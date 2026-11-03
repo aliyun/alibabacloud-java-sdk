@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TextTranslateAsyncShrinkRequest extends TeaModel {
     /**
-     * <p>The business ID of the caller. The maximum length is 128 characters. This ID is passed through in the translation results.</p>
+     * <p>The caller business ID. It can be up to 128 characters in length. This ID is passed through in the translation results. It is used only for asynchronous text translation and is returned as-is in the task results.</p>
      * 
      * <strong>example:</strong>
      * <p>order-20260928-001</p>
@@ -14,7 +14,7 @@ public class TextTranslateAsyncShrinkRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The business name of the caller. This field represents your identity and facilitates subsequent communication. If you are an internal Alibaba organization, specify this parameter based on the actual scenario, such as BU name-product or BU name-chat. If you are an external partner, specify the full name of your company. The company name must be the same as the one used when registering your Alibaba Cloud account.</p>
+     * <p>This field represents your identity and facilitates communication for various issues. If you are an internal Alibaba organization, we recommend that you specify this parameter based on the actual scenario, such as BU name-product or BU name-chat. If you are an external partner, we recommend that you specify the full name of your company. The company name must be the same as the one you used when registering your Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>BUxxx-chat</p>
@@ -32,7 +32,7 @@ public class TextTranslateAsyncShrinkRequest extends TeaModel {
     public String formatType;
 
     /**
-     * <p>The ID of the intervention glossary. You must create the glossary in the console and provide its ID in the request parameters. If the intervention glossary ID is empty, the translation results are not modified.</p>
+     * <p>The ID of the intervention glossary. You must create the glossary in the console and provide its ID in the input parameters. If the intervention glossary ID is empty, the translation results are not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot; glossary_1&quot;</p>
@@ -41,7 +41,7 @@ public class TextTranslateAsyncShrinkRequest extends TeaModel {
     public String glossary;
 
     /**
-     * <p>The source language code. For more information, see the supported language list below. If this parameter is not specified, the language is automatically detected.</p>
+     * <p>The source language code. For more information, see the supported language list below. If you do not specify this parameter, the source language is automatically detected.</p>
      * 
      * <strong>example:</strong>
      * <p>auto</p>
@@ -50,7 +50,7 @@ public class TextTranslateAsyncShrinkRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
-     * <p>The list of texts to be translated.</p>
+     * <p>The list of text to be translated.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SourceTextList")
@@ -67,14 +67,14 @@ public class TextTranslateAsyncShrinkRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>The business scenario identifier. You can specify only one of the following values. After you specify a value, the translation engine uses the terminology library and style policy of the corresponding industry to output industry-specific translations. If this parameter is not specified or an invalid value is specified, the general translation policy is used. Valid values:</p>
+     * <p>The business scenario identifier. You can specify only one of the following values. After you specify a value, the translation engine uses the terminology library and style policy of the corresponding industry to output industry-specific translations. If this field is not specified or an invalid value is specified, the general translation policy is used. Valid values:</p>
      * <ul>
-     * <li>e-commerce-title: Translates cross-border e-commerce product titles.</li>
-     * <li>e-commerce-description: Translates cross-border e-commerce product descriptions.</li>
-     * <li>e-commerce-chat: Translates cross-border e-commerce conversations.</li>
-     * <li>e-commerce-cpv: Translates cross-border e-commerce product CPV attributes.</li>
-     * <li>novel: Translates novels.</li>
-     * <li>game: Translates games.</li>
+     * <li>e-commerce-title: cross-border e-commerce product title translation</li>
+     * <li>e-commerce-description: cross-border e-commerce product description translation</li>
+     * <li>e-commerce-chat: cross-border e-commerce conversation translation</li>
+     * <li>e-commerce-cpv: cross-border e-commerce product CPV attribute translation</li>
+     * <li>novel: novel translation</li>
+     * <li>game: game translation</li>
      * </ul>
      * 
      * <strong>example:</strong>

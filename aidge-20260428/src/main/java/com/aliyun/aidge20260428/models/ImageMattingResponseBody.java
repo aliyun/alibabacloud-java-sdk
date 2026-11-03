@@ -14,7 +14,7 @@ public class ImageMattingResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The matting result.</p>
+     * <p>The image matting result.</p>
      */
     @NameInMap("Data")
     public ImageMattingResponseBodyData data;
@@ -40,8 +40,8 @@ public class ImageMattingResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li>true: Successful.</li>
-     * <li>false: Failed.</li>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class ImageMattingResponseBody extends TeaModel {
 
     public static class ImageMattingResponseBodyData extends TeaModel {
         /**
-         * <p>The height of the result image in pixels.</p>
+         * <p>The height of the result image. Unit: pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>
@@ -106,7 +106,7 @@ public class ImageMattingResponseBody extends TeaModel {
         public Integer height;
 
         /**
-         * <p>The URL of the image matting result.</p>
+         * <p>The URL of the result image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg">http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg</a></p>
@@ -115,13 +115,33 @@ public class ImageMattingResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>The quality score of the image matting result.</p>
+         * <p>The matting quality score.</p>
          * 
          * <strong>example:</strong>
          * <p>0.11</p>
          */
         @NameInMap("Score")
         public Double score;
+
+        /**
+         * <p>The returned layer information. This includes the URL of the original image, the URL of the matting result, and the matting area information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;origin_url&quot;: &quot;xxx&quot;,
+         *                     &quot;score&quot;: &quot;xxx&quot;,
+         *                     &quot;file&quot;: &quot;xxxx&quot;,
+         *                     &quot;extra_info&quot;: &quot;&quot;,
+         *                     &quot;pass&quot;: &quot;xx&quot;,
+         *                     &quot;bbox&quot;: &quot;xxx&quot;,
+         *                     &quot;plain_url&quot;: &quot;xxxxxx&quot;,
+         *                     &quot;image_shape&quot;: [
+         *                         xxx,
+         *                         xxx
+         *                     ],
+         *                     &quot;url&quot;: &quot;xxx&quot;</p>
+         */
+        @NameInMap("StructData")
+        public Object structData;
 
         /**
          * <p>The usage information.</p>
@@ -133,7 +153,7 @@ public class ImageMattingResponseBody extends TeaModel {
         public java.util.Map<String, Long> usageMap;
 
         /**
-         * <p>The width of the result image in pixels.</p>
+         * <p>The width of the result image. Unit: pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>
@@ -168,6 +188,14 @@ public class ImageMattingResponseBody extends TeaModel {
         }
         public Double getScore() {
             return this.score;
+        }
+
+        public ImageMattingResponseBodyData setStructData(Object structData) {
+            this.structData = structData;
+            return this;
+        }
+        public Object getStructData() {
+            return this.structData;
         }
 
         public ImageMattingResponseBodyData setUsageMap(java.util.Map<String, Long> usageMap) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageCroppingRequest extends TeaModel {
     /**
-     * <p>The URL of the image to process.</p>
+     * <p>The URL of the image to be processed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

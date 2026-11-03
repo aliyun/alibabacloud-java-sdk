@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class DiduiAreaDeductionShrinkRequest extends TeaModel {
     /**
-     * <p>The list of products and their detection boxes.</p>
+     * <p>The list of products and bounding boxes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Products")
     public String productsShrink;
 
     /**
-     * <p>The ID of the customer-specific SKU vector database that determines which database is used for recall. The database must be created in advance through the database creation process.</p>
+     * <p>The ID of the customer\&quot;s dedicated SKU vector database, which determines the database used for retrieval. The database must be created through the database creation process in advance.</p>
      * 
      * <strong>example:</strong>
      * <p>rag_xxx</p>
@@ -21,7 +21,7 @@ public class DiduiAreaDeductionShrinkRequest extends TeaModel {
     public String ragId;
 
     /**
-     * <p>The optional business request ID used for Tracing Analysis.</p>
+     * <p>The optional business request ID, used for end-to-end Tracing Analysis.</p>
      * 
      * <strong>example:</strong>
      * <p>didui-request-001</p>

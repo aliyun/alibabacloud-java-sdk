@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageTranslationStandardRequest extends TeaModel {
     /**
-     * <p>The intervention glossary ID. This parameter is optional. You must create the glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</p>
+     * <p>The ID of the intervention glossary. This parameter is optional. You must create the glossary in the console and provide its ID. If the provided intervention glossary ID is empty, the translation results will not be modified.</p>
      * 
      * <strong>example:</strong>
      * <p>glossary_1</p>
@@ -15,10 +15,10 @@ public class ImageTranslationStandardRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li>Image URL: Must be publicly accessible.</li>
-     * <li>Format: png, jpeg, jpg, bmp, or webp.</li>
-     * <li>Pixels: Both width and height must not exceed 4000.</li>
-     * <li>File size: The original file must be ≤ 10 MB.</li>
+     * <li>Image URL: Must be publicly accessible over the Internet.</li>
+     * <li>Formats: PNG, JPEG, JPG, BMP, and WEBP.</li>
+     * <li>Pixels: Both width and height must not exceed 4,000.</li>
+     * <li>File size: The original file must be 10 MB or smaller.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -29,7 +29,7 @@ public class ImageTranslationStandardRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>Specifies whether to translate text on the image subject. This parameter is optional. Default value: false. This helps protect information and avoids translating embedded information such as product names.</p>
+     * <p>Specifies whether to translate the text on the product subject in the image. This parameter is optional. Default value: false. This helps protect information and prevents embedded information such as product names from being translated.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -38,7 +38,7 @@ public class ImageTranslationStandardRequest extends TeaModel {
     public Boolean includingProductArea;
 
     /**
-     * <p>The source language code. This parameter is required.<br>&lt;props=&quot;china&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping</a>.<br>&lt;props=&quot;intl&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/zh/aidge/language-direction-mapping">Language direction mapping</a>.</p>
+     * <p>The source language code. This parameter is required.<br>&lt;props=&quot;china&quot;&gt;For supported language pairs, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language pair mapping table</a>.<br>&lt;props=&quot;intl&quot;&gt;For supported language pairs, see <a href="https://www.alibabacloud.com/help/zh/aidge/language-direction-mapping">Language pair mapping table</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class ImageTranslationStandardRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
-     * <p>The target language code. This parameter is required.<br>&lt;props=&quot;china&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping</a>.<br>&lt;props=&quot;intl&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/zh/aidge/language-direction-mapping">Language direction mapping</a>.</p>
+     * <p>The target language code. This parameter is required.<br>&lt;props=&quot;china&quot;&gt;For supported language pairs, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language pair mapping table</a>.<br>&lt;props=&quot;intl&quot;&gt;For supported language pairs, see <a href="https://www.alibabacloud.com/help/zh/aidge/language-direction-mapping">Language pair mapping table</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class ImageTranslationStandardRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>Specifies whether to translate brand names on the image. This parameter is optional. Default value: false. This helps protect brand name information from being translated.</p>
+     * <p>Specifies whether to translate brand names in the image. This parameter is optional. Default value: false. This helps protect brand name information from being translated.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -67,7 +67,7 @@ public class ImageTranslationStandardRequest extends TeaModel {
     public Boolean translatingBrandInTheProduct;
 
     /**
-     * <p>Specifies whether to return layer information such as text position, font, and color. If this parameter is set to true, layer information is returned, which can be used to connect to an image editor for secondary editing. Default value: false.</p>
+     * <p>Specifies whether to return layer information such as text position, font, and color. If set to true, layer information is returned and can be used to integrate with image editors for secondary editing. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

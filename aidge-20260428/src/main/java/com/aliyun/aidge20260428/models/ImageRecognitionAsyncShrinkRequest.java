@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageRecognitionAsyncShrinkRequest extends TeaModel {
     /**
-     * <p>The business ID of the caller. It is recorded upon acceptance and returned as is when you query the result of the asynchronous task.</p>
+     * <p>The business order ID of the caller. It is recorded upon acceptance and returned as is when you query the result of the asynchronous task.</p>
      * 
      * <strong>example:</strong>
      * <p>order-20260928-001</p>
@@ -14,7 +14,7 @@ public class ImageRecognitionAsyncShrinkRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The image URL. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256 × 256 and 3000 × 3000 pixels, and the file size cannot exceed 10 MB.</p>
+     * <p>The URL of the image. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256 × 256 and 3000 × 3000 pixels, and the file size cannot exceed 10 MB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,38 +24,19 @@ public class ImageRecognitionAsyncShrinkRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>The types of elements to detect outside the image subject. Valid values:</p>
-     * <ul>
-     * <li>1: watermark</li>
-     * <li>2: logo</li>
-     * <li>3: text</li>
-     * <li>4: text-containing color block
-     * You can specify multiple values. This parameter and ObjectDetectElements cannot be empty at the same time.</li>
-     * </ul>
+     * <p>The types of elements to be detected outside the image subject. Valid values: 1: Watermark. 2: Logo. 3: Text. 4: Text-containing color block. You can specify multiple values. This parameter and ObjectDetectElements cannot be both empty.</p>
      */
     @NameInMap("NonObjectDetectElements")
     public String nonObjectDetectElementsShrink;
 
     /**
-     * <p>The types of elements to detect on the image subject. Valid values:</p>
-     * <ul>
-     * <li>1: watermark</li>
-     * <li>2: logo</li>
-     * <li>3: text</li>
-     * <li>4: text-containing color block
-     * You can specify multiple values.</li>
-     * </ul>
+     * <p>The types of elements to be detected on the image subject. Valid values: 1: Watermark. 2: Logo. 3: Text. 4: Text-containing color block. You can specify multiple values.</p>
      */
     @NameInMap("ObjectDetectElements")
     public String objectDetectElementsShrink;
 
     /**
-     * <p>Specifies whether to return the marginalization distance of the subject. Valid values:</p>
-     * <ul>
-     * <li>1: yes</li>
-     * <li>0: no
-     * Default value: 0.</li>
-     * </ul>
+     * <p>Specifies whether to return the marginalization distance of the subject. Valid values: 1: Yes. 0: No. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -64,12 +45,7 @@ public class ImageRecognitionAsyncShrinkRequest extends TeaModel {
     public Integer returnBorderPixel;
 
     /**
-     * <p>Specifies whether to return the OCR result of the text in the recognized area. Valid values:</p>
-     * <ul>
-     * <li>1: yes</li>
-     * <li>0: no
-     * Default value: 0.</li>
-     * </ul>
+     * <p>Specifies whether to return the OCR result of the text in the recognized area. Valid values: 1: Yes. 0: No. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -78,16 +54,11 @@ public class ImageRecognitionAsyncShrinkRequest extends TeaModel {
     public Integer returnCharacter;
 
     /**
-     * <p>Specifies whether to return the text proportion. Valid values:</p>
-     * <ul>
-     * <li>1: yes</li>
-     * <li>0: no
-     * Default value: 0.
-     * This parameter takes effect only when the following two conditions are met:</li>
-     * </ul>
+     * <p>Specifies whether to return the text proportion. Valid values: 1: Yes. 0: No. Default value: 0.
+     * This parameter takes effect only when the following two conditions are met:</p>
      * <ol>
      * <li>ReturnCharacter is set to 1.</li>
-     * <li>ObjectDetectElements or NonObjectDetectElements is set to 3, which means text needs to be recognized.</li>
+     * <li>ObjectDetectElements or NonObjectDetectElements is set to 3, which means text recognition is required.</li>
      * </ol>
      * 
      * <strong>example:</strong>
@@ -97,12 +68,7 @@ public class ImageRecognitionAsyncShrinkRequest extends TeaModel {
     public Integer returnCharacterProp;
 
     /**
-     * <p>Specifies whether to return the number of subjects. Valid values:</p>
-     * <ul>
-     * <li>1: yes</li>
-     * <li>0: no
-     * Default value: 0.</li>
-     * </ul>
+     * <p>Specifies whether to return the number of subjects. Valid values: 1: Yes. 0: No. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -111,12 +77,7 @@ public class ImageRecognitionAsyncShrinkRequest extends TeaModel {
     public Integer returnProductNum;
 
     /**
-     * <p>Specifies whether to return the area proportion of the subject. Valid values:</p>
-     * <ul>
-     * <li>1: yes</li>
-     * <li>0: no
-     * Default value: 0.</li>
-     * </ul>
+     * <p>Specifies whether to return the area proportion of the subject. Valid values: 1: Yes. 0: No. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

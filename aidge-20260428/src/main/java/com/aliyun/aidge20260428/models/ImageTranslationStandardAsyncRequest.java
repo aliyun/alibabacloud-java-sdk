@@ -33,7 +33,7 @@ public class ImageTranslationStandardAsyncRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>Specifies whether to include the translation of the product area.</p>
+     * <p>Specifies whether to include translation for the product area.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -62,7 +62,7 @@ public class ImageTranslationStandardAsyncRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>Specifies whether to translate the brand text in the product area.</p>
+     * <p>Specifies whether to translate brand text in the product area.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

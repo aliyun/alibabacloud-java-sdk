@@ -38,7 +38,7 @@ public class AddDisplayKnowledgeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -93,7 +93,7 @@ public class AddDisplayKnowledgeResponseBody extends TeaModel {
 
     public static class AddDisplayKnowledgeResponseBodyDataResults extends TeaModel {
         /**
-         * <p>The failure error code.</p>
+         * <p>The error code for the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -102,7 +102,7 @@ public class AddDisplayKnowledgeResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The failure reason.</p>
+         * <p>The reason for the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>The deviceName format is incorrect.</p>
@@ -111,7 +111,7 @@ public class AddDisplayKnowledgeResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The index in the original request array.</p>
+         * <p>The index of the record in the original request array.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -149,7 +149,7 @@ public class AddDisplayKnowledgeResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Indicates whether the record is accepted.</p>
+         * <p>Indicates whether the record was accepted.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -278,13 +278,13 @@ public class AddDisplayKnowledgeResponseBody extends TeaModel {
         public String ragId;
 
         /**
-         * <p>The processing results for each record.</p>
+         * <p>The processing result of each record.</p>
          */
         @NameInMap("Results")
         public java.util.List<AddDisplayKnowledgeResponseBodyDataResults> results;
 
         /**
-         * <p>Indicates whether the business processing is successful.</p>
+         * <p>Indicates whether the business processing was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

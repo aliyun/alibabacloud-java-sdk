@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageTranslationStandardAsyncResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is not returned for normal calls.</p>
+     * <p>The error code. This parameter is not returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class ImageTranslationStandardAsyncResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The asynchronous task submission result of Image Translation Standard Edition.</p>
+     * <p>The submission result of the asynchronous task for Image Translation Standard Edition.</p>
      */
     @NameInMap("Data")
     public ImageTranslationStandardAsyncResponseBodyData data;
 
     /**
-     * <p>The error message. This parameter is not returned for normal calls.</p>
+     * <p>The error message. This parameter is not returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>

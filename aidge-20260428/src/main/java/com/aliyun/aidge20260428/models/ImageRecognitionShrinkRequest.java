@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageRecognitionShrinkRequest extends TeaModel {
     /**
-     * <p>The URL of the image to recognize.</p>
+     * <p>The URL of the image to be recognized.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ImageRecognitionShrinkRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>The element types to detect on the non-subject area of the image (1: watermark, 2: logo, 3: text, 4: text-containing color block). You can select multiple element types. This parameter and ObjectDetectElements cannot both be empty.</p>
+     * <p>The elements to detect outside the image subject. Valid values: 1 (watermark), 2 (logo), 3 (text), and 4 (text-containing color block). You can specify multiple values. This parameter and ObjectDetectElements cannot be empty at the same time.</p>
      * 
      * <strong>example:</strong>
      * <p>[1,2,3,4]</p>
@@ -24,7 +24,7 @@ public class ImageRecognitionShrinkRequest extends TeaModel {
     public String nonObjectDetectElementsShrink;
 
     /**
-     * <p>The element types to detect on the image subject (1: watermark, 2: logo, 3: text, 4: text-containing color block). You can select multiple element types.</p>
+     * <p>The elements to detect on the image subject. Valid values: 1 (watermark), 2 (logo), 3 (text), and 4 (text-containing color block). You can specify multiple values.</p>
      * 
      * <strong>example:</strong>
      * <p>[1,2,3,4]</p>
@@ -60,7 +60,7 @@ public class ImageRecognitionShrinkRequest extends TeaModel {
     public Integer returnCharacterProp;
 
     /**
-     * <p>Specifies whether to return the product count. Valid values: 1 (return) and 0 (do not return).</p>
+     * <p>Specifies whether to return the product quantity. Valid values: 1 (return) and 0 (do not return).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

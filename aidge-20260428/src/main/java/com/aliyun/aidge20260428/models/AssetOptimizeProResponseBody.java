@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssetOptimizeProResponseBody extends TeaModel {
     /**
-     * <p>The status code. The value &quot;success&quot; is returned for a successful call.</p>
+     * <p>The status code. A value of success is returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,13 +14,13 @@ public class AssetOptimizeProResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The submit result of the asynchronous task, which contains the asynchronous task ID.</p>
+     * <p>The submission result of the asynchronous task, which includes the asynchronous task ID.</p>
      */
     @NameInMap("Data")
     public AssetOptimizeProResponseBodyData data;
 
     /**
-     * <p>The error message. The value &quot;Success&quot; is returned for a successful call.</p>
+     * <p>The error message. A value of Success is returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class AssetOptimizeProResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which uniquely identifies the request.</p>
+     * <p>The request ID, which is used to identify a unique request.</p>
      * 
      * <strong>example:</strong>
      * <p>4FCCA90A-A7A4-1D37-88C3-C17549886E70</p>
@@ -38,7 +38,7 @@ public class AssetOptimizeProResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class AssetOptimizeProResponseBody extends TeaModel {
 
     public static class AssetOptimizeProResponseBodyData extends TeaModel {
         /**
-         * <p>The asynchronous task ID. Use this ID to query the processing result by calling QueryAsyncTaskResult.</p>
+         * <p>The ID of the asynchronous task, which is used to query the processing result by calling QueryAsyncTaskResult.</p>
          * 
          * <strong>example:</strong>
          * <p>8080345d-b28a-9e2e-9ad7-370f8e236949</p>

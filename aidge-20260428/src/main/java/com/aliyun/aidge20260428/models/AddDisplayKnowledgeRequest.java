@@ -44,7 +44,7 @@ public class AddDisplayKnowledgeRequest extends TeaModel {
 
     public static class AddDisplayKnowledgeRequestRecords extends TeaModel {
         /**
-         * <p>The HTTP(S) URL of the product image.</p>
+         * <p>The HTTP or HTTPS URL of the product image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxx/img_1784599244373_9c2309a0.jpg">https://xxxx/img_1784599244373_9c2309a0.jpg</a></p>
@@ -53,7 +53,7 @@ public class AddDisplayKnowledgeRequest extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>The SKU ID. If this parameter is left empty, the platform generates the ID.</p>
+         * <p>The SKU ID. If this parameter is left empty, the platform generates an ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sku-001</p>

@@ -14,13 +14,13 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The deletion results for the display knowledge base content.</p>
+     * <p>The result of deleting content from the display knowledge base.</p>
      */
     @NameInMap("Data")
     public DeleteDisplayKnowledgeResponseBodyData data;
 
     /**
-     * <p>The response message or failure description.</p>
+     * <p>The returned message or failure description.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,7 +38,7 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -102,7 +102,7 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The cause of the failure.</p>
+         * <p>The reason for the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -141,13 +141,13 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
          * <p>The record status. This field is empty for deletion results.</p>
          * 
          * <strong>example:</strong>
-         * <p>Empty for the deletion API</p>
+         * <p>Empty for deletion API operations</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>Indicates whether the deletion is successful.</p>
+         * <p>Indicates whether the deletion was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -274,7 +274,7 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
         public String ragId;
 
         /**
-         * <p>The number of visible records after the deletion.</p>
+         * <p>The number of visible records after deletion.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -289,7 +289,7 @@ public class DeleteDisplayKnowledgeResponseBody extends TeaModel {
         public java.util.List<DeleteDisplayKnowledgeResponseBodyDataResults> results;
 
         /**
-         * <p>Indicates whether the business processing is successful.</p>
+         * <p>Indicates whether the business processing was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

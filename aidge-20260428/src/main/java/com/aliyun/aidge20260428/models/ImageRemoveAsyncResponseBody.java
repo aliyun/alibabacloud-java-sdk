@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageRemoveAsyncResponseBody extends TeaModel {
     /**
-     * <p>The status code, such as &quot;success&quot;.</p>
+     * <p>The status code, such as success.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,7 +20,7 @@ public class ImageRemoveAsyncResponseBody extends TeaModel {
     public ImageRemoveAsyncResponseBodyData data;
 
     /**
-     * <p>The error message, such as &quot;The parameters contain sensitive information. Try another input.&quot;</p>
+     * <p>The error message, such as \&quot;The parameter contains sensitive information. Please try another input.\&quot;</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class ImageRemoveAsyncResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which is used to identify a unique request.</p>
+     * <p>The request ID, which is used to identify a unique request call.</p>
      * 
      * <strong>example:</strong>
      * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
@@ -38,11 +38,7 @@ public class ImageRemoveAsyncResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
-     * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call fails.</li>
-     * </ul>
+     * <p>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -97,7 +93,7 @@ public class ImageRemoveAsyncResponseBody extends TeaModel {
 
     public static class ImageRemoveAsyncResponseBodyData extends TeaModel {
         /**
-         * <p>The task ID used to query the result of the asynchronous task.</p>
+         * <p>The task ID used to query the asynchronous task result.</p>
          * 
          * <strong>example:</strong>
          * <p>TID_550e8400-e29b-41d4-a716-446655440000</p>

@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DocumentTranslateRequest extends TeaModel {
     /**
-     * <p>The type of the document. Valid values: PDF and word.<br>Supported capacity limits:  </p>
+     * <p>The type of the document. Valid values: PDF and word. Size limits: </p>
      * <ul>
-     * <li>Word: 200 MB or 100 pages </li>
-     * <li>PDF: 200 MB or 100 pages  </li>
-     * <li>Maximum size per file: 200 MB</li>
+     * <li>Word: 200 MB or 100 pages. </li>
+     * <li>PDF: 200 MB or 100 pages. </li>
+     * <li>Maximum size of a single file: 200 MB.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class DocumentTranslateRequest extends TeaModel {
     public String fileType;
 
     /**
-     * <p>The glossary ID. Specify this parameter when you need the glossary feature. Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand name protection and similar scenarios.</p>
+     * <p>The ID of the intervention glossary. Specify this parameter when the intervention feature is required. This parameter supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-null value). It is commonly used in scenarios such as brand word protection.</p>
      * 
      * <strong>example:</strong>
      * <p>glossary_1</p>
@@ -29,7 +29,7 @@ public class DocumentTranslateRequest extends TeaModel {
     public String glossary;
 
     /**
-     * <p>The target language. The language code uses the two-letter ISO 639-1 standard.</p>
+     * <p>The target language. The language code uses the two-letter representation of the ISO 639-1 standard.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

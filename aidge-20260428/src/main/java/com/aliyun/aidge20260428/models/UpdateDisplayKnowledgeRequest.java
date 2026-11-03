@@ -15,7 +15,7 @@ public class UpdateDisplayKnowledgeRequest extends TeaModel {
     public String ragId;
 
     /**
-     * <p>The records to update. A maximum of 500 records can be specified.</p>
+     * <p>The records to be modified. A maximum of 500 records can be specified.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Records")

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageTranslationPlusAsyncRequest extends TeaModel {
     /**
-     * <p>The business order ID of the caller. This ID is recorded when the request is accepted and returned as is when you query the asynchronous task result.</p>
+     * <p>The business order number of the caller. It is recorded upon acceptance and returned as is when querying the asynchronous task result.</p>
      * 
      * <strong>example:</strong>
      * <p>order-20260928-001</p>
@@ -14,7 +14,7 @@ public class ImageTranslationPlusAsyncRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The intervention glossary ID. You must create the intervention glossary separately and provide its ID in the input parameters. If the provided intervention glossary ID is empty, the translation results are not modified.</p>
+     * <p>The ID of the intervention glossary. The intervention glossary ID must be created separately and provided in the input parameters. If the provided intervention glossary ID is empty, the translation results will not be modified.</p>
      * 
      * <strong>example:</strong>
      * <p>glossary_1</p>
@@ -24,10 +24,10 @@ public class ImageTranslationPlusAsyncRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li>Image URL: The image must be accessible over the Internet.    </li>
-     * <li>Format: PNG, JPEG, JPG, BMP, or WEBP.    </li>
-     * <li>Resolution: The width and height cannot exceed 4,000 pixels.   </li>
-     * <li>File size: The original file size cannot exceed 10 MB.</li>
+     * <li>Image URL: Must be publicly accessible over the Internet.    </li>
+     * <li>Format: PNG, JPEG, JPG, BMP, or WebP.    </li>
+     * <li>Resolution: The width and height must not exceed 4,000 pixels.   </li>
+     * <li>File size: The original file must be less than or equal to 10 MB.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -38,7 +38,7 @@ public class ImageTranslationPlusAsyncRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>Specifies whether to translate the text on the image subject. This helps you protect information and prevent embedded information, such as the product name, from being translated. In the example image, the text in the red box represents the text on the subject, and the text in the blue box represents the text not on the subject.</p>
+     * <p>Specifies whether to translate the text on the image subject. This helps you protect information and prevent embedded information such as product names from being translated. In the example image, the text in the red box represents the text on the subject, and the text in the blue box represents the text not on the subject.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -57,7 +57,7 @@ public class ImageTranslationPlusAsyncRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
-     * <p>The target language code. We recommend that you use the 12 minor language pairs listed above.</p>
+     * <p>The target language code. We recommend using the 12 minor language pairs listed above.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class ImageTranslationPlusAsyncRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>Specifies whether to translate the brand name in the image. This prevents the brand name from being translated. Default value: false. In the example image, \&quot;懒角落\&quot; represents the brand name.</p>
+     * <p>Specifies whether to translate the brand names in the image. This helps you protect brand name information from being translated. Default value: false, which indicates that brand names are not translated. In the example image, &quot;Lazy Corner&quot; represents the brand name.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -76,7 +76,7 @@ public class ImageTranslationPlusAsyncRequest extends TeaModel {
     public Boolean translatingBrandInTheProduct;
 
     /**
-     * <p>Specifies whether to return layout information such as the position, font, and color of the text. This can be used to obtain data when you integrate the image editor for secondary editing. You can call the image translation result data query API operation to obtain the complete parameter information.</p>
+     * <p>Specifies whether to return layout information such as the position, font, and color of the text. This can be used to obtain data when integrating the image editor for secondary editing. You can call the image translation result query API to obtain the complete parameter information.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

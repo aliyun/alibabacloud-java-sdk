@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageMattingAsyncResponseBody extends TeaModel {
     /**
-     * <p>The status code, such as &quot;success&quot;. This parameter is not returned for normal calls.</p>
+     * <p>The status code, such as success.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,7 +14,7 @@ public class ImageMattingAsyncResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The submission result of the asynchronous task for intelligent image matting.</p>
+     * <p>The submission result of the intelligent image matting asynchronous task.</p>
      */
     @NameInMap("Data")
     public ImageMattingAsyncResponseBodyData data;
@@ -29,7 +29,7 @@ public class ImageMattingAsyncResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request. It is used to identify a unique request.</p>
+     * <p>The request ID, which is used to identify a unique request.</p>
      * 
      * <strong>example:</strong>
      * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
@@ -38,11 +38,7 @@ public class ImageMattingAsyncResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
-     * <ul>
-     * <li>true: The call is successful.</li>
-     * <li>false: The call fails.</li>
-     * </ul>
+     * <p>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

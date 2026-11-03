@@ -14,7 +14,7 @@ public class UpdateDisplayKnowledgeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The update result of the display knowledge base content.</p>
+     * <p>The modification result of the display knowledge base content.</p>
      */
     @NameInMap("Data")
     public UpdateDisplayKnowledgeResponseBodyData data;
@@ -38,7 +38,7 @@ public class UpdateDisplayKnowledgeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -102,7 +102,7 @@ public class UpdateDisplayKnowledgeResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The cause of the failure.</p>
+         * <p>The reason for the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -111,7 +111,7 @@ public class UpdateDisplayKnowledgeResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The index in the original request array.</p>
+         * <p>The index of the original request array.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -147,7 +147,7 @@ public class UpdateDisplayKnowledgeResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Indicates whether the record is accepted.</p>
+         * <p>Indicates whether the record was accepted.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -280,7 +280,7 @@ public class UpdateDisplayKnowledgeResponseBody extends TeaModel {
         public java.util.List<UpdateDisplayKnowledgeResponseBodyDataResults> results;
 
         /**
-         * <p>Indicates whether the business processing is successful.</p>
+         * <p>Indicates whether the business processing was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

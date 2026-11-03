@@ -14,13 +14,13 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The translation result data, including the translated image URL and usage information.</p>
+     * <p>The translation result data, including the URL of the translated image and usage information.</p>
      */
     @NameInMap("Data")
     public ImageTranslationStandardResponseBodyData data;
 
     /**
-     * <p>The error message. &quot;Success&quot; is returned for a successful call. A specific error message is returned for a failed call.</p>
+     * <p>The error message. This parameter returns Success for successful calls and specific error messages for exceptions.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which uniquely identifies the request.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1CEC4D94-905A-1ED1-A7B4-1BFEFFB3D850</p>
@@ -38,7 +38,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
+     * <p>Indicates whether the call was successful. A value of true indicates success, and a value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -94,30 +94,45 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
     public static class ImageTranslationStandardResponseBodyDataEditInfoGoodsRects extends TeaModel {
         /**
          * <p>The rotation angle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Degree")
         public Integer degree;
 
         /**
          * <p>The height.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Height")
         public Integer height;
 
         /**
          * <p>The left coordinate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Left")
         public Integer left;
 
         /**
          * <p>The top coordinate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Top")
         public Integer top;
 
         /**
          * <p>The width.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Width")
         public Integer width;
@@ -172,30 +187,45 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
     public static class ImageTranslationStandardResponseBodyDataEditInfoTextAreasTextsImageRect extends TeaModel {
         /**
          * <p>The rotation angle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Degree")
         public Integer degree;
 
         /**
          * <p>The height.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54</p>
          */
         @NameInMap("Height")
         public Integer height;
 
         /**
          * <p>The left coordinate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43</p>
          */
         @NameInMap("Left")
         public Integer left;
 
         /**
          * <p>The top coordinate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83</p>
          */
         @NameInMap("Top")
         public Integer top;
 
         /**
          * <p>The width.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>418</p>
          */
         @NameInMap("Width")
         public Integer width;
@@ -250,30 +280,45 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
     public static class ImageTranslationStandardResponseBodyDataEditInfoTextAreasTextsTextRect extends TeaModel {
         /**
          * <p>The rotation angle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Degree")
         public Integer degree;
 
         /**
          * <p>The height.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("Height")
         public Integer height;
 
         /**
          * <p>The left coordinate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("Left")
         public Integer left;
 
         /**
          * <p>The top coordinate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95</p>
          */
         @NameInMap("Top")
         public Integer top;
 
         /**
          * <p>The width.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>488</p>
          */
         @NameInMap("Width")
         public Integer width;
@@ -369,7 +414,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>The line count.</p>
+         * <p>The number of lines.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -396,7 +441,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
          * <p>The text value.</p>
          * 
          * <strong>example:</strong>
-         * <p>Solid Wood Wardrobe</p>
+         * <p>Solid wood wardrobe</p>
          */
         @NameInMap("Value")
         public String value;
@@ -535,7 +580,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public String horizontalLayout;
 
         /**
-         * <p>The line count.</p>
+         * <p>The number of lines.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -801,7 +846,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public ImageTranslationStandardResponseBodyDataEditInfo editInfo;
 
         /**
-         * <p>The URL of the image generated after image translation.</p>
+         * <p>The URL of the image generated after the image translation.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg</a></p>
@@ -810,7 +855,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>The usage information, including the number of processed images.</p>
+         * <p>The usage information, such as the number of processed images.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;ProcessedImageCount&quot;:1}</p>

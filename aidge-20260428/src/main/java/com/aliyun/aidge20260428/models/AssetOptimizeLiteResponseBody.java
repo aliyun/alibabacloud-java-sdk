@@ -14,7 +14,7 @@ public class AssetOptimizeLiteResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The submit result of the asynchronous task.</p>
+     * <p>The asynchronous task submission result.</p>
      */
     @NameInMap("Data")
     public AssetOptimizeLiteResponseBodyData data;
@@ -38,7 +38,7 @@ public class AssetOptimizeLiteResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

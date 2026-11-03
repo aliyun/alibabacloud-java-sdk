@@ -14,7 +14,7 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The floor display area inference result.</p>
+     * <p>The inference result of the floor display area.</p>
      */
     @NameInMap("Data")
     public DiduiAreaDeductionResponseBodyData data;
@@ -102,7 +102,7 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
         public Double areaM2;
 
         /**
-         * <p>The left edge length, in meters.</p>
+         * <p>The length of the left boundary, in meters.</p>
          * 
          * <strong>example:</strong>
          * <p>1.025</p>
@@ -111,7 +111,7 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
         public Double leftEdgeM;
 
         /**
-         * <p>The right edge length, in meters.</p>
+         * <p>The length of the right boundary, in meters.</p>
          * 
          * <strong>example:</strong>
          * <p>1.419</p>
@@ -152,7 +152,7 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
 
     public static class DiduiAreaDeductionResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The stage 4 area label.</p>
+         * <p>The Stage 4 area label.</p>
          */
         @NameInMap("Stage4AreaLabel")
         public DiduiAreaDeductionResponseBodyDataResultStage4AreaLabel stage4AreaLabel;
@@ -201,7 +201,7 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
         public Integer httpStatus;
 
         /**
-         * <p>The downstream call latency, in milliseconds.</p>
+         * <p>The duration of the downstream call, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -252,7 +252,7 @@ public class DiduiAreaDeductionResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Indicates whether the workflow execution is successful.</p>
+         * <p>The business status of the workflow.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

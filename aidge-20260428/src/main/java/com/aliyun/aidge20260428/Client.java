@@ -85,27 +85,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Scenarios</h2>
      * <ul>
      * <li><strong>Virtual try-on for clothing:</strong>
-     * Supports various clothing categories such as tops, bottoms, jumpsuits, and dresses. After you upload a model image and a garment image, the service generates natural and realistic try-on effects to visually demonstrate how the garment looks on the model.</li>
+     * Supports various clothing categories such as tops, bottoms, jumpsuits, and dresses. After you upload a model image and a product image, the service generates a natural and realistic try-on effect to intuitively display how the clothing looks on the model.</li>
      * <li><strong>Virtual try-on for shoes and hats:</strong>
-     * Supports virtual try-on for accessories such as shoes and hats. The service intelligently matches the position and proportion of the product based on the model\&quot;s pose and body parts to present a coordinated and realistic wearing effect.</li>
+     * Supports virtual try-on for products such as shoes and hats. The service intelligently matches the position and proportion of the product based on the model\&quot;s pose and body parts to present a coordinated and realistic wearing effect.</li>
      * <li><strong>E-commerce product display and marketing:</strong>
-     * Helps merchants quickly generate model try-on images for different products. This reduces the costs of traditional photography, outfit changes, and post-production, and improves the production efficiency of product images.</li>
+     * Helps merchants quickly generate model try-on images for different products, reducing the costs of traditional photography, outfit changes, and post-production, and improving the production efficiency of product images.</li>
      * <li><strong>Online shopping experience optimization:</strong>
-     * Allows consumers to preview the wearing effect of products through virtual try-on. This provides a more intuitive understanding of the style, matching, and overall effect of the product, which assists in purchase decisions and enhances the shopping experience.</li>
+     * Allows consumers to preview the wearing effect of products through virtual try-on, providing a more intuitive understanding of the style, matching, and overall effect of the products, which assists in purchase decisions and enhances the shopping experience.</li>
      * </ul>
      * <h2>Features</h2>
      * <ul>
-     * <li><strong>Provide a model image and a product image. The system uses the model image as the try-on subject and applies the garment from the product image to the model:</strong><ul>
-     * <li>a. Model image: The image of the person who will wear the garment in the virtual try-on.</li>
+     * <li><strong>First, you need to provide a model image and a product image. The system uses the model image as the try-on subject and applies the clothing from the product image to the model:</strong><ul>
+     * <li>a. Model image: The image of the person who will virtually try on the clothing.</li>
      * <li>b. Product image: The image of the clothing, shoes, or hat to be worn by the model.</li>
      * </ul>
      * </li>
-     * <li><strong>Select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</strong><ul>
-     * <li>a. Specify product type: You can directly specify the type of the current product, and the system will process it accordingly.</li>
+     * <li><strong>Second, you can select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</strong><ul>
+     * <li>a. Specify product type: You can directly specify the type of the current product, and the system will process it according to the specified type.</li>
      * <li>b. Automatic type recognition: If you do not specify the product type, the system automatically recognizes the product category in the product image and performs the virtual try-on based on the recognition result.</li>
      * </ul>
      * </li>
-     * <li><strong>The system generates a virtual try-on image by combining the model image, product image, and product type to show the wearing effect of the product on the model:</strong><ul>
+     * <li><strong>Finally, the system generates a virtual try-on image by combining the model image, product image, and product type to display the wearing effect of the product on the model:</strong><ul>
      * <li>a. Preserve model details: The generation process does not alter the appearance, hairstyle, pose, body shape, or other details of the person in the original model image.</li>
      * <li>b. Maintain image consistency: The background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</li>
      * <li>c. Generate try-on effect: The product is naturally applied to the model, fitting the person\&quot;s pose and body structure to generate a coordinated and realistic virtual try-on image.</li>
@@ -118,26 +118,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tr>
      * <th><strong>Type</strong></th>
      * <th><strong>Model image</strong></th>
-     * <th><strong>Garment image</strong></th>
-     * <th><strong>Try-on result</strong></th>
+     * <th><strong>Clothing image</strong></th>
+     * <th><strong>Try-on result image</strong></th>
      * </tr>
      * </thead>
      * <tbody><tr>
      * <td>Tops</td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/e4273b03-0d3b-4e98-b8f3-8713fccee303.png" alt="lQLPJv-OKUNDSxvNBojNA62wAMWEBuiTUuMKXnNidWFWAA_941_1672.png"></td>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/d9ab77f7-8791-4fa5-8d76-4fda3e2e1310.png" alt="男模特衬衫正面-aidge.png"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/d9ab77f7-8791-4fa5-8d76-4fda3e2e1310.png" alt="Front view of male model in shirt-aidge.png"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/42982786-73ee-4d23-a8d0-551f7a18be22.png" alt="7c1c0c04-9828-940f-b86d-c08f7ec8fb97_qwen_image3_serving_output_0.png"></td>
      * </tr>
      * <tr>
      * <td>Bottoms</td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/64147be2-0c95-431a-8c04-f756fac96db2.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/f79a31cb-08bd-4b59-be9d-9b9aa3f60230.png" alt="微喇牛仔裤-aidge.png"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/f79a31cb-08bd-4b59-be9d-9b9aa3f60230.png" alt="Bootcut jeans-aidge.png"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/297f29eb-7bc9-49a5-b4f7-114375a0f312.png" alt="adbb8e02-9738-991a-9699-f46bc5c089a9_qwen_image3_serving_output_0.png"></td>
      * </tr>
      * <tr>
      * <td>Shoes</td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/64147be2-0c95-431a-8c04-f756fac96db2.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/bb9804b5-0ab9-485b-829b-d54708377fd2.png" alt="男模特鞋子正面-aidge.png"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/bb9804b5-0ab9-485b-829b-d54708377fd2.png" alt="Front view of male model\\&quot;s shoes-aidge.png"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/8e54fdc3-7a86-4e3b-aa1d-f3741ce7658c.png" alt="91d7b8c4-fc31-9a7f-8b6e-3bec5e62efb3_qwen_image3_serving_output_0.png"></td>
      * </tr>
      * <tr>
@@ -155,13 +155,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tr>
      * <td>Hats</td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/ac26f38e-acc7-49d1-a4ec-a51b54e4bd66.png" alt="adbb8e02-9738-991a-9699-f46bc5c089a9_qwen_image3_serving_output_0.png"></td>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/34176b57-3aa8-4b6e-8d0f-808ae953654a.png" alt="帽子-aidge.png"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/34176b57-3aa8-4b6e-8d0f-808ae953654a.png" alt="Hat-aidge.png"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/949b4c28-8821-4aa5-a2b4-e4acc1e57b9b.png" alt="881f02f3-12f5-95dd-b651-98fab6e30fa0_qwen_image3_serving_output_0.png"></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Generates virtual try-on images by applying a specified garment to a model image based on AI algorithms. The service preserves the model\&quot;s pose, facial features, and background details while ensuring a realistic and well-fitted appearance. You only need to provide the URLs of the original model and garment images to obtain the processed image.</p>
+     * <p>Generates a virtual try-on image by applying a clothing item to a model based on the provided clothing and model images. This AI-powered image generation API service replaces the model\&quot;s existing clothing with the specified item while preserving the model\&quot;s pose, facial features, and other background details. It ensures a realistic and well-fitted appearance of the clothing on the model. You can obtain the processed image by providing the URLs of the original images.</p>
      * 
      * @param request AiTryOnRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -208,27 +208,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Scenarios</h2>
      * <ul>
      * <li><strong>Virtual try-on for clothing:</strong>
-     * Supports various clothing categories such as tops, bottoms, jumpsuits, and dresses. After you upload a model image and a garment image, the service generates natural and realistic try-on effects to visually demonstrate how the garment looks on the model.</li>
+     * Supports various clothing categories such as tops, bottoms, jumpsuits, and dresses. After you upload a model image and a product image, the service generates a natural and realistic try-on effect to intuitively display how the clothing looks on the model.</li>
      * <li><strong>Virtual try-on for shoes and hats:</strong>
-     * Supports virtual try-on for accessories such as shoes and hats. The service intelligently matches the position and proportion of the product based on the model\&quot;s pose and body parts to present a coordinated and realistic wearing effect.</li>
+     * Supports virtual try-on for products such as shoes and hats. The service intelligently matches the position and proportion of the product based on the model\&quot;s pose and body parts to present a coordinated and realistic wearing effect.</li>
      * <li><strong>E-commerce product display and marketing:</strong>
-     * Helps merchants quickly generate model try-on images for different products. This reduces the costs of traditional photography, outfit changes, and post-production, and improves the production efficiency of product images.</li>
+     * Helps merchants quickly generate model try-on images for different products, reducing the costs of traditional photography, outfit changes, and post-production, and improving the production efficiency of product images.</li>
      * <li><strong>Online shopping experience optimization:</strong>
-     * Allows consumers to preview the wearing effect of products through virtual try-on. This provides a more intuitive understanding of the style, matching, and overall effect of the product, which assists in purchase decisions and enhances the shopping experience.</li>
+     * Allows consumers to preview the wearing effect of products through virtual try-on, providing a more intuitive understanding of the style, matching, and overall effect of the products, which assists in purchase decisions and enhances the shopping experience.</li>
      * </ul>
      * <h2>Features</h2>
      * <ul>
-     * <li><strong>Provide a model image and a product image. The system uses the model image as the try-on subject and applies the garment from the product image to the model:</strong><ul>
-     * <li>a. Model image: The image of the person who will wear the garment in the virtual try-on.</li>
+     * <li><strong>First, you need to provide a model image and a product image. The system uses the model image as the try-on subject and applies the clothing from the product image to the model:</strong><ul>
+     * <li>a. Model image: The image of the person who will virtually try on the clothing.</li>
      * <li>b. Product image: The image of the clothing, shoes, or hat to be worn by the model.</li>
      * </ul>
      * </li>
-     * <li><strong>Select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</strong><ul>
-     * <li>a. Specify product type: You can directly specify the type of the current product, and the system will process it accordingly.</li>
+     * <li><strong>Second, you can select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</strong><ul>
+     * <li>a. Specify product type: You can directly specify the type of the current product, and the system will process it according to the specified type.</li>
      * <li>b. Automatic type recognition: If you do not specify the product type, the system automatically recognizes the product category in the product image and performs the virtual try-on based on the recognition result.</li>
      * </ul>
      * </li>
-     * <li><strong>The system generates a virtual try-on image by combining the model image, product image, and product type to show the wearing effect of the product on the model:</strong><ul>
+     * <li><strong>Finally, the system generates a virtual try-on image by combining the model image, product image, and product type to display the wearing effect of the product on the model:</strong><ul>
      * <li>a. Preserve model details: The generation process does not alter the appearance, hairstyle, pose, body shape, or other details of the person in the original model image.</li>
      * <li>b. Maintain image consistency: The background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</li>
      * <li>c. Generate try-on effect: The product is naturally applied to the model, fitting the person\&quot;s pose and body structure to generate a coordinated and realistic virtual try-on image.</li>
@@ -241,26 +241,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tr>
      * <th><strong>Type</strong></th>
      * <th><strong>Model image</strong></th>
-     * <th><strong>Garment image</strong></th>
-     * <th><strong>Try-on result</strong></th>
+     * <th><strong>Clothing image</strong></th>
+     * <th><strong>Try-on result image</strong></th>
      * </tr>
      * </thead>
      * <tbody><tr>
      * <td>Tops</td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/e4273b03-0d3b-4e98-b8f3-8713fccee303.png" alt="lQLPJv-OKUNDSxvNBojNA62wAMWEBuiTUuMKXnNidWFWAA_941_1672.png"></td>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/d9ab77f7-8791-4fa5-8d76-4fda3e2e1310.png" alt="男模特衬衫正面-aidge.png"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/d9ab77f7-8791-4fa5-8d76-4fda3e2e1310.png" alt="Front view of male model in shirt-aidge.png"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/42982786-73ee-4d23-a8d0-551f7a18be22.png" alt="7c1c0c04-9828-940f-b86d-c08f7ec8fb97_qwen_image3_serving_output_0.png"></td>
      * </tr>
      * <tr>
      * <td>Bottoms</td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/64147be2-0c95-431a-8c04-f756fac96db2.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/f79a31cb-08bd-4b59-be9d-9b9aa3f60230.png" alt="微喇牛仔裤-aidge.png"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/f79a31cb-08bd-4b59-be9d-9b9aa3f60230.png" alt="Bootcut jeans-aidge.png"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/297f29eb-7bc9-49a5-b4f7-114375a0f312.png" alt="adbb8e02-9738-991a-9699-f46bc5c089a9_qwen_image3_serving_output_0.png"></td>
      * </tr>
      * <tr>
      * <td>Shoes</td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/64147be2-0c95-431a-8c04-f756fac96db2.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/bb9804b5-0ab9-485b-829b-d54708377fd2.png" alt="男模特鞋子正面-aidge.png"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/bb9804b5-0ab9-485b-829b-d54708377fd2.png" alt="Front view of male model\\&quot;s shoes-aidge.png"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/8e54fdc3-7a86-4e3b-aa1d-f3741ce7658c.png" alt="91d7b8c4-fc31-9a7f-8b6e-3bec5e62efb3_qwen_image3_serving_output_0.png"></td>
      * </tr>
      * <tr>
@@ -278,13 +278,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tr>
      * <td>Hats</td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/ac26f38e-acc7-49d1-a4ec-a51b54e4bd66.png" alt="adbb8e02-9738-991a-9699-f46bc5c089a9_qwen_image3_serving_output_0.png"></td>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/34176b57-3aa8-4b6e-8d0f-808ae953654a.png" alt="帽子-aidge.png"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/34176b57-3aa8-4b6e-8d0f-808ae953654a.png" alt="Hat-aidge.png"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/949b4c28-8821-4aa5-a2b4-e4acc1e57b9b.png" alt="881f02f3-12f5-95dd-b651-98fab6e30fa0_qwen_image3_serving_output_0.png"></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Generates virtual try-on images by applying a specified garment to a model image based on AI algorithms. The service preserves the model\&quot;s pose, facial features, and background details while ensuring a realistic and well-fitted appearance. You only need to provide the URLs of the original model and garment images to obtain the processed image.</p>
+     * <p>Generates a virtual try-on image by applying a clothing item to a model based on the provided clothing and model images. This AI-powered image generation API service replaces the model\&quot;s existing clothing with the specified item while preserving the model\&quot;s pose, facial features, and other background details. It ensures a realistic and well-fitted appearance of the clothing on the model. You can obtain the processed image by providing the URLs of the original images.</p>
      * 
      * @param request AiTryOnRequest
      * @return AiTryOnResponse
@@ -296,22 +296,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Product Introduction</h2>
-     * <p>A one-click cross-platform product listing optimization service for cross-border e-commerce sellers (minimum cost edition). Accepts a product link from a source platform and outputs all listing assets adapted to the target platform requirements, including titles, attributes, main images, SKU images, detail images, and copywriting. Uses an officially preset minimum-cost workflow that focuses on filtering and lightweight processing without calling expensive image translation capabilities, maximizing cost control while ensuring listing compliance. (Asynchronous)</p>
+     * <h2>Product introduction</h2>
+     * <p>Optimizes cross-platform product materials for cross-border e-commerce sellers with a one-click, cost-effective service. Takes a product link from a source platform and outputs a full set of materials, including titles, attributes, main images, SKU images, detail images, and copy, tailored to the target platform requirements. Uses an official pre-built, lowest-cost workflow that focuses on filtering and lightweight processing without invoking high-cost image translation capabilities, maximizing cost control while ensuring listing compliance. (Asynchronous)</p>
      * <h2>Scenarios</h2>
-     * <p>Suitable for cost-sensitive cross-platform listing scenarios where speed, volume, and low cost are the top priorities. Examples include bulk listing from 1688 to TEMU, batch uploading of high-SKU inventory, entry-level AI processing for top sellers and ERP/SaaS platforms, and merchants with high daily processing volumes but low requirements for marketing performance.
-     * By filtering images that contain watermarks or non-compliant elements and prioritizing clean original images, this service reduces AI generation steps and helps merchants complete cross-platform listings at minimal call cost.</p>
+     * <p>Applies to cost-sensitive, cross-platform listing scenarios that prioritize speed, volume, and low cost. Examples include broad listing from 1688 to TEMU, bulk listing of high-SKU inventory, entry-level AI processing capabilities provided by top sellers and ERP or SaaS platforms, and merchants with high daily processing volumes but low requirements for marketing performance.
+     * Reduces AI generation steps by filtering images with watermarks or non-compliant elements and prioritizing clean original images. This helps merchants complete cross-platform listing at an extremely low call cost.</p>
      * <h2>Features</h2>
-     * <p>This service uses an officially preset minimum-cost product optimization workflow that covers the entire pipeline from asset retrieval, compliance filtering, and text optimization to image processing:</p>
+     * <p>This service uses the official pre-built lowest-cost product optimization workflow, covering the entire process from material acquisition, compliance filtering, and text optimization to image processing:</p>
      * <ol>
-     * <li>Automatically parses 1688 product links and extracts multiple asset types such as titles, SKUs, main images, detail images, and attributes.</li>
-     * <li>Performs text filtering and SEO optimization based on the TEMU platform blocklist and compliance rules.</li>
-     * <li>Intelligently identifies watermarks, logos, and Chinese text in images, prioritizing filtering and selecting clean original images. SKU images and a small number of main images are processed with image translation capabilities to meet platform standards (high-conversion images with marketing text may be filtered out).</li>
-     * <li>Completes category matching, attribute filling, and localized rewriting based on target platform requirements.</li>
+     * <li>Automatically parses 1688 product links and extracts multiple types of materials, including titles, SKUs, main images, detail images, and attributes.</li>
+     * <li>Completes text filtering and SEO optimization based on the TEMU platform blacklist and compliance rules.</li>
+     * <li>Intelligently identifies watermarks, logos, and Chinese copy in images, and prioritizes filtering and selecting clean original images. SKU images and a small number of main images are processed by using image translation capabilities to meet platform specifications. High-conversion images with marketing copy may be filtered out.</li>
+     * <li>Completes category matching, attribute filling, and localized rewriting based on the requirements of the target platform.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Provides a one-click cross-platform product listing optimization service for cross-border e-commerce sellers (minimum cost edition). Accepts a product link from a source platform and outputs all listing assets adapted to the target platform requirements, including titles, attributes, main images, SKU images, detail images, and copywriting. Uses an officially preset minimum-cost workflow that focuses on filtering and lightweight processing without calling expensive image translation capabilities, maximizing cost control while ensuring listing compliance. (Asynchronous)</p>
+     * <p>Optimizes cross-platform product materials for cross-border e-commerce sellers with a one-click, cost-effective service. Takes a product link from a source platform and outputs a full set of materials, including titles, attributes, main images, SKU images, detail images, and copy, tailored to the target platform requirements. Uses an official pre-built, lowest-cost workflow that focuses on filtering and lightweight processing without invoking high-cost image translation capabilities, maximizing cost control while ensuring listing compliance. (Asynchronous)</p>
      * 
      * @param request AssetOptimizeLiteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -375,22 +375,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Product Introduction</h2>
-     * <p>A one-click cross-platform product listing optimization service for cross-border e-commerce sellers (minimum cost edition). Accepts a product link from a source platform and outputs all listing assets adapted to the target platform requirements, including titles, attributes, main images, SKU images, detail images, and copywriting. Uses an officially preset minimum-cost workflow that focuses on filtering and lightweight processing without calling expensive image translation capabilities, maximizing cost control while ensuring listing compliance. (Asynchronous)</p>
+     * <h2>Product introduction</h2>
+     * <p>Optimizes cross-platform product materials for cross-border e-commerce sellers with a one-click, cost-effective service. Takes a product link from a source platform and outputs a full set of materials, including titles, attributes, main images, SKU images, detail images, and copy, tailored to the target platform requirements. Uses an official pre-built, lowest-cost workflow that focuses on filtering and lightweight processing without invoking high-cost image translation capabilities, maximizing cost control while ensuring listing compliance. (Asynchronous)</p>
      * <h2>Scenarios</h2>
-     * <p>Suitable for cost-sensitive cross-platform listing scenarios where speed, volume, and low cost are the top priorities. Examples include bulk listing from 1688 to TEMU, batch uploading of high-SKU inventory, entry-level AI processing for top sellers and ERP/SaaS platforms, and merchants with high daily processing volumes but low requirements for marketing performance.
-     * By filtering images that contain watermarks or non-compliant elements and prioritizing clean original images, this service reduces AI generation steps and helps merchants complete cross-platform listings at minimal call cost.</p>
+     * <p>Applies to cost-sensitive, cross-platform listing scenarios that prioritize speed, volume, and low cost. Examples include broad listing from 1688 to TEMU, bulk listing of high-SKU inventory, entry-level AI processing capabilities provided by top sellers and ERP or SaaS platforms, and merchants with high daily processing volumes but low requirements for marketing performance.
+     * Reduces AI generation steps by filtering images with watermarks or non-compliant elements and prioritizing clean original images. This helps merchants complete cross-platform listing at an extremely low call cost.</p>
      * <h2>Features</h2>
-     * <p>This service uses an officially preset minimum-cost product optimization workflow that covers the entire pipeline from asset retrieval, compliance filtering, and text optimization to image processing:</p>
+     * <p>This service uses the official pre-built lowest-cost product optimization workflow, covering the entire process from material acquisition, compliance filtering, and text optimization to image processing:</p>
      * <ol>
-     * <li>Automatically parses 1688 product links and extracts multiple asset types such as titles, SKUs, main images, detail images, and attributes.</li>
-     * <li>Performs text filtering and SEO optimization based on the TEMU platform blocklist and compliance rules.</li>
-     * <li>Intelligently identifies watermarks, logos, and Chinese text in images, prioritizing filtering and selecting clean original images. SKU images and a small number of main images are processed with image translation capabilities to meet platform standards (high-conversion images with marketing text may be filtered out).</li>
-     * <li>Completes category matching, attribute filling, and localized rewriting based on target platform requirements.</li>
+     * <li>Automatically parses 1688 product links and extracts multiple types of materials, including titles, SKUs, main images, detail images, and attributes.</li>
+     * <li>Completes text filtering and SEO optimization based on the TEMU platform blacklist and compliance rules.</li>
+     * <li>Intelligently identifies watermarks, logos, and Chinese copy in images, and prioritizes filtering and selecting clean original images. SKU images and a small number of main images are processed by using image translation capabilities to meet platform specifications. High-conversion images with marketing copy may be filtered out.</li>
+     * <li>Completes category matching, attribute filling, and localized rewriting based on the requirements of the target platform.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Provides a one-click cross-platform product listing optimization service for cross-border e-commerce sellers (minimum cost edition). Accepts a product link from a source platform and outputs all listing assets adapted to the target platform requirements, including titles, attributes, main images, SKU images, detail images, and copywriting. Uses an officially preset minimum-cost workflow that focuses on filtering and lightweight processing without calling expensive image translation capabilities, maximizing cost control while ensuring listing compliance. (Asynchronous)</p>
+     * <p>Optimizes cross-platform product materials for cross-border e-commerce sellers with a one-click, cost-effective service. Takes a product link from a source platform and outputs a full set of materials, including titles, attributes, main images, SKU images, detail images, and copy, tailored to the target platform requirements. Uses an official pre-built, lowest-cost workflow that focuses on filtering and lightweight processing without invoking high-cost image translation capabilities, maximizing cost control while ensuring listing compliance. (Asynchronous)</p>
      * 
      * @param request AssetOptimizeLiteRequest
      * @return AssetOptimizeLiteResponse
@@ -402,22 +402,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Product Introduction</h2>
-     * <p>A one-click cross-platform product listing optimization service for cross-border e-commerce sellers (best performance edition). Accepts a 1688 product link as input and outputs a complete set of assets adapted to TEMU platform requirements, including titles, attributes, main images, SKU images, detail images, and copywriting.</p>
-     * <h2>Common scenarios</h2>
-     * <p>Suitable for scenarios that demand high-quality cross-platform product listing assets and strong conversion performance. Examples include categories with high dependency on marketing assets such as apparel, accessories, beauty, and home goods. Also ideal for brand merchants and high-value products that need to preserve the tone of marketing images with embedded copywriting. Designed for top sellers and ERP/SaaS platforms conducting localized operations across multiple languages and markets, as well as scenarios that require category-specific assets (such as size charts and weight/dimension tables) to improve listing quality and conversion rates.</p>
-     * <h2>Functions and features</h2>
-     * <p>This service uses an officially pre-built &quot;Best Performance&quot; product optimization workflow that covers the entire pipeline from asset retrieval, diagnosis, filtering, and optimization to output:</p>
+     * <h2>Product introduction</h2>
+     * <p>A one-click cross-platform product material optimization service for cross-border e-commerce sellers (best effect edition). Input a 1688 product link to generate a complete set of materials, including titles, attributes, main images, SKU images, detail images, and copy, tailored to TEMU platform requirements.</p>
+     * <h2>Scenarios</h2>
+     * <p>Applicable to scenarios with high requirements for the quality and conversion performance of cross-platform product materials. Examples include categories highly dependent on marketing materials such as apparel, accessories, cosmetics, and home goods; brand merchants and high-ticket items that need to retain the tone of marketing images with copy; top sellers and ERP/SaaS platforms conducting localized operations across multiple languages and markets; and scenarios requiring category-specific materials, such as size charts and weight and dimension charts, to improve listing quality and conversion rates.</p>
+     * <h2>Features</h2>
+     * <p>This service uses the official pre-built best-effect product optimization workflow, covering the entire pipeline from material acquisition, diagnosis, filtering, and optimization to output:</p>
      * <ol>
-     * <li>Automatically parses 1688 product links to extract all assets including titles, SKUs, main images, detail images, and attributes. Intelligently diagnoses missing assets and optimization opportunities.</li>
-     * <li>Uses LLM-based text compliance filtering, SEO keyword optimization, five-point description generation, and multilingual localization rewriting.</li>
-     * <li>Invokes multiple image processing capabilities including intelligent recognition, intelligent background removal, intelligent erasure, Image Translation Pro, image expansion, intelligent cropping, and HD upscaling.</li>
-     * <li>Outputs category-specific assets such as size charts and weight/dimension tables for apparel categories.</li>
-     * <li>Delivers a standardized product asset package ready for direct listing.</li>
+     * <li>Automatically parses 1688 product links to extract a full set of materials, including titles, SKUs, main images, detail images, and attributes, and intelligently diagnoses missing materials and optimization opportunities.</li>
+     * <li>Uses LLMs for text compliance filtering, SEO keyword optimization, five-point description generation, and multilingual localization rewriting.</li>
+     * <li>Invokes multiple capabilities for images, including intelligent recognition, intelligent background removal, intelligent object removal, Image Translation Pro, image outpainting, intelligent cropping, and high-definition upscaling.</li>
+     * <li>Generates category-specific materials, such as size charts and weight and dimension charts for apparel.</li>
+     * <li>Outputs a standardized product material package ready for direct listing.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Provides a one-click cross-platform product listing optimization service for cross-border e-commerce sellers (best performance edition). Accepts a 1688 product link as input and outputs a complete set of assets adapted to TEMU platform requirements, including titles, attributes, main images, SKU images, detail images, and copywriting. Uses an officially pre-built best-performance workflow that maximizes AI capabilities, preserves and localizes brand marketing assets, and generates category-specific assets such as size charts for apparel categories. (Asynchronous)</p>
+     * <p>Provides a one-click cross-platform product material optimization service for cross-border e-commerce sellers (optimal performance edition). This asynchronous operation takes 1688 product links as input and generates a full set of materials tailored to TEMU platform requirements, including titles, attributes, main images, SKU images, detail images, and copy. It uses officially pre-configured optimal workflows to maximize AI capabilities, retains and localizes brand marketing materials, and generates personalized materials such as size charts for categories like apparel.</p>
      * 
      * @param tmpReq AssetOptimizeProRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -499,22 +499,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Product Introduction</h2>
-     * <p>A one-click cross-platform product listing optimization service for cross-border e-commerce sellers (best performance edition). Accepts a 1688 product link as input and outputs a complete set of assets adapted to TEMU platform requirements, including titles, attributes, main images, SKU images, detail images, and copywriting.</p>
-     * <h2>Common scenarios</h2>
-     * <p>Suitable for scenarios that demand high-quality cross-platform product listing assets and strong conversion performance. Examples include categories with high dependency on marketing assets such as apparel, accessories, beauty, and home goods. Also ideal for brand merchants and high-value products that need to preserve the tone of marketing images with embedded copywriting. Designed for top sellers and ERP/SaaS platforms conducting localized operations across multiple languages and markets, as well as scenarios that require category-specific assets (such as size charts and weight/dimension tables) to improve listing quality and conversion rates.</p>
-     * <h2>Functions and features</h2>
-     * <p>This service uses an officially pre-built &quot;Best Performance&quot; product optimization workflow that covers the entire pipeline from asset retrieval, diagnosis, filtering, and optimization to output:</p>
+     * <h2>Product introduction</h2>
+     * <p>A one-click cross-platform product material optimization service for cross-border e-commerce sellers (best effect edition). Input a 1688 product link to generate a complete set of materials, including titles, attributes, main images, SKU images, detail images, and copy, tailored to TEMU platform requirements.</p>
+     * <h2>Scenarios</h2>
+     * <p>Applicable to scenarios with high requirements for the quality and conversion performance of cross-platform product materials. Examples include categories highly dependent on marketing materials such as apparel, accessories, cosmetics, and home goods; brand merchants and high-ticket items that need to retain the tone of marketing images with copy; top sellers and ERP/SaaS platforms conducting localized operations across multiple languages and markets; and scenarios requiring category-specific materials, such as size charts and weight and dimension charts, to improve listing quality and conversion rates.</p>
+     * <h2>Features</h2>
+     * <p>This service uses the official pre-built best-effect product optimization workflow, covering the entire pipeline from material acquisition, diagnosis, filtering, and optimization to output:</p>
      * <ol>
-     * <li>Automatically parses 1688 product links to extract all assets including titles, SKUs, main images, detail images, and attributes. Intelligently diagnoses missing assets and optimization opportunities.</li>
-     * <li>Uses LLM-based text compliance filtering, SEO keyword optimization, five-point description generation, and multilingual localization rewriting.</li>
-     * <li>Invokes multiple image processing capabilities including intelligent recognition, intelligent background removal, intelligent erasure, Image Translation Pro, image expansion, intelligent cropping, and HD upscaling.</li>
-     * <li>Outputs category-specific assets such as size charts and weight/dimension tables for apparel categories.</li>
-     * <li>Delivers a standardized product asset package ready for direct listing.</li>
+     * <li>Automatically parses 1688 product links to extract a full set of materials, including titles, SKUs, main images, detail images, and attributes, and intelligently diagnoses missing materials and optimization opportunities.</li>
+     * <li>Uses LLMs for text compliance filtering, SEO keyword optimization, five-point description generation, and multilingual localization rewriting.</li>
+     * <li>Invokes multiple capabilities for images, including intelligent recognition, intelligent background removal, intelligent object removal, Image Translation Pro, image outpainting, intelligent cropping, and high-definition upscaling.</li>
+     * <li>Generates category-specific materials, such as size charts and weight and dimension charts for apparel.</li>
+     * <li>Outputs a standardized product material package ready for direct listing.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Provides a one-click cross-platform product listing optimization service for cross-border e-commerce sellers (best performance edition). Accepts a 1688 product link as input and outputs a complete set of assets adapted to TEMU platform requirements, including titles, attributes, main images, SKU images, detail images, and copywriting. Uses an officially pre-built best-performance workflow that maximizes AI capabilities, preserves and localizes brand marketing assets, and generates category-specific assets such as size charts for apparel categories. (Asynchronous)</p>
+     * <p>Provides a one-click cross-platform product material optimization service for cross-border e-commerce sellers (optimal performance edition). This asynchronous operation takes 1688 product links as input and generates a full set of materials tailored to TEMU platform requirements, including titles, attributes, main images, SKU images, detail images, and copy. It uses officially pre-configured optimal workflows to maximize AI capabilities, retains and localizes brand marketing materials, and generates personalized materials such as size charts for categories like apparel.</p>
      * 
      * @param request AssetOptimizeProRequest
      * @return AssetOptimizeProResponse
@@ -526,215 +526,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h1>Applicable scenarios</h1>
-     * <p>Cross-platform product listing attribute filling: When merchants list products across platforms, the attribute fields required by different platforms (such as the source platform and the TEMU platform) vary significantly, and complex hierarchical option dependencies exist (such as Material → Wood Type → Density). Manual filling is time-consuming and error-prone. This service automatically understands product information and intelligently fills in various attributes. It is applicable to scenarios such as automated bulk listing for top sellers, ERP/SaaS platform integration, and quick product listing for SMB merchants.</p>
-     * <h1>Feature overview</h1>
-     * <p>Users input the product title, source category, product details, SKU, product attributes, and product images (up to 10). The system uses multimodal AI to understand the product semantics and visual features, and completes two core tasks: ① Matches the precise category path for the product on the TEMU platform. ② Automatically fills in the required attributes under that category (such as material, battery properties, size, and connectivity), and returns the confidence score and reasoning for each attribute. The API uses synchronous mode and returns results immediately after the call.</p>
+     * <h1>Scenarios</h1>
+     * <p>Cross-platform product listing attribute filling: When merchants list products across platforms, the source platform and the TEMU platform have different attribute fields required for different categories, and there are complex hierarchical associated options (such as material -&gt; wood type -&gt; density). Manual filling is time-consuming and error-prone. This service automatically understands product information and intelligently fills in various attributes. It is suitable for scenarios such as automated batch product listing for top sellers, ERP/SaaS platform integration, and quick product listing for SMB merchants.</p>
+     * <h1>Features</h1>
+     * <p>Users input the product title, source category, product details, SKU, product attributes, and product images (up to 10). The system uses multimodal AI to understand the semantic and visual features of the product and completes two core tasks: 1. Matches the precise category path of the product on the TEMU platform. 2. Automatically fills in the required attributes under the category (such as material, battery properties, size, and connectivity) and returns the confidence level and filling reason for each attribute. The API operates in synchronous mode and returns results immediately after the call.</p>
      * <h1>Comparison</h1>
-     * <p>The following example shows the attributes of a USB fan:</p>
-     * <table>
-     * <thead>
-     * <tr>
-     * <th><strong>1688 Attribute</strong></th>
-     * <th><strong>1688 Attribute Value</strong></th>
-     * <th><strong>TEMU Attribute</strong></th>
-     * <th><strong>TEMU Attribute Value</strong></th>
-     * <th><strong>Existing in 1688</strong></th>
-     * </tr>
-     * </thead>
-     * <tbody><tr>
-     * <td>Brand</td>
-     * <td>Other</td>
-     * <td>Power Mode</td>
-     * <td>USB Charging (Built-in Battery)</td>
-     * <td>No</td>
-     * </tr>
-     * <tr>
-     * <td>Battery Life</td>
-     * <td>3-6h (inclusive)</td>
-     * <td>Rechargeable Battery</td>
-     * <td>Lithium Battery</td>
-     * <td>No</td>
-     * </tr>
-     * <tr>
-     * <td>Additional Features</td>
-     * <td>Digital Display</td>
-     * <td>Battery Capacity (mAh)</td>
-     * <td>4000</td>
-     * <td>Yes</td>
-     * </tr>
-     * <tr>
-     * <td>Built-in Battery Capacity</td>
-     * <td>2000mAh-4000mAh (inclusive)</td>
-     * <td>Fan Features</td>
-     * <td>High Speed</td>
-     * <td>No</td>
-     * </tr>
-     * <tr>
-     * <td>Item Number</td>
-     * <td>X699</td>
-     * <td>Control Method</td>
-     * <td>Button</td>
-     * <td>Yes</td>
-     * </tr>
-     * <tr>
-     * <td>Main Downstream Platforms</td>
-     * <td>ebay, Amazon, wish, AliExpress, Independent Site, LAZADA, Other</td>
-     * <td>Finish Type</td>
-     * <td>Painted</td>
-     * <td>Yes</td>
-     * </tr>
-     * <tr>
-     * <td>Has Licensable Own Brand</td>
-     * <td>No</td>
-     * <td>Recommended Use</td>
-     * <td>Cooling</td>
-     * <td>No</td>
-     * </tr>
-     * <tr>
-     * <td>Dimensions</td>
-     * <td>65\*60\*171</td>
-     * <td>Fan Design</td>
-     * <td>Wearable Fan</td>
-     * <td>No</td>
-     * </tr>
-     * <tr>
-     * <td>Applicable Gift Occasion</td>
-     * <td>Personal Gift</td>
-     * <td>Included Components</td>
-     * <td>None</td>
-     * <td>No</td>
-     * </tr>
-     * <tr>
-     * <td>Shell Process</td>
-     * <td>Spray Coating (UV Paint, Rubber Paint, Metallic Paint, Piano Lacquer, Pearl Powder)</td>
-     * <td>Material</td>
-     * <td>Plastic</td>
-     * <td>No</td>
-     * </tr>
-     * <tr>
-     * <td>Package Volume</td>
-     * <td>65\*60\*171</td>
-     * <td>Special Features</td>
-     * <td>Portable</td>
-     * <td>No</td>
-     * </tr>
-     * <tr>
-     * <td>Appearance Dimensions</td>
-     * <td>51\*36\*34</td>
-     * <td>Indoor/Outdoor Use</td>
-     * <td>Indoor and Outdoor</td>
-     * <td>No</td>
-     * </tr>
-     * <tr>
-     * <td>Wind Speed Levels</td>
-     * <td>3 Levels</td>
-     * <td>Brand Name</td>
-     * <td>None</td>
-     * <td>No</td>
-     * </tr>
-     * <tr>
-     * <td>Operation Method</td>
-     * <td>Standard Button</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Blade Material</td>
-     * <td>ABS</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Power Mode</td>
-     * <td>USB</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Built-in Battery</td>
-     * <td>Yes</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Patented Source</td>
-     * <td>No</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Color</td>
-     * <td>X699 Fan-Yellow, X699 Fan-Light Purple, X699 Fan-Sky Blue, X699 Fan-Orange, X699 Fan-Light Green, Standard Small Fan</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Main Sales Regions</td>
-     * <td>Japan &amp; Korea, Africa, Korea, Japan, Europe, South America, Southeast Asia, North America, Northeast Asia, Middle East, Latin America, Europe &amp; America, Other</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Cross-border Export Exclusive</td>
-     * <td>Yes</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Style</td>
-     * <td>Fresh</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Motor Type</td>
-     * <td>Brushless Motor</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Noise</td>
-     * <td>36dB(A)-45dB(A) (inclusive)</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Net Weight</td>
-     * <td>125g</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Number of Blades</td>
-     * <td>6 or More</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Fan Type</td>
-     * <td>Handheld Fan</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * </tbody></table>
+     * <p>Take the attributes of a USB fan as an example:
+     * | <strong>1688 attribute</strong> | <strong>1688 attribute value</strong> | <strong>TEMU attribute</strong> | <strong>TEMU attribute value</strong> | <strong>Is it an existing</strong></p>
+     * <p><strong>1688 attribute?</strong> |
+     * | --- | --- | --- | --- | --- |
+     * | Brand | Other | Power supply method | USB charging (built-in battery) | No |
+     * | Battery life | 3-6h (inclusive) | Rechargeable battery | Lithium battery | No |
+     * | Additional features | Digital display | Battery capacity (mAh) | 4000 | Yes |
+     * | Built-in battery capacity | 2000mAh-4000mAh (inclusive) | Fan features | High-speed features | No |
+     * | Item number | X699 | Control method | Button | Yes |
+     * | Main downstream platforms | eBay, Amazon, Wish, AliExpress, Independent site, LAZADA, Other | Finish type | Painted | Yes |
+     * | Has licensable own brand | No | Recommended use | Cooling | No |
+     * | Dimensions | 65\*60\*171 | Fan design | Wearable fan | No |
+     * | Suitable gift-giving occasions | Personal gifts | Included components | None | No |
+     * | Shell craftsmanship | Spraying (UV paint, rubber paint, metallic paint, piano baking paint, pearlescent powder) | Material | Plastic | No |
+     * | Package volume | 65\*60\*171 | Special features | Portable | No |
+     * | Exterior dimensions | 51\*36\*34 | Indoor/outdoor use | Both indoor and outdoor | No |
+     * | Wind speed gears | 3 gears | Brand name | None | No |
+     * | Operation method | Standard button |  |  |  |
+     * | Fan blade material | ABS |  |  |  |
+     * | Power supply method | USB |  |  |  |
+     * | Built-in battery | Built-in battery |  |  |  |
+     * | Patented source | No |  |  |  |
+     * | Color | X699 fan-yellow, X699 fan-light purple, X699 fan-sky blue, X699 fan-orange, X699 fan-light green, Standard small fan |  |  |  |
+     * | Main sales regions | Japan and South Korea, Africa, South Korea, Japan, Europe, South America, Southeast Asia, North America, Northeast Asia, Middle East, Latin America, Europe and America, Other |  |  |  |
+     * | Exclusive source for cross-border export | Yes |  |  |  |
+     * | Style | Fresh |  |  |  |
+     * | Motor type | Brushless motor |  |  |  |
+     * | Noise | 36dB(A)-45dB(A) (inclusive) |  |  |  |
+     * | Net weight | 125g |  |  |  |
+     * | Number of fan blades | 6 or more |  |  |  |
+     * | Fan category | Handheld fan |  |  |  |</p>
      * 
      * <b>summary</b> : 
-     * <p>Provides a cross-platform product category and attribute intelligent filling service based on multimodal foundation models. Takes product information from a source platform, automatically matches the category on the target listing platform, and intelligently fills in all required attribute fields under that category, offering a one-stop solution for category selection and attribute filling during product listing. (Synchronous)</p>
+     * <p>Provides an intelligent cross-platform product category attribute filling service based on multimodal large models. Accepts product information from a source platform, automatically matches the category on a target platform, and intelligently fills all required attribute fields under the category to provide a one-stop solution for category selection and attribute filling during product listing. (Synchronous)</p>
      * 
      * @param tmpReq CategoryAttributeMatchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -800,215 +630,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h1>Applicable scenarios</h1>
-     * <p>Cross-platform product listing attribute filling: When merchants list products across platforms, the attribute fields required by different platforms (such as the source platform and the TEMU platform) vary significantly, and complex hierarchical option dependencies exist (such as Material → Wood Type → Density). Manual filling is time-consuming and error-prone. This service automatically understands product information and intelligently fills in various attributes. It is applicable to scenarios such as automated bulk listing for top sellers, ERP/SaaS platform integration, and quick product listing for SMB merchants.</p>
-     * <h1>Feature overview</h1>
-     * <p>Users input the product title, source category, product details, SKU, product attributes, and product images (up to 10). The system uses multimodal AI to understand the product semantics and visual features, and completes two core tasks: ① Matches the precise category path for the product on the TEMU platform. ② Automatically fills in the required attributes under that category (such as material, battery properties, size, and connectivity), and returns the confidence score and reasoning for each attribute. The API uses synchronous mode and returns results immediately after the call.</p>
+     * <h1>Scenarios</h1>
+     * <p>Cross-platform product listing attribute filling: When merchants list products across platforms, the source platform and the TEMU platform have different attribute fields required for different categories, and there are complex hierarchical associated options (such as material -&gt; wood type -&gt; density). Manual filling is time-consuming and error-prone. This service automatically understands product information and intelligently fills in various attributes. It is suitable for scenarios such as automated batch product listing for top sellers, ERP/SaaS platform integration, and quick product listing for SMB merchants.</p>
+     * <h1>Features</h1>
+     * <p>Users input the product title, source category, product details, SKU, product attributes, and product images (up to 10). The system uses multimodal AI to understand the semantic and visual features of the product and completes two core tasks: 1. Matches the precise category path of the product on the TEMU platform. 2. Automatically fills in the required attributes under the category (such as material, battery properties, size, and connectivity) and returns the confidence level and filling reason for each attribute. The API operates in synchronous mode and returns results immediately after the call.</p>
      * <h1>Comparison</h1>
-     * <p>The following example shows the attributes of a USB fan:</p>
-     * <table>
-     * <thead>
-     * <tr>
-     * <th><strong>1688 Attribute</strong></th>
-     * <th><strong>1688 Attribute Value</strong></th>
-     * <th><strong>TEMU Attribute</strong></th>
-     * <th><strong>TEMU Attribute Value</strong></th>
-     * <th><strong>Existing in 1688</strong></th>
-     * </tr>
-     * </thead>
-     * <tbody><tr>
-     * <td>Brand</td>
-     * <td>Other</td>
-     * <td>Power Mode</td>
-     * <td>USB Charging (Built-in Battery)</td>
-     * <td>No</td>
-     * </tr>
-     * <tr>
-     * <td>Battery Life</td>
-     * <td>3-6h (inclusive)</td>
-     * <td>Rechargeable Battery</td>
-     * <td>Lithium Battery</td>
-     * <td>No</td>
-     * </tr>
-     * <tr>
-     * <td>Additional Features</td>
-     * <td>Digital Display</td>
-     * <td>Battery Capacity (mAh)</td>
-     * <td>4000</td>
-     * <td>Yes</td>
-     * </tr>
-     * <tr>
-     * <td>Built-in Battery Capacity</td>
-     * <td>2000mAh-4000mAh (inclusive)</td>
-     * <td>Fan Features</td>
-     * <td>High Speed</td>
-     * <td>No</td>
-     * </tr>
-     * <tr>
-     * <td>Item Number</td>
-     * <td>X699</td>
-     * <td>Control Method</td>
-     * <td>Button</td>
-     * <td>Yes</td>
-     * </tr>
-     * <tr>
-     * <td>Main Downstream Platforms</td>
-     * <td>ebay, Amazon, wish, AliExpress, Independent Site, LAZADA, Other</td>
-     * <td>Finish Type</td>
-     * <td>Painted</td>
-     * <td>Yes</td>
-     * </tr>
-     * <tr>
-     * <td>Has Licensable Own Brand</td>
-     * <td>No</td>
-     * <td>Recommended Use</td>
-     * <td>Cooling</td>
-     * <td>No</td>
-     * </tr>
-     * <tr>
-     * <td>Dimensions</td>
-     * <td>65\*60\*171</td>
-     * <td>Fan Design</td>
-     * <td>Wearable Fan</td>
-     * <td>No</td>
-     * </tr>
-     * <tr>
-     * <td>Applicable Gift Occasion</td>
-     * <td>Personal Gift</td>
-     * <td>Included Components</td>
-     * <td>None</td>
-     * <td>No</td>
-     * </tr>
-     * <tr>
-     * <td>Shell Process</td>
-     * <td>Spray Coating (UV Paint, Rubber Paint, Metallic Paint, Piano Lacquer, Pearl Powder)</td>
-     * <td>Material</td>
-     * <td>Plastic</td>
-     * <td>No</td>
-     * </tr>
-     * <tr>
-     * <td>Package Volume</td>
-     * <td>65\*60\*171</td>
-     * <td>Special Features</td>
-     * <td>Portable</td>
-     * <td>No</td>
-     * </tr>
-     * <tr>
-     * <td>Appearance Dimensions</td>
-     * <td>51\*36\*34</td>
-     * <td>Indoor/Outdoor Use</td>
-     * <td>Indoor and Outdoor</td>
-     * <td>No</td>
-     * </tr>
-     * <tr>
-     * <td>Wind Speed Levels</td>
-     * <td>3 Levels</td>
-     * <td>Brand Name</td>
-     * <td>None</td>
-     * <td>No</td>
-     * </tr>
-     * <tr>
-     * <td>Operation Method</td>
-     * <td>Standard Button</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Blade Material</td>
-     * <td>ABS</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Power Mode</td>
-     * <td>USB</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Built-in Battery</td>
-     * <td>Yes</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Patented Source</td>
-     * <td>No</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Color</td>
-     * <td>X699 Fan-Yellow, X699 Fan-Light Purple, X699 Fan-Sky Blue, X699 Fan-Orange, X699 Fan-Light Green, Standard Small Fan</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Main Sales Regions</td>
-     * <td>Japan &amp; Korea, Africa, Korea, Japan, Europe, South America, Southeast Asia, North America, Northeast Asia, Middle East, Latin America, Europe &amp; America, Other</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Cross-border Export Exclusive</td>
-     * <td>Yes</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Style</td>
-     * <td>Fresh</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Motor Type</td>
-     * <td>Brushless Motor</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Noise</td>
-     * <td>36dB(A)-45dB(A) (inclusive)</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Net Weight</td>
-     * <td>125g</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Number of Blades</td>
-     * <td>6 or More</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * <tr>
-     * <td>Fan Type</td>
-     * <td>Handheld Fan</td>
-     * <td></td>
-     * <td></td>
-     * <td></td>
-     * </tr>
-     * </tbody></table>
+     * <p>Take the attributes of a USB fan as an example:
+     * | <strong>1688 attribute</strong> | <strong>1688 attribute value</strong> | <strong>TEMU attribute</strong> | <strong>TEMU attribute value</strong> | <strong>Is it an existing</strong></p>
+     * <p><strong>1688 attribute?</strong> |
+     * | --- | --- | --- | --- | --- |
+     * | Brand | Other | Power supply method | USB charging (built-in battery) | No |
+     * | Battery life | 3-6h (inclusive) | Rechargeable battery | Lithium battery | No |
+     * | Additional features | Digital display | Battery capacity (mAh) | 4000 | Yes |
+     * | Built-in battery capacity | 2000mAh-4000mAh (inclusive) | Fan features | High-speed features | No |
+     * | Item number | X699 | Control method | Button | Yes |
+     * | Main downstream platforms | eBay, Amazon, Wish, AliExpress, Independent site, LAZADA, Other | Finish type | Painted | Yes |
+     * | Has licensable own brand | No | Recommended use | Cooling | No |
+     * | Dimensions | 65\*60\*171 | Fan design | Wearable fan | No |
+     * | Suitable gift-giving occasions | Personal gifts | Included components | None | No |
+     * | Shell craftsmanship | Spraying (UV paint, rubber paint, metallic paint, piano baking paint, pearlescent powder) | Material | Plastic | No |
+     * | Package volume | 65\*60\*171 | Special features | Portable | No |
+     * | Exterior dimensions | 51\*36\*34 | Indoor/outdoor use | Both indoor and outdoor | No |
+     * | Wind speed gears | 3 gears | Brand name | None | No |
+     * | Operation method | Standard button |  |  |  |
+     * | Fan blade material | ABS |  |  |  |
+     * | Power supply method | USB |  |  |  |
+     * | Built-in battery | Built-in battery |  |  |  |
+     * | Patented source | No |  |  |  |
+     * | Color | X699 fan-yellow, X699 fan-light purple, X699 fan-sky blue, X699 fan-orange, X699 fan-light green, Standard small fan |  |  |  |
+     * | Main sales regions | Japan and South Korea, Africa, South Korea, Japan, Europe, South America, Southeast Asia, North America, Northeast Asia, Middle East, Latin America, Europe and America, Other |  |  |  |
+     * | Exclusive source for cross-border export | Yes |  |  |  |
+     * | Style | Fresh |  |  |  |
+     * | Motor type | Brushless motor |  |  |  |
+     * | Noise | 36dB(A)-45dB(A) (inclusive) |  |  |  |
+     * | Net weight | 125g |  |  |  |
+     * | Number of fan blades | 6 or more |  |  |  |
+     * | Fan category | Handheld fan |  |  |  |</p>
      * 
      * <b>summary</b> : 
-     * <p>Provides a cross-platform product category and attribute intelligent filling service based on multimodal foundation models. Takes product information from a source platform, automatically matches the category on the target listing platform, and intelligently fills in all required attribute fields under that category, offering a one-stop solution for category selection and attribute filling during product listing. (Synchronous)</p>
+     * <p>Provides an intelligent cross-platform product category attribute filling service based on multimodal large models. Accepts product information from a source platform, automatically matches the category on a target platform, and intelligently fills all required attribute fields under the category to provide a one-stop solution for category selection and attribute filling during product listing. (Synchronous)</p>
      * 
      * @param request CategoryAttributeMatchRequest
      * @return CategoryAttributeMatchResponse
@@ -1021,14 +681,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>An intelligent cross-platform product category matching service based on a large language model. Accepts product information from a source platform, automatically matches the best category on the target listing platform, and returns a confidence score with matching reasons to help sellers quickly select categories for cross-platform product listing. (Synchronous)</p>
-     * <h2>Common scenarios</h2>
-     * <p>Cross-platform product listing: After sourcing products, sellers list them on a target platform and must map each product to the correct category in the target platform\&quot;s category tree. Manually selecting categories requires familiarity with the entire category structure of the target platform, which is time-consuming, labor-intensive, and error-prone. Incorrect category mapping can cause products to be delisted.
-     * This service automates category mapping and is suitable for bulk API calls from large sellers\&quot; proprietary systems, integration into ERP/SaaS platforms for automated listing workflows, and quick single-product listing for SMB sellers.
-     * The current version supports only TEMU as the target listing platform. Automatic retrieval of product information from source platforms is not yet supported — users must provide product details manually. Support for this capability and additional source and target platforms will be added in future releases.</p>
+     * <p>Provides an intelligent cross-platform product category matching service based on large language models. Accepts product information from a source platform, automatically matches the optimal category on the target platform, and returns a confidence score and matching rationale to help merchants quickly select categories for cross-platform product listing. (Synchronous)</p>
+     * <h2>Scenarios</h2>
+     * <p>Cross-platform product listing: After sourcing products, merchants list them on a target platform and need to map the products to the correct categories in the target platform\&quot;s category tree. Manual category selection requires familiarity with the target platform\&quot;s complete category system, which is time-consuming, labor-intensive, and error-prone. Incorrect category matching can lead to product delisting and other issues.
+     * This service automatically completes category mapping and is suitable for scenarios such as batch calls from self-built systems of top sellers, integration of automated product listing workflows into ERP/SaaS platforms, and quick listing of single products by SMB merchants.
+     * The current version only supports TEMU as the target platform. It does not currently support directly retrieving product information from the source platform, requiring users to manually input parameters. Future updates will add this capability and expand support for more source and target platforms.</p>
      * <h2>Features</h2>
-     * <p>Users provide fields such as product title, source category, product description, SKU information, and product attributes. The system uses an AI model to understand product semantics and matches the most appropriate category path from the full TEMU platform category tree. The response includes the complete category path (CategoryPath), category name (CategoryName), confidence score (0–100), and matching reason. The API operates in synchronous mode and returns results immediately, making it suitable for embedding in real-time business workflows.</p>
-     * <h2>Demo</h2>
+     * <p>Users input fields such as the product title, source category, product details, SKU information, and product attributes. The system uses an AI model to understand the product semantics and matches the most appropriate category path from the full category tree of the TEMU platform. The returned results include the complete category path (CategoryPath), category name (CategoryName), confidence score (0-100), and matching rationale. The API operates in synchronous mode and returns results immediately after the call, making it suitable for embedding in real-time business workflows.</p>
+     * <h2>Examples</h2>
      * <table>
      * <thead>
      * <tr>
@@ -1042,7 +702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tbody><tr>
      * <td>1688</td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/jP2lRYjv7234mO8g/img/69a226e8-aff1-4891-bb0a-c47c1ea397ae.png" alt="done-image-245c58c8-a9fc-4e32-b959-8b4bcd52b264.png"></td>
-     * <td>USB Fans, Mini Fans</td>
+     * <td>USB fans, mini fans</td>
      * <td>TEMU</td>
      * <td>Home Appliances</td>
      * </tr>
@@ -1119,7 +779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Provides an intelligent cross-platform product category matching service based on a large language model. Accepts product information from a source platform, automatically matches the best category on the target listing platform, and returns a confidence score with matching reasons to help sellers quickly select categories for cross-platform product listing. (Synchronous)</p>
+     * <p>Provides an intelligent cross-platform product category matching service based on large language models. Accepts product information from a source platform, automatically matches the optimal category on the target platform, and returns a confidence score and matching rationale to help merchants quickly select categories for cross-platform product listing. (Synchronous)</p>
      * 
      * @param request CategoryMatchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1176,14 +836,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>An intelligent cross-platform product category matching service based on a large language model. Accepts product information from a source platform, automatically matches the best category on the target listing platform, and returns a confidence score with matching reasons to help sellers quickly select categories for cross-platform product listing. (Synchronous)</p>
-     * <h2>Common scenarios</h2>
-     * <p>Cross-platform product listing: After sourcing products, sellers list them on a target platform and must map each product to the correct category in the target platform\&quot;s category tree. Manually selecting categories requires familiarity with the entire category structure of the target platform, which is time-consuming, labor-intensive, and error-prone. Incorrect category mapping can cause products to be delisted.
-     * This service automates category mapping and is suitable for bulk API calls from large sellers\&quot; proprietary systems, integration into ERP/SaaS platforms for automated listing workflows, and quick single-product listing for SMB sellers.
-     * The current version supports only TEMU as the target listing platform. Automatic retrieval of product information from source platforms is not yet supported — users must provide product details manually. Support for this capability and additional source and target platforms will be added in future releases.</p>
+     * <p>Provides an intelligent cross-platform product category matching service based on large language models. Accepts product information from a source platform, automatically matches the optimal category on the target platform, and returns a confidence score and matching rationale to help merchants quickly select categories for cross-platform product listing. (Synchronous)</p>
+     * <h2>Scenarios</h2>
+     * <p>Cross-platform product listing: After sourcing products, merchants list them on a target platform and need to map the products to the correct categories in the target platform\&quot;s category tree. Manual category selection requires familiarity with the target platform\&quot;s complete category system, which is time-consuming, labor-intensive, and error-prone. Incorrect category matching can lead to product delisting and other issues.
+     * This service automatically completes category mapping and is suitable for scenarios such as batch calls from self-built systems of top sellers, integration of automated product listing workflows into ERP/SaaS platforms, and quick listing of single products by SMB merchants.
+     * The current version only supports TEMU as the target platform. It does not currently support directly retrieving product information from the source platform, requiring users to manually input parameters. Future updates will add this capability and expand support for more source and target platforms.</p>
      * <h2>Features</h2>
-     * <p>Users provide fields such as product title, source category, product description, SKU information, and product attributes. The system uses an AI model to understand product semantics and matches the most appropriate category path from the full TEMU platform category tree. The response includes the complete category path (CategoryPath), category name (CategoryName), confidence score (0–100), and matching reason. The API operates in synchronous mode and returns results immediately, making it suitable for embedding in real-time business workflows.</p>
-     * <h2>Demo</h2>
+     * <p>Users input fields such as the product title, source category, product details, SKU information, and product attributes. The system uses an AI model to understand the product semantics and matches the most appropriate category path from the full category tree of the TEMU platform. The returned results include the complete category path (CategoryPath), category name (CategoryName), confidence score (0-100), and matching rationale. The API operates in synchronous mode and returns results immediately after the call, making it suitable for embedding in real-time business workflows.</p>
+     * <h2>Examples</h2>
      * <table>
      * <thead>
      * <tr>
@@ -1197,7 +857,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tbody><tr>
      * <td>1688</td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/jP2lRYjv7234mO8g/img/69a226e8-aff1-4891-bb0a-c47c1ea397ae.png" alt="done-image-245c58c8-a9fc-4e32-b959-8b4bcd52b264.png"></td>
-     * <td>USB Fans, Mini Fans</td>
+     * <td>USB fans, mini fans</td>
      * <td>TEMU</td>
      * <td>Home Appliances</td>
      * </tr>
@@ -1274,7 +934,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Provides an intelligent cross-platform product category matching service based on a large language model. Accepts product information from a source platform, automatically matches the best category on the target listing platform, and returns a confidence score with matching reasons to help sellers quickly select categories for cross-platform product listing. (Synchronous)</p>
+     * <p>Provides an intelligent cross-platform product category matching service based on large language models. Accepts product information from a source platform, automatically matches the optimal category on the target platform, and returns a confidence score and matching rationale to help merchants quickly select categories for cross-platform product listing. (Synchronous)</p>
      * 
      * @param request CategoryMatchRequest
      * @return CategoryMatchResponse
@@ -1286,7 +946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes display knowledge base content in batches synchronously.</p>
+     * <p>Synchronously deletes content from a display knowledge base in batches.</p>
      * 
      * @param tmpReq DeleteDisplayKnowledgeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1328,7 +988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes display knowledge base content in batches synchronously.</p>
+     * <p>Synchronously deletes content from a display knowledge base in batches.</p>
      * 
      * @param request DeleteDisplayKnowledgeRequest
      * @return DeleteDisplayKnowledgeResponse
@@ -1340,19 +1000,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p><strong>Before you use this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of the floor display area inference service.</strong></p>
+     * <h2>Request description</h2>
+     * <p><strong>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of the floor display area inference product.</strong></p>
      * <ul>
-     * <li>This operation infers the actual dimensions (lengths of two edges) and floor area of a floor display based on the provided overall floor display image, SKU knowledge base, and product location information in the image.</li>
-     * <li>Make sure that the knowledge base corresponding to the specified <code>RagId</code> belongs to the caller and is in the active (<code>AVAILABLE</code>) state.</li>
-     * <li>The <code>Products</code> array must contain at least one product item, and each product item must have at least one bounding box defined in <code>Boxes</code>.</li>
-     * <li>All coordinate values are represented in a normalized coordinate system ranging from 0 to 1000. Make sure that the input satisfies the relationships <code>Left &lt; Right</code> and <code>Top &lt; Bottom</code>.</li>
-     * <li>Set a reasonable timeout period when you call this operation (300 seconds or less recommended) to avoid failures caused by network latency or high processing complexity.</li>
-     * <li>For calls in a production environment, use the POP Action method. The internal REST address is intended for integration testing during the development phase.</li>
+     * <li>This operation infers the actual dimensions (the lengths of the two sides) and floor area of a floor display based on the provided overall image of the floor display, the SKU knowledge base, and the position information of products in the image.</li>
+     * <li>Make sure that the knowledge base corresponding to the provided <code>RagId</code> belongs to the caller and is in the <code>AVAILABLE</code> state.</li>
+     * <li>The <code>Products</code> array must contain at least one product item, and the <code>Boxes</code> array under each product item must contain at least one bounding box.</li>
+     * <li>All coordinate values are represented in a normalized coordinate system ranging from 0 to 1000. Make sure that the input satisfies the <code>Left &lt; Right</code> and <code>Top &lt; Bottom</code> conditions.</li>
+     * <li>Set a reasonable timeout period (recommended maximum of 300 seconds) when calling this API to prevent failures caused by network latency or high processing complexity.</li>
+     * <li>For calls in the production environment, use the POP Action method for access. Internal REST addresses are mainly used for joint debugging during the development and testing phases.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Calculates the edge lengths and floor area of a floor display based on the floor display image and product detection boxes.</p>
+     * <p>Calculates the side lengths and floor area of a floor display based on the floor display image and product bounding boxes.</p>
      * 
      * @param tmpReq DiduiAreaDeductionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1402,19 +1062,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p><strong>Before you use this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of the floor display area inference service.</strong></p>
+     * <h2>Request description</h2>
+     * <p><strong>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of the floor display area inference product.</strong></p>
      * <ul>
-     * <li>This operation infers the actual dimensions (lengths of two edges) and floor area of a floor display based on the provided overall floor display image, SKU knowledge base, and product location information in the image.</li>
-     * <li>Make sure that the knowledge base corresponding to the specified <code>RagId</code> belongs to the caller and is in the active (<code>AVAILABLE</code>) state.</li>
-     * <li>The <code>Products</code> array must contain at least one product item, and each product item must have at least one bounding box defined in <code>Boxes</code>.</li>
-     * <li>All coordinate values are represented in a normalized coordinate system ranging from 0 to 1000. Make sure that the input satisfies the relationships <code>Left &lt; Right</code> and <code>Top &lt; Bottom</code>.</li>
-     * <li>Set a reasonable timeout period when you call this operation (300 seconds or less recommended) to avoid failures caused by network latency or high processing complexity.</li>
-     * <li>For calls in a production environment, use the POP Action method. The internal REST address is intended for integration testing during the development phase.</li>
+     * <li>This operation infers the actual dimensions (the lengths of the two sides) and floor area of a floor display based on the provided overall image of the floor display, the SKU knowledge base, and the position information of products in the image.</li>
+     * <li>Make sure that the knowledge base corresponding to the provided <code>RagId</code> belongs to the caller and is in the <code>AVAILABLE</code> state.</li>
+     * <li>The <code>Products</code> array must contain at least one product item, and the <code>Boxes</code> array under each product item must contain at least one bounding box.</li>
+     * <li>All coordinate values are represented in a normalized coordinate system ranging from 0 to 1000. Make sure that the input satisfies the <code>Left &lt; Right</code> and <code>Top &lt; Bottom</code> conditions.</li>
+     * <li>Set a reasonable timeout period (recommended maximum of 300 seconds) when calling this API to prevent failures caused by network latency or high processing complexity.</li>
+     * <li>For calls in the production environment, use the POP Action method for access. Internal REST addresses are mainly used for joint debugging during the development and testing phases.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Calculates the edge lengths and floor area of a floor display based on the floor display image and product detection boxes.</p>
+     * <p>Calculates the side lengths and floor area of a floor display based on the floor display image and product bounding boxes.</p>
      * 
      * @param request DiduiAreaDeductionRequest
      * @return DiduiAreaDeductionResponse
@@ -1428,18 +1088,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p><em>Scenarios</em>*</p>
      * <ul>
-     * <li>Floor display area assessment: Infers the bounding rectangle area of the floor display footprint based on an overall photo of the floor display and the actual dimensions of the products.</li>
-     * <li>Multi-SKU mixed arrangement analysis: Uses the dimensions of each different product to participate in side length inference.</li>
-     * <li>Area result review: Verifies results by combining the original image, product assets, and the returned two side lengths and area.
+     * <li>Floor display area evaluation: Infers the area of the bounding rectangle based on the overall photo of the floor display and the actual dimensions of the products.</li>
+     * <li>Multi-SKU mixed layout analysis: Uses the dimensions of different products to infer the side lengths.</li>
+     * <li>Area result review: Verifies the results by combining the original image, product assets, and the returned side lengths and area.
      * <strong>Features</strong></li>
-     * <li>SKU asset-driven: Specifies the asset knowledge base through ragId. Each participating product must have a name, positive length, width, and height values, and at least one HTTPS reference image.</li>
-     * <li>Phased area inference: Sequentially forms decision edges, SKU projections, dimension accumulation, and final area.</li>
-     * <li>Unified units: SKU asset dimensions are stored in centimeters. Result side lengths are output in meters and area in square meters.</li>
-     * <li>Completeness and numerical validation: Returns failure when there are missing assets, no valid bounding boxes, or the area does not satisfy product consistency.</li>
+     * <li>SKU asset-driven: Specifies the asset knowledge base by using ragId. Each participating product must have a name, positive length, width, and height, and at least one HTTPS reference image.</li>
+     * <li>Phased area inference: Sequentially forms decision edges, SKU projections, dimension accumulation, and the final area.</li>
+     * <li>Unified units: SKU asset dimensions are stored in centimeters. The resulting side lengths are output in meters and the area in square meters.</li>
+     * <li>Completeness and numerical validation: Returns a failure if assets are missing, no valid bounding boxes are found, or the area does not meet product consistency.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Analyzes the floor display area based on product recognition, SKU asset knowledge base, and a dedicated area reasoning model building. The product first locates floor display products, then reads the actual length, width, height, and reference images of the corresponding SKUs to infer the two side lengths and area of the bounding rectangle of the floor display footprint. This is applicable to floor display scale assessment and inspection review in retail stores.</p>
+     * <p>Analyzes the area of floor displays based on product recognition, SKU asset knowledge bases, and dedicated area reasoning model building. The product first locates products in the floor display, reads the actual dimensions and reference images of the corresponding SKUs, and infers the side lengths and area of the bounding rectangle of the floor display. This feature is suitable for evaluating the scale of floor displays in stores and for inspection and review.</p>
      * 
      * @param request DiduiAreaDeductionProRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1477,18 +1137,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p><em>Scenarios</em>*</p>
      * <ul>
-     * <li>Floor display area assessment: Infers the bounding rectangle area of the floor display footprint based on an overall photo of the floor display and the actual dimensions of the products.</li>
-     * <li>Multi-SKU mixed arrangement analysis: Uses the dimensions of each different product to participate in side length inference.</li>
-     * <li>Area result review: Verifies results by combining the original image, product assets, and the returned two side lengths and area.
+     * <li>Floor display area evaluation: Infers the area of the bounding rectangle based on the overall photo of the floor display and the actual dimensions of the products.</li>
+     * <li>Multi-SKU mixed layout analysis: Uses the dimensions of different products to infer the side lengths.</li>
+     * <li>Area result review: Verifies the results by combining the original image, product assets, and the returned side lengths and area.
      * <strong>Features</strong></li>
-     * <li>SKU asset-driven: Specifies the asset knowledge base through ragId. Each participating product must have a name, positive length, width, and height values, and at least one HTTPS reference image.</li>
-     * <li>Phased area inference: Sequentially forms decision edges, SKU projections, dimension accumulation, and final area.</li>
-     * <li>Unified units: SKU asset dimensions are stored in centimeters. Result side lengths are output in meters and area in square meters.</li>
-     * <li>Completeness and numerical validation: Returns failure when there are missing assets, no valid bounding boxes, or the area does not satisfy product consistency.</li>
+     * <li>SKU asset-driven: Specifies the asset knowledge base by using ragId. Each participating product must have a name, positive length, width, and height, and at least one HTTPS reference image.</li>
+     * <li>Phased area inference: Sequentially forms decision edges, SKU projections, dimension accumulation, and the final area.</li>
+     * <li>Unified units: SKU asset dimensions are stored in centimeters. The resulting side lengths are output in meters and the area in square meters.</li>
+     * <li>Completeness and numerical validation: Returns a failure if assets are missing, no valid bounding boxes are found, or the area does not meet product consistency.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Analyzes the floor display area based on product recognition, SKU asset knowledge base, and a dedicated area reasoning model building. The product first locates floor display products, then reads the actual length, width, height, and reference images of the corresponding SKUs to infer the two side lengths and area of the bounding rectangle of the floor display footprint. This is applicable to floor display scale assessment and inspection review in retail stores.</p>
+     * <p>Analyzes the area of floor displays based on product recognition, SKU asset knowledge bases, and dedicated area reasoning model building. The product first locates products in the floor display, reads the actual dimensions and reference images of the corresponding SKUs, and infers the side lengths and area of the bounding rectangle of the floor display. This feature is suitable for evaluating the scale of floor displays in stores and for inspection and review.</p>
      * 
      * @param request DiduiAreaDeductionProRequest
      * @return DiduiAreaDeductionProResponse
@@ -1500,30 +1160,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Product Introduction</h2>
-     * <p>Designed specifically for document translation. Supports translation between more than 400 language pairs (including bridged pairs) to handle multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
-     * Excels in the following areas:</p>
+     * <h2>Product introduction</h2>
+     * <p>Designed specifically for document translation, this feature supports translation across more than 400 language pairs (including bridged pairs) and meets the needs of multi-scenario, multi-page, and high-complexity document translation. Scanned documents are not currently supported.
+     * It excels in the following aspects:</p>
      * <ul>
-     * <li>Content accuracy: translation accuracy, parameter and unit accuracy</li>
-     * <li>Structural integrity: overall layout continuity, page margin and layout restoration</li>
+     * <li>Content accuracy: Ensures translation accuracy and the accuracy of parameters and units.</li>
+     * <li>Structural integrity: Maintains overall layout continuity and restores page margins and layouts.</li>
      * </ul>
-     * <h2>Common scenarios</h2>
-     * <p>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, textbooks, courseware, and other scenarios.</p>
-     * <h2>Functions and features</h2>
+     * <h2>Scenarios</h2>
+     * <p>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, teaching materials, and courseware.</p>
+     * <h2>Features</h2>
      * <ul>
-     * <li>Supports PDF and Word formats. Supports source documents that contain multiple languages. For a detailed language list, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language pair mapping table</a>.</li>
-     * <li>Supports translation of text within images in documents, as well as complex translation scenarios involving charts, special symbols, and more.</li>
-     * <li>Supports high-fidelity layout restoration after translation.</li>
-     * <li>A single PDF supports up to 100 pages. A single Word document supports up to 100 pages.</li>
-     * <li>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand name protection and similar scenarios. Simply pass the corresponding glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 glossary entries. If you need more, contact the platform for assistance.</li>
+     * <li>Supports PDF and Word formats, and supports source documents containing multiple languages. For the detailed language list, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language pair mapping table</a>.</li>
+     * <li>Supports the translation of text in images within documents, as well as complex translation scenarios such as other charts and special symbols.</li>
+     * <li>Supports highly restored layout after translation.</li>
+     * <li>Supports up to 100 pages for a single PDF file and up to 100 pages for a single Word file.</li>
+     * <li>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-null value). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API operation, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention words. If you have more requirements, contact the platform for processing.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Designed specifically for document translation. Supports translation between more than 400 language pairs (including bridged pairs) to handle multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported. Excels in the following areas:</p>
-     * <ul>
-     * <li>Content accuracy: translation accuracy, parameter and unit accuracy.</li>
-     * <li>Structural integrity: overall layout continuity, page margin and layout restoration.</li>
-     * </ul>
+     * <p>Translates documents across more than 400 language pairs, including bridged pairs, to meet the needs of multi-scenario, multi-page, and high-complexity document translation. Scanned documents are not currently supported. This feature excels in the following aspects: - Content accuracy: Ensures translation accuracy and the accuracy of parameters and units. - Structural integrity: Maintains overall layout continuity and restores page margins and layouts.</p>
      * 
      * @param request DocumentTranslateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1567,30 +1223,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Product Introduction</h2>
-     * <p>Designed specifically for document translation. Supports translation between more than 400 language pairs (including bridged pairs) to handle multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
-     * Excels in the following areas:</p>
+     * <h2>Product introduction</h2>
+     * <p>Designed specifically for document translation, this feature supports translation across more than 400 language pairs (including bridged pairs) and meets the needs of multi-scenario, multi-page, and high-complexity document translation. Scanned documents are not currently supported.
+     * It excels in the following aspects:</p>
      * <ul>
-     * <li>Content accuracy: translation accuracy, parameter and unit accuracy</li>
-     * <li>Structural integrity: overall layout continuity, page margin and layout restoration</li>
+     * <li>Content accuracy: Ensures translation accuracy and the accuracy of parameters and units.</li>
+     * <li>Structural integrity: Maintains overall layout continuity and restores page margins and layouts.</li>
      * </ul>
-     * <h2>Common scenarios</h2>
-     * <p>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, textbooks, courseware, and other scenarios.</p>
-     * <h2>Functions and features</h2>
+     * <h2>Scenarios</h2>
+     * <p>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, teaching materials, and courseware.</p>
+     * <h2>Features</h2>
      * <ul>
-     * <li>Supports PDF and Word formats. Supports source documents that contain multiple languages. For a detailed language list, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language pair mapping table</a>.</li>
-     * <li>Supports translation of text within images in documents, as well as complex translation scenarios involving charts, special symbols, and more.</li>
-     * <li>Supports high-fidelity layout restoration after translation.</li>
-     * <li>A single PDF supports up to 100 pages. A single Word document supports up to 100 pages.</li>
-     * <li>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand name protection and similar scenarios. Simply pass the corresponding glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 glossary entries. If you need more, contact the platform for assistance.</li>
+     * <li>Supports PDF and Word formats, and supports source documents containing multiple languages. For the detailed language list, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language pair mapping table</a>.</li>
+     * <li>Supports the translation of text in images within documents, as well as complex translation scenarios such as other charts and special symbols.</li>
+     * <li>Supports highly restored layout after translation.</li>
+     * <li>Supports up to 100 pages for a single PDF file and up to 100 pages for a single Word file.</li>
+     * <li>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-null value). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API operation, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention words. If you have more requirements, contact the platform for processing.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Designed specifically for document translation. Supports translation between more than 400 language pairs (including bridged pairs) to handle multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported. Excels in the following areas:</p>
-     * <ul>
-     * <li>Content accuracy: translation accuracy, parameter and unit accuracy.</li>
-     * <li>Structural integrity: overall layout continuity, page margin and layout restoration.</li>
-     * </ul>
+     * <p>Translates documents across more than 400 language pairs, including bridged pairs, to meet the needs of multi-scenario, multi-page, and high-complexity document translation. Scanned documents are not currently supported. This feature excels in the following aspects: - Content accuracy: Ensures translation accuracy and the accuracy of parameters and units. - Structural integrity: Maintains overall layout continuity and restores page margins and layouts.</p>
      * 
      * @param request DocumentTranslateRequest
      * @return DocumentTranslateResponse
@@ -1603,53 +1255,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2><strong>Product introduction</strong></h2>
-     * <p>E-commerce video variation generation is an AI video service for product content production that covers video understanding, element replacement, quality verification, and result delivery. The service focuses on product and person consistency, detail restoration, conversion expression, and large-scale production. It supports targeted replacement of products or persons based on popular video templates, quickly generating multiple content versions while retaining original actions, camera rhythms, and marketing structures to reduce shooting, editing, and adaptation costs.</p>
+     * <p>E-commerce video replication is an AI video service designed for product content production, covering video understanding, element replacement, quality verification, and result delivery. The service focuses on product and person consistency, detail restoration, conversion expression, and scaled production. It supports targeted replacement of products or persons based on viral video templates. By preserving the original actions, camera pacing, and marketing structure, it rapidly generates multiple content versions to reduce shooting, editing, and adaptation costs.</p>
      * <h2><strong>Scenarios</strong></h2>
      * <ul>
-     * <li><strong>Video asset variation generation:</strong> Uses an existing e-commerce video as a template and replaces only specified products or persons in the video, preserving the original camera angles, rhythms, and marketing expressions as much as possible. This is suitable for producing assets with multiple SKUs, models, regions, and versions.</li>
-     * <li><strong>Quick asset generation for new products:</strong> For newly launched products, this reduces the need for live-action shooting, studio setup, post-production editing, and repetitive production. It quickly deploys video assets for new products, helping merchants shorten the launch cycle from spotting a popular video to breaking down the script and shooting new content.</li>
-     * <li><strong>Product explanation and selling point expression:</strong> Suitable for products such as apparel, beauty and personal care, food and beverage, home and daily necessities, 3C digital products, and small home appliances. It can replicate the explanation structure, display actions, and camera rhythms based on the selling points of the original video to generate explanation videos tailored for the conversion of new products.</li>
-     * <li><strong>Multi-selling point and multi-version testing:</strong> Quickly generates multiple versions based on different product selling points, target audiences, scripts, camera angles, and visual styles. This supports merchants in conducting content testing and iterating on delivered assets.</li>
+     * <li><strong>Video material replication:</strong> Uses an existing e-commerce video as a template and replaces only the specified product or person in the video, preserving the original camera work, pacing, and marketing expression as much as possible. This is suitable for producing materials with multiple SKUs, models, regions, and versions.</li>
+     * <li><strong>Rapid material generation for new products:</strong> For newly launched products, it reduces the need for live-action shooting, studio setup, post-production editing, and repetitive production. It rapidly deploys video materials for new products, helping merchants shorten the launch cycle from spotting a viral video to breaking down the script and shooting new content.</li>
+     * <li><strong>Product explanation and selling point expression:</strong> Suitable for products such as apparel, beauty and personal care, food and beverage, home and daily necessities, consumer electronics, and small home appliances. It can replicate the explanation structure, demonstration actions, and camera pacing based on the selling points of the original video to generate explanation videos tailored for the conversion of new products.</li>
+     * <li><strong>Multi-selling point and multi-version testing:</strong> Rapidly generates multiple versions based on different product selling points, target audiences, scripts, camera work, and visual styles, supporting merchants in conducting content testing and iterating on advertising materials.</li>
      * </ul>
-     * <h2><strong>Feature overview</strong></h2>
-     * <h3><strong>Core features</strong></h3>
+     * <h2><strong>Service capabilities</strong></h2>
+     * <h3><strong>Core capabilities</strong></h3>
      * <ul>
      * <li><p><strong>Supports two replacement modes:</strong></p>
      * <ul>
-     * <li><p><strong>Product replacement (</strong><code>product_replacement</code><strong>)</strong>: Retains the original video host\&quot;s identity, actions, scene, and sales structure, and replaces the original product with the target product.</p>
+     * <li><p><strong>Product replacement (</strong><code>product_replacement</code><strong>)</strong>: Preserves the identity, actions, scene, and sales structure of the original video host, and replaces the original product with the target product.</p>
      * </li>
-     * <li><p><strong>Person replacement (</strong><code>person_replacement</code><strong>)</strong>: Retains the original product, actions, scene, and sales structure, and replaces the person on camera with the target person from a reference image or description.</p>
+     * <li><p><strong>Person replacement (</strong><code>person_replacement</code><strong>)</strong>: Preserves the product, actions, scene, and sales structure of the original video, and replaces the person on camera with the target person from reference images or descriptions.</p>
      * </li>
      * </ul>
      * </li>
      * <li><p><strong>Supports two generation modes:</strong></p>
      * <ul>
-     * <li><p><strong>Reference generation (</strong><code>reference</code><strong>)</strong>: 1:1 replication. Uses the original video as a complete reference to automatically generate a new video with the same duration as the original video. It retains the original script, storyboard, actions, scene, and rhythm, and only performs targeted replacement of specified content such as persons or products.</p>
+     * <li><p><strong>Reference generation (</strong><code>reference</code><strong>)</strong>: 1:1 replication. Uses the original video as a complete reference to automatically generate a new video with the same duration. It preserves the original script, storyboard, actions, scene, and pacing, and only performs targeted replacement of specified content such as persons or products.</p>
      * </li>
      * <li><p><strong>Rebuild generation (</strong><code>rebuild</code><strong>)</strong>: Breaks down the script, storyboard, and key elements of the original video, retains only core content such as specified persons or products, and then redesigns and generates a new video. It is not limited by the duration of the original video and supports inputting a target duration.</p>
      * </li>
      * </ul>
      * </li>
-     * <li><p><strong>Fully automated end-to-end generation with zero prompt engineering required</strong>: Only requires the reference video and target product or person images. The system automatically completes the entire process of video understanding, script planning, storyboard design, first-frame generation, and video synthesis.</p>
+     * <li><p><strong>Fully automated end-to-end generation with zero prompt engineering threshold</strong>: Only requires the reference video and target product or person images. The system automatically completes the entire process of video understanding, script planning, storyboard design, first-frame generation, and video synthesis.</p>
      * </li>
-     * <li><p><strong>Product understanding and information structuring</strong>: Identifies product categories, appearance, materials, colors, structures, and key components, and combines them with the titles, attributes, and selling points provided by the merchant to generate usable video expression information.</p>
+     * <li><p><strong>Product understanding and information structuring</strong>: Identifies product categories, appearance, materials, colors, structures, and key components, and combines them with the titles, attributes, and selling points provided by merchants to generate usable video expression information.</p>
      * </li>
      * <li><p><strong>Template video element replacement</strong>: Supports replacing products or persons within the authorized scope, and defines the replacement scope and protection scope to minimize changes in non-target areas.</p>
      * </li>
-     * <li><p><strong>Product subject consistency</strong>: Maintains the stability of the product\&quot;s shape, color, texture, pattern, packaging, and logo as much as possible across different camera angles, perspectives, actions, and scenes.</p>
+     * <li><p><strong>Product subject consistency</strong>: Maintains the stability of the product\&quot;s shape, color, texture, pattern, packaging, and logo across different camera shots, angles, actions, and scenes as much as possible.</p>
      * </li>
      * <li><p><strong>Product fidelity</strong>: Multi-round VL quality inspection locks the product state (color, texture, structure, print) throughout the process to prevent product feature drift.</p>
      * </li>
-     * <li><p><strong>Selling point script and storyboard replication</strong>: Replicates the selling point planning, video structure, camera sequence, display actions, voiceover content, and ending style based on the original video.</p>
+     * <li><p><strong>Selling point script and storyboard replication</strong>: Replicates the selling point planning, video structure, camera shot sequence, demonstration actions, voiceover content, and ending style based on the original video.</p>
      * </li>
-     * <li><p><strong>Commercial model adaptation</strong>: Supports matching the corresponding model image and display method based on the product style, fit, target audience, and market demand.</p>
+     * <li><p><strong>Commercial model adaptation</strong>: Supports matching corresponding model images and demonstration methods based on product style, fit, target audience, and market demand.</p>
      * </li>
-     * <li><p><strong>Quality verification and result feedback</strong>: Performs multi-dimensional checks on the product subject, person, clothing, text, image integrity, audio, and overall usability, and outputs result information for manual review.</p>
+     * <li><p><strong>Quality verification and result feedback</strong>: Performs multi-dimensional checks on the product subject, person, apparel, text, image integrity, audio, and overall usability, and outputs result information for manual review.</p>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an asynchronous task for e-commerce video variation generation, an AI video service for product content production that covers video understanding, element replacement, quality verification, and result delivery. The service focuses on product and person consistency, detail restoration, conversion expression, and large-scale production. It supports targeted replacement of products or persons based on popular video templates, quickly generating multiple content versions while retaining original actions, camera rhythms, and marketing structures to reduce shooting, editing, and adaptation costs.</p>
+     * <p>E-commerce video replication is an AI video service designed for product content production, covering video understanding, element replacement, quality verification, and result delivery. The service focuses on product and person consistency, detail restoration, conversion expression, and scaled production. It supports targeted replacement of products or persons based on viral video templates. By preserving the original actions, camera pacing, and marketing structure, it rapidly generates multiple content versions to reduce shooting, editing, and adaptation costs.</p>
      * 
      * @param tmpReq EcomVideoRecreationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1696,53 +1348,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2><strong>Product introduction</strong></h2>
-     * <p>E-commerce video variation generation is an AI video service for product content production that covers video understanding, element replacement, quality verification, and result delivery. The service focuses on product and person consistency, detail restoration, conversion expression, and large-scale production. It supports targeted replacement of products or persons based on popular video templates, quickly generating multiple content versions while retaining original actions, camera rhythms, and marketing structures to reduce shooting, editing, and adaptation costs.</p>
+     * <p>E-commerce video replication is an AI video service designed for product content production, covering video understanding, element replacement, quality verification, and result delivery. The service focuses on product and person consistency, detail restoration, conversion expression, and scaled production. It supports targeted replacement of products or persons based on viral video templates. By preserving the original actions, camera pacing, and marketing structure, it rapidly generates multiple content versions to reduce shooting, editing, and adaptation costs.</p>
      * <h2><strong>Scenarios</strong></h2>
      * <ul>
-     * <li><strong>Video asset variation generation:</strong> Uses an existing e-commerce video as a template and replaces only specified products or persons in the video, preserving the original camera angles, rhythms, and marketing expressions as much as possible. This is suitable for producing assets with multiple SKUs, models, regions, and versions.</li>
-     * <li><strong>Quick asset generation for new products:</strong> For newly launched products, this reduces the need for live-action shooting, studio setup, post-production editing, and repetitive production. It quickly deploys video assets for new products, helping merchants shorten the launch cycle from spotting a popular video to breaking down the script and shooting new content.</li>
-     * <li><strong>Product explanation and selling point expression:</strong> Suitable for products such as apparel, beauty and personal care, food and beverage, home and daily necessities, 3C digital products, and small home appliances. It can replicate the explanation structure, display actions, and camera rhythms based on the selling points of the original video to generate explanation videos tailored for the conversion of new products.</li>
-     * <li><strong>Multi-selling point and multi-version testing:</strong> Quickly generates multiple versions based on different product selling points, target audiences, scripts, camera angles, and visual styles. This supports merchants in conducting content testing and iterating on delivered assets.</li>
+     * <li><strong>Video material replication:</strong> Uses an existing e-commerce video as a template and replaces only the specified product or person in the video, preserving the original camera work, pacing, and marketing expression as much as possible. This is suitable for producing materials with multiple SKUs, models, regions, and versions.</li>
+     * <li><strong>Rapid material generation for new products:</strong> For newly launched products, it reduces the need for live-action shooting, studio setup, post-production editing, and repetitive production. It rapidly deploys video materials for new products, helping merchants shorten the launch cycle from spotting a viral video to breaking down the script and shooting new content.</li>
+     * <li><strong>Product explanation and selling point expression:</strong> Suitable for products such as apparel, beauty and personal care, food and beverage, home and daily necessities, consumer electronics, and small home appliances. It can replicate the explanation structure, demonstration actions, and camera pacing based on the selling points of the original video to generate explanation videos tailored for the conversion of new products.</li>
+     * <li><strong>Multi-selling point and multi-version testing:</strong> Rapidly generates multiple versions based on different product selling points, target audiences, scripts, camera work, and visual styles, supporting merchants in conducting content testing and iterating on advertising materials.</li>
      * </ul>
-     * <h2><strong>Feature overview</strong></h2>
-     * <h3><strong>Core features</strong></h3>
+     * <h2><strong>Service capabilities</strong></h2>
+     * <h3><strong>Core capabilities</strong></h3>
      * <ul>
      * <li><p><strong>Supports two replacement modes:</strong></p>
      * <ul>
-     * <li><p><strong>Product replacement (</strong><code>product_replacement</code><strong>)</strong>: Retains the original video host\&quot;s identity, actions, scene, and sales structure, and replaces the original product with the target product.</p>
+     * <li><p><strong>Product replacement (</strong><code>product_replacement</code><strong>)</strong>: Preserves the identity, actions, scene, and sales structure of the original video host, and replaces the original product with the target product.</p>
      * </li>
-     * <li><p><strong>Person replacement (</strong><code>person_replacement</code><strong>)</strong>: Retains the original product, actions, scene, and sales structure, and replaces the person on camera with the target person from a reference image or description.</p>
+     * <li><p><strong>Person replacement (</strong><code>person_replacement</code><strong>)</strong>: Preserves the product, actions, scene, and sales structure of the original video, and replaces the person on camera with the target person from reference images or descriptions.</p>
      * </li>
      * </ul>
      * </li>
      * <li><p><strong>Supports two generation modes:</strong></p>
      * <ul>
-     * <li><p><strong>Reference generation (</strong><code>reference</code><strong>)</strong>: 1:1 replication. Uses the original video as a complete reference to automatically generate a new video with the same duration as the original video. It retains the original script, storyboard, actions, scene, and rhythm, and only performs targeted replacement of specified content such as persons or products.</p>
+     * <li><p><strong>Reference generation (</strong><code>reference</code><strong>)</strong>: 1:1 replication. Uses the original video as a complete reference to automatically generate a new video with the same duration. It preserves the original script, storyboard, actions, scene, and pacing, and only performs targeted replacement of specified content such as persons or products.</p>
      * </li>
      * <li><p><strong>Rebuild generation (</strong><code>rebuild</code><strong>)</strong>: Breaks down the script, storyboard, and key elements of the original video, retains only core content such as specified persons or products, and then redesigns and generates a new video. It is not limited by the duration of the original video and supports inputting a target duration.</p>
      * </li>
      * </ul>
      * </li>
-     * <li><p><strong>Fully automated end-to-end generation with zero prompt engineering required</strong>: Only requires the reference video and target product or person images. The system automatically completes the entire process of video understanding, script planning, storyboard design, first-frame generation, and video synthesis.</p>
+     * <li><p><strong>Fully automated end-to-end generation with zero prompt engineering threshold</strong>: Only requires the reference video and target product or person images. The system automatically completes the entire process of video understanding, script planning, storyboard design, first-frame generation, and video synthesis.</p>
      * </li>
-     * <li><p><strong>Product understanding and information structuring</strong>: Identifies product categories, appearance, materials, colors, structures, and key components, and combines them with the titles, attributes, and selling points provided by the merchant to generate usable video expression information.</p>
+     * <li><p><strong>Product understanding and information structuring</strong>: Identifies product categories, appearance, materials, colors, structures, and key components, and combines them with the titles, attributes, and selling points provided by merchants to generate usable video expression information.</p>
      * </li>
      * <li><p><strong>Template video element replacement</strong>: Supports replacing products or persons within the authorized scope, and defines the replacement scope and protection scope to minimize changes in non-target areas.</p>
      * </li>
-     * <li><p><strong>Product subject consistency</strong>: Maintains the stability of the product\&quot;s shape, color, texture, pattern, packaging, and logo as much as possible across different camera angles, perspectives, actions, and scenes.</p>
+     * <li><p><strong>Product subject consistency</strong>: Maintains the stability of the product\&quot;s shape, color, texture, pattern, packaging, and logo across different camera shots, angles, actions, and scenes as much as possible.</p>
      * </li>
      * <li><p><strong>Product fidelity</strong>: Multi-round VL quality inspection locks the product state (color, texture, structure, print) throughout the process to prevent product feature drift.</p>
      * </li>
-     * <li><p><strong>Selling point script and storyboard replication</strong>: Replicates the selling point planning, video structure, camera sequence, display actions, voiceover content, and ending style based on the original video.</p>
+     * <li><p><strong>Selling point script and storyboard replication</strong>: Replicates the selling point planning, video structure, camera shot sequence, demonstration actions, voiceover content, and ending style based on the original video.</p>
      * </li>
-     * <li><p><strong>Commercial model adaptation</strong>: Supports matching the corresponding model image and display method based on the product style, fit, target audience, and market demand.</p>
+     * <li><p><strong>Commercial model adaptation</strong>: Supports matching corresponding model images and demonstration methods based on product style, fit, target audience, and market demand.</p>
      * </li>
-     * <li><p><strong>Quality verification and result feedback</strong>: Performs multi-dimensional checks on the product subject, person, clothing, text, image integrity, audio, and overall usability, and outputs result information for manual review.</p>
+     * <li><p><strong>Quality verification and result feedback</strong>: Performs multi-dimensional checks on the product subject, person, apparel, text, image integrity, audio, and overall usability, and outputs result information for manual review.</p>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an asynchronous task for e-commerce video variation generation, an AI video service for product content production that covers video understanding, element replacement, quality verification, and result delivery. The service focuses on product and person consistency, detail restoration, conversion expression, and large-scale production. It supports targeted replacement of products or persons based on popular video templates, quickly generating multiple content versions while retaining original actions, camera rhythms, and marketing structures to reduce shooting, editing, and adaptation costs.</p>
+     * <p>E-commerce video replication is an AI video service designed for product content production, covering video understanding, element replacement, quality verification, and result delivery. The service focuses on product and person consistency, detail restoration, conversion expression, and scaled production. It supports targeted replacement of products or persons based on viral video templates. By preserving the original actions, camera pacing, and marketing structure, it rapidly generates multiple content versions to reduce shooting, editing, and adaptation costs.</p>
      * 
      * @param request EcomVideoRecreationRequest
      * @return EcomVideoRecreationResponse
@@ -1756,18 +1408,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p><em>Scenarios</em>*</p>
      * <ol>
-     * <li>Inspection photo review: Screens photos submitted by stores for recapture risks.</li>
-     * <li>Screen or printed photo recapture verification: Locates visible screens, printed photos, and other carriers.</li>
-     * <li>Review clue display: Annotates products and visible clues on the original image to assist re-examination.
+     * <li>Inspection photo review: Screens store-submitted photos for recapture risks.</li>
+     * <li>Screen or printed photo recapture verification: Localizes visible screens, printed photos, and other media.</li>
+     * <li>Review clue display: Annotates products and visible clues on the original image to assist in manual review.
      * <strong>Features</strong></li>
-     * <li>General recapture detection: Returns an isFake Boolean result.</li>
-     * <li>Review element localization: Distinguishes physical products, screens, printed photos, and visible recapture clues. Products displayed within a screen are not redundantly output as physical products.</li>
-     * <li>Separate presentation of clues and conclusions: Localization text describes only visible phenomena. Normal reflections or standard packaging prints are not directly treated as recapture evidence.
-     * Supports a single HTTPS image as input. Supplementary localization returns up to 12 targets, each containing a category, a bounding box, and up to 24 characters of visible text. The coverage field indicates whether the localization is complete.</li>
+     * <li>General recapture detection: Outputs a Boolean result for isFake.</li>
+     * <li>Review element localization: Distinguishes physical products, screens, printed photos, and visible recapture clues. Products inside screens are not repeatedly output as physical products.</li>
+     * <li>Separate presentation of clues and conclusions: Localization text only describes visible phenomena and does not directly use normal reflections or standard packaging prints as recapture evidence.
+     * Supports a single HTTPS image input. The supplementary localization returns up to 12 targets. Each target includes a category, a bounding box, and visible text of up to 24 characters. The coverage field indicates whether the localization is complete.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Provides a general-purpose image review service built on recapture recognition and multimodal large model element localization. The service determines whether an image is a recaptured photo and locates primary physical products, screen display areas, printed photos, and visible recapture clues. It is applicable to risk screening and manual review of inspection photos across multiple store categories.</p>
+     * <p>Detects whether an image is recaptured and localizes main physical products, screen display areas, printed photos, and visible recapture clues based on recapture recognition and multimodal large model element localization. It is suitable for risk screening and manual review of store inspection photos across multiple categories.</p>
      * 
      * @param request GeneralRephotographyDetectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1801,18 +1453,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p><em>Scenarios</em>*</p>
      * <ol>
-     * <li>Inspection photo review: Screens photos submitted by stores for recapture risks.</li>
-     * <li>Screen or printed photo recapture verification: Locates visible screens, printed photos, and other carriers.</li>
-     * <li>Review clue display: Annotates products and visible clues on the original image to assist re-examination.
+     * <li>Inspection photo review: Screens store-submitted photos for recapture risks.</li>
+     * <li>Screen or printed photo recapture verification: Localizes visible screens, printed photos, and other media.</li>
+     * <li>Review clue display: Annotates products and visible clues on the original image to assist in manual review.
      * <strong>Features</strong></li>
-     * <li>General recapture detection: Returns an isFake Boolean result.</li>
-     * <li>Review element localization: Distinguishes physical products, screens, printed photos, and visible recapture clues. Products displayed within a screen are not redundantly output as physical products.</li>
-     * <li>Separate presentation of clues and conclusions: Localization text describes only visible phenomena. Normal reflections or standard packaging prints are not directly treated as recapture evidence.
-     * Supports a single HTTPS image as input. Supplementary localization returns up to 12 targets, each containing a category, a bounding box, and up to 24 characters of visible text. The coverage field indicates whether the localization is complete.</li>
+     * <li>General recapture detection: Outputs a Boolean result for isFake.</li>
+     * <li>Review element localization: Distinguishes physical products, screens, printed photos, and visible recapture clues. Products inside screens are not repeatedly output as physical products.</li>
+     * <li>Separate presentation of clues and conclusions: Localization text only describes visible phenomena and does not directly use normal reflections or standard packaging prints as recapture evidence.
+     * Supports a single HTTPS image input. The supplementary localization returns up to 12 targets. Each target includes a category, a bounding box, and visible text of up to 24 characters. The coverage field indicates whether the localization is complete.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Provides a general-purpose image review service built on recapture recognition and multimodal large model element localization. The service determines whether an image is a recaptured photo and locates primary physical products, screen display areas, printed photos, and visible recapture clues. It is applicable to risk screening and manual review of inspection photos across multiple store categories.</p>
+     * <p>Detects whether an image is recaptured and localizes main physical products, screen display areas, printed photos, and visible recapture clues based on recapture recognition and multimodal large model element localization. It is suitable for risk screening and manual review of store inspection photos across multiple categories.</p>
      * 
      * @param request GeneralRephotographyDetectionRequest
      * @return GeneralRephotographyDetectionResponse
@@ -1823,8 +1475,229 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Product introduction</h1>
+     * <p>Generates or rewrites e-commerce product copy, including titles, short highlights, search keywords, bullet points, and product descriptions, based on product information or existing copy. Adapts the content type and length to the requirements of the target platform.
+     * Supports Chinese and English input materials and optional multilingual translation, making it suitable for domestic product listing, cross-border product distribution, and product copy localization. Uses synchronous calls and processes one copy type for one product per request.</p>
+     * <h1>Scenarios</h1>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th><strong>Scenario</strong></th>
+     * <th><strong>Description</strong></th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Same-platform localization</td>
+     * <td>Select rewrite to translate as needed while retaining the original facts and structural type.</td>
+     * </tr>
+     * <tr>
+     * <td>Cross-platform content adaptation</td>
+     * <td>Select the target platform to generate or rewrite content according to its configuration limits. The source platform of the input is not required.</td>
+     * </tr>
+     * <tr>
+     * <td>New product material creation</td>
+     * <td>Select generate to create the target content type based on product information. Categories and attributes can be used to supplement facts.</td>
+     * </tr>
+     * <tr>
+     * <td>Batch operation tool integration</td>
+     * <td>The caller submits requests product by product. The workflow itself does not provide batch task or queuing APIs.</td>
+     * </tr>
+     * </tbody></table>
+     * <h1>Features</h1>
+     * <h2>Core capabilities</h2>
+     * <p>This capability supports the creation of various copy content types for domestic and cross-border e-commerce scenarios. It can generate titles, detailed descriptions, keywords, highlights, and descriptions that comply with the content rules (such as length requirements and writing styles) of different platforms, and supports cross-language creation.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Content type</th>
+     * <th>Platform</th>
+     * <th></th>
+     * <th></th>
+     * <th></th>
+     * <th></th>
+     * <th></th>
+     * <th>Target language</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td></td>
+     * <td>Amazon</td>
+     * <td>Temu</td>
+     * <td>TikTok</td>
+     * <td>Shopify</td>
+     * <td>Wildberries</td>
+     * <td>Tmall</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>title</strong></td>
+     * <td>✓</td>
+     * <td>✓</td>
+     * <td>✓</td>
+     * <td>✓</td>
+     * <td>✓</td>
+     * <td>✓</td>
+     * <td>Covers languages in popular regions:</td>
+     * </tr>
+     * <tr>
+     * <td>Chinese (zh), English (en), Russian (ru), German (de), French (fr), Korean (ko), Italian (it), Thai (th), Arabic (ar), Turkish (tr), Hebrew (he), Ukrainian (uk), Polish (pl), Japanese (ja), Dutch (nl), Portuguese (pt), Spanish (es), Malay (ms), Bulgarian (bg), Indonesian (id), and Vietnamese (vi).</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>highlight</strong></td>
+     * <td>✓</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td>✓</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>bulletPoint</strong></td>
+     * <td>✓</td>
+     * <td></td>
+     * <td></td>
+     * <td>✓</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>keywords</strong></td>
+     * <td>✓</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>description</strong></td>
+     * <td>✓</td>
+     * <td>✓</td>
+     * <td>✓</td>
+     * <td>✓</td>
+     * <td>✓</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Based on the different content inputs provided by users, two production modes are supported:</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>Mode</strong></td>
+     * <td><strong>Description</strong></td>
+     * <td><strong>Recommended scenario</strong></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>---</td>
+     * <td>---</td>
+     * <td>---</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Generate</td>
+     * <td>Reorganizes and writes copy based on product information.</td>
+     * <td>You have only product parameters, attributes, or selling points, or other types of product information, and need to create new titles, keywords, product descriptions, or other copy.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Rewrite</td>
+     * <td>Retains the original information and main structure while optimizing the expression.</td>
+     * <td>You have existing product copy and want to adjust the wording, improve readability, or localize it with translation.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h1>Examples</h1>
+     * <p>The following examples use the Amazon platform:</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th><strong>Content type</strong></th>
+     * <th><strong>Source language</strong></th>
+     * <th><strong>Source content</strong></th>
+     * <th><strong>Target language</strong></th>
+     * <th><strong>Generated result</strong></th>
+     * <th><strong>Capability advantage</strong></th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>bulletPoint</td>
+     * <td>en</td>
+     * <td>[VERSATILE RESIN FILTRATION SYSTEM\] This silicone funnel and metal filter mesh combination is designed for all 3D printing enthusiasts. It is ideal for pouring used photosensitive resin back into standard bottles with a 15mm neck width ensuring a clean transfer every time. The durable metal filter effectively catches all solidified debris protecting your valuable resin from  and extending its usability.</td>
+     * <td>de</td>
+     * <td>[Vielseitiges Harz-Filtersystem\] Silikontrichter und Metallfiltergitter für 3D-Druck; Einfüllen von gebrauchtem lichtempfindlichem Harz in Flaschen mit 15 mm Halsweite</td>
+     * <td>Extracts core selling points, retains key information such as bottle neck size, and presents them in German bullet points for quick reading.</td>
+     * </tr>
+     * <tr>
+     * <td>description</td>
+     * <td>en</td>
+     * <td>[VERSATILE RESIN FILTRATION SYSTEM\] This silicone funnel and metal filter mesh combination is designed for all 3D printing enthusiasts. It is ideal for pouring used photosensitive resin back into standard bottles with a 15mm neck width ensuring a clean transfer every time. The durable metal filter effectively catches all solidified debris protecting your valuable resin from  and extending its usability.</td>
+     * <td>de</td>
+     * <td>[Vielseitiges Harz-Filtrationssystem\] Diese Kombination aus Silikontrichter und Metallfilternetz richtet sich an alle, die mit 3D-Druck arbeiten. Der flexible Silikontrichter passt sicher auf Standardflaschen mit einer Halsweite von 15 mm und ermöglicht ein sauberes Zurückfüllen von gebrauchtem lichtempfindlichem Harz ohne Kleckern. Das feine Metallfilter fängt verfestigte Partikel zuverlässig ab, sodass Ihr Harz frei von Verunreinigungen bleibt und seine Nutzbarkeit erhalten wird. Die robuste Konstruktion des Filters unterstützt eine gleichmäßige Durchflussrate beim Umfüllen.</td>
+     * <td>Organizes the product purpose, usage, and filtration features into a coherent German introduction for easy understanding.</td>
+     * </tr>
+     * <tr>
+     * <td>highlight</td>
+     * <td>en</td>
+     * <td>[VERSATILE RESIN FILTRATION SYSTEM\] This silicone funnel and metal filter mesh combination is designed for all 3D printing enthusiasts. It is ideal for pouring used photosensitive resin back into standard bottles with a 15mm neck width ensuring a clean transfer every time. The durable metal filter effectively catches all solidified debris protecting your valuable resin from  and extending its usability.</td>
+     * <td>de</td>
+     * <td>[Vielseitiges Harz-Filtrationssystem\] Silikontrichter, Metallfilternetz, für 3D-Druck-Harz</td>
+     * <td>Condenses lengthy materials to highlight core components and purposes, making it easy to grasp product features at a glance.</td>
+     * </tr>
+     * <tr>
+     * <td>keywords</td>
+     * <td>en</td>
+     * <td>[VERSATILE RESIN FILTRATION SYSTEM\] This silicone funnel and metal filter mesh combination is designed for all 3D printing enthusiasts. It is ideal for pouring used photosensitive resin back into standard bottles with a 15mm neck width ensuring a clean transfer every time. The durable metal filter effectively catches all solidified debris protecting your valuable resin from  and extending its usability.</td>
+     * <td>de</td>
+     * <td>Silikontrichter Metallfilter Harz Filterungssystem 3D Drucker Harz umfüllen Metall Sieb für Photosensitive Harze</td>
+     * <td>Extracts German search terms related to materials, categories, and purposes, reducing manual organization and translation efforts.</td>
+     * </tr>
+     * <tr>
+     * <td>title</td>
+     * <td>en</td>
+     * <td>[VERSATILE RESIN FILTRATION SYSTEM\] This silicone funnel and metal filter mesh combination is designed for all 3D printing enthusiasts. It is ideal for pouring used photosensitive resin back into standard bottles with a 15mm neck width ensuring a clean transfer every time. The durable metal filter effectively catches all solidified debris protecting your valuable resin from  and extending its usability.</td>
+     * <td>de</td>
+     * <td>Silikontrichter mit Metallfilter für 3D-Druck-Harz</td>
+     * <td>Extracts the product name, core components, and purpose to generate a concise and clear German title.</td>
+     * </tr>
+     * </tbody></table>
+     * 
      * <b>summary</b> : 
-     * <p>商品文案生成改写</p>
+     * <p>Generates or rewrites e-commerce product copy, including titles, short highlights, search keywords, bullet points, and product descriptions, based on product information or existing copy. Adapts the content type and length to the requirements of the target platform. Supports Chinese and English input materials and optional multilingual translation, making it suitable for domestic product listing, cross-border product distribution, and product copy localization. Uses synchronous calls and processes one copy type for one product per request.</p>
      * 
      * @param request GenerateProductContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1899,8 +1772,229 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h1>Product introduction</h1>
+     * <p>Generates or rewrites e-commerce product copy, including titles, short highlights, search keywords, bullet points, and product descriptions, based on product information or existing copy. Adapts the content type and length to the requirements of the target platform.
+     * Supports Chinese and English input materials and optional multilingual translation, making it suitable for domestic product listing, cross-border product distribution, and product copy localization. Uses synchronous calls and processes one copy type for one product per request.</p>
+     * <h1>Scenarios</h1>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th><strong>Scenario</strong></th>
+     * <th><strong>Description</strong></th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Same-platform localization</td>
+     * <td>Select rewrite to translate as needed while retaining the original facts and structural type.</td>
+     * </tr>
+     * <tr>
+     * <td>Cross-platform content adaptation</td>
+     * <td>Select the target platform to generate or rewrite content according to its configuration limits. The source platform of the input is not required.</td>
+     * </tr>
+     * <tr>
+     * <td>New product material creation</td>
+     * <td>Select generate to create the target content type based on product information. Categories and attributes can be used to supplement facts.</td>
+     * </tr>
+     * <tr>
+     * <td>Batch operation tool integration</td>
+     * <td>The caller submits requests product by product. The workflow itself does not provide batch task or queuing APIs.</td>
+     * </tr>
+     * </tbody></table>
+     * <h1>Features</h1>
+     * <h2>Core capabilities</h2>
+     * <p>This capability supports the creation of various copy content types for domestic and cross-border e-commerce scenarios. It can generate titles, detailed descriptions, keywords, highlights, and descriptions that comply with the content rules (such as length requirements and writing styles) of different platforms, and supports cross-language creation.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Content type</th>
+     * <th>Platform</th>
+     * <th></th>
+     * <th></th>
+     * <th></th>
+     * <th></th>
+     * <th></th>
+     * <th>Target language</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td></td>
+     * <td>Amazon</td>
+     * <td>Temu</td>
+     * <td>TikTok</td>
+     * <td>Shopify</td>
+     * <td>Wildberries</td>
+     * <td>Tmall</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>title</strong></td>
+     * <td>✓</td>
+     * <td>✓</td>
+     * <td>✓</td>
+     * <td>✓</td>
+     * <td>✓</td>
+     * <td>✓</td>
+     * <td>Covers languages in popular regions:</td>
+     * </tr>
+     * <tr>
+     * <td>Chinese (zh), English (en), Russian (ru), German (de), French (fr), Korean (ko), Italian (it), Thai (th), Arabic (ar), Turkish (tr), Hebrew (he), Ukrainian (uk), Polish (pl), Japanese (ja), Dutch (nl), Portuguese (pt), Spanish (es), Malay (ms), Bulgarian (bg), Indonesian (id), and Vietnamese (vi).</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>highlight</strong></td>
+     * <td>✓</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td>✓</td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>bulletPoint</strong></td>
+     * <td>✓</td>
+     * <td></td>
+     * <td></td>
+     * <td>✓</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>keywords</strong></td>
+     * <td>✓</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>description</strong></td>
+     * <td>✓</td>
+     * <td>✓</td>
+     * <td>✓</td>
+     * <td>✓</td>
+     * <td>✓</td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Based on the different content inputs provided by users, two production modes are supported:</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td><strong>Mode</strong></td>
+     * <td><strong>Description</strong></td>
+     * <td><strong>Recommended scenario</strong></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>---</td>
+     * <td>---</td>
+     * <td>---</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Generate</td>
+     * <td>Reorganizes and writes copy based on product information.</td>
+     * <td>You have only product parameters, attributes, or selling points, or other types of product information, and need to create new titles, keywords, product descriptions, or other copy.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * <tr>
+     * <td>Rewrite</td>
+     * <td>Retains the original information and main structure while optimizing the expression.</td>
+     * <td>You have existing product copy and want to adjust the wording, improve readability, or localize it with translation.</td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * <td></td>
+     * </tr>
+     * </tbody></table>
+     * <h1>Examples</h1>
+     * <p>The following examples use the Amazon platform:</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th><strong>Content type</strong></th>
+     * <th><strong>Source language</strong></th>
+     * <th><strong>Source content</strong></th>
+     * <th><strong>Target language</strong></th>
+     * <th><strong>Generated result</strong></th>
+     * <th><strong>Capability advantage</strong></th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>bulletPoint</td>
+     * <td>en</td>
+     * <td>[VERSATILE RESIN FILTRATION SYSTEM\] This silicone funnel and metal filter mesh combination is designed for all 3D printing enthusiasts. It is ideal for pouring used photosensitive resin back into standard bottles with a 15mm neck width ensuring a clean transfer every time. The durable metal filter effectively catches all solidified debris protecting your valuable resin from  and extending its usability.</td>
+     * <td>de</td>
+     * <td>[Vielseitiges Harz-Filtersystem\] Silikontrichter und Metallfiltergitter für 3D-Druck; Einfüllen von gebrauchtem lichtempfindlichem Harz in Flaschen mit 15 mm Halsweite</td>
+     * <td>Extracts core selling points, retains key information such as bottle neck size, and presents them in German bullet points for quick reading.</td>
+     * </tr>
+     * <tr>
+     * <td>description</td>
+     * <td>en</td>
+     * <td>[VERSATILE RESIN FILTRATION SYSTEM\] This silicone funnel and metal filter mesh combination is designed for all 3D printing enthusiasts. It is ideal for pouring used photosensitive resin back into standard bottles with a 15mm neck width ensuring a clean transfer every time. The durable metal filter effectively catches all solidified debris protecting your valuable resin from  and extending its usability.</td>
+     * <td>de</td>
+     * <td>[Vielseitiges Harz-Filtrationssystem\] Diese Kombination aus Silikontrichter und Metallfilternetz richtet sich an alle, die mit 3D-Druck arbeiten. Der flexible Silikontrichter passt sicher auf Standardflaschen mit einer Halsweite von 15 mm und ermöglicht ein sauberes Zurückfüllen von gebrauchtem lichtempfindlichem Harz ohne Kleckern. Das feine Metallfilter fängt verfestigte Partikel zuverlässig ab, sodass Ihr Harz frei von Verunreinigungen bleibt und seine Nutzbarkeit erhalten wird. Die robuste Konstruktion des Filters unterstützt eine gleichmäßige Durchflussrate beim Umfüllen.</td>
+     * <td>Organizes the product purpose, usage, and filtration features into a coherent German introduction for easy understanding.</td>
+     * </tr>
+     * <tr>
+     * <td>highlight</td>
+     * <td>en</td>
+     * <td>[VERSATILE RESIN FILTRATION SYSTEM\] This silicone funnel and metal filter mesh combination is designed for all 3D printing enthusiasts. It is ideal for pouring used photosensitive resin back into standard bottles with a 15mm neck width ensuring a clean transfer every time. The durable metal filter effectively catches all solidified debris protecting your valuable resin from  and extending its usability.</td>
+     * <td>de</td>
+     * <td>[Vielseitiges Harz-Filtrationssystem\] Silikontrichter, Metallfilternetz, für 3D-Druck-Harz</td>
+     * <td>Condenses lengthy materials to highlight core components and purposes, making it easy to grasp product features at a glance.</td>
+     * </tr>
+     * <tr>
+     * <td>keywords</td>
+     * <td>en</td>
+     * <td>[VERSATILE RESIN FILTRATION SYSTEM\] This silicone funnel and metal filter mesh combination is designed for all 3D printing enthusiasts. It is ideal for pouring used photosensitive resin back into standard bottles with a 15mm neck width ensuring a clean transfer every time. The durable metal filter effectively catches all solidified debris protecting your valuable resin from  and extending its usability.</td>
+     * <td>de</td>
+     * <td>Silikontrichter Metallfilter Harz Filterungssystem 3D Drucker Harz umfüllen Metall Sieb für Photosensitive Harze</td>
+     * <td>Extracts German search terms related to materials, categories, and purposes, reducing manual organization and translation efforts.</td>
+     * </tr>
+     * <tr>
+     * <td>title</td>
+     * <td>en</td>
+     * <td>[VERSATILE RESIN FILTRATION SYSTEM\] This silicone funnel and metal filter mesh combination is designed for all 3D printing enthusiasts. It is ideal for pouring used photosensitive resin back into standard bottles with a 15mm neck width ensuring a clean transfer every time. The durable metal filter effectively catches all solidified debris protecting your valuable resin from  and extending its usability.</td>
+     * <td>de</td>
+     * <td>Silikontrichter mit Metallfilter für 3D-Druck-Harz</td>
+     * <td>Extracts the product name, core components, and purpose to generate a concise and clear German title.</td>
+     * </tr>
+     * </tbody></table>
+     * 
      * <b>summary</b> : 
-     * <p>商品文案生成改写</p>
+     * <p>Generates or rewrites e-commerce product copy, including titles, short highlights, search keywords, bullet points, and product descriptions, based on product information or existing copy. Adapts the content type and length to the requirements of the target platform. Supports Chinese and English input materials and optional multilingual translation, making it suitable for domestic product listing, cross-border product distribution, and product copy localization. Uses synchronous calls and processes one copy type for one product per request.</p>
      * 
      * @param request GenerateProductContentRequest
      * @return GenerateProductContentResponse
@@ -1912,29 +2006,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Product Introduction</h2>
-     * <p>The image cropping service resizes input images to specified dimensions. It automatically identifies the main subject area and precisely crops to various sizes to meet design requirements across different scenarios. (Synchronous)</p>
-     * <h2>Common scenarios</h2>
+     * <h2>Product introduction</h2>
+     * <p>The image cropping service can resize input images to specified dimensions. It supports automatic identification of the main subject area and precisely crops images to various sizes to meet design requirements across different scenarios. (Synchronous)</p>
+     * <h2>Scenarios</h2>
      * <ul>
-     * <li><p><strong>Multi-platform content distribution</strong>: Automatically generates content in multiple sizes to meet the different image size requirements of various platforms and scenarios.</p>
+     * <li><p><strong>Multi-platform content distribution</strong>: Automatically generates content styles in various sizes to adapt to the different image size requirements of different platforms and scenarios.</p>
      * </li>
-     * <li><p><strong>Content placement</strong>: Automatically adjusts sizes for different ad slots across platforms, highlights the main subject, reduces whitespace, and emphasizes product features.</p>
+     * <li><p><strong>Content delivery</strong>: Automatically adjusts sizes for different ad slots on different platforms to highlight the main content, reduce blank space, and emphasize product features.</p>
      * </li>
      * </ul>
      * <h2>Features</h2>
      * <ul>
      * <li><p>Automatically identifies the main subject area of an image for precise cropping.</p>
      * </li>
-     * <li><p>Supports custom cropping dimensions to adapt to different platforms and devices.</p>
+     * <li><p>Supports custom output sizes for cropping to adapt to different platforms and devices.</p>
      * </li>
      * </ul>
-     * <h2>Comparison</h2>
+     * <h2>Effect comparison</h2>
      * <table>
      * <thead>
      * <tr>
      * <th><strong>Original image</strong></th>
-     * <th><strong>Cropped to 1000×1000</strong></th>
-     * <th><strong>Cropped to 3000×2000</strong></th>
+     * <th>*<em>Cropped to 1000\<em>1000</em></em></th>
+     * <th>*<em>Cropped to 3000\<em>2000</em></em></th>
      * </tr>
      * </thead>
      * <tbody><tr>
@@ -1955,7 +2049,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Intelligently crops images to specified dimensions, automatically identifies the main subject area, and precisely crops to various sizes to meet design requirements across different scenarios. (Synchronous)</p>
+     * <p>Intelligently crops images to specified sizes by automatically identifying the main subject area and precisely cropping them to various sizes to meet design requirements across different scenarios. (Synchronous)</p>
      * 
      * @param request ImageCroppingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1995,29 +2089,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Product Introduction</h2>
-     * <p>The image cropping service resizes input images to specified dimensions. It automatically identifies the main subject area and precisely crops to various sizes to meet design requirements across different scenarios. (Synchronous)</p>
-     * <h2>Common scenarios</h2>
+     * <h2>Product introduction</h2>
+     * <p>The image cropping service can resize input images to specified dimensions. It supports automatic identification of the main subject area and precisely crops images to various sizes to meet design requirements across different scenarios. (Synchronous)</p>
+     * <h2>Scenarios</h2>
      * <ul>
-     * <li><p><strong>Multi-platform content distribution</strong>: Automatically generates content in multiple sizes to meet the different image size requirements of various platforms and scenarios.</p>
+     * <li><p><strong>Multi-platform content distribution</strong>: Automatically generates content styles in various sizes to adapt to the different image size requirements of different platforms and scenarios.</p>
      * </li>
-     * <li><p><strong>Content placement</strong>: Automatically adjusts sizes for different ad slots across platforms, highlights the main subject, reduces whitespace, and emphasizes product features.</p>
+     * <li><p><strong>Content delivery</strong>: Automatically adjusts sizes for different ad slots on different platforms to highlight the main content, reduce blank space, and emphasize product features.</p>
      * </li>
      * </ul>
      * <h2>Features</h2>
      * <ul>
      * <li><p>Automatically identifies the main subject area of an image for precise cropping.</p>
      * </li>
-     * <li><p>Supports custom cropping dimensions to adapt to different platforms and devices.</p>
+     * <li><p>Supports custom output sizes for cropping to adapt to different platforms and devices.</p>
      * </li>
      * </ul>
-     * <h2>Comparison</h2>
+     * <h2>Effect comparison</h2>
      * <table>
      * <thead>
      * <tr>
      * <th><strong>Original image</strong></th>
-     * <th><strong>Cropped to 1000×1000</strong></th>
-     * <th><strong>Cropped to 3000×2000</strong></th>
+     * <th>*<em>Cropped to 1000\<em>1000</em></em></th>
+     * <th>*<em>Cropped to 3000\<em>2000</em></em></th>
      * </tr>
      * </thead>
      * <tbody><tr>
@@ -2038,7 +2132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Intelligently crops images to specified dimensions, automatically identifies the main subject area, and precisely crops to various sizes to meet design requirements across different scenarios. (Synchronous)</p>
+     * <p>Intelligently crops images to specified sizes by automatically identifying the main subject area and precisely cropping them to various sizes to meet design requirements across different scenarios. (Synchronous)</p>
      * 
      * @param request ImageCroppingRequest
      * @return ImageCroppingResponse
@@ -2050,32 +2144,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Product Introduction</h2>
-     * <p>The intelligent image matting product automatically identifies the salient subject in an image, separates the subject from the background, and returns the subject image with the background removed. This product also provides multiple background options and custom size selections to optimize product display. (Synchronous)</p>
+     * <h2>Product introduction</h2>
+     * <p>The intelligent image matting feature automatically identifies the salient subject in an image, separates the subject from the background, and returns the subject image with the background removed. It also provides multiple background options and custom size options to optimize product display effects. (Synchronous)</p>
      * <h2>Scenarios</h2>
      * <ul>
-     * <li><p><strong>Secondary editing of materials</strong>: After separating the image subject from the background, you can further edit the image.</p>
+     * <li><p><strong>Support secondary editing of materials</strong>: After separating the image subject from the background, you can further edit the image.</p>
      * </li>
-     * <li><p><strong>Improved material processing efficiency</strong>: Quickly extract the subject from various material images for easy background replacement, improving the production efficiency of advertising visuals and marketing posters.</p>
+     * <li><p><strong>Improve material processing efficiency</strong>: Quickly extract the subjects from various material images to facilitate background replacement, thereby improving the production efficiency of advertising images and marketing posters.</p>
      * </li>
      * </ul>
      * <h2>Features.</h2>
-     * <h4>1. One-click precise subject recognition</h4>
+     * <h4>1. One-click accurate subject identification</h4>
      * <ul>
-     * <li><p><strong>AI automatic recognition</strong>: Based on deep learning models, intelligently distinguishes foreground subjects (portraits, products, objects, etc.) from backgrounds without manual tracing.</p>
+     * <li><p><strong>Automatic AI identification</strong>: Based on deep learning models, it intelligently distinguishes foreground subjects (such as portraits, products, and objects) from the background without manual outlining.</p>
      * </li>
-     * <li><p><strong>Multi-scenario adaptation</strong>: Supports precise segmentation in complex scenarios (such as hair strands, transparent objects, and fur edges) with an accuracy rate exceeding 95%.</p>
+     * <li><p><strong>Multi-scenario adaptation</strong>: Supports accurate segmentation in complex scenarios (such as hair, transparent objects, and fur edges) with an accuracy rate of over 95%.</p>
      * </li>
      * </ul>
      * <h4>2. Intelligent edge optimization</h4>
      * <ul>
-     * <li><strong>Detail-level processing</strong>: Performs automatic optimization on edge aliasing and semi-transparent areas (such as smoke and glass) to preserve natural transition effects.</li>
+     * <li><strong>Detail-level processing</strong>: Performs automatic optimization on edge jaggies and semi-transparent areas (such as smoke and glass) to retain natural transition effects.</li>
      * </ul>
      * <h4>3. Multi-format output and background operations</h4>
      * <ul>
-     * <li><p><strong>Transparent background export</strong>: Directly generates PNG images with transparent backgrounds and white backgrounds, suitable for e-commerce, design, and other scenarios.</p>
+     * <li><p><strong>Transparent background export</strong>: Directly generates PNG images with transparent backgrounds and white backgrounds, adapting to e-commerce and design scenarios.</p>
      * </li>
-     * <li><p><strong>Custom background color support</strong></p>
+     * <li><p><strong>Custom background color support</strong>: Supports custom background colors.</p>
      * </li>
      * </ul>
      * <h2>Effect comparison</h2>
@@ -2087,21 +2181,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/62b39e16-5b30-469f-88cd-7f31ba790008.jpeg" alt="主图3.jpeg"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/62b39e16-5b30-469f-88cd-7f31ba790008.jpeg" alt="Main image 3.jpeg"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/bfad041f-a8e0-4d6f-a2bf-999292ea9ebc.jpeg" alt="ae4cd8ce912c4d9fa171dc5217be576d_202605251928_0.5899999737739563.jpeg"></td>
      * </tr>
      * <tr>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/b201b356-24b8-4f98-babc-c7fe918bdc37.jpeg" alt="主图2.jpeg"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/b201b356-24b8-4f98-babc-c7fe918bdc37.jpeg" alt="Main image 2.jpeg"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/8b266603-e80a-42dd-9d3d-6fa9f0948e52.jpeg" alt="52033655bd054737960a87518655d935_202605251926_5.959999978542328.jpeg"></td>
      * </tr>
      * <tr>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/d3c0d876-42a0-4294-8ce5-2a20df2deab9.jpeg" alt="主图6.jpeg"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/d3c0d876-42a0-4294-8ce5-2a20df2deab9.jpeg" alt="Main image 6.jpeg"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/5677f55e-4fe3-4978-a676-1ce71ad604b0.jpeg" alt="abdecd31cc45450f83b33f9baf4499c6_202605251930_7.9700000286102295.jpeg"></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Automatically identifies the salient subject in an image, separates the subject from the background, and returns the subject image with the background removed. This product also provides multiple background options and custom size selections to optimize product display. (Synchronous)</p>
+     * <p>Identifies the salient subject in an image, separates the subject from the background, and returns the subject image with the background removed. This feature also provides multiple background options and custom size options to optimize product display effects. (Synchronous)</p>
      * 
      * @param request ImageMattingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2149,32 +2243,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Product Introduction</h2>
-     * <p>The intelligent image matting product automatically identifies the salient subject in an image, separates the subject from the background, and returns the subject image with the background removed. This product also provides multiple background options and custom size selections to optimize product display. (Synchronous)</p>
+     * <h2>Product introduction</h2>
+     * <p>The intelligent image matting feature automatically identifies the salient subject in an image, separates the subject from the background, and returns the subject image with the background removed. It also provides multiple background options and custom size options to optimize product display effects. (Synchronous)</p>
      * <h2>Scenarios</h2>
      * <ul>
-     * <li><p><strong>Secondary editing of materials</strong>: After separating the image subject from the background, you can further edit the image.</p>
+     * <li><p><strong>Support secondary editing of materials</strong>: After separating the image subject from the background, you can further edit the image.</p>
      * </li>
-     * <li><p><strong>Improved material processing efficiency</strong>: Quickly extract the subject from various material images for easy background replacement, improving the production efficiency of advertising visuals and marketing posters.</p>
+     * <li><p><strong>Improve material processing efficiency</strong>: Quickly extract the subjects from various material images to facilitate background replacement, thereby improving the production efficiency of advertising images and marketing posters.</p>
      * </li>
      * </ul>
      * <h2>Features.</h2>
-     * <h4>1. One-click precise subject recognition</h4>
+     * <h4>1. One-click accurate subject identification</h4>
      * <ul>
-     * <li><p><strong>AI automatic recognition</strong>: Based on deep learning models, intelligently distinguishes foreground subjects (portraits, products, objects, etc.) from backgrounds without manual tracing.</p>
+     * <li><p><strong>Automatic AI identification</strong>: Based on deep learning models, it intelligently distinguishes foreground subjects (such as portraits, products, and objects) from the background without manual outlining.</p>
      * </li>
-     * <li><p><strong>Multi-scenario adaptation</strong>: Supports precise segmentation in complex scenarios (such as hair strands, transparent objects, and fur edges) with an accuracy rate exceeding 95%.</p>
+     * <li><p><strong>Multi-scenario adaptation</strong>: Supports accurate segmentation in complex scenarios (such as hair, transparent objects, and fur edges) with an accuracy rate of over 95%.</p>
      * </li>
      * </ul>
      * <h4>2. Intelligent edge optimization</h4>
      * <ul>
-     * <li><strong>Detail-level processing</strong>: Performs automatic optimization on edge aliasing and semi-transparent areas (such as smoke and glass) to preserve natural transition effects.</li>
+     * <li><strong>Detail-level processing</strong>: Performs automatic optimization on edge jaggies and semi-transparent areas (such as smoke and glass) to retain natural transition effects.</li>
      * </ul>
      * <h4>3. Multi-format output and background operations</h4>
      * <ul>
-     * <li><p><strong>Transparent background export</strong>: Directly generates PNG images with transparent backgrounds and white backgrounds, suitable for e-commerce, design, and other scenarios.</p>
+     * <li><p><strong>Transparent background export</strong>: Directly generates PNG images with transparent backgrounds and white backgrounds, adapting to e-commerce and design scenarios.</p>
      * </li>
-     * <li><p><strong>Custom background color support</strong></p>
+     * <li><p><strong>Custom background color support</strong>: Supports custom background colors.</p>
      * </li>
      * </ul>
      * <h2>Effect comparison</h2>
@@ -2186,21 +2280,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/62b39e16-5b30-469f-88cd-7f31ba790008.jpeg" alt="主图3.jpeg"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/62b39e16-5b30-469f-88cd-7f31ba790008.jpeg" alt="Main image 3.jpeg"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/bfad041f-a8e0-4d6f-a2bf-999292ea9ebc.jpeg" alt="ae4cd8ce912c4d9fa171dc5217be576d_202605251928_0.5899999737739563.jpeg"></td>
      * </tr>
      * <tr>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/b201b356-24b8-4f98-babc-c7fe918bdc37.jpeg" alt="主图2.jpeg"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/b201b356-24b8-4f98-babc-c7fe918bdc37.jpeg" alt="Main image 2.jpeg"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/8b266603-e80a-42dd-9d3d-6fa9f0948e52.jpeg" alt="52033655bd054737960a87518655d935_202605251926_5.959999978542328.jpeg"></td>
      * </tr>
      * <tr>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/d3c0d876-42a0-4294-8ce5-2a20df2deab9.jpeg" alt="主图6.jpeg"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/d3c0d876-42a0-4294-8ce5-2a20df2deab9.jpeg" alt="Main image 6.jpeg"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/5677f55e-4fe3-4978-a676-1ce71ad604b0.jpeg" alt="abdecd31cc45450f83b33f9baf4499c6_202605251930_7.9700000286102295.jpeg"></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Automatically identifies the salient subject in an image, separates the subject from the background, and returns the subject image with the background removed. This product also provides multiple background options and custom size selections to optimize product display. (Synchronous)</p>
+     * <p>Identifies the salient subject in an image, separates the subject from the background, and returns the subject image with the background removed. This feature also provides multiple background options and custom size options to optimize product display effects. (Synchronous)</p>
      * 
      * @param request ImageMattingRequest
      * @return ImageMattingResponse
@@ -2216,13 +2310,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li><p>Supports secondary editing of materials: After separating the image subject from the background, you can further edit the image.</p>
      * </li>
-     * <li><p>Improves material processing efficiency: Quickly extracts the subjects from various material images for background replacement, thereby improving the production efficiency of advertising images and marketing posters.</p>
+     * <li><p>Improves material processing efficiency: Quickly extracts the subjects of various material images to facilitate background replacement, thereby improving the production efficiency of advertising images and marketing posters.</p>
      * </li>
      * </ul>
      * <h1>Features.</h1>
      * <h4>1. One-click precise subject recognition</h4>
      * <ul>
-     * <li><p><strong>AI-based automatic recognition</strong>: Based on deep learning models, it intelligently distinguishes foreground subjects (portraits, products, objects, etc.) from the background without manual outlining.</p>
+     * <li><p><strong>AI-based automatic recognition</strong>: Based on deep learning models, intelligently distinguishes foreground subjects (portraits, products, objects, etc.) from the background without manual outlining.</p>
      * </li>
      * <li><p><strong>Multi-scenario adaptation</strong>: Supports precise segmentation in complex scenarios (such as hair, transparent objects, and fur edges) with an accuracy rate of over 95%.</p>
      * </li>
@@ -2235,7 +2329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li><p><strong>Transparent background export</strong>: Directly generates PNG images with transparent backgrounds and white backgrounds, adapting to e-commerce and design scenarios.</p>
      * </li>
-     * <li><p><strong>Custom background color support</strong></p>
+     * <li><p><strong>Supports custom background colors</strong></p>
      * </li>
      * </ul>
      * <h1>Effect comparison</h1>
@@ -2261,7 +2355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Extracts the salient subject from an image by separating it from the background and returns the subject image with the background removed. It also provides multiple background options and custom size options to optimize product display.</p>
+     * <p>Extracts the salient subject from an image by automatically identifying and separating it from the background, and returns the subject image with the background removed. This operation also provides multiple background options and custom size selections to optimize product display.</p>
      * 
      * @param request ImageMattingAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2317,13 +2411,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li><p>Supports secondary editing of materials: After separating the image subject from the background, you can further edit the image.</p>
      * </li>
-     * <li><p>Improves material processing efficiency: Quickly extracts the subjects from various material images for background replacement, thereby improving the production efficiency of advertising images and marketing posters.</p>
+     * <li><p>Improves material processing efficiency: Quickly extracts the subjects of various material images to facilitate background replacement, thereby improving the production efficiency of advertising images and marketing posters.</p>
      * </li>
      * </ul>
      * <h1>Features.</h1>
      * <h4>1. One-click precise subject recognition</h4>
      * <ul>
-     * <li><p><strong>AI-based automatic recognition</strong>: Based on deep learning models, it intelligently distinguishes foreground subjects (portraits, products, objects, etc.) from the background without manual outlining.</p>
+     * <li><p><strong>AI-based automatic recognition</strong>: Based on deep learning models, intelligently distinguishes foreground subjects (portraits, products, objects, etc.) from the background without manual outlining.</p>
      * </li>
      * <li><p><strong>Multi-scenario adaptation</strong>: Supports precise segmentation in complex scenarios (such as hair, transparent objects, and fur edges) with an accuracy rate of over 95%.</p>
      * </li>
@@ -2336,7 +2430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li><p><strong>Transparent background export</strong>: Directly generates PNG images with transparent backgrounds and white backgrounds, adapting to e-commerce and design scenarios.</p>
      * </li>
-     * <li><p><strong>Custom background color support</strong></p>
+     * <li><p><strong>Supports custom background colors</strong></p>
      * </li>
      * </ul>
      * <h1>Effect comparison</h1>
@@ -2362,7 +2456,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Extracts the salient subject from an image by separating it from the background and returns the subject image with the background removed. It also provides multiple background options and custom size options to optimize product display.</p>
+     * <p>Extracts the salient subject from an image by automatically identifying and separating it from the background, and returns the subject image with the background removed. This operation also provides multiple background options and custom size selections to optimize product display.</p>
      * 
      * @param request ImageMattingAsyncRequest
      * @return ImageMattingAsyncResponse
@@ -2375,43 +2469,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>The Intelligent Element Recognition API is designed specifically for identifying specific elements in e-commerce images. It analyzes image details in depth, helping users quickly identify elements such as text, logos, watermarks, and text-containing color blocks in both the subject and background of images. This greatly improves the efficiency and accuracy of image screening. (Synchronous)</p>
+     * <p>The intelligent element recognition API is designed specifically for recognizing specific elements in e-commerce images. It deeply analyzes image details to help users quickly identify elements such as text, logos, watermarks, and text-containing color blocks in the main subject and background of an image, greatly improving the efficiency and accuracy of image filtering. (Synchronous)</p>
      * <h2>Scenarios</h2>
-     * <p><strong>1. Intelligent image screening and optimization:</strong>
-     * Merchants and platforms can use the Intelligent Element Recognition API for image screening to automatically identify images that contain specific elements such as watermarks and logos. After screening, you can call the Intelligent Removal API to optimize these images, improve image quality, and shorten the product release cycle.
+     * <p><strong>1. Intelligent image filtering and optimization:</strong>
+     * Merchants and platforms can use the intelligent element recognition API to filter images and automatically identify images containing specific elements such as watermarks and logos. After filtering, you can further call the intelligent elimination API to optimize these images, improve image quality, and shorten the product release cycle.
      * <strong>2. Automated image processing and efficiency improvement:</strong>
-     * With the Intelligent Element Recognition API, merchants and platforms can automate the image processing workflow by automatically identifying and marking image elements that require optimization. This process reduces manual intervention and improves image processing efficiency.</p>
+     * Through the intelligent element recognition API, merchants and platforms can automate the image processing workflow to automatically identify and mark image elements that need optimization. This workflow reduces manual intervention and improves image processing efficiency.</p>
      * <h2>Features</h2>
-     * <p><strong>1. Definitions of image subject, image background, text, logo, watermark, and text-containing color block: For details, see the related examples in the removal documentation (reserved text link)</strong></p>
+     * <p><strong>1. Definitions of image subject, image background, text, logo, watermark, and text-containing color block: For details, see the relevant examples in the elimination documentation (reserved text link).</strong></p>
      * <ul>
      * <li><p>Image subject: The core product area in the image.</p>
      * </li>
-     * <li><p>Image background: The remaining part of the image other than the product subject.</p>
+     * <li><p>Image background: The rest of the image other than the product subject.</p>
      * </li>
-     * <li><p>Text: Horizontal, vertical, or diagonal English or Chinese text.</p>
+     * <li><p>Text: Horizontal, vertical, or slanted English or Chinese text.</p>
      * </li>
-     * <li><p>Logo: An emblem or trademark.</p>
+     * <li><p>Logo: Logos or trademarks.</p>
      * </li>
-     * <li><p>Watermark: Monochrome transparent text, emblems, images, URLs, or store names.</p>
+     * <li><p>Watermark: Monochrome transparent text, logos, images, URLs, store names, etc.</p>
      * </li>
-     * <li><p>Text-containing color block: A color block outside the subject that contains text.</p>
+     * <li><p>Text-containing color block: Color blocks containing text outside the subject.</p>
      * </li>
      * </ul>
-     * <p><strong>2. The main features of the Intelligent Element Recognition API include:</strong></p>
+     * <p><strong>2. The features of the intelligent element recognition API mainly include:</strong></p>
      * <ul>
      * <li><p>Element recognition: Identifies whether elements such as text, logos, watermarks, and text-containing color blocks exist in the image subject and background.</p>
      * </li>
-     * <li><p>Workflow coordination: Used in combination with the Intelligent Removal API. First, the Intelligent Element Recognition API identifies elements that need to be removed, and then the Intelligent Removal API removes them effectively, ensuring the accuracy and efficiency of image processing.</p>
+     * <li><p>Workflow collaboration: Used in combination with the intelligent elimination API. First, the intelligent element recognition API identifies the elements to be removed, and then the intelligent elimination API effectively removes them to ensure the accuracy and efficiency of image processing.</p>
      * </li>
      * </ul>
      * <h2>Technical advantages</h2>
      * <ul>
-     * <li><p>Synchronous batch processing: As a synchronous API, the Intelligent Element Recognition API can process a large number of images while maintaining fast response times, adapting to business needs of different scales.</p>
+     * <li><p>Synchronous batch processing: As a synchronous API, the intelligent element recognition API can process a large number of images while maintaining fast response, adapting to business needs of different scales.</p>
      * </li>
-     * <li><p>Flexibility: Users can select the types of elements to identify, including elements in both the subject and non-subject areas, such as watermarks, logos, and text, to meet personalized recognition needs.</p>
+     * <li><p>Flexibility: Users can select the types of elements to be recognized as needed, including elements in the subject and non-subject areas, such as watermarks, logos, and text, to meet personalized recognition needs.</p>
      * </li>
      * </ul>
-     * <h2>Comparison</h2>
+     * <h2>Result comparison</h2>
      * <table>
      * <thead>
      * <tr>
@@ -2467,7 +2561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Intelligent element recognition.</p>
+     * <p>Identifies specific elements in e-commerce images.</p>
      * 
      * @param tmpReq ImageRecognitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2538,43 +2632,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>The Intelligent Element Recognition API is designed specifically for identifying specific elements in e-commerce images. It analyzes image details in depth, helping users quickly identify elements such as text, logos, watermarks, and text-containing color blocks in both the subject and background of images. This greatly improves the efficiency and accuracy of image screening. (Synchronous)</p>
+     * <p>The intelligent element recognition API is designed specifically for recognizing specific elements in e-commerce images. It deeply analyzes image details to help users quickly identify elements such as text, logos, watermarks, and text-containing color blocks in the main subject and background of an image, greatly improving the efficiency and accuracy of image filtering. (Synchronous)</p>
      * <h2>Scenarios</h2>
-     * <p><strong>1. Intelligent image screening and optimization:</strong>
-     * Merchants and platforms can use the Intelligent Element Recognition API for image screening to automatically identify images that contain specific elements such as watermarks and logos. After screening, you can call the Intelligent Removal API to optimize these images, improve image quality, and shorten the product release cycle.
+     * <p><strong>1. Intelligent image filtering and optimization:</strong>
+     * Merchants and platforms can use the intelligent element recognition API to filter images and automatically identify images containing specific elements such as watermarks and logos. After filtering, you can further call the intelligent elimination API to optimize these images, improve image quality, and shorten the product release cycle.
      * <strong>2. Automated image processing and efficiency improvement:</strong>
-     * With the Intelligent Element Recognition API, merchants and platforms can automate the image processing workflow by automatically identifying and marking image elements that require optimization. This process reduces manual intervention and improves image processing efficiency.</p>
+     * Through the intelligent element recognition API, merchants and platforms can automate the image processing workflow to automatically identify and mark image elements that need optimization. This workflow reduces manual intervention and improves image processing efficiency.</p>
      * <h2>Features</h2>
-     * <p><strong>1. Definitions of image subject, image background, text, logo, watermark, and text-containing color block: For details, see the related examples in the removal documentation (reserved text link)</strong></p>
+     * <p><strong>1. Definitions of image subject, image background, text, logo, watermark, and text-containing color block: For details, see the relevant examples in the elimination documentation (reserved text link).</strong></p>
      * <ul>
      * <li><p>Image subject: The core product area in the image.</p>
      * </li>
-     * <li><p>Image background: The remaining part of the image other than the product subject.</p>
+     * <li><p>Image background: The rest of the image other than the product subject.</p>
      * </li>
-     * <li><p>Text: Horizontal, vertical, or diagonal English or Chinese text.</p>
+     * <li><p>Text: Horizontal, vertical, or slanted English or Chinese text.</p>
      * </li>
-     * <li><p>Logo: An emblem or trademark.</p>
+     * <li><p>Logo: Logos or trademarks.</p>
      * </li>
-     * <li><p>Watermark: Monochrome transparent text, emblems, images, URLs, or store names.</p>
+     * <li><p>Watermark: Monochrome transparent text, logos, images, URLs, store names, etc.</p>
      * </li>
-     * <li><p>Text-containing color block: A color block outside the subject that contains text.</p>
+     * <li><p>Text-containing color block: Color blocks containing text outside the subject.</p>
      * </li>
      * </ul>
-     * <p><strong>2. The main features of the Intelligent Element Recognition API include:</strong></p>
+     * <p><strong>2. The features of the intelligent element recognition API mainly include:</strong></p>
      * <ul>
      * <li><p>Element recognition: Identifies whether elements such as text, logos, watermarks, and text-containing color blocks exist in the image subject and background.</p>
      * </li>
-     * <li><p>Workflow coordination: Used in combination with the Intelligent Removal API. First, the Intelligent Element Recognition API identifies elements that need to be removed, and then the Intelligent Removal API removes them effectively, ensuring the accuracy and efficiency of image processing.</p>
+     * <li><p>Workflow collaboration: Used in combination with the intelligent elimination API. First, the intelligent element recognition API identifies the elements to be removed, and then the intelligent elimination API effectively removes them to ensure the accuracy and efficiency of image processing.</p>
      * </li>
      * </ul>
      * <h2>Technical advantages</h2>
      * <ul>
-     * <li><p>Synchronous batch processing: As a synchronous API, the Intelligent Element Recognition API can process a large number of images while maintaining fast response times, adapting to business needs of different scales.</p>
+     * <li><p>Synchronous batch processing: As a synchronous API, the intelligent element recognition API can process a large number of images while maintaining fast response, adapting to business needs of different scales.</p>
      * </li>
-     * <li><p>Flexibility: Users can select the types of elements to identify, including elements in both the subject and non-subject areas, such as watermarks, logos, and text, to meet personalized recognition needs.</p>
+     * <li><p>Flexibility: Users can select the types of elements to be recognized as needed, including elements in the subject and non-subject areas, such as watermarks, logos, and text, to meet personalized recognition needs.</p>
      * </li>
      * </ul>
-     * <h2>Comparison</h2>
+     * <h2>Result comparison</h2>
      * <table>
      * <thead>
      * <tr>
@@ -2630,7 +2724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Intelligent element recognition.</p>
+     * <p>Identifies specific elements in e-commerce images.</p>
      * 
      * @param request ImageRecognitionRequest
      * @return ImageRecognitionResponse
@@ -2645,7 +2739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h1>Scenarios</h1>
      * <ol>
      * <li>Intelligent image filtering and optimization:
-     * Merchants and platforms can use the intelligent element recognition API to filter images and automatically identify images containing specific elements such as watermarks and logos. After filtering, they can call the intelligent elimination API to optimize these images, improve image quality, and shorten the product release cycle.</li>
+     * Merchants and platforms can use the intelligent element recognition API to filter images and automatically identify images containing specific elements such as watermarks and logos. After filtering, they can further call the intelligent elimination API to optimize these images, improve image quality, and shorten the product release cycle.</li>
      * <li>Automated image processing and efficiency improvement:
      * Through the intelligent element recognition API, merchants and platforms can automate the image processing workflow and automatically identify and mark image elements that need to be optimized. This workflow reduces manual intervention and improves the efficiency of image processing.</li>
      * </ol>
@@ -2656,20 +2750,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </li>
      * <li><p>Image background: The rest of the image other than the product subject.</p>
      * </li>
-     * <li><p>Text: Horizontal, vertical, or diagonal English or Chinese text.</p>
+     * <li><p>Text: Horizontal, vertical, or slanted English or Chinese text.</p>
      * </li>
      * <li><p>Logo: A logo or trademark.</p>
      * </li>
-     * <li><p>Watermark: Monochrome transparent text, logos, images, URLs, store names, etc.</p>
+     * <li><p>Watermark: Monochrome transparent text, logos, images, URLs, or store names.</p>
      * </li>
      * <li><p>Text-containing color block: A color block containing text outside the subject.</p>
      * </li>
      * </ul>
-     * <p><strong>2. The intelligent element recognition API provides the following features:</strong></p>
+     * <p><strong>2. The features of the intelligent element recognition API include:</strong></p>
      * <ul>
      * <li><p>Element recognition: Identifies whether elements such as text, logos, watermarks, and text-containing color blocks exist in the image subject and background.</p>
      * </li>
-     * <li><p>Workflow collaboration: Used in combination with the intelligent elimination API. First, the intelligent element recognition API identifies the elements to be removed, and then the intelligent elimination API effectively removes them to ensure the accuracy and efficiency of image processing.</p>
+     * <li><p>Workflow collaboration: Used in combination with the intelligent elimination API. The intelligent element recognition API first identifies the elements to be removed, and then the intelligent elimination API effectively removes them to ensure the accuracy and efficiency of image processing.</p>
      * </li>
      * </ul>
      * <p><strong>3. Technical advantages:</strong></p>
@@ -2735,7 +2829,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Identifies specific elements in e-commerce images. It extracts image details to help users quickly identify text, logos, watermarks, and text-containing color blocks in the main subject and background, significantly improving the efficiency and accuracy of image filtering.</p>
+     * <p>Identifies specific elements in e-commerce images. It deeply analyzes image details to help users quickly identify elements such as text, logos, watermarks, and text-containing color blocks in the main subject and background, significantly improving the efficiency and accuracy of image filtering.</p>
      * 
      * @param tmpReq ImageRecognitionAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2812,7 +2906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h1>Scenarios</h1>
      * <ol>
      * <li>Intelligent image filtering and optimization:
-     * Merchants and platforms can use the intelligent element recognition API to filter images and automatically identify images containing specific elements such as watermarks and logos. After filtering, they can call the intelligent elimination API to optimize these images, improve image quality, and shorten the product release cycle.</li>
+     * Merchants and platforms can use the intelligent element recognition API to filter images and automatically identify images containing specific elements such as watermarks and logos. After filtering, they can further call the intelligent elimination API to optimize these images, improve image quality, and shorten the product release cycle.</li>
      * <li>Automated image processing and efficiency improvement:
      * Through the intelligent element recognition API, merchants and platforms can automate the image processing workflow and automatically identify and mark image elements that need to be optimized. This workflow reduces manual intervention and improves the efficiency of image processing.</li>
      * </ol>
@@ -2823,20 +2917,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </li>
      * <li><p>Image background: The rest of the image other than the product subject.</p>
      * </li>
-     * <li><p>Text: Horizontal, vertical, or diagonal English or Chinese text.</p>
+     * <li><p>Text: Horizontal, vertical, or slanted English or Chinese text.</p>
      * </li>
      * <li><p>Logo: A logo or trademark.</p>
      * </li>
-     * <li><p>Watermark: Monochrome transparent text, logos, images, URLs, store names, etc.</p>
+     * <li><p>Watermark: Monochrome transparent text, logos, images, URLs, or store names.</p>
      * </li>
      * <li><p>Text-containing color block: A color block containing text outside the subject.</p>
      * </li>
      * </ul>
-     * <p><strong>2. The intelligent element recognition API provides the following features:</strong></p>
+     * <p><strong>2. The features of the intelligent element recognition API include:</strong></p>
      * <ul>
      * <li><p>Element recognition: Identifies whether elements such as text, logos, watermarks, and text-containing color blocks exist in the image subject and background.</p>
      * </li>
-     * <li><p>Workflow collaboration: Used in combination with the intelligent elimination API. First, the intelligent element recognition API identifies the elements to be removed, and then the intelligent elimination API effectively removes them to ensure the accuracy and efficiency of image processing.</p>
+     * <li><p>Workflow collaboration: Used in combination with the intelligent elimination API. The intelligent element recognition API first identifies the elements to be removed, and then the intelligent elimination API effectively removes them to ensure the accuracy and efficiency of image processing.</p>
      * </li>
      * </ul>
      * <p><strong>3. Technical advantages:</strong></p>
@@ -2902,7 +2996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Identifies specific elements in e-commerce images. It extracts image details to help users quickly identify text, logos, watermarks, and text-containing color blocks in the main subject and background, significantly improving the efficiency and accuracy of image filtering.</p>
+     * <p>Identifies specific elements in e-commerce images. It deeply analyzes image details to help users quickly identify elements such as text, logos, watermarks, and text-containing color blocks in the main subject and background, significantly improving the efficiency and accuracy of image filtering.</p>
      * 
      * @param request ImageRecognitionAsyncRequest
      * @return ImageRecognitionAsyncResponse
@@ -2915,49 +3009,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>The Intelligent Image Eraser product is designed specifically for e-commerce images. It automatically identifies and removes text, specific names, transparent text blocks, and watermarks from e-commerce images. You can specify objects to erase as needed, enabling efficient and precise batch processing of images to simplify image editing workflows. (Synchronous/Asynchronous)</p>
-     * <h2>Common scenarios</h2>
+     * <p>The intelligent image object removal product is customized for e-commerce images. It automatically identifies and removes text, specific names, transparent text blocks, and intrusive text overlays from e-commerce images. You can specify objects to be removed as needed to efficiently and accurately process large batches of images and simplify image editing. Supports synchronous and asynchronous modes.</p>
+     * <h2>Scenarios</h2>
      * <ul>
-     * <li><strong>Efficient e-commerce image processing:</strong></li>
+     * <li><strong>Efficient processing of e-commerce images:</strong></li>
      * </ul>
-     * <p>Remove irrelevant visual elements to provide clearer, more focused product displays and enhance the shopping experience.</p>
+     * <p>Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</p>
      * <ul>
-     * <li><strong>Multi-platform product information synchronization:</strong></li>
+     * <li><strong>Product information synchronization across multiple platforms:</strong></li>
      * </ul>
-     * <p>When listing products across different e-commerce platforms, quickly remove specific text and watermarks to comply with image specifications of different platforms.</p>
-     * <h2>Functions and features</h2>
+     * <p>When merchants list products on different e-commerce platforms, they can quickly remove specific text and intrusive text overlays to comply with the image specifications of different platforms.</p>
+     * <h2>Features</h2>
      * <ol>
-     * <li><p>First, understand the definitions of image subject and image background. When specifying objects to erase, you can choose whether the erasure scope is the image subject or the image background area. Both API and editor access methods are supported to meet different types of requirements.</p>
+     * <li><p>First, clarify the definitions of the image subject and the image background. In actual use, when specifying the objects to be removed, you can choose the removal scope to be the image subject or the image background area. Both API and editor integration methods are supported to meet different types of requirements.</p>
      * <ol>
      * <li><p>Image subject: the core product area in the image.</p>
      * </li>
-     * <li><p>Image background: the remaining part of the image other than the product subject.</p>
+     * <li><p>Image background: the rest of the image other than the product subject.</p>
      * </li>
      * </ol>
      * </li>
-     * <li><p>The following four types of objects can be erased: text, specific names, transparent text blocks, and watermarks. Refer to the following examples to clarify your requirements and perform targeted operations:</p>
+     * <li><p>Second, the objects to be removed support the following four types: text, specific names, transparent text blocks, and intrusive text overlays. You can refer to the following examples to clarify your usage requirements and perform targeted operations:</p>
      * </li>
      * </ol>
-     * <h2>Effect comparison</h2>
+     * <h2>Result comparison</h2>
      * <table>
      * <thead>
      * <tr>
      * <th><strong>Original image</strong></th>
-     * <th><strong>Image after erasure</strong></th>
+     * <th><strong>Image after removal</strong></th>
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/AJdl65AyryVZyOke/img/4bd2c812-ed3c-45da-8a86-ebd29102f4b1.jpeg" alt="主图1-豹纹大容量千禧单肩斜跨帆布包.jpeg"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/AJdl65AyryVZyOke/img/4bd2c812-ed3c-45da-8a86-ebd29102f4b1.jpeg" alt="Main image 1 - Leopard print large capacity millennium single shoulder crossbody canvas bag.jpeg"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/eff0eb1b-36df-431d-a010-3bb3b7348ff9.png" alt="image.png"></td>
      * </tr>
      * <tr>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/c44ac17b-3fa4-4a6f-b411-90f1062b183b.jpeg" alt="主图1-带柄超短半贴圆头法式假指甲.jpeg"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/c44ac17b-3fa4-4a6f-b411-90f1062b183b.jpeg" alt="Main image 1 - Handled ultra-short half-cover round-head French false nails.jpeg"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/af779684-4aa5-49b0-8668-34ab8bd4bcc1.png" alt="image.png"></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Intelligently erases unwanted elements from e-commerce images, automatically identifying and removing text, specific names, transparent text blocks, and watermarks. Supports specifying objects to erase as needed, enabling efficient and precise batch processing of images to simplify image editing workflows (synchronous/asynchronous).</p>
+     * <p>Intelligently removes unwanted elements from e-commerce images. Tailored for e-commerce scenarios, it automatically identifies and removes text, specific names, transparent text blocks, and watermarks. You can specify objects to remove on demand to efficiently and accurately process large image batches and simplify image editing in synchronous or asynchronous mode.</p>
      * 
      * @param request ImageRemovalProRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2994,49 +3088,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>The Intelligent Image Eraser product is designed specifically for e-commerce images. It automatically identifies and removes text, specific names, transparent text blocks, and watermarks from e-commerce images. You can specify objects to erase as needed, enabling efficient and precise batch processing of images to simplify image editing workflows. (Synchronous/Asynchronous)</p>
-     * <h2>Common scenarios</h2>
+     * <p>The intelligent image object removal product is customized for e-commerce images. It automatically identifies and removes text, specific names, transparent text blocks, and intrusive text overlays from e-commerce images. You can specify objects to be removed as needed to efficiently and accurately process large batches of images and simplify image editing. Supports synchronous and asynchronous modes.</p>
+     * <h2>Scenarios</h2>
      * <ul>
-     * <li><strong>Efficient e-commerce image processing:</strong></li>
+     * <li><strong>Efficient processing of e-commerce images:</strong></li>
      * </ul>
-     * <p>Remove irrelevant visual elements to provide clearer, more focused product displays and enhance the shopping experience.</p>
+     * <p>Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</p>
      * <ul>
-     * <li><strong>Multi-platform product information synchronization:</strong></li>
+     * <li><strong>Product information synchronization across multiple platforms:</strong></li>
      * </ul>
-     * <p>When listing products across different e-commerce platforms, quickly remove specific text and watermarks to comply with image specifications of different platforms.</p>
-     * <h2>Functions and features</h2>
+     * <p>When merchants list products on different e-commerce platforms, they can quickly remove specific text and intrusive text overlays to comply with the image specifications of different platforms.</p>
+     * <h2>Features</h2>
      * <ol>
-     * <li><p>First, understand the definitions of image subject and image background. When specifying objects to erase, you can choose whether the erasure scope is the image subject or the image background area. Both API and editor access methods are supported to meet different types of requirements.</p>
+     * <li><p>First, clarify the definitions of the image subject and the image background. In actual use, when specifying the objects to be removed, you can choose the removal scope to be the image subject or the image background area. Both API and editor integration methods are supported to meet different types of requirements.</p>
      * <ol>
      * <li><p>Image subject: the core product area in the image.</p>
      * </li>
-     * <li><p>Image background: the remaining part of the image other than the product subject.</p>
+     * <li><p>Image background: the rest of the image other than the product subject.</p>
      * </li>
      * </ol>
      * </li>
-     * <li><p>The following four types of objects can be erased: text, specific names, transparent text blocks, and watermarks. Refer to the following examples to clarify your requirements and perform targeted operations:</p>
+     * <li><p>Second, the objects to be removed support the following four types: text, specific names, transparent text blocks, and intrusive text overlays. You can refer to the following examples to clarify your usage requirements and perform targeted operations:</p>
      * </li>
      * </ol>
-     * <h2>Effect comparison</h2>
+     * <h2>Result comparison</h2>
      * <table>
      * <thead>
      * <tr>
      * <th><strong>Original image</strong></th>
-     * <th><strong>Image after erasure</strong></th>
+     * <th><strong>Image after removal</strong></th>
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/AJdl65AyryVZyOke/img/4bd2c812-ed3c-45da-8a86-ebd29102f4b1.jpeg" alt="主图1-豹纹大容量千禧单肩斜跨帆布包.jpeg"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/AJdl65AyryVZyOke/img/4bd2c812-ed3c-45da-8a86-ebd29102f4b1.jpeg" alt="Main image 1 - Leopard print large capacity millennium single shoulder crossbody canvas bag.jpeg"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/eff0eb1b-36df-431d-a010-3bb3b7348ff9.png" alt="image.png"></td>
      * </tr>
      * <tr>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/c44ac17b-3fa4-4a6f-b411-90f1062b183b.jpeg" alt="主图1-带柄超短半贴圆头法式假指甲.jpeg"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/c44ac17b-3fa4-4a6f-b411-90f1062b183b.jpeg" alt="Main image 1 - Handled ultra-short half-cover round-head French false nails.jpeg"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/af779684-4aa5-49b0-8668-34ab8bd4bcc1.png" alt="image.png"></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Intelligently erases unwanted elements from e-commerce images, automatically identifying and removing text, specific names, transparent text blocks, and watermarks. Supports specifying objects to erase as needed, enabling efficient and precise batch processing of images to simplify image editing workflows (synchronous/asynchronous).</p>
+     * <p>Intelligently removes unwanted elements from e-commerce images. Tailored for e-commerce scenarios, it automatically identifies and removes text, specific names, transparent text blocks, and watermarks. You can specify objects to remove on demand to efficiently and accurately process large image batches and simplify image editing in synchronous or asynchronous mode.</p>
      * 
      * @param request ImageRemovalProRequest
      * @return ImageRemovalProResponse
@@ -3050,22 +3144,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Scenarios</h2>
      * <ul>
-     * <li><strong>Efficient processing of e-commerce images:</strong>
+     * <li><strong>Efficient e-commerce image processing:</strong>
      * Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</li>
-     * <li><strong>Product information synchronization across multiple platforms:</strong>
-     * Quickly removes specific text and watermarks when merchants list products on different e-commerce platforms to comply with the image specifications of each platform.</li>
+     * <li><strong>Multi-platform product information synchronization:</strong>
+     * Quickly removes specific text and promotional watermarks when merchants list products on different e-commerce platforms, ensuring compliance with the image specifications of different platforms.</li>
      * </ul>
      * <h2>Features</h2>
      * <ol>
-     * <li><p>First, understand the definitions of the image subject and the image background. In actual use, when specifying the objects to remove, you can choose to remove objects from the image subject or the image background. Both API and editor integration methods are supported to meet different requirements.</p>
+     * <li><p>First, understand the definitions of the image subject and the image background. In actual use, when specifying the objects to be removed, you can choose to remove objects from the image subject or the image background. Both API and editor integration methods are supported to meet different needs.</p>
      * <ol>
      * <li><p>Image subject: the core product area in the image.</p>
      * </li>
-     * <li><p>Image background: the rest of the image except the product subject.</p>
+     * <li><p>Image background: the rest of the image excluding the product subject.</p>
      * </li>
      * </ol>
      * </li>
-     * <li><p>Second, the following four types of objects can be removed: text, specific names, transparent text blocks, and watermarks. You can refer to the following examples to clarify your requirements and perform targeted operations:</p>
+     * <li><p>Second, the objects to be removed can be text, specific names, transparent text blocks, or promotional watermarks. You can refer to the following examples to clarify your requirements and perform targeted operations:</p>
      * </li>
      * </ol>
      * <h2>Effect comparison</h2>
@@ -3081,13 +3175,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/eff0eb1b-36df-431d-a010-3bb3b7348ff9.png" alt="image.png"></td>
      * </tr>
      * <tr>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/c44ac17b-3fa4-4a6f-b411-90f1062b183b.jpeg" alt="Main image 1 - Handled ultra-short half-cover round head French false nails.jpeg"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/c44ac17b-3fa4-4a6f-b411-90f1062b183b.jpeg" alt="Main image 1 - Handled ultra-short half-cover round-head French false nails.jpeg"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/af779684-4aa5-49b0-8668-34ab8bd4bcc1.png" alt="image.png"></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Removes objects from e-commerce images by automatically identifying and erasing text, specific names, transparent text blocks, and watermarks. Allows you to specify objects to remove as needed, enabling efficient and accurate processing of large batches of images and simplifying image editing.</p>
+     * <p>Removes text, specific names, transparent text blocks, and promotional watermarks from e-commerce images. This operation automatically identifies and removes these elements or allows you to specify the objects to be removed, enabling efficient and accurate processing of large batches of images and simplifying image editing.</p>
      * 
      * @param request ImageRemovalProAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3125,22 +3219,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Scenarios</h2>
      * <ul>
-     * <li><strong>Efficient processing of e-commerce images:</strong>
+     * <li><strong>Efficient e-commerce image processing:</strong>
      * Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</li>
-     * <li><strong>Product information synchronization across multiple platforms:</strong>
-     * Quickly removes specific text and watermarks when merchants list products on different e-commerce platforms to comply with the image specifications of each platform.</li>
+     * <li><strong>Multi-platform product information synchronization:</strong>
+     * Quickly removes specific text and promotional watermarks when merchants list products on different e-commerce platforms, ensuring compliance with the image specifications of different platforms.</li>
      * </ul>
      * <h2>Features</h2>
      * <ol>
-     * <li><p>First, understand the definitions of the image subject and the image background. In actual use, when specifying the objects to remove, you can choose to remove objects from the image subject or the image background. Both API and editor integration methods are supported to meet different requirements.</p>
+     * <li><p>First, understand the definitions of the image subject and the image background. In actual use, when specifying the objects to be removed, you can choose to remove objects from the image subject or the image background. Both API and editor integration methods are supported to meet different needs.</p>
      * <ol>
      * <li><p>Image subject: the core product area in the image.</p>
      * </li>
-     * <li><p>Image background: the rest of the image except the product subject.</p>
+     * <li><p>Image background: the rest of the image excluding the product subject.</p>
      * </li>
      * </ol>
      * </li>
-     * <li><p>Second, the following four types of objects can be removed: text, specific names, transparent text blocks, and watermarks. You can refer to the following examples to clarify your requirements and perform targeted operations:</p>
+     * <li><p>Second, the objects to be removed can be text, specific names, transparent text blocks, or promotional watermarks. You can refer to the following examples to clarify your requirements and perform targeted operations:</p>
      * </li>
      * </ol>
      * <h2>Effect comparison</h2>
@@ -3156,13 +3250,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/eff0eb1b-36df-431d-a010-3bb3b7348ff9.png" alt="image.png"></td>
      * </tr>
      * <tr>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/c44ac17b-3fa4-4a6f-b411-90f1062b183b.jpeg" alt="Main image 1 - Handled ultra-short half-cover round head French false nails.jpeg"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/c44ac17b-3fa4-4a6f-b411-90f1062b183b.jpeg" alt="Main image 1 - Handled ultra-short half-cover round-head French false nails.jpeg"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/af779684-4aa5-49b0-8668-34ab8bd4bcc1.png" alt="image.png"></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Removes objects from e-commerce images by automatically identifying and erasing text, specific names, transparent text blocks, and watermarks. Allows you to specify objects to remove as needed, enabling efficient and accurate processing of large batches of images and simplifying image editing.</p>
+     * <p>Removes text, specific names, transparent text blocks, and promotional watermarks from e-commerce images. This operation automatically identifies and removes these elements or allows you to specify the objects to be removed, enabling efficient and accurate processing of large batches of images and simplifying image editing.</p>
      * 
      * @param request ImageRemovalProAsyncRequest
      * @return ImageRemovalProAsyncResponse
@@ -3474,16 +3568,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Scenarios</h2>
      * <ul>
-     * <li><strong>Efficient e-commerce image processing:</strong><br>Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</li>
-     * <li><strong>Multi-platform product information synchronization:</strong><br>When merchants list products on different e-commerce platforms simultaneously, they can quickly remove specific text and promotional stickers to comply with the image specifications of different platforms.</li>
+     * <li><strong>Efficient processing of e-commerce images:</strong><br>Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</li>
+     * <li><strong>Multi-platform product information synchronization:</strong><br>When merchants synchronize product listings across different e-commerce platforms, they can quickly remove specific text and watermarks to comply with the image specifications of different platforms.</li>
      * <li><strong>Marketing material preparation:</strong><br>Merchants can easily remove original promotional information and quickly update it with the latest campaign information.<blockquote>
-     * <p>Note: Merchants or platforms can batch remove impurities in images to optimize image quality. We recommend using this feature in combination with the &quot;Intelligent Recognition API&quot; (coming soon) to first filter images containing text, specific names, transparent text blocks, and promotional stickers, and then use the &quot;Intelligent Erasure API&quot; for batch removal. The Intelligent Recognition API focuses on &quot;recognition&quot;, while the Intelligent Erasure API focuses on &quot;erasure&quot;. By calling them in sequence, you can maximize the erasure effect and reduce &quot;false removals&quot; and &quot;false recognitions&quot;.</p>
+     * <p>Note: Merchants or platforms can batch remove impurities in images to optimize image quality. Use this feature in combination with the Intelligent Recognition API (coming soon) to first filter out images containing text, specific names, transparent text blocks, and watermarks, and then use the Intelligent Erasure API for batch removal. The Intelligent Recognition API focuses on recognition, while the Intelligent Erasure API focuses on erasure. By calling them in sequence, you can maximize the erasure effect and reduce false removals and false recognitions.</p>
      * </blockquote>
      * </li>
      * </ul>
      * <h2>Features</h2>
      * <ol>
-     * <li><p>First, clarify the definitions of the image subject and the image background. In actual use, when specifying the objects to be removed, you can choose whether the removal scope is the image subject or the image background area. Both API and editor integration methods are supported to meet different types of requirements.</p>
+     * <li><p>First, clarify the definitions of the image subject and the image background. In actual use, when specifying the objects to remove, you can choose whether the removal scope is the image subject or the image background area. Both API and editor integration methods are supported to meet different types of requirements.</p>
      * <ol>
      * <li><p>Image subject: the core product area in the image.</p>
      * </li>
@@ -3491,18 +3585,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </li>
      * </ol>
      * </li>
-     * <li><p>Second, the objects to be removed support the following three cases:</p>
+     * <li><p>Second, the objects to remove support the following three scenarios:</p>
      * <ol>
-     * <li><p>The user only selects the type. Supported types include text, specific names, transparent text blocks, and promotional stickers. You can clarify the usage requirements through the following examples for targeted operations.</p>
+     * <li><p>The user selects only the type. You can select text, specific names, transparent text blocks, and watermarks. You can clarify your usage requirements through the following examples for targeted operations.</p>
      * </li>
-     * <li><p>(Upgraded) Provides specified image erasure. Users can specify multiple images at a time.</p>
+     * <li><p>(Upgraded) Provides specified image erasure. You can specify multiple images at a time.</p>
      * </li>
-     * <li><p>(Upgraded) Provides specified text erasure. Users can specify multiple text strings at a time.</p>
-     * </li>
-     * </ol>
+     * <li><p>(Upgraded) Provides specified text erasure. You can specify multiple text strings at a time.</p>
      * </li>
      * </ol>
-     * <p>Processing flow: The user passes in the original image URL → OCR and VLM models detect the text or image position → Determine the coordinates of the area to be repaired → AI repairs and generates a clean image → Returns the result image URL.</p>
+     * </li>
+     * </ol>
+     * <p>Processing flow: The user passes the original image URL → The OCR and VLM models detect the text or image position → Determine the coordinates of the area to be inpainted → AI inpainting generates a clean image → Return the result image URL.</p>
      * <h2>Effect comparison</h2>
      * <table>
      * <thead>
@@ -3553,7 +3647,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>Does not involve the image subject area</li>
      * </ul>
      * <p><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/05759aef-1720-41cd-8800-f7d0801e4d95.jpeg" alt="b05173e7-2ae5-494e-99d2-7111fc966fd5.jpeg"> |
-     * | Promotional stickers | *   Involves the image subject area</p>
+     * | Watermarks | *   Involves the image subject area</p>
      * <pre><code>![2.jpeg](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/bf1442f8-a9fa-40d3-bcb0-7a8a41b49b5d.jpeg)
      * </code></pre>
      * <ul>
@@ -3569,7 +3663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * | Specified text erasure (supports multiple text strings) | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c784d8be-4b4d-4972-8b99-828c742b8f03.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/805423ca-bd0d-4d44-a18e-a7d7bfe88587.png" alt="image.png"> |</p>
      * 
      * <b>summary</b> : 
-     * <p>Intelligently removes unwanted elements from e-commerce images by automatically identifying and erasing text, specific names, transparent text blocks, and promotional stickers. Supports specifying target objects for removal to enable efficient and accurate batch processing and simplify image editing.</p>
+     * <p>Intelligently removes unwanted elements from e-commerce images by automatically identifying and erasing text, specific names, transparent text blocks, and intrusive watermarks. It also allows you to specify objects for removal as needed, enabling efficient and accurate processing of large image batches and simplifying image editing workflows.</p>
      * 
      * @param tmpReq ImageRemoveAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3649,16 +3743,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Scenarios</h2>
      * <ul>
-     * <li><strong>Efficient e-commerce image processing:</strong><br>Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</li>
-     * <li><strong>Multi-platform product information synchronization:</strong><br>When merchants list products on different e-commerce platforms simultaneously, they can quickly remove specific text and promotional stickers to comply with the image specifications of different platforms.</li>
+     * <li><strong>Efficient processing of e-commerce images:</strong><br>Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</li>
+     * <li><strong>Multi-platform product information synchronization:</strong><br>When merchants synchronize product listings across different e-commerce platforms, they can quickly remove specific text and watermarks to comply with the image specifications of different platforms.</li>
      * <li><strong>Marketing material preparation:</strong><br>Merchants can easily remove original promotional information and quickly update it with the latest campaign information.<blockquote>
-     * <p>Note: Merchants or platforms can batch remove impurities in images to optimize image quality. We recommend using this feature in combination with the &quot;Intelligent Recognition API&quot; (coming soon) to first filter images containing text, specific names, transparent text blocks, and promotional stickers, and then use the &quot;Intelligent Erasure API&quot; for batch removal. The Intelligent Recognition API focuses on &quot;recognition&quot;, while the Intelligent Erasure API focuses on &quot;erasure&quot;. By calling them in sequence, you can maximize the erasure effect and reduce &quot;false removals&quot; and &quot;false recognitions&quot;.</p>
+     * <p>Note: Merchants or platforms can batch remove impurities in images to optimize image quality. Use this feature in combination with the Intelligent Recognition API (coming soon) to first filter out images containing text, specific names, transparent text blocks, and watermarks, and then use the Intelligent Erasure API for batch removal. The Intelligent Recognition API focuses on recognition, while the Intelligent Erasure API focuses on erasure. By calling them in sequence, you can maximize the erasure effect and reduce false removals and false recognitions.</p>
      * </blockquote>
      * </li>
      * </ul>
      * <h2>Features</h2>
      * <ol>
-     * <li><p>First, clarify the definitions of the image subject and the image background. In actual use, when specifying the objects to be removed, you can choose whether the removal scope is the image subject or the image background area. Both API and editor integration methods are supported to meet different types of requirements.</p>
+     * <li><p>First, clarify the definitions of the image subject and the image background. In actual use, when specifying the objects to remove, you can choose whether the removal scope is the image subject or the image background area. Both API and editor integration methods are supported to meet different types of requirements.</p>
      * <ol>
      * <li><p>Image subject: the core product area in the image.</p>
      * </li>
@@ -3666,18 +3760,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </li>
      * </ol>
      * </li>
-     * <li><p>Second, the objects to be removed support the following three cases:</p>
+     * <li><p>Second, the objects to remove support the following three scenarios:</p>
      * <ol>
-     * <li><p>The user only selects the type. Supported types include text, specific names, transparent text blocks, and promotional stickers. You can clarify the usage requirements through the following examples for targeted operations.</p>
+     * <li><p>The user selects only the type. You can select text, specific names, transparent text blocks, and watermarks. You can clarify your usage requirements through the following examples for targeted operations.</p>
      * </li>
-     * <li><p>(Upgraded) Provides specified image erasure. Users can specify multiple images at a time.</p>
+     * <li><p>(Upgraded) Provides specified image erasure. You can specify multiple images at a time.</p>
      * </li>
-     * <li><p>(Upgraded) Provides specified text erasure. Users can specify multiple text strings at a time.</p>
-     * </li>
-     * </ol>
+     * <li><p>(Upgraded) Provides specified text erasure. You can specify multiple text strings at a time.</p>
      * </li>
      * </ol>
-     * <p>Processing flow: The user passes in the original image URL → OCR and VLM models detect the text or image position → Determine the coordinates of the area to be repaired → AI repairs and generates a clean image → Returns the result image URL.</p>
+     * </li>
+     * </ol>
+     * <p>Processing flow: The user passes the original image URL → The OCR and VLM models detect the text or image position → Determine the coordinates of the area to be inpainted → AI inpainting generates a clean image → Return the result image URL.</p>
      * <h2>Effect comparison</h2>
      * <table>
      * <thead>
@@ -3728,7 +3822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>Does not involve the image subject area</li>
      * </ul>
      * <p><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/05759aef-1720-41cd-8800-f7d0801e4d95.jpeg" alt="b05173e7-2ae5-494e-99d2-7111fc966fd5.jpeg"> |
-     * | Promotional stickers | *   Involves the image subject area</p>
+     * | Watermarks | *   Involves the image subject area</p>
      * <pre><code>![2.jpeg](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/bf1442f8-a9fa-40d3-bcb0-7a8a41b49b5d.jpeg)
      * </code></pre>
      * <ul>
@@ -3744,7 +3838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * | Specified text erasure (supports multiple text strings) | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c784d8be-4b4d-4972-8b99-828c742b8f03.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/805423ca-bd0d-4d44-a18e-a7d7bfe88587.png" alt="image.png"> |</p>
      * 
      * <b>summary</b> : 
-     * <p>Intelligently removes unwanted elements from e-commerce images by automatically identifying and erasing text, specific names, transparent text blocks, and promotional stickers. Supports specifying target objects for removal to enable efficient and accurate batch processing and simplify image editing.</p>
+     * <p>Intelligently removes unwanted elements from e-commerce images by automatically identifying and erasing text, specific names, transparent text blocks, and intrusive watermarks. It also allows you to specify objects for removal as needed, enabling efficient and accurate processing of large image batches and simplifying image editing workflows.</p>
      * 
      * @param request ImageRemoveAsyncRequest
      * @return ImageRemoveAsyncResponse
@@ -3756,8 +3850,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Product Introduction</h2>
-     * <p>Image Translation PLUS is designed specifically for e-commerce images and uses a Mixture of Experts (MOE) architecture. Compared to the Image Translation Lite and Pro editions, it delivers superior translation accuracy for multiple minority languages. Use it for the following 12 language pairs. More language pairs will be supported in the future.
+     * <h2>Product introduction</h2>
+     * <p>The PLUS edition of the image translation service is designed specifically for e-commerce images. Built on the Mixture of Experts (MOE) architecture, it delivers higher translation accuracy for multiple minor languages than the Lite and Pro editions. We recommend that you use this edition for the following 12 language pairs. More language pairs will be supported in the future.
      * Supported language pairs:</p>
      * <table>
      * <thead>
@@ -3862,19 +3956,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </tbody></table>
      * <h2>Scenarios</h2>
-     * <p>Main product images and detail images for cross-border e-commerce.</p>
+     * <p>Main images and detail images for cross-border e-commerce.</p>
      * <h2>Features</h2>
      * <ul>
-     * <li><p><strong>Product body information protection</strong>: Allows you to choose whether to translate text on the product body. This helps protect body information such as embedded product names from being translated.</p>
+     * <li><p><strong>Product subject information protection</strong>: Allows you to specify whether to translate the text on the product subject. This helps protect the subject information, such as the embedded product name, from being translated.</p>
      * </li>
-     * <li><p><strong>Brand name protection</strong>: Allows you to choose whether to translate brand names on images. This helps protect brand name information from being translated.</p>
+     * <li><p><strong>Brand name protection</strong>: Allows you to specify whether to translate the brand name in the image. This helps protect the brand name from being translated.</p>
      * </li>
-     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping text untranslated (ABC→ABC), specifying a translation (ABC→DEF), or removing text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</p>
+     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or leaving it untranslated (ABC-null). This is commonly used for scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API operation to meet your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention words. If you need more, contact the platform for assistance.</p>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Image Translation PLUS is designed specifically for e-commerce images and uses a Mixture of Experts (MOE) architecture. Compared to the Image Translation Lite and Pro editions, it delivers superior translation accuracy for multiple minority languages. We recommend using it for the following 12 language pairs, with more language pairs to be supported in the future.</p>
+     * <p>Translates e-commerce images by using the PLUS edition of the image translation service. Built on the Mixture of Experts (MOE) architecture, this edition delivers higher translation accuracy for multiple minor languages than the Lite and Pro editions. It is recommended for the following 12 language pairs, with more to be added in the future.</p>
      * 
      * @param request ImageTranslationPlusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3930,8 +4024,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Product Introduction</h2>
-     * <p>Image Translation PLUS is designed specifically for e-commerce images and uses a Mixture of Experts (MOE) architecture. Compared to the Image Translation Lite and Pro editions, it delivers superior translation accuracy for multiple minority languages. Use it for the following 12 language pairs. More language pairs will be supported in the future.
+     * <h2>Product introduction</h2>
+     * <p>The PLUS edition of the image translation service is designed specifically for e-commerce images. Built on the Mixture of Experts (MOE) architecture, it delivers higher translation accuracy for multiple minor languages than the Lite and Pro editions. We recommend that you use this edition for the following 12 language pairs. More language pairs will be supported in the future.
      * Supported language pairs:</p>
      * <table>
      * <thead>
@@ -4036,19 +4130,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </tbody></table>
      * <h2>Scenarios</h2>
-     * <p>Main product images and detail images for cross-border e-commerce.</p>
+     * <p>Main images and detail images for cross-border e-commerce.</p>
      * <h2>Features</h2>
      * <ul>
-     * <li><p><strong>Product body information protection</strong>: Allows you to choose whether to translate text on the product body. This helps protect body information such as embedded product names from being translated.</p>
+     * <li><p><strong>Product subject information protection</strong>: Allows you to specify whether to translate the text on the product subject. This helps protect the subject information, such as the embedded product name, from being translated.</p>
      * </li>
-     * <li><p><strong>Brand name protection</strong>: Allows you to choose whether to translate brand names on images. This helps protect brand name information from being translated.</p>
+     * <li><p><strong>Brand name protection</strong>: Allows you to specify whether to translate the brand name in the image. This helps protect the brand name from being translated.</p>
      * </li>
-     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping text untranslated (ABC→ABC), specifying a translation (ABC→DEF), or removing text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</p>
+     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or leaving it untranslated (ABC-null). This is commonly used for scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API operation to meet your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention words. If you need more, contact the platform for assistance.</p>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Image Translation PLUS is designed specifically for e-commerce images and uses a Mixture of Experts (MOE) architecture. Compared to the Image Translation Lite and Pro editions, it delivers superior translation accuracy for multiple minority languages. We recommend using it for the following 12 language pairs, with more language pairs to be supported in the future.</p>
+     * <p>Translates e-commerce images by using the PLUS edition of the image translation service. Built on the Mixture of Experts (MOE) architecture, this edition delivers higher translation accuracy for multiple minor languages than the Lite and Pro editions. It is recommended for the following 12 language pairs, with more to be added in the future.</p>
      * 
      * @param request ImageTranslationPlusRequest
      * @return ImageTranslationPlusResponse
@@ -4064,11 +4158,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Main images and detail images for cross-border e-commerce.</p>
      * <h2>Features</h2>
      * <ul>
-     * <li><p><strong>Product subject information protection</strong>: Allows you to specify whether to translate the text on the product subject. This helps you protect the subject information, such as the embedded product name, from being translated.</p>
+     * <li><p><strong>Product subject information protection</strong>: You can choose whether to translate the text on the product subject. This helps you protect the subject information from being translated, such as embedded information like product names.</p>
      * </li>
-     * <li><p><strong>Brand name protection</strong>: Allows you to specify whether to translate the brand name in the image. This helps you protect the brand name from being translated.</p>
+     * <li><p><strong>Brand name protection</strong>: You can choose whether to translate the brand names in the image. This helps you protect brand name information from being translated.</p>
      * </li>
-     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), and skipping translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API operation to meet your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</p>
+     * <li><p><strong>Translation intervention</strong>: You can customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or omitting the translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can achieve this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention entries. If you need more, contact the platform for assistance.</p>
      * </li>
      * </ul>
      * <h2>Supported language pairs</h2>
@@ -4175,11 +4269,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </tbody></table>
      * <h2>Preparations and call process</h2>
-     * <p>The asynchronous API operations for the Plus edition of image translation and other features share the same result retrieval process, RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
-     * For the integration process of asynchronous calls, subscription rules, message formats and encryption protocols, and detailed integration solutions, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API operation call instructions</a>.</p>
+     * <p>Image Translation Plus and other asynchronous APIs share the same result retrieval process, RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
+     * For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Translates e-commerce images by using the Mixture of Experts (MoE) architecture. Compared with the Lite and Pro editions, the Plus edition provides higher translation accuracy for multiple minor languages.</p>
+     * <p>Image Translation Plus is designed specifically for e-commerce images. It adopts the Mixture of Experts (MoE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages.</p>
      * 
      * @param request ImageTranslationPlusAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4243,11 +4337,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Main images and detail images for cross-border e-commerce.</p>
      * <h2>Features</h2>
      * <ul>
-     * <li><p><strong>Product subject information protection</strong>: Allows you to specify whether to translate the text on the product subject. This helps you protect the subject information, such as the embedded product name, from being translated.</p>
+     * <li><p><strong>Product subject information protection</strong>: You can choose whether to translate the text on the product subject. This helps you protect the subject information from being translated, such as embedded information like product names.</p>
      * </li>
-     * <li><p><strong>Brand name protection</strong>: Allows you to specify whether to translate the brand name in the image. This helps you protect the brand name from being translated.</p>
+     * <li><p><strong>Brand name protection</strong>: You can choose whether to translate the brand names in the image. This helps you protect brand name information from being translated.</p>
      * </li>
-     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), and skipping translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API operation to meet your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</p>
+     * <li><p><strong>Translation intervention</strong>: You can customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or omitting the translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can achieve this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention entries. If you need more, contact the platform for assistance.</p>
      * </li>
      * </ul>
      * <h2>Supported language pairs</h2>
@@ -4354,11 +4448,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </tbody></table>
      * <h2>Preparations and call process</h2>
-     * <p>The asynchronous API operations for the Plus edition of image translation and other features share the same result retrieval process, RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
-     * For the integration process of asynchronous calls, subscription rules, message formats and encryption protocols, and detailed integration solutions, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API operation call instructions</a>.</p>
+     * <p>Image Translation Plus and other asynchronous APIs share the same result retrieval process, RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
+     * For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Translates e-commerce images by using the Mixture of Experts (MoE) architecture. Compared with the Lite and Pro editions, the Plus edition provides higher translation accuracy for multiple minor languages.</p>
+     * <p>Image Translation Plus is designed specifically for e-commerce images. It adopts the Mixture of Experts (MoE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages.</p>
      * 
      * @param request ImageTranslationPlusAsyncRequest
      * @return ImageTranslationPlusAsyncResponse
@@ -4370,21 +4464,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Product Introduction</h2>
-     * <p>The Image Translation Pro edition is designed for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. More than 400 language directions are supported, including bridged directions.</p>
+     * <h2>Product introduction</h2>
+     * <p>The Pro edition of the image translation service is designed specifically for e-commerce images. It integrates multimodal large models to achieve more accurate image understanding, significantly improves translation quality, and continuously expands and optimizes multilingual translation capabilities. It supports over 400 language pairs, including bridged languages.</p>
      * <h2>Scenarios</h2>
-     * <p>E-commerce product images, marketing images, and images for various other scenarios.</p>
-     * <h2>Functions and features</h2>
+     * <p>E-commerce product images, marketing images, and images in various other scenarios.</p>
+     * <h2>Features</h2>
      * <ul>
-     * <li><strong>Product subject information protection</strong>: You can choose whether to translate text on the product subject, which helps protect subject information such as embedded product names from being translated.</li>
-     * <li><strong>Post-translation editing</strong>: You can choose whether to return layout information such as text position, font, and color. This information can be used for secondary editing when integrated with an image editor. The editor SDK package is not yet available. Follow platform notifications for updates.</li>
-     * <li><strong>Brand name protection</strong>: You can choose whether to translate brand names on images, which helps protect brand name information from being translated.</li>
-     * <li><strong>Translation intervention</strong>: You can customize translation results, including keeping text untranslated (ABC→ABC), specifying translations (ABC→DEF), or removing text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.  </li>
-     * <li>&lt;props=&quot;china&quot;&gt; <strong>Image editor integration</strong>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image Translation Editor Protocol</a>.</li>
+     * <li><strong>Product subject information protection</strong>: Allows you to specify whether to translate text on the product subject. This helps you protect subject information and prevents embedded information such as product names from being translated.</li>
+     * <li><strong>Secondary editing after translation</strong>: Allows you to specify whether to return layout information such as text position, font, and color. This information can be used for secondary editing when you integrate an image editor. The SDK package for the editor is not yet available. Follow platform notifications for updates.</li>
+     * <li><strong>Brand name protection</strong>: Allows you to specify whether to translate brand names in images. This helps you protect brand name information from being translated.</li>
+     * <li><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), and omitting the translation (ABC-null). This is commonly used for scenarios such as brand word protection. You only need to pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention words. If you need a higher quota, contact the platform.  </li>
+     * <li>&lt;props=&quot;china&quot;&gt; <strong>Image editor integration</strong>: For details, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image translation editor protocol</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Translates images using the Pro edition, which is designed for e-commerce images. This edition integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. More than 400 language directions are supported, including bridged directions.</p>
+     * <p>Translates e-commerce images by using the Pro edition of the image translation service. Integrates multimodal large models to achieve more accurate image understanding, significantly improves translation quality, and continuously expands and optimizes multilingual translation capabilities. Supports over 400 language pairs, including bridged languages.</p>
      * 
      * @param request ImageTranslationProRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4444,21 +4538,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Product Introduction</h2>
-     * <p>The Image Translation Pro edition is designed for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. More than 400 language directions are supported, including bridged directions.</p>
+     * <h2>Product introduction</h2>
+     * <p>The Pro edition of the image translation service is designed specifically for e-commerce images. It integrates multimodal large models to achieve more accurate image understanding, significantly improves translation quality, and continuously expands and optimizes multilingual translation capabilities. It supports over 400 language pairs, including bridged languages.</p>
      * <h2>Scenarios</h2>
-     * <p>E-commerce product images, marketing images, and images for various other scenarios.</p>
-     * <h2>Functions and features</h2>
+     * <p>E-commerce product images, marketing images, and images in various other scenarios.</p>
+     * <h2>Features</h2>
      * <ul>
-     * <li><strong>Product subject information protection</strong>: You can choose whether to translate text on the product subject, which helps protect subject information such as embedded product names from being translated.</li>
-     * <li><strong>Post-translation editing</strong>: You can choose whether to return layout information such as text position, font, and color. This information can be used for secondary editing when integrated with an image editor. The editor SDK package is not yet available. Follow platform notifications for updates.</li>
-     * <li><strong>Brand name protection</strong>: You can choose whether to translate brand names on images, which helps protect brand name information from being translated.</li>
-     * <li><strong>Translation intervention</strong>: You can customize translation results, including keeping text untranslated (ABC→ABC), specifying translations (ABC→DEF), or removing text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.  </li>
-     * <li>&lt;props=&quot;china&quot;&gt; <strong>Image editor integration</strong>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image Translation Editor Protocol</a>.</li>
+     * <li><strong>Product subject information protection</strong>: Allows you to specify whether to translate text on the product subject. This helps you protect subject information and prevents embedded information such as product names from being translated.</li>
+     * <li><strong>Secondary editing after translation</strong>: Allows you to specify whether to return layout information such as text position, font, and color. This information can be used for secondary editing when you integrate an image editor. The SDK package for the editor is not yet available. Follow platform notifications for updates.</li>
+     * <li><strong>Brand name protection</strong>: Allows you to specify whether to translate brand names in images. This helps you protect brand name information from being translated.</li>
+     * <li><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), and omitting the translation (ABC-null). This is commonly used for scenarios such as brand word protection. You only need to pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention words. If you need a higher quota, contact the platform.  </li>
+     * <li>&lt;props=&quot;china&quot;&gt; <strong>Image editor integration</strong>: For details, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image translation editor protocol</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Translates images using the Pro edition, which is designed for e-commerce images. This edition integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. More than 400 language directions are supported, including bridged directions.</p>
+     * <p>Translates e-commerce images by using the Pro edition of the image translation service. Integrates multimodal large models to achieve more accurate image understanding, significantly improves translation quality, and continuously expands and optimizes multilingual translation capabilities. Supports over 400 language pairs, including bridged languages.</p>
      * 
      * @param request ImageTranslationProRequest
      * @return ImageTranslationProResponse
@@ -4471,25 +4565,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Scenarios</h2>
-     * <p>E-commerce product images, marketing images, and images in various other scenarios.</p>
+     * <p>E-commerce product images, marketing images, and images for various other scenarios.</p>
      * <h2>Features</h2>
      * <ul>
-     * <li><p>Product subject information protection: You can specify whether to translate the text on the product subject. This helps you protect the subject information, such as the embedded product name, from being translated.</p>
+     * <li><p>Product subject information protection: You can specify whether to translate the text on the product subject. This helps you protect the subject information, such as the product name, from being translated.</p>
      * </li>
      * <li><p>Secondary editing after translation: You can specify whether to return layout information such as the position, font, and color of the text. This information can be used for secondary editing when you integrate an image editor. The SDK package for the editor is not yet available. Follow platform notifications for updates.</p>
      * </li>
      * <li><p>Brand name protection: You can specify whether to translate brand names in the image. This helps you protect brand name information from being translated.</p>
      * </li>
-     * <li><p>Translation intervention: You can customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or omitting the translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention entries. If you need more, contact the platform for assistance.</p>
+     * <li><p>Translation intervention: You can customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or omitting the translation (ABC-null value). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</p>
      * </li>
      * </ul>
      * <h2>Preparations and call process</h2>
-     * <p>Image Translation Pro supports both synchronous and asynchronous calls. This topic describes the asynchronous call API. For synchronous calls, see <a href="https://www.alibabacloud.com/help/en/aidge/image-translation-pro">Image Translation Pro</a>.
-     * The asynchronous APIs for text translation and other capabilities share the same result retrieval process, RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
-     * For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, see <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</p>
+     * <p>Image Translation Pro supports both synchronous and asynchronous call methods. This topic describes the asynchronous call API. For synchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/image-translation-pro">Image Translation Pro</a>.
+     * The asynchronous APIs for text translation and other capabilities share the same result retrieval process, ApsaraMQ for RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
+     * For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Translates images asynchronously by using Image Translation Pro. Designed for e-commerce images, this service integrates multimodal large language models to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 400 language pairs, including bridged language pairs.</p>
+     * <p>Translates images by using Image Translation Pro, which is designed specifically for e-commerce images, integrates multimodal large model technology for more accurate image understanding, significantly improves translation quality, and continuously expands and optimizes multilingual translation capabilities. It supports more than 400 language pairs, including bridged languages.</p>
      * 
      * @param request ImageTranslationProAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4550,25 +4644,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Scenarios</h2>
-     * <p>E-commerce product images, marketing images, and images in various other scenarios.</p>
+     * <p>E-commerce product images, marketing images, and images for various other scenarios.</p>
      * <h2>Features</h2>
      * <ul>
-     * <li><p>Product subject information protection: You can specify whether to translate the text on the product subject. This helps you protect the subject information, such as the embedded product name, from being translated.</p>
+     * <li><p>Product subject information protection: You can specify whether to translate the text on the product subject. This helps you protect the subject information, such as the product name, from being translated.</p>
      * </li>
      * <li><p>Secondary editing after translation: You can specify whether to return layout information such as the position, font, and color of the text. This information can be used for secondary editing when you integrate an image editor. The SDK package for the editor is not yet available. Follow platform notifications for updates.</p>
      * </li>
      * <li><p>Brand name protection: You can specify whether to translate brand names in the image. This helps you protect brand name information from being translated.</p>
      * </li>
-     * <li><p>Translation intervention: You can customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or omitting the translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention entries. If you need more, contact the platform for assistance.</p>
+     * <li><p>Translation intervention: You can customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or omitting the translation (ABC-null value). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</p>
      * </li>
      * </ul>
      * <h2>Preparations and call process</h2>
-     * <p>Image Translation Pro supports both synchronous and asynchronous calls. This topic describes the asynchronous call API. For synchronous calls, see <a href="https://www.alibabacloud.com/help/en/aidge/image-translation-pro">Image Translation Pro</a>.
-     * The asynchronous APIs for text translation and other capabilities share the same result retrieval process, RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
-     * For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, see <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</p>
+     * <p>Image Translation Pro supports both synchronous and asynchronous call methods. This topic describes the asynchronous call API. For synchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/image-translation-pro">Image Translation Pro</a>.
+     * The asynchronous APIs for text translation and other capabilities share the same result retrieval process, ApsaraMQ for RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
+     * For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Translates images asynchronously by using Image Translation Pro. Designed for e-commerce images, this service integrates multimodal large language models to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 400 language pairs, including bridged language pairs.</p>
+     * <p>Translates images by using Image Translation Pro, which is designed specifically for e-commerce images, integrates multimodal large model technology for more accurate image understanding, significantly improves translation quality, and continuously expands and optimizes multilingual translation capabilities. It supports more than 400 language pairs, including bridged languages.</p>
      * 
      * @param request ImageTranslationProAsyncRequest
      * @return ImageTranslationProAsyncResponse
@@ -4581,23 +4675,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h1>1. Product Introduction</h1>
-     * <p>The image translation product is designed specifically for e-commerce images, supporting over 400 language directions (including bridging). It accurately handles complex text layouts within images and ensures that translated content matches the image context, helping e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color, enabling secondary editing of translation results through an image editor.</p>
-     * <h1>2. Common scenarios</h1>
+     * <p>The image translation product is tailored for e-commerce images, supporting over 400 language pairs (including bridged pairs). It accurately processes complex text layouts within images and ensures that the translated content matches the image context, helping e-commerce platforms and developers easily achieve multilingual conversion and presentation. Additionally, the product returns layer information such as text position, font, and color, facilitating integration with image editors for secondary editing.</p>
+     * <h1>2. Scenarios</h1>
      * <p>E-commerce product images, marketing images, and images for various other scenarios.</p>
      * <h1>3. Features</h1>
      * <ul>
-     * <li><p><strong>Product subject information protection</strong>: Allows you to choose whether to translate text on the product subject, helping protect subject information from being translated and avoiding translation of embedded information such as product names.</p>
+     * <li><p><strong>Product subject information protection</strong>: Allows you to specify whether to translate text on the product subject, protecting subject information such as embedded product names from being translated.</p>
      * </li>
-     * <li><p><strong>Brand name protection</strong>: Allows you to choose whether to translate brand names on images, helping protect brand name information from being translated.</p>
+     * <li><p><strong>Brand name protection</strong>: Allows you to specify whether to translate brand names in the image, protecting brand name information from being translated.</p>
      * </li>
-     * <li><p><strong>Secondary editing after translation (layer information)</strong>: Allows you to choose whether to return layer information such as text position, font, and color, which can be used to connect to an image editor for secondary editing of translation results. Follow platform notifications for updates on the editor SDK package release.</p>
+     * <li><p><strong>Secondary editing after translation (layer information)</strong>: Allows you to specify whether to return layer information such as text position, font, and color. This information can be used to integrate with image editors for secondary editing of the translation results. For updates on the availability of the editor SDK, refer to platform notifications.</p>
      * </li>
-     * <li><p><strong>Translation intervention support</strong>: Allows you to customize translation results, including no translation (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand term protection and similar scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need more.<br>&lt;props=&quot;china&quot;&gt;*   <strong>Image editor integration support</strong>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image translation editor protocol</a>.</p>
+     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including no translation (ABC-ABC), specified translation (ABC-DEF), and skipping translation (ABC-null value). This is commonly used for scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, meeting your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention words. If you need more, contact the platform for assistance.<br>&lt;props=&quot;china&quot;&gt;*   <strong>Image editor integration</strong>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image Translation Editor Protocol</a>.</p>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Translates text in images with support for over 400 language directions (including bridging). This product is designed specifically for e-commerce images, accurately handling complex text layouts within images and ensuring that translated content matches the image context. It helps e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color, enabling secondary editing of translation results through an image editor.</p>
+     * <p>Translates e-commerce images and supports over 400 language pairs, including bridged languages. Accurately processes complex text layouts within images and ensures that the translated content matches the image context, helping e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. Additionally, returns layer information such as the position, font, and color of text in the image to facilitate secondary editing of translation results in image editors.</p>
      * 
      * @param request ImageTranslationStandardRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4654,23 +4748,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h1>1. Product Introduction</h1>
-     * <p>The image translation product is designed specifically for e-commerce images, supporting over 400 language directions (including bridging). It accurately handles complex text layouts within images and ensures that translated content matches the image context, helping e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color, enabling secondary editing of translation results through an image editor.</p>
-     * <h1>2. Common scenarios</h1>
+     * <p>The image translation product is tailored for e-commerce images, supporting over 400 language pairs (including bridged pairs). It accurately processes complex text layouts within images and ensures that the translated content matches the image context, helping e-commerce platforms and developers easily achieve multilingual conversion and presentation. Additionally, the product returns layer information such as text position, font, and color, facilitating integration with image editors for secondary editing.</p>
+     * <h1>2. Scenarios</h1>
      * <p>E-commerce product images, marketing images, and images for various other scenarios.</p>
      * <h1>3. Features</h1>
      * <ul>
-     * <li><p><strong>Product subject information protection</strong>: Allows you to choose whether to translate text on the product subject, helping protect subject information from being translated and avoiding translation of embedded information such as product names.</p>
+     * <li><p><strong>Product subject information protection</strong>: Allows you to specify whether to translate text on the product subject, protecting subject information such as embedded product names from being translated.</p>
      * </li>
-     * <li><p><strong>Brand name protection</strong>: Allows you to choose whether to translate brand names on images, helping protect brand name information from being translated.</p>
+     * <li><p><strong>Brand name protection</strong>: Allows you to specify whether to translate brand names in the image, protecting brand name information from being translated.</p>
      * </li>
-     * <li><p><strong>Secondary editing after translation (layer information)</strong>: Allows you to choose whether to return layer information such as text position, font, and color, which can be used to connect to an image editor for secondary editing of translation results. Follow platform notifications for updates on the editor SDK package release.</p>
+     * <li><p><strong>Secondary editing after translation (layer information)</strong>: Allows you to specify whether to return layer information such as text position, font, and color. This information can be used to integrate with image editors for secondary editing of the translation results. For updates on the availability of the editor SDK, refer to platform notifications.</p>
      * </li>
-     * <li><p><strong>Translation intervention support</strong>: Allows you to customize translation results, including no translation (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand term protection and similar scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need more.<br>&lt;props=&quot;china&quot;&gt;*   <strong>Image editor integration support</strong>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image translation editor protocol</a>.</p>
+     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including no translation (ABC-ABC), specified translation (ABC-DEF), and skipping translation (ABC-null value). This is commonly used for scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, meeting your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention words. If you need more, contact the platform for assistance.<br>&lt;props=&quot;china&quot;&gt;*   <strong>Image editor integration</strong>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image Translation Editor Protocol</a>.</p>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Translates text in images with support for over 400 language directions (including bridging). This product is designed specifically for e-commerce images, accurately handling complex text layouts within images and ensuring that translated content matches the image context. It helps e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color, enabling secondary editing of translation results through an image editor.</p>
+     * <p>Translates e-commerce images and supports over 400 language pairs, including bridged languages. Accurately processes complex text layouts within images and ensures that the translated content matches the image context, helping e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. Additionally, returns layer information such as the position, font, and color of text in the image to facilitate secondary editing of translation results in image editors.</p>
      * 
      * @param request ImageTranslationStandardRequest
      * @return ImageTranslationStandardResponse
@@ -4686,24 +4780,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>E-commerce product images, marketing images, and images for various other scenarios.</p>
      * <h2>Features</h2>
      * <ul>
-     * <li><p><strong>Product subject information protection</strong>: Allows you to specify whether to translate the text on the product subject. This helps protect the subject information from being translated and prevents the translation of embedded information such as product names.</p>
+     * <li><p><strong>Product subject information protection</strong>: Allows you to specify whether to translate text on the product subject. This protects the subject information from being translated and prevents embedded information such as product names from being translated.</p>
      * </li>
-     * <li><p><strong>Brand name protection</strong>: Allows you to specify whether to translate brand names in the image. This helps protect brand name information from being translated.</p>
+     * <li><p><strong>Brand name protection</strong>: Allows you to specify whether to translate brand names in the image. This protects brand name information from being translated.</p>
      * </li>
-     * <li><p><strong>Secondary editing after translation (layer information)</strong>: Allows you to specify whether to return layer information such as the position, font, and color of the text. This information can be used to integrate with image editors for secondary editing of translation results. For the release progress of the editor SDK package, refer to platform notifications.</p>
+     * <li><p><strong>Secondary editing after translation (layer information)</strong>: Allows you to specify whether to return layer information such as text position, font, and color. This information can be used to integrate with image editors for secondary editing of translation results. For updates on the availability of the editor SDK, refer to platform notifications.</p>
      * </li>
-     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), and skipping translation (ABC-null value). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API operation to meet your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention entries. If you need more, contact the platform for assistance.</p>
+     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping text untranslated (ABC-ABC), specifying translations (ABC-DEF), and omitting translations (ABC-null value). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</p>
      * </li>
      * </ul>
      * <h2>Preparations and call process</h2>
      * <ul>
-     * <li>The standard edition of Image Translation supports both synchronous and asynchronous call methods. This topic describes the asynchronous call API operation. To use synchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/image-translation">Image Translation Standard Edition</a>.   </li>
-     * <li>The asynchronous API operations for the standard edition of Image Translation and other features share the result retrieval process, ApsaraMQ for RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.   </li>
-     * <li>For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API operation call instructions</a>.</li>
+     * <li>Image Translation Standard Edition supports both synchronous and asynchronous calls. This topic describes the asynchronous call API. For synchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/image-translation">Image Translation Standard Edition</a>.   </li>
+     * <li>The asynchronous APIs for Image Translation Standard Edition and other features share the result retrieval process, ApsaraMQ for RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.   </li>
+     * <li>For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Translates images specifically designed for e-commerce, supporting over 400 language pairs, including bridged pairs. It accurately processes complex text layouts within images and ensures that the translated content matches the image context. This helps e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. Additionally, the service returns layer information such as the position, font, and color of text in the image, which facilitates secondary editing of translation results by using image editors.</p>
+     * <p>Translates images tailored for e-commerce scenarios, supporting over 400 language directions (including bridged languages), accurately processing complex text layouts within images, and ensuring translated content matches the image context to help e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. It also returns layer information such as text position, font, and color to facilitate secondary editing of translation results in image editors.</p>
      * 
      * @param request ImageTranslationStandardAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4767,24 +4861,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>E-commerce product images, marketing images, and images for various other scenarios.</p>
      * <h2>Features</h2>
      * <ul>
-     * <li><p><strong>Product subject information protection</strong>: Allows you to specify whether to translate the text on the product subject. This helps protect the subject information from being translated and prevents the translation of embedded information such as product names.</p>
+     * <li><p><strong>Product subject information protection</strong>: Allows you to specify whether to translate text on the product subject. This protects the subject information from being translated and prevents embedded information such as product names from being translated.</p>
      * </li>
-     * <li><p><strong>Brand name protection</strong>: Allows you to specify whether to translate brand names in the image. This helps protect brand name information from being translated.</p>
+     * <li><p><strong>Brand name protection</strong>: Allows you to specify whether to translate brand names in the image. This protects brand name information from being translated.</p>
      * </li>
-     * <li><p><strong>Secondary editing after translation (layer information)</strong>: Allows you to specify whether to return layer information such as the position, font, and color of the text. This information can be used to integrate with image editors for secondary editing of translation results. For the release progress of the editor SDK package, refer to platform notifications.</p>
+     * <li><p><strong>Secondary editing after translation (layer information)</strong>: Allows you to specify whether to return layer information such as text position, font, and color. This information can be used to integrate with image editors for secondary editing of translation results. For updates on the availability of the editor SDK, refer to platform notifications.</p>
      * </li>
-     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), and skipping translation (ABC-null value). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API operation to meet your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention entries. If you need more, contact the platform for assistance.</p>
+     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping text untranslated (ABC-ABC), specifying translations (ABC-DEF), and omitting translations (ABC-null value). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</p>
      * </li>
      * </ul>
      * <h2>Preparations and call process</h2>
      * <ul>
-     * <li>The standard edition of Image Translation supports both synchronous and asynchronous call methods. This topic describes the asynchronous call API operation. To use synchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/image-translation">Image Translation Standard Edition</a>.   </li>
-     * <li>The asynchronous API operations for the standard edition of Image Translation and other features share the result retrieval process, ApsaraMQ for RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.   </li>
-     * <li>For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API operation call instructions</a>.</li>
+     * <li>Image Translation Standard Edition supports both synchronous and asynchronous calls. This topic describes the asynchronous call API. For synchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/image-translation">Image Translation Standard Edition</a>.   </li>
+     * <li>The asynchronous APIs for Image Translation Standard Edition and other features share the result retrieval process, ApsaraMQ for RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.   </li>
+     * <li>For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Translates images specifically designed for e-commerce, supporting over 400 language pairs, including bridged pairs. It accurately processes complex text layouts within images and ensures that the translated content matches the image context. This helps e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. Additionally, the service returns layer information such as the position, font, and color of text in the image, which facilitates secondary editing of translation results by using image editors.</p>
+     * <p>Translates images tailored for e-commerce scenarios, supporting over 400 language directions (including bridged languages), accurately processing complex text layouts within images, and ensuring translated content matches the image context to help e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. It also returns layer information such as text position, font, and color to facilitate secondary editing of translation results in image editors.</p>
      * 
      * @param request ImageTranslationStandardAsyncRequest
      * @return ImageTranslationStandardAsyncResponse
@@ -4792,6 +4886,124 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ImageTranslationStandardAsyncResponse imageTranslationStandardAsync(ImageTranslationStandardAsyncRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.imageTranslationStandardAsyncWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h1>Product introduction</h1>
+     * <p>The high-definition upscaling product is tailored for e-commerce images. It intelligently enhances image resolution and details, improves textures and image quality during upscaling, and supports high-definition outputs such as 2K and 4K. It meets the high-definition requirements for product main images, detail images, and marketing materials, enabling efficient and clear processing of large batches of images to improve product image quality. (Synchronous)</p>
+     * <h1>Scenarios</h1>
+     * <ul>
+     * <li><p>High-definition e-commerce product images: Enhances the resolution and details of product main images, detail images, and marketing materials to make textures and materials clearer and improve product display quality.</p>
+     * </li>
+     * <li><p>Multi-platform product material adaptation: Upscales existing product images in high definition to meet the image display requirements of different e-commerce platforms and adapt to multi-platform and multi-scenario material usage needs.</p>
+     * </li>
+     * <li><p>Batch optimization of existing images: Enhances existing low-resolution product images in high definition to reduce reshooting and production costs and improve the reuse efficiency of image materials.</p>
+     * </li>
+     * </ul>
+     * <h1>Features</h1>
+     * <ol>
+     * <li><p>Intelligent high-definition upscaling: Uses AI-based image enhancement technology to improve the resolution and optimize the details of input images, enhancing image clarity and texture representation.</p>
+     * </li>
+     * <li><p>Multiple upscaling factors: Supports 2x and 4x upscaling factors. You can flexibly select the factor based on image quality and business requirements.</p>
+     * </li>
+     * <li><p>Synchronous API calls: Supports synchronous submission of images and retrieval of processing results through API calls, facilitating integration into e-commerce image processing workflows.</p>
+     * </li>
+     * </ol>
+     * <h1>Effect comparison</h1>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th><strong>Original image</strong></th>
+     * <th><strong>Upscaled image</strong></th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/p7ldzRN3LAP3oqBQ/img/eec1cb9d-d109-480a-8ef1-363f3123c92d.jpeg" alt="Original image.jpeg"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/p7ldzRN3LAP3oqBQ/img/b45c4d15-15b8-4c9e-ae93-2b0831c191e2.jpeg" alt="Upscaled image.jpeg"></td>
+     * </tr>
+     * </tbody></table>
+     * 
+     * <b>summary</b> : 
+     * <p>Synchronously upscales e-commerce images to intelligently enhance resolution and details by improving textures and optimizing image quality. Supports high-definition outputs such as 2K and 4K to meet the requirements for main product images, detail images, and marketing materials, enabling efficient processing of large image batches to improve overall product image quality.</p>
+     * 
+     * @param request ImageUpscaleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ImageUpscaleResponse
+     */
+    public ImageUpscaleResponse imageUpscaleWithOptions(ImageUpscaleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
+            query.put("ImageUrl", request.imageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.upscaleFactor)) {
+            query.put("UpscaleFactor", request.upscaleFactor);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ImageUpscale"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ImageUpscaleResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h1>Product introduction</h1>
+     * <p>The high-definition upscaling product is tailored for e-commerce images. It intelligently enhances image resolution and details, improves textures and image quality during upscaling, and supports high-definition outputs such as 2K and 4K. It meets the high-definition requirements for product main images, detail images, and marketing materials, enabling efficient and clear processing of large batches of images to improve product image quality. (Synchronous)</p>
+     * <h1>Scenarios</h1>
+     * <ul>
+     * <li><p>High-definition e-commerce product images: Enhances the resolution and details of product main images, detail images, and marketing materials to make textures and materials clearer and improve product display quality.</p>
+     * </li>
+     * <li><p>Multi-platform product material adaptation: Upscales existing product images in high definition to meet the image display requirements of different e-commerce platforms and adapt to multi-platform and multi-scenario material usage needs.</p>
+     * </li>
+     * <li><p>Batch optimization of existing images: Enhances existing low-resolution product images in high definition to reduce reshooting and production costs and improve the reuse efficiency of image materials.</p>
+     * </li>
+     * </ul>
+     * <h1>Features</h1>
+     * <ol>
+     * <li><p>Intelligent high-definition upscaling: Uses AI-based image enhancement technology to improve the resolution and optimize the details of input images, enhancing image clarity and texture representation.</p>
+     * </li>
+     * <li><p>Multiple upscaling factors: Supports 2x and 4x upscaling factors. You can flexibly select the factor based on image quality and business requirements.</p>
+     * </li>
+     * <li><p>Synchronous API calls: Supports synchronous submission of images and retrieval of processing results through API calls, facilitating integration into e-commerce image processing workflows.</p>
+     * </li>
+     * </ol>
+     * <h1>Effect comparison</h1>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th><strong>Original image</strong></th>
+     * <th><strong>Upscaled image</strong></th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/p7ldzRN3LAP3oqBQ/img/eec1cb9d-d109-480a-8ef1-363f3123c92d.jpeg" alt="Original image.jpeg"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/p7ldzRN3LAP3oqBQ/img/b45c4d15-15b8-4c9e-ae93-2b0831c191e2.jpeg" alt="Upscaled image.jpeg"></td>
+     * </tr>
+     * </tbody></table>
+     * 
+     * <b>summary</b> : 
+     * <p>Synchronously upscales e-commerce images to intelligently enhance resolution and details by improving textures and optimizing image quality. Supports high-definition outputs such as 2K and 4K to meet the requirements for main product images, detail images, and marketing materials, enabling efficient processing of large image batches to improve overall product image quality.</p>
+     * 
+     * @param request ImageUpscaleRequest
+     * @return ImageUpscaleResponse
+     */
+    public ImageUpscaleResponse imageUpscale(ImageUpscaleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.imageUpscaleWithOptions(request, runtime);
     }
 
     /**
@@ -5990,7 +6202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query on the content of a display knowledge base with paging (synchronization).</p>
+     * <p>Queries the display knowledge base content by using a paged query with paging (synchronization).</p>
      * 
      * @param tmpReq QueryDisplayKnowledgeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6048,7 +6260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query on the content of a display knowledge base with paging (synchronization).</p>
+     * <p>Queries the display knowledge base content by using a paged query with paging (synchronization).</p>
      * 
      * @param request QueryDisplayKnowledgeRequest
      * @return QueryDisplayKnowledgeResponse
@@ -6491,11 +6703,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Scenarios</h2>
-     * <p>Size charts: extracts size charts of apparel categories into text.
-     * Package weight and dimensions: extracts package weight and dimension information from images.</p>
-     * <h2>Feature description</h2>
-     * <p>The size chart extraction service is based on multimodal large language models. It automatically recognizes size charts or package weight and dimension information in images and converts the information into structured text. You provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can specify the column names to be recognized, such as Size, Bust, and Length, by using ColumnNameList to achieve precise and targeted extraction. You can also control the output language by using the LanguageModel parameter. Valid values: cn for Chinese and en for English. If you do not specify this parameter, the original language is retained. This service is applicable to scenarios such as text conversion of size charts for apparel categories and batch structuring of package weight and dimension information for commodities.
-     * Core capabilities: You can input an image URL and optional column name configurations to output the structured data of the size chart or package weight and dimensions in the image. The API operation uses the asynchronous task mode (background: true). After you submit the task, a task ID is returned. You must poll the task to obtain the final result. This mode is suitable for processing complex images or handling a large number of calls.</p>
+     * <p>Size charts: Extracts size charts of apparel categories into text.
+     * Item weight and dimensions: Extracts item weight and dimension information from images.</p>
+     * <h2>Features</h2>
+     * <p>The size chart extraction service is based on a multimodal large model. It automatically recognizes size charts or item weight and dimension information in images and converts the information into structured text. You provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can use the ColumnNameList parameter to specify the column names to be recognized, such as Size, Bust, and Length, for precise and targeted extraction. You can also use the LanguageModel parameter to control the output language. Valid values: cn for Chinese and en for English. If you do not specify this parameter, the original language is retained. This service is applicable to scenarios such as text conversion of size charts for apparel categories and batch structuring of item weight and dimension information.
+     * Core capabilities: You input an image URL and optional column name configurations, and the system outputs the structured data of the size chart or item weight and dimensions in the image. The API operation uses an asynchronous task mode (background: true). After you submit the task, a task ID is returned. You must poll the task to obtain the final result. This mode is suitable for processing complex images or handling a large number of calls.</p>
      * <h2>Comparison</h2>
      * <table>
      * <thead>
@@ -6511,90 +6723,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * <pre><code>      &quot;SizeChart&quot;: [
      *         {
-     *           &quot;Size&quot;: {
+     *           &quot;尺码&quot;: {
      *             &quot;value&quot;: &quot;S&quot;
      *           },
-     *           &quot;Waist&quot;: {
+     *           &quot;腰围&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 58
      *           },
-     *           &quot;Skirt length&quot;: {
+     *           &quot;裙长&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 81
      *           },
-     *           &quot;Weight recommendation&quot;: {
+     *           &quot;体重建议&quot;: {
      *             &quot;unit&quot;: &quot;kg&quot;,
      *             &quot;lower_value&quot;: 40,
      *             &quot;upper_value&quot;: 47.5
      *           }
      *         },
      *         {
-     *           &quot;Size&quot;: {
+     *           &quot;尺码&quot;: {
      *             &quot;value&quot;: &quot;M&quot;
      *           },
-     *           &quot;Waist&quot;: {
+     *           &quot;腰围&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 59
      *           },
-     *           &quot;Skirt length&quot;: {
+     *           &quot;裙长&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 82
      *           },
-     *           &quot;Weight recommendation&quot;: {
+     *           &quot;体重建议&quot;: {
      *             &quot;unit&quot;: &quot;kg&quot;,
      *             &quot;lower_value&quot;: 45,
      *             &quot;upper_value&quot;: 52.5
      *           }
      *         },
      *         {
-     *           &quot;Size&quot;: {
+     *           &quot;尺码&quot;: {
      *             &quot;value&quot;: &quot;L&quot;
      *           },
-     *           &quot;Waist&quot;: {
+     *           &quot;腰围&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 60
      *           },
-     *           &quot;Skirt length&quot;: {
+     *           &quot;裙长&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 83
      *           },
-     *           &quot;Weight recommendation&quot;: {
+     *           &quot;体重建议&quot;: {
      *             &quot;unit&quot;: &quot;kg&quot;,
      *             &quot;lower_value&quot;: 50,
      *             &quot;upper_value&quot;: 57.5
      *           }
      *         },
      *         {
-     *           &quot;Size&quot;: {
+     *           &quot;尺码&quot;: {
      *             &quot;value&quot;: &quot;XL&quot;
      *           },
-     *           &quot;Waist&quot;: {
+     *           &quot;腰围&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 61
      *           },
-     *           &quot;Skirt length&quot;: {
+     *           &quot;裙长&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 84
      *           },
-     *           &quot;Weight recommendation&quot;: {
+     *           &quot;体重建议&quot;: {
      *             &quot;unit&quot;: &quot;kg&quot;,
      *             &quot;lower_value&quot;: 55,
      *             &quot;upper_value&quot;: 62.5
      *           }
      *         },
      *         {
-     *           &quot;Size&quot;: {
+     *           &quot;尺码&quot;: {
      *             &quot;value&quot;: &quot;2XL&quot;
      *           },
-     *           &quot;Waist&quot;: {
+     *           &quot;腰围&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 62
      *           },
-     *           &quot;Skirt length&quot;: {
+     *           &quot;裙长&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 85
      *           },
-     *           &quot;Weight recommendation&quot;: {
+     *           &quot;体重建议&quot;: {
      *             &quot;unit&quot;: &quot;kg&quot;,
      *             &quot;lower_value&quot;: 60,
      *             &quot;upper_value&quot;: 67.5
@@ -6610,14 +6822,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      *       &quot;IntersectionAttributes&quot;: [
      *         &quot;Size&quot;,
      *         &quot;Skirt length&quot;,
-     *         &quot;Waist (stretched)&quot;,
+     *         &quot;Waist (stretch)&quot;,
      *         &quot;Weight recommendation&quot;
      *       \\]
      * </code></pre>
      * <p>} |</p>
      * 
      * <b>summary</b> : 
-     * <p>Extracts structured information such as size charts and package weight and dimensions from images by using multimodal large language models in asynchronous mode.</p>
+     * <p>Extracts structured information such as size charts and item weight and dimensions from images by using a multimodal large model. (Asynchronous)</p>
      * 
      * @param tmpReq SizeChartExtractAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6668,11 +6880,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Scenarios</h2>
-     * <p>Size charts: extracts size charts of apparel categories into text.
-     * Package weight and dimensions: extracts package weight and dimension information from images.</p>
-     * <h2>Feature description</h2>
-     * <p>The size chart extraction service is based on multimodal large language models. It automatically recognizes size charts or package weight and dimension information in images and converts the information into structured text. You provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can specify the column names to be recognized, such as Size, Bust, and Length, by using ColumnNameList to achieve precise and targeted extraction. You can also control the output language by using the LanguageModel parameter. Valid values: cn for Chinese and en for English. If you do not specify this parameter, the original language is retained. This service is applicable to scenarios such as text conversion of size charts for apparel categories and batch structuring of package weight and dimension information for commodities.
-     * Core capabilities: You can input an image URL and optional column name configurations to output the structured data of the size chart or package weight and dimensions in the image. The API operation uses the asynchronous task mode (background: true). After you submit the task, a task ID is returned. You must poll the task to obtain the final result. This mode is suitable for processing complex images or handling a large number of calls.</p>
+     * <p>Size charts: Extracts size charts of apparel categories into text.
+     * Item weight and dimensions: Extracts item weight and dimension information from images.</p>
+     * <h2>Features</h2>
+     * <p>The size chart extraction service is based on a multimodal large model. It automatically recognizes size charts or item weight and dimension information in images and converts the information into structured text. You provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can use the ColumnNameList parameter to specify the column names to be recognized, such as Size, Bust, and Length, for precise and targeted extraction. You can also use the LanguageModel parameter to control the output language. Valid values: cn for Chinese and en for English. If you do not specify this parameter, the original language is retained. This service is applicable to scenarios such as text conversion of size charts for apparel categories and batch structuring of item weight and dimension information.
+     * Core capabilities: You input an image URL and optional column name configurations, and the system outputs the structured data of the size chart or item weight and dimensions in the image. The API operation uses an asynchronous task mode (background: true). After you submit the task, a task ID is returned. You must poll the task to obtain the final result. This mode is suitable for processing complex images or handling a large number of calls.</p>
      * <h2>Comparison</h2>
      * <table>
      * <thead>
@@ -6688,90 +6900,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * <pre><code>      &quot;SizeChart&quot;: [
      *         {
-     *           &quot;Size&quot;: {
+     *           &quot;尺码&quot;: {
      *             &quot;value&quot;: &quot;S&quot;
      *           },
-     *           &quot;Waist&quot;: {
+     *           &quot;腰围&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 58
      *           },
-     *           &quot;Skirt length&quot;: {
+     *           &quot;裙长&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 81
      *           },
-     *           &quot;Weight recommendation&quot;: {
+     *           &quot;体重建议&quot;: {
      *             &quot;unit&quot;: &quot;kg&quot;,
      *             &quot;lower_value&quot;: 40,
      *             &quot;upper_value&quot;: 47.5
      *           }
      *         },
      *         {
-     *           &quot;Size&quot;: {
+     *           &quot;尺码&quot;: {
      *             &quot;value&quot;: &quot;M&quot;
      *           },
-     *           &quot;Waist&quot;: {
+     *           &quot;腰围&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 59
      *           },
-     *           &quot;Skirt length&quot;: {
+     *           &quot;裙长&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 82
      *           },
-     *           &quot;Weight recommendation&quot;: {
+     *           &quot;体重建议&quot;: {
      *             &quot;unit&quot;: &quot;kg&quot;,
      *             &quot;lower_value&quot;: 45,
      *             &quot;upper_value&quot;: 52.5
      *           }
      *         },
      *         {
-     *           &quot;Size&quot;: {
+     *           &quot;尺码&quot;: {
      *             &quot;value&quot;: &quot;L&quot;
      *           },
-     *           &quot;Waist&quot;: {
+     *           &quot;腰围&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 60
      *           },
-     *           &quot;Skirt length&quot;: {
+     *           &quot;裙长&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 83
      *           },
-     *           &quot;Weight recommendation&quot;: {
+     *           &quot;体重建议&quot;: {
      *             &quot;unit&quot;: &quot;kg&quot;,
      *             &quot;lower_value&quot;: 50,
      *             &quot;upper_value&quot;: 57.5
      *           }
      *         },
      *         {
-     *           &quot;Size&quot;: {
+     *           &quot;尺码&quot;: {
      *             &quot;value&quot;: &quot;XL&quot;
      *           },
-     *           &quot;Waist&quot;: {
+     *           &quot;腰围&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 61
      *           },
-     *           &quot;Skirt length&quot;: {
+     *           &quot;裙长&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 84
      *           },
-     *           &quot;Weight recommendation&quot;: {
+     *           &quot;体重建议&quot;: {
      *             &quot;unit&quot;: &quot;kg&quot;,
      *             &quot;lower_value&quot;: 55,
      *             &quot;upper_value&quot;: 62.5
      *           }
      *         },
      *         {
-     *           &quot;Size&quot;: {
+     *           &quot;尺码&quot;: {
      *             &quot;value&quot;: &quot;2XL&quot;
      *           },
-     *           &quot;Waist&quot;: {
+     *           &quot;腰围&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 62
      *           },
-     *           &quot;Skirt length&quot;: {
+     *           &quot;裙长&quot;: {
      *             &quot;unit&quot;: &quot;CM&quot;,
      *             &quot;value&quot;: 85
      *           },
-     *           &quot;Weight recommendation&quot;: {
+     *           &quot;体重建议&quot;: {
      *             &quot;unit&quot;: &quot;kg&quot;,
      *             &quot;lower_value&quot;: 60,
      *             &quot;upper_value&quot;: 67.5
@@ -6787,14 +6999,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      *       &quot;IntersectionAttributes&quot;: [
      *         &quot;Size&quot;,
      *         &quot;Skirt length&quot;,
-     *         &quot;Waist (stretched)&quot;,
+     *         &quot;Waist (stretch)&quot;,
      *         &quot;Weight recommendation&quot;
      *       \\]
      * </code></pre>
      * <p>} |</p>
      * 
      * <b>summary</b> : 
-     * <p>Extracts structured information such as size charts and package weight and dimensions from images by using multimodal large language models in asynchronous mode.</p>
+     * <p>Extracts structured information such as size charts and item weight and dimensions from images by using a multimodal large model. (Asynchronous)</p>
      * 
      * @param request SizeChartExtractAsyncRequest
      * @return SizeChartExtractAsyncResponse
@@ -7380,19 +7592,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </li>
      * <li><p>Product attributes: Product attribute terms are short and contain e-commerce-specific words such as models and parameters.</p>
      * </li>
-     * <li><p>Customer service conversations: In customer service scenarios, the model optimizes issues such as missing context and typos, and supports polite expressions in specific language pairs.</p>
-     * <p>  The Maas MT large language model can also be used for translation in general scenarios, such as office work, meetings, and daily conversations.</p>
+     * <li><p>Customer service conversations: In customer service scenarios, the model optimizes issues such as missing context and typos, and supports polite expressions in some language pairs.</p>
      * </li>
      * </ul>
+     * <p>The Maas MT large language model can also be used for translation in general scenarios, such as office work, meetings, and daily conversations.</p>
      * <h2>Features</h2>
      * <ul>
-     * <li><p><strong>Ultra-low hallucination rate and high-speed inference</strong> The Maas MT large language model is aligned with preferences for translation scenarios. Compared with general-purpose large language models, it provides faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</p>
+     * <li><p><strong>Ultra-low hallucination rate and high-speed inference</strong>: The Maas MT large language model is aligned with preferences for translation scenarios. Compared with general-purpose large language models, it provides faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</p>
      * </li>
-     * <li><p><strong>Supported text formats</strong> The model supports text and HTML formats.</p>
+     * <li><p><strong>Supported text formats</strong>: The model supports text and HTML formats.</p>
      * </li>
-     * <li><p><strong>Translation intervention</strong> You can customize translation results, including keeping terms untranslated (ABC-ABC), specifying translations (ABC-DEF), and omitting translations (ABC-null value). This feature is commonly used for brand word protection. You only need to pass the corresponding intervention glossary ID when calling the API. This meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</p>
+     * <li><p><strong>Translation intervention</strong>: You can customize translation results, including keeping words untranslated (ABC-ABC), specifying translations (ABC-DEF), and omitting translations (ABC-null). This is commonly used for brand word protection. You only need to pass the corresponding intervention glossary ID when calling the API. This meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention words. If you need more, contact the platform.</p>
      * </li>
-     * <li><p><strong>Translation quality comparison</strong></p>
+     * <li><p><strong>Translation effect comparison</strong></p>
      * <table>
      * <thead>
      * <tr>
@@ -7421,19 +7633,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>Men Key Bag Genuine Cow Leather Buckets Key Cases Pouch Zipper Keychain Auto Car Key Case Women Home Key Holder Wallet</td>
      * <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
      * <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
-     * <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermeture éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-     * <td>Clearer and more explicit product subject expression, identifying it as a &quot;key bag&quot; rather than a &quot;keychain&quot;, avoiding ambiguity in other translations</td>
+     * <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
+     * <td>Clearer and more explicit product subject. It is translated as a &quot;key bag&quot; rather than a &quot;keychain&quot;. Other translations may cause ambiguity about the product subject.</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
-     * <h2>Preparations and invocation flow</h2>
-     * <p>Text translation supports both synchronous and asynchronous invocation methods. This topic describes the asynchronous invocation API. To use synchronous calls, see <a href="https://api.aliyun.com/document/Aidge/2026-04-28/TextTranslate">Text Translation - Synchronous API</a>.
-     * The asynchronous APIs for text translation and other features share the same result retrieval flow, RocketMQ subscribe rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
-     * For the asynchronous invocation onboarding flow, subscribe rules, message formats and encryption protocols, and detailed integration solutions, see <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API invocation instructions</a>.</p>
+     * <h2>Preparations and call flow</h2>
+     * <p>Text translation supports both synchronization and asynchronous call methods. This topic describes the asynchronous call API. For synchronization calls, see <a href="https://api.aliyun.com/document/Aidge/2026-04-28/TextTranslate">Text Translation - Synchronization API</a>.
+     * The asynchronous APIs for text translation and other capabilities share the same result retrieval flow, RocketMQ subscribe rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
+     * For the asynchronous call flow, subscribe rules, message formats and encryption protocols, and detailed integration solutions, see <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Translates text by using the Maas MT model, an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs and optimized for e-commerce terms such as brands, models, materials, and attributes. It supports 156 languages, more than 400 language pairs, and automatic language detection for source texts.</p>
+     * <p>Translates text by using the Maas MT e-commerce translation model, which is trained on over 1 billion high-quality bilingual sentence pairs and optimized for e-commerce terms such as brands, models, materials, and attributes. It supports 156 languages, over 400 language pairs, and automatic source language detection.</p>
      * 
      * @param tmpReq TextTranslateAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7507,19 +7719,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </li>
      * <li><p>Product attributes: Product attribute terms are short and contain e-commerce-specific words such as models and parameters.</p>
      * </li>
-     * <li><p>Customer service conversations: In customer service scenarios, the model optimizes issues such as missing context and typos, and supports polite expressions in specific language pairs.</p>
-     * <p>  The Maas MT large language model can also be used for translation in general scenarios, such as office work, meetings, and daily conversations.</p>
+     * <li><p>Customer service conversations: In customer service scenarios, the model optimizes issues such as missing context and typos, and supports polite expressions in some language pairs.</p>
      * </li>
      * </ul>
+     * <p>The Maas MT large language model can also be used for translation in general scenarios, such as office work, meetings, and daily conversations.</p>
      * <h2>Features</h2>
      * <ul>
-     * <li><p><strong>Ultra-low hallucination rate and high-speed inference</strong> The Maas MT large language model is aligned with preferences for translation scenarios. Compared with general-purpose large language models, it provides faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</p>
+     * <li><p><strong>Ultra-low hallucination rate and high-speed inference</strong>: The Maas MT large language model is aligned with preferences for translation scenarios. Compared with general-purpose large language models, it provides faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</p>
      * </li>
-     * <li><p><strong>Supported text formats</strong> The model supports text and HTML formats.</p>
+     * <li><p><strong>Supported text formats</strong>: The model supports text and HTML formats.</p>
      * </li>
-     * <li><p><strong>Translation intervention</strong> You can customize translation results, including keeping terms untranslated (ABC-ABC), specifying translations (ABC-DEF), and omitting translations (ABC-null value). This feature is commonly used for brand word protection. You only need to pass the corresponding intervention glossary ID when calling the API. This meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</p>
+     * <li><p><strong>Translation intervention</strong>: You can customize translation results, including keeping words untranslated (ABC-ABC), specifying translations (ABC-DEF), and omitting translations (ABC-null). This is commonly used for brand word protection. You only need to pass the corresponding intervention glossary ID when calling the API. This meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention words. If you need more, contact the platform.</p>
      * </li>
-     * <li><p><strong>Translation quality comparison</strong></p>
+     * <li><p><strong>Translation effect comparison</strong></p>
      * <table>
      * <thead>
      * <tr>
@@ -7548,19 +7760,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>Men Key Bag Genuine Cow Leather Buckets Key Cases Pouch Zipper Keychain Auto Car Key Case Women Home Key Holder Wallet</td>
      * <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
      * <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
-     * <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermeture éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-     * <td>Clearer and more explicit product subject expression, identifying it as a &quot;key bag&quot; rather than a &quot;keychain&quot;, avoiding ambiguity in other translations</td>
+     * <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
+     * <td>Clearer and more explicit product subject. It is translated as a &quot;key bag&quot; rather than a &quot;keychain&quot;. Other translations may cause ambiguity about the product subject.</td>
      * </tr>
      * </tbody></table>
      * </li>
      * </ul>
-     * <h2>Preparations and invocation flow</h2>
-     * <p>Text translation supports both synchronous and asynchronous invocation methods. This topic describes the asynchronous invocation API. To use synchronous calls, see <a href="https://api.aliyun.com/document/Aidge/2026-04-28/TextTranslate">Text Translation - Synchronous API</a>.
-     * The asynchronous APIs for text translation and other features share the same result retrieval flow, RocketMQ subscribe rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
-     * For the asynchronous invocation onboarding flow, subscribe rules, message formats and encryption protocols, and detailed integration solutions, see <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API invocation instructions</a>.</p>
+     * <h2>Preparations and call flow</h2>
+     * <p>Text translation supports both synchronization and asynchronous call methods. This topic describes the asynchronous call API. For synchronization calls, see <a href="https://api.aliyun.com/document/Aidge/2026-04-28/TextTranslate">Text Translation - Synchronization API</a>.
+     * The asynchronous APIs for text translation and other capabilities share the same result retrieval flow, RocketMQ subscribe rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
+     * For the asynchronous call flow, subscribe rules, message formats and encryption protocols, and detailed integration solutions, see <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Translates text by using the Maas MT model, an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs and optimized for e-commerce terms such as brands, models, materials, and attributes. It supports 156 languages, more than 400 language pairs, and automatic language detection for source texts.</p>
+     * <p>Translates text by using the Maas MT e-commerce translation model, which is trained on over 1 billion high-quality bilingual sentence pairs and optimized for e-commerce terms such as brands, models, materials, and attributes. It supports 156 languages, over 400 language pairs, and automatic source language detection.</p>
      * 
      * @param request TextTranslateAsyncRequest
      * @return TextTranslateAsyncResponse
@@ -7572,7 +7784,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Synchronously updates the content of a display knowledge base in batches.</p>
+     * <p>Synchronously modifies the content of a display knowledge base in batches.</p>
      * 
      * @param tmpReq UpdateDisplayKnowledgeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7614,7 +7826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Synchronously updates the content of a display knowledge base in batches.</p>
+     * <p>Synchronously modifies the content of a display knowledge base in batches.</p>
      * 
      * @param request UpdateDisplayKnowledgeRequest
      * @return UpdateDisplayKnowledgeResponse
@@ -7741,11 +7953,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the TaskId and poll the task status by calling the query API until the task is completed and the result is returned.</p>
      * <h2>Scenarios</h2>
      * <ul>
-     * <li><p><strong>Cross-border e-commerce video localization</strong>: Translates the speech subtitles and selling point text in product introduction videos into the language of the target market to promote products on overseas platforms.</p>
+     * <li><p><strong>Cross-border e-commerce video localization</strong>: Translates the speech subtitles and selling point text in product introduction videos into the language of the target market to facilitate promotion on overseas platforms.</p>
      * </li>
      * <li><p><strong>International social media marketing</strong>: Localizes speech subtitles and on-screen text for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</p>
      * </li>
-     * <li><p><strong>Global brand advertising</strong>: Automatically generates video versions in the corresponding languages based on the delivery regions to reduce manual production costs.</p>
+     * <li><p><strong>Global brand advertising</strong>: Automatically generates video versions in the languages of the target regions to reduce manual production costs.</p>
      * </li>
      * <li><p><strong>Training and product instructions</strong>: Translates the speech subtitles and on-screen text in training courses or product demo videos into multiple languages for global teams.</p>
      * </li>
@@ -7762,15 +7974,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tbody><tr>
      * <td>Speech subtitle translation</td>
      * <td>speech</td>
-     * <td>Translates the video speech into target language dubbing. You can choose to erase the original subtitles only or replace them with translated subtitles. By default, the original subtitles are not processed and no new subtitles are added.</td>
+     * <td>Translates the video speech into target language dubbing. You can choose to only erase the original subtitles or replace them with translated subtitles. By default, the original subtitles are not processed and no new subtitles are added.</td>
      * </tr>
      * <tr>
      * <td>On-screen text translation</td>
      * <td>visual</td>
-     * <td>Translates the source language text in the video frames, or erases the on-screen text without translation. You can choose to erase brand logos.</td>
+     * <td>Translates the source language text in the video frames, or only erases the on-screen text without translation. You can choose to erase brand logos.</td>
      * </tr>
      * <tr>
-     * <td>Speech subtitle translation (speech) generates target language dubbing based on the spoken content in the video, processes the subtitles based on the original subtitle processing option, and synthesizes the final video. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content. Replacing with translated subtitles erases the original subtitles first and then adds subtitles synchronized with the translated speech.</td>
+     * <td>Speech subtitle translation (speech) generates target language dubbing based on the spoken content in the video, processes the subtitles according to the original subtitle processing option, and synthesizes the final video. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content. Replacing with translated subtitles first erases the original subtitles and then adds subtitles synchronized with the translated speech.</td>
      * <td></td>
      * <td></td>
      * </tr>
@@ -7780,14 +7992,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td></td>
      * </tr>
      * <tr>
-     * <td>When both speech and visual are selected, the speech subtitle translation is completed and the video is synthesized first, and then the on-screen text processing is performed on this video. The translated dubbing is retained, and a final video is output. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that no subtitles are erased or added during the speech subtitle phase, and subsequent on-screen text processing may still change the original subtitles. Subtitles that have been replaced with translated subtitles are retained during subsequent on-screen text processing.</td>
+     * <td>When both speech and visual are selected, the speech subtitle translation is completed and the video is synthesized first. Then, on-screen text processing is performed on this video, retaining the translated dubbing, and a final video is output. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that no subtitles are erased or added during the speech subtitle phase, and subsequent on-screen text processing may still change the original subtitles. Subtitles that have been replaced with translated ones will be retained during subsequent on-screen text processing.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising. The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the TaskId and poll the task status by calling the query API until the task is completed and the result is returned.</p>
+     * <p>Translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising. The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the task ID and poll the task status by calling the query API until the task is completed and the result is returned.</p>
      * 
      * @param tmpReq VideoTranslationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7860,11 +8072,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the TaskId and poll the task status by calling the query API until the task is completed and the result is returned.</p>
      * <h2>Scenarios</h2>
      * <ul>
-     * <li><p><strong>Cross-border e-commerce video localization</strong>: Translates the speech subtitles and selling point text in product introduction videos into the language of the target market to promote products on overseas platforms.</p>
+     * <li><p><strong>Cross-border e-commerce video localization</strong>: Translates the speech subtitles and selling point text in product introduction videos into the language of the target market to facilitate promotion on overseas platforms.</p>
      * </li>
      * <li><p><strong>International social media marketing</strong>: Localizes speech subtitles and on-screen text for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</p>
      * </li>
-     * <li><p><strong>Global brand advertising</strong>: Automatically generates video versions in the corresponding languages based on the delivery regions to reduce manual production costs.</p>
+     * <li><p><strong>Global brand advertising</strong>: Automatically generates video versions in the languages of the target regions to reduce manual production costs.</p>
      * </li>
      * <li><p><strong>Training and product instructions</strong>: Translates the speech subtitles and on-screen text in training courses or product demo videos into multiple languages for global teams.</p>
      * </li>
@@ -7881,15 +8093,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tbody><tr>
      * <td>Speech subtitle translation</td>
      * <td>speech</td>
-     * <td>Translates the video speech into target language dubbing. You can choose to erase the original subtitles only or replace them with translated subtitles. By default, the original subtitles are not processed and no new subtitles are added.</td>
+     * <td>Translates the video speech into target language dubbing. You can choose to only erase the original subtitles or replace them with translated subtitles. By default, the original subtitles are not processed and no new subtitles are added.</td>
      * </tr>
      * <tr>
      * <td>On-screen text translation</td>
      * <td>visual</td>
-     * <td>Translates the source language text in the video frames, or erases the on-screen text without translation. You can choose to erase brand logos.</td>
+     * <td>Translates the source language text in the video frames, or only erases the on-screen text without translation. You can choose to erase brand logos.</td>
      * </tr>
      * <tr>
-     * <td>Speech subtitle translation (speech) generates target language dubbing based on the spoken content in the video, processes the subtitles based on the original subtitle processing option, and synthesizes the final video. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content. Replacing with translated subtitles erases the original subtitles first and then adds subtitles synchronized with the translated speech.</td>
+     * <td>Speech subtitle translation (speech) generates target language dubbing based on the spoken content in the video, processes the subtitles according to the original subtitle processing option, and synthesizes the final video. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content. Replacing with translated subtitles first erases the original subtitles and then adds subtitles synchronized with the translated speech.</td>
      * <td></td>
      * <td></td>
      * </tr>
@@ -7899,14 +8111,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td></td>
      * </tr>
      * <tr>
-     * <td>When both speech and visual are selected, the speech subtitle translation is completed and the video is synthesized first, and then the on-screen text processing is performed on this video. The translated dubbing is retained, and a final video is output. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that no subtitles are erased or added during the speech subtitle phase, and subsequent on-screen text processing may still change the original subtitles. Subtitles that have been replaced with translated subtitles are retained during subsequent on-screen text processing.</td>
+     * <td>When both speech and visual are selected, the speech subtitle translation is completed and the video is synthesized first. Then, on-screen text processing is performed on this video, retaining the translated dubbing, and a final video is output. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that no subtitles are erased or added during the speech subtitle phase, and subsequent on-screen text processing may still change the original subtitles. Subtitles that have been replaced with translated ones will be retained during subsequent on-screen text processing.</td>
      * <td></td>
      * <td></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising. The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the TaskId and poll the task status by calling the query API until the task is completed and the result is returned.</p>
+     * <p>Translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising. The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the task ID and poll the task status by calling the query API until the task is completed and the result is returned.</p>
      * 
      * @param request VideoTranslationRequest
      * @return VideoTranslationResponse
@@ -7920,35 +8132,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Scenarios</h2>
      * <ul>
-     * <li><strong>Virtual try-on for clothing products:</strong>
-     * Supports multiple clothing categories such as tops, bottoms, jumpsuits, and dresses. After uploading a model image and a product image, the system generates a natural and realistic try-on effect that visually demonstrates how the garment looks when worn.</li>
+     * <li><strong>Virtual try-on for clothing:</strong>
+     * Supports various clothing categories such as tops, bottoms, jumpsuits, and dresses. After you upload a model image and a garment image, the system generates natural and realistic try-on effects to visually demonstrate how the clothing looks on the model.</li>
      * <li><strong>Virtual try-on for shoes and hats:</strong>
-     * Supports virtual try-on for shoes, hats, and similar products. The system intelligently matches the product position and proportion based on the model\&quot;s pose and body parts to produce a coordinated and realistic wearing effect.</li>
+     * Supports virtual try-on for accessories such as shoes and hats. The system intelligently matches the position and proportion of the items based on the model\&quot;s pose and body parts to present a coordinated and realistic wearing effect.</li>
      * <li><strong>E-commerce product display and marketing:</strong>
-     * Helps merchants quickly generate model try-on images for different products, reducing the costs of traditional photography, outfit changes, and post-production while improving the production efficiency of product images.  </li>
+     *  Helps merchants quickly generate model try-on images for different products, reducing the costs of traditional photography, outfit changes, and post-production, and improving the production efficiency of product images.  </li>
      * <li><strong>Online shopping experience optimization:</strong>
-     * Consumers can preview how products look when worn through virtual try-on, gaining a more intuitive understanding of the style, coordination, and overall effect of products to support purchasing decisions and enhance the shopping experience.</li>
+     * Allows consumers to preview the wearing effect of products through virtual try-on, providing a more intuitive understanding of the style, matching, and overall effect of the products, which assists in purchase decisions and enhances the shopping experience.</li>
      * </ul>
      * <h2>Features</h2>
      * <ul>
-     * <li><strong>First, provide a model image and a product image. The system uses the model image as the try-on subject and applies the garment from the product image onto the model:</strong><ul>
-     * <li>a. Model image: the image of the person for virtual try-on.</li>
-     * <li>b. Product image: the image of the clothing, shoes, or hat to be applied onto the model.</li>
+     * <li><strong>First, you need to input a model image and a product image. The system uses the model image as the try-on subject and applies the garment from the product image to the model:</strong><ul>
+     * <li>a. Model image: the image of the person who will wear the clothing in the virtual try-on.</li>
+     * <li>b. Product image: the image of the clothing, shoes, or hat to be worn by the model.</li>
      * </ul>
      * </li>
-     * <li><strong>Second, select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</strong><ul>
-     * <li>a. Specify product type: directly specify the product type, and the system processes accordingly.</li>
-     * <li>b. Automatic type recognition: if no product type is specified, the system automatically identifies the product category from the product image and performs the virtual try-on based on the recognition result.</li>
+     * <li><strong>Second, you can select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</strong><ul>
+     * <li>a. Specify product type: you can directly input the type of the current product, and the system will process it according to the specified type.</li>
+     * <li>b. Automatic type recognition: if you do not input the product type, the system will automatically recognize the product category in the product image and perform the virtual try-on based on the recognition result.</li>
      * </ul>
      * </li>
-     * <li><strong>Finally, the system combines the model image, product image, and product type to generate a virtual try-on image that shows how the product looks on the model:</strong><ul>
-     * <li>a. Preserve model details: the generation process does not alter the model\&quot;s appearance, hairstyle, pose, body shape, or other details from the original model image.</li>
-     * <li>b. Maintain scene consistency: the background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</li>
-     * <li>c. Generate try-on effect: the product is naturally applied onto the model, conforming to the model\&quot;s pose and body structure, to produce a coordinated and realistic virtual try-on image.</li>
+     * <li><strong>Finally, the system combines the model image, product image, and product type to generate a virtual try-on image, showing the wearing effect of the product on the model:</strong><ul>
+     * <li>a. Preserve model details: the generation process does not adjust the appearance, hairstyle, pose, body shape, or other details of the person in the original model image.</li>
+     * <li>b. Maintain image consistency: the background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</li>
+     * <li>c. Generate try-on effect: the product is naturally applied to the model, fitting the person\&quot;s pose and body structure to generate a coordinated and realistic virtual try-on image.</li>
      * </ul>
      * </li>
      * </ul>
-     * <h2>Sample results</h2>
+     * <h2>Examples</h2>
      * <table>
      * <thead>
      * <tr>
@@ -7961,19 +8173,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tbody><tr>
      * <td>Tops</td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/e4273b03-0d3b-4e98-b8f3-8713fccee303.png" alt="lQLPJv-OKUNDSxvNBojNA62wAMWEBuiTUuMKXnNidWFWAA_941_1672.png"></td>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/d9ab77f7-8791-4fa5-8d76-4fda3e2e1310.png" alt="男模特衬衫正面-aidge.png"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/d9ab77f7-8791-4fa5-8d76-4fda3e2e1310.png" alt="Front view of male model wearing a shirt-aidge.png"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/42982786-73ee-4d23-a8d0-551f7a18be22.png" alt="7c1c0c04-9828-940f-b86d-c08f7ec8fb97_qwen_image3_serving_output_0.png"></td>
      * </tr>
      * <tr>
      * <td>Bottoms</td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/64147be2-0c95-431a-8c04-f756fac96db2.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/f79a31cb-08bd-4b59-be9d-9b9aa3f60230.png" alt="微喇牛仔裤-aidge.png"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/f79a31cb-08bd-4b59-be9d-9b9aa3f60230.png" alt="Bootcut jeans-aidge.png"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/297f29eb-7bc9-49a5-b4f7-114375a0f312.png" alt="adbb8e02-9738-991a-9699-f46bc5c089a9_qwen_image3_serving_output_0.png"></td>
      * </tr>
      * <tr>
      * <td>Shoes</td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/64147be2-0c95-431a-8c04-f756fac96db2.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/bb9804b5-0ab9-485b-829b-d54708377fd2.png" alt="男模特鞋子正面-aidge.png"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/bb9804b5-0ab9-485b-829b-d54708377fd2.png" alt="Front view of men\\&quot;s shoes-aidge.png"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/8e54fdc3-7a86-4e3b-aa1d-f3741ce7658c.png" alt="91d7b8c4-fc31-9a7f-8b6e-3bec5e62efb3_qwen_image3_serving_output_0.png"></td>
      * </tr>
      * <tr>
@@ -7991,13 +8203,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tr>
      * <td>Hats</td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/ac26f38e-acc7-49d1-a4ec-a51b54e4bd66.png" alt="adbb8e02-9738-991a-9699-f46bc5c089a9_qwen_image3_serving_output_0.png"></td>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/34176b57-3aa8-4b6e-8d0f-808ae953654a.png" alt="帽子-aidge.png"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/34176b57-3aa8-4b6e-8d0f-808ae953654a.png" alt="Hat-aidge.png"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/949b4c28-8821-4aa5-a2b4-e4acc1e57b9b.png" alt="881f02f3-12f5-95dd-b651-98fab6e30fa0_qwen_image3_serving_output_0.png"></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Generates virtual try-on images based on AI algorithms. This API service replaces the clothing on a model with the specified garment based on the input garment image and model image, while preserving the model\&quot;s appearance details, pose, facial features, and scene details to produce realistic and well-fitted try-on results. You only need to provide the URL of the original product image to obtain a processed clean image.</p>
+     * <p>Generates virtual try-on images by using AI algorithms. This API service replaces the clothing on a model image with a specified garment image while preserving the model\&quot;s pose, facial features, and other details, ensuring a realistic and well-fitted result. You only need to provide the URLs of the original images to obtain the processed image.</p>
      * 
      * @param request VirtualTryOnRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8043,35 +8255,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Scenarios</h2>
      * <ul>
-     * <li><strong>Virtual try-on for clothing products:</strong>
-     * Supports multiple clothing categories such as tops, bottoms, jumpsuits, and dresses. After uploading a model image and a product image, the system generates a natural and realistic try-on effect that visually demonstrates how the garment looks when worn.</li>
+     * <li><strong>Virtual try-on for clothing:</strong>
+     * Supports various clothing categories such as tops, bottoms, jumpsuits, and dresses. After you upload a model image and a garment image, the system generates natural and realistic try-on effects to visually demonstrate how the clothing looks on the model.</li>
      * <li><strong>Virtual try-on for shoes and hats:</strong>
-     * Supports virtual try-on for shoes, hats, and similar products. The system intelligently matches the product position and proportion based on the model\&quot;s pose and body parts to produce a coordinated and realistic wearing effect.</li>
+     * Supports virtual try-on for accessories such as shoes and hats. The system intelligently matches the position and proportion of the items based on the model\&quot;s pose and body parts to present a coordinated and realistic wearing effect.</li>
      * <li><strong>E-commerce product display and marketing:</strong>
-     * Helps merchants quickly generate model try-on images for different products, reducing the costs of traditional photography, outfit changes, and post-production while improving the production efficiency of product images.  </li>
+     *  Helps merchants quickly generate model try-on images for different products, reducing the costs of traditional photography, outfit changes, and post-production, and improving the production efficiency of product images.  </li>
      * <li><strong>Online shopping experience optimization:</strong>
-     * Consumers can preview how products look when worn through virtual try-on, gaining a more intuitive understanding of the style, coordination, and overall effect of products to support purchasing decisions and enhance the shopping experience.</li>
+     * Allows consumers to preview the wearing effect of products through virtual try-on, providing a more intuitive understanding of the style, matching, and overall effect of the products, which assists in purchase decisions and enhances the shopping experience.</li>
      * </ul>
      * <h2>Features</h2>
      * <ul>
-     * <li><strong>First, provide a model image and a product image. The system uses the model image as the try-on subject and applies the garment from the product image onto the model:</strong><ul>
-     * <li>a. Model image: the image of the person for virtual try-on.</li>
-     * <li>b. Product image: the image of the clothing, shoes, or hat to be applied onto the model.</li>
+     * <li><strong>First, you need to input a model image and a product image. The system uses the model image as the try-on subject and applies the garment from the product image to the model:</strong><ul>
+     * <li>a. Model image: the image of the person who will wear the clothing in the virtual try-on.</li>
+     * <li>b. Product image: the image of the clothing, shoes, or hat to be worn by the model.</li>
      * </ul>
      * </li>
-     * <li><strong>Second, select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</strong><ul>
-     * <li>a. Specify product type: directly specify the product type, and the system processes accordingly.</li>
-     * <li>b. Automatic type recognition: if no product type is specified, the system automatically identifies the product category from the product image and performs the virtual try-on based on the recognition result.</li>
+     * <li><strong>Second, you can select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</strong><ul>
+     * <li>a. Specify product type: you can directly input the type of the current product, and the system will process it according to the specified type.</li>
+     * <li>b. Automatic type recognition: if you do not input the product type, the system will automatically recognize the product category in the product image and perform the virtual try-on based on the recognition result.</li>
      * </ul>
      * </li>
-     * <li><strong>Finally, the system combines the model image, product image, and product type to generate a virtual try-on image that shows how the product looks on the model:</strong><ul>
-     * <li>a. Preserve model details: the generation process does not alter the model\&quot;s appearance, hairstyle, pose, body shape, or other details from the original model image.</li>
-     * <li>b. Maintain scene consistency: the background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</li>
-     * <li>c. Generate try-on effect: the product is naturally applied onto the model, conforming to the model\&quot;s pose and body structure, to produce a coordinated and realistic virtual try-on image.</li>
+     * <li><strong>Finally, the system combines the model image, product image, and product type to generate a virtual try-on image, showing the wearing effect of the product on the model:</strong><ul>
+     * <li>a. Preserve model details: the generation process does not adjust the appearance, hairstyle, pose, body shape, or other details of the person in the original model image.</li>
+     * <li>b. Maintain image consistency: the background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</li>
+     * <li>c. Generate try-on effect: the product is naturally applied to the model, fitting the person\&quot;s pose and body structure to generate a coordinated and realistic virtual try-on image.</li>
      * </ul>
      * </li>
      * </ul>
-     * <h2>Sample results</h2>
+     * <h2>Examples</h2>
      * <table>
      * <thead>
      * <tr>
@@ -8084,19 +8296,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tbody><tr>
      * <td>Tops</td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/e4273b03-0d3b-4e98-b8f3-8713fccee303.png" alt="lQLPJv-OKUNDSxvNBojNA62wAMWEBuiTUuMKXnNidWFWAA_941_1672.png"></td>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/d9ab77f7-8791-4fa5-8d76-4fda3e2e1310.png" alt="男模特衬衫正面-aidge.png"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/d9ab77f7-8791-4fa5-8d76-4fda3e2e1310.png" alt="Front view of male model wearing a shirt-aidge.png"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/42982786-73ee-4d23-a8d0-551f7a18be22.png" alt="7c1c0c04-9828-940f-b86d-c08f7ec8fb97_qwen_image3_serving_output_0.png"></td>
      * </tr>
      * <tr>
      * <td>Bottoms</td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/64147be2-0c95-431a-8c04-f756fac96db2.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/f79a31cb-08bd-4b59-be9d-9b9aa3f60230.png" alt="微喇牛仔裤-aidge.png"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/f79a31cb-08bd-4b59-be9d-9b9aa3f60230.png" alt="Bootcut jeans-aidge.png"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/297f29eb-7bc9-49a5-b4f7-114375a0f312.png" alt="adbb8e02-9738-991a-9699-f46bc5c089a9_qwen_image3_serving_output_0.png"></td>
      * </tr>
      * <tr>
      * <td>Shoes</td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/64147be2-0c95-431a-8c04-f756fac96db2.jpeg" alt="lQDPJwcNMfxtoRvNBQDNAtCwhseujKzDt_QKXnNSTPaeAA_720_1280.jpeg"></td>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/bb9804b5-0ab9-485b-829b-d54708377fd2.png" alt="男模特鞋子正面-aidge.png"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/bb9804b5-0ab9-485b-829b-d54708377fd2.png" alt="Front view of men\\&quot;s shoes-aidge.png"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/8e54fdc3-7a86-4e3b-aa1d-f3741ce7658c.png" alt="91d7b8c4-fc31-9a7f-8b6e-3bec5e62efb3_qwen_image3_serving_output_0.png"></td>
      * </tr>
      * <tr>
@@ -8114,13 +8326,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tr>
      * <td>Hats</td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/ac26f38e-acc7-49d1-a4ec-a51b54e4bd66.png" alt="adbb8e02-9738-991a-9699-f46bc5c089a9_qwen_image3_serving_output_0.png"></td>
-     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/34176b57-3aa8-4b6e-8d0f-808ae953654a.png" alt="帽子-aidge.png"></td>
+     * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/34176b57-3aa8-4b6e-8d0f-808ae953654a.png" alt="Hat-aidge.png"></td>
      * <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5PZM1WeKq3p/img/949b4c28-8821-4aa5-a2b4-e4acc1e57b9b.png" alt="881f02f3-12f5-95dd-b651-98fab6e30fa0_qwen_image3_serving_output_0.png"></td>
      * </tr>
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>Generates virtual try-on images based on AI algorithms. This API service replaces the clothing on a model with the specified garment based on the input garment image and model image, while preserving the model\&quot;s appearance details, pose, facial features, and scene details to produce realistic and well-fitted try-on results. You only need to provide the URL of the original product image to obtain a processed clean image.</p>
+     * <p>Generates virtual try-on images by using AI algorithms. This API service replaces the clothing on a model image with a specified garment image while preserving the model\&quot;s pose, facial features, and other details, ensuring a realistic and well-fitted result. You only need to provide the URLs of the original images to obtain the processed image.</p>
      * 
      * @param request VirtualTryOnRequest
      * @return VirtualTryOnResponse

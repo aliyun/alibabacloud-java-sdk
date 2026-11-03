@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class ImageRemovalProRequest extends TeaModel {
     /**
-     * <p>The call type. Valid values:</p>
+     * <p>Specifies the call type. Valid values:</p>
      * <ul>
      * <li>true: Asynchronous.</li>
-     * <li>false: Synchronous.</li>
+     * <li>false: Synchronous.
+     * Default value: false.</li>
      * </ul>
-     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -19,7 +19,7 @@ public class ImageRemovalProRequest extends TeaModel {
     public Boolean async;
 
     /**
-     * <p>The URL of the image to process.</p>
+     * <p>The URL of the image to be processed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -38,11 +38,7 @@ public class ImageCroppingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
-     * <ul>
-     * <li>true: Successful.</li>
-     * <li>false: Failed.</li>
-     * </ul>
+     * <p>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageTranslationPlusAsyncResponseBody extends TeaModel {
     /**
-     * <p>The response code for the submission call. A successful call returns success.</p>
+     * <p>The response code for the submission call. The value success indicates a successful call.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,13 +14,13 @@ public class ImageTranslationPlusAsyncResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The submission result of the asynchronous task for the Plus edition of image translation.</p>
+     * <p>The submission result of the Image Translation Plus asynchronous task.</p>
      */
     @NameInMap("Data")
     public ImageTranslationPlusAsyncResponseBodyData data;
 
     /**
-     * <p>The error message, such as \&quot;The content contains sensitive data. Try another input.\&quot;</p>
+     * <p>The error message, such as &quot;The content contains sensitive data. Try another input.&quot;</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class ImageTranslationPlusAsyncResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique identifier of the request, which is used for troubleshooting and tracing analysis.</p>
+     * <p>The unique identity of the request, used for troubleshooting and Tracing Analysis.</p>
      * 
      * <strong>example:</strong>
      * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
@@ -38,7 +38,7 @@ public class ImageTranslationPlusAsyncResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Specifies whether the submission call is successful. This does not indicate that the translation is complete. A value of true indicates success, and a value of false indicates failure.</p>
+     * <p>Specifies whether the submission call is successful. This does not mean that the translation is completed. A value of true indicates success, and a value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -93,7 +93,7 @@ public class ImageTranslationPlusAsyncResponseBody extends TeaModel {
 
     public static class ImageTranslationPlusAsyncResponseBodyData extends TeaModel {
         /**
-         * <p>The identifier of the asynchronous task, which is used for result queries and notification association. Do not use the example prefix as a business validation rule.</p>
+         * <p>The identifier of the asynchronous task, which is used for result query and notification association. Do not use the example prefix as a business validation rule.</p>
          * 
          * <strong>example:</strong>
          * <p>TID_550e8400-e29b-41d4-a716-446655440000</p>

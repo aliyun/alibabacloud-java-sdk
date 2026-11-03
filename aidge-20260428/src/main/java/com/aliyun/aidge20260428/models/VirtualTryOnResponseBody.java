@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VirtualTryOnResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is not returned if the call is successful.</p>
+     * <p>The error code. This parameter is not returned when the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class VirtualTryOnResponseBody extends TeaModel {
     public VirtualTryOnResponseBodyData data;
 
     /**
-     * <p>The error message. This parameter is not returned if the call is successful.</p>
+     * <p>The error message. This parameter is not returned when the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class VirtualTryOnResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which uniquely identifies the request.</p>
+     * <p>The request ID, which is used to identify a unique request.</p>
      * 
      * <strong>example:</strong>
      * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
@@ -38,7 +38,11 @@ public class VirtualTryOnResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call failed.</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -93,7 +97,7 @@ public class VirtualTryOnResponseBody extends TeaModel {
 
     public static class VirtualTryOnResponseBodyData extends TeaModel {
         /**
-         * <p>The asynchronous task ID, which is used to query the task result later.</p>
+         * <p>The ID of the asynchronous task, which is used to query the task result later.</p>
          * 
          * <strong>example:</strong>
          * <p>task-xxxx-xxxx-xxxx</p>

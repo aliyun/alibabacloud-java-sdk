@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VirtualTryOnRequest extends TeaModel {
     /**
-     * <p>The URL of the garment image. Only one image is supported. The URL must be a publicly accessible <code>http</code>/<code>https</code> address. The image must be in JPG, JPEG, PNG, BMP, or WEBP format, with a resolution between 256 × 256 and 2049 × 2049 pixels, and a file size of no more than 10 MB.<br></p>
+     * <p>The URL of the garment image. Only one image is supported. The URL must be a publicly accessible HTTP or HTTPS URL. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256×256 and 2049×2049 pixels, and the file size must not exceed 10 MB.<br></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class VirtualTryOnRequest extends TeaModel {
     public String clothImageUrl;
 
     /**
-     * <p>The garment type. Valid values: tops, bottoms, dresses, tops_and_bottoms, shoes, and hats. If this parameter is not specified, the system automatically identifies the garment type.</p>
+     * <p>The garment type. Valid values: tops, bottoms, dresses, tops_and_bottoms, shoes, and hats. If you do not specify this parameter, the system automatically recognizes the garment type.</p>
      * 
      * <strong>example:</strong>
      * <p>tops</p>
@@ -24,7 +24,7 @@ public class VirtualTryOnRequest extends TeaModel {
     public String clothType;
 
     /**
-     * <p>The URL of the model image. Only one image is supported. The URL must be a publicly accessible <code>http</code>/<code>https</code> address. The image must be in JPG, JPEG, PNG, BMP, or WEBP format, with a resolution between 256 × 256 and 2049 × 2049 pixels, and a file size of no more than 10 MB.<br></p>
+     * <p>The URL of the model image. Only one image is supported. The URL must be a publicly accessible HTTP or HTTPS URL. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256×256 and 2049×2049 pixels, and the file size must not exceed 10 MB.<br></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

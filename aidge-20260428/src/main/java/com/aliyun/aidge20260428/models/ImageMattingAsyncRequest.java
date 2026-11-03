@@ -28,7 +28,7 @@ public class ImageMattingAsyncRequest extends TeaModel {
     public String bgColor;
 
     /**
-     * <p>The business order ID of the caller. It is recorded upon acceptance and returned as is when you query the result of the asynchronous task.</p>
+     * <p>The business order number of the caller. It is recorded upon acceptance and returned as is when querying the asynchronous task result.</p>
      * 
      * <strong>example:</strong>
      * <p>order-20260928-001</p>
@@ -37,7 +37,7 @@ public class ImageMattingAsyncRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The URL of the original image. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 100 × 100 and 3000 × 3000 pixels, and the file size must not exceed 10 MB.</p>
+     * <p>The URL of the original image. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 100 × 100 and 3000 × 3000 pixels, and the file size cannot exceed 10 MB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

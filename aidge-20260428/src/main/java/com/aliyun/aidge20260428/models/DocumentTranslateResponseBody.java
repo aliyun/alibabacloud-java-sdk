@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DocumentTranslateResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The response code. This parameter is not returned when the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,8 +20,8 @@ public class DocumentTranslateResponseBody extends TeaModel {
     public DocumentTranslateResponseBodyData data;
 
     /**
-     * <p>The error message, such as &quot;The parameters contain sensitive information. Try other input.&quot;
-     * This parameter is not returned if the call is successful.</p>
+     * <p>The error message, such as &quot;The parameter contains sensitive information. Try another input.&quot;
+     * This parameter is not returned when the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -30,7 +30,7 @@ public class DocumentTranslateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique identity of the request. Use this ID for troubleshooting and Tracing Analysis.</p>
+     * <p>The unique identifier of the request, used for troubleshooting and tracing analysis.</p>
      * 
      * <strong>example:</strong>
      * <p>39E8A74B-F99E-1195-A5FF-3ECC5F94F304</p>
@@ -39,7 +39,11 @@ public class DocumentTranslateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. true: The call is successful. false: The call failed.</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -94,7 +98,7 @@ public class DocumentTranslateResponseBody extends TeaModel {
 
     public static class DocumentTranslateResponseBodyData extends TeaModel {
         /**
-         * <p>The unique identifier of the asynchronous task. Use this ID to query the task status and result.</p>
+         * <p>The unique identifier of the asynchronous task, which is used to query the task status and results later.</p>
          * 
          * <strong>example:</strong>
          * <p>6071a030-5c92-9df1-96d0-44952343439a</p>

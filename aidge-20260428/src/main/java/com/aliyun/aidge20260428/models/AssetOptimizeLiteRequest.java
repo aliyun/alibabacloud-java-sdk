@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssetOptimizeLiteRequest extends TeaModel {
     /**
-     * <p>The custom glossary for term intervention.</p>
+     * <p>The intervention glossary.</p>
      * 
      * <strong>example:</strong>
      * <p>Test</p>

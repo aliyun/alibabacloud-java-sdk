@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageTranslationProRequest extends TeaModel {
     /**
-     * <p>Specifies whether to use asynchronous mode. Default value: false (synchronous mode). When set to true, the API immediately returns a TaskId. Use the query translation result API to retrieve the final result.</p>
+     * <p>Specifies whether to use the asynchronous mode. Default value: false, which indicates the synchronous mode. If set to true, the API immediately returns a TaskId, and you must call the query translation results API to obtain the final results.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public Boolean async;
 
     /**
-     * <p>The ID of the intervention glossary. This parameter is optional. Create the glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</p>
+     * <p>The ID of the intervention glossary. Optional. You must create the glossary in the console and provide its ID. If the intervention glossary ID is empty, the translation results are not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>glossary_1</p>
@@ -23,14 +23,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public String glossary;
 
     /**
-     * <p>The URL of the original image. This parameter is required.</p>
-     * <p>Image requirements:</p>
-     * <ul>
-     * <li>Image URL: The URL must be publicly accessible.</li>
-     * <li>Format: png, jpeg, jpg, bmp, or webp.</li>
-     * <li>Pixels: The width and height must not exceed 4000 pixels each.</li>
-     * <li>File size: The original file must be 10 MB or smaller.</li>
-     * </ul>
+     * <p>The URL of the source image. Required.<br>Image requirements:<br>• Image URL: Must be publicly accessible.<br>• Format: PNG, JPEG, JPG, BMP, or WEBP.<br>• Pixels: The width and height must not exceed 4,000 pixels.<br>• File size: The original file must be 10 MB or smaller.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +33,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>Specifies whether to translate text on the image subject. This parameter is optional. Default value: false. Setting this parameter to false helps protect information such as embedded product names from being translated.</p>
+     * <p>Specifies whether to translate text on the product subject in the image. Optional. Default value: false. This helps you protect information and prevents embedded information such as product names from being translated.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -49,7 +42,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public Boolean includingProductArea;
 
     /**
-     * <p>The source language code. This parameter is required.<br>&lt;props=&quot;china&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping</a>.<br>&lt;props=&quot;intl&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/zh/aidge/language-direction-mapping">Language direction mapping</a>.</p>
+     * <p>The source language code. Required.<br>&lt;props=&quot;china&quot;&gt;For supported language pairs, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language pair mapping table</a>.<br>&lt;props=&quot;intl&quot;&gt;For supported language pairs, see <a href="https://www.alibabacloud.com/help/zh/aidge/language-direction-mapping">Language pair mapping table</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +52,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
-     * <p>The target language code. This parameter is required.<br>&lt;props=&quot;china&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping</a>.<br>&lt;props=&quot;intl&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/zh/aidge/language-direction-mapping">Language direction mapping</a>.</p>
+     * <p>The target language code. Required.<br>&lt;props=&quot;china&quot;&gt;For supported language pairs, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language pair mapping table</a>.<br>&lt;props=&quot;intl&quot;&gt;For supported language pairs, see <a href="https://www.alibabacloud.com/help/zh/aidge/language-direction-mapping">Language pair mapping table</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +62,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>Specifies whether to translate brand names on images. This parameter is optional. Default value: false. Setting this parameter to false helps protect brand name information from being translated.</p>
+     * <p>Specifies whether to translate brand names in the image. Optional. Default value: false. This helps you protect brand name information from being translated.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -78,7 +71,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public Boolean translatingBrandInTheProduct;
 
     /**
-     * <p>Specifies whether to return layout information such as text position, font, and color. When set to true, layer information is returned, which can be used with an image editor for secondary editing. Default value: false.</p>
+     * <p>Specifies whether to return layout information such as text position, font, and color. If set to true, layer information is returned, which can be used for secondary editing in an image editor. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

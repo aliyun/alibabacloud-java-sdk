@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class VideoTranslationShrinkRequest extends TeaModel {
     /**
-     * <p>The list of translation features. Valid values: speech and visual. You can select both. At least one feature is required. Duplicate values are not accepted.</p>
+     * <p>The list of translation features. Valid values: speech and visual. You can select both. At least one feature must be specified. Duplicate values are not allowed.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Capabilities")
     public String capabilitiesShrink;
 
     /**
-     * <p>Specifies whether to enable quality inspection for on-screen text processing. Effective only when visual is included and this parameter is explicitly set to true. If only speech is selected, this parameter is ignored, no quality inspection is performed, no quality inspection fields are returned, and no error is reported due to this parameter. Enabling quality inspection may increase the processing time. Do not enable it unless necessary. Default value: false.</p>
+     * <p>Specifies whether to enable the quality check for on-screen text processing. This parameter takes effect only when visual is included and explicitly set to true. If only speech is selected, this parameter is ignored. No quality check is performed, no quality check fields are returned, and no error is reported for this parameter. Enabling the quality check may increase the waiting time. Do not enable it unless necessary. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -21,7 +21,12 @@ public class VideoTranslationShrinkRequest extends TeaModel {
     public Boolean enableQualityCheck;
 
     /**
-     * <p>Applicable only when visual is included. Specifies whether to erase on-screen text without translation. Valid values: true: erases on-screen text without translation. false: translates on-screen text. Default value: false.</p>
+     * <p>Valid only when visual is included. Specifies whether to only erase the on-screen text without translation. Valid values:</p>
+     * <ul>
+     * <li>true: Erases the on-screen text without translation.</li>
+     * <li>false: Translates the on-screen text.
+     * Default value: false.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -30,7 +35,12 @@ public class VideoTranslationShrinkRequest extends TeaModel {
     public Boolean eraseOnly;
 
     /**
-     * <p>Applicable only when visual is included. Specifies whether to erase brand logos. Valid values: true: erases brand logos. false: retains brand logos. Default value: false. This parameter is independent of EraseOnly.</p>
+     * <p>Valid only when visual is included. Specifies whether to erase brand logos. Valid values:</p>
+     * <ul>
+     * <li>true: Erases brand logos.</li>
+     * <li>false: Retains brand logos.
+     * Default value: false. This parameter is independent of EraseOnly.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -39,7 +49,7 @@ public class VideoTranslationShrinkRequest extends TeaModel {
     public Boolean removeLogo;
 
     /**
-     * <p>The original language of the video (source language). For supported languages, see Language support.</p>
+     * <p>The original language of the video. For supported languages, see Language support.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -48,7 +58,12 @@ public class VideoTranslationShrinkRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
-     * <p>Applicable only when speech is included. Valid values: erase: erases the original subtitles only. replace: replaces the original subtitles with translated subtitles, which means erasing the original subtitles and adding subtitles synchronized with the translated speech. If not specified, the original subtitles are not processed, which means neither erasing the original subtitles nor adding new subtitles.</p>
+     * <p>Valid only when speech is included. Valid values:</p>
+     * <ul>
+     * <li>erase: Erases only the original subtitles.</li>
+     * <li>replace: Replaces the original subtitles with translated subtitles. This erases the original subtitles and adds subtitles synchronized with the translated speech.</li>
+     * <li>If not specified, the original subtitles are not processed. This means the original subtitles are neither erased nor replaced with new subtitles.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>replace</p>
@@ -57,7 +72,7 @@ public class VideoTranslationShrinkRequest extends TeaModel {
     public String subtitleMode;
 
     /**
-     * <p>Required when speech is included. Optional when only visual is included and EraseOnly is set to true. If specified in this case, it is ignored. Required in other cases.</p>
+     * <p>Required when speech is included. Optional when only visual is selected and EraseOnly is set to true. If provided in this case, it is ignored. Required in all other cases.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -66,7 +81,7 @@ public class VideoTranslationShrinkRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>The video URL. Supported formats: MP4 and MOV. Maximum size: 200 MB.</p>
+     * <p>The URL of the video. Supported formats: MP4 and MOV. Maximum size: 200 MB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
