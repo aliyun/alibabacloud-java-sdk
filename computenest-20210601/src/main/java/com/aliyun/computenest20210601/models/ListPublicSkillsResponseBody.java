@@ -92,12 +92,24 @@ public class ListPublicSkillsResponseBody extends TeaModel {
     }
 
     public static class ListPublicSkillsResponseBodySkillsLocales extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ECS Patch Management</p>
+         */
         @NameInMap("EnValue")
         public String enValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ECS 补丁管理</p>
+         */
         @NameInMap("OriginalValue")
         public String originalValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ECS 补丁管理</p>
+         */
         @NameInMap("ZhValue")
         public String zhValue;
 
@@ -181,6 +193,9 @@ public class ListPublicSkillsResponseBody extends TeaModel {
 
         /**
          * <p>The skill display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS 补丁管理</p>
          */
         @NameInMap("SkillDisplayName")
         public String skillDisplayName;

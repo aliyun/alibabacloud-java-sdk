@@ -30,7 +30,7 @@ public class GetSkillResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The set of connection types required by the Skill.</p>
+     * <p>The set of connection types that the Skill depends on.</p>
      */
     @NameInMap("RequiredConnections")
     public java.util.List<String> requiredConnections;
@@ -42,7 +42,16 @@ public class GetSkillResponseBody extends TeaModel {
     public String securityScanStatus;
 
     /**
-     * <p>The Skill description.</p>
+     * <p>The security scan remediation suggestions (a Markdown-formatted string containing a set of remediation suggestions). This value is meaningful only when the source file security scan status is BLOCK.</p>
+     * 
+     * <strong>example:</strong>
+     * <h4>&lt;span style=\&quot;color:#2563eb\&quot;&gt; System Shutdown Command</span>\n- &lt;span style=\&quot;color:#16a34a\&quot;&gt;✅</span> Add an explicit user confirmation requirement before executing the <code>reboot-instance</code> command, and document that the restart will cause service interruption.\n\n#### &lt;span style=\&quot;color:#2563eb\&quot;&gt; Privilege Escalation Operation</span>\n- &lt;span style=\&quot;color:#16a34a\&quot;&gt;✅</span> Document that <code>sudo</code> is required, and provide installation alternatives that do not rely on root privileges (such as user local directories or package managers).\n\n#### &lt;span style=\&quot;color:#2563eb\&quot;&gt; Hardcoded Access Keys</span>\n- &lt;span style=\&quot;color:#16a34a\&quot;&gt;✅</span> Replace realistic example credentials with obvious placeholders (such as <code>&lt;your-access-key-id&gt;</code>) to avoid confusion with real credentials.\n\n#### &lt;span style=\&quot;color:#2563eb\&quot;&gt; User Deception (Direct Execution of Remote Scripts)</span>\n- &lt;span style=\&quot;color:#16a34a\&quot;&gt;✅</span> Immediately remove the <code>curl | bash</code> pattern. Instead, download the script first, verify its integrity (checksum/signature), and then execute it: <code>curl -fsSL url -o script.sh &amp;&amp; bash script.sh</code></h4>
+     */
+    @NameInMap("SecurityScanSuggestions")
+    public String securityScanSuggestions;
+
+    /**
+     * <p>The description of the Skill.</p>
      * 
      * <strong>example:</strong>
      * <p>Create new skills, modify and improve existing skills, and measure skill performance.</p>
@@ -51,7 +60,10 @@ public class GetSkillResponseBody extends TeaModel {
     public String skillDescription;
 
     /**
-     * <p>The Skill display name.</p>
+     * <p>The display name of the Skill.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AI 技能创建与优化</p>
      */
     @NameInMap("SkillDisplayName")
     public String skillDisplayName;
@@ -66,13 +78,13 @@ public class GetSkillResponseBody extends TeaModel {
     public String skillId;
 
     /**
-     * <p>The set of Skill labels.</p>
+     * <p>The set of labels for the Skill.</p>
      */
     @NameInMap("SkillLabels")
     public java.util.List<String> skillLabels;
 
     /**
-     * <p>The Skill name.</p>
+     * <p>The name of the Skill.</p>
      * 
      * <strong>example:</strong>
      * <p>skill-creator</p>
@@ -143,6 +155,14 @@ public class GetSkillResponseBody extends TeaModel {
         return this.securityScanStatus;
     }
 
+    public GetSkillResponseBody setSecurityScanSuggestions(String securityScanSuggestions) {
+        this.securityScanSuggestions = securityScanSuggestions;
+        return this;
+    }
+    public String getSecurityScanSuggestions() {
+        return this.securityScanSuggestions;
+    }
+
     public GetSkillResponseBody setSkillDescription(String skillDescription) {
         this.skillDescription = skillDescription;
         return this;
@@ -200,12 +220,24 @@ public class GetSkillResponseBody extends TeaModel {
     }
 
     public static class GetSkillResponseBodyLocales extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>AI Skill Creation and Optimization</p>
+         */
         @NameInMap("EnValue")
         public String enValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AI 技能创建与优化</p>
+         */
         @NameInMap("OriginalValue")
         public String originalValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AI 技能创建与优化</p>
+         */
         @NameInMap("ZhValue")
         public String zhValue;
 

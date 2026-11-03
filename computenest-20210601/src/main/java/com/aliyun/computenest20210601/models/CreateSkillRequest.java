@@ -37,6 +37,10 @@ public class CreateSkillRequest extends TeaModel {
     @NameInMap("SkillDescription")
     public String skillDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>appflow-chat-skill</p>
+     */
     @NameInMap("SkillDisplayName")
     public String skillDisplayName;
 

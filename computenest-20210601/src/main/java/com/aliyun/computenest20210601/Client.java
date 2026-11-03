@@ -9,10 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-hangzhou", "computenest.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "computenest.ap-southeast-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("computenest", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -1813,7 +1809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Before you begin</h3>
-     * <p>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
+     * <p>Confirm that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a Skill.</p>
@@ -1849,7 +1845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Before you begin</h3>
-     * <p>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
+     * <p>Confirm that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a Skill.</p>
@@ -3658,11 +3654,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites</h3>
-     * <p>Ensure that the service provider has enabled the upgrade/downgrade feature and configured the related parameters when the service was created.</p>
+     * <h3>Before you begin</h3>
+     * <p>Make sure that the service provider has enabled the specification modification feature and configured the modification parameters when creating the service.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call the UpdateServiceInstanceSpec operation to upgrade or downgrade a service instance if its parameters or package settings do not meet your requirements.</p>
+     * <p>Modifies the specifications of a service instance when the parameter values or plan settings of the service instance do not meet your requirements.</p>
      * 
      * @param tmpReq UpdateServiceInstanceSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3728,11 +3724,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites</h3>
-     * <p>Ensure that the service provider has enabled the upgrade/downgrade feature and configured the related parameters when the service was created.</p>
+     * <h3>Before you begin</h3>
+     * <p>Make sure that the service provider has enabled the specification modification feature and configured the modification parameters when creating the service.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call the UpdateServiceInstanceSpec operation to upgrade or downgrade a service instance if its parameters or package settings do not meet your requirements.</p>
+     * <p>Modifies the specifications of a service instance when the parameter values or plan settings of the service instance do not meet your requirements.</p>
      * 
      * @param request UpdateServiceInstanceSpecRequest
      * @return UpdateServiceInstanceSpecResponse

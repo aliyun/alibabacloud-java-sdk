@@ -92,12 +92,24 @@ public class ListSkillsResponseBody extends TeaModel {
     }
 
     public static class ListSkillsResponseBodySkillsLocales extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Alibaba Cloud CLI Operation Guide</p>
+         */
         @NameInMap("EnValue")
         public String enValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Java 编程专家</p>
+         */
         @NameInMap("OriginalValue")
         public String originalValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Java 编程专家</p>
+         */
         @NameInMap("ZhValue")
         public String zhValue;
 
@@ -181,6 +193,9 @@ public class ListSkillsResponseBody extends TeaModel {
 
         /**
          * <p>The Skill display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Java 编程专家</p>
          */
         @NameInMap("SkillDisplayName")
         public String skillDisplayName;
