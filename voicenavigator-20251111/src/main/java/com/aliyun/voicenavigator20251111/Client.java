@@ -1432,7 +1432,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get call details.</p>
+     * <p>Retrieves the details of a call.</p>
      * 
      * @param request GetCallDetailRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1468,7 +1468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get call details.</p>
+     * <p>Retrieves the details of a call.</p>
      * 
      * @param request GetCallDetailRecordRequest
      * @return GetCallDetailRecordResponse
@@ -3048,7 +3048,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of available voices.</p>
+     * <p>Retrieves the details of an instance.</p>
      * 
      * @param request ListVoicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3061,12 +3061,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            body.put("Model", request.model);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.nlsAccessType)) {
             body.put("NlsAccessType", request.nlsAccessType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nlsEngine)) {
             body.put("NlsEngine", request.nlsEngine);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.omniModel)) {
+            body.put("OmniModel", request.omniModel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -3096,7 +3104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of available voices.</p>
+     * <p>Retrieves the details of an instance.</p>
      * 
      * @param request ListVoicesRequest
      * @return ListVoicesResponse

@@ -1,3 +1,8 @@
+2026-11-03 Version: 1.4.2
+- Update API ListVoices: add request parameters Model.
+- Update API ListVoices: add request parameters OmniModel.
+
+
 2026-10-27 Version: 1.4.1
 - Update API GetCallDetailRecord: add response parameters Body.Data.Transcripts.$.PlaybackStatus.
 - Update API GetCallDetailRecord: add response parameters Body.Data.Transcripts.$.PlayedAnswer.

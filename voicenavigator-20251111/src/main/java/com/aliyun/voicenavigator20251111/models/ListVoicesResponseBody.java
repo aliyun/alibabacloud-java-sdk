@@ -14,7 +14,7 @@ public class ListVoicesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>A paginated list of voices.</p>
+     * <p>The paginated voice results.</p>
      */
     @NameInMap("Data")
     public ListVoicesResponseBodyData data;
@@ -39,7 +39,7 @@ public class ListVoicesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>A list of dynamic parameters related to the error.</p>
+     * <p>The list of dynamic error parameters.</p>
      */
     @NameInMap("Params")
     public java.util.List<String> params;
@@ -108,19 +108,19 @@ public class ListVoicesResponseBody extends TeaModel {
 
     public static class ListVoicesResponseBodyDataVoices extends TeaModel {
         /**
-         * <p>The category of the voice.</p>
+         * <p>The category.</p>
          * 
          * <strong>example:</strong>
-         * <p>千问音色</p>
+         * <p>Qwen voice</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>The language supported by the voice.</p>
+         * <p>The supported languages.</p>
          * 
          * <strong>example:</strong>
-         * <p>中文及中英文混合</p>
+         * <p>Chinese and mixed Chinese-English</p>
          */
         @NameInMap("Language")
         public String language;
@@ -135,10 +135,10 @@ public class ListVoicesResponseBody extends TeaModel {
         public String model;
 
         /**
-         * <p>The name of the voice.</p>
+         * <p>The voice name.</p>
          * 
          * <strong>example:</strong>
-         * <p>芊悦</p>
+         * <p>Qianyue</p>
          */
         @NameInMap("Name")
         public String name;
@@ -153,22 +153,22 @@ public class ListVoicesResponseBody extends TeaModel {
         public String nlsEngine;
 
         /**
-         * <p>The style of the voice.</p>
+         * <p>The style.</p>
          * 
          * <strong>example:</strong>
-         * <p>女声</p>
+         * <p>Female voice</p>
          */
         @NameInMap("Style")
         public String style;
 
         /**
-         * <p>A list of supported parameters.</p>
+         * <p>The list of supported parameters.</p>
          */
         @NameInMap("SupportedParams")
         public java.util.List<String> supportedParams;
 
         /**
-         * <p>The identifier for the voice.</p>
+         * <p>The speaker.</p>
          * 
          * <strong>example:</strong>
          * <p>Cherry</p>
@@ -258,7 +258,7 @@ public class ListVoicesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries on the current page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -267,7 +267,7 @@ public class ListVoicesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total count of voices.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -276,7 +276,7 @@ public class ListVoicesResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
-         * <p>A list of voices.</p>
+         * <p>The list of voices.</p>
          */
         @NameInMap("Voices")
         public java.util.List<ListVoicesResponseBodyDataVoices> voices;

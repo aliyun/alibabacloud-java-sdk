@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVoicesRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>e48e45dd-e47a-4744-a063-f08cbebb1c5a</p>
@@ -14,7 +14,16 @@ public class ListVoicesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The TTS access type.</p>
+     * <p>The model.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qwen-3.8-omni-flash</p>
+     */
+    @NameInMap("Model")
+    public String model;
+
+    /**
+     * <p>The TTS invocation method.</p>
      * 
      * <strong>example:</strong>
      * <p>MANAGED</p>
@@ -30,6 +39,15 @@ public class ListVoicesRequest extends TeaModel {
      */
     @NameInMap("NlsEngine")
     public String nlsEngine;
+
+    /**
+     * <p>Specifies whether the model is an Omni model.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("OmniModel")
+    public Boolean omniModel;
 
     /**
      * <p>The page number.</p>
@@ -62,6 +80,14 @@ public class ListVoicesRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public ListVoicesRequest setModel(String model) {
+        this.model = model;
+        return this;
+    }
+    public String getModel() {
+        return this.model;
+    }
+
     public ListVoicesRequest setNlsAccessType(String nlsAccessType) {
         this.nlsAccessType = nlsAccessType;
         return this;
@@ -76,6 +102,14 @@ public class ListVoicesRequest extends TeaModel {
     }
     public String getNlsEngine() {
         return this.nlsEngine;
+    }
+
+    public ListVoicesRequest setOmniModel(Boolean omniModel) {
+        this.omniModel = omniModel;
+        return this;
+    }
+    public Boolean getOmniModel() {
+        return this.omniModel;
     }
 
     public ListVoicesRequest setPageNumber(Integer pageNumber) {
