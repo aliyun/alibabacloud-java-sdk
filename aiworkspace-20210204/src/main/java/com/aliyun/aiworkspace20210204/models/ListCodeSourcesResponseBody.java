@@ -20,7 +20,7 @@ public class ListCodeSourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of code source configurations that match the filter conditions.</p>
+     * <p>The total number of code source configurations that meet the filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

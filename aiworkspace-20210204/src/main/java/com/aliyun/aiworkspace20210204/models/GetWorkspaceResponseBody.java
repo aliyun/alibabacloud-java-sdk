@@ -11,7 +11,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public java.util.List<String> adminNames;
 
     /**
-     * <p>The ID of the user who created the workspace.</p>
+     * <p>The user ID of the creator.</p>
      * 
      * <strong>example:</strong>
      * <p>1157******94123</p>
@@ -20,7 +20,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String creator;
 
     /**
-     * <p>The description of the workspace.</p>
+     * <p>The workspace description.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace description example</p>
@@ -38,19 +38,17 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The environments that the workspace contains. Valid values:</p>
+     * <p>The environments included in the workspace.</p>
      * <ul>
-     * <li><p>A workspace in basic mode has only the production environment (prod).</p>
-     * </li>
-     * <li><p>A workspace in standard mode has both the development environment (dev) and the production environment (prod).</p>
-     * </li>
+     * <li>Simple mode includes only the production environment (prod).</li>
+     * <li>Standard mode includes the development environment (dev) and the production environment (prod).</li>
      * </ul>
      */
     @NameInMap("EnvTypes")
     public java.util.List<String> envTypes;
 
     /**
-     * <p>Additional information. This parameter currently contains the tenant ID (TenantId).</p>
+     * <p>The extra information, which currently includes TenantId (tenant ID).</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;TenantId&quot;: &quot;4286******98&quot;}</p>
@@ -59,7 +57,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public java.util.Map<String, ?> extraInfos;
 
     /**
-     * <p>The time when the workspace was created. The time is in UTC and follows the ISO 8601 standard.</p>
+     * <p>The time when the workspace was created. The time is displayed in UTC and formatted in ISO 8601.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35.232Z</p>
@@ -68,7 +66,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The time when the workspace was last modified. The time is in UTC and follows the ISO 8601 standard.</p>
+     * <p>The time when the workspace was modified. The time is displayed in UTC and formatted in ISO 8601.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35.232Z</p>
@@ -77,12 +75,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>Indicates whether the workspace is the default workspace. Valid values:</p>
+     * <p>Specifies whether the workspace is the default workspace. Valid values:</p>
      * <ul>
-     * <li><p>false: The workspace is not the default workspace.</p>
-     * </li>
-     * <li><p>true: The workspace is the default workspace.</p>
-     * </li>
+     * <li>false: The workspace is not the default workspace.</li>
+     * <li>true: The workspace is the default workspace.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,7 +88,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public Boolean isDefault;
 
     /**
-     * <p>The information about the workspace owner. This parameter is returned only when Verbose is set to true.</p>
+     * <p>The workspace owner information. Displayed when Verbose is set to true.</p>
      */
     @NameInMap("Owner")
     public GetWorkspaceResponseBodyOwner owner;
@@ -116,20 +112,14 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The status of the workspace. Valid values:</p>
+     * <p>The workspace status. Valid values:</p>
      * <ul>
-     * <li><p>ENABLED: The workspace is running as normal.</p>
-     * </li>
-     * <li><p>INITIALIZING: The workspace is being initialized.</p>
-     * </li>
-     * <li><p>FAILURE: The workspace failed to be created.</p>
-     * </li>
-     * <li><p>DISABLED: The workspace is manually disabled.</p>
-     * </li>
-     * <li><p>FROZEN: The workspace is frozen due to an overdue payment.</p>
-     * </li>
-     * <li><p>UPDATING: The workspace is being updated.</p>
-     * </li>
+     * <li>ENABLED: Normal.</li>
+     * <li>INITIALIZING: Initializing.</li>
+     * <li>FAILURE: Failed.</li>
+     * <li>DISABLED: Manually disabled.</li>
+     * <li>FROZEN: Frozen due to overdue payment.</li>
+     * <li>UPDATING: Updating.</li>
      * </ul>
      * 
      * <strong>example:</strong>

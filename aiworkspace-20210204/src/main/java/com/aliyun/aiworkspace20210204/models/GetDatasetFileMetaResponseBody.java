@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDatasetFileMetaResponseBody extends TeaModel {
     /**
-     * <p>The details of the dataset file metadata.</p>
+     * <p>The details of the retrieved dataset file metadata.</p>
      */
     @NameInMap("DatasetFileMeta")
     public DatasetFileMetaContentGet datasetFileMeta;
@@ -20,7 +20,7 @@ public class GetDatasetFileMetaResponseBody extends TeaModel {
     public String datasetId;
 
     /**
-     * <p>The name of the dataset version.</p>
+     * <p>The dataset version name.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>

@@ -93,6 +93,9 @@ public class Trial extends TeaModel {
 
     /**
      * <p>UserId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1557702098******</p>
      */
     @NameInMap("UserId")
     public String userId;

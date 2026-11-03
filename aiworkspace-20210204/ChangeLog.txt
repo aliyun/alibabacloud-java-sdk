@@ -1,3 +1,7 @@
+2026-11-03 Version: 7.3.6
+- Update API GetWorkspace: add request parameters ExtraVerboseFields.
+
+
 2026-10-17 Version: 7.3.5
 - Update API ListConfigs: add request parameters Options.
 

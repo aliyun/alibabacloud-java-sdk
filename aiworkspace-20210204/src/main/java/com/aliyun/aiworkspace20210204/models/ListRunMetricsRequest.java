@@ -15,7 +15,7 @@ public class ListRunMetricsRequest extends TeaModel {
     public String key;
 
     /**
-     * <p>The maximum number of results to return. The default value is 10.</p>
+     * <p>The maximum number of results to return. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -24,7 +24,7 @@ public class ListRunMetricsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The paging token. The token starts from 0. The default value is 0.</p>
+     * <p>The pagination token, starting from 0. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

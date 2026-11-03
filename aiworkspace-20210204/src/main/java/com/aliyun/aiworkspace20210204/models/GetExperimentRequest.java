@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetExperimentRequest extends TeaModel {
     /**
-     * <p>Specifies whether to retrieve the latest run information for the experiment.</p>
+     * <p>Specifies whether to retrieve the latest run information associated with the experiment.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

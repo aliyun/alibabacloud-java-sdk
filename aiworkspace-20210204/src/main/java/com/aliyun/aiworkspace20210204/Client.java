@@ -1706,7 +1706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a run. A run belongs to an experiment and can be associated with a specific workload or can be a standalone code execution.</p>
+     * <p>Creates a run. A run belongs to an experiment and can be associated with a specific workload or executed as standalone code.</p>
      * 
      * @param request CreateRunRequest
      * @param headers map
@@ -1760,7 +1760,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a run. A run belongs to an experiment and can be associated with a specific workload or can be a standalone code execution.</p>
+     * <p>Creates a run. A run belongs to an experiment and can be associated with a specific workload or executed as standalone code.</p>
      * 
      * @param request CreateRunRequest
      * @return CreateRunResponse
@@ -3942,7 +3942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves run details.</p>
+     * <p>Retrieves the details of a run.</p>
      * 
      * @param request GetRunRequest
      * @param headers map
@@ -3976,7 +3976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves run details.</p>
+     * <p>Retrieves the details of a run.</p>
      * 
      * @param request GetRunRequest
      * @return GetRunResponse
@@ -3999,6 +3999,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetWorkspaceResponse getWorkspaceWithOptions(String WorkspaceId, GetWorkspaceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.extraVerboseFields)) {
+            query.put("ExtraVerboseFields", request.extraVerboseFields);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.verbose)) {
             query.put("Verbose", request.verbose);
         }
@@ -4077,7 +4081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of code configurations. This operation supports pagination, sorting, and conditional filtering.</p>
+     * <p>Queries a list of code configurations with support for pagination, sorting, and conditional filtering.</p>
      * 
      * @param request ListCodeSourcesRequest
      * @param headers map
@@ -4131,7 +4135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of code configurations. This operation supports pagination, sorting, and conditional filtering.</p>
+     * <p>Queries a list of code configurations with support for pagination, sorting, and conditional filtering.</p>
      * 
      * @param request ListCodeSourcesRequest
      * @return ListCodeSourcesResponse
@@ -5703,7 +5707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of metric records for a run.</p>
+     * <p>Retrieves the list of metric records for a run.</p>
      * 
      * @param request ListRunMetricsRequest
      * @param headers map
@@ -5745,7 +5749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of metric records for a run.</p>
+     * <p>Retrieves the list of metric records for a run.</p>
      * 
      * @param request ListRunMetricsRequest
      * @return ListRunMetricsResponse
@@ -5758,7 +5762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of runs.</p>
+     * <p>Queries a list of runs.</p>
      * 
      * @param request ListRunsRequest
      * @param headers map
@@ -5848,7 +5852,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of runs.</p>
+     * <p>Queries a list of runs.</p>
      * 
      * @param request ListRunsRequest
      * @return ListRunsResponse

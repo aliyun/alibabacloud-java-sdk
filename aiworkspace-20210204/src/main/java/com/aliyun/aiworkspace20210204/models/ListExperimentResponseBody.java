@@ -11,7 +11,7 @@ public class ListExperimentResponseBody extends TeaModel {
     public java.util.List<Experiment> experiments;
 
     /**
-     * <p>The token for the next page. Save this token and include it in the next request to retrieve the next page of results.</p>
+     * <p>The token for the next page. Record this token and pass it in the next request.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -29,7 +29,7 @@ public class ListExperimentResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0C6835C5-A424-5AFB-ACC2-F1E3CA1ABF7C</p>

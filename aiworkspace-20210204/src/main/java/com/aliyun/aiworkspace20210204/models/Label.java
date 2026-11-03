@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Label extends TeaModel {
     /**
-     * <p>The label key. The value can be up to 128 bytes in length and cannot contain equal signs (=) and commas (,).</p>
+     * <p>The tag key. It can be up to 128 bytes in length and cannot contain equal signs (=) or half-width commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>env</p>
@@ -14,7 +14,7 @@ public class Label extends TeaModel {
     public String key;
 
     /**
-     * <p>The label value. The value can be up to 128 bytes in length and cannot contain equal signs (=) and commas (,).</p>
+     * <p>The tag value. It can be up to 128 bytes in length and cannot contain equal signs (=) or half-width commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
