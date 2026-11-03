@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListExtendfilesResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -42,13 +42,13 @@ public class ListExtendfilesResponseBody extends TeaModel {
 
     public static class ListExtendfilesResponseBodyResult extends TeaModel {
         /**
-         * <p>The extension file path.</p>
+         * <p>The path of the extension file.</p>
          */
         @NameInMap("filePath")
         public String filePath;
 
         /**
-         * <p>The extension file size.</p>
+         * <p>The size of the extension file.</p>
          * 
          * <strong>example:</strong>
          * <p>968668</p>
@@ -57,7 +57,7 @@ public class ListExtendfilesResponseBody extends TeaModel {
         public Long fileSize;
 
         /**
-         * <p>The extension file name.</p>
+         * <p>The name of the extension file.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql-connector-java-5.1.35.jar</p>

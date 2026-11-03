@@ -14,10 +14,10 @@ public class AddSnapshotRepoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result:</p>
+     * <p>The returned result. Valid values:</p>
      * <ul>
      * <li>true: The reference repository is created.</li>
-     * <li>false: The reference repository failed to be created.</li>
+     * <li>false: The reference repository fails to be created.</li>
      * </ul>
      * 
      * <strong>example:</strong>

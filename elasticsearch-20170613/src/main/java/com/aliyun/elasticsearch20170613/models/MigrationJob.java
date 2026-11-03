@@ -4,36 +4,69 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class MigrationJob extends TeaModel {
+    /**
+     * <p>currentState</p>
+     */
     @NameInMap("currentState")
     public String currentState;
 
+    /**
+     * <p>disableSourceClusterAuth</p>
+     */
     @NameInMap("disableSourceClusterAuth")
     public Boolean disableSourceClusterAuth;
 
+    /**
+     * <p>disableTargetClusterAuth</p>
+     */
     @NameInMap("disableTargetClusterAuth")
     public Boolean disableTargetClusterAuth;
 
+    /**
+     * <p>endTime</p>
+     */
     @NameInMap("endTime")
     public Long endTime;
 
+    /**
+     * <p>migrationJobId</p>
+     */
     @NameInMap("migrationJobId")
     public String migrationJobId;
 
+    /**
+     * <p>phase</p>
+     */
     @NameInMap("phase")
     public String phase;
 
+    /**
+     * <p>sourceCluster</p>
+     */
     @NameInMap("sourceCluster")
     public MigrationJobSourceCluster sourceCluster;
 
+    /**
+     * <p>startTime</p>
+     */
     @NameInMap("startTime")
     public Long startTime;
 
+    /**
+     * <p>statusResult</p>
+     */
     @NameInMap("statusResult")
     public java.util.List<MigrationJobStatusResult> statusResult;
 
+    /**
+     * <p>targetCluster</p>
+     */
     @NameInMap("targetCluster")
     public MigrationJobTargetCluster targetCluster;
 
+    /**
+     * <p>updateTime</p>
+     */
     @NameInMap("updateTime")
     public Long updateTime;
 
@@ -131,9 +164,15 @@ public class MigrationJob extends TeaModel {
     }
 
     public static class MigrationJobSourceCluster extends TeaModel {
+        /**
+         * <p>instanceId</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>type</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -161,9 +200,15 @@ public class MigrationJob extends TeaModel {
     }
 
     public static class MigrationJobStatusResult extends TeaModel {
+        /**
+         * <p>code</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>success</p>
+         */
         @NameInMap("success")
         public Boolean success;
 
@@ -191,9 +236,15 @@ public class MigrationJob extends TeaModel {
     }
 
     public static class MigrationJobTargetCluster extends TeaModel {
+        /**
+         * <p>type</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>type</p>
+         */
         @NameInMap("type")
         public String type;
 

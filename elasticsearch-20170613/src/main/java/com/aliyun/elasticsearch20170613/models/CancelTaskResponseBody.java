@@ -14,10 +14,10 @@ public class CancelTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result. Valid values:</p>
+     * <p>The returned result. Valid values:</p>
      * <ul>
      * <li>true: The task is canceled.</li>
-     * <li>false: The task failed to be canceled.</li>
+     * <li>false: The task fails to be canceled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

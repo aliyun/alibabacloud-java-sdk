@@ -14,9 +14,9 @@ public class UpdateInstanceChargeTypeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result. Valid values:</p>
+     * <p>The return result. Valid values:</p>
      * <ul>
-     * <li>true: The conversion is successful.</li>
+     * <li>true: The conversion succeeded.</li>
      * <li>false: The conversion failed.</li>
      * </ul>
      * 

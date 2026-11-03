@@ -14,10 +14,10 @@ public class CloseHttpsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result. Valid values:</p>
+     * <p>The result. Valid values:</p>
      * <ul>
      * <li>true: The HTTPS protocol is disabled.</li>
-     * <li>false: Failed to disable the HTTPS protocol.</li>
+     * <li>false: Disabling the HTTPS protocol failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

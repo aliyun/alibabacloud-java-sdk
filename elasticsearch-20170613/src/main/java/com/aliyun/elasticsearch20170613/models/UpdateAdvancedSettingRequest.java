@@ -22,6 +22,15 @@ public class UpdateAdvancedSettingRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <p>The garbage collection (GC) update strategy. Valid values: blue_green (blue-green update, default), normal (in-place update), and intelligent (intelligent recommendation).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>blue_green</p>
+     */
+    @NameInMap("updateStrategy")
+    public String updateStrategy;
+
     public static UpdateAdvancedSettingRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAdvancedSettingRequest self = new UpdateAdvancedSettingRequest();
         return TeaModel.build(map, self);
@@ -41,6 +50,14 @@ public class UpdateAdvancedSettingRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateAdvancedSettingRequest setUpdateStrategy(String updateStrategy) {
+        this.updateStrategy = updateStrategy;
+        return this;
+    }
+    public String getUpdateStrategy() {
+        return this.updateStrategy;
     }
 
 }

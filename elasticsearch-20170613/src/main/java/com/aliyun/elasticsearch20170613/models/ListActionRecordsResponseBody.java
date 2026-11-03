@@ -394,18 +394,27 @@ public class ListActionRecordsResponseBody extends TeaModel {
 
         /**
          * <p>The instance information after the change, represented as a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;192.0.2.1&quot;,&quot;198.51.100.2&quot;,&quot;203.0.113.3&quot;]</p>
          */
         @NameInMap("metaNow")
         public String metaNow;
 
         /**
          * <p>The instance information before the change, represented as a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;192.0.2.1/32&quot;,&quot;198.51.100.2/32&quot;,&quot;203.0.113.3/32&quot;]</p>
          */
         @NameInMap("metaOld")
         public String metaOld;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the account that triggered the change belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123456</p>
          */
         @NameInMap("ownerId")
         public String ownerId;

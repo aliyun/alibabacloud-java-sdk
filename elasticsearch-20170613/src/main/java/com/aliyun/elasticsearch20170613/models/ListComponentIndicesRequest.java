@@ -14,7 +14,7 @@ public class ListComponentIndicesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The page number for paging. Default value: 1.</p>
+     * <p>The paging Settings for the page number in a paged query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -26,7 +26,7 @@ public class ListComponentIndicesRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The number of entries per page for paging. Default value: 10.</p>
+     * <p>The paging Settings for the number of entries per page in a paged query. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

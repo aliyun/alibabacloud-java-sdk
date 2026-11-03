@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateComponentIndexRequest extends TeaModel {
     /**
-     * <p>The metadata, which is used to store remarks and other information.</p>
+     * <p>The metadata used to store information such as remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>{       &quot;description&quot;: &quot;set number of shards to one&quot;   }</p>
@@ -42,7 +42,7 @@ public class CreateComponentIndexRequest extends TeaModel {
 
     public static class CreateComponentIndexRequestTemplate extends TeaModel {
         /**
-         * <p>The aliases configuration of the template.</p>
+         * <p>The template aliases configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -51,7 +51,7 @@ public class CreateComponentIndexRequest extends TeaModel {
         public java.util.Map<String, ?> aliases;
 
         /**
-         * <p>The mappings configuration of the template.</p>
+         * <p>The template mappings configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{ 			&quot;properties&quot;: { 				&quot;@timestamp&quot;: { 					&quot;type&quot;: &quot;date&quot; 				} 			} 		}</p>
@@ -60,7 +60,7 @@ public class CreateComponentIndexRequest extends TeaModel {
         public java.util.Map<String, ?> mappings;
 
         /**
-         * <p>The settings configuration of the template.</p>
+         * <p>The template settings configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{ 			&quot;index.number_of_replicas&quot;: 0 		}</p>

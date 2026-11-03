@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateComponentIndexRequest extends TeaModel {
     /**
-     * <p>The metadata, which is used to store remarks and other information.</p>
+     * <p>The metadata, which is used to store information such as remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>{ &quot;description&quot;: &quot;set number of shards to one&quot; }</p>
@@ -14,7 +14,7 @@ public class UpdateComponentIndexRequest extends TeaModel {
     public java.util.Map<String, ?> meta;
 
     /**
-     * <p>The composable template information.</p>
+     * <p>The composite template information.</p>
      */
     @NameInMap("template")
     public UpdateComponentIndexRequestTemplate template;
@@ -42,7 +42,7 @@ public class UpdateComponentIndexRequest extends TeaModel {
 
     public static class UpdateComponentIndexRequestTemplate extends TeaModel {
         /**
-         * <p>The aliases configuration of the template.</p>
+         * <p>The aliases configuration for the template.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -51,7 +51,7 @@ public class UpdateComponentIndexRequest extends TeaModel {
         public java.util.Map<String, ?> aliases;
 
         /**
-         * <p>The mappings configuration of the template.</p>
+         * <p>The mappings configuration for the template.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;properties&quot;: { &quot;@timestamp&quot;: { &quot;type&quot;: &quot;date&quot; } } }</p>
@@ -60,7 +60,7 @@ public class UpdateComponentIndexRequest extends TeaModel {
         public java.util.Map<String, ?> mappings;
 
         /**
-         * <p>The settings configuration of the template.</p>
+         * <p>The settings configuration for the template.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;index.number_of_replicas&quot;: 0 }</p>

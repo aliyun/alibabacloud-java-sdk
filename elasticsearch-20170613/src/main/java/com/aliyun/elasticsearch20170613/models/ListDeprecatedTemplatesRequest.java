@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDeprecatedTemplatesRequest extends TeaModel {
     /**
-     * <p>The index template name.</p>
+     * <p>The name of the index template.</p>
      * 
      * <strong>example:</strong>
      * <p>component-openstore-index-template</p>
@@ -14,7 +14,7 @@ public class ListDeprecatedTemplatesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The page number settings for a paged query. This parameter is used for paging.</p>
+     * <p>The page number for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -23,7 +23,7 @@ public class ListDeprecatedTemplatesRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The number of entries per page settings for a paged query. This parameter is used for paging.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelTaskRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain a maximum of 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
@@ -14,7 +14,7 @@ public class CancelTaskRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The task type. Set this parameter to MigrateData, which indicates a data migration task.</p>
+     * <p>The task type. Set the value to MigrateData, which specifies a data migration task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

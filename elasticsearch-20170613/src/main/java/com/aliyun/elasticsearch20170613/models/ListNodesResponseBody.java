@@ -92,8 +92,8 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * <p>The IP address type. Valid values:</p>
          * <ul>
-         * <li>public: public IP address.</li>
-         * <li>private: private IP address.</li>
+         * <li>public: Public IP address.</li>
+         * <li>private: Private IP address.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -169,7 +169,7 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyResult extends TeaModel {
         /**
-         * <p>The status of each collector on the ECS instance. Valid values:</p>
+         * <p>The status of the collectors on the ECS instance. Valid values:</p>
          * <ul>
          * <li>heartOk: Normal heartbeat.</li>
          * <li>heartLost: Abnormal heartbeat.</li>
@@ -184,10 +184,10 @@ public class ListNodesResponseBody extends TeaModel {
         public String agentStatus;
 
         /**
-         * <p>Indicates whether Cloud Assistant is enabled. Valid values:</p>
+         * <p>Indicates whether Cloud Assistant is activated. Valid values:</p>
          * <ul>
-         * <li>true: Enabled.</li>
-         * <li>false: Not enabled.</li>
+         * <li>true: Activated.</li>
+         * <li>false: Not activated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -206,7 +206,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String ecsInstanceId;
 
         /**
-         * <p>The ECS instance name.</p>
+         * <p>The name of the ECS instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS_beat</p>
@@ -215,7 +215,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String ecsInstanceName;
 
         /**
-         * <p>The list of IP address information for the ECS instance.</p>
+         * <p>The list of IP addresses of the ECS instance.</p>
          */
         @NameInMap("ipAddress")
         public java.util.List<ListNodesResponseBodyResultIpAddress> ipAddress;
@@ -234,7 +234,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The ECS instance status. Valid values:</p>
+         * <p>The instance status of the ECS instance. Valid values:</p>
          * <ul>
          * <li>running: Running.</li>
          * <li>starting: Starting.</li>
@@ -249,7 +249,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tag information of the ECS instance.</p>
+         * <p>The tags of the ECS instance.</p>
          */
         @NameInMap("tags")
         public java.util.List<ListNodesResponseBodyResultTags> tags;

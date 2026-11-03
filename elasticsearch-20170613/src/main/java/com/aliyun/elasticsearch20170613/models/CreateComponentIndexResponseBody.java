@@ -16,8 +16,8 @@ public class CreateComponentIndexResponseBody extends TeaModel {
     /**
      * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li>true: The template was created successfully.</li>
-     * <li>false: The template failed to be created.</li>
+     * <li>true: Created.</li>
+     * <li>false: Creation failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

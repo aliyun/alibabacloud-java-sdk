@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ValidateConnectionResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
@@ -14,10 +14,10 @@ public class ValidateConnectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result. Valid values:</p>
+     * <p>The return result. Valid values:</p>
      * <ul>
-     * <li>true: The validation succeeded.</li>
-     * <li>false: The validation failed.</li>
+     * <li>true: The verification is successful.</li>
+     * <li>false: The verification fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UninstallLogstashPluginResponseBody extends TeaModel {
     /**
-     * <p>The response headers of this call.</p>
+     * <p>The response headers returned by this call.</p>
      */
     @NameInMap("Headers")
     public java.util.Map<String, ?> headers;

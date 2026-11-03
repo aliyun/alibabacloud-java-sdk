@@ -14,10 +14,10 @@ public class ActivateZonesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the operation. Valid values:</p>
+     * <p>Indicates whether the zone is restored. Valid values:</p>
      * <ul>
-     * <li>true: The zone is resumed.</li>
-     * <li>false: The zone failed to be resumed.</li>
+     * <li>true: The zone is restored.</li>
+     * <li>false: The zone fails to be restored.</li>
      * </ul>
      * 
      * <strong>example:</strong>

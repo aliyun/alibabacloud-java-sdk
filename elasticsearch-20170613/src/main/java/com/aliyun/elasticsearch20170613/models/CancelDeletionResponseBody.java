@@ -14,10 +14,10 @@ public class CancelDeletionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the instance is recovered. Valid values:</p>
+     * <p>Indicates whether the instance was successfully restored. Valid values:</p>
      * <ul>
-     * <li>true: The instance is recovered.</li>
-     * <li>false: The instance is not recovered.</li>
+     * <li>true: Yes.</li>
+     * <li>false: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>

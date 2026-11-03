@@ -4,6 +4,14 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class TurnOnZoneRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to drain traffic from the load balancer. Valid values:</p>
+     * <ul>
+     * <li>false: uses the default policy.</li>
+     * <li>true: drains traffic from the load balancer.
+     * Default value: false.</li>
+     * </ul>
+     */
     @NameInMap("hpAlbZoneDrained")
     public Boolean hpAlbZoneDrained;
 

@@ -14,10 +14,10 @@ public class ShrinkNodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the operation. Valid values:</p>
+     * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li>true: The node shrinking succeeded.</li>
-     * <li>false: The node shrinking failed.</li>
+     * <li>true: The scale-in operation succeeded.</li>
+     * <li>false: The scale-in operation failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

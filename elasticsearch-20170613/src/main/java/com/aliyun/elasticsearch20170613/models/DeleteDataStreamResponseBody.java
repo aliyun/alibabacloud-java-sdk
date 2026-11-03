@@ -14,9 +14,9 @@ public class DeleteDataStreamResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the operation. Valid values:</p>
+     * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li><p>true: The data stream is deleted.</p>
+     * <li><p>true: The data stream was deleted.</p>
      * </li>
      * <li><p>false: The data stream failed to be deleted.</p>
      * </li>

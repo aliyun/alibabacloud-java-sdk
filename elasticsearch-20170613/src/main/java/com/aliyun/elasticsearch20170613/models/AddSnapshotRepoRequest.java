@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddSnapshotRepoRequest extends TeaModel {
     /**
-     * <p>The cross-cluster backup information, which specifies the reference instance.</p>
+     * <p>Specifies the cross-cluster backup information, namely the reference instance.</p>
      * 
      * <strong>example:</strong>
      * <p>{

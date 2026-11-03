@@ -14,7 +14,7 @@ public class ListNodesRequest extends TeaModel {
     public String ecsInstanceIds;
 
     /**
-     * <p>The ECS instance name.</p>
+     * <p>The name of the ECS instance.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -32,7 +32,7 @@ public class ListNodesRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The number of results per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class ListNodesRequest extends TeaModel {
     public Integer size;
 
     /**
-     * <p>The tag information of the ECS instance. Must include the tag key (tagKey) and tag value (tagValue).</p>
+     * <p>The tags of the ECS instances. Each tag must include a tag key (tagKey) and a tag value (tagValue).</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;tagKey&quot;:&quot;abc&quot;,&quot;tagValue&quot;:&quot;xyz&quot;}]</p>

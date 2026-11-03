@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableKibanaPvlNetworkResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0DC92CFE-62AF-51AF-9D5B-F1078D7C451E</p>
@@ -14,7 +14,7 @@ public class EnableKibanaPvlNetworkResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether private network access for Kibana is created.</p>
+     * <p>Indicates whether private network access to Kibana is successfully created. Valid values:</p>
      * <ul>
      * <li>true: Succeeded.</li>
      * <li>false: Failed.</li>

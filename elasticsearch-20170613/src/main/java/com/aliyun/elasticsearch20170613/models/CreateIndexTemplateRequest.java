@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIndexTemplateRequest extends TeaModel {
     /**
-     * <p>A unique token used to ensure the idempotence of the request. The client generates this value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>E1136AE9-4E49-4585-9358-6FDD2A6D****</p>
@@ -14,10 +14,10 @@ public class CreateIndexTemplateRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to enable data streams. Valid values:</p>
+     * <p>Specifies whether to enable the data stream. Valid values:</p>
      * <ul>
-     * <li>true: Enabled.</li>
-     * <li>false (default): Disabled.</li>
+     * <li>true: enables the data stream.</li>
+     * <li>false: disables the data stream. This is the default value.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -28,7 +28,7 @@ public class CreateIndexTemplateRequest extends TeaModel {
     public Boolean dataStream;
 
     /**
-     * <p>The lifecycle policy name.</p>
+     * <p>The life epoch Policy Name.</p>
      * 
      * <strong>example:</strong>
      * <p>policy-1</p>
@@ -37,14 +37,14 @@ public class CreateIndexTemplateRequest extends TeaModel {
     public String ilmPolicy;
 
     /**
-     * <p>The index matching pattern (regular expression).</p>
+     * <p>The regular expression for the index pattern.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("indexPatterns")
     public java.util.List<String> indexPatterns;
 
     /**
-     * <p>The index template name.</p>
+     * <p>The name of the index template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class CreateIndexTemplateRequest extends TeaModel {
     public String indexTemplate;
 
     /**
-     * <p>The priority of the cluster index template.</p>
+     * <p>The priority of the cluster index template. A larger value indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -131,7 +131,7 @@ public class CreateIndexTemplateRequest extends TeaModel {
 
     public static class CreateIndexTemplateRequestTemplate extends TeaModel {
         /**
-         * <p>The aliases configuration.</p>
+         * <p>The aliases.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;mydata\&quot;:{}}</p>
@@ -140,7 +140,7 @@ public class CreateIndexTemplateRequest extends TeaModel {
         public String aliases;
 
         /**
-         * <p>The mappings configuration.</p>
+         * <p>The mappings.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;properties\&quot;:{\&quot;created_at\&quot;:{\&quot;format\&quot;:\&quot;EEE MMM dd HH:mm:ss Z yyyy\&quot;,\&quot;type\&quot;:\&quot;date\&quot;},\&quot;host_name\&quot;:{\&quot;type\&quot;:\&quot;keyword\&quot;}}}</p>
@@ -149,7 +149,7 @@ public class CreateIndexTemplateRequest extends TeaModel {
         public String mappings;
 
         /**
-         * <p>The settings configuration.</p>
+         * <p>The settings.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;index.number_of_shards\&quot;:\&quot;1\&quot;}</p>

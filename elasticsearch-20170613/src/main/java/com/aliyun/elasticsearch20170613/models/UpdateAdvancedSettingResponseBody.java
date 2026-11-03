@@ -14,10 +14,10 @@ public class UpdateAdvancedSettingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result. Valid values:</p>
+     * <p>The return result. Valid values:</p>
      * <ul>
-     * <li>true: The garbage collector configuration was updated.</li>
-     * <li>false: The garbage collector configuration failed to be updated.</li>
+     * <li>true: The garbage collector configuration is updated.</li>
+     * <li>false: The garbage collector configuration fails to be updated.</li>
      * </ul>
      * 
      * <strong>example:</strong>

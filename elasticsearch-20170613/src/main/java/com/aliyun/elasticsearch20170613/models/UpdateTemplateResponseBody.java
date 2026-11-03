@@ -14,10 +14,10 @@ public class UpdateTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the scenario-specific template configuration is modified.</p>
+     * <p>Indicates whether the scenario-specific template configuration is updated:</p>
      * <ul>
-     * <li>true: The modification is successful.</li>
-     * <li>false: The modification failed.</li>
+     * <li>true: The update succeeded.</li>
+     * <li>false: The update failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

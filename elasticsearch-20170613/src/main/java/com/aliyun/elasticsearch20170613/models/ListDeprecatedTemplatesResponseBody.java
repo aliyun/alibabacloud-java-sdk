@@ -20,7 +20,7 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned results.</p>
+     * <p>The result details.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListDeprecatedTemplatesResponseBodyResult> result;
@@ -56,7 +56,7 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
 
     public static class ListDeprecatedTemplatesResponseBodyHeaders extends TeaModel {
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of returned entries.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -81,7 +81,7 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
 
     public static class ListDeprecatedTemplatesResponseBodyResultTemplate extends TeaModel {
         /**
-         * <p>The aliases configuration of the template.</p>
+         * <p>The alias configuration of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;{}&quot;</p>
@@ -140,10 +140,10 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
 
     public static class ListDeprecatedTemplatesResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the template matches a data stream. Valid values:</p>
+         * <p>Indicates whether the data stream is matched. Valid values:</p>
          * <ul>
-         * <li>true: matched.</li>
-         * <li>false: not matched.</li>
+         * <li>true: Matched.</li>
+         * <li>false: Not matched.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
         public java.util.List<String> indexPatterns;
 
         /**
-         * <p>The index template name.</p>
+         * <p>The name of the index template.</p>
          * 
          * <strong>example:</strong>
          * <p>openstore-index-template</p>

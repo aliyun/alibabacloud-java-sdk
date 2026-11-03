@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateXpackMonitorConfigResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
@@ -14,9 +14,9 @@ public class UpdateXpackMonitorConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result. Valid values:</p>
+     * <p>The result of the request. Valid values:</p>
      * <ul>
-     * <li>true: The update was successful.</li>
+     * <li>true: The update succeeded.</li>
      * <li>false: The update failed.</li>
      * </ul>
      * 

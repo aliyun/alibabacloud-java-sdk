@@ -86,7 +86,7 @@ public class Logstash extends TeaModel {
      * <p>The billing method of the instance. Valid values:</p>
      * <ul>
      * <li>prepaid: subscription</li>
-     * <li>postpaid: pay-as-you-go.</li>
+     * <li>postpaid: pay-as-you-go</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class Logstash extends TeaModel {
      * <p>The zone status. Valid values:</p>
      * <ul>
      * <li>ISOLATION: offline</li>
-     * <li>NORMAL: Normal.</li>
+     * <li>NORMAL: normal</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class Logstash extends TeaModel {
      * <p>The instance version. Valid values:</p>
      * <ul>
      * <li>6.7.0_with_X-Pack</li>
-     * <li>7.4.0_with_X-Pack.</li>
+     * <li>7.4.0_with_X-Pack</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -387,7 +387,7 @@ public class Logstash extends TeaModel {
 
     public static class LogstashNetworkConfig extends TeaModel {
         /**
-         * <p>The network type. Currently, only Virtual Private Cloud (VPC) is supported.</p>
+         * <p>The network type. Only VPC is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc</p>
@@ -405,7 +405,7 @@ public class Logstash extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The zone in which the instance resides.</p>
+         * <p>The zone where the instance is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-*</p>
@@ -567,7 +567,7 @@ public class Logstash extends TeaModel {
          * <p>The zone status. Valid values:</p>
          * <ul>
          * <li>ISOLATION: offline</li>
-         * <li>NORMAL: Normal.</li>
+         * <li>NORMAL: normal</li>
          * </ul>
          * 
          * <strong>example:</strong>

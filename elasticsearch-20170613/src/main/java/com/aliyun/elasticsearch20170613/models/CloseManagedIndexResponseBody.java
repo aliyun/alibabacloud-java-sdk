@@ -14,11 +14,11 @@ public class CloseManagedIndexResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the cloud-managed feature for the index is disabled. Valid values:</p>
+     * <p>Indicates whether the cloud hosting feature for the index was successfully disabled. Valid values:</p>
      * <ul>
-     * <li><p>true: The feature is disabled.</p>
+     * <li><p>true: Succeeded.</p>
      * </li>
-     * <li><p>false: The feature failed to be disabled.</p>
+     * <li><p>false: Failed.</p>
      * </li>
      * </ul>
      * 

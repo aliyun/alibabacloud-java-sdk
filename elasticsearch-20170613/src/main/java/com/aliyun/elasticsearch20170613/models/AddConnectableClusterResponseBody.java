@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddConnectableClusterResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>5A5D8E74-565C-43DC-B031-29289FA****</p>
@@ -14,7 +14,7 @@ public class AddConnectableClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result. Valid values:</p>
+     * <p>The returned result. Valid values:</p>
      * <ul>
      * <li>true: The configuration succeeded.</li>
      * <li>false: The configuration failed.</li>

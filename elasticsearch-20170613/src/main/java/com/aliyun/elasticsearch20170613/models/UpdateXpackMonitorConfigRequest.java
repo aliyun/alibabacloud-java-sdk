@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateXpackMonitorConfigRequest extends TeaModel {
     /**
-     * <p>A unique token used to ensure the idempotence of the request. The client generates this value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must ensure that it is unique among different requests. The token can contain up to 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
@@ -17,7 +17,7 @@ public class UpdateXpackMonitorConfigRequest extends TeaModel {
      * <p>Specifies whether to enable X-Pack monitoring. Valid values:</p>
      * <ul>
      * <li>true: Enabled.</li>
-     * <li>false: Not enabled.</li>
+     * <li>false: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class UpdateXpackMonitorConfigRequest extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>The access endpoint of the Elasticsearch instance.</p>
+     * <p>The endpoint of the Elasticsearch instance.</p>
      */
     @NameInMap("endpoints")
     public java.util.List<String> endpoints;

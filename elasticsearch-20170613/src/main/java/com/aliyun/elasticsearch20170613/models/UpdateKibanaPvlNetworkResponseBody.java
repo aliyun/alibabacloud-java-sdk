@@ -14,10 +14,10 @@ public class UpdateKibanaPvlNetworkResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result. Valid values:</p>
+     * <p>The returned result. Valid values:</p>
      * <ul>
      * <li>true: The operation is successful.</li>
-     * <li>false: The operation failed.</li>
+     * <li>false: The operation fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>

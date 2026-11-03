@@ -16,8 +16,8 @@ public class ValidateSlrPermissionResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the service-linked role has been created. Valid values:</p>
      * <ul>
-     * <li>true: Created.</li>
-     * <li>false: Not created.</li>
+     * <li>true: The role has been created.</li>
+     * <li>false: The role has not been created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
