@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CompareFaceVerifyResponseBody extends TeaModel {
     /**
-     * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
+     * <p>The return code. A value of 200 indicates success, and other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -85,7 +85,11 @@ public class CompareFaceVerifyResponseBody extends TeaModel {
         public String certifyId;
 
         /**
-         * <p>Indicates whether the verification passed. A value of T indicates passed. A value of F indicates not passed.</p>
+         * <p>Indicates whether the verification is passed. Valid values:</p>
+         * <ul>
+         * <li>T: Passed.</li>
+         * <li>F: Failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>T</p>

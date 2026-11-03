@@ -14,7 +14,7 @@ public class ModifyControlStrategyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message returned by the operation.</p>
+     * <p>The message returned by the API.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

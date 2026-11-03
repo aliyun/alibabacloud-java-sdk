@@ -43,7 +43,7 @@ public class DeleteCustomizeFlowStrategyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>5A6229C0-E156-48E4-B6EC-0F528BDF60D2</p>

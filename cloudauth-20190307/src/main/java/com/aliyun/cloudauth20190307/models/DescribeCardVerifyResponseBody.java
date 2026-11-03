@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeCardVerifyResponseBody extends TeaModel {
     /**
-     * <p>The response code. 200 indicates success. Other values indicate failure.</p>
-     * <blockquote>
-     * <p><strong>Important</strong></p>
+     * <p>The return code. A value of 200 indicates success, and other values indicate failure.
+     * Important</p>
      * <ul>
-     * <li>This parameter indicates whether the operation is called correctly. For more information about return codes, refer to error codes.</li>
-     * <li>Check the business verification result by viewing the fields in ResultObject.</li>
+     * <li>This parameter indicates whether the operation is called correctly. For more information about return codes, see Error codes.</li>
+     * <li>To view the business verification result, check the fields in ResultObject.</li>
      * </ul>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -21,13 +19,11 @@ public class DescribeCardVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message of the operation.</p>
-     * <blockquote>
-     * <p><strong>Important</strong></p>
+     * <p>The message returned for the operation call.
+     * Important</p>
      * <ul>
-     * <li>This parameter only indicates whether the operation is abnormal.</li>
+     * <li>This parameter only indicates whether an exception occurs during the operation call.</li>
      * </ul>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -91,9 +87,9 @@ public class DescribeCardVerifyResponseBody extends TeaModel {
         /**
          * <p>The identity verification result. Valid values:</p>
          * <ul>
-         * <li>1: consistent</li>
-         * <li>2: inconsistent</li>
-         * <li>3: no record found.</li>
+         * <li>1: Consistent.</li>
+         * <li>2: Inconsistent.</li>
+         * <li>3: No record found.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,7 +102,7 @@ public class DescribeCardVerifyResponseBody extends TeaModel {
          * <p>The ID card information submitted for verification.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;address&quot;:&quot;浙江省杭州市余杭区文一西路969号&quot;,&quot;birthDate&quot;:&quot;19901226&quot;,&quot;certName&quot;:&quot;张三&quot;,&quot;certNo&quot;:&quot;1234561990122*****&quot;,&quot;nationality&quot;:&quot;汉&quot;,&quot;authority&quot;:&quot;xxx公安局&quot;,&quot;startDate&quot;:&quot;20201130&quot;,&quot;endDate&quot;:&quot;20301130&quot;}</p>
+         * <p>{&quot;address&quot;:&quot;No. 969 West Wenyi Road, Yuhang District, Hangzhou City, Zhejiang Province&quot;,&quot;birthDate&quot;:&quot;19901226&quot;,&quot;certName&quot;:&quot;Zhang San&quot;,&quot;certNo&quot;:&quot;1234561990122*****&quot;,&quot;nationality&quot;:&quot;Han&quot;,&quot;authority&quot;:&quot;xxx Public Security Bureau&quot;,&quot;startDate&quot;:&quot;20201130&quot;,&quot;endDate&quot;:&quot;20301130&quot;}</p>
          */
         @NameInMap("CardInfo")
         public String cardInfo;
@@ -126,16 +122,16 @@ public class DescribeCardVerifyResponseBody extends TeaModel {
          * <p>The ID card information read by OCR.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;address&quot;:&quot;浙江省杭州市余杭区文一西路969号&quot;,&quot;birthDate&quot;:&quot;19901226&quot;,&quot;certName&quot;:&quot;张三&quot;,&quot;certNo&quot;:&quot;1234561990122*****&quot;,&quot;nationality&quot;:&quot;汉&quot;,&quot;authority&quot;:&quot;xxx公安局&quot;,&quot;startDate&quot;:&quot;20201130&quot;,&quot;endDate&quot;:&quot;20301130&quot;}</p>
+         * <p>{&quot;address&quot;:&quot;No. 969 West Wenyi Road, Yuhang District, Hangzhou City, Zhejiang Province&quot;,&quot;birthDate&quot;:&quot;19901226&quot;,&quot;certName&quot;:&quot;Zhang San&quot;,&quot;certNo&quot;:&quot;1234561990122*****&quot;,&quot;nationality&quot;:&quot;Han&quot;,&quot;authority&quot;:&quot;xxx Public Security Bureau&quot;,&quot;startDate&quot;:&quot;20201130&quot;,&quot;endDate&quot;:&quot;20301130&quot;}</p>
          */
         @NameInMap("OcrCardInfo")
         public String ocrCardInfo;
 
         /**
-         * <p>The returned photo URLs.</p>
+         * <p>The URLs of the returned photos.</p>
          * <ul>
-         * <li>certUrl: front side</li>
-         * <li>certNationalUrl: national emblem side.</li>
+         * <li>certUrl: Front side.</li>
+         * <li>certNationalUrl: National emblem side.</li>
          * </ul>
          * 
          * <strong>example:</strong>

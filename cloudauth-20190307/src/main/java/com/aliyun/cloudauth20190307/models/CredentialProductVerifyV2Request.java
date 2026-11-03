@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CredentialProductVerifyV2Request extends TeaModel {
     /**
-     * <p>The credential name. Only the following value is supported: 0501 (product image).</p>
+     * <p>The credential name. Valid values: 0501 (product image).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CredentialProductVerifyV2Request extends TeaModel {
     public String credName;
 
     /**
-     * <p>The credential type. Only the following value is supported: 05 (product image).</p>
+     * <p>The credential type. Valid values: 05 (product image).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,13 +46,13 @@ public class CredentialProductVerifyV2Request extends TeaModel {
      * <p>The merchant ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>无。</p>
+     * <p>None</p>
      */
     @NameInMap("MerchantId")
     public String merchantId;
 
     /**
-     * <p>The call mode. Only the following value is supported: ANTI_FAKE_CHECK.</p>
+     * <p>The call mode. Valid values: ANTI_FAKE_CHECK.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

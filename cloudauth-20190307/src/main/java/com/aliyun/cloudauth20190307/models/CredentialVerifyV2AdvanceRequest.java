@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CredentialVerifyV2AdvanceRequest extends TeaModel {
     /**
-     * <p>The certificate number.</p>
+     * <p>The relevant certificate number.</p>
      * 
      * <strong>example:</strong>
      * <p>4601*****</p>
@@ -16,21 +16,21 @@ public class CredentialVerifyV2AdvanceRequest extends TeaModel {
     /**
      * <p>The credential name. Valid values:</p>
      * <ul>
-     * <li>01: personal card or certificate<ul>
+     * <li>01: personal cards and certificates<ul>
      * <li>0101: ID card</li>
      * <li>0102: bank card</li>
      * <li>0104: teacher qualification certificate</li>
      * <li>0107: student ID card</li>
      * </ul>
      * </li>
-     * <li>02: business scenario<ul>
+     * <li>02: business scenarios<ul>
      * <li>0201: storefront photo</li>
      * <li>0202: counter photo</li>
-     * <li>0203: scene photo</li>
+     * <li>0203: scenario photo</li>
      * </ul>
      * </li>
-     * <li>03: enterprise qualification<ul>
-     * <li>0301: business license.</li>
+     * <li>03: enterprise qualifications<ul>
+     * <li>0301: business license</li>
      * </ul>
      * </li>
      * </ul>
@@ -44,9 +44,9 @@ public class CredentialVerifyV2AdvanceRequest extends TeaModel {
     /**
      * <p>The credential type. Valid values:</p>
      * <ul>
-     * <li>01: personal card or certificate</li>
-     * <li>02: business scenario</li>
-     * <li>03: enterprise qualification.</li>
+     * <li>01: personal cards and certificates</li>
+     * <li>02: business scenarios</li>
+     * <li>03: enterprise qualifications</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,25 +65,25 @@ public class CredentialVerifyV2AdvanceRequest extends TeaModel {
     public String identifyNum;
 
     /**
-     * <p>The Base64-encoded image. Specify one of imageUrl, imageFile, or imageContext.</p>
+     * <p>The Base64-encoded image. Specify one of imageUrl, imageFile, and imageContext.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("ImageContext")
     public String imageContext;
 
     /**
-     * <p>The input stream of the image. Specify one of imageUrl, imageFile, or imageContext.</p>
+     * <p>The image input stream. Specify one of imageUrl, imageFile, and imageContext.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("ImageFile")
     public java.io.InputStream imageFileObject;
 
     /**
-     * <p>The URL of the image. Specify one of imageUrl, imageFile, or imageContext.</p>
+     * <p>The image URL. Specify one of imageUrl, imageFile, and imageContext.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://marry.momocdn.com/avatar/3B/B6/3BB6527E-7467-926E-1048-B43614F20CC420230803_L.jpg">http://marry.momocdn.com/avatar/3B/B6/3BB6527E-7467-926E-1048-B43614F20CC420230803_L.jpg</a></p>
@@ -94,9 +94,9 @@ public class CredentialVerifyV2AdvanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable authoritative verification. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Disabled.</li>
-     * <li><strong>1</strong>: Enabled.<blockquote>
-     * <p>Danger: Deprecated.</p>
+     * <li><strong><strong>0</strong></strong>: no</li>
+     * <li><strong>1</strong>: yes<blockquote>
+     * <p>Danger: <strong>[Deprecated]</strong></danger></p>
      * </blockquote>
      * </li>
      * </ul>
@@ -108,9 +108,9 @@ public class CredentialVerifyV2AdvanceRequest extends TeaModel {
     public String isCheck;
 
     /**
-     * <p>Specifies whether to enable OCR.</p>
+     * <p>Specifies whether to perform OCR.</p>
      * <blockquote>
-     * <p>Danger: Deprecated.</p>
+     * <p>Danger: <strong>[Deprecated]</strong></danger></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -120,16 +120,16 @@ public class CredentialVerifyV2AdvanceRequest extends TeaModel {
     public String isOcr;
 
     /**
-     * <p>This feature is offline. This parameter no longer takes effect.</p>
+     * <p>This feature has been retired and the parameter no longer takes effect.</p>
      */
     @NameInMap("MerchantDetail")
     public java.util.List<CredentialVerifyV2AdvanceRequestMerchantDetail> merchantDetail;
 
     /**
-     * <p>The merchant ID. This parameter is required when CredName is set to 02.</p>
+     * <p>The merchant ID. This field is required when <strong><strong>CredName</strong></strong> is set to <strong>02</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>无。</p>
+     * <p>None</p>
      */
     @NameInMap("MerchantId")
     public String merchantId;
@@ -137,7 +137,7 @@ public class CredentialVerifyV2AdvanceRequest extends TeaModel {
     /**
      * <p>The call mode. Valid values:</p>
      * <ul>
-     * <li>ANTI_FAKE_CHECK (default): image anti-forgery detection.</li>
+     * <li>ANTI_FAKE_CHECK (default): image anti-counterfeiting detection</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class CredentialVerifyV2AdvanceRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>This feature is offline. This parameter no longer takes effect.</p>
+     * <p>This feature has been retired and the parameter no longer takes effect.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -158,7 +158,7 @@ public class CredentialVerifyV2AdvanceRequest extends TeaModel {
     public String prompt;
 
     /**
-     * <p>This feature is offline. This parameter no longer takes effect.</p>
+     * <p>This feature has been retired and the parameter no longer takes effect.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -172,7 +172,7 @@ public class CredentialVerifyV2AdvanceRequest extends TeaModel {
      * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>张三</p>
+     * <p>Zhang San</p>
      */
     @NameInMap("UserName")
     public String userName;
@@ -304,7 +304,7 @@ public class CredentialVerifyV2AdvanceRequest extends TeaModel {
 
     public static class CredentialVerifyV2AdvanceRequestMerchantDetail extends TeaModel {
         /**
-         * <p>This feature is offline. This parameter no longer takes effect.</p>
+         * <p>This feature has been retired and the parameter no longer takes effect.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -315,7 +315,7 @@ public class CredentialVerifyV2AdvanceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>This feature is offline. This parameter no longer takes effect.</p>
+         * <p>This feature has been retired and the parameter no longer takes effect.</p>
          * 
          * <strong>example:</strong>
          * <ul>

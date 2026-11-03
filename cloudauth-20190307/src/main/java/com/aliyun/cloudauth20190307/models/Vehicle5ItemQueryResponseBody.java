@@ -14,7 +14,7 @@ public class Vehicle5ItemQueryResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class Vehicle5ItemQueryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result information.</p>
+     * <p>The returned result information.</p>
      */
     @NameInMap("ResultObject")
     public Vehicle5ItemQueryResponseBodyResultObject resultObject;
@@ -78,8 +78,8 @@ public class Vehicle5ItemQueryResponseBody extends TeaModel {
         /**
          * <p>The verification result code. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Match found (billable).</li>
-         * <li><strong>3</strong>: No record found (not billable).</li>
+         * <li><strong>1</strong>: found (billed)</li>
+         * <li><strong>3</strong>: no record found (not billed)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -100,10 +100,10 @@ public class Vehicle5ItemQueryResponseBody extends TeaModel {
          *         &quot;vin&quot;: &quot;A********&quot;,
          *         &quot;state&quot;: &quot;0&quot;,
          *         &quot;modelNo&quot;: &quot;B********&quot;,
-         *         &quot;type&quot;: &quot;小型轿车&quot;,
-         *         &quot;brand&quot;: &quot;宝马&quot;,
-         *         &quot;usePropertyDesc&quot;: &quot;非营运&quot;,
-         *         &quot;stateDesc&quot;: &quot;正常&quot;
+         *         &quot;type&quot;: &quot;Small sedan&quot;,
+         *         &quot;brand&quot;: &quot;BMW&quot;,
+         *         &quot;usePropertyDesc&quot;: &quot;Non-commercial&quot;,
+         *         &quot;stateDesc&quot;: &quot;Normal&quot;
          *     }</p>
          */
         @NameInMap("VehicleInfo")

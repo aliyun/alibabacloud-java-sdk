@@ -23,7 +23,7 @@ public class DescribeOssStatusV2ResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class DescribeOssStatusV2ResponseBody extends TeaModel {
     public DescribeOssStatusV2ResponseBodyResultObject resultObject;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

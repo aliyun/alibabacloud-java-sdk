@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Id3MetaVerifyPROResponseBody extends TeaModel {
     /**
-     * <p>The response code. <strong>200</strong> indicates that the API call is successful.</p>
+     * <p>The return code. A value of <strong>200</strong> indicates that the API call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,9 +14,9 @@ public class Id3MetaVerifyPROResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message of the API call.</p>
+     * <p>The message returned for the API call.</p>
      * <blockquote>
-     * <p>Notice: This parameter only indicates whether the API call is abnormal.</p>
+     * <p>Notice: This parameter only indicates whether an exception occurs during the API call.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -79,11 +79,11 @@ public class Id3MetaVerifyPROResponseBody extends TeaModel {
 
     public static class Id3MetaVerifyPROResponseBodyResultObject extends TeaModel {
         /**
-         * <p>The authoritative source verification result. Valid values:</p>
+         * <p>The verification result from the authoritative source. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Verification is consistent (billable).</li>
-         * <li><strong>2</strong>: Verification is inconsistent (billable).</li>
-         * <li><strong>3</strong>: No record found (not billable).</li>
+         * <li><strong>1</strong>: Consistent (billed).</li>
+         * <li><strong>2</strong>: Inconsistent (billed).</li>
+         * <li><strong>3</strong>: No record found (not billed).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -94,11 +94,12 @@ public class Id3MetaVerifyPROResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li><p><strong>verifyScore</strong>: The face comparison score. Value range: 0 to 1000. A higher score indicates a higher probability of the same face. A score &gt;= 700.0 confirms the same person.</p>
+         * <li><p><strong>verifyScore</strong>: The face comparison score. Valid values: 0 to 1000. A higher score indicates a higher probability that the faces belong to the same person. A score of 700.0 or higher confirms that the faces belong to the same person.</p>
          * </li>
-         * <li><p><strong>faceAttack</strong>: Returned when liveness detection is enabled (does not participate in the verification result decision).</p>
+         * <li><p><strong>faceAttack</strong>: Returned when liveness detection is enabled. This value does not affect the verification result.</p>
          * </li>
-         * <li><p><strong>invokeChannel</strong>: The identifier of the actual invocation channel. 1: authoritative source. 0: comprehensive source.</p>
+         * <li><p><strong>invokeChannel</strong>: The identifier of the actual invocation channel. Valid values:
+         * 1: Authoritative source. 0: Comprehensive source.</p>
          * </li>
          * </ul>
          * 
@@ -113,7 +114,7 @@ public class Id3MetaVerifyPROResponseBody extends TeaModel {
         public String faceDetail;
 
         /**
-         * <p>Indicates whether the whitelist is hit: <strong>Y</strong>.</p>
+         * <p>Indicates whether the whitelist is hit. Valid value: <strong>Y</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>Y</p>
@@ -122,29 +123,29 @@ public class Id3MetaVerifyPROResponseBody extends TeaModel {
         public String hitWhitelist;
 
         /**
-         * <p>The authoritative source verification details. Valid values:</p>
+         * <p>The verification details from the authoritative source. Valid values:</p>
          * <ul>
          * <li><p><strong>101</strong>: Authentication passed.</p>
          * </li>
          * <li><p><strong>201</strong>: Authentication failed. The name does not match the ID card number.</p>
          * </li>
-         * <li><p><strong>202</strong>: Authentication failed. Suspected to be the person.</p>
+         * <li><p><strong>202</strong>: Authentication failed. The person is suspected to be the ID owner.</p>
          * </li>
-         * <li><p><strong>203</strong>: Authentication failed. No photo in the database.</p>
+         * <li><p><strong>203</strong>: Authentication failed. No photo is found in the database.</p>
          * </li>
-         * <li><p><strong>204</strong>: Authentication failed. Not the same person.</p>
+         * <li><p><strong>204</strong>: Authentication failed. The faces do not belong to the same person.</p>
          * </li>
-         * <li><p><strong>205</strong>: Authentication failed. Modeling of the image to be compared failed.</p>
+         * <li><p><strong>205</strong>: Authentication failed. Image modeling for the image to be compared failed.</p>
          * </li>
          * <li><p><strong>206</strong>: Authentication failed. The image format is incorrect.</p>
          * </li>
-         * <li><p><strong>207</strong>: Authentication failed. The uploaded image is too small. Upload the image again.</p>
+         * <li><p><strong>207</strong>: Authentication failed. The uploaded image is too small. Upload another image.</p>
          * </li>
-         * <li><p><strong>208</strong>: Authentication failed. The quality of the uploaded portrait photo is poor. Upload the photo again.</p>
+         * <li><p><strong>208</strong>: Authentication failed. The quality of the uploaded face photo is poor. Upload another photo.</p>
          * </li>
-         * <li><p><strong>301</strong>: No record found. The ID number does not exist in the database.</p>
+         * <li><p><strong>301</strong>: No record found. The ID card number does not exist in the database.</p>
          * </li>
-         * <li><p><strong>302</strong>: No record found. Verification is not possible.</p>
+         * <li><p><strong>302</strong>: No record found. Verification cannot be performed.</p>
          * </li>
          * </ul>
          * 

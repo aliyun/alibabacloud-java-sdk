@@ -7,8 +7,8 @@ public class Mobile3MetaDetailStandardVerifyRequest extends TeaModel {
     /**
      * <p>The ID card number.</p>
      * <ul>
-     * <li>If ParamType is set to normal, pass in the ID card number in plaintext.</li>
-     * <li>If ParamType is set to md5, pass in the MD5-encrypted ID card number.</li>
+     * <li>If paramType is set to normal, specify the plaintext ID card number.</li>
+     * <li>If paramType is set to md5, specify the ciphertext ID card number.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class Mobile3MetaDetailStandardVerifyRequest extends TeaModel {
     public String identifyNum;
 
     /**
-     * <p>The phone number.</p>
+     * <p>The mobile phone number.</p>
      * <ul>
-     * <li>If ParamType is set to normal, pass in the phone number in plaintext.</li>
-     * <li>If ParamType is set to md5, pass in the MD5-encrypted phone number.</li>
+     * <li>If paramType is set to normal, specify the plaintext mobile phone number.</li>
+     * <li>If paramType is set to md5, specify the ciphertext mobile phone number.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,8 +33,8 @@ public class Mobile3MetaDetailStandardVerifyRequest extends TeaModel {
     /**
      * <p>The parameter type. Valid values:</p>
      * <ul>
-     * <li>normal: not encrypted.</li>
-     * <li>md5: MD5-encrypted.</li>
+     * <li>normal: The value is not encrypted.</li>
+     * <li>md5: The value is encrypted by using MD5.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,12 +46,12 @@ public class Mobile3MetaDetailStandardVerifyRequest extends TeaModel {
     /**
      * <p>The name.</p>
      * <ul>
-     * <li>If ParamType is set to normal, pass in the name in plaintext.</li>
-     * <li>If ParamType is set to md5, pass in the MD5-encrypted name.</li>
+     * <li>If paramType is set to normal, specify the plaintext name.</li>
+     * <li>If paramType is set to md5, specify the ciphertext name.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>张*</p>
+     * <p>Zhang*</p>
      */
     @NameInMap("UserName")
     public String userName;

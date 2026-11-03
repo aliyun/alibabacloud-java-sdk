@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class Id2MetaVerifyWithOCRResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of 200 indicates success. Any other value indicates failure.
+     * <p>The return code. A value of 200 indicates success, and other values indicate failure.
      * <strong>Important</strong></p>
      * <ul>
-     * <li>This parameter indicates only whether the API call was made correctly. For detailed response codes, see error codes.</li>
-     * <li>Check the fields in ResultObject for the business verification result.</li>
+     * <li>This parameter indicates whether the API operation is called successfully. For detailed return code descriptions, see Error codes.</li>
+     * <li>To view the business verification results, check the fields in ResultObject.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,9 +19,9 @@ public class Id2MetaVerifyWithOCRResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message of the API call.
+     * <p>The message returned for the API call.
      * <strong>Important</strong>
-     * This parameter indicates only whether the API call is abnormal.</p>
+     * This parameter only indicates whether an exception occurs during the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -85,9 +85,9 @@ public class Id2MetaVerifyWithOCRResponseBody extends TeaModel {
         /**
          * <p>The identity verification result. Valid values:</p>
          * <ul>
-         * <li>1: consistent.</li>
-         * <li>2: inconsistent.</li>
-         * <li>3: no record found.</li>
+         * <li>1: Consistent.</li>
+         * <li>2: Inconsistent.</li>
+         * <li>3: No record found.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -97,10 +97,10 @@ public class Id2MetaVerifyWithOCRResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>{&quot;address&quot;:&quot;浙江省杭州市余*****&quot;,&quot;birthDate&quot;:&quot;19901226&quot;,&quot;certName&quot;:&quot;张三&quot;,&quot;certNo&quot;:&quot;1234561990122*****&quot;,&quot;nationality&quot;:&quot;汉&quot;,&quot;authority&quot;:&quot;xxx公安局&quot;,&quot;startDate&quot;:&quot;20201130&quot;,&quot;endDate&quot;:&quot;20301130&quot;}.</p>
+         * <p>{&quot;address&quot;:&quot;Yu*****, Hangzhou, Zhejiang&quot;,&quot;birthDate&quot;:&quot;19901226&quot;,&quot;certName&quot;:&quot;Zhang San&quot;,&quot;certNo&quot;:&quot;1234561990122*****&quot;,&quot;nationality&quot;:&quot;Han&quot;,&quot;authority&quot;:&quot;xxx Public Security Bureau&quot;,&quot;startDate&quot;:&quot;20201130&quot;,&quot;endDate&quot;:&quot;20301130&quot;}</p>
          * 
          * <strong>example:</strong>
-         * <p>OCR读取的身份证信息。</p>
+         * <p>The ID card information read by OCR</p>
          */
         @NameInMap("CardInfo")
         public String cardInfo;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSceneConfigResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>B506328A-D84B-4750-82C7-6A207C585CF1</p>

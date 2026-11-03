@@ -14,7 +14,7 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result information.</p>
+     * <p>The returned result information.</p>
      */
     @NameInMap("ResultObject")
     public Mobile3MetaSimpleStandardVerifyResponseBodyResultObject resultObject;
@@ -78,9 +78,9 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
         /**
          * <p>The verification result. Valid values:</p>
          * <ul>
-         * <li>1: Consistent (billable).</li>
-         * <li>2: Inconsistent (billable).</li>
-         * <li>3: No record found (not billable).</li>
+         * <li>1: Consistent (billed).</li>
+         * <li>2: Inconsistent (billed).</li>
+         * <li>3: No record found (not billed).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>The carrier name. Valid values:</p>
+         * <p>The name of the Internet service provider (ISP). Valid values:</p>
          * <ul>
          * <li><strong>CMCC</strong>: China Mobile.</li>
          * <li><strong>CUCC</strong>: China Unicom.</li>

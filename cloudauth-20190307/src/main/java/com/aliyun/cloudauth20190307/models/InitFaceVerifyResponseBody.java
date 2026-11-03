@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InitFaceVerifyResponseBody extends TeaModel {
     /**
-     * <p>The response code. 200 indicates success. Other values indicate failure.</p>
+     * <p>The return code. A value of 200 indicates success, and other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -76,7 +76,7 @@ public class InitFaceVerifyResponseBody extends TeaModel {
 
     public static class InitFaceVerifyResponseBodyResultObject extends TeaModel {
         /**
-         * <p>The unique identifier of the ID Verification session.</p>
+         * <p>The unique identifier of ID Verification.</p>
          * 
          * <strong>example:</strong>
          * <p>91707dc296d469ad38e4c5efa6a0f24b</p>
@@ -85,18 +85,18 @@ public class InitFaceVerifyResponseBody extends TeaModel {
         public String certifyId;
 
         /**
-         * <p>The URL for performing ID Verification in a web browser. After authentication ends, the page redirects based on the ReturnUrl input parameter.</p>
+         * <p>The URL for ID Verification in a web browser. After the authentication is completed, the user is redirected based on the ReturnUrl parameter.</p>
          * <blockquote>
          * <p>Notice: </p>
          * </blockquote>
          * <ul>
-         * <li><p>The CertifyUrl returned by the initialization operation is <strong>valid for 30 minutes and can only be submitted once for authentication</strong>. Use it within the validity period and avoid reuse.</p>
+         * <li><p>The CertifyUrl returned by the initialization API operation is <strong>valid for 30 minutes and can be used to submit authentication only once</strong>. Use it within the validity period to avoid repeated use.</p>
          * </li>
-         * <li><p>This parameter requires the correct <strong>MetaInfo</strong> input to return a CertifyUrl that matches the client. If it cannot be obtained, check whether <strong>MetaInfo</strong> and other input parameters are correct.</p>
+         * <li><p>This parameter requires the correct input of the <strong>MetaInfo</strong> parameter to return a CertifyUrl that matches the client. If you cannot obtain it, check whether <strong>MetaInfo</strong> and other input parameters are correct.</p>
          * </li>
-         * <li><p>The domain name of this URL may change with service updates. To ensure normal service availability, do not apply access control to this domain name.</p>
+         * <li><p>The domain name of this URL may change with service updates. To ensure normal service availability, we recommend that you do not configure access control for this domain name.</p>
          * </li>
-         * <li><p>When redirecting in a browser, do not use incognito mode or modify the URL. Otherwise, a <strong>signature exception</strong> error may occur.</p>
+         * <li><p>When the browser redirects, try not to use incognito mode or change the URL. Otherwise, a <strong>signature exception</strong> error may occur.</p>
          * </li>
          * </ul>
          * 

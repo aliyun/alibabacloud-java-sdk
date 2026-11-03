@@ -42,7 +42,7 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
 
     public static class DescribeOssUploadTokenResponseBodyOssUploadToken extends TeaModel {
         /**
-         * <p>The OSS bucket for file storage.</p>
+         * <p>The OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>cloudauth-zhangjiakou-external</p>
@@ -69,7 +69,7 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
         public Long expired;
 
         /**
-         * <p>The key required for file upload.</p>
+         * <p>The key required to upload files.</p>
          * 
          * <strong>example:</strong>
          * <p>STS.NU8rUBj****</p>
@@ -87,7 +87,7 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The secret required for file upload.</p>
+         * <p>The secret required to upload files.</p>
          * 
          * <strong>example:</strong>
          * <p>FwmnyoqT8dHj7nJLuM67T****</p>
@@ -96,7 +96,7 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
         public String secret;
 
         /**
-         * <p>The token required for file upload.</p>
+         * <p>The token required to upload files.</p>
          * 
          * <strong>example:</strong>
          * <p>uWia500nTS5knZaDzq4/KqpvhcLnO****</p>

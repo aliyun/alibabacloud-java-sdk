@@ -14,7 +14,7 @@ public class DownloadVerifyRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The OSS download link for the file.</p>
+     * <p>The OSS link for downloading the file.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://cn-shanghai-aliyun-cloudauth.oss-cn-shanghai.aliyuncs.com/invoke_download/0E30CD55-DCD4-5363-AA98-XXXXXXX">https://cn-shanghai-aliyun-cloudauth.oss-cn-shanghai.aliyuncs.com/invoke_download/0E30CD55-DCD4-5363-AA98-XXXXXXX</a></p>

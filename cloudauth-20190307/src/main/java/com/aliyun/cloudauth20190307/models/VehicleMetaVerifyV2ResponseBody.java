@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VehicleMetaVerifyV2ResponseBody extends TeaModel {
     /**
-     * <p>The return code. <strong>200</strong> indicates that the request was successful.</p>
+     * <p>The return code. <strong>200</strong> indicates that the API operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class VehicleMetaVerifyV2ResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -78,9 +78,9 @@ public class VehicleMetaVerifyV2ResponseBody extends TeaModel {
         /**
          * <p>The verification result code. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Consistent.</li>
-         * <li><strong>2</strong>: Inconsistent.</li>
-         * <li><strong>3</strong>: No record found.</li>
+         * <li><strong>1</strong>: The verification is consistent.</li>
+         * <li><strong>2</strong>: The verification is inconsistent.</li>
+         * <li><strong>3</strong>: No record is found.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class VehicleMetaVerifyV2ResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>The vehicle details.</p>
+         * <p>The detailed vehicle information.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -98,12 +98,12 @@ public class VehicleMetaVerifyV2ResponseBody extends TeaModel {
          *     &quot;approvedLoad&quot;: &quot;0&quot;,
          *     &quot;axleCount&quot;: &quot;2&quot;,
          *     &quot;backWheelDistance&quot;: &quot;1585&quot;,
-         *     &quot;brand&quot;: &quot;雷克萨斯&quot;,
+         *     &quot;brand&quot;: &quot;Lexus&quot;,
          *     &quot;displacement&quot;: &quot;4608&quot;,
          *     &quot;engineNum&quot;: &quot;1*********&quot;,
          *     &quot;engineType&quot;: &quot;1**&quot;,
          *     &quot;frontWheelDistance&quot;: &quot;1585&quot;,
-         *     &quot;fuelType&quot;: &quot;汽油&quot;,
+         *     &quot;fuelType&quot;: &quot;Gasoline&quot;,
          *     &quot;inspectionDate&quot;: &quot;<strong><strong>-</strong>-** <strong>:</strong>:<strong>&quot;,
          *     &quot;modelNum&quot;: &quot;UR</strong>*</strong>-<strong><strong><strong>&quot;,
          *     &quot;power&quot;: &quot;228&quot;,
@@ -111,8 +111,8 @@ public class VehicleMetaVerifyV2ResponseBody extends TeaModel {
          *     &quot;retirementDate&quot;: &quot;****-</strong>-** <strong>:</strong>:<strong>&quot;,
          *     &quot;totalMass&quot;: &quot;2940&quot;,
          *     &quot;unladenMass&quot;: &quot;2350&quot;,
-         *     &quot;useProperty&quot;: &quot;非营运&quot;,
-         *     &quot;vehicleState&quot;: &quot;正常&quot;,
+         *     &quot;useProperty&quot;: &quot;Non-commercial&quot;,
+         *     &quot;vehicleState&quot;: &quot;Normal&quot;,
          *     &quot;vin&quot;: &quot;JT</strong>*************&quot;,
          *     &quot;wheelBase&quot;: &quot;2790&quot;
          * }</p>

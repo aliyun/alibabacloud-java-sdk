@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryControlStrategyResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of 200 indicates success. Other values indicate failure.</p>
+     * <p>The return code. A value of 200 indicates success, and other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class QueryControlStrategyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -76,7 +76,7 @@ public class QueryControlStrategyResponseBody extends TeaModel {
 
     public static class QueryControlStrategyResponseBodyResultObject extends TeaModel {
         /**
-         * <p>The API name, which is the same as the ProductCode of the verification operation.</p>
+         * <p>The API name, which is the same as the <strong>ProductCode</strong> of the authentication operation.</p>
          * 
          * <strong>example:</strong>
          * <p>ID_PRO</p>
@@ -87,13 +87,13 @@ public class QueryControlStrategyResponseBody extends TeaModel {
         /**
          * <p>The rule configuration type. Valid values:</p>
          * <ul>
-         * <li><strong>QPS</strong>: QPS greater than</li>
-         * <li><strong>SUCCESS_RATE_5_MIN</strong>: success rate in the last 5 minutes less than</li>
-         * <li><strong>RESP_TIME_5_MIN</strong>: average response time in the last 5 minutes greater than</li>
-         * <li><strong>AMOUNT_RISE</strong>: call volume increase compared to the previous period greater than</li>
-         * <li><strong>AMOUNT_FALL</strong>: call volume decrease compared to the previous period less than</li>
-         * <li><strong>PASSED_RATE_1_HOUR</strong>: verification consistency rate in the last hour less than</li>
-         * <li><strong>PARAM_ERROR_RATE_1_HOUR</strong>: parameter error rate in the last hour greater than.</li>
+         * <li><strong>QPS</strong>: The QPS is greater than the threshold.</li>
+         * <li><strong>SUCCESS_RATE_5_MIN</strong>: The success rate in the last 5 minutes is less than the threshold.</li>
+         * <li><strong>RESP_TIME_5_MIN</strong>: The average response time in the last 5 minutes is greater than the threshold.</li>
+         * <li><strong>AMOUNT_RISE</strong>: The period-over-period growth in call volume is greater than the threshold.</li>
+         * <li><strong>AMOUNT_FALL</strong>: The period-over-period decline in call volume is less than the threshold.</li>
+         * <li><strong>PASSED_RATE_1_HOUR</strong>: The verification consistency rate in the last 1 hour is less than the threshold.</li>
+         * <li><strong>PARAM_ERROR_RATE_1_HOUR</strong>: The parameter error rate in the last 1 hour is greater than the threshold.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,7 @@ public class QueryControlStrategyResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The alert threshold for configure alerting of the rule.</p>
+         * <p>The alert threshold configured for the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>0.9</p>

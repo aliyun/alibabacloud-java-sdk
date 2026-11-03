@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CredentialVerifyV2ResponseBody extends TeaModel {
     /**
-     * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
+     * <p>The return code. A value of 200 indicates success, and other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The return message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result information.</p>
+     * <p>The returned result information.</p>
      */
     @NameInMap("ResultObject")
     public CredentialVerifyV2ResponseBodyResultObject resultObject;
@@ -76,7 +76,7 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
 
     public static class CredentialVerifyV2ResponseBodyResultObjectVlResult extends TeaModel {
         /**
-         * <p>This feature is offline. This parameter no longer takes effect.</p>
+         * <p>This feature has been retired and the parameter no longer takes effect.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -87,7 +87,7 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
         public Boolean success;
 
         /**
-         * <p>This feature is offline. This parameter no longer takes effect.</p>
+         * <p>This feature has been retired and the parameter no longer takes effect.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -122,14 +122,14 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
 
     public static class CredentialVerifyV2ResponseBodyResultObject extends TeaModel {
         /**
-         * <p>The additional information in JSON format.</p>
+         * <p>The other information in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{</p>
          * <p>&quot;sameBackgroundDetail&quot;: {</p>
-         * <p>// 相似背景对于的原始图请求RequestId</p>
+         * <p>// The request ID of the original image request for the similar background</p>
          * <p>&quot;originalRequestId&quot;: &quot;130A2C10-B9EE-4D84-88E3-5384FF03****&quot;;</p>
-         * <p>// 相似背景对于的原始图请求商户ID</p>
+         * <p>// The merchant ID of the original image request for the similar background</p>
          * <p>&quot;originalMerchantId&quot;: &quot;xxxxxxxx&quot;</p>
          * <p>}</p>
          * <p>}</p>
@@ -140,16 +140,16 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
         /**
          * <p>The OCR recognition result.</p>
          * <blockquote>
-         * <p>Danger: Deprecated.</p>
+         * <p>Danger: <strong>[Deprecated]</strong></danger></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>{
          *    &quot;certNo&quot;:&quot;20216*********&quot;,
-         *   &quot;certType&quot;:&quot;小学教师资格&quot;,
-         *    &quot;gender&quot;:&quot;男&quot;,
-         *    &quot;subject&quot;:&quot;美术&quot;,
-         *     &quot;name&quot;:&quot;李**&quot;,
+         *   &quot;certType&quot;:&quot;Primary school teacher qualification&quot;,
+         *    &quot;gender&quot;:&quot;Male&quot;,
+         *    &quot;subject&quot;:&quot;Art&quot;,
+         *     &quot;name&quot;:&quot;Li**&quot;,
          *     &quot;ext_info&quot;:&quot;{}&quot;,
          *     &quot;birthDate&quot;:&quot;1998-07-28&quot;,
          *     &quot;idNo&quot;:&quot;620************&quot;,
@@ -162,9 +162,9 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
         /**
          * <p>The risk result. Valid values:</p>
          * <ul>
-         * <li>0: Low risk.</li>
-         * <li>1: High risk.</li>
-         * <li>2: Suspicious.</li>
+         * <li>0: low risk</li>
+         * <li>1: high risk</li>
+         * <li>2: suspicious</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -180,14 +180,14 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
         public java.util.Map<String, String> riskScore;
 
         /**
-         * <p>The risk tags, separated by commas (,). Valid values:</p>
+         * <p>The risk tags. Multiple tags are separated by commas (,). Valid values:</p>
          * <ul>
-         * <li>PS: image manipulation.</li>
-         * <li>SCREEN_PHOTO: screen recapture.</li>
-         * <li>SCREENSHOT: screenshot.</li>
-         * <li>WATERMARK: watermark.</li>
-         * <li>SAME_BACKGROUND: similar background.</li>
-         * <li>ORIGINAL_PHOTO: non-original image.</li>
+         * <li>PS: The image is edited by using Photoshop.</li>
+         * <li>SCREEN_PHOTO: The image is a photo of a screen.</li>
+         * <li>SCREENSHOT: The image is a screenshot.</li>
+         * <li>WATERMARK: The image contains a watermark.</li>
+         * <li>SAME_BACKGROUND: The image has a similar background.</li>
+         * <li>ORIGINAL_PHOTO: The image is not an original photo.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
         /**
          * <p>The authoritative verification details.</p>
          * <blockquote>
-         * <p>Danger: Deprecated.</p>
+         * <p>Danger: <strong>[Deprecated]</strong></danger></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -211,7 +211,7 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
         /**
          * <p>The authoritative verification result.</p>
          * <blockquote>
-         * <p>Danger: Deprecated.</p>
+         * <p>Danger: <strong>[Deprecated]</strong></danger></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -223,7 +223,7 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
         public String verifyResult;
 
         /**
-         * <p>This feature is offline. This parameter no longer takes effect.</p>
+         * <p>This feature has been retired and the parameter no longer takes effect.</p>
          */
         @NameInMap("VlResult")
         public CredentialVerifyV2ResponseBodyResultObjectVlResult vlResult;

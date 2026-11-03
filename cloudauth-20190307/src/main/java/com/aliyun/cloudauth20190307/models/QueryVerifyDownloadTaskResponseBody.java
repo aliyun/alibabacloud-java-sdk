@@ -16,10 +16,10 @@ public class QueryVerifyDownloadTaskResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>Indicates whether the download task is complete. Valid values:</p>
+     * <p>Indicates whether the download task is completed. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Complete.</li>
-     * <li><strong>false</strong>: Not complete.</li>
+     * <li><strong>true</strong>: Completed.</li>
+     * <li><strong>false</strong>: Not completed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,11 +38,11 @@ public class QueryVerifyDownloadTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task status. Valid values:</p>
+     * <p>The status of the task. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: The file is being generated.</li>
-     * <li><strong>2</strong>: The file is generated.</li>
-     * <li><strong>3</strong>: The file failed to be generated.</li>
+     * <li><strong>1</strong>: File generation is in progress.</li>
+     * <li><strong>2</strong>: File generation is complete.</li>
+     * <li><strong>3</strong>: File generation failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

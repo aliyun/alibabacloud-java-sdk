@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class Id3MetaVerifyPROAdvanceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to allow cropping of the facial photo. By default, cropping is not allowed. Valid values:</p>
+     * <p>Specifies whether to allow cropping the face image. By default, cropping is not allowed.</p>
      * <ul>
      * <li><strong>T</strong>: Cropping is allowed.</li>
      * <li><strong>F</strong>: Cropping is not allowed.<blockquote>
-     * <p>If the requested image is not captured by a standard liveness detection SDK, allow cropping of the facial photo.
-     * After this feature is enabled, the requested image is first cropped and corrected for the face, and then the request is sent to the service.</p>
+     * <p>If the requested image is not collected by the standard liveness detection SDK, we recommend that you allow face image cropping.
+     * After this feature is enabled, the requested image is cropped and corrected before the request is processed.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -22,7 +22,7 @@ public class Id3MetaVerifyPROAdvanceRequest extends TeaModel {
     public String crop;
 
     /**
-     * <p>Specifies whether to allow fallback to a non-public security source. Valid values:</p>
+     * <p>Specifies whether to allow fallback to non-public security sources. Valid values:</p>
      * <ul>
      * <li><strong>N</strong> (default): Disabled.</li>
      * <li><strong>Y</strong>: Enabled.</li>
@@ -35,16 +35,16 @@ public class Id3MetaVerifyPROAdvanceRequest extends TeaModel {
     public String enableFallback;
 
     /**
-     * <p>The input stream of the facial photo.</p>
+     * <p>The input stream of the face photo.</p>
      * 
      * <strong>example:</strong>
-     * <p>For the specific integration method, refer to the file upload Advance API configuration</p>
+     * <p>For integration details, refer to the configuration of the Advance file upload API</p>
      */
     @NameInMap("FaceFile")
     public java.io.InputStream faceFileObject;
 
     /**
-     * <p>The Base64-encoded photo. If you use this method to submit the facial photo, check the photo size and do not submit an excessively large photo.</p>
+     * <p>The Base64-encoded string of the photo. If you use this method to pass the face photo, check the photo size and do not pass an excessively large photo.</p>
      * 
      * <strong>example:</strong>
      * <p>/9j/4AAQSkZJRgABAQAASxxxxxxx</p>
@@ -53,7 +53,7 @@ public class Id3MetaVerifyPROAdvanceRequest extends TeaModel {
     public String facePicture;
 
     /**
-     * <p>The URL of the facial photo. The URL must be a publicly accessible HTTP or HTTPS link.</p>
+     * <p>The URL of the face photo. The URL must be a publicly accessible HTTP or HTTPS link.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg">https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg</a></p>
@@ -64,13 +64,13 @@ public class Id3MetaVerifyPROAdvanceRequest extends TeaModel {
     /**
      * <p>The ID card number.</p>
      * <ul>
-     * <li><p>If <strong>paramType</strong> is set to normal: Enter the ID card number in plaintext.</p>
+     * <li><p>If <strong>paramType</strong> is set to normal, enter the plaintext ID card number.</p>
      * </li>
-     * <li><p>If <strong>paramType</strong> is set to sm2: Enter the encrypted ID card number.</p>
+     * <li><p>If <strong>paramType</strong> is set to sm2, enter the ciphertext ID card number.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>Due to authoritative source limitations, only second-generation resident ID card numbers are supported.</p>
+     * <p>Due to authoritative source limitations, only the ID card numbers of the second-generation resident identity cards are supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -111,9 +111,9 @@ public class Id3MetaVerifyPROAdvanceRequest extends TeaModel {
     /**
      * <p>The name.</p>
      * <ul>
-     * <li><p>If <strong>paramType</strong> is set to normal: Enter the name in plaintext.</p>
+     * <li><p>If <strong>paramType</strong> is set to normal, enter the plaintext name.</p>
      * </li>
-     * <li><p>If <strong>paramType</strong> is set to sm2: Enter the encrypted name.</p>
+     * <li><p>If <strong>paramType</strong> is set to sm2, enter the ciphertext name.</p>
      * </li>
      * </ul>
      * 

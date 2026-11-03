@@ -42,7 +42,7 @@ public class ModifyBlackListStrategyRequest extends TeaModel {
 
     public static class ModifyBlackListStrategyRequestBlackListStrategy extends TeaModel {
         /**
-         * <p>The blacklist string. Separate multiple entries with commas (,).</p>
+         * <p>The blacklist string. Multiple entries are separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1,127.0.0.2</p>
@@ -53,10 +53,10 @@ public class ModifyBlackListStrategyRequest extends TeaModel {
         /**
          * <p>The blacklist type. Valid values:</p>
          * <ul>
-         * <li><strong>mobile</strong>: mobile number blacklist.</li>
-         * <li><strong>ip</strong>: IP blacklist.</li>
-         * <li><strong>identifyNum</strong>: ID card blacklist.</li>
-         * <li><strong>bankCard</strong>: bank card blacklist.</li>
+         * <li><strong>mobile</strong>: Mobile phone number blacklist.</li>
+         * <li><strong>ip</strong>: IP address blacklist.</li>
+         * <li><strong>identifyNum</strong>: ID IP blacklist.</li>
+         * <li><strong>bankCard</strong>: Bank IP blacklist.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -66,10 +66,10 @@ public class ModifyBlackListStrategyRequest extends TeaModel {
         public String bizKey;
 
         /**
-         * <p>The rule ID. Valid values:</p>
+         * <p>The rule ID:</p>
          * <ul>
-         * <li><strong>Empty</strong>: creates a rule.</li>
-         * <li><strong>Not empty</strong>: modifies a rule.</li>
+         * <li><strong>Empty</strong>: Creates a rule.</li>
+         * <li><strong>Not empty</strong>: Modifies a rule.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -82,8 +82,8 @@ public class ModifyBlackListStrategyRequest extends TeaModel {
          * <p>The product name. Valid values:</p>
          * <ul>
          * <li><strong>id2meta</strong>: ID card two-element verification.</li>
-         * <li><strong>mobile3Meta</strong>: mobile number element verification.</li>
-         * <li><strong>bankcardMeta</strong>: bank card element verification.</li>
+         * <li><strong>mobile3Meta</strong>: Mobile phone number element verification.</li>
+         * <li><strong>bankcardMeta</strong>: Bank card element verification.</li>
          * </ul>
          * 
          * <strong>example:</strong>

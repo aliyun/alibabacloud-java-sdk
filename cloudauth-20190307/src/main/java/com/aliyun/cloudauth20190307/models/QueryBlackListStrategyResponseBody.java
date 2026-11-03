@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryBlackListStrategyResponseBody extends TeaModel {
     /**
-     * <p>The return code. <strong>200</strong> indicates that the request was successful.</p>
+     * <p>The return code. <strong>200</strong> indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -76,7 +76,7 @@ public class QueryBlackListStrategyResponseBody extends TeaModel {
 
     public static class QueryBlackListStrategyResponseBodyResultObject extends TeaModel {
         /**
-         * <p>The blacklist string. Multiple blacklist entries are separated by <strong>commas</strong>.</p>
+         * <p>The blacklist string. Items in the blacklist are separated by <strong>commas</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1,127.0.0.2</p>
@@ -85,12 +85,12 @@ public class QueryBlackListStrategyResponseBody extends TeaModel {
         public String bizContent;
 
         /**
-         * <p>The blacklist type. Valid values:</p>
+         * <p>The list type. Valid values:</p>
          * <ul>
-         * <li>mobile: phone number blacklist</li>
-         * <li>ip: IP blacklist</li>
-         * <li>identifyNum: ID card blacklist</li>
-         * <li>bankCard: bank card blacklist.</li>
+         * <li>mobile: The mobile phone number blocklist.</li>
+         * <li>ip: The IP address blocklist.</li>
+         * <li>identifyNum: The ID card blocklist.</li>
+         * <li>bankCard: The bank card blocklist.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -120,9 +120,9 @@ public class QueryBlackListStrategyResponseBody extends TeaModel {
         /**
          * <p>The product name. Valid values:</p>
          * <ul>
-         * <li>id2meta: ID card two-factor verification.</li>
-         * <li>mobile3Meta: Phone number factor verification.</li>
-         * <li>bankcardMeta: Bank card factor verification.</li>
+         * <li>id2meta: ID card two-element verification</li>
+         * <li>mobile3Meta: mobile phone number element verification</li>
+         * <li>bankcardMeta: bank card element verification</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,8 +134,8 @@ public class QueryBlackListStrategyResponseBody extends TeaModel {
         /**
          * <p>The status. Valid values:</p>
          * <ul>
-         * <li><strong>disabled</strong>: Disabled.</li>
-         * <li><strong>normal</strong>: Enabled.</li>
+         * <li><strong>disabled</strong>: disabled</li>
+         * <li><strong>normal</strong>: enabled</li>
          * </ul>
          * 
          * <strong>example:</strong>

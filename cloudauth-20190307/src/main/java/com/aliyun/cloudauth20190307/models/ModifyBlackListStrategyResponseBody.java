@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyBlackListStrategyResponseBody extends TeaModel {
     /**
-     * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
+     * <p>The return code. A value of 200 indicates success, and other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ModifyBlackListStrategyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;StatusCode\&quot;: -1}</p>

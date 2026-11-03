@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeVerifyTokenRequest extends TeaModel {
     /**
-     * <p>The authentication ID. A unique ID that identifies an authentication task. The value can be up to 64 characters in length. For a single authentication task, the system supports unlimited submissions until the authentication is passed and the task is completed.</p>
+     * <p>The authentication ID. The unique ID that identifies an authentication task. The ID cannot exceed 64 characters in length. For a single authentication task, the system supports unlimited submissions until the authentication is passed and the task is completed.</p>
      * <blockquote>
-     * <p>Use a different BizId for each different authentication task.</p>
+     * <p>You must use a different BizId when initiating different authentication tasks.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeVerifyTokenRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The business scenario identifier for using the ID Verification service. Create one in the console first. For more information, see <a href="https://help.aliyun.com/document_detail/127885.html">Business settings</a>.</p>
+     * <p>The business scenario identifier for using the ID Verification service. Create the identifier in the console first. For more information, see <a href="https://help.aliyun.com/document_detail/127885.html">Business settings</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class DescribeVerifyTokenRequest extends TeaModel {
     public String faceRetainedImageUrl;
 
     /**
-     * <p>The redirect URL upon verification failure.</p>
+     * <p>The redirect URL for verification failure.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -70,7 +70,7 @@ public class DescribeVerifyTokenRequest extends TeaModel {
     public String failedRedirectUrl;
 
     /**
-     * <p>The HTTP or HTTPS URL of the national emblem side of the ID card image.</p>
+     * <p>The HTTP or HTTPS URL of the image for the back side of the ID card.</p>
      * 
      * <strong>example:</strong>
      * <p>http%3A%2F%2Fjiangsu.china.com.cn%2Fuploadfile%2F2015%2F0114%2F1421221304095989.jpg</p>
@@ -79,7 +79,7 @@ public class DescribeVerifyTokenRequest extends TeaModel {
     public String idCardBackImageUrl;
 
     /**
-     * <p>The HTTP or HTTPS URL of the portrait side of the ID card image.</p>
+     * <p>The HTTP or HTTPS URL of the image for the front side of the ID card.</p>
      * 
      * <strong>example:</strong>
      * <p>http%3A%2F%2Fjiangsu.china.com.cn%2Fuploadfile%2F2015%2F0114%2F1421221304095989.jpg</p>
@@ -100,13 +100,13 @@ public class DescribeVerifyTokenRequest extends TeaModel {
      * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>张三</p>
+     * <p>John Doe</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The redirect URL upon successful verification.</p>
+     * <p>The redirect URL for verification success.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -144,7 +144,7 @@ public class DescribeVerifyTokenRequest extends TeaModel {
     public String userPhoneNumber;
 
     /**
-     * <p>The registration time of the user. Specify the value in UNIX timestamp format. Unit: milliseconds.</p>
+     * <p>The registration time of the user. The value is a timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1577808000000</p>

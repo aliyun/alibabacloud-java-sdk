@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFaceVerifyResultRequest extends TeaModel {
     /**
-     * <p>The unique identifier for real-person authentication.</p>
+     * <p>The unique identifier for ID Verification.</p>
      * 
      * <strong>example:</strong>
      * <p>shae18209d29ce4e8ba252caae98ab15</p>
@@ -14,10 +14,10 @@ public class DeleteFaceVerifyResultRequest extends TeaModel {
     public String certifyId;
 
     /**
-     * <p>Specifies whether deletion depends on having retrieved the relevant data from the corresponding authentication process.</p>
+     * <p>Specifies whether the deletion relies on the data retrieved from the corresponding verification process. Valid values:</p>
      * <ul>
-     * <li>Y: Required. To successfully delete the relevant data, you must have already obtained the processing result through the DescribeFaceVerify API.</li>
-     * <li>N: Not required (default). You can directly pass N when integrating through the pure server-side API mode.</li>
+     * <li>Y: Yes. To successfully delete the related data, you must have obtained the processing result by calling the DescribeFaceVerify operation.</li>
+     * <li>N: No. This is the default value. You can directly set this parameter to N when you use the server-only API integration mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>

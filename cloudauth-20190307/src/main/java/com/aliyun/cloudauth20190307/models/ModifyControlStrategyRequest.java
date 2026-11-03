@@ -11,7 +11,7 @@ public class ModifyControlStrategyRequest extends TeaModel {
     public java.util.List<ModifyControlStrategyRequestControlStrategyList> controlStrategyList;
 
     /**
-     * <p>The product type. Currently, only <strong>ANT_CLOUD_AUTH</strong> (financial-grade ID Verification) is supported. All other types have been discontinued.</p>
+     * <p>The product type. Currently, only <strong>ANT_CLOUD_AUTH</strong> (Financial-grade ID Verification) is supported. All other types are retired.</p>
      * 
      * <strong>example:</strong>
      * <p>ANT_CLOUD_AUTH</p>
@@ -59,7 +59,7 @@ public class ModifyControlStrategyRequest extends TeaModel {
 
     public static class ModifyControlStrategyRequestControlStrategyList extends TeaModel {
         /**
-         * <p>The API name, which is the same as <strong>ProductCode</strong>.</p>
+         * <p>The name of the API operation, which is the same as <strong>ProductCode</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>ID_PRO</p>
@@ -70,13 +70,13 @@ public class ModifyControlStrategyRequest extends TeaModel {
         /**
          * <p>The rule configuration type. Valid values:</p>
          * <ul>
-         * <li><strong>QPS</strong>: QPS greater than</li>
-         * <li><strong>SUCCESS_RATE_5_MIN</strong>: success rate in the last 5 minutes less than</li>
-         * <li><strong>RESP_TIME_5_MIN</strong>: average response time in the last 5 minutes greater than</li>
-         * <li><strong>AMOUNT_RISE</strong>: call volume increase compared to the previous period greater than</li>
-         * <li><strong>AMOUNT_FALL</strong>: call volume decrease compared to the previous period less than</li>
-         * <li><strong>PASSED_RATE_1_HOUR</strong>: verification consistency rate in the last hour less than</li>
-         * <li><strong>PARAM_ERROR_RATE_1_HOUR</strong>: parameter error rate in the last hour greater than.</li>
+         * <li><strong>QPS</strong>: The QPS is greater than the threshold.</li>
+         * <li><strong>SUCCESS_RATE_5_MIN</strong>: The success rate in the last 5 minutes is less than the threshold.</li>
+         * <li><strong>RESP_TIME_5_MIN</strong>: The average response time in the last 5 minutes is greater than the threshold.</li>
+         * <li><strong>AMOUNT_RISE</strong>: The period-over-period increase in call volume is greater than the threshold.</li>
+         * <li><strong>AMOUNT_FALL</strong>: The period-over-period decrease in call volume is less than the threshold.</li>
+         * <li><strong>PASSED_RATE_1_HOUR</strong>: The verification consistency rate in the last hour is less than the threshold.</li>
+         * <li><strong>PARAM_ERROR_RATE_1_HOUR</strong>: The parameter error rate in the last hour is greater than the threshold.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class ModifyControlStrategyRequest extends TeaModel {
         public String bizType;
 
         /**
-         * <p>The rule ID.</p>
+         * <p>The ID of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>38</p>

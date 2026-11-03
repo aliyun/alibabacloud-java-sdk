@@ -6,36 +6,34 @@ import com.aliyun.tea.*;
 public class Mobile3MetaDetailVerifyRequest extends TeaModel {
     /**
      * <p>The ID card number.</p>
-     * <blockquote>
-     * <p>Note: Only second-generation resident ID card numbers and Hong Kong, Macao, or Taiwan residence permit numbers are supported.</p>
-     * </blockquote>
+     * <p>Note: Only second-generation resident identity cards and residence permits for Hong Kong, Macao, and Taiwan residents are supported.</p>
      * <ul>
-     * <li><p>If ParamType is set to normal, pass in the ID card number in plaintext.</p>
+     * <li><p>If ParamType is set to normal: enter the plaintext ID card number.</p>
      * </li>
-     * <li><p>If ParamType is set to md5, pass in the ID card number in ciphertext.</p>
+     * <li><p>If ParamType is set to md5: enter the ciphertext ID card number.</p>
      * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>明文：429001********8211</p>
-     * <p>密文：</p>
+     * <p>Plaintext: 429001********8211</p>
+     * <p>Ciphertext:</p>
      * <p>32fa7bcd874161bea8ec8fd98f390ec9</p>
      */
     @NameInMap("IdentifyNum")
     public String identifyNum;
 
     /**
-     * <p>The phone number.</p>
+     * <p>The mobile phone number.</p>
      * <ul>
-     * <li><p>If ParamType is set to normal, pass in the phone number in plaintext.</p>
+     * <li><p>If ParamType is set to normal: enter the plaintext mobile phone number.</p>
      * </li>
-     * <li><p>If ParamType is set to md5, pass in the phone number in ciphertext.</p>
+     * <li><p>If ParamType is set to md5: enter the ciphertext mobile phone number.</p>
      * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>明文：186****2055</p>
-     * <p>密文：</p>
+     * <p>Plaintext: 186****2055</p>
+     * <p>Ciphertext:</p>
      * <p>849169cd3b20621c1c78bd61a11a4fc2</p>
      */
     @NameInMap("Mobile")
@@ -46,7 +44,7 @@ public class Mobile3MetaDetailVerifyRequest extends TeaModel {
      * <ul>
      * <li><p>normal: plaintext without encryption</p>
      * </li>
-     * <li><p>md5: MD5 encryption.</p>
+     * <li><p>md5: MD5 encryption</p>
      * </li>
      * </ul>
      * 
@@ -59,15 +57,15 @@ public class Mobile3MetaDetailVerifyRequest extends TeaModel {
     /**
      * <p>The name.</p>
      * <ul>
-     * <li><p>If ParamType is set to normal, pass in the name in plaintext.</p>
+     * <li><p>If ParamType is set to normal: enter the plaintext name.</p>
      * </li>
-     * <li><p>If ParamType is set to md5, pass in the name in ciphertext.</p>
+     * <li><p>If ParamType is set to md5: enter the ciphertext name.</p>
      * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>明文：张三</p>
-     * <p>密文：</p>
+     * <p>Plaintext: Zhang San</p>
+     * <p>Ciphertext:</p>
      * <p>32fa7bcd874161bea8ec8fd98f390ec9</p>
      */
     @NameInMap("UserName")

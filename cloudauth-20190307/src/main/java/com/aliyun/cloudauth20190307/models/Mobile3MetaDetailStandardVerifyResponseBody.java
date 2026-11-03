@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Mobile3MetaDetailStandardVerifyResponseBody extends TeaModel {
     /**
-     * <p>The return code. <strong>200</strong> indicates a successful response.</p>
+     * <p>The response code. <strong>200</strong> indicates that the API operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -78,9 +78,9 @@ public class Mobile3MetaDetailStandardVerifyResponseBody extends TeaModel {
         /**
          * <p>The verification result code. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Verification is consistent.</li>
-         * <li><strong>2</strong>: Verification is inconsistent.</li>
-         * <li><strong>3</strong>: No record found.</li>
+         * <li><strong>1</strong>: The verification is consistent.</li>
+         * <li><strong>2</strong>: The verification is inconsistent.</li>
+         * <li><strong>3</strong>: No record is found.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class Mobile3MetaDetailStandardVerifyResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>The carrier name. Valid values:</p>
+         * <p>The name of the Internet service provider (ISP). Valid values:</p>
          * <ul>
          * <li><strong>CMCC</strong>: China Mobile.</li>
          * <li><strong>CUCC</strong>: China Unicom.</li>
@@ -107,12 +107,12 @@ public class Mobile3MetaDetailStandardVerifyResponseBody extends TeaModel {
         /**
          * <p>The detailed verification result. Valid values:</p>
          * <ul>
-         * <li>101: Verification passed. All three elements are consistent.</li>
-         * <li>201: The phone number is inconsistent with both the name and the ID card number.</li>
-         * <li>202: The phone number is consistent with the name but inconsistent with the ID card number.</li>
-         * <li>203: The phone number is inconsistent with the name but consistent with the ID card number.</li>
-         * <li>204: Other inconsistency.</li>
-         * <li>301: No record found.</li>
+         * <li>101: The verification is passed and the three elements are consistent.</li>
+         * <li>201: The mobile phone number is inconsistent with both the name and the ID card number.</li>
+         * <li>202: The mobile phone number is consistent with the name but inconsistent with the ID card number.</li>
+         * <li>203: The mobile phone number is inconsistent with the name but consistent with the ID card number.</li>
+         * <li>204: Other inconsistencies exist.</li>
+         * <li>301: No record is found.</li>
          * </ul>
          * 
          * <strong>example:</strong>

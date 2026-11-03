@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class InitAuthVerifyRequest extends TeaModel {
     /**
-     * <p>A security token that you generate to prevent replay attacks and data tampering.
-     * If this value is set, the CallbackToken field is included in the callback to CallbackUrl.</p>
+     * <p>The security token that you generate for anti-replay and anti-tampering verification.
+     * If this parameter is specified, the CallbackToken field is included in the callback request sent to CallbackUrl.</p>
      * 
      * <strong>example:</strong>
      * <p>NMjvQanQgplBSaEI0sL86WnQplB</p>
@@ -15,13 +15,11 @@ public class InitAuthVerifyRequest extends TeaModel {
     public String callbackToken;
 
     /**
-     * <p>The callback URL for OCR results. The callback request method is GET by default. The callback URL must start with https. After OCR is completed, a callback is sent to this URL with the certifyId and subcode fields automatically appended.</p>
-     * <blockquote>
-     * <p>Warning</p>
-     * </blockquote>
+     * <p>The callback URL for OCR results. The default callback request method is GET. The callback URL must start with https. After OCR recognition is completed, a callback request is sent to this URL, and the certifyId and subcode fields are automatically appended.
+     * Warning</p>
      * <ul>
-     * <li>The URL is validated for public network access before the API is invoked. If the URL is not publicly accessible, a 400 error is returned.</li>
-     * <li>The callback is executed immediately after the OCR invocation is completed, but may be delayed due to network issues. Accept the request completion notification from the client side first, and then invoke the query API to obtain the result details.</li>
+     * <li>The accessibility of this URL is verified before the API is invoked. If the specified URL does not support public network access, a 400 error is returned.</li>
+     * <li>The callback is executed immediately after the OCR recognition is invoked, but may be delayed due to network or other issues. Accept the request completion notification on the client side first, and then invoke the query API to obtain the result details.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,10 +29,10 @@ public class InitAuthVerifyRequest extends TeaModel {
     public String callbackUrl;
 
     /**
-     * <p>The number of card pages collected by the SDK. Valid values:</p>
+     * <p>The number of pages of the identity document to be collected by the SDK. Valid values:</p>
      * <ul>
-     * <li>&quot;1&quot;: front side only</li>
-     * <li>&quot;2&quot;: both front and back sides.</li>
+     * <li>1: the front side.</li>
+     * <li>2: both the front and back sides.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -45,7 +43,7 @@ public class InitAuthVerifyRequest extends TeaModel {
     public String cardPageNumber;
 
     /**
-     * <p>The document type. Set the value to IDENTITY_CARD.</p>
+     * <p>The type of the identity document. Valid values: IDENTITY_CARD.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,11 +53,11 @@ public class InitAuthVerifyRequest extends TeaModel {
     public String cardType;
 
     /**
-     * <p>The OCR document scan pattern. Valid values:</p>
+     * <p>The OCR identity document scanning pattern. Valid values:</p>
      * <ul>
-     * <li>shoot (default): photo capture</li>
-     * <li>scan: scan</li>
-     * <li>auto: automatic switchover between photo capture and scan.</li>
+     * <li>shoot: takes a photo. This is the default value.</li>
+     * <li>scan: scans the document.</li>
+     * <li>auto: automatic switchover between photo and scan patterns.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,7 +67,7 @@ public class InitAuthVerifyRequest extends TeaModel {
     public String docScanMode;
 
     /**
-     * <p>Specifies whether to enable the document anti-forgery detection feature. Valid values:</p>
+     * <p>Specifies whether to enable the anti-counterfeiting detection feature for the identity document. Valid values:</p>
      * <ul>
      * <li>Y: Enabled.</li>
      * <li>N: Disabled. This is the default value.</li>
@@ -82,7 +80,7 @@ public class InitAuthVerifyRequest extends TeaModel {
     public String idSpoof;
 
     /**
-     * <p>The MetaInfo environment parameter, which must be obtained from the client SDK.</p>
+     * <p>The MetaInfo environment parameter, which must be obtained through the client SDK.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,8 +99,8 @@ public class InitAuthVerifyRequest extends TeaModel {
     public String metaInfo;
 
     /**
-     * <p>A custom business unique identifier that you specify for subsequent troubleshooting.</p>
-     * <p>The value can contain letters (both uppercase and lowercase) and digits, with a maximum length of 32 characters.</p>
+     * <p>The custom unique business identifier used for subsequent troubleshooting.</p>
+     * <p>The value can contain uppercase and lowercase letters and digits, and can be up to 32 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -112,7 +110,7 @@ public class InitAuthVerifyRequest extends TeaModel {
     public String outerOrderNo;
 
     /**
-     * <p>The product solution to use. Set the value to ID_OCR.</p>
+     * <p>The product solution to be integrated. Valid values: ID_OCR.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -122,7 +120,7 @@ public class InitAuthVerifyRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The China Chinese authentication scenario ID.</p>
+     * <p>The ID of the authentication scene.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

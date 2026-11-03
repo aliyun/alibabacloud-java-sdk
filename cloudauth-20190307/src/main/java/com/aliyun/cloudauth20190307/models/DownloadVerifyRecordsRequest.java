@@ -5,49 +5,49 @@ import com.aliyun.tea.*;
 
 public class DownloadVerifyRecordsRequest extends TeaModel {
     /**
-     * <p>The query conditions in JSON string format. The following fields are included:</p>
+     * <p>The query conditions in JSON string format. This parameter includes the following fields:</p>
      * <ul>
-     * <li><strong>DownloadMode (String)</strong>: the download mode.<ul>
-     * <li>Example: sync</li>
+     * <li><strong>DownloadMode</strong> (String): The download mode.<ul>
+     * <li>Example value: sync</li>
      * </ul>
      * </li>
-     * <li><strong>InvokeType (String)</strong>: the product plan, which corresponds to <strong>ProductType</strong>.</li>
-     * <li><strong>SceneIdList (List<Long>)</strong>: the list of scene IDs.</li>
-     * <li><strong>StatisticsType (String)</strong>: the statistics type. Valid values:<ul>
+     * <li><strong>InvokeType</strong> (String): The product solution, which corresponds to <strong>ProductType</strong>.</li>
+     * <li><strong>SceneIdList</strong> (List<Long>): The list of scene IDs.</li>
+     * <li><strong>StatisticsType</strong> (String): The statistics type.<ul>
      * <li>day</li>
      * <li>month</li>
      * </ul>
      * </li>
-     * <li><strong>StartDate (String)</strong>: the query start time.<ul>
-     * <li>Example: 2025-09-17 00:00:00 +0800</li>
+     * <li><strong>StartDate</strong> (String): The start time of the query.<ul>
+     * <li>Example value: 2025-09-17 00:00:00 +0800</li>
      * </ul>
      * </li>
-     * <li><strong>EndDate (String)</strong>: the query end time.<ul>
-     * <li>Example: 2025-10-16 23:59:59 +0800</li>
+     * <li><strong>EndDate</strong> (String): The end time of the query.<ul>
+     * <li>Example value: 2025-10-16 23:59:59 +0800</li>
      * </ul>
      * </li>
-     * <li><strong>ProductProgramList</strong>: the list of product codes under the product plan to query.<ul>
-     * <li>Example: [&quot;FINANCE_FACE_VERIFY&quot;,&quot;MFVC&quot;]</li>
+     * <li><strong>ProductProgramList</strong>: The list of product codes corresponding to the product solution to be queried.<ul>
+     * <li>Example value: [&quot;FINANCE_FACE_VERIFY&quot;,&quot;MFVC&quot;]</li>
      * </ul>
      * </li>
-     * <li><strong>Code (information verification API)</strong>: Valid values:<ul>
-     * <li><strong>ID_CARD_2_META</strong>: ID card two-factor verification</li>
+     * <li><strong>Code</strong> (Information verification API):<ul>
+     * <li><strong>ID_CARD_2_META</strong>: Two-element verification for ID cards</li>
      * <li><strong>ID_PERIOD</strong>: ID card validity period verification</li>
-     * <li><strong>MOBILE_ONLINE_LENGTH</strong>: mobile number online duration</li>
-     * <li><strong>MOBILE_ONLINE_STATUS</strong>: mobile number online status</li>
-     * <li><strong>MOBILE_3_META_SIMPLE</strong>: mobile number three-factor verification (basic)</li>
-     * <li><strong>MOBILE_3_META</strong>: mobile number three-factor verification (detailed)</li>
-     * <li><strong>MOBILE_2_META</strong>: mobile number two-factor verification</li>
-     * <li><strong>BANK_CARD_N_META</strong>: bank card verification (detailed)</li>
-     * <li><strong>MOBILE_DETECT</strong>: phone number detection </li>
-     * <li><strong>VEHICLE_N_META</strong>: vehicle element verification (enhanced)</li>
-     * <li><strong>VEHICLE_PENTA_INFO</strong>: vehicle five-element information recognition</li>
-     * <li><strong>VEHICLE_LICENSE_INFO</strong>: vehicle information recognition</li>
-     * <li><strong>VEHICLE_INSURE_DATE</strong>: vehicle insurance date query</li>
-     * <li><strong>VEHICLE_CHECK</strong>: vehicle element verification</li>
+     * <li><strong>MOBILE_ONLINE_LENGTH</strong>: Mobile phone in-network duration</li>
+     * <li><strong>MOBILE_ONLINE_STATUS</strong>: Mobile phone in-network status</li>
+     * <li><strong>MOBILE_3_META_SIMPLE</strong>: Simplified three-element verification for mobile phone numbers</li>
+     * <li><strong>MOBILE_3_META</strong>: Detailed three-element verification for mobile phone numbers</li>
+     * <li><strong>MOBILE_2_META</strong>: Two-element verification for mobile phone numbers</li>
+     * <li><strong>BANK_CARD_N_META</strong>: Detailed bank card verification</li>
+     * <li><strong>MOBILE_DETECT</strong>: Phone number detection </li>
+     * <li><strong>VEHICLE_N_META</strong>: Enhanced vehicle element verification</li>
+     * <li><strong>VEHICLE_PENTA_INFO</strong>: Five-item vehicle information recognition</li>
+     * <li><strong>VEHICLE_LICENSE_INFO</strong>: Vehicle information recognition</li>
+     * <li><strong>VEHICLE_INSURE_DATE</strong>: Vehicle insurance date query</li>
+     * <li><strong>VEHICLE_CHECK</strong>: Vehicle element verification</li>
      * </ul>
      * </li>
-     * <li><strong>ProductCode (information verification)</strong>: same as Code.</li>
+     * <li><strong>ProductCode</strong> (Information verification): Same as Code.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,10 +59,10 @@ public class DownloadVerifyRecordsRequest extends TeaModel {
     /**
      * <p>The product type. Valid values:</p>
      * <ul>
-     * <li><strong>FINANCE_VERIFY</strong>: financial-grade ID Verification</li>
-     * <li><strong>SMART_VERIFY</strong>: enhanced ID Verification (discontinued)</li>
+     * <li><strong>FINANCE_VERIFY</strong>: Financial-grade ID Verification</li>
+     * <li><strong>SMART_VERIFY</strong>: Enhanced ID Verification (discontinued)</li>
      * <li><strong>FACE_VERIFY</strong>: ID Verification (discontinued)</li>
-     * <li><strong>INFO_CHECK_STATISTICS</strong>: information verification.</li>
+     * <li><strong>INFO_CHECK_STATISTICS</strong>: Information verification</li>
      * </ul>
      * 
      * <strong>example:</strong>

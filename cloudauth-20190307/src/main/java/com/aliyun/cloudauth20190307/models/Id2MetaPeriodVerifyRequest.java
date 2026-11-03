@@ -7,8 +7,9 @@ public class Id2MetaPeriodVerifyRequest extends TeaModel {
     /**
      * <p>The ID card number.</p>
      * <ul>
-     * <li>If paramType is set to normal, enter the ID card number in plaintext.</li>
-     * <li>If paramType is set to md5, the value is in the following format: first 6 digits of the ID card number (plaintext) + date of birth (ciphertext) + last 4 digits of the ID card number (plaintext).</li>
+     * <li>If paramType is set to normal: Enter the plaintext ID card number.</li>
+     * <li>If paramType is set to md5:
+     * Enter the first 6 digits of the ID card number (plaintext) + the date of birth (ciphertext) + the last 4 digits of the ID card number (plaintext).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +21,8 @@ public class Id2MetaPeriodVerifyRequest extends TeaModel {
     /**
      * <p>The parameter type. Valid values:</p>
      * <ul>
-     * <li>normal: not encrypted.</li>
-     * <li>md5: MD5-encrypted.</li>
+     * <li>normal: Not encrypted.</li>
+     * <li>md5: MD5 encryption.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,12 +34,12 @@ public class Id2MetaPeriodVerifyRequest extends TeaModel {
     /**
      * <p>The name.</p>
      * <ul>
-     * <li>paramType = normal: enter the name in plaintext.</li>
-     * <li>paramType = md5: the first character of the name is MD5-encrypted (32-bit lowercase MD5) + the remaining characters of the name in plaintext.</li>
+     * <li>If paramType is set to normal: Enter the plaintext name.</li>
+     * <li>If paramType is set to md5: Enter the MD5 hash (32-character lowercase) of the first character of the name + the rest of the name in plaintext.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>张*</p>
+     * <p>Zhang*</p>
      */
     @NameInMap("UserName")
     public String userName;

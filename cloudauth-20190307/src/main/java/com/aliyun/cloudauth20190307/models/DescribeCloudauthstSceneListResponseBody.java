@@ -60,7 +60,7 @@ public class DescribeCloudauthstSceneListResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The Alibaba Cloud Marketplace commodity code.</p>
+         * <p>The commodity code in Alibaba Cloud Marketplace.</p>
          * 
          * <strong>example:</strong>
          * <p>SMART_VERIFY</p>
@@ -92,13 +92,13 @@ public class DescribeCloudauthstSceneListResponseBody extends TeaModel {
          * <p>The scenario name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试场景</p>
+         * <p>Test scenario</p>
          */
         @NameInMap("SceneName")
         public String sceneName;
 
         /**
-         * <p>Specifies whether to deliver files generated during authentication to the customer\&quot;s OSS. Valid values:</p>
+         * <p>Specifies whether to deliver the files generated during verification to the customer\&quot;s OSS. Valid values:</p>
          * <ul>
          * <li><strong>Y</strong>: Enabled.</li>
          * <li><strong>N</strong>: Disabled.</li>

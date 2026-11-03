@@ -77,31 +77,31 @@ public class DescribeAuthVerifyResponseBody extends TeaModel {
     public static class DescribeAuthVerifyResponseBodyResult extends TeaModel {
         /**
          * <ul>
-         * <li>Card information read by OCR (ocrIdCardInfo)</li>
-         * <li>Card information photo edited by the client (ocrIdEditInfo)</li>
-         * <li>OSS storage location and link of the OCR photo (ocrPictureFront).</li>
+         * <li>The card and certificate information read by OCR (ocrIdCardInfo)</li>
+         * <li>The photo of the card and certificate information edited on the client (ocrIdEditInfo)</li>
+         * <li>The OSS storage location and URL of the OCR photo (ocrPictureFront)</li>
          * </ul>
          * 
          * <strong>example:</strong>
          * <p>&quot;ocrIdCardInfo&quot;: {
-         *     &quot;certName&quot;: &quot;张先生&quot;,
-         *     &quot;sex&quot;: &quot;男&quot;,
-         *     &quot;nationality&quot;: &quot;汉&quot;,
+         *     &quot;certName&quot;: &quot;Mr. Zhang&quot;,
+         *     &quot;sex&quot;: &quot;Male&quot;,
+         *     &quot;nationality&quot;: &quot;Han&quot;,
          *     &quot;birth&quot;: &quot;20010213&quot;,
-         *     &quot;address&quot;: &quot;XXX省XX市XXX区XX街道X号&quot;,
+         *     &quot;address&quot;: &quot;No. X, XX Street, XXX District, XX City, XXX Province&quot;,
          *     &quot;certNo&quot;: &quot;4<strong><strong><strong><strong><strong><strong><strong><strong>X&quot;,
-         *     &quot;authority&quot;: &quot;XXX公安局XXX分局&quot;,
+         *     &quot;authority&quot;: &quot;XXX Branch of XXX Public Security Bureau&quot;,
          *     &quot;startDate&quot;: &quot;20250523&quot;,
          *     &quot;endDate&quot;: &quot;20450523&quot;
          *   },
          * &quot;ocrIdEditInfo&quot;: {
-         *     &quot;certName&quot;: &quot;张先生&quot;,
-         *     &quot;sex&quot;: &quot;男&quot;,
-         *     &quot;nationality&quot;: &quot;汉&quot;,
+         *     &quot;certName&quot;: &quot;Mr. Zhang&quot;,
+         *     &quot;sex&quot;: &quot;Male&quot;,
+         *     &quot;nationality&quot;: &quot;Han&quot;,
          *     &quot;birth&quot;: &quot;20010213&quot;,
-         *     &quot;address&quot;: &quot;XXX省XX市XXX区XX街道X号&quot;,
+         *     &quot;address&quot;: &quot;No. X, XX Street, XXX District, XX City, XXX Province&quot;,
          *     &quot;certNo&quot;: &quot;4</strong></strong></strong></strong></strong></strong></strong></strong>X&quot;,
-         *     &quot;authority&quot;: &quot;XXX公安局XXX分局&quot;,
+         *     &quot;authority&quot;: &quot;XXX Branch of XXX Public Security Bureau&quot;,
          *     &quot;startDate&quot;: &quot;20250523&quot;,
          *     &quot;endDate&quot;: &quot;20450523&quot;
          *   },
@@ -117,25 +117,25 @@ public class DescribeAuthVerifyResponseBody extends TeaModel {
         public String materialInfo;
 
         /**
-         * <p>The anti-spoofing detection result for the back side of the document, including the risk determination result and risk type:</p>
+         * <p>The anti-spoofing detection result for the back side of the ID card, including the risk determination result and risk type:</p>
          * <blockquote>
          * <p>- 
-         * Card front anti-spoofing detection is enabled only when IdSpoof = Y is set in the Initialize operation. Otherwise, spoofRiskResult returns N by default, and spoofType is empty.</p>
+         * Anti-spoofing detection for the back side of the card is enabled only when IdSpoof is set to Y in the Initialize operation. Otherwise, spoofRiskResult defaults to N, and spoofType is empty.</p>
          * </blockquote>
          * <p>spoofRiskResult:</p>
          * <ul>
-         * <li>Y: Risk detected.</li>
-         * <li>N: No risk detected.</li>
+         * <li>Y: Risk detected</li>
+         * <li>N: No risk detected</li>
          * </ul>
          * <p>spoofType:</p>
          * <ul>
-         * <li>SCREEN_REMARK: Recaptured photo.</li>
-         * <li>PHOTO_COPY: Photocopy.</li>
-         * <li>TAMPER: Digitally tampered.</li>
+         * <li>SCREEN_REMARK: Screen recapture</li>
+         * <li>PHOTO_COPY: Photocopy</li>
+         * <li>TAMPER: Image tampering</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>This is an algorithm prediction result. This field may not be returned. Avoid setting a mandatory dependency on this field in your business logic.</li>
+         * <li>This field contains algorithm prediction results and may not be returned. Avoid building critical business dependencies on this field.</li>
          * </ul>
          * </blockquote>
          * 
@@ -147,25 +147,25 @@ public class DescribeAuthVerifyResponseBody extends TeaModel {
         public String spoofBackInfo;
 
         /**
-         * <p>The anti-spoofing detection result for the front side of the document, including the risk determination result and risk type:</p>
+         * <p>The anti-spoofing detection result for the front side of the ID card, including the risk determination result and risk type:</p>
          * <blockquote>
          * <p>- 
-         * Card front anti-spoofing detection is enabled only when IdSpoof = Y is set in the Initialize operation. Otherwise, spoofRiskResult returns N by default, and spoofType is empty.</p>
+         * Anti-spoofing detection for the front side of the card is enabled only when IdSpoof is set to Y in the Initialize operation. Otherwise, spoofRiskResult defaults to N, and spoofType is empty.</p>
          * </blockquote>
          * <p>spoofRiskResult:</p>
          * <ul>
-         * <li>Y: Risk detected.</li>
-         * <li>N: No risk detected.</li>
+         * <li>Y: Risk detected</li>
+         * <li>N: No risk detected</li>
          * </ul>
          * <p>spoofType:</p>
          * <ul>
-         * <li>SCREEN_REMARK: Recaptured photo.</li>
-         * <li>PHOTO_COPY: Photocopy.</li>
-         * <li>TAMPER: Digitally tampered.</li>
+         * <li>SCREEN_REMARK: Screen recapture</li>
+         * <li>PHOTO_COPY: Photocopy</li>
+         * <li>TAMPER: Image tampering</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>This is an algorithm prediction result. This field may not be returned. Avoid setting a mandatory dependency on this field in your business logic.</li>
+         * <li>This field contains algorithm prediction results and may not be returned. Avoid building critical business dependencies on this field.</li>
          * </ul>
          * </blockquote>
          * 

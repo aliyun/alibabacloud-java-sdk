@@ -5,13 +5,11 @@ import com.aliyun.tea.*;
 
 public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of 200 indicates success. Any other value indicates failure.</p>
-     * <blockquote>
-     * <p><strong>Important</strong></p>
-     * </blockquote>
+     * <p>The return code. A value of 200 indicates success, and other values indicate failure.
+     * Important</p>
      * <ul>
-     * <li>This parameter indicates whether the API operation is called correctly. For more information about return codes, see error codes.</li>
-     * <li>Check the business verification result in the fields of ResultObject.</li>
+     * <li>This parameter indicates whether the API operation was called successfully. For detailed return code descriptions, see Error codes.</li>
+     * <li>To view the business verification result, check the fields in ResultObject.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +19,7 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -85,8 +83,8 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
         /**
          * <p>The query result. Valid values:</p>
          * <ul>
-         * <li>1: A query result is found.</li>
-         * <li>3: No query result is found.</li>
+         * <li>1: A query result is returned.</li>
+         * <li>3: No query result is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -96,7 +94,7 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>The carrier name. China Mobile: CMCC. China Unicom: CUCC. China Telecom: CTCC.</p>
+         * <p>The ISP name. Valid values: China Mobile - CMCC, China Unicom - CUCC, and China Telecom - CTCC.</p>
          * 
          * <strong>example:</strong>
          * <p>CMCC</p>
@@ -107,10 +105,10 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
         /**
          * <p>The detailed verification result. Valid values:</p>
          * <ul>
-         * <li>101: The registration date is equal to or later than the phone number activation date.</li>
-         * <li>102: The registration date is earlier than the phone number activation date.</li>
-         * <li>103: The new subscriber has not been synchronized yet.</li>
-         * <li>301: Data exception or the subscriber has been deactivated.</li>
+         * <li>101: The registration time is later than or equal to the activation time of the mobile phone number.</li>
+         * <li>102: The registration time is earlier than the activation time of the mobile phone number.</li>
+         * <li>103: The newly activated user is not synchronized.</li>
+         * <li>301: Data exception or disconnected user.</li>
          * </ul>
          * 
          * <strong>example:</strong>

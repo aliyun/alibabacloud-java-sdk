@@ -29,7 +29,7 @@ public class CompareFacesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -38,7 +38,7 @@ public class CompareFacesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the response is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,18 +93,18 @@ public class CompareFacesResponseBody extends TeaModel {
 
     public static class CompareFacesResponseBodyData extends TeaModel {
         /**
-         * <p>The confidence thresholds for face comparison. The returned content is a JSON object with the structure <code>&quot;key&quot;:&quot;value&quot;</code>.</p>
+         * <p>The confidence thresholds for face comparison. The response is a JSON object in the <code>&quot;key&quot;:&quot;value&quot;</code> format.</p>
          * <ul>
-         * <li><code>key</code> is the false acceptance rate (FAR), which is the probability of incorrectly identifying another person as the specified person.</li>
-         * <li><code>value</code> is the corresponding threshold.</li>
+         * <li><code>key</code>: The false acceptance rate (FAR), which is the probability of misidentifying another person as the specified person.</li>
+         * <li><code>value</code>: The corresponding threshold.</li>
          * </ul>
          * <blockquote>
-         * <p>About the confidence thresholds (confidenceThresholds) in the example:</p>
+         * <p>Regarding the confidence thresholds (confidenceThresholds) in the example:</p>
          * </blockquote>
          * <ul>
-         * <li><code>&quot;0.0001&quot;: &quot;90.07&quot;</code> indicates that the corresponding threshold is 90.07 when the FAR is 0.01%.</li>
-         * <li><code>&quot;0.001&quot;: &quot;80.01&quot;</code> indicates that the corresponding threshold is 80.01 when the FAR is 0.1%.</li>
-         * <li><code>&quot;0.01&quot;: &quot;70.02&quot;</code> indicates that the corresponding threshold is 70.02 when the FAR is 1%.</li>
+         * <li><code>&quot;0.0001&quot;: &quot;90.07&quot;</code> indicates that the threshold is 90.07 when the FAR is 0.01%.</li>
+         * <li><code>&quot;0.001&quot;: &quot;80.01&quot;</code> indicates that the threshold is 80.01 when the FAR is 0.1%.</li>
+         * <li><code>&quot;0.01&quot;: &quot;70.02&quot;</code> indicates that the threshold is 70.02 when the FAR is 1%.</li>
          * </ul>
          * <p>The confidence thresholds are dynamically generated based on different images and algorithms. Do not persist the confidence thresholds.</p>
          * 
@@ -115,7 +115,7 @@ public class CompareFacesResponseBody extends TeaModel {
         public String confidenceThresholds;
 
         /**
-         * <p>The similarity score between the faces in the two images. Valid values: [0, 100]. A higher value indicates a greater similarity.</p>
+         * <p>The similarity score of the faces in the two images. Valid values: [0, 100]. A higher value indicates a higher similarity.</p>
          * 
          * <strong>example:</strong>
          * <p>98.7913</p>

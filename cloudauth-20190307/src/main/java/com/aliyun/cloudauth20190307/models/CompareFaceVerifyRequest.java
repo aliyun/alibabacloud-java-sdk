@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CompareFaceVerifyRequest extends TeaModel {
     /**
-     * <p>Specifies whether cropping is allowed. Default value: F.</p>
+     * <p>Specifies whether to allow cropping. Default value: F. Valid values:</p>
      * <ul>
-     * <li>T: detection is required.</li>
-     * <li>F: detection is required. (Default: F).</li>
+     * <li>T: Allowed.</li>
+     * <li>F: Not allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class CompareFaceVerifyRequest extends TeaModel {
 
     /**
      * <p>The unique identifier of the merchant request.</p>
-     * <p>The value is a 32-character alphanumeric string. The first few characters are a custom abbreviation defined by the merchant, the middle part can be a time segment, and the last part can be a random or incremental sequence.</p>
+     * <p>The value is a 32-character alphanumeric string. The first few characters are a custom abbreviation of the merchant, the middle part can be a period of time, and the last part can be a random or incremental sequence.</p>
      * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
@@ -28,7 +28,7 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String outerOrderNo;
 
     /**
-     * <p>Fixed value: PV_FC.</p>
+     * <p>The product code. Fixed value: PV_FC.</p>
      * 
      * <strong>example:</strong>
      * <p>PV_FC</p>
@@ -37,7 +37,7 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The verification scenario ID.</p>
+     * <p>The ID of the verification scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000006</p>
@@ -46,9 +46,9 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public Long sceneId;
 
     /**
-     * <p>The CertifyId from a previous successful ID Verification. The photo captured during that verification is used as the face comparison photo.</p>
+     * <p>The CertifyId of a previous successful ID Verification. The photo used during the verification is used as the face comparison photo.</p>
      * <blockquote>
-     * <p>You can use one of the following four methods to submit a face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</p>
+     * <p>You can use one of the following four methods to upload the face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -58,9 +58,9 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String sourceCertifyId;
 
     /**
-     * <p>The Base64-encoded photo.</p>
+     * <p>The Base64-encoded string of the photo.</p>
      * <blockquote>
-     * <p>You can use one of the following four methods to submit a face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</p>
+     * <p>You can use one of the following four methods to upload the face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -70,9 +70,9 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String sourceFaceContrastPicture;
 
     /**
-     * <p>The OSS photo URL. Only authorized OSS photo URLs are supported.</p>
+     * <p>The URL of the photo in OSS. Only authorized OSS photo URLs are supported.</p>
      * <blockquote>
-     * <p>You can use one of the following four methods to submit a face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</p>
+     * <p>You can use one of the following four methods to upload the face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -82,9 +82,9 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String sourceFaceContrastPictureUrl;
 
     /**
-     * <p>The bucket name of the authorized OSS space.</p>
+     * <p>The name of the authorized OSS bucket.</p>
      * <blockquote>
-     * <p>You can use one of the following four methods to submit a face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</p>
+     * <p>You can use one of the following four methods to upload the face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -94,9 +94,9 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String sourceOssBucketName;
 
     /**
-     * <p>The file name in the authorized OSS space.</p>
+     * <p>The name of the object in the authorized OSS bucket.</p>
      * <blockquote>
-     * <p>You can use one of the following four methods to submit a face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</p>
+     * <p>You can use one of the following four methods to upload the face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -106,9 +106,9 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String sourceOssObjectName;
 
     /**
-     * <p>The CertifyId from a previous successful ID Verification. The photo captured during that verification is used as the face comparison photo.</p>
+     * <p>The CertifyId of a previous successful ID Verification. The photo used during the verification is used as the base library face comparison photo.</p>
      * <blockquote>
-     * <p>You can use one of the following four methods to submit a reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</p>
+     * <p>You can use one of the following four methods to upload the base library face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -118,9 +118,9 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String targetCertifyId;
 
     /**
-     * <p>The Base64-encoded reference photo.</p>
+     * <p>The Base64-encoded string of the base library photo.</p>
      * <blockquote>
-     * <p>You can use one of the following four methods to submit a reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</p>
+     * <p>You can use one of the following four methods to upload the base library face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -130,9 +130,9 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String targetFaceContrastPicture;
 
     /**
-     * <p>The OSS URL of the reference photo. Only authorized OSS photo URLs are supported.</p>
+     * <p>The URL of the base library photo in OSS. Only authorized OSS photo URLs are supported.</p>
      * <blockquote>
-     * <p>You can use one of the following four methods to submit a reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</p>
+     * <p>You can use one of the following four methods to upload the base library face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -142,9 +142,9 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String targetFaceContrastPictureUrl;
 
     /**
-     * <p>The bucket name of the authorized OSS space.</p>
+     * <p>The name of the authorized OSS bucket.</p>
      * <blockquote>
-     * <p>You can use one of the following four methods to submit a reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</p>
+     * <p>You can use one of the following four methods to upload the base library face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -154,9 +154,9 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String targetOssBucketName;
 
     /**
-     * <p>The file name in the authorized OSS space.</p>
+     * <p>The name of the object in the authorized OSS bucket.</p>
      * <blockquote>
-     * <p>You can use one of the following four methods to submit a reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</p>
+     * <p>You can use one of the following four methods to upload the base library face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

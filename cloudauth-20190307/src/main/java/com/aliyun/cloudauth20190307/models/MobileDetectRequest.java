@@ -16,7 +16,7 @@ public class MobileDetectRequest extends TeaModel {
     /**
      * <p>The encryption method. Valid values:</p>
      * <ul>
-     * <li>normal: plaintext without encryption</li>
+     * <li>normal: Plaintext without encryption.</li>
      * <li>md5: MD5 encryption.</li>
      * </ul>
      * 

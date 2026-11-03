@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class VerifyMaterialResponseBody extends TeaModel {
     /**
-     * <p>The comparison score between the facial photo submitted during verification and the authoritative data. Value range: <strong>0</strong> to <strong>100</strong>.</p>
-     * <p>Confidence thresholds for reference:</p>
+     * <p>The comparison score between the submitted face photo and the authoritative data during the authentication process. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
+     * <p>Refer to the following confidence thresholds:</p>
      * <ul>
-     * <li>At a false acceptance rate of 0.001%, the corresponding threshold is 95.</li>
-     * <li>At a false acceptance rate of 0.01%, the corresponding threshold is 90.</li>
-     * <li>At a false acceptance rate of 0.1%, the corresponding threshold is 80.</li>
-     * <li>At a false acceptance rate of 1%, the corresponding threshold is 60.</li>
+     * <li>When the false acceptance rate (FAR) is 0.001%, the corresponding threshold is 95.</li>
+     * <li>When the FAR is 0.01%, the corresponding threshold is 90.</li>
+     * <li>When the FAR is 0.1%, the corresponding threshold is 80.</li>
+     * <li>When the FAR is 1%, the corresponding threshold is 60.</li>
      * </ul>
      * <blockquote>
-     * <p>This field only represents the comparison result between the face and the authoritative data and serves as a reference score. We do not recommend using this score alone as the pass/fail criterion. For the comprehensive verification result, refer to the <strong>VerifyStatus</strong> field. The <strong>VerifyStatus</strong> result combines the face-to-authoritative-data comparison with multiple other strategies to improve the security level.</p>
+     * <p>This field only indicates the comparison result between the face and the authoritative data and serves as a reference score. Do not use this score alone as the pass or fail criterion. For the comprehensive authentication result, refer to the <strong>VerifyStatus</strong> field. The <strong>VerifyStatus</strong> result combines the face and authoritative data comparison with various other strategies to improve the security level.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,13 +24,13 @@ public class VerifyMaterialResponseBody extends TeaModel {
     public Float authorityComparisionScore;
 
     /**
-     * <p>The comparison score between the facial photo submitted during verification and the face on the portrait side of the ID card. Value range: <strong>0</strong> to <strong>100</strong>.</p>
-     * <p>Confidence thresholds for reference:</p>
+     * <p>The comparison score between the submitted face photo and the face on the front side of the ID card during the authentication process. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
+     * <p>Refer to the following confidence thresholds:</p>
      * <ul>
-     * <li>At a false acceptance rate of 0.001%, the corresponding threshold is 95.</li>
-     * <li>At a false acceptance rate of 0.01%, the corresponding threshold is 90.</li>
-     * <li>At a false acceptance rate of 0.1%, the corresponding threshold is 80.</li>
-     * <li>At a false acceptance rate of 1%, the corresponding threshold is 60.</li>
+     * <li>When the false acceptance rate (FAR) is 0.001%, the corresponding threshold is 95.</li>
+     * <li>When the FAR is 0.01%, the corresponding threshold is 90.</li>
+     * <li>When the FAR is 0.1%, the corresponding threshold is 80.</li>
+     * <li>When the FAR is 1%, the corresponding threshold is 60.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class VerifyMaterialResponseBody extends TeaModel {
     public Float idCardFaceComparisonScore;
 
     /**
-     * <p>The verification materials.</p>
+     * <p>The authentication materials.</p>
      */
     @NameInMap("Material")
     public VerifyMaterialResponseBodyMaterial material;
@@ -55,10 +55,10 @@ public class VerifyMaterialResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The verification status. Valid values:</p>
+     * <p>The authentication status. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Verification passed.</li>
-     * <li><strong>2</strong> to <strong>n</strong>: Verification failed due to various reasons. For detailed descriptions, see <strong>Verification status description</strong> below.</li>
+     * <li><strong>1</strong>: The authentication is passed.</li>
+     * <li><strong>2</strong> to <strong>n</strong>: The authentication fails due to various reasons. For detailed descriptions, see <strong>Authentication status description</strong> below.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +68,7 @@ public class VerifyMaterialResponseBody extends TeaModel {
     public Integer verifyStatus;
 
     /**
-     * <p>The token for this verification, used to correlate the various operations within a verification request. The token is valid for 30 minutes.</p>
+     * <p>The token for this authentication. It is used to link various APIs in the authentication request and is valid for 30 minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>c302c0797679457685410ee51a5ba375</p>
@@ -134,7 +134,7 @@ public class VerifyMaterialResponseBody extends TeaModel {
          * <p>The address.</p>
          * 
          * <strong>example:</strong>
-         * <p>浙江省杭州市余杭区文一西路969号</p>
+         * <p>No. 969 Wenyi West Road, Yuhang District, Hangzhou City, Zhejiang Province</p>
          */
         @NameInMap("Address")
         public String address;
@@ -143,13 +143,13 @@ public class VerifyMaterialResponseBody extends TeaModel {
          * <p>The issuing authority.</p>
          * 
          * <strong>example:</strong>
-         * <p>杭州市公安局</p>
+         * <p>Hangzhou Municipal Public Security Bureau</p>
          */
         @NameInMap("Authority")
         public String authority;
 
         /**
-         * <p>The HTTP or HTTPS URL of the national emblem side of the ID card. The URL is valid for 5 minutes. Save the image to your own storage to avoid access issues.</p>
+         * <p>The HTTP or HTTPS URL of the image for the back side of the ID card. The URL is valid for 5 minutes. Store the image in your own storage to prevent usage issues.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://image-demo.img-cn-hangzhou.aliyuncs.com/example3.jpg">http://image-demo.img-cn-hangzhou.aliyuncs.com/example3.jpg</a></p>
@@ -167,7 +167,7 @@ public class VerifyMaterialResponseBody extends TeaModel {
         public String birth;
 
         /**
-         * <p>The expiration date of the ID card. Format: yyyymmdd.</p>
+         * <p>The end date of the ID card validity period. Format: yyyymmdd.</p>
          * 
          * <strong>example:</strong>
          * <p>20201101</p>
@@ -176,7 +176,7 @@ public class VerifyMaterialResponseBody extends TeaModel {
         public String endDate;
 
         /**
-         * <p>The HTTP or HTTPS URL of the portrait side of the ID card. The URL is valid for 5 minutes. Save the image to your own storage to avoid access issues.</p>
+         * <p>The HTTP or HTTPS URL of the image for the front side of the ID card. The URL is valid for 5 minutes. Store the image in your own storage to prevent usage issues.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://image-demo.img-cn-hangzhou.aliyuncs.com/example2.jpg">http://image-demo.img-cn-hangzhou.aliyuncs.com/example2.jpg</a></p>
@@ -188,7 +188,7 @@ public class VerifyMaterialResponseBody extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("Name")
         public String name;
@@ -197,7 +197,7 @@ public class VerifyMaterialResponseBody extends TeaModel {
          * <p>The ethnicity.</p>
          * 
          * <strong>example:</strong>
-         * <p>汉</p>
+         * <p>Han</p>
          */
         @NameInMap("Nationality")
         public String nationality;
@@ -309,9 +309,9 @@ public class VerifyMaterialResponseBody extends TeaModel {
 
     public static class VerifyMaterialResponseBodyMaterial extends TeaModel {
         /**
-         * <p>The global camera image captured by the ID Verification SDK.</p>
+         * <p>The global image captured by the camera and collected by the ID Verification SDK.</p>
          * <blockquote>
-         * <p>This parameter takes effect only after configuration. If you need to use this parameter, <a href="https://selfservice.console.aliyun.com/ticket/category/cloudauth/today">submit a ticket</a> to contact us.</p>
+         * <p>This parameter takes effect only after it is configured. If you need to use this parameter, submit a <a href="https://selfservice.console.aliyun.com/ticket/category/cloudauth/today">ticket</a> to contact us.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -321,7 +321,7 @@ public class VerifyMaterialResponseBody extends TeaModel {
         public String faceGlobalUrl;
 
         /**
-         * <p>The HTTP or HTTPS URL of the front-facing facial photo, corresponding to the request parameter <strong>FaceImageUrl</strong>. The URL is valid for 5 minutes. Save the image to your own storage to avoid access issues.</p>
+         * <p>The HTTP or HTTPS URL of the front-facing portrait photo, which corresponds to the <strong>FaceImageUrl</strong> request parameter. The URL is valid for 5 minutes. Store the image in your own storage to prevent usage issues.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg">http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</a></p>
@@ -330,10 +330,10 @@ public class VerifyMaterialResponseBody extends TeaModel {
         public String faceImageUrl;
 
         /**
-         * <p>Indicates whether the face is wearing a mask. Valid values:</p>
+         * <p>Specifies whether the face is wearing a mask. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: A mask is detected.</li>
-         * <li><strong>false</strong>: No mask is detected.</li>
+         * <li><strong>true</strong>: A mask is worn.</li>
+         * <li><strong>false</strong>: No mask is worn.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -343,12 +343,12 @@ public class VerifyMaterialResponseBody extends TeaModel {
         public String faceMask;
 
         /**
-         * <p>The quality of the front-facing facial photo. Valid values:</p>
+         * <p>The quality of the front-facing portrait photo. Valid values:</p>
          * <ul>
-         * <li><strong>UNQUALIFIED</strong>: poor quality</li>
-         * <li><strong>LOW</strong>: low quality</li>
-         * <li><strong>NORMAL</strong>: moderate quality</li>
-         * <li><strong>HIGH</strong>: high quality.</li>
+         * <li><strong>UNQUALIFIED</strong>: Poor photo quality.</li>
+         * <li><strong>LOW</strong>: Low.</li>
+         * <li><strong>NORMAL</strong>: Normal.</li>
+         * <li><strong>HIGH</strong>: High.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -360,23 +360,23 @@ public class VerifyMaterialResponseBody extends TeaModel {
         /**
          * <p>The OCR result of the ID card information.</p>
          * <blockquote>
-         * <p>If the front and back photos of the ID card are not provided during verification, the OCR result of the ID card information is not returned. Even if both photos are provided, not all information on the ID card is guaranteed to be returned. OCR may fail to recognize certain information due to issues such as poor photo quality. We recommend that your business logic does not strictly depend on the ID card OCR information.</p>
+         * <p>If the front and back sides of the ID card are not provided during the authentication process, the OCR result of the ID card information is not returned. Even if the front and back sides of the ID card are provided, the system does not guarantee that all information on the ID card is returned. If OCR fails to recognize certain information due to photo quality issues, the OCR information may be incomplete. Do not strongly rely on the ID card OCR information in your business.</p>
          * </blockquote>
          */
         @NameInMap("IdCardInfo")
         public VerifyMaterialResponseBodyMaterialIdCardInfo idCardInfo;
 
         /**
-         * <p>The name, corresponding to the request parameter <strong>Name</strong>.</p>
+         * <p>The name, which corresponds to the <strong>Name</strong> request parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("IdCardName")
         public String idCardName;
 
         /**
-         * <p>The ID card number, corresponding to the request parameter <strong>IdCardNumber</strong>.</p>
+         * <p>The ID card number, which corresponds to the <strong>IdCardNumber</strong> request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>02343218901123****</p>

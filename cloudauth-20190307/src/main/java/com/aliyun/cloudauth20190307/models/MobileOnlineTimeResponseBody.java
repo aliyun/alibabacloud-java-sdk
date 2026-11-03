@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MobileOnlineTimeResponseBody extends TeaModel {
     /**
-     * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
+     * <p>The return code. A value of 200 indicates success, and other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class MobileOnlineTimeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class MobileOnlineTimeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result information.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("ResultObject")
     public MobileOnlineTimeResponseBodyResultObject resultObject;
@@ -90,10 +90,10 @@ public class MobileOnlineTimeResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>The name of the telecommunications service provider. Valid values:</p>
+         * <p>The name of the Internet service provider (ISP). Valid values:</p>
          * <ul>
-         * <li>CMCC: China Mobile. </li>
-         * <li>CUCC: China Unicom. </li>
+         * <li>CMCC: China Mobile.</li>
+         * <li>CUCC: China Unicom.</li>
          * <li>CTCC: China Telecom.</li>
          * </ul>
          * 
@@ -104,13 +104,13 @@ public class MobileOnlineTimeResponseBody extends TeaModel {
         public String ispName;
 
         /**
-         * <p>The network duration code. Valid values:</p>
+         * <p>The time code. Valid values:</p>
          * <ul>
-         * <li>1: [0,3) indicates a network duration of 0 to 3 months.</li>
-         * <li>2: [3,6) indicates a network duration of 3 to 6 months.</li>
-         * <li>3: [6,12) indicates a network duration of 6 to 12 months.</li>
-         * <li>4: [12,24) indicates a network duration of 12 to 24 months.</li>
-         * <li>5: [24,+) indicates a network duration of more than 24 months.</li>
+         * <li>1: [0,3), indicating a network tenure of 0 to 3 months.</li>
+         * <li>2: [3,6), indicating a network tenure of 3 to 6 months.</li>
+         * <li>3: [6,12), indicating a network tenure of 6 to 12 months.</li>
+         * <li>4: [12,24), indicating a network tenure of 12 to 24 months.</li>
+         * <li>5: [24,+), indicating a network tenure of more than 24 months.</li>
          * </ul>
          * 
          * <strong>example:</strong>

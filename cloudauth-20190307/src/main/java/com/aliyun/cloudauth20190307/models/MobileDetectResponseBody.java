@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MobileDetectResponseBody extends TeaModel {
     /**
-     * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
+     * <p>The return code. A value of 200 indicates success, and other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class MobileDetectResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -76,10 +76,10 @@ public class MobileDetectResponseBody extends TeaModel {
 
     public static class MobileDetectResponseBodyResultObjectItems extends TeaModel {
         /**
-         * <p>The location to which the phone number belongs. This field is available only for plaintext phone numbers.</p>
+         * <p>The phone number location. This field is available only for plaintext phone numbers.</p>
          * 
          * <strong>example:</strong>
-         * <p>安徽-马**</p>
+         * <p>Anhui-Ma**</p>
          */
         @NameInMap("Area")
         public String area;
@@ -88,7 +88,7 @@ public class MobileDetectResponseBody extends TeaModel {
          * <p>The verification result. Valid values:</p>
          * <ul>
          * <li>1: Active and available. </li>
-         * <li>2: Not in active and available status.</li>
+         * <li>2: Inactive or unavailable.</li>
          * <li>3: No query results.</li>
          * </ul>
          * 
@@ -99,10 +99,10 @@ public class MobileDetectResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>The carrier name. Valid values:</p>
+         * <p>The name of the carrier. Valid values:</p>
          * <ul>
-         * <li>CMCC: China Mobile </li>
-         * <li>CUCC: China Unicom </li>
+         * <li>CMCC: China Mobile. </li>
+         * <li>CUCC: China Unicom. </li>
          * <li>CTCC: China Telecom.</li>
          * </ul>
          * 
@@ -125,10 +125,10 @@ public class MobileDetectResponseBody extends TeaModel {
          * <p>The verification details. Valid values:</p>
          * <ul>
          * <li>101: Available number.</li>
-         * <li>102: Empty number.</li>
-         * <li>103: Suspended. </li>
-         * <li>104: Silent number (inactive secondary number in the past six months, new number, or non-smartphone user). </li>
-         * <li>105: Risky number (user with prolonged shutdown, voice service not activated, or prone to complaints).</li>
+         * <li>102: Non-existent number.</li>
+         * <li>103: Service suspended. </li>
+         * <li>104: Silent number (inactive secondary numbers, new numbers, or non-smartphone users within the last six months). </li>
+         * <li>105: Risky number (powered off for a long time, voice service not activated, or users prone to complaints).</li>
          * <li>301: No record found.</li>
          * </ul>
          * 
@@ -187,7 +187,7 @@ public class MobileDetectResponseBody extends TeaModel {
 
     public static class MobileDetectResponseBodyResultObject extends TeaModel {
         /**
-         * <p>The total number of billing counts in a single request.</p>
+         * <p>The total number of billable calls in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

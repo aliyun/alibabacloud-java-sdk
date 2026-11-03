@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class RemoveWhiteListSettingShrinkRequest extends TeaModel {
     /**
-     * <p>The IDs of the whitelists to delete in batch.</p>
+     * <p>The IDs of the whitelists to delete in batches.</p>
      */
     @NameInMap("Ids")
     public String idsShrink;
 
     /**
-     * <p>The ServiceCode of the ID Verification service. Set this parameter to <strong>antcloudauth</strong>.</p>
+     * <p>The service code of the ID Verification service. Valid values: <strong>antcloudauth</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>antcloudauth</p>

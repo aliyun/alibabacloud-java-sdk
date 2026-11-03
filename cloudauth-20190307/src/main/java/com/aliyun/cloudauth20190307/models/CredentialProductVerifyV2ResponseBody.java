@@ -14,7 +14,7 @@ public class CredentialProductVerifyV2ResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -81,9 +81,9 @@ public class CredentialProductVerifyV2ResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>{
          *  &quot;sameBackgroundDetail&quot;: {
-         *  // 相似背景对于的原始图请求RequestId
-         *  &quot;originalRequestId&quot;: &quot;130A2C10-B9EE-4D84-88E3-5384FF03****&quot;;
-         *  // 相似背景对于的原始图请求商户ID 
+         *  // The request ID of the original image request for the similar background
+         *  &quot;originalRequestId&quot;: &quot;130A2C10-B9EE-4D84-88E3-5384FF03****&quot;,
+         *  // The merchant ID of the original image request for the similar background 
          *  &quot;originalMerchantId&quot;: &quot;xxxxxxxx&quot; 
          *  }
          * }</p>
@@ -92,11 +92,11 @@ public class CredentialProductVerifyV2ResponseBody extends TeaModel {
         public String materialInfo;
 
         /**
-         * <p>Valid values:</p>
+         * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li>0: low risk</li>
-         * <li>1: high risk</li>
-         * <li>2: suspicious.</li>
+         * <li>0: Low risk.</li>
+         * <li>1: High risk.</li>
+         * <li>2: Suspicious.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -112,11 +112,11 @@ public class CredentialProductVerifyV2ResponseBody extends TeaModel {
         public java.util.Map<String, String> riskScore;
 
         /**
-         * <p>The risk labels. Multiple labels are separated by commas. Valid values:</p>
+         * <p>The risk tags. Multiple tags are separated by commas. Valid values:</p>
          * <ul>
-         * <li>PS: image manipulation</li>
-         * <li>LOW_QUALITY_PRODUCT: low quality (low clarity)</li>
-         * <li>SAME_BACKGROUND: similar image.</li>
+         * <li>PS: Image manipulation.</li>
+         * <li>LOW_QUALITY_PRODUCT: Low quality (low clarity).</li>
+         * <li>SAME_BACKGROUND: Similar image.</li>
          * </ul>
          * 
          * <strong>example:</strong>

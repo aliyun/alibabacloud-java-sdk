@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCustomizeFlowStrategyListResponseBody extends TeaModel {
     /**
-     * <p>The return code. <strong>200</strong> indicates that the request is successful.</p>
+     * <p>The return code. A value of <strong>200</strong> indicates that the API request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class ModifyCustomizeFlowStrategyListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -50,7 +50,7 @@ public class ModifyCustomizeFlowStrategyListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the response is successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

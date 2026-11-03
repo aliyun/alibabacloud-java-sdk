@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Mobile2MetaVerifyResponseBody extends TeaModel {
     /**
-     * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
+     * <p>The return code. A value of 200 indicates success, and other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -78,9 +78,9 @@ public class Mobile2MetaVerifyResponseBody extends TeaModel {
         /**
          * <p>The verification result. Valid values:</p>
          * <ul>
-         * <li>1: Consistent.</li>
-         * <li>2: Inconsistent.</li>
-         * <li>3: No record found.</li>
+         * <li>1: consistent</li>
+         * <li>2: inconsistent</li>
+         * <li>3: no record found</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -90,11 +90,11 @@ public class Mobile2MetaVerifyResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>The carrier name. Valid values:</p>
+         * <p>The ISP name. Valid values:</p>
          * <ul>
          * <li>CMCC: China Mobile</li>
          * <li>CUCC: China Unicom</li>
-         * <li>CTCC: China Telecom.</li>
+         * <li>CTCC: China Telecom</li>
          * </ul>
          * 
          * <strong>example:</strong>

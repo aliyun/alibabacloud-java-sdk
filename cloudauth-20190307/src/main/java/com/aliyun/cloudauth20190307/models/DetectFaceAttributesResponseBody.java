@@ -29,7 +29,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -38,7 +38,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the response is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

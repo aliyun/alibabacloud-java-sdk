@@ -5,29 +5,28 @@ import com.aliyun.tea.*;
 
 public class Id2MetaVerifyWithOCRRequest extends TeaModel {
     /**
-     * <p>The input stream of the portrait side image of the ID card.
+     * <p>The input stream of the image for the portrait side of the ID card.
      * Specify either CertUrl or CertFile.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("CertFile")
     public String certFile;
 
     /**
-     * <p>The image of the national emblem side of the ID card.
-     * Specify either CertNationalUrl or CertNationalFile. You can also leave both empty.</p>
+     * <p>The URL of the image of the national emblem side of the ID card. You can specify either CertNationalUrl or CertNationalFile. You can also specify neither.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("CertNationalFile")
     public String certNationalFile;
 
     /**
-     * <p>The URL of the national emblem side image of the ID card.
-     * A publicly accessible HTTP or HTTPS URL.
-     * Specify either CertNationalUrl or CertNationalFile. You can also leave both empty.</p>
+     * <p>The URL of the image for the national emblem side of the ID card.
+     * The URL must be a publicly accessible HTTP or HTTPS link.
+     * Specify either CertNationalUrl or CertNationalFile, or leave both empty.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://www.aliyun.com/cert.jpeg">https://www.aliyun.com/cert.jpeg</a></p>
@@ -36,8 +35,8 @@ public class Id2MetaVerifyWithOCRRequest extends TeaModel {
     public String certNationalUrl;
 
     /**
-     * <p>The image of the portrait side of the ID card.
-     * A publicly accessible HTTP or HTTPS URL.
+     * <p>The URL of the image for the portrait side of the ID card.
+     * The URL must be a publicly accessible HTTP or HTTPS link.
      * Specify either CertUrl or CertFile.</p>
      * 
      * <strong>example:</strong>

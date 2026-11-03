@@ -24,7 +24,7 @@ public class DescribeFaceGuardRiskRequest extends TeaModel {
 
     /**
      * <p>The identifier used for subsequent troubleshooting. Ensure that this value is unique within your business.</p>
-     * <p>The value can contain letters (both uppercase and lowercase) and digits, with a maximum length of 32 characters.</p>
+     * <p>The value can contain uppercase and lowercase letters and digits, and can be up to 32 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c35xxxx</p>
@@ -33,7 +33,7 @@ public class DescribeFaceGuardRiskRequest extends TeaModel {
     public String outerOrderNo;
 
     /**
-     * <p>The product code. Set this to FACE_GUARD.</p>
+     * <p>The product code. Set the value to FACE_GUARD.</p>
      * 
      * <strong>example:</strong>
      * <p>FACE_GUARD</p>

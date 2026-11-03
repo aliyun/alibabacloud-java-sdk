@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InitCardVerifyRequest extends TeaModel {
     /**
-     * <p>The security token used for anti-replay and anti-tampering verification. If you specify this parameter, the CallbackToken field is included in the callback URL.</p>
+     * <p>The security token used for anti-replay and anti-tampering verification. If you specify this parameter, the CallbackToken field is displayed in the callback URL.</p>
      * 
      * <strong>example:</strong>
      * <p>NMjvQanQgplBSaEI0sL86WnQplB</p>
@@ -14,10 +14,8 @@ public class InitCardVerifyRequest extends TeaModel {
     public String callbackToken;
 
     /**
-     * <p>The callback URL for authentication results. The URL must start with https. After the authentication is complete, the system sends a callback to this URL with the certifyId and passed fields automatically appended. Example: <a href="https://www.aliyun.com?certifyId=xxxx&passed=T">https://www.aliyun.com?certifyId=xxxx&amp;passed=T</a></p>
-     * <blockquote>
-     * <p><strong>Warning</strong> The callback is triggered only when the authentication is complete. No notification is sent if the authentication is abandoned, interrupted, or not performed. After you receive the callback notification, call the query operation to obtain the authentication details if needed.</p>
-     * </blockquote>
+     * <p>The callback URL for authentication results. The URL must start with https. After the authentication is completed, the platform calls back this URL and automatically adds the certifyId and passed fields. Example: <a href="https://www.aliyun.com?certifyId=xxxx&passed=T">https://www.aliyun.com?certifyId=xxxx&amp;passed=T</a>.
+     * Warning: The callback is triggered only when the authentication is completed. If the authentication is abandoned, abnormally interrupted, or not performed, no notification is sent. When you receive the callback notification, call the query API to obtain the authentication details if needed.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
@@ -26,14 +24,11 @@ public class InitCardVerifyRequest extends TeaModel {
     public String callbackUrl;
 
     /**
-     * <p>The number of card pages to be collected by the SDK. Valid values:</p>
+     * <p>The number of pages of the ID document collected by the SDK. Valid values:</p>
      * <ul>
-     * <li><p>1: collects the front side only.</p>
-     * </li>
-     * <li><p>2: collects both the front and back sides.</p>
-     * </li>
-     * <li><p>If the verification type is ID card validity period (VerifyMeta is set to ID_PERIOD), set this parameter to 2.</p>
-     * </li>
+     * <li>1: collects the front side.</li>
+     * <li>2: collects the front and back sides.
+     * If the verification type is the validity period of the ID document (VerifyMeta is set to ID_PERIOD), you must set this parameter to 2.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -44,9 +39,9 @@ public class InitCardVerifyRequest extends TeaModel {
     public String cardPageNumber;
 
     /**
-     * <p>The document type. Valid values:</p>
+     * <p>The type of the ID document. Valid values:</p>
      * <ul>
-     * <li>IDENTITY_CARD: resident identity card.</li>
+     * <li>IDENTITY_CARD: second-generation resident ID card.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -57,10 +52,10 @@ public class InitCardVerifyRequest extends TeaModel {
     public String cardType;
 
     /**
-     * <p>The photo capture mode (manual or automatic). Valid values:</p>
+     * <p>The photo capture mode. Valid values:</p>
      * <ul>
-     * <li>shoot: manual capture</li>
-     * <li>scan: scan mode </li>
+     * <li>shoot: photo capture.</li>
+     * <li>scan: scanning.</li>
      * <li>auto: automatic switchover.</li>
      * </ul>
      * 
@@ -71,7 +66,7 @@ public class InitCardVerifyRequest extends TeaModel {
     public String docScanMode;
 
     /**
-     * <p>A custom business unique identifier that you define for subsequent troubleshooting. The value is a combination of letters and digits up to 32 characters in length. Make sure the value is unique.</p>
+     * <p>The custom unique business identifier used for subsequent troubleshooting. The value must be a unique combination of up to 32 letters and digits.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,7 +76,7 @@ public class InitCardVerifyRequest extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>The MetaInfo environment parameter. Obtain this value by using the client SDK.</p>
+     * <p>The MetaInfo environment parameter, which must be obtained by using the client SDK.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -91,7 +86,7 @@ public class InitCardVerifyRequest extends TeaModel {
     public String metaInfo;
 
     /**
-     * <p>The verification mode. Valid values:</p>
+     * <p>The verification method. Valid values:</p>
      * <ul>
      * <li>OCR_VERIFY: OCR recognition and authentication mode.</li>
      * </ul>
@@ -104,11 +99,10 @@ public class InitCardVerifyRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>Specifies whether to temporarily store images collected by the app. Valid values:</p>
+     * <p>Specifies whether to temporarily store the image information collected by the app. Valid values:</p>
      * <ul>
-     * <li>Y: Yes.</li>
-     * <li>N: No.</li>
-     * <li>If you set this parameter to Y, the query operation returns card image information.</li>
+     * <li>Y: yes. If you select this value, the query API can return the image information of the ID document.</li>
+     * <li>N: no.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -121,7 +115,7 @@ public class InitCardVerifyRequest extends TeaModel {
     /**
      * <p>The verification type. Valid values:</p>
      * <ul>
-     * <li>ID_2_META: two-factor identity verification (name + ID card number).</li>
+     * <li>ID_2_META: two identity elements (name and ID number).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

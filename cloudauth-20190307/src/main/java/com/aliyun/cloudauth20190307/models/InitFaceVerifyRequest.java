@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class InitFaceVerifyRequest extends TeaModel {
     /**
-     * <p>Specifies whether the SDK enables strict face quality detection:</p>
+     * <p>Specifies whether to enable strict face quality detection in the SDK. Valid values:</p>
      * <ul>
-     * <li><p><strong>Y</strong>: Enabled.</p>
+     * <li><p><strong>Y</strong>: Enables strict face quality detection.</p>
      * </li>
-     * <li><p><strong>N</strong>: Disabled (default).</p>
+     * <li><p><strong>N</strong>: Does not enable strict face quality detection. This is the default value.</p>
      * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>If this parameter is enabled, the SDK must integrate the <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/description-of-sdk-package-clipping">strict face quality detection module</a>. Strict quality detection may reduce the face recognition success rate.</li>
-     * <li>Only Android SDK 2.3.24 and later versions are supported.</li>
+     * <li>If you enable this parameter, the SDK must integrate the <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/description-of-sdk-package-clipping">strict face quality detection module</a>. Affected by strict quality detection, the success rate of face scanning may decrease.</li>
+     * <li>Only Android SDK 2.3.24 and later are supported.</li>
      * </ul>
      * </blockquote>
      * 
@@ -26,7 +26,7 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String appQualityCheck;
 
     /**
-     * <p>The user authorization ID. Maximum length: 64 characters.</p>
+     * <p>The user authorization ID. The maximum length is 64 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>92d46b9e9e2d703f2897f350d5bd4149</p>
@@ -35,8 +35,8 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String authId;
 
     /**
-     * <p>The date of birth on the certificate.</p>
-     * <p>This field is required when the certificate type <strong>CertType</strong> is set to <strong>PASSPORT</strong> and <strong>Mode</strong> is set to <strong>3</strong>.</p>
+     * <p>The date of birth on the ID document.</p>
+     * <p>This parameter is required when the <strong>CertType</strong> parameter is set to <strong>PASSPORT</strong> and the <strong>Mode</strong> parameter is set to <strong>3</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1993-10-10</p>
@@ -45,8 +45,8 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String birthday;
 
     /**
-     * <p>The security token that you generate to prevent duplication and tampering.</p>
-     * <p>If this value is set, the <strong>CallbackToken</strong> field is displayed in the callback URL.</p>
+     * <p>The security token that you generate to prevent duplicate and tampered requests.</p>
+     * <p>If you specify this parameter, the <strong>CallbackToken</strong> field is displayed in the callback URL.</p>
      * 
      * <strong>example:</strong>
      * <p>NMjvQanQgplBSaEI0sL86WnQplB</p>
@@ -55,13 +55,13 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String callbackToken;
 
     /**
-     * <p>The callback notification URL for the authentication result. The default callback request method is GET, and the callback URL must start with <code>https</code>. After authentication is complete, the platform calls back this URL and automatically appends the <code>certifyId</code> and <code>passed</code> fields. The <code>passed</code> field returns the subcode value. Example: <code>https://www.aliyun.com?callbackToken=1000004826&amp;certifyId=shaxxxx&amp;passed=200.</code></p>
+     * <p>The callback URL for authentication result notifications. The default callback request method is GET. The callback URL must start with <code>https</code>. After the authentication is completed, the platform invokes this URL and automatically appends the <code>certifyId</code> and <code>passed</code> fields. The value of the <code>passed</code> field is the subcode. Example: <code>https://www.aliyun.com?callbackToken=1000004826&amp;certifyId=shaxxxx&amp;passed=200</code>.</p>
      * <notice>
      * 
      * <ul>
-     * <li>The callback is triggered only when authentication is complete (including both passed and failed). If authentication is abandoned, abnormally breaks, or is not performed, no notification is sent. After receiving the callback notification, you can use the query operation to obtain authentication details if needed.</li>
-     * <li>The accessibility of the provided URL is verified before the operation is invoked. If the URL cannot be accessed through public network access, error 401 is returned.</li>
-     * <li>After receiving the callback, your service must return HTTP status code 200. Otherwise, a retry is triggered with two callbacks within 3 seconds.</li>
+     * <li>The callback is triggered only when the authentication is completed, including both successful and failed authentications. If the authentication is abandoned, an abnormal break occurs, or the authentication is not performed, no notification is sent. We recommend that you invoke the query API operation to obtain the authentication details after you receive the callback notification if needed.</li>
+     * <li>The accessibility of the URL is verified before the API operation is invoked. If the URL does not support public network access, a 401 error is returned.</li>
+     * <li>The API operation must return HTTP status code 200 after the callback. Otherwise, a retry is triggered, and two callbacks are sent within 3 seconds.</li>
      * </ul>
      * </notice>
      * 
@@ -72,15 +72,15 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String callbackUrl;
 
     /**
-     * <p>Specifies whether to enable the camera selection feature:</p>
+     * <p>Specifies whether to enable the camera selection feature. Valid values:</p>
      * <ul>
-     * <li><p><strong>Y</strong>: Enabled.</p>
+     * <li><p><strong>Y</strong>: Enables the feature.</p>
      * </li>
-     * <li><p><strong>N</strong>: Disabled (default).</p>
+     * <li><p><strong>N</strong>: Does not enable the feature. This is the default value.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This feature takes effect only for PC integration mode. After it is enabled, users can select a camera for authentication.</p>
+     * <p>This feature takes effect only in the PC integration mode. After this feature is enabled, users can select a camera for authentication.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -93,13 +93,13 @@ public class InitFaceVerifyRequest extends TeaModel {
      * <p>The real name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Wang Shanshan</p>
+     * <p>Zhang San</p>
      */
     @NameInMap("CertName")
     public String certName;
 
     /**
-     * <p>The certificate number.</p>
+     * <p>The ID document number.</p>
      * 
      * <strong>example:</strong>
      * <p>330103xxxxxxxxxxxx</p>
@@ -108,8 +108,8 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String certNo;
 
     /**
-     * <p>The certificate type.
-     * Currently, only ID cards are supported. Set this parameter to IDENTITY_CARD.</p>
+     * <p>The type of the ID document.</p>
+     * <p>Only ID cards are supported. Set the value to IDENTITY_CARD.</p>
      * 
      * <strong>example:</strong>
      * <p>IDENTITY_CARD</p>
@@ -118,12 +118,10 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String certType;
 
     /**
+     * <p><strong>[Deprecated]</strong></p>
+     * <p>The CertifyId of a previous successful ID Verification. The photo used in the previous authentication is used as the comparison photo.</p>
      * <blockquote>
-     * <p>Warning: This parameter will be deprecated.</warning></p>
-     * </blockquote>
-     * <p>The CertifyId from a previous successful ID Verification session. The photo from that authentication is used as the comparison photo.</p>
-     * <blockquote>
-     * <p>Among the four image input methods (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</p>
+     * <p>You can specify only one of the following parameters to pass the image: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -148,7 +146,7 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String certifyUrlStyle;
 
     /**
-     * <p>The Web SDK device type. Valid values: <strong>WEB</strong> or <strong>H5</strong>.</p>
+     * <p>The device type of the Web SDK. Valid values: <strong>WEB</strong> and <strong>H5</strong>.</p>
      * <blockquote>
      * <p>Only Web SDK device types are supported.</p>
      * </blockquote>
@@ -160,7 +158,7 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String certifyUrlType;
 
     /**
-     * <p>Specifies whether to allow cropping of face images. Cropping is not allowed by default.</p>
+     * <p>Specifies whether to allow face image cropping. By default, cropping is not allowed. Valid values:</p>
      * <ul>
      * <li><p>T: Cropping is allowed.</p>
      * </li>
@@ -168,7 +166,7 @@ public class InitFaceVerifyRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If the requested image is not captured by a standard liveness detection SDK, allow cropping of face images. After this feature is enabled, the requested image is first cropped and corrected before the request is sent to the service.</p>
+     * <p>If the requested image is not collected by the standard liveness detection SDK, we recommend that you allow face image cropping. After this feature is enabled, the requested image is cropped and corrected before the request is sent to the service.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -178,7 +176,16 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String crop;
 
     /**
-     * <p>Specifies whether to enable beauty mode: Y/N.</p>
+     * <p>Specifies whether to allow album upload. Valid values: Y and N. Default value: N.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
+    @NameInMap("EnableAlbumUpload")
+    public String enableAlbumUpload;
+
+    /**
+     * <p>Specifies whether to enable the beauty filter. Valid values: Y and N.</p>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -187,8 +194,17 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String enableBeauty;
 
     /**
-     * <p>The encryption algorithm. Currently, only the SM2 national cryptographic algorithm is supported.</p>
-     * <p>After encrypted transmission is enabled, pass in the encrypted CertName and CertNo. For encryption instructions, refer to <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/description-of-parameter-encryption#task-2229332">Parameter encryption description</a>.</p>
+     * <p>Specifies whether to enable speech synthesis for H5 willingness authentication. Valid values: Y and N. Default value: Y.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
+    @NameInMap("EnableTts")
+    public String enableTts;
+
+    /**
+     * <p>The encryption algorithm. Only the SM2 algorithm is supported.</p>
+     * <p>After encrypted transmission is enabled, you must pass the encrypted CertName and CertNo. For more information about encryption, see <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/description-of-parameter-encryption#task-2229332">Parameter encryption</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>SM2</p>
@@ -197,9 +213,9 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String encryptType;
 
     /**
-     * <p>The Base64-encoded photo.</p>
+     * <p>The Base64-encoded image.</p>
      * <blockquote>
-     * <p>Among the four image input methods (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</p>
+     * <p>You can specify only one of the following parameters to pass the image: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -209,9 +225,9 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String faceContrastPicture;
 
     /**
-     * <p>The OSS photo URL. Currently, only authorized OSS photo URLs are supported.</p>
+     * <p>The URL of the image in OSS. Only authorized OSS image URLs are supported.</p>
      * <blockquote>
-     * <p>Among the four image input methods (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</p>
+     * <p>You can specify only one of the following parameters to pass the image: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -221,11 +237,11 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String faceContrastPictureUrl;
 
     /**
-     * <p>The device assistant tag type. Valid values: <strong>DeviceRisk</strong>.</p>
+     * <p>The type of the Device Assistant tag. Set the value to <strong>DeviceRisk</strong>.</p>
      * <blockquote>
      * <ul>
-     * <li>Selecting device assistant output incurs additional fees. For more information, refer to <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/face-guard">Paid value-added services</a>.</li>
-     * <li>If you do not need device assistant tag output, do not pass this parameter or pass an empty value.</li>
+     * <li>Outputting Device Assistant tags incurs additional fees. For more information, see <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/face-guard">Value-added services</a>.</li>
+     * <li>If you do not need to output Device Assistant tags, you can leave this parameter empty or do not pass it.</li>
      * </ul>
      * </blockquote>
      * 
@@ -236,10 +252,10 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String faceGuardOutput;
 
     /**
-     * <p>Specifies whether to display the &quot;I have completed authentication&quot; button on the H5 degradation page after authentication is complete:</p>
+     * <p>Specifies whether to display the I Have Completed Authentication button on the H5 downgrade page after authentication is completed. Valid values:</p>
      * <ul>
-     * <li><strong>Y</strong>: Enabled.</li>
-     * <li><strong>N</strong> (default): Disabled.</li>
+     * <li><strong>Y</strong>: Displays the button.</li>
+     * <li><strong>N</strong> (default): Hides the button.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -258,7 +274,7 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String ip;
 
     /**
-     * <p>The Metainfo environment parameter, which must be obtained through the client SDK.</p>
+     * <p>The Metainfo environment parameter. You must obtain this parameter by using the client SDK.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;zimVer&quot;:&quot;3.0.0&quot;,&quot;appVersion&quot;: &quot;1&quot;,&quot;bioMetaInfo&quot;: &quot;4.1.0:11501568,0&quot;,&quot;appName&quot;: &quot;com.aliyun.antcloudauth&quot;,&quot;deviceType&quot;: &quot;ios&quot;,&quot;osVersion&quot;: &quot;iOS 10.3.2&quot;,&quot;apdidToken&quot;: &quot;&quot;,&quot;deviceModel&quot;: &quot;iPhone9,1&quot;}</p>
@@ -276,15 +292,15 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String mobile;
 
     /**
-     * <p>The method for obtaining passport NFC verification elements:</p>
+     * <p>The method to obtain the passport NFC verification elements. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: User input. The end user manually enters certificate element information using the UI provided by the Alibaba Cloud SDK.</p>
+     * <li><p><strong>1</strong>: User input. The end user manually enters the ID document element information by using the UI provided by the Alibaba Cloud SDK.</p>
      * </li>
-     * <li><p><strong>3</strong>: External parameter input. Certificate element information is passed in externally.</p>
+     * <li><p><strong>3</strong>: External parameter input. The ID document element information is passed from external sources.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>NFC decoding of passport chip encrypted information requires three passport elements: name, date of birth, and certificate expiration date.</p>
+     * <p>When the NFC decoder decrypts the encrypted information of the passport chip, it needs to obtain three passport elements: name, date of birth, and expiration date.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -296,31 +312,31 @@ public class InitFaceVerifyRequest extends TeaModel {
     /**
      * <p>The liveness detection type. Valid values:</p>
      * <blockquote>
-     * <p>The liveness detection type supports only the following values. Custom actions or combinations are not supported.</p>
+     * <p>Only the following liveness detection types are supported. Custom actions or combinations are not supported.</p>
      * </blockquote>
-     * <p>Note:
-     * The liveness detection type supports only the following values. Custom actions or combinations are not supported.</p>
+     * <p>Description
+     * Only the following liveness detection types are supported. Custom actions or combinations are not supported.</p>
      * <ul>
-     * <li><p><strong>LIVENESS</strong> (default): Blink.</p>
+     * <li><p><strong>LIVENESS</strong> (default): Blinking.</p>
      * </li>
-     * <li><p><strong>PHOTINUS_LIVENESS</strong>: Blink + colorful light.</p>
+     * <li><p><strong>PHOTINUS_LIVENESS</strong>: Blinking and colorful light reflection.</p>
      * </li>
-     * <li><p><strong>MULTI_ACTION</strong>: Blink + head shake (the order of blink and head shake is random).</p>
+     * <li><p><strong>MULTI_ACTION</strong>: Blinking and head turning (the order is random).</p>
      * </li>
-     * <li><p><strong>MOVE_ACTION</strong> (recommended): Move closer/farther + blink.</p>
+     * <li><p><strong>MOVE_ACTION</strong> (recommended): Moving closer or farther and blinking.</p>
      * </li>
-     * <li><p><strong>MOVE_PHOTINUS</strong>: Move closer/farther + colorful light.</p>
+     * <li><p><strong>MOVE_PHOTINUS</strong>: Moving closer or farther and colorful light reflection.</p>
      * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><strong>The default liveness detection type</strong> is supported in the following versions:<ul>
+     * <li><strong>The default liveness detection type</strong> is supported in the following SDK versions:<ul>
      * <li>Android SDK 1.2.6 and later</li>
      * <li>iOS SDK 1.2.4 and later</li>
      * <li>Harmony SDK 1.0.0 and later</li>
      * </ul>
      * </li>
-     * <li>Other types are supported in the latest Android/iOS/Harmony SDK versions. Integrate the latest version.</li>
+     * <li>Other types are supported in the latest SDK versions for Android, iOS, and Harmony. We recommend that you integrate the latest SDK version.</li>
      * </ul>
      * </blockquote>
      * 
@@ -331,11 +347,11 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>Specifies whether to block authentication when multiple faces are detected on the device. Valid values:</p>
+     * <p>Specifies whether to intercept the request when multiple faces are detected on the terminal. Valid values:</p>
      * <ul>
-     * <li><p><strong>Y</strong>: Block. The client prompts the user to redo face recognition.</p>
+     * <li><p><strong>Y</strong>: Intercepts the request. The client prompts the user to scan the face again.</p>
      * </li>
-     * <li><p><strong>N</strong> (default): Do not block. The largest face in the frame is sent to the server for security detection.</p>
+     * <li><p><strong>N</strong> (default): Does not intercept the request. The largest face in the face scanning screen is sent to the server for security detection.</p>
      * </li>
      * </ul>
      * 
@@ -346,9 +362,9 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String needMultiFaceCheck;
 
     /**
-     * <p>The bucket name of the authorized OSS space.</p>
+     * <p>The name of the authorized OSS bucket.</p>
      * <blockquote>
-     * <p>Among the four image input methods (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</p>
+     * <p>You can specify only one of the following parameters to pass the image: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -358,9 +374,9 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String ossBucketName;
 
     /**
-     * <p>The file name in the authorized OSS space.</p>
+     * <p>The name of the object in the authorized OSS bucket.</p>
      * <blockquote>
-     * <p>Among the four image input methods (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</p>
+     * <p>You can specify only one of the following parameters to pass the image: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -371,7 +387,7 @@ public class InitFaceVerifyRequest extends TeaModel {
 
     /**
      * <p>The unique identifier of the merchant request.</p>
-     * <p>The value is a 32-character alphanumeric string. The first few characters are a custom abbreviation defined by the merchant, the middle part can use a time segment, and the last part can use a random or incremental sequence.</p>
+     * <p>The value is a 32-character alphanumeric string. The first few characters are a custom abbreviation of the merchant, the middle part can be a period of time, and the last part can be a random or incremental sequence.</p>
      * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
@@ -380,17 +396,17 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String outerOrderNo;
 
     /**
-     * <p>The degradation configuration when WebRTC or WebAssembly incompatibility occurs during mobile H5 authentication.</p>
+     * <p>The downgrade configuration when WebRTC or WebAssembly is incompatible during mobile H5 authentication. Valid values:</p>
      * <ul>
-     * <li><p><strong>keep</strong>: Degradation is not supported. The system returns directly.</p>
+     * <li><p><strong>keep</strong>: Downgrade is not supported. The result is directly returned.</p>
      * </li>
-     * <li><p><strong>url</strong> (default): Degradation is supported. An authentication URL is returned. The user opens or switches to a browser to authenticate using this URL.</p>
+     * <li><p><strong>url</strong> (default): Downgrade is supported. The authentication URL is returned. The user opens or switches to a browser by using this URL for authentication.</p>
      * </li>
-     * <li><p><strong>video</strong>: Degradation is supported. The system camera is used to record a 3-5 second blink video for authentication.</p>
+     * <li><p><strong>video</strong>: Downgrade is supported. The system camera is used to record a 3- to 5-second blinking video for authentication.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>When the degradation mode is Video, the following features become ineffective and product security is reduced. Configure this mode only for security scenarios.</p>
+     * <p>When the downgrade mode is set to video, the following features become invalid and product security is reduced. We recommend that you configure this mode only for security scenarios.</p>
      * <ul>
      * <li>The liveness detection type setting does not take effect.</li>
      * <li>The VideoEvidence feature is not supported.</li>
@@ -404,11 +420,11 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String procedurePriority;
 
     /**
-     * <p>A fixed value. This parameter varies depending on the product plan:</p>
+     * <p>The fixed value. The value of this parameter varies based on the product solution:</p>
      * <ul>
-     * <li>APP authentication plan: The fixed value is ID_PRO.</li>
-     * <li>Face liveness verification plan: The fixed value is PV_FV.</li>
-     * <li>Liveness detection plan: The fixed value is LR_FR.</li>
+     * <li>APP authentication solution: Set the value to ID_PRO.</li>
+     * <li>Face liveness verification solution: Set the value to PV_FV.</li>
+     * <li>Liveness detection solution: Set the value to LR_FR.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -418,11 +434,11 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>Specifies whether to enable the rare character mode:</p>
+     * <p>Specifies whether to enable the rare character mode. Valid values:</p>
      * <ul>
-     * <li><p><strong>Y</strong>: Enabled. An information input box pops up before authentication, requiring the user to enter the rare character name and ID card number and agree to the agreement before starting the authentication process.</p>
+     * <li><p><strong>Y</strong>: Enables the mode. Before authentication, an information input box appears. The user must enter the name with rare characters and the ID card number, and agree to the agreement before the authentication process starts.</p>
      * </li>
-     * <li><p><strong>N</strong>: Disabled (default).</p>
+     * <li><p><strong>N</strong>: Does not enable the mode. This is the default value.</p>
      * </li>
      * </ul>
      * 
@@ -433,15 +449,15 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String rarelyCharacters;
 
     /**
-     * <p>Specifies whether to read the certificate photo:</p>
+     * <p>Specifies whether to read the ID document photo. Valid values:</p>
      * <ul>
-     * <li><p><strong>Y</strong>: Read.</p>
+     * <li><p><strong>Y</strong>: Reads the photo.</p>
      * </li>
-     * <li><p><strong>N</strong>: Do not read.</p>
+     * <li><p><strong>N</strong>: Does not read the photo.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If the certificate face photo is needed in subsequent authentication steps, set this parameter to Y.</p>
+     * <p>If you need to use the face photo from the ID document in subsequent authentication steps, we recommend that you set this parameter to Y.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -451,7 +467,7 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String readImg;
 
     /**
-     * <p>The target URL to which the merchant business page redirects.</p>
+     * <p>The redirect URL for the merchant business page.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
@@ -460,7 +476,7 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String returnUrl;
 
     /**
-     * <p>The authentication scene ID.</p>
+     * <p>The ID of the authentication scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000006</p>
@@ -469,19 +485,19 @@ public class InitFaceVerifyRequest extends TeaModel {
     public Long sceneId;
 
     /**
-     * <p>The elderly-friendly configuration parameter. This parameter takes effect for each authentication request. You can select different parameters for each authentication request based on the business attributes, customer distribution, and operational characteristics of your app. Valid values:</p>
+     * <p>The age-friendly configuration parameter. This parameter takes effect for each authentication request. You can select different parameters for each authentication request based on the business property, customer distribution, and operation attribute of your app. The following options are available. Default value: 0.</p>
      * <ul>
-     * <li><p><strong>0</strong> (default): Disabled. The current authentication request does not enable elderly-friendly mode.</p>
+     * <li><p><strong>0</strong>: Disables the age-friendly pattern for the current authentication request.</p>
      * </li>
-     * <li><p><strong>1</strong>: Enabled. The current authentication request enables elderly-friendly mode.</p>
+     * <li><p><strong>1</strong>: Enables the age-friendly pattern for the current authentication request.</p>
      * </li>
-     * <li><p><strong>2</strong>: User choice.</p>
+     * <li><p><strong>2</strong>: Allows the user to select the pattern.</p>
      * </li>
      * </ul>
-     * <p>Allows end users to select the authentication mode. The product guide page provides two authentication entries: &quot;Start Authentication&quot; and &quot;Senior Authentication Mode&quot;. When the user selects &quot;Senior Authentication Mode&quot;, the system enters elderly-friendly mode.</p>
+     * <p>The end user can select the authentication pattern. The product guide page provides two authentication entries: Start Authentication and Senior Authentication Pattern. When the user selects Senior Authentication Pattern, the system enters the age-friendly pattern.</p>
      * <blockquote>
      * <ul>
-     * <li>The elderly-friendly parameter takes effect only when the liveness detection type <strong>Model</strong> is set to <strong>LIVENESS</strong> or <strong>MULTI_ACTION</strong>.</li>
+     * <li>The age-friendly parameter takes effect only when the liveness detection type <strong>Model</strong> is set to <strong>LIVENESS</strong> or <strong>MULTI_ACTION</strong>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -492,8 +508,8 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String suitableType;
 
     /**
-     * <p>The UI configuration file URL.</p>
-     * <p>You can view the complete configuration in <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/web-sdk-ui-custom-configuration-description">Web SDK UI custom configuration</a>.</p>
+     * <p>The URL of the UI configuration file.</p>
+     * <p>For the complete configuration, see <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/web-sdk-ui-custom-configuration-description">Web SDK UI custom configuration</a>.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -502,7 +518,7 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String uiCustomUrl;
 
     /**
-     * <p>The custom user ID defined by the business. Keep this value unique.</p>
+     * <p>The custom user ID in the customer business. Make sure that the ID is unique.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789</p>
@@ -511,8 +527,8 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>The certificate expiration date.</p>
-     * <p>This field is required when the certificate type <strong>CertType</strong> is set to <strong>PASSPORT</strong> and <strong>Mode</strong> is set to <strong>3</strong>.</p>
+     * <p>The expiration date of the ID document.</p>
+     * <p>This parameter is required when the <strong>CertType</strong> parameter is set to <strong>PASSPORT</strong> and the <strong>Mode</strong> parameter is set to <strong>3</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2039-06-10</p>
@@ -521,15 +537,15 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String validityDate;
 
     /**
-     * <p>Specifies whether to enable video evidence:</p>
+     * <p>Specifies whether to enable video evidence. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enabled.</p>
+     * <li><p><strong>true</strong>: Enables video evidence.</p>
      * </li>
-     * <li><p><strong>false</strong>: Disabled (default).</p>
+     * <li><p><strong>false</strong>: Does not enable video evidence. This is the default value.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>Because video files are large, the system discards video files to prioritize the transmission of essential authentication images when the network is unstable. Set video as a weak dependency in your business logic.</p>
+     * <p>Because video files are large, the system discards video files to prioritize the transmission of necessary authentication images when the network is unstable. We recommend that you set your business to weakly depend on videos.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -539,11 +555,11 @@ public class InitFaceVerifyRequest extends TeaModel {
     public String videoEvidence;
 
     /**
-     * <p>The custom voluntary content. This parameter is required when personalized settings are enabled. The format is a JSON string of a String List.</p>
+     * <p>The custom willingness content. This parameter is required when personalized settings are enabled. The value is a JSON string of a string list.</p>
      * <ul>
-     * <li><p>For read-aloud scenarios: The content cannot exceed 60 Chinese characters (excluding punctuation), and the List contains only 1 element.</p>
+     * <li><p>In the read-along scenario: The content cannot exceed 60 Chinese characters (excluding punctuation marks), and the list contains only one element.</p>
      * </li>
-     * <li><p>For Q&amp;A scenarios: A maximum of 3 questions can be set. Each question cannot exceed 30 Chinese characters. Each question is a separate element in the List.</p>
+     * <li><p>In the Q&amp;A scenario: You can configure up to three questions. Each question cannot exceed 30 Chinese characters, and each question is an element in the list.</p>
      * </li>
      * </ul>
      * 
@@ -662,12 +678,28 @@ public class InitFaceVerifyRequest extends TeaModel {
         return this.crop;
     }
 
+    public InitFaceVerifyRequest setEnableAlbumUpload(String enableAlbumUpload) {
+        this.enableAlbumUpload = enableAlbumUpload;
+        return this;
+    }
+    public String getEnableAlbumUpload() {
+        return this.enableAlbumUpload;
+    }
+
     public InitFaceVerifyRequest setEnableBeauty(String enableBeauty) {
         this.enableBeauty = enableBeauty;
         return this;
     }
     public String getEnableBeauty() {
         return this.enableBeauty;
+    }
+
+    public InitFaceVerifyRequest setEnableTts(String enableTts) {
+        this.enableTts = enableTts;
+        return this;
+    }
+    public String getEnableTts() {
+        return this.enableTts;
     }
 
     public InitFaceVerifyRequest setEncryptType(String encryptType) {

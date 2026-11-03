@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteControlStrategyRequest extends TeaModel {
     /**
-     * <p>The API name, same as <strong>ProductCode</strong>.</p>
+     * <p>The API name, which is the same as <strong>ProductCode</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>ID_PRO</p>
@@ -14,7 +14,7 @@ public class DeleteControlStrategyRequest extends TeaModel {
     public String apiName;
 
     /**
-     * <p>The security rule ID.</p>
+     * <p>The ID of the security rule.</p>
      * 
      * <strong>example:</strong>
      * <p>38</p>
@@ -23,7 +23,7 @@ public class DeleteControlStrategyRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The product type. Currently, only <strong>ANT_CLOUD_AUTH</strong> (financial-grade real-person authentication) is supported. All other types have been discontinued.</p>
+     * <p>The product type. Currently, only <strong>ANT_CLOUD_AUTH</strong> (financial-grade ID Verification) is supported. All other types are discontinued.</p>
      * 
      * <strong>example:</strong>
      * <p>ANT_CLOUD_AUTH</p>

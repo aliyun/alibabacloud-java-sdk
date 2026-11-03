@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAllCustomizeFlowStrategyRequest extends TeaModel {
     /**
-     * <p>The region ID.</p>
+     * <p>regionId</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>

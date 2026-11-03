@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeVerifyResultRequest extends TeaModel {
     /**
-     * <p>The verification ID. A unique ID that identifies a verification task. The value can be up to 64 characters in length. For a single verification task, the system supports unlimited submissions until the verification is passed and the task is completed.</p>
+     * <p>The verification ID. The unique ID that identifies a verification task. The ID can be up to 64 characters in length. For a single verification task, the system supports unlimited submissions until the verification is passed and the task is completed.</p>
      * <blockquote>
-     * <p>Use a different BizId for each verification task.</p>
+     * <p>You must use a different BizId when you initiate different verification tasks.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

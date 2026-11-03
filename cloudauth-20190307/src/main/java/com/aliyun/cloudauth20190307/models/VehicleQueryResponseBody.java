@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VehicleQueryResponseBody extends TeaModel {
     /**
-     * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
+     * <p>The return code. A value of 200 indicates success, and other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class VehicleQueryResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -79,8 +79,8 @@ public class VehicleQueryResponseBody extends TeaModel {
          * <p>The verification result code. Valid values:</p>
          * <blockquote>
          * <ul>
-         * <li>1: match found (billable).</li>
-         * <li>3: no record found (not billable).</li>
+         * <li>1: Found (billable).</li>
+         * <li>3: No record found (not billable).</li>
          * </ul>
          * </blockquote>
          * 
@@ -99,13 +99,13 @@ public class VehicleQueryResponseBody extends TeaModel {
          *     &quot;approvedLoad&quot;: 0,
          *     &quot;axleCount&quot;: 2,
          *     &quot;backWheelDistance&quot;: 1585,
-         *     &quot;brand&quot;: &quot;雷克萨斯&quot;,
+         *     &quot;brand&quot;: &quot;Lexus&quot;,
          *     &quot;compulsoryScrapTo&quot;: &quot;<strong><strong>-</strong>-** <strong>:</strong>:<strong>&quot;,
          *     &quot;displacement&quot;: 4608,
          *     &quot;engineNo&quot;: &quot;1UR0</strong>**</strong>&quot;,
          *     &quot;engineType&quot;: &quot;1**&quot;,
          *     &quot;frontWheelDistance&quot;: 1585,
-         *     &quot;fuelType&quot;: &quot;汽油&quot;,
+         *     &quot;fuelType&quot;: &quot;Gasoline&quot;,
          *     &quot;high&quot;: 1860,
          *     &quot;inspectionResultEffectiveTo&quot;: &quot;<strong><strong>-</strong>-** <strong>:</strong>:<strong>&quot;,
          *     &quot;modelNo&quot;: &quot;UR</strong>*</strong>-<strong><strong><strong>&quot;,
@@ -113,11 +113,11 @@ public class VehicleQueryResponseBody extends TeaModel {
          *     &quot;registrationDate&quot;: &quot;</strong></strong>-</strong>-** <strong>:</strong>:<strong>&quot;,
          *     &quot;releaseDate&quot;: &quot;&quot;,
          *     &quot;state&quot;: &quot;0&quot;,
-         *     &quot;stateDesc&quot;: &quot;正常&quot;,
+         *     &quot;stateDesc&quot;: &quot;Normal&quot;,
          *     &quot;totalMass&quot;: 2940,
          *     &quot;unladenMass&quot;: 2350,
          *     &quot;useProperty&quot;: 0,
-         *     &quot;usePropertyDesc&quot;: &quot;非营运&quot;,
+         *     &quot;usePropertyDesc&quot;: &quot;Non-commercial&quot;,
          *     &quot;long&quot;: 4890,
          *     &quot;vin&quot;: &quot;A</strong>*********&quot;,
          *     &quot;wheelBase&quot;: 2790,

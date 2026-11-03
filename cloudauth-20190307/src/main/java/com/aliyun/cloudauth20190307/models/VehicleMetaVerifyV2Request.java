@@ -9,8 +9,8 @@ public class VehicleMetaVerifyV2Request extends TeaModel {
      * <p>This parameter is required when VerifyMetaType is set to VEHICLE_3_META.</p>
      * <blockquote>
      * <ul>
-     * <li>If ParamType is set to normal, enter the plaintext value.</li>
-     * <li>If ParamType is set to md5, enter the first 6 digits of the ID card number in plaintext + the MD5-encrypted date of birth (32-bit lowercase MD5) + the last 4 digits of the ID card number.</li>
+     * <li>When paramType is set to normal, enter the plaintext.</li>
+     * <li>When paramType is set to md5, enter the first 6 digits of the ID card number in plaintext + the 32-bit lowercase MD5 hash of the birth date + the last 4 digits of the ID card number.</li>
      * </ul>
      * </blockquote>
      * 
@@ -24,7 +24,7 @@ public class VehicleMetaVerifyV2Request extends TeaModel {
      * <p>The parameter type. Valid values:</p>
      * <ul>
      * <li>normal: not encrypted.</li>
-     * <li>md5: MD5-encrypted.</li>
+     * <li>md5: MD5 encrypted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,13 +37,13 @@ public class VehicleMetaVerifyV2Request extends TeaModel {
      * <p>The name.</p>
      * <blockquote>
      * <ul>
-     * <li>If ParamType is set to normal, enter the plaintext value.</li>
-     * <li>If ParamType is set to md5, enter the MD5-encrypted first character of the name (32-bit lowercase MD5) + the remaining characters of the name in plaintext.</li>
+     * <li>When paramType is set to normal, enter the plaintext.</li>
+     * <li>When paramType is set to md5, enter the 32-bit lowercase MD5 hash of the first character of the name + the rest of the name in plaintext.</li>
      * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>张*</p>
+     * <p>Zhang*</p>
      */
     @NameInMap("UserName")
     public String userName;
@@ -52,13 +52,13 @@ public class VehicleMetaVerifyV2Request extends TeaModel {
      * <p>The license plate number.</p>
      * <blockquote>
      * <ul>
-     * <li>If ParamType is set to normal, enter the plaintext value.</li>
-     * <li>If ParamType is set to md5, enter the license plate number excluding the last two characters in plaintext + the MD5-encrypted last two characters (32-bit lowercase MD5).</li>
+     * <li>When paramType is set to normal, enter the plaintext.</li>
+     * <li>When paramType is set to md5, enter the license plate number except the last two characters in plaintext + the 32-bit lowercase MD5 hash of the last two characters of the license plate.</li>
      * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>陕A9****</p>
+     * <p>Shaanxi A9****</p>
      */
     @NameInMap("VehicleNum")
     public String vehicleNum;
@@ -73,11 +73,11 @@ public class VehicleMetaVerifyV2Request extends TeaModel {
     public String vehicleType;
 
     /**
-     * <p>The verification type.</p>
+     * <p>The verification type. Valid values:</p>
      * <blockquote>
      * <ul>
-     * <li>VEHICLE_2_META: two-element verification. Verifies the name and license plate number.</li>
-     * <li>VEHICLE_3_META: three-element verification. Verifies the name, license plate number, and ID card number.</li>
+     * <li>VEHICLE_2_META: two-element verification, which verifies the name and license plate number.</li>
+     * <li>VEHICLE_3_META: three-element verification, which verifies the name, license plate number, and ID card number.</li>
      * </ul>
      * </blockquote>
      * 

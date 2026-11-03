@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCardVerifyRequest extends TeaModel {
     /**
-     * <p>The verification request ID.
-     * You must first call the InitCardVerify operation to submit a verification request before you can obtain the verification request ID.</p>
+     * <p>The authentication request ID. You must call the InitCardVerify operation to submit an authentication request before you can obtain the authentication request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -16,9 +16,9 @@ public class DeleteBlackListStrategyRequest extends TeaModel {
     /**
      * <p>The product name. Valid values:</p>
      * <ul>
-     * <li><strong>id2meta</strong>: ID card two-element verification.</li>
-     * <li><strong>mobile3Meta</strong>: Mobile number element verification.</li>
-     * <li><strong>bankcardMeta</strong>: Bank card element verification.</li>
+     * <li><strong>id2meta</strong>: Two-element verification for ID cards.</li>
+     * <li><strong>mobile3Meta</strong>: Element verification for mobile phone numbers.</li>
+     * <li><strong>bankcardMeta</strong>: Element verification for bank cards.</li>
      * </ul>
      * 
      * <strong>example:</strong>

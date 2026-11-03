@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LivenessFaceVerifyResponseBody extends TeaModel {
     /**
-     * <p>The return code. <strong>200</strong> indicates that the API operation is successful.</p>
+     * <p>The response code. <strong>200</strong> indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class LivenessFaceVerifyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of this request.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -32,7 +32,7 @@ public class LivenessFaceVerifyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The response result.</p>
      */
     @NameInMap("ResultObject")
     public LivenessFaceVerifyResponseBodyResultObject resultObject;
@@ -76,7 +76,7 @@ public class LivenessFaceVerifyResponseBody extends TeaModel {
 
     public static class LivenessFaceVerifyResponseBodyResultObject extends TeaModel {
         /**
-         * <p>The unique identity of the ID Verification request.</p>
+         * <p>The unique identifier of the ID Verification request.</p>
          * 
          * <strong>example:</strong>
          * <p>91707dc296d469ad38e4c5efa6a0f24b</p>
@@ -85,7 +85,7 @@ public class LivenessFaceVerifyResponseBody extends TeaModel {
         public String certifyId;
 
         /**
-         * <p>The attachment information of the facial verification subject, including face quality, face attack detection, face or OCR images, and intent verification data.</p>
+         * <p>The supplementary information about the face verification subject, including face quality, face attack data, face or OCR images, and willingness verification data.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;faceAttack&quot;: &quot;F&quot;,&quot;facialPictureFront&quot;: {&quot;qualityScore&quot;: 88.3615493774414,&quot;verifyScore&quot;: 50.28594166529785}}</p>
@@ -109,7 +109,7 @@ public class LivenessFaceVerifyResponseBody extends TeaModel {
         public String passed;
 
         /**
-         * <p>The verification result code.</p>
+         * <p>The authentication result code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>

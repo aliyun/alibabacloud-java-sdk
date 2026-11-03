@@ -6,18 +6,17 @@ import com.aliyun.tea.*;
 public class Id2MetaVerifyRequest extends TeaModel {
     /**
      * <p>The ID card number.</p>
-     * <p>Note
-     * Only second-generation resident ID card numbers and Hong Kong, Macao, and Taiwan residence permit numbers are supported.</p>
+     * <p>Note: Only the numbers of second-generation resident identity cards and residence permits for Hong Kong, Macao, and Taiwan residents are supported.</p>
      * <ul>
-     * <li><p>If ParamType is set to normal, enter the ID card number in plaintext.</p>
+     * <li><p>If you set paramType to normal, enter the ID card number in plaintext.</p>
      * </li>
-     * <li><p>If ParamType is set to md5, the format is: first 6 digits of the ID card number (plaintext) + date of birth (ciphertext) + last 4 digits of the ID card number (plaintext).</p>
+     * <li><p>If you set paramType to md5, enter the first 6 digits of the ID card number in plaintext, the date of birth in ciphertext, and the last 4 digits of the ID card number in plaintext.</p>
      * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>明文：429001********8211</p>
-     * <p>密文：</p>
+     * <p>Plaintext: 429001********8211</p>
+     * <p>Ciphertext:</p>
      * <p>42900132fa7bcd874161bea8ec8fd98f390ec98211</p>
      */
     @NameInMap("IdentifyNum")
@@ -28,7 +27,7 @@ public class Id2MetaVerifyRequest extends TeaModel {
      * <ul>
      * <li><p>normal: plaintext without encryption</p>
      * </li>
-     * <li><p>md5: MD5 encryption.</p>
+     * <li><p>md5: MD5 encryption</p>
      * </li>
      * </ul>
      * 
@@ -41,16 +40,16 @@ public class Id2MetaVerifyRequest extends TeaModel {
     /**
      * <p>The name.</p>
      * <ul>
-     * <li><p>If ParamType is set to normal, enter the name in plaintext.</p>
+     * <li><p>If you set paramType to normal, enter the name in plaintext.</p>
      * </li>
-     * <li><p>If ParamType is set to md5, the format is: first character of the name (ciphertext) + remaining characters of the name (plaintext).</p>
+     * <li><p>If you set paramType to md5, enter the first character of the name in ciphertext and the rest of the name in plaintext.</p>
      * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>明文：张三</p>
-     * <p>密文：</p>
-     * <p>6499fc7409049355527ef6a2ba5706b8三​</p>
+     * <p>Plaintext: Zhang San</p>
+     * <p>Ciphertext:</p>
+     * <p>6499fc7409049355527ef6a2ba5706b8San</p>
      */
     @NameInMap("UserName")
     public String userName;

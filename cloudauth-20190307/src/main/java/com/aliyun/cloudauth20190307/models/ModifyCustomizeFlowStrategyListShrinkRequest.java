@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCustomizeFlowStrategyListShrinkRequest extends TeaModel {
     /**
-     * <p>The product type. Currently, only <strong>ANT_CLOUD_AUTH</strong> (financial-grade ID Verification) is supported. All other types have been discontinued.</p>
+     * <p>The product type. Currently, only <strong>ANT_CLOUD_AUTH</strong> (Financial-grade ID Verification) is supported. All other product types are retired.</p>
      * 
      * <strong>example:</strong>
      * <p>ANT_CLOUD_AUTH</p>
@@ -14,7 +14,7 @@ public class ModifyCustomizeFlowStrategyListShrinkRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The policy list.</p>
+     * <p>The list of policies.</p>
      */
     @NameInMap("StrategyObject")
     public String strategyObjectShrink;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MobileOnlineStatusResponseBody extends TeaModel {
     /**
-     * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
+     * <p>The return code. A value of 200 indicates success, and other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class MobileOnlineStatusResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class MobileOnlineStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result information.</p>
+     * <p>The returned result information.</p>
      */
     @NameInMap("ResultObject")
     public MobileOnlineStatusResponseBodyResultObject resultObject;
@@ -78,9 +78,9 @@ public class MobileOnlineStatusResponseBody extends TeaModel {
         /**
          * <p>The verification result. Valid values:</p>
          * <ul>
-         * <li>1: active and available. </li>
-         * <li>2: not in an active and available state. For more information, see subCode.</li>
-         * <li>3: no query result.</li>
+         * <li>1: Available on the network. </li>
+         * <li>2: Unavailable on the network. For more information, see subCode.</li>
+         * <li>3: No query result.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class MobileOnlineStatusResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>The name of the telecommunications service provider. Valid values:</p>
+         * <p>The name of the Internet service provider (ISP). Valid values:</p>
          * <ul>
          * <li>CMCC: China Mobile. </li>
          * <li>CUCC: China Unicom. </li>
@@ -106,12 +106,12 @@ public class MobileOnlineStatusResponseBody extends TeaModel {
         /**
          * <p>The verification details. Valid values:</p>
          * <ul>
-         * <li>101: active and available. </li>
-         * <li>201: suspended. </li>
-         * <li>202: canceled. </li>
-         * <li>203: active but unavailable. </li>
-         * <li>204: not active. </li>
-         * <li>301: no record found.</li>
+         * <li>101: Available on the network. </li>
+         * <li>201: Suspended. </li>
+         * <li>202: Canceled. </li>
+         * <li>203: On the network but unavailable. </li>
+         * <li>204: Not on the network. </li>
+         * <li>301: No record found.</li>
          * </ul>
          * 
          * <strong>example:</strong>

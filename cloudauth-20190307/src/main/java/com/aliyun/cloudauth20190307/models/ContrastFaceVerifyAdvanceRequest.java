@@ -8,13 +8,13 @@ public class ContrastFaceVerifyAdvanceRequest extends TeaModel {
      * <p>The real name.</p>
      * 
      * <strong>example:</strong>
-     * <p>张三</p>
+     * <p>Zhang San</p>
      */
     @NameInMap("CertName")
     public String certName;
 
     /**
-     * <p>The certificate number.</p>
+     * <p>The ID document number.</p>
      * 
      * <strong>example:</strong>
      * <p>330103xxxxxxxxxxxx</p>
@@ -23,8 +23,7 @@ public class ContrastFaceVerifyAdvanceRequest extends TeaModel {
     public String certNo;
 
     /**
-     * <p>The certificate type.
-     * Currently only ID cards are supported. You must set this parameter to IDENTITY_CARD.</p>
+     * <p>The type of the ID document. Only ID cards are supported. Set the value to IDENTITY_CARD.</p>
      * 
      * <strong>example:</strong>
      * <p>IDENTITY_CARD</p>
@@ -33,9 +32,9 @@ public class ContrastFaceVerifyAdvanceRequest extends TeaModel {
     public String certType;
 
     /**
-     * <p>The CertifyId from a previous successful ID Verification. The photo from that verification is used as the comparison photo.</p>
+     * <p>The CertifyId of a previous successful ID Verification. The photo used in the previous verification is used as the comparison photo.</p>
      * <blockquote>
-     * <p>Among the four methods of passing in images (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</p>
+     * <p>You can use only one of the following methods to upload the image: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,10 +46,8 @@ public class ContrastFaceVerifyAdvanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to allow cropping of the face image. Valid values:</p>
      * <ul>
-     * <li><p>T: Allowed.</p>
-     * </li>
-     * <li><p>F (default): Not allowed.</p>
-     * </li>
+     * <li>T: Cropping is allowed.</li>
+     * <li>F: Cropping is not allowed. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,7 +66,7 @@ public class ContrastFaceVerifyAdvanceRequest extends TeaModel {
     public String deviceToken;
 
     /**
-     * <p>The encryption type. An empty value indicates no encryption.</p>
+     * <p>The encryption type. An empty value indicates that encryption is not used.</p>
      * 
      * <strong>example:</strong>
      * <p>SM2</p>
@@ -81,7 +78,7 @@ public class ContrastFaceVerifyAdvanceRequest extends TeaModel {
      * <p>The local video file.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("FaceContrastFile")
     public java.io.InputStream faceContrastFileObject;
@@ -96,9 +93,9 @@ public class ContrastFaceVerifyAdvanceRequest extends TeaModel {
     public String faceContrastPicture;
 
     /**
-     * <p>The OSS photo URL. Currently only authorized OSS photo URLs are supported.</p>
+     * <p>The URL of the photo in OSS. Only authorized OSS photo URLs are supported.</p>
      * <blockquote>
-     * <p>Among the four methods of passing in images (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</p>
+     * <p>You can use only one of the following methods to upload the image: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -126,7 +123,7 @@ public class ContrastFaceVerifyAdvanceRequest extends TeaModel {
     public String mobile;
 
     /**
-     * <p>The liveness detection type.</p>
+     * <p>The type of liveness detection.</p>
      * 
      * <strong>example:</strong>
      * <p>FRONT_CAMERA_LIVENESS</p>
@@ -135,9 +132,9 @@ public class ContrastFaceVerifyAdvanceRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>The bucket name of the authorized OSS space.</p>
+     * <p>The name of the authorized OSS bucket.</p>
      * <blockquote>
-     * <p>Among the four methods of passing in images (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</p>
+     * <p>You can use only one of the following methods to upload the image: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -147,9 +144,9 @@ public class ContrastFaceVerifyAdvanceRequest extends TeaModel {
     public String ossBucketName;
 
     /**
-     * <p>The file name in the authorized OSS space.</p>
+     * <p>The name of the object in the authorized OSS bucket.</p>
      * <blockquote>
-     * <p>Among the four methods of passing in images (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</p>
+     * <p>You can use only one of the following methods to upload the image: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -159,8 +156,7 @@ public class ContrastFaceVerifyAdvanceRequest extends TeaModel {
     public String ossObjectName;
 
     /**
-     * <p>The unique identifier of the merchant request.
-     * The value is a 32-character alphanumeric string. The first few characters are a custom abbreviation defined by the merchant, the middle part can be a time segment, and the last part can be a random or incremental sequence.</p>
+     * <p>The unique identifier of the merchant request. The value is a 32-character alphanumeric string. The first few characters are a custom abbreviation of the merchant, the middle part can be a period of time, and the last part can be a random or incremental sequence.</p>
      * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
@@ -169,7 +165,7 @@ public class ContrastFaceVerifyAdvanceRequest extends TeaModel {
     public String outerOrderNo;
 
     /**
-     * <p>Fixed value: ID_MIN.</p>
+     * <p>The product code. Set the value to ID_MIN.</p>
      * 
      * <strong>example:</strong>
      * <p>ID_MIN</p>
@@ -178,7 +174,7 @@ public class ContrastFaceVerifyAdvanceRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The verification scenario ID.</p>
+     * <p>The ID of the authentication scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000006</p>
@@ -187,7 +183,7 @@ public class ContrastFaceVerifyAdvanceRequest extends TeaModel {
     public Long sceneId;
 
     /**
-     * <p>The custom user ID defined by the business.</p>
+     * <p>The custom user ID in the customer\&quot;s business system.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789</p>

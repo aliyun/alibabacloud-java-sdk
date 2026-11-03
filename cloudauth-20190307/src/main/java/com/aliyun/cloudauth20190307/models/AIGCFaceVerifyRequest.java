@@ -7,7 +7,7 @@ public class AIGCFaceVerifyRequest extends TeaModel {
     /**
      * <p>The Base64-encoded photo.</p>
      * <blockquote>
-     * <p>You can use one of the following methods to pass in the image: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</p>
+     * <p>You can pass the image by using one of the following methods: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class AIGCFaceVerifyRequest extends TeaModel {
     public String faceContrastPicture;
 
     /**
-     * <p>The URL of the face image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
+     * <p>The URL of the portrait image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
      * <blockquote>
-     * <p>You can use one of the following methods to pass in the image: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</p>
+     * <p>You can pass the image by using one of the following methods: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,9 +29,9 @@ public class AIGCFaceVerifyRequest extends TeaModel {
     public String faceContrastPictureUrl;
 
     /**
-     * <p>The name of the authorized OSS bucket.</p>
+     * <p>The name of the authorized Object Storage Service (OSS) bucket.</p>
      * <blockquote>
-     * <p>You can use one of the following methods to pass in the image: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</p>
+     * <p>You can pass the image by using one of the following methods: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,9 +41,9 @@ public class AIGCFaceVerifyRequest extends TeaModel {
     public String ossBucketName;
 
     /**
-     * <p>The file name in the authorized OSS bucket.</p>
+     * <p>The name of the object in the authorized OSS bucket.</p>
      * <blockquote>
-     * <p>You can use one of the following methods to pass in the image: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</p>
+     * <p>You can pass the image by using one of the following methods: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class AIGCFaceVerifyRequest extends TeaModel {
     public String ossObjectName;
 
     /**
-     * <p>The custom business unique identifier on the client side, which is used for subsequent troubleshooting. The value can contain up to 32 characters, including letters and digits. Make sure the value is unique.</p>
+     * <p>The custom unique business identifier on the customer\&quot;s server, which is used for subsequent troubleshooting. The value can be up to 32 characters in length and can contain letters and digits. Make sure that the value is unique.</p>
      * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
@@ -71,7 +71,7 @@ public class AIGCFaceVerifyRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The ID of the verification scenario. This ID is automatically generated after you create a verification scenario in the console. For more information about how to create a verification scenario, refer to Add a verification scenario.</p>
+     * <p>The ID of the authentication scenario. This ID is automatically generated after you create an authentication scenario in the console. For more information about how to create an authentication scenario, see Add an authentication scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>100000xxxx</p>

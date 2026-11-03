@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAllCustomizeFlowStrategyResponseBody extends TeaModel {
     /**
-     * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
+     * <p>The return code. A value of 200 indicates success, and other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,7 +41,7 @@ public class DeleteAllCustomizeFlowStrategyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>8FC3D6AC-9FED-4311-8DA7-C4BF47D9F260</p>
@@ -50,7 +50,7 @@ public class DeleteAllCustomizeFlowStrategyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the response is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

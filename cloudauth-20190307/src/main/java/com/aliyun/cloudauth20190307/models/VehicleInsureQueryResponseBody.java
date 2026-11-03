@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VehicleInsureQueryResponseBody extends TeaModel {
     /**
-     * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
+     * <p>The return code. A value of 200 indicates success, and other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class VehicleInsureQueryResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message of the request.</p>
+     * <p>The response message for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class VehicleInsureQueryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result information.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("ResultObject")
     public VehicleInsureQueryResponseBodyResultObject resultObject;
@@ -79,8 +79,8 @@ public class VehicleInsureQueryResponseBody extends TeaModel {
          * <p>The verification result code. Valid values:</p>
          * <blockquote>
          * <ul>
-         * <li>1: record found (billable).</li>
-         * <li>3: no record found (not billable).</li>
+         * <li>1: Found (billable).</li>
+         * <li>3: No record found (not billable).</li>
          * </ul>
          * </blockquote>
          * 

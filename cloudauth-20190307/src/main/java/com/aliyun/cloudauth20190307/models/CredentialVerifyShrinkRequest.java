@@ -16,21 +16,21 @@ public class CredentialVerifyShrinkRequest extends TeaModel {
     /**
      * <p>The credential name. Valid values:</p>
      * <ul>
-     * <li>01: personal card and certificate<ul>
+     * <li>01: Personal cards and certificates<ul>
      * <li>0101: ID card</li>
-     * <li>0102: bank card</li>
-     * <li>0104: teacher qualification certificate</li>
-     * <li>0107: student ID card</li>
+     * <li>0102: Bank card</li>
+     * <li>0104: Teacher qualification certificate</li>
+     * <li>0107: Student ID card</li>
      * </ul>
      * </li>
-     * <li>02: business scenario<ul>
-     * <li>0201: storefront photo</li>
-     * <li>0202: counter photo</li>
-     * <li>0203: scene photo</li>
+     * <li>02: Business scenarios<ul>
+     * <li>0201: Storefront photo</li>
+     * <li>0202: Counter photo</li>
+     * <li>0203: Scene photo</li>
      * </ul>
      * </li>
-     * <li>03: enterprise qualification<ul>
-     * <li>0301: business license.</li>
+     * <li>03: Enterprise qualifications<ul>
+     * <li>0301: Business license</li>
      * </ul>
      * </li>
      * </ul>
@@ -44,9 +44,9 @@ public class CredentialVerifyShrinkRequest extends TeaModel {
     /**
      * <p>The credential type. Valid values:</p>
      * <ul>
-     * <li>01: personal card and certificate</li>
-     * <li>02: business scenario</li>
-     * <li>03: enterprise qualification.</li>
+     * <li>01: Personal cards and certificates.</li>
+     * <li>02: Business scenarios.</li>
+     * <li>03: Enterprise qualifications.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class CredentialVerifyShrinkRequest extends TeaModel {
     public String identifyNum;
 
     /**
-     * <p>The Base64-encoded image. Specify either imageUrl or imageContext.</p>
+     * <p>The Base64-encoded image content. You must specify either imageUrl or imageContext.</p>
      * 
      * <strong>example:</strong>
      * <p>base64</p>
@@ -74,7 +74,7 @@ public class CredentialVerifyShrinkRequest extends TeaModel {
     public String imageContext;
 
     /**
-     * <p>The image URL. Specify either imageUrl or imageContext.</p>
+     * <p>The image URL. You must specify either imageUrl or imageContext.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://marry.momocdn.com/avatar/3B/B6/3BB6527E-7467-926E-1048-B43614F20CC420230803_L.jpg">http://marry.momocdn.com/avatar/3B/B6/3BB6527E-7467-926E-1048-B43614F20CC420230803_L.jpg</a></p>
@@ -85,8 +85,8 @@ public class CredentialVerifyShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable authoritative verification. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Disabled.</li>
-     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong><strong>0</strong></strong>: No.</li>
+     * <li><strong>1</strong>: Yes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -98,10 +98,10 @@ public class CredentialVerifyShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable optical character recognition (OCR). Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Disabled.</li>
-     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: No.</li>
+     * <li><strong>1</strong>: Yes.</li>
      * </ul>
-     * <p>You can set <strong>isOCR</strong> to <strong>1</strong> only when <strong>CredType</strong> is set to <strong>01</strong>.</p>
+     * <p>You can set this parameter to <strong>1</strong> only when <strong>CredType</strong> is set to <strong>01</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,16 +110,16 @@ public class CredentialVerifyShrinkRequest extends TeaModel {
     public String isOCR;
 
     /**
-     * <p>This parameter is required when PromptModel is set to DEFAULT.</p>
+     * <p>The merchant details. This parameter is required when PromptModel is set to DEFAULT.</p>
      */
     @NameInMap("MerchantDetail")
     public String merchantDetailShrink;
 
     /**
-     * <p>The merchant ID. This parameter is required when <strong>CredName</strong> is set to <strong>02</strong>.</p>
+     * <p>The merchant ID. This parameter is required when <strong><strong>CredName</strong></strong> is set to <strong>02</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>无。</p>
+     * <p>None</p>
      */
     @NameInMap("MerchantId")
     public String merchantId;
@@ -127,15 +127,15 @@ public class CredentialVerifyShrinkRequest extends TeaModel {
     /**
      * <p>The call mode. Valid values:</p>
      * <ul>
-     * <li><p>ANTI_FAKE_CHECK: image anti-forgery detection.</p>
+     * <li><p>ANTI_FAKE_CHECK: Image anti-counterfeiting detection.</p>
      * </li>
-     * <li><p>ANTI_FAKE_VL: image anti-forgery detection and semantic understanding.</p>
+     * <li><p>ANTI_FAKE_VL: Image anti-counterfeiting detection and semantic understanding.</p>
      * </li>
-     * <li><p>IMAGE_VL_COG: image semantic understanding.</p>
+     * <li><p>IMAGE_VL_COG: Image semantic understanding.</p>
      * </li>
      * </ul>
      * <p>Default value: ANTI_FAKE_CHECK.</p>
-     * <p>ProductCode can be set to ANTI_FAKE_VL or IMAGE_VL_COG only when CredType is set to 02.</p>
+     * <p>You can set this parameter to ANTI_FAKE_VL or IMAGE_VL_COG only when CredType is set to 02.</p>
      * 
      * <strong>example:</strong>
      * <p>ANTI_FAKE_CHECK</p>
@@ -148,7 +148,7 @@ public class CredentialVerifyShrinkRequest extends TeaModel {
      * <p>This parameter is required when PromptModel is set to CUSTOM.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("Prompt")
     public String prompt;
@@ -156,9 +156,9 @@ public class CredentialVerifyShrinkRequest extends TeaModel {
     /**
      * <p>The method to obtain the prompt for image semantic understanding. Valid values:</p>
      * <ul>
-     * <li><p>DEFAULT: system default.</p>
+     * <li><p>DEFAULT: System default.</p>
      * </li>
-     * <li><p>CUSTOM: custom.</p>
+     * <li><p>CUSTOM: Custom.</p>
      * </li>
      * </ul>
      * <p>Note: This parameter is required when ProductCode is set to ANTI_FAKE_VL or IMAGE_VL_COG.</p>
@@ -173,7 +173,7 @@ public class CredentialVerifyShrinkRequest extends TeaModel {
      * <p>The name.</p>
      * 
      * <strong>example:</strong>
-     * <p>张*</p>
+     * <p>Zhang*</p>
      */
     @NameInMap("UserName")
     public String userName;

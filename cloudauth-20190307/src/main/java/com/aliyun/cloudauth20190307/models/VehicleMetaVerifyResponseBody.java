@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VehicleMetaVerifyResponseBody extends TeaModel {
     /**
-     * <p>The return code. <strong>200</strong> indicates that the request was successful.</p>
+     * <p>The return code. <strong>200</strong> indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class VehicleMetaVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class VehicleMetaVerifyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result information.</p>
+     * <p>The returned result information.</p>
      */
     @NameInMap("ResultObject")
     public VehicleMetaVerifyResponseBodyResultObject resultObject;

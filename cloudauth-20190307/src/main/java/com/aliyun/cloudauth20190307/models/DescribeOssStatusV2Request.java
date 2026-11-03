@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeOssStatusV2Request extends TeaModel {
     /**
-     * <p>The ServiceCode of the ID Verification product. Valid values:</p>
+     * <p>The ServiceCode of the ID Verification cloud service. Valid values:</p>
      * <ul>
-     * <li><strong>antcloudauth</strong>: financial-grade ID Verification.</li>
-     * <li><strong>cloudauthst (discontinued)</strong>: enhanced ID Verification.</li>
+     * <li><strong>antcloudauth</strong>: Financial-grade ID Verification.</li>
+     * <li><strong>cloudauthst</strong> (retired): ID Verification Enhanced Edition.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeOssStatusV2Request extends TeaModel {
     public String serviceCode;
 
     /**
-     * <p>The source IP address of the visitor.</p>
+     * <p>The source IP address of the requester.</p>
      * 
      * <strong>example:</strong>
      * <p>120.25.41.25</p>

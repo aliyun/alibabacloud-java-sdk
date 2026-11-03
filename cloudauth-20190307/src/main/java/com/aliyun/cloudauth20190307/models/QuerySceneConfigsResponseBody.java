@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySceneConfigsResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -14,7 +14,7 @@ public class QuerySceneConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of intent verification configurations.</p>
+     * <p>The list of willingness configurations.</p>
      */
     @NameInMap("sceneConfigs")
     public java.util.List<QuerySceneConfigsResponseBodySceneConfigs> sceneConfigs;
@@ -42,7 +42,7 @@ public class QuerySceneConfigsResponseBody extends TeaModel {
 
     public static class QuerySceneConfigsResponseBodySceneConfigs extends TeaModel {
         /**
-         * <p>The specific configuration content, in JSON string format.</p>
+         * <p>The specific configuration content, which is a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;faceCompareMode\&quot;:\&quot;CUSTOM\&quot;,\&quot;certConfigs\&quot;:[{\&quot;index\&quot;:0,\&quot;openVoiceCompare\&quot;:false,\&quot;openCustomizedContent\&quot;:true,\&quot;model\&quot;:\&quot;QA\&quot;}],\&quot;screenEvidence\&quot;:true}</p>
@@ -78,7 +78,7 @@ public class QuerySceneConfigsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The scenario ID.</p>
+         * <p>The scene ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000009045</p>
@@ -96,7 +96,7 @@ public class QuerySceneConfigsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The version number of the scenario configuration.</p>
+         * <p>The scene configuration version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

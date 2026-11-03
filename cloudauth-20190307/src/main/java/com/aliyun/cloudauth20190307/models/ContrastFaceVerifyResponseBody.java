@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ContrastFaceVerifyResponseBody extends TeaModel {
     /**
-     * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
+     * <p>The return code. A value of 200 indicates success, and other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -85,7 +85,7 @@ public class ContrastFaceVerifyResponseBody extends TeaModel {
         public String certifyId;
 
         /**
-         * <p>The subject information of the verification. This is returned as empty in common verification scenarios.</p>
+         * <p>The information of the authenticated subject. This parameter is empty in common authentication scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -94,7 +94,7 @@ public class ContrastFaceVerifyResponseBody extends TeaModel {
         public String identityInfo;
 
         /**
-         * <p>The supplementary material information of the verification subject, primarily image-based materials, in JSON format as follows.</p>
+         * <p>The attachment information of the authenticated subject, which mainly includes image materials. The value is in JSON format as follows.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;faceAttack&quot;: &quot;F&quot;,&quot;facialPictureFront&quot;: {&quot;qualityScore&quot;: 88.3615493774414,&quot;verifyScore&quot;: 50.28594166529785}}</p>
@@ -103,7 +103,7 @@ public class ContrastFaceVerifyResponseBody extends TeaModel {
         public String materialInfo;
 
         /**
-         * <p>Indicates whether the verification is passed. A value of T indicates passed. A value of F indicates not passed.</p>
+         * <p>Indicates whether the verification is passed. A value of T indicates that the verification is passed, and a value of F indicates that the verification fails.</p>
          * 
          * <strong>example:</strong>
          * <p>T</p>
@@ -112,7 +112,7 @@ public class ContrastFaceVerifyResponseBody extends TeaModel {
         public String passed;
 
         /**
-         * <p>The verification result description. For more information, see the SubCode description below.</p>
+         * <p>The description of the authentication result. For more information, see the SubCode description below.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>

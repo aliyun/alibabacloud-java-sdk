@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class MobileOnlineStatusRequest extends TeaModel {
     /**
-     * <p>The phone number. Valid values:</p>
+     * <p>The mobile phone number.</p>
      * <ul>
-     * <li>If paramType is set to normal, pass in the phone number in plaintext.</li>
-     * <li>If paramType is set to md5, pass in the MD5-encrypted phone number.</li>
+     * <li>If paramType is set to normal, specify the plaintext mobile phone number.</li>
+     * <li>If paramType is set to md5, specify the ciphertext mobile phone number.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +20,8 @@ public class MobileOnlineStatusRequest extends TeaModel {
     /**
      * <p>The parameter type. Valid values:</p>
      * <ul>
-     * <li>normal: not encrypted.</li>
-     * <li>md5: MD5-encrypted.</li>
+     * <li>normal: Not encrypted.</li>
+     * <li>md5: MD5 encrypted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
