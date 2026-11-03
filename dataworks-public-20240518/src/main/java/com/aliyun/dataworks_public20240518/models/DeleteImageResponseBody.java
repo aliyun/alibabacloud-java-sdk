@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteImageResponseBody extends TeaModel {
     /**
-     * <p>The result of the API request.</p>
+     * <p>The API request result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class DeleteImageResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
@@ -23,7 +23,7 @@ public class DeleteImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

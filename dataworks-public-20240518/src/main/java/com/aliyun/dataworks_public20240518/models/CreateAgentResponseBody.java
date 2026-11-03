@@ -42,7 +42,7 @@ public class CreateAgentResponseBody extends TeaModel {
 
     public static class CreateAgentResponseBodyAgentExpertSuites extends TeaModel {
         /**
-         * <p>创建时不返回；请使用 GetAgent 显式查询已发布版本获取固定的官方套件制品版本。</p>
+         * <p>This parameter is not returned upon creation. Call GetAgent to explicitly query the published version to obtain the fixed official suite artifact version.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1.0.202610211408</p>
@@ -51,6 +51,8 @@ public class CreateAgentResponseBody extends TeaModel {
         public String packageVersion;
 
         /**
+         * <p>The source of the expert suite.</p>
+         * 
          * <strong>example:</strong>
          * <p>OFFICIAL</p>
          */
@@ -58,6 +60,8 @@ public class CreateAgentResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The ID of the expert suite.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataworks-data-analysis-extension</p>
          */
@@ -65,11 +69,22 @@ public class CreateAgentResponseBody extends TeaModel {
         public String suiteId;
 
         /**
+         * <p>The release version number of the custom suite.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Version")
         public Integer version;
+
+        /**
+         * <p>The saved version selection strategy is returned only for personal or enterprise resources and is mutually exclusive with the fixed integer Version. It does not represent the specific revision actually loaded in the session. This parameter is not returned for official resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>^1.2.3</p>
+         */
+        @NameInMap("VersionSelector")
+        public String versionSelector;
 
         public static CreateAgentResponseBodyAgentExpertSuites build(java.util.Map<String, ?> map) throws Exception {
             CreateAgentResponseBodyAgentExpertSuites self = new CreateAgentResponseBodyAgentExpertSuites();
@@ -108,10 +123,20 @@ public class CreateAgentResponseBody extends TeaModel {
             return this.version;
         }
 
+        public CreateAgentResponseBodyAgentExpertSuites setVersionSelector(String versionSelector) {
+            this.versionSelector = versionSelector;
+            return this;
+        }
+        public String getVersionSelector() {
+            return this.versionSelector;
+        }
+
     }
 
     public static class CreateAgentResponseBodyAgentSkills extends TeaModel {
         /**
+         * <p>The name of the custom skill.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-business-skill</p>
          */
@@ -119,7 +144,7 @@ public class CreateAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>创建时不返回；请使用 GetAgent 显式查询已发布版本获取固定的官方制品版本。</p>
+         * <p>This parameter is not returned upon creation. Call GetAgent to explicitly query the published version to obtain the fixed official artifact version.</p>
          * 
          * <strong>example:</strong>
          * <p>0.6.0.202608201110</p>
@@ -128,6 +153,8 @@ public class CreateAgentResponseBody extends TeaModel {
         public String packageVersion;
 
         /**
+         * <p>The ID of the official skill.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataworks-semantic</p>
          */
@@ -135,6 +162,8 @@ public class CreateAgentResponseBody extends TeaModel {
         public String skillId;
 
         /**
+         * <p>The source of the skill.</p>
+         * 
          * <strong>example:</strong>
          * <p>OFFICIAL</p>
          */
@@ -142,11 +171,22 @@ public class CreateAgentResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The release version number of the custom skill.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Version")
         public Integer version;
+
+        /**
+         * <p>The saved version selection strategy is returned only for personal or enterprise resources and is mutually exclusive with the fixed integer Version. It does not represent the specific revision actually loaded in the session. This parameter is not returned for official resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>^1.2.3</p>
+         */
+        @NameInMap("VersionSelector")
+        public String versionSelector;
 
         public static CreateAgentResponseBodyAgentSkills build(java.util.Map<String, ?> map) throws Exception {
             CreateAgentResponseBodyAgentSkills self = new CreateAgentResponseBodyAgentSkills();
@@ -193,17 +233,25 @@ public class CreateAgentResponseBody extends TeaModel {
             return this.version;
         }
 
+        public CreateAgentResponseBodyAgentSkills setVersionSelector(String versionSelector) {
+            this.versionSelector = versionSelector;
+            return this;
+        }
+        public String getVersionSelector() {
+            return this.versionSelector;
+        }
+
     }
 
     public static class CreateAgentResponseBodyAgent extends TeaModel {
         /**
-         * <p>已保存的套件引用。官方资源返回来源及目录 ID；发布后的制品版本由 PackageVersion 表示。</p>
+         * <p>The saved suite references. Official resources return the source and directory ID. The published artifact version is represented by PackageVersion.</p>
          */
         @NameInMap("ExpertSuites")
         public java.util.List<CreateAgentResponseBodyAgentExpertSuites> expertSuites;
 
         /**
-         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The creation time, in milliseconds.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +261,7 @@ public class CreateAgentResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The last modification time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The last modification time, in milliseconds.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -232,7 +280,7 @@ public class CreateAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>已保存的 Skill 引用；官方 Skill 在 Agent 发布后返回固定的 PackageVersion。</p>
+         * <p>The saved skill references. For official skills, a fixed PackageVersion is returned after the agent is published.</p>
          */
         @NameInMap("Skills")
         public java.util.List<CreateAgentResponseBodyAgentSkills> skills;

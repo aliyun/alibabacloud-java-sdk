@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LoadAgentSessionRequest extends TeaModel {
     /**
-     * <p>The client-generated request ID, which is returned in the response.</p>
+     * <p>The ID provided by the requester. This ID is echoed back as is.</p>
      * 
      * <strong>example:</strong>
      * <p>4as3dasf654a</p>
@@ -14,7 +14,7 @@ public class LoadAgentSessionRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The JSON-RPC version. The value must be <code>2.0</code>.</p>
+     * <p>The JSON-RPC version. Fixed to 2.0.</p>
      * 
      * <strong>example:</strong>
      * <p>2.0</p>
@@ -23,7 +23,7 @@ public class LoadAgentSessionRequest extends TeaModel {
     public String jsonrpc;
 
     /**
-     * <p>Business parameters.</p>
+     * <p>The business parameters.</p>
      */
     @NameInMap("Params")
     public LoadAgentSessionRequestParams params;
@@ -59,7 +59,7 @@ public class LoadAgentSessionRequest extends TeaModel {
 
     public static class LoadAgentSessionRequestParamsMeta extends TeaModel {
         /**
-         * <p>In a resumable transfer scenario, this specifies the offset from which to resume fetching the SSE output.</p>
+         * <p>The offset from which to pull subsequent SSE outputs in a resumable transmission scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -68,10 +68,10 @@ public class LoadAgentSessionRequest extends TeaModel {
         public Long beginLogOffset;
 
         /**
-         * <p>Specifies whether to use resumable transfer. If the SSE stream is interrupted due to issues like an unstable network connection, you can set this parameter to <code>true</code> to re-fetch the stream data from the point of failure.</p>
+         * <p>Specifies whether this is a resumable transmission scenario. If the SSE stream is interrupted due to network instability, you can set this flag to repull the SSE response data from the breakpoint.</p>
          * 
          * <strong>example:</strong>
-         * <p>true or false</p>
+         * <p>true</p>
          */
         @NameInMap("IsReload")
         public Boolean isReload;
@@ -101,7 +101,7 @@ public class LoadAgentSessionRequest extends TeaModel {
 
     public static class LoadAgentSessionRequestParams extends TeaModel {
         /**
-         * <p>DataWorks-specific extended parameters for ACP.</p>
+         * <p>The ACP extension parameters for DataWorks.</p>
          */
         @NameInMap("Meta")
         public LoadAgentSessionRequestParamsMeta meta;

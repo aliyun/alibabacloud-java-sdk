@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCrossProjectPipelineRunRequest extends TeaModel {
     /**
-     * <p>The cross-workspace deployment flow ID.</p>
+     * <p>The cross-workspace deployment pipeline run ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

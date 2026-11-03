@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgentShrinkRequest extends TeaModel {
     /**
-     * <p>The list of child agents that can be called by this agent.</p>
+     * <p>The list of sub-agents that can be called by this agent.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -34,7 +34,7 @@ public class CreateAgentShrinkRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>Agent 绑定的已发布专家套件。个人或企业套件使用 SuiteId，可选 Version；官方套件必须显式指定 Source=OFFICIAL 和官方目录中的 SuiteId，不传 Version。未传时创建为空，不会默认加载所有官方套件。</p>
+     * <p>The released expert suites bound to the agent. For personal or enterprise suites, use SuiteId and optionally specify a fixed Version or VersionSelector. For official suites, you must explicitly set Source to OFFICIAL and specify the SuiteId from the official catalog. Do not specify Version or VersionSelector. If this parameter is not specified, an empty list is created, and official suites are not loaded by default.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;Source&quot;:&quot;OFFICIAL&quot;,&quot;SuiteId&quot;:&quot;dataworks-data-analysis-extension&quot;},{&quot;SuiteId&quot;:&quot;suite_example&quot;,&quot;Version&quot;:1}]</p>
@@ -43,7 +43,7 @@ public class CreateAgentShrinkRequest extends TeaModel {
     public String expertSuitesShrink;
 
     /**
-     * <p>The extended metadata in key-value pairs.</p>
+     * <p>The extended metadata as key-value pairs.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -63,7 +63,7 @@ public class CreateAgentShrinkRequest extends TeaModel {
     public String modelShrink;
 
     /**
-     * <p>The name of the agent. The name must be unique within the current account.</p>
+     * <p>The name of the agent. It must be unique within the current account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,12 @@ public class CreateAgentShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>是否在创建 Agent 后立即发布。true 发布创建的版本；false 或省略保持原有仅创建草稿行为。保存与发布不是原子操作，发布失败时草稿可能已存在；重试前应先查询 Agent，避免重复创建。</p>
+     * <p>Specifies whether to publish the agent immediately after creation. Valid values:</p>
+     * <ul>
+     * <li>true: Publishes the created version.</li>
+     * <li>false or omitted: Retains the original behavior of creating a draft only.
+     * Saving and publishing are not atomic operations. If publishing fails, the draft may already exist. Query the agent before retrying to avoid duplicate creation.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -96,7 +101,7 @@ public class CreateAgentShrinkRequest extends TeaModel {
      * <p>The system prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>You are a data analytics assistant</p>
+     * <p>You are a data analytics assistant.</p>
      */
     @NameInMap("SystemPrompt")
     public String systemPrompt;
@@ -113,7 +118,7 @@ public class CreateAgentShrinkRequest extends TeaModel {
     public String toolsShrink;
 
     /**
-     * <p>The visibility level.<br>
+     * <p>The visibility level. Valid values:<br>
      * <code>TENANT</code>: Visible within the account.<br>
      * <code>PROJECT</code>: Visible to specified projects.<br>
      * <code>USER</code>: Visible to specified users.</p>
@@ -125,7 +130,7 @@ public class CreateAgentShrinkRequest extends TeaModel {
     public String visibility;
 
     /**
-     * <p>The visibility scope. The corresponding field is used based on the visibility level.</p>
+     * <p>The visibility scope. The corresponding fields are used based on the Visibility parameter.</p>
      */
     @NameInMap("VisibilityScope")
     public String visibilityScopeShrink;

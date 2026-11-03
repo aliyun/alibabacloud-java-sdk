@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteTaskRequest extends TeaModel {
     /**
-     * <p>The task ID.</p>
+     * <p>The ID of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,14 +15,7 @@ public class DeleteTaskRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The environment of the workspace.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>Prod: production environment</p>
-     * </li>
-     * <li><p>Dev: development environment</p>
-     * </li>
-     * </ul>
+     * <p>The project environment.</p>
      * 
      * <strong>example:</strong>
      * <p>Prod</p>

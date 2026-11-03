@@ -14,7 +14,7 @@ public class AbolishCrossProjectPipelineRunResponseBody extends TeaModel {
     public AbolishCrossProjectPipelineRunResponseBodyData data;
 
     /**
-     * <p>The request ID, which is used to locate and troubleshoot this API call.</p>
+     * <p>The request ID, which is used to locate and troubleshoot the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>735894D1-D5E5-50B8-8A6D-041C90A98B23</p>
@@ -23,7 +23,7 @@ public class AbolishCrossProjectPipelineRunResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

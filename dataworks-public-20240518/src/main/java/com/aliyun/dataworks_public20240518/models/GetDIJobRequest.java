@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDIJobRequest extends TeaModel {
     /**
-     * <p>This field is deprecated. Use the <code>Id</code> field instead.</p>
+     * <p><strong>[Deprecated]</strong> This field is deprecated. Use the Id field instead.</p>
      * 
      * <strong>example:</strong>
      * <p>11588</p>
@@ -15,7 +15,7 @@ public class GetDIJobRequest extends TeaModel {
     public Long DIJobId;
 
     /**
-     * <p>The ID of the DI job.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>11588</p>
@@ -24,7 +24,7 @@ public class GetDIJobRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The DataWorks workspace ID. You can call the <code>ListProjects</code> operation to obtain the workspace ID.</p>
+     * <p>The DataWorks workspace ID. You can call the ListProjects operation to obtain the workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -33,7 +33,7 @@ public class GetDIJobRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>Specifies whether to return the detailed configuration, including <code>TransformationRules</code>, <code>TableMappings</code>, and <code>JobSettings</code>. This configuration is returned by default.</p>
+     * <p>Specifies whether to return detailed configuration information, which includes TransformationRules, TableMappings, and JobSettings. Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

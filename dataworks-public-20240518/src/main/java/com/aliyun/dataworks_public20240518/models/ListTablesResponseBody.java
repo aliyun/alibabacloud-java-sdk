@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTablesResponseBody extends TeaModel {
     /**
-     * <p>The paging information.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PagingInfo")
     public ListTablesResponseBodyPagingInfo pagingInfo;
@@ -77,7 +77,7 @@ public class ListTablesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The list of tables.</p>
+         * <p>The list of data tables.</p>
          */
         @NameInMap("Tables")
         public java.util.List<Table> tables;

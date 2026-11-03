@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgentSessionShrinkRequest extends TeaModel {
     /**
-     * <p>The request ID passed by the caller. The value is returned as-is.</p>
+     * <p>The ID passed by the requester. The value is returned as is.</p>
      * 
      * <strong>example:</strong>
      * <p>4758330557805415712</p>
@@ -14,7 +14,7 @@ public class CreateAgentSessionShrinkRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+     * <p>The JSON-RPC version. This value is always 2.0.</p>
      * 
      * <strong>example:</strong>
      * <p>2.0</p>

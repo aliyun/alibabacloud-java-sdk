@@ -15,7 +15,7 @@ public class GetComputeResourceAuthUserMappingsRequest extends TeaModel {
     public Long computeResourceId;
 
     /**
-     * <p>The DataWorks workspace to which the data source belongs.</p>
+     * <p>The ID of the DataWorks workspace to which the data source belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

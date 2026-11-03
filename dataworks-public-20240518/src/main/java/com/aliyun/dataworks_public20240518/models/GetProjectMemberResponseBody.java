@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetProjectMemberResponseBody extends TeaModel {
     /**
-     * <p>The details of the Workspace member.</p>
+     * <p>The details of the workspace member.</p>
      */
     @NameInMap("ProjectMember")
     public GetProjectMemberResponseBodyProjectMember projectMember;
 
     /**
-     * <p>The request ID. Use this ID to locate logs and troubleshoot issues.</p>
+     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>8abcb91f-d266-4073-b907-2ed670378ed1</p>
@@ -42,29 +42,18 @@ public class GetProjectMemberResponseBody extends TeaModel {
 
     public static class GetProjectMemberResponseBodyProjectMemberRoles extends TeaModel {
         /**
-         * <p>The code of the Workspace role.</p>
-         * <p>The built-in system roles in a DataWorks Workspace include:</p>
+         * <p>The code of the workspace role. Built-in workspace roles in DataWorks:</p>
          * <ul>
-         * <li><p>role_project_admin: Workspace Administrator</p>
-         * </li>
-         * <li><p>role_project_dev: Developer</p>
-         * </li>
-         * <li><p>role_project_dg_admin: Data Governance Administrator</p>
-         * </li>
-         * <li><p>role_project_guest: Guest</p>
-         * </li>
-         * <li><p>role_project_security: Security Administrator</p>
-         * </li>
-         * <li><p>role_project_deploy: Deployment</p>
-         * </li>
-         * <li><p>role_project_owner: Workspace Owner</p>
-         * </li>
-         * <li><p>role_project_data_analyst: Data Analyst</p>
-         * </li>
-         * <li><p>role_project_pe: O\&amp;M (Operations &amp; Maintenance)</p>
-         * </li>
-         * <li><p>role_project_erd: Model Designer</p>
-         * </li>
+         * <li>role_project_admin: workspace administrator</li>
+         * <li>role_project_dev: developer</li>
+         * <li>role_project_dg_admin: data governance administrator</li>
+         * <li>role_project_guest: guest</li>
+         * <li>role_project_security: security administrator</li>
+         * <li>role_project_deploy: deployer</li>
+         * <li>role_project_owner: workspace owner</li>
+         * <li>role_project_data_analyst: data analyst</li>
+         * <li>role_project_pe: operator</li>
+         * <li>role_project_erd: model designer</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -74,7 +63,7 @@ public class GetProjectMemberResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The name of the Workspace role.</p>
+         * <p>The name of the workspace role.</p>
          * 
          * <strong>example:</strong>
          * <p>Visitors</p>
@@ -83,12 +72,10 @@ public class GetProjectMemberResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the Workspace role.</p>
+         * <p>The type of the workspace role. Valid values:</p>
          * <ul>
-         * <li><p>UserCustom: A user-defined role.</p>
-         * </li>
-         * <li><p>System: A built-in System Role.</p>
-         * </li>
+         * <li>UserCustom: custom role</li>
+         * <li>System: system role</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,7 +117,7 @@ public class GetProjectMemberResponseBody extends TeaModel {
 
     public static class GetProjectMemberResponseBodyProjectMember extends TeaModel {
         /**
-         * <p>The ID of the Workspace.</p>
+         * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>88757</p>
@@ -139,15 +126,15 @@ public class GetProjectMemberResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>Roles assigned to the Workspace member.</p>
+         * <p>The list of workspace roles assigned to the workspace member.</p>
          */
         @NameInMap("Roles")
         public java.util.List<GetProjectMemberResponseBodyProjectMemberRoles> roles;
 
         /**
-         * <p>The status of the Workspace member.</p>
+         * <p>The status of the workspace member. Valid values:</p>
          * <ul>
-         * <li>Normal: The member is active.</li>
+         * <li>Normal: The member is normal.</li>
          * <li>Forbidden: The member is disabled.</li>
          * </ul>
          * 
@@ -158,7 +145,7 @@ public class GetProjectMemberResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The ID of the DataWorks account.</p>
          * 
          * <strong>example:</strong>
          * <p>123422344899</p>
@@ -167,7 +154,10 @@ public class GetProjectMemberResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The name of the user.</p>
+         * <p>The cloud account name of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liusan</p>
          */
         @NameInMap("UserName")
         public String userName;

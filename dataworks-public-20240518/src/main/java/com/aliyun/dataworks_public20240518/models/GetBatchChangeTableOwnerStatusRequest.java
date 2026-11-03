@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBatchChangeTableOwnerStatusRequest extends TeaModel {
     /**
-     * <p>The batch transfer task ID returned by SubmitBatchChangeTableOwner.</p>
+     * <p>The ID of the batch transfer task returned by SubmitBatchChangeTableOwner.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

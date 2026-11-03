@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LoadAgentSessionShrinkRequest extends TeaModel {
     /**
-     * <p>The client-generated request ID, which is returned in the response.</p>
+     * <p>The ID provided by the requester. This ID is echoed back as is.</p>
      * 
      * <strong>example:</strong>
      * <p>4as3dasf654a</p>
@@ -14,7 +14,7 @@ public class LoadAgentSessionShrinkRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The JSON-RPC version. The value must be <code>2.0</code>.</p>
+     * <p>The JSON-RPC version. Fixed to 2.0.</p>
      * 
      * <strong>example:</strong>
      * <p>2.0</p>
@@ -23,7 +23,7 @@ public class LoadAgentSessionShrinkRequest extends TeaModel {
     public String jsonrpc;
 
     /**
-     * <p>Business parameters.</p>
+     * <p>The business parameters.</p>
      */
     @NameInMap("Params")
     public String paramsShrink;

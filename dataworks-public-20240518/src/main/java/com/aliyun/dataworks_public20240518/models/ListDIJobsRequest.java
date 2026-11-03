@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDIJobsRequest extends TeaModel {
     /**
-     * <p>The type of the destination data source. If you do not specify this parameter, jobs are not filtered by this criterion. Valid values: <code>Hologres</code>, <code>OSS-HDFS</code>, <code>OSS</code>, <code>MaxCompute</code>, <code>LogHub</code>, <code>StarRocks</code>, <code>DataHub</code>, <code>AnalyticDB_For_MySQL</code>, <code>Kafka</code>, and <code>Hive</code>.</p>
+     * <p>The type of the destination data source. If you do not specify this parameter, no limit is applied. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, LogHub, StarRocks, DataHub, AnalyticDB_For_MySQL, Kafka, and Hive.</p>
      * 
      * <strong>example:</strong>
      * <p>Hologres</p>
@@ -16,16 +16,11 @@ public class ListDIJobsRequest extends TeaModel {
     /**
      * <p>The synchronization type. Valid values:</p>
      * <ul>
-     * <li><p><code>FullAndRealtimeIncremental</code>: full and real-time incremental synchronization</p>
-     * </li>
-     * <li><p><code>RealtimeIncremental</code>: real-time incremental synchronization</p>
-     * </li>
-     * <li><p><code>Full</code>: full synchronization</p>
-     * </li>
-     * <li><p><code>OfflineIncremental</code>: offline incremental synchronization</p>
-     * </li>
-     * <li><p><code>FullAndOfflineIncremental</code>: full and offline incremental synchronization</p>
-     * </li>
+     * <li>FullAndRealtimeIncremental: full and real-time incremental synchronization</li>
+     * <li>RealtimeIncremental: real-time incremental synchronization</li>
+     * <li>Full: full synchronization</li>
+     * <li>OfflineIncremental: batch incremental synchronization</li>
+     * <li>FullAndOfflineIncremental: full and batch incremental synchronization</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,8 +30,8 @@ public class ListDIJobsRequest extends TeaModel {
     public String migrationType;
 
     /**
-     * <p>The name of the Data Integration job.</p>
-     * <p>The name must be unique within the DataWorks workspace.</p>
+     * <p>The name of the export task.</p>
+     * <p>The name must be unique within the current DataWorks workspace. Duplicate names are not allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>test_export_01</p>
@@ -45,7 +40,7 @@ public class ListDIJobsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The page number. Pages are numbered starting from 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -54,7 +49,7 @@ public class ListDIJobsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Default: 10. Maximum: 100.</p>
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -63,7 +58,7 @@ public class ListDIJobsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the DataWorks workspace.</p>
+     * <p>The ID of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +68,7 @@ public class ListDIJobsRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The type of the source data source. If you do not specify this parameter, jobs are not filtered by this criterion. Valid values: <code>PolarDB</code>, <code>MySQL</code>, <code>Kafka</code>, <code>LogHub</code>, <code>Hologres</code>, <code>Oracle</code>, <code>OceanBase</code>, <code>MongoDB</code>, <code>RedShift</code>, <code>Hive</code>, <code>SQLServer</code>, <code>Doris</code>, and <code>ClickHouse</code>.</p>
+     * <p>The type of the source data source. If you do not specify this parameter, no limit is applied. Valid values: PolarDB, MySQL, Kafka, LogHub, Hologres, Oracle, OceanBase, MongoDB, RedShift, Hive, SQLServer, Doris, and ClickHouse.</p>
      * 
      * <strong>example:</strong>
      * <p>MySQL</p>
@@ -82,7 +77,10 @@ public class ListDIJobsRequest extends TeaModel {
     public String sourceDataSourceType;
 
     /**
-     * <p>The configuration type of the job. Valid values: <code>FILESPEC</code>, <code>CLASSIC</code>, and <code>ALL</code>. <code>FILESPEC</code> indicates a new job type configured based on a structured file specification. <code>CLASSIC</code> indicates a job configured in the traditional mode. If you set this parameter to <code>ALL</code>, jobs of both types are returned.</p>
+     * <p>The task configuration specification type. Valid values: FILESPEC, CLASSIC, and ALL. FILESPEC: new-version tasks based on structured filespec. CLASSIC: tasks in the traditional configuration mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FILESPEC</p>
      */
     @NameInMap("SpecType")
     public String specType;

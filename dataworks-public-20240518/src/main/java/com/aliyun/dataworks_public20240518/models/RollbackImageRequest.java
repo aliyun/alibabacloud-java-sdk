@@ -15,7 +15,7 @@ public class RollbackImageRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The image version to roll back to.</p>
+     * <p>The image version to roll back.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

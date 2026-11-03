@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAgentSessionTitleRequest extends TeaModel {
     /**
+     * <p>The JSON-RPC correlation ID for the current request. It is specified by the caller and used to correlate the request and response.</p>
+     * 
      * <strong>example:</strong>
      * <p>updateagentsessiontitle-rpc-001</p>
      */
@@ -12,12 +14,17 @@ public class UpdateAgentSessionTitleRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The JSON-RPC protocol version. Set the value to 2.0.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.0</p>
      */
     @NameInMap("Jsonrpc")
     public String jsonrpc;
 
+    /**
+     * <p>The request parameters for modifying the session title, including the target session ID and the new title.</p>
+     */
     @NameInMap("Params")
     public UpdateAgentSessionTitleRequestParams params;
 
@@ -52,6 +59,7 @@ public class UpdateAgentSessionTitleRequest extends TeaModel {
 
     public static class UpdateAgentSessionTitleRequestParams extends TeaModel {
         /**
+         * <p>The ID of the agent session that belongs to the current account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -61,6 +69,7 @@ public class UpdateAgentSessionTitleRequest extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The new title. The length must be 1 to 512 characters after leading and trailing whitespaces are removed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

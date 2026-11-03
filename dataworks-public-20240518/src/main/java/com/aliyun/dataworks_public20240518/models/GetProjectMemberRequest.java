@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetProjectMemberRequest extends TeaModel {
     /**
-     * <p>The ID of the DataWorks Workspace. You can sign in to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks Console</a> and go to the Workspace Management page to obtain the Workspace ID.</p>
-     * <p>This parameter is used to identify the DataWorks workspace that you want to access.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
+     * <p>This parameter specifies the DataWorks workspace used to invoke this API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class GetProjectMemberRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The ID of the user. To find the ID, sign in to the <a href="https://dataworks.console.aliyun.com/product/ms_menu">DataWorks Console</a>, go to the Management Center, select the target Workspace, and open the Tenant Members and Roles page.</p>
+     * <p>The ID of the DataWorks account. You can log on to the <a href="https://dataworks.console.aliyun.com/product/ms_menu">DataWorks console - Administration</a>, select the workspace that you want to manage, go to the Administration page, and then go to the Tenant Members and Roles page to view the account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

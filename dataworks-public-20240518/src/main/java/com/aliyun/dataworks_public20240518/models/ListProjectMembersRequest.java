@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProjectMembersRequest extends TeaModel {
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number of the requested data.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,8 +23,8 @@ public class ListProjectMembersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the DataWorks workspace. To obtain this ID, log in to the <a href="https://workbench.data.aliyun.com/console">DataWorks Console</a> and go to the Workspace Management page.</p>
-     * <p>This parameter specifies the DataWorks workspace for the API call.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
+     * <p>This parameter specifies the DataWorks workspace used when you invoke this API operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,13 +34,13 @@ public class ListProjectMembersRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>A list of role codes for the workspace to filter the results. You can call the <a href="https://help.aliyun.com/document_detail/2853930.html">ListProjectRoles</a> operation to obtain the role codes.</p>
+     * <p>The list of workspace role codes. You can call the <a href="https://help.aliyun.com/document_detail/2853930.html">ListProjectRoles</a> operation to obtain the role codes.</p>
      */
     @NameInMap("RoleCodes")
     public java.util.List<String> roleCodes;
 
     /**
-     * <p>A list of DataWorks user IDs to filter the results. You can find these IDs on the <a href="https://dataworks.console.aliyun.com/product/ms_menu">Tenant Members and Roles</a> page in the Management Center.</p>
+     * <p>The list of DataWorks account IDs. You can log on to the <a href="https://dataworks.console.aliyun.com/product/ms_menu">DataWorks console - Administration</a>, select the workspace that you want to manage, go to the Administration page, and then go to the Tenant Members and Roles page to view the account IDs.</p>
      */
     @NameInMap("UserIds")
     public java.util.List<String> userIds;

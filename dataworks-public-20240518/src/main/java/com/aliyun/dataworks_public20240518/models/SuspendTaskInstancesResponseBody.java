@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class SuspendTaskInstancesResponseBody extends TeaModel {
     /**
-     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
-     * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
+     * <p>22C97E95-F023-56B5-8852-B1A77A17****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The result of the batch operation, which is in the MAP structure. The instance ID serves as a key, and the result serves as a value.</p>
+     * <p>The result information of the batch operation. The structure is a map, where the key is the task instance ID and the value is the result information.</p>
      */
     @NameInMap("SuccessInfo")
     public java.util.Map<String, SuccessInfoValue> successInfo;

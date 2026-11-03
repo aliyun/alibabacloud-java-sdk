@@ -14,7 +14,7 @@ public class StopWorkflowInstancesShrinkRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The list of workflow instance IDs. You can call the ListWorkflowInstances operation to query workflow instance IDs.</p>
+     * <p>The IDs of the workflow instances. You can call ListWorkflowInstances to query workflow instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Ids")

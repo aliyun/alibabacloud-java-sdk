@@ -42,6 +42,8 @@ public class ListAgentSessionsResponseBody extends TeaModel {
 
     public static class ListAgentSessionsResponseBodyJsonRpcResponseError extends TeaModel {
         /**
+         * <p>The JSON-RPC error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>400</p>
          */
@@ -49,6 +51,8 @@ public class ListAgentSessionsResponseBody extends TeaModel {
         public Integer code;
 
         /**
+         * <p>The optional additional error information. The content depends on the error type.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -56,6 +60,8 @@ public class ListAgentSessionsResponseBody extends TeaModel {
         public Object data;
 
         /**
+         * <p>The business error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>SESSION_FILTER_REQUIRED</p>
          */
@@ -63,6 +69,8 @@ public class ListAgentSessionsResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>SESSION_FILTER_REQUIRED</p>
          */
@@ -110,7 +118,7 @@ public class ListAgentSessionsResponseBody extends TeaModel {
 
     public static class ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessionsMetaSessionTagList extends TeaModel {
         /**
-         * <p>The session tag. You can filter sessions based on session tags. For example, if you use a fixed RAM user to call OpenAPI but the calling system has its own account system, you can filter the session list based on an account ID. In this case, set this parameter to the account ID of the calling system.</p>
+         * <p>The session tag. You can filter sessions based on session tags. For example, if you use a fixed RAM user to call OpenAPI operations but the calling system has its own account system, you need to filter the session list based on the account ID. In this case, you can pass the account ID of the calling system as this tag.</p>
          * 
          * <strong>example:</strong>
          * <p>user_123456</p>
@@ -134,6 +142,9 @@ public class ListAgentSessionsResponseBody extends TeaModel {
     }
 
     public static class ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessionsMeta extends TeaModel {
+        /**
+         * <p>Indicates whether the session is archived.</p>
+         */
         @NameInMap("Archived")
         public Boolean archived;
 
@@ -152,16 +163,16 @@ public class ListAgentSessionsResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <ul>
          * <li>NORMAL: Stateless session</li>
-         * <li>INIT: Initialization state</li>
+         * <li>INIT: Initialized</li>
          * <li>RUNNING: Running</li>
-         * <li>RELEASED: Released state</li>
+         * <li>RELEASED: Released</li>
          * </ul>
          */
         @NameInMap("SessionStatus")
         public String sessionStatus;
 
         /**
-         * <p>The list of session tags.</p>
+         * <p>The session tag list.</p>
          */
         @NameInMap("SessionTagList")
         public java.util.List<ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessionsMetaSessionTagList> sessionTagList;
@@ -207,13 +218,13 @@ public class ListAgentSessionsResponseBody extends TeaModel {
 
     public static class ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessions extends TeaModel {
         /**
-         * <p>The extended session information from DataWorks, which is not part of the ACP standard protocol.</p>
+         * <p>The session information extended by DataWorks, which is not part of the standard ACP protocol.</p>
          */
         @NameInMap("Meta")
         public ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessionsMeta meta;
 
         /**
-         * <p>The time when the session was created.</p>
+         * <p>The session creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -249,7 +260,7 @@ public class ListAgentSessionsResponseBody extends TeaModel {
         public String sessionTitle;
 
         /**
-         * <p>The time when the session was last modified.</p>
+         * <p>The session update time.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -386,11 +397,14 @@ public class ListAgentSessionsResponseBody extends TeaModel {
     }
 
     public static class ListAgentSessionsResponseBodyJsonRpcResponse extends TeaModel {
+        /**
+         * <p>The JSON-RPC error message. This parameter is returned when the call fails and is not returned when the call succeeds.</p>
+         */
         @NameInMap("Error")
         public ListAgentSessionsResponseBodyJsonRpcResponseError error;
 
         /**
-         * <p>The ID passed in by the requester. The value is returned as-is.</p>
+         * <p>The ID passed by the requester, which is returned as is.</p>
          * 
          * <strong>example:</strong>
          * <p>29d9a29c-a284-48c1-9eaa-4a42c7c616d5</p>
@@ -399,7 +413,7 @@ public class ListAgentSessionsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+         * <p>The JSON-RPC version. Fixed to 2.0.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>

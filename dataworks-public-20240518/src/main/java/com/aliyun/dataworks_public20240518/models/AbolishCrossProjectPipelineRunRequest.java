@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AbolishCrossProjectPipelineRunRequest extends TeaModel {
     /**
-     * <p>The ID of the cross-workspace publish flow.</p>
+     * <p>The ID of the cross-workspace deployment pipeline run.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,10 +25,10 @@ public class AbolishCrossProjectPipelineRunRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The reason for stopping the cross-workspace publish flow.</p>
+     * <p>The reason for terminating the pipeline run.</p>
      * 
      * <strong>example:</strong>
-     * <p>The target publish plan has changed. Stop the flow that has not been executed</p>
+     * <p>The target deployment plan has changed. Terminate the pipeline run that has not yet executed</p>
      */
     @NameInMap("Reason")
     public String reason;

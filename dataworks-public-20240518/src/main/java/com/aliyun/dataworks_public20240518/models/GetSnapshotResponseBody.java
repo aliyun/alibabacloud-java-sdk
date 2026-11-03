@@ -101,7 +101,7 @@ public class GetSnapshotResponseBody extends TeaModel {
 
     public static class GetSnapshotResponseBodySnapshot extends TeaModel {
         /**
-         * <p>The submit comment.</p>
+         * <p>The submission comment.</p>
          * 
          * <strong>example:</strong>
          * <p>snapshot comment</p>
@@ -116,7 +116,7 @@ public class GetSnapshotResponseBody extends TeaModel {
         public GetSnapshotResponseBodySnapshotContent content;
 
         /**
-         * <p>The OSS pre-signed download URL. This parameter is mutually exclusive with Content.</p>
+         * <p>The pre-signed OSS download URL. This parameter is mutually exclusive with Content.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oss.example.com/presigned">https://oss.example.com/presigned</a></p>
@@ -125,7 +125,7 @@ public class GetSnapshotResponseBody extends TeaModel {
         public String contentUrl;
 
         /**
-         * <p>The snapshot creation time in millisecond timestamp.</p>
+         * <p>The timestamp when the snapshot was generated, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1782370983000</p>
@@ -161,7 +161,7 @@ public class GetSnapshotResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The unique ID of the object to which the snapshot belongs.</p>
+         * <p>The unique ID of the parent object.</p>
          * 
          * <strong>example:</strong>
          * <p>8467231038932407294</p>

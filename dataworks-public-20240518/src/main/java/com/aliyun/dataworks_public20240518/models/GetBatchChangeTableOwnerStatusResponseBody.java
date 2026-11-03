@@ -20,7 +20,7 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,7 +59,7 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
 
     public static class GetBatchChangeTableOwnerStatusResponseBodyDataDetails extends TeaModel {
         /**
-         * <p>The error message returned when the table transfer fails.</p>
+         * <p>The error message returned when the table fails to be transferred.</p>
          * 
          * <strong>example:</strong>
          * <p>Forbidden: You are not a member of this project</p>
@@ -118,7 +118,7 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
 
     public static class GetBatchChangeTableOwnerStatusResponseBodyData extends TeaModel {
         /**
-         * <p>The batch transfer task ID.</p>
+         * <p>The ID of the batch transfer task.</p>
          * 
          * <strong>example:</strong>
          * <p>524257_openapi-req-abc123</p>
@@ -133,7 +133,7 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
         public java.util.List<GetBatchChangeTableOwnerStatusResponseBodyDataDetails> details;
 
         /**
-         * <p>The number of tables that failed to transfer.</p>
+         * <p>The number of tables that fail to be transferred.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -160,7 +160,7 @@ public class GetBatchChangeTableOwnerStatusResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The number of tables that were successfully transferred.</p>
+         * <p>The number of tables that are successfully transferred.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

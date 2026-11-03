@@ -42,6 +42,8 @@ public class CreateAgentSessionResponseBody extends TeaModel {
 
     public static class CreateAgentSessionResponseBodyJsonRpcResponseError extends TeaModel {
         /**
+         * <p>The JSON-RPC error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -49,6 +51,8 @@ public class CreateAgentSessionResponseBody extends TeaModel {
         public Integer code;
 
         /**
+         * <p>The optional additional error information. The content depends on the error type.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -56,6 +60,8 @@ public class CreateAgentSessionResponseBody extends TeaModel {
         public Object data;
 
         /**
+         * <p>The business error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>0x4883300000000019</p>
          */
@@ -63,8 +69,10 @@ public class CreateAgentSessionResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
-         * <p>创建 DataAgent 实例必须指定资源组，请在请求的 _meta.dataAgent.resourceGroupId 中传入资源组 ID</p>
+         * <p>To create a DataAgent instance, you must specify a resource group. Pass the resource group ID in _meta.dataAgent.resourceGroupId of the request</p>
          */
         @NameInMap("Message")
         public String message;
@@ -110,7 +118,7 @@ public class CreateAgentSessionResponseBody extends TeaModel {
 
     public static class CreateAgentSessionResponseBodyJsonRpcResponseResult extends TeaModel {
         /**
-         * <p>The ID of the created session.</p>
+         * <p>The ID of the newly created session.</p>
          * 
          * <strong>example:</strong>
          * <p>sess_0f12abc34</p>
@@ -134,11 +142,14 @@ public class CreateAgentSessionResponseBody extends TeaModel {
     }
 
     public static class CreateAgentSessionResponseBodyJsonRpcResponse extends TeaModel {
+        /**
+         * <p>The JSON-RPC error message. This field is not returned if the request is successful.</p>
+         */
         @NameInMap("Error")
         public CreateAgentSessionResponseBodyJsonRpcResponseError error;
 
         /**
-         * <p>The request ID passed by the caller. The value is returned as-is.</p>
+         * <p>The ID passed by the requester. The value is returned as is.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -147,7 +158,7 @@ public class CreateAgentSessionResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+         * <p>The JSON-RPC version. This value is always 2.0.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>
@@ -162,6 +173,8 @@ public class CreateAgentSessionResponseBody extends TeaModel {
         public CreateAgentSessionResponseBodyJsonRpcResponseResult result;
 
         /**
+         * <p>The response time. The value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1789549200000</p>
          */

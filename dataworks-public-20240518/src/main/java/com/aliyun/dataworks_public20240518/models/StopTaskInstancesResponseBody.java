@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopTaskInstancesResponseBody extends TeaModel {
     /**
-     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+     * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A17****</p>
@@ -14,7 +14,7 @@ public class StopTaskInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result information of the batch operation. The structure is a map where the task instance ID is the key and the result information is the value.</p>
+     * <p>The result information of the batch operation. The structure is a map where the key is the task instance ID and the value is the result information.</p>
      */
     @NameInMap("SuccessInfo")
     public java.util.Map<String, SuccessInfoValue> successInfo;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTablesShrinkRequest extends TeaModel {
     /**
-     * <p>The comment. Fuzzy match is supported.</p>
+     * <p>The comment on the data table. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
@@ -23,7 +23,7 @@ public class ListTablesShrinkRequest extends TeaModel {
     public Boolean includeExtendedProperties;
 
     /**
-     * <p>The name. Fuzzy match is supported.</p>
+     * <p>The name of the data table. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -63,7 +63,7 @@ public class ListTablesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the parent metadata entity. You can refer to the response of the ListDatabases or ListSchemas operation, or see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
+     * <p>The ID of the parent metadata entity. You can refer to the response of the ListDatabases or ListSchemas operation, or see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts of metadata entities</a>.</p>
      * <ul>
      * <li><p>The parent entity can be the database to which the table belongs. The <code>ParentMetaEntityId</code> format is <code>${EntityType}:${Instance ID or URL-encoded JDBC URL}:${Data catalog identifier}:${Database name}</code>. Use an empty string as a placeholder for non-existent levels.</p>
      * </li>
@@ -72,12 +72,12 @@ public class ListTablesShrinkRequest extends TeaModel {
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>The database schema can be used for <code>ParentMetaEntityId</code> only when the database type supports schemas (<code>maxcompute</code>, <code>holo</code>, <code>postgresql</code>, <code>sqlserver</code>, <code>hybriddb_for_postgresql</code>, or <code>oracle</code>). For MaxCompute, the three-level model must be enabled. Otherwise, only the database can be used.</li>
-     * <li>For MaxCompute and DLF types, use an empty string as a placeholder for the instance ID. For MaxCompute, the database name is the MaxCompute project name.</li>
-     * <li>For StarRocks, the data catalog identifier is the catalog name. For DLF, the data catalog identifier is the catalog ID. Other types do not support the catalog level, so use an empty string as a placeholder.</li>
+     * <li>You can use a database schema for <code>ParentMetaEntityId</code> only when the database type supports schemas (<code>maxcompute</code>, <code>holo</code>, <code>postgresql</code>, <code>sqlserver</code>, <code>hybriddb_for_postgresql</code>, or <code>oracle</code>). For MaxCompute, the three-level model must be enabled. Otherwise, you can only use a database.</li>
+     * <li>For MaxCompute and DLF data sources, use an empty string as a placeholder for the instance ID. For MaxCompute, the database name is the MaxCompute project name.</li>
+     * <li>For StarRocks, the data catalog identifier is the catalog name. For DLF, the data catalog identifier is the catalog ID. Other types do not support the catalog level, so you can use an empty string as a placeholder.</li>
      * </ul>
      * </blockquote>
-     * <p>Examples of <code>ParentMetaEntityId</code> formats for common types:</p>
+     * <p>The following examples show the <code>ParentMetaEntityId</code> formats for common data source types:</p>
      * <ul>
      * <li><p><code>maxcompute-project:::project_name</code></p>
      * </li>
@@ -112,7 +112,7 @@ public class ListTablesShrinkRequest extends TeaModel {
     public String parentMetaEntityId;
 
     /**
-     * <p>The field used for sorting. Default value: CreateTime. Valid values:</p>
+     * <p>The field by which to sort the results. Default value: CreateTime. Valid values:</p>
      * <ul>
      * <li>CreateTime: creation time</li>
      * <li>ModifyTime: modification time</li>

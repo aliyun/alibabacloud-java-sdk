@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgentSessionRequest extends TeaModel {
     /**
-     * <p>The request ID passed by the caller. The value is returned as-is.</p>
+     * <p>The ID passed by the requester. The value is returned as is.</p>
      * 
      * <strong>example:</strong>
      * <p>4758330557805415712</p>
@@ -14,7 +14,7 @@ public class CreateAgentSessionRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The JSON-RPC version. Fixed value: 2.0.</p>
+     * <p>The JSON-RPC version. This value is always 2.0.</p>
      * 
      * <strong>example:</strong>
      * <p>2.0</p>
@@ -59,11 +59,11 @@ public class CreateAgentSessionRequest extends TeaModel {
 
     public static class CreateAgentSessionRequestParamsMetaAgent extends TeaModel {
         /**
-         * <p>The name of the agent to bind to the session. This parameter is required. Valid values:</p>
+         * <p>The name of the agent bound to the session. This parameter is required. Valid values:</p>
          * <ul>
-         * <li>dataworks_data_agent: DataWorks built-in agent — Data Agent. Provides intelligent data development AI capabilities that cover the entire workflow of data integration, development, O&amp;M, governance, and analytics.</li>
-         * <li>dataworks_chatbi_agent: DataWorks built-in agent — ChatBI. Uses natural language processing and intelligent analytics to automate the entire analysis workflow through conversational interaction, from requirement parsing, data extraction, and automatic code generation to visual report output.</li>
-         * <li>dataworks_ai_assistant_agent: DataWorks built-in agent — AI Assistant Service. An enterprise-grade dedicated AI assistant for DataWorks built on open source frameworks such as OpenClaw and Hermes Agent.</li>
+         * <li>dataworks_data_agent: DataWorks built-in agent - Data Agent. It provides AI capabilities for the entire data development lifecycle, including data integration, development, O&amp;M, governance, and analysis.</li>
+         * <li>dataworks_chatbi_agent: DataWorks built-in agent - ChatBI. Based on natural language processing and intelligent analysis technologies, it automates the entire analysis process from requirement parsing, data extraction, and automatic code generation to visual report output through conversational interaction.</li>
+         * <li>dataworks_ai_assistant_agent: DataWorks built-in agent - AI Assistant. An enterprise-grade AI assistant for DataWorks built on open-source frameworks such as OpenClaw and Hermes Agent.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class CreateAgentSessionRequest extends TeaModel {
 
     public static class CreateAgentSessionRequestParamsMetaConfigSessionTags extends TeaModel {
         /**
-         * <p>The session tag. You can filter sessions by tag. For example, if you use a fixed RAM user to call the OpenAPI but your system has its own account system, you can pass the account ID of your system as this tag to filter the session list by account ID. The value can be up to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * <p>The session tag. You can filter sessions based on session tags. For example, if a fixed RAM user is used to call an API operation but the calling system has its own account system, you need to filter the session list based on the account ID. In this case, you can pass the account ID of the calling system as the session tag. The value can be up to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
          * 
          * <strong>example:</strong>
          * <p>chatbi</p>
@@ -114,7 +114,7 @@ public class CreateAgentSessionRequest extends TeaModel {
 
     public static class CreateAgentSessionRequestParamsMetaConfig extends TeaModel {
         /**
-         * <p>The session source identifier, which facilitates retrieval by source. For example, if an agent is used on both Page A and Page B, and you want Page A to display only sessions created on Page A, you can filter by this parameter. The value can be up to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * <p>The session source identifier, which facilitates retrieval by source. For example, if an agent is used on both Page A and Page B, and you want to display only sessions created on Page A, you can filter sessions based on this parameter. The value can be up to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
          * 
          * <strong>example:</strong>
          * <p>openapi_sdk</p>
@@ -123,7 +123,7 @@ public class CreateAgentSessionRequest extends TeaModel {
         public String sessionSource;
 
         /**
-         * <p>The list of session tags. You can use session tags for search and filtering.</p>
+         * <p>The list of session tags. You can search and filter sessions based on session tags.</p>
          */
         @NameInMap("SessionTags")
         public java.util.List<CreateAgentSessionRequestParamsMetaConfigSessionTags> sessionTags;
@@ -153,10 +153,10 @@ public class CreateAgentSessionRequest extends TeaModel {
 
     public static class CreateAgentSessionRequestParamsMetaInitialConfigOptions extends TeaModel {
         /**
-         * <p>The exec mode. Valid values:</p>
+         * <p>The execution mode. Valid values:</p>
          * <ul>
-         * <li>chat: Conversation mode only. Suitable for simple data queries and Q&amp;A scenarios. Advantages: fast response and low token consumption. Disadvantages: cannot handle complex problems.</li>
-         * <li>cli: Sandbox mode. Suitable for complex data analytics, data processing, and code writing scenarios. Advantages: can handle complex problems, and the model autonomously performs analysis and problem resolution. Disadvantages: slower processing speed and higher token consumption compared to the conversation mode.</li>
+         * <li>chat: conversation mode only. This mode is suitable for simple scenarios such as data querying and Q&amp;A. It is fast and consumes fewer tokens, but cannot handle complex problems.</li>
+         * <li>cli: sandbox mode. This mode is suitable for complex scenarios such as data analytics, data processing, and code writing. It can handle complex problems and allows the model to independently analyze and process problems. However, it is slower and consumes more tokens than conversation mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class CreateAgentSessionRequest extends TeaModel {
         /**
          * <p>The authorization mode for script execution. OpenAPI currently supports only the yolo mode. Valid values:</p>
          * <ul>
-         * <li>yolo: Automatic authorization. No manual intervention is required, and the model processes tasks automatically.</li>
+         * <li>yolo: automatic authorization. No manual intervention is required, and the model can process tasks automatically.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,6 +178,8 @@ public class CreateAgentSessionRequest extends TeaModel {
         public String mode;
 
         /**
+         * <p>The model ID. Use the full model identifier supported by the target environment. If this parameter is omitted, the default model is used. If this parameter is specified, the server verifies its availability and applies it before the session is created.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen3.7-max(openai)</p>
          */
@@ -185,7 +187,7 @@ public class CreateAgentSessionRequest extends TeaModel {
         public String model;
 
         /**
-         * <p>The DataWorks workspace ID. Used to initialize the session project context. If omitted, the session is treated as having no project context. You can later correct or switch the project context by using PromptAgentSession.</p>
+         * <p>The DataWorks workspace ID. This parameter is used to initialize the project context of the session. If this parameter is omitted, the session is processed without a project context. You can subsequently correct or switch the project context by using PromptAgentSession.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -194,6 +196,8 @@ public class CreateAgentSessionRequest extends TeaModel {
         public String projectId;
 
         /**
+         * <p>The reasoning effort configuration. The value must be supported by the target model. A value of none disables reasoning, and a value of default uses the default configuration of the model. If an unsupported value is specified or the configuration application has failed, the session creation is marked as failed. If this parameter is omitted, the existing reasoning effort configuration is not modified. A successful configuration updates the default value of the daemon workspace and affects not only the current request.</p>
+         * 
          * <strong>example:</strong>
          * <p>none</p>
          */
@@ -210,7 +214,7 @@ public class CreateAgentSessionRequest extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The names of custom skills to load. Separate multiple skill names with commas (,).</p>
+         * <p>The names of the custom skills to be loaded. Separate multiple names with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>skill-name-1,skill-name2,skill-name-3</p>
@@ -283,13 +287,13 @@ public class CreateAgentSessionRequest extends TeaModel {
 
     public static class CreateAgentSessionRequestParamsMeta extends TeaModel {
         /**
-         * <p>The agent configuration for this session. Valid values are those returned by the ListAgents operation.</p>
+         * <p>The agent configuration for the session. Valid values are the results returned by the ListAgents operation.</p>
          */
         @NameInMap("Agent")
         public CreateAgentSessionRequestParamsMetaAgent agent;
 
         /**
-         * <p>The session parameter settings, such as filtering parameter settings based on session source and session tags.</p>
+         * <p>The session parameter settings, such as filter parameter settings based on the session source and session tags.</p>
          */
         @NameInMap("Config")
         public CreateAgentSessionRequestParamsMetaConfig config;
@@ -333,7 +337,7 @@ public class CreateAgentSessionRequest extends TeaModel {
 
     public static class CreateAgentSessionRequestParams extends TeaModel {
         /**
-         * <p>The extended metadata that carries agent binding, session source, tags, and other information.</p>
+         * <p>The extended metadata that carries agent binding, session source, and tags.</p>
          */
         @NameInMap("Meta")
         public CreateAgentSessionRequestParamsMeta meta;
