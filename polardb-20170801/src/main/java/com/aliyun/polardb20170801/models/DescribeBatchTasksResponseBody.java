@@ -14,7 +14,7 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -32,13 +32,13 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task information.</p>
+     * <p>The task details.</p>
      */
     @NameInMap("TaskList")
     public java.util.List<DescribeBatchTasksResponseBodyTaskList> taskList;
 
     /**
-     * <p>The total number of tasks that meet the filter conditions, regardless of pagination.</p>
+     * <p>The total number of tasks that meet the specified conditions, regardless of pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -93,7 +93,7 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
 
     public static class DescribeBatchTasksResponseBodyTaskList extends TeaModel {
         /**
-         * <p>The batch task ID.</p>
+         * <p>The ID of the batch task.</p>
          * 
          * <strong>example:</strong>
          * <p>pcb-xxx</p>
@@ -111,7 +111,7 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The number of successful batch tasks.</p>
+         * <p>The number of successful tasks in the batch.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -120,7 +120,7 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
         public Integer successCount;
 
         /**
-         * <p>The task start time.</p>
+         * <p>The start time of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-06 20:51:44</p>
@@ -129,7 +129,7 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
         public String taskBegin;
 
         /**
-         * <p>The task end time.</p>
+         * <p>The end time of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-06 22:43:26</p>
@@ -156,7 +156,7 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The total number of tasks that meet the filter conditions, regardless of pagination.</p>
+         * <p>The total number of tasks that meet the specified conditions, regardless of pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>

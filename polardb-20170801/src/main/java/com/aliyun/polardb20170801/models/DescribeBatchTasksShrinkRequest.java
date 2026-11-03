@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeBatchTasksShrinkRequest extends TeaModel {
     /**
-     * <p>The end of the creation time range.</p>
-     * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The end time of creation.</p>
+     * <p>The time is in ISO 8601 format and the UTC time zone. The format is YYYY-MM-DDTHH:mm:ssZ.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class DescribeBatchTasksShrinkRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: 1.</p>
+     * <p>The page number. The value must be greater than 0 and less than or equal to the maximum value of the Integer data type. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -25,7 +25,7 @@ public class DescribeBatchTasksShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -34,8 +34,8 @@ public class DescribeBatchTasksShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The start of the creation time range.</p>
-     * <p>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The start time of creation.</p>
+     * <p>The time is in ISO 8601 format and the UTC time zone. The format is YYYY-MM-DDTHH:mm:ssZ.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class DescribeBatchTasksShrinkRequest extends TeaModel {
     /**
      * <p>The list of task statuses.</p>
      * <blockquote>
-     * <p>If this parameter is left empty, scheduled tasks in all statuses are queried by default.</p>
+     * <p>If this parameter is left empty, tasks in all statuses are queried by default.</p>
      * </blockquote>
      */
     @NameInMap("Status")

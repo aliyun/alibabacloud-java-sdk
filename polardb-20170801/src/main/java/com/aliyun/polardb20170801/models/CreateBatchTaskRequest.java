@@ -14,11 +14,20 @@ public class CreateBatchTaskRequest extends TeaModel {
     public String applicationType;
 
     /**
-     * <p>The instance IDs.</p>
+     * <p>The machine instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
+
+    /**
+     * <p>The per-instance parameter overrides (JSON object: instanceId -&gt; param). This parameter is used in scenarios where multiple instances have different targets, such as different agent workspaces.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;pa-xxx1&quot;:{&quot;agentId&quot;:&quot;test1&quot;},&quot;pa-xxx2&quot;:{&quot;scope&quot;:&quot;global&quot;}}</p>
+     */
+    @NameInMap("InstanceParams")
+    public String instanceParams;
 
     /**
      * <p>The archive parameters.</p>
@@ -30,10 +39,7 @@ public class CreateBatchTaskRequest extends TeaModel {
     public String param;
 
     /**
-     * <p>The region ID.</p>
-     * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view the region information of all clusters under the target account.</p>
-     * </blockquote>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view the regions of all clusters under the target account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,6 +87,14 @@ public class CreateBatchTaskRequest extends TeaModel {
     }
     public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public CreateBatchTaskRequest setInstanceParams(String instanceParams) {
+        this.instanceParams = instanceParams;
+        return this;
+    }
+    public String getInstanceParams() {
+        return this.instanceParams;
     }
 
     public CreateBatchTaskRequest setParam(String param) {

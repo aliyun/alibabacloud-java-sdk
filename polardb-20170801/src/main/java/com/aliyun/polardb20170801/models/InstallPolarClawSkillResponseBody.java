@@ -14,7 +14,7 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The response status code.</p>
+     * <p>The returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,13 +32,22 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>Indicates whether the operation is successful. This parameter is returned when Async is set to false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Ok")
     public Boolean ok;
+
+    /**
+     * <p>The operation name. This parameter is returned when Async is set to true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InstallPolarClawSkill</p>
+     */
+    @NameInMap("Operation")
+    public String operation;
 
     /**
      * <p>Id of the request</p>
@@ -50,7 +59,7 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The identifier of the installed Skill.</p>
+     * <p>The identifier of the installed skill. This parameter is returned during synchronous execution.</p>
      * 
      * <strong>example:</strong>
      * <p>alibacloud-rds-copilot</p>
@@ -59,7 +68,16 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
     public String slug;
 
     /**
-     * <p>The installation directory.</p>
+     * <p>The initial state of the task. This parameter is returned when Async is set to true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pending</p>
+     */
+    @NameInMap("State")
+    public String state;
+
+    /**
+     * <p>The installation directory. This parameter is returned during synchronous execution.</p>
      * 
      * <strong>example:</strong>
      * <p>/home/node/.openclaw/skills/alibacloud-rds-copilot</p>
@@ -68,7 +86,16 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
     public String targetDir;
 
     /**
-     * <p>The version number of the installed Skill.</p>
+     * <p>The ID of the asynchronous task. This parameter is returned when Async is set to true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9f1c2e3d-xxxx</p>
+     */
+    @NameInMap("TaskId")
+    public String taskId;
+
+    /**
+     * <p>The installed version number. This parameter is returned during synchronous execution.</p>
      * 
      * <strong>example:</strong>
      * <p>1.2.0</p>
@@ -113,6 +140,14 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
         return this.ok;
     }
 
+    public InstallPolarClawSkillResponseBody setOperation(String operation) {
+        this.operation = operation;
+        return this;
+    }
+    public String getOperation() {
+        return this.operation;
+    }
+
     public InstallPolarClawSkillResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -129,12 +164,28 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
         return this.slug;
     }
 
+    public InstallPolarClawSkillResponseBody setState(String state) {
+        this.state = state;
+        return this;
+    }
+    public String getState() {
+        return this.state;
+    }
+
     public InstallPolarClawSkillResponseBody setTargetDir(String targetDir) {
         this.targetDir = targetDir;
         return this;
     }
     public String getTargetDir() {
         return this.targetDir;
+    }
+
+    public InstallPolarClawSkillResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public InstallPolarClawSkillResponseBody setVersion(String version) {

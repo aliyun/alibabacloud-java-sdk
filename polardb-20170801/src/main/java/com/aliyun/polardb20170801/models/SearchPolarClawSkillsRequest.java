@@ -15,6 +15,15 @@ public class SearchPolarClawSkillsRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>Specifies whether to perform an exact search by matching the slug.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Exact")
+    public Boolean exact;
+
+    /**
      * <p>The maximum number of results to return. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
@@ -24,13 +33,22 @@ public class SearchPolarClawSkillsRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The search keyword. If this parameter is not specified, popular or recommended results are returned.</p>
+     * <p>The search keyword. If this parameter is not specified, popular or recommended skills are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>rds</p>
      */
     @NameInMap("Query")
     public String query;
+
+    /**
+     * <p>The source of the skill. Valid values: clawhub and polarhub.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>polarhub</p>
+     */
+    @NameInMap("Source")
+    public String source;
 
     public static SearchPolarClawSkillsRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchPolarClawSkillsRequest self = new SearchPolarClawSkillsRequest();
@@ -43,6 +61,14 @@ public class SearchPolarClawSkillsRequest extends TeaModel {
     }
     public String getApplicationId() {
         return this.applicationId;
+    }
+
+    public SearchPolarClawSkillsRequest setExact(Boolean exact) {
+        this.exact = exact;
+        return this;
+    }
+    public Boolean getExact() {
+        return this.exact;
     }
 
     public SearchPolarClawSkillsRequest setLimit(Integer limit) {
@@ -59,6 +85,14 @@ public class SearchPolarClawSkillsRequest extends TeaModel {
     }
     public String getQuery() {
         return this.query;
+    }
+
+    public SearchPolarClawSkillsRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyResourceControlRequest extends TeaModel {
     /**
-     * <p>The updated maximum number of CPU cores. The minimum value is 1, and the maximum value is determined by the resource_control_cpu_count_limit kernel parameter of the cluster. You must specify exactly one of the MaxCpu and CpuCount parameters.</p>
+     * <p>The updated maximum number of CPU cores. The minimum value is 1, and the maximum value is determined by the resource_control_cpu_count_limit kernel parameter of the cluster. You must specify either MaxCpu or CpuCount, but not both.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -24,7 +24,7 @@ public class ModifyResourceControlRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The updated maximum CPU quota percentage. Valid values: 1 to 100. You must specify exactly one of the MaxCpu and CpuCount parameters.</p>
+     * <p>The updated maximum CPU quota percentage. Valid values: 1 to 100. You must specify either MaxCpu or CpuCount, but not both.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -33,7 +33,7 @@ public class ModifyResourceControlRequest extends TeaModel {
     public Integer maxCpu;
 
     /**
-     * <p>The ID of the region where the PolarDB cluster is deployed.</p>
+     * <p>The region ID of the PolarDB cluster.</p>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</p>
      * </blockquote>

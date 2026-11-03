@@ -23,7 +23,7 @@ public class CreateAgenticDBTenantApiKeyResponseBody extends TeaModel {
     public String apiKeyId;
 
     /**
-     * <p>The creation time. The time is in ISO 8601 format and follows the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The creation time. The time follows the ISO 8601 standard in the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-06-10T08:00:00Z</p>
@@ -32,7 +32,7 @@ public class CreateAgenticDBTenantApiKeyResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The expiration time. This parameter is empty if the API key never expires. The time is in ISO 8601 format and follows the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The expiration time. If the API key never expires, this value is empty. The time follows the ISO 8601 standard in the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2027-01-01T00:00:00Z</p>

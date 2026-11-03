@@ -14,7 +14,7 @@ public class SearchPolarClawSkillsResponseBody extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The response status code.</p>
+     * <p>The returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class SearchPolarClawSkillsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -129,7 +129,7 @@ public class SearchPolarClawSkillsResponseBody extends TeaModel {
         public String summary;
 
         /**
-         * <p>The UNIX timestamp of the last update, in seconds.</p>
+         * <p>The last update timestamp in UNIX seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1716000000</p>

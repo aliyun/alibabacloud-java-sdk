@@ -93,7 +93,17 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
 
     public static class DescribeAgenticDBProjectsResponseBodyItems extends TeaModel {
         /**
-         * <p>The creation time. The time is in ISO 8601 format and the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The number of all undeleted branches in the project, including hibernated branches and branches not bound to compute nodes. This parameter is empty if not provided by earlier backend versions, which does not indicate zero branches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("BranchCount")
+        public Long branchCount;
+
+        /**
+         * <p>The creation time.</p>
+         * <p>The time follows the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-10T11:00:00Z</p>
@@ -138,7 +148,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The retention period for recent records of the project. This field may be empty for older projects. To query the current effective value, call DescribeAgenticDBProjectHistoryRetention.</p>
+         * <p>The retention period of recent records for the project. This parameter may be empty for earlier projects. To query the current effective value, call DescribeAgenticDBProjectHistoryRetention.</p>
          * 
          * <strong>example:</strong>
          * <p>604800</p>
@@ -165,12 +175,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>The project status. Valid values:</p>
-         * <ul>
-         * <li>Active: Normal.</li>
-         * <li>Destroying: Being destroyed.</li>
-         * <li>Destroyed: Destroyed.</li>
-         * </ul>
+         * <p>The status of the project. Valid values: Active (normal), Destroying (being destroyed), and Destroyed (destroyed).</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -179,7 +184,7 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tenant ID.</p>
+         * <p>The ID of the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>t-4b83e0da66674951</p>
@@ -190,6 +195,14 @@ public class DescribeAgenticDBProjectsResponseBody extends TeaModel {
         public static DescribeAgenticDBProjectsResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeAgenticDBProjectsResponseBodyItems self = new DescribeAgenticDBProjectsResponseBodyItems();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAgenticDBProjectsResponseBodyItems setBranchCount(Long branchCount) {
+            this.branchCount = branchCount;
+            return this;
+        }
+        public Long getBranchCount() {
+            return this.branchCount;
         }
 
         public DescribeAgenticDBProjectsResponseBodyItems setCreateTime(String createTime) {

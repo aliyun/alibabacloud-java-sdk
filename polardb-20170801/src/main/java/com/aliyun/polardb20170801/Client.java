@@ -3152,6 +3152,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tenantName)) {
             query.put("TenantName", request.tenantName);
         }
@@ -3794,6 +3798,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIdsShrink)) {
             query.put("InstanceIds", request.instanceIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceParams)) {
+            query.put("InstanceParams", request.instanceParams);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.param)) {
@@ -12653,7 +12661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of AgenticDB projects.</p>
+     * <p>Queries the list of AgenticDB projects.</p>
      * 
      * @param request DescribeAgenticDBProjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12709,7 +12717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of AgenticDB projects.</p>
+     * <p>Queries the list of AgenticDB projects.</p>
      * 
      * @param request DescribeAgenticDBProjectsRequest
      * @return DescribeAgenticDBProjectsResponse
@@ -22624,7 +22632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about vSwitches.</p>
+     * <p>Queries vSwitch information.</p>
      * 
      * @param request DescribeVSwitchListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22696,7 +22704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about vSwitches.</p>
+     * <p>Queries vSwitch information.</p>
      * 
      * @param request DescribeVSwitchListRequest
      * @return DescribeVSwitchListResponse
@@ -22980,7 +22988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the relational algebra of a cluster.</p>
+     * <p>Closes the cluster relationship.</p>
      * 
      * @param request DisableDBClusterOrcaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23032,7 +23040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the relational algebra of a cluster.</p>
+     * <p>Closes the cluster relationship.</p>
      * 
      * @param request DisableDBClusterOrcaRequest
      * @return DisableDBClusterOrcaResponse
@@ -23324,7 +23332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the Orca (Redis-compatible) feature for a PolarDB cluster.</p>
+     * <p>Enables the relational feature for a cluster.</p>
      * 
      * @param request EnableDBClusterOrcaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23372,7 +23380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the Orca (Redis-compatible) feature for a PolarDB cluster.</p>
+     * <p>Enables the relational feature for a cluster.</p>
      * 
      * @param request EnableDBClusterOrcaRequest
      * @return EnableDBClusterOrcaResponse
@@ -24556,7 +24564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Installs a PolarClaw Skill.</p>
+     * <p>Installs a PolarClaw skill.</p>
      * 
      * @param request InstallPolarClawSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24565,12 +24573,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InstallPolarClawSkillResponse installPolarClawSkillWithOptions(InstallPolarClawSkillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("AgentId", request.agentId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
             query.put("ApplicationId", request.applicationId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.force)) {
             query.put("Force", request.force);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            query.put("Scope", request.scope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.skillVersion)) {
@@ -24608,7 +24624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Installs a PolarClaw Skill.</p>
+     * <p>Installs a PolarClaw skill.</p>
      * 
      * @param request InstallPolarClawSkillRequest
      * @return InstallPolarClawSkillResponse
@@ -30609,7 +30625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU quota percentage mode and the maximum CPU core count mode. When modifying the rule, you must specify exactly one of the MaxCpu and CpuCount parameters.</p>
+     * <p>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU quota percentage mode and the maximum CPU core count mode. When modifying the rule, you must specify either MaxCpu or CpuCount, but not both.</p>
      * 
      * @param request ModifyResourceControlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30670,7 +30686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU quota percentage mode and the maximum CPU core count mode. When modifying the rule, you must specify exactly one of the MaxCpu and CpuCount parameters.</p>
+     * <p>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU quota percentage mode and the maximum CPU core count mode. When modifying the rule, you must specify either MaxCpu or CpuCount, but not both.</p>
      * 
      * @param request ModifyResourceControlRequest
      * @return ModifyResourceControlResponse
@@ -32888,7 +32904,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Searches for PolarClaw Skills.</p>
+     * <p>Searches for PolarClaw skills.</p>
      * 
      * @param request SearchPolarClawSkillsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32901,12 +32917,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ApplicationId", request.applicationId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.exact)) {
+            query.put("Exact", request.exact);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
             query.put("Limit", request.limit);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.query)) {
             query.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -32928,7 +32952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Searches for PolarClaw Skills.</p>
+     * <p>Searches for PolarClaw skills.</p>
      * 
      * @param request SearchPolarClawSkillsRequest
      * @return SearchPolarClawSkillsResponse
@@ -34210,7 +34234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the skills of a PolarClaw Agent.</p>
+     * <p>Updates the skills of a PolarClaw agent.</p>
      * 
      * @param tmpReq UpdatePolarClawAgentSkillsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -34256,7 +34280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the skills of a PolarClaw Agent.</p>
+     * <p>Updates the skills of a PolarClaw agent.</p>
      * 
      * @param request UpdatePolarClawAgentSkillsRequest
      * @return UpdatePolarClawAgentSkillsResponse

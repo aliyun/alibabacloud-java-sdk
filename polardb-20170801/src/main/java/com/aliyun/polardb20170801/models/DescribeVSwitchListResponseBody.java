@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchListResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the returned results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -16,12 +16,9 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong></p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * <p>Default value: 30.</p>
      * 
@@ -50,7 +47,7 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>A list of vSwitches.</p>
+     * <p>The list of vSwitches.</p>
      */
     @NameInMap("VSwitchs")
     public java.util.List<DescribeVSwitchListResponseBodyVSwitchs> vSwitchs;
@@ -131,10 +128,8 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The vSwitch is the default vSwitch.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The vSwitch is not the default vSwitch.</p>
-         * </li>
+         * <li><strong>true</strong>: The vSwitch is the default vSwitch.</li>
+         * <li><strong>false</strong>: The vSwitch is not the default vSwitch.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -144,7 +139,7 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The ID of the zone where the vSwitch resides.</p>
+         * <p>The zone ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-b</p>
@@ -153,7 +148,7 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
         public String izNo;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that owns the resource.</p>
+         * <p>The ID of the owner account.</p>
          * 
          * <strong>example:</strong>
          * <p>177563751276****</p>
@@ -182,10 +177,8 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
         /**
          * <p>The status of the vSwitch. Valid values:</p>
          * <ul>
-         * <li><p><strong>Pending</strong>: The vSwitch is being configured.</p>
-         * </li>
-         * <li><p><strong>Available</strong>: The vSwitch is available.</p>
-         * </li>
+         * <li><strong>Pending</strong>: The vSwitch is being configured.</li>
+         * <li><strong>Available</strong>: The vSwitch is available.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -213,7 +206,7 @@ public class DescribeVSwitchListResponseBody extends TeaModel {
         public String vSwitchName;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1vbkkyt7apvy4j*****</p>

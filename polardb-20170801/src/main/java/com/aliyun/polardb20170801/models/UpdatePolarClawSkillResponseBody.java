@@ -14,7 +14,7 @@ public class UpdatePolarClawSkillResponseBody extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The returned status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class UpdatePolarClawSkillResponseBody extends TeaModel {
     public UpdatePolarClawSkillResponseBodyConfig config;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

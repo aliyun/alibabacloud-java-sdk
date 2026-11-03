@@ -23,7 +23,7 @@ public class UpdatePolarClawAgentSkillsResponseBody extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The response status code.</p>
+     * <p>The returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class UpdatePolarClawAgentSkillsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -41,7 +41,7 @@ public class UpdatePolarClawAgentSkillsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

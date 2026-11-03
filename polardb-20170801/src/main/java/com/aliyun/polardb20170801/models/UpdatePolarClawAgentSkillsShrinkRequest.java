@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePolarClawAgentSkillsShrinkRequest extends TeaModel {
     /**
-     * <p>PolarClaw Agent ID。</p>
+     * <p>The PolarClaw Agent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

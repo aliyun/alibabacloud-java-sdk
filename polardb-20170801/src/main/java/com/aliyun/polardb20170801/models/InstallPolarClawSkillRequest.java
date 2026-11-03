@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class InstallPolarClawSkillRequest extends TeaModel {
     /**
+     * <p>The target agent in the workspace. If not specified, the default agent is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test1</p>
+     */
+    @NameInMap("AgentId")
+    public String agentId;
+
+    /**
      * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -15,13 +24,22 @@ public class InstallPolarClawSkillRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>Specifies whether to force a reinstallation.</p>
+     * <p>Specifies whether to force reinstallation.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Force")
     public Boolean force;
+
+    /**
+     * <p>The scope. Valid values: workspace (default) and global (shared directory). This parameter is mutually exclusive with AgentId.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>global</p>
+     */
+    @NameInMap("Scope")
+    public String scope;
 
     /**
      * <p>The version number.</p>
@@ -33,7 +51,7 @@ public class InstallPolarClawSkillRequest extends TeaModel {
     public String skillVersion;
 
     /**
-     * <p>The Skill identifier.</p>
+     * <p>The skill identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>alibacloud-rds-copilot</p>
@@ -42,7 +60,7 @@ public class InstallPolarClawSkillRequest extends TeaModel {
     public String slug;
 
     /**
-     * <p>The source.</p>
+     * <p>The source. Default value: polarhub.</p>
      * 
      * <strong>example:</strong>
      * <p>clawhub</p>
@@ -64,6 +82,14 @@ public class InstallPolarClawSkillRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public InstallPolarClawSkillRequest setAgentId(String agentId) {
+        this.agentId = agentId;
+        return this;
+    }
+    public String getAgentId() {
+        return this.agentId;
+    }
+
     public InstallPolarClawSkillRequest setApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -78,6 +104,14 @@ public class InstallPolarClawSkillRequest extends TeaModel {
     }
     public Boolean getForce() {
         return this.force;
+    }
+
+    public InstallPolarClawSkillRequest setScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+    public String getScope() {
+        return this.scope;
     }
 
     public InstallPolarClawSkillRequest setSkillVersion(String skillVersion) {

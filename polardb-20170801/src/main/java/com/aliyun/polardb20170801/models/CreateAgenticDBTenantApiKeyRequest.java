@@ -15,7 +15,7 @@ public class CreateAgenticDBTenantApiKeyRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The description of the purpose.</p>
+     * <p>The usage description.</p>
      * 
      * <strong>example:</strong>
      * <p>Dedicated key for MCP server</p>
@@ -43,8 +43,16 @@ public class CreateAgenticDBTenantApiKeyRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the tenant. The name must be unique within the same cluster and be 2 to 64 characters in length.</p>
-     * <p>This parameter is required.</p>
+     * <p>Specifies the ID of an existing tenant. If you specify this parameter, an API key is created only for the existing tenant in the current cluster. If the tenant does not exist, an error is returned and no tenant is created. If TenantName is also specified, the name must match the name of the tenant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-4b83e0da66674951</p>
+     */
+    @NameInMap("TenantId")
+    public String tenantId;
+
+    /**
+     * <p>The name of the tenant. The name must be unique within the cluster and must be 2 to 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>my-tenant</p>
@@ -87,6 +95,14 @@ public class CreateAgenticDBTenantApiKeyRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateAgenticDBTenantApiKeyRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public CreateAgenticDBTenantApiKeyRequest setTenantName(String tenantName) {
