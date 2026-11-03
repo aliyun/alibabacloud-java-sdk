@@ -1392,10 +1392,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>Call this operation to query the execution status and result of an asynchronous video generation task created by calling <code>CreateVideoTask</code>.</li>
-     * <li>Poll the task status at an interval of 2 to 5 seconds until the task status changes to <code>succeeded</code> or <code>failed</code>.</li>
+     * <li>You can call this operation to query the execution status and result of an asynchronous video generation task created by calling <code>CreateVideoTask</code>.</li>
+     * <li>Poll the task at an interval of 2 to 5 seconds until the task status changes to <code>succeeded</code> or <code>failed</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1431,10 +1431,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>Call this operation to query the execution status and result of an asynchronous video generation task created by calling <code>CreateVideoTask</code>.</li>
-     * <li>Poll the task status at an interval of 2 to 5 seconds until the task status changes to <code>succeeded</code> or <code>failed</code>.</li>
+     * <li>You can call this operation to query the execution status and result of an asynchronous video generation task created by calling <code>CreateVideoTask</code>.</li>
+     * <li>Poll the task at an interval of 2 to 5 seconds until the task status changes to <code>succeeded</code> or <code>failed</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 

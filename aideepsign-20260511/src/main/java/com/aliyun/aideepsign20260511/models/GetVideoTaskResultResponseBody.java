@@ -23,7 +23,7 @@ public class GetVideoTaskResultResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The cause of the failure. This field is returned only when the task status is failed.</p>
+     * <p>The cause of the failure. This parameter is returned only when the task status is failed.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -41,7 +41,7 @@ public class GetVideoTaskResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task status. Valid values: running, succeeded, and failed. Set the polling interval to at least 5 seconds.</p>
+     * <p>The task status. Valid values: <code>running</code>, <code>succeeded</code>, and <code>failed</code>. Set the polling interval to at least 5 seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>succeeded</p>
@@ -153,7 +153,7 @@ public class GetVideoTaskResultResponseBody extends TeaModel {
         public String objectKey;
 
         /**
-         * <p>The presigned download URL of the video stored in OSS after C2PA signing.</p>
+         * <p>The presigned download URL of the C2PA-signed object stored in OSS.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://duguang-database-public.oss-cn-hangzhou.aliyuncs.com/cosmetic_plicense_init/024d6974-1b14-4741-8919-9d02b7e3901b.mp4">http://duguang-database-public.oss-cn-hangzhou.aliyuncs.com/cosmetic_plicense_init/024d6974-1b14-4741-8919-9d02b7e3901b.mp4</a></p>

@@ -26,7 +26,7 @@ public class CreateVideoTaskRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The video duration in seconds. Valid values: an integer from 2 to 30, -1 (intelligent duration), and 0 (server default of 5 seconds).</p>
+     * <p>The video duration in seconds. Valid values: an integer in the range of [2, 30], -1 (intelligent duration), and 0 (the server uses the default value of 5 seconds).</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -44,7 +44,7 @@ public class CreateVideoTaskRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>The video description prompt. You must specify either this parameter or Media. For text-to-video generation, only Prompt is required.</p>
+     * <p>The video description prompt. Either this parameter or Media is required. For pure text-to-video generation, only Prompt is required.</p>
      * 
      * <strong>example:</strong>
      * <p>A meeting room full of cats</p>
@@ -80,7 +80,7 @@ public class CreateVideoTaskRequest extends TeaModel {
     public String resolution;
 
     /**
-     * <p>The random seed. Valid values: -1 (random), an integer from 0 to 2147483647, and 0 (server default of random).</p>
+     * <p>The random seed. Valid values: -1 (random), an integer in the range of [0, 2147483647], and 0 (the server uses a random seed by default).</p>
      * 
      * <strong>example:</strong>
      * <p>42</p>
