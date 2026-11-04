@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>umeng_push20220225</artifactId>
-  <version>1.0.17</version>
+  <version>1.0.18</version>
   <packaging>jar</packaging>
   <name>umeng_push20220225</name>
   <description>Alibaba Cloud umeng-push (20220225) SDK for Java
@@ -41,12 +41,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.26</version>
+      <version>0.2.28</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.12</version>
+      <version>0.3.19</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

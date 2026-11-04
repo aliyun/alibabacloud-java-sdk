@@ -65,6 +65,20 @@ public class ChannelProperties extends TeaModel {
     @NameInMap("vivoPushMode")
     public String vivoPushMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>发送模版消息时必填，此时vivoCategory不用填</p>
+     */
+    @NameInMap("vivoTemplateId")
+    public String vivoTemplateId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>格式为{&quot;key1&quot;:&quot;v1&quot;,&quot;key2&quot;:&quot;v2&quot;}</p>
+     */
+    @NameInMap("vivoTemplateParams")
+    public java.util.Map<String, ?> vivoTemplateParams;
+
     @NameInMap("xiaomiChannelId")
     public String xiaomiChannelId;
 
@@ -191,6 +205,22 @@ public class ChannelProperties extends TeaModel {
     }
     public String getVivoPushMode() {
         return this.vivoPushMode;
+    }
+
+    public ChannelProperties setVivoTemplateId(String vivoTemplateId) {
+        this.vivoTemplateId = vivoTemplateId;
+        return this;
+    }
+    public String getVivoTemplateId() {
+        return this.vivoTemplateId;
+    }
+
+    public ChannelProperties setVivoTemplateParams(java.util.Map<String, ?> vivoTemplateParams) {
+        this.vivoTemplateParams = vivoTemplateParams;
+        return this;
+    }
+    public java.util.Map<String, ?> getVivoTemplateParams() {
+        return this.vivoTemplateParams;
     }
 
     public ChannelProperties setXiaomiChannelId(String xiaomiChannelId) {
