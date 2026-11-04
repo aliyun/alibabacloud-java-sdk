@@ -908,10 +908,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a workspace along with the first member and the first API key in a one-time onboarding process. The plaintext API key is returned in the response.</p>
+     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding flow, and returns the plaintext API key.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding process.</p>
+     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding flow.</p>
      * 
      * @param request CreateContextDatabaseWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -922,6 +922,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.memberName)) {
             query.put("MemberName", request.memberName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.permissionMode)) {
+            query.put("PermissionMode", request.permissionMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceName)) {
@@ -947,10 +951,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a workspace along with the first member and the first API key in a one-time onboarding process. The plaintext API key is returned in the response.</p>
+     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding flow, and returns the plaintext API key.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding process.</p>
+     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding flow.</p>
      * 
      * @param request CreateContextDatabaseWorkspaceRequest
      * @return CreateContextDatabaseWorkspaceResponse

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     /**
-     * <p>The plaintext API key. This value is returned only once at creation time. The caller must persist it.</p>
+     * <p>The plaintext API key. This key is returned only once upon creation. The caller must persist the key.</p>
      * 
      * <strong>example:</strong>
      * <p>ctxdb-*****</p>
@@ -14,7 +14,7 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String apiKey;
 
     /**
-     * <p>The name of the first API key. The value is fixed as default.</p>
+     * <p>The name of the first API key. The value is fixed to default.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -23,7 +23,7 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String apiKeyName;
 
     /**
-     * <p>The time when the workspace was created, in ISO 8601 format.</p>
+     * <p>The creation time in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-05-28T17:59:55Z</p>
@@ -50,6 +50,20 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String memberName;
 
     /**
+     * <p>The permission mode that actually takes effect after the workspace is created. The value is returned as a lowercase string:</p>
+     * <ul>
+     * <li><code>personal_compatibility</code>: Compatibility mode, which corresponds to the request value <code>compatibility</code>.</li>
+     * <li><code>advanced</code>: Advanced permission mode.</li>
+     * </ul>
+     * <p>This field is optional. If it is not returned in the response, check the actual mode in the workspace details. Do not recreate the workspace only because this field is missing.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>advanced</p>
+     */
+    @NameInMap("PermissionMode")
+    public String permissionMode;
+
+    /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +73,7 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The role of the first member. The value is fixed as owner.</p>
+     * <p>The role of the first member. The value is fixed to owner.</p>
      * 
      * <strong>example:</strong>
      * <p>owner</p>
@@ -68,11 +82,7 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String role;
 
     /**
-     * <p>The workspace status. Valid values:</p>
-     * <ul>
-     * <li>Active: running as expected.</li>
-     * <li>Locked: locked due to overdue payment or expiration.</li>
-     * </ul>
+     * <p>The status of the workspace. Valid values: Active (running normally) and Locked (stopped due to an overdue payment or locked due to expiration).</p>
      * 
      * <strong>example:</strong>
      * <p>Active</p>
@@ -81,11 +91,7 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The workspace type. Valid values:</p>
-     * <ul>
-     * <li>personal: individual account.</li>
-     * <li>enterprise: enterprise account.</li>
-     * </ul>
+     * <p>The type of the workspace. Valid values: personal and enterprise.</p>
      * 
      * <strong>example:</strong>
      * <p>personal</p>
@@ -94,7 +100,7 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String type;
 
     /**
-     * <p>The ID of the new workspace.</p>
+     * <p>The ID of the newly created workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>ws-as1llqmkol****</p>
@@ -103,7 +109,7 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     public String workspaceId;
 
     /**
-     * <p>The workspace name.</p>
+     * <p>The name of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>my-workspace</p>
@@ -154,6 +160,14 @@ public class CreateContextDatabaseWorkspaceResponseBody extends TeaModel {
     }
     public String getMemberName() {
         return this.memberName;
+    }
+
+    public CreateContextDatabaseWorkspaceResponseBody setPermissionMode(String permissionMode) {
+        this.permissionMode = permissionMode;
+        return this;
+    }
+    public String getPermissionMode() {
+        return this.permissionMode;
     }
 
     public CreateContextDatabaseWorkspaceResponseBody setRequestId(String requestId) {

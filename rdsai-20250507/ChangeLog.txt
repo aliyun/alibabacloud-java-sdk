@@ -1,3 +1,8 @@
+2026-11-04 Version: 3.10.2
+- Update API CreateContextDatabaseWorkspace: add request parameters PermissionMode.
+- Update API CreateContextDatabaseWorkspace: add response parameters Body.PermissionMode.
+
+
 2026-11-03 Version: 3.10.1
 - Update API DescribeAppInstanceAttribute: add response parameters Body.MinorVersionReleaseNotes.
 
