@@ -32,7 +32,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
     public java.util.List<ListManagedAgentsResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of results returned for this request.</p>
+     * <p>The maximum number of results returned for the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -41,7 +41,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The message about the request processing result.</p>
+     * <p>The request processing result message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -50,7 +50,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The token for the next page. An empty value indicates that the last page is reached.</p>
+     * <p>The token for the next page. An empty value indicates that the end of the list is reached.</p>
      * 
      * <strong>example:</strong>
      * <p>next-token-1</p>
@@ -245,7 +245,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
 
     public static class ListManagedAgentsResponseBodyItems extends TeaModel {
         /**
-         * <p>API_KEY 表示使用 API Key；USER 表示使用用户身份。</p>
+         * <p>The inbound access mode.</p>
          * 
          * <strong>example:</strong>
          * <p>API_KEY</p>
@@ -254,7 +254,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         public String accessMode;
 
         /**
-         * <p>仅 accessMode 为 USER 时返回：ALL 表示全部用户，SPECIFIED 表示指定用户。</p>
+         * <p>The user access scope.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>

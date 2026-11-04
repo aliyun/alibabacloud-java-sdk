@@ -11,7 +11,7 @@ public class ListSkillsResponseBody extends TeaModel {
     public ListSkillsResponseBodyData data;
 
     /**
-     * <p>The maximum number of entries per page.</p>
+     * <p>The maximum number of entries to return per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListSkillsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page.</p>
+     * <p>The token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>next-page-token</p>
@@ -76,7 +76,7 @@ public class ListSkillsResponseBody extends TeaModel {
 
     public static class ListSkillsResponseBodyDataPageItems extends TeaModel {
         /**
-         * <p>The business tags as a JSON array string.</p>
+         * <p>The JSON array string of business tags.</p>
          * 
          * <strong>example:</strong>
          * <p>Sample property value</p>
@@ -88,7 +88,7 @@ public class ListSkillsResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>A sample description that explains the purpose of the resource</p>
+         * <p>Sample description used to explain the purpose of the resource</p>
          */
         @NameInMap("description")
         public String description;
@@ -103,12 +103,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public Long downloadCount;
 
         /**
-         * <p>The draft mode. Valid values:</p>
-         * <ul>
-         * <li>HEAD: The Skill has a persistent draft.</li>
-         * <li>VERSIONED: Each edit creates a versioned draft.</li>
-         * </ul>
-         * <p>The value is determined by the server. The caller uses this value to render the status column.</p>
+         * <p>The draft mode. A value of HEAD indicates that the skill has a persistent draft. A value of VERSIONED indicates that a versioned draft is created for each edit. This value is determined by the server, and the caller renders the status column based on this value.</p>
          * 
          * <strong>example:</strong>
          * <p>HEAD</p>
@@ -117,7 +112,13 @@ public class ListSkillsResponseBody extends TeaModel {
         public String draftMode;
 
         /**
-         * <p>The version that is being edited. In HEAD draft mode, the value is HEAD.</p>
+         * <p>Indicates whether the page item is editable.</p>
+         */
+        @NameInMap("editable")
+        public Boolean editable;
+
+        /**
+         * <p>The version being edited. The value is HEAD in HEAD draft mode.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -126,7 +127,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public String editingVersion;
 
         /**
-         * <p>Indicates whether the Skill is enabled.</p>
+         * <p>Indicates whether the skill is enabled.</p>
          */
         @NameInMap("enable")
         public Boolean enable;
@@ -174,7 +175,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The version that is under review. In HEAD draft mode, the value is HEAD.</p>
+         * <p>The version under review. The value is HEAD in HEAD draft mode.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -192,7 +193,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787671022000</p>
@@ -250,6 +251,14 @@ public class ListSkillsResponseBody extends TeaModel {
         }
         public String getDraftMode() {
             return this.draftMode;
+        }
+
+        public ListSkillsResponseBodyDataPageItems setEditable(Boolean editable) {
+            this.editable = editable;
+            return this;
+        }
+        public Boolean getEditable() {
+            return this.editable;
         }
 
         public ListSkillsResponseBodyDataPageItems setEditingVersion(String editingVersion) {

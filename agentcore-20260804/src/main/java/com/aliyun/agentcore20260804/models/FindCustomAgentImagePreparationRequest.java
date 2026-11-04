@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FindCustomAgentImagePreparationRequest extends TeaModel {
     /**
-     * <p>The client token submitted when creating or explicitly updating the image. Do not specify AgentId or the operation type.</p>
+     * <p>The client token submitted when creating or explicitly updating an image. Do not specify AgentId or the operation type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

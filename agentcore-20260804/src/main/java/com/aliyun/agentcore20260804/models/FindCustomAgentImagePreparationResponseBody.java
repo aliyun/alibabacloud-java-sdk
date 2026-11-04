@@ -14,7 +14,7 @@ public class FindCustomAgentImagePreparationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The preparation query result. For the asynchronous execution status, refer to the phase.</p>
+     * <p>The preparation query result. Check the phase for the asynchronous execution status.</p>
      */
     @NameInMap("data")
     public FindCustomAgentImagePreparationResponseBodyData data;
@@ -152,7 +152,7 @@ public class FindCustomAgentImagePreparationResponseBody extends TeaModel {
 
     public static class FindCustomAgentImagePreparationResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the target agent.</p>
+         * <p>The target agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-example</p>
@@ -161,13 +161,13 @@ public class FindCustomAgentImagePreparationResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The security error. This parameter is returned only when the task fails. Otherwise, the value is null.</p>
+         * <p>The security error. This field is returned only when the task fails. Otherwise, the value is null.</p>
          */
         @NameInMap("error")
         public FindCustomAgentImagePreparationResponseBodyDataError error;
 
         /**
-         * <p>The phase where the failure occurred. This parameter is returned only when the phase is FAILED. Otherwise, the value is null.</p>
+         * <p>The failed phase. This field is returned only when the phase is FAILED. Otherwise, the value is null.</p>
          * 
          * <strong>example:</strong>
          * <p>COPYING</p>
@@ -185,7 +185,7 @@ public class FindCustomAgentImagePreparationResponseBody extends TeaModel {
         public String phase;
 
         /**
-         * <p>The ID of the task submitted in the console.</p>
+         * <p>The ID of the task submitted from the console.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-example:1</p>

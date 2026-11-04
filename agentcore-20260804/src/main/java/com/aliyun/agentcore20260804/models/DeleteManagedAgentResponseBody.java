@@ -110,7 +110,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
 
     public static class DeleteManagedAgentResponseBodyData extends TeaModel {
         /**
-         * <p>API_KEY 表示使用 API Key；USER 表示使用用户身份。</p>
+         * <p>The inbound access mode.</p>
          * 
          * <strong>example:</strong>
          * <p>API_KEY</p>
@@ -119,7 +119,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         public String accessMode;
 
         /**
-         * <p>仅 accessMode 为 USER 时返回：ALL 表示全部用户，SPECIFIED 表示指定用户。</p>
+         * <p>The user access scope.</p>
          * 
          * <strong>example:</strong>
          * <p>SPECIFIED</p>
@@ -173,7 +173,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The latest specification version.</p>
+         * <p>The latest specification version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

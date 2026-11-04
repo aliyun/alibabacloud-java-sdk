@@ -29,7 +29,7 @@ public class ListPermissionRulesResponseBody extends TeaModel {
     public java.util.List<ListPermissionRulesResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of entries returned in the current request.</p>
+     * <p>The maximum number of results returned in this response.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +47,7 @@ public class ListPermissionRulesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The next page token.</p>
+     * <p>The pagination token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>token-example</p>
@@ -71,7 +71,7 @@ public class ListPermissionRulesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of rules that meet the specified conditions.</p>
+     * <p>The total number of rules that match the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

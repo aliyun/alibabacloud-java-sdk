@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIdentityProviderDepartmentsResponseBody extends TeaModel {
     /**
-     * <p>The business status code of the API request. SUCCESS indicates that the request is successful, but does not indicate that the asynchronous synchronization task is completed.</p>
+     * <p>The business status code of the current API request. SUCCESS indicates that the current request is successful, but does not indicate that the asynchronous synchronization task is completed.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,7 +14,7 @@ public class ListIdentityProviderDepartmentsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code of the API request, which does not indicate the execution result of the asynchronous task.</p>
+     * <p>The HTTP status code of the current API request. This does not indicate the execution result of an asynchronous task.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class ListIdentityProviderDepartmentsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The direct child departments on the current page under the current parent department. You must make another query to obtain the details of the child departments.</p>
+     * <p>The direct child departments on the current page under the current parent department. You must query child department details separately.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;id&quot;:&quot;10001&quot;,&quot;name&quot;:&quot;R&amp;D Department&quot;,&quot;parentId&quot;:&quot;1&quot;,&quot;memberCount&quot;:12,&quot;hasChildren&quot;:true}]</p>
@@ -32,7 +32,7 @@ public class ListIdentityProviderDepartmentsResponseBody extends TeaModel {
     public java.util.List<ListIdentityProviderDepartmentsResponseBodyItems> items;
 
     /**
-     * <p>The number of items per page used for this query.</p>
+     * <p>The number of entries per page used for the current query.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -41,7 +41,7 @@ public class ListIdentityProviderDepartmentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The response message of the API request.</p>
+     * <p>The response message of the current API request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -50,7 +50,7 @@ public class ListIdentityProviderDepartmentsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The token for the next page. An empty or missing value indicates that there are no subsequent pages at the current hierarchy level of the parent department, but does not indicate that the entire department tree has been returned.</p>
+     * <p>The token for the next page. An empty or missing value indicates that there are no subsequent pages at the current hierarchy of the parent department, but does not indicate that the entire department tree has been returned.</p>
      * 
      * <strong>example:</strong>
      * <p>example-next-page-token</p>
@@ -68,7 +68,7 @@ public class ListIdentityProviderDepartmentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API request is successful. To check whether an asynchronous task is completed, query the task status.</p>
+     * <p>Indicates whether the current API request is successful. To check whether an asynchronous task is completed, query the task status.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,7 +77,7 @@ public class ListIdentityProviderDepartmentsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of departments. This operation does not provide this statistic and may not return this field. Do not treat a missing value as 0.</p>
+     * <p>The total number of departments. The current operation does not provide this statistic and may not return it. Do not treat a missing value as 0.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -164,7 +164,7 @@ public class ListIdentityProviderDepartmentsResponseBody extends TeaModel {
 
     public static class ListIdentityProviderDepartmentsResponseBodyItems extends TeaModel {
         /**
-         * <p>Indicates whether the department has child departments. A value of true indicates that the department has child departments and an expansion entry can be displayed accordingly. A value of false indicates a leaf node. If this field is not returned, the status is unknown. You must use the ID of the current node to make another query to obtain the details of the child departments.</p>
+         * <p>Indicates whether the department has child departments. A value of true indicates that the department has child departments and an expand entry can be displayed based on this. A value of false indicates a leaf node. A missing value indicates unknown. You must use the ID of the current node to query child department details separately.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -173,7 +173,7 @@ public class ListIdentityProviderDepartmentsResponseBody extends TeaModel {
         public Boolean hasChildren;
 
         /**
-         * <p>The unique identifier of the department returned by the identity provider. When querying the child departments of this node, use this value as the parentDepartmentId.</p>
+         * <p>The unique identifier of the department returned by the identity provider. When querying the child departments of this node, use this value as parentDepartmentId.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>
@@ -182,7 +182,7 @@ public class ListIdentityProviderDepartmentsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The number of members in the department returned by the identity provider. This field is not returned when the number is unknown. Do not treat a missing value as 0.</p>
+         * <p>The number of members in the department returned by the identity provider. This field is not returned when the value is unknown. Do not treat a missing value as 0.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -200,7 +200,7 @@ public class ListIdentityProviderDepartmentsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the parent department to which this department belongs. This value describes the parent-child relationship and is not used to expand the current node.</p>
+         * <p>The ID of the parent department to which the department belongs. This value describes the parent-child relationship and is not used to expand the current node.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

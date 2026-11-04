@@ -29,7 +29,7 @@ public class GetAccessApplicationResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message about the request processing result.</p>
+     * <p>The request processing result message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class GetAccessApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;

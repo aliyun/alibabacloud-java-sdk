@@ -197,7 +197,7 @@ public class CreatePermissionRulesResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The rule source details.</p>
+         * <p>The details of the rule source.</p>
          * 
          * <strong>example:</strong>
          * <p>OpenAPI</p>

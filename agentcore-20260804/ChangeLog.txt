@@ -1,3 +1,8 @@
+2026-11-04 Version: 3.2.1
+- Update API GetSkillDetail: add response parameters Body.data.editable.
+- Update API ListSkills: add response parameters Body.data.pageItems.$.editable.
+
+
 2026-11-01 Version: 3.2.0
 - Support API CreatePermissionRules.
 - Support API DeleteAccessApplication.

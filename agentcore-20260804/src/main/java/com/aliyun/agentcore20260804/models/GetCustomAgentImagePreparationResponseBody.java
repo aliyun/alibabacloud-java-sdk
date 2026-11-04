@@ -14,7 +14,7 @@ public class GetCustomAgentImagePreparationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The preparation query result. Refer to the phase for the asynchronous execution status.</p>
+     * <p>The preparation query result. Check the phase parameter for the asynchronous execution status.</p>
      */
     @NameInMap("data")
     public GetCustomAgentImagePreparationResponseBodyData data;
@@ -110,7 +110,7 @@ public class GetCustomAgentImagePreparationResponseBody extends TeaModel {
 
     public static class GetCustomAgentImagePreparationResponseBodyDataError extends TeaModel {
         /**
-         * <p>The business error code for image preparation. This code is used to identify the failure type. For the specific cause, refer to the message.</p>
+         * <p>The business error code for image preparation. This code is used to identify the failure type. For the specific cause, see the message parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>ImageSyncFailed</p>
@@ -161,13 +161,13 @@ public class GetCustomAgentImagePreparationResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The error information. This field is returned only when the task fails. Otherwise, the value is null.</p>
+         * <p>The security error. This parameter is returned only when the task fails. Otherwise, null is returned.</p>
          */
         @NameInMap("error")
         public GetCustomAgentImagePreparationResponseBodyDataError error;
 
         /**
-         * <p>The failed phase. This field is returned only when the status is FAILED. Otherwise, the value is null.</p>
+         * <p>The failed phase. This parameter is returned only when the phase is FAILED. Otherwise, null is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>COPYING</p>
@@ -176,7 +176,7 @@ public class GetCustomAgentImagePreparationResponseBody extends TeaModel {
         public String failedPhase;
 
         /**
-         * <p>The current phase. Only SUCCEEDED indicates that the deployment of the target version is successful.</p>
+         * <p>The current phase. Only SUCCEEDED indicates that the target version is deployed successfully.</p>
          * 
          * <strong>example:</strong>
          * <p>FAILED</p>
@@ -185,7 +185,7 @@ public class GetCustomAgentImagePreparationResponseBody extends TeaModel {
         public String phase;
 
         /**
-         * <p>The console submission task ID.</p>
+         * <p>The Console submission task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-example:1</p>

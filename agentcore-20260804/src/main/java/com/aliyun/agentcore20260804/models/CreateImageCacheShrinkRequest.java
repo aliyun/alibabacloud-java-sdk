@@ -12,7 +12,7 @@ public class CreateImageCacheShrinkRequest extends TeaModel {
     public String bodyShrink;
 
     /**
-     * <p>This parameter is required and cannot be empty. It is reserved to be compatible with the API. Currently, it does not provide the ability to deduplicate requests or recover the original result based on this field. If a timeout occurs or the result is unconfirmed, query the query cache status first before deciding whether to recommit.</p>
+     * <p>Required and non-empty. This parameter is reserved for API compatibility. It currently does not provide request deduplication or original result recovery based on this field. If a timeout occurs or the result is unconfirmed, query the cache status first before deciding whether to resubmit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

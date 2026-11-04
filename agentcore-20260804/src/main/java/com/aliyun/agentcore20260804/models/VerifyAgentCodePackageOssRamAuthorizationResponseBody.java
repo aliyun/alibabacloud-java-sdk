@@ -14,7 +14,7 @@ public class VerifyAgentCodePackageOssRamAuthorizationResponseBody extends TeaMo
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("data")
     public VerifyAgentCodePackageOssRamAuthorizationResponseBodyData data;
@@ -107,7 +107,7 @@ public class VerifyAgentCodePackageOssRamAuthorizationResponseBody extends TeaMo
 
     public static class VerifyAgentCodePackageOssRamAuthorizationResponseBodyData extends TeaModel {
         /**
-         * <p>The policy binding status.</p>
+         * <p>The binding status of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>AUTHORIZED</p>

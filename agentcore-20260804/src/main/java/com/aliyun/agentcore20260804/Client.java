@@ -512,15 +512,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, prepare a writable workspace, a RAM role ARN, a container image or code package, and runtime configurations. You must specify name, artifact, roleArn, and runtime. The runtime parameter must include both compute and sessionPolicy.
-     * In container mode, use artifact.container and specify artifact.port. The image must have the required access permissions and be accessible over the network allowed by the workspace.
-     * In code package pattern, specify artifact.port, and the sourceUri, languageRuntime, and entrypoint parameters of artifact.code. Do not specify container at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, call GetAgentCodePackageUploadUrl to obtain the upload URL, upload the file directly, and then commit the returned sourceUri.
-     * When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. For code package requests, set the client timeout to 210 seconds. Archive integrity and secure decompression are checked at startup. A successful acceptance does not mean that the agent is ready to run.
-     * The creation process is asynchronous. A successful response indicates that the request is accepted. You can use the returned agentId to call GetCustomAgent and check the latestVersionStatus, latestExecutionError, and status parameters corresponding to latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure the access endpoint.
+     * <p>Before you call this operation, prepare a writable workspace, a RAM role ARN, a container image or code package, and runtime configurations. You must specify the name, artifact, roleArn, and runtime parameters. The runtime parameter must include both compute and sessionPolicy.
+     * To use the container mode, configure artifact.container and specify artifact.port. The image must have the required access permissions and be accessible over the network allowed by the workspace.
+     * To use the code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint parameters of artifact.code. Do not specify the container parameter at the same time. Dependencies must be packaged by the user. The supported formats are ZIP and TAR.GZ, and the compressed package size cannot exceed 500,000,000 bytes. You can call the ListAgentCodeRuntimes operation to query the runtime environment identity. The sourceUri parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. To upload a local file, call the GetAgentCodePackageUploadUrl operation to obtain the upload URL, upload the file directly, and then commit the returned sourceUri.
+     * When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
+     * The creation process is asynchronous. A successful response indicates that the request is accepted. Use the returned agentId to call the GetCustomAgent operation and check the latestVersionStatus, latestExecutionError, and status parameters corresponding to latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call the CreateServiceEndpoint operation to configure the access endpoint.
      * The clientToken parameter does not currently provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not currently take effect. Omit this parameter.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a custom agent in a specified workspace, which supports deployment by using a container image or a code package. The creation process is asynchronous. You can call GetCustomAgent to query the deployment result.</p>
+     * <p>Creates a custom agent in a specified workspace by using a container image or a code package. The creation process is asynchronous. You can call the GetCustomAgent operation to query the deployment result.</p>
      * 
      * @param tmpReq CreateCustomAgentRequest
      * @param headers map
@@ -566,15 +566,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, prepare a writable workspace, a RAM role ARN, a container image or code package, and runtime configurations. You must specify name, artifact, roleArn, and runtime. The runtime parameter must include both compute and sessionPolicy.
-     * In container mode, use artifact.container and specify artifact.port. The image must have the required access permissions and be accessible over the network allowed by the workspace.
-     * In code package pattern, specify artifact.port, and the sourceUri, languageRuntime, and entrypoint parameters of artifact.code. Do not specify container at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, call GetAgentCodePackageUploadUrl to obtain the upload URL, upload the file directly, and then commit the returned sourceUri.
-     * When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. For code package requests, set the client timeout to 210 seconds. Archive integrity and secure decompression are checked at startup. A successful acceptance does not mean that the agent is ready to run.
-     * The creation process is asynchronous. A successful response indicates that the request is accepted. You can use the returned agentId to call GetCustomAgent and check the latestVersionStatus, latestExecutionError, and status parameters corresponding to latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure the access endpoint.
+     * <p>Before you call this operation, prepare a writable workspace, a RAM role ARN, a container image or code package, and runtime configurations. You must specify the name, artifact, roleArn, and runtime parameters. The runtime parameter must include both compute and sessionPolicy.
+     * To use the container mode, configure artifact.container and specify artifact.port. The image must have the required access permissions and be accessible over the network allowed by the workspace.
+     * To use the code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint parameters of artifact.code. Do not specify the container parameter at the same time. Dependencies must be packaged by the user. The supported formats are ZIP and TAR.GZ, and the compressed package size cannot exceed 500,000,000 bytes. You can call the ListAgentCodeRuntimes operation to query the runtime environment identity. The sourceUri parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. To upload a local file, call the GetAgentCodePackageUploadUrl operation to obtain the upload URL, upload the file directly, and then commit the returned sourceUri.
+     * When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
+     * The creation process is asynchronous. A successful response indicates that the request is accepted. Use the returned agentId to call the GetCustomAgent operation and check the latestVersionStatus, latestExecutionError, and status parameters corresponding to latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call the CreateServiceEndpoint operation to configure the access endpoint.
      * The clientToken parameter does not currently provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not currently take effect. Omit this parameter.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a custom agent in a specified workspace, which supports deployment by using a container image or a code package. The creation process is asynchronous. You can call GetCustomAgent to query the deployment result.</p>
+     * <p>Creates a custom agent in a specified workspace by using a container image or a code package. The creation process is asynchronous. You can call the GetCustomAgent operation to query the deployment result.</p>
      * 
      * @param request CreateCustomAgentRequest
      * @return CreateCustomAgentResponse
@@ -814,39 +814,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Features and prerequisites</h2>
-     * <p>Issues a new credential explicitly. This requires an available shared pool and the AgentIdentity SCIM reception to be Enabled. This operation does not automatically enable reception. If it is not enabled, call prepare first. Returns the configuration, credential summary, and the current token. The limit of a maximum of two credentials is enforced by AgentIdentity. An existing available token does not prevent users from explicitly creating a second one. Old credentials are not automatically revoked, and no extended rotation process is provided.
-     * The token is returned only once and cannot be retrieved again in subsequent list and query operations. Do not automatically retry the issuance. If the response is lost, check the list first to verify whether it has been created. Creating a credential does not enable AC syncEnabled, start a full user import, or switch SAML logon. Deleting an old token should be performed explicitly after the user confirms the actual usage of the external provisioning system.</p>
-     * <h2>Request and examples</h2>
-     * <p>POST /workspaces/{workspaceId}/scim-provisioning/credentials
-     * Call conventions: Call the operation in the region of the target workspace, using an AK/STS identity that has permissions for the identity source resources of the corresponding workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameter content of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not log the key. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
-     * <pre><code class="language-text">POST /workspaces/ws-example/scim-provisioning/credentials
-     * No business request body.
-     * </code></pre>
-     * <h2>Response example</h2>
-     * <pre><code class="language-json">{
-     *   &quot;data&quot;: {
-     *     &quot;configuration&quot;: {
-     *       &quot;status&quot;: &quot;Enabled&quot;,
-     *       &quot;baseUrl&quot;: &quot;https://example.com/scim/v2&quot;
-     *     },
-     *     &quot;credential&quot;: {
-     *       &quot;credentialId&quot;: &quot;credential-example&quot;,
-     *       &quot;status&quot;: &quot;Enabled&quot;,
-     *       &quot;expireTime&quot;: &quot;&lt;Upstream expiration time&gt;&quot;
-     *     },
-     *     &quot;token&quot;: &quot;&lt;Newly issued token for the current request&gt;&quot;
-     *   }
-     * }
-     * </code></pre>
-     * <h2>Errors and handling</h2>
-     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that there is no binding of the matching type. Synchronous calls to the upstream may fail and return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
-     * 400 LimitExceeded.ScimCredential: A maximum of two credentials are allowed. Delete one before you can continue to create. 400 InvalidParameter: Reception is not enabled or the shared pool is unavailable. Do not retry quota errors as system failures.</p>
-     * <h2>Call relationships and usage boundaries</h2>
-     * <p>After creation, securely save the token that is returned only once and configure it in the external provisioning system. Existing tokens remain valid. Only DeleteIdentityProviderSCIMCredential revokes the specified credential. Do not automatically retry when the response is lost. Call ListIdentityProviderSCIMCredentials to check first. This operation does not provide automatic rotation or scaling.</p>
+     * <h2>Features and prerequisites\nExplicitly issues a new credential, which requires an available shared pool and the AgentIdentity SCIM receiver to be Enabled. This operation does not automatically enable the receiver. If it is not enabled, call the prepare operation first. Returns the configuration, credential summary, and the current token. The maximum limit of two credentials is enforced by AgentIdentity. An existing available token does not prevent users from explicitly creating a second one. Old credentials are not automatically revoked, and no extended rotation process is provided.\nThe token is returned only once and cannot be retrieved again in subsequent list or query operations. Do not automatically retry the issuance. If the response is lost, check the list first to verify whether it has been created. Creating a credential does not enable AC syncEnabled, start a full user import, or switch SAML logon. Deleting an old token should be explicitly performed by the user after confirming the actual usage of the external provisioning system.\n\n## Requests and examples\nPOST /workspaces/{workspaceId}/scim-provisioning/credentials\nCalling conventions: Call the operation in the region of the target workspace, using an AccessKey (AK) or Security Token Service (STS) identity that has permissions for the identity provider resources of the corresponding workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not log the key. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.\n<code>text\\nPOST /workspaces/ws-example/scim-provisioning/credentials\\nNo business request body.\\n</code>\n\n## Response example\n<code>json\\n{\\n  &quot;data&quot;: {\\n    &quot;configuration&quot;: {\\n      &quot;status&quot;: &quot;Enabled&quot;,\\n      &quot;baseUrl&quot;: &quot;https://example.com/scim/v2&quot;\\n    },\\n    &quot;credential&quot;: {\\n      &quot;credentialId&quot;: &quot;credential-example&quot;,\\n      &quot;status&quot;: &quot;Enabled&quot;,\\n      &quot;expireTime&quot;: &quot;&lt;Upstream expiration time&gt;&quot;\\n    },\\n    &quot;token&quot;: &quot;&lt;Newly issued token for this request&gt;&quot;\\n  }\\n}\\n</code>\n\n## Errors and handling\nError handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that there is no binding of the matching type. Synchronous calls to the upstream may fail and return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace not found errors follow the common error handling.\n400 LimitExceeded.ScimCredential: A maximum of two credentials are allowed. Delete one before creating another. 400 InvalidParameter: The receiver is not enabled or the shared pool is unavailable. Do not retry quota errors as system failures.\n\n## Call relationships and usage boundaries\nAfter creation, securely save the token that is returned only once and configure it in the external provisioning system. Existing tokens remain valid. Only DeleteIdentityProviderSCIMCredential revokes the specified credential. Do not automatically retry if the response is lost. Call ListIdentityProviderSCIMCredentials to check first. This operation does not provide automatic rotation or scaling.</h2>
      * 
      * <b>summary</b> : 
-     * <p>Issues a SCIM credential explicitly and returns the plaintext token only for the current call. A maximum of two credentials are allowed in the same pool. This operation does not automatically revoke old credentials or enable AC user synchronization.</p>
+     * <p>Issues a SCIM credential explicitly and returns the plaintext token only in the current response. A maximum of two credentials are allowed per pool. This operation does not automatically revoke old credentials or enable AC user synchronization.</p>
      * 
      * @param request CreateIdentityProviderSCIMCredentialRequest
      * @param headers map
@@ -874,39 +845,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Features and prerequisites</h2>
-     * <p>Issues a new credential explicitly. This requires an available shared pool and the AgentIdentity SCIM reception to be Enabled. This operation does not automatically enable reception. If it is not enabled, call prepare first. Returns the configuration, credential summary, and the current token. The limit of a maximum of two credentials is enforced by AgentIdentity. An existing available token does not prevent users from explicitly creating a second one. Old credentials are not automatically revoked, and no extended rotation process is provided.
-     * The token is returned only once and cannot be retrieved again in subsequent list and query operations. Do not automatically retry the issuance. If the response is lost, check the list first to verify whether it has been created. Creating a credential does not enable AC syncEnabled, start a full user import, or switch SAML logon. Deleting an old token should be performed explicitly after the user confirms the actual usage of the external provisioning system.</p>
-     * <h2>Request and examples</h2>
-     * <p>POST /workspaces/{workspaceId}/scim-provisioning/credentials
-     * Call conventions: Call the operation in the region of the target workspace, using an AK/STS identity that has permissions for the identity source resources of the corresponding workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameter content of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not log the key. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
-     * <pre><code class="language-text">POST /workspaces/ws-example/scim-provisioning/credentials
-     * No business request body.
-     * </code></pre>
-     * <h2>Response example</h2>
-     * <pre><code class="language-json">{
-     *   &quot;data&quot;: {
-     *     &quot;configuration&quot;: {
-     *       &quot;status&quot;: &quot;Enabled&quot;,
-     *       &quot;baseUrl&quot;: &quot;https://example.com/scim/v2&quot;
-     *     },
-     *     &quot;credential&quot;: {
-     *       &quot;credentialId&quot;: &quot;credential-example&quot;,
-     *       &quot;status&quot;: &quot;Enabled&quot;,
-     *       &quot;expireTime&quot;: &quot;&lt;Upstream expiration time&gt;&quot;
-     *     },
-     *     &quot;token&quot;: &quot;&lt;Newly issued token for the current request&gt;&quot;
-     *   }
-     * }
-     * </code></pre>
-     * <h2>Errors and handling</h2>
-     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that there is no binding of the matching type. Synchronous calls to the upstream may fail and return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
-     * 400 LimitExceeded.ScimCredential: A maximum of two credentials are allowed. Delete one before you can continue to create. 400 InvalidParameter: Reception is not enabled or the shared pool is unavailable. Do not retry quota errors as system failures.</p>
-     * <h2>Call relationships and usage boundaries</h2>
-     * <p>After creation, securely save the token that is returned only once and configure it in the external provisioning system. Existing tokens remain valid. Only DeleteIdentityProviderSCIMCredential revokes the specified credential. Do not automatically retry when the response is lost. Call ListIdentityProviderSCIMCredentials to check first. This operation does not provide automatic rotation or scaling.</p>
+     * <h2>Features and prerequisites\nExplicitly issues a new credential, which requires an available shared pool and the AgentIdentity SCIM receiver to be Enabled. This operation does not automatically enable the receiver. If it is not enabled, call the prepare operation first. Returns the configuration, credential summary, and the current token. The maximum limit of two credentials is enforced by AgentIdentity. An existing available token does not prevent users from explicitly creating a second one. Old credentials are not automatically revoked, and no extended rotation process is provided.\nThe token is returned only once and cannot be retrieved again in subsequent list or query operations. Do not automatically retry the issuance. If the response is lost, check the list first to verify whether it has been created. Creating a credential does not enable AC syncEnabled, start a full user import, or switch SAML logon. Deleting an old token should be explicitly performed by the user after confirming the actual usage of the external provisioning system.\n\n## Requests and examples\nPOST /workspaces/{workspaceId}/scim-provisioning/credentials\nCalling conventions: Call the operation in the region of the target workspace, using an AccessKey (AK) or Security Token Service (STS) identity that has permissions for the identity provider resources of the corresponding workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not log the key. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.\n<code>text\\nPOST /workspaces/ws-example/scim-provisioning/credentials\\nNo business request body.\\n</code>\n\n## Response example\n<code>json\\n{\\n  &quot;data&quot;: {\\n    &quot;configuration&quot;: {\\n      &quot;status&quot;: &quot;Enabled&quot;,\\n      &quot;baseUrl&quot;: &quot;https://example.com/scim/v2&quot;\\n    },\\n    &quot;credential&quot;: {\\n      &quot;credentialId&quot;: &quot;credential-example&quot;,\\n      &quot;status&quot;: &quot;Enabled&quot;,\\n      &quot;expireTime&quot;: &quot;&lt;Upstream expiration time&gt;&quot;\\n    },\\n    &quot;token&quot;: &quot;&lt;Newly issued token for this request&gt;&quot;\\n  }\\n}\\n</code>\n\n## Errors and handling\nError handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that there is no binding of the matching type. Synchronous calls to the upstream may fail and return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace not found errors follow the common error handling.\n400 LimitExceeded.ScimCredential: A maximum of two credentials are allowed. Delete one before creating another. 400 InvalidParameter: The receiver is not enabled or the shared pool is unavailable. Do not retry quota errors as system failures.\n\n## Call relationships and usage boundaries\nAfter creation, securely save the token that is returned only once and configure it in the external provisioning system. Existing tokens remain valid. Only DeleteIdentityProviderSCIMCredential revokes the specified credential. Do not automatically retry if the response is lost. Call ListIdentityProviderSCIMCredentials to check first. This operation does not provide automatic rotation or scaling.</h2>
      * 
      * <b>summary</b> : 
-     * <p>Issues a SCIM credential explicitly and returns the plaintext token only for the current call. A maximum of two credentials are allowed in the same pool. This operation does not automatically revoke old credentials or enable AC user synchronization.</p>
+     * <p>Issues a SCIM credential explicitly and returns the plaintext token only in the current response. A maximum of two credentials are allowed per pool. This operation does not automatically revoke old credentials or enable AC user synchronization.</p>
      * 
      * @param request CreateIdentityProviderSCIMCredentialRequest
      * @return CreateIdentityProviderSCIMCredentialResponse
@@ -919,11 +861,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Initiates a one-time user synchronization based on the saved scope without saving the configuration or requiring syncEnabled=true. Prerequisites: the identity provider is in the READY or SYNC_FAILED state, a user pool exists, and no other pending identity provider operations are in progress. The returned taskId only indicates that the request is accepted. Call GetIdentityProviderSyncJob to poll the status until it reaches SUCCESS, FAILED, or CANCELED. If the task fails, check the failureReason. The workspace user quota still applies, and previously synchronized users are not automatically deleted if the scope is reduced.
-     * Authorization information: RAM action agentcore:CreateIdentityProviderSyncJob, access level Write, resource ARN: acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is required for authorization.
-     * Idempotency and retry: This operation does not provide a ClientToken parameter for conditional idempotency. Repeated submissions do not guarantee the same task is returned. If an operation is already in progress, an operation conflict is returned. Submitting again after the task ends creates a new synchronization task. If a submission times out, query the identity provider status first to avoid blindly resubmitting the request.
+     * <p>Initiates a user synchronization based on the saved scope without saving the configuration or requiring syncEnabled=true. The prerequisites are that the identity provider is in the READY or SYNC_FAILED state, a user pool exists, and no other identity provider operations are in progress. The returned taskId only indicates that the request is accepted. Call GetIdentityProviderSyncJob to poll the status until it reaches SUCCESS, FAILED, or CANCELED. If the task fails, check failureReason. The workspace user quota is still enforced, and synchronized users are not automatically deleted when the scope is reduced.
+     * Authorization information: The RAM action is agentcore:CreateIdentityProviderSyncJob, the access level is Write, and the resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is required for authorization.
+     * Idempotency and retries: This operation does not provide a ClientToken parameter for conditional idempotency. Repeated submissions do not guarantee that the same task is returned. If an operation is already in progress, an operation conflict is returned. Submitting the request again after the task ends creates a new synchronization task. If a submission times out, query the identity provider status first to avoid unnecessary repeated submissions.
      * Calling this API is free of charge, and operation records support ActionTrail auditing.
-     * Initial selective synchronization process: CreateIdentityProvider (syncOnBind=false, it is recommended to keep syncEnabled=false initially) → GetIdentityProvider and wait for READY → ListIdentityProviderDepartments to select departments → UpdateIdentityProvider to save syncScope and wait for READY → CreateIdentityProviderSyncJob → GetIdentityProviderSyncJob to query the terminal state. If incremental synchronization is required, configure callbacks and event subscriptions, and then update syncEnabled=true.
+     * First-time selective synchronization flow: CreateIdentityProvider (syncOnBind=false, we recommend that you keep syncEnabled=false initially) → GetIdentityProvider and wait for the READY state → ListIdentityProviderDepartments to select departments → UpdateIdentityProvider to save syncScope and wait for the READY state → CreateIdentityProviderSyncJob → GetIdentityProviderSyncJob to query the final state. To enable incremental synchronization, configure callbacks and event subscriptions, and then set syncEnabled=true.
      * Response example:</p>
      * <pre><code class="language-json">{
      *   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
@@ -967,11 +909,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Initiates a one-time user synchronization based on the saved scope without saving the configuration or requiring syncEnabled=true. Prerequisites: the identity provider is in the READY or SYNC_FAILED state, a user pool exists, and no other pending identity provider operations are in progress. The returned taskId only indicates that the request is accepted. Call GetIdentityProviderSyncJob to poll the status until it reaches SUCCESS, FAILED, or CANCELED. If the task fails, check the failureReason. The workspace user quota still applies, and previously synchronized users are not automatically deleted if the scope is reduced.
-     * Authorization information: RAM action agentcore:CreateIdentityProviderSyncJob, access level Write, resource ARN: acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is required for authorization.
-     * Idempotency and retry: This operation does not provide a ClientToken parameter for conditional idempotency. Repeated submissions do not guarantee the same task is returned. If an operation is already in progress, an operation conflict is returned. Submitting again after the task ends creates a new synchronization task. If a submission times out, query the identity provider status first to avoid blindly resubmitting the request.
+     * <p>Initiates a user synchronization based on the saved scope without saving the configuration or requiring syncEnabled=true. The prerequisites are that the identity provider is in the READY or SYNC_FAILED state, a user pool exists, and no other identity provider operations are in progress. The returned taskId only indicates that the request is accepted. Call GetIdentityProviderSyncJob to poll the status until it reaches SUCCESS, FAILED, or CANCELED. If the task fails, check failureReason. The workspace user quota is still enforced, and synchronized users are not automatically deleted when the scope is reduced.
+     * Authorization information: The RAM action is agentcore:CreateIdentityProviderSyncJob, the access level is Write, and the resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is required for authorization.
+     * Idempotency and retries: This operation does not provide a ClientToken parameter for conditional idempotency. Repeated submissions do not guarantee that the same task is returned. If an operation is already in progress, an operation conflict is returned. Submitting the request again after the task ends creates a new synchronization task. If a submission times out, query the identity provider status first to avoid unnecessary repeated submissions.
      * Calling this API is free of charge, and operation records support ActionTrail auditing.
-     * Initial selective synchronization process: CreateIdentityProvider (syncOnBind=false, it is recommended to keep syncEnabled=false initially) → GetIdentityProvider and wait for READY → ListIdentityProviderDepartments to select departments → UpdateIdentityProvider to save syncScope and wait for READY → CreateIdentityProviderSyncJob → GetIdentityProviderSyncJob to query the terminal state. If incremental synchronization is required, configure callbacks and event subscriptions, and then update syncEnabled=true.
+     * First-time selective synchronization flow: CreateIdentityProvider (syncOnBind=false, we recommend that you keep syncEnabled=false initially) → GetIdentityProvider and wait for the READY state → ListIdentityProviderDepartments to select departments → UpdateIdentityProvider to save syncScope and wait for the READY state → CreateIdentityProviderSyncJob → GetIdentityProviderSyncJob to query the final state. To enable incremental synchronization, configure callbacks and event subscriptions, and then set syncEnabled=true.
      * Response example:</p>
      * <pre><code class="language-json">{
      *   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
@@ -1000,7 +942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates or reuses an image cache in the current workspace based on the image source and tag. Both public and private images uniformly reuse the workspace\&quot;s source image pull authorization and resource roles. The resource manager parses the tag during the transfer node and performs image replication based on the parsed summary. The digest is empty before parsing is complete. For regular tags, the saved summary is reused after parsing. For the latest tag, it is parsed again when registered after reaching the desired state, and duplicate registrations in progress reuse the node. The logical imageId remains stable. accessInternet and accessVpc only determine the source reading and transfer for the current request and do not modify the agent network. An HTTP 200 response returns an acceptance snapshot of PENDING, READY, or FAILED, which does not indicate that the creation is complete. ClientToken does not guarantee to deduplicate requests or recover the original result. If the result is unconfirmed, query the query cache status first before deciding whether to recommit.</p>
+     * <p>Creates or reuses an image cache in the current workspace based on the image source and tag. Both public and private images reuse the workspace\&quot;s source image pull authorization and resource roles. The resource manager parses the tag during the transfer task and performs image replication based on the parsed digest. The digest is empty before parsing is complete. For regular tags, the saved digest is reused after parsing. For the latest tag, re-registration after reaching the final state triggers re-parsing, and duplicate in-progress registrations reuse the task. The logical imageId remains stable. AccessInternet and AccessVpc only determine the source read and transfer for the current request and do not modify the agent network. An HTTP 200 response returns an acceptance snapshot with a status of PENDING, READY, or FAILED, which does not indicate that the creation is complete. The ClientToken does not guarantee request deduplication or original result recovery. If the result is unconfirmed, query the cache status first before deciding whether to resubmit.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an image cache.</p>
@@ -1057,7 +999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates or reuses an image cache in the current workspace based on the image source and tag. Both public and private images uniformly reuse the workspace\&quot;s source image pull authorization and resource roles. The resource manager parses the tag during the transfer node and performs image replication based on the parsed summary. The digest is empty before parsing is complete. For regular tags, the saved summary is reused after parsing. For the latest tag, it is parsed again when registered after reaching the desired state, and duplicate registrations in progress reuse the node. The logical imageId remains stable. accessInternet and accessVpc only determine the source reading and transfer for the current request and do not modify the agent network. An HTTP 200 response returns an acceptance snapshot of PENDING, READY, or FAILED, which does not indicate that the creation is complete. ClientToken does not guarantee to deduplicate requests or recover the original result. If the result is unconfirmed, query the query cache status first before deciding whether to recommit.</p>
+     * <p>Creates or reuses an image cache in the current workspace based on the image source and tag. Both public and private images reuse the workspace\&quot;s source image pull authorization and resource roles. The resource manager parses the tag during the transfer task and performs image replication based on the parsed digest. The digest is empty before parsing is complete. For regular tags, the saved digest is reused after parsing. For the latest tag, re-registration after reaching the final state triggers re-parsing, and duplicate in-progress registrations reuse the task. The logical imageId remains stable. AccessInternet and AccessVpc only determine the source read and transfer for the current request and do not modify the agent network. An HTTP 200 response returns an acceptance snapshot with a status of PENDING, READY, or FAILED, which does not indicate that the creation is complete. The ClientToken does not guarantee request deduplication or original result recovery. If the result is unconfirmed, query the cache status first before deciding whether to resubmit.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an image cache.</p>
@@ -1132,11 +1074,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check whether the service is ready by using the returned status or by calling a query operation.</p>
+     * <h2>Request description</h2>
+     * <p>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check the returned status or call a query operation to confirm whether the service is ready.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check whether the service is ready by using the returned status or by calling a query operation.</p>
+     * <p>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check the returned status or call a query operation to confirm whether the service is ready.</p>
      * 
      * @param tmpReq CreateMcpRequest
      * @param headers map
@@ -1182,11 +1124,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check whether the service is ready by using the returned status or by calling a query operation.</p>
+     * <h2>Request description</h2>
+     * <p>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check the returned status or call a query operation to confirm whether the service is ready.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check whether the service is ready by using the returned status or by calling a query operation.</p>
+     * <p>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check the returned status or call a query operation to confirm whether the service is ready.</p>
      * 
      * @param request CreateMcpRequest
      * @return CreateMcpResponse
@@ -1382,7 +1324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates permission rules in batches for resources in a specified workspace.</p>
+     * <p>Creates permission rules in bulk for resources in a specified workspace.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates permission rules.</p>
@@ -1431,7 +1373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates permission rules in batches for resources in a specified workspace.</p>
+     * <p>Creates permission rules in bulk for resources in a specified workspace.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates permission rules.</p>
@@ -2189,11 +2131,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Features and prerequisites</h2>
-     * <p>Revokes a specified credential. The credentialId parameter is required and cannot be empty. You can obtain it from the credential list. The shared pool must be available, but SAML configuration or SCIM accept being Enabled is not required. After deletion, external provisioning requests that use this token become invalid. This operation only affects the selected credential. It does not automatically disable the accept feature, does not automatically disable AC syncEnabled, and does not affect other credentials or SAML.
-     * Even if you delete the last credential, the synchronization switch is not automatically written back and a new token is not reissued. Disable external provisioning or replace the token in use as needed. A successful response returns a common response without business data. Refresh the list to confirm the deletion. The result for unknown or deleted IDs is determined by the upstream service. A unified 404 or unconditional idempotent success is not guaranteed.</p>
+     * <p>Revokes a specified credential. The credentialId parameter is required and cannot be empty. You can obtain it from the credential list. The shared pool must be available. SAML configuration or enabled SCIM receiving is not required. After deletion, external provisioning requests that use this token become invalid. This operation only affects the selected credential. It does not automatically disable receiving, turn off the AC syncEnabled switch, or affect other credentials or SAML.
+     * Even if you delete the last credential, the synchronization switch is not automatically written back and a new token is not reissued. Disable external provisioning or replace the token in use as needed. A successful response returns a common response without business data content. Refresh the list to confirm. The result for unknown or deleted IDs is determined by the upstream system. A unified 404 error or unconditional idempotent success is not guaranteed.</p>
      * <h2>Request and examples</h2>
      * <p>DELETE /workspaces/{workspaceId}/scim-provisioning/credentials/{credentialId}
-     * Call conventions: Call the API in the region of the target workspace by using an AccessKey (AK) or Security Token Service (STS) identity that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct-connect API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
+     * Call conventions: Call the API in the region of the target workspace by using an AccessKey (AK) or Security Token Service (STS) identity that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
      * <pre><code class="language-text">DELETE /workspaces/ws-example/scim-provisioning/credentials/credential-example
      * </code></pre>
      * <h2>Response example</h2>
@@ -2203,13 +2145,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * }
      * </code></pre>
      * <h2>Errors and handling</h2>
-     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. If a synchronous call to the upstream service fails, a 503 IdentityProviderProvisioningUnavailable error may be returned. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
-     * 400 InvalidParameter: The credentialId parameter is empty or the shared pool is not available. 404 IdentityProviderNotFound indicates that the binding does not exist, which does not mean that all unknown credential IDs return this code. Handle other deletion errors based on upstream results. If the operation fails, refresh the list to check. No automatic creation of a replacement token is performed.</p>
+     * <p>Error handling: 400 InvalidParameter indicates that the parameter or current configuration prerequisite is not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. If a synchronous call to the upstream system fails, it may return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
+     * 400 InvalidParameter: The credentialId parameter is empty or the shared pool is not available. 404 IdentityProviderNotFound indicates that the binding does not exist. This does not mean that all unknown credential IDs return this code. Handle other deletion errors based on upstream results. If the operation fails, refresh the list to check. Automatic creation of a replacement token is not triggered.</p>
      * <h2>Call relationships and usage boundaries</h2>
-     * <p>Call ListIdentityProviderSCIMCredentials to obtain the credentialId and then delete the specified credential. If the external provisioning system still uses this token, subsequent provisioning may result in authentication failures. Therefore, confirm the actual usage first. After deletion, no automatic creation of a new credential is performed, and the AC synchronization switch or SAML logon is not disabled.</p>
+     * <p>Use ListIdentityProviderSCIMCredentials to obtain the credentialId and then delete the specified credential. If the external provisioning system still uses this token, subsequent provisioning may result in an authentication failure. Therefore, confirm the actual usage first. After deletion, a new credential is not automatically created, the AC synchronization switch is not turned off, and SAML logon is not disabled.</p>
      * 
      * <b>summary</b> : 
-     * <p>Revokes a specified SCIM credential. This operation does not automatically create a new token, modify the AC synchronization switch, or disable SAML logon.</p>
+     * <p>Revokes a specified SCIM credential. This operation does not trigger automatic creation of a new token, modify the AC synchronization switch, or disable SAML logon.</p>
      * 
      * @param request DeleteIdentityProviderSCIMCredentialRequest
      * @param headers map
@@ -2238,11 +2180,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Features and prerequisites</h2>
-     * <p>Revokes a specified credential. The credentialId parameter is required and cannot be empty. You can obtain it from the credential list. The shared pool must be available, but SAML configuration or SCIM accept being Enabled is not required. After deletion, external provisioning requests that use this token become invalid. This operation only affects the selected credential. It does not automatically disable the accept feature, does not automatically disable AC syncEnabled, and does not affect other credentials or SAML.
-     * Even if you delete the last credential, the synchronization switch is not automatically written back and a new token is not reissued. Disable external provisioning or replace the token in use as needed. A successful response returns a common response without business data. Refresh the list to confirm the deletion. The result for unknown or deleted IDs is determined by the upstream service. A unified 404 or unconditional idempotent success is not guaranteed.</p>
+     * <p>Revokes a specified credential. The credentialId parameter is required and cannot be empty. You can obtain it from the credential list. The shared pool must be available. SAML configuration or enabled SCIM receiving is not required. After deletion, external provisioning requests that use this token become invalid. This operation only affects the selected credential. It does not automatically disable receiving, turn off the AC syncEnabled switch, or affect other credentials or SAML.
+     * Even if you delete the last credential, the synchronization switch is not automatically written back and a new token is not reissued. Disable external provisioning or replace the token in use as needed. A successful response returns a common response without business data content. Refresh the list to confirm. The result for unknown or deleted IDs is determined by the upstream system. A unified 404 error or unconditional idempotent success is not guaranteed.</p>
      * <h2>Request and examples</h2>
      * <p>DELETE /workspaces/{workspaceId}/scim-provisioning/credentials/{credentialId}
-     * Call conventions: Call the API in the region of the target workspace by using an AccessKey (AK) or Security Token Service (STS) identity that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct-connect API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
+     * Call conventions: Call the API in the region of the target workspace by using an AccessKey (AK) or Security Token Service (STS) identity that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
      * <pre><code class="language-text">DELETE /workspaces/ws-example/scim-provisioning/credentials/credential-example
      * </code></pre>
      * <h2>Response example</h2>
@@ -2252,13 +2194,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * }
      * </code></pre>
      * <h2>Errors and handling</h2>
-     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. If a synchronous call to the upstream service fails, a 503 IdentityProviderProvisioningUnavailable error may be returned. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
-     * 400 InvalidParameter: The credentialId parameter is empty or the shared pool is not available. 404 IdentityProviderNotFound indicates that the binding does not exist, which does not mean that all unknown credential IDs return this code. Handle other deletion errors based on upstream results. If the operation fails, refresh the list to check. No automatic creation of a replacement token is performed.</p>
+     * <p>Error handling: 400 InvalidParameter indicates that the parameter or current configuration prerequisite is not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. If a synchronous call to the upstream system fails, it may return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
+     * 400 InvalidParameter: The credentialId parameter is empty or the shared pool is not available. 404 IdentityProviderNotFound indicates that the binding does not exist. This does not mean that all unknown credential IDs return this code. Handle other deletion errors based on upstream results. If the operation fails, refresh the list to check. Automatic creation of a replacement token is not triggered.</p>
      * <h2>Call relationships and usage boundaries</h2>
-     * <p>Call ListIdentityProviderSCIMCredentials to obtain the credentialId and then delete the specified credential. If the external provisioning system still uses this token, subsequent provisioning may result in authentication failures. Therefore, confirm the actual usage first. After deletion, no automatic creation of a new credential is performed, and the AC synchronization switch or SAML logon is not disabled.</p>
+     * <p>Use ListIdentityProviderSCIMCredentials to obtain the credentialId and then delete the specified credential. If the external provisioning system still uses this token, subsequent provisioning may result in an authentication failure. Therefore, confirm the actual usage first. After deletion, a new credential is not automatically created, the AC synchronization switch is not turned off, and SAML logon is not disabled.</p>
      * 
      * <b>summary</b> : 
-     * <p>Revokes a specified SCIM credential. This operation does not automatically create a new token, modify the AC synchronization switch, or disable SAML logon.</p>
+     * <p>Revokes a specified SCIM credential. This operation does not trigger automatic creation of a new token, modify the AC synchronization switch, or disable SAML logon.</p>
      * 
      * @param request DeleteIdentityProviderSCIMCredentialRequest
      * @return DeleteIdentityProviderSCIMCredentialResponse
@@ -2271,7 +2213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes the logical image cache of the current workspace. The deletion requires that no enabled agent configurations reference the cache and no active instances are using it. Concurrency is rechecked upon submission. Caches in the PENDING or FAILED state can still be deleted, and the backend handles the cleanup. An HTTP 200 response returns an imageId that matches the request. If deletionPending is true, the current workspace is still undergoing deletion, and a Get request returns DELETING until ImageCacheNotFound is explicitly returned. If false, the deletion is complete or the current workspace no longer exists. Usage by other workspaces does not block the deletion for the current workspace. The physical content is reclaimed only after all workspaces in the same region have removed their associations and no active instances are using it.</p>
+     * <p>Deletes the logical image cache of the current workspace. The deletion requires that no enabled agent configuration references the cache and no valid instances are using it. Concurrency is rechecked upon submission. The PENDING or FAILED status does not prevent deletion, and the backend handles the cleanup. An HTTP 200 response returns an imageId that matches the request. If deletionPending is true, the deletion is still in progress for the current workspace, and a Get request returns DELETING until ImageCacheNotFound is explicitly returned. If false, the deletion is complete or the current workspace no longer exists. Usage by other workspaces does not block the deletion for the current workspace. The physical content is reclaimed after all workspaces in the same region delete their associations and no valid instances are using it.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an image cache.</p>
@@ -2312,7 +2254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes the logical image cache of the current workspace. The deletion requires that no enabled agent configurations reference the cache and no active instances are using it. Concurrency is rechecked upon submission. Caches in the PENDING or FAILED state can still be deleted, and the backend handles the cleanup. An HTTP 200 response returns an imageId that matches the request. If deletionPending is true, the current workspace is still undergoing deletion, and a Get request returns DELETING until ImageCacheNotFound is explicitly returned. If false, the deletion is complete or the current workspace no longer exists. Usage by other workspaces does not block the deletion for the current workspace. The physical content is reclaimed only after all workspaces in the same region have removed their associations and no active instances are using it.</p>
+     * <p>Deletes the logical image cache of the current workspace. The deletion requires that no enabled agent configuration references the cache and no valid instances are using it. Concurrency is rechecked upon submission. The PENDING or FAILED status does not prevent deletion, and the backend handles the cleanup. An HTTP 200 response returns an imageId that matches the request. If deletionPending is true, the deletion is still in progress for the current workspace, and a Get request returns DELETING until ImageCacheNotFound is explicitly returned. If false, the deletion is complete or the current workspace no longer exists. Usage by other workspaces does not block the deletion for the current workspace. The physical content is reclaimed after all workspaces in the same region delete their associations and no valid instances are using it.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an image cache.</p>
@@ -2606,7 +2548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a permission rule in a specified workspace. Repeated deletions still return a success response.</p>
+     * <p>Deletes a permission rule in a specified workspace. Repeated deletion requests still return a success response.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a permission rule.</p>
@@ -2643,7 +2585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a permission rule in a specified workspace. Repeated deletions still return a success response.</p>
+     * <p>Deletes a permission rule in a specified workspace. Repeated deletion requests still return a success response.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a permission rule.</p>
@@ -3222,10 +3164,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries an access application. The secret is returned only when the application is created and is not returned by query operations.</p>
+     * <p>Queries the access application. The secret is returned only upon creation and is not returned by the query operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries an access application.</p>
+     * <p>Queries the access application.</p>
      * 
      * @param request GetAccessApplicationRequest
      * @param headers map
@@ -3253,10 +3195,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries an access application. The secret is returned only when the application is created and is not returned by query operations.</p>
+     * <p>Queries the access application. The secret is returned only upon creation and is not returned by the query operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries an access application.</p>
+     * <p>Queries the access application.</p>
      * 
      * @param request GetAccessApplicationRequest
      * @return GetAccessApplicationResponse
@@ -3269,7 +3211,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Generates a time-limited, read-only download URL for the code package referenced by the currently saved agent configuration. This applies to code packages uploaded locally or imported from Object Storage Service (OSS). The operation uses workspaceId and agentId for locating and does not accept arbitrary bucket, object key, or historical version parameters. The current configuration must reference an available, fixed code package, and does not require waiting for a running instance to be ready. An error is returned if the code package does not exist, has changed, or is unreadable. The link is valid for up to 10 minutes and does not exceed the underlying credential expiration time. Call the operation again after it expires. The resourceVersionId indicates the saved configuration version corresponding to this download. The sample download link is redacted. Use the downloadUrl in the response.</p>
+     * <p>Generates a time-limited, read-only download URL for the code package referenced by the currently saved agent configuration. This applies to code packages uploaded locally or imported from OSS. The package is located by using workspaceId and agentId. Arbitrary Bucket, Object Key, or historical version parameters are not accepted.
+     * The current configuration must reference an available, fixed code package, and there is no need to wait for a running instance to be ready. An error is returned if the code package does not exist, has been changed, or is unreadable. The link is valid for up to 10 minutes and does not exceed the underlying credential expiration time. Call the API again after it expires. The resourceVersionId indicates the saved configuration version corresponding to this download. The sample download link is redacted. Use the downloadUrl in this response.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the download URL for the saved code package of an agent.</p>
@@ -3300,7 +3243,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Generates a time-limited, read-only download URL for the code package referenced by the currently saved agent configuration. This applies to code packages uploaded locally or imported from Object Storage Service (OSS). The operation uses workspaceId and agentId for locating and does not accept arbitrary bucket, object key, or historical version parameters. The current configuration must reference an available, fixed code package, and does not require waiting for a running instance to be ready. An error is returned if the code package does not exist, has changed, or is unreadable. The link is valid for up to 10 minutes and does not exceed the underlying credential expiration time. Call the operation again after it expires. The resourceVersionId indicates the saved configuration version corresponding to this download. The sample download link is redacted. Use the downloadUrl in the response.</p>
+     * <p>Generates a time-limited, read-only download URL for the code package referenced by the currently saved agent configuration. This applies to code packages uploaded locally or imported from OSS. The package is located by using workspaceId and agentId. Arbitrary Bucket, Object Key, or historical version parameters are not accepted.
+     * The current configuration must reference an available, fixed code package, and there is no need to wait for a running instance to be ready. An error is returned if the code package does not exist, has been changed, or is unreadable. The link is valid for up to 10 minutes and does not exceed the underlying credential expiration time. Call the API again after it expires. The resourceVersionId indicates the saved configuration version corresponding to this download. The sample download link is redacted. Use the downloadUrl in this response.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the download URL for the saved code package of an agent.</p>
@@ -3316,8 +3260,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Generates a RAM authorization URL for the resource role of the current workspace for a specified source bucket. The client cannot specify or override the role. After you open the authorizeUrl and confirm the authorization, call VerifyAgentCodePackageOssRamAuthorization to check the policy binding, and call ValidateAgentCodePackageFromOss to check specific objects.
-     * This authorization reuses the OSSObjectRestoreCustom template, which includes permissions to read, write, and delete objects, and is not a read-only authorization. Retrieving the URL itself does not complete the authorization, transfer the code package, or modify the default OSS binding of the workspace. Existing authorizations for the same role and bucket can be reused. The example URL is provided to demonstrate the format. Use the actual authorization URL returned by the API operation.</p>
+     * <p>Generates a RAM authorization URL for the resource role of the current workspace for a specified source bucket. Clients cannot specify or override the role. After you open the authorizeUrl and confirm the authorization, call VerifyAgentCodePackageOssRamAuthorization to check the policy binding, and call ValidateAgentCodePackageFromOss to check specific objects.
+     * This authorization reuses the OSSObjectRestoreCustom template, which includes permissions such as reading, writing, and deleting objects. It is not a read-only authorization. Retrieving the URL itself does not complete the authorization, transfer the code package, or modify the default OSS binding of the workspace. Existing authorizations for the same role and bucket can be reused. The example URL is provided to demonstrate the format. Use the actual authorization URL returned by the API operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the OSS RAM authorization URL for the agent code package.</p>
@@ -3354,8 +3298,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Generates a RAM authorization URL for the resource role of the current workspace for a specified source bucket. The client cannot specify or override the role. After you open the authorizeUrl and confirm the authorization, call VerifyAgentCodePackageOssRamAuthorization to check the policy binding, and call ValidateAgentCodePackageFromOss to check specific objects.
-     * This authorization reuses the OSSObjectRestoreCustom template, which includes permissions to read, write, and delete objects, and is not a read-only authorization. Retrieving the URL itself does not complete the authorization, transfer the code package, or modify the default OSS binding of the workspace. Existing authorizations for the same role and bucket can be reused. The example URL is provided to demonstrate the format. Use the actual authorization URL returned by the API operation.</p>
+     * <p>Generates a RAM authorization URL for the resource role of the current workspace for a specified source bucket. Clients cannot specify or override the role. After you open the authorizeUrl and confirm the authorization, call VerifyAgentCodePackageOssRamAuthorization to check the policy binding, and call ValidateAgentCodePackageFromOss to check specific objects.
+     * This authorization reuses the OSSObjectRestoreCustom template, which includes permissions such as reading, writing, and deleting objects. It is not a read-only authorization. Retrieving the URL itself does not complete the authorization, transfer the code package, or modify the default OSS binding of the workspace. Existing authorizations for the same role and bucket can be reused. The example URL is provided to demonstrate the format. Use the actual authorization URL returned by the API operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the OSS RAM authorization URL for the agent code package.</p>
@@ -3371,8 +3315,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves a time-limited upload URL for a code package without uploading the file content. The fileName must be a ZIP or TAR.GZ filename without directories. The format must match the file extension. The fileSize is in bytes, with valid values ranging from 1 to 500,000,000.
-     * Use the uploadMethod, uploadUrl, and headers from the response to upload the file directly. After the upload is complete, pass the sourceUri to the artifact.code.sourceUri parameter of CreateCustomAgent or UpdateCustomAgent. The actual object and size are verified and a fixed copy is saved during creation or update. The upload URL is valid for up to 10 minutes and does not exceed the expiration time of the underlying temporary credentials. Retrieve a new URL after it expires. The example URL is desensitized and cannot be used for actual uploads. Use the original URL and request headers from this response.</p>
+     * <p>Retrieves a time-limited upload URL for a code package without uploading the file content. The fileName must be a ZIP or TAR.GZ file name without a directory path. The format must match the file extension. The fileSize is specified in bytes, with valid values ranging from 1 to 500,000,000.
+     * Use the uploadMethod, uploadUrl, and headers from the response to upload the file directly. After the upload is complete, pass the sourceUri to the artifact.code.sourceUri parameter of CreateCustomAgent or UpdateCustomAgent. The actual object and size are verified and a fixed copy is saved during creation or update. The upload URL is valid for up to 10 minutes and does not exceed the validity period of the underlying temporary credentials. Retrieve a new URL if it expires. The example URL is redacted and cannot be used for actual uploads. Use the original URL and request headers from this response.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the upload URL for an agent code package.</p>
@@ -3415,8 +3359,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves a time-limited upload URL for a code package without uploading the file content. The fileName must be a ZIP or TAR.GZ filename without directories. The format must match the file extension. The fileSize is in bytes, with valid values ranging from 1 to 500,000,000.
-     * Use the uploadMethod, uploadUrl, and headers from the response to upload the file directly. After the upload is complete, pass the sourceUri to the artifact.code.sourceUri parameter of CreateCustomAgent or UpdateCustomAgent. The actual object and size are verified and a fixed copy is saved during creation or update. The upload URL is valid for up to 10 minutes and does not exceed the expiration time of the underlying temporary credentials. Retrieve a new URL after it expires. The example URL is desensitized and cannot be used for actual uploads. Use the original URL and request headers from this response.</p>
+     * <p>Retrieves a time-limited upload URL for a code package without uploading the file content. The fileName must be a ZIP or TAR.GZ file name without a directory path. The format must match the file extension. The fileSize is specified in bytes, with valid values ranging from 1 to 500,000,000.
+     * Use the uploadMethod, uploadUrl, and headers from the response to upload the file directly. After the upload is complete, pass the sourceUri to the artifact.code.sourceUri parameter of CreateCustomAgent or UpdateCustomAgent. The actual object and size are verified and a fixed copy is saved during creation or update. The upload URL is valid for up to 10 minutes and does not exceed the validity period of the underlying temporary credentials. Retrieve a new URL if it expires. The example URL is redacted and cannot be used for actual uploads. Use the original URL and request headers from this response.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the upload URL for an agent code package.</p>
@@ -3782,7 +3726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Queries the preparation and deployment phases of the current submission. The health of the previous instance does not indicate the success of the current deployment. Only phase=SUCCEEDED indicates completion. Regular polling does not create a dump task. A network interruption does not indicate task failure.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the image preparation and deployment phases by using the preparation ID. Regular polling does not create a dump task. Only phase=SUCCEEDED indicates that the deployment of the target version is successful. The health of the previous instance does not indicate the success of the current deployment.</p>
+     * <p>Queries the image preparation and deployment phases by using the preparation ID. Regular polling does not create a dump task. Only phase=SUCCEEDED indicates that the target version is deployed successfully. The health of the previous instance does not indicate the success of the current deployment.</p>
      * 
      * @param request GetCustomAgentImagePreparationRequest
      * @param headers map
@@ -3813,7 +3757,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Queries the preparation and deployment phases of the current submission. The health of the previous instance does not indicate the success of the current deployment. Only phase=SUCCEEDED indicates completion. Regular polling does not create a dump task. A network interruption does not indicate task failure.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the image preparation and deployment phases by using the preparation ID. Regular polling does not create a dump task. Only phase=SUCCEEDED indicates that the deployment of the target version is successful. The health of the previous instance does not indicate the success of the current deployment.</p>
+     * <p>Queries the image preparation and deployment phases by using the preparation ID. Regular polling does not create a dump task. Only phase=SUCCEEDED indicates that the target version is deployed successfully. The health of the previous instance does not indicate the success of the current deployment.</p>
      * 
      * @param request GetCustomAgentImagePreparationRequest
      * @return GetCustomAgentImagePreparationResponse
@@ -4014,28 +3958,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Features and prerequisites</h2>
-     * <p>The shared CustomSSO user pool must be created and not in the process of overall unbinding or unbinding failure. Prior SAML configuration is not required. SAML updates or update failures do not block the query. configuration.status and baseUrl are retrieved from AgentIdentity. syncEnabled is the expected synchronization switch for AC. operationStatus represents the most recent independent SCIM switch and the initial full import task when enabled. The presence of a URL does not indicate that external provisioning is complete or that AC synchronization is enabled.
-     * operationStatus valid values:</p>
-     * <ul>
-     * <li>PENDING: Waiting.</li>
-     * <li>RUNNING: Executing.</li>
-     * <li>PAUSED: Paused.</li>
-     * <li>SUCCESS: Succeeded.</li>
-     * <li>FAILED: Failed.</li>
-     * <li>CANCELED: Canceled.
-     * If there are no historical tasks, it returns null or is not returned. You can poll when the status is PENDING or RUNNING. Stop polling when a terminal state is reached. You can manually refresh when the status is PAUSED. This operation does not provide the taskId or failure details, and does not indicate credential issuance, external provisioning connection tests, or continuous incremental synchronization health. The URL, credentials, and historical task records may be retained after the feature is disabled.
-     * status represents the independent SCIM configuration status:</li>
-     * <li>UNCONFIGURED: Preparation is not complete.</li>
-     * <li>WAITING_CONFIGURATION: The receiving end is enabled, the HTTPS URL is valid, and a valid token exists, waiting for external configuration and enablement confirmation.</li>
-     * <li>UPDATING: The enablement or disablement task is executing.</li>
-     * <li>READY: Synchronization is enabled and the current enablement task succeeded, and the receiving end, URL, and credentials are still available.</li>
-     * <li>DISABLED: Disabled and configuration is retained.</li>
-     * <li>UPDATE_FAILED: The operation failed, was paused, was canceled, or the configuration and credentials are unavailable after enablement.
-     * The original facts of configuration, syncEnabled, and operationStatus are retained. The SAML or OIDC binding status is not used to determine the SCIM status. READY does not prove that Matrix execution is complete, the external connection test passed, or continuous incremental synchronization is healthy.</li>
-     * </ul>
+     * <p>The shared CustomSSO user pool must be created and not in the process of overall unbinding or unbinding failure. Prior SAML configuration is not required. Ongoing SAML updates or update failures do not block the query. The configuration.status and baseUrl fields are retrieved from AgentIdentity. syncEnabled is the expected synchronization switch for AC. operationStatus represents the most recent independent SCIM switch and the initial full import task when enabled. The presence of a URL does not indicate that external provisioning is complete, nor does it mean that AC synchronization is enabled.
+     * operationStatus: PENDING (waiting), RUNNING (executing), PAUSED (paused), SUCCESS (succeeded), FAILED (failed), CANCELED (canceled). Returns null or is omitted if no historical tasks exist. You can poll the status when it is PENDING or RUNNING. Stop polling when it reaches a terminal state. You can manually refresh the status when it is PAUSED. This operation does not provide the taskId or failure details, and does not indicate credential issuance, external provisioning connection tests, or the health of continuous incremental synchronization. The URL, credentials, and historical task records may be retained after it is disabled.
+     * status is the independent SCIM configuration state: UNCONFIGURED (preparation is not complete); WAITING_CONFIGURATION (the receiving endpoint is enabled, the HTTPS URL is valid, and at least one valid token exists, waiting for external configuration and enablement confirmation); UPDATING (an enablement or disablement task is being executed); READY (synchronization is enabled and the current enablement task succeeded, and the receiving endpoint, URL, and credentials remain available); DISABLED (disabled and the configuration is retained); UPDATE_FAILED (the operation failed, was paused, was canceled, or the configuration and credentials are unavailable after enablement). The original facts of configuration, syncEnabled, and operationStatus are retained. The SAML or OIDC binding status is not used to determine the SCIM status. The READY state does not prove that Matrix execution is complete, the external connection test has passed, or continuous incremental synchronization is healthy.</p>
      * <h2>Requests and examples</h2>
      * <p>GET /workspaces/{workspaceId}/scim-provisioning
-     * Call conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has the permissions on the identity source resources of the workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
+     * Calling conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS credential that has the required permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not log secrets. Asynchronous business tasks do not imply that the HTTP request uses a long-lived connection to wait for completion.</p>
      * <pre><code class="language-text">GET /workspaces/ws-example/scim-provisioning
      * </code></pre>
      * <h2>Response examples</h2>
@@ -4052,10 +3980,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * }
      * </code></pre>
      * <h2>Errors and handling</h2>
-     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that there is no binding of the matching type. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
-     * 400 InvalidParameter: The shared user pool is unavailable, being unbound, or failed to unbind. If there is no binding, 404 IdentityProviderNotFound is returned. Upstream read failures must retain the error and cannot be mapped to Disabled, unconfigured, or synchronization succeeded.</p>
+     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls that fail upstream may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace-not-found errors follow the common error handling process.
+     * 400 InvalidParameter: the shared user pool is unavailable, being unbound, or failed to unbind. If no binding exists, 404 IdentityProviderNotFound is returned. Upstream read failures must retain the original error and cannot be mapped to Disabled, unconfigured, or synchronization succeeded.</p>
      * <h2>Call relationships and usage boundaries</h2>
-     * <p>SCIM configuration sequence: After preparing the shared pool, call PrepareIdentityProviderSCIM and configure the returned baseUrl and newly issued token to the provisioning system of the external IdP. After completing the external connection test, call UpdateIdentityProviderSCIM to enable synchronization, and then call this operation to query operationStatus. SUCCESS only indicates that the most recent SCIM task is complete, and does not represent continuous incremental synchronization health or the success of the external provisioning connection test.</p>
+     * <p>SCIM configuration sequence: After preparing the shared pool, call PrepareIdentityProviderSCIM and configure the returned baseUrl and newly issued token into the provisioning system of the external IdP. After completing the external connection test, call UpdateIdentityProviderSCIM to enable synchronization, and then call this operation to query operationStatus. SUCCESS only indicates that the most recent SCIM task is complete. It does not indicate the health of continuous incremental synchronization or the success of the external provisioning connection test.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the actual SCIM receiving configuration, the expected AC synchronization switch, and the status of the most recent independent SCIM task. Prior SAML configuration is not required.</p>
@@ -4087,28 +4015,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Features and prerequisites</h2>
-     * <p>The shared CustomSSO user pool must be created and not in the process of overall unbinding or unbinding failure. Prior SAML configuration is not required. SAML updates or update failures do not block the query. configuration.status and baseUrl are retrieved from AgentIdentity. syncEnabled is the expected synchronization switch for AC. operationStatus represents the most recent independent SCIM switch and the initial full import task when enabled. The presence of a URL does not indicate that external provisioning is complete or that AC synchronization is enabled.
-     * operationStatus valid values:</p>
-     * <ul>
-     * <li>PENDING: Waiting.</li>
-     * <li>RUNNING: Executing.</li>
-     * <li>PAUSED: Paused.</li>
-     * <li>SUCCESS: Succeeded.</li>
-     * <li>FAILED: Failed.</li>
-     * <li>CANCELED: Canceled.
-     * If there are no historical tasks, it returns null or is not returned. You can poll when the status is PENDING or RUNNING. Stop polling when a terminal state is reached. You can manually refresh when the status is PAUSED. This operation does not provide the taskId or failure details, and does not indicate credential issuance, external provisioning connection tests, or continuous incremental synchronization health. The URL, credentials, and historical task records may be retained after the feature is disabled.
-     * status represents the independent SCIM configuration status:</li>
-     * <li>UNCONFIGURED: Preparation is not complete.</li>
-     * <li>WAITING_CONFIGURATION: The receiving end is enabled, the HTTPS URL is valid, and a valid token exists, waiting for external configuration and enablement confirmation.</li>
-     * <li>UPDATING: The enablement or disablement task is executing.</li>
-     * <li>READY: Synchronization is enabled and the current enablement task succeeded, and the receiving end, URL, and credentials are still available.</li>
-     * <li>DISABLED: Disabled and configuration is retained.</li>
-     * <li>UPDATE_FAILED: The operation failed, was paused, was canceled, or the configuration and credentials are unavailable after enablement.
-     * The original facts of configuration, syncEnabled, and operationStatus are retained. The SAML or OIDC binding status is not used to determine the SCIM status. READY does not prove that Matrix execution is complete, the external connection test passed, or continuous incremental synchronization is healthy.</li>
-     * </ul>
+     * <p>The shared CustomSSO user pool must be created and not in the process of overall unbinding or unbinding failure. Prior SAML configuration is not required. Ongoing SAML updates or update failures do not block the query. The configuration.status and baseUrl fields are retrieved from AgentIdentity. syncEnabled is the expected synchronization switch for AC. operationStatus represents the most recent independent SCIM switch and the initial full import task when enabled. The presence of a URL does not indicate that external provisioning is complete, nor does it mean that AC synchronization is enabled.
+     * operationStatus: PENDING (waiting), RUNNING (executing), PAUSED (paused), SUCCESS (succeeded), FAILED (failed), CANCELED (canceled). Returns null or is omitted if no historical tasks exist. You can poll the status when it is PENDING or RUNNING. Stop polling when it reaches a terminal state. You can manually refresh the status when it is PAUSED. This operation does not provide the taskId or failure details, and does not indicate credential issuance, external provisioning connection tests, or the health of continuous incremental synchronization. The URL, credentials, and historical task records may be retained after it is disabled.
+     * status is the independent SCIM configuration state: UNCONFIGURED (preparation is not complete); WAITING_CONFIGURATION (the receiving endpoint is enabled, the HTTPS URL is valid, and at least one valid token exists, waiting for external configuration and enablement confirmation); UPDATING (an enablement or disablement task is being executed); READY (synchronization is enabled and the current enablement task succeeded, and the receiving endpoint, URL, and credentials remain available); DISABLED (disabled and the configuration is retained); UPDATE_FAILED (the operation failed, was paused, was canceled, or the configuration and credentials are unavailable after enablement). The original facts of configuration, syncEnabled, and operationStatus are retained. The SAML or OIDC binding status is not used to determine the SCIM status. The READY state does not prove that Matrix execution is complete, the external connection test has passed, or continuous incremental synchronization is healthy.</p>
      * <h2>Requests and examples</h2>
      * <p>GET /workspaces/{workspaceId}/scim-provisioning
-     * Call conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has the permissions on the identity source resources of the workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
+     * Calling conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS credential that has the required permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not log secrets. Asynchronous business tasks do not imply that the HTTP request uses a long-lived connection to wait for completion.</p>
      * <pre><code class="language-text">GET /workspaces/ws-example/scim-provisioning
      * </code></pre>
      * <h2>Response examples</h2>
@@ -4125,10 +4037,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * }
      * </code></pre>
      * <h2>Errors and handling</h2>
-     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that there is no binding of the matching type. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
-     * 400 InvalidParameter: The shared user pool is unavailable, being unbound, or failed to unbind. If there is no binding, 404 IdentityProviderNotFound is returned. Upstream read failures must retain the error and cannot be mapped to Disabled, unconfigured, or synchronization succeeded.</p>
+     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls that fail upstream may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace-not-found errors follow the common error handling process.
+     * 400 InvalidParameter: the shared user pool is unavailable, being unbound, or failed to unbind. If no binding exists, 404 IdentityProviderNotFound is returned. Upstream read failures must retain the original error and cannot be mapped to Disabled, unconfigured, or synchronization succeeded.</p>
      * <h2>Call relationships and usage boundaries</h2>
-     * <p>SCIM configuration sequence: After preparing the shared pool, call PrepareIdentityProviderSCIM and configure the returned baseUrl and newly issued token to the provisioning system of the external IdP. After completing the external connection test, call UpdateIdentityProviderSCIM to enable synchronization, and then call this operation to query operationStatus. SUCCESS only indicates that the most recent SCIM task is complete, and does not represent continuous incremental synchronization health or the success of the external provisioning connection test.</p>
+     * <p>SCIM configuration sequence: After preparing the shared pool, call PrepareIdentityProviderSCIM and configure the returned baseUrl and newly issued token into the provisioning system of the external IdP. After completing the external connection test, call UpdateIdentityProviderSCIM to enable synchronization, and then call this operation to query operationStatus. SUCCESS only indicates that the most recent SCIM task is complete. It does not indicate the health of continuous incremental synchronization or the success of the external provisioning connection test.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the actual SCIM receiving configuration, the expected AC synchronization switch, and the status of the most recent independent SCIM task. Prior SAML configuration is not required.</p>
@@ -4145,31 +4057,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Features and prerequisites</h2>
-     * <p>An available CustomSSO shared user pool is required. The identityProviderType must be CustomSSO. The protocol parameter is required and only supports the exact value SAML. Uploading the IdP metadata in advance is not required. This operation returns the entityId, acsUrl, and metadataXml of the SP for configuring an external IdP. These values are not the logon URL or IdP entity ID of the external IdP. You cannot submit the SP XML as the IdP XML to UpdateIdentityProvider.
-     * This operation is read-only. It does not enable logon, enable SCIM, create credentials, or perform logon connection tests. You cannot read the information when the shared pool is being initialized, being unbound, or has failed to unbind.</p>
+     * <p>An available CustomSSO shared user pool is required. The identityProviderType must be CustomSSO, and the protocol parameter is required and only supports the exact value SAML. Uploading the IdP metadata in advance is not required. This operation returns the entityId, acsUrl, and metadataXml of the local SP for users to configure an external IdP. These values are not the logon URL or IdP Entity ID of the external IdP. You cannot submit the SP XML as the IdP XML to UpdateIdentityProvider.
+     * This operation is read-only. It does not enable logon, enable SCIM, create credentials, or perform logon connection tests. You cannot read the information when the shared pool is being initialized, being unbound, or failed to be unbound.</p>
      * <h2>Requests and examples</h2>
      * <p>GET /workspaces/{workspaceId}/identity-providers/{identityProviderType}/service-provider
-     * Call conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a persistent connection to wait for completion.</p>
+     * Call conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has the permissions on the identity source resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
      * <pre><code class="language-text">GET /workspaces/ws-example/identity-providers/CustomSSO/service-provider?protocol=SAML
      * </code></pre>
      * <h2>Response examples</h2>
      * <pre><code class="language-json">{
      *   &quot;data&quot;: {
      *     &quot;protocol&quot;: &quot;SAML&quot;,
-     *     &quot;entityId&quot;: &quot;&lt;SP entity ID&gt;&quot;,
+     *     &quot;entityId&quot;: &quot;&lt;Local SP Entity ID&gt;&quot;,
      *     &quot;acsUrl&quot;: &quot;https://example.com/saml/acs&quot;,
-     *     &quot;metadataXml&quot;: &quot;&lt;SP metadata XML&gt;&quot;
+     *     &quot;metadataXml&quot;: &quot;&lt;Local SP Metadata XML&gt;&quot;
      *   }
      * }
      * </code></pre>
      * <h2>Errors and handling</h2>
-     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
-     * 400 InvalidParameter: identityProviderType or protocol is not supported. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, or has failed to unbind.</p>
+     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to the upstream service may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
+     * 400 InvalidParameter: The identityProviderType or protocol is not supported. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, or failed to be unbound.</p>
      * <h2>Call relationships and usage boundaries</h2>
      * <p>SAML configuration sequence: Call CreateIdentityProvider to initialize the CustomSSO shared pool and wait for GetIdentityProvider to return READY. Call this operation to obtain the SP information and configure it in the external IdP. Then, submit the external IdP metadata XML or complete manual configuration to UpdateIdentityProvider. After saving, enable loginEnabled separately as needed. Querying the SP information does not complete the external IdP configuration or verify logon.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the SAML service provider (SP) information for CustomSSO, including the entity ID, ACS URL, and SP metadata XML, for configuring an external IdP.</p>
+     * <p>Queries the SAML service provider (SP) information of CustomSSO, including the Entity ID, Assertion Consumer Service (ACS) URL, and SP metadata XML, for users to configure an external identity provider (IdP).</p>
      * 
      * @param request GetIdentityProviderServiceProviderRequest
      * @param headers map
@@ -4204,31 +4116,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Features and prerequisites</h2>
-     * <p>An available CustomSSO shared user pool is required. The identityProviderType must be CustomSSO. The protocol parameter is required and only supports the exact value SAML. Uploading the IdP metadata in advance is not required. This operation returns the entityId, acsUrl, and metadataXml of the SP for configuring an external IdP. These values are not the logon URL or IdP entity ID of the external IdP. You cannot submit the SP XML as the IdP XML to UpdateIdentityProvider.
-     * This operation is read-only. It does not enable logon, enable SCIM, create credentials, or perform logon connection tests. You cannot read the information when the shared pool is being initialized, being unbound, or has failed to unbind.</p>
+     * <p>An available CustomSSO shared user pool is required. The identityProviderType must be CustomSSO, and the protocol parameter is required and only supports the exact value SAML. Uploading the IdP metadata in advance is not required. This operation returns the entityId, acsUrl, and metadataXml of the local SP for users to configure an external IdP. These values are not the logon URL or IdP Entity ID of the external IdP. You cannot submit the SP XML as the IdP XML to UpdateIdentityProvider.
+     * This operation is read-only. It does not enable logon, enable SCIM, create credentials, or perform logon connection tests. You cannot read the information when the shared pool is being initialized, being unbound, or failed to be unbound.</p>
      * <h2>Requests and examples</h2>
      * <p>GET /workspaces/{workspaceId}/identity-providers/{identityProviderType}/service-provider
-     * Call conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a persistent connection to wait for completion.</p>
+     * Call conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has the permissions on the identity source resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
      * <pre><code class="language-text">GET /workspaces/ws-example/identity-providers/CustomSSO/service-provider?protocol=SAML
      * </code></pre>
      * <h2>Response examples</h2>
      * <pre><code class="language-json">{
      *   &quot;data&quot;: {
      *     &quot;protocol&quot;: &quot;SAML&quot;,
-     *     &quot;entityId&quot;: &quot;&lt;SP entity ID&gt;&quot;,
+     *     &quot;entityId&quot;: &quot;&lt;Local SP Entity ID&gt;&quot;,
      *     &quot;acsUrl&quot;: &quot;https://example.com/saml/acs&quot;,
-     *     &quot;metadataXml&quot;: &quot;&lt;SP metadata XML&gt;&quot;
+     *     &quot;metadataXml&quot;: &quot;&lt;Local SP Metadata XML&gt;&quot;
      *   }
      * }
      * </code></pre>
      * <h2>Errors and handling</h2>
-     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
-     * 400 InvalidParameter: identityProviderType or protocol is not supported. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, or has failed to unbind.</p>
+     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to the upstream service may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
+     * 400 InvalidParameter: The identityProviderType or protocol is not supported. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, or failed to be unbound.</p>
      * <h2>Call relationships and usage boundaries</h2>
      * <p>SAML configuration sequence: Call CreateIdentityProvider to initialize the CustomSSO shared pool and wait for GetIdentityProvider to return READY. Call this operation to obtain the SP information and configure it in the external IdP. Then, submit the external IdP metadata XML or complete manual configuration to UpdateIdentityProvider. After saving, enable loginEnabled separately as needed. Querying the SP information does not complete the external IdP configuration or verify logon.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the SAML service provider (SP) information for CustomSSO, including the entity ID, ACS URL, and SP metadata XML, for configuring an external IdP.</p>
+     * <p>Queries the SAML service provider (SP) information of CustomSSO, including the Entity ID, Assertion Consumer Service (ACS) URL, and SP metadata XML, for users to configure an external identity provider (IdP).</p>
      * 
      * @param request GetIdentityProviderServiceProviderRequest
      * @return GetIdentityProviderServiceProviderResponse
@@ -4241,11 +4153,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the status, current step, number of processed users, and failure cause of a manual synchronization task by using the local taskId of AgentCore. The taskId must be obtained from CreateIdentityProviderSyncJob in the same workspace and identity provider. It is not the synchronizationJobId of AgentIdentity. Poll the task until the status is SUCCESS, FAILED, or CANCELED. The PENDING, RUNNING, and PAUSED statuses do not indicate completion. The syncedUserCount includes updated existing users and does not equal the number of newly added users or the progress percentage.
-     * Authorization information: The RAM operation is agentcore:GetIdentityProviderSyncJob, the access level is Read, and the resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is a required authorization resource.
-     * Idempotence and retry: This operation is read-only and can be repeatedly queried.
-     * Calling this API operation is free of charge, and operation records support ActionTrail auditing.
-     * Response example:</p>
+     * <p>Queries the status, current step, number of processed users, and failure cause of a manual synchronization task based on the local taskId in AgentCore. The taskId must be returned by CreateIdentityProviderSyncJob for the same workspace and identity provider. It is not the synchronizationJobId of AgentIdentity. Poll the task until the status is SUCCESS, FAILED, or CANCELED. The PENDING, RUNNING, and PAUSED statuses do not indicate completion. The syncedUserCount includes updated existing users and does not represent the number of newly added users or the progress percentage.
+     * Authorization information: The RAM action is agentcore:GetIdentityProviderSyncJob. The access level is Read. The resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is required for authorization.
+     * Idempotence and retry: This API operation is read-only and can be repeatedly called.
+     * Calling this API operation is free of charge. Operation records support ActionTrail audit.
+     * Sample response:</p>
      * <pre><code class="language-json">{
      *   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
      *   &quot;message&quot;: &quot;success&quot;,
@@ -4291,11 +4203,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the status, current step, number of processed users, and failure cause of a manual synchronization task by using the local taskId of AgentCore. The taskId must be obtained from CreateIdentityProviderSyncJob in the same workspace and identity provider. It is not the synchronizationJobId of AgentIdentity. Poll the task until the status is SUCCESS, FAILED, or CANCELED. The PENDING, RUNNING, and PAUSED statuses do not indicate completion. The syncedUserCount includes updated existing users and does not equal the number of newly added users or the progress percentage.
-     * Authorization information: The RAM operation is agentcore:GetIdentityProviderSyncJob, the access level is Read, and the resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is a required authorization resource.
-     * Idempotence and retry: This operation is read-only and can be repeatedly queried.
-     * Calling this API operation is free of charge, and operation records support ActionTrail auditing.
-     * Response example:</p>
+     * <p>Queries the status, current step, number of processed users, and failure cause of a manual synchronization task based on the local taskId in AgentCore. The taskId must be returned by CreateIdentityProviderSyncJob for the same workspace and identity provider. It is not the synchronizationJobId of AgentIdentity. Poll the task until the status is SUCCESS, FAILED, or CANCELED. The PENDING, RUNNING, and PAUSED statuses do not indicate completion. The syncedUserCount includes updated existing users and does not represent the number of newly added users or the progress percentage.
+     * Authorization information: The RAM action is agentcore:GetIdentityProviderSyncJob. The access level is Read. The resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is required for authorization.
+     * Idempotence and retry: This API operation is read-only and can be repeatedly called.
+     * Calling this API operation is free of charge. Operation records support ActionTrail audit.
+     * Sample response:</p>
      * <pre><code class="language-json">{
      *   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
      *   &quot;message&quot;: &quot;success&quot;,
@@ -4326,11 +4238,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the saved synchronization scope, the validity of selected departments, and the estimated user count downstream of the identity provider. This operation is not used for real-time estimation of unsaved selections. AllAuthorized indicates the address book scope authorized for the application, which is not equivalent to the entire enterprise organization. An empty selectedDepartments array does not prove that the organization has no sub-departments. The estimation can be used only when estimateStatus is Ready and a count is returned. A missing count does not indicate 0.
-     * Authorization information: RAM operation agentcore:GetIdentityProviderSyncScope, access level Read, resource ARN: acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is a required authorization resource.
-     * Idempotence and retry: This operation is read-only and can be queried repeatedly.
-     * Calling this API operation is free of charge. Operation records support ActionTrail auditing.
-     * Sample response:</p>
+     * <p>Queries the saved synchronization scope, selected department validity, and user count estimation of the downstream identity provider. This operation is not used for real-time estimation of unsaved selections. AllAuthorized indicates the address book scope authorized for the application, which is not equivalent to the entire enterprise organization. An empty selectedDepartments array does not indicate that the organization has no sub-departments. Estimations can only be used when estimateStatus is Ready and a count is returned. A missing count does not indicate 0.
+     * Authorization information: The RAM operation is agentcore:GetIdentityProviderSyncScope. The access level is Read. The resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is a required authorization resource.
+     * Idempotence and retry: This operation is read-only and can be called repeatedly.
+     * Calling this API is free of charge. Operation records support ActionTrail auditing.
+     * Response example:</p>
      * <pre><code class="language-json">{
      *   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
      *   &quot;message&quot;: &quot;success&quot;,
@@ -4387,11 +4299,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the saved synchronization scope, the validity of selected departments, and the estimated user count downstream of the identity provider. This operation is not used for real-time estimation of unsaved selections. AllAuthorized indicates the address book scope authorized for the application, which is not equivalent to the entire enterprise organization. An empty selectedDepartments array does not prove that the organization has no sub-departments. The estimation can be used only when estimateStatus is Ready and a count is returned. A missing count does not indicate 0.
-     * Authorization information: RAM operation agentcore:GetIdentityProviderSyncScope, access level Read, resource ARN: acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is a required authorization resource.
-     * Idempotence and retry: This operation is read-only and can be queried repeatedly.
-     * Calling this API operation is free of charge. Operation records support ActionTrail auditing.
-     * Sample response:</p>
+     * <p>Queries the saved synchronization scope, selected department validity, and user count estimation of the downstream identity provider. This operation is not used for real-time estimation of unsaved selections. AllAuthorized indicates the address book scope authorized for the application, which is not equivalent to the entire enterprise organization. An empty selectedDepartments array does not indicate that the organization has no sub-departments. Estimations can only be used when estimateStatus is Ready and a count is returned. A missing count does not indicate 0.
+     * Authorization information: The RAM operation is agentcore:GetIdentityProviderSyncScope. The access level is Read. The resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is a required authorization resource.
+     * Idempotence and retry: This operation is read-only and can be called repeatedly.
+     * Calling this API is free of charge. Operation records support ActionTrail auditing.
+     * Response example:</p>
      * <pre><code class="language-json">{
      *   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
      *   &quot;message&quot;: &quot;success&quot;,
@@ -4433,7 +4345,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of the logical image cache in the current workspace. Returns the complete source, current digest, actual size, creation time, status, and secure error messages. AgentCount counts configuration references with the switch enabled. CanDelete verifies both configuration references and instance usage. If the switch is disabled, the count is 0, but deletion is still prohibited if old instances are not released. If the resource does not belong to the current workspace, resources with the same content from other workspaces are not returned.</p>
+     * <p>Queries the details of the logical image cache in the current workspace. It returns the complete source, current digest, actual capacity, creation time, status, and secure error messages. The AgentCount field counts the configuration references with the feature enabled. The CanDelete field verifies both configuration references and instance usage. If the feature is disabled, the count is 0, but deletion remains prohibited if legacy instances are not released. Resources with the same content from other workspaces are not returned if the resource does not belong to the current workspace.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of an image cache.</p>
@@ -4474,7 +4386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of the logical image cache in the current workspace. Returns the complete source, current digest, actual size, creation time, status, and secure error messages. AgentCount counts configuration references with the switch enabled. CanDelete verifies both configuration references and instance usage. If the switch is disabled, the count is 0, but deletion is still prohibited if old instances are not released. If the resource does not belong to the current workspace, resources with the same content from other workspaces are not returned.</p>
+     * <p>Queries the details of the logical image cache in the current workspace. It returns the complete source, current digest, actual capacity, creation time, status, and secure error messages. The AgentCount field counts the configuration references with the feature enabled. The CanDelete field verifies both configuration references and instance usage. If the feature is disabled, the count is 0, but deletion remains prohibited if legacy instances are not released. Resources with the same content from other workspaces are not returned if the resource does not belong to the current workspace.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of an image cache.</p>
@@ -4944,11 +4856,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Queries the basic information, version status, labels, visibility scope, and version list of a specified Skill.</p>
+     * <h2>Request description</h2>
+     * <p>Queries the basic information, version status, tags, visibility scope, and version list of a specified skill.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the basic information, version status, labels, visibility scope, and version list of a specified Skill.</p>
+     * <p>Queries the basic information, version status, tags, visibility scope, and version list of a specified skill.</p>
      * 
      * @param request GetSkillDetailRequest
      * @param headers map
@@ -4976,11 +4888,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Queries the basic information, version status, labels, visibility scope, and version list of a specified Skill.</p>
+     * <h2>Request description</h2>
+     * <p>Queries the basic information, version status, tags, visibility scope, and version list of a specified skill.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the basic information, version status, labels, visibility scope, and version list of a specified Skill.</p>
+     * <p>Queries the basic information, version status, tags, visibility scope, and version list of a specified skill.</p>
      * 
      * @param request GetSkillDetailRequest
      * @return GetSkillDetailResponse
@@ -5529,8 +5441,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the directories in the current workspace that can be used to create code package agents or switch runtime environments. Runtime environments are dynamically provided based on the current version configuration, and internal image addresses are not returned.
-     * If maxResults is omitted or set to 0, the default value is 10. If the value is greater than 100, it is processed as 100. Omit nextToken in the first request. For subsequent requests, use the token returned in the previous response as is, and keep the workspace unchanged. If a directory change invalidates the token, query from the first page again. An empty nextToken indicates that there are no more pages. Existing agents continue to use the saved images for restarts, scaling, and regular updates.</p>
+     * <p>Queries the directory of runtime environments available in the current workspace for creating code package agents or switching runtime environments. The runtime environments are dynamically provided based on the current version configuration, and internal image addresses are not returned.
+     * If maxResults is omitted or set to 0, the default value is 10. If it is greater than 100, it is processed as 100. Omit nextToken in the first request. For subsequent requests, use the token returned in the previous response as is, and keep the workspace unchanged. If the token becomes invalid due to directory changes, query from the first page again. An empty nextToken indicates that there are no more pages. Existing agents continue to use the saved images for restarts, scale-outs, and regular updates.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the runtime environments supported for code deployment.</p>
@@ -5571,8 +5483,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the directories in the current workspace that can be used to create code package agents or switch runtime environments. Runtime environments are dynamically provided based on the current version configuration, and internal image addresses are not returned.
-     * If maxResults is omitted or set to 0, the default value is 10. If the value is greater than 100, it is processed as 100. Omit nextToken in the first request. For subsequent requests, use the token returned in the previous response as is, and keep the workspace unchanged. If a directory change invalidates the token, query from the first page again. An empty nextToken indicates that there are no more pages. Existing agents continue to use the saved images for restarts, scaling, and regular updates.</p>
+     * <p>Queries the directory of runtime environments available in the current workspace for creating code package agents or switching runtime environments. The runtime environments are dynamically provided based on the current version configuration, and internal image addresses are not returned.
+     * If maxResults is omitted or set to 0, the default value is 10. If it is greater than 100, it is processed as 100. Omit nextToken in the first request. For subsequent requests, use the token returned in the previous response as is, and keep the workspace unchanged. If the token becomes invalid due to directory changes, query from the first page again. An empty nextToken indicates that there are no more pages. Existing agents continue to use the saved images for restarts, scale-outs, and regular updates.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the runtime environments supported for code deployment.</p>
@@ -6098,11 +6010,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries DingTalk or Lark departments by hierarchy and page. Prerequisites include an existing identity provider binding, a user pool, valid application credentials, and address book read authorization. If parentDepartmentId is not specified, the root hierarchy is queried. When expanding a node, use the ID of the node to query its direct child departments. The hasChildren field is used to determine expandability and does not indicate that child nodes have been returned. The nextToken field is only used to continue querying the next page under the current parent department. The query only reads the directory, does not save the synchronization scope, and does not import users. After a new department is added to a DingTalk or Lark organization, re-query the corresponding parent department because the old list does not represent the latest directory.
-     * Authorization information: The RAM operation is agentcore:ListIdentityProviderDepartments, the access level is List, and the resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource requires authorization.
-     * Idempotence and retry: This operation is read-only and can be invoked repeatedly.
+     * <p>Performs a paging query on DingTalk or Lark departments by hierarchy. You must attach an identity provider, configure a user pool, obtain valid application credentials, and grant address book read authorization. If parentDepartmentId is not specified, the root hierarchy is queried. When expanding a node, use the ID of the node to query its direct child departments. The hasChildren field is used to determine expandability and does not indicate that child nodes have been returned. The nextToken field is only used to continue querying the next page under the current parent department. The query only reads the directory, does not save the synchronization scope, and does not import users. After a new department is added to a DingTalk or Lark organization, you should re-query the corresponding parent department because the old list cannot represent the latest directory.
+     * Authorization information: The RAM action is agentcore:ListIdentityProviderDepartments, the access level is List, and the resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is a required authorization resource.
+     * Idempotence and retry: This operation is read-only and can be queried repeatedly.
      * It is free of charge to invoke this API operation, and operation records support ActionTrail auditing.
-     * Sample response:</p>
+     * Response example:</p>
      * <pre><code class="language-json">{
      *   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
      *   &quot;message&quot;: &quot;success&quot;,
@@ -6124,7 +6036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries the departments of an identity provider by page.</p>
+     * <p>Performs a paging query on the departments of an identity provider.</p>
      * 
      * @param request ListIdentityProviderDepartmentsRequest
      * @param headers map
@@ -6166,11 +6078,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries DingTalk or Lark departments by hierarchy and page. Prerequisites include an existing identity provider binding, a user pool, valid application credentials, and address book read authorization. If parentDepartmentId is not specified, the root hierarchy is queried. When expanding a node, use the ID of the node to query its direct child departments. The hasChildren field is used to determine expandability and does not indicate that child nodes have been returned. The nextToken field is only used to continue querying the next page under the current parent department. The query only reads the directory, does not save the synchronization scope, and does not import users. After a new department is added to a DingTalk or Lark organization, re-query the corresponding parent department because the old list does not represent the latest directory.
-     * Authorization information: The RAM operation is agentcore:ListIdentityProviderDepartments, the access level is List, and the resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource requires authorization.
-     * Idempotence and retry: This operation is read-only and can be invoked repeatedly.
+     * <p>Performs a paging query on DingTalk or Lark departments by hierarchy. You must attach an identity provider, configure a user pool, obtain valid application credentials, and grant address book read authorization. If parentDepartmentId is not specified, the root hierarchy is queried. When expanding a node, use the ID of the node to query its direct child departments. The hasChildren field is used to determine expandability and does not indicate that child nodes have been returned. The nextToken field is only used to continue querying the next page under the current parent department. The query only reads the directory, does not save the synchronization scope, and does not import users. After a new department is added to a DingTalk or Lark organization, you should re-query the corresponding parent department because the old list cannot represent the latest directory.
+     * Authorization information: The RAM action is agentcore:ListIdentityProviderDepartments, the access level is List, and the resource ARN is acs:agentcore:{regionId}:{accountId}:workspace/{workspaceId}/identityProvider/{identityProviderType}. This resource is a required authorization resource.
+     * Idempotence and retry: This operation is read-only and can be queried repeatedly.
      * It is free of charge to invoke this API operation, and operation records support ActionTrail auditing.
-     * Sample response:</p>
+     * Response example:</p>
      * <pre><code class="language-json">{
      *   &quot;requestId&quot;: &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
      *   &quot;message&quot;: &quot;success&quot;,
@@ -6192,7 +6104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries the departments of an identity provider by page.</p>
+     * <p>Performs a paging query on the departments of an identity provider.</p>
      * 
      * @param request ListIdentityProviderDepartmentsRequest
      * @return ListIdentityProviderDepartmentsResponse
@@ -6206,11 +6118,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Features and prerequisites</h2>
-     * <p>Retrieves the current credential summary list from AgentIdentity and returns a data array. Each item contains credentialId, status, createTime, and expireTime. If no credentials exist, an empty array is returned. This operation does not support maxResults, nextToken, or pagination. Do not call this operation with fake pagination fields. The list never returns plaintext tokens, nor does it enable the receiving or issuing of new credentials.
-     * Receiving is not required to be enabled, but the shared pool must be available. A credential is considered available if its status is Enabled and its expireTime is later than the current time. The maximum limit of two credentials is determined by AgentIdentity. Client-side counting is for reference only. The list may contain unavailable or expired credentials. Do not use this list to claim that available tokens exist.</p>
+     * <p>Retrieves the current credential summary list from AgentIdentity and returns a data array. Each item contains credentialId, status, createTime, and expireTime. An empty array is returned if no credentials exist. This operation does not support the maxResults or nextToken parameters, and does not provide pagination capabilities. Do not call this operation with fake pagination fields. The list never returns plaintext tokens, nor does it enable receiving or issuing new credentials.
+     * Receiving is not required to be currently enabled, but the shared pool must be available. A credential is considered available if its status is Enabled and its expireTime is later than the current time. The maximum limit of two credentials is determined by AgentIdentity. Client-side counting is for reference only. The list may contain unavailable or expired credentials. Do not assume that available tokens exist based on this list.</p>
      * <h2>Requests and examples</h2>
      * <p>GET /workspaces/{workspaceId}/scim-provisioning/credentials
-     * Call conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a persistent connection to wait for completion.</p>
+     * Calling conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS credential that has the required permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, rather than the extra body wrapper of the backend direct-connection API operation. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not imply that the HTTP request uses a persistent connection to wait for completion.</p>
      * <pre><code class="language-text">GET /workspaces/ws-example/scim-provisioning/credentials
      * </code></pre>
      * <h2>Response examples</h2>
@@ -6219,20 +6131,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
      *     {
      *       &quot;credentialId&quot;: &quot;credential-example&quot;,
      *       &quot;status&quot;: &quot;Enabled&quot;,
-     *       &quot;createTime&quot;: &quot;&lt;Upstream creation time&gt;&quot;,
-     *       &quot;expireTime&quot;: &quot;&lt;Upstream expiration time&gt;&quot;
+     *       &quot;createTime&quot;: &quot;&lt;upstream creation time&gt;&quot;,
+     *       &quot;expireTime&quot;: &quot;&lt;upstream expiration time&gt;&quot;
      *     }
      *   ]
      * }
      * </code></pre>
      * <h2>Errors and handling</h2>
-     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream service that fail may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
-     * 400 InvalidParameter: The shared user pool is unavailable. 404 IdentityProviderNotFound: No corresponding binding exists. Upstream query failures cannot be replaced with an empty list, which may mislead users into repeatedly creating credentials.</p>
+     * <p>Error handling: A 400 InvalidParameter error indicates that the parameters or current configuration prerequisites are not met. A 404 IdentityProviderNotFound error indicates that no binding of the matching type exists. Synchronous calls to the upstream service may return a 503 IdentityProviderProvisioningUnavailable error if they fail. Retain the request ID for troubleshooting and do not interpret read failures as an unconfigured state. Actual authentication and workspace non-existence errors follow the common error handling process.
+     * 400 InvalidParameter: The shared user pool is unavailable. 404 IdentityProviderNotFound: No corresponding binding exists. Upstream query failures must not be replaced with an empty list. Otherwise, users may be induced to repeatedly create credentials.</p>
      * <h2>Call relationships and usage boundaries</h2>
-     * <p>Used for configuration recovery and credential management: Existing plaintext tokens cannot be queried and retrieved again. The list provides only credential summaries. To obtain a new token, call CreateIdentityProviderSCIMCredential. To revoke a credential, submit the credentialId from the list to DeleteIdentityProviderSCIMCredential. A maximum of two credentials are allowed in the same pool. This operation returns the complete array and does not support or fabricate pagination parameters.</p>
+     * <p>Used for configuration recovery and credential management: Existing plaintext tokens cannot be queried and retrieved again. The list provides only credential summaries. Call CreateIdentityProviderSCIMCredential when a new token is required. Submit the credentialId from the list to DeleteIdentityProviderSCIMCredential when a credential needs to be revoked. A maximum of two credentials are allowed in the same pool. This operation returns the complete array and does not support or fabricate pagination parameters.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the complete summary list of up to two SCIM credentials in the shared user pool, without returning plaintext tokens or supporting pagination.</p>
+     * <p>Queries the complete summary list of up to two SCIM credentials in the shared user pool. Plaintext tokens are not returned, and pagination is not supported.</p>
      * 
      * @param request ListIdentityProviderSCIMCredentialsRequest
      * @param headers map
@@ -6261,11 +6173,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Features and prerequisites</h2>
-     * <p>Retrieves the current credential summary list from AgentIdentity and returns a data array. Each item contains credentialId, status, createTime, and expireTime. If no credentials exist, an empty array is returned. This operation does not support maxResults, nextToken, or pagination. Do not call this operation with fake pagination fields. The list never returns plaintext tokens, nor does it enable the receiving or issuing of new credentials.
-     * Receiving is not required to be enabled, but the shared pool must be available. A credential is considered available if its status is Enabled and its expireTime is later than the current time. The maximum limit of two credentials is determined by AgentIdentity. Client-side counting is for reference only. The list may contain unavailable or expired credentials. Do not use this list to claim that available tokens exist.</p>
+     * <p>Retrieves the current credential summary list from AgentIdentity and returns a data array. Each item contains credentialId, status, createTime, and expireTime. An empty array is returned if no credentials exist. This operation does not support the maxResults or nextToken parameters, and does not provide pagination capabilities. Do not call this operation with fake pagination fields. The list never returns plaintext tokens, nor does it enable receiving or issuing new credentials.
+     * Receiving is not required to be currently enabled, but the shared pool must be available. A credential is considered available if its status is Enabled and its expireTime is later than the current time. The maximum limit of two credentials is determined by AgentIdentity. Client-side counting is for reference only. The list may contain unavailable or expired credentials. Do not assume that available tokens exist based on this list.</p>
      * <h2>Requests and examples</h2>
      * <p>GET /workspaces/{workspaceId}/scim-provisioning/credentials
-     * Call conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a persistent connection to wait for completion.</p>
+     * Calling conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS credential that has the required permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, rather than the extra body wrapper of the backend direct-connection API operation. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not imply that the HTTP request uses a persistent connection to wait for completion.</p>
      * <pre><code class="language-text">GET /workspaces/ws-example/scim-provisioning/credentials
      * </code></pre>
      * <h2>Response examples</h2>
@@ -6274,20 +6186,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
      *     {
      *       &quot;credentialId&quot;: &quot;credential-example&quot;,
      *       &quot;status&quot;: &quot;Enabled&quot;,
-     *       &quot;createTime&quot;: &quot;&lt;Upstream creation time&gt;&quot;,
-     *       &quot;expireTime&quot;: &quot;&lt;Upstream expiration time&gt;&quot;
+     *       &quot;createTime&quot;: &quot;&lt;upstream creation time&gt;&quot;,
+     *       &quot;expireTime&quot;: &quot;&lt;upstream expiration time&gt;&quot;
      *     }
      *   ]
      * }
      * </code></pre>
      * <h2>Errors and handling</h2>
-     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream service that fail may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
-     * 400 InvalidParameter: The shared user pool is unavailable. 404 IdentityProviderNotFound: No corresponding binding exists. Upstream query failures cannot be replaced with an empty list, which may mislead users into repeatedly creating credentials.</p>
+     * <p>Error handling: A 400 InvalidParameter error indicates that the parameters or current configuration prerequisites are not met. A 404 IdentityProviderNotFound error indicates that no binding of the matching type exists. Synchronous calls to the upstream service may return a 503 IdentityProviderProvisioningUnavailable error if they fail. Retain the request ID for troubleshooting and do not interpret read failures as an unconfigured state. Actual authentication and workspace non-existence errors follow the common error handling process.
+     * 400 InvalidParameter: The shared user pool is unavailable. 404 IdentityProviderNotFound: No corresponding binding exists. Upstream query failures must not be replaced with an empty list. Otherwise, users may be induced to repeatedly create credentials.</p>
      * <h2>Call relationships and usage boundaries</h2>
-     * <p>Used for configuration recovery and credential management: Existing plaintext tokens cannot be queried and retrieved again. The list provides only credential summaries. To obtain a new token, call CreateIdentityProviderSCIMCredential. To revoke a credential, submit the credentialId from the list to DeleteIdentityProviderSCIMCredential. A maximum of two credentials are allowed in the same pool. This operation returns the complete array and does not support or fabricate pagination parameters.</p>
+     * <p>Used for configuration recovery and credential management: Existing plaintext tokens cannot be queried and retrieved again. The list provides only credential summaries. Call CreateIdentityProviderSCIMCredential when a new token is required. Submit the credentialId from the list to DeleteIdentityProviderSCIMCredential when a credential needs to be revoked. A maximum of two credentials are allowed in the same pool. This operation returns the complete array and does not support or fabricate pagination parameters.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the complete summary list of up to two SCIM credentials in the shared user pool, without returning plaintext tokens or supporting pagination.</p>
+     * <p>Queries the complete summary list of up to two SCIM credentials in the shared user pool. Plaintext tokens are not returned, and pagination is not supported.</p>
      * 
      * @param request ListIdentityProviderSCIMCredentialsRequest
      * @return ListIdentityProviderSCIMCredentialsResponse
@@ -6413,10 +6325,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the logical image caches within the current account, region, and workspace. WorkspaceId is required, and caches are not visible across workspaces. All conditions filter the full set using the AND operator before pagination is calculated. Results are sorted in descending order of logical resource creation time and ascending order of ImageId. The cursor is bound to the account, region, workspace, all filters, and the sort order. Returns the complete cache objects, the AgentCount based on the configuration switch, and the actual deletion eligibility. Query failures do not return a disguised empty list, and the nextToken on the last page is an empty string.</p>
+     * <p>Queries the logical image caches within the current account, region, and workspace. WorkspaceId is required, and caches are invisible across workspaces. All conditions filter the full set using the AND operator before pagination is calculated. The results are sorted in descending order by logical resource creation time and ascending order by ImageId. The cursor is bound to the account, region, workspace, all filters, and sorting criteria. Returns the complete cache objects, the AgentCount based on the configuration switch, and the actual deletion eligibility. Query failures are not disguised as empty lists, and the nextToken on the last page is an empty string.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries image caches.</p>
+     * <p>Lists image caches.</p>
      * 
      * @param request ListImageCachesRequest
      * @param headers map
@@ -6494,10 +6406,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the logical image caches within the current account, region, and workspace. WorkspaceId is required, and caches are not visible across workspaces. All conditions filter the full set using the AND operator before pagination is calculated. Results are sorted in descending order of logical resource creation time and ascending order of ImageId. The cursor is bound to the account, region, workspace, all filters, and the sort order. Returns the complete cache objects, the AgentCount based on the configuration switch, and the actual deletion eligibility. Query failures do not return a disguised empty list, and the nextToken on the last page is an empty string.</p>
+     * <p>Queries the logical image caches within the current account, region, and workspace. WorkspaceId is required, and caches are invisible across workspaces. All conditions filter the full set using the AND operator before pagination is calculated. The results are sorted in descending order by logical resource creation time and ascending order by ImageId. The cursor is bound to the account, region, workspace, all filters, and sorting criteria. Returns the complete cache objects, the AgentCount based on the configuration switch, and the actual deletion eligibility. Query failures are not disguised as empty lists, and the nextToken on the last page is an empty string.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries image caches.</p>
+     * <p>Lists image caches.</p>
      * 
      * @param request ListImageCachesRequest
      * @return ListImageCachesResponse
@@ -6510,10 +6422,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of managed agents in a specified workspace by using paging and returns summary information for each agent, including the identity, name, status, template, and specifications.</p>
+     * <p>Performs a paged query for the list of managed agents in a specified workspace and returns summary information for each agent, including the identity, name, status, template, and specifications. Paging is supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of managed agents in a specified workspace.</p>
+     * <p>Queries a list of managed agents in a specified workspace.</p>
      * 
      * @param request ListManagedAgentsRequest
      * @param headers map
@@ -6551,10 +6463,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of managed agents in a specified workspace by using paging and returns summary information for each agent, including the identity, name, status, template, and specifications.</p>
+     * <p>Performs a paged query for the list of managed agents in a specified workspace and returns summary information for each agent, including the identity, name, status, template, and specifications. Paging is supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of managed agents in a specified workspace.</p>
+     * <p>Queries a list of managed agents in a specified workspace.</p>
      * 
      * @param request ListManagedAgentsRequest
      * @return ListManagedAgentsResponse
@@ -6695,11 +6607,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</p>
+     * <h2>Request description</h2>
+     * <p>Performs a paging query to retrieve the MCP services and their configurations and statuses in a specified workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</p>
+     * <p>Performs a paging query to retrieve the MCP services and their configurations and statuses in a specified workspace.</p>
      * 
      * @param request ListMcpsRequest
      * @param headers map
@@ -6757,11 +6669,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</p>
+     * <h2>Request description</h2>
+     * <p>Performs a paging query to retrieve the MCP services and their configurations and statuses in a specified workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</p>
+     * <p>Performs a paging query to retrieve the MCP services and their configurations and statuses in a specified workspace.</p>
      * 
      * @param request ListMcpsRequest
      * @return ListMcpsResponse
@@ -7170,7 +7082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries permission rules by resource with paging.</p>
+     * <p>Performs a paged query of permission rules by resource with paging.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries permission rules.</p>
@@ -7239,7 +7151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries permission rules by resource with paging.</p>
+     * <p>Performs a paged query of permission rules by resource with paging.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries permission rules.</p>
@@ -7599,11 +7511,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Performs a paged query of Skills in a specified workspace and returns basic Skill information, version status, and paging information.</p>
+     * <h2>Request description</h2>
+     * <p>Performs a paged query for skills in a specified workspace and returns basic information, version statuses, and paging information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query of Skills in a specified workspace and returns basic Skill information, version status, and paging information.</p>
+     * <p>Performs a paged query for skills in a specified workspace and returns basic information, version statuses, and paging information.</p>
      * 
      * @param request ListSkillsRequest
      * @param headers map
@@ -7669,11 +7581,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Performs a paged query of Skills in a specified workspace and returns basic Skill information, version status, and paging information.</p>
+     * <h2>Request description</h2>
+     * <p>Performs a paged query for skills in a specified workspace and returns basic information, version statuses, and paging information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query of Skills in a specified workspace and returns basic Skill information, version status, and paging information.</p>
+     * <p>Performs a paged query for skills in a specified workspace and returns basic information, version statuses, and paging information.</p>
      * 
      * @param request ListSkillsRequest
      * @return ListSkillsResponse
@@ -8049,11 +7961,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Features and prerequisites</h2>
-     * <p>Requires an available CustomSSO shared user pool. Does not depend on SAML metadata and is not blocked by SAML updates or update failures. Synchronously calls AgentIdentity to enable SCIM receiving and reads the configuration and credential list. Reuses the existing configuration if receiving is already enabled. Repeated initialization does not create duplicate valid credentials or automatically enable user synchronization. If an enabled and unexpired credential exists, returns its summary and sets the token to null. If no available credentials exist, creates one and returns the token only for the current request. Existing invalid or expired credentials are not automatically deleted and may still count towards the upstream limit of two credentials.
-     * The prepare operation enables receiving and may issue credentials, but does not set the AC syncEnabled parameter, initiate the first import, or indicate that the external provisioning connection test has passed. After configuring the baseUrl and the current token in the external provisioning system, call UpdateIdentityProviderSCIM to confirm and enable synchronization. Existing tokens cannot be retrieved. If the response is lost, query the credential list first instead of automatically reissuing a token. Do not log tokens or persist them in frontend caches.</p>
-     * <h2>Requests and examples</h2>
+     * <p>Requires an available CustomSSO shared user pool. Does not depend on SAML metadata and is not locked by SAML updating or update failure statuses. Synchronously calls AgentIdentity to enable SCIM receiving and reads the configuration and credential list. Reuses the existing configuration if receiving is already enabled. Repeated initialization does not create duplicate valid credentials or automatically enable user synchronization. If a credential with the Enabled status exists and has not expired, its summary is returned and token is null. If no available credentials exist, a new credential is created and the token is returned only for the current request. Existing invalid or expired credentials are not automatically deleted and may still trigger the upstream limit of up to two credentials.
+     * The prepare operation has the side effects of enabling receiving and potentially issuing credentials, but does not set the access control syncEnabled parameter, initiate the first import, or indicate that the external provisioning connection test has passed. After configuring the baseUrl and the current token in the external provisioning system, call UpdateIdentityProviderSCIM to confirm and enable synchronization. Existing tokens cannot be retrieved again. If the response is lost, query the credential list first instead of automatically reissuing the token. Tokens should not be logged or persisted in frontend caches.</p>
+     * <h2>Request and examples</h2>
      * <p>POST /workspaces/{workspaceId}/scim-provisioning/prepare
-     * Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not log the keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
+     * Calling conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS credential that has permissions on the identity provider resources of the workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not log the keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
      * <pre><code class="language-text">POST /workspaces/ws-example/scim-provisioning/prepare
      * No business request body.
      * </code></pre>
@@ -8069,15 +7981,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      *       &quot;status&quot;: &quot;Enabled&quot;,
      *       &quot;expireTime&quot;: &quot;&lt;Expiration time returned by the upstream&gt;&quot;
      *     },
-     *     &quot;token&quot;: &quot;&lt;Token newly issued only for this request; null if an available credential already exists&gt;&quot;
+     *     &quot;token&quot;: &quot;&lt;Token newly issued for the current request only. Null if an available credential already exists.&gt;&quot;
      *   }
      * }
      * </code></pre>
      * <h2>Errors and handling</h2>
      * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream may return 503 IdentityProviderProvisioningUnavailable if they fail. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace not found errors follow the common error handling.
-     * 400 LimitExceeded.ScimCredential: The maximum of two credentials has been reached. You must explicitly delete one credential and try again. Credentials are not automatically deleted, rotated, or expanded. 400 InvalidParameter: The shared pool is unavailable. This call may have enabled upstream receiving and then reported an error due to issuance failure. The error does not mean that the operation has been automatically rolled back.</p>
+     * 400 LimitExceeded.ScimCredential: The maximum limit of two credentials has been reached. You must explicitly delete one credential before retrying. Credentials are not automatically deleted, rotated, or expanded. 400 InvalidParameter: The shared pool is unavailable. This call may have enabled upstream receiving and then reported an error due to issuance failure. The error does not mean that the operation has been automatically rolled back.</p>
      * <h2>Call relationships and usage boundaries</h2>
-     * <p>The shared pool is created by using CreateIdentityProvider with identityProviderType set to CustomSSO. SAML configuration is not required. If an existing credential is reused and the token is null, use the token already saved by the user. Do not configure a null value in the external system. If the token is lost, call ListIdentityProviderSCIMCredentials to check first, and then explicitly call CreateIdentityProviderSCIMCredential to issue a new one. When the limit of two credentials is reached, the user must confirm and delete the unused one.</p>
+     * <p>The shared pool is created by using CreateIdentityProvider with identityProviderType=CustomSSO. SAML configuration is not required. If an existing credential is reused and token is null, use the token already saved by the user. Do not configure a null value in the external system. If the token is lost, call ListIdentityProviderSCIMCredentials to verify first, and then explicitly call CreateIdentityProviderSCIMCredential to issue a new one. When the limit of two credentials is reached, the user must confirm and delete the unused credential.</p>
      * 
      * <b>summary</b> : 
      * <p>Prepares the SCIM receiving configuration and returns the provisioning URL and credential summary. Issues a token if no available credentials exist and returns the plaintext only for the current request. This operation does not automatically enable user synchronization.</p>
@@ -8109,11 +8021,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Features and prerequisites</h2>
-     * <p>Requires an available CustomSSO shared user pool. Does not depend on SAML metadata and is not blocked by SAML updates or update failures. Synchronously calls AgentIdentity to enable SCIM receiving and reads the configuration and credential list. Reuses the existing configuration if receiving is already enabled. Repeated initialization does not create duplicate valid credentials or automatically enable user synchronization. If an enabled and unexpired credential exists, returns its summary and sets the token to null. If no available credentials exist, creates one and returns the token only for the current request. Existing invalid or expired credentials are not automatically deleted and may still count towards the upstream limit of two credentials.
-     * The prepare operation enables receiving and may issue credentials, but does not set the AC syncEnabled parameter, initiate the first import, or indicate that the external provisioning connection test has passed. After configuring the baseUrl and the current token in the external provisioning system, call UpdateIdentityProviderSCIM to confirm and enable synchronization. Existing tokens cannot be retrieved. If the response is lost, query the credential list first instead of automatically reissuing a token. Do not log tokens or persist them in frontend caches.</p>
-     * <h2>Requests and examples</h2>
+     * <p>Requires an available CustomSSO shared user pool. Does not depend on SAML metadata and is not locked by SAML updating or update failure statuses. Synchronously calls AgentIdentity to enable SCIM receiving and reads the configuration and credential list. Reuses the existing configuration if receiving is already enabled. Repeated initialization does not create duplicate valid credentials or automatically enable user synchronization. If a credential with the Enabled status exists and has not expired, its summary is returned and token is null. If no available credentials exist, a new credential is created and the token is returned only for the current request. Existing invalid or expired credentials are not automatically deleted and may still trigger the upstream limit of up to two credentials.
+     * The prepare operation has the side effects of enabling receiving and potentially issuing credentials, but does not set the access control syncEnabled parameter, initiate the first import, or indicate that the external provisioning connection test has passed. After configuring the baseUrl and the current token in the external provisioning system, call UpdateIdentityProviderSCIM to confirm and enable synchronization. Existing tokens cannot be retrieved again. If the response is lost, query the credential list first instead of automatically reissuing the token. Tokens should not be logged or persisted in frontend caches.</p>
+     * <h2>Request and examples</h2>
      * <p>POST /workspaces/{workspaceId}/scim-provisioning/prepare
-     * Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not log the keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
+     * Calling conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS credential that has permissions on the identity provider resources of the workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not log the keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
      * <pre><code class="language-text">POST /workspaces/ws-example/scim-provisioning/prepare
      * No business request body.
      * </code></pre>
@@ -8129,15 +8041,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      *       &quot;status&quot;: &quot;Enabled&quot;,
      *       &quot;expireTime&quot;: &quot;&lt;Expiration time returned by the upstream&gt;&quot;
      *     },
-     *     &quot;token&quot;: &quot;&lt;Token newly issued only for this request; null if an available credential already exists&gt;&quot;
+     *     &quot;token&quot;: &quot;&lt;Token newly issued for the current request only. Null if an available credential already exists.&gt;&quot;
      *   }
      * }
      * </code></pre>
      * <h2>Errors and handling</h2>
      * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream may return 503 IdentityProviderProvisioningUnavailable if they fail. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace not found errors follow the common error handling.
-     * 400 LimitExceeded.ScimCredential: The maximum of two credentials has been reached. You must explicitly delete one credential and try again. Credentials are not automatically deleted, rotated, or expanded. 400 InvalidParameter: The shared pool is unavailable. This call may have enabled upstream receiving and then reported an error due to issuance failure. The error does not mean that the operation has been automatically rolled back.</p>
+     * 400 LimitExceeded.ScimCredential: The maximum limit of two credentials has been reached. You must explicitly delete one credential before retrying. Credentials are not automatically deleted, rotated, or expanded. 400 InvalidParameter: The shared pool is unavailable. This call may have enabled upstream receiving and then reported an error due to issuance failure. The error does not mean that the operation has been automatically rolled back.</p>
      * <h2>Call relationships and usage boundaries</h2>
-     * <p>The shared pool is created by using CreateIdentityProvider with identityProviderType set to CustomSSO. SAML configuration is not required. If an existing credential is reused and the token is null, use the token already saved by the user. Do not configure a null value in the external system. If the token is lost, call ListIdentityProviderSCIMCredentials to check first, and then explicitly call CreateIdentityProviderSCIMCredential to issue a new one. When the limit of two credentials is reached, the user must confirm and delete the unused one.</p>
+     * <p>The shared pool is created by using CreateIdentityProvider with identityProviderType=CustomSSO. SAML configuration is not required. If an existing credential is reused and token is null, use the token already saved by the user. Do not configure a null value in the external system. If the token is lost, call ListIdentityProviderSCIMCredentials to verify first, and then explicitly call CreateIdentityProviderSCIMCredential to issue a new one. When the limit of two credentials is reached, the user must confirm and delete the unused credential.</p>
      * 
      * <b>summary</b> : 
      * <p>Prepares the SCIM receiving configuration and returns the provisioning URL and credential summary. Issues a token if no available credentials exist and returns the plaintext only for the current request. This operation does not automatically enable user synchronization.</p>
@@ -8328,10 +8240,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retries the image cache for the original ImageId in the current workspace. WorkspaceId is required. The business request body is not required and can be omitted or provided as an empty object. The source authorization and transfer network reuse the trusted context of the original registration. If a digest exists, the retry uses the original digest. If no digest exists, the original tag is resolved again. A new request for a FAILED status can start a new production round. PENDING and READY statuses are reused. DELETING status is rejected, and deleted resources are not recreated. PUBLIC and PRIVATE statuses reuse the pull authorization of the original workspace. Returns a complete acceptance snapshot and retains the original ImageId and CreatedAt. ClientToken does not guarantee request deduplication. If the result is not confirmed, query the real-time status first before deciding whether to resubmit.</p>
+     * <p>Retries an image cache for the original ImageId in the current workspace. WorkspaceId is required. The business request body is not required and can be omitted or provided as an empty object. The source authorization and transfer network reuse the original trusted context of the registration. If a digest exists, the retry uses the original digest. If no digest exists, the original tag is re-parsed. A new request in the FAILED state can start a new production round. Requests in the PENDING or READY state are reused. Requests in the DELETING state are rejected, and deleted resources are not recreated. PUBLIC or PRIVATE resources reuse the pull authorization of the original workspace. Returns a complete acceptance snapshot and retains the original ImageId and CreatedAt. ClientToken does not guarantee request deduplication. If the result is not confirmed, query the real-time status first before deciding whether to resubmit.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retries the image cache.</p>
+     * <p>Retries an image cache.</p>
      * 
      * @param tmpReq RetryImageCacheRequest
      * @param headers map
@@ -8385,10 +8297,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retries the image cache for the original ImageId in the current workspace. WorkspaceId is required. The business request body is not required and can be omitted or provided as an empty object. The source authorization and transfer network reuse the trusted context of the original registration. If a digest exists, the retry uses the original digest. If no digest exists, the original tag is resolved again. A new request for a FAILED status can start a new production round. PENDING and READY statuses are reused. DELETING status is rejected, and deleted resources are not recreated. PUBLIC and PRIVATE statuses reuse the pull authorization of the original workspace. Returns a complete acceptance snapshot and retains the original ImageId and CreatedAt. ClientToken does not guarantee request deduplication. If the result is not confirmed, query the real-time status first before deciding whether to resubmit.</p>
+     * <p>Retries an image cache for the original ImageId in the current workspace. WorkspaceId is required. The business request body is not required and can be omitted or provided as an empty object. The source authorization and transfer network reuse the original trusted context of the registration. If a digest exists, the retry uses the original digest. If no digest exists, the original tag is re-parsed. A new request in the FAILED state can start a new production round. Requests in the PENDING or READY state are reused. Requests in the DELETING state are rejected, and deleted resources are not recreated. PUBLIC or PRIVATE resources reuse the pull authorization of the original workspace. Returns a complete acceptance snapshot and retains the original ImageId and CreatedAt. ClientToken does not guarantee request deduplication. If the result is not confirmed, query the real-time status first before deciding whether to resubmit.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retries the image cache.</p>
+     * <p>Retries an image cache.</p>
      * 
      * @param request RetryImageCacheRequest
      * @return RetryImageCacheResponse
@@ -8582,7 +8494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates an access application. The secret is returned only upon creation and is not returned by query operations.</p>
+     * <p>Updates an access application. The secret is returned only when the application is created and is not returned by query operations.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an access application.</p>
@@ -8625,7 +8537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates an access application. The secret is returned only upon creation and is not returned by query operations.</p>
+     * <p>Updates an access application. The secret is returned only when the application is created and is not returned by query operations.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an access application.</p>
@@ -8956,16 +8868,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Provide at least one top-level field to update. Omitted top-level fields retain their original configurations. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
-     * When updating an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, also provide the entrypoint field.
-     * In the code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint fields of artifact.code. Do not specify the container field at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported, and the compressed package size cannot exceed 500,000,000 bytes. Query the runtime environment identity by calling the ListAgentCodeRuntimes operation. The sourceUri field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, first call the GetAgentCodePackageUploadUrl operation to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
-     * When submitting a new code package source, the backend rechecks read permissions, objects, and sizes. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
-     * When providing the runtime field, the compute and sessionPolicy fields must be provided at the same time. If the hpa field or its subfields are omitted, unspecified elastic configurations use default values. To retain the original elastic configurations, provide them together. When providing the network field, omitted access items are treated as allowed, but actual access is still restricted by the workspace network limits. To retain the original limits, provide both accessInternet and accessVpc. When providing the healthCheck field, the port field is required, and other unspecified items use default values. When providing the logging.sls field, both the project and logstore fields are required.
-     * The update is an asynchronous process. A successful response indicates that the request is accepted. Call the GetCustomAgent operation to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
-     * The clientToken field does not currently provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold field for health checks does not currently take effect. Omit this field.</p>
+     * <p>Provide at least one top-level field to update. Omitted top-level fields retain their original configurations. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for description to clear the description, and pass null for healthCheck to remove the health check.
+     * When retaining the current ACR image source, you can submit only the artifact subfields that need to be modified. For example, to update the image tag of the same repository, submit only artifact.container.tag. Unsubmitted ports, source fields, and startup commands retain their original values. When switching sources, the merged artifact configuration must meet the required fields of the corresponding source and the mutual exclusivity requirement between code and container.
+     * In code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint of artifact.code. Do not specify container at the same time. Dependencies are packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. Query the runtime environment identity by calling ListAgentCodeRuntimes. The sourceUri field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, first call GetAgentCodePackageUploadUrl to obtain the upload URL and upload the file directly, and then commit the returned sourceUri.
+     * When submitting a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
+     * Instance count and elasticity: When providing runtime, compute and sessionPolicy must be provided at the same time. When hpa or its partial fields are omitted, unspecified elastic configurations use the default values: enabled=false, minSandboxCount=1, maxSandboxCount=10, maxConcurrentSessionsPerSandbox=100, and sessionTtlSeconds=600. To retain the original elastic configuration, provide the complete hpa. Omitting the entire runtime retains the original configuration. minSandboxCount and maxSandboxCount are configuration boundaries. Query the actual instance count by using sandboxPhaseCounts. When providing network, omitted access items are treated as allowed, but actual access is still restricted by the workspace network. To retain the original restrictions, provide both accessInternet and accessVpc. When providing healthCheck, you must specify port. Other unspecified items use the default values. When providing logging.sls, you must specify both project and logstore.
+     * Environment variables: Omitting the entire environment retains the original configuration. When providing variables, the list is replaced as a whole, and variables to be retained must also be submitted. Setting variables=[] or environment=null clears the user-configured environment variables. Providing environment but omitting variables also clears the variables. Variable names must be non-empty and unique in the list. The value must be a string, and empty strings are allowed.
+     * The update is an asynchronous process. A successful response indicates that the request is accepted. Call GetCustomAgent to query latestSpecVersion, effectiveSpecVersion, latestVersionStatus, and latestExecutionError, and check status and sandboxPhaseCounts to confirm the configuration processing progress and instance status. A successful configuration process does not indicate that all old instances have been replaced.
+     * When explicitly submitting customImage, you must provide clientToken. After clientToken is passed, the backend records the submission based on the tenant, workspace, and this identifier. Retries with the same parameters reuse the acceptance result. Use a new identifier for different submission content. If clientToken is not passed, query the status first before deciding whether to retry. The healthyThreshold field for health checks does not take effect currently. Omit this field.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the configuration of a specified custom agent in a workspace and executes the update asynchronously. Omitted top-level fields retain their original configurations. You can call the GetCustomAgent operation to query the update result.</p>
+     * <p>Updates the configuration of a specified custom agent in a workspace and executes the update asynchronously. Omitted top-level fields retain their original configurations. You can query the update results by calling GetCustomAgent.</p>
      * 
      * @param tmpReq UpdateCustomAgentRequest
      * @param headers map
@@ -9011,16 +8924,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Provide at least one top-level field to update. Omitted top-level fields retain their original configurations. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
-     * When updating an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, also provide the entrypoint field.
-     * In the code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint fields of artifact.code. Do not specify the container field at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported, and the compressed package size cannot exceed 500,000,000 bytes. Query the runtime environment identity by calling the ListAgentCodeRuntimes operation. The sourceUri field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, first call the GetAgentCodePackageUploadUrl operation to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
-     * When submitting a new code package source, the backend rechecks read permissions, objects, and sizes. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
-     * When providing the runtime field, the compute and sessionPolicy fields must be provided at the same time. If the hpa field or its subfields are omitted, unspecified elastic configurations use default values. To retain the original elastic configurations, provide them together. When providing the network field, omitted access items are treated as allowed, but actual access is still restricted by the workspace network limits. To retain the original limits, provide both accessInternet and accessVpc. When providing the healthCheck field, the port field is required, and other unspecified items use default values. When providing the logging.sls field, both the project and logstore fields are required.
-     * The update is an asynchronous process. A successful response indicates that the request is accepted. Call the GetCustomAgent operation to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
-     * The clientToken field does not currently provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold field for health checks does not currently take effect. Omit this field.</p>
+     * <p>Provide at least one top-level field to update. Omitted top-level fields retain their original configurations. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for description to clear the description, and pass null for healthCheck to remove the health check.
+     * When retaining the current ACR image source, you can submit only the artifact subfields that need to be modified. For example, to update the image tag of the same repository, submit only artifact.container.tag. Unsubmitted ports, source fields, and startup commands retain their original values. When switching sources, the merged artifact configuration must meet the required fields of the corresponding source and the mutual exclusivity requirement between code and container.
+     * In code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint of artifact.code. Do not specify container at the same time. Dependencies are packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. Query the runtime environment identity by calling ListAgentCodeRuntimes. The sourceUri field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, first call GetAgentCodePackageUploadUrl to obtain the upload URL and upload the file directly, and then commit the returned sourceUri.
+     * When submitting a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
+     * Instance count and elasticity: When providing runtime, compute and sessionPolicy must be provided at the same time. When hpa or its partial fields are omitted, unspecified elastic configurations use the default values: enabled=false, minSandboxCount=1, maxSandboxCount=10, maxConcurrentSessionsPerSandbox=100, and sessionTtlSeconds=600. To retain the original elastic configuration, provide the complete hpa. Omitting the entire runtime retains the original configuration. minSandboxCount and maxSandboxCount are configuration boundaries. Query the actual instance count by using sandboxPhaseCounts. When providing network, omitted access items are treated as allowed, but actual access is still restricted by the workspace network. To retain the original restrictions, provide both accessInternet and accessVpc. When providing healthCheck, you must specify port. Other unspecified items use the default values. When providing logging.sls, you must specify both project and logstore.
+     * Environment variables: Omitting the entire environment retains the original configuration. When providing variables, the list is replaced as a whole, and variables to be retained must also be submitted. Setting variables=[] or environment=null clears the user-configured environment variables. Providing environment but omitting variables also clears the variables. Variable names must be non-empty and unique in the list. The value must be a string, and empty strings are allowed.
+     * The update is an asynchronous process. A successful response indicates that the request is accepted. Call GetCustomAgent to query latestSpecVersion, effectiveSpecVersion, latestVersionStatus, and latestExecutionError, and check status and sandboxPhaseCounts to confirm the configuration processing progress and instance status. A successful configuration process does not indicate that all old instances have been replaced.
+     * When explicitly submitting customImage, you must provide clientToken. After clientToken is passed, the backend records the submission based on the tenant, workspace, and this identifier. Retries with the same parameters reuse the acceptance result. Use a new identifier for different submission content. If clientToken is not passed, query the status first before deciding whether to retry. The healthyThreshold field for health checks does not take effect currently. Omit this field.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the configuration of a specified custom agent in a workspace and executes the update asynchronously. Omitted top-level fields retain their original configurations. You can call the GetCustomAgent operation to query the update result.</p>
+     * <p>Updates the configuration of a specified custom agent in a workspace and executes the update asynchronously. Omitted top-level fields retain their original configurations. You can query the update results by calling GetCustomAgent.</p>
      * 
      * @param request UpdateCustomAgentRequest
      * @return UpdateCustomAgentResponse
@@ -9180,13 +9094,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Features and prerequisites</h2>
-     * <p>The syncEnabled parameter is required. If you set this parameter to true, a task is submitted to independently enable SCIM and perform the initial full user import. During execution, the AgentIdentity receiving status must be Enabled, and an Enabled and unexpired credential must exist. Therefore, you must first call the prepare operation and complete the URL and token configuration in the external system. If you set this parameter to false, a task is submitted to disable synchronization and upstream receiving. Existing users, credentials, and SAML logon configurations are retained. If you re-enable the feature later and receiving is disabled, you must call the prepare operation again.
-     * After the request is accepted, the expected switch status in AC is saved and an independent SCIM task is submitted. The original shared binding fields are returned, and the status field still indicates the status of shared resources and logon configurations. The new scimStatus field indicates the independent SCIM status, and the operationStatus field indicates task result of the original SCIM task. The SCIM taskId is not returned. You can call GetIdentityProviderSCIM to query task result. The prerequisite checks for enabling the feature are executed within the task. If the prerequisites are not met, you may receive a successful request response first, and then the operationStatus becomes FAILED. A failure does not automatically roll back the expected switch status.
-     * SCIM does not depend on SAML configurations and does not affect the SAML status or switch. A successful task or a successful full import of empty users does not prove that continuous incremental synchronization is healthy. Whether users exist depends on whether the external system actually pre-provisions them.
-     * The scimStatus field indicates the independent SCIM configuration status. UNCONFIGURED: The preparation is not completed. WAITING_CONFIGURATION: The receiving end is enabled, the HTTPS URL is valid, and a valid token exists. The system is waiting for external configuration and enablement confirmation. UPDATING: The enablement or disablement is being executed. READY: Synchronization is enabled and the current enablement task is successful. The receiving end, URL, and credentials are still available. DISABLED: The feature is disabled and the configuration is retained. UPDATE_FAILED: The operation failed, was paused, was canceled, or the configuration and credentials became unavailable after enablement. The original facts of configuration, syncEnabled, and operationStatus are retained. The SAML or OIDC binding status is not used to determine the SCIM status. The READY status does not prove that Matrix execution is completed, the external connection test is passed, or continuous incremental synchronization is healthy.</p>
+     * <p>syncEnabled is required. If you set this parameter to true, an independent SCIM enabling and initial full user import task is submitted. During execution, the AgentIdentity receiving status must be Enabled, and an enabled and unexpired credential must exist. Therefore, call the prepare operation first and complete the URL and token configuration in the external system. If you set this parameter to false, a task to disable synchronization and upstream receiving is submitted. Existing users, credentials, and SAML logon configurations are retained. If you re-enable the feature later and receiving is disabled, call the prepare operation again.
+     * After the request is accepted, the expected switch status in AC is saved and an independent SCIM task is submitted. The original shared binding fields are returned, and the status still indicates the shared resource and logon configuration status. The new scimStatus parameter indicates the independent SCIM status, and operationStatus indicates task result of the original SCIM task. The SCIM taskId is not returned. Call GetIdentityProviderSCIM to query and wait for task result. The prerequisite checks for enabling are executed within the task. If the prerequisites are not met, you may receive a successful request response first, and then operationStatus is set to FAILED. A failure does not automatically roll back the expected switch status.
+     * SCIM does not depend on SAML configurations and does not affect the SAML status or switch. A successful task and a successful full import of empty users do not prove that continuous incremental synchronization is healthy. Whether users exist depends on whether the external system actually pre-provisions them.
+     * scimStatus indicates the independent SCIM configuration status. Valid values:</p>
+     * <ul>
+     * <li>UNCONFIGURED: The preparation is not completed.</li>
+     * <li>WAITING_CONFIGURATION: The receiving end is enabled, the HTTPS URL is valid, and a valid token exists. The system is waiting for external configuration and enabling confirmation.</li>
+     * <li>UPDATING: The enabling or disabling operation is being executed.</li>
+     * <li>READY: Synchronization is enabled and the current enabling task is successful. The receiving end, URL, and credentials are still available.</li>
+     * <li>DISABLED: The feature is disabled and the configuration is retained.</li>
+     * <li>UPDATE_FAILED: The operation failed, was paused, was canceled, or the configuration and credentials became unavailable after enabling.
+     * The original facts of configuration, syncEnabled, and operationStatus are retained. The SAML or OIDC binding status is not used to determine the SCIM status. The READY status does not prove that Matrix execution is completed, the external connection test is passed, or continuous incremental synchronization is healthy.</li>
+     * </ul>
      * <h2>Requests and examples</h2>
      * <p>PUT /workspaces/{workspaceId}/scim-provisioning
-     * Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS credential that has permissions on the identity provider resources of the corresponding workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the additional body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
+     * Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has the permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
      * <pre><code class="language-text">PUT /workspaces/ws-example/scim-provisioning
      * {&quot;syncEnabled&quot;: true}
      * To disable the feature: {&quot;syncEnabled&quot;: false}
@@ -9205,13 +9128,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * }
      * </code></pre>
      * <h2>Errors and handling</h2>
-     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to the upstream system may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
-     * 400 InvalidParameter: The syncEnabled parameter is missing. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, failed to unbind, or has a concurrent status conflict. If the upstream system is not enabled or has no valid credentials, it may manifest as an asynchronous FAILED status after acceptance. You cannot only handle HTTP errors.</p>
+     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call to the upstream system that fails may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
+     * 400 InvalidParameter: syncEnabled is missing. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, failed to be unbound, or has a concurrent status conflict. If the upstream system is not enabled or has no valid credentials, it may manifest as an asynchronous FAILED status after acceptance. You cannot handle only HTTP errors.</p>
      * <h2>Call relationships and usage boundaries</h2>
-     * <p>The call example for enabling the feature is body={&quot;syncEnabled&quot;:true}, and for disabling the feature is body={&quot;syncEnabled&quot;:false}. This API retains the original binding details and the meaning of the status field, and adds the scimStatus and operationStatus fields. After acceptance, call GetIdentityProviderSCIM to query the independent status and operationStatus. Pre-provisioning tests or user assignments for external IdPs must still be completed in the external system. AC does not configure external IdPs for users.</p>
+     * <p>The request body for enabling the feature is {&quot;syncEnabled&quot;:true}, and the request body for disabling the feature is {&quot;syncEnabled&quot;:false}. This API retains the original binding details and the meaning of status, and adds scimStatus and operationStatus. After the request is accepted, call GetIdentityProviderSCIM to query the independent status and operationStatus. Pre-provisioning tests or user assignments for external IdPs must still be completed in the external system. AC does not configure external IdPs for users.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables SCIM-based user synchronization independently. When enabled, the initial full import is executed asynchronously. You can query the result by calling GetIdentityProviderSCIM. The SAML logon configuration is retained.</p>
+     * <p>Enables or disables SCIM user synchronization independently. When enabled, the initial full import is asynchronously executed. You can query the results by calling GetIdentityProviderSCIM. The SAML logon configuration is retained.</p>
      * 
      * @param tmpReq UpdateIdentityProviderSCIMRequest
      * @param headers map
@@ -9252,13 +9175,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Features and prerequisites</h2>
-     * <p>The syncEnabled parameter is required. If you set this parameter to true, a task is submitted to independently enable SCIM and perform the initial full user import. During execution, the AgentIdentity receiving status must be Enabled, and an Enabled and unexpired credential must exist. Therefore, you must first call the prepare operation and complete the URL and token configuration in the external system. If you set this parameter to false, a task is submitted to disable synchronization and upstream receiving. Existing users, credentials, and SAML logon configurations are retained. If you re-enable the feature later and receiving is disabled, you must call the prepare operation again.
-     * After the request is accepted, the expected switch status in AC is saved and an independent SCIM task is submitted. The original shared binding fields are returned, and the status field still indicates the status of shared resources and logon configurations. The new scimStatus field indicates the independent SCIM status, and the operationStatus field indicates task result of the original SCIM task. The SCIM taskId is not returned. You can call GetIdentityProviderSCIM to query task result. The prerequisite checks for enabling the feature are executed within the task. If the prerequisites are not met, you may receive a successful request response first, and then the operationStatus becomes FAILED. A failure does not automatically roll back the expected switch status.
-     * SCIM does not depend on SAML configurations and does not affect the SAML status or switch. A successful task or a successful full import of empty users does not prove that continuous incremental synchronization is healthy. Whether users exist depends on whether the external system actually pre-provisions them.
-     * The scimStatus field indicates the independent SCIM configuration status. UNCONFIGURED: The preparation is not completed. WAITING_CONFIGURATION: The receiving end is enabled, the HTTPS URL is valid, and a valid token exists. The system is waiting for external configuration and enablement confirmation. UPDATING: The enablement or disablement is being executed. READY: Synchronization is enabled and the current enablement task is successful. The receiving end, URL, and credentials are still available. DISABLED: The feature is disabled and the configuration is retained. UPDATE_FAILED: The operation failed, was paused, was canceled, or the configuration and credentials became unavailable after enablement. The original facts of configuration, syncEnabled, and operationStatus are retained. The SAML or OIDC binding status is not used to determine the SCIM status. The READY status does not prove that Matrix execution is completed, the external connection test is passed, or continuous incremental synchronization is healthy.</p>
+     * <p>syncEnabled is required. If you set this parameter to true, an independent SCIM enabling and initial full user import task is submitted. During execution, the AgentIdentity receiving status must be Enabled, and an enabled and unexpired credential must exist. Therefore, call the prepare operation first and complete the URL and token configuration in the external system. If you set this parameter to false, a task to disable synchronization and upstream receiving is submitted. Existing users, credentials, and SAML logon configurations are retained. If you re-enable the feature later and receiving is disabled, call the prepare operation again.
+     * After the request is accepted, the expected switch status in AC is saved and an independent SCIM task is submitted. The original shared binding fields are returned, and the status still indicates the shared resource and logon configuration status. The new scimStatus parameter indicates the independent SCIM status, and operationStatus indicates task result of the original SCIM task. The SCIM taskId is not returned. Call GetIdentityProviderSCIM to query and wait for task result. The prerequisite checks for enabling are executed within the task. If the prerequisites are not met, you may receive a successful request response first, and then operationStatus is set to FAILED. A failure does not automatically roll back the expected switch status.
+     * SCIM does not depend on SAML configurations and does not affect the SAML status or switch. A successful task and a successful full import of empty users do not prove that continuous incremental synchronization is healthy. Whether users exist depends on whether the external system actually pre-provisions them.
+     * scimStatus indicates the independent SCIM configuration status. Valid values:</p>
+     * <ul>
+     * <li>UNCONFIGURED: The preparation is not completed.</li>
+     * <li>WAITING_CONFIGURATION: The receiving end is enabled, the HTTPS URL is valid, and a valid token exists. The system is waiting for external configuration and enabling confirmation.</li>
+     * <li>UPDATING: The enabling or disabling operation is being executed.</li>
+     * <li>READY: Synchronization is enabled and the current enabling task is successful. The receiving end, URL, and credentials are still available.</li>
+     * <li>DISABLED: The feature is disabled and the configuration is retained.</li>
+     * <li>UPDATE_FAILED: The operation failed, was paused, was canceled, or the configuration and credentials became unavailable after enabling.
+     * The original facts of configuration, syncEnabled, and operationStatus are retained. The SAML or OIDC binding status is not used to determine the SCIM status. The READY status does not prove that Matrix execution is completed, the external connection test is passed, or continuous incremental synchronization is healthy.</li>
+     * </ul>
      * <h2>Requests and examples</h2>
      * <p>PUT /workspaces/{workspaceId}/scim-provisioning
-     * Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS credential that has permissions on the identity provider resources of the corresponding workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the additional body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
+     * Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has the permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</p>
      * <pre><code class="language-text">PUT /workspaces/ws-example/scim-provisioning
      * {&quot;syncEnabled&quot;: true}
      * To disable the feature: {&quot;syncEnabled&quot;: false}
@@ -9277,13 +9209,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * }
      * </code></pre>
      * <h2>Errors and handling</h2>
-     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to the upstream system may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
-     * 400 InvalidParameter: The syncEnabled parameter is missing. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, failed to unbind, or has a concurrent status conflict. If the upstream system is not enabled or has no valid credentials, it may manifest as an asynchronous FAILED status after acceptance. You cannot only handle HTTP errors.</p>
+     * <p>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call to the upstream system that fails may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
+     * 400 InvalidParameter: syncEnabled is missing. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, failed to be unbound, or has a concurrent status conflict. If the upstream system is not enabled or has no valid credentials, it may manifest as an asynchronous FAILED status after acceptance. You cannot handle only HTTP errors.</p>
      * <h2>Call relationships and usage boundaries</h2>
-     * <p>The call example for enabling the feature is body={&quot;syncEnabled&quot;:true}, and for disabling the feature is body={&quot;syncEnabled&quot;:false}. This API retains the original binding details and the meaning of the status field, and adds the scimStatus and operationStatus fields. After acceptance, call GetIdentityProviderSCIM to query the independent status and operationStatus. Pre-provisioning tests or user assignments for external IdPs must still be completed in the external system. AC does not configure external IdPs for users.</p>
+     * <p>The request body for enabling the feature is {&quot;syncEnabled&quot;:true}, and the request body for disabling the feature is {&quot;syncEnabled&quot;:false}. This API retains the original binding details and the meaning of status, and adds scimStatus and operationStatus. After the request is accepted, call GetIdentityProviderSCIM to query the independent status and operationStatus. Pre-provisioning tests or user assignments for external IdPs must still be completed in the external system. AC does not configure external IdPs for users.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables SCIM-based user synchronization independently. When enabled, the initial full import is executed asynchronously. You can query the result by calling GetIdentityProviderSCIM. The SAML logon configuration is retained.</p>
+     * <p>Enables or disables SCIM user synchronization independently. When enabled, the initial full import is asynchronously executed. You can query the results by calling GetIdentityProviderSCIM. The SAML logon configuration is retained.</p>
      * 
      * @param request UpdateIdentityProviderSCIMRequest
      * @return UpdateIdentityProviderSCIMResponse
@@ -10231,8 +10163,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Uses the current workspace role to check whether the customer\&quot;s OSS object exists and is readable, and checks the file name extension and compressed size. Returns the sourceUri, file name, size, and format read in this request. The bucket and object key are passed separately, and HTTPS download URLs are not accepted.
-     * The validation uses object metadata and read probing. It does not perform full downloads, transfers, or decompression, nor does it generate a SHA-256 hash. Passing the validation does not mean that the archive content is complete or can be started. When you submit a CreateCustomAgent or UpdateCustomAgent request, the system re-validates and transfers the package. You do not need to invoke this operation in advance as a prerequisite for submission.</p>
+     * <p>Uses the current workspace role to check whether the customer OSS object exists and is readable, and checks the file name extension and compressed size. Returns the sourceUri, file name, size, and format read in this request. The bucket and object key are passed separately, and HTTPS download URLs are not accepted.
+     * The validation uses object metadata and read probing, and does not perform full downloads, transfers, decompression, or SHA-256 generation. Passing the validation does not indicate that the archive content is complete or can be started. The validation and transfer are performed again when CreateCustomAgent or UpdateCustomAgent is submitted. You do not need to invoke this operation in advance as a prerequisite for submission.</p>
      * 
      * <b>summary</b> : 
      * <p>Validates the OSS code package source for an agent.</p>
@@ -10275,8 +10207,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Uses the current workspace role to check whether the customer\&quot;s OSS object exists and is readable, and checks the file name extension and compressed size. Returns the sourceUri, file name, size, and format read in this request. The bucket and object key are passed separately, and HTTPS download URLs are not accepted.
-     * The validation uses object metadata and read probing. It does not perform full downloads, transfers, or decompression, nor does it generate a SHA-256 hash. Passing the validation does not mean that the archive content is complete or can be started. When you submit a CreateCustomAgent or UpdateCustomAgent request, the system re-validates and transfers the package. You do not need to invoke this operation in advance as a prerequisite for submission.</p>
+     * <p>Uses the current workspace role to check whether the customer OSS object exists and is readable, and checks the file name extension and compressed size. Returns the sourceUri, file name, size, and format read in this request. The bucket and object key are passed separately, and HTTPS download URLs are not accepted.
+     * The validation uses object metadata and read probing, and does not perform full downloads, transfers, decompression, or SHA-256 generation. Passing the validation does not indicate that the archive content is complete or can be started. The validation and transfer are performed again when CreateCustomAgent or UpdateCustomAgent is submitted. You do not need to invoke this operation in advance as a prerequisite for submission.</p>
      * 
      * <b>summary</b> : 
      * <p>Validates the OSS code package source for an agent.</p>
@@ -10292,7 +10224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the binding status of the authorization policy for a specified source bucket to the current workspace role. AUTHORIZED indicates that the policy is bound. UNAUTHORIZED indicates that the policy is not bound. A bound policy does not indicate that a specific code package object exists or is readable.
+     * <p>Queries the binding status of the authorization policy for the specified source bucket to the current workspace role. AUTHORIZED indicates that the policy is bound, and UNAUTHORIZED indicates that the policy is not bound. A bound policy does not necessarily mean that a specific code package object exists or is readable.
      * To check a specific object, call ValidateAgentCodePackageFromOss. This operation does not copy code packages or modify the default OSS binding of the workspace.</p>
      * 
      * <b>summary</b> : 
@@ -10330,7 +10262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the binding status of the authorization policy for a specified source bucket to the current workspace role. AUTHORIZED indicates that the policy is bound. UNAUTHORIZED indicates that the policy is not bound. A bound policy does not indicate that a specific code package object exists or is readable.
+     * <p>Queries the binding status of the authorization policy for the specified source bucket to the current workspace role. AUTHORIZED indicates that the policy is bound, and UNAUTHORIZED indicates that the policy is not bound. A bound policy does not necessarily mean that a specific code package object exists or is readable.
      * To check a specific object, call ValidateAgentCodePackageFromOss. This operation does not copy code packages or modify the default OSS binding of the workspace.</p>
      * 
      * <b>summary</b> : 

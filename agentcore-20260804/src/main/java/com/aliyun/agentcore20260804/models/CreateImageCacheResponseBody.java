@@ -116,7 +116,7 @@ public class CreateImageCacheResponseBody extends TeaModel {
 
     public static class CreateImageCacheResponseBodyDataError extends TeaModel {
         /**
-         * <p>The secure and non-null error code for the current creation failure.</p>
+         * <p>The secure and non-empty error code for the current creation failure.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,11 +126,11 @@ public class CreateImageCacheResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The secure and non-null display reason for the creation failure, excluding credentials, internal addresses, or stack traces.</p>
+         * <p>The secure and non-empty display reason for the creation failure, excluding credentials, internal addresses, or stack traces.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Failed to create the image cache. Please try again</p>
+         * <p>Image cache creation failed. Try again</p>
          */
         @NameInMap("message")
         public String message;
@@ -170,7 +170,7 @@ public class CreateImageCacheResponseBody extends TeaModel {
         public String acrInstanceId;
 
         /**
-         * <p>The deduplicated number of agents that have useImageCache set to true and are associated with this logical resource in the current workspace. The value is greater than or equal to 0. This set is the same as the set filtered by imageCacheId in ListAllAgents. Agents with the feature disabled are not counted, and this value is independent of the number of occupied instances.</p>
+         * <p>The deduplicated number of agents in the current workspace that have useImageCache set to true and are associated with this logical resource. The value is greater than or equal to 0. This set is the same as the imageCacheId filter in ListAllAgents. Agents with the feature disabled are not counted, and this value is independent of the number of occupied instances.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class CreateImageCacheResponseBody extends TeaModel {
         public Long agentCount;
 
         /**
-         * <p>The actual cache size in bytes. The known value is greater than or equal to 0. If the value is unknown, it is null. The compressed size of the source image cannot be used as a substitute.</p>
+         * <p>The actual cache size in bytes. A known value is greater than or equal to 0. If the value is unknown, it is null. The compressed size of the source image cannot be used as a substitute.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,7 +193,7 @@ public class CreateImageCacheResponseBody extends TeaModel {
         public Long cacheSizeBytes;
 
         /**
-         * <p>Indicates whether deletion is allowed. The value is true when there are no configuration references with the switch enabled, no valid instances occupying the resource, and the resource is not being deleted in the current workspace. If the reference status is unknown, the query should fail, and deletion cannot be allowed by default.</p>
+         * <p>Indicates whether deletion is allowed. The value is true when the current workspace has no configuration references with the switch enabled, no valid instances are occupying the resource, and the resource is not being deleted. If the reference status is unknown, the query should fail instead of allowing deletion by default.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class CreateImageCacheResponseBody extends TeaModel {
         public Boolean canDelete;
 
         /**
-         * <p>The creation time of the logical resource in the current workspace, in RFC3339 format with time zone. The time is not refreshed when the content of the latest tag is updated.</p>
+         * <p>The creation time of the logical resource in the current workspace, in RFC 3339 format with time zone. Content updates for the latest tag do not refresh this time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class CreateImageCacheResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The reason why deletion is blocked. The value is null when canDelete is true. Otherwise, the value is returned based on the priority of DELETING, AGENT_ENABLED, and INSTANCES_RELEASING. Even if the number of agents is 0, old instances may still occupy the resource.</p>
+         * <p>The reason why deletion is blocked. The value is null when canDelete is true. Otherwise, the value is returned based on the priority of DELETING, AGENT_ENABLED, and INSTANCES_RELEASING. Even if the agent count is 0, old instances may still occupy the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -246,7 +246,7 @@ public class CreateImageCacheResponseBody extends TeaModel {
         public CreateImageCacheResponseBodyDataError error;
 
         /**
-         * <p>The logical resource ID manageable by the current workspace, which is not a shared physical cache ID.</p>
+         * <p>The logical resource ID manageable by the current workspace. This is not a shared physical cache ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,7 +266,7 @@ public class CreateImageCacheResponseBody extends TeaModel {
         public String registry;
 
         /**
-         * <p>The path of the source image repository in the namespace/repository format, which already includes the namespace.</p>
+         * <p>The path of the source image repository in the namespace/repository format, which includes the namespace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,7 +276,7 @@ public class CreateImageCacheResponseBody extends TeaModel {
         public String repository;
 
         /**
-         * <p>The status of the image cache. Valid values: PENDING: creating, READY: available, FAILED: abnormal, DELETING: deleting in the current workspace.</p>
+         * <p>Valid values: PENDING: The workspace is being created. READY: The workspace is available. FAILED: The workspace is in an abnormal state. DELETING: The workspace is being deleted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -286,7 +286,7 @@ public class CreateImageCacheResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tag of the source image. Case is preserved. Regular tags cannot be registered with different digests, with the exact lowercase latest tag being the only exception.</p>
+         * <p>The tag of the source image. Case is preserved. Regular tags cannot be registered with different digests, except for the exact lowercase latest tag.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

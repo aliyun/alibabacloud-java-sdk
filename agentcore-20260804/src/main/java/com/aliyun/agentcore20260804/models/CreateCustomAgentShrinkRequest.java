@@ -11,7 +11,7 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
     public String bodyShrink;
 
     /**
-     * <p>Idempotence is not currently guaranteed. Do not rely on this parameter to prevent duplicate requests.</p>
+     * <p>Idempotence is currently not guaranteed. Do not rely on this parameter to prevent duplicate requests.</p>
      * 
      * <strong>example:</strong>
      * <p>custom-agent-request-20261010-001</p>

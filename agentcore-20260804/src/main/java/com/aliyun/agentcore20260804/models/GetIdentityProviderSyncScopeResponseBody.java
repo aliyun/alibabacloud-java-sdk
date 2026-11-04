@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIdentityProviderSyncScopeResponseBody extends TeaModel {
     /**
-     * <p>The business status code of the API request. SUCCESS indicates that the request is successful, but does not indicate that the asynchronous synchronization task is completed.</p>
+     * <p>The business status code for the current API request. SUCCESS indicates that the current request is successful, which does not mean that the asynchronous synchronization task is completed.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,7 +14,7 @@ public class GetIdentityProviderSyncScopeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The business data returned by the request.</p>
+     * <p>The business data returned by the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;syncScope&quot;:{&quot;mode&quot;:&quot;SelectedDepartments&quot;,&quot;departmentIds&quot;:[&quot;10001&quot;]},&quot;selectedDepartments&quot;:[{&quot;id&quot;:&quot;10001&quot;,&quot;name&quot;:&quot;R&amp;D Department&quot;,&quot;exists&quot;:true}],&quot;estimateStatus&quot;:&quot;Ready&quot;,&quot;expandedDepartmentCount&quot;:2,&quot;estimatedUserCount&quot;:12}</p>
@@ -23,7 +23,7 @@ public class GetIdentityProviderSyncScopeResponseBody extends TeaModel {
     public GetIdentityProviderSyncScopeResponseBodyData data;
 
     /**
-     * <p>The HTTP status code of the API request. It does not indicate the execution result of the asynchronous task.</p>
+     * <p>The HTTP status code for the current API request, which does not indicate the execution result of an asynchronous task.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class GetIdentityProviderSyncScopeResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message of the API request.</p>
+     * <p>The response message for the current API request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -50,7 +50,7 @@ public class GetIdentityProviderSyncScopeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API request is successful. To check whether the asynchronous task is completed, query the task status.</p>
+     * <p>Indicates whether the current API request is successful. To check whether an asynchronous task is completed, query the task status.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -172,7 +172,7 @@ public class GetIdentityProviderSyncScopeResponseBody extends TeaModel {
 
     public static class GetIdentityProviderSyncScopeResponseBodyDataSyncScope extends TeaModel {
         /**
-         * <p>When the mode is SelectedDepartments, this parameter contains at least one non-empty department ID, which should be obtained from ListIdentityProviderDepartments. When the mode is AllAuthorized, pass an empty array or omit this parameter.</p>
+         * <p>When the mode is SelectedDepartments, this list must contain at least one non-empty department ID, which should be obtained from ListIdentityProviderDepartments. When the mode is AllAuthorized, pass an empty array or omit this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;10001&quot;]</p>
@@ -181,7 +181,7 @@ public class GetIdentityProviderSyncScopeResponseBody extends TeaModel {
         public java.util.List<String> departmentIds;
 
         /**
-         * <p>The scope mode. Valid values: AllAuthorized (the entire authorized scope, limited by the application\&quot;s address book authorization) and SelectedDepartments (the selected departments and all their sub-departments). When explicitly submitting syncScope, a valid mode must be provided and verified by the backend.</p>
+         * <p>AllAuthorized: the entire authorized scope, subject to the application\&quot;s address book authorization limits. SelectedDepartments: the selected departments and all their sub-departments. When explicitly submitting syncScope, a valid mode must be provided and is verified by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>SelectedDepartments</p>
@@ -214,7 +214,7 @@ public class GetIdentityProviderSyncScopeResponseBody extends TeaModel {
 
     public static class GetIdentityProviderSyncScopeResponseBodyData extends TeaModel {
         /**
-         * <p>The estimation status of the user count for the synchronization scope. The count is available only when the status is Ready. A missing count in other states cannot be considered as 0.</p>
+         * <p>The user count estimation status for the synchronization scope. The count is available only when the status is Ready. A missing count in other states cannot be considered as 0.</p>
          * 
          * <strong>example:</strong>
          * <p>Ready</p>
@@ -223,7 +223,7 @@ public class GetIdentityProviderSyncScopeResponseBody extends TeaModel {
         public String estimateStatus;
 
         /**
-         * <p>The estimated number of users in the saved synchronization scope. This parameter is returned only when estimateStatus is Ready and the downstream system provides the value. It does not represent the number of users that have been synchronized.</p>
+         * <p>The estimated number of users in the saved synchronization scope. This is returned only when estimateStatus is Ready and the downstream identity provider provides this value. It does not represent the number of users that have already been synchronized.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -232,7 +232,7 @@ public class GetIdentityProviderSyncScopeResponseBody extends TeaModel {
         public Long estimatedUserCount;
 
         /**
-         * <p>The estimated number of departments including sub-departments. This parameter is returned only when estimateStatus is Ready and the downstream system provides the value.</p>
+         * <p>The estimated number of departments including sub-departments. This is returned only when estimateStatus is Ready and the downstream identity provider provides this value.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -241,7 +241,7 @@ public class GetIdentityProviderSyncScopeResponseBody extends TeaModel {
         public Long expandedDepartmentCount;
 
         /**
-         * <p>The names and validity of the saved selected departments. This parameter can be an empty array when the mode is AllAuthorized. An empty array does not indicate that the organization has no departments.</p>
+         * <p>The names and validity of the saved selected departments. This can be an empty array when the mode is AllAuthorized. An empty array does not indicate that the organization has no departments.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;id&quot;:&quot;10001&quot;,&quot;name&quot;:&quot;R&amp;D Department&quot;,&quot;exists&quot;:true}]</p>
@@ -250,7 +250,7 @@ public class GetIdentityProviderSyncScopeResponseBody extends TeaModel {
         public java.util.List<GetIdentityProviderSyncScopeResponseBodyDataSelectedDepartments> selectedDepartments;
 
         /**
-         * <p>The saved synchronization scope downstream. AllAuthorized indicates the address book scope authorized for the application.</p>
+         * <p>The saved synchronization scope of the downstream identity provider. AllAuthorized indicates the address book scope authorized for the application.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;mode&quot;:&quot;SelectedDepartments&quot;,&quot;departmentIds&quot;:[&quot;10001&quot;]}</p>

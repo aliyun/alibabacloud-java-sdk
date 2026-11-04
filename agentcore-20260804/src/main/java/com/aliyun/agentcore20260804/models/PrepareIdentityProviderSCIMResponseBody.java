@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PrepareIdentityProviderSCIMResponseBody extends TeaModel {
     /**
-     * <p>The business result code. If the request fails, handle the error based on the HTTP status code and the message.</p>
+     * <p>The business result code. Handle failures by combining the HTTP status code and the message.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,13 +14,13 @@ public class PrepareIdentityProviderSCIMResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The operation result. For the result structure, see the response fields of this API. For asynchronous write APIs, the response indicates that the request is accepted, but does not guarantee that the background task is completed.</p>
+     * <p>The operation result. For the result structure, see the response fields of this API. The response of an asynchronous write API indicates that the request is accepted, but does not guarantee that the background task is completed.</p>
      */
     @NameInMap("data")
     public PrepareIdentityProviderSCIMResponseBodyData data;
 
     /**
-     * <p>The processing status of the current request. This status is not equivalent to the final result of the background task.</p>
+     * <p>The processing status of the current request. This is not equivalent to the final result of the background task.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class PrepareIdentityProviderSCIMResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request acceptance or error message. For asynchronous tasks, you must check the task result by using the corresponding query API.</p>
+     * <p>The request acceptance or error message. Check the result of an asynchronous task by using the corresponding query API.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,7 +38,7 @@ public class PrepareIdentityProviderSCIMResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID. It is used to associate the current call with troubleshooting. Retain this ID if the request fails.</p>
+     * <p>The ID used to associate the current call with troubleshooting. Retain this ID when a failure occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>request-example</p>
@@ -47,7 +47,7 @@ public class PrepareIdentityProviderSCIMResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the current request is processed successfully. A value of true indicates success. For asynchronous write operations, you must continue to query the task result.</p>
+     * <p>Specifies whether the current request is processed successfully. A value of true indicates success. For asynchronous writes, you must continue to query the task results.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -116,7 +116,7 @@ public class PrepareIdentityProviderSCIMResponseBody extends TeaModel {
         public String baseUrl;
 
         /**
-         * <p>The receiving status of AgentIdentity. Enabled indicates that SCIM receiving is enabled, and Disabled indicates that it is disabled. This status is not equivalent to the expected value of syncEnabled for access control.</p>
+         * <p>The receiving status of AgentIdentity. Enabled indicates that SCIM receiving is enabled, and Disabled indicates that it is disabled. This is not equivalent to the expected value of syncEnabled in access control.</p>
          * 
          * <strong>example:</strong>
          * <p>Enabled</p>
@@ -158,7 +158,7 @@ public class PrepareIdentityProviderSCIMResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The credential ID. This parameter is required and cannot be empty when you delete a credential. Use the ID returned in the credential list, not the plaintext token.</p>
+         * <p>The ID of the credential. This parameter is required and cannot be empty when you delete a credential. Use the ID returned in the credential list, not the plaintext token.</p>
          * 
          * <strong>example:</strong>
          * <p>credential-example</p>
@@ -167,7 +167,7 @@ public class PrepareIdentityProviderSCIMResponseBody extends TeaModel {
         public String credentialId;
 
         /**
-         * <p>The expiration time returned by AgentIdentity. Only credentials that are in the Enabled state and have not expired are considered available.</p>
+         * <p>The expiration time returned by AgentIdentity. Only credentials with the Enabled status that have not expired are considered available.</p>
          * 
          * <strong>example:</strong>
          * <p>2027-10-26T00:00:00Z</p>
@@ -176,7 +176,7 @@ public class PrepareIdentityProviderSCIMResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The credential status of AgentIdentity. Only credentials that are in the Enabled state and have not expired are considered available. This field is not the operationStatus of a SCIM task.</p>
+         * <p>The status of the AgentIdentity credential. Only credentials with the Enabled status that have not expired are considered available. This field is not the operationStatus of the SCIM task.</p>
          * 
          * <strong>example:</strong>
          * <p>Enabled</p>
@@ -231,13 +231,13 @@ public class PrepareIdentityProviderSCIMResponseBody extends TeaModel {
         public PrepareIdentityProviderSCIMResponseBodyDataConfiguration configuration;
 
         /**
-         * <p>The current credential summary, which includes the credentialId, status, createTime, and expireTime fields. This summary does not include the token.</p>
+         * <p>The current credential summary, including credentialId, status, createTime, and expireTime. It does not include the token.</p>
          */
         @NameInMap("credential")
         public PrepareIdentityProviderSCIMResponseBodyDataCredential credential;
 
         /**
-         * <p>The plaintext token is returned only when a new credential is created. If the prepare operation reuses a valid credential, this field is null. The token cannot be retrieved again from the list. If the response is lost, query the list first instead of automatically reissuing the token. Do not write the token to logs or persist it in frontend caches.</p>
+         * <p>The plaintext token returned only when a new credential is created. If the prepare operation reuses a valid credential, this value is null. The token cannot be retrieved from the list. If the response is lost, query the list first instead of automatically reissuing the token. Do not write the token to logs or persistent frontend caches.</p>
          * 
          * <strong>example:</strong>
          * <p>example-scim-token</p>
