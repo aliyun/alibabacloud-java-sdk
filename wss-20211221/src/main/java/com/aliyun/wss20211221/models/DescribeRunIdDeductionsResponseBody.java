@@ -20,7 +20,7 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Leave this parameter empty for the first request. For subsequent requests, use the <code>nextToken</code> value from the previous response.</p>
+     * <p>The pagination token. Leave this parameter empty for the first request. For subsequent requests, use the nextToken value returned in the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJvZmZzZXQiOjIwfQ==</p>
@@ -29,7 +29,7 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page for a paged query.</p>
+     * <p>The Settings for the number of entries per page during paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -47,7 +47,7 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The unique identifier of the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>68BD3312-53D8-123E-BB32-1A9F25E07A03</p>
@@ -56,7 +56,7 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of core-hour package deduction details in the query result.</p>
+     * <p>The total number of core-hour package deduction details returned.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -65,7 +65,7 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>The total usage duration. Unit: seconds. Do not use this field for AI scenarios.</p>
+     * <p>The total usage duration. Unit: seconds. Do not use this field in AI scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>100000</p>
@@ -74,7 +74,7 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
     public Long totalUsedTime;
 
     /**
-     * <p>The total credits used that match the specified conditions.</p>
+     * <p>The total used credits that meet the conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1.23</p>
@@ -161,7 +161,7 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
 
     public static class DescribeRunIdDeductionsResponseBodyDeductions extends TeaModel {
         /**
-         * <p>The agent type: <code>CREDIT_PACKAGE</code> / <code>JVS_CLAW</code> / <code>OPEN_CLAW</code> / <code>JVS_COPILOT</code>.</p>
+         * <p>The agent type. Valid values: CREDIT_PACKAGE, JVS_CLAW, OPEN_CLAW, and JVS_COPILOT.</p>
          * 
          * <strong>example:</strong>
          * <p>OpenClaw</p>
@@ -170,7 +170,7 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
         public String agentType;
 
         /**
-         * <p>The end time of the period.</p>
+         * <p>The end time of the period. The time is in ISO 8601 format and displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-31T03:00Z</p>
@@ -179,10 +179,10 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The group resource type.</p>
+         * <p>The grouped resource type to which the deduction record belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>GROUP_CREDIT_PACKAGE、GROUP_BUSINESS_CREDIT_PACKAGE</p>
+         * <p>GROUP_CREDIT_PACKAGE</p>
          */
         @NameInMap("GroupResourceType")
         public String groupResourceType;
@@ -196,11 +196,17 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The identifier of the called large language model. This field is used to distinguish the consumption of each model when grouping by model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-3.7</p>
+         */
         @NameInMap("Model")
         public String model;
 
         /**
-         * <p>The credit or plan package ID.</p>
+         * <p>The ID of the credit or package.</p>
          * 
          * <strong>example:</strong>
          * <p>crp-xxx</p>
@@ -227,7 +233,7 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The unique run ID.</p>
+         * <p>The unique ID of the run.</p>
          * 
          * <strong>example:</strong>
          * <p>run-szwB1fYHCTocjGkFAIf6V8A</p>
@@ -236,7 +242,7 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
         public String runId;
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time. The time is in ISO 8601 format and displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-16T02:10:00Z</p>
@@ -248,13 +254,13 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
          * <p>The summary of the large language model call.</p>
          * 
          * <strong>example:</strong>
-         * <p>How is the weather today</p>
+         * <p>How is the weather today?</p>
          */
         @NameInMap("Summary")
         public String summary;
 
         /**
-         * <p>The usage duration. Unit: seconds. Do not use this field for AI scenarios.</p>
+         * <p>The usage duration. Unit: seconds. Do not use this field in AI scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>360000000</p>
@@ -263,7 +269,7 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
         public Long usedTime;
 
         /**
-         * <p>The credits used.</p>
+         * <p>The used credits.</p>
          * 
          * <strong>example:</strong>
          * <p>1.23</p>

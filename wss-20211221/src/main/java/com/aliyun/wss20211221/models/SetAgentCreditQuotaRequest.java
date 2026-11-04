@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetAgentCreditQuotaRequest extends TeaModel {
     /**
-     * <p>A list of Agent IDs.</p>
+     * <p>The list of Agent IDs.</p>
      */
     @NameInMap("AgentIds")
     public java.util.List<String> agentIds;
@@ -36,6 +36,20 @@ public class SetAgentCreditQuotaRequest extends TeaModel {
      */
     @NameInMap("CreditQuota")
     public Integer creditQuota;
+
+    /**
+     * <p>The operator scenarios type. Valid values:</p>
+     * <ul>
+     * <li>If this parameter is not specified or is set to NaturalMonthlyOwn: calendar month exclusive.</li>
+     * <li>JzYearlyShare: Jiaozi yearly shared.</li>
+     * <li>JzYearlyOwn: Jiaozi yearly exclusive.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NaturalMonthlyOwn</p>
+     */
+    @NameInMap("SceneType")
+    public String sceneType;
 
     public static SetAgentCreditQuotaRequest build(java.util.Map<String, ?> map) throws Exception {
         SetAgentCreditQuotaRequest self = new SetAgentCreditQuotaRequest();
@@ -72,6 +86,14 @@ public class SetAgentCreditQuotaRequest extends TeaModel {
     }
     public Integer getCreditQuota() {
         return this.creditQuota;
+    }
+
+    public SetAgentCreditQuotaRequest setSceneType(String sceneType) {
+        this.sceneType = sceneType;
+        return this;
+    }
+    public String getSceneType() {
+        return this.sceneType;
     }
 
 }

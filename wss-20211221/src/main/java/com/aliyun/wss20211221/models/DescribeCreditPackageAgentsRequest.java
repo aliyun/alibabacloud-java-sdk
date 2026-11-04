@@ -11,7 +11,7 @@ public class DescribeCreditPackageAgentsRequest extends TeaModel {
     public java.util.List<String> agentIds;
 
     /**
-     * <p>The Agent type. Valid values: <code>CREDIT_PACKAGE</code>, <code>JVS_CLAW</code>, <code>OPEN_CLAW</code>, and <code>JVS_COPILOT</code>.</p>
+     * <p>The agent type. Valid values: <code>CREDIT_PACKAGE</code>, <code>JVS_CLAW</code>, <code>OPEN_CLAW</code>, and <code>JVS_COPILOT</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>JVS_COPILOT</p>

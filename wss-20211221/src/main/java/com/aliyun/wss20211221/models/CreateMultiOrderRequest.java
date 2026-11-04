@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateMultiOrderRequest extends TeaModel {
     /**
-     * <p>The channel cookie information.</p>
+     * <p>The cookie information used for channel attribution. Specify this parameter if channel attribution information exists. Otherwise, you can leave it empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>channel=example</p>
      */
     @NameInMap("ChannelCookie")
     public String channelCookie;
@@ -32,7 +35,10 @@ public class CreateMultiOrderRequest extends TeaModel {
     public java.util.Map<String, String> properties;
 
     /**
-     * <p>The UID of the reseller owner.</p>
+     * <p>The ID of the actual end user. This parameter is required when a reseller partner places an order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100000000001</p>
      */
     @NameInMap("ResellerOwnerUid")
     public Long resellerOwnerUid;
@@ -94,28 +100,28 @@ public class CreateMultiOrderRequest extends TeaModel {
 
         /**
          * <p>The value of the module.</p>
-         * <p>The following section describes the sample values and valid values for each key of the Enterprise Edition monthly duration package:</p>
+         * <p>The sample values and valid values for each key of the monthly duration package for Enterprise Edition are as follows:</p>
          * <ul>
-         * <li>RegionId: ap-southeast-1</li>
+         * <li>RegionId: cn-shanghai</li>
          * <li>InstanceType: eds.enterprise_office.4c8g</li>
-         * <li>DurationType (hours): Valid values: <ul>
+         * <li>DurationType (hours): [Enum] <ul>
          * <li>120</li>
          * <li>250</li>
          * </ul>
          * </li>
-         * <li>OsType: Valid values: <ul>
+         * <li>OsType: [Enum] <ul>
          * <li>Windows</li>
          * <li>Linux</li>
          * </ul>
          * </li>
          * <li>RootDiskSize (GiB): 80</li>
-         * <li>RootDiskCategory: Valid values: <ul>
+         * <li>RootDiskCategory: [Enum] <ul>
          * <li>cloud_efficiency (ultra cloud disk)</li>
-         * <li>cloud_auto (ultra-fast cloud disk)</li>
-         * <li>cloud_essd (enhanced standard SSD. Only specific instance types support this value.)</li>
+         * <li>cloud_auto (ESSD AutoPL cloud disk)</li>
+         * <li>cloud_essd (enhanced standard SSD, supported only by specific instance types)</li>
          * </ul>
          * </li>
-         * <li>RootPerformanceLevel: Valid values: <ul>
+         * <li>RootPerformanceLevel: [Enum] <ul>
          * <li>PL0</li>
          * <li>PL1</li>
          * <li>PL2</li>
@@ -158,7 +164,7 @@ public class CreateMultiOrderRequest extends TeaModel {
 
     public static class CreateMultiOrderRequestOrderItems extends TeaModel {
         /**
-         * <p>The quantity to purchase.</p>
+         * <p>The purchase quantity.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -185,7 +191,10 @@ public class CreateMultiOrderRequest extends TeaModel {
         public Boolean autoRenew;
 
         /**
-         * <p>Specifies whether this is a change purchase.</p>
+         * <p>Specifies whether to modify the configuration of the monthly duration package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("BuyChange")
         public Boolean buyChange;
@@ -203,17 +212,20 @@ public class CreateMultiOrderRequest extends TeaModel {
         public java.util.List<String> instanceIds;
 
         /**
-         * <p>The callback URL after the payment is completed.</p>
+         * <p>The callback URL after the order is paid. Specify the URL to receive the payment result based on your business requirements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/order/paid">https://example.com/order/paid</a></p>
          */
         @NameInMap("PaidCallBackUrl")
         public String paidCallBackUrl;
 
         /**
-         * <p>The subscription duration. Valid values:</p>
+         * <p>The subscription period. Valid values:</p>
          * <ul>
-         * <li><p>If PeriodUnit is set to Year: 1, 2, 3, and 5.</p>
+         * <li><p>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values are 1, 2, 3, and 5.</p>
          * </li>
-         * <li><p>If PeriodUnit is set to Month: 1, 2, 3, and 6.</p>
+         * <li><p>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values are 1, 2, 3, and 6.</p>
          * </li>
          * </ul>
          * 
@@ -224,9 +236,9 @@ public class CreateMultiOrderRequest extends TeaModel {
         public Integer period;
 
         /**
-         * <p>The unit of the subscription duration for a subscription instance.</p>
+         * <p>The unit of the subscription period for the subscription instance.</p>
          * <blockquote>
-         * <p>This parameter is required only when the billing method of the instance is subscription. This parameter is case-sensitive. Make sure that the value is spelled correctly.</p>
+         * <p>This parameter is required only when the billing method of the instance is subscription. This parameter is case-sensitive. Make sure that the spelling is correct.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -236,7 +248,7 @@ public class CreateMultiOrderRequest extends TeaModel {
         public String periodUnit;
 
         /**
-         * <p>The promotion ID.</p>
+         * <p>The ID of the promotion.</p>
          * 
          * <strong>example:</strong>
          * <p>youhuiquan_promotion_option_id_for_blank</p>
@@ -247,7 +259,7 @@ public class CreateMultiOrderRequest extends TeaModel {
         /**
          * <p>The list of resource IDs.</p>
          * <blockquote>
-         * <p>For monthly duration packages, this parameter corresponds to the cloud desktop ID. This parameter is required when OrderType is not set to <code>create</code>.</p>
+         * <p>For the monthly duration package, this parameter corresponds to the cloud desktop ID. This parameter is required when OrderType is not set to <code>create</code>.</p>
          * </blockquote>
          */
         @NameInMap("ResourceIds")
@@ -256,7 +268,7 @@ public class CreateMultiOrderRequest extends TeaModel {
         /**
          * <p>The resource type.</p>
          * <blockquote>
-         * <p>This parameter is case-sensitive. Make sure that the value is spelled correctly.</p>
+         * <p>This parameter is case-sensitive. Make sure that the spelling is correct.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -265,6 +277,15 @@ public class CreateMultiOrderRequest extends TeaModel {
          */
         @NameInMap("ResourceType")
         public String resourceType;
+
+        /**
+         * <p>The unified expiration date, which can be a day from the 1st to the 28th of a month. If this parameter is not specified, the standard renewal process is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
+        @NameInMap("UnifiedExpireDay")
+        public Integer unifiedExpireDay;
 
         public static CreateMultiOrderRequestOrderItems build(java.util.Map<String, ?> map) throws Exception {
             CreateMultiOrderRequestOrderItems self = new CreateMultiOrderRequestOrderItems();
@@ -365,6 +386,14 @@ public class CreateMultiOrderRequest extends TeaModel {
         }
         public String getResourceType() {
             return this.resourceType;
+        }
+
+        public CreateMultiOrderRequestOrderItems setUnifiedExpireDay(Integer unifiedExpireDay) {
+            this.unifiedExpireDay = unifiedExpireDay;
+            return this;
+        }
+        public Integer getUnifiedExpireDay() {
+            return this.unifiedExpireDay;
         }
 
     }

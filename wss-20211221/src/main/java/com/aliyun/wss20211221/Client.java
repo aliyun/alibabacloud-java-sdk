@@ -9,10 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("ap-southeast-1", "wss.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "wss.cn-shanghai.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("wss", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -32,12 +28,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of EDS.
-     * &lt;props=&quot;intl&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/cloud-desktop?#J_8623712560">pricing</a> of EDS.
-     * If automatic payment is not specified, this operation does not process the payment. You must use the order ID returned by this operation to construct a payment redirect URL and complete the payment before the order takes effect and the resources are provisioned.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of Wuying Workspace before you call this operation.
+     * &lt;props=&quot;intl&quot;&gt;Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/cloud-desktop?#J_8623712560">pricing</a> of Wuying Workspace before you call this operation.
+     * If automatic payment is not specified, this operation does not process the payment. You must use the order ID returned by this operation to construct a payment redirect URL and complete the payment. The order takes effect and resources are provisioned only after the payment is completed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Places, renews, or modifies orders for specific products of Elastic Desktop Service (EDS) Enterprise Edition, such as monthly duration packages.</p>
+     * <p>Creates an order, renews, or modifies the configuration of specific products such as the monthly duration package for Wuying Workspace Enterprise Edition.</p>
      * 
      * @param tmpReq CreateMultiOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -91,12 +87,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of EDS.
-     * &lt;props=&quot;intl&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/cloud-desktop?#J_8623712560">pricing</a> of EDS.
-     * If automatic payment is not specified, this operation does not process the payment. You must use the order ID returned by this operation to construct a payment redirect URL and complete the payment before the order takes effect and the resources are provisioned.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of Wuying Workspace before you call this operation.
+     * &lt;props=&quot;intl&quot;&gt;Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/cloud-desktop?#J_8623712560">pricing</a> of Wuying Workspace before you call this operation.
+     * If automatic payment is not specified, this operation does not process the payment. You must use the order ID returned by this operation to construct a payment redirect URL and complete the payment. The order takes effect and resources are provisioned only after the payment is completed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Places, renews, or modifies orders for specific products of Elastic Desktop Service (EDS) Enterprise Edition, such as monthly duration packages.</p>
+     * <p>Creates an order, renews, or modifies the configuration of specific products such as the monthly duration package for Wuying Workspace Enterprise Edition.</p>
      * 
      * @param request CreateMultiOrderRequest
      * @return CreateMultiOrderResponse
@@ -108,17 +104,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li><strong>Paging support</strong>: Use the <code>NextToken</code> and <code>MaxResults</code> parameters for paging. Set <code>NextToken</code> to an empty character string for the first request.</li>
-     * <li><strong>Filtering</strong>: Use the <code>AgentType</code> and <code>AgentIds</code> parameters to filter the returned Agent list.</li>
-     * <li><strong>Status filtering</strong>: Use the <code>Status</code> parameter to filter Agents by status (0: deleted, 1: active).</li>
+     * <li><strong>Paging</strong>: Use the <code>NextToken</code> and <code>MaxResults</code> parameters for paging. Set <code>NextToken</code> to an empty character string for the first request.</li>
+     * <li><strong>Filtering</strong>: Use the <code>AgentType</code> and <code>AgentIds</code> parameters to filter the returned agent list.</li>
+     * <li><strong>Status filtering</strong>: Use the <code>Status</code> parameter to filter agents by status. Valid values: 0 (deleted) and 1 (active).</li>
      * <li><strong>Sorting</strong>: Results are sorted by <code>id</code> in ascending order by default.</li>
      * <li><strong>Additional parameter for anonymous edition</strong>: The <code>FillInstance</code> parameter automatically populates the bound JVS_COPILOT AgentId of the currently logged-on user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of Agents and usage summary information under the current username.</p>
+     * <p>Queries the list of agents and usage summary information under the current username.</p>
      * 
      * @param request DescribeCreditPackageAgentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -166,17 +162,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li><strong>Paging support</strong>: Use the <code>NextToken</code> and <code>MaxResults</code> parameters for paging. Set <code>NextToken</code> to an empty character string for the first request.</li>
-     * <li><strong>Filtering</strong>: Use the <code>AgentType</code> and <code>AgentIds</code> parameters to filter the returned Agent list.</li>
-     * <li><strong>Status filtering</strong>: Use the <code>Status</code> parameter to filter Agents by status (0: deleted, 1: active).</li>
+     * <li><strong>Paging</strong>: Use the <code>NextToken</code> and <code>MaxResults</code> parameters for paging. Set <code>NextToken</code> to an empty character string for the first request.</li>
+     * <li><strong>Filtering</strong>: Use the <code>AgentType</code> and <code>AgentIds</code> parameters to filter the returned agent list.</li>
+     * <li><strong>Status filtering</strong>: Use the <code>Status</code> parameter to filter agents by status. Valid values: 0 (deleted) and 1 (active).</li>
      * <li><strong>Sorting</strong>: Results are sorted by <code>id</code> in ascending order by default.</li>
      * <li><strong>Additional parameter for anonymous edition</strong>: The <code>FillInstance</code> parameter automatically populates the bound JVS_COPILOT AgentId of the currently logged-on user.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of Agents and usage summary information under the current username.</p>
+     * <p>Queries the list of agents and usage summary information under the current username.</p>
      * 
      * @param request DescribeCreditPackageAgentsRequest
      * @return DescribeCreditPackageAgentsResponse
@@ -189,20 +185,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API queries credit usage details based on the dimension specified by <code>UsageType</code> (User / CreditPackage / Agent). The response includes the total credits, remaining credits, used credits, hourly consumption samples, alert thresholds, and period quotas of the current credit package.</p>
+     * <p>This API queries credit usage details based on the dimension specified by <code>UsageType</code> (User, CreditPackage, Agent, or EndUser). The response includes the total amount, remaining amount, and used amount of the current credit package, hourly consumption samples, alert thresholds, and periodic quotas.</p>
      * <ul>
-     * <li><strong>User</strong>: User dimension. Returns the aggregated usage and remaining credits of all active credit packages for the current user.</li>
-     * <li><strong>CreditPackage</strong>: Credit package dimension. Returns the total credits, remaining credits, and consumption samples of a specified credit package instance.</li>
-     * <li><strong>Agent</strong>: Agent dimension. Returns the cumulative usage, current period usage, quota, and alert information of a specified agent.
-     * <strong>Notes</strong>:</li>
-     * <li>The <code>InstanceIds</code> parameter can be omitted when <code>UsageType=User</code>. Pass a credit package instance ID when <code>UsageType=CreditPackage</code>, or pass an AgentId when <code>UsageType=Agent</code>.</li>
-     * <li>Anonymous requests support the <code>FillInstance</code> parameter. When <code>InstanceIds</code> is not explicitly provided and <code>FillInstance=true</code>, the server automatically populates the bound <code>JVS_COPILOT</code> AgentId based on the current logon <code>wyId</code>.</li>
-     * <li>Time window constants: The <code>dayUsedCredit</code> statistics window is <code>now - ONE_DAY_MILLIS</code>, and the <code>weekUsedCredit</code> statistics window is <code>now - ONE_WEEK_MILLIS</code>.</li>
+     * <li><strong>User</strong>: The user dimension. Returns the total used amount and remaining amount of all active credit packages for the current user.</li>
+     * <li><strong>CreditPackage</strong>: The credit package dimension. Returns the total amount, remaining amount, and consumption samples of a specified credit package instance.</li>
+     * <li><strong>Agent</strong>: The agent dimension. Returns the cumulative used amount, current period used amount, quota, and alerts for a specified agent.</li>
+     * <li><strong>EndUser</strong>: The Wuying user dimension. Returns the shared credit usage, pay-as-you-go credit usage, and total credit usage for the current period of a Wuying user.
+     * <strong>Note</strong>:</li>
+     * <li>The <code>InstanceIds</code> parameter can be omitted when <code>UsageType</code> is set to <code>User</code>. Set it to the credit package instance ID when <code>UsageType</code> is <code>CreditPackage</code>, the agent ID when <code>UsageType</code> is <code>Agent</code>, and the Wuying ID when <code>UsageType</code> is <code>EndUser</code>.</li>
+     * <li>Anonymous requests support the <code>FillInstance</code> parameter. If <code>InstanceIds</code> is not explicitly provided and <code>FillInstance</code> is set to <code>true</code>, the server automatically populates the bound <code>JVS_COPILOT</code> agent ID based on the currently logged-in <code>wyId</code>.</li>
+     * <li>Time window constants: The statistical window for <code>dayUsedCredit</code> is <code>now - ONE_DAY_MILLIS</code>, and the statistical window for <code>weekUsedCredit</code> is <code>now - ONE_WEEK_MILLIS</code>.</li>
      * <li>The consumption samples in <code>currentCreditConsumeList</code> are aggregated by hour and may have an asynchronous synchronization delay of up to 5 minutes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries credit usage details by a specified dimension such as user, credit package, or agent.</p>
+     * <p>Queries the credit usage of users, credit packages, or agents based on a specified dimension.</p>
      * 
      * @param request DescribeCreditUsageInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -217,6 +214,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
             query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneType)) {
+            query.put("SceneType", request.sceneType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.usageType)) {
@@ -243,20 +244,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API queries credit usage details based on the dimension specified by <code>UsageType</code> (User / CreditPackage / Agent). The response includes the total credits, remaining credits, used credits, hourly consumption samples, alert thresholds, and period quotas of the current credit package.</p>
+     * <p>This API queries credit usage details based on the dimension specified by <code>UsageType</code> (User, CreditPackage, Agent, or EndUser). The response includes the total amount, remaining amount, and used amount of the current credit package, hourly consumption samples, alert thresholds, and periodic quotas.</p>
      * <ul>
-     * <li><strong>User</strong>: User dimension. Returns the aggregated usage and remaining credits of all active credit packages for the current user.</li>
-     * <li><strong>CreditPackage</strong>: Credit package dimension. Returns the total credits, remaining credits, and consumption samples of a specified credit package instance.</li>
-     * <li><strong>Agent</strong>: Agent dimension. Returns the cumulative usage, current period usage, quota, and alert information of a specified agent.
-     * <strong>Notes</strong>:</li>
-     * <li>The <code>InstanceIds</code> parameter can be omitted when <code>UsageType=User</code>. Pass a credit package instance ID when <code>UsageType=CreditPackage</code>, or pass an AgentId when <code>UsageType=Agent</code>.</li>
-     * <li>Anonymous requests support the <code>FillInstance</code> parameter. When <code>InstanceIds</code> is not explicitly provided and <code>FillInstance=true</code>, the server automatically populates the bound <code>JVS_COPILOT</code> AgentId based on the current logon <code>wyId</code>.</li>
-     * <li>Time window constants: The <code>dayUsedCredit</code> statistics window is <code>now - ONE_DAY_MILLIS</code>, and the <code>weekUsedCredit</code> statistics window is <code>now - ONE_WEEK_MILLIS</code>.</li>
+     * <li><strong>User</strong>: The user dimension. Returns the total used amount and remaining amount of all active credit packages for the current user.</li>
+     * <li><strong>CreditPackage</strong>: The credit package dimension. Returns the total amount, remaining amount, and consumption samples of a specified credit package instance.</li>
+     * <li><strong>Agent</strong>: The agent dimension. Returns the cumulative used amount, current period used amount, quota, and alerts for a specified agent.</li>
+     * <li><strong>EndUser</strong>: The Wuying user dimension. Returns the shared credit usage, pay-as-you-go credit usage, and total credit usage for the current period of a Wuying user.
+     * <strong>Note</strong>:</li>
+     * <li>The <code>InstanceIds</code> parameter can be omitted when <code>UsageType</code> is set to <code>User</code>. Set it to the credit package instance ID when <code>UsageType</code> is <code>CreditPackage</code>, the agent ID when <code>UsageType</code> is <code>Agent</code>, and the Wuying ID when <code>UsageType</code> is <code>EndUser</code>.</li>
+     * <li>Anonymous requests support the <code>FillInstance</code> parameter. If <code>InstanceIds</code> is not explicitly provided and <code>FillInstance</code> is set to <code>true</code>, the server automatically populates the bound <code>JVS_COPILOT</code> agent ID based on the currently logged-in <code>wyId</code>.</li>
+     * <li>Time window constants: The statistical window for <code>dayUsedCredit</code> is <code>now - ONE_DAY_MILLIS</code>, and the statistical window for <code>weekUsedCredit</code> is <code>now - ONE_WEEK_MILLIS</code>.</li>
      * <li>The consumption samples in <code>currentCreditConsumeList</code> are aggregated by hour and may have an asynchronous synchronization delay of up to 5 minutes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries credit usage details by a specified dimension such as user, credit package, or agent.</p>
+     * <p>Queries the credit usage of users, credit packages, or agents based on a specified dimension.</p>
      * 
      * @param request DescribeCreditUsageInfoRequest
      * @return DescribeCreditUsageInfoResponse
@@ -275,7 +277,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>The <code>resourceTypes</code> parameter is in JSON array format and contains multiple resource type strings.</li>
      * <li>The <code>startTime</code> and <code>endTime</code> parameters are in timestamp format and specify the time range for the query.</li>
      * <li>Pagination parameters include <code>nextToken</code>, <code>maxResults</code>, <code>pageNo</code>, and <code>pageSize</code>, which control the number and pagination of returned results.</li>
-     * <li>When the <code>resourceTypes</code> parameter contains invalid values or the <code>periods</code> parameter fails JSON parsing, a <code>SalesClientException</code> exception is thrown.</li>
+     * <li>If the <code>resourceTypes</code> parameter contains invalid values or the <code>periods</code> parameter fails JSON parsing, a <code>SalesClientException</code> exception is thrown.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -334,7 +336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>The <code>resourceTypes</code> parameter is in JSON array format and contains multiple resource type strings.</li>
      * <li>The <code>startTime</code> and <code>endTime</code> parameters are in timestamp format and specify the time range for the query.</li>
      * <li>Pagination parameters include <code>nextToken</code>, <code>maxResults</code>, <code>pageNo</code>, and <code>pageSize</code>, which control the number and pagination of returned results.</li>
-     * <li>When the <code>resourceTypes</code> parameter contains invalid values or the <code>periods</code> parameter fails JSON parsing, a <code>SalesClientException</code> exception is thrown.</li>
+     * <li>If the <code>resourceTypes</code> parameter contains invalid values or the <code>periods</code> parameter fails JSON parsing, a <code>SalesClientException</code> exception is thrown.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -350,7 +352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about delivery addresses.</p>
+     * <p>Queries logistics address information.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDeliveryAddressResponse
@@ -373,7 +375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about delivery addresses.</p>
+     * <p>Queries logistics address information.</p>
      * @return DescribeDeliveryAddressResponse
      */
     public DescribeDeliveryAddressResponse describeDeliveryAddress() throws Exception {
@@ -383,10 +385,96 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing of Elastic Desktop Service and its <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of Elastic Desktop Service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the prices of Elastic Desktop Service products, including prices for new purchases, renewals, specification changes, and unsubscriptions.</p>
+     * <p>Queries deduction group information.</p>
+     * 
+     * @param request DescribeGroupsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeGroupsResponse
+     */
+    public DescribeGroupsResponse describeGroupsWithOptions(DescribeGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupResourceTypes)) {
+            query.put("GroupResourceTypes", request.groupResourceTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupType)) {
+            query.put("GroupType", request.groupType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIds)) {
+            query.put("ResourceIds", request.resourceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.states)) {
+            query.put("States", request.states);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeUsingPeriod)) {
+            query.put("TimeUsingPeriod", request.timeUsingPeriod);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeGroups"),
+            new TeaPair("version", "2021-12-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeGroupsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of Elastic Desktop Service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries deduction group information.</p>
+     * 
+     * @param request DescribeGroupsRequest
+     * @return DescribeGroupsResponse
+     */
+    public DescribeGroupsResponse describeGroups(DescribeGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeGroupsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of Elastic Desktop Service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the prices of Elastic Desktop Service products for order types such as new purchases, renewals, configuration changes, and unsubscriptions.</p>
      * 
      * @param request DescribeMultiPriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -430,10 +518,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing of Elastic Desktop Service and its <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of Elastic Desktop Service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the prices of Elastic Desktop Service products, including prices for new purchases, renewals, specification changes, and unsubscriptions.</p>
+     * <p>Queries the prices of Elastic Desktop Service products for order types such as new purchases, renewals, configuration changes, and unsubscriptions.</p>
      * 
      * @param request DescribeMultiPriceRequest
      * @return DescribeMultiPriceResponse
@@ -445,7 +533,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the deduction details of a core-hour package.</p>
+     * <p>Queries the deduction details of core-hour packages.</p>
      * 
      * @param request DescribePackageDeductionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -454,12 +542,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribePackageDeductionsResponse describePackageDeductionsWithOptions(DescribePackageDeductionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentType)) {
+            query.put("AgentType", request.agentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentTypes)) {
+            query.put("AgentTypes", request.agentTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.consumeWyId)) {
+            query.put("ConsumeWyId", request.consumeWyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.consumeWyIds)) {
+            query.put("ConsumeWyIds", request.consumeWyIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deductionRequestId)) {
+            query.put("DeductionRequestId", request.deductionRequestId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deductionTypes)) {
+            query.put("DeductionTypes", request.deductionTypes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.groupResourceTypes)) {
+            query.put("GroupResourceTypes", request.groupResourceTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdType)) {
+            query.put("InstanceIdType", request.instanceIdType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
             query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            query.put("Model", request.model);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.packageIds)) {
@@ -482,8 +614,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceTypes", request.resourceTypes);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.runId)) {
+            query.put("RunId", request.runId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runIdList)) {
+            query.put("RunIdList", request.runIdList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wyId)) {
+            query.put("WyId", request.wyId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -505,7 +649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the deduction details of a core-hour package.</p>
+     * <p>Queries the deduction details of core-hour packages.</p>
      * 
      * @param request DescribePackageDeductionsRequest
      * @return DescribePackageDeductionsResponse
@@ -517,14 +661,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation supports GET and POST methods.</li>
-     * <li>The <code>periods</code> parameter is in JSON array format. Each element is a <code>PeriodParam</code> object that contains the <code>periodUnit</code> and <code>baseTime</code> fields.</li>
-     * <li>The <code>resourceTypes</code> parameter is in JSON array format and contains multiple resource type strings.</li>
-     * <li>The <code>startTime</code> and <code>endTime</code> parameters are in timestamp format and specify the time range for the query.</li>
-     * <li>Pagination parameters include <code>nextToken</code>, <code>maxResults</code>, <code>pageNo</code>, and <code>pageSize</code>, which control the number of returned results and pagination.</li>
-     * <li>When the <code>resourceTypes</code> parameter contains invalid values or the <code>periods</code> parameter fails JSON parsing, a <code>SalesClientException</code> exception is thrown.</li>
+     * <li>This operation supports the GET and POST methods.</li>
+     * <li>The periods parameter is in JSON array format. Each element is a PeriodParam object that contains the periodUnit and baseTime fields.</li>
+     * <li>The resourceTypes parameter is in JSON array format and contains multiple resource type strings.</li>
+     * <li>The startTime and endTime parameters are in timestamp format and specify the time range for the query.</li>
+     * <li>The pagination parameters include nextToken, maxResults, pageNo, and pageSize, which are used to control the number of returned results and pagination.</li>
+     * <li>If the resourceTypes parameter contains invalid values or the JSON parsing of the periods parameter fails, a SalesClientException is thrown.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -553,6 +697,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BizType", request.bizType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.consumeWyId)) {
+            query.put("ConsumeWyId", request.consumeWyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.consumeWyIds)) {
+            query.put("ConsumeWyIds", request.consumeWyIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deductionRequestId)) {
+            query.put("DeductionRequestId", request.deductionRequestId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deductionTypes)) {
             query.put("DeductionTypes", request.deductionTypes);
         }
@@ -573,6 +729,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GroupSeparator", request.groupSeparator);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIdType)) {
             query.put("InstanceIdType", request.instanceIdType);
         }
@@ -583,6 +743,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            query.put("Model", request.model);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
@@ -607,6 +771,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceTypes)) {
             query.put("ResourceTypes", request.resourceTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runId)) {
+            query.put("RunId", request.runId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runIdList)) {
+            query.put("RunIdList", request.runIdList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
@@ -636,14 +808,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation supports GET and POST methods.</li>
-     * <li>The <code>periods</code> parameter is in JSON array format. Each element is a <code>PeriodParam</code> object that contains the <code>periodUnit</code> and <code>baseTime</code> fields.</li>
-     * <li>The <code>resourceTypes</code> parameter is in JSON array format and contains multiple resource type strings.</li>
-     * <li>The <code>startTime</code> and <code>endTime</code> parameters are in timestamp format and specify the time range for the query.</li>
-     * <li>Pagination parameters include <code>nextToken</code>, <code>maxResults</code>, <code>pageNo</code>, and <code>pageSize</code>, which control the number of returned results and pagination.</li>
-     * <li>When the <code>resourceTypes</code> parameter contains invalid values or the <code>periods</code> parameter fails JSON parsing, a <code>SalesClientException</code> exception is thrown.</li>
+     * <li>This operation supports the GET and POST methods.</li>
+     * <li>The periods parameter is in JSON array format. Each element is a PeriodParam object that contains the periodUnit and baseTime fields.</li>
+     * <li>The resourceTypes parameter is in JSON array format and contains multiple resource type strings.</li>
+     * <li>The startTime and endTime parameters are in timestamp format and specify the time range for the query.</li>
+     * <li>The pagination parameters include nextToken, maxResults, pageNo, and pageSize, which are used to control the number of returned results and pagination.</li>
+     * <li>If the resourceTypes parameter contains invalid values or the JSON parsing of the periods parameter fails, a SalesClientException is thrown.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -678,6 +850,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.key)) {
             query.put("Key", request.key);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.properties)) {
+            query.put("Properties", request.properties);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
@@ -719,18 +895,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>This operation sets the credit quota for one or more Agents of a specific type.</p>
-     * <h3>Usage notes</h3>
+     * <h2>Operation description</h2>
+     * <p>You can use this API operation to set the credit usage quota for a specific type of Agent. Batch setting of quotas for multiple Agents is supported.</p>
+     * <h3>Before you begin</h3>
      * <ul>
-     * <li>The <code>AgentType</code> parameter specifies the type of Agent to which the quota applies, such as <code>JVSClaw</code> or <code>OpenClaw</code>.</li>
-     * <li>The <code>AgentIds</code> parameter is an array of up to 100 Agent IDs.</li>
-     * <li>The <code>CreditQuota</code> parameter specifies the credit quota for each Agent.</li>
+     * <li>The <code>AgentType</code> parameter specifies the type of Agent for which you want to set the quota, such as <code>JVSClaw</code> or <code>OpenClaw</code>.</li>
+     * <li>The <code>AgentIds</code> parameter is an array that can contain up to 100 Agent IDs.</li>
+     * <li>The <code>CreditQuota</code> parameter specifies the credit usage quota for each Agent.</li>
      * </ul>
      * <h3>Examples</h3>
      * 
      * <b>summary</b> : 
-     * <p>Sets the credit quota for specified Agents.</p>
+     * <p>Sets the credit usage quota for a specified Agent.</p>
      * 
      * @param request SetAgentCreditQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -755,6 +931,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CreditQuota", request.creditQuota);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneType)) {
+            query.put("SceneType", request.sceneType);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -774,18 +954,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>This operation sets the credit quota for one or more Agents of a specific type.</p>
-     * <h3>Usage notes</h3>
+     * <h2>Operation description</h2>
+     * <p>You can use this API operation to set the credit usage quota for a specific type of Agent. Batch setting of quotas for multiple Agents is supported.</p>
+     * <h3>Before you begin</h3>
      * <ul>
-     * <li>The <code>AgentType</code> parameter specifies the type of Agent to which the quota applies, such as <code>JVSClaw</code> or <code>OpenClaw</code>.</li>
-     * <li>The <code>AgentIds</code> parameter is an array of up to 100 Agent IDs.</li>
-     * <li>The <code>CreditQuota</code> parameter specifies the credit quota for each Agent.</li>
+     * <li>The <code>AgentType</code> parameter specifies the type of Agent for which you want to set the quota, such as <code>JVSClaw</code> or <code>OpenClaw</code>.</li>
+     * <li>The <code>AgentIds</code> parameter is an array that can contain up to 100 Agent IDs.</li>
+     * <li>The <code>CreditQuota</code> parameter specifies the credit usage quota for each Agent.</li>
      * </ul>
      * <h3>Examples</h3>
      * 
      * <b>summary</b> : 
-     * <p>Sets the credit quota for specified Agents.</p>
+     * <p>Sets the credit usage quota for a specified Agent.</p>
      * 
      * @param request SetAgentCreditQuotaRequest
      * @return SetAgentCreditQuotaResponse

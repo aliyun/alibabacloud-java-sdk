@@ -14,17 +14,32 @@ public class DescribeCreditUsageInfoRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>The JSON string of instance IDs. This parameter can be omitted when <code>UsageType=User</code>. Pass a credit package instance ID when <code>UsageType=CreditPackage</code>, or pass an <code>AgentId</code> when <code>UsageType=Agent</code>.</p>
+     * <p>The JSON string of the instance ID list. This parameter can be omitted when <code>UsageType</code> is set to <code>User</code>. Set it to the credit package instance ID when <code>UsageType</code> is <code>CreditPackage</code>, and the agent ID when <code>UsageType</code> is <code>Agent</code>.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The usage type (UsageType). Valid values:</p>
+     * <p>The operator Scenarios type. Valid values:</p>
      * <ul>
-     * <li>User: Returns the usage, remaining credits, and consumption trends of the current user\&quot;s active credit packages.</li>
-     * <li>CreditPackage: Requires a CreditPackageId. Returns the total and remaining credits of the specified credit package.</li>
-     * <li>Agent: Requires an AgentId. Returns the cumulative credit usage, cumulative allocated quota, and their percentages.</li>
+     * <li>Not specified or NaturalMonthlyOwn: Natural monthly exclusive.</li>
+     * <li>JzYearlyShare: Jz annual shared.</li>
+     * <li>JzYearlyOwn: Jz annual exclusive.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>JzYearlyShare</p>
+     */
+    @NameInMap("SceneType")
+    public String sceneType;
+
+    /**
+     * <p>The usage type. Valid values:</p>
+     * <ul>
+     * <li>User: Returns the used amount, remaining amount, and consumption trend of the currently active credit packages for the user.</li>
+     * <li>CreditPackage: Requires a credit package ID. Returns the total amount and remaining amount of the specified credit package.</li>
+     * <li>Agent: Requires an agent ID. Returns the cumulative credit usage, cumulative allocated quota, and the percentage between the two.</li>
+     * <li>EndUser: Requires a Wuying ID. Returns the shared credit usage, pay-as-you-go credit usage, and total credit usage for the current period of the Wuying user.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,6 +67,14 @@ public class DescribeCreditUsageInfoRequest extends TeaModel {
     }
     public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public DescribeCreditUsageInfoRequest setSceneType(String sceneType) {
+        this.sceneType = sceneType;
+        return this;
+    }
+    public String getSceneType() {
+        return this.sceneType;
     }
 
     public DescribeCreditUsageInfoRequest setUsageType(String usageType) {

@@ -1,3 +1,44 @@
+2026-11-04 Version: 1.8.0
+- Support API DescribeGroups.
+- Update API CreateMultiOrder: add request parameters OrderItems.$.UnifiedExpireDay.
+- Update API DescribeCreditUsageInfo: add request parameters SceneType.
+- Update API DescribeCreditUsageInfo: add response parameters Body.UsageInfoList.$.UsageInfo.PeriodCreditQuota.
+- Update API DescribeCreditUsageInfo: add response parameters Body.UsageInfoList.$.UsageInfo.PeriodPayGoUsedCredit.
+- Update API DescribeCreditUsageInfo: add response parameters Body.UsageInfoList.$.UsageInfo.PeriodSharedUsedCredit.
+- Update API DescribeCreditUsageInfo: add response parameters Body.UsageInfoList.$.UsageInfo.PeriodTotalUsedCredit.
+- Update API DescribeMultiPrice: add request parameters OrderItems.$.UnifiedExpireDay.
+- Update API DescribePackageDeductions: add request parameters AgentType.
+- Update API DescribePackageDeductions: add request parameters AgentTypes.
+- Update API DescribePackageDeductions: add request parameters BizType.
+- Update API DescribePackageDeductions: add request parameters ConsumeWyId.
+- Update API DescribePackageDeductions: add request parameters ConsumeWyIds.
+- Update API DescribePackageDeductions: add request parameters DeductionRequestId.
+- Update API DescribePackageDeductions: add request parameters DeductionTypes.
+- Update API DescribePackageDeductions: add request parameters GroupResourceTypes.
+- Update API DescribePackageDeductions: add request parameters InstanceId.
+- Update API DescribePackageDeductions: add request parameters InstanceIdType.
+- Update API DescribePackageDeductions: add request parameters Model.
+- Update API DescribePackageDeductions: add request parameters RunId.
+- Update API DescribePackageDeductions: add request parameters RunIdList.
+- Update API DescribePackageDeductions: add request parameters WyId.
+- Update API DescribePackageDeductions: add response parameters Body.Deductions.$.AgentType.
+- Update API DescribePackageDeductions: add response parameters Body.Deductions.$.DeductionRequestId.
+- Update API DescribePackageDeductions: add response parameters Body.Deductions.$.DeductionType.
+- Update API DescribePackageDeductions: add response parameters Body.Deductions.$.Model.
+- Update API DescribePackageDeductions: add response parameters Body.Deductions.$.PackageId.
+- Update API DescribePackageDeductions: add response parameters Body.Deductions.$.ResourceId.
+- Update API DescribePackageDeductions: add response parameters Body.Deductions.$.Summary.
+- Update API DescribeRunIdDeductions: add request parameters ConsumeWyId.
+- Update API DescribeRunIdDeductions: add request parameters ConsumeWyIds.
+- Update API DescribeRunIdDeductions: add request parameters DeductionRequestId.
+- Update API DescribeRunIdDeductions: add request parameters InstanceId.
+- Update API DescribeRunIdDeductions: add request parameters Model.
+- Update API DescribeRunIdDeductions: add request parameters RunId.
+- Update API DescribeRunIdDeductions: add request parameters RunIdList.
+- Update API ModifyInstanceProperties: add request parameters Properties.
+- Update API SetAgentCreditQuota: add request parameters SceneType.
+
+
 2026-08-17 Version: 1.7.1
 - Update API DescribeCreditUsageInfo: add response parameters Body.UsageInfoList.$.UsageInfo.AvailableAmount.
 - Update API DescribeCreditUsageInfo: add response parameters Body.UsageInfoList.$.UsageInfo.CurrentInstanceExpiredTime.

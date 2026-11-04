@@ -14,7 +14,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The array of usage data.</p>
+     * <p>The business data array.</p>
      */
     @NameInMap("UsageInfoList")
     public java.util.List<DescribeCreditUsageInfoResponseBodyUsageInfoList> usageInfoList;
@@ -42,7 +42,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
 
     public static class DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfoCreditTrendList extends TeaModel {
         /**
-         * <p>The time point in the format <code>yyyy-MM-dd HH</code> (accurate to the hour).</p>
+         * <p>The time point in the <code>yyyy-MM-dd HH</code> format, accurate to the hour.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-02 10</p>
@@ -51,7 +51,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         public String timePoint;
 
         /**
-         * <p>The number of credits consumed in this hour.</p>
+         * <p>The number of credits consumed in the hour.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -83,9 +83,21 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfoRemainCreditInfo extends TeaModel {
+        /**
+         * <p>The number of instances being deducted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
         @NameInMap("DeductingAmount")
         public Integer deductingAmount;
 
+        /**
+         * <p>The number of instances pending to take effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
+         */
         @NameInMap("PendingAmount")
         public Integer pendingAmount;
 
@@ -113,9 +125,18 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo extends TeaModel {
+        /**
+         * <p>The number of currently available instances for the reported resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9976.00</p>
+         */
         @NameInMap("AvailableAmount")
         public Integer availableAmount;
 
+        /**
+         * <p>The list of contact group names.</p>
+         */
         @NameInMap("ContactGroupNames")
         public java.util.List<String> contactGroupNames;
 
@@ -125,11 +146,17 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         @NameInMap("CreditTrendList")
         public java.util.List<DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfoCreditTrendList> creditTrendList;
 
+        /**
+         * <p>The time when the current instance expires, in the <code>YYYY-MM-DD HH:mm:ss</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-12-02 00:00:00</p>
+         */
         @NameInMap("CurrentInstanceExpiredTime")
         public String currentInstanceExpiredTime;
 
         /**
-         * <p>The instance ID of the current active credit package.</p>
+         * <p>The instance ID of the currently active credit package.</p>
          * 
          * <strong>example:</strong>
          * <p>cp-inst-001</p>
@@ -138,34 +165,34 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         public String currentInstanceId;
 
         /**
-         * <p>The remaining credits of the current active credit package.</p>
+         * <p>The remaining amount of the currently active credit package.</p>
          * 
          * <strong>example:</strong>
-         * <p>Current period remaining credits</p>
+         * <p>Remaining credits for the current period</p>
          */
         @NameInMap("CurrentRemainCredit")
         public Long currentRemainCredit;
 
         /**
-         * <p>The total credits of the current active credit package.</p>
+         * <p>The total amount of the currently active credit package.</p>
          * 
          * <strong>example:</strong>
-         * <p>Current period credit quota</p>
+         * <p>Credit quota for the current period</p>
          */
         @NameInMap("CurrentTotalCredit")
         public Long currentTotalCredit;
 
         /**
-         * <p>The used credits of the current active credit package.</p>
+         * <p>The used amount of the currently active credit package.</p>
          * 
          * <strong>example:</strong>
-         * <p>Current period credits consumed</p>
+         * <p>Credits consumed in the current period</p>
          */
         @NameInMap("CurrentUsedCredit")
         public Long currentUsedCredit;
 
         /**
-         * <p>The credit usage in the last 1 day.</p>
+         * <p>The credit usage in the last day.</p>
          * 
          * <strong>example:</strong>
          * <p>Credits consumed in the last day</p>
@@ -173,8 +200,41 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         @NameInMap("DayUsedCredit")
         public Long dayUsedCredit;
 
+        /**
+         * <p>The last trigger time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-02 10:10:10</p>
+         */
         @NameInMap("LastTriggeredAt")
         public String lastTriggeredAt;
+
+        /**
+         * <p>The credit quota for the current period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
+        @NameInMap("PeriodCreditQuota")
+        public Long periodCreditQuota;
+
+        /**
+         * <p>The pay-as-you-go credits consumed in the current period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>240</p>
+         */
+        @NameInMap("PeriodPayGoUsedCredit")
+        public Long periodPayGoUsedCredit;
+
+        /**
+         * <p>The shared credits consumed in the current period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
+        @NameInMap("PeriodSharedUsedCredit")
+        public Long periodSharedUsedCredit;
 
         /**
          * <p>The shared credit quota in the current active period.</p>
@@ -186,6 +246,15 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         public Long periodTotalCredit;
 
         /**
+         * <p>The total credits consumed in the current period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>360</p>
+         */
+        @NameInMap("PeriodTotalUsedCredit")
+        public Long periodTotalUsedCredit;
+
+        /**
          * <p>The shared credit usage in the current active period.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +264,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         public Long periodUsedCredit;
 
         /**
-         * <p>The cumulative remaining credits.</p>
+         * <p>The cumulative remaining billable credits.</p>
          * 
          * <strong>example:</strong>
          * <p>Remaining credits</p>
@@ -203,17 +272,23 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         @NameInMap("RemainCredit")
         public Long remainCredit;
 
+        /**
+         * <p>The remaining credit information.</p>
+         */
         @NameInMap("RemainCreditInfo")
         public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfoRemainCreditInfo remainCreditInfo;
 
         /**
-         * <p>The quota used today.</p>
+         * <p>The used quota for today.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("TodayUsed")
         public String todayUsed;
 
         /**
-         * <p>The total cumulative credits.</p>
+         * <p>The cumulative total credits.</p>
          * 
          * <strong>example:</strong>
          * <p>Credit quota</p>
@@ -223,6 +298,9 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
 
         /**
          * <p>The cumulative used quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalUsed")
         public String totalUsed;
@@ -237,7 +315,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         public Long totalUsedCredit;
 
         /**
-         * <p>The alert threshold percentage (0–100).</p>
+         * <p>The alert threshold percentage, ranging from 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -246,7 +324,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         public Integer warnPercent;
 
         /**
-         * <p>The credit usage in the last 1 week.</p>
+         * <p>The credit usage in the last week.</p>
          * 
          * <strong>example:</strong>
          * <p>Credits consumed in the last week</p>
@@ -339,12 +417,44 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             return this.lastTriggeredAt;
         }
 
+        public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo setPeriodCreditQuota(Long periodCreditQuota) {
+            this.periodCreditQuota = periodCreditQuota;
+            return this;
+        }
+        public Long getPeriodCreditQuota() {
+            return this.periodCreditQuota;
+        }
+
+        public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo setPeriodPayGoUsedCredit(Long periodPayGoUsedCredit) {
+            this.periodPayGoUsedCredit = periodPayGoUsedCredit;
+            return this;
+        }
+        public Long getPeriodPayGoUsedCredit() {
+            return this.periodPayGoUsedCredit;
+        }
+
+        public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo setPeriodSharedUsedCredit(Long periodSharedUsedCredit) {
+            this.periodSharedUsedCredit = periodSharedUsedCredit;
+            return this;
+        }
+        public Long getPeriodSharedUsedCredit() {
+            return this.periodSharedUsedCredit;
+        }
+
         public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo setPeriodTotalCredit(Long periodTotalCredit) {
             this.periodTotalCredit = periodTotalCredit;
             return this;
         }
         public Long getPeriodTotalCredit() {
             return this.periodTotalCredit;
+        }
+
+        public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo setPeriodTotalUsedCredit(Long periodTotalUsedCredit) {
+            this.periodTotalUsedCredit = periodTotalUsedCredit;
+            return this;
+        }
+        public Long getPeriodTotalUsedCredit() {
+            return this.periodTotalUsedCredit;
         }
 
         public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo setPeriodUsedCredit(Long periodUsedCredit) {
@@ -429,7 +539,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo usageInfo;
 
         /**
-         * <p>The usage primary key. When <code>UsageType=User</code>, this is the <code>aliUid</code>. When <code>UsageType=CreditPackage</code>, this is the credit package instance ID. When <code>UsageType=Agent</code>, this is the <code>AgentId</code>.</p>
+         * <p>The primary key for usage. The value is <code>aliUid</code> when <code>UsageType</code> is <code>User</code>, the credit package instance ID when <code>UsageType</code> is <code>CreditPackage</code>, and the agent ID when <code>UsageType</code> is <code>Agent</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-abc</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDeliveryAddressResponseBody extends TeaModel {
     /**
-     * <p>The address list.</p>
+     * <p>The list of addresses.</p>
      */
     @NameInMap("Addresses")
     public java.util.List<DescribeDeliveryAddressResponseBodyAddresses> addresses;
 
     /**
-     * <p>The request ID. Alibaba Cloud generates this unique identifier for each request.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>72481C12-69AB-5CE1-8A35-A8EFA921****</p>
@@ -20,10 +20,7 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total count of addresses.</p>
-     * <blockquote>
-     * <p>Up to 20 addresses are supported.</p>
-     * </blockquote>
+     * <p>The total number of addresses. A maximum of 20 addresses are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -62,7 +59,7 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
 
     public static class DescribeDeliveryAddressResponseBodyAddressesArea extends TeaModel {
         /**
-         * <p>The area ID.</p>
+         * <p>The district ID.</p>
          * 
          * <strong>example:</strong>
          * <p>33****</p>
@@ -71,10 +68,10 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
         public Long areaId;
 
         /**
-         * <p>The area name.</p>
+         * <p>The district name.</p>
          * 
          * <strong>example:</strong>
-         * <p>西湖区</p>
+         * <p>Xihu District</p>
          */
         @NameInMap("AreaName")
         public String areaName;
@@ -116,7 +113,7 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
          * <p>The city name.</p>
          * 
          * <strong>example:</strong>
-         * <p>杭州市</p>
+         * <p>Hangzhou</p>
          */
         @NameInMap("CityName")
         public String cityName;
@@ -146,8 +143,7 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
 
     public static class DescribeDeliveryAddressResponseBodyAddressesProvince extends TeaModel {
         /**
-         * <p>The province ID. For more information, see <a href="https://help.aliyun.com/document_detail/167926.html">China regions, countries and territories codes</a>.</p>
-         * <p>For example, <strong>110000</strong> represents Beijing and <strong>120000</strong> represents Tianjin.</p>
+         * <p>The province ID. For more information, see <a href="https://help.aliyun.com/document_detail/167926.html">Codes for regions, countries, and areas in China</a>. For example, <strong>110000</strong> indicates Beijing, and <strong>120000</strong> indicates Tianjin.</p>
          * 
          * <strong>example:</strong>
          * <p>330000</p>
@@ -159,7 +155,7 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
          * <p>The province name.</p>
          * 
          * <strong>example:</strong>
-         * <p>浙江省</p>
+         * <p>Zhejiang Province</p>
          */
         @NameInMap("ProvinceName")
         public String provinceName;
@@ -201,7 +197,7 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
          * <p>The town name.</p>
          * 
          * <strong>example:</strong>
-         * <p>三墩镇</p>
+         * <p>Sandun Town</p>
          */
         @NameInMap("TownName")
         public String townName;
@@ -231,7 +227,7 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
 
     public static class DescribeDeliveryAddressResponseBodyAddresses extends TeaModel {
         /**
-         * <p>The area.</p>
+         * <p>The district.</p>
          */
         @NameInMap("Area")
         public DescribeDeliveryAddressResponseBodyAddressesArea area;
@@ -243,7 +239,7 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
         public DescribeDeliveryAddressResponseBodyAddressesCity city;
 
         /**
-         * <p>The contact name.</p>
+         * <p>The contact.</p>
          * 
          * <strong>example:</strong>
          * <p>Alice</p>
@@ -252,7 +248,7 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
         public String contacts;
 
         /**
-         * <p>Indicates whether this is the default address.</p>
+         * <p>Indicates whether the address is the default address.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -261,16 +257,16 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
         public Boolean defaultAddress;
 
         /**
-         * <p>The detailed address, which should include the street name and house number.</p>
+         * <p>The detailed address, which must be accurate down to the street and building number.</p>
          * 
          * <strong>example:</strong>
-         * <p>灯彩街1008号云园区2号楼测试中心</p>
+         * <p>Test Center, Building 2, Cloud Park, No. 1008 Dengcai Street</p>
          */
         @NameInMap("Detail")
         public String detail;
 
         /**
-         * <p>The mobile number.</p>
+         * <p>The mobile phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>1381111****</p>

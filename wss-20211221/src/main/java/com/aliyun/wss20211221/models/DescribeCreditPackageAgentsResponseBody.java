@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
     /**
-     * <p>The Agent list.</p>
+     * <p>The agent list.</p>
      */
     @NameInMap("Agents")
     public java.util.List<DescribeCreditPackageAgentsResponseBodyAgents> agents;
@@ -85,7 +85,7 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p><strong>The instance creation time.</strong></p>
+         * <p>The time when the instance was created, in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-01 10:00:00</p>
@@ -103,7 +103,7 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
         public String creditPackageId;
 
         /**
-         * <p><strong>The time when the instance expires.</strong></p>
+         * <p>The time when the instance expires, in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-01 10:00:00</p>
@@ -130,7 +130,7 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
         public Long totalCredit;
 
         /**
-         * <p><strong>The amount of credits used.</strong></p>
+         * <p><strong>The number of credits used.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

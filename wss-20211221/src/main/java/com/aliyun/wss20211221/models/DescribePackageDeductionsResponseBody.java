@@ -20,7 +20,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page in a paged query. Settings the number of rows per page for paging.</p>
+     * <p>The number of entries per page in the Settings for paging during a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -38,7 +38,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of deduction detail records returned.</p>
+     * <p>The total number of core-hour package deduction details queried.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -65,7 +65,10 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
     public Long totalUsedTime;
 
     /**
-     * <p>The total usage duration in decimal format.</p>
+     * <p>The total usage calculated by using a precision factor, rounded to four decimal places. This field uses the same metering criteria as UsedTimeDecimal in the details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0000</p>
      */
     @NameInMap("TotalUsedTimeDecimal")
     public String totalUsedTimeDecimal;
@@ -141,6 +144,15 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
 
     public static class DescribePackageDeductionsResponseBodyDeductions extends TeaModel {
         /**
+         * <p>The agent type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenClaw</p>
+         */
+        @NameInMap("AgentType")
+        public String agentType;
+
+        /**
          * <p>The number of vCPUs.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +162,25 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The cloud computer ID.</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-xxxx</p>
+         */
+        @NameInMap("DeductionRequestId")
+        public String deductionRequestId;
+
+        /**
+         * <p>The deduction types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KNOWLEDGE_SPACE/CONVESATION</p>
+         */
+        @NameInMap("DeductionType")
+        public String deductionType;
+
+        /**
+         * <p>The Cloud Desktop ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-6wye9optu0kag****</p>
@@ -159,7 +189,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The name of the cloud computer.</p>
+         * <p>The name of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>DemoComputer</p>
@@ -168,7 +198,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public String desktopName;
 
         /**
-         * <p>The specifications of the cloud computer.</p>
+         * <p>The specifications of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>eds.enterprise_office.4c8g</p>
@@ -177,22 +207,28 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public String desktopType;
 
         /**
-         * <p>The end time of the period.</p>
+         * <p>The end time of the deduction record in UTC. The format is yyyy-MM-ddTHH:mm:ssZ. For records aggregated by hour, the format can be yyyy-MM-ddTHH:mmZ with seconds omitted.</p>
          * 
          * <strong>example:</strong>
-         * <p>2024-07-31T03:00Z</p>
+         * <p>2024-07-31T03:00:00Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
-         * <p>The group resource type.</p>
+         * <p>The group resource type to which the deduction record belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GROUP_CORE_PACKAGE</p>
          */
         @NameInMap("GroupResourceType")
         public String groupResourceType;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A specific instance ID</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -207,13 +243,16 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public String instanceState;
 
         /**
-         * <p>The instance type.</p>
+         * <p>The instance specifications for the deduction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ec.agentbay-pc</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
-         * <p>The memory size. Unit: MB.</p>
+         * <p>The memory. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>8192</p>
@@ -222,7 +261,16 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public Long memory;
 
         /**
-         * <p>The operating system type of the cloud computer.</p>
+         * <p>The model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-3.7</p>
+         */
+        @NameInMap("Model")
+        public String model;
+
+        /**
+         * <p>The operating system type of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>Windows</p>
@@ -231,13 +279,31 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The region ID of the cloud computer.</p>
+         * <p>The ID of the credit package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crp-xxx</p>
+         */
+        @NameInMap("PackageId")
+        public String packageId;
+
+        /**
+         * <p>The region ID of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
+
+        /**
+         * <p>The ID of the first resource in the deduction item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-xxx</p>
+         */
+        @NameInMap("ResourceId")
+        public String resourceId;
 
         /**
          * <p>The resource type.</p>
@@ -249,22 +315,34 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The session ID.</p>
+         * <p>The ID of the session associated with the deduction record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ai-123456****</p>
          */
         @NameInMap("SessionId")
         public String sessionId;
 
         /**
-         * <p>The start time of the period.</p>
+         * <p>The start time of the deduction record in UTC. The format is yyyy-MM-ddTHH:mm:ssZ. For records aggregated by hour, the format can be yyyy-MM-ddTHH:mmZ with seconds omitted.</p>
          * 
          * <strong>example:</strong>
-         * <p>2024-07-31T02:00Z</p>
+         * <p>2024-07-31T02:00:00Z</p>
          */
         @NameInMap("StaTime")
         public String staTime;
 
         /**
-         * <p>The number of cores deducted in this period.</p>
+         * <p>The summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Summary of the AI query</p>
+         */
+        @NameInMap("Summary")
+        public String summary;
+
+        /**
+         * <p>The number of cores deducted.</p>
          * 
          * <strong>example:</strong>
          * <p>4.0</p>
@@ -282,13 +360,19 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public Long usedTime;
 
         /**
-         * <p>The usage duration in decimal format.</p>
+         * <p>The usage calculated from UsedTime by using a precision factor, rounded to four decimal places. This field is returned only for applicable resource types and must be read based on the metering criteria of the corresponding resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0000</p>
          */
         @NameInMap("UsedTimeDecimal")
         public String usedTimeDecimal;
 
         /**
-         * <p>The usage duration after proportional scaling.</p>
+         * <p>The usage that includes the deduction coefficient. In scenarios where deduction is based on duration, the value is measured in seconds and returned as an integer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         @NameInMap("UsedTimeWithScale")
         public Long usedTimeWithScale;
@@ -298,12 +382,36 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribePackageDeductionsResponseBodyDeductions setAgentType(String agentType) {
+            this.agentType = agentType;
+            return this;
+        }
+        public String getAgentType() {
+            return this.agentType;
+        }
+
         public DescribePackageDeductionsResponseBodyDeductions setCpu(Integer cpu) {
             this.cpu = cpu;
             return this;
         }
         public Integer getCpu() {
             return this.cpu;
+        }
+
+        public DescribePackageDeductionsResponseBodyDeductions setDeductionRequestId(String deductionRequestId) {
+            this.deductionRequestId = deductionRequestId;
+            return this;
+        }
+        public String getDeductionRequestId() {
+            return this.deductionRequestId;
+        }
+
+        public DescribePackageDeductionsResponseBodyDeductions setDeductionType(String deductionType) {
+            this.deductionType = deductionType;
+            return this;
+        }
+        public String getDeductionType() {
+            return this.deductionType;
         }
 
         public DescribePackageDeductionsResponseBodyDeductions setDesktopId(String desktopId) {
@@ -378,6 +486,14 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
             return this.memory;
         }
 
+        public DescribePackageDeductionsResponseBodyDeductions setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
+        }
+
         public DescribePackageDeductionsResponseBodyDeductions setOsType(String osType) {
             this.osType = osType;
             return this;
@@ -386,12 +502,28 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
             return this.osType;
         }
 
+        public DescribePackageDeductionsResponseBodyDeductions setPackageId(String packageId) {
+            this.packageId = packageId;
+            return this;
+        }
+        public String getPackageId() {
+            return this.packageId;
+        }
+
         public DescribePackageDeductionsResponseBodyDeductions setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribePackageDeductionsResponseBodyDeductions setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
         }
 
         public DescribePackageDeductionsResponseBodyDeductions setResourceType(String resourceType) {
@@ -416,6 +548,14 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         }
         public String getStaTime() {
             return this.staTime;
+        }
+
+        public DescribePackageDeductionsResponseBodyDeductions setSummary(String summary) {
+            this.summary = summary;
+            return this;
+        }
+        public String getSummary() {
+            return this.summary;
         }
 
         public DescribePackageDeductionsResponseBodyDeductions setUsedCoreTime(Float usedCoreTime) {

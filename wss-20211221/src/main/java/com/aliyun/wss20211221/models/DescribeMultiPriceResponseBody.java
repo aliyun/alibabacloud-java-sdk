@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMultiPriceResponseBody extends TeaModel {
     /**
-     * <p>The price details.</p>
+     * <p>The detailed pricing information.</p>
      */
     @NameInMap("PriceInfo")
     public DescribeMultiPriceResponseBodyPriceInfo priceInfo;
@@ -42,7 +42,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
 
     public static class DescribeMultiPriceResponseBodyPriceInfoPricePriceDetailsModuleDetails extends TeaModel {
         /**
-         * <p>The discount price.</p>
+         * <p>The discounted price.</p>
          * 
          * <strong>example:</strong>
          * <p>734.65</p>
@@ -63,7 +63,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
          * <p>The module name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Enterprise Office-8C32G</p>
+         * <p>Enterprise Office - 8C32G</p>
          */
         @NameInMap("ModuleName")
         public String moduleName;
@@ -88,6 +88,9 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
 
         /**
          * <p>The savings plan discount price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SavingPlanDiscountPrice")
         public Float savingPlanDiscountPrice;
@@ -166,7 +169,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
 
     public static class DescribeMultiPriceResponseBodyPriceInfoPricePriceDetailsPriceDetail extends TeaModel {
         /**
-         * <p>The discount price.</p>
+         * <p>The discounted price.</p>
          * 
          * <strong>example:</strong>
          * <p>20.00</p>
@@ -194,6 +197,9 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
 
         /**
          * <p>The savings plan recommended price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SavingPlanRecommendPrice")
         public Float savingPlanRecommendPrice;
@@ -256,13 +262,13 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
 
     public static class DescribeMultiPriceResponseBodyPriceInfoPricePriceDetails extends TeaModel {
         /**
-         * <p>The pricing module details.</p>
+         * <p>The pricing details of the billing module.</p>
          */
         @NameInMap("ModuleDetails")
         public java.util.List<DescribeMultiPriceResponseBodyPriceInfoPricePriceDetailsModuleDetails> moduleDetails;
 
         /**
-         * <p>The sort property.</p>
+         * <p>The sorting attribute.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -271,7 +277,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         public Integer orderItem;
 
         /**
-         * <p>The price details.</p>
+         * <p>The pricing details.</p>
          */
         @NameInMap("PriceDetail")
         public DescribeMultiPriceResponseBodyPriceInfoPricePriceDetailsPriceDetail priceDetail;
@@ -309,19 +315,25 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
 
     public static class DescribeMultiPriceResponseBodyPriceInfoPricePromotions extends TeaModel {
         /**
-         * <p>The activity ID.</p>
+         * <p>The promotion activity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         @NameInMap("ActivityId")
         public String activityId;
 
         /**
-         * <p>Indicates whether the activity is effective.</p>
+         * <p>Indicates whether the promotion activity is in effect.</p>
          */
         @NameInMap("Effective")
         public Boolean effective;
 
         /**
-         * <p>The timestamp when the activity ends.</p>
+         * <p>The end time of the promotion activity. The value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1790784000000</p>
          */
         @NameInMap("EndTimestamp")
         public String endTimestamp;
@@ -336,13 +348,19 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         public String optionCode;
 
         /**
-         * <p>The tiered pricing discount value.</p>
+         * <p>The discount amount after the spend-and-save promotion threshold is reached. Unit: CNY. Two decimal places are retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.00</p>
          */
         @NameInMap("PriceBreakReduceValue")
         public String priceBreakReduceValue;
 
         /**
-         * <p>The tiered pricing threshold.</p>
+         * <p>The threshold amount for the spend-and-save promotion. Unit: CNY. Two decimal places are retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.00</p>
          */
         @NameInMap("PriceBreakThreshold")
         public String priceBreakThreshold;
@@ -384,7 +402,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         public Boolean selected;
 
         /**
-         * <p>The timestamp when the activity starts.</p>
+         * <p>The start time of the promotion activity. The value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1788192000000</p>
          */
         @NameInMap("StartTimestamp")
         public String startTimestamp;
@@ -486,7 +507,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
 
     public static class DescribeMultiPriceResponseBodyPriceInfoPrice extends TeaModel {
         /**
-         * <p>The currency unit.</p>
+         * <p>The currency unit. CNY for the China site. USD for the international site.</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -495,7 +516,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The discount price.</p>
+         * <p>The discounted price.</p>
          * 
          * <strong>example:</strong>
          * <p>534.6</p>
@@ -513,7 +534,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         public Float originalPrice;
 
         /**
-         * <p>The price details.</p>
+         * <p>The pricing details.</p>
          */
         @NameInMap("PriceDetails")
         public java.util.List<DescribeMultiPriceResponseBodyPriceInfoPricePriceDetails> priceDetails;
@@ -525,13 +546,13 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         public java.util.List<DescribeMultiPriceResponseBodyPriceInfoPricePromotions> promotions;
 
         /**
-         * <p>The unsubscription instance and pricing details.</p>
+         * <p>The unsubscribed instances and pricing details.</p>
          */
         @NameInMap("RefundInstanceIdPriceMap")
         public java.util.Map<String, Float> refundInstanceIdPriceMap;
 
         /**
-         * <p>The unsubscription price.</p>
+         * <p>The refund price.</p>
          * 
          * <strong>example:</strong>
          * <p>60.00</p>
@@ -630,10 +651,10 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The promotion rule ID.</p>
+         * <p>The pricing rule ID. The value is an integer.</p>
          * 
          * <strong>example:</strong>
-         * <p>hrzdvc</p>
+         * <p>1001</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;
@@ -663,7 +684,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
 
     public static class DescribeMultiPriceResponseBodyPriceInfo extends TeaModel {
         /**
-         * <p>The price information.</p>
+         * <p>The pricing information.</p>
          */
         @NameInMap("Price")
         public DescribeMultiPriceResponseBodyPriceInfoPrice price;

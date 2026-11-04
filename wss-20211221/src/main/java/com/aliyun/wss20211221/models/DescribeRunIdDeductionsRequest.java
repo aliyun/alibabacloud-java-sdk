@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRunIdDeductionsRequest extends TeaModel {
     /**
-     * <p>The agent type: <code>CREDIT_PACKAGE</code> / <code>JVS_CLAW</code> / <code>OPEN_CLAW</code> / <code>JVS_COPILOT</code>.</p>
+     * <p>The agent type. Valid values: CREDIT_PACKAGE, JVS_CLAW, OPEN_CLAW, and JVS_COPILOT.</p>
      * 
      * <strong>example:</strong>
      * <p>JVSCopilot、JVSClaw、OpenClaw</p>
@@ -13,6 +13,9 @@ public class DescribeRunIdDeductionsRequest extends TeaModel {
     @NameInMap("AgentType")
     public String agentType;
 
+    /**
+     * <p>The list of agent types.</p>
+     */
     @NameInMap("AgentTypes")
     public java.util.List<String> agentTypes;
 
@@ -35,34 +38,73 @@ public class DescribeRunIdDeductionsRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <p>The consumption WyId.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2892766fb8521756</p>
+     */
+    @NameInMap("ConsumeWyId")
+    public String consumeWyId;
+
+    /**
+     * <p>The Wuying user IDs. You can obtain the IDs by calling the GetLoginToken logon operation. The returned parameter is WyId.</p>
+     */
+    @NameInMap("ConsumeWyIds")
+    public java.util.List<String> consumeWyIds;
+
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>uuid</p>
+     */
+    @NameInMap("DeductionRequestId")
+    public String deductionRequestId;
+
+    /**
      * <p>The deduction types. Do not specify this parameter for non-knowledge base scenarios.</p>
      */
     @NameInMap("DeductionTypes")
     public java.util.List<String> deductionTypes;
 
     /**
-     * <p>The end time of the period.</p>
+     * <p>The end time of the query. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
-     * <p>Millisecond timestamp: 1785205179000</p>
+     * <p>1785205179000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The list of additional grouping fields when aggregating by runId, such as model to distinguish between different models.</p>
+     */
     @NameInMap("GroupByFields")
     public java.util.List<String> groupByFields;
 
+    /**
+     * <p>The list of grouped resource types.</p>
+     */
     @NameInMap("GroupResourceTypes")
     public java.util.List<String> groupResourceTypes;
 
     /**
-     * <p>Specifies whether to group results by deduction type.</p>
+     * <p>Specifies whether to group the results by deduction type.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("GroupSeparator")
     public Boolean groupSeparator;
+
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mdp-0c62ayep0nk4v****</p>
+     */
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     /**
      * <p>The instance ID type. Do not specify this parameter for non-knowledge base scenarios.</p>
@@ -74,7 +116,7 @@ public class DescribeRunIdDeductionsRequest extends TeaModel {
     public String instanceIdType;
 
     /**
-     * <p>The list of cloud computer IDs. If this field has a value, the <code>PackageIds</code> field is required.</p>
+     * <p>The list of cloud computer IDs. If this field is specified, the PackageIds field is required.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
@@ -89,7 +131,16 @@ public class DescribeRunIdDeductionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Leave this parameter empty for the first request. For subsequent requests, use the <code>nextToken</code> value from the previous response.</p>
+     * <p>The model name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qwen-3.8</p>
+     */
+    @NameInMap("Model")
+    public String model;
+
+    /**
+     * <p>The pagination token. Leave this parameter empty for the first request. For subsequent requests, use the nextToken value returned in the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJvZmZzZXQiOjIwfQ==</p>
@@ -104,7 +155,7 @@ public class DescribeRunIdDeductionsRequest extends TeaModel {
     public java.util.List<String> packageIds;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -113,7 +164,7 @@ public class DescribeRunIdDeductionsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page for a paged query.</p>
+     * <p>The Settings for the number of entries per page during paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -125,7 +176,7 @@ public class DescribeRunIdDeductionsRequest extends TeaModel {
      * <p>The resource type.</p>
      * 
      * <strong>example:</strong>
-     * <p>Enterprise Edition: CreditPackage, Commercial Edition: BusinessCreditPackage</p>
+     * <p>Enterprise Edition: CreditPackage, Business Edition: BusinessCreditPackage</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -137,14 +188,35 @@ public class DescribeRunIdDeductionsRequest extends TeaModel {
     public java.util.List<String> resourceTypes;
 
     /**
-     * <p>The start time.</p>
+     * <p>The run ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>Millisecond timestamp: 1785205179000</p>
+     * <p>t-xxx</p>
+     */
+    @NameInMap("RunId")
+    public String runId;
+
+    /**
+     * <p>The list of run IDs.</p>
+     */
+    @NameInMap("RunIdList")
+    public java.util.List<String> runIdList;
+
+    /**
+     * <p>The start time of the query. The value is a UNIX timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1785205179000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>The globally unique ID of the Wuying user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wy-123456****</p>
+     */
     @NameInMap("WyId")
     public String wyId;
 
@@ -183,6 +255,30 @@ public class DescribeRunIdDeductionsRequest extends TeaModel {
     }
     public String getBizType() {
         return this.bizType;
+    }
+
+    public DescribeRunIdDeductionsRequest setConsumeWyId(String consumeWyId) {
+        this.consumeWyId = consumeWyId;
+        return this;
+    }
+    public String getConsumeWyId() {
+        return this.consumeWyId;
+    }
+
+    public DescribeRunIdDeductionsRequest setConsumeWyIds(java.util.List<String> consumeWyIds) {
+        this.consumeWyIds = consumeWyIds;
+        return this;
+    }
+    public java.util.List<String> getConsumeWyIds() {
+        return this.consumeWyIds;
+    }
+
+    public DescribeRunIdDeductionsRequest setDeductionRequestId(String deductionRequestId) {
+        this.deductionRequestId = deductionRequestId;
+        return this;
+    }
+    public String getDeductionRequestId() {
+        return this.deductionRequestId;
     }
 
     public DescribeRunIdDeductionsRequest setDeductionTypes(java.util.List<String> deductionTypes) {
@@ -225,6 +321,14 @@ public class DescribeRunIdDeductionsRequest extends TeaModel {
         return this.groupSeparator;
     }
 
+    public DescribeRunIdDeductionsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public DescribeRunIdDeductionsRequest setInstanceIdType(String instanceIdType) {
         this.instanceIdType = instanceIdType;
         return this;
@@ -247,6 +351,14 @@ public class DescribeRunIdDeductionsRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public DescribeRunIdDeductionsRequest setModel(String model) {
+        this.model = model;
+        return this;
+    }
+    public String getModel() {
+        return this.model;
     }
 
     public DescribeRunIdDeductionsRequest setNextToken(String nextToken) {
@@ -295,6 +407,22 @@ public class DescribeRunIdDeductionsRequest extends TeaModel {
     }
     public java.util.List<String> getResourceTypes() {
         return this.resourceTypes;
+    }
+
+    public DescribeRunIdDeductionsRequest setRunId(String runId) {
+        this.runId = runId;
+        return this;
+    }
+    public String getRunId() {
+        return this.runId;
+    }
+
+    public DescribeRunIdDeductionsRequest setRunIdList(java.util.List<String> runIdList) {
+        this.runIdList = runIdList;
+        return this;
+    }
+    public java.util.List<String> getRunIdList() {
+        return this.runIdList;
     }
 
     public DescribeRunIdDeductionsRequest setStartTime(Long startTime) {

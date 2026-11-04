@@ -51,7 +51,7 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-01 00:00:00</p>
@@ -60,7 +60,7 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The end time.</p>
+         * <p>The end time in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-31 23:59:59</p>
@@ -69,7 +69,7 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration time in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-31 23:59:59</p>
@@ -129,7 +129,7 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-01 00:00:00</p>
@@ -294,7 +294,7 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
         public Long consumeSecond;
 
         /**
-         * <p>The deduction date.</p>
+         * <p>The deduction date in the YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-01</p>
@@ -415,7 +415,7 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
         public java.util.List<DescribeDeductionStatisticResponseBodyDataDeductions> deductions;
 
         /**
-         * <p><strong>The usage list.</strong></p>
+         * <p><strong>The list of usage records.</strong></p>
          */
         @NameInMap("Usages")
         public java.util.List<DescribeDeductionStatisticResponseBodyDataUsages> usages;

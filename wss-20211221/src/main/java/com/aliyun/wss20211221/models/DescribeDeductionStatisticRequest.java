@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeDeductionStatisticRequest extends TeaModel {
     /**
-     * <p>The end time (timestamp).</p>
+     * <p>The end time of the query. UNIX timestamp, in milliseconds.</p>
      * 
      * <strong>example:</strong>
-     * <p>2025-06-06T02:14:00Z</p>
+     * <p>1749176040000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>The list of instance IDs (JSON array).</p>
+     * <p>The list of instance IDs in JSON array format.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
@@ -35,10 +35,10 @@ public class DescribeDeductionStatisticRequest extends TeaModel {
     public java.util.List<String> resourceTypes;
 
     /**
-     * <p>The start time (timestamp).</p>
+     * <p>The start time of the query. UNIX timestamp, in milliseconds.</p>
      * 
      * <strong>example:</strong>
-     * <p>2026-03-20T16:00:00Z</p>
+     * <p>1774022400000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
@@ -90,7 +90,7 @@ public class DescribeDeductionStatisticRequest extends TeaModel {
 
     public static class DescribeDeductionStatisticRequestPeriods extends TeaModel {
         /**
-         * <p>The base time.</p>
+         * <p>The base time in the YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-01</p>

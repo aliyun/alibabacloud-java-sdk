@@ -20,7 +20,7 @@ public class DescribeMultiPriceRequest extends TeaModel {
     public String orderType;
 
     /**
-     * <p>The package code. You do not need to specify this parameter if the product is not a package.</p>
+     * <p>The package code. You do not need to specify this parameter for non-package types.</p>
      * 
      * <strong>example:</strong>
      * <p>pacakge</p>
@@ -29,7 +29,7 @@ public class DescribeMultiPriceRequest extends TeaModel {
     public String packageCode;
 
     /**
-     * <p>The user ID of resource ownership in the reselling pattern. You do not need to specify this parameter if the product is not in the reselling pattern.</p>
+     * <p>The user ID for resource ownership in the reseller pattern. You do not need to specify this parameter for non-reseller patterns.</p>
      * 
      * <strong>example:</strong>
      * <p>182864463481****</p>
@@ -86,6 +86,38 @@ public class DescribeMultiPriceRequest extends TeaModel {
 
         /**
          * <p>The value of the module.</p>
+         * <p>The following section describes the sample values and valid values of each key for the Enterprise Edition monthly package:</p>
+         * <ul>
+         * <li>RegionId: cn-shanghai</li>
+         * <li>InstanceType: eds.enterprise_office.4c8g</li>
+         * <li>DurationType (hours): Valid values: <ul>
+         * <li>120</li>
+         * <li>250</li>
+         * </ul>
+         * </li>
+         * <li>OsType: Valid values: <ul>
+         * <li>Windows</li>
+         * <li>Linux</li>
+         * </ul>
+         * </li>
+         * <li>RootDiskSize (GiB): 80</li>
+         * <li>RootDiskCategory: Valid values: <ul>
+         * <li>cloud_efficiency (ultra cloud disk)</li>
+         * <li>cloud_auto (ESSD AutoPL cloud disk)</li>
+         * <li>cloud_essd (enhanced standard SSD, supported only by specific instance types)</li>
+         * </ul>
+         * </li>
+         * <li>RootPerformanceLevel: Valid values: <ul>
+         * <li>PL0</li>
+         * <li>PL1</li>
+         * <li>PL2</li>
+         * <li>PL3</li>
+         * </ul>
+         * </li>
+         * <li>DataDiskSize (GiB): Same as RootDiskSize.</li>
+         * <li>DataDiskCategory: Same as RootDiskCategory.</li>
+         * <li>DataPerformanceLevel: Same as RootPerformanceLevel.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -118,7 +150,7 @@ public class DescribeMultiPriceRequest extends TeaModel {
 
     public static class DescribeMultiPriceRequestOrderItems extends TeaModel {
         /**
-         * <p>The quantity to purchase.</p>
+         * <p>The purchase quantity.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -133,7 +165,10 @@ public class DescribeMultiPriceRequest extends TeaModel {
         public java.util.List<DescribeMultiPriceRequestOrderItemsComponents> components;
 
         /**
-         * <p>The extended properties.</p>
+         * <p>The extended data of the order item, which is passed as a JSON string. The structure varies based on the order scenario. For the billing method change scenario, you can pass the instance and the list of target billing methods. If no extended data is required, you can leave this parameter empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;regionId&quot;:&quot;cn-hangzhou&quot;,&quot;resourceType&quot;:&quot;Desktop&quot;,&quot;chargeType&quot;:&quot;POSTPAY&quot;,&quot;instanceId&quot;:&quot;ecd-6wye9optu0kag****&quot;}]</p>
          */
         @NameInMap("Data")
         public String data;
@@ -145,7 +180,13 @@ public class DescribeMultiPriceRequest extends TeaModel {
         public java.util.List<String> instanceIds;
 
         /**
-         * <p>The subscription duration. Valid values:</p>
+         * <p>The subscription period. Valid values:</p>
+         * <ul>
+         * <li><p>When <code>PeriodUnit</code> is set to <code>Year</code>: 1, 2, and 3.</p>
+         * </li>
+         * <li><p>When <code>PeriodUnit</code> is set to <code>Month</code>: 1, 2, 3, and 6.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -154,7 +195,7 @@ public class DescribeMultiPriceRequest extends TeaModel {
         public Integer period;
 
         /**
-         * <p>The unit of the subscription duration.</p>
+         * <p>The unit of the subscription period.</p>
          * 
          * <strong>example:</strong>
          * <p>Year</p>
@@ -163,7 +204,7 @@ public class DescribeMultiPriceRequest extends TeaModel {
         public String periodUnit;
 
         /**
-         * <p>The promotion ID.</p>
+         * <p>The ID of the promotion.</p>
          * 
          * <strong>example:</strong>
          * <p>youhuiquan_promotion_option_id_for_blank</p>
@@ -179,6 +220,9 @@ public class DescribeMultiPriceRequest extends TeaModel {
 
         /**
          * <p>The resource type.</p>
+         * <blockquote>
+         * <p>This parameter is case-sensitive. Make sure that the spelling is correct.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>DurationPackage</p>
@@ -187,10 +231,22 @@ public class DescribeMultiPriceRequest extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The period of the savings plan.</p>
+         * <p>The subscription period of the savings plan. For example, 1Year indicates one year.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1Year</p>
          */
         @NameInMap("SavingPlanPeriod")
         public String savingPlanPeriod;
+
+        /**
+         * <p>The unified expiration date, which can be a day from the 1st to the 28th of a month. If you do not specify this parameter, the instance is renewed in the standard way.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
+        @NameInMap("UnifiedExpireDay")
+        public Integer unifiedExpireDay;
 
         public static DescribeMultiPriceRequestOrderItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeMultiPriceRequestOrderItems self = new DescribeMultiPriceRequestOrderItems();
@@ -275,6 +331,14 @@ public class DescribeMultiPriceRequest extends TeaModel {
         }
         public String getSavingPlanPeriod() {
             return this.savingPlanPeriod;
+        }
+
+        public DescribeMultiPriceRequestOrderItems setUnifiedExpireDay(Integer unifiedExpireDay) {
+            this.unifiedExpireDay = unifiedExpireDay;
+            return this;
+        }
+        public Integer getUnifiedExpireDay() {
+            return this.unifiedExpireDay;
         }
 
     }
