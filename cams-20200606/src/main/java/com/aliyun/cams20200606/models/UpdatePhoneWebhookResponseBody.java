@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdatePhoneWebhookResponseBody extends TeaModel {
     /**
-     * <p>The access denied details.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
@@ -16,9 +16,9 @@ public class UpdatePhoneWebhookResponseBody extends TeaModel {
     /**
      * <p>The request status code.</p>
      * <ul>
-     * <li><p>OK indicates that the request was successful.</p>
+     * <li><p>OK: The request is successful.</p>
      * </li>
-     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * <li><p>Other error codes: For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
      * </ul>
      * 

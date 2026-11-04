@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitVerifyCodeResultResponseBody extends TeaModel {
     /**
-     * <p>The access denied details.</p>
+     * <p>The access denial details.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -16,9 +16,9 @@ public class SubmitVerifyCodeResultResponseBody extends TeaModel {
     /**
      * <p>The request status code.</p>
      * <ul>
-     * <li><p>A value of <code>OK</code> indicates that the request was successful.</p>
+     * <li><p>A return value of OK indicates that the request is successful.</p>
      * </li>
-     * <li><p>See the <a href="https://help.aliyun.com/document_detail/196974.html">error code list</a> for other error codes.</p>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
      * </ul>
      * 
@@ -56,11 +56,11 @@ public class SubmitVerifyCodeResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
+     * <li><p>true: Successful.</p>
      * </li>
-     * <li><p>false: The request failed.</p>
+     * <li><p>false: Failed.</p>
      * </li>
      * </ul>
      * 

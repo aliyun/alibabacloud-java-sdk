@@ -44,7 +44,7 @@ public class ListMarketingFlowResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>CB6122C9-09B5-5926-**476A96CB0</p>
@@ -192,7 +192,7 @@ public class ListMarketingFlowResponseBody extends TeaModel {
 
         /**
          * <p>The upgrade start time. The upgrade start time is specified as a cron expression.</p>
-         * <p>For example, <code>0 0 4 1/1 * ?</code> indicates that the upgrade starts at 4:00 on the first day of each month and is performed at 4:00 every day.</p>
+         * <p>For example, <code>0 0 4 1/1 * ?</code> indicates that the upgrade starts at 4:00 on the first day of each month and runs at 4:00 every day.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 4 1/1 * ?</p>
@@ -201,7 +201,7 @@ public class ListMarketingFlowResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>The end time.</p>
+         * <p>The end time in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-01 XX1:11:11</p>
@@ -213,13 +213,13 @@ public class ListMarketingFlowResponseBody extends TeaModel {
          * <p>The execution method.</p>
          * 
          * <strong>example:</strong>
-         * <p>1(默认corn)</p>
+         * <p>1(default cron)</p>
          */
         @NameInMap("ExecutionType")
         public String executionType;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-XX-01 11:11:11</p>
@@ -228,7 +228,7 @@ public class ListMarketingFlowResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The modification time (deprecated).</p>
+         * <p><strong>[Deprecated]</strong> The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>N/A</p>
@@ -300,16 +300,16 @@ public class ListMarketingFlowResponseBody extends TeaModel {
         public String relatedGroupName;
 
         /**
-         * <p>The specific time. This parameter is valid when the execution method is set to 2.</p>
+         * <p>The specific time. This parameter is valid when ExecutionType is set to 2.</p>
          * 
          * <strong>example:</strong>
-         * <p>特定时间(执行方式为2时)</p>
+         * <p>Specific time (when ExecutionType is 2)</p>
          */
         @NameInMap("SpecificTime")
         public String specificTime;
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-XX 11:11:11</p>

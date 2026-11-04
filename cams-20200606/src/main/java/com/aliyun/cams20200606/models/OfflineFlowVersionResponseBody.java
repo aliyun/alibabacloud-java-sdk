@@ -41,13 +41,13 @@ public class OfflineFlowVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The response content.</p>
+     * <p>The content of the returned data.</p>
      */
     @NameInMap("Response")
     public java.util.Map<String, ?> response;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
      * <li><p>true: Successful.</p>
      * </li>

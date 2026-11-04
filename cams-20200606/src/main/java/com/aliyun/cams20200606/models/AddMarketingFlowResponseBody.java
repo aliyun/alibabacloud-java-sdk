@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddMarketingFlowResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -17,7 +17,7 @@ public class AddMarketingFlowResponseBody extends TeaModel {
      * <p>The status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>Example value example value.</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Code")
     public String code;
@@ -26,16 +26,16 @@ public class AddMarketingFlowResponseBody extends TeaModel {
      * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
-     * <p>Example value example value.</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The message returned with the result.</p>
+     * <p>The message returned for the result.</p>
      * 
      * <strong>example:</strong>
-     * <p>Example value.</p>
+     * <p>示例值</p>
      */
     @NameInMap("Message")
     public String message;
@@ -44,7 +44,7 @@ public class AddMarketingFlowResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>Example value.</p>
+     * <p>示例值</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -26,7 +26,7 @@ public class ListDmTagRequest extends TeaModel {
     public Long pageIndex;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FlowUnbindPhoneResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,7 +14,7 @@ public class FlowUnbindPhoneResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The request status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -32,11 +32,11 @@ public class FlowUnbindPhoneResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The operation is successful.</p>
+     * <li><p>true: Yes.</p>
      * </li>
-     * <li><p>false: The operation failed.</p>
+     * <li><p>false: No.</p>
      * </li>
      * </ul>
      * 
@@ -46,15 +46,21 @@ public class FlowUnbindPhoneResponseBody extends TeaModel {
     @NameInMap("Model")
     public Boolean model;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The operation is successful.</p>
+     * <li><p>true: Successful.</p>
      * </li>
-     * <li><p>false: The operation failed.</p>
+     * <li><p>false: Failed.</p>
      * </li>
      * </ul>
      * 

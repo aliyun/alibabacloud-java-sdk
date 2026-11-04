@@ -9,7 +9,7 @@ public class BindMessengerPageRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Sample value sample value sample value.</p>
+     * <p>Sample value sample value sample value</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -18,7 +18,7 @@ public class BindMessengerPageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The PageId of the Messenger.</p>
+     * <p>The Messenger page ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

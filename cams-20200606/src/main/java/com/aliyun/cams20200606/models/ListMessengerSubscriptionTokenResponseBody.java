@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,11 +14,11 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The status code of the request.</p>
+     * <p>The request status code.</p>
      * <ul>
-     * <li><p>A return value of OK indicates that the request was successful.</p>
+     * <li><p>A value of OK indicates that the request is successful.</p>
      * </li>
-     * <li><p>For a list of other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
      * </ul>
      * 
@@ -29,7 +29,7 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data object.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListMessengerSubscriptionTokenResponseBodyData> data;
@@ -44,7 +44,7 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The identifier for the next page. Pass this value to query the next page.</p>
+     * <p>The next page token. Pass this value to query the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>3399***</p>
@@ -62,11 +62,11 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: successful.</p>
+     * <li><p>true: The operation is successful.</p>
      * </li>
-     * <li><p>false: failed.</p>
+     * <li><p>false: The operation fails.</p>
      * </li>
      * </ul>
      * 
@@ -139,7 +139,7 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
 
     public static class ListMessengerSubscriptionTokenResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the security token was created.</p>
+         * <p>The creation time of the token.</p>
          * 
          * <strong>example:</strong>
          * <p>172546854885</p>
@@ -166,7 +166,7 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
         public Long nextEligibleTime;
 
         /**
-         * <p>The re-subscription status.</p>
+         * <p>The resubscription status.</p>
          * 
          * <strong>example:</strong>
          * <p>Example</p>
@@ -175,7 +175,7 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
         public String notificationMessagesReoptin;
 
         /**
-         * <p>The customer\&quot;s time zone.</p>
+         * <p>The time zone of the customer.</p>
          * 
          * <strong>example:</strong>
          * <p>Example</p>
@@ -193,7 +193,7 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
         public String notificationMessagesToken;
 
         /**
-         * <p>The page ID for Messenger.</p>
+         * <p>The page ID of Messenger.</p>
          * 
          * <strong>example:</strong>
          * <p>239***</p>
@@ -211,7 +211,7 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
         public String recipientId;
 
         /**
-         * <p>The expiration time of the security token.</p>
+         * <p>The expiration time of the token.</p>
          * 
          * <strong>example:</strong>
          * <p>172546854885</p>
@@ -229,7 +229,7 @@ public class ListMessengerSubscriptionTokenResponseBody extends TeaModel {
         public String topicTitle;
 
         /**
-         * <p>The status of the security token.</p>
+         * <p>The token status.</p>
          * 
          * <strong>example:</strong>
          * <p>Example</p>

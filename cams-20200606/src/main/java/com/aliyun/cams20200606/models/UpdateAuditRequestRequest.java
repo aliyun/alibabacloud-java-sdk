@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAuditRequestRequest extends TeaModel {
     /**
-     * <p>Viber audit items.</p>
+     * <p>The Viber audit items.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AuditRecord")
@@ -21,7 +21,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
     public String auditResult;
 
     /**
-     * <p>The Space ID of the ISV sub-customer or the instance ID. View it on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
+     * <p>The space ID or instance ID of the ISV sub-customer. This is the channel ID. You can view it on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The request number.</p>
+     * <p>The request number to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
 
     public static class UpdateAuditRequestRequestAuditRecordCompanyAddress extends TeaModel {
         /**
-         * <p>Company address.</p>
+         * <p>The company address.</p>
          * 
          * <strong>example:</strong>
          * <p>123 Sunshine Street, City, Country</p>
@@ -133,7 +133,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String companyAddress;
 
         /**
-         * <p>Company address title.</p>
+         * <p>The company address title.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx company</p>
@@ -166,7 +166,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
 
     public static class UpdateAuditRequestRequestAuditRecordCompanyTel extends TeaModel {
         /**
-         * <p>Company phone number.</p>
+         * <p>The company telephone number.</p>
          * 
          * <strong>example:</strong>
          * <p>07364245xxxx</p>
@@ -175,7 +175,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String companyTelNumber;
 
         /**
-         * <p>Phone number title.</p>
+         * <p>The telephone number title.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -208,7 +208,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
 
     public static class UpdateAuditRequestRequestAuditRecord extends TeaModel {
         /**
-         * <p>Age limit.</p>
+         * <p>The age limit.</p>
          * 
          * <strong>example:</strong>
          * <p>unlimited</p>
@@ -217,7 +217,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String ageLimit;
 
         /**
-         * <p>Application reason.</p>
+         * <p>The reason for the application.</p>
          * 
          * <strong>example:</strong>
          * <p>reason</p>
@@ -226,7 +226,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String applyReason;
 
         /**
-         * <p>Business account name.</p>
+         * <p>The business account name.</p>
          * 
          * <strong>example:</strong>
          * <p>testaccount</p>
@@ -235,7 +235,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String businessAccountName;
 
         /**
-         * <p>Business license registration number.</p>
+         * <p>The business license registration number.</p>
          * 
          * <strong>example:</strong>
          * <p>9211515**345</p>
@@ -244,13 +244,13 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String businessLicenseRegistrationNumber;
 
         /**
-         * <p>Company addresses.</p>
+         * <p>The company address.</p>
          */
         @NameInMap("CompanyAddress")
         public java.util.List<UpdateAuditRequestRequestAuditRecordCompanyAddress> companyAddress;
 
         /**
-         * <p>Company English name.</p>
+         * <p>The English name of the company.</p>
          * 
          * <strong>example:</strong>
          * <p>baidu</p>
@@ -259,7 +259,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String companyEnglishName;
 
         /**
-         * <p>Company legal name.</p>
+         * <p>The legal name of the company.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -268,7 +268,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String companyLegalName;
 
         /**
-         * <p>Company legal person name.</p>
+         * <p>The name of the legal representative of the company.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -277,7 +277,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String companyLegalPerson;
 
         /**
-         * <p>Company profile.</p>
+         * <p>The company profile.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -286,7 +286,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String companyProfile;
 
         /**
-         * <p>Company registered country or region.</p>
+         * <p>The country or region where the company is registered.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -295,13 +295,13 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String companyRegisteredCountry;
 
         /**
-         * <p>Company phone numbers.</p>
+         * <p>The company telephone number.</p>
          */
         @NameInMap("CompanyTel")
         public java.util.List<UpdateAuditRequestRequestAuditRecordCompanyTel> companyTel;
 
         /**
-         * <p>Complete address of headquarters.</p>
+         * <p>The complete address of the headquarters.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxstreet</p>
@@ -310,7 +310,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String completeAddressOfHeadquarters;
 
         /**
-         * <p>Contact mailbox.</p>
+         * <p>The email address of the contact.</p>
          * 
          * <strong>example:</strong>
          * <p>5**<a href="mailto:8585@gmail.com">8585@gmail.com</a></p>
@@ -319,7 +319,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String contactEmail;
 
         /**
-         * <p>Contact mailbox.</p>
+         * <p>The contact email address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:xxxx@gamil.com">xxxx@gamil.com</a></p>
@@ -328,7 +328,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String contactMail;
 
         /**
-         * <p>Contact name.</p>
+         * <p>The name of the contact.</p>
          * 
          * <strong>example:</strong>
          * <p>mary</p>
@@ -337,7 +337,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String contactName;
 
         /**
-         * <p>Contact phone number.</p>
+         * <p>The phone number of the contact.</p>
          * 
          * <strong>example:</strong>
          * <p>861515115***</p>
@@ -346,7 +346,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String contactPhone;
 
         /**
-         * <p>Contact position.</p>
+         * <p>The position of the contact.</p>
          * 
          * <strong>example:</strong>
          * <p>job</p>
@@ -355,7 +355,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String contactPosition;
 
         /**
-         * <p>Enable auto-reply (this field is deprecated).</p>
+         * <p>Specifies whether to enable auto-reply. This field is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>N/A‌</p>
@@ -364,7 +364,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String enableAutoReply;
 
         /**
-         * <p>Industry description.</p>
+         * <p>The industry description.</p>
          * 
          * <strong>example:</strong>
          * <p>description</p>
@@ -373,7 +373,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String industryDescription;
 
         /**
-         * <p>Industry involved.</p>
+         * <p>The industry to which the company belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>telecommunicationsAndIT</p>
@@ -382,7 +382,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String industryInvolved;
 
         /**
-         * <p>Letter of guarantee (download address).</p>
+         * <p>The letter of guarantee (download URL).</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxx.xxx.xxx">https://xxx.xxx.xxx</a></p>
@@ -391,25 +391,25 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String letterGuarantee;
 
         /**
-         * <p>Logo</p>
+         * <p>logo</p>
          */
         @NameInMap("Logo")
         public java.util.List<String> logo;
 
         /**
-         * <p>Local destination countries or regions.</p>
+         * <p>The local destination countries or regions.</p>
          */
         @NameInMap("MessageDestinationCountry")
         public java.util.List<String> messageDestinationCountry;
 
         /**
-         * <p>International destination countries and regions.</p>
+         * <p>The international destination countries and regions.</p>
          */
         @NameInMap("MessageDestinationInternationalCountry")
         public java.util.List<String> messageDestinationInternationalCountry;
 
         /**
-         * <p>Commercial message dialogue introduction.</p>
+         * <p>The introduction to the business message dialogue.</p>
          * 
          * <strong>example:</strong>
          * <p>hello!</p>
@@ -418,7 +418,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String messageDialogueIntroduction;
 
         /**
-         * <p>Commercial message enable date (GMT).</p>
+         * <p>The date on which business messaging is enabled (GMT time zone).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-11-07</p>
@@ -427,7 +427,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String messageEnableDate;
 
         /**
-         * <p>Commercial message dialogue name.</p>
+         * <p>The business message session name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -436,7 +436,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String messageSessionName;
 
         /**
-         * <p>Supplementary material address.</p>
+         * <p>The URL of the supplementary document.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxx.xxx.com">https://xxx.xxx.com</a></p>
@@ -445,7 +445,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String otherLetterGuarantee;
 
         /**
-         * <p>Recovery date.</p>
+         * <p>The recovery date, in YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-11-07</p>
@@ -454,7 +454,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String recoveryDate;
 
         /**
-         * <p>Reply content (deprecated).</p>
+         * <p>The reply content. This field is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>N/A</p>
@@ -463,7 +463,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String replyContent;
 
         /**
-         * <p>Deprecated.</p>
+         * <p>This field is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>N/A</p>
@@ -472,7 +472,7 @@ public class UpdateAuditRequestRequest extends TeaModel {
         public String suspensionDate;
 
         /**
-         * <p>Company website.</p>
+         * <p>The company web address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.xxx.xxx.com">https://www.xxx.xxx.com</a></p>

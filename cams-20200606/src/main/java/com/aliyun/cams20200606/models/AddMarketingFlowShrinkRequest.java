@@ -8,17 +8,17 @@ public class AddMarketingFlowShrinkRequest extends TeaModel {
      * <p>The description of the campaign.</p>
      * 
      * <strong>example:</strong>
-     * <p>Example value example value.</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("ActivityDesc")
     public String activityDesc;
 
     /**
-     * <p>The name of the node instance.</p>
+     * <p>The name of the node task instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Example value example value.</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("ActivityName")
     public String activityName;
@@ -27,7 +27,7 @@ public class AddMarketingFlowShrinkRequest extends TeaModel {
      * <p>The business code.</p>
      * 
      * <strong>example:</strong>
-     * <p>Example value.</p>
+     * <p>示例值</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
@@ -45,16 +45,16 @@ public class AddMarketingFlowShrinkRequest extends TeaModel {
      * <p>The cron expression.</p>
      * 
      * <strong>example:</strong>
-     * <p>Example value example value example value.</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("CronExpression")
     public String cronExpression;
 
     /**
-     * <p>The end time.</p>
+     * <p>The end time in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
-     * <p>Example value example value example value.</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("EndDate")
     public String endDate;
@@ -68,7 +68,7 @@ public class AddMarketingFlowShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Example value.</p>
+     * <p>示例值</p>
      */
     @NameInMap("ExecutionType")
     public String executionType;
@@ -80,7 +80,7 @@ public class AddMarketingFlowShrinkRequest extends TeaModel {
      * <p>The parameter flag.</p>
      * 
      * <strong>example:</strong>
-     * <p>Example value.</p>
+     * <p>示例值</p>
      */
     @NameInMap("ParamFlag")
     public String paramFlag;
@@ -98,7 +98,7 @@ public class AddMarketingFlowShrinkRequest extends TeaModel {
      * <p>The code of the associated flow.</p>
      * 
      * <strong>example:</strong>
-     * <p>Example value.</p>
+     * <p>示例值</p>
      */
     @NameInMap("RelatedFlowCode")
     public String relatedFlowCode;
@@ -107,7 +107,7 @@ public class AddMarketingFlowShrinkRequest extends TeaModel {
      * <p>The name of the associated flow.</p>
      * 
      * <strong>example:</strong>
-     * <p>Example value.</p>
+     * <p>示例值</p>
      */
     @NameInMap("RelatedFlowName")
     public String relatedFlowName;
@@ -128,10 +128,10 @@ public class AddMarketingFlowShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start time.</p>
+     * <p>The start time in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
-     * <p>Example value.</p>
+     * <p>示例值</p>
      */
     @NameInMap("StartDate")
     public String startDate;

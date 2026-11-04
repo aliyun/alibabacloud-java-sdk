@@ -23,7 +23,7 @@ public class GetDownloadExcelListShrinkRequest extends TeaModel {
     public String bizExtendShrink;
 
     /**
-     * <p>The query conditions.</p>
+     * <p>The query condition.</p>
      * 
      * <strong>example:</strong>
      * <p>aa</p>
@@ -32,13 +32,13 @@ public class GetDownloadExcelListShrinkRequest extends TeaModel {
     public String condition;
 
     /**
-     * <p>The country names.</p>
+     * <p>The country name.</p>
      */
     @NameInMap("CountryNames")
     public String countryNamesShrink;
 
     /**
-     * <p>The end time.</p>
+     * <p>The end date. Format: YYYY-MM-DD.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-12-01</p>
@@ -56,7 +56,7 @@ public class GetDownloadExcelListShrinkRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The contact group IDs.</p>
+     * <p>The contact group ID.</p>
      */
     @NameInMap("GroupIds")
     public String groupIdsShrink;
@@ -71,7 +71,7 @@ public class GetDownloadExcelListShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start time.</p>
+     * <p>The start date. Format: YYYY-MM-DD.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-11-01</p>

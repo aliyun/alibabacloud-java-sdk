@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateChatFlowResponseBody extends TeaModel {
     /**
-     * <p>The access denied details.</p>
+     * <p>The access denial details.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -38,7 +38,7 @@ public class CreateChatFlowResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
@@ -53,7 +53,7 @@ public class CreateChatFlowResponseBody extends TeaModel {
     public java.util.Map<String, ?> response;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
      * <li><p>true: Successful.</p>
      * </li>

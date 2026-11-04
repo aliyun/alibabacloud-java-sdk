@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMessengerSubscriptionTokenRequest extends TeaModel {
     /**
-     * <p>The space ID of the ISV sub-customer or the instance ID. View the ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
+     * <p>The SpaceId or instance ID of the ISV sub-customer, which is the channel ID. You can view it on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListMessengerSubscriptionTokenRequest extends TeaModel {
     public String customAudienceId;
 
     /**
-     * <p>The number of entries to return. Valid values: 1 to 1000.</p>
+     * <p>The number of items to query. Valid values: 1 to 1000.</p>
      * 
      * <strong>example:</strong>
      * <p>67</p>
@@ -36,7 +36,7 @@ public class ListMessengerSubscriptionTokenRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page ID for Messenger.</p>
+     * <p>The page ID of Messenger.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

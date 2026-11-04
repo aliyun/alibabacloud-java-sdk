@@ -23,7 +23,7 @@ public class FlowUnbindPhoneShrinkRequest extends TeaModel {
     public String channelType;
 
     /**
-     * <p>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page.</p>
+     * <p>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class FlowUnbindPhoneShrinkRequest extends TeaModel {
     public String flowCode;
 
     /**
-     * <p>The flow version. You can view the flow version by going to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page, clicking the flow name, and entering the flow editor canvas page.</p>
+     * <p>The flow version. You can click the flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas page of the flow editor and view the flow version.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,7 +45,7 @@ public class FlowUnbindPhoneShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The list of phone numbers, PageIds, AccountIds,&lt;props=&quot;intl&quot;&gt; or ServiceIds under the channel instance.</p>
+     * <p>The list of phone numbers, PageIds, AccountIds&lt;props=&quot;intl&quot;&gt;, and ServiceIds under the channel instance.</p>
      */
     @NameInMap("PhoneNumbers")
     public String phoneNumbersShrink;

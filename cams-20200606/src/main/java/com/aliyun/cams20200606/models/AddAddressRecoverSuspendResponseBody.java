@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddAddressRecoverSuspendResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -32,7 +32,7 @@ public class AddAddressRecoverSuspendResponseBody extends TeaModel {
     public java.util.Map<String, ?> data;
 
     /**
-     * <p>The returned message. A success message is returned if the request succeeds. A failure reason is returned if the request fails.</p>
+     * <p>The returned message. If the request succeeds, a success message is returned. If the request fails, the failure reason is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
@@ -50,11 +50,7 @@ public class AddAddressRecoverSuspendResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
-     * <ul>
-     * <li>true: Successful.</li>
-     * <li>false: Failed.</li>
-     * </ul>
+     * <p>Indicates whether the operation was successful. Valid values: true: The operation was successful. false: The operation failed.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

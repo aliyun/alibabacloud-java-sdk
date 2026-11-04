@@ -8,7 +8,7 @@ public class AddGroupResponseBody extends TeaModel {
      * <p>The access denied details.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
@@ -16,7 +16,7 @@ public class AddGroupResponseBody extends TeaModel {
     /**
      * <p>The request status code.</p>
      * <ul>
-     * <li><p>OK indicates that the request was successful.</p>
+     * <li><p>OK: The request succeeded.</p>
      * </li>
      * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
@@ -38,7 +38,7 @@ public class AddGroupResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The prompt message. This parameter has a value when an exception is returned.</p>
+     * <p>The message. This parameter has a value when an exception is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

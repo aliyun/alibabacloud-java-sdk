@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddCustomAudienceUserResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -16,9 +16,9 @@ public class AddCustomAudienceUserResponseBody extends TeaModel {
     /**
      * <p>The request status code.</p>
      * <ul>
-     * <li><p>A value of OK indicates that the request was successful.</p>
+     * <li><p>OK indicates that the request is successful.</p>
      * </li>
-     * <li><p>For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
      * </ul>
      * 
@@ -47,9 +47,9 @@ public class AddCustomAudienceUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The operation was successful.</p>
+     * <li><p>true: The operation is successful.</p>
      * </li>
      * <li><p>false: The operation failed.</p>
      * </li>

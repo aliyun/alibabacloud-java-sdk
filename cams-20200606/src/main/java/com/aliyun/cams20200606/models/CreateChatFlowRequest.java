@@ -26,7 +26,7 @@ public class CreateChatFlowRequest extends TeaModel {
      * <p>The source flowCode for creation.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("CreateFromFlowCode")
     public String createFromFlowCode;
@@ -35,13 +35,13 @@ public class CreateChatFlowRequest extends TeaModel {
      * <p>The source flowVersion for creation.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>Sample value sample value sample value</p>
      */
     @NameInMap("CreateFromFlowVersion")
     public String createFromFlowVersion;
 
     /**
-     * <p>The flow trigger type. Valid values:</p>
+     * <p>The trigger type of the flow. Valid values:</p>
      * <ul>
      * <li>TriggeredManually</li>
      * <li>TriggeredByWhatsApp</li>
@@ -60,16 +60,23 @@ public class CreateChatFlowRequest extends TeaModel {
      * <p>The lifecycle extension input parameters.</p>
      */
     @NameInMap("LifeCycleExtendData")
+    @Deprecated
     public java.util.Map<String, String> lifeCycleExtendData;
+
+    /**
+     * <p>The lifecycle extension input parameters.</p>
+     */
+    @NameInMap("LifeCycleExtendDataV2")
+    public java.util.Map<String, ?> lifeCycleExtendDataV2;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
-     * <p>The flow remarks.</p>
+     * <p>The remarks for the flow.</p>
      * 
      * <strong>example:</strong>
-     * <p>Send verification template triggered by API</p>
+     * <p>Trigger verification template delivery via API</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -81,10 +88,10 @@ public class CreateChatFlowRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The flow title.</p>
+     * <p>The title of the flow.</p>
      * 
      * <strong>example:</strong>
-     * <p>WhatsApp auto-reply</p>
+     * <p>WhatsApp Auto-Reply</p>
      */
     @NameInMap("Title")
     public String title;
@@ -134,12 +141,21 @@ public class CreateChatFlowRequest extends TeaModel {
         return this.flowTriggerType;
     }
 
+    @Deprecated
     public CreateChatFlowRequest setLifeCycleExtendData(java.util.Map<String, String> lifeCycleExtendData) {
         this.lifeCycleExtendData = lifeCycleExtendData;
         return this;
     }
     public java.util.Map<String, String> getLifeCycleExtendData() {
         return this.lifeCycleExtendData;
+    }
+
+    public CreateChatFlowRequest setLifeCycleExtendDataV2(java.util.Map<String, ?> lifeCycleExtendDataV2) {
+        this.lifeCycleExtendDataV2 = lifeCycleExtendDataV2;
+        return this;
+    }
+    public java.util.Map<String, ?> getLifeCycleExtendDataV2() {
+        return this.lifeCycleExtendDataV2;
     }
 
     public CreateChatFlowRequest setOwnerId(Long ownerId) {

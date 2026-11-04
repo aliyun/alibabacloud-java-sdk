@@ -14,10 +14,10 @@ public class UpdateMarketingFLowShrinkRequest extends TeaModel {
     public String activityCode;
 
     /**
-     * <p>The campaign description.</p>
+     * <p>The description of the campaign.</p>
      * 
      * <strong>example:</strong>
-     * <p>活动描述</p>
+     * <p>Campaign description</p>
      */
     @NameInMap("ActivityDesc")
     public String activityDesc;
@@ -32,7 +32,7 @@ public class UpdateMarketingFLowShrinkRequest extends TeaModel {
     public String activityId;
 
     /**
-     * <p>The campaign name.</p>
+     * <p>The name of the campaign.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -41,13 +41,13 @@ public class UpdateMarketingFLowShrinkRequest extends TeaModel {
     public String activityName;
 
     /**
-     * <p>The cron expression for timed scheduling.</p>
+     * <p>The cron expression for periodic scheduling.</p>
      */
     @NameInMap("CronExpression")
     public String cronExpression;
 
     /**
-     * <p>The end time.</p>
+     * <p>The end time in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-11-26 09:59:00</p>
@@ -69,16 +69,16 @@ public class UpdateMarketingFLowShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to use custom pass-through parameters.</p>
+     * <p>Specifies whether to pass custom parameters.</p>
      * 
      * <strong>example:</strong>
-     * <p>Y:传入自定义参数 N:不传参数</p>
+     * <p>Y: Pass custom parameters. N: Do not pass parameters</p>
      */
     @NameInMap("ParamFlag")
     public String paramFlag;
 
     /**
-     * <p>The custom pass-through parameters.</p>
+     * <p>The custom parameters to pass.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;testEmail&quot;:&quot;wy****<a href="mailto:999@alibaba-inc.com">999@alibaba-inc.com</a>&quot;}</p>
@@ -120,7 +120,7 @@ public class UpdateMarketingFLowShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start time.</p>
+     * <p>The start time in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-11-25 09:59:00</p>

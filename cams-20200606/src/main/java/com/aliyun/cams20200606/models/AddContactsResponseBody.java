@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddContactsResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The access denial details.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -17,7 +17,7 @@ public class AddContactsResponseBody extends TeaModel {
      * <p>The status code.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("Code")
     public String code;
@@ -35,7 +35,7 @@ public class AddContactsResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("Message")
     public String message;
@@ -44,13 +44,13 @@ public class AddContactsResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: The call was successful.</li>
      * <li><strong>false</strong>: The call failed.</li>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDmTagResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The access denial details.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,9 +14,9 @@ public class ListDmTagResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The response status code.</p>
+     * <p>The request status code.</p>
      * <ul>
-     * <li><p>OK indicates that the request was successful.</p>
+     * <li><p>A value of OK indicates that the request succeeded.</p>
      * </li>
      * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>

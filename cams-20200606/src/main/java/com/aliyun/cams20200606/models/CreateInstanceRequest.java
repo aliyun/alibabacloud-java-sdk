@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The channel type.</p>
+     * <blockquote>
+     * <p>Notice: The Singapore site supports all channels, and the Germany site currently supports only WhatsApp.</notice></p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +36,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String countryId;
 
     /**
-     * <p>The ID of the Facebook Business Manager (BM).</p>
+     * <p>FacebookBmId</p>
      * 
      * <strong>example:</strong>
      * <p>393992929</p>
@@ -42,7 +45,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String facebookBmId;
 
     /**
-     * <p>The description of the instance.</p>
+     * <p>The instance description.</p>
      * 
      * <strong>example:</strong>
      * <p>ins</p>
@@ -51,7 +54,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceDescription;
 
     /**
-     * <p>The name of the instance.</p>
+     * <p>The instance name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +64,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>Specifies whether to confirm the audit.</p>
+     * <p>Specifies whether the audit is confirmed.</p>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -70,7 +73,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String isConfirmAudit;
 
     /**
-     * <p>The URL of the ISV terms file.</p>
+     * <p>The name of the ISV/client agreement file.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://a.com/1.pdf">https://a.com/1.pdf</a></p>
@@ -79,7 +82,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String isvTerms;
 
     /**
-     * <p>The office address of the business.</p>
+     * <p>The enterprise address.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -88,7 +91,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String officeAddress;
 
     /**
-     * <p>The ID of the resource group that contains the instance.</p>
+     * <p>The ID of the resource group to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>

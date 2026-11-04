@@ -14,7 +14,7 @@ public class QueryChatappBindWabaRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The ISV verification code, used to verify that the sub-account is authorized.</p>
+     * <p>The ISV verification code, used to verify whether the sub-account is authorized by the ISV.</p>
      * 
      * <strong>example:</strong>
      * <p>aksik93kdkkxmwol9****</p>

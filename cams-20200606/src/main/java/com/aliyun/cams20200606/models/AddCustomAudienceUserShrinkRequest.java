@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddCustomAudienceUserShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the Meta ad account.</p>
+     * <p>The Meta ad account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AddCustomAudienceUserShrinkRequest extends TeaModel {
     public String adAccountId;
 
     /**
-     * <p>Indicates whether this is the last batch of data.</p>
+     * <p>The last batch flag.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -24,7 +24,10 @@ public class AddCustomAudienceUserShrinkRequest extends TeaModel {
     public Boolean batchLastFlag;
 
     /**
-     * <p>The space ID of the Independent Software Vendor (ISV) sub-customer or the instance ID of a direct customer.</p>
+     * <p>The SpaceId of the ISV sub-customer.</p>
+     * <ul>
+     * <li>The instance ID of the direct customer.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +37,7 @@ public class AddCustomAudienceUserShrinkRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The ID of the custom audience.</p>
+     * <p>The custom audience ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +47,7 @@ public class AddCustomAudienceUserShrinkRequest extends TeaModel {
     public String customAudienceId;
 
     /**
-     * <p>The estimated total number of users.</p>
+     * <p>The estimated phone number data.</p>
      * 
      * <strong>example:</strong>
      * <p>26</p>
@@ -56,7 +59,7 @@ public class AddCustomAudienceUserShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The Page ID for Messenger.</p>
+     * <p>The Page ID of Messenger.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +75,7 @@ public class AddCustomAudienceUserShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>A list of users.</p>
+     * <p>The list of users.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Users")

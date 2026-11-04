@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryChatappBindWabaResponseBody extends TeaModel {
     /**
-     * <p>The access denial details.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -16,7 +16,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
     /**
      * <p>The request status code.</p>
      * <ul>
-     * <li><p>A value of <code>OK</code> indicates the request was successful.</p>
+     * <li><p>A return value of OK indicates that the request was successful.</p>
      * </li>
      * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
@@ -53,12 +53,10 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The request was successful.</p>
-     * </li>
-     * <li><p><code>false</code>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The call succeeded.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,16 +120,12 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
 
     public static class QueryChatappBindWabaResponseBodyData extends TeaModel {
         /**
-         * <p>The account review status. Valid values:</p>
+         * <p>The review status of the WABA. Valid values:</p>
          * <ul>
-         * <li><p><code>PENDING</code>: The account is under review.</p>
-         * </li>
-         * <li><p><code>APPROVED</code>: The account is approved.</p>
-         * </li>
-         * <li><p><code>REJECTED</code>: The account is rejected.</p>
-         * </li>
-         * <li><p><code>DISABLED</code>: The account is disabled.</p>
-         * </li>
+         * <li>PENDING: Pending review.</li>
+         * <li>APPROVED: Review approved.</li>
+         * <li>REJECTED: Review rejected.</li>
+         * <li>DISABLED: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -141,13 +135,13 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         public String accountReviewStatus;
 
         /**
-         * <p>Details about the WABA account.</p>
+         * <p>The WABA-related information.</p>
          */
         @NameInMap("AuthInternationalRateEligibility")
         public java.util.Map<String, ?> authInternationalRateEligibility;
 
         /**
-         * <p>The Business platform ID.</p>
+         * <p>The ID of the Business platform.</p>
          * 
          * <strong>example:</strong>
          * <p>19293988***</p>
@@ -156,7 +150,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         public String businessId;
 
         /**
-         * <p>The Business platform name.</p>
+         * <p>The name of the Business platform.</p>
          * 
          * <strong>example:</strong>
          * <p>Alibaba</p>
@@ -183,6 +177,8 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Indicates whether the phone number is in use in the WhatsApp Business app.</p>
+         * 
          * <strong>example:</strong>
          * <p>N</p>
          */
@@ -217,7 +213,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The international rate capability qualification.</p>
+         * <p>The international rate eligibility.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;start_time&quot;:1721952000</p>

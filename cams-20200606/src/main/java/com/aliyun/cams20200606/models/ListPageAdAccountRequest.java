@@ -18,7 +18,7 @@ public class ListPageAdAccountRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The PageId of Messenger.</p>
+     * <p>The Page ID of Messenger.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

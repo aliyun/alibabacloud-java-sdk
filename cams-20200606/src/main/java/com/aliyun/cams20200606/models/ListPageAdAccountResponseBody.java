@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListPageAdAccountResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
@@ -16,9 +16,9 @@ public class ListPageAdAccountResponseBody extends TeaModel {
     /**
      * <p>The request status code.</p>
      * <ul>
-     * <li><p>OK indicates that the request was successful.</p>
+     * <li><p>A value of OK indicates that the request is successful.</p>
      * </li>
-     * <li><p>For other error codes, refer to <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
      * </ul>
      * 
@@ -53,7 +53,7 @@ public class ListPageAdAccountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
      * <li><p>true: Successful.</p>
      * </li>
@@ -149,7 +149,7 @@ public class ListPageAdAccountResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The PageId of Messenger.</p>
+         * <p>The Page ID of Messenger.</p>
          * 
          * <strong>example:</strong>
          * <p>2030***</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteContactsResponseBody extends TeaModel {
     /**
-     * <p>The details of the permission check failure.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -16,7 +16,7 @@ public class DeleteContactsResponseBody extends TeaModel {
     /**
      * <p>The request status code.</p>
      * <ul>
-     * <li><p>OK indicates that the request was successful.</p>
+     * <li><p>A return value of OK indicates that the request is successful.</p>
      * </li>
      * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
@@ -41,7 +41,7 @@ public class DeleteContactsResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Sample value.</p>
+     * <p>Sample value sample value sample value</p>
      */
     @NameInMap("Message")
     public String message;
@@ -56,10 +56,10 @@ public class DeleteContactsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the call is successful.</p>
      * <ul>
-     * <li><strong>true</strong>: The call was successful.</li>
-     * <li><strong>false</strong>: The call failed.</li>
+     * <li><strong>true</strong>: The call is successful.</li>
+     * <li><strong>false</strong>: The call fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>

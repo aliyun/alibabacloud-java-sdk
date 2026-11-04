@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListChatappTemplateRequest extends TeaModel {
     /**
-     * <p>The review status. Valid values:</p>
+     * <p>The audit status. Valid values:</p>
      * <ul>
      * <li><p><strong>pass</strong>: Approved.</p>
      * </li>
@@ -24,7 +24,7 @@ public class ListChatappTemplateRequest extends TeaModel {
     public String auditStatus;
 
     /**
-     * <p>The category of the template.</p>
+     * <p>The template category.</p>
      * 
      * <strong>example:</strong>
      * <p>AUTHENTICATION</p>
@@ -33,7 +33,7 @@ public class ListChatappTemplateRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The code of the template.</p>
+     * <p>The template code.</p>
      * 
      * <strong>example:</strong>
      * <p>838888822*****</p>
@@ -42,7 +42,7 @@ public class ListChatappTemplateRequest extends TeaModel {
     public String code;
 
     /**
-     * <p>The space ID of the ISV sub-customer, or the instance ID of a direct customer.</p>
+     * <p>The SpaceId of the ISV sub-customer or the instance ID of the direct customer.</p>
      * 
      * <strong>example:</strong>
      * <p>28251486512358****</p>
@@ -53,7 +53,7 @@ public class ListChatappTemplateRequest extends TeaModel {
     /**
      * <p>The WabaId of the ISV customer.</p>
      * <blockquote>
-     * <p>This is a deprecated parameter. Use CustSpaceId instead.</p>
+     * <p>This parameter is deprecated. Use CustSpaceId instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class ListChatappTemplateRequest extends TeaModel {
     public String custWabaId;
 
     /**
-     * <p>The ISV verification code, which is used to verify whether the RAM user is authorized by the ISV.</p>
+     * <p>The ISV verification code, used to verify whether a sub-account is authorized by the ISV.</p>
      * 
      * <strong>example:</strong>
      * <p>skdi3kksloslikdkkdk</p>
@@ -73,7 +73,7 @@ public class ListChatappTemplateRequest extends TeaModel {
     public String isvCode;
 
     /**
-     * <p>The language of the template. For more information about language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+     * <p>The template language. For language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -82,7 +82,7 @@ public class ListChatappTemplateRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The name of the template.</p>
+     * <p>The template name.</p>
      * 
      * <strong>example:</strong>
      * <p>hello_whatsapp</p>
@@ -245,7 +245,7 @@ public class ListChatappTemplateRequest extends TeaModel {
         public Integer index;
 
         /**
-         * <p>The number of templates to query per page. Default value: 10.</p>
+         * <p>The number of templates to return per query. Default value: 10.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

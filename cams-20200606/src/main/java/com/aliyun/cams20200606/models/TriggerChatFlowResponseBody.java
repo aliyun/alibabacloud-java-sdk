@@ -24,6 +24,9 @@ public class TriggerChatFlowResponseBody extends TeaModel {
 
     /**
      * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("Data")
     public java.util.Map<String, ?> data;

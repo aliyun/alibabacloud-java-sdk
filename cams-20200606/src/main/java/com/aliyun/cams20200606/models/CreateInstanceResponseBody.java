@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
     /**
-     * <p>Details of the access denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,7 +14,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code. A value of <code>OK</code> indicates that the request was successful.</p>
+     * <p>The status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,13 +23,13 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data object.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public CreateInstanceResponseBodyData data;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>NULL</p>
@@ -38,7 +38,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2992939*****</p>
@@ -47,7 +47,11 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. A value of <code>true</code> indicates success and <code>false</code> indicates failure.</p>
+     * <p>Specifies whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -119,7 +123,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         public String channelType;
 
         /**
-         * <p>The description of the instance.</p>
+         * <p>The instance description.</p>
          * 
          * <strong>example:</strong>
          * <p>des</p>
@@ -128,7 +132,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         public String instanceDescription;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2999292</p>
@@ -137,7 +141,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>ins</p>
@@ -146,7 +150,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         public Long instanceName;
 
         /**
-         * <p>The ID of the region where the resource is located.</p>
+         * <p>The region to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -155,7 +159,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         public String resourceRegionId;
 
         /**
-         * <p>The time when the request was submitted.</p>
+         * <p>The submission time.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>

@@ -9,17 +9,17 @@ public class BindDmAccountShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("AccountCode")
     public String accountCode;
 
     /**
-     * <p>The SpaceId of the ISV sub-customer.</p>
+     * <p>The space ID of the ISV sub-customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;

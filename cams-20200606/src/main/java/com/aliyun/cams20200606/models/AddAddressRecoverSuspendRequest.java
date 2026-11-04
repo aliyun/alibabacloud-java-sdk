@@ -92,7 +92,7 @@ public class AddAddressRecoverSuspendRequest extends TeaModel {
 
     public static class AddAddressRecoverSuspendRequestAuditRecord extends TeaModel {
         /**
-         * <p>The reason for the application.</p>
+         * <p>The reason for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>示例值示例值示例值</p>
@@ -113,7 +113,7 @@ public class AddAddressRecoverSuspendRequest extends TeaModel {
         public java.util.List<String> messageDestinationInternationalCountry;
 
         /**
-         * <p>The recovery date.</p>
+         * <p>The recovery date in YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>示例值示例值</p>
@@ -122,7 +122,7 @@ public class AddAddressRecoverSuspendRequest extends TeaModel {
         public String recoveryDate;
 
         /**
-         * <p>The suspension date.</p>
+         * <p>The suspension date in YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>示例值示例值</p>

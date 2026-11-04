@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListChatappMessageResponseBody extends TeaModel {
     /**
-     * <p>The access denied details.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,7 +14,7 @@ public class ListChatappMessageResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code.</p>
+     * <p>The request status code.</p>
      * <ul>
      * <li><p>OK: The request was successful.</p>
      * </li>
@@ -138,7 +138,7 @@ public class ListChatappMessageResponseBody extends TeaModel {
         public String channelType;
 
         /**
-         * <p>The name of the message receiving status.</p>
+         * <p>The name of the message acceptance status.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -174,7 +174,7 @@ public class ListChatappMessageResponseBody extends TeaModel {
         public String conversationId;
 
         /**
-         * <p>The inbound or outbound message type.</p>
+         * <p>The upstream or downstream message type.</p>
          * 
          * <strong>example:</strong>
          * <p>DOWN</p>
@@ -183,11 +183,11 @@ public class ListChatappMessageResponseBody extends TeaModel {
         public String eventAction;
 
         /**
-         * <p>The name of the inbound or outbound message type. Valid values:</p>
+         * <p>The name of the upstream or downstream message type. Valid values:</p>
          * <ul>
-         * <li><p>DOWN: outbound message.</p>
+         * <li><p>DOWN: downstream message.</p>
          * </li>
-         * <li><p>UP: inbound message.</p>
+         * <li><p>UP: upstream message.</p>
          * </li>
          * </ul>
          * 
@@ -312,7 +312,7 @@ public class ListChatappMessageResponseBody extends TeaModel {
         public String month;
 
         /**
-         * <p>The sending time.</p>
+         * <p>The sending time in ISO 8601 format with a time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-11T01:16:49.761+00:00</p>

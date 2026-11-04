@@ -16,7 +16,7 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
     /**
      * <p>The WabaId of the ISV customer.</p>
      * <blockquote>
-     * <p>Deprecated parameter. Use CustSpaceId instead.</p>
+     * <p><strong>[Deprecated]</strong> Use CustSpaceId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
     public String custWabaId;
 
     /**
-     * <p>The ISV verification code, which is used to verify whether the sub-account is authorized by the ISV.</p>
+     * <p>The ISV verification code used to verify whether the RAM user is authorized by the ISV.</p>
      * 
      * <strong>example:</strong>
      * <p>skdi3kksloslikdkkdk</p>
@@ -37,7 +37,7 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
     public String isvCode;
 
     /**
-     * <p>The language of the template. For detailed language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+     * <p>The template language. For more information about language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The code of the template.</p>
+     * <p>The template code.</p>
      * 
      * <strong>example:</strong>
      * <p>****4b5c79c9432497a075bdfca36bf5</p>
@@ -56,7 +56,7 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
     public String templateCode;
 
     /**
-     * <p>The name of the template.</p>
+     * <p>The template name.</p>
      * 
      * <strong>example:</strong>
      * <p>test_name</p>
@@ -72,6 +72,7 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
      * <li><p><strong>VIBER</strong></p>
      * </li>
      * </ul>
+     * <p>Default value: WHATSAPP.</p>
      * 
      * <strong>example:</strong>
      * <p>WHATSAPP</p>

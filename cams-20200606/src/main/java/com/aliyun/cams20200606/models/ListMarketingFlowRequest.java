@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMarketingFlowRequest extends TeaModel {
     /**
-     * <p>The campaign code. You can use the system code or modify it to use a custom code.</p>
+     * <p>The campaign code. You can use the system-generated code or modify it to use a custom code.</p>
      * 
      * <strong>example:</strong>
      * <p>rewrwerw</p>

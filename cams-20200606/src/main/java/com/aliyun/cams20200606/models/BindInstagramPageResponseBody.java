@@ -8,7 +8,7 @@ public class BindInstagramPageResponseBody extends TeaModel {
      * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
@@ -47,7 +47,7 @@ public class BindInstagramPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful.</p>
      * <ul>
      * <li><strong>true</strong>: The call was successful.</li>
      * <li><strong>false</strong>: The call failed.</li>
@@ -132,7 +132,7 @@ public class BindInstagramPageResponseBody extends TeaModel {
         public String connectionStatus;
 
         /**
-         * <p>The current page ID.</p>
+         * <p>The current page.</p>
          * 
          * <strong>example:</strong>
          * <p>1234322333</p>

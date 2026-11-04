@@ -14,7 +14,7 @@ public class DeleteContactsRequest extends TeaModel {
     public String bizCode;
 
     /**
-     * <p>The business extension information. Default value: an empty collection.</p>
+     * <p>The extended business information. Default value: an empty set.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     /**
-     * <p>The templatetype cannot be modified.</p>
+     * <p>The template category for Viber templates. This parameter is invalid for WhatsApp templates.</p>
      * 
      * <strong>example:</strong>
-     * <p>text</p>
+     * <p>MARKETING</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
-     * <p>When a Utility template is changed to Marketing type, the template is paused for sending.</p>
+     * <p>Specifies whether to pause sending the template when its category is changed from Utility to Marketing.</p>
      * 
      * <strong>example:</strong>
-     * <p>120</p>
+     * <p>true</p>
      */
     @NameInMap("CategoryChangePaused")
     public Boolean categoryChangePaused;
@@ -25,7 +25,7 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     /**
      * <p>The list of message template components.</p>
      * <blockquote>
-     * <p>When Category is AUTHENTICATION, Components cannot contain a node with Type set to HEADER. When Type is BODY/FOOTER, the Text content is empty and is automatically generated.</p>
+     * <p>When Category is AUTHENTICATION, Components cannot contain nodes with Type set to HEADER. When Type is BODY or FOOTER, if Text is empty, the content is automatically generated.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -33,44 +33,41 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     public String componentsShrink;
 
     /**
-     * <p>The SpaceId of the ISV sub-customer or the instance ID of the direct customer.</p>
+     * <p>The Space ID of the ISV sub-customer or the instance ID of the direct customer.</p>
      * 
      * <strong>example:</strong>
-     * <p>28251486512358****</p>
+     * <p>cams-did***</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>The ISV customer WabaId.</p>
-     * <blockquote>
-     * <p>This parameter is deprecated. Use CustSpaceId instead.</p>
-     * </blockquote>
+     * <p>The WABA ID of the ISV customer. This parameter is deprecated. Use CustSpaceId instead.</p>
      * 
      * <strong>example:</strong>
-     * <p>65921621816****</p>
+     * <p>939***</p>
      */
     @NameInMap("CustWabaId")
     public String custWabaId;
 
     /**
-     * <p>The example for creating a template.</p>
+     * <p>The variables in a key-value structure.</p>
      */
     @NameInMap("Example")
     public String exampleShrink;
 
     /**
-     * <p>The ISV verification code used to verify whether the sub-account is authorized by the ISV.</p>
+     * <p>The ISV verification code, which is used to verify whether the RAM user is authorized by the ISV.</p>
      * 
      * <strong>example:</strong>
-     * <p>ksiekdki39ksks93939</p>
+     * <p>9393***</p>
      */
     @NameInMap("IsvCode")
     @Deprecated
     public String isvCode;
 
     /**
-     * <p>The template language. For language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+     * <p>The language.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,11 +77,7 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The validity period for sending template messages in WhatsApp.</p>
-     * <ul>
-     * <li>AUTHENTICATION: valid values range from 30 to 900. </li>
-     * <li>UTILITY: valid values range from 30 to 43200.</li>
-     * </ul>
+     * <p>The validity period for sending WhatsApp authentication template messages.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -105,7 +98,7 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
      * <p>The message template code.</p>
      * 
      * <strong>example:</strong>
-     * <p>8472929283883</p>
+     * <p>93938**</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;
@@ -120,10 +113,7 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The templatetype.</p>
-     * <ul>
-     * <li><strong>WHATSAPP</strong></li>
-     * </ul>
+     * <p>The templatetype to modify. Valid values: WHATSAPP and VIBER. Default value: WHATSAPP.</p>
      * 
      * <strong>example:</strong>
      * <p>WHATSAPP</p>

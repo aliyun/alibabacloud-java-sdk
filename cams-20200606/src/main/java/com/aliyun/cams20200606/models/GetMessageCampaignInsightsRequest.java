@@ -15,7 +15,7 @@ public class GetMessageCampaignInsightsRequest extends TeaModel {
     public String adAccountId;
 
     /**
-     * <p>The ID of the campaign.</p>
+     * <p>The budget ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetMessageCampaignInsightsRequest extends TeaModel {
     public String campaignId;
 
     /**
-     * <p>The Space ID of the Independent Software Vendor (ISV) sub-customer or the instance ID of the direct customers. This is the channel ID. You can find the channel ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
+     * <p>The space ID or instance ID of the ISV sub-customer. This is the channel ID, which can be viewed on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class GetMessageCampaignInsightsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The Page ID.</p>
+     * <p>The page number to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

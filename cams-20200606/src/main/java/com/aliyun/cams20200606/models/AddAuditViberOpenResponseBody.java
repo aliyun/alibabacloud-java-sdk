@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddAuditViberOpenResponseBody extends TeaModel {
     /**
-     * <p>Detailed information about the access denial.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,11 +14,11 @@ public class AddAuditViberOpenResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The response status code.</p>
+     * <p>The request status code.</p>
      * <ul>
-     * <li><p><code>OK</code>: The request succeeded.</p>
+     * <li><p>OK indicates that the request was successful.</p>
      * </li>
-     * <li><p>For other values, see <a href="https://help.aliyun.com/document_detail/196974.html">Error Codes</a>.</p>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
      * </ul>
      * 
@@ -29,7 +29,7 @@ public class AddAuditViberOpenResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>122</p>
@@ -38,7 +38,7 @@ public class AddAuditViberOpenResponseBody extends TeaModel {
     public java.util.Map<String, ?> data;
 
     /**
-     * <p>A message describing the result of the request.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -47,7 +47,7 @@ public class AddAuditViberOpenResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2121-112</p>
@@ -56,12 +56,10 @@ public class AddAuditViberOpenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the request succeeded.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request succeeded.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

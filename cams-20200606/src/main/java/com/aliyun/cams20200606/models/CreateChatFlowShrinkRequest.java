@@ -26,7 +26,7 @@ public class CreateChatFlowShrinkRequest extends TeaModel {
      * <p>The source flowCode for creation.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("CreateFromFlowCode")
     public String createFromFlowCode;
@@ -35,13 +35,13 @@ public class CreateChatFlowShrinkRequest extends TeaModel {
      * <p>The source flowVersion for creation.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>Sample value sample value sample value</p>
      */
     @NameInMap("CreateFromFlowVersion")
     public String createFromFlowVersion;
 
     /**
-     * <p>The flow trigger type. Valid values:</p>
+     * <p>The trigger type of the flow. Valid values:</p>
      * <ul>
      * <li>TriggeredManually</li>
      * <li>TriggeredByWhatsApp</li>
@@ -60,16 +60,23 @@ public class CreateChatFlowShrinkRequest extends TeaModel {
      * <p>The lifecycle extension input parameters.</p>
      */
     @NameInMap("LifeCycleExtendData")
+    @Deprecated
     public String lifeCycleExtendDataShrink;
+
+    /**
+     * <p>The lifecycle extension input parameters.</p>
+     */
+    @NameInMap("LifeCycleExtendDataV2")
+    public String lifeCycleExtendDataV2Shrink;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
-     * <p>The flow remarks.</p>
+     * <p>The remarks for the flow.</p>
      * 
      * <strong>example:</strong>
-     * <p>Send verification template triggered by API</p>
+     * <p>Trigger verification template delivery via API</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -81,10 +88,10 @@ public class CreateChatFlowShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The flow title.</p>
+     * <p>The title of the flow.</p>
      * 
      * <strong>example:</strong>
-     * <p>WhatsApp auto-reply</p>
+     * <p>WhatsApp Auto-Reply</p>
      */
     @NameInMap("Title")
     public String title;
@@ -134,12 +141,21 @@ public class CreateChatFlowShrinkRequest extends TeaModel {
         return this.flowTriggerType;
     }
 
+    @Deprecated
     public CreateChatFlowShrinkRequest setLifeCycleExtendDataShrink(String lifeCycleExtendDataShrink) {
         this.lifeCycleExtendDataShrink = lifeCycleExtendDataShrink;
         return this;
     }
     public String getLifeCycleExtendDataShrink() {
         return this.lifeCycleExtendDataShrink;
+    }
+
+    public CreateChatFlowShrinkRequest setLifeCycleExtendDataV2Shrink(String lifeCycleExtendDataV2Shrink) {
+        this.lifeCycleExtendDataV2Shrink = lifeCycleExtendDataV2Shrink;
+        return this;
+    }
+    public String getLifeCycleExtendDataV2Shrink() {
+        return this.lifeCycleExtendDataV2Shrink;
     }
 
     public CreateChatFlowShrinkRequest setOwnerId(Long ownerId) {

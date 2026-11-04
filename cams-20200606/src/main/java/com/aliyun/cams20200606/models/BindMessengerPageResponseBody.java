@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindMessengerPageResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The access denial details.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -123,7 +123,7 @@ public class BindMessengerPageResponseBody extends TeaModel {
         public String connectionStatus;
 
         /**
-         * <p>The current page ID.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1654543543543</p>

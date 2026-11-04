@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceRequest extends TeaModel {
+    /**
+     * <p>The binding ID.</p>
+     */
     @NameInMap("BindId")
     public String bindId;
 
@@ -52,6 +55,9 @@ public class ListInstanceRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>Indicates whether the instance is bound.</p>
+     */
     @NameInMap("IsBind")
     public Boolean isBind;
 
@@ -83,7 +89,7 @@ public class ListInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The submit time.</p>
+     * <p>The submit time in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-12-12 00:00:00</p>

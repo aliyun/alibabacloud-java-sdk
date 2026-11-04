@@ -17,25 +17,25 @@ public class ArchiveChatappTemplateShrinkRequest extends TeaModel {
     /**
      * <p>The channel type. Valid values:</p>
      * <ul>
-     * <li><strong>WHATSAPP</strong>.</li>
+     * <li><strong>WHATSAPP</strong></li>
      * </ul>
      * <blockquote>
-     * <p>Only the WhatsApp channel type is supported.</p>
+     * <p>Currently, only the WhatsApp channel type is supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("ChannelType")
     public String channelType;
 
     /**
-     * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer. You can view the Space ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
+     * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer. You can view the space ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;

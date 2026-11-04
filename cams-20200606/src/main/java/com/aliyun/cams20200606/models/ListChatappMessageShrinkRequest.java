@@ -21,9 +21,9 @@ public class ListChatappMessageShrinkRequest extends TeaModel {
     /**
      * <p>The channel type. Valid values:</p>
      * <ul>
-     * <li><p><strong>whatsapp</strong></p>
+     * <li><p><strong>whatsapp</strong>.</p>
      * </li>
-     * <li><p><strong>viber</strong></p>
+     * <li><p><strong>viber</strong>.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -35,7 +35,7 @@ public class ListChatappMessageShrinkRequest extends TeaModel {
     public String channelType;
 
     /**
-     * <p>The message receiving status of the user.</p>
+     * <p>The message acceptance status of the user.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -54,7 +54,7 @@ public class ListChatappMessageShrinkRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The end time. This value is a UNIX timestamp in milliseconds.</p>
+     * <p>The end time. This value is a UNIX timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1727057232686</p>
@@ -63,6 +63,8 @@ public class ListChatappMessageShrinkRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The end time in the format of YYYY-MM-DD HH:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-30 00:00:00</p>
      */
@@ -72,8 +74,8 @@ public class ListChatappMessageShrinkRequest extends TeaModel {
     /**
      * <p>The message type. Valid values:</p>
      * <ul>
-     * <li>DOWN: outbound message.</li>
-     * <li>UP: inbound message.</li>
+     * <li>DOWN: downstream message.</li>
+     * <li>UP: upstream message.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,7 +85,7 @@ public class ListChatappMessageShrinkRequest extends TeaModel {
     public String eventAction;
 
     /**
-     * <p>The bulk message ID. View the bulk message ID in the <a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Message List</strong> &gt; <strong>Bulk Sending List</strong> console.</p>
+     * <p>The batch message ID. View the batch message ID in the <a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Message List</strong> &gt; <strong>Batch Sending List</strong> console.</p>
      * 
      * <strong>example:</strong>
      * <p>9292****</p>
@@ -117,7 +119,7 @@ public class ListChatappMessageShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start time. This value is a UNIX timestamp in milliseconds.</p>
+     * <p>The start time. This value is a UNIX timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1727057232686</p>
@@ -126,6 +128,8 @@ public class ListChatappMessageShrinkRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>The start time in the format of YYYY-MM-DD HH:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01 00:00:00</p>
      */
@@ -142,7 +146,7 @@ public class ListChatappMessageShrinkRequest extends TeaModel {
     public String templateCode;
 
     /**
-     * <p>The user phone number. This is the phone number that you imported when sending messages in the <a href="https://chatapp.console.aliyun.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Message Sending</strong> console.</p>
+     * <p>The user phone number. This is the user phone number that you imported when sending messages in the <a href="https://chatapp.console.aliyun.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Message Sending</strong> console.</p>
      * 
      * <strong>example:</strong>
      * <p>86138***</p>

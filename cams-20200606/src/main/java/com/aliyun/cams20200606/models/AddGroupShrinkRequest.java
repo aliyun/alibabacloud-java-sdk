@@ -8,7 +8,7 @@ public class AddGroupShrinkRequest extends TeaModel {
      * <p>The business tenant code.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>Sample value sample value sample value</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
@@ -53,7 +53,7 @@ public class AddGroupShrinkRequest extends TeaModel {
      * <p>The email address.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Sample value sample value</p>
      */
     @NameInMap("Email")
     public String email;

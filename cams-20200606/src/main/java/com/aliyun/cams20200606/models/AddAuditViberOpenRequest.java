@@ -20,7 +20,7 @@ public class AddAuditViberOpenRequest extends TeaModel {
     public String auditResult;
 
     /**
-     * <p>The Space ID of the ISV sub-customer.</p>
+     * <p>The SpaceId of the ISV sub-customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class AddAuditViberOpenRequest extends TeaModel {
 
     public static class AddAuditViberOpenRequestAuditRecordCompanyTel extends TeaModel {
         /**
-         * <p>The company phone number.</p>
+         * <p>The company telephone number.</p>
          * 
          * <strong>example:</strong>
          * <p>156********</p>
@@ -156,7 +156,7 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String companyTelNumber;
 
         /**
-         * <p>The title of the company phone number.</p>
+         * <p>The title of the company telephone.</p>
          * 
          * <strong>example:</strong>
          * <p>title</p>
@@ -198,7 +198,7 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String ageLimit;
 
         /**
-         * <p>The name of the business account.</p>
+         * <p>The business account name.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -207,7 +207,7 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String businessAccountName;
 
         /**
-         * <p>The registration number of the business license.</p>
+         * <p>The business license registration number.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -216,7 +216,7 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String businessLicenseRegistrationNumber;
 
         /**
-         * <p>A list of company addresses.</p>
+         * <p>The list of company addresses.</p>
          */
         @NameInMap("CompanyAddress")
         public java.util.List<AddAuditViberOpenRequestAuditRecordCompanyAddress> companyAddress;
@@ -267,7 +267,7 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String companyRegisteredCountry;
 
         /**
-         * <p>A list of company phone number objects.</p>
+         * <p>The list of company telephone objects.</p>
          */
         @NameInMap("CompanyTel")
         public java.util.List<AddAuditViberOpenRequestAuditRecordCompanyTel> companyTel;
@@ -282,7 +282,7 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String completeAddressOfHeadquarters;
 
         /**
-         * <p>The email address of the contact person.</p>
+         * <p>The email address of the contact.</p>
          * 
          * <strong>example:</strong>
          * <p>7151***<a href="mailto:5@qq.com">5@qq.com</a></p>
@@ -300,7 +300,7 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String contactMail;
 
         /**
-         * <p>The name of the contact person.</p>
+         * <p>The name of the contact.</p>
          * 
          * <strong>example:</strong>
          * <p>mary</p>
@@ -309,7 +309,7 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String contactName;
 
         /**
-         * <p>The phone number of the contact person.</p>
+         * <p>The phone number of the contact.</p>
          * 
          * <strong>example:</strong>
          * <p>8615115**777</p>
@@ -318,7 +318,7 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String contactPhone;
 
         /**
-         * <p>The position of the contact person.</p>
+         * <p>The position of the contact.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -336,7 +336,7 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String enableAutoReply;
 
         /**
-         * <p>A description of the industry.</p>
+         * <p>The industry description.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -363,25 +363,25 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String letterGuarantee;
 
         /**
-         * <p>A list of logos.</p>
+         * <p>The list of logos.</p>
          */
         @NameInMap("Logo")
         public java.util.List<String> logo;
 
         /**
-         * <p>A list of destination countries/regions for messages.</p>
+         * <p>The list of message destination countries.</p>
          */
         @NameInMap("MessageDestinationCountry")
         public java.util.List<String> messageDestinationCountry;
 
         /**
-         * <p>A list of destination countries/regions for international messages.</p>
+         * <p>The list of international destination countries for messages.</p>
          */
         @NameInMap("MessageDestinationInternationalCountry")
         public java.util.List<String> messageDestinationInternationalCountry;
 
         /**
-         * <p>The introduction in the message dialog box.</p>
+         * <p>The introduction of the message dialog box.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -390,7 +390,7 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String messageDialogueIntroduction;
 
         /**
-         * <p>The date when messaging is enabled.</p>
+         * <p>The date when messaging is enabled, in the YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -399,7 +399,7 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String messageEnableDate;
 
         /**
-         * <p>The name of the message session.</p>
+         * <p>The message session name.</p>
          * 
          * <strong>example:</strong>
          * <p>nPHK8uaRo</p>
@@ -408,7 +408,7 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String messageSessionName;
 
         /**
-         * <p>Other letters of guarantee.</p>
+         * <p>The other letter of guarantee.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -417,7 +417,7 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String otherLetterGuarantee;
 
         /**
-         * <p>The content of the reply.</p>
+         * <p>The reply content.</p>
          * 
          * <strong>example:</strong>
          * <p>hello</p>
@@ -426,7 +426,7 @@ public class AddAuditViberOpenRequest extends TeaModel {
         public String replyContent;
 
         /**
-         * <p>The website address.</p>
+         * <p>The web address.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>

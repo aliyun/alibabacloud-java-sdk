@@ -15,7 +15,7 @@ public class SubmitVerifyCodeResultRequest extends TeaModel {
     public String messageId;
 
     /**
-     * <p>The verification result.</p>
+     * <p>The backfill result.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

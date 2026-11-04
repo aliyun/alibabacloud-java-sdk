@@ -8,7 +8,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
      * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
@@ -16,7 +16,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
     /**
      * <p>The request status code.</p>
      * <ul>
-     * <li><p>OK indicates that the request was successful.</p>
+     * <li><p>A value of OK indicates that the request is successful.</p>
      * </li>
      * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
@@ -120,7 +120,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
 
     public static class ListProductCatalogResponseBodyModelPagingCursors extends TeaModel {
         /**
-         * <p>The position of the next record.</p>
+         * <p>The cursor for the next record.</p>
          * 
          * <strong>example:</strong>
          * <p>sjsuueu83838</p>
@@ -129,7 +129,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
         public String after;
 
         /**
-         * <p>The position of the previous record.</p>
+         * <p>The cursor for the previous record.</p>
          * 
          * <strong>example:</strong>
          * <p>sjjsjdjjdjd83883</p>
@@ -162,7 +162,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
 
     public static class ListProductCatalogResponseBodyModelPaging extends TeaModel {
         /**
-         * <p>The cursor position for pagination.</p>
+         * <p>The pagination cursors.</p>
          */
         @NameInMap("Cursors")
         public ListProductCatalogResponseBodyModelPagingCursors cursors;

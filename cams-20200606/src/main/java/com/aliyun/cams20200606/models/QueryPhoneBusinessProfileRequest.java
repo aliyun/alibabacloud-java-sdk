@@ -18,7 +18,7 @@ public class QueryPhoneBusinessProfileRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The phone number.</p>
+     * <p>The mobile phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

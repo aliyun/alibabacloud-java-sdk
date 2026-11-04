@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetChatappTemplateDetailResponseBody extends TeaModel {
     /**
-     * <p>The access denied detail information.</p>
+     * <p>The access denied details.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -16,7 +16,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
     /**
      * <p>The request status code.</p>
      * <ul>
-     * <li><p>OK indicates that the request was successful.</p>
+     * <li><p>A return value of OK indicates that the request is successful.</p>
      * </li>
      * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
@@ -29,7 +29,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      * 
      * <strong>example:</strong>
      * <p>{ 		&quot;category&quot;: &quot;ACCOUNT_UPDATE&quot;, 		&quot;name&quot;: &quot;account_notice&quot;, 		&quot;language&quot;: &quot;en_US&quot;, 		&quot;templateCode&quot;: &quot;744c4b5c79c9432497a075bdfca3****&quot;, 		&quot;auditStatus&quot;: &quot;APPROVED&quot;, 		&quot;components&quot;: &quot;[{\&quot;type\&quot;:\&quot;BODY\&quot;,\&quot;text\&quot;:\&quot;body_text$(textVariable)\&quot;},{\&quot;type\&quot;:\&quot;HEADER\&quot;,\&quot;formate\&quot;:\&quot;IMAGE\&quot;,\&quot;url\&quot;:\&quot;$(linkVariable)\&quot;},{\&quot;type\&quot;:\&quot;FOOTER\&quot;,\&quot;text\&quot;:\&quot;footer-text\&quot;},{\&quot;type\&quot;:\&quot;BUTTONS\&quot;,\&quot;buttons\&quot;:[{\&quot;type\&quot;:\&quot;PHONE_NUMBER\&quot;,\&quot;text\&quot;:\&quot;phone-button-text\&quot;,\&quot;phone_number\&quot;:\&quot;+861388888****\&quot;},{\&quot;type\&quot;:\&quot;URL\&quot;,\&quot;text\&quot;:\&quot;url-button-text\&quot;,\&quot;url\&quot;:\&quot;<a href="https://www.website.com/%5C%5C%22%7D%5D%7D%5D">https://www.website.com/\\&quot;}]}]</a>&quot;, 		&quot;example&quot;: &quot;{\&quot;textVariable\&quot;: \&quot;text\&quot;, \&quot;linkVariable\&quot;: \&quot;link\&quot;}&quot; 	}</p>
@@ -56,6 +56,8 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -135,7 +137,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String intentCode;
 
         /**
-         * <p>The next template language.</p>
+         * <p>The language code of the next template.</p>
          * 
          * <strong>example:</strong>
          * <p>en</p>
@@ -144,7 +146,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String nextLanguageCode;
 
         /**
-         * <p>The next template code.</p>
+         * <p>The code of the next template.</p>
          * 
          * <strong>example:</strong>
          * <p>20939920093993</p>
@@ -153,7 +155,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String nextTemplateCode;
 
         /**
-         * <p>The next template name.</p>
+         * <p>The name of the next template.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -252,7 +254,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
 
     public static class GetChatappTemplateDetailResponseBodyDataComponentsButtons extends TeaModel {
         /**
-         * <p>Required for WhatsApp templates with Category set to Authentication and Button Type set to ONE_TAP. Specifies the button text for the WhatsApp Autofill operation.</p>
+         * <p>The button text for the WhatsApp autofill operation. This parameter is required for WhatsApp templates where the category is Authentication and the button type is ONE_TAP.</p>
          * 
          * <strong>example:</strong>
          * <p>Autofill</p>
@@ -270,17 +272,17 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String couponCode;
 
         /**
-         * <p>The extended fields.</p>
+         * <p>The extended attributes.</p>
          */
         @NameInMap("ExtendAttrs")
         public GetChatappTemplateDetailResponseBodyDataComponentsButtonsExtendAttrs extendAttrs;
 
         /**
-         * <p>The Flow data event type. Valid values:</p>
+         * <p>The flow data event type. Valid values:</p>
          * <ul>
-         * <li><p>NAVIGATE: navigation.</p>
+         * <li><p>NAVIGATE: Navigation.</p>
          * </li>
-         * <li><p>DATA_EXCHANGE: data exchange.</p>
+         * <li><p>DATA_EXCHANGE: Data exchange.</p>
          * </li>
          * </ul>
          * 
@@ -300,7 +302,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String flowId;
 
         /**
-         * <p>Valid for WhatsApp templates with Category set to Marketing and Button Type set to QUICK_REPLY. Indicates that the button is a marketing opt-out button. If a customer clicks this button and the send control operation is configured on the Chat App Message Service platform, subsequent Marketing messages will not be sent to the customer.</p>
+         * <p>Indicates whether the button is a marketing opt-out button. If a customer clicks this button and sending control is configured on the Chat App Message Service platform, subsequent marketing messages are not sent to the customer. This parameter is valid only for WhatsApp templates where the category is Marketing and the button type is QUICK_REPLY.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -309,7 +311,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public Boolean isOptOut;
 
         /**
-         * <p>The navigate screen. Required when FlowAction is set to NAVIGATE.</p>
+         * <p>The navigation screen. This parameter is required when FlowAction is set to NAVIGATE.</p>
          * 
          * <strong>example:</strong>
          * <p>DETAILS</p>
@@ -318,7 +320,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String navigateScreen;
 
         /**
-         * <p>Required for WhatsApp templates with Category set to Authentication and Button Type set to ONE_TAP. Specifies the package name for WhatsApp to launch the application.</p>
+         * <p>The package name of the application invoked by WhatsApp. This parameter is required for WhatsApp templates where the category is Authentication and the button type is ONE_TAP.</p>
          * 
          * <strong>example:</strong>
          * <p>com.aliyun</p>
@@ -327,7 +329,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String packageName;
 
         /**
-         * <p>The phone number. Valid only when the button type is <strong>PHONE_NUMBER</strong>.</p>
+         * <p>The phone number. This parameter is valid only when the button type is <strong>PHONE_NUMBER</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>+861398745****</p>
@@ -336,7 +338,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
-         * <p>Required for WhatsApp templates with Category set to Authentication and Button Type set to ONE_TAP. Specifies the signature hash value for WhatsApp to launch the application.</p>
+         * <p>The signature hash value of the application invoked by WhatsApp. This parameter is required for WhatsApp templates where the category is Authentication and the button type is ONE_TAP.</p>
          * 
          * <strong>example:</strong>
          * <p>2993839</p>
@@ -345,7 +347,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String signatureHash;
 
         /**
-         * <p>The applications supported by the ONE_TAP/ZERO_TAP verification code.</p>
+         * <p>The applications supported by the ONE_TAP or ZERO_TAP verification code button.</p>
          */
         @NameInMap("SupportedApps")
         public java.util.List<GetChatappTemplateDetailResponseBodyDataComponentsButtonsSupportedApps> supportedApps;
@@ -360,31 +362,40 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String text;
 
         /**
-         * <p>The button type.</p>
+         * <p>The validity period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10800</p>
+         */
+        @NameInMap("TtlMinutes")
+        public Long ttlMinutes;
+
+        /**
+         * <p>The button type. Valid values:</p>
          * <ul>
-         * <li><p><strong>PHONE_NUMBER</strong>: phone call button.</p>
+         * <li><p><strong>PHONE_NUMBER</strong>: Call button.</p>
          * </li>
-         * <li><p><strong>URL</strong>: web page button.</p>
+         * <li><p><strong>URL</strong>: URL button.</p>
          * </li>
-         * <li><p><strong>QUICK_REPLY</strong>: quick reply button.</p>
+         * <li><p><strong>QUICK_REPLY</strong>: Quick reply button.</p>
          * </li>
-         * <li><p><strong>COPY_CODE</strong>: copy verification code or coupon code.</p>
+         * <li><p><strong>COPY_CODE</strong>: Copy verification code or coupon code button.</p>
          * </li>
-         * <li><p><strong>ONE_TAP</strong>: autofill button for AUTHENTICATION templates.</p>
+         * <li><p><strong>ONE_TAP</strong>: Autofill button for authentication templates.</p>
          * </li>
-         * <li><p><strong>ZERO_TAP</strong>: autofill button for AUTHENTICATION templates.</p>
+         * <li><p><strong>ZERO_TAP</strong>: Autofill button for authentication templates.</p>
          * </li>
-         * <li><p><strong>MPM</strong>: multi-product catalog.</p>
+         * <li><p><strong>MPM</strong>: Multi-product message button.</p>
          * </li>
-         * <li><p><strong>CATALOG</strong>: catalog.</p>
+         * <li><p><strong>CATALOG</strong>: Catalog button.</p>
          * </li>
-         * <li><p><strong>FLOW</strong>: open WhatsApp flow.</p>
+         * <li><p><strong>FLOW</strong>: WhatsApp flow button.</p>
          * </li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>For WhatsApp templates with Category set to AUTHENTICATION, only one button is allowed, and the type can only be COPY_CODE or ONE_TAP. If the type is COPY_CODE, Text is required. If the type is ONE_TAP, Text (displayed when the target application is not installed on the device, indicating the name of the copy verification code button), SignatureHash, PackageName, and AutofillText are required.</li>
-         * <li>Viber templates allow only one button, and it must be of the URL type.</li>
+         * <li>For WhatsApp templates where the category is AUTHENTICATION, only one button is allowed, and the type must be COPY_CODE or ONE_TAP. If the type is COPY_CODE, Text is required. If the type is ONE_TAP, Text (displayed when the target application is not installed on the device, representing the name of the copy verification code button), SignatureHash, PackageName, and AutofillText are required.</li>
+         * <li>For Viber templates, only one button is allowed, and the type must be URL.</li>
          * </ul>
          * </blockquote>
          * 
@@ -395,7 +406,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The URL that is accessed when the link button is clicked.</p>
+         * <p>The URL to be accessed when the URL button is clicked.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com">https://example.com</a></p>
@@ -404,11 +415,11 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String url;
 
         /**
-         * <p>The URL type.</p>
+         * <p>The URL type. Valid values:</p>
          * <ul>
-         * <li><p><strong>static</strong>: static.</p>
+         * <li><p><strong>static</strong>: Static.</p>
          * </li>
-         * <li><p><strong>dynamic</strong>: dynamic.</p>
+         * <li><p><strong>dynamic</strong>: Dynamic.</p>
          * </li>
          * </ul>
          * 
@@ -519,6 +530,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             return this.text;
         }
 
+        public GetChatappTemplateDetailResponseBodyDataComponentsButtons setTtlMinutes(Long ttlMinutes) {
+            this.ttlMinutes = ttlMinutes;
+            return this;
+        }
+        public Long getTtlMinutes() {
+            return this.ttlMinutes;
+        }
+
         public GetChatappTemplateDetailResponseBodyDataComponentsButtons setType(String type) {
             this.type = type;
             return this;
@@ -565,7 +584,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String text;
 
         /**
-         * <p>The button type for a carousel template. Valid values: URL, PHONE_NUMBER, or QUICK_REPLY.</p>
+         * <p>The button type for carousel templates. Valid values: URL, PHONE_NUMBER, and QUICK_REQLY.</p>
          * 
          * <strong>example:</strong>
          * <p>URL</p>
@@ -574,7 +593,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The URL to visit when the button is clicked.</p>
+         * <p>The URL to visit after the button is clicked.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://aliyun.com">https://aliyun.com</a></p>
@@ -585,9 +604,9 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         /**
          * <p>The URL type. Valid values:</p>
          * <ul>
-         * <li><p>static: static.</p>
+         * <li><p>static: Static URL.</p>
          * </li>
-         * <li><p>dynamic: dynamic.</p>
+         * <li><p>dynamic: Dynamic URL.</p>
          * </li>
          * </ul>
          * 
@@ -652,7 +671,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public java.util.List<GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponentsButtons> buttons;
 
         /**
-         * <p>The header type in a carousel template. Only IMAGE and VIDEO are supported. All cards must have the same header type.</p>
+         * <p>The header type for carousel templates. Only IMAGE and VIDEO are supported. The header must be consistent across all cards.</p>
          * 
          * <strong>example:</strong>
          * <p>HEADER</p>
@@ -661,7 +680,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String format;
 
         /**
-         * <p>The card text content.</p>
+         * <p>The text content of the card.</p>
          * 
          * <strong>example:</strong>
          * <p>Body</p>
@@ -679,7 +698,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The web URL.</p>
+         * <p>The web address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://aliyun.com">https://aliyun.com</a></p>
@@ -758,7 +777,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
 
     public static class GetChatappTemplateDetailResponseBodyDataComponents extends TeaModel {
         /**
-         * <p>Valid for WhatsApp templates when Category is Authentication and Component Type is Body. Indicates whether a security recommendation message that advises users not to share the verification code is displayed above the Body.</p>
+         * <p>Indicates whether to display a security recommendation above the body to warn users not to share the verification code with others. This parameter is valid only for WhatsApp templates where the category is Authentication and the component type is Body.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -767,14 +786,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public Boolean addSecretRecommendation;
 
         /**
-         * <p>The button list. Applicable only to the <strong>BUTTONS</strong> component.</p>
+         * <p>The list of buttons. This parameter is valid only for the <strong>BUTTONS</strong> component.</p>
          * <blockquote>
-         * <p>WhatsApp button quantity rules:</p>
+         * <p>WhatsApp button limits</p>
          * <ul>
-         * <li>For WhatsApp templates with Category set to MARKETING or UTILITY, a maximum of 10 buttons are allowed.</li>
-         * <li>Only 1 PHONE_NUMBER button is allowed.</li>
-         * <li>A maximum of 2 URL buttons are allowed.</li>
-         * <li>QUICK_REPLY buttons cannot be mixed in random order with PHONE_NUMBER or URL buttons.</li>
+         * <li>For MARKETING or UTILITY templates, a maximum of 10 buttons are allowed.</li>
+         * <li>Only one PHONE_NUMBER button is allowed.</li>
+         * <li>A maximum of two URL buttons are allowed.</li>
+         * <li>QUICK_REPLY buttons must not be interspersed with PHONE_NUMBER or URL buttons.</li>
          * </ul>
          * </blockquote>
          */
@@ -782,7 +801,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public java.util.List<GetChatappTemplateDetailResponseBodyDataComponentsButtons> buttons;
 
         /**
-         * <p>The file description.</p>
+         * <p>The description of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -797,7 +816,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public java.util.List<GetChatappTemplateDetailResponseBodyDataComponentsCards> cards;
 
         /**
-         * <p>The verification code validity period in minutes for WhatsApp Authentication templates. Valid only when the message type is WhatsApp, Category is Authentication, and Component Type is Footer. This information is displayed in the Footer position.</p>
+         * <p>The expiration time of the verification code in minutes for WhatsApp authentication templates. This is valid only for WhatsApp messages where the category is Authentication and the component type is Footer. This information is displayed in the footer.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -806,7 +825,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public Integer codeExpirationMinutes;
 
         /**
-         * <p>The video duration of a Viber video message. Valid values: 0 to 600.</p>
+         * <p>The duration of the video in seconds for Viber video messages. Valid values: 0 to 600.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -815,7 +834,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public Integer duration;
 
         /**
-         * <p>The file name.</p>
+         * <p>The name of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -824,7 +843,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The file type of a Viber file message.</p>
+         * <p>The file type for Viber file messages.</p>
          * 
          * <strong>example:</strong>
          * <p>docx</p>
@@ -851,7 +870,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String latitude;
 
         /**
-         * <p>The location address.</p>
+         * <p>The address of the location.</p>
          * 
          * <strong>example:</strong>
          * <p>hangzhou</p>
@@ -860,7 +879,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String locationAddress;
 
         /**
-         * <p>The location name.</p>
+         * <p>The name of the location.</p>
          * 
          * <strong>example:</strong>
          * <p>hangzhou</p>
@@ -878,7 +897,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String longitude;
 
         /**
-         * <p>The offer code expiration variable in a Limited Time Offer (LTO) template.</p>
+         * <p>The expiration variable of the offer code for limited-time offer (LTO) templates.</p>
          * 
          * <strong>example:</strong>
          * <p>$(offerExpirationTimeMs)</p>
@@ -887,7 +906,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String offerExpirationTimeMs;
 
         /**
-         * <p>The text of the message to be sent.</p>
+         * <p>The text of the message to send.</p>
          * 
          * <strong>example:</strong>
          * <p>hello</p>
@@ -896,7 +915,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String text;
 
         /**
-         * <p>The thumbnail for a Viber video message.</p>
+         * <p>The thumbnail URL for Viber video messages.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://img.png">https://img.png</a></p>
@@ -905,7 +924,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String thumbUrl;
 
         /**
-         * <p>The component type.</p>
+         * <p>The component type. Valid values:</p>
          * <ul>
          * <li><p><strong>BODY</strong></p>
          * </li>
@@ -922,9 +941,9 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>For WhatsApp templates, the <strong>BODY</strong> component cannot exceed 1024 characters. The <strong>HEADER</strong> and <strong>FOOTER</strong> components cannot exceed 60 characters.</li>
+         * <li>For WhatsApp templates, the <strong>BODY</strong> component cannot exceed 1,024 characters. The <strong>HEADER</strong> and <strong>FOOTER</strong> components cannot exceed 60 characters.</li>
          * <li>For Viber templates, the <strong>FOOTER</strong>, <strong>CAROUSEL</strong>, and <strong>LIMITED_TIME_OFFER</strong> types are invalid.</li>
-         * <li>For Viber templates, images, videos, and files are placed in the <strong>HEADER</strong> (the device displays images below the text).</li>
+         * <li>In Viber templates, images, videos, and files are placed in the <strong>HEADER</strong>. The client displays the image below the text.</li>
          * </ul>
          * </blockquote>
          * 
@@ -935,7 +954,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The material URL.</p>
+         * <p>The media URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://image.developer.aliyundoc.com">https://image.developer.aliyundoc.com</a></p>
@@ -944,7 +963,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String url;
 
         /**
-         * <p>Specifies whether the offer code has an expiration time in a Limited Time Offer (LTO) template.</p>
+         * <p>Indicates whether the offer code has an expiration time in LTO templates.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1113,7 +1132,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
 
     public static class GetChatappTemplateDetailResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the current template can be used for sending. This parameter is valid only for Marketing templates.</p>
+         * <p>Indicates whether the current template can be sent. This parameter is valid only for marketing templates.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1122,7 +1141,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public Boolean allowSend;
 
         /**
-         * <p>The audit status. Valid values:</p>
+         * <p>The review status. Valid values:</p>
          * <ul>
          * <li><p><strong>pass</strong>: Approved.</p>
          * </li>
@@ -1143,20 +1162,20 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         /**
          * <p>The WhatsApp template category. Valid values:</p>
          * <ul>
-         * <li><p><strong>UTILITY</strong>: transaction-related.</p>
+         * <li><p><strong>UTILITY</strong>: Transaction-related.</p>
          * </li>
-         * <li><p><strong>MARKETING</strong>: marketing template.</p>
+         * <li><p><strong>MARKETING</strong>: Marketing template.</p>
          * </li>
-         * <li><p><strong>AUTHENTICATION</strong>: identity verification.</p>
+         * <li><p><strong>AUTHENTICATION</strong>: Authentication.</p>
          * </li>
          * </ul>
-         * <p>Viber template category. Valid values:</p>
+         * <p>The Viber template category. Valid values:</p>
          * <ul>
-         * <li><p><strong>UTILITY</strong>: transaction-related.</p>
+         * <li><p><strong>UTILITY</strong>: Transaction-related.</p>
          * </li>
-         * <li><p><strong>MARKETING</strong>: marketing template.</p>
+         * <li><p><strong>MARKETING</strong>: Marketing template.</p>
          * </li>
-         * <li><p><strong>AUTHENTICATION</strong>: identity verification.</p>
+         * <li><p><strong>AUTHENTICATION</strong>: Authentication.</p>
          * </li>
          * </ul>
          * 
@@ -1167,7 +1186,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>Indicates whether template sending is paused when a Utility template is changed to a Marketing template.</p>
+         * <p>Indicates whether the template sending is paused when a utility template is changed to a marketing template.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1188,7 +1207,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public java.util.Map<String, String> example;
 
         /**
-         * <p>The language of the template. For detailed language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+         * <p>The template language. For more information about language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>en_US</p>
@@ -1197,7 +1216,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>The message time-to-live when sending WhatsApp Authentication template messages.</p>
+         * <p>The time-to-live (TTL) of the message in seconds when sending messages by using WhatsApp authentication templates.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -1206,7 +1225,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public Integer messageSendTtlSeconds;
 
         /**
-         * <p>The name of the template.</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>hello_whatsapp</p>
@@ -1224,11 +1243,11 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String productSetId;
 
         /**
-         * <p>The template quality.</p>
+         * <p>The quality of the template. Valid values:</p>
          * <ul>
          * <li>RED: Low quality.</li>
          * <li>YELLOW: Medium quality.</li>
-         * <li>UNKNOWN: Quality unknown.</li>
+         * <li>UNKNOWN: Unknown quality.</li>
          * <li>GREEN: High quality.</li>
          * </ul>
          * 
@@ -1239,7 +1258,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String qualityScore;
 
         /**
-         * <p>The reason for template review rejection.</p>
+         * <p>The reason why the template was rejected.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -1248,7 +1267,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>The code of the template.</p>
+         * <p>The template code.</p>
          * 
          * <strong>example:</strong>
          * <p>744c4b5c79c9432497a075bdfca3****</p>
@@ -1257,7 +1276,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public String templateCode;
 
         /**
-         * <p>The templatetype.</p>
+         * <p>The templatetype. Valid values:</p>
          * <ul>
          * <li><p><strong>WHATSAPP</strong></p>
          * </li>

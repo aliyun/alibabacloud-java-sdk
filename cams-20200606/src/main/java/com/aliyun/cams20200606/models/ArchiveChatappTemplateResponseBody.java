@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ArchiveChatappTemplateResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The detailed reason for the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,9 +14,9 @@ public class ArchiveChatappTemplateResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The request status code.</p>
+     * <p>The status code of the request.</p>
      * <ul>
-     * <li><p>OK indicates that the request was successful.</p>
+     * <li><p>A value of OK indicates that the request is successful.</p>
      * </li>
      * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
@@ -53,9 +53,9 @@ public class ArchiveChatappTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>true</strong>: The call is successful.</li>
      * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
@@ -120,16 +120,16 @@ public class ArchiveChatappTemplateResponseBody extends TeaModel {
 
     public static class ArchiveChatappTemplateResponseBodyData extends TeaModel {
         /**
-         * <p>The request status code.</p>
+         * <p>The status code of the request.</p>
          * <ul>
-         * <li><p>OK indicates that the request was successful.</p>
+         * <li><p>A value of OK indicates that the request is successful.</p>
          * </li>
          * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
          * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>Sample value</p>
          */
         @NameInMap("Code")
         public String code;
@@ -138,7 +138,7 @@ public class ArchiveChatappTemplateResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>Sample value</p>
          */
         @NameInMap("Message")
         public String message;
@@ -147,15 +147,15 @@ public class ArchiveChatappTemplateResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>Sample value</p>
          */
         @NameInMap("RequestId")
         public String requestId;
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>true</strong>: The call is successful.</li>
          * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 

@@ -20,7 +20,7 @@ public class AddAuditViberOpenShrinkRequest extends TeaModel {
     public String auditResult;
 
     /**
-     * <p>The Space ID of the ISV sub-customer.</p>
+     * <p>The SpaceId of the ISV sub-customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

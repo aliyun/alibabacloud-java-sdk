@@ -17,25 +17,25 @@ public class ArchiveChatappTemplateRequest extends TeaModel {
     /**
      * <p>The channel type. Valid values:</p>
      * <ul>
-     * <li><strong>WHATSAPP</strong>.</li>
+     * <li><strong>WHATSAPP</strong></li>
      * </ul>
      * <blockquote>
-     * <p>Only the WhatsApp channel type is supported.</p>
+     * <p>Currently, only the WhatsApp channel type is supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("ChannelType")
     public String channelType;
 
     /**
-     * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer. You can view the Space ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
+     * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer. You can view the space ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
@@ -86,7 +86,7 @@ public class ArchiveChatappTemplateRequest extends TeaModel {
 
     public static class ArchiveChatappTemplateRequestTemplateList extends TeaModel {
         /**
-         * <p>The template language. For detailed language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+         * <p>The template language. For more information about language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -96,7 +96,7 @@ public class ArchiveChatappTemplateRequest extends TeaModel {
         public String language;
 
         /**
-         * <p>The template code. You can view the template code on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Template Design</strong> page.</p>
+         * <p>The template code. To view the template code, go to the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> page and choose <strong>Manage</strong> &gt; <strong>Template Design</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

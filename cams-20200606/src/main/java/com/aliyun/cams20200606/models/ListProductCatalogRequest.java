@@ -23,7 +23,7 @@ public class ListProductCatalogRequest extends TeaModel {
     public String before;
 
     /**
-     * <p>The ID of the business platform where the WABA is located. You can view the business platform ID in the Chat App Message Service console after WABA registration is complete.</p>
+     * <p>The ID of the business platform where the WhatsApp Business Account (WABA) is located. You can view the business platform ID in the Chat App Message Service console after the WABA registration is completed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,8 +42,7 @@ public class ListProductCatalogRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The list of fields, separated by commas (,).
-     * For specific fields, see <a href="https://help.aliyun.com/document_detail/2579419.html">Catalog fields</a>.</p>
+     * <p>The list of fields. Separate multiple fields with commas (,). For specific fields, refer to <a href="https://help.aliyun.com/document_detail/2579419.html">Catalog fields</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>id,name</p>

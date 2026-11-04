@@ -9,7 +9,7 @@ public class BindInstagramPageRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -28,7 +28,7 @@ public class BindInstagramPageRequest extends TeaModel {
     public String pageId;
 
     /**
-     * <p>The region of the instance.</p>
+     * <p>The region ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ap-southeast-1</p>

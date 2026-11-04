@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMessageCampaignResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -16,7 +16,7 @@ public class ListMessageCampaignResponseBody extends TeaModel {
     /**
      * <p>The request status code.</p>
      * <ul>
-     * <li><p>A value of OK indicates that the request was successful.</p>
+     * <li><p>A value of OK indicates that the request is successful.</p>
      * </li>
      * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
@@ -53,11 +53,11 @@ public class ListMessageCampaignResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: successful.</p>
+     * <li><p>true: Successful.</p>
      * </li>
-     * <li><p>false: failed.</p>
+     * <li><p>false: Failed.</p>
      * </li>
      * </ul>
      * 
@@ -139,7 +139,7 @@ public class ListMessageCampaignResponseBody extends TeaModel {
 
     public static class ListMessageCampaignResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the Meta ad account.</p>
+         * <p>The Meta ad account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2339**</p>
@@ -166,7 +166,7 @@ public class ListMessageCampaignResponseBody extends TeaModel {
         public String budgetType;
 
         /**
-         * <p>The campaign ID.</p>
+         * <p>The budget ID.</p>
          * 
          * <strong>example:</strong>
          * <p>233**</p>
@@ -175,7 +175,7 @@ public class ListMessageCampaignResponseBody extends TeaModel {
         public String campaignId;
 
         /**
-         * <p>The name of the campaign.</p>
+         * <p>The budget name.</p>
          * 
          * <strong>example:</strong>
          * <p>campaign-name</p>
@@ -184,7 +184,7 @@ public class ListMessageCampaignResponseBody extends TeaModel {
         public String campaignName;
 
         /**
-         * <p>The time when the campaign was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>173029392838</p>
@@ -193,7 +193,7 @@ public class ListMessageCampaignResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The Page ID for Messenger.</p>
+         * <p>The Page ID of Messenger.</p>
          * 
          * <strong>example:</strong>
          * <p>238***</p>
@@ -202,7 +202,7 @@ public class ListMessageCampaignResponseBody extends TeaModel {
         public String pageId;
 
         /**
-         * <p>The status of the campaign.</p>
+         * <p>The budget status.</p>
          * 
          * <strong>example:</strong>
          * <p>AVAILABLE</p>

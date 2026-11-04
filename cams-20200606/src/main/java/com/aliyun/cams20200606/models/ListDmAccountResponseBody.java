@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDmAccountResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -55,9 +55,9 @@ public class ListDmAccountResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: Successful.</p>
+     * <li><p>true: The operation was successful.</p>
      * </li>
-     * <li><p>false: Failed.</p>
+     * <li><p>false: The operation failed.</p>
      * </li>
      * </ul>
      * 
@@ -148,7 +148,7 @@ public class ListDmAccountResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The time when the account was created.</p>
+         * <p>The time when the account was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1743579634000</p>
@@ -168,8 +168,8 @@ public class ListDmAccountResponseBody extends TeaModel {
         /**
          * <p>The type of the sender address. Valid values:</p>
          * <ul>
-         * <li>batch: batch emails</li>
-         * <li>trigger: triggered emails</li>
+         * <li>batch: batch email</li>
+         * <li>trigger: triggered email</li>
          * </ul>
          * 
          * <strong>example:</strong>

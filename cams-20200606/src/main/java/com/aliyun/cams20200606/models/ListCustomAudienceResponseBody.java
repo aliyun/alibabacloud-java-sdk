@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomAudienceResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -16,9 +16,9 @@ public class ListCustomAudienceResponseBody extends TeaModel {
     /**
      * <p>The request status code.</p>
      * <ul>
-     * <li><p>A value of OK indicates that the request was successful.</p>
+     * <li><p>A return value of OK indicates that the request was successful.</p>
      * </li>
-     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error code list</a>.</p>
      * </li>
      * </ul>
      * 
@@ -35,7 +35,7 @@ public class ListCustomAudienceResponseBody extends TeaModel {
     public java.util.List<ListCustomAudienceResponseBodyData> data;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error description.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -53,12 +53,10 @@ public class ListCustomAudienceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * <ul>
-     * <li><p><strong>true</strong>: successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -148,7 +146,7 @@ public class ListCustomAudienceResponseBody extends TeaModel {
         public String adAccountId;
 
         /**
-         * <p>The time when the audience was created.</p>
+         * <p>The creation time, expressed as a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1720356898</p>
@@ -157,7 +155,7 @@ public class ListCustomAudienceResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the custom audience.</p>
+         * <p>The custom audience ID.</p>
          * 
          * <strong>example:</strong>
          * <p>339**</p>
@@ -166,7 +164,7 @@ public class ListCustomAudienceResponseBody extends TeaModel {
         public String customAudienceId;
 
         /**
-         * <p>The name of the custom audience.</p>
+         * <p>The custom audience name.</p>
          * 
          * <strong>example:</strong>
          * <p>custom audience name</p>
@@ -184,7 +182,7 @@ public class ListCustomAudienceResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The Page ID for Messenger.</p>
+         * <p>The page ID of Messenger.</p>
          * 
          * <strong>example:</strong>
          * <p>239**</p>
@@ -220,7 +218,7 @@ public class ListCustomAudienceResponseBody extends TeaModel {
         public String tokenType;
 
         /**
-         * <p>The time when the audience was last updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>51</p>
@@ -229,7 +227,7 @@ public class ListCustomAudienceResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>The upload type.</p>
+         * <p>The user upload type.</p>
          * 
          * <strong>example:</strong>
          * <p>excel</p>

@@ -40,7 +40,7 @@ public class AddChatappPhoneNumberRequest extends TeaModel {
     /**
      * <p>The pre-validated phone number.</p>
      * <blockquote>
-     * <p>This parameter is deprecated.</p>
+     * <p><strong>[Deprecated]</strong></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class AddChatappPhoneNumberRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The display name of the phone number.</p>
+     * <p>The name of the phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

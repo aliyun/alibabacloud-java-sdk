@@ -14,9 +14,9 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code.</p>
+     * <p>The status code of the request.</p>
      * <ul>
-     * <li><p>OK indicates that the request was successful.</p>
+     * <li><p>A value of OK indicates that the request is successful.</p>
      * </li>
      * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>

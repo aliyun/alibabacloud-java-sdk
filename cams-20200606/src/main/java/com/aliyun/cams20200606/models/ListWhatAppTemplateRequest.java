@@ -14,7 +14,7 @@ public class ListWhatAppTemplateRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>This parameter is reserved for internal use.</p>
+     * <p>The internal parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -16,7 +16,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
     /**
      * <p>The request status code.</p>
      * <ul>
-     * <li><p>A value of OK indicates that the request was successful.</p>
+     * <li><p>OK indicates that the request was successful.</p>
      * </li>
      * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
@@ -29,14 +29,16 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>示例值</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -60,6 +62,12 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -129,6 +137,8 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
 
     public static class QueryChatappPhoneNumbersResponseBodyPhoneNumbersCallingConfigureCallingCallHoursHolidaySchedule extends TeaModel {
         /**
+         * <p>The date in YYYY-MM-DD format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-01</p>
          */
@@ -136,6 +146,8 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String date;
 
         /**
+         * <p>The end time in HHmm format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2359</p>
          */
@@ -143,6 +155,8 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The start time in HHmm format.</p>
+         * 
          * <strong>example:</strong>
          * <p>0000</p>
          */
@@ -182,6 +196,8 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
 
     public static class QueryChatappPhoneNumbersResponseBodyPhoneNumbersCallingConfigureCallingCallHoursWeeklyOperatingHours extends TeaModel {
         /**
+         * <p>The closing time in HHmm format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2359</p>
          */
@@ -189,6 +205,8 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String closeTime;
 
         /**
+         * <p>The day of the week.</p>
+         * 
          * <strong>example:</strong>
          * <p>示例值示例值示例值</p>
          */
@@ -196,6 +214,8 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String dayOfWeek;
 
         /**
+         * <p>The opening time in HHmm format.</p>
+         * 
          * <strong>example:</strong>
          * <p>0000</p>
          */
@@ -235,6 +255,8 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
 
     public static class QueryChatappPhoneNumbersResponseBodyPhoneNumbersCallingConfigureCallingCallHours extends TeaModel {
         /**
+         * <p>The visibility of the call icon.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEFAULT</p>
          */
@@ -242,16 +264,23 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String callIconVisibility;
 
         /**
+         * <p>The callback permission status.</p>
+         * 
          * <strong>example:</strong>
          * <p>ENABLED</p>
          */
         @NameInMap("CallbackPermissionStatus")
         public String callbackPermissionStatus;
 
+        /**
+         * <p>The holiday call hours schedule.</p>
+         */
         @NameInMap("HolidaySchedule")
         public java.util.List<QueryChatappPhoneNumbersResponseBodyPhoneNumbersCallingConfigureCallingCallHoursHolidaySchedule> holidaySchedule;
 
         /**
+         * <p>The status of the call hours configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>ENABLED</p>
          */
@@ -259,12 +288,17 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The time zone ID, such as Asia/Shanghai.</p>
+         * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
          */
         @NameInMap("TimezoneId")
         public String timezoneId;
 
+        /**
+         * <p>The weekly operating hours schedule.</p>
+         */
         @NameInMap("WeeklyOperatingHours")
         public java.util.List<QueryChatappPhoneNumbersResponseBodyPhoneNumbersCallingConfigureCallingCallHoursWeeklyOperatingHours> weeklyOperatingHours;
 
@@ -324,10 +358,15 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
     }
 
     public static class QueryChatappPhoneNumbersResponseBodyPhoneNumbersCallingConfigureCalling extends TeaModel {
+        /**
+         * <p>The call hours configuration.</p>
+         */
         @NameInMap("CallHours")
         public QueryChatappPhoneNumbersResponseBodyPhoneNumbersCallingConfigureCallingCallHours callHours;
 
         /**
+         * <p>The status of the calling feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>ENABLED</p>
          */
@@ -358,10 +397,15 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
     }
 
     public static class QueryChatappPhoneNumbersResponseBodyPhoneNumbersCallingConfigure extends TeaModel {
+        /**
+         * <p>The calling feature configuration.</p>
+         */
         @NameInMap("Calling")
         public QueryChatappPhoneNumbersResponseBodyPhoneNumbersCallingConfigureCalling calling;
 
         /**
+         * <p>The callback URL for calls.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://aliyun.com">https://aliyun.com</a></p>
          */
@@ -369,6 +413,8 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String callingCallbackUrl;
 
         /**
+         * <p>The maximum call duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -407,6 +453,9 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
     }
 
     public static class QueryChatappPhoneNumbersResponseBodyPhoneNumbers extends TeaModel {
+        /**
+         * <p>The calling configuration.</p>
+         */
         @NameInMap("CallingConfigure")
         public QueryChatappPhoneNumbersResponseBodyPhoneNumbersCallingConfigure callingConfigure;
 
@@ -420,6 +469,8 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String codeVerificationStatus;
 
         /**
+         * <p>Indicates whether the phone number is verified.</p>
+         * 
          * <strong>example:</strong>
          * <p>N</p>
          */
@@ -427,7 +478,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String isOfficial;
 
         /**
-         * <p>The messaging limit tier of the phone number.</p>
+         * <p>The messaging volume limit tier of the phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>TIER_10K</p>
@@ -436,7 +487,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String messagingLimitTier;
 
         /**
-         * <p>The status of the name.</p>
+         * <p>The name status.</p>
          * 
          * <strong>example:</strong>
          * <p>Approval</p>
@@ -472,7 +523,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String qualityRating;
 
         /**
-         * <p>The status of the phone number.</p>
+         * <p>The phone number status.</p>
          * 
          * <strong>example:</strong>
          * <p>CONNECTED</p>
@@ -481,7 +532,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The callback URL for delivery receipts.</p>
+         * <p>The URL for status report notifications.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://ali.com/status">https://ali.com/status</a></p>
@@ -490,7 +541,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String statusCallbackUrl;
 
         /**
-         * <p>The queue for delivery receipts of mobile terminated messages.</p>
+         * <p>The queue for status report notifications.</p>
          * 
          * <strong>example:</strong>
          * <p>Alicom-Queue-****-ChatAppStatus</p>
@@ -499,7 +550,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String statusQueue;
 
         /**
-         * <p>The callback URL for mobile originated messages.</p>
+         * <p>The URL for inbound message notifications.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://ali.com/inbound">https://ali.com/inbound</a></p>
@@ -508,7 +559,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String upCallbackUrl;
 
         /**
-         * <p>The queue for mobile originated messages.</p>
+         * <p>The queue for inbound message notifications.</p>
          * 
          * <strong>example:</strong>
          * <p>Alicom-Queue-****-ChatAppInbound</p>
@@ -517,7 +568,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String upQueue;
 
         /**
-         * <p>The name used for the request.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>Alibaba</p>

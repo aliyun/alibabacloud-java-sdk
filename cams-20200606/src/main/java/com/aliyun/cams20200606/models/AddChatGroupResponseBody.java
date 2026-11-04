@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddChatGroupResponseBody extends TeaModel {
     /**
-     * <p>Details of the access denial.</p>
+     * <p>The access denial details.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,11 +14,11 @@ public class AddChatGroupResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The response status code. Valid values:</p>
+     * <p>The status code of the request. Valid values:</p>
      * <ul>
-     * <li><p><code>OK</code>: The request was successful.</p>
+     * <li><p>OK: The request is successful.</p>
      * </li>
-     * <li><p>For other error codes, see the <a href="https://help.aliyun.com/document_detail/196974.html">error code list</a>.</p>
+     * <li><p>Other error codes. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
      * </ul>
      * 
@@ -29,7 +29,7 @@ public class AddChatGroupResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -38,7 +38,7 @@ public class AddChatGroupResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique identifier for the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
@@ -47,12 +47,10 @@ public class AddChatGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates if the API call succeeded. Valid values:</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The API call was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The API call failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The call is successful.</li>
+     * <li><strong>false</strong>: The call fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +60,7 @@ public class AddChatGroupResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The unique request code.</p>
+     * <p>The unique code of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>8938****</p>

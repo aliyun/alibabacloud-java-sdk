@@ -8,13 +8,13 @@ public class AddContactsShrinkRequest extends TeaModel {
      * <p>The business code.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
     /**
-     * <p>The business extension information. Default value: an empty collection.</p>
+     * <p>The business extension information. Default value: an empty set.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -53,7 +53,7 @@ public class AddContactsShrinkRequest extends TeaModel {
      * <p>The email address.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("Email")
     public String email;
@@ -62,7 +62,7 @@ public class AddContactsShrinkRequest extends TeaModel {
      * <p>The file path.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("FilePath")
     public String filePath;
@@ -72,13 +72,13 @@ public class AddContactsShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("Groups")
     public String groups;
 
     /**
-     * <p>Indicates whether the back-to-origin IP address whitelist needs to be updated. This parameter returns true when the current back-to-origin IP address whitelist differs from the latest back-to-origin IP address whitelist.</p>
+     * <p>Specifies whether the whitelist of back-to-origin IP addresses needs to be updated. If the whitelist of back-to-origin IP addresses in use differs from the latest whitelist of back-to-origin IP addresses, the whitelist needs to be updated and this parameter returns true. Valid values:</p>
      * <ul>
      * <li>true: The whitelist needs to be updated.</li>
      * <li>false: The whitelist does not need to be updated.</li>

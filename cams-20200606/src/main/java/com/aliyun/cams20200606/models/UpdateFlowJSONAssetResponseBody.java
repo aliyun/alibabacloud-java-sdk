@@ -14,7 +14,7 @@ public class UpdateFlowJSONAssetResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code. OK indicates success.</p>
+     * <p>The response code. A value of OK indicates a successful call.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -93,7 +93,7 @@ public class UpdateFlowJSONAssetResponseBody extends TeaModel {
 
     public static class UpdateFlowJSONAssetResponseBodyData extends TeaModel {
         /**
-         * <p>Flow ID。</p>
+         * <p>The flow ID.</p>
          * 
          * <strong>example:</strong>
          * <p>92675332812643****</p>

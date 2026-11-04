@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateChatappTemplateResponseBody extends TeaModel {
     /**
-     * <p>The access denied details.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -16,7 +16,7 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
     /**
      * <p>The request status code.</p>
      * <ul>
-     * <li><p>OK indicates that the request was successful.</p>
+     * <li><p>OK: The request is successful.</p>
      * </li>
      * <li><p>For other error codes, see <a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">Error codes</a>.</p>
      * </li>

@@ -8,15 +8,15 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
      * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>The status code.</p>
+     * <p>The request status code.</p>
      * <ul>
-     * <li><p>OK indicates that the request was successful.</p>
+     * <li><p>A value of OK indicates that the request is successful.</p>
      * </li>
      * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
@@ -47,10 +47,10 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The call was successful.</li>
-     * <li><strong>false</strong>: The call failed.</li>
+     * <li><strong>true</strong>: The call is successful.</li>
+     * <li><strong>false</strong>: The call fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>

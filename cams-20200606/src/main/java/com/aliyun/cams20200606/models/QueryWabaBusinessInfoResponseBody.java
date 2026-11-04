@@ -152,7 +152,7 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
          * <p>The industry.</p>
          * 
          * <strong>example:</strong>
-         * <p>Retail</p>
+         * <p>零售</p>
          */
         @NameInMap("Vertical")
         @Deprecated

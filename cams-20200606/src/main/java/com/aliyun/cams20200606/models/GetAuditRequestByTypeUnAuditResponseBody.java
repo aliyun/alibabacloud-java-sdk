@@ -350,7 +350,7 @@ public class GetAuditRequestByTypeUnAuditResponseBody extends TeaModel {
         public java.util.List<String> messageDestinationInternationalCountry;
 
         /**
-         * <p>The business message introduction.</p>
+         * <p>The business messaging introduction.</p>
          * 
          * <strong>example:</strong>
          * <p>MessageDialogueIntroduction</p>
@@ -359,7 +359,7 @@ public class GetAuditRequestByTypeUnAuditResponseBody extends TeaModel {
         public String messageDialogueIntroduction;
 
         /**
-         * <p>The date when business messaging is enabled.</p>
+         * <p>The date when business messaging is enabled, in the YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-11-01</p>
@@ -368,7 +368,7 @@ public class GetAuditRequestByTypeUnAuditResponseBody extends TeaModel {
         public String messageEnableDate;
 
         /**
-         * <p>The business message session name.</p>
+         * <p>The business messaging session name.</p>
          * 
          * <strong>example:</strong>
          * <p>Message Session Name</p>
@@ -386,7 +386,7 @@ public class GetAuditRequestByTypeUnAuditResponseBody extends TeaModel {
         public String nowRecovery;
 
         /**
-         * <p>The recovery date.</p>
+         * <p>The recovery date in the YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-111-06</p>
@@ -662,7 +662,7 @@ public class GetAuditRequestByTypeUnAuditResponseBody extends TeaModel {
         public String auditResult;
 
         /**
-         * <p>The audit time.</p>
+         * <p>The audit time in the YYYYMMDD format.</p>
          * 
          * <strong>example:</strong>
          * <p>20250106</p>

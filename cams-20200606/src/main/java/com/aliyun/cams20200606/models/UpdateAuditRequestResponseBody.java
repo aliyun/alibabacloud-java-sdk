@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAuditRequestResponseBody extends TeaModel {
     /**
-     * <p>Access denied details.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,11 +14,11 @@ public class UpdateAuditRequestResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Request status code.</p>
+     * <p>The request status code.</p>
      * <ul>
-     * <li><p>OK indicates a successful request.</p>
+     * <li><p>OK indicates that the request was successful.</p>
      * </li>
-     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error Codes</a>.</p>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
      * </ul>
      * 
@@ -29,7 +29,7 @@ public class UpdateAuditRequestResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returns the RequestNo.</p>
+     * <p>The request number (RequestNo).</p>
      * 
      * <strong>example:</strong>
      * <p>14111561****</p>
@@ -38,7 +38,7 @@ public class UpdateAuditRequestResponseBody extends TeaModel {
     public java.util.Map<String, ?> data;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class UpdateAuditRequestResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of this API call request. Alibaba Cloud generates this unique identifier for the request. Use it to troubleshoot and locate issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -56,7 +56,7 @@ public class UpdateAuditRequestResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
      * <li><p>true: Successful.</p>
      * </li>

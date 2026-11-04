@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SyncMessageCampaignResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The access denial details.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,8 +14,9 @@ public class SyncMessageCampaignResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The status code of the request. A value of OK indicates that the request was successful.</p>
-     * <p>For other error codes, see Error Codes.</p>
+     * <p>The request status code. Valid values:</p>
+     * <p>OK: The request is successful.</p>
+     * <p>For other error codes, see the error code list.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -33,7 +34,7 @@ public class SyncMessageCampaignResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>233**</p>
@@ -42,12 +43,10 @@ public class SyncMessageCampaignResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The call was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The call failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The call is successful.</li>
+     * <li><strong>false</strong>: The call fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class ListInstanceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code.</p>
+     * <p>The request status code.</p>
      * <ul>
      * <li><p>OK indicates that the request was successful.</p>
      * </li>
@@ -254,7 +254,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The submit time.</p>
+         * <p>The submit time in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-12 00:00:00</p>

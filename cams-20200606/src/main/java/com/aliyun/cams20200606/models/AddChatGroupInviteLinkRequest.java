@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddChatGroupInviteLinkRequest extends TeaModel {
     /**
-     * <p>The business phone number. You can view the business phone number by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</p>
+     * <p>The business phone number. You can call the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation to view the business phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,10 +17,10 @@ public class AddChatGroupInviteLinkRequest extends TeaModel {
     /**
      * <p>The channel type. Valid values:</p>
      * <ul>
-     * <li><strong>WHATSAPP</strong></li>
+     * <li><strong>WHATSAPP</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p>Only the WhatsApp channel type is supported.</p>
+     * <p>Currently, only the WhatsApp channel type is supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class AddChatGroupInviteLinkRequest extends TeaModel {
     public String channelType;
 
     /**
-     * <p>The space ID or instance ID of the ISV sub-customer. This is the channel ID, which can be viewed on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
+     * <p>The space ID or instance ID of the ISV sub-customer, which is the channel ID. You can view it on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class AddChatGroupInviteLinkRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The group ID. You can view the group ID by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</p>
+     * <p>The group ID. You can call the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation to view the group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
