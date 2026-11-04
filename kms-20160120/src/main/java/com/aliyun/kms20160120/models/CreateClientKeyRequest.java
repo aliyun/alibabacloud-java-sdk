@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClientKeyRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>CreateClientKey</strong>.</p>
+     * <p>The name of the attached application access point (AAP).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,14 @@ public class CreateClientKeyRequest extends TeaModel {
     public String aapName;
 
     /**
-     * <p>The encryption password of the client key.</p>
-     * <p>The password must be 8 to 64 characters in length and must contain at least two of the following types: digits, letters, and special characters. Special characters include <code>~ ! @ # $ % ^ &amp; * ? _ -</code>.</p>
+     * <p>The end time of the validity period of the ClientKey.</p>
+     * <p>The time is specified in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you do not specify NotAfter, the default value is the creation time of the ClientKey plus 5 years.</li>
+     * <li>If you specify NotAfter, you must also specify NotBefore.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2028-08-31T17:14:33Z</p>
@@ -25,14 +31,14 @@ public class CreateClientKeyRequest extends TeaModel {
     public String notAfter;
 
     /**
-     * <p>The end of the validity period of the client key.</p>
-     * <p>Specify the time in the ISO 8601 standard. The time must be in UTC. The time must be in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+     * <p>The start time of the validity period of the ClientKey.</p>
+     * <p>The time is specified in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>If you do not configure NotAfter, the default value is the time when the client key was created plus five years.</li>
-     * <li>If you configure NotAfter, you must configure NotBefore.</li>
+     * <li>If you do not specify NotBefore, the default value is the creation time of the ClientKey.</li>
+     * <li>If you specify NotBefore, you must also specify NotAfter.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2023-08-31T17:14:33Z</p>
@@ -41,7 +47,8 @@ public class CreateClientKeyRequest extends TeaModel {
     public String notBefore;
 
     /**
-     * <p>The name of the AAP.</p>
+     * <p>The passphrase of the ClientKey.</p>
+     * <p>The passphrase must be 8 to 64 characters in length and can contain digits, uppercase and lowercase letters, and special characters such as <code>~!@#$%^&amp;*?_-</code>. It must contain at least two of these character types.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

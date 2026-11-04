@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateKeyRequest extends TeaModel {
     /**
-     * <p>The ID of the KMS instance.</p>
+     * <p>The instance ID of the KMS instance.</p>
      * <blockquote>
-     * <p>This parameter is required when you create a key for a KMS instance. This parameter is not required when you create a default key (master key).</p>
+     * <p>You must specify this parameter when you create a key for a KMS instance. You do not need to specify this parameter when you create a default key (master key).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class CreateKeyRequest extends TeaModel {
     public String DKMSInstanceId;
 
     /**
-     * <p>The description of the key.<br> The description can be 0 to 8,192 characters in length.<br></p>
+     * <p>The description of the key.<br>The description must be 0 to 8,192 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>key description example</p>
@@ -26,14 +26,12 @@ public class CreateKeyRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable automatic key rotation. Valid values:</p>
+     * <p>Specifies whether to enable automatic key rotation. Valid values:  </p>
      * <ul>
-     * <li><p>true: enables automatic key rotation.</p>
-     * </li>
-     * <li><p>false (default): disables automatic key rotation.</p>
-     * </li>
+     * <li>true: Enables automatic key rotation.</li>
+     * <li>false (default): Disables automatic key rotation.</li>
      * </ul>
-     * <p>This parameter is valid only when the key management type of the key supports automatic rotation. For more information, see <a href="https://help.aliyun.com/document_detail/2358146.html">Key rotation</a>.</p>
+     * <p>This parameter takes effect only when the key management type to which the key belongs supports automatic rotation. For more information, see <a href="https://help.aliyun.com/document_detail/2358146.html">Key rotation</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -42,9 +40,9 @@ public class CreateKeyRequest extends TeaModel {
     public Boolean enableAutomaticRotation;
 
     /**
-     * <p>The specification of the key. The valid values vary based on the key management type. For more information about key specifications, supported standards, and algorithms, see <a href="https://help.aliyun.com/document_detail/480161.html">Key management types and key specifications</a>.</p>
+     * <p>The key specification. Valid values vary based on the key management type. For more information about key specifications, followed standards, and key algorithms, see <a href="https://help.aliyun.com/document_detail/480161.html">Key management types and key specifications</a>.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the key specification is Aliyun_AES_256 by default.</p>
+     * <p>If you do not specify this parameter, the default key specification is Aliyun_AES_256.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -54,16 +52,12 @@ public class CreateKeyRequest extends TeaModel {
     public String keySpec;
 
     /**
-     * <p>The key storage location. This parameter is valid only when DKMSInstanceId is specified for a hardware key management instance. Valid values:</p>
+     * <p>The storage location of hardware-protected key. This parameter takes effect only when DKMSInstanceId is set to the ID of a hardware key management instance. Valid values:</p>
      * <ul>
-     * <li><p>HsmInternal (default): The key is stored in an HSM and does not support rotation.</p>
-     * </li>
-     * <li><p>HsmEncryptedDatabase: The key is stored in a database.</p>
-     * <ul>
-     * <li><p>Symmetric keys: Rotation is supported.</p>
-     * </li>
-     * <li><p>Asymmetric keys: Rotation is not supported.</p>
-     * </li>
+     * <li>HsmInternal (default): Hardware-protected key is stored in the HSM and does not support rotation.</li>
+     * <li>HsmEncryptedDatabase: Hardware-protected key is stored in the database.<ul>
+     * <li>Symmetric keys: Support rotation.</li>
+     * <li>Asymmetric keys: Do not support rotation.</li>
      * </ul>
      * </li>
      * </ul>
@@ -75,14 +69,12 @@ public class CreateKeyRequest extends TeaModel {
     public String keyStorageMechanism;
 
     /**
-     * <p>The usage of the key. Valid values:</p>
+     * <p>The purpose of the key. Valid values:  </p>
      * <ul>
-     * <li><p>ENCRYPT/DECRYPT: encrypts and decrypts data.</p>
-     * </li>
-     * <li><p>SIGN/VERIFY: generates and verifies digital signatures.</p>
-     * </li>
+     * <li>ENCRYPT/DECRYPT: Data encryption and decryption.</li>
+     * <li>SIGN/VERIFY: Digital signature generation and verification.</li>
      * </ul>
-     * <p>Default value: If the key supports signature verification, the default value is SIGN/VERIFY. Otherwise, the default value is ENCRYPT/DECRYPT.</p>
+     * <p>Default value: If the key supports signature generation and verification, the default value is SIGN/VERIFY. Otherwise, the default value is ENCRYPT/DECRYPT.</p>
      * 
      * <strong>example:</strong>
      * <p>ENCRYPT/DECRYPT</p>
@@ -91,12 +83,10 @@ public class CreateKeyRequest extends TeaModel {
     public String keyUsage;
 
     /**
-     * <p>The source of the key material. Valid values:</p>
+     * <p>The source of the key material. Valid values:  </p>
      * <ul>
-     * <li><p>Aliyun_KMS (default): The key material is generated by Alibaba Cloud KMS.</p>
-     * </li>
-     * <li><p>EXTERNAL: The key material is imported.</p>
-     * </li>
+     * <li>Aliyun_KMS (default): The key material is generated by Alibaba Cloud KMS.</li>
+     * <li>EXTERNAL: The key material is imported by you.</li>
      * </ul>
      * <blockquote>
      * <ul>
@@ -104,7 +94,7 @@ public class CreateKeyRequest extends TeaModel {
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>If you set this parameter to EXTERNAL, import key material. For more information, see <a href="https://help.aliyun.com/document_detail/607841.html">Import key material for a symmetric key</a> or <a href="https://help.aliyun.com/document_detail/608827.html">Import key material for an asymmetric key</a>.</li>
+     * <li>If you select EXTERNAL, you must import the key material. For more information, see <a href="https://help.aliyun.com/document_detail/607841.html">Import symmetric key material</a> or <a href="https://help.aliyun.com/document_detail/608827.html">Import asymmetric key material</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,15 +104,14 @@ public class CreateKeyRequest extends TeaModel {
     public String origin;
 
     /**
-     * <p>The content of the key policy. The value is in the JSON format. The policy can be up to 32,768 bytes in length. For more information about key policies, see <a href="https://help.aliyun.com/document_detail/2716468.html">Key policy overview</a>. If you do not specify this parameter, the default credential policy is used.</p>
-     * <p>A key policy contains the following content:</p>
+     * <p>The content of the key policy in JSON format. The maximum length is 32,768 bytes.
+     * For more information about key policies, see <a href="https://help.aliyun.com/document_detail/2716468.html">Key policy overview</a>. If you do not specify this parameter, the default key policy is used.</p>
+     * <p>The key policy includes the following fields:</p>
      * <ul>
-     * <li><p>Version: The version of the key policy. Only version 1 is supported.</p>
-     * </li>
-     * <li><p>Statement: The statements of the key policy. Each key policy contains one or more statements.</p>
-     * </li>
+     * <li>Version: The version of the key policy. Only version 1 is supported.</li>
+     * <li>Statement: The statements of the key policy. Each key policy contains one or more statements.</li>
      * </ul>
-     * <p>The following is the format of a key policy:</p>
+     * <p>The key policy uses the following format:</p>
      * <pre><code>{
      *   &quot;Version&quot;: &quot;1&quot;,
      *   &quot;Statement&quot;: [
@@ -147,23 +136,23 @@ public class CreateKeyRequest extends TeaModel {
      *   ]
      * }
      * </code></pre>
-     * <p>Details about a statement:</p>
+     * <p>Statement details:</p>
      * <ul>
-     * <li><p>Sid: (Optional) The custom statement identifier. The identifier can be up to 128 characters in length and can contain uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and special characters, including underscores (_), forward slashes (/), plus signs (+), equal signs (=), periods (.), at signs (@), and hyphens (-).</p>
+     * <li><p>Sid: Optional. The custom statement identifier. It can be up to 128 characters in length and can contain uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and special characters (_/+=.@-).</p>
      * </li>
-     * <li><p>Effect: (Required) The effect of the policy statement. Valid values: Allow and Deny.</p>
+     * <li><p>Effect: Required. Specifies whether to allow or deny the permissions in the policy statement. Valid values: Allow and Deny.</p>
      * </li>
-     * <li><p>Principal: (Required) The principal to which the permission is granted. Set this parameter to the current Alibaba Cloud account (the Alibaba Cloud account to which the key belongs), a RAM user or RAM role of the current Alibaba Cloud account, or a RAM user or RAM role of another Alibaba Cloud account.</p>
+     * <li><p>Principal: Required. The principal to which the policy is attached. You can set this field to the current Alibaba Cloud account (the account to which the key belongs), RAM users or RAM roles under the current Alibaba Cloud account, or RAM users or RAM roles under other Alibaba Cloud accounts.</p>
      * </li>
-     * <li><p>Action: (Required) The API operations that are allowed or denied. The value must start with &quot;kms:&quot;. For a list of supported operations, see <a href="https://help.aliyun.com/document_detail/2716468.html">Key policy overview</a>. If you specify an operation that is not in the list, the setting does not take effect.</p>
+     * <li><p>Action: Required. The API operations to allow or deny. The value must start with &quot;kms:&quot;. For the scope of the operation permission list, see <a href="https://help.aliyun.com/document_detail/2716468.html">Key policy overview</a>. If you specify operations outside the list, the settings do not take effect.</p>
      * </li>
-     * <li><p>Resource: (Required) The value can only be \*, which indicates the current KMS key.</p>
+     * <li><p>Resource: Required. The value can only be *, which indicates the current KMS key.</p>
      * </li>
-     * <li><p>Condition: (Optional) The conditions for the authorization to take effect. Use conditions to evaluate the context of an API request to determine whether to apply the policy statement. The format is <code>&quot;Condition&quot;: {&quot;condition operator&quot;: {&quot;condition key&quot;: &quot;condition value&quot;}}</code>. For more information, see <a href="https://help.aliyun.com/document_detail/2716468.html">Key policy overview</a>.</p>
+     * <li><p>Condition: Optional. The conditions that must be met for the authorization to take effect. You can use conditions to evaluate the context of API requests to determine whether the policy statement applies. The format is <code>&quot;Condition&quot;: {&quot;condition operator&quot;: {&quot;condition key&quot;: &quot;condition value&quot;}}</code>. For more information, see <a href="https://help.aliyun.com/document_detail/2716468.html">Key policy overview</a>.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>After granting permissions to a RAM user or RAM role of another Alibaba Cloud account, use that account to grant the RAM user or RAM role permissions to use the key in the RAM console. The RAM user or RAM role can use the key only after this is complete. For more information, see <a href="https://help.aliyun.com/document_detail/480682.html">Custom policies for Key Management Service</a>, <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>, and <a href="https://help.aliyun.com/document_detail/116147.html">Grant permissions to a RAM role</a>.</p>
+     * <p>After you grant permissions to RAM users or RAM roles under other Alibaba Cloud accounts, you must still use the Alibaba Cloud accounts of the RAM users or RAM roles to authorize them to use the key in the RAM console. Only then can the RAM users or RAM roles use the key. For specific operations, see <a href="https://help.aliyun.com/document_detail/480682.html">Custom policy examples for KMS</a>, <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>, and <a href="https://help.aliyun.com/document_detail/116147.html">Grant permissions to a RAM role</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -173,21 +162,19 @@ public class CreateKeyRequest extends TeaModel {
     public String policy;
 
     /**
-     * <p>You do not need to specify this parameter. KMS automatically sets an appropriate protection level for your key.</p>
-     * <p>The protection level of the key. Valid values:</p>
+     * <p>You do not need to specify this parameter. KMS will configure the appropriate protection settings for your key.</p>
+     * <p>The protection level of the key. Valid values:  </p>
      * <ul>
-     * <li><p>SOFTWARE</p>
-     * </li>
-     * <li><p>HSM</p>
-     * </li>
+     * <li>SOFTWARE</li>
+     * <li>HSM</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>If you specify DKMSInstanceId, this parameter is ignored. If the instance is a software key management instance, the protection level is SOFTWARE. If the instance is a hardware key management instance, the protection level is HSM.</li>
+     * <li>If DKMSInstanceId is specified, this parameter does not take effect. If the instance is a software key management instance, the protection level is SOFTWARE. If the instance is a hardware key management instance, the protection level is HSM.</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>If you do not specify DKMSInstanceId, leave this parameter empty. KMS sets the protection level. If a managed HSM is available in the region, KMS sets this parameter to HSM. Otherwise, KMS sets this parameter to SOFTWARE. For more information, see <a href="https://help.aliyun.com/document_detail/125803.html">Managed HSM overview</a>.</li>
+     * <li>If DKMSInstanceId is not specified, we recommend that you do not specify this parameter and rely on KMS settings. If KMS has a managed HSM in the region, this parameter will be set to HSM. Otherwise, it is set to SOFTWARE. For more information, see <a href="https://help.aliyun.com/document_detail/125803.html">Managed HSM overview</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -197,17 +184,17 @@ public class CreateKeyRequest extends TeaModel {
     public String protectionLevel;
 
     /**
-     * <p>The automatic rotation period. The format is \<code>integer[unit]\\</code>. \<code>integer\\</code> indicates the length of the period. \<code>unit\\</code> indicates the unit of time. Valid units: d (day), h (hour), m (minute), and s (second). For example, both 7d and 604800s represent a period of 7 days.</p>
+     * <p>The epoch for automatic rotation. The format is integer[unit], where integer indicates the time length and unit indicates the time unit. Valid units are d (days), h (hours), m (minutes), and s (seconds). Both 7d and 604800s indicate a 7-day epoch.</p>
      * <ul>
-     * <li><p>If the key is a default key, the value is 365d.</p>
+     * <li><p>If the key is a default key, the value is 365 days.</p>
      * </li>
-     * <li><p>If the key is a software-protected key, the value can be from 7d to 365d.</p>
+     * <li><p>If the key is a software-protected key, the value is 7 to 365 days.</p>
      * </li>
      * <li><p>If the key is a hardware-protected key, automatic rotation is not supported.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required if you set EnableAutomaticRotation to true.</p>
+     * <p>You must specify this parameter when EnableAutomaticRotation is set to true.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -217,11 +204,11 @@ public class CreateKeyRequest extends TeaModel {
     public String rotationInterval;
 
     /**
-     * <p>The tags to bind to the key. Each tag consists of a key-value pair (Key:Value), which includes a tag key and a tag value.</p>
-     * <p>Specify a maximum of 20 tags. To specify multiple tags, use the following format: <code>[{&quot;TagKey&quot;:&quot;key1&quot;,&quot;TagValue&quot;:&quot;value1&quot;},{&quot;TagKey&quot;:&quot;key2&quot;,&quot;TagValue&quot;:&quot;value2&quot;},...]</code>.</p>
-     * <p>Each tag key and tag value can be up to 128 characters in length and can contain uppercase letters, lowercase letters, digits, forward slashes (/), backslashes (\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).</p>
+     * <p>The tags to bind to the key. Each tag consists of a key-value pair, which includes a tag key and a tag value.</p>
+     * <p>You can specify up to 20 tags. To specify multiple tags, use the following format: <code>[{&quot;TagKey&quot;:&quot;key1&quot;,&quot;TagValue&quot;:&quot;value1&quot;},{&quot;TagKey&quot;:&quot;key2&quot;,&quot;TagValue&quot;:&quot;value2&quot;},...]</code>.</p>
+     * <p>Each tag key and tag value can be up to 128 characters in length and can contain uppercase and lowercase letters, digits, forward slashes (/), backslashes (\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).</p>
      * <blockquote>
-     * <p>The tag key cannot start with aliyun or acs:.</p>
+     * <p>A tag key cannot start with aliyun or acs:.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

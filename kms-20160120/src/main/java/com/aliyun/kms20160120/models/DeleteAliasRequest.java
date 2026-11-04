@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAliasRequest extends TeaModel {
     /**
-     * <p>The alias that you want to delete.</p>
-     * <p>The value must be 1 to 255 characters in length and must include the alias/ prefix.</p>
+     * <p>The alias to delete. It must be 1 to 255 characters in length and must include the alias/ prefix.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

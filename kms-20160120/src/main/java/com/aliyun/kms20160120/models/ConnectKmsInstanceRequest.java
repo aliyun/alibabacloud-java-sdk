@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConnectKmsInstanceRequest extends TeaModel {
     /**
-     * <p>The provider of the KMS instance. Set the value to Aliyun.</p>
+     * <p>The provider of the KMS instance. Currently, only Aliyun is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ConnectKmsInstanceRequest extends TeaModel {
     public String KMProvider;
 
     /**
-     * <p>The ID of the KMS instance that you want to enable.</p>
+     * <p>The ID of the KMS instance to enable.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ConnectKmsInstanceRequest extends TeaModel {
     public String kmsInstanceId;
 
     /**
-     * <p>The vSwitch in the two zones. The vSwitch must have at least one available IP address.</p>
+     * <p>Sets a vSwitch for the dual-zone deployment. The vSwitch must have at least one available IP address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ConnectKmsInstanceRequest extends TeaModel {
     public String vSwitchIds;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) that is associated with the KMS instance.</p>
+     * <p>The ID of the virtual private cloud (VPC) for the KMS instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ConnectKmsInstanceRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The two zones for the KMS instance. Dual-zone deployment improves service availability and disaster recovery capabilities.</p>
+     * <p>Sets two zones for the KMS instance. Dual-zone load balancing improves service availability and disaster recovery capabilities.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

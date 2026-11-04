@@ -14,7 +14,7 @@ public class CreateNetworkRuleRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the access control rule.</p>
+     * <p>The name of the network control rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateNetworkRuleRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The private IP address or private CIDR block. Separate multiple items with commas (,).</p>
+     * <p>The private IP addresses or private CIDR blocks. Separate multiple IP addresses with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;192.10.XX.XX&quot;,&quot;192.168.XX.XX/24&quot;]</p>
@@ -33,8 +33,7 @@ public class CreateNetworkRuleRequest extends TeaModel {
     public String sourcePrivateIp;
 
     /**
-     * <p>The network type.</p>
-     * <p>Only private IP addresses are supported. Set the value to Private.</p>
+     * <p>The network type. Valid values: Private. This value indicates that only private IP addresses are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

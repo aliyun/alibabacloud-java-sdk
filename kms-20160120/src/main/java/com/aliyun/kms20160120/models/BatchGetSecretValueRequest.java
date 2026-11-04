@@ -27,11 +27,11 @@ public class BatchGetSecretValueRequest extends TeaModel {
         /**
          * <p>Specifies whether to retrieve the extended configuration of the secret. Valid values:</p>
          * <ul>
-         * <li>true: Retrieve the extended configuration.</li>
-         * <li>false (default): Do not retrieve the extended configuration.</li>
+         * <li>true: Retrieves the extended configuration.</li>
+         * <li>false: Does not retrieve the extended configuration. This is the default value.</li>
          * </ul>
          * <blockquote>
-         * <p>Generic secrets do not support extended configurations. This parameter is ignored for generic secrets.</p>
+         * <p>Generic secrets do not support extended configurations. If you specify this parameter for a generic secret, it is ignored.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -41,9 +41,9 @@ public class BatchGetSecretValueRequest extends TeaModel {
         public String fetchExtendedConfig;
 
         /**
-         * <p>The secret name or secret Alibaba Cloud Resource Name (ARN).</p>
+         * <p>The name or Alibaba Cloud Resource Name (ARN) of the secret.</p>
          * <blockquote>
-         * <p>When accessing a secret in another Alibaba Cloud account, you must specify the secret ARN. The format of a secret ARN is <code>acs:kms:${region}:${account}:secret/${secret-name}</code>.</p>
+         * <p>To access a secret that belongs to another Alibaba Cloud account, you must specify the ARN of the secret. The ARN is in the <code>acs:kms:${region}:${account}:secret/${secret-name}</code> format.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -54,7 +54,7 @@ public class BatchGetSecretValueRequest extends TeaModel {
         public String secretName;
 
         /**
-         * <p>The version number.</p>
+         * <p>The version ID of the secret.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -63,10 +63,10 @@ public class BatchGetSecretValueRequest extends TeaModel {
         public String versionId;
 
         /**
-         * <p>The version stage. Default value: ACSCurrent.</p>
+         * <p>The stage of the secret version. Default value: ACSCurrent.</p>
          * <p>If you specify this parameter, the secret value of the specified version stage is returned. If you do not specify this parameter, the secret value of the ACSCurrent version stage is returned.</p>
          * <blockquote>
-         * <p>For ApsaraDB RDS secrets, PolarDB secrets, Redis/Tair secrets, RAM secrets, and ECS secrets, you can retrieve only the secret values of the ACSPrevious and ACSCurrent versions.</p>
+         * <p>For ApsaraDB RDS secrets, PolarDB secrets, Redis/Tair secrets, RAM secrets, and ECS secrets, you can only retrieve the secret values of the versions marked with ACSPrevious and ACSCurrent.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

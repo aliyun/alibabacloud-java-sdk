@@ -15,7 +15,7 @@ public class AsymmetricVerifyRequest extends TeaModel {
     public String algorithm;
 
     /**
-     * <p>The digest that is generated using the hash algorithm that corresponds to the value of <strong>Algorithm</strong> to hash the original message.</p>
+     * <p>The digest generated for the original message by using the hash algorithm that corresponds to the <strong>Algorithm</strong> parameter.</p>
      * <blockquote>
      * <p>The value is Base64-encoded.</p>
      * </blockquote>
@@ -28,21 +28,16 @@ public class AsymmetricVerifyRequest extends TeaModel {
     public String digest;
 
     /**
-     * <p>Specifies whether to perform a dry run.</p>
+     * <p>Specifies whether to enable the DryRun mode. Valid values:</p>
      * <ul>
-     * <li><p>true: performs a dry run.</p>
-     * </li>
-     * <li><p>false (default): does not perform a dry run.</p>
-     * </li>
+     * <li>true: Enabled.</li>
+     * <li>false (default): Disabled.</li>
      * </ul>
-     * <p>A dry run is used to test API calls and verify whether you have the permissions to access the specified resources and whether the request parameters are valid. If you perform a dry run, KMS always returns a failure response that indicates the cause of the failure. The following failure causes are included:</p>
+     * <p>The DryRun mode is used to test API calls, verify whether you have the required permissions on the resources, and check whether the request parameters are correctly configured. When the DryRun mode is enabled, KMS always returns a failure and provides the cause of the failure. The causes include:</p>
      * <ul>
-     * <li><p>DryRunOperationError: The request would have succeeded if the DryRun parameter is not specified.</p>
-     * </li>
-     * <li><p>ValidationError: The specified parameters in the request are invalid.</p>
-     * </li>
-     * <li><p>AccessDeniedError: You are not authorized to perform this operation on the KMS resource.</p>
-     * </li>
+     * <li>DryRunOperationError: The request would succeed if the DryRun parameter is not configured.</li>
+     * <li>ValidationError: The specified parameters in the request are invalid.</li>
+     * <li>AccessDeniedError: You are not authorized to perform the operation on the KMS resources.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,9 +47,9 @@ public class AsymmetricVerifyRequest extends TeaModel {
     public String dryRun;
 
     /**
-     * <p>The globally unique identifier (GUID) of the customer master key (CMK).</p>
+     * <p>The globally unique identifier of the customer master key (CMK).</p>
      * <blockquote>
-     * <p>You can also specify the alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Overview of aliases</a>.</p>
+     * <p>You can also set this parameter to the alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Usage notes for aliases</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -65,7 +60,7 @@ public class AsymmetricVerifyRequest extends TeaModel {
     public String keyId;
 
     /**
-     * <p>The ID of the key version. The ID must be the GUID of the key version.</p>
+     * <p>The key version ID. The globally unique identifier of the key version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

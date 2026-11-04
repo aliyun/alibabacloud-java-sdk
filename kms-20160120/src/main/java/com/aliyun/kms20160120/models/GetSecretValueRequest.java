@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetSecretValueRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable DryRun mode. Valid values:</p>
+     * <p>Specifies whether to enable the dry run mode. Valid values:</p>
      * <ul>
-     * <li>true: Enables DryRun mode.</li>
-     * <li>false (default): Disables DryRun mode.</li>
+     * <li>true: Enables the dry run mode.</li>
+     * <li>false: Disables the dry run mode. This is the default value.</li>
      * </ul>
-     * <p>DryRun mode is used to test API calls, verify whether you have the required permissions on the specified resources, and check whether the request parameters are configured correctly. When DryRun mode is enabled, KMS always returns a failure with the reason for the failure. Possible failure reasons include:</p>
+     * <p>The dry run mode is used to test API calls, verify whether you have the required permissions on the resources, and check whether the request parameters are correctly configured. After the dry run mode is enabled, KMS always returns a failure and provides the cause of the failure. The causes include:</p>
      * <ul>
-     * <li>DryRunOperationError: The request would succeed if the DryRun parameter were not configured.</li>
-     * <li>ValidationError: A parameter specified in the request is invalid.</li>
-     * <li>AccessDeniedError: You do not have permission to perform this operation on the KMS resource.</li>
+     * <li>DryRunOperationError: The request would succeed if the DryRun parameter is not configured.</li>
+     * <li>ValidationError: The specified parameters in the request are invalid.</li>
+     * <li>AccessDeniedError: You do not have the permissions to perform the operation on the KMS resource.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +27,10 @@ public class GetSecretValueRequest extends TeaModel {
      * <p>Specifies whether to retrieve the extended configuration of the secret. Valid values:</p>
      * <ul>
      * <li>true: Retrieves the extended configuration.</li>
-     * <li>false (default): Does not retrieve the extended configuration.</li>
+     * <li>false: Does not retrieve the extended configuration. This is the default value.</li>
      * </ul>
      * <blockquote>
-     * <p>Generic secrets do not support extended configuration. If you set this parameter, it is ignored.</p>
+     * <p>Generic secrets do not support extended configurations. If you specify this parameter for a generic secret, it is ignored.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -40,6 +40,8 @@ public class GetSecretValueRequest extends TeaModel {
     public Boolean fetchExtendedConfig;
 
     /**
+     * <p>The remote attestation.</p>
+     * 
      * <strong>example:</strong>
      * <p>{ &quot;AttestationDocument&quot;:&quot;base64-encoded-attestion-document&quot;,  &quot;KeyEncryptionAlgorithm&quot;:&quot;RSAES_OAEP_SHA_256&quot; }</p>
      */
@@ -47,9 +49,9 @@ public class GetSecretValueRequest extends TeaModel {
     public String recipient;
 
     /**
-     * <p>The secret name or secret Alibaba Cloud Resource Name (ARN).</p>
+     * <p>The name or Alibaba Cloud Resource Name (ARN) of the secret.</p>
      * <blockquote>
-     * <p>When accessing a secret in another Alibaba Cloud account, you must enter the secret ARN. The format of the secret ARN is <code>acs:kms:${region}:${account}:secret/${secret-name}</code>.</p>
+     * <p>To access a secret that belongs to another Alibaba Cloud account, you must specify the ARN of the secret. The ARN of a secret is in the <code>acs:kms:${region}:${account}:secret/${secret-name}</code> format.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -60,9 +62,9 @@ public class GetSecretValueRequest extends TeaModel {
     public String secretName;
 
     /**
-     * <p>The version number.</p>
+     * <p>The version ID.</p>
      * <blockquote>
-     * <p>Specifying VersionId is not supported for ApsaraDB RDS secrets, PolarDB secrets, Redis/Tair secrets, dynamic RAM secrets, or dynamic ECS secrets. If you set this parameter, it is ignored.</p>
+     * <p>ApsaraDB RDS secrets, PolarDB secrets, Redis/Tair secrets, RAM secrets, and ECS secrets do not support the VersionId parameter. If you specify this parameter, it is ignored.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,10 +74,10 @@ public class GetSecretValueRequest extends TeaModel {
     public String versionId;
 
     /**
-     * <p>The version status. Default value: ACSCurrent.</p>
-     * <p>If you specify this parameter, the secret value of the specified version status is returned. If you do not specify this parameter, the secret value of the ACSCurrent version status is returned.</p>
+     * <p>The version stage. Default value: ACSCurrent.</p>
+     * <p>If you specify this parameter, the secret value of the specified version stage is returned. If you do not specify this parameter, the secret value of the ACSCurrent version stage is returned.</p>
      * <blockquote>
-     * <p>For ApsaraDB RDS secrets, PolarDB secrets, Redis/Tair secrets, dynamic RAM secrets, and dynamic ECS secrets, only the secret values corresponding to ACSPrevious and ACSCurrent can be retrieved.</p>
+     * <p>For ApsaraDB RDS secrets, PolarDB secrets, Redis/Tair secrets, RAM secrets, and ECS secrets, you can only retrieve the secret values of the versions marked with ACSPrevious and ACSCurrent.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

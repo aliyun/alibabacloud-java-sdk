@@ -15,14 +15,14 @@ public class AsymmetricSignRequest extends TeaModel {
     public String algorithm;
 
     /**
-     * <p>The digest of the original message. The digest is generated using the hash algorithm that corresponds to the value of the Algorithm parameter.</p>
+     * <p>The digest generated from the original message by using the hash algorithm that corresponds to the value of the Algorithm parameter.</p>
      * <blockquote>
      * <ul>
      * <li>The value is Base64-encoded.</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>For information about how to calculate a message digest, see the &quot;Pre-signing: calculate a message digest&quot; section of the <a href="https://help.aliyun.com/document_detail/148146.html">Asymmetric digital signature</a> topic.</li>
+     * <li>For more information about how to calculate a message digest, see the <strong>Signature preprocessing: Calculate the message digest</strong> section in <a href="https://help.aliyun.com/document_detail/148146.html">Asymmetric digital signatures</a>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -33,21 +33,16 @@ public class AsymmetricSignRequest extends TeaModel {
     public String digest;
 
     /**
-     * <p>Specifies whether to enable the dry-run feature.</p>
+     * <p>Specifies whether to enable the dry run mode.</p>
      * <ul>
-     * <li><p>true: enables the feature.</p>
-     * </li>
-     * <li><p>false (default): disables the feature.</p>
-     * </li>
+     * <li>true: Enables the dry run mode.</li>
+     * <li>false: Disables the dry run mode. This is the default value.</li>
      * </ul>
-     * <p>The dry-run feature is used to test API calls and verify the permissions on the resources that you have and the validity of the request parameters. If you enable the dry-run feature, KMS always returns a failure response and a failure reason. The failure reasons include the following:</p>
+     * <p>The dry run mode is used to test API calls, verify whether you have the required permissions on the resources, and check whether the request parameters are correctly configured. When the dry run mode is enabled, KMS always returns a failure and provides the cause of the failure. The causes include:</p>
      * <ul>
-     * <li><p>DryRunOperationError: The request would have succeeded if the DryRun parameter is not configured.</p>
-     * </li>
-     * <li><p>ValidationError: The specified parameters in the request are invalid.</p>
-     * </li>
-     * <li><p>AccessDeniedError: You are not authorized to perform the operation on the KMS resource.</p>
-     * </li>
+     * <li>DryRunOperationError: The request would succeed if the DryRun parameter is not configured.</li>
+     * <li>ValidationError: The specified parameters in the request are invalid.</li>
+     * <li>AccessDeniedError: You are not authorized to perform the operation on the KMS resources.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,9 +52,9 @@ public class AsymmetricSignRequest extends TeaModel {
     public String dryRun;
 
     /**
-     * <p>The globally unique identifier (GUID) of the customer master key (CMK).</p>
+     * <p>The globally unique identifier of the customer master key (CMK).</p>
      * <blockquote>
-     * <p>You can also specify the alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Overview of aliases</a>.</p>
+     * <p>You can also set this parameter to the alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Usage notes for aliases</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -70,7 +65,7 @@ public class AsymmetricSignRequest extends TeaModel {
     public String keyId;
 
     /**
-     * <p>The ID of the key version. The ID must be the GUID of the key version.</p>
+     * <p>The key version ID, which is the globally unique identifier of the key version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
