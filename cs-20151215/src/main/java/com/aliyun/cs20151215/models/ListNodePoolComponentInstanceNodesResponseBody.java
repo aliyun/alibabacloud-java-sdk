@@ -104,7 +104,7 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
         public ListNodePoolComponentInstanceNodesResponseBodyNodeListComponentConfig config;
 
         /**
-         * <p>The custom configuration version number of the component on the node.</p>
+         * <p>The custom configuration revision of the component on the node.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -171,7 +171,7 @@ public class ListNodePoolComponentInstanceNodesResponseBody extends TeaModel {
 
     public static class ListNodePoolComponentInstanceNodesResponseBodyNodeList extends TeaModel {
         /**
-         * <p>The details of the component on the node.</p>
+         * <p>The detailed information about the component on the node.</p>
          */
         @NameInMap("component")
         public ListNodePoolComponentInstanceNodesResponseBodyNodeListComponent component;

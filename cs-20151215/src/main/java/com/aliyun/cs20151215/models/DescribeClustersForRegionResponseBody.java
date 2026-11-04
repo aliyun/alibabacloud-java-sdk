@@ -261,6 +261,13 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <strong>example:</strong>
+         * <p>Extended</p>
+         */
+        @NameInMap("support_policy")
+        public String supportPolicy;
+
+        /**
          * <p>The list of tags for the cluster.</p>
          */
         @NameInMap("tags")
@@ -462,6 +469,14 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
+        }
+
+        public DescribeClustersForRegionResponseBodyClusters setSupportPolicy(String supportPolicy) {
+            this.supportPolicy = supportPolicy;
+            return this;
+        }
+        public String getSupportPolicy() {
+            return this.supportPolicy;
         }
 
         public DescribeClustersForRegionResponseBodyClusters setTags(java.util.List<Tag> tags) {

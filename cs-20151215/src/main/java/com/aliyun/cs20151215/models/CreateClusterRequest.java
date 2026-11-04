@@ -1009,6 +1009,13 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean sshFlags;
 
     /**
+     * <strong>example:</strong>
+     * <p>Extended</p>
+     */
+    @NameInMap("support_policy")
+    public String supportPolicy;
+
+    /**
      * <p>The node tags. Tag definition rules:</p>
      * <ul>
      * <li>Tags are case-sensitive key-value pairs. You can settings up to 20 tags.</li>
@@ -1957,6 +1964,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public Boolean getSshFlags() {
         return this.sshFlags;
+    }
+
+    public CreateClusterRequest setSupportPolicy(String supportPolicy) {
+        this.supportPolicy = supportPolicy;
+        return this;
+    }
+    public String getSupportPolicy() {
+        return this.supportPolicy;
     }
 
     public CreateClusterRequest setTags(java.util.List<Tag> tags) {

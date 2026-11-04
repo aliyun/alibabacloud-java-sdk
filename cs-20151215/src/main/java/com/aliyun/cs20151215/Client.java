@@ -1135,6 +1135,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ssh_flags", request.sshFlags);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.supportPolicy)) {
+            body.put("support_policy", request.supportPolicy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
             body.put("tags", request.tags);
         }
@@ -1375,7 +1379,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a node pool. A node pool is a logical collection of nodes with the same property, which allows unified management and O&amp;M of nodes, such as node upgrades and elastic scaling. You can further use the automated O&amp;M features of node pools, such as automatic repair of OS CVE vulnerabilities, automatic recovery of faulty nodes, and automatic upgrades of kubelet and containerd versions, to reduce O&amp;M costs. You can invoke CreateClusterNodePool to create a node pool for a cluster.</p>
+     * <p>A node pool is a logical collection of nodes with the same properties, which allows unified management and O&amp;M of nodes, such as node upgrades and elastic scaling. You can further use the automated O&amp;M features of node pools, such as automatic repair of OS CVE vulnerabilities, automatic recovery of faulty nodes, and automatic upgrades of kubelet and containerd versions, to reduce O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</p>
      * 
      * @param request CreateClusterNodePoolRequest
      * @param headers map
@@ -1469,7 +1473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a node pool. A node pool is a logical collection of nodes with the same property, which allows unified management and O&amp;M of nodes, such as node upgrades and elastic scaling. You can further use the automated O&amp;M features of node pools, such as automatic repair of OS CVE vulnerabilities, automatic recovery of faulty nodes, and automatic upgrades of kubelet and containerd versions, to reduce O&amp;M costs. You can invoke CreateClusterNodePool to create a node pool for a cluster.</p>
+     * <p>A node pool is a logical collection of nodes with the same properties, which allows unified management and O&amp;M of nodes, such as node upgrades and elastic scaling. You can further use the automated O&amp;M features of node pools, such as automatic repair of OS CVE vulnerabilities, automatic recovery of faulty nodes, and automatic upgrades of kubelet and containerd versions, to reduce O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</p>
      * 
      * @param request CreateClusterNodePoolRequest
      * @return CreateClusterNodePoolResponse
@@ -2015,7 +2019,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a node pool that is no longer in use. When a node pool is deleted, all pods on its nodes are deleted, which may trigger rescheduling. If rescheduling fails, your services may be affected. Ensure that the cluster has sufficient resources for rescheduling.</p>
+     * <p>Deletes a node pool that is no longer in use. When a node pool is deleted, all pods on its nodes are deleted, which may trigger descheduling. If the pods cannot be rescheduled, your services may be affected. Ensure that the cluster has sufficient resources for descheduling.</p>
      * 
      * @param request DeleteClusterNodepoolRequest
      * @param headers map
@@ -2049,7 +2053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a node pool that is no longer in use. When a node pool is deleted, all pods on its nodes are deleted, which may trigger rescheduling. If rescheduling fails, your services may be affected. Ensure that the cluster has sufficient resources for rescheduling.</p>
+     * <p>Deletes a node pool that is no longer in use. When a node pool is deleted, all pods on its nodes are deleted, which may trigger descheduling. If the pods cannot be rescheduled, your services may be affected. Ensure that the cluster has sufficient resources for descheduling.</p>
      * 
      * @param request DeleteClusterNodepoolRequest
      * @return DeleteClusterNodepoolResponse
@@ -3118,10 +3122,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>When you remove a node, perform standard operations by using this API operation or the <a href="https://cs.console.aliyun.com">Container Service console</a>. Do not manually remove nodes by running the <code>kubectl delete node</code> command.</li>
-     * <li>Do not release nodes or remove instances in the ECS or Auto Scaling console, or by calling related API operations, or passively release nodes when a subscription instance expires. In these cases, the nodes are directly shut down and automatically removed from the Container Service console.</li>
-     * <li>If the expected number of nodes is configured for a node pool, the node pool automatically scales out other instances based on the corresponding configurations to maintain the expected number of nodes.</li>
-     * <li>Removing a node involves pod migration, which may affect your services. Perform this operation during off-peak hours. Unexpected risks may occur during the operation. Back up your data in advance.</li>
-     * <li>When a node is removed, ACK drains the node. Make sure that other nodes in the cluster have sufficient resources to prevent application pods from failing to be scheduled.</li>
+     * <li>Do not proactively release nodes or remove instances in the ECS or Auto Scaling (ESS) console or by calling related API operations, or passively release nodes when a subscription instance expires. In these cases, the nodes are directly shut down and automatically removed from the Container Service console.</li>
+     * <li>If the expected number of nodes is configured for a node pool, the node pool automatically scales out other instances based on the configurations to maintain the expected number of nodes.</li>
+     * <li>Removing a node involves pod migration and may affect your services. Perform this operation during off-peak hours. Unexpected risks may occur during the operation. Back up your data in advance.</li>
+     * <li>When a node is removed, ACK performs a drain operation. Make sure that other nodes in the cluster have sufficient resources to prevent application pods from failing to be scheduled.</li>
      * <li>Check the node affinity rules and scheduling policies of the pods on the node to be removed. Make sure that the pods can be scheduled to other nodes after the node is removed.</li>
      * </ul>
      * 
@@ -3162,10 +3166,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>When you remove a node, perform standard operations by using this API operation or the <a href="https://cs.console.aliyun.com">Container Service console</a>. Do not manually remove nodes by running the <code>kubectl delete node</code> command.</li>
-     * <li>Do not release nodes or remove instances in the ECS or Auto Scaling console, or by calling related API operations, or passively release nodes when a subscription instance expires. In these cases, the nodes are directly shut down and automatically removed from the Container Service console.</li>
-     * <li>If the expected number of nodes is configured for a node pool, the node pool automatically scales out other instances based on the corresponding configurations to maintain the expected number of nodes.</li>
-     * <li>Removing a node involves pod migration, which may affect your services. Perform this operation during off-peak hours. Unexpected risks may occur during the operation. Back up your data in advance.</li>
-     * <li>When a node is removed, ACK drains the node. Make sure that other nodes in the cluster have sufficient resources to prevent application pods from failing to be scheduled.</li>
+     * <li>Do not proactively release nodes or remove instances in the ECS or Auto Scaling (ESS) console or by calling related API operations, or passively release nodes when a subscription instance expires. In these cases, the nodes are directly shut down and automatically removed from the Container Service console.</li>
+     * <li>If the expected number of nodes is configured for a node pool, the node pool automatically scales out other instances based on the configurations to maintain the expected number of nodes.</li>
+     * <li>Removing a node involves pod migration and may affect your services. Perform this operation during off-peak hours. Unexpected risks may occur during the operation. Back up your data in advance.</li>
+     * <li>When a node is removed, ACK performs a drain operation. Make sure that other nodes in the cluster have sufficient resources to prevent application pods from failing to be scheduled.</li>
      * <li>Check the node affinity rules and scheduling policies of the pods on the node to be removed. Make sure that the pods can be scheduled to other nodes after the node is removed.</li>
      * </ul>
      * 
@@ -3959,6 +3963,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
             query.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supportPolicy)) {
+            query.put("SupportPolicy", request.supportPolicy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.runtime)) {
@@ -6378,6 +6386,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("security_group_id", request.securityGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.supportPolicy)) {
+            body.put("support_policy", request.supportPolicy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.systemEventsLogging)) {
             body.put("system_events_logging", request.systemEventsLogging);
         }
@@ -6489,10 +6501,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><notice>Starting July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to input and output parameters of ACK cluster management OpenAPI operations and deprecation of OpenAPI operations</a>.</notice></p>
+     * <p><notice>Starting July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to request and response parameters and deprecation of OpenAPI operations related to ACK cluster management</a>.</notice></p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the configuration of a node pool based on the node pool ID by calling the ModifyClusterNodePool operation.</p>
+     * <p>Updates the configurations of a specified node pool.</p>
      * 
      * @param request ModifyClusterNodePoolRequest
      * @param headers map
@@ -6558,10 +6570,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><notice>Starting July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to input and output parameters of ACK cluster management OpenAPI operations and deprecation of OpenAPI operations</a>.</notice></p>
+     * <p><notice>Starting July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to request and response parameters and deprecation of OpenAPI operations related to ACK cluster management</a>.</notice></p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the configuration of a node pool based on the node pool ID by calling the ModifyClusterNodePool operation.</p>
+     * <p>Updates the configurations of a specified node pool.</p>
      * 
      * @param request ModifyClusterNodePoolRequest
      * @return ModifyClusterNodePoolResponse
@@ -7008,15 +7020,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Node removal involves pod migration, which may affect your workloads. Perform this operation during off-peak hours.</li>
+     * <li>Removing nodes involves pod migration and may affect your services. Perform this operation during off-peak hours.</li>
      * <li>Unexpected risks may occur during the operation. Back up your data in advance.</li>
      * <li>During the operation, the system sets the nodes to the unschedulable state.</li>
      * <li>Only worker nodes are removed. Master nodes are not removed.</li>
-     * <li>Even if you choose to release nodes (by setting release_node to true), subscription nodes are not released. You must release them manually in the <a href="https://ecs.console.aliyun.com/">ECS console</a> after removing them from the node pool.</li>
+     * <li>Even if you choose to release nodes (by setting <code>release_node</code> to <code>true</code>), subscription nodes are not released. To release subscription nodes, you must first <a href="https://www.alibabacloud.com/help/en/ecs/change-the-billing-method-of-an-instance-from-subscription-to-pay-as-you-go-1">change their billing method to pay-as-you-go</a> and then release them in the <a href="https://ecs.console.aliyun.com/">ECS console</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Removes nodes from a node pool in a cluster and adjusts the expected number of nodes when the nodes are no longer needed. When removing nodes, you can specify whether to release the associated ECS instances and whether to automatically drain the nodes. Node removal involves pod migration, which may affect your workloads. Perform this operation during off-peak hours and back up your data in advance.</p>
+     * <p>Removes nodes from a node pool in a cluster and adjusts the expected number of nodes when the nodes are no longer needed. When removing nodes, you can specify whether to release the associated ECS instances and whether to automatically drain the nodes. Removing nodes involves pod migration and may affect your services. Perform this operation during off-peak hours and back up your data in advance.</p>
      * 
      * @param tmpReq RemoveNodePoolNodesRequest
      * @param headers map
@@ -7077,15 +7089,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Node removal involves pod migration, which may affect your workloads. Perform this operation during off-peak hours.</li>
+     * <li>Removing nodes involves pod migration and may affect your services. Perform this operation during off-peak hours.</li>
      * <li>Unexpected risks may occur during the operation. Back up your data in advance.</li>
      * <li>During the operation, the system sets the nodes to the unschedulable state.</li>
      * <li>Only worker nodes are removed. Master nodes are not removed.</li>
-     * <li>Even if you choose to release nodes (by setting release_node to true), subscription nodes are not released. You must release them manually in the <a href="https://ecs.console.aliyun.com/">ECS console</a> after removing them from the node pool.</li>
+     * <li>Even if you choose to release nodes (by setting <code>release_node</code> to <code>true</code>), subscription nodes are not released. To release subscription nodes, you must first <a href="https://www.alibabacloud.com/help/en/ecs/change-the-billing-method-of-an-instance-from-subscription-to-pay-as-you-go-1">change their billing method to pay-as-you-go</a> and then release them in the <a href="https://ecs.console.aliyun.com/">ECS console</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Removes nodes from a node pool in a cluster and adjusts the expected number of nodes when the nodes are no longer needed. When removing nodes, you can specify whether to release the associated ECS instances and whether to automatically drain the nodes. Node removal involves pod migration, which may affect your workloads. Perform this operation during off-peak hours and back up your data in advance.</p>
+     * <p>Removes nodes from a node pool in a cluster and adjusts the expected number of nodes when the nodes are no longer needed. When removing nodes, you can specify whether to release the associated ECS instances and whether to automatically drain the nodes. Removing nodes involves pod migration and may affect your services. Perform this operation during off-peak hours and back up your data in advance.</p>
      * 
      * @param request RemoveNodePoolNodesRequest
      * @return RemoveNodePoolNodesResponse

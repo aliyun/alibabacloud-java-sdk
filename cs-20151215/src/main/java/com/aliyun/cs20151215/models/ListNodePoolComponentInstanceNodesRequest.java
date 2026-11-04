@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNodePoolComponentInstanceNodesRequest extends TeaModel {
     /**
-     * <p>Filters nodes by the specified configuration version number of the node component.</p>
+     * <p>Filters nodes by the specified configuration revision of the node component.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

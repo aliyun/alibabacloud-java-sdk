@@ -44,6 +44,30 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
 
     public static class DescribeKubernetesVersionMetadataResponseBodyImages extends TeaModel {
         /**
+         * <p>The image architecture.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x86_64</p>
+         */
+        @NameInMap("architecture")
+        public String architecture;
+
+        /**
+         * <p>The image category. Some valid values:</p>
+         * <ul>
+         * <li><code>system</code>: public images.</li>
+         * <li><code>self</code>: your custom images.</li>
+         * <li><code>others</code>: public images from other users.</li>
+         * <li><code>marketplace</code>: Alibaba Cloud Marketplace images.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
+         */
+        @NameInMap("image_category")
+        public String imageCategory;
+
+        /**
          * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
@@ -60,30 +84,6 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
          */
         @NameInMap("image_name")
         public String imageName;
-
-        /**
-         * <p>The operating system platform. Valid values:</p>
-         * <ul>
-         * <li><code>AliyunLinux</code></li>
-         * <li><code>CentOS</code></li>
-         * <li><code>Windows</code></li>
-         * <li><code>WindowsCore</code></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>AliyunLinux</p>
-         */
-        @NameInMap("platform")
-        public String platform;
-
-        /**
-         * <p>The image version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3.2104</p>
-         */
-        @NameInMap("os_version")
-        public String osVersion;
 
         /**
          * <p>The operating system distribution type. Use this field to specify the operating system for nodes. Valid values:</p>
@@ -119,32 +119,48 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String osType;
 
         /**
-         * <p>The image category. Some valid values:</p>
+         * <p>The image version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.2104</p>
+         */
+        @NameInMap("os_version")
+        public String osVersion;
+
+        /**
+         * <p>The operating system platform. Valid values:</p>
          * <ul>
-         * <li><code>system</code>: public images.</li>
-         * <li><code>self</code>: your custom images.</li>
-         * <li><code>others</code>: public images from other users.</li>
-         * <li><code>marketplace</code>: Alibaba Cloud Marketplace images.</li>
+         * <li><code>AliyunLinux</code></li>
+         * <li><code>CentOS</code></li>
+         * <li><code>Windows</code></li>
+         * <li><code>WindowsCore</code></li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>system</p>
+         * <p>AliyunLinux</p>
          */
-        @NameInMap("image_category")
-        public String imageCategory;
-
-        /**
-         * <p>The image architecture.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>x86_64</p>
-         */
-        @NameInMap("architecture")
-        public String architecture;
+        @NameInMap("platform")
+        public String platform;
 
         public static DescribeKubernetesVersionMetadataResponseBodyImages build(java.util.Map<String, ?> map) throws Exception {
             DescribeKubernetesVersionMetadataResponseBodyImages self = new DescribeKubernetesVersionMetadataResponseBodyImages();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeKubernetesVersionMetadataResponseBodyImages setArchitecture(String architecture) {
+            this.architecture = architecture;
+            return this;
+        }
+        public String getArchitecture() {
+            return this.architecture;
+        }
+
+        public DescribeKubernetesVersionMetadataResponseBodyImages setImageCategory(String imageCategory) {
+            this.imageCategory = imageCategory;
+            return this;
+        }
+        public String getImageCategory() {
+            return this.imageCategory;
         }
 
         public DescribeKubernetesVersionMetadataResponseBodyImages setImageId(String imageId) {
@@ -163,22 +179,6 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
             return this.imageName;
         }
 
-        public DescribeKubernetesVersionMetadataResponseBodyImages setPlatform(String platform) {
-            this.platform = platform;
-            return this;
-        }
-        public String getPlatform() {
-            return this.platform;
-        }
-
-        public DescribeKubernetesVersionMetadataResponseBodyImages setOsVersion(String osVersion) {
-            this.osVersion = osVersion;
-            return this;
-        }
-        public String getOsVersion() {
-            return this.osVersion;
-        }
-
         public DescribeKubernetesVersionMetadataResponseBodyImages setImageType(String imageType) {
             this.imageType = imageType;
             return this;
@@ -195,20 +195,20 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
             return this.osType;
         }
 
-        public DescribeKubernetesVersionMetadataResponseBodyImages setImageCategory(String imageCategory) {
-            this.imageCategory = imageCategory;
+        public DescribeKubernetesVersionMetadataResponseBodyImages setOsVersion(String osVersion) {
+            this.osVersion = osVersion;
             return this;
         }
-        public String getImageCategory() {
-            return this.imageCategory;
+        public String getOsVersion() {
+            return this.osVersion;
         }
 
-        public DescribeKubernetesVersionMetadataResponseBodyImages setArchitecture(String architecture) {
-            this.architecture = architecture;
+        public DescribeKubernetesVersionMetadataResponseBodyImages setPlatform(String platform) {
+            this.platform = platform;
             return this;
         }
-        public String getArchitecture() {
-            return this.architecture;
+        public String getPlatform() {
+            return this.platform;
         }
 
     }
@@ -225,6 +225,31 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
          */
         @NameInMap("capabilities")
         public java.util.Map<String, ?> capabilities;
+
+        /**
+         * <p>Indicates whether the Kubernetes version can be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("creatable")
+        public Boolean creatable;
+
+        /**
+         * <p>The expiration time of the Kubernetes version. The time is in ISO 8601 format and includes time zone information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-30T00:00:00Z</p>
+         */
+        @NameInMap("expiration_date")
+        public String expirationDate;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2026-04-30T00:00:00Z</p>
+         */
+        @NameInMap("extended_expiration_date")
+        public String extendedExpirationDate;
 
         /**
          * <p>The list of system images.</p>
@@ -246,21 +271,6 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public java.util.Map<String, ?> metaData;
 
         /**
-         * <p>The container runtime configurations.</p>
-         */
-        @NameInMap("runtimes")
-        public java.util.List<Runtime> runtimes;
-
-        /**
-         * <p>The Kubernetes version released by ACK. For more information about versions, see <a href="https://help.aliyun.com/document_detail/185269.html">Overview of Kubernetes version releases</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1.31.1-aliyun.1</p>
-         */
-        @NameInMap("version")
-        public String version;
-
-        /**
          * <p>The release time of the Kubernetes version. The time is in ISO 8601 format and includes time zone information.</p>
          * 
          * <strong>example:</strong>
@@ -270,28 +280,32 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String releaseDate;
 
         /**
-         * <p>The expiration time of the Kubernetes version. The time is in ISO 8601 format and includes time zone information.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2026-01-30T00:00:00Z</p>
+         * <p>The container runtime configurations.</p>
          */
-        @NameInMap("expiration_date")
-        public String expirationDate;
+        @NameInMap("runtimes")
+        public java.util.List<Runtime> runtimes;
 
         /**
-         * <p>Indicates whether the Kubernetes version can be created.</p>
-         * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>Extended</p>
          */
-        @NameInMap("creatable")
-        public Boolean creatable;
+        @NameInMap("support_policy")
+        public String supportPolicy;
 
         /**
          * <p>The list of upgradable versions.</p>
          */
         @NameInMap("upgradable_versions")
         public java.util.List<String> upgradableVersions;
+
+        /**
+         * <p>The Kubernetes version released by ACK. For more information about versions, see <a href="https://help.aliyun.com/document_detail/185269.html">Overview of Kubernetes version releases</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.31.1-aliyun.1</p>
+         */
+        @NameInMap("version")
+        public String version;
 
         public static DescribeKubernetesVersionMetadataResponseBody build(java.util.Map<String, ?> map) throws Exception {
             DescribeKubernetesVersionMetadataResponseBody self = new DescribeKubernetesVersionMetadataResponseBody();
@@ -304,6 +318,30 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         }
         public java.util.Map<String, ?> getCapabilities() {
             return this.capabilities;
+        }
+
+        public DescribeKubernetesVersionMetadataResponseBody setCreatable(Boolean creatable) {
+            this.creatable = creatable;
+            return this;
+        }
+        public Boolean getCreatable() {
+            return this.creatable;
+        }
+
+        public DescribeKubernetesVersionMetadataResponseBody setExpirationDate(String expirationDate) {
+            this.expirationDate = expirationDate;
+            return this;
+        }
+        public String getExpirationDate() {
+            return this.expirationDate;
+        }
+
+        public DescribeKubernetesVersionMetadataResponseBody setExtendedExpirationDate(String extendedExpirationDate) {
+            this.extendedExpirationDate = extendedExpirationDate;
+            return this;
+        }
+        public String getExtendedExpirationDate() {
+            return this.extendedExpirationDate;
         }
 
         public DescribeKubernetesVersionMetadataResponseBody setImages(java.util.List<DescribeKubernetesVersionMetadataResponseBodyImages> images) {
@@ -322,22 +360,6 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
             return this.metaData;
         }
 
-        public DescribeKubernetesVersionMetadataResponseBody setRuntimes(java.util.List<Runtime> runtimes) {
-            this.runtimes = runtimes;
-            return this;
-        }
-        public java.util.List<Runtime> getRuntimes() {
-            return this.runtimes;
-        }
-
-        public DescribeKubernetesVersionMetadataResponseBody setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
-        }
-
         public DescribeKubernetesVersionMetadataResponseBody setReleaseDate(String releaseDate) {
             this.releaseDate = releaseDate;
             return this;
@@ -346,20 +368,20 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
             return this.releaseDate;
         }
 
-        public DescribeKubernetesVersionMetadataResponseBody setExpirationDate(String expirationDate) {
-            this.expirationDate = expirationDate;
+        public DescribeKubernetesVersionMetadataResponseBody setRuntimes(java.util.List<Runtime> runtimes) {
+            this.runtimes = runtimes;
             return this;
         }
-        public String getExpirationDate() {
-            return this.expirationDate;
+        public java.util.List<Runtime> getRuntimes() {
+            return this.runtimes;
         }
 
-        public DescribeKubernetesVersionMetadataResponseBody setCreatable(Boolean creatable) {
-            this.creatable = creatable;
+        public DescribeKubernetesVersionMetadataResponseBody setSupportPolicy(String supportPolicy) {
+            this.supportPolicy = supportPolicy;
             return this;
         }
-        public Boolean getCreatable() {
-            return this.creatable;
+        public String getSupportPolicy() {
+            return this.supportPolicy;
         }
 
         public DescribeKubernetesVersionMetadataResponseBody setUpgradableVersions(java.util.List<String> upgradableVersions) {
@@ -368,6 +390,14 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         }
         public java.util.List<String> getUpgradableVersions() {
             return this.upgradableVersions;
+        }
+
+        public DescribeKubernetesVersionMetadataResponseBody setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }

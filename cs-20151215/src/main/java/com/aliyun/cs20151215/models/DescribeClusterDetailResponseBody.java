@@ -374,6 +374,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String subnetCidr;
 
     /**
+     * <strong>example:</strong>
+     * <p>Extended</p>
+     */
+    @NameInMap("support_policy")
+    public String supportPolicy;
+
+    /**
      * <p>The cluster resource tags.</p>
      */
     @NameInMap("tags")
@@ -738,6 +745,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
     public String getSubnetCidr() {
         return this.subnetCidr;
+    }
+
+    public DescribeClusterDetailResponseBody setSupportPolicy(String supportPolicy) {
+        this.supportPolicy = supportPolicy;
+        return this;
+    }
+    public String getSupportPolicy() {
+        return this.supportPolicy;
     }
 
     public DescribeClusterDetailResponseBody setTags(java.util.List<Tag> tags) {

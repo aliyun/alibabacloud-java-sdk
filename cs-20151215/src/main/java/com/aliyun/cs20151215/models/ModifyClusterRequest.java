@@ -190,6 +190,13 @@ public class ModifyClusterRequest extends TeaModel {
     public String securityGroupId;
 
     /**
+     * <strong>example:</strong>
+     * <p>Extended</p>
+     */
+    @NameInMap("support_policy")
+    public String supportPolicy;
+
+    /**
      * <p>The system event storage configuration.</p>
      */
     @NameInMap("system_events_logging")
@@ -375,6 +382,14 @@ public class ModifyClusterRequest extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public ModifyClusterRequest setSupportPolicy(String supportPolicy) {
+        this.supportPolicy = supportPolicy;
+        return this;
+    }
+    public String getSupportPolicy() {
+        return this.supportPolicy;
     }
 
     public ModifyClusterRequest setSystemEventsLogging(ModifyClusterRequestSystemEventsLogging systemEventsLogging) {

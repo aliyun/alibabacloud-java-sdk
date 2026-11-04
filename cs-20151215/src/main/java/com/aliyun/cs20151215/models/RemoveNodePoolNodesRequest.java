@@ -7,10 +7,8 @@ public class RemoveNodePoolNodesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove the nodes concurrently. Valid values:</p>
      * <ul>
-     * <li><p>true: removes the nodes from the scaling group concurrently.</p>
-     * </li>
-     * <li><p>false: removes the nodes from the scaling group sequentially.</p>
-     * </li>
+     * <li>true: removes the nodes from the scaling group concurrently.</li>
+     * <li>false: removes the nodes from the scaling group sequentially.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -34,16 +32,16 @@ public class RemoveNodePoolNodesRequest extends TeaModel {
     public Boolean drainNode;
 
     /**
-     * <p>The list of instances to be removed.</p>
+     * <p>The list of instances to remove.</p>
      */
     @NameInMap("instance_ids")
     public java.util.List<String> instanceIds;
 
     /**
      * <p><strong>[Deprecated]</strong></p>
-     * <p>The list of nodes to be removed.</p>
+     * <p>The list of nodes to remove.</p>
      * <blockquote>
-     * <p>Danger: This parameter is deprecated. Use instance_ids instead.</danger></p>
+     * <p>Danger: This parameter is deprecated. Use <code>instance_ids</code> instead.</danger></p>
      * </blockquote>
      */
     @NameInMap("nodes")
@@ -51,11 +49,12 @@ public class RemoveNodePoolNodesRequest extends TeaModel {
     public java.util.List<String> nodes;
 
     /**
-     * <p>Specifies whether to release the nodes. Valid values:</p>
+     * <p>Specifies whether automatic release the nodes. Valid values:</p>
      * <ul>
      * <li>true: releases the nodes.</li>
      * <li>false: does not release the nodes.</li>
      * </ul>
+     * <p>Subscription nodes are not automatically released when you remove them. Automatic release subscription nodes, <a href="https://www.alibabacloud.com/help/en/ecs/change-the-billing-method-of-an-instance-from-subscription-to-pay-as-you-go-1">change the billing method of the nodes from subscription to pay-as-you-go</a> and then release them in the ECS console.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

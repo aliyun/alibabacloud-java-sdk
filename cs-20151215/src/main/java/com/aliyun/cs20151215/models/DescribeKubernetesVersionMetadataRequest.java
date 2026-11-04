@@ -82,6 +82,13 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     public String region;
 
     /**
+     * <strong>example:</strong>
+     * <p>Extended</p>
+     */
+    @NameInMap("SupportPolicy")
+    public String supportPolicy;
+
+    /**
      * <p>The runtime type. You can specify a runtime type to filter system images supported by the runtime. Valid values:</p>
      * <ul>
      * <li><code>docker</code>: Docker runtime.</li>
@@ -148,6 +155,14 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public DescribeKubernetesVersionMetadataRequest setSupportPolicy(String supportPolicy) {
+        this.supportPolicy = supportPolicy;
+        return this;
+    }
+    public String getSupportPolicy() {
+        return this.supportPolicy;
     }
 
     public DescribeKubernetesVersionMetadataRequest setRuntime(String runtime) {
