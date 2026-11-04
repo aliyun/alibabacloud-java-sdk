@@ -4,9 +4,23 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteFaceUserRequest extends TeaModel {
+    /**
+     * <p>The business isolation ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ZheJiangHzXiHu</p>
+     */
     @NameInMap("IsolationId")
     public String isolationId;
 
+    /**
+     * <p>The unique internal user ID of the face service.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3mtjaqebeq4dulcy</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

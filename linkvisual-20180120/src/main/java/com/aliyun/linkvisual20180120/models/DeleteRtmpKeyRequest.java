@@ -10,12 +10,18 @@ public class DeleteRtmpKeyRequest extends TeaModel {
     @NameInMap("IotId")
     public String iotId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
     public String productKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public Integer type;
 

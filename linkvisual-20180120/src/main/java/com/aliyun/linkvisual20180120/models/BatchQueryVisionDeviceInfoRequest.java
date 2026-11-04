@@ -10,6 +10,9 @@ public class BatchQueryVisionDeviceInfoRequest extends TeaModel {
     @NameInMap("IotIdList")
     public java.util.List<String> iotIdList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 

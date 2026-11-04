@@ -4,9 +4,23 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteFaceDeviceGroupRequest extends TeaModel {
+    /**
+     * <p>The device group ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qaf2tihq</p>
+     */
     @NameInMap("DeviceGroupId")
     public String deviceGroupId;
 
+    /**
+     * <p>The isolation ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestIsolationId</p>
+     */
     @NameInMap("IsolationId")
     public String isolationId;
 

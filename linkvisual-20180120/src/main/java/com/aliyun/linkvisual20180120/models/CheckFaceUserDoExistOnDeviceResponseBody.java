@@ -4,18 +4,45 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class CheckFaceUserDoExistOnDeviceResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned check information.</p>
+     */
     @NameInMap("Data")
     public CheckFaceUserDoExistOnDeviceResponseBodyData data;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A13279A-5640-45E7-87AA-83750541AD0E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +92,12 @@ public class CheckFaceUserDoExistOnDeviceResponseBody extends TeaModel {
     }
 
     public static class CheckFaceUserDoExistOnDeviceResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the face of the specified user is successfully synchronized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DoExist")
         public Boolean doExist;
 

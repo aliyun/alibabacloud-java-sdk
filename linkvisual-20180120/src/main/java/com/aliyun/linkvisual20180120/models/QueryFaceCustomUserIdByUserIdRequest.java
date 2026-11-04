@@ -4,9 +4,23 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryFaceCustomUserIdByUserIdRequest extends TeaModel {
+    /**
+     * <p>The isolation ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestIsolationId</p>
+     */
     @NameInMap("IsolationId")
     public String isolationId;
 
+    /**
+     * <p>The user ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestUserId</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

@@ -4,12 +4,34 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateTimeTemplateRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable 24/7 recording. Valid values:</p>
+     * <ul>
+     * <li>1: Yes.</li>
+     * <li>0: No. You must configure the TimeSections.N.DayOfWeek, TimeSections.N.Begin, and TimeSections.N.End parameters.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AllDay")
     public Integer allDay;
 
+    /**
+     * <p>The name of the time template.</p>
+     * <p>The name must be fewer than 48 characters in length and can contain letters, digits, and the following special characters: hyphens (-), underscores (_), at signs (@), periods (.), and colons (:).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The list of time ranges.</p>
+     */
     @NameInMap("TimeSections")
     public java.util.List<CreateTimeTemplateRequestTimeSections> timeSections;
 
@@ -43,12 +65,30 @@ public class CreateTimeTemplateRequest extends TeaModel {
     }
 
     public static class CreateTimeTemplateRequestTimeSections extends TeaModel {
+        /**
+         * <p>The start time of each day. Valid values: 0 to 86399. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20000</p>
+         */
         @NameInMap("Begin")
         public Integer begin;
 
+        /**
+         * <p>The day of the week. Valid values: 0 to 6, which represent Sunday through Saturday.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DayOfWeek")
         public Integer dayOfWeek;
 
+        /**
+         * <p>The end time of each day. Valid values: 1 to 86399. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60000</p>
+         */
         @NameInMap("End")
         public Integer end;
 

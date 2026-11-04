@@ -4,18 +4,45 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryFaceAllUserGroupAndDeviceGroupRelationResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public QueryFaceAllUserGroupAndDeviceGroupRelationResponseBodyData data;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A13279A-5640-45E7-87AA-83750541AD0E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the API call was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +92,48 @@ public class QueryFaceAllUserGroupAndDeviceGroupRelationResponseBody extends Tea
     }
 
     public static class QueryFaceAllUserGroupAndDeviceGroupRelationResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The control ID of the synchronization relationship between the user group and the device group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ni1iyxqry0j0****</p>
+         */
         @NameInMap("ControlId")
         public String controlId;
 
+        /**
+         * <p>The face synchronization relationship type, which synchronizes user photos and user information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYNC_INFO_PICTURE</p>
+         */
         @NameInMap("ControlType")
         public String controlType;
 
+        /**
+         * <p>The device group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestDeviceGro****</p>
+         */
         @NameInMap("DeviceGroupId")
         public String deviceGroupId;
 
+        /**
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-12 17:12:37</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The user group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestUserGro****</p>
+         */
         @NameInMap("UserGroupId")
         public String userGroupId;
 
@@ -128,15 +185,36 @@ public class QueryFaceAllUserGroupAndDeviceGroupRelationResponseBody extends Tea
     }
 
     public static class QueryFaceAllUserGroupAndDeviceGroupRelationResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of face synchronization relationships between user groups and device groups.</p>
+         */
         @NameInMap("List")
         public java.util.List<QueryFaceAllUserGroupAndDeviceGroupRelationResponseBodyDataList> list;
 
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Page")
         public Integer page;
 
+        /**
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

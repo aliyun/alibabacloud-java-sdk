@@ -4,18 +4,45 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryFaceUserResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public QueryFaceUserResponseBodyData data;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A13279A-5640-45E7-87AA-83750541AD0E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the API call is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +92,57 @@ public class QueryFaceUserResponseBody extends TeaModel {
     }
 
     public static class QueryFaceUserResponseBodyDataFacePicListFeatureDTOList extends TeaModel {
+        /**
+         * <p>The name of the algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestAlgorithmName</p>
+         */
         @NameInMap("AlgorithmName")
         public String algorithmName;
 
+        /**
+         * <p>The provider of the algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestAlgorithmProvider</p>
+         */
         @NameInMap("AlgorithmProvider")
         public String algorithmProvider;
 
+        /**
+         * <p>The version of the algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestAlgorithmVersion</p>
+         */
         @NameInMap("AlgorithmVersion")
         public String algorithmVersion;
 
+        /**
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The MD5 hash of the face.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestFaceMd5</p>
+         */
         @NameInMap("FaceMd5")
         public String faceMd5;
 
@@ -139,12 +202,27 @@ public class QueryFaceUserResponseBody extends TeaModel {
     }
 
     public static class QueryFaceUserResponseBodyDataFacePicList extends TeaModel {
+        /**
+         * <p>The MD5 hash of the photo.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestFaceMd5</p>
+         */
         @NameInMap("FaceMd5")
         public String faceMd5;
 
+        /**
+         * <p>The URL of the photo.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://test.com/xxx.jpg">https://test.com/xxx.jpg</a></p>
+         */
         @NameInMap("FaceUrl")
         public String faceUrl;
 
+        /**
+         * <p>The list of face feature values.</p>
+         */
         @NameInMap("FeatureDTOList")
         public java.util.List<QueryFaceUserResponseBodyDataFacePicListFeatureDTOList> featureDTOList;
 
@@ -180,18 +258,45 @@ public class QueryFaceUserResponseBody extends TeaModel {
     }
 
     public static class QueryFaceUserResponseBodyData extends TeaModel {
+        /**
+         * <p>The user ID in the caller\&quot;s system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestCustomUserId</p>
+         */
         @NameInMap("CustomUserId")
         public String customUserId;
 
+        /**
+         * <p>The list of face photo information.</p>
+         */
         @NameInMap("FacePicList")
         public java.util.List<QueryFaceUserResponseBodyDataFacePicList> facePicList;
 
+        /**
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestName</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The user parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;age&quot;:28, &quot;sex&quot;:&quot;male&quot;}</p>
+         */
         @NameInMap("Params")
         public String params;
 
+        /**
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestUserId</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

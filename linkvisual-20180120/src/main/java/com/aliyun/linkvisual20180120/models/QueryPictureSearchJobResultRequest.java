@@ -4,15 +4,43 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryPictureSearchJobResultRequest extends TeaModel {
+    /**
+     * <p>Instance ID of the image search application instance. You can call the <a href="https://help.aliyun.com/document_detail/206608.html">QueryPictureSearchApps</a> operation to query instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fdc576d03c094faea9fa10fbf48c****</p>
+     */
     @NameInMap("AppInstanceId")
     public String appInstanceId;
 
+    /**
+     * <p>The page number of the page to return. Pages start from page 1.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The ID of the integrated image search job. You can call the <a href="https://help.aliyun.com/document_detail/206778.html">QueryPictureSearchJob</a> operation to query the ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b7e501d0d2524a4caeb50df3282a****</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>The number of entries to return on each page. Minimum value: 1. Maximum value: 50. Default value: 10.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

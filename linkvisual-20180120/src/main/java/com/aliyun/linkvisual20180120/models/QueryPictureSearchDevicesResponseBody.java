@@ -4,18 +4,49 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryPictureSearchDevicesResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/145071.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public QueryPictureSearchDevicesResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Specified parameter CurrentPage is not valid.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DF7DC571-FE48-4C25-8BE0-B13C3038C85B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +96,24 @@ public class QueryPictureSearchDevicesResponseBody extends TeaModel {
     }
 
     public static class QueryPictureSearchDevicesResponseBodyDataPageData extends TeaModel {
+        /**
+         * <p>The ID of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VrJwPGjC1sJlqPjZA3cxg4****</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <p>The alias of the device.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for IPC devices.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>camera1</p>
+         */
         @NameInMap("NickName")
         public String nickName;
 
@@ -95,18 +141,45 @@ public class QueryPictureSearchDevicesResponseBody extends TeaModel {
     }
 
     public static class QueryPictureSearchDevicesResponseBodyData extends TeaModel {
+        /**
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageCount")
         public Integer pageCount;
 
+        /**
+         * <p>The list of applications.</p>
+         */
         @NameInMap("PageData")
         public java.util.List<QueryPictureSearchDevicesResponseBodyDataPageData> pageData;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

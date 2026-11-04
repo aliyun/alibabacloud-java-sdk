@@ -10,6 +10,9 @@ public class RefreshGbSubDeviceListRequest extends TeaModel {
     @NameInMap("IotId")
     public String iotId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 

@@ -4,18 +4,53 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceVodUrlResponseBody extends TeaModel {
+    /**
+     * <p>The response code. Valid values:</p>
+     * <ul>
+     * <li><strong>200</strong>: The call was successful.</li>
+     * <li>Other values: The call failed. For more information, see <a href="https://help.aliyun.com/document_detail/145071.html">Error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The query result.</p>
+     */
     @NameInMap("Data")
     public QueryDeviceVodUrlResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>product is not active.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06DC77A0-4622-42DB-9EE0-25FIOHS82JK1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +100,22 @@ public class QueryDeviceVodUrlResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceVodUrlResponseBodyData extends TeaModel {
+        /**
+         * <p>The decryption key.
+         * A decryption key is generated when the <strong>ShouldEncrypt</strong> parameter is set to <strong>true</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;iv&quot;: &quot;MDEy<strong><strong>OTo7PD0+Pw==&quot;,&quot;key&quot;: &quot;eA2r</strong></strong>fHjOmnyBfQ==&quot;}</p>
+         */
         @NameInMap("DecryptKey")
         public String decryptKey;
 
         @NameInMap("StunInfo")
         public String stunInfo;
 
+        /**
+         * <p>The URL of the local recording.</p>
+         */
         @NameInMap("VodUrl")
         public String vodUrl;
 

@@ -4,18 +4,45 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryFaceUserGroupAndDeviceGroupRelationResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The return value of the API call.</p>
+     */
     @NameInMap("Data")
     public QueryFaceUserGroupAndDeviceGroupRelationResponseBodyData data;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A13279A-5640-45E7-87AA-83750541AD0E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the API call is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +92,48 @@ public class QueryFaceUserGroupAndDeviceGroupRelationResponseBody extends TeaMod
     }
 
     public static class QueryFaceUserGroupAndDeviceGroupRelationResponseBodyData extends TeaModel {
+        /**
+         * <p>The control ID for the face synchronization relationship between user groups and device groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ni1iyxqry0j03plv</p>
+         */
         @NameInMap("ControlId")
         public String controlId;
 
+        /**
+         * <p>The face synchronization relationship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYNC_INFO_PICTURE</p>
+         */
         @NameInMap("ControlType")
         public String controlType;
 
+        /**
+         * <p>The device group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestDeviceGroupId</p>
+         */
         @NameInMap("DeviceGroupId")
         public String deviceGroupId;
 
+        /**
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-12 17:12:37</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The user group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestUserGroupId</p>
+         */
         @NameInMap("UserGroupId")
         public String userGroupId;
 

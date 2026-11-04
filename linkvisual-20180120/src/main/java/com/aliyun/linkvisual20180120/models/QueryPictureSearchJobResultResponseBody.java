@@ -4,18 +4,49 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryPictureSearchJobResultResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/145071.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public QueryPictureSearchJobResultResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AppInstanceId is mandatory for this action.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a06c4750-7cce-11eb-8010-557d50136505</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +96,69 @@ public class QueryPictureSearchJobResultResponseBody extends TeaModel {
     }
 
     public static class QueryPictureSearchJobResultResponseBodyDataPageData extends TeaModel {
+        /**
+         * <p>The alias of the device.</p>
+         * <blockquote>
+         * <p>If no alias is set for the device, this parameter is not returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>camera1</p>
+         */
         @NameInMap("DeviceNickName")
         public String deviceNickName;
 
+        /**
+         * <p>The time when the event was created. The value is a 13-digit timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1614333155075</p>
+         */
         @NameInMap("EventTime")
         public Long eventTime;
 
+        /**
+         * <p>The IoT ID of the V-series edge all-in-one device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pZJUqijOyfpFOOGNPF7S00****</p>
+         */
         @NameInMap("GatewayIotId")
         public String gatewayIotId;
 
+        /**
+         * <p>The IoT ID of the queried device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5RUngwC1RknD4lPiHgH300****</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <p>The URL of the image to be searched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxx.xxx.xxx.com/xxx">https://xxx.xxx.xxx.com/xxx</a></p>
+         */
         @NameInMap("PicUrl")
         public String picUrl;
 
+        /**
+         * <p>The face similarity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("Threshold")
         public Float threshold;
 
+        /**
+         * <p>The ID of the image feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vectorId86d9a5c32b9947278e526c2eef8a****</p>
+         */
         @NameInMap("VectorId")
         public String vectorId;
 
@@ -150,18 +226,45 @@ public class QueryPictureSearchJobResultResponseBody extends TeaModel {
     }
 
     public static class QueryPictureSearchJobResultResponseBodyData extends TeaModel {
+        /**
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageCount")
         public Integer pageCount;
 
+        /**
+         * <p>The query results.</p>
+         */
         @NameInMap("PageData")
         public java.util.List<QueryPictureSearchJobResultResponseBodyDataPageData> pageData;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

@@ -13,18 +13,30 @@ public class CreateGbDeviceRequest extends TeaModel {
     @NameInMap("DeviceType")
     public Integer deviceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GbId")
     public String gbId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("MediaNetProtocol")
     public String mediaNetProtocol;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 

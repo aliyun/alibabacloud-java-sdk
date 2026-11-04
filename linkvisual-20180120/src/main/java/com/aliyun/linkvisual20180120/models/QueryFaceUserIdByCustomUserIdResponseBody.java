@@ -4,18 +4,45 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryFaceUserIdByCustomUserIdResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The return value of the API operation.</p>
+     */
     @NameInMap("Data")
     public QueryFaceUserIdByCustomUserIdResponseBodyData data;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A13279A-5640-45E7-87AA-83750541AD0E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the API call was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +92,39 @@ public class QueryFaceUserIdByCustomUserIdResponseBody extends TeaModel {
     }
 
     public static class QueryFaceUserIdByCustomUserIdResponseBodyData extends TeaModel {
+        /**
+         * <p>The user ID in the caller system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestCustomUserId</p>
+         */
         @NameInMap("CustomUserId")
         public String customUserId;
 
+        /**
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestName</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The user parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;age&quot;:28, &quot;sex&quot;:&quot;male&quot;}</p>
+         */
         @NameInMap("Params")
         public String params;
 
+        /**
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestUserId</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

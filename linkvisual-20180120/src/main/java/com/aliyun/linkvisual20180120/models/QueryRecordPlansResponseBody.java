@@ -4,18 +4,49 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryRecordPlansResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/145071.html">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The query information.</p>
+     */
     @NameInMap("Data")
     public QueryRecordPlansResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tenant auth error</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06DC77A0-4622-42DB-9EE0-25FIOHS82JK1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +96,30 @@ public class QueryRecordPlansResponseBody extends TeaModel {
     }
 
     public static class QueryRecordPlansResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The name of the recording plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plan1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the recording plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6c5a397bc17c4b48ace86f0f0c30****</p>
+         */
         @NameInMap("PlanId")
         public String planId;
 
+        /**
+         * <p>The ID of the time template associated with the recording plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>693e244a038f4255bb2f5db32874****</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -106,18 +155,45 @@ public class QueryRecordPlansResponseBody extends TeaModel {
     }
 
     public static class QueryRecordPlansResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of returned recording plan templates.</p>
+         */
         @NameInMap("List")
         public java.util.List<QueryRecordPlansResponseBodyDataList> list;
 
+        /**
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Page")
         public Integer page;
 
+        /**
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageCount")
         public Integer pageCount;
 
+        /**
+         * <p>The number of records returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of recording plans returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

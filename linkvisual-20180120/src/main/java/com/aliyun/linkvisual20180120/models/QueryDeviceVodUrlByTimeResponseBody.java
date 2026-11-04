@@ -4,18 +4,53 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceVodUrlByTimeResponseBody extends TeaModel {
+    /**
+     * <p>The response code. Valid values:</p>
+     * <ul>
+     * <li><strong>200</strong>: The call was successful.</li>
+     * <li>Other values: An error occurred. For more information, see <a href="https://help.aliyun.com/document_detail/145071.html">Error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public QueryDeviceVodUrlByTimeResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tenant auth error</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06DC77A0-4622-42DB-9EE0-25FIOHS82JK1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +100,25 @@ public class QueryDeviceVodUrlByTimeResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceVodUrlByTimeResponseBodyData extends TeaModel {
+        /**
+         * <p>The decryption key.
+         * A decryption key is generated when the <strong>ShouldEncrypt</strong> parameter is set to <strong>true</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;iv&quot;: &quot;MDEy<strong><strong>OTo7PD0+Pw==&quot;,&quot;key&quot;: &quot;eA2r</strong></strong>fHjOmnyBfQ==&quot;}</p>
+         */
         @NameInMap("DecryptKey")
         public String decryptKey;
 
         @NameInMap("StunInfo")
         public String stunInfo;
 
+        /**
+         * <p>The playback URL of the local recording.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://iotx-vision-vod-vpc-hz-pre.aliyun-inc.com/vod/device/localrecord/flv/play/1****668.flv?token=e9****a9e14482c56be52&session=470e****3d015">https://iotx-vision-vod-vpc-hz-pre.aliyun-inc.com/vod/device/localrecord/flv/play/1****668.flv?token=e9****a9e14482c56be52&amp;session=470e****3d015</a></p>
+         */
         @NameInMap("VodUrl")
         public String vodUrl;
 

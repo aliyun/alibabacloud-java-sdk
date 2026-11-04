@@ -4,12 +4,31 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEventRecordPlanDeviceByPlanRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The number of entries to return on each page. Minimum value: 1. Maximum value: 50. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the intelligent alert event recording plan. You can call the <a href="https://help.aliyun.com/document_detail/107907.html">QueryEventRecordPlans</a> operation to query the ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5b60bf0dd55944c19d7817442bc9****</p>
+     */
     @NameInMap("PlanId")
     public String planId;
 

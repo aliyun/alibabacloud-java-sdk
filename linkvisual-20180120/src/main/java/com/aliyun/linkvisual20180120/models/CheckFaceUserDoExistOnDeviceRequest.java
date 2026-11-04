@@ -4,18 +4,52 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class CheckFaceUserDoExistOnDeviceRequest extends TeaModel {
+    /**
+     * <p>The device name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestDeviceName</p>
+     */
     @NameInMap("DeviceName")
     public String deviceName;
 
+    /**
+     * <p>The isolation ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestIotInstanceId</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>The isolation ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a103lZ86ovStDMnU</p>
+     */
     @NameInMap("IsolationId")
     public String isolationId;
 
+    /**
+     * <p>The ProductKey of the IoT Platform product.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1654Sr4Y3f</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 
+    /**
+     * <p>The user ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tibce3fsgqelezk8</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

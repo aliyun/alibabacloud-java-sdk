@@ -4,18 +4,45 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class AddFaceUserGroupAndDeviceGroupRelationResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The face synchronization relationship information.</p>
+     */
     @NameInMap("Data")
     public AddFaceUserGroupAndDeviceGroupRelationResponseBodyData data;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A13279A-5640-45E7-87AA-83750541AD0E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +92,21 @@ public class AddFaceUserGroupAndDeviceGroupRelationResponseBody extends TeaModel
     }
 
     public static class AddFaceUserGroupAndDeviceGroupRelationResponseBodyData extends TeaModel {
+        /**
+         * <p>The associated control ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qcb2yea4ha4dxmly</p>
+         */
         @NameInMap("ControlId")
         public String controlId;
 
+        /**
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-20 18:59:01</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 

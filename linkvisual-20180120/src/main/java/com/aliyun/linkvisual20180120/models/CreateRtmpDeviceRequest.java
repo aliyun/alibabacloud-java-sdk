@@ -10,9 +10,15 @@ public class CreateRtmpDeviceRequest extends TeaModel {
     @NameInMap("DeviceName")
     public String deviceName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 

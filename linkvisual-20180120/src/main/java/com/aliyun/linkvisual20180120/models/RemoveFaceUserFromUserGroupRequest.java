@@ -4,12 +4,33 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class RemoveFaceUserFromUserGroupRequest extends TeaModel {
+    /**
+     * <p>The isolation ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestIsolationId</p>
+     */
     @NameInMap("IsolationId")
     public String isolationId;
 
+    /**
+     * <p>The user group ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestUserGroupId</p>
+     */
     @NameInMap("UserGroupId")
     public String userGroupId;
 
+    /**
+     * <p>The user ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestUserId</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

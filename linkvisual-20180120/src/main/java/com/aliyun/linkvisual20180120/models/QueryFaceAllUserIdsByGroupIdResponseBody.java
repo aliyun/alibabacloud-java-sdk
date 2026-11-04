@@ -4,18 +4,45 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryFaceAllUserIdsByGroupIdResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public QueryFaceAllUserIdsByGroupIdResponseBodyData data;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A13279A-5640-45E7-87AA-83750541AD0E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +92,39 @@ public class QueryFaceAllUserIdsByGroupIdResponseBody extends TeaModel {
     }
 
     public static class QueryFaceAllUserIdsByGroupIdResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The user ID in the caller service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestCustomUserId</p>
+         */
         @NameInMap("CustomUserId")
         public String customUserId;
 
+        /**
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestName</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The user parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;age&quot;:28, &quot;sex&quot;:&quot;male&quot;}</p>
+         */
         @NameInMap("Params")
         public String params;
 
+        /**
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestUserId</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -117,15 +168,36 @@ public class QueryFaceAllUserIdsByGroupIdResponseBody extends TeaModel {
     }
 
     public static class QueryFaceAllUserIdsByGroupIdResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of users.</p>
+         */
         @NameInMap("List")
         public java.util.List<QueryFaceAllUserIdsByGroupIdResponseBodyDataList> list;
 
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Page")
         public Integer page;
 
+        /**
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

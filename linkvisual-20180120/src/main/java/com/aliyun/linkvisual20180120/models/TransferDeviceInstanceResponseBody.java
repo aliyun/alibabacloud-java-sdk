@@ -4,18 +4,53 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class TransferDeviceInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The response code:</p>
+     * <ul>
+     * <li><strong>200</strong>: The call was successful.</li>
+     * <li>Other values: The call failed. For more information, see <a href="https://help.aliyun.com/document_detail/145071.html">Error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The result.</p>
+     */
     @NameInMap("Data")
     public TransferDeviceInstanceResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The source instance and the target instance cannot be the same</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The unique identifier that Alibaba Cloud generates for the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27AF2E38-12ED-4F67-BD20-36E812CD7A42</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +100,21 @@ public class TransferDeviceInstanceResponseBody extends TeaModel {
     }
 
     public static class TransferDeviceInstanceResponseBodyDataFailedList extends TeaModel {
+        /**
+         * <p>The name of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e5jdfalekj****</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The description of the failed transfer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The device has already been transferred or does not belong to the source instance</p>
+         */
         @NameInMap("Message")
         public String message;
 
@@ -95,9 +142,21 @@ public class TransferDeviceInstanceResponseBody extends TeaModel {
     }
 
     public static class TransferDeviceInstanceResponseBodyDataSuccessList extends TeaModel {
+        /**
+         * <p>The name of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e598798j****</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The description of the successful transfer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("Message")
         public String message;
 
@@ -125,9 +184,15 @@ public class TransferDeviceInstanceResponseBody extends TeaModel {
     }
 
     public static class TransferDeviceInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of devices that failed to be transferred.</p>
+         */
         @NameInMap("FailedList")
         public java.util.List<TransferDeviceInstanceResponseBodyDataFailedList> failedList;
 
+        /**
+         * <p>The list of devices that were successfully transferred.</p>
+         */
         @NameInMap("SuccessList")
         public java.util.List<TransferDeviceInstanceResponseBodyDataSuccessList> successList;
 

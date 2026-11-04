@@ -4,18 +4,45 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryFaceDeviceGroupsByDeviceResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public QueryFaceDeviceGroupsByDeviceResponseBodyData data;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A13279A-5640-45E7-87AA-83750541AD0E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +92,30 @@ public class QueryFaceDeviceGroupsByDeviceResponseBody extends TeaModel {
     }
 
     public static class QueryFaceDeviceGroupsByDeviceResponseBodyDataDeviceGroupList extends TeaModel {
+        /**
+         * <p>The device group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestDeviceGroupId</p>
+         */
         @NameInMap("DeviceGroupId")
         public String deviceGroupId;
 
+        /**
+         * <p>The device group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestDeviceGroupName</p>
+         */
         @NameInMap("DeviceGroupName")
         public String deviceGroupName;
 
+        /**
+         * <p>The time when the device group was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-12 17:12:37</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
@@ -106,15 +151,36 @@ public class QueryFaceDeviceGroupsByDeviceResponseBody extends TeaModel {
     }
 
     public static class QueryFaceDeviceGroupsByDeviceResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of device groups.</p>
+         */
         @NameInMap("DeviceGroupList")
         public java.util.List<QueryFaceDeviceGroupsByDeviceResponseBodyDataDeviceGroupList> deviceGroupList;
 
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNo")
         public Integer pageNo;
 
+        /**
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of device groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

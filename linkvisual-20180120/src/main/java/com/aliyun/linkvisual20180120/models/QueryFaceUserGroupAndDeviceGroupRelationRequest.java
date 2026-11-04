@@ -4,9 +4,23 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryFaceUserGroupAndDeviceGroupRelationRequest extends TeaModel {
+    /**
+     * <p>The control ID for the face synchronization relationship between user groups and device groups.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ni1iyxqry0j03plv</p>
+     */
     @NameInMap("ControlId")
     public String controlId;
 
+    /**
+     * <p>The isolation ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestIsolationId</p>
+     */
     @NameInMap("IsolationId")
     public String isolationId;
 

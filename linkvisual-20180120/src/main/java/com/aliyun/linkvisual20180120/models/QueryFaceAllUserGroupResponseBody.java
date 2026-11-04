@@ -4,18 +4,45 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryFaceAllUserGroupResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public QueryFaceAllUserGroupResponseBodyData data;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A13279A-5640-45E7-87AA-83750541AD0E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +92,30 @@ public class QueryFaceAllUserGroupResponseBody extends TeaModel {
     }
 
     public static class QueryFaceAllUserGroupResponseBodyDataUserGroupList extends TeaModel {
+        /**
+         * <p>The last modified time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-12 17:12:37</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The user group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dmjpxfdk</p>
+         */
         @NameInMap("UserGroupId")
         public String userGroupId;
 
+        /**
+         * <p>The user group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestUserGroupName</p>
+         */
         @NameInMap("UserGroupName")
         public String userGroupName;
 
@@ -106,15 +151,36 @@ public class QueryFaceAllUserGroupResponseBody extends TeaModel {
     }
 
     public static class QueryFaceAllUserGroupResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNo")
         public Integer pageNo;
 
+        /**
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of user groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
+        /**
+         * <p>The list of user group information.</p>
+         */
         @NameInMap("UserGroupList")
         public java.util.List<QueryFaceAllUserGroupResponseBodyDataUserGroupList> userGroupList;
 
