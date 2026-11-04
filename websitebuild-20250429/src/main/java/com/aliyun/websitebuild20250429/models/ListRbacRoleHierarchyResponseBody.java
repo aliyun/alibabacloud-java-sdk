@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRbacRoleHierarchyResponseBody extends TeaModel {
     /**
-     * <p>The access denied details.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,10 +14,10 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed. Valid values:</p>
+     * <p>Indicates whether retries are allowed. Valid values:</p>
      * <ul>
-     * <li>false: No retry is allowed.</li>
-     * <li>true: A retry is allowed.</li>
+     * <li>false: Retries are not allowed.</li>
+     * <li>true: Retries are allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,9 +45,9 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> response parameter.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -57,13 +57,13 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The number of entries per query.</p>
+     * <p>The number of entries to return per query.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -73,13 +73,13 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The response object.</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("Module")
     public ListRbacRoleHierarchyResponseBodyModule module;
 
     /**
-     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+     * <p>The token used to start the next query. If no next query is available, this parameter is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
@@ -109,13 +109,13 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is synchronously processed.</p>
+     * <p>Indicates whether the request is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -234,7 +234,7 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
 
     public static class ListRbacRoleHierarchyResponseBodyModuleData extends TeaModel {
         /**
-         * <p>The child role ID.</p>
+         * <p>The ID of the child role.</p>
          * 
          * <strong>example:</strong>
          * <p>fc94cc51-310f-4485-adb2-ed8c706aff3b</p>
@@ -243,7 +243,7 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
         public String childRoleId;
 
         /**
-         * <p>The parent role ID.</p>
+         * <p>The ID of the parent role.</p>
          * 
          * <strong>example:</strong>
          * <p>71e07711-9a17-49f4-9f83-387a60ee5b64</p>
@@ -276,7 +276,7 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
 
     public static class ListRbacRoleHierarchyResponseBodyModuleNext extends TeaModel {
         /**
-         * <p>The child role ID.</p>
+         * <p>The ID of the child role.</p>
          * 
          * <strong>example:</strong>
          * <p>fc94cc51-310f-4485-adb2-ed8c706aff3b</p>
@@ -285,7 +285,7 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
         public String childRoleId;
 
         /**
-         * <p>The parent role ID.</p>
+         * <p>The ID of the parent role.</p>
          * 
          * <strong>example:</strong>
          * <p>71e07711-9a17-49f4-9f83-387a60ee5b64</p>
@@ -327,7 +327,7 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
         public Integer currentPageNum;
 
         /**
-         * <p>The request results.</p>
+         * <p>The request result.</p>
          */
         @NameInMap("Data")
         public java.util.List<ListRbacRoleHierarchyResponseBodyModuleData> data;
@@ -366,7 +366,7 @@ public class ListRbacRoleHierarchyResponseBody extends TeaModel {
         public Boolean prePage;
 
         /**
-         * <p>The server processes up to 1,000 most recent records beyond the pagination limit. If the results exceed 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>

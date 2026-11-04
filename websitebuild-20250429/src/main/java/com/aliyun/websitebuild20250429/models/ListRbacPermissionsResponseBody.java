@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRbacPermissionsResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reason why access is denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed.</p>
+     * <p>Specifies whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name.</p>
+     * <p>The name of the app.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -50,13 +50,13 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters returned.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The number of entries per query.</p>
+     * <p>The number of entries to return in each query.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -66,13 +66,13 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The response object.</p>
+     * <p>The returned object.</p>
      */
     @NameInMap("Module")
     public ListRbacPermissionsResponseBodyModule module;
 
     /**
-     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+     * <p>The token that is used to start the next query. This parameter is empty if no next query exists.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -102,7 +102,7 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
@@ -227,7 +227,7 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
 
     public static class ListRbacPermissionsResponseBodyModuleData extends TeaModel {
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>GetDISyncInstanceInfo</strong>.</p>
+         * <p>The system-defined parameter. Set the value to <strong>GetDISyncInstanceInfo</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>monitor</p>
@@ -303,7 +303,7 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
 
     public static class ListRbacPermissionsResponseBodyModuleNext extends TeaModel {
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>GetRemind</strong>.</p>
+         * <p>The system-defined parameter. Set the value to <strong>GetRemind</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>accept</p>
@@ -332,7 +332,7 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
         /**
          * <p>The resource metadata declaration.</p>
          * <p><strong>Note</strong>: The metadata is constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources. A valid resource declaration must include the full-path metadata declaration from level 0 to the validLeaf level.</p>
-         * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
+         * <p>For more information, see <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for Alibaba Cloud International</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>buy</p>
@@ -390,13 +390,13 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
         public Integer currentPageNum;
 
         /**
-         * <p>The query results.</p>
+         * <p>The request results.</p>
          */
         @NameInMap("Data")
         public java.util.List<ListRbacPermissionsResponseBodyModuleData> data;
 
         /**
-         * <p>The next feature ID.</p>
+         * <p>The ID of the next feature.</p>
          */
         @NameInMap("Next")
         public ListRbacPermissionsResponseBodyModuleNext next;
@@ -429,7 +429,7 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
         public Boolean prePage;
 
         /**
-         * <p>Apart from pagination limits, the server processes up to 1000 recent records for the current query. If the results exceed 1000 entries, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * <p>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>

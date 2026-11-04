@@ -240,6 +240,13 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         public String instanceCreateStatus;
 
         /**
+         * <strong>example:</strong>
+         * <p>tenant_00000000-0000-4000-8000-000000000001_schema</p>
+         */
+        @NameInMap("SchemaName")
+        public String schemaName;
+
+        /**
          * <p>The service key.</p>
          * 
          * <strong>example:</strong>
@@ -274,6 +281,13 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
          */
         @NameInMap("SupabasePublicUrl")
         public String supabasePublicUrl;
+
+        /**
+         * <strong>example:</strong>
+         * <p>schema</p>
+         */
+        @NameInMap("TenantMode")
+        public String tenantMode;
 
         public static GetAppSupabaseInstanceResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             GetAppSupabaseInstanceResponseBodyModule self = new GetAppSupabaseInstanceResponseBodyModule();
@@ -320,6 +334,14 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
             return this.instanceCreateStatus;
         }
 
+        public GetAppSupabaseInstanceResponseBodyModule setSchemaName(String schemaName) {
+            this.schemaName = schemaName;
+            return this;
+        }
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
         public GetAppSupabaseInstanceResponseBodyModule setServiceKey(String serviceKey) {
             this.serviceKey = serviceKey;
             return this;
@@ -350,6 +372,14 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         }
         public String getSupabasePublicUrl() {
             return this.supabasePublicUrl;
+        }
+
+        public GetAppSupabaseInstanceResponseBodyModule setTenantMode(String tenantMode) {
+            this.tenantMode = tenantMode;
+            return this;
+        }
+        public String getTenantMode() {
+            return this.tenantMode;
         }
 
     }

@@ -106,7 +106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the application instance information.</p>
      * 
      * <b>summary</b> : 
      * <p>Grants a role to a user.</p>
@@ -145,7 +145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the application instance information.</p>
      * 
      * <b>summary</b> : 
      * <p>Grants a role to a user.</p>
@@ -1759,10 +1759,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AI conversation session through Wanxiaozhi 2.0.</p>
+     * <p>The Wanxiaozhi 2.0 API operation for creating an AI session.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an RBAC permission.</p>
+     * <p>Creates RBAC permissions.</p>
      * 
      * @param request CreateRbacPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1798,10 +1798,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AI conversation session through Wanxiaozhi 2.0.</p>
+     * <p>The Wanxiaozhi 2.0 API operation for creating an AI session.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an RBAC permission.</p>
+     * <p>Creates RBAC permissions.</p>
      * 
      * @param request CreateRbacPermissionRequest
      * @return CreateRbacPermissionResponse
@@ -2437,10 +2437,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AI conversation session for WanXiaoZhi 2.0.</p>
+     * <p>The API operation for creating an AI session in Wanxiaozhi 2.0.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an RBAC permission.</p>
+     * <p>Deletes RBAC permissions.</p>
      * 
      * @param request DeleteRbacPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2476,10 +2476,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AI conversation session for WanXiaoZhi 2.0.</p>
+     * <p>The API operation for creating an AI session in Wanxiaozhi 2.0.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an RBAC permission.</p>
+     * <p>Deletes RBAC permissions.</p>
      * 
      * @param request DeleteRbacPermissionRequest
      * @return DeleteRbacPermissionResponse
@@ -2491,7 +2491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the application instance information.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an RBAC role.</p>
@@ -2530,7 +2530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the application instance information.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an RBAC role.</p>
@@ -2771,7 +2771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the Supabase instance configuration information corresponding to a resource.</p>
+     * <p>Queries the Supabase instance configuration for a resource.</p>
      * 
      * <b>summary</b> : 
      * <p>Exports the RBAC configuration.</p>
@@ -2806,7 +2806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the Supabase instance configuration information corresponding to a resource.</p>
+     * <p>Queries the Supabase instance configuration for a resource.</p>
      * 
      * <b>summary</b> : 
      * <p>Exports the RBAC configuration.</p>
@@ -3237,10 +3237,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the details of application instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries application instance information.</p>
+     * <p>Queries the details of application instances.</p>
      * 
      * @param request GetAppInstanceForAdminRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3276,10 +3276,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the details of application instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries application instance information.</p>
+     * <p>Queries the details of application instances.</p>
      * 
      * @param request GetAppInstanceForAdminRequest
      * @return GetAppInstanceForAdminResponse
@@ -6627,10 +6627,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AI conversation session through WanXiaoZhi 2.0.</p>
+     * <p>Creates an AI session in Wanxiaozhi 2.0.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the RBAC permission list.</p>
+     * <p>Queries the RBAC permissions.</p>
      * 
      * @param request ListRbacPermissionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6686,10 +6686,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AI conversation session through WanXiaoZhi 2.0.</p>
+     * <p>Creates an AI session in Wanxiaozhi 2.0.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the RBAC permission list.</p>
+     * <p>Queries the RBAC permissions.</p>
      * 
      * @param request ListRbacPermissionsRequest
      * @return ListRbacPermissionsResponse
@@ -6701,7 +6701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the application instance information.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the RBAC role hierarchy.</p>
@@ -6760,7 +6760,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the application instance information.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the RBAC role hierarchy.</p>
@@ -6775,10 +6775,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of RBAC roles.</p>
+     * <p>Queries a list of RBAC roles.</p>
      * 
      * @param request ListRbacRolesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6834,10 +6834,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of RBAC roles.</p>
+     * <p>Queries a list of RBAC roles.</p>
      * 
      * @param request ListRbacRolesRequest
      * @return ListRbacRolesResponse
@@ -8420,7 +8420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the information of an application instance.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a single RBAC role.</p>
@@ -8459,7 +8459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the information of an application instance.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a single RBAC role.</p>
@@ -8474,10 +8474,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AI conversation session for Wan Xiaozhi 2.0.</p>
+     * <p>The API operation to create an AI session for Wanxiaozhi 2.0.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of role permissions.</p>
+     * <p>Queries the role permission list.</p>
      * 
      * @param request QueryRbacRolePermissionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8529,10 +8529,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AI conversation session for Wan Xiaozhi 2.0.</p>
+     * <p>The API operation to create an AI session for Wanxiaozhi 2.0.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of role permissions.</p>
+     * <p>Queries the role permission list.</p>
      * 
      * @param request QueryRbacRolePermissionsRequest
      * @return QueryRbacRolePermissionsResponse
@@ -9010,10 +9010,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes an RBAC role hierarchy.</p>
+     * <p>Removes the RBAC role hierarchy.</p>
      * 
      * @param request RemoveRbacRoleHierarchyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9053,10 +9053,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes an RBAC role hierarchy.</p>
+     * <p>Removes the RBAC role hierarchy.</p>
      * 
      * @param request RemoveRbacRoleHierarchyRequest
      * @return RemoveRbacRoleHierarchyResponse
@@ -9936,7 +9936,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
      * <p>Sets the RBAC role hierarchy.</p>
@@ -9979,7 +9979,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plugin.</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
      * <p>Sets the RBAC role hierarchy.</p>
@@ -11060,10 +11060,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plug-in.</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates an RBAC role.</p>
+     * <p>Updates the RBAC role.</p>
      * 
      * @param request UpdateRbacRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11103,10 +11103,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plug-in.</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates an RBAC role.</p>
+     * <p>Updates the RBAC role.</p>
      * 
      * @param request UpdateRbacRoleRequest
      * @return UpdateRbacRoleResponse

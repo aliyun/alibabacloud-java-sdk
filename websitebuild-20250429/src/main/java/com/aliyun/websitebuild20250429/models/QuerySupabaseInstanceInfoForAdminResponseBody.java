@@ -294,6 +294,13 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         public String rdsDatabasePassword;
 
         /**
+         * <strong>example:</strong>
+         * <p>tenant_00000000-0000-4000-8000-000000000001_schema</p>
+         */
+        @NameInMap("SchemaName")
+        public String schemaName;
+
+        /**
          * <p>The service key.</p>
          * 
          * <strong>example:</strong>
@@ -391,6 +398,13 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
          */
         @NameInMap("TenantId")
         public String tenantId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>schema</p>
+         */
+        @NameInMap("TenantMode")
+        public String tenantMode;
 
         /**
          * <p>The user ID.</p>
@@ -494,6 +508,14 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
             return this.rdsDatabasePassword;
         }
 
+        public QuerySupabaseInstanceInfoForAdminResponseBodyModule setSchemaName(String schemaName) {
+            this.schemaName = schemaName;
+            return this;
+        }
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
         public QuerySupabaseInstanceInfoForAdminResponseBodyModule setServiceKey(String serviceKey) {
             this.serviceKey = serviceKey;
             return this;
@@ -580,6 +602,14 @@ public class QuerySupabaseInstanceInfoForAdminResponseBody extends TeaModel {
         }
         public String getTenantId() {
             return this.tenantId;
+        }
+
+        public QuerySupabaseInstanceInfoForAdminResponseBodyModule setTenantMode(String tenantMode) {
+            this.tenantMode = tenantMode;
+            return this;
+        }
+        public String getTenantMode() {
+            return this.tenantMode;
         }
 
         public QuerySupabaseInstanceInfoForAdminResponseBodyModule setUserId(String userId) {

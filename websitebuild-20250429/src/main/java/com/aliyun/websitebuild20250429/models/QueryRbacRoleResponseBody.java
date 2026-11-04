@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryRbacRoleResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reason for the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,10 +14,10 @@ public class QueryRbacRoleResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed. Valid values:</p>
+     * <p>Specifies whether retries are allowed. Valid values:</p>
      * <ul>
-     * <li>false: Retry is not allowed.</li>
-     * <li>true: Retry is allowed.</li>
+     * <li>false: Retries are not allowed.</li>
+     * <li>true: Retries are allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class QueryRbacRoleResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name. The application with this name is queried.</p>
+     * <p>The name of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -54,7 +54,7 @@ public class QueryRbacRoleResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters returned.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -87,7 +87,7 @@ public class QueryRbacRoleResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
@@ -196,7 +196,7 @@ public class QueryRbacRoleResponseBody extends TeaModel {
 
     public static class QueryRbacRoleResponseBodyModule extends TeaModel {
         /**
-         * <p>The time when the task was created, in ISO 8601 format (such as 2024-01-01T00:00:00+Z).</p>
+         * <p>The time when the task was created, in ISO 8601 format, such as 2024-01-01T00:00:00Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-02-06T10:20:09Z</p>
@@ -214,10 +214,10 @@ public class QueryRbacRoleResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The default status. Valid values:</p>
+         * <p>Indicates whether it is the default. Valid values:</p>
          * <ul>
-         * <li>0: not default.</li>
-         * <li>1: default.</li>
+         * <li>0: No.</li>
+         * <li>1: Yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,7 +227,7 @@ public class QueryRbacRoleResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>Indicates whether the approval template is system-defined. Valid values:</p>
+         * <p>Specifies whether the approval template is system-defined. Valid values:</p>
          * <ul>
          * <li>1: Yes.</li>
          * <li>0: No.</li>
@@ -249,7 +249,7 @@ public class QueryRbacRoleResponseBody extends TeaModel {
          * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>文件名</p>
+         * <p>File name</p>
          */
         @NameInMap("Name")
         public String name;

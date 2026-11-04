@@ -14,7 +14,7 @@ public class QueryRbacRolePermissionsRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The field by which to sort the results.</p>
+     * <p>The field used for sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>gmtCreated</p>
@@ -50,11 +50,11 @@ public class QueryRbacRolePermissionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The organization role ID, including predefined roles and custom roles:</p>
+     * <p>The organization role ID, including preset roles and custom roles:</p>
      * <ul>
-     * <li>Organization administrator (predefined role): 111111111</li>
-     * <li>Permission management administrator (predefined role): 111111112</li>
-     * <li>Regular user (predefined role): 111111113</li>
+     * <li>Organization administrator (preset role): 111111111</li>
+     * <li>Permission management administrator (preset role): 111111112</li>
+     * <li>Regular user (preset role): 111111113</li>
      * <li>Custom role: the role ID of the custom role</li>
      * </ul>
      * 

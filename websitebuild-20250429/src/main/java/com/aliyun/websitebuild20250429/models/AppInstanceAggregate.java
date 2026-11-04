@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AppInstanceAggregate extends TeaModel {
     /**
-     * <p>The list of AI agents associated with the application.</p>
+     * <p>The list of AI staff associated with the application.</p>
      */
     @NameInMap("AiStaffList")
     public java.util.List<AppAiStaff> aiStaffList;
@@ -59,7 +59,7 @@ public class AppInstanceAggregate extends TeaModel {
     public String buildType;
 
     /**
-     * <p>没有关联会话时为 null。</p>
+     * <p>The associated conversation information. The value is null if no conversation is associated.</p>
      */
     @NameInMap("ConversationInfo")
     public AppInstanceAggregateConversationInfo conversationInfo;
@@ -101,7 +101,7 @@ public class AppInstanceAggregate extends TeaModel {
     public String designSpecBizId;
 
     /**
-     * <p>The design specification ID.</p>
+     * <p>The ID of the design configuration.</p>
      */
     @NameInMap("DesignSpecId")
     public String designSpecId;
@@ -143,7 +143,7 @@ public class AppInstanceAggregate extends TeaModel {
     public String gmtDelete;
 
     /**
-     * <p>The update time.</p>
+     * <p>The modification time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-08-28T02:25:41Z</p>
@@ -152,7 +152,7 @@ public class AppInstanceAggregate extends TeaModel {
     public String gmtModified;
 
     /**
-     * <p>The publication time.</p>
+     * <p>The publish time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-01 00:00:00</p>
@@ -579,7 +579,7 @@ public class AppInstanceAggregate extends TeaModel {
 
     public static class AppInstanceAggregateConversationInfo extends TeaModel {
         /**
-         * <p>0 表示存在空会话。</p>
+         * <p>The number of conversation turns. A value of 0 indicates an empty conversation.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -622,7 +622,7 @@ public class AppInstanceAggregate extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The update time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>Wed Nov 26 10:15:28 CST 2025</p>
@@ -801,8 +801,7 @@ public class AppInstanceAggregate extends TeaModel {
 
     public static class AppInstanceAggregateTags extends TeaModel {
         /**
-         * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. If you specify this parameter, it cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. The value cannot be an empty string. The value can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. The value cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Group</p>
@@ -811,8 +810,7 @@ public class AppInstanceAggregate extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. If you specify this parameter, it can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. The value can be an empty string. The value can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. The value cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>ufo</p>

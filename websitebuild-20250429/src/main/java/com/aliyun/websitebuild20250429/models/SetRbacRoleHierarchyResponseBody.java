@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetRbacRoleHierarchyResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access was denied.</p>
+     * <p>The detailed reason for the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,10 +14,10 @@ public class SetRbacRoleHierarchyResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed. Valid values:</p>
+     * <p>Specifies whether a retry is allowed. Valid values:</p>
      * <ul>
-     * <li>false: Retry is not allowed.</li>
-     * <li>true: Retry is allowed.</li>
+     * <li>false: A retry is not allowed.</li>
+     * <li>true: A retry is allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class SetRbacRoleHierarchyResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and cannot exceed 36 characters in length.</p>
+     * <p>The application name. It can contain digits, letters, and hyphens (-). It must start with a letter, must not end with a hyphen (-), and must not exceed 36 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -60,7 +60,7 @@ public class SetRbacRoleHierarchyResponseBody extends TeaModel {
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Indicates whether the move was successful.</p>
+     * <p>Indicates whether the move is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -90,13 +90,13 @@ public class SetRbacRoleHierarchyResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>The reserved parameter.</p>
+     * <p>The backup parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

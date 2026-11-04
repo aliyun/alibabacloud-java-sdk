@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeRbacUserRoleResponseBody extends TeaModel {
     /**
-     * <p>The details of the permission verification failure.</p>
+     * <p>The details of the permission check failure.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -41,7 +41,7 @@ public class RevokeRbacUserRoleResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
+     * <p>The dynamic message. This parameter is not in use and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/u6qw3gxzu3b7sbj/u6qw3gxzu3b7sbj.diff.zip?Expires=1740975709&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=FP7dDnkrLlOZHmRRORVqbLOtv9c%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/u6qw3gxzu3b7sbj/u6qw3gxzu3b7sbj.diff.zip?Expires=1740975709&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=FP7dDnkrLlOZHmRRORVqbLOtv9c%3D</a></p>
@@ -56,7 +56,7 @@ public class RevokeRbacUserRoleResponseBody extends TeaModel {
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Indicates whether the operation is successful.</p>
+     * <p>Indicates whether the move succeeded.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -86,7 +86,7 @@ public class RevokeRbacUserRoleResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统异常</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;

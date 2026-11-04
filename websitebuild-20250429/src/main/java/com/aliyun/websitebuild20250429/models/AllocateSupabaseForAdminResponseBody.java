@@ -291,6 +291,13 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String rdsDatabasePassword;
 
         /**
+         * <strong>example:</strong>
+         * <p>tenant_00000000-0000-4000-8000-000000000001_schema</p>
+         */
+        @NameInMap("SchemaName")
+        public String schemaName;
+
+        /**
          * <p>The service key.</p>
          * 
          * <strong>example:</strong>
@@ -394,6 +401,13 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String tenantId;
 
         /**
+         * <strong>example:</strong>
+         * <p>schema</p>
+         */
+        @NameInMap("TenantMode")
+        public String tenantMode;
+
+        /**
          * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
@@ -495,6 +509,14 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
             return this.rdsDatabasePassword;
         }
 
+        public AllocateSupabaseForAdminResponseBodyModule setSchemaName(String schemaName) {
+            this.schemaName = schemaName;
+            return this;
+        }
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
         public AllocateSupabaseForAdminResponseBodyModule setServiceKey(String serviceKey) {
             this.serviceKey = serviceKey;
             return this;
@@ -581,6 +603,14 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         }
         public String getTenantId() {
             return this.tenantId;
+        }
+
+        public AllocateSupabaseForAdminResponseBodyModule setTenantMode(String tenantMode) {
+            this.tenantMode = tenantMode;
+            return this;
+        }
+        public String getTenantMode() {
+            return this.tenantMode;
         }
 
         public AllocateSupabaseForAdminResponseBodyModule setUserId(String userId) {

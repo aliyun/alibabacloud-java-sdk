@@ -14,7 +14,7 @@ public class ListRbacRoleHierarchyRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The number of entries per query.</p>
+     * <p>The number of entries to return per query.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListRbacRoleHierarchyRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+     * <p>The token used to start the next query. If no next query is available, this parameter is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -33,7 +33,7 @@ public class ListRbacRoleHierarchyRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The field used for sorting.</p>
+     * <p>The sort field.</p>
      * 
      * <strong>example:</strong>
      * <p>CreationTime</p>
@@ -42,7 +42,7 @@ public class ListRbacRoleHierarchyRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>The sort type. Valid values: ASC and DESC.</p>
+     * <p>The sort order. Valid values: ASC and DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>DOWNGRADE</p>
