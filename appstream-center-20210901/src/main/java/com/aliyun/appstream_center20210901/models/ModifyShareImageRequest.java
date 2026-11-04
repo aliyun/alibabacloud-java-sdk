@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyShareImageRequest extends TeaModel {
     /**
-     * <p>The IDs of the Alibaba Cloud accounts to share the image with.</p>
+     * <p>The Alibaba Cloud account IDs to add for sharing.</p>
      */
     @NameInMap("AddAccount")
     public java.util.List<Long> addAccount;
@@ -20,7 +20,7 @@ public class ModifyShareImageRequest extends TeaModel {
     public Integer bizType;
 
     /**
-     * <p>The ID of the source image.</p>
+     * <p>The source image ID.</p>
      * 
      * <strong>example:</strong>
      * <p>img-bp13mu****</p>
@@ -29,7 +29,7 @@ public class ModifyShareImageRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The product type, such as Cloud Desktop, cloud application, or workstation.</p>
+     * <p>The product type, such as cloud desktop, cloud application, or workstation.</p>
      * 
      * <strong>example:</strong>
      * <p>CloudDesktop</p>
@@ -38,7 +38,7 @@ public class ModifyShareImageRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The IDs of the Alibaba Cloud accounts to remove from the image sharing list.</p>
+     * <p>The Alibaba Cloud account IDs to remove from the share list.</p>
      */
     @NameInMap("RemoveAccount")
     public java.util.List<Long> removeAccount;

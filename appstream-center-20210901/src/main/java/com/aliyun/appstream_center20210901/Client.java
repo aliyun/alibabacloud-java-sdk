@@ -1968,6 +1968,116 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the resource and session events of the current account. <code>StartTime</code> and <code>EndTime</code> must be specified at the same time, and the time range includes the start and end times. The service only retrieves logs from 30 days before the call time to the current time, so events outside this window are not returned. If multiple filter parameters are specified at the same time, the intersection is used. Results are returned in descending order of the event log time. To use page number-based pagination, specify <code>PageSize</code> and <code>PageNumber</code>. The current version does not use <code>MaxResults</code> and <code>NextToken</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the resource and session events of the current account within the last 30 days by using paging.</p>
+     * 
+     * @param request DescribeEventsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeEventsResponse
+     */
+    public DescribeEventsResponse describeEventsWithOptions(DescribeEventsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
+            body.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupName)) {
+            body.put("AppInstanceGroupName", request.appInstanceGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceId)) {
+            body.put("AppInstanceId", request.appInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            body.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            body.put("EventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventType)) {
+            body.put("EventType", request.eventType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberEniIp)) {
+            body.put("MemberEniIp", request.memberEniIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
+            body.put("OfficeSiteId", request.officeSiteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeEvents"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeEventsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the resource and session events of the current account. <code>StartTime</code> and <code>EndTime</code> must be specified at the same time, and the time range includes the start and end times. The service only retrieves logs from 30 days before the call time to the current time, so events outside this window are not returned. If multiple filter parameters are specified at the same time, the intersection is used. Results are returned in descending order of the event log time. To use page number-based pagination, specify <code>PageSize</code> and <code>PageNumber</code>. The current version does not use <code>MaxResults</code> and <code>NextToken</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the resource and session events of the current account within the last 30 days by using paging.</p>
+     * 
+     * @param request DescribeEventsRequest
+     * @return DescribeEventsResponse
+     */
+    public DescribeEventsResponse describeEvents(DescribeEventsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeEventsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries the details of a development host.</p>
      * 
@@ -5315,6 +5425,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Queries the available workload templates for a specified virtual node pool. Before calling this operation, call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the VirtualNodePoolId under the current account. This operation verifies the ownership of the node pool and returns up to 100 records sorted by the template configuration order. The template content is Base64-encoded after being UTF-8 encoded. You must perform Base64 decoding before use. The current version does not use MaxResults and NextToken for pagination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the available Wuying Workstation workload templates for a specified virtual node pool.</p>
+     * 
+     * @param request ListWuyingServerWorkloadTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListWuyingServerWorkloadTemplateResponse
+     */
+    public ListWuyingServerWorkloadTemplateResponse listWuyingServerWorkloadTemplateWithOptions(ListWuyingServerWorkloadTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.virtualNodePoolId)) {
+            query.put("VirtualNodePoolId", request.virtualNodePoolId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWuyingServerWorkloadTemplate"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWuyingServerWorkloadTemplateResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the available workload templates for a specified virtual node pool. Before calling this operation, call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the VirtualNodePoolId under the current account. This operation verifies the ownership of the node pool and returns up to 100 records sorted by the template configuration order. The template content is Base64-encoded after being UTF-8 encoded. You must perform Base64 decoding before use. The current version does not use MaxResults and NextToken for pagination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the available Wuying Workstation workload templates for a specified virtual node pool.</p>
+     * 
+     * @param request ListWuyingServerWorkloadTemplateRequest
+     * @return ListWuyingServerWorkloadTemplateResponse
+     */
+    public ListWuyingServerWorkloadTemplateResponse listWuyingServerWorkloadTemplate(ListWuyingServerWorkloadTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listWuyingServerWorkloadTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <p>This operation returns the list of available zone IDs for the current Alibaba Cloud account based on the specified region, product type, and operating system type. A typical use case is to check which zones are available before creating a resource that requires a vSwitch, and then select a vSwitch in one of those zones.
      * This operation only queries information. It does not create resources or incur fees.</p>
@@ -5871,7 +6039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Shares an image with other WUYING users or cancels the sharing of a shared image.</p>
+     * <p>Shares an image with other WUYING users or unshares a shared image.</p>
      * 
      * @param request ModifyShareImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5919,7 +6087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Shares an image with other WUYING users or cancels the sharing of a shared image.</p>
+     * <p>Shares an image with other WUYING users or unshares a shared image.</p>
      * 
      * @param request ModifyShareImageRequest
      * @return ModifyShareImageResponse
@@ -6087,6 +6255,770 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PageListAppInstanceGroupUserResponse pageListAppInstanceGroupUser(PageListAppInstanceGroupUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.pageListAppInstanceGroupUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the delivery group ID, name, and status in delivery group reports. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the business region, and then call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the delivery group. <code>AppInstanceGroupId</code> matches the exact ID, and <code>AppInstanceGroupName</code> filters by inclusion. If multiple filter conditions are passed at the same time, the intersection is taken. When filtering by date, <code>StatDate</code> specifies a single day, and <code>StartDate</code> and <code>EndDate</code> must be passed in pairs to represent a closed interval. If both a single day and an interval are passed, the results must meet both conditions. Before using <code>EndUserId</code>, make sure that the user has a valid authorization relationship.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries delivery group reports by region, delivery group, status, user authorization relationship, or statistical date.</p>
+     * 
+     * @param request QueryAppInstanceGroupReportListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryAppInstanceGroupReportListResponse
+     */
+    public QueryAppInstanceGroupReportListResponse queryAppInstanceGroupReportListWithOptions(QueryAppInstanceGroupReportListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
+            body.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupName)) {
+            body.put("AppInstanceGroupName", request.appInstanceGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            body.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
+            body.put("EndUserId", request.endUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statDate)) {
+            body.put("StatDate", request.statDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryAppInstanceGroupReportList"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryAppInstanceGroupReportListResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the delivery group ID, name, and status in delivery group reports. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the business region, and then call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the delivery group. <code>AppInstanceGroupId</code> matches the exact ID, and <code>AppInstanceGroupName</code> filters by inclusion. If multiple filter conditions are passed at the same time, the intersection is taken. When filtering by date, <code>StatDate</code> specifies a single day, and <code>StartDate</code> and <code>EndDate</code> must be passed in pairs to represent a closed interval. If both a single day and an interval are passed, the results must meet both conditions. Before using <code>EndUserId</code>, make sure that the user has a valid authorization relationship.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries delivery group reports by region, delivery group, status, user authorization relationship, or statistical date.</p>
+     * 
+     * @param request QueryAppInstanceGroupReportListRequest
+     * @return QueryAppInstanceGroupReportListResponse
+     */
+    public QueryAppInstanceGroupReportListResponse queryAppInstanceGroupReportList(QueryAppInstanceGroupReportListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryAppInstanceGroupReportListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries connection statistical reports. Before you invoke this operation, you can invoke <a href="~~ListRegions~~">ListRegions</a> and <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the <code>BizRegionId</code> and <code>AppInstanceGroupId</code> parameters. <code>ProductType</code>, <code>StartDate</code>, and <code>EndDate</code> are required for server-side validation. The statistical interval is <code>[StartDate, EndDate)</code>, which includes the start time but excludes the end time. Results are returned by page, with a maximum of 1,500 entries per page.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of successful connections, the number of failed connections, the success rate, and the average connection duration within a specified time range.</p>
+     * 
+     * @param request QueryConnectionReportRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryConnectionReportResponse
+     */
+    public QueryConnectionReportResponse queryConnectionReportWithOptions(QueryConnectionReportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
+            body.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            body.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryConnectionReport"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryConnectionReportResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries connection statistical reports. Before you invoke this operation, you can invoke <a href="~~ListRegions~~">ListRegions</a> and <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the <code>BizRegionId</code> and <code>AppInstanceGroupId</code> parameters. <code>ProductType</code>, <code>StartDate</code>, and <code>EndDate</code> are required for server-side validation. The statistical interval is <code>[StartDate, EndDate)</code>, which includes the start time but excludes the end time. Results are returned by page, with a maximum of 1,500 entries per page.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of successful connections, the number of failed connections, the success rate, and the average connection duration within a specified time range.</p>
+     * 
+     * @param request QueryConnectionReportRequest
+     * @return QueryConnectionReportResponse
+     */
+    public QueryConnectionReportResponse queryConnectionReport(QueryConnectionReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryConnectionReportWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the daily active user (DAU) report. StartDate and EndDate are required. The date range is inclusive and cannot exceed 180 days. If ProductType is not specified or is unrecognized, the query defaults to <code>CloudApp</code>. You can use BizRegionId and AppInstanceGroupId to narrow the scope. If neither is specified, the query returns aggregated data for all business regions. Results are paginated, with a maximum of 1,500 records per page.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of daily active users and streaming daily active users by date.</p>
+     * 
+     * @param request QueryDauReportDataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryDauReportDataResponse
+     */
+    public QueryDauReportDataResponse queryDauReportDataWithOptions(QueryDauReportDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
+            body.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            body.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryDauReportData"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDauReportDataResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the daily active user (DAU) report. StartDate and EndDate are required. The date range is inclusive and cannot exceed 180 days. If ProductType is not specified or is unrecognized, the query defaults to <code>CloudApp</code>. You can use BizRegionId and AppInstanceGroupId to narrow the scope. If neither is specified, the query returns aggregated data for all business regions. Results are paginated, with a maximum of 1,500 records per page.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of daily active users and streaming daily active users by date.</p>
+     * 
+     * @param request QueryDauReportDataRequest
+     * @return QueryDauReportDataResponse
+     */
+    public QueryDauReportDataResponse queryDauReportData(QueryDauReportDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryDauReportDataWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the monthly active user (MAU) report. <code>ProductType</code>, <code>StartDate</code>, and <code>EndDate</code> are required for server-side validation, and the time span cannot exceed 60 months. The API returns statistical values by month. To adapt to offline data generated on the next day, the last month in the query range uses the day before <code>EndDate</code> as the statistical cutoff date. Results are returned in pages, with a maximum of 1,500 entries per page.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of monthly active users for each month within a specified time range.</p>
+     * 
+     * @param request QueryMauReportDataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryMauReportDataResponse
+     */
+    public QueryMauReportDataResponse queryMauReportDataWithOptions(QueryMauReportDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
+            body.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            body.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryMauReportData"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMauReportDataResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the monthly active user (MAU) report. <code>ProductType</code>, <code>StartDate</code>, and <code>EndDate</code> are required for server-side validation, and the time span cannot exceed 60 months. The API returns statistical values by month. To adapt to offline data generated on the next day, the last month in the query range uses the day before <code>EndDate</code> as the statistical cutoff date. Results are returned in pages, with a maximum of 1,500 entries per page.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of monthly active users for each month within a specified time range.</p>
+     * 
+     * @param request QueryMauReportDataRequest
+     * @return QueryMauReportDataResponse
+     */
+    public QueryMauReportDataResponse queryMauReportData(QueryMauReportDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryMauReportDataWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries network round-trip time (RTT) reports. <code>ProductType</code>, <code>StartDate</code>, and <code>EndDate</code> are required for server-side validation. The statistical interval is <code>[StartDate, EndDate)</code>. The minimum, maximum, and average RTT values are measured in milliseconds. The low-RTT threshold is determined by the report statistical caliber, and the current API operation does not return this threshold. Results are returned in pages, with a maximum of 1,500 entries per page.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the network RTT and low-RTT user statistics within a specified time range.</p>
+     * 
+     * @param request QueryNetworkRttReportRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryNetworkRttReportResponse
+     */
+    public QueryNetworkRttReportResponse queryNetworkRttReportWithOptions(QueryNetworkRttReportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
+            body.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            body.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryNetworkRttReport"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryNetworkRttReportResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries network round-trip time (RTT) reports. <code>ProductType</code>, <code>StartDate</code>, and <code>EndDate</code> are required for server-side validation. The statistical interval is <code>[StartDate, EndDate)</code>. The minimum, maximum, and average RTT values are measured in milliseconds. The low-RTT threshold is determined by the report statistical caliber, and the current API operation does not return this threshold. Results are returned in pages, with a maximum of 1,500 entries per page.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the network RTT and low-RTT user statistics within a specified time range.</p>
+     * 
+     * @param request QueryNetworkRttReportRequest
+     * @return QueryNetworkRttReportResponse
+     */
+    public QueryNetworkRttReportResponse queryNetworkRttReport(QueryNetworkRttReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryNetworkRttReportWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the node quantity report. <code>StartDate</code>, <code>EndDate</code>, and <code>StatDateType</code> are required. The query span limit is determined by the statistical granularity: up to 1 day for <code>1m</code> and <code>30m</code>, up to 15 days for <code>6h</code>, and up to 180 days for <code>1d</code>. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 entries per page.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the total number of nodes, the number of subscription nodes, and the number of pay-as-you-go nodes by statistical granularity.</p>
+     * 
+     * @param request QueryNodeReportDataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryNodeReportDataResponse
+     */
+    public QueryNodeReportDataResponse queryNodeReportDataWithOptions(QueryNodeReportDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
+            body.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            body.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statDateType)) {
+            body.put("StatDateType", request.statDateType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryNodeReportData"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryNodeReportDataResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the node quantity report. <code>StartDate</code>, <code>EndDate</code>, and <code>StatDateType</code> are required. The query span limit is determined by the statistical granularity: up to 1 day for <code>1m</code> and <code>30m</code>, up to 15 days for <code>6h</code>, and up to 180 days for <code>1d</code>. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 entries per page.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the total number of nodes, the number of subscription nodes, and the number of pay-as-you-go nodes by statistical granularity.</p>
+     * 
+     * @param request QueryNodeReportDataRequest
+     * @return QueryNodeReportDataResponse
+     */
+    public QueryNodeReportDataResponse queryNodeReportData(QueryNodeReportDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryNodeReportDataWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries session quantity reports. <code>StartDate</code>, <code>EndDate</code>, and <code>StatDateType</code> are required. The query span limit is determined by the statistical granularity: up to 1 day for <code>1m</code> and <code>30m</code>, up to 15 days for <code>6h</code>, and up to 180 days for <code>1d</code>. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 records per page.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the total number of sessions, connected sessions, and streaming sessions by statistical granularity.</p>
+     * 
+     * @param request QuerySessionReportDataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QuerySessionReportDataResponse
+     */
+    public QuerySessionReportDataResponse querySessionReportDataWithOptions(QuerySessionReportDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
+            body.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            body.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statDateType)) {
+            body.put("StatDateType", request.statDateType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QuerySessionReportData"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QuerySessionReportDataResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries session quantity reports. <code>StartDate</code>, <code>EndDate</code>, and <code>StatDateType</code> are required. The query span limit is determined by the statistical granularity: up to 1 day for <code>1m</code> and <code>30m</code>, up to 15 days for <code>6h</code>, and up to 180 days for <code>1d</code>. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 records per page.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the total number of sessions, connected sessions, and streaming sessions by statistical granularity.</p>
+     * 
+     * @param request QuerySessionReportDataRequest
+     * @return QuerySessionReportDataResponse
+     */
+    public QuerySessionReportDataResponse querySessionReportData(QuerySessionReportDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.querySessionReportDataWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the application usage of a specified user on an hourly basis. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to be queried. A maximum of the top five applications by usage duration are returned for each hour.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the cumulative duration of application usage by a specified user on an hourly basis and returns the top five applications for each hour.</p>
+     * 
+     * @param request QueryUserAppUsageAggregateByHourRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryUserAppUsageAggregateByHourResponse
+     */
+    public QueryUserAppUsageAggregateByHourResponse queryUserAppUsageAggregateByHourWithOptions(QueryUserAppUsageAggregateByHourRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
+            body.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            body.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryUserAppUsageAggregateByHour"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryUserAppUsageAggregateByHourResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the application usage of a specified user on an hourly basis. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to be queried. A maximum of the top five applications by usage duration are returned for each hour.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the cumulative duration of application usage by a specified user on an hourly basis and returns the top five applications for each hour.</p>
+     * 
+     * @param request QueryUserAppUsageAggregateByHourRequest
+     * @return QueryUserAppUsageAggregateByHourResponse
+     */
+    public QueryUserAppUsageAggregateByHourResponse queryUserAppUsageAggregateByHour(QueryUserAppUsageAggregateByHourRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryUserAppUsageAggregateByHourWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the ranking of application usage duration for a specified user within a statistical range. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to be queried. The results are sorted in descending order of cumulative application usage duration.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the ranking of cumulative application usage duration for a specified user within a date range.</p>
+     * 
+     * @param request QueryUserAppUsageTimeRankRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryUserAppUsageTimeRankResponse
+     */
+    public QueryUserAppUsageTimeRankResponse queryUserAppUsageTimeRankWithOptions(QueryUserAppUsageTimeRankRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
+            body.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            body.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryUserAppUsageTimeRank"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryUserAppUsageTimeRankResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the ranking of application usage duration for a specified user within a statistical range. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to be queried. The results are sorted in descending order of cumulative application usage duration.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the ranking of cumulative application usage duration for a specified user within a date range.</p>
+     * 
+     * @param request QueryUserAppUsageTimeRankRequest
+     * @return QueryUserAppUsageTimeRankResponse
+     */
+    public QueryUserAppUsageTimeRankResponse queryUserAppUsageTimeRank(QueryUserAppUsageTimeRankRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryUserAppUsageTimeRankWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries user usage reports. ProductType, StartDate, and EndDate are required for server-side validation, and the time span cannot exceed 60 months. During the query, the start and end times are converted to the <code>yyyyMMdd</code> format and aggregated based on a closed interval of natural days. The results are paginated in descending order of cumulative usage duration, with a maximum of 1,500 records per page. You can combine ConnectionStatus, UserId, BizRegionId, and AppInstanceGroupId for filtering.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the connection status, last connection time, cumulative usage duration, and session persistence duration of users.</p>
+     * 
+     * @param request QueryUserUsageReportRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryUserUsageReportResponse
+     */
+    public QueryUserUsageReportResponse queryUserUsageReportWithOptions(QueryUserUsageReportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
+            body.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            body.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionStatus)) {
+            body.put("ConnectionStatus", request.connectionStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            body.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            body.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryUserUsageReport"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryUserUsageReportResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries user usage reports. ProductType, StartDate, and EndDate are required for server-side validation, and the time span cannot exceed 60 months. During the query, the start and end times are converted to the <code>yyyyMMdd</code> format and aggregated based on a closed interval of natural days. The results are paginated in descending order of cumulative usage duration, with a maximum of 1,500 records per page. You can combine ConnectionStatus, UserId, BizRegionId, and AppInstanceGroupId for filtering.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the connection status, last connection time, cumulative usage duration, and session persistence duration of users.</p>
+     * 
+     * @param request QueryUserUsageReportRequest
+     * @return QueryUserUsageReportResponse
+     */
+    public QueryUserUsageReportResponse queryUserUsageReport(QueryUserUsageReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryUserUsageReportWithOptions(request, runtime);
     }
 
     /**
