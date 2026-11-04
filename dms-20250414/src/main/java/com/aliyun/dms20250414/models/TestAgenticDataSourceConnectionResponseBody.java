@@ -29,7 +29,7 @@ public class TestAgenticDataSourceConnectionResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The request ID, which is used to locate the current call.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>request-1234567890</p>
@@ -38,7 +38,7 @@ public class TestAgenticDataSourceConnectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the current call is successful.</p>
+     * <p>Indicates whether the call is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -93,13 +93,13 @@ public class TestAgenticDataSourceConnectionResponseBody extends TeaModel {
          * <p>The description of the connection test result. This parameter is usually empty when the connection is successful, and returns the cause when the connection fails.</p>
          * 
          * <strong>example:</strong>
-         * <p>Connection timed out. Check the connection endpoint</p>
+         * <p>Connection timed out. Check the endpoint.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>Indicates whether the data source is connected.</p>
+         * <p>Indicates whether the data source is connected successfully.</p>
          */
         @NameInMap("Success")
         public Boolean success;

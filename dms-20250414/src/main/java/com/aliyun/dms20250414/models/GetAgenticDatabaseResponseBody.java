@@ -11,7 +11,7 @@ public class GetAgenticDatabaseResponseBody extends TeaModel {
     public AgenticDatabase data;
 
     /**
-     * <p>The error code returned when an exception occurs.</p>
+     * <p>The error code returned when an exception occurs during the request.</p>
      * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
@@ -20,7 +20,7 @@ public class GetAgenticDatabaseResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned when the call fails.</p>
+     * <p>The error message returned when the API call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
@@ -29,7 +29,7 @@ public class GetAgenticDatabaseResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>

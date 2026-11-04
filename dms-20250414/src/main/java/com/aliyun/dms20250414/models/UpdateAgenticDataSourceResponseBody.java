@@ -11,7 +11,7 @@ public class UpdateAgenticDataSourceResponseBody extends TeaModel {
     public UpdateAgenticDataSourceResponseBodyData data;
 
     /**
-     * <p>The error code returned if the call fails. This parameter is empty if the call is successful.</p>
+     * <p>The error code returned when the call fails. This field is empty when the call succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidParameter</p>
@@ -20,7 +20,7 @@ public class UpdateAgenticDataSourceResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned if the call fails. This parameter is empty if the call is successful.</p>
+     * <p>The error message returned when the call fails. This field is empty when the call succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>The parameter is invalid</p>
@@ -38,7 +38,7 @@ public class UpdateAgenticDataSourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -90,6 +90,15 @@ public class UpdateAgenticDataSourceResponseBody extends TeaModel {
 
     public static class UpdateAgenticDataSourceResponseBodyData extends TeaModel {
         /**
+         * <p>The name of the ADB MySQL Spark resource group. This field is returned only for data sources whose DbType is ADB_MYSQL_SPARK and is independent of the Schema (database name).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>resourceGroup1</p>
+         */
+        @NameInMap("AdbSparkResourceGroup")
+        public String adbSparkResourceGroup;
+
+        /**
          * <p>The display name of the data source.</p>
          * 
          * <strong>example:</strong>
@@ -99,7 +108,7 @@ public class UpdateAgenticDataSourceResponseBody extends TeaModel {
         public String alias;
 
         /**
-         * <p>The logon username for the data source. This parameter is empty if username authentication is not used.</p>
+         * <p>The logon username for the data source. This field is empty if username authentication is not used.</p>
          * 
          * <strong>example:</strong>
          * <p>db_user</p>
@@ -108,7 +117,7 @@ public class UpdateAgenticDataSourceResponseBody extends TeaModel {
         public String authAccount;
 
         /**
-         * <p>The masked value of the password or token. The actual value is not returned.</p>
+         * <p>The masked value of the password or token. The actual content is not returned.</p>
          * 
          * <strong>example:</strong>
          * <p>P@ss****</p>
@@ -190,7 +199,7 @@ public class UpdateAgenticDataSourceResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The time when the data source was last updated. The format is yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The time when the data source was last modified. The format is yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-13 14:35:00</p>
@@ -208,7 +217,7 @@ public class UpdateAgenticDataSourceResponseBody extends TeaModel {
         public String host;
 
         /**
-         * <p>The ID of the cloud resource instance. This parameter may be empty for data sources registered by endpoint.</p>
+         * <p>The ID of the cloud resource instance. This field may be empty for data sources registered by endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-bp1234567890</p>
@@ -233,7 +242,7 @@ public class UpdateAgenticDataSourceResponseBody extends TeaModel {
         public String instanceSource;
 
         /**
-         * <p>The name of the KMS-managed credential. This parameter is empty if KMS is not used. This is sensitive information.</p>
+         * <p>The name of the KMS managed credential. This field is empty if KMS is not used and is considered sensitive information.</p>
          * 
          * <strong>example:</strong>
          * <p>datasource-secret</p>
@@ -242,7 +251,7 @@ public class UpdateAgenticDataSourceResponseBody extends TeaModel {
         public String kmsSecret;
 
         /**
-         * <p>The ID of the data access security policy in use. This parameter is empty if no policy is configured.</p>
+         * <p>The ID of the data access security policy currently in use. This field is empty if no policy is set.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-usr-example</p>
@@ -278,7 +287,7 @@ public class UpdateAgenticDataSourceResponseBody extends TeaModel {
         public String resourceAccountId;
 
         /**
-         * <p>The ARN of the RAM role used to access the data source. This parameter is empty if role authorization is not used.</p>
+         * <p>The ARN of the Alibaba Cloud RAM role used to access the data source. This field is empty if role authorization is not used.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::123456789012****:role/DataSourceRole</p>
@@ -287,7 +296,7 @@ public class UpdateAgenticDataSourceResponseBody extends TeaModel {
         public String roleArn;
 
         /**
-         * <p>The name of the connection target. For ADB_POSTGRESQL, DRDS, POSTGRESQL, and POLARDB_POSTGRESQL, this indicates the database name. For ORACLE, this indicates the SID or service name. For POLARDB_ORACLE, this indicates the SID. For MAXCOMPUTE, this indicates the project. For other types, this parameter is usually empty.</p>
+         * <p>The name of the connection target. For ADB_POSTGRESQL, DRDS, POSTGRESQL, and POLARDB_POSTGRESQL, this indicates the database name. For ORACLE, this indicates the SID or service name. For POLARDB_ORACLE, this indicates the SID. For MAXCOMPUTE, this indicates the project. For other types, this field is usually empty.</p>
          * 
          * <strong>example:</strong>
          * <p>postgres</p>
@@ -339,6 +348,14 @@ public class UpdateAgenticDataSourceResponseBody extends TeaModel {
         public static UpdateAgenticDataSourceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             UpdateAgenticDataSourceResponseBodyData self = new UpdateAgenticDataSourceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateAgenticDataSourceResponseBodyData setAdbSparkResourceGroup(String adbSparkResourceGroup) {
+            this.adbSparkResourceGroup = adbSparkResourceGroup;
+            return this;
+        }
+        public String getAdbSparkResourceGroup() {
+            return this.adbSparkResourceGroup;
         }
 
         public UpdateAgenticDataSourceResponseBodyData setAlias(String alias) {

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteAgenticDataSourceResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the deletion was successful.</p>
+     * <p>Indicates whether the deletion is successful.</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
-     * <p>The error code returned when the call fails. This field is empty when the call succeeds.</p>
+     * <p>The error code returned if the call fails. This parameter is empty if the call succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidParameter</p>
@@ -20,7 +20,7 @@ public class DeleteAgenticDataSourceResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned when the call fails. This field is empty when the call succeeds.</p>
+     * <p>The error message returned if the call fails. This parameter is empty if the call succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>The parameter is invalid</p>
@@ -29,7 +29,7 @@ public class DeleteAgenticDataSourceResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The ID of the request. You can use this ID to trace the call.</p>
+     * <p>The request ID used to trace the call.</p>
      * 
      * <strong>example:</strong>
      * <p>request-1234567890</p>
@@ -38,7 +38,7 @@ public class DeleteAgenticDataSourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the call is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

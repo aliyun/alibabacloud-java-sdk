@@ -1,3 +1,18 @@
+2026-11-04 Version: 4.4.3
+- Update API AddAgenticDataSource: add request parameters AdbSparkResourceGroup.
+- Update API AddAgenticDataSource: add response parameters Body.Data.AdbSparkResourceGroup.
+- Update API CreateDataAgentWorkspace: add request parameters Config.
+- Update API CreateDataAgentWorkspace: add response parameters Body.Data.Config.
+- Update API GetAgenticDataSource: add response parameters Body.Data.AdbSparkResourceGroup.
+- Update API GetDataAgentWorkspaceInfo: add response parameters Body.Data.Config.
+- Update API ListDataAgentWorkspace: add response parameters Body.Data.Content.$.Config.
+- Update API TestAgenticDataSourceConnection: add request parameters AdbSparkResourceGroup.
+- Update API UpdateAgenticDataSource: add request parameters AdbSparkResourceGroup.
+- Update API UpdateAgenticDataSource: add response parameters Body.Data.AdbSparkResourceGroup.
+- Update API UpdateDataAgentSpaceInfo: add request parameters Config.
+- Update API UpdateDataAgentSpaceInfo: add response parameters Body.Data.Config.
+
+
 2026-11-02 Version: 4.4.2
 - Update API SendChatMessage: add request parameters SessionConfig.WebReportTheme.
 

@@ -29,7 +29,7 @@ public class CreateAgenticSqlExecuteCredentialResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>34E01EDD-6A16-4CF0-9541-C644D1BE01AA</p>
@@ -106,7 +106,7 @@ public class CreateAgenticSqlExecuteCredentialResponseBody extends TeaModel {
         public String accessKey;
 
         /**
-         * <p>The AccessKey secret of the credential. This value is returned only once when the credential is created. Keep it secure.</p>
+         * <p>The AccessSecret of the credential. This value is returned only once when the credential is created. Keep it secure.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxxxx</p>

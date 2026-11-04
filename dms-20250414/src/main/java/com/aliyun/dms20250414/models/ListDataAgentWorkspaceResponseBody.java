@@ -29,7 +29,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The maximum number of results per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>nu use</p>
@@ -47,7 +47,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>E0D2-*****-A63B6</p>
@@ -127,7 +127,16 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
 
     public static class ListDataAgentWorkspaceResponseBodyDataContent extends TeaModel {
         /**
-         * <p>The creation time of the workspace. The value is a timestamp in milliseconds.</p>
+         * <p>The workspace configuration items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{sql_config:null}</p>
+         */
+        @NameInMap("Config")
+        public String config;
+
+        /**
+         * <p>The time when the workspace was created. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1765960516000</p>
@@ -172,7 +181,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether session sharing is enabled for the workspace.</p>
+         * <p>Indicates whether workspace sessions are shared.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -181,7 +190,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public Boolean isSessionShareEnabled;
 
         /**
-         * <p>The last modification time of the workspace. The value is a timestamp in milliseconds.</p>
+         * <p>The time when the workspace was last modified. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1765961516000</p>
@@ -190,7 +199,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The role name of the user in the workspace.</p>
+         * <p>The name of the user\&quot;s role in the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -264,6 +273,14 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public static ListDataAgentWorkspaceResponseBodyDataContent build(java.util.Map<String, ?> map) throws Exception {
             ListDataAgentWorkspaceResponseBodyDataContent self = new ListDataAgentWorkspaceResponseBodyDataContent();
             return TeaModel.build(map, self);
+        }
+
+        public ListDataAgentWorkspaceResponseBodyDataContent setConfig(String config) {
+            this.config = config;
+            return this;
+        }
+        public String getConfig() {
+            return this.config;
         }
 
         public ListDataAgentWorkspaceResponseBodyDataContent setCreateTime(Long createTime) {

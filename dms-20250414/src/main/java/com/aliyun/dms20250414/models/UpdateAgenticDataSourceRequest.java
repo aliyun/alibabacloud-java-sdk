@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateAgenticDataSourceRequest extends TeaModel {
     /**
-     * <p>The new display name of the data source. If you do not specify this parameter, the alias is not updated.</p>
+     * <p>The name of the AnalyticDB for MySQL Spark resource group. This parameter takes effect only when DbType is set to ADB_MYSQL_SPARK. If this parameter is not specified, the original resource group is retained. This parameter is independent of Schema (database name) and they cannot replace each other.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>resourceGroup1</p>
+     */
+    @NameInMap("AdbSparkResourceGroup")
+    public String adbSparkResourceGroup;
+
+    /**
+     * <p>The new display name of the data source. If this parameter is not specified, the value is not updated.</p>
      * 
      * <strong>example:</strong>
      * <p>demo_mysql</p>
@@ -14,7 +23,7 @@ public class UpdateAgenticDataSourceRequest extends TeaModel {
     public String alias;
 
     /**
-     * <p>The new logon username. If you do not specify this parameter, the authentication account is not updated.</p>
+     * <p>The new logon username. If this parameter is not specified, the value is not updated.</p>
      * 
      * <strong>example:</strong>
      * <p>db_user</p>
@@ -23,7 +32,7 @@ public class UpdateAgenticDataSourceRequest extends TeaModel {
     public String authAccount;
 
     /**
-     * <p>The new logon password. If you do not specify this parameter, the authentication password is not updated. This is sensitive information. Do not record or disclose it.</p>
+     * <p>The new logon password. If this parameter is not specified, the value is not updated. This is sensitive information. Do not record or disclose it.</p>
      * 
      * <strong>example:</strong>
      * <p>P@ss****</p>
@@ -32,13 +41,13 @@ public class UpdateAgenticDataSourceRequest extends TeaModel {
     public String authPassword;
 
     /**
-     * <p>Optional. Valid values:</p>
+     * <p>Optional. The authentication type. Valid values:</p>
      * <ul>
-     * <li>-1: No authentication required.</li>
-     * <li>0: Username and password.</li>
-     * <li>1: Password only.</li>
-     * <li>2: Password-free.
-     * If you do not specify this parameter, the authentication type is not updated.</li>
+     * <li>-1: no authentication required</li>
+     * <li>0: username and password</li>
+     * <li>1: password only</li>
+     * <li>2: password-free
+     * If this parameter is not specified, the value is not updated.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +57,7 @@ public class UpdateAgenticDataSourceRequest extends TeaModel {
     public Integer authType;
 
     /**
-     * <p>The new name of the metadata catalog. If you do not specify this parameter, the catalog name is not updated. The name can be up to 128 characters in length. It must start with a Chinese character, a letter, or an underscore, and can contain digits and hyphens. It cannot contain only digits.</p>
+     * <p>The new name of the metadata catalog. If this parameter is not specified, the value is not updated. The name can be up to 128 characters in length. It must start with a Chinese character, a letter, or an underscore, and can contain digits and hyphens. It cannot contain only digits.</p>
      * 
      * <strong>example:</strong>
      * <p>demo_catalog</p>
@@ -59,9 +68,9 @@ public class UpdateAgenticDataSourceRequest extends TeaModel {
     /**
      * <p>The registration method. Valid values:</p>
      * <ul>
-     * <li>INSTANCE_ID: Select an existing cloud instance.</li>
-     * <li>HOST_PORT: Register by endpoint and port.
-     * If you do not specify this parameter, the creation mode is not updated.</li>
+     * <li>INSTANCE_ID: select an existing cloud instance</li>
+     * <li>HOST_PORT: register by endpoint and port
+     * If this parameter is not specified, the value is not updated.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,7 +99,7 @@ public class UpdateAgenticDataSourceRequest extends TeaModel {
     public String dbType;
 
     /**
-     * <p>The environment type. Valid values: product, pre, dev, test, sit, uat, pet, and stag. If you do not specify this parameter, the environment type is not updated.</p>
+     * <p>The environment type. Valid values: product, pre, dev, test, sit, uat, pet, and stag. If this parameter is not specified, the value is not updated.</p>
      * 
      * <strong>example:</strong>
      * <p>product</p>
@@ -99,7 +108,7 @@ public class UpdateAgenticDataSourceRequest extends TeaModel {
     public String envType;
 
     /**
-     * <p>Optional. The new domain name or IP address of the database. Do not include the protocol, path, or port. If you do not specify this parameter, the host is not updated.</p>
+     * <p>Optional. The new domain name or IP address of the database. It cannot contain the protocol, path, or port. If this parameter is not specified, the value is not updated.</p>
      * 
      * <strong>example:</strong>
      * <p>mysql.example.com</p>
@@ -108,7 +117,7 @@ public class UpdateAgenticDataSourceRequest extends TeaModel {
     public String host;
 
     /**
-     * <p>The new ID of the cloud resource instance. If you do not specify this parameter, the instance resource ID is not updated.</p>
+     * <p>The new ID of the cloud resource instance. If this parameter is not specified, the value is not updated.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-bp1234567890</p>
@@ -117,7 +126,7 @@ public class UpdateAgenticDataSourceRequest extends TeaModel {
     public String instanceResourceId;
 
     /**
-     * <p>The new name of the KMS-managed credential. If you do not specify this parameter, the KMS secret is not updated.</p>
+     * <p>The new name of the KMS-managed credential. If this parameter is not specified, the value is not updated.</p>
      * 
      * <strong>example:</strong>
      * <p>datasource-secret</p>
@@ -126,7 +135,7 @@ public class UpdateAgenticDataSourceRequest extends TeaModel {
     public String kmsSecret;
 
     /**
-     * <p>Optional. The new ID of the data access security policy. If you do not specify this parameter, the policy ID is not updated.</p>
+     * <p>Optional. The new ID of the data access security policy. If this parameter is not specified, the value is not updated.</p>
      * 
      * <strong>example:</strong>
      * <p>sp-usr-example</p>
@@ -135,7 +144,7 @@ public class UpdateAgenticDataSourceRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>Optional. The new service port of the database. If you do not specify this parameter, the service port is not updated.</p>
+     * <p>Optional. The new service port of the database. If this parameter is not specified, the value is not updated.</p>
      * 
      * <strong>example:</strong>
      * <p>3306</p>
@@ -144,7 +153,7 @@ public class UpdateAgenticDataSourceRequest extends TeaModel {
     public Integer port;
 
     /**
-     * <p>The new ARN of the Alibaba Cloud RAM role. If you do not specify this parameter, the role ARN is not updated.</p>
+     * <p>The new ARN of the Alibaba Cloud RAM role. If this parameter is not specified, the value is not updated.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::123456789012****:role/DataSourceRole</p>
@@ -153,7 +162,7 @@ public class UpdateAgenticDataSourceRequest extends TeaModel {
     public String roleArn;
 
     /**
-     * <p>Optional. For ADB_POSTGRESQL, DRDS, POSTGRESQL, and POLARDB_POSTGRESQL, specify the database name. For ORACLE, specify the SID or service name, and prefix the service name with a forward slash (/). For POLARDB_ORACLE, specify the SID. For MAXCOMPUTE, specify the project name. For other types, leave this parameter empty. If you do not specify this parameter, the schema is not updated.</p>
+     * <p>Optional. For ADB_POSTGRESQL, DRDS, POSTGRESQL, and POLARDB_POSTGRESQL, specify the database name. For ORACLE, specify the SID or service name, and prefix the service name with a forward slash (/). For POLARDB_ORACLE, specify the SID. For MAXCOMPUTE, specify the project name. For other types, do not specify this parameter. If this parameter is not specified, the value is not updated.</p>
      * 
      * <strong>example:</strong>
      * <p>postgres</p>
@@ -182,9 +191,9 @@ public class UpdateAgenticDataSourceRequest extends TeaModel {
     /**
      * <p>Specifies whether to use the cloud instance name as the data source name. Valid values:</p>
      * <ul>
-     * <li>1: Yes.</li>
-     * <li>0: No.
-     * If you do not specify this parameter, the sync alias setting is not updated.</li>
+     * <li>1: yes</li>
+     * <li>0: no
+     * If this parameter is not specified, the value is not updated.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -196,10 +205,10 @@ public class UpdateAgenticDataSourceRequest extends TeaModel {
     /**
      * <p>The new SSL setting. Valid values:</p>
      * <ul>
-     * <li>1: Enable.</li>
-     * <li>0: Disable.</li>
-     * <li>-1: Use default settings.
-     * If you do not specify this parameter, the SSL setting is not updated. SSL is supported only for ADB_MYSQL, CLICKHOUSE, MARIADB, MYSQL, OCEANBASEX, POLARDB, SELECTDB, and STARROCKS.</li>
+     * <li>1: enable</li>
+     * <li>0: disable</li>
+     * <li>-1: use default settings
+     * If this parameter is not specified, the value is not updated. SSL is supported only for ADB_MYSQL, CLICKHOUSE, MARIADB, MYSQL, OCEANBASEX, POLARDB, SELECTDB, and STARROCKS.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -211,6 +220,14 @@ public class UpdateAgenticDataSourceRequest extends TeaModel {
     public static UpdateAgenticDataSourceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAgenticDataSourceRequest self = new UpdateAgenticDataSourceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateAgenticDataSourceRequest setAdbSparkResourceGroup(String adbSparkResourceGroup) {
+        this.adbSparkResourceGroup = adbSparkResourceGroup;
+        return this;
+    }
+    public String getAdbSparkResourceGroup() {
+        return this.adbSparkResourceGroup;
     }
 
     public UpdateAgenticDataSourceRequest setAlias(String alias) {

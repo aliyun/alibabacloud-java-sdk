@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetListMcpServerToolsResultRequest extends TeaModel {
     /**
-     * <p>The DMS unit identifier. This value is typically the same as the DMSUnit used in the request that started the tool detection.</p>
+     * <p>The DMS unit identifier. This is typically the same as the DMSUnit used in the request to start tool detection.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -14,7 +14,7 @@ public class GetListMcpServerToolsResultRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>The MCP Server ID used when the detection was started. This value must match the detection record associated with the SessionId.</p>
+     * <p>The MCP server ID used when starting the detection. It must match the detection record corresponding to SessionId.</p>
      * 
      * <strong>example:</strong>
      * <p>44lg***z65</p>
@@ -23,7 +23,7 @@ public class GetListMcpServerToolsResultRequest extends TeaModel {
     public String mcpServerUuid;
 
     /**
-     * <p>The temporary session ID returned by StartListMcpServerTools. This ID is used to locate the connectivity detection task.</p>
+     * <p>The temporary session ID returned by StartListMcpServerTools, which is used to locate this connectivity detection task.</p>
      * 
      * <strong>example:</strong>
      * <p>1vwe***6wr</p>

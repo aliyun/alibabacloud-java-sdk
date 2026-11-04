@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateDataAgentWorkspaceRequest extends TeaModel {
     /**
+     * <p>The workspace configurations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{sql_config:null}</p>
+     */
+    @NameInMap("Config")
+    public String config;
+
+    /**
      * <p>The current DMS unit.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +23,7 @@ public class CreateDataAgentWorkspaceRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>Specifies whether session sharing is enabled within the workspace.</p>
+     * <p>Specifies whether sessions within the workspace are shared.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +32,7 @@ public class CreateDataAgentWorkspaceRequest extends TeaModel {
     public Boolean isSessionShareEnabled;
 
     /**
-     * <p>The description of the workspace.</p>
+     * <p>The description of the collaborative workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>Space for test</p>
@@ -32,7 +41,7 @@ public class CreateDataAgentWorkspaceRequest extends TeaModel {
     public String workspaceDesc;
 
     /**
-     * <p>The name of the workspace.</p>
+     * <p>The name of the collaborative workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>workspaceTest</p>
@@ -43,6 +52,14 @@ public class CreateDataAgentWorkspaceRequest extends TeaModel {
     public static CreateDataAgentWorkspaceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDataAgentWorkspaceRequest self = new CreateDataAgentWorkspaceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDataAgentWorkspaceRequest setConfig(String config) {
+        this.config = config;
+        return this;
+    }
+    public String getConfig() {
+        return this.config;
     }
 
     public CreateDataAgentWorkspaceRequest setDMSUnit(String DMSUnit) {

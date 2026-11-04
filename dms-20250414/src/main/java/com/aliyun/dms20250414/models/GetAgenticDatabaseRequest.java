@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgenticDatabaseRequest extends TeaModel {
     /**
-     * <p>The UUID of the database. You can obtain this value by calling ListAgenticDatabase or SearchAgenticDatabase.</p>
+     * <p>The UUID of the database. You can obtain the UUID by calling ListAgenticDatabase or SearchAgenticDatabase.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response struct.</p>
      */
     @NameInMap("Data")
     public UpdateDataAgentSpaceInfoResponseBodyData data;
 
     /**
-     * <p>The error code returned if the request fails.</p>
+     * <p>The error code returned when a request exception occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>DMS-DA-40114</p>
@@ -20,7 +20,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The error message returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>Specified parameter is not valid.</p>
@@ -38,7 +38,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,16 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
 
     public static class UpdateDataAgentSpaceInfoResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the workspace was created, specified as a UNIX timestamp in seconds.</p>
+         * <p>The workspace configuration items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{sql_config:null}</p>
+         */
+        @NameInMap("Config")
+        public String config;
+
+        /**
+         * <p>The creation time of the session (UNIX timestamp in seconds).</p>
          * 
          * <strong>example:</strong>
          * <p>1765960516</p>
@@ -102,7 +111,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The user ID (UID) of the workspace creator.</p>
+         * <p>The UID of the workspace creator.</p>
          * 
          * <strong>example:</strong>
          * <p>20282*****7591</p>
@@ -111,7 +120,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The description of the workspace.</p>
+         * <p>The description of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>space for test new</p>
@@ -120,7 +129,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether session sharing is enabled in the workspace.</p>
+         * <p>Indicates whether session sharing within the workspace is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -129,7 +138,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         public Boolean isSessionShareEnabled;
 
         /**
-         * <p>The time when the workspace was last modified, specified as a UNIX timestamp in seconds.</p>
+         * <p>The last modification time of the workspace (UNIX timestamp in seconds).</p>
          * 
          * <strong>example:</strong>
          * <p>1765962516</p>
@@ -138,7 +147,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The user role in the workspace.</p>
+         * <p>The name of the removed user role.</p>
          * 
          * <strong>example:</strong>
          * <p>active</p>
@@ -156,7 +165,7 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         public String totalMember;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20923*****7291</p>
@@ -185,6 +194,14 @@ public class UpdateDataAgentSpaceInfoResponseBody extends TeaModel {
         public static UpdateDataAgentSpaceInfoResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             UpdateDataAgentSpaceInfoResponseBodyData self = new UpdateDataAgentSpaceInfoResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateDataAgentSpaceInfoResponseBodyData setConfig(String config) {
+            this.config = config;
+            return this;
+        }
+        public String getConfig() {
+            return this.config;
         }
 
         public UpdateDataAgentSpaceInfoResponseBodyData setCreateTime(String createTime) {

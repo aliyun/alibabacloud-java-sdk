@@ -29,7 +29,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E0D2-*****-A63B6</p>
@@ -93,7 +93,16 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
 
     public static class GetDataAgentWorkspaceInfoResponseBodyData extends TeaModel {
         /**
-         * <p>The creation time of the workspace. The value is a UNIX timestamp in seconds.</p>
+         * <p>The configuration items of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{sql_config:null}</p>
+         */
+        @NameInMap("Config")
+        public String config;
+
+        /**
+         * <p>The creation time of the session. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1765960516</p>
@@ -111,7 +120,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>Indicates whether sessions are shared within the workspace.</p>
+         * <p>Indicates whether sessions in the workspace are shared.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -156,7 +165,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The description of the workspace.</p>
+         * <p>The description of the collaborative workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>space for test</p>
@@ -165,7 +174,7 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
         public String workspaceDesc;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The ID of the collaborative workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>20923*****7291</p>
@@ -194,6 +203,14 @@ public class GetDataAgentWorkspaceInfoResponseBody extends TeaModel {
         public static GetDataAgentWorkspaceInfoResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetDataAgentWorkspaceInfoResponseBodyData self = new GetDataAgentWorkspaceInfoResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetDataAgentWorkspaceInfoResponseBodyData setConfig(String config) {
+            this.config = config;
+            return this;
+        }
+        public String getConfig() {
+            return this.config;
         }
 
         public GetDataAgentWorkspaceInfoResponseBodyData setCreateTime(String createTime) {

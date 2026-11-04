@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class AddAgenticDataSourceRequest extends TeaModel {
     /**
+     * <p>The name of the ADB MySQL Spark resource group. This parameter takes effect only when DbType is set to ADB_MYSQL_SPARK. You must specify a resource group for this connection type. This parameter is independent of Schema (database name) and they cannot replace each other.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>resourceGroup1</p>
+     */
+    @NameInMap("AdbSparkResourceGroup")
+    public String adbSparkResourceGroup;
+
+    /**
      * <p>The display name of the data source. If you do not specify this parameter, the server generates a name.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +23,7 @@ public class AddAgenticDataSourceRequest extends TeaModel {
     public String alias;
 
     /**
-     * <p>The logon username. You can leave this parameter empty for authentication methods that do not require a username.</p>
+     * <p>The logon username. You can leave this parameter empty if the authentication method does not require a username.</p>
      * 
      * <strong>example:</strong>
      * <p>db_user</p>
@@ -32,13 +41,7 @@ public class AddAgenticDataSourceRequest extends TeaModel {
     public String authPassword;
 
     /**
-     * <p>Optional. The authentication type. Valid values:</p>
-     * <ul>
-     * <li>-1: No authentication required.</li>
-     * <li>0: Username and password.</li>
-     * <li>1: Password only.</li>
-     * <li>2: Password-free.</li>
-     * </ul>
+     * <p>Optional. The authentication type. Valid values: -1: no authentication required, 0: username and password, 1: password only, and 2: password-free.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -47,7 +50,7 @@ public class AddAgenticDataSourceRequest extends TeaModel {
     public Integer authType;
 
     /**
-     * <p>The name of the metadata catalog. If you do not specify this parameter, the name is automatically generated. The name can be up to 128 characters in length. It must start with a Chinese character, a letter, or an underscore, and can contain digits and hyphens. It cannot contain only digits.</p>
+     * <p>The name of the metadata catalog. If you do not specify this parameter, the name is automatically generated. The name can be up to 128 characters in length. It must start with a letter, Chinese character, or underscore, and can contain digits and hyphens. It cannot contain only digits.</p>
      * 
      * <strong>example:</strong>
      * <p>demo_catalog</p>
@@ -56,12 +59,7 @@ public class AddAgenticDataSourceRequest extends TeaModel {
     public String catalogName;
 
     /**
-     * <p>The entry method. Valid values:</p>
-     * <ul>
-     * <li>INSTANCE_ID: Select an existing cloud instance.</li>
-     * <li>HOST_PORT: Enter the endpoint and port.
-     * If you do not specify this parameter, HOST_PORT is used.</li>
-     * </ul>
+     * <p>The entry method. Valid values: INSTANCE_ID: select an existing cloud instance, and HOST_PORT: enter an endpoint and port. If you do not specify this parameter, HOST_PORT is used.</p>
      * 
      * <strong>example:</strong>
      * <p>HOST_PORT</p>
@@ -107,14 +105,7 @@ public class AddAgenticDataSourceRequest extends TeaModel {
     public String instanceResourceId;
 
     /**
-     * <p>The source of the data source. Valid values:</p>
-     * <ul>
-     * <li>RDS: An ApsaraDB instance.</li>
-     * <li>PUBLIC_OWN: A self-managed database on the Internet.</li>
-     * <li>ECS_OWN: A self-managed database on an ECS instance.</li>
-     * <li>GATEWAY: A database accessed through Database Gateway.</li>
-     * <li>VPC_IDC: A database accessed through a VPC or data center.</li>
-     * </ul>
+     * <p>The source of the data source. Valid values: RDS: ApsaraDB instance, PUBLIC_OWN: self-managed database connected over the Internet, ECS_OWN: self-managed database hosted on an ECS instance, GATEWAY: database connected through Database Gateway, and VPC_IDC: database connected through a VPC or IDC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -133,7 +124,7 @@ public class AddAgenticDataSourceRequest extends TeaModel {
     public String kmsSecret;
 
     /**
-     * <p>Optional. The ID of the data access security policy. This policy is used to control the access and protection rules for the data source.</p>
+     * <p>Optional. The ID of the data access security policy. This policy is used to control access and protection rules for the data source.</p>
      * 
      * <strong>example:</strong>
      * <p>sp-usr-example</p>
@@ -187,12 +178,7 @@ public class AddAgenticDataSourceRequest extends TeaModel {
     public String snowflakeWarehouse;
 
     /**
-     * <p>Specifies whether to use the cloud instance name as the data source name. Valid values:</p>
-     * <ul>
-     * <li>1: Yes.</li>
-     * <li>0: No.
-     * This parameter takes effect only when you select a cloud database instance.</li>
-     * </ul>
+     * <p>Specifies whether to use the cloud instance name as the data source name. Valid values: 1: yes, and 0: no. This parameter takes effect only when you select a cloud database instance.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -201,13 +187,7 @@ public class AddAgenticDataSourceRequest extends TeaModel {
     public Integer syncAlias;
 
     /**
-     * <p>Specifies whether to use SSL. Valid values:</p>
-     * <ul>
-     * <li>1: Enable.</li>
-     * <li>0: Disable.</li>
-     * <li>-1: Use the default setting.
-     * Only ADB_MYSQL, CLICKHOUSE, MARIADB, MYSQL, OCEANBASEX, POLARDB, SELECTDB, and STARROCKS support SSL. Leave this parameter empty for other types.</li>
-     * </ul>
+     * <p>Specifies whether to use SSL. Valid values: 1: enabled, 0: disabled, and -1: default settings. Only ADB_MYSQL, CLICKHOUSE, MARIADB, MYSQL, OCEANBASEX, POLARDB, SELECTDB, and STARROCKS support SSL. Leave this parameter empty for other types.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -245,6 +225,14 @@ public class AddAgenticDataSourceRequest extends TeaModel {
     public static AddAgenticDataSourceRequest build(java.util.Map<String, ?> map) throws Exception {
         AddAgenticDataSourceRequest self = new AddAgenticDataSourceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddAgenticDataSourceRequest setAdbSparkResourceGroup(String adbSparkResourceGroup) {
+        this.adbSparkResourceGroup = adbSparkResourceGroup;
+        return this;
+    }
+    public String getAdbSparkResourceGroup() {
+        return this.adbSparkResourceGroup;
     }
 
     public AddAgenticDataSourceRequest setAlias(String alias) {

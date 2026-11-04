@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class UpdateDataAgentSpaceInfoRequest extends TeaModel {
     /**
+     * <p>The workspace configuration items.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{sql_config:null}</p>
+     */
+    @NameInMap("Config")
+    public String config;
+
+    /**
      * <p>The current DMS unit.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +23,7 @@ public class UpdateDataAgentSpaceInfoRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>Specifies whether to enable session sharing for the workspace. Valid values: true and false.</p>
+     * <p>Specifies whether to enable the session sharing feature for the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +32,7 @@ public class UpdateDataAgentSpaceInfoRequest extends TeaModel {
     public Boolean isSessionShareEnabled;
 
     /**
-     * <p>The new description for the workspace.</p>
+     * <p>The new description of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>space for test new</p>
@@ -32,7 +41,7 @@ public class UpdateDataAgentSpaceInfoRequest extends TeaModel {
     public String workspaceDesc;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>20923*****7291</p>
@@ -41,7 +50,7 @@ public class UpdateDataAgentSpaceInfoRequest extends TeaModel {
     public String workspaceId;
 
     /**
-     * <p>The new name for the workspace.</p>
+     * <p>The new name of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>yunqitest_v2</p>
@@ -52,6 +61,14 @@ public class UpdateDataAgentSpaceInfoRequest extends TeaModel {
     public static UpdateDataAgentSpaceInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDataAgentSpaceInfoRequest self = new UpdateDataAgentSpaceInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateDataAgentSpaceInfoRequest setConfig(String config) {
+        this.config = config;
+        return this;
+    }
+    public String getConfig() {
+        return this.config;
     }
 
     public UpdateDataAgentSpaceInfoRequest setDMSUnit(String DMSUnit) {

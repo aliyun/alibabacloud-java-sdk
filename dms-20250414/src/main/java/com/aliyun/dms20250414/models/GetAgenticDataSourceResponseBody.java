@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAgenticDataSourceResponseBody extends TeaModel {
     /**
-     * <p>The data source details. This parameter is empty if the data source does not exist.</p>
+     * <p>The data source details. This field is empty if the data source does not exist.</p>
      */
     @NameInMap("Data")
     public GetAgenticDataSourceResponseBodyData data;
 
     /**
-     * <p>The error code returned when the call fails. This parameter is empty if the call is successful.</p>
+     * <p>The error code returned when the call fails. This field is empty when the call succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidParameter</p>
@@ -20,7 +20,7 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned when the call fails. This parameter is empty if the call is successful.</p>
+     * <p>The error message returned when the call fails. This field is empty when the call succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>The parameter is invalid</p>
@@ -29,7 +29,7 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID, which is used to locate the call.</p>
      * 
      * <strong>example:</strong>
      * <p>request-1234567890</p>
@@ -90,6 +90,15 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
 
     public static class GetAgenticDataSourceResponseBodyData extends TeaModel {
         /**
+         * <p>The name of the ADB MySQL Spark resource group. This field is returned only for data sources whose DbType is ADB_MYSQL_SPARK and is independent of the Schema (database name).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>resourceGroup1</p>
+         */
+        @NameInMap("AdbSparkResourceGroup")
+        public String adbSparkResourceGroup;
+
+        /**
          * <p>The display name of the data source.</p>
          * 
          * <strong>example:</strong>
@@ -99,7 +108,7 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
         public String alias;
 
         /**
-         * <p>The logon username for the data source. This parameter is empty if username authentication is not used.</p>
+         * <p>The logon username for the data source. This field is empty if username authentication is not used.</p>
          * 
          * <strong>example:</strong>
          * <p>db_user</p>
@@ -108,7 +117,7 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
         public String authAccount;
 
         /**
-         * <p>The masked value of the password or token. The actual value is not returned.</p>
+         * <p>The masked value of the password or token. The actual content is not returned.</p>
          * 
          * <strong>example:</strong>
          * <p>P@ss****</p>
@@ -119,10 +128,10 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
         /**
          * <p>The authentication method. Valid values:</p>
          * <ul>
-         * <li>-1: no authentication required</li>
-         * <li>0: username and password</li>
-         * <li>1: password only</li>
-         * <li>2: password-free</li>
+         * <li>-1: No authentication required.</li>
+         * <li>0: Username and password.</li>
+         * <li>1: Password only.</li>
+         * <li>2: Password-free.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -152,8 +161,8 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
         /**
          * <p>The method used to register the data source. Valid values:</p>
          * <ul>
-         * <li>INSTANCE_ID: select an existing cloud instance</li>
-         * <li>HOST_PORT: register by endpoint and port</li>
+         * <li>INSTANCE_ID: Select an existing cloud instance.</li>
+         * <li>HOST_PORT: Register by endpoint and port.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -217,7 +226,7 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
         public String host;
 
         /**
-         * <p>The ID of the cloud resource instance. This parameter may be empty for data sources registered by endpoint.</p>
+         * <p>The ID of the cloud resource instance. This field may be empty for data sources registered by endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-bp1234567890</p>
@@ -228,11 +237,11 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
         /**
          * <p>The source of the data source. Valid values:</p>
          * <ul>
-         * <li>RDS: ApsaraDB instance</li>
-         * <li>PUBLIC_OWN: self-managed database on the Internet</li>
-         * <li>ECS_OWN: self-managed database on an ECS instance</li>
-         * <li>GATEWAY: connected through Database Gateway</li>
-         * <li>VPC_IDC: connected through a VPC or IDC</li>
+         * <li>RDS: ApsaraDB instance.</li>
+         * <li>PUBLIC_OWN: Self-managed database on the Internet.</li>
+         * <li>ECS_OWN: Self-managed database on an ECS instance.</li>
+         * <li>GATEWAY: Connected through Database Gateway.</li>
+         * <li>VPC_IDC: Connected through a VPC or IDC.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -242,7 +251,7 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
         public String instanceSource;
 
         /**
-         * <p>The name of the KMS-managed credential. This parameter is empty if KMS is not used. This field contains sensitive information.</p>
+         * <p>The name of the KMS-managed credential. This field is empty if KMS is not used and is considered sensitive information.</p>
          * 
          * <strong>example:</strong>
          * <p>datasource-secret</p>
@@ -251,7 +260,7 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
         public String kmsSecret;
 
         /**
-         * <p>The ID of the data access security policy currently in use. This parameter is empty if no policy is configured.</p>
+         * <p>The ID of the data access security policy currently in use. This field is empty if no policy is configured.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-usr-example</p>
@@ -287,7 +296,7 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
         public String resourceAccountId;
 
         /**
-         * <p>The ARN of the RAM role used to access the data source. This parameter is empty if role-based authorization is not used.</p>
+         * <p>The ARN of the Alibaba Cloud RAM role used to access the data source. This field is empty if role-based authorization is not used.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::123456789012****:role/DataSourceRole</p>
@@ -296,7 +305,7 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
         public String roleArn;
 
         /**
-         * <p>The name of the connection target. For ADB_POSTGRESQL, DRDS, POSTGRESQL, and POLARDB_POSTGRESQL, this indicates the database name. For ORACLE, this indicates the SID or service name. For POLARDB_ORACLE, this indicates the SID. For MAXCOMPUTE, this indicates the project. For other types, this parameter is usually empty.</p>
+         * <p>The name of the connection target. For ADB_POSTGRESQL, DRDS, POSTGRESQL, and POLARDB_POSTGRESQL, this indicates the database name. For ORACLE, this indicates the SID or service name. For POLARDB_ORACLE, this indicates the SID. For MAXCOMPUTE, this indicates the project. For other types, this field is usually empty.</p>
          * 
          * <strong>example:</strong>
          * <p>postgres</p>
@@ -305,7 +314,7 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
         public String schema;
 
         /**
-         * <p>The name of the Snowflake role. This parameter takes effect only when DbType is set to SNOWFLAKE.</p>
+         * <p>The name of the Snowflake role. This field takes effect only when DbType is SNOWFLAKE.</p>
          * 
          * <strong>example:</strong>
          * <p>WAREHOUSE</p>
@@ -314,7 +323,7 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
         public String snowflakeRole;
 
         /**
-         * <p>The name of the Snowflake compute warehouse. This parameter takes effect only when DbType is set to SNOWFLAKE.</p>
+         * <p>The name of the Snowflake compute warehouse. This field takes effect only when DbType is SNOWFLAKE.</p>
          * 
          * <strong>example:</strong>
          * <p>ROLE</p>
@@ -325,9 +334,9 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
         /**
          * <p>The status of the data source. Valid values:</p>
          * <ul>
-         * <li>0: normal</li>
-         * <li>-1: deleted</li>
-         * <li>-2: disabled</li>
+         * <li>0: Normal.</li>
+         * <li>-1: Deleted.</li>
+         * <li>-2: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -339,8 +348,8 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
         /**
          * <p>Specifies whether to use the cloud instance name as the data source name. Valid values:</p>
          * <ul>
-         * <li>1: yes</li>
-         * <li>0: no</li>
+         * <li>1: Yes.</li>
+         * <li>0: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -352,9 +361,9 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
         /**
          * <p>The SSL settings. Valid values:</p>
          * <ul>
-         * <li>1: enabled</li>
-         * <li>0: disabled</li>
-         * <li>-1: use default settings</li>
+         * <li>1: Enabled.</li>
+         * <li>0: Disabled.</li>
+         * <li>-1: Use default settings.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -364,7 +373,7 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
         public Integer useSsl;
 
         /**
-         * <p>The ID of the destination vSwitch used when accessing MaxCompute. This parameter is empty in other scenarios.</p>
+         * <p>The ID of the destination vSwitch used when accessing MaxCompute. This field is empty in other scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1234567890</p>
@@ -373,7 +382,7 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the destination VPC used when accessing MaxCompute. This parameter is empty in other scenarios.</p>
+         * <p>The ID of the destination VPC used when accessing MaxCompute. This field is empty in other scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1234567890</p>
@@ -382,7 +391,7 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The ID of the destination zone used when accessing MaxCompute. This parameter is empty in other scenarios.</p>
+         * <p>The ID of the destination zone used when accessing MaxCompute. This field is empty in other scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
@@ -393,6 +402,14 @@ public class GetAgenticDataSourceResponseBody extends TeaModel {
         public static GetAgenticDataSourceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetAgenticDataSourceResponseBodyData self = new GetAgenticDataSourceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetAgenticDataSourceResponseBodyData setAdbSparkResourceGroup(String adbSparkResourceGroup) {
+            this.adbSparkResourceGroup = adbSparkResourceGroup;
+            return this;
+        }
+        public String getAdbSparkResourceGroup() {
+            return this.adbSparkResourceGroup;
         }
 
         public GetAgenticDataSourceResponseBodyData setAlias(String alias) {

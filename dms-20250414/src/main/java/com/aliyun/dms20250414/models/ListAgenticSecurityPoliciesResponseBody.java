@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgenticSecurityPoliciesResponseBody extends TeaModel {
     /**
-     * <p>The list of security policies returned by this query. Enabled system default policies are placed at the beginning, followed by the user policies on the current page. You can use Readonly to distinguish between the two types of policies.</p>
+     * <p>The list of security policies returned by the current query. Enabled system default policies are placed at the beginning, followed by the user policies on the current page. You can use Readonly to distinguish between the two types of policies.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListAgenticSecurityPoliciesResponseBodyData> data;
@@ -29,7 +29,7 @@ public class ListAgenticSecurityPoliciesResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The request ID, which is used to locate and trace this call.</p>
+     * <p>The request ID, which is used to locate and trace the call.</p>
      * 
      * <strong>example:</strong>
      * <p>request-1234567890</p>
@@ -120,7 +120,7 @@ public class ListAgenticSecurityPoliciesResponseBody extends TeaModel {
         public String aliyunAccountUid;
 
         /**
-         * <p>The ID of the system default policy inherited by the user policy. This value is empty if no inheritance relationship is configured. This value is not returned for system default policies.</p>
+         * <p>The ID of the system default policy inherited by the user policy. This parameter is empty when no inheritance relationship is configured. This value is not returned for system default policies.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-sys-default</p>
@@ -129,7 +129,7 @@ public class ListAgenticSecurityPoliciesResponseBody extends TeaModel {
         public String basePolicyId;
 
         /**
-         * <p>The description of the security policy. The description of a system default policy is returned in the language of the request context.</p>
+         * <p>The description of the security policy. The description of a system default policy is returned in the language of the call context.</p>
          * 
          * <strong>example:</strong>
          * <p>Read-only access policy for analytics</p>
@@ -138,7 +138,7 @@ public class ListAgenticSecurityPoliciesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The time when the security policy was created. The time is in the yyyy-MM-dd HH:mm:ss format and does not contain a time zone offset.</p>
+         * <p>The time when the security policy was created. The time is in the yyyy-MM-dd HH:mm:ss format and does not include a time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-13 14:30:00</p>
@@ -147,7 +147,7 @@ public class ListAgenticSecurityPoliciesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The time when the security policy was last modified. The time is in the yyyy-MM-dd HH:mm:ss format and does not contain a time zone offset.</p>
+         * <p>The time when the security policy was last modified. The time is in the yyyy-MM-dd HH:mm:ss format and does not include a time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-13 14:35:00</p>
@@ -156,7 +156,7 @@ public class ListAgenticSecurityPoliciesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The business ID of the security policy. A system default policy ID starts with sp-sys-, and a user policy ID starts with sp-usr-.</p>
+         * <p>The business ID of the security policy. The ID of a system default policy starts with sp-sys-, and the ID of a user policy starts with sp-usr-.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-sys-default</p>
@@ -165,7 +165,7 @@ public class ListAgenticSecurityPoliciesResponseBody extends TeaModel {
         public String policyId;
 
         /**
-         * <p>The Policy Name of the security policy. The Policy Name of a system default policy is returned in the language of the request context.</p>
+         * <p>The policy name. The name of a system default policy is returned in the language of the call context.</p>
          * 
          * <strong>example:</strong>
          * <p>team-readonly-policy</p>
@@ -176,9 +176,9 @@ public class ListAgenticSecurityPoliciesResponseBody extends TeaModel {
         /**
          * <p>The current state of the security policy. Valid values:</p>
          * <ul>
-         * <li>ON: Enabled.</li>
-         * <li>OFF: Disabled.</li>
-         * <li>ARCHIVED: Archived.
+         * <li>ON: The policy is enabled.</li>
+         * <li>OFF: The policy is disabled.</li>
+         * <li>ARCHIVED: The policy is archived.
          * All system default policies returned by this operation are in the ON state.</li>
          * </ul>
          * 
@@ -189,7 +189,7 @@ public class ListAgenticSecurityPoliciesResponseBody extends TeaModel {
         public String policyStatus;
 
         /**
-         * <p>Specifies whether the policy is read-only. Valid values:</p>
+         * <p>Indicates whether the policy is read-only. Valid values:</p>
          * <ul>
          * <li>true: The policy is a system default policy.</li>
          * <li>false: The policy is a user policy of the current account.</li>
@@ -208,7 +208,7 @@ public class ListAgenticSecurityPoliciesResponseBody extends TeaModel {
         public String tags;
 
         /**
-         * <p>The identifier of the operator that last modified the policy. For a user policy, the operator ID is recorded first. If no operator ID is available, the UID of the current Alibaba Cloud account is recorded.</p>
+         * <p>The identifier of the operator who last modified the policy. For user policies, the operator ID is recorded first. If no operator ID is available, the UID of the current Alibaba Cloud account is recorded.</p>
          * 
          * <strong>example:</strong>
          * <p>system</p>

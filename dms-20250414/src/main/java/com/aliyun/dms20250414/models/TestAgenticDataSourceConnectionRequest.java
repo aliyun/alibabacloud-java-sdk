@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class TestAgenticDataSourceConnectionRequest extends TeaModel {
     /**
-     * <p>The alias. You can leave this parameter empty when testing a connection. This parameter does not create or modify a data source.</p>
+     * <p>The name of the AnalyticDB for MySQL Spark resource group. This parameter takes effect only when DbType is set to ADB_MYSQL_SPARK. You must specify a resource group when connecting to this type of data source. This parameter is independent of Schema (database name) and they cannot replace each other.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>resourceGroup1</p>
+     */
+    @NameInMap("AdbSparkResourceGroup")
+    public String adbSparkResourceGroup;
+
+    /**
+     * <p>The alias. You can leave this parameter empty when testing a connection. This operation does not create or modify a data source.</p>
      * 
      * <strong>example:</strong>
      * <p>demo_mysql</p>
@@ -32,7 +41,13 @@ public class TestAgenticDataSourceConnectionRequest extends TeaModel {
     public String authPassword;
 
     /**
-     * <p>The authentication type. This parameter is optional. Valid values: -1 (no authentication required), 0 (username and password), 1 (password only), and 2 (password-free).</p>
+     * <p>The authentication type. This parameter is optional. Valid values:</p>
+     * <ul>
+     * <li>-1: No authentication required.</li>
+     * <li>0: Username and password.</li>
+     * <li>1: Password only.</li>
+     * <li>2: Password-free.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -41,7 +56,7 @@ public class TestAgenticDataSourceConnectionRequest extends TeaModel {
     public Integer authType;
 
     /**
-     * <p>The catalog name. You can leave this parameter empty when testing a connection. This parameter does not create a metadata catalog.</p>
+     * <p>The catalog name. You can leave this parameter empty when testing a connection. This operation does not create a metadata catalog.</p>
      * 
      * <strong>example:</strong>
      * <p>demo_catalog</p>
@@ -50,7 +65,7 @@ public class TestAgenticDataSourceConnectionRequest extends TeaModel {
     public String catalogName;
 
     /**
-     * <p>The UUID of the data source. This parameter is required when testing an existing data source. If no new password is passed, the saved password is reused. Leave this parameter empty when testing a new data source.</p>
+     * <p>The UUID of the data source. Specify this parameter when testing an existing data source. If no new password is passed, the saved password is reused. Leave this parameter empty when testing a new data source.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou_a1b2c3d4e5f6</p>
@@ -59,7 +74,7 @@ public class TestAgenticDataSourceConnectionRequest extends TeaModel {
     public String dataSourceUuid;
 
     /**
-     * <p>The type of the data source. Use uppercase letters. Do not pass numbers. Valid values: MYSQL, POSTGRESQL, ORACLE, SQLSERVER, MARIADB, POLARDB, POLARDB_POSTGRESQL, POLARDB_ORACLE, OCEANBASEX, DRDS, ADB_MYSQL, ADB_POSTGRESQL, CLICKHOUSE, SELECTDB, STARROCKS, HOLOGRES, MAXCOMPUTE, ES_REST, and TRINO.</p>
+     * <p>The type of the data source. Use uppercase letters for the identifier. Do not pass numbers. Valid values: MYSQL, POSTGRESQL, ORACLE, SQLSERVER, MARIADB, POLARDB, POLARDB_POSTGRESQL, POLARDB_ORACLE, OCEANBASEX, DRDS, ADB_MYSQL, ADB_POSTGRESQL, CLICKHOUSE, SELECTDB, STARROCKS, HOLOGRES, MAXCOMPUTE, ES_REST, and TRINO.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,7 +93,7 @@ public class TestAgenticDataSourceConnectionRequest extends TeaModel {
     public String envType;
 
     /**
-     * <p>The domain name or IP address of the database. Do not include the protocol, path, or port. This parameter is optional. You can leave this parameter empty when you select an existing cloud instance and the endpoint is automatically populated.</p>
+     * <p>The domain name or IP address of the database. Do not include the protocol, path, or port. This parameter is optional. You can leave this parameter empty if you select an existing cloud instance and the address is automatically populated.</p>
      * 
      * <strong>example:</strong>
      * <p>mysql.example.com</p>
@@ -87,7 +102,7 @@ public class TestAgenticDataSourceConnectionRequest extends TeaModel {
     public String host;
 
     /**
-     * <p>The ID of the cloud resource instance. This parameter is required when you select an existing cloud instance. You can leave this parameter empty when you enter a connection endpoint.</p>
+     * <p>The ID of the cloud resource instance. Specify this parameter when you select an existing cloud instance. You can leave this parameter empty when you enter an endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-bp1234567890</p>
@@ -99,10 +114,10 @@ public class TestAgenticDataSourceConnectionRequest extends TeaModel {
      * <p>The source of the data source. Valid values:</p>
      * <ul>
      * <li>RDS: ApsaraDB instance.</li>
-     * <li>PUBLIC_OWN: self-managed database connected over the Internet.</li>
-     * <li>ECS_OWN: self-managed database hosted on an ECS instance.</li>
-     * <li>GATEWAY: database connected through Database Gateway.</li>
-     * <li>VPC_IDC: database connected over a VPC or data center.</li>
+     * <li>PUBLIC_OWN: Self-managed database connected over the Internet.</li>
+     * <li>ECS_OWN: Self-managed database hosted on an ECS instance.</li>
+     * <li>GATEWAY: Database connected through Database Gateway.</li>
+     * <li>VPC_IDC: Database connected through a VPC or data center.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -113,7 +128,7 @@ public class TestAgenticDataSourceConnectionRequest extends TeaModel {
     public String instanceSource;
 
     /**
-     * <p>The name of the KMS secret. This parameter is required when you use KMS to manage database credentials. Leave this parameter empty in other scenarios.</p>
+     * <p>The name of the credential managed by Key Management Service (KMS). Specify this parameter when you use KMS to manage database credentials. Leave this parameter empty in other scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>datasource-secret</p>
@@ -122,7 +137,7 @@ public class TestAgenticDataSourceConnectionRequest extends TeaModel {
     public String kmsSecret;
 
     /**
-     * <p>The service port of the database. This parameter is optional. You can leave this parameter empty when you select an existing cloud instance and the port is automatically populated.</p>
+     * <p>The service port of the database. This parameter is optional. You can leave this parameter empty if you select an existing cloud instance and the port is automatically populated.</p>
      * 
      * <strong>example:</strong>
      * <p>3306</p>
@@ -131,7 +146,7 @@ public class TestAgenticDataSourceConnectionRequest extends TeaModel {
     public Integer port;
 
     /**
-     * <p>The complete ARN of the RAM role. This parameter is required when you use an Alibaba Cloud RAM role to access the data source. Leave this parameter empty in other scenarios.</p>
+     * <p>The complete ARN of the Resource Access Management (RAM) role. Specify this parameter when you use an Alibaba Cloud RAM role to access the data source. Leave this parameter empty in other scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::123456789012****:role/DataSourceRole</p>
@@ -140,7 +155,7 @@ public class TestAgenticDataSourceConnectionRequest extends TeaModel {
     public String roleArn;
 
     /**
-     * <p>The schema name. This parameter is optional. For ADB_POSTGRESQL, DRDS, POSTGRESQL, and POLARDB_POSTGRESQL, enter the database name. For ORACLE, enter the SID or service name, and prefix the service name with a forward slash (/). For POLARDB_ORACLE, enter the SID. For MAXCOMPUTE, enter the project name. Leave this parameter empty for other types.</p>
+     * <p>The schema name. This parameter is optional. For ADB_POSTGRESQL, DRDS, POSTGRESQL, and POLARDB_POSTGRESQL, specify the database name. For ORACLE, specify the SID or service name, and prefix the service name with a forward slash (/). For POLARDB_ORACLE, specify the SID. For MAXCOMPUTE, specify the project name. Leave this parameter empty for other types.</p>
      * 
      * <strong>example:</strong>
      * <p>postgres</p>
@@ -167,7 +182,7 @@ public class TestAgenticDataSourceConnectionRequest extends TeaModel {
     public String snowflakeWarehouse;
 
     /**
-     * <p>Specifies whether to synchronize the alias. This parameter is optional when testing a connection. This parameter does not modify the data source name.</p>
+     * <p>Specifies whether to synchronize the alias. This parameter is optional when testing a connection. This operation does not modify the data source name.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -180,7 +195,7 @@ public class TestAgenticDataSourceConnectionRequest extends TeaModel {
      * <ul>
      * <li>1: Enable.</li>
      * <li>0: Disable.</li>
-     * <li>-1: Use the default setting.
+     * <li>-1: Use default settings.
      * SSL is supported only for ADB_MYSQL, CLICKHOUSE, MARIADB, MYSQL, OCEANBASEX, POLARDB, SELECTDB, and STARROCKS. Leave this parameter empty for other types.</li>
      * </ul>
      * 
@@ -191,7 +206,7 @@ public class TestAgenticDataSourceConnectionRequest extends TeaModel {
     public Integer useSsl;
 
     /**
-     * <p>The ID of the vSwitch. This parameter is required when you access MaxCompute over a VPC. Leave this parameter empty in other scenarios.</p>
+     * <p>The ID of the vSwitch. Specify this parameter when you access MaxCompute through a VPC. Leave this parameter empty in other scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp1234567890</p>
@@ -200,7 +215,7 @@ public class TestAgenticDataSourceConnectionRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC. This parameter is required when you access MaxCompute over a VPC. Leave this parameter empty in other scenarios.</p>
+     * <p>The ID of the VPC. Specify this parameter when you access MaxCompute through a VPC. Leave this parameter empty in other scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1234567890</p>
@@ -209,7 +224,7 @@ public class TestAgenticDataSourceConnectionRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The zone ID. This parameter is required when you access MaxCompute over a VPC. Leave this parameter empty in other scenarios.</p>
+     * <p>The ID of the zone. Specify this parameter when you access MaxCompute through a VPC. Leave this parameter empty in other scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-h</p>
@@ -220,6 +235,14 @@ public class TestAgenticDataSourceConnectionRequest extends TeaModel {
     public static TestAgenticDataSourceConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         TestAgenticDataSourceConnectionRequest self = new TestAgenticDataSourceConnectionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public TestAgenticDataSourceConnectionRequest setAdbSparkResourceGroup(String adbSparkResourceGroup) {
+        this.adbSparkResourceGroup = adbSparkResourceGroup;
+        return this;
+    }
+    public String getAdbSparkResourceGroup() {
+        return this.adbSparkResourceGroup;
     }
 
     public TestAgenticDataSourceConnectionRequest setAlias(String alias) {

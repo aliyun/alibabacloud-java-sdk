@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class ListAgenticSecurityPoliciesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to include archived policies in the query scope of user policies. Valid values:</p>
+     * <p>Specifies whether to include archived policies in the user policy query scope. Valid values:</p>
      * <ul>
      * <li>true: Includes archived policies.</li>
      * <li>false: Does not include archived policies.
-     * Default value: false. When querying archived policies, do not specify PolicyStatus. If ON or OFF is specified, only user policies in the corresponding state are returned. This parameter does not affect system default policies.</li>
+     * Default value: false. When you query archived policies, do not specify PolicyStatus. If you specify ON or OFF, only user policies in the corresponding state are returned. This parameter does not affect system default policies.</li>
      * </ul>
      */
     @NameInMap("IncludeArchived")
     public Boolean includeArchived;
 
     /**
-     * <p>The page number of the user policies to query. Pages start from 1. Default value: 1. Only user policies are paginated. System default policies are returned separately in each call.</p>
+     * <p>The page number for querying user policies. Pages start from 1. Default value: 1. Only user policies are paginated. System default policies are returned separately in each call.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -25,7 +25,12 @@ public class ListAgenticSecurityPoliciesRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The filter condition for the user policy status. Valid values: ON (enabled) and OFF (disabled). If this parameter is not specified or contains only whitespace characters, policies are not filtered by status. You cannot specify ARCHIVED. To query archived user policies, do not specify this parameter and set IncludeArchived to true. This parameter does not affect system default policies.</p>
+     * <p>The filter condition for the user policy status. Valid values:</p>
+     * <ul>
+     * <li>ON: The policy is enabled.</li>
+     * <li>OFF: The policy is disabled.
+     * If this parameter is not specified or contains only whitespace characters, policies are not filtered by status. You cannot specify ARCHIVED. To query archived user policies, do not specify this parameter and set IncludeArchived to true. This parameter does not affect system default policies.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ON</p>
@@ -34,7 +39,7 @@ public class ListAgenticSecurityPoliciesRequest extends TeaModel {
     public String policyStatus;
 
     /**
-     * <p>The number of user policies to query on each page. Valid values: 1 to 100. Default value: 20. In addition, each call returns up to Size enabled system default policies. Therefore, the number of items in the returned Data may be greater than Size.</p>
+     * <p>The number of user policies to query on each page. Valid values: 1 to 100. Default value: 20. In addition, each call returns up to Size enabled system default policies. Therefore, the number of returned Data entries may be greater than Size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

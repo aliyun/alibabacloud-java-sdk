@@ -38,7 +38,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,16 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
 
     public static class CreateDataAgentWorkspaceResponseBodyData extends TeaModel {
         /**
-         * <p>The creation time of the workspace. This value is a UNIX timestamp in seconds.</p>
+         * <p>The workspace configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{sql_config:null}</p>
+         */
+        @NameInMap("Config")
+        public String config;
+
+        /**
+         * <p>The creation time of the workspace. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1765960516</p>
@@ -111,7 +120,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>Indicates whether session sharing is enabled within the workspace.</p>
+         * <p>Indicates whether session sharing within the workspace is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -120,7 +129,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
         public Boolean isSessionShareEnabled;
 
         /**
-         * <p>The most recent modification time of the workspace. This value is a UNIX timestamp in seconds.</p>
+         * <p>The last modification time of the workspace. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1765961516</p>
@@ -129,7 +138,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The role name of the user in the workspace.</p>
+         * <p>The name of the user\&quot;s role in the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>owner</p>
@@ -138,7 +147,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
         public String roleName;
 
         /**
-         * <p>The total number of members in the workspace.</p>
+         * <p>The number of members in the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -149,8 +158,8 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
         /**
          * <p>The workspace type. Valid values:</p>
          * <ul>
-         * <li>personal: personal workspace.</li>
-         * <li>common/null: multi-user collaborative workspace.</li>
+         * <li>personal: Personal workspace.</li>
+         * <li>common or null: Multi-user collaborative workspace.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,6 +207,14 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
         public static CreateDataAgentWorkspaceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateDataAgentWorkspaceResponseBodyData self = new CreateDataAgentWorkspaceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDataAgentWorkspaceResponseBodyData setConfig(String config) {
+            this.config = config;
+            return this;
+        }
+        public String getConfig() {
+            return this.config;
         }
 
         public CreateDataAgentWorkspaceResponseBodyData setCreateTime(Long createTime) {

@@ -31,7 +31,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Enter the connection and authentication information for the data source. The connection is automatically tested before saving. If the test succeeds, the data source is created and metadata synchronization starts.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a data source accessible by the Agent data gateway.</p>
+     * <p>Creates a data source that can be accessed by the Agent data gateway.</p>
      * 
      * @param request AddAgenticDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -40,6 +40,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddAgenticDataSourceResponse addAgenticDataSourceWithOptions(AddAgenticDataSourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adbSparkResourceGroup)) {
+            query.put("AdbSparkResourceGroup", request.adbSparkResourceGroup);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.alias)) {
             query.put("Alias", request.alias);
         }
@@ -154,7 +158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Enter the connection and authentication information for the data source. The connection is automatically tested before saving. If the test succeeds, the data source is created and metadata synchronization starts.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a data source accessible by the Agent data gateway.</p>
+     * <p>Creates a data source that can be accessed by the Agent data gateway.</p>
      * 
      * @param request AddAgenticDataSourceRequest
      * @return AddAgenticDataSourceResponse
@@ -1318,7 +1322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a DataAgent workspace.</p>
+     * <p>Creates a DataAgent collaborative workspace.</p>
      * 
      * @param request CreateDataAgentWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1327,6 +1331,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateDataAgentWorkspaceResponse createDataAgentWorkspaceWithOptions(CreateDataAgentWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            query.put("Config", request.config);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
             query.put("DMSUnit", request.DMSUnit);
         }
@@ -1362,7 +1370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a DataAgent workspace.</p>
+     * <p>Creates a DataAgent collaborative workspace.</p>
      * 
      * @param request CreateDataAgentWorkspaceRequest
      * @return CreateDataAgentWorkspaceResponse
@@ -1446,7 +1454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After deletion, the data source cannot establish connections and cannot be restored by calling the enable API operation.</p>
+     * <p>After deletion, the data source can no longer establish connections and cannot be recovered by calling the enable API operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a data source and its associated metadata catalog.</p>
@@ -1481,7 +1489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After deletion, the data source cannot establish connections and cannot be restored by calling the enable API operation.</p>
+     * <p>After deletion, the data source can no longer establish connections and cannot be recovered by calling the enable API operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a data source and its associated metadata catalog.</p>
@@ -2921,7 +2929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Queries the connection, authentication, status, and metadata catalog information of a specified data source under the current account. Only masked values are returned for passwords.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a data source by its UUID.</p>
+     * <p>Queries the details of a data source by UUID.</p>
      * 
      * @param request GetAgenticDataSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2956,7 +2964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Queries the connection, authentication, status, and metadata catalog information of a specified data source under the current account. Only masked values are returned for passwords.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a data source by its UUID.</p>
+     * <p>Queries the details of a data source by UUID.</p>
      * 
      * @param request GetAgenticDataSourceRequest
      * @return GetAgenticDataSourceResponse
@@ -3520,7 +3528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a workspace.</p>
+     * <p>Retrieves the details of a collaborative workspace.</p>
      * 
      * @param request GetDataAgentWorkspaceInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3556,7 +3564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a workspace.</p>
+     * <p>Retrieves the details of a collaborative workspace.</p>
      * 
      * @param request GetDataAgentWorkspaceInfoRequest
      * @return GetDataAgentWorkspaceInfoResponse
@@ -3568,7 +3576,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the MCP Server connectivity and tool list results by the Session ID returned when the detection was started.</p>
+     * <p>Queries the connectivity and tool list results of an MCP server based on the session ID returned when the detection was started.</p>
      * 
      * @param request GetListMcpServerToolsResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3608,7 +3616,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the MCP Server connectivity and tool list results by the Session ID returned when the detection was started.</p>
+     * <p>Queries the connectivity and tool list results of an MCP server based on the session ID returned when the detection was started.</p>
      * 
      * @param request GetListMcpServerToolsResultRequest
      * @return GetListMcpServerToolsResultResponse
@@ -4516,14 +4524,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>This operation returns the enabled system default policies and the user policies of the current Alibaba Cloud account.</p>
      * <ul>
-     * <li>System default policies are placed at the beginning of the list. Only policies in the ON (enabled) state are returned. They are not filtered by PolicyStatus or IncludeArchived.</li>
-     * <li>Page and Size are used to paginate user policies. Each call also returns up to Size enabled system default policies. Therefore, the number of items in Data may be greater than Size, and the same system default policies may be repeatedly returned during pagination.</li>
+     * <li>System default policies are placed at the beginning of the list. Only policies in the ON (enabled) state are returned, and they are not filtered by PolicyStatus or IncludeArchived.</li>
+     * <li>Page and Size are used to paginate user policies. Each call also returns up to Size enabled system default policies. Therefore, the number of entries in Data may be greater than Size, and the same system default policies may be repeatedly returned during pagination.</li>
      * <li>TotalCount is the sum of the number of all enabled system default policies and the number of user policies that meet the filter conditions.</li>
      * <li>You can use Readonly to distinguish between the two types of policies: true indicates a system default policy, and false indicates a user policy.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the user security policy of the current Alibaba Cloud account by page and returns the enabled system default security policy.</p>
+     * <p>Queries the user security policy of the current Alibaba Cloud account by using paging and returns the enabled system default security policy.</p>
      * 
      * @param request ListAgenticSecurityPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4569,14 +4577,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>This operation returns the enabled system default policies and the user policies of the current Alibaba Cloud account.</p>
      * <ul>
-     * <li>System default policies are placed at the beginning of the list. Only policies in the ON (enabled) state are returned. They are not filtered by PolicyStatus or IncludeArchived.</li>
-     * <li>Page and Size are used to paginate user policies. Each call also returns up to Size enabled system default policies. Therefore, the number of items in Data may be greater than Size, and the same system default policies may be repeatedly returned during pagination.</li>
+     * <li>System default policies are placed at the beginning of the list. Only policies in the ON (enabled) state are returned, and they are not filtered by PolicyStatus or IncludeArchived.</li>
+     * <li>Page and Size are used to paginate user policies. Each call also returns up to Size enabled system default policies. Therefore, the number of entries in Data may be greater than Size, and the same system default policies may be repeatedly returned during pagination.</li>
      * <li>TotalCount is the sum of the number of all enabled system default policies and the number of user policies that meet the filter conditions.</li>
      * <li>You can use Readonly to distinguish between the two types of policies: true indicates a system default policy, and false indicates a user policy.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the user security policy of the current Alibaba Cloud account by page and returns the enabled system default security policy.</p>
+     * <p>Queries the user security policy of the current Alibaba Cloud account by using paging and returns the enabled system default security policy.</p>
      * 
      * @param request ListAgenticSecurityPoliciesRequest
      * @return ListAgenticSecurityPoliciesResponse
@@ -7598,6 +7606,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public TestAgenticDataSourceConnectionResponse testAgenticDataSourceConnectionWithOptions(TestAgenticDataSourceConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adbSparkResourceGroup)) {
+            query.put("AdbSparkResourceGroup", request.adbSparkResourceGroup);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.alias)) {
             query.put("Alias", request.alias);
         }
@@ -7720,7 +7732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only the parameters passed in the current request are modified. Unspecified parameters remain unchanged. The data source type cannot be modified.</p>
+     * <p>Only the parameters passed in the current request are modified. Unpassed parameters remain unchanged. The data source type cannot be modified.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the connection, authentication, or display information of an existing data source.</p>
@@ -7732,6 +7744,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAgenticDataSourceResponse updateAgenticDataSourceWithOptions(UpdateAgenticDataSourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adbSparkResourceGroup)) {
+            query.put("AdbSparkResourceGroup", request.adbSparkResourceGroup);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.alias)) {
             query.put("Alias", request.alias);
         }
@@ -7831,7 +7847,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only the parameters passed in the current request are modified. Unspecified parameters remain unchanged. The data source type cannot be modified.</p>
+     * <p>Only the parameters passed in the current request are modified. Unpassed parameters remain unchanged. The data source type cannot be modified.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates the connection, authentication, or display information of an existing data source.</p>
@@ -8116,7 +8132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates workspace information.</p>
+     * <p>Updates the information of a workspace.</p>
      * 
      * @param request UpdateDataAgentSpaceInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8125,6 +8141,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateDataAgentSpaceInfoResponse updateDataAgentSpaceInfoWithOptions(UpdateDataAgentSpaceInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            query.put("Config", request.config);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
             query.put("DMSUnit", request.DMSUnit);
         }
@@ -8164,7 +8184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates workspace information.</p>
+     * <p>Updates the information of a workspace.</p>
      * 
      * @param request UpdateDataAgentSpaceInfoRequest
      * @return UpdateDataAgentSpaceInfoResponse
