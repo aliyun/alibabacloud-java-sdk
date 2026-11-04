@@ -16,7 +16,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String businessType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -25,7 +25,8 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The network connectivity tracking configurations. Before you use this parameter, read <a href="https://help.aliyun.com/document_detail/2865958.html">Connection timeout management</a>.</p>
+     * <p>The network connection tracking configuration collection.</p>
+     * <p>Before you use this parameter, read <a href="https://help.aliyun.com/document_detail/2865958.html">Connection timeout management</a>.</p>
      */
     @NameInMap("ConnectionTrackingConfiguration")
     public CreateNetworkInterfaceRequestConnectionTrackingConfiguration connectionTrackingConfiguration;
@@ -46,7 +47,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Boolean deleteOnRelease;
 
     /**
-     * <p>The description of the Elastic Network Interface (ENI). The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The description of the Elastic Network Interface (ENI). The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * <p>Default value: empty.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +56,9 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Specifies whether to enable the primary IPv6 address for the Elastic Network Interface (ENI).</p>
+     */
     @NameInMap("EnablePrimaryIPv6")
     public Boolean enablePrimaryIPv6;
 
@@ -83,7 +87,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     /**
      * <p>One or more IPv4 prefixes that are allocated to the Elastic Network Interface (ENI). Valid values of N: 1 to 10.</p>
      * <blockquote>
-     * <p>If you want to allocate IPv4 prefixes to the Elastic Network Interface (ENI), you must configure Settings for either Ipv4Prefix.N or Ipv4PrefixCount. You cannot configure Settings for both parameters.</p>
+     * <p>If you need to configure IPv4 prefixes for the Elastic Network Interface (ENI), you must specify either <code>Ipv4Prefix.N</code> or <code>Ipv4PrefixCount</code>, but you cannot specify both parameters.</p>
      * </blockquote>
      */
     @NameInMap("Ipv4Prefix")
@@ -92,7 +96,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     /**
      * <p>The number of IPv4 prefixes that are allocated to the Elastic Network Interface (ENI). Valid values: 1 to 10.</p>
      * <blockquote>
-     * <p>If you want to allocate IPv4 prefixes to the Elastic Network Interface (ENI), you must configure Settings for either Ipv4Prefix.N or Ipv4PrefixCount. You cannot configure Settings for both parameters.</p>
+     * <p>If you need to configure IPv4 prefixes for the Elastic Network Interface (ENI), you must specify either <code>Ipv4Prefix.N</code> or <code>Ipv4PrefixCount</code>, but you cannot specify both parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -102,10 +106,10 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Integer ipv4PrefixCount;
 
     /**
-     * <p>One or more IPv6 addresses that are allocated to the Elastic Network Interface (ENI). It supports Settings for up to 10 IPv6 addresses. Valid values of N: 1 to 10.</p>
+     * <p>One or more IPv6 addresses that are allocated to the Elastic Network Interface (ENI). You can configure up to 10 IPv6 addresses. Valid values of N: 1 to 10.</p>
      * <p>Example: Ipv6Address.1=2001:db8:1234:1a00::\<em>\</em>\<em>\</em></p>
      * <blockquote>
-     * <p>If you want to allocate IPv6 addresses to the Elastic Network Interface (ENI), you must configure Settings for either Ipv6Addresses.N or Ipv6AddressCount. You cannot configure Settings for both parameters.</p>
+     * <p>If you need to configure IPv6 addresses for the Elastic Network Interface (ENI), you must specify either <code>Ipv6Addresses.N</code> or <code>Ipv6AddressCount</code>, but you cannot specify both parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -117,7 +121,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     /**
      * <p>The number of IPv6 addresses that are randomly generated for the Elastic Network Interface (ENI). Valid values: 1 to 10.</p>
      * <blockquote>
-     * <p>If you want to allocate IPv6 addresses to the Elastic Network Interface (ENI), you must configure Settings for either Ipv6Addresses.N or Ipv6AddressCount. You cannot configure Settings for both parameters.</p>
+     * <p>If you need to configure IPv6 addresses for the Elastic Network Interface (ENI), you must specify either <code>Ipv6Addresses.N</code> or <code>Ipv6AddressCount</code>, but you cannot specify both parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -129,7 +133,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     /**
      * <p>One or more IPv6 prefixes that are allocated to the Elastic Network Interface (ENI). Valid values of N: 1 to 10.</p>
      * <blockquote>
-     * <p>If you want to allocate IPv6 prefixes to the Elastic Network Interface (ENI), you must configure Settings for either Ipv6Prefix.N or Ipv6PrefixCount. You cannot configure Settings for both parameters.</p>
+     * <p>If you need to configure IPv6 prefixes for the Elastic Network Interface (ENI), you must specify either <code>Ipv6Prefix.N</code> or <code>Ipv6PrefixCount</code>, but you cannot specify both parameters.</p>
      * </blockquote>
      */
     @NameInMap("Ipv6Prefix")
@@ -138,7 +142,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     /**
      * <p>The number of IPv6 prefixes that are allocated to the Elastic Network Interface (ENI). Valid values: 1 to 10.</p>
      * <blockquote>
-     * <p>If you want to allocate IPv6 prefixes to the Elastic Network Interface (ENI), you must configure Settings for either Ipv6Prefix.N or Ipv6PrefixCount. You cannot configure Settings for both parameters.</p>
+     * <p>If you need to configure IPv6 prefixes for the Elastic Network Interface (ENI), you must specify either <code>Ipv6Prefix.N</code> or <code>Ipv6PrefixCount</code>, but you cannot specify both parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -148,7 +152,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Integer ipv6PrefixCount;
 
     /**
-     * <p>The name of the Elastic Network Interface (ENI). The name must be 2 to 128 characters in length. It can contain letters in the Unicode letter categorization (including English and Chinese characters) and ASCII digits (0-9). It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the Elastic Network Interface (ENI). The name must be 2 to 128 characters in length and can contain characters in the letter categorization of Unicode (including English and Chinese characters) and ASCII digits (0 to 9). It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * <p>Default value: empty.</p>
      * 
      * <strong>example:</strong>
@@ -158,19 +162,19 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String networkInterfaceName;
 
     /**
-     * <p>The communication parameters of the Elastic Network Interface (ENI).</p>
+     * <p>The communication parameter collection of the Elastic Network Interface (ENI).</p>
      */
     @NameInMap("NetworkInterfaceTrafficConfig")
     public CreateNetworkInterfaceRequestNetworkInterfaceTrafficConfig networkInterfaceTrafficConfig;
 
     /**
-     * <p>The communication pattern of the Elastic Network Interface (ENI). Valid values:</p>
+     * <p>The communication mode of the Elastic Network Interface (ENI). Valid values:</p>
      * <ul>
-     * <li>Standard: uses the TCP communication pattern.</li>
-     * <li>HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the RDMA communication pattern.</li>
+     * <li>Standard: uses the TCP communication mode.</li>
+     * <li>HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the RDMA communication mode.</li>
      * </ul>
      * <blockquote>
-     * <p>For an Elastic Network Interface (ENI) that uses the RDMA communication pattern, you can attach the Elastic Network Interface (ENI) only to an instance of an instance type that supports ERI. The number of Elastic Network Interfaces (ENIs) that use the RDMA pattern cannot exceed the limit for the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> and <a href="https://help.aliyun.com/document_detail/336853.html">Configure eRDMA on enterprise-level instances</a>&lt;props=&quot;china&quot;&gt; and <a href="https://help.aliyun.com/document_detail/2248432.html">Configure eRDMA on GPU-accelerated instances</a>.</p>
+     * <p>An Elastic Network Interface (ENI) that uses the RDMA communication mode can be attached only to an instance of an instance type that supports ERI. The number of Elastic Network Interfaces (ENIs) that use the RDMA mode cannot exceed the limit of the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> and <a href="https://help.aliyun.com/document_detail/336853.html">Configure eRDMA on enterprise-level instances</a>&lt;props=&quot;china&quot;&gt; and <a href="https://help.aliyun.com/document_detail/2248432.html">Configure eRDMA on GPU-accelerated instances</a>.</p>
      * </blockquote>
      * <p>Default value: Standard.</p>
      * 
@@ -188,7 +192,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     /**
      * <p>The primary private IP address of the Elastic Network Interface (ENI).</p>
-     * <p>The specified IP address must be an idle IP address in the CIDR block of the vSwitch to which the Elastic Network Interface (ENI) belongs. If you do not specify this parameter, an idle IP address in the vSwitch is randomly allocated by default.</p>
+     * <p>The specified IP address must be an idle IP address in the CIDR block of the vSwitch. If you do not specify this parameter, an idle IP address in the vSwitch is randomly allocated by default.</p>
      * 
      * <strong>example:</strong>
      * <p><code>172.17.**.**</code></p>
@@ -199,7 +203,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     /**
      * <p>One or more secondary private IP addresses that are selected from the idle IP addresses in the CIDR block of the vSwitch to which the Elastic Network Interface (ENI) belongs. Valid values of N: 0 to 10.</p>
      * <blockquote>
-     * <p>When you allocate secondary private IP addresses, you cannot specify both the PrivateIpAddress.N parameter and the SecondaryPrivateIpAddressCount parameter.</p>
+     * <p>When you allocate secondary private IP addresses, you cannot specify both the <code>PrivateIpAddress.N</code> parameter and the <code>SecondaryPrivateIpAddressCount</code> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -210,8 +214,8 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     /**
      * <p>The number of queues for the Elastic Network Interface (ENI). Valid values: 1 to 2048.</p>
-     * <p>When you attach the Elastic Network Interface (ENI) to an instance, the value of this parameter must be less than the maximum number of queues per single network interface controller (NIC) supported by the instance type. You can invoke the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the MaximumQueueNumberPerEni value for the instance type.</p>
-     * <p>Default value: empty. When you attach the Elastic Network Interface (ENI), the default number of queues per Elastic Network Interface (ENI) for the instance type is used. You can invoke the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the SecondaryEniQueueNumber value for the instance type.</p>
+     * <p>When you attach the Elastic Network Interface (ENI) to an instance, this value must be less than the maximum number of queues per network interface controller (NIC) supported by the instance type. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the <code>MaximumQueueNumberPerEni</code> value for the instance type.</p>
+     * <p>Default value: empty. When you attach the Elastic Network Interface (ENI), the default number of queues for the instance type is used. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the <code>SecondaryEniQueueNumber</code> value for the instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -221,9 +225,9 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     /**
      * <p>The number of queues for the RDMA ENI.</p>
-     * <p>If you want to attach multiple RDMA ENIs to an instance, we recommend that you manually specify the QueuePairNumber value for each ENI based on the maximum QueuePairNumber value supported by the instance type and the number of ENIs that you plan to use. Make sure that the total number of queue pairs for all ENIs does not exceed the maximum value allowed for the instance type. You can call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation to query the maximum value for the instance type.</p>
+     * <p>If you want to attach multiple RDMA ENIs to an instance, we recommend that you manually specify the <code>QueuePairNumber</code> value for each ENI based on the maximum <code>QueuePairNumber</code> value supported by the instance type and the number of ENIs that you plan to use. Make sure that the total number of queue pairs for all ENIs does not exceed the maximum value allowed for the instance type. You can call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation to query the maximum value for the instance type.</p>
      * <blockquote>
-     * <p>Notice: If you do not specify the QueuePairNumber value for an RDMA ENI, the maximum QueuePairNumber value supported by the instance type for all RDMA ENIs is used by default. Therefore, after you attach an RDMA ENI for which QueuePairNumber is not specified, you cannot attach more RDMA ENIs. This limit does not apply to standard ENIs.</notice></p>
+     * <p>Notice: If you do not specify <code>QueuePairNumber</code> for an RDMA ENI, the maximum <code>QueuePairNumber</code> value supported by the instance type for all RDMA ENIs is used by default. Therefore, after you attach an RDMA ENI for which <code>QueuePairNumber</code> is not specified, you cannot attach more RDMA ENIs. This limit does not apply to standard ENIs.</notice></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -233,7 +237,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Integer queuePairNumber;
 
     /**
-     * <p>The region ID of the Elastic Network Interface (ENI) to be created. You can invoke the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where you want to create the Elastic Network Interface (ENI). You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -243,7 +247,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</p>
+     * <p>The ID of the resource group. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4ph****</p>
@@ -277,7 +281,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Integer rxQueueSize;
 
     /**
-     * <p>The number of private IP addresses that you want Elastic Compute Service (ECS) to allocate for automatic creation. Valid values: 1 to 49.</p>
+     * <p>Specifies the number of private IP addresses for automatic creation by ECS. Valid values: 1 to 49.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -286,9 +290,9 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Integer secondaryPrivateIpAddressCount;
 
     /**
-     * <p>The ID of the security group to which you want to add the Elastic Network Interface (ENI). The security group and the Elastic Network Interface (ENI) must belong to the same VPC.</p>
+     * <p>The ID of the security group to which you want to add the Elastic Network Interface (ENI). The security group and the Elastic Network Interface (ENI) must belong to the same virtual private cloud (VPC).</p>
      * <blockquote>
-     * <p>When you invoke this operation, you must configure Settings for either SecurityGroupId or SecurityGroupIds.N. You cannot configure Settings for both.</p>
+     * <p>When you call this operation, you must specify either <code>SecurityGroupId</code> or <code>SecurityGroupIds.N</code>, but you cannot specify both.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -298,9 +302,9 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The IDs of one or more security groups to which you want to add the Elastic Network Interface (ENI). The security groups and the Elastic Network Interface (ENI) must belong to the same VPC. The valid values of N depend on the quota of security groups to which an Elastic Network Interface (ENI) can be added. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</p>
+     * <p>The IDs of one or more security groups to which you want to add the Elastic Network Interface (ENI). The security groups and the Elastic Network Interface (ENI) must belong to the same VPC. The valid values of N depend on the quota for security groups to which an Elastic Network Interface (ENI) can be added. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</p>
      * <blockquote>
-     * <p>When you invoke this operation, you must configure Settings for either SecurityGroupId or SecurityGroupIds.N. You cannot configure Settings for both.</p>
+     * <p>When you call this operation, you must specify either <code>SecurityGroupId</code> or <code>SecurityGroupIds.N</code>, but you cannot specify both.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -310,11 +314,11 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public java.util.List<String> securityGroupIds;
 
     /**
-     * <p>Specifies whether to enable source/destination checking. We recommend that you enable this feature to improve network security. Valid values:</p>
+     * <p>Specifies whether to enable the source/destination checking feature. We recommend that you enable this feature to improve network security. Valid values:</p>
      * <ul>
-     * <li><p>true: enables source/destination checking.</p>
+     * <li><p>true: enables the feature.</p>
      * </li>
-     * <li><p>false: disables source/destination checking.</p>
+     * <li><p>false: disables the feature.</p>
      * </li>
      * </ul>
      * <p>Default value: false.</p>
@@ -354,7 +358,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Integer txQueueSize;
 
     /**
-     * <p>The vSwitch ID of the Elastic Network Interface (ENI). The private IP address of the Elastic Network Interface (ENI) is selected from the idle IP addresses in the CIDR block of the vSwitch.</p>
+     * <p>The ID of the vSwitch to which the Elastic Network Interface (ENI) belongs. The private IP address of the Elastic Network Interface (ENI) is selected from the idle IP addresses in the CIDR block of the vSwitch.</p>
      * <blockquote>
      * <p>Notice: The Elastic Network Interface (ENI) and the instance to which you want to attach the Elastic Network Interface (ENI) must belong to the same zone, but they can belong to different vSwitches.</notice></p>
      * </blockquote>
@@ -372,7 +376,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>null</p>
+     * <p>false</p>
      */
     @NameInMap("Visible")
     public Boolean visible;
@@ -672,7 +676,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     public static class CreateNetworkInterfaceRequestConnectionTrackingConfiguration extends TeaModel {
         /**
-         * <p>The timeout period for closed and TIME_WAIT TCP connections. Unit: seconds. Valid values: integers from 3 to 15.</p>
+         * <p>The timeout period for closed TCP connections and TCP connections in the TIME_WAIT state. Unit: seconds. Valid values: integers from 3 to 15.</p>
          * <p>Default value: 3.</p>
          * <blockquote>
          * <p>If your ECS instance is used together with an NLB or CLB instance, the default timeout period for connections in the TIME_WAIT state is 15 seconds.</p>
@@ -739,6 +743,11 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     }
 
     public static class CreateNetworkInterfaceRequestEnhancedNetwork extends TeaModel {
+        /**
+         * <blockquote>
+         * <p>This parameter is not available.</p>
+         * </blockquote>
+         */
         @NameInMap("EnableExpress")
         public Boolean enableExpress;
 
@@ -764,9 +773,21 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         @NameInMap("EnableSriov")
         public Boolean enableSriov;
 
+        /**
+         * <p>The number of virtual functions when SR-IOV is enabled. Valid values: 1 to 256.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("VirtualFunctionQuantity")
         public Integer virtualFunctionQuantity;
 
+        /**
+         * <p>The total number of queues for virtual functions when SR-IOV is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("VirtualFunctionTotalQueueNumber")
         public Integer virtualFunctionTotalQueueNumber;
 
@@ -819,7 +840,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     public static class CreateNetworkInterfaceRequestNetworkInterfaceTrafficConfig extends TeaModel {
         /**
-         * <p>The communication pattern of the Elastic Network Interface (ENI).</p>
+         * <p>The communication mode of the Elastic Network Interface (ENI).</p>
          * 
          * <strong>example:</strong>
          * <p>HighPerformance</p>
@@ -946,7 +967,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     public static class CreateNetworkInterfaceRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the Elastic Network Interface (ENI). Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
+         * <p>The tag key of the Elastic Network Interface (ENI). Valid values of N: 1 to 20. If this parameter is specified, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -955,7 +976,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the Elastic Network Interface (ENI). Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
+         * <p>The tag value of the Elastic Network Interface (ENI). Valid values of N: 1 to 20. If this parameter is specified, it can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

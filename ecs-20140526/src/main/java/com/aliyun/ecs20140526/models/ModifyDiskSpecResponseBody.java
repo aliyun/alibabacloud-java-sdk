@@ -7,7 +7,7 @@ public class ModifyDiskSpecResponseBody extends TeaModel {
     /**
      * <p>The ID of the generated order.</p>
      * <blockquote>
-     * <p>The order ID is returned only when you change the specifications of a subscription disk.</p>
+     * <p>The order ID is returned only when you change the specifications of a subscription cloud disk.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class ModifyDiskSpecResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task ID for changing the disk specifications.</p>
+     * <p>The ID of the task for the disk specification change.</p>
      * <blockquote>
      * <p>This parameter is not returned if you only modify the performance level (PL) of an enterprise SSD.</p>
      * </blockquote>

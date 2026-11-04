@@ -9,24 +9,36 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
 
     /**
      * <p>The current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8909013D-4A64-41A6-93E6-E3FD08A3EAFE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries that meet the query conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

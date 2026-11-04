@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotGroupsResponseBody extends TeaModel {
     /**
-     * <p>The token for the next query.</p>
+     * <p>The pagination token for the next query.</p>
      * <blockquote>
-     * <p>If this parameter is empty, no more data is returned.</p>
+     * <p>If this value is empty, no more data is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

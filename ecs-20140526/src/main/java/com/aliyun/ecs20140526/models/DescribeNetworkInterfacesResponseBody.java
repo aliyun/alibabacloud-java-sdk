@@ -8,7 +8,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets networkInterfaceSets;
 
     /**
-     * <p>The pagination token returned by the current call.</p>
+     * <p>The pagination token returned by the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -17,9 +17,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The paging query parameter.</p>
+     * <p>The page number for paged queries.</p>
      * <blockquote>
-     * <p>This parameter will soon be deprecated. We recommend that you use the <code>NextToken</code> and <code>MaxResults</code> parameters for paging.</p>
+     * <p>This parameter will be deprecated soon. Use NextToken and MaxResults for pagination.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,9 +29,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The paging query parameter.</p>
+     * <p>The page size for paged queries.</p>
      * <blockquote>
-     * <p>This parameter will soon be deprecated. We recommend that you use the <code>NextToken</code> and <code>MaxResults</code> parameters for paging.</p>
+     * <p>This parameter will be deprecated soon. Use NextToken and MaxResults for pagination.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,9 +50,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of Elastic Network Interface (ENI) resources returned.</p>
+     * <p>The total number of returned ENIs.</p>
      * <blockquote>
-     * <p>When you use the <code>MaxResults</code> and <code>NextToken</code> parameters for a paging query, the returned <code>TotalCount</code> value is meaningless.</p>
+     * <p>When you use the <code>MaxResults</code> and <code>NextToken</code> parameters for pagination, the returned value of the <code>TotalCount</code> parameter is meaningless.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

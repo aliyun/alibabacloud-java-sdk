@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeBandwidthPackagesRequest extends TeaModel {
     /**
      * <p>The ID of the bandwidth package.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bwp-bp1xea10o8qxwaswq****</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
     /**
-     * <p>The ID of the NAT gateway. If specified, only bandwidth packages associated with the NAT gateway are returned.</p>
+     * <p>The ID of the NAT gateway. If you specify this parameter, only bandwidth packages associated with the NAT gateway are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ngw-bp1uewa15k4iyaszaasza****</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
@@ -24,12 +30,18 @@ public class DescribeBandwidthPackagesRequest extends TeaModel {
 
     /**
      * <p>The page number. Starting value: 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -37,6 +49,9 @@ public class DescribeBandwidthPackagesRequest extends TeaModel {
     /**
      * <p>The region ID of the bandwidth package.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

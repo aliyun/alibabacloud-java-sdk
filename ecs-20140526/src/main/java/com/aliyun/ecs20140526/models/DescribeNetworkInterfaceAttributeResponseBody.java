@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     /**
-     * <p>The Elastic IP Address (EIP) associated with the secondary private IP address of the network interface controller (NIC).</p>
+     * <p>The Elastic IP Address (EIP) associated with the secondary private IP address of the Elastic Network Interface (ENI).</p>
      */
     @NameInMap("AssociatedPublicIp")
     public DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp associatedPublicIp;
 
     /**
      * <blockquote>
-     * <p>This parameter is in invitational preview and is not publicly available.</p>
+     * <p>This parameter is in invitational preview and is not available for public use.</p>
      * </blockquote>
      */
     @NameInMap("Attachment")
@@ -20,24 +20,24 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is in invitational preview and is not publicly available.</p>
+     * <p>This parameter is in invitational preview and is not available for public use.</p>
      * </blockquote>
      */
     @NameInMap("BondInterfaceSpecification")
     public DescribeNetworkInterfaceAttributeResponseBodyBondInterfaceSpecification bondInterfaceSpecification;
 
     /**
-     * <p>The collection of network connectivity tracking configuration information.</p>
-     * <p>Before you use this parameter, read <a href="https://help.aliyun.com/document_detail/2865958.html">Connection timeout management</a>.</p>
+     * <p>The network connection tracking configuration information set.</p>
+     * <p>Read <a href="https://help.aliyun.com/document_detail/2865958.html">Connection timeout management</a> before using this parameter.</p>
      * <blockquote>
-     * <p>This parameter is returned only when the Attribute input parameter is set to connectionTrackingConfiguration.</p>
+     * <p>This parameter is returned only when the input parameter <code>Attribute</code> is set to <code>connectionTrackingConfiguration</code>.</p>
      * </blockquote>
      */
     @NameInMap("ConnectionTrackingConfiguration")
     public DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration connectionTrackingConfiguration;
 
     /**
-     * <p>The time when the network interface controller (NIC) was created. The time is in ISO 8601 format and displayed in UTC.</p>
+     * <p>The creation time of the elastic network interface (ENI). The time is displayed in ISO 8601 format in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-12-25T12:31:31Z</p>
@@ -46,11 +46,11 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String creationTime;
 
     /**
-     * <p>Indicates whether the ENI is retained when the associated instance is released. Valid values:</p>
+     * <p>Indicates whether the ENI is retained when the instance is released. Valid values:</p>
      * <ul>
-     * <li><p>true: The ENI is not retained.</p>
+     * <li><p>true: not retained</p>
      * </li>
-     * <li><p>false: The ENI is retained.</p>
+     * <li><p>false: retained</p>
      * </li>
      * </ul>
      * 
@@ -61,7 +61,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public Boolean deleteOnRelease;
 
     /**
-     * <p>The description of the network interface controller (NIC).</p>
+     * <p>The description of the Elastic Network Interface (ENI).</p>
      * 
      * <strong>example:</strong>
      * <p>testDescription</p>
@@ -70,15 +70,15 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>This parameter is not publicly available.</p>
+     * <p>This parameter is not available for public use.</p>
      */
     @NameInMap("EnhancedNetwork")
     public DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork enhancedNetwork;
 
     /**
-     * <p>The ID of the instance to which the network interface controller (NIC) is attached.</p>
+     * <p>The ID of the instance to which the Elastic Network Interface (ENI) is attached.</p>
      * <blockquote>
-     * <p>Network interface controllers (NICs) that are managed and controlled by other Alibaba Cloud services do not return instance IDs.</p>
+     * <p>The instance ID is not returned for Elastic Network Interfaces (ENIs) that are managed and controlled by other Alibaba Cloud services.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public DescribeNetworkInterfaceAttributeResponseBodyIpv6Sets ipv6Sets;
 
     /**
-     * <p>The MAC address of the network interface controller (NIC).</p>
+     * <p>The MAC address of the Elastic Network Interface (ENI).</p>
      * 
      * <strong>example:</strong>
      * <p>00:16:3e:12:<strong>:</strong></p>
@@ -106,7 +106,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String macAddress;
 
     /**
-     * <p>The ID of the network interface controller (NIC).</p>
+     * <p>The ID of the Elastic Network Interface (ENI).</p>
      * 
      * <strong>example:</strong>
      * <p>eni-bp125p95hhdhn3ot****</p>
@@ -115,7 +115,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String networkInterfaceId;
 
     /**
-     * <p>The name of the network interface controller (NIC).</p>
+     * <p>The name of the Elastic Network Interface (ENI).</p>
      * 
      * <strong>example:</strong>
      * <p>my-eni-name</p>
@@ -124,19 +124,19 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String networkInterfaceName;
 
     /**
-     * <p>The traffic parameters of the network interface controller (NIC).</p>
+     * <p>The communication parameters of the Elastic Network Interface (ENI).</p>
      */
     @NameInMap("NetworkInterfaceTrafficConfig")
     public DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig networkInterfaceTrafficConfig;
 
     /**
-     * <p>The communication mode of the network interface controller (NIC). Valid values:</p>
+     * <p>The communication mode of the Elastic Network Interface (ENI). Valid values:</p>
      * <ul>
-     * <li>Standard: TCP communication mode is used.</li>
-     * <li>HighPerformance: Elastic RDMA Interface (ERI) is enabled and RDMA communication mode is used.</li>
+     * <li>Standard: TCP communication mode.</li>
+     * <li>HighPerformance: Remote Direct Memory Access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</li>
      * </ul>
      * <blockquote>
-     * <p>The HighPerformance parameter value is supported only by the c7re RDMA enhanced instance family.</p>
+     * <p>The HighPerformance parameter value is supported only by the c7re RDMA-enhanced instance family.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String networkInterfaceTrafficMode;
 
     /**
-     * <p>The ID of the account that owns the network interface controller (NIC).</p>
+     * <p>The ID of the account to which the Elastic Network Interface (ENI) belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>123456****</p>
@@ -155,7 +155,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The private IP address of the network interface controller (NIC).</p>
+     * <p>The private IP address of the Elastic Network Interface (ENI).</p>
      * 
      * <strong>example:</strong>
      * <p><code>10.1.**.**</code></p>
@@ -167,26 +167,26 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets privateIpSets;
 
     /**
-     * <p>The QoS rate limit settings.</p>
+     * <p>The QoS throttling settings.</p>
      */
     @NameInMap("QoSConfig")
     public DescribeNetworkInterfaceAttributeResponseBodyQoSConfig qoSConfig;
 
     /**
-     * <p>The number of queues for the Elastic Network Interface (ENI).</p>
+     * <p>The number of queues of the Elastic Network Interface (ENI).</p>
      * <ul>
-     * <li><p>If the ENI is a primary network interface controller (NIC): the default number of queues for the primary NIC that the instance type allows is returned.</p>
+     * <li><p>If the Elastic Network Interface (ENI) is a primary ENI: returns the default number of queues for the primary ENI of the instance type.</p>
      * </li>
-     * <li><p>If the ENI is a secondary ENI:</p>
+     * <li><p>If the Elastic Network Interface (ENI) is a secondary ENI:</p>
      * <ul>
      * <li>If the secondary ENI is in the InUse state:<ul>
-     * <li>If the number of queues for the secondary ENI has not been modified, the default number of queues for the secondary ENI that the instance type allows is returned.</li>
-     * <li>If the number of queues for the secondary ENI has been modified, the modified number of queues is returned.</li>
+     * <li>If the number of queues of the secondary ENI has not been modified, the default number of queues for the secondary ENI of the instance type is returned.</li>
+     * <li>If the number of queues of the secondary ENI has been modified, the modified number of queues is returned.</li>
      * </ul>
      * </li>
-     * <li>If the secondary ENI is in the active (Available) state:<ul>
-     * <li>If the number of queues for the secondary ENI has not been modified, an empty value is returned.</li>
-     * <li>If the number of queues for the secondary ENI has been modified, the modified number of queues is returned.</li>
+     * <li>If the secondary ENI is in the Available state:<ul>
+     * <li>If the number of queues of the secondary ENI has not been modified, an empty value is returned.</li>
+     * <li>If the number of queues of the secondary ENI has been modified, the modified number of queues is returned.</li>
      * </ul>
      * </li>
      * </ul>
@@ -201,7 +201,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is in invitational preview and is not publicly available.</p>
+     * <p>This parameter is in invitational preview and is not available for public use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -220,7 +220,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
+     * <p>The ID of the resource group to which the instance belongs. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
      * <blockquote>
      * <p>Filtering by the default resource group is not supported.</p>
      * </blockquote>
@@ -235,7 +235,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds securityGroupIds;
 
     /**
-     * <p>The Virtual Network Operator (VNO) ID associated with the network interface controller (NIC).</p>
+     * <p>The ID of the Virtual Network Operator (VNO) corresponding to the Elastic Network Interface (ENI).</p>
      * 
      * <strong>example:</strong>
      * <p>12345678910</p>
@@ -244,7 +244,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public Long serviceID;
 
     /**
-     * <p>Indicates whether the user of the network interface controller (NIC) is an Alibaba Cloud service or a VNO.</p>
+     * <p>Indicates whether the user of the Elastic Network Interface (ENI) is a cloud service or a VNO.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -254,14 +254,14 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is in invitational preview and is not publicly available.</p>
+     * <p>This parameter is in invitational preview and is not available for public use.</p>
      * </blockquote>
      */
     @NameInMap("SlaveInterfaceSpecification")
     public DescribeNetworkInterfaceAttributeResponseBodySlaveInterfaceSpecification slaveInterfaceSpecification;
 
     /**
-     * <p>This parameter is not publicly available.</p>
+     * <p>This parameter is not available for public use.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -270,15 +270,15 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public Boolean sourceDestCheck;
 
     /**
-     * <p>The status of the network interface controller (NIC). Valid values:</p>
+     * <p>The status of the Elastic Network Interface (ENI). Valid values:</p>
      * <ul>
      * <li>Available: active.</li>
-     * <li>Attaching: being attached.</li>
+     * <li>Attaching: attaching.</li>
      * <li>InUse: in use.</li>
-     * <li>Detaching: being detached.</li>
-     * <li>Deleting: being deleted.</li>
+     * <li>Detaching: detaching.</li>
+     * <li>Deleting: deleting.</li>
      * </ul>
-     * <p>Default value: empty, which indicates that network interface controllers (NICs) in all states are queried.</p>
+     * <p>Default value: null, which indicates that all states are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>Available</p>
@@ -291,7 +291,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is in invitational preview and is not publicly available.</p>
+     * <p>This parameter is in invitational preview and is not available for public use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -301,10 +301,10 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String tcpOptionAddressEnabled;
 
     /**
-     * <p>The type of the Elastic Network Interface (ENI). Valid values:</p>
+     * <p>The Elastic Network Interface (ENI) type. Valid values:</p>
      * <ul>
-     * <li>Primary: primary network interface controller (NIC).</li>
-     * <li>Secondary: secondary Elastic Network Interface (ENI).</li>
+     * <li>Primary: primary ENI.</li>
+     * <li>Secondary: secondary ENI.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -314,7 +314,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String type;
 
     /**
-     * <p>The ID of the vSwitch to which the network interface controller (NIC) belongs.</p>
+     * <p>The ID of the vSwitch to which the Elastic Network Interface (ENI) belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp1s5fnvk4gn2tws0****</p>
@@ -323,7 +323,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC to which the network interface controller (NIC) belongs.</p>
+     * <p>The ID of the virtual private cloud (VPC) to which the Elastic Network Interface (ENI) belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp67acfmxazb4p****</p>
@@ -652,7 +652,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public String allocationId;
 
         /**
-         * <p>The EIP address.</p>
+         * <p>The EIP.</p>
          * 
          * <strong>example:</strong>
          * <p><code>116.62.**.**</code></p>
@@ -705,18 +705,18 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public static class DescribeNetworkInterfaceAttributeResponseBodyAttachment extends TeaModel {
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitational preview and is not available for public use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>hide</p>
+         * <p>0</p>
          */
         @NameInMap("DeviceIndex")
         public Integer deviceIndex;
 
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitational preview and is not available for public use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -729,10 +729,10 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public DescribeNetworkInterfaceAttributeResponseBodyAttachmentMemberNetworkInterfaceIds memberNetworkInterfaceIds;
 
         /**
-         * <p>The index of the network card to which the ENI is attached.</p>
+         * <p>The index of the physical network card to which the ENI is attached.</p>
          * <ul>
-         * <li>If the ENI is in the Available state or the index was not specified during attachment, this value is not returned.</li>
-         * <li>If the ENI is in the InUse state and the index was specified during attachment, this value indicates the index of the network card to which the ENI is attached.</li>
+         * <li>If the ENI is in the Available state or no index was specified during attachment, this value is not returned.</li>
+         * <li>If the ENI is in the InUse state and an index was specified during attachment, this value indicates the index of the physical network card to which the ENI is attached.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -743,7 +743,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitational preview and is not available for public use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -862,7 +862,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public static class DescribeNetworkInterfaceAttributeResponseBodyBondInterfaceSpecification extends TeaModel {
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitational preview and is not available for public use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -899,9 +899,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration extends TeaModel {
         /**
-         * <p>The timeout period for TCP connections in the TIME_WAIT and CLOSED states. Unit: seconds. Valid values: an integer from 3 to 15.</p>
+         * <p>The timeout period for closed and TIME_WAIT TCP connections. Unit: seconds. Valid values: integers from 3 to 15.</p>
          * <blockquote>
-         * <p>If your ECS instance is used with NLB or CLB, the default timeout period for connections in the <code>TIME_WAIT</code> state is 15 seconds.</p>
+         * <p>If your ECS instance is used together with NLB or CLB, the default timeout period for connections in the <code>TIME_WAIT</code> state is 15 seconds.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -911,7 +911,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public Integer tcpClosedAndTimeWaitTimeout;
 
         /**
-         * <p>The timeout period for TCP connections in the ESTABLISHED state. Unit: seconds. Valid values: [30, 60, 80, 100, 200, 300, 500, 700, 910].</p>
+         * <p>The timeout period for established TCP connections. Unit: seconds. Valid values: 30, 60, 80, 100, 200, 300, 500, 700, and 910.</p>
          * 
          * <strong>example:</strong>
          * <p>910</p>
@@ -920,9 +920,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public Integer tcpEstablishedTimeout;
 
         /**
-         * <p>The timeout period for UDP flows. Unit: seconds. Valid values: [10, 20, 30, 60, 80, 100].</p>
+         * <p>The timeout period for UDP flows. Unit: seconds. Valid values: 10, 20, 30, 60, 80, and 100.</p>
          * <blockquote>
-         * <p>If your ECS instance is used with NLB or CLB, the default value is 100 seconds.</p>
+         * <p>If your ECS instance is used together with NLB or CLB, the default value is 100 seconds.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -963,12 +963,15 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork extends TeaModel {
+        /**
+         * <p>Indicates whether the network enhancement feature for the elastic network interface controller (NIC) is enabled.</p>
+         */
         @NameInMap("EnableExpress")
         public Boolean enableExpress;
 
         /**
          * <blockquote>
-         * <p>This parameter is not available for use.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -978,7 +981,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public Boolean enableRss;
 
         /**
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not available for public use.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -986,9 +989,21 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         @NameInMap("EnableSriov")
         public Boolean enableSriov;
 
+        /**
+         * <p>The number of virtual function features of the Elastic Network Interface (ENI).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("VirtualFunctionQuantity")
         public Integer virtualFunctionQuantity;
 
+        /**
+         * <p>The total number of queues for the virtual function feature of the Elastic Network Interface (ENI).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("VirtualFunctionTotalQueueNumber")
         public Integer virtualFunctionTotalQueueNumber;
 
@@ -1166,7 +1181,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig extends TeaModel {
         /**
-         * <p>The communication mode of the network interface controller (NIC).</p>
+         * <p>The communication mode of the Elastic Network Interface (ENI).</p>
          * 
          * <strong>example:</strong>
          * <p>HighPerformance</p>
@@ -1175,7 +1190,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public String networkInterfaceTrafficMode;
 
         /**
-         * <p>The number of queues for the network interface controller (NIC).</p>
+         * <p>The number of queues of the Elastic Network Interface (ENI).</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -1184,7 +1199,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public Integer queueNumber;
 
         /**
-         * <p>The number of RDMA queue pairs.</p>
+         * <p>The number of queues of the RDMA network interface.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -1342,7 +1357,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public Long concurrentConnections;
 
         /**
-         * <p>The inbound internal network packet forwarding rate.</p>
+         * <p>The inbound internal packet forwarding rate.</p>
          * 
          * <strong>example:</strong>
          * <p>50000</p>
@@ -1351,7 +1366,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public Long ppsRx;
 
         /**
-         * <p>The outbound internal network packet forwarding rate.</p>
+         * <p>The outbound internal packet forwarding rate.</p>
          * 
          * <strong>example:</strong>
          * <p>50000</p>
@@ -1408,13 +1423,13 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyQoSConfig extends TeaModel {
         /**
-         * <p>Indicates whether QoS rate limiting is enabled.</p>
+         * <p>Indicates whether QoS throttling is enabled.</p>
          */
         @NameInMap("EnableQoS")
         public Boolean enableQoS;
 
         /**
-         * <p>The QoS rate limit settings.</p>
+         * <p>The QoS throttling settings.</p>
          */
         @NameInMap("QoS")
         public DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS qoS;
@@ -1464,7 +1479,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public static class DescribeNetworkInterfaceAttributeResponseBodySlaveInterfaceSpecification extends TeaModel {
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitational preview and is not available for public use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1475,7 +1490,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitational preview and is not available for public use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1486,7 +1501,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p>This parameter is in invitational preview and is not available for public use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

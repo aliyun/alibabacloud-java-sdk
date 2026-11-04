@@ -16,9 +16,9 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to associate the instance on a dedicated host with the dedicated host. Valid values:</p>
      * <ul>
-     * <li><p>default: The instance is not associated with the dedicated host. If an instance in the economical mode is stopped and then started, and the original dedicated host has insufficient resources, the instance is deployed on another dedicated host in the automatic deployment resource pool.</p>
+     * <li><p>default: The instance is not associated with the dedicated host. If an instance in economical mode is stopped and then started, and the available resources of the original dedicated host are insufficient, the instance is automatically deployed on another dedicated host in the automatic deployment resource pool.</p>
      * </li>
-     * <li><p>host: The instance is associated with the dedicated host. If an instance in the economical mode is stopped and then started, it is still deployed on the original dedicated host. If the original dedicated host has insufficient resources, the instance fails to start.</p>
+     * <li><p>host: The instance is associated with the dedicated host. If an instance in economical mode is stopped and then started, the instance is still deployed on the original dedicated host. If the available resources of the original dedicated host are insufficient, the instance fails to be started.</p>
      * </li>
      * </ul>
      * <p>Default value: default.</p>
@@ -38,7 +38,7 @@ public class CreateInstanceRequest extends TeaModel {
     public java.util.List<CreateInstanceRequestArn> arn;
 
     /**
-     * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when InstanceChargeType is set to PrePaid. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when the InstanceChargeType parameter is set to PrePaid. Valid values:</p>
      * <ul>
      * <li>true: enables auto-renewal.</li>
      * <li>false: disables auto-renewal. This is the default value.</li>
@@ -51,9 +51,9 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal duration. This parameter is required when AutoRenew is set to true.</p>
-     * <p>&lt;props=&quot;china&quot;&gt;When PeriodUnit is set to Week, valid values of AutoRenewPeriod are 1, 2, and 3.</p>
-     * <p>When PeriodUnit is set to Month, valid values of AutoRenewPeriod are 1, 2, 3, 6, and 12.</p>
+     * <p>The auto-renewal duration. This parameter is required when the AutoRenew parameter is set to true.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;When the PeriodUnit parameter is set to Week, valid values of the AutoRenewPeriod parameter are 1, 2, and 3.</p>
+     * <p>When the PeriodUnit parameter is set to Month, valid values of the AutoRenewPeriod parameter are 1, 2, 3, 6, and 12.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -62,7 +62,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer autoRenewPeriod;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken parameter can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -85,8 +85,8 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The performance mode of the burstable instance. Valid values:</p>
      * <ul>
-     * <li>Standard: standard mode. For more information about instance performance, see the &quot;Standard mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
-     * <li>Unlimited: unlimited mode. For more information about instance performance, see the &quot;Unlimited mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+     * <li>Standard: standard mode. For more information about the performance of the instance in standard mode, see the &quot;Standard mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+     * <li>Unlimited: unlimited mode. For more information about the performance of the instance in unlimited mode, see the &quot;Unlimited mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,7 +96,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String creditSpecification;
 
     /**
-     * <p>The data cloud disks.</p>
+     * <p>The data disks.</p>
      */
     @NameInMap("DataDisk")
     public java.util.List<CreateInstanceRequestDataDisk> dataDisk;
@@ -106,7 +106,7 @@ public class CreateInstanceRequest extends TeaModel {
      * &lt;props=&quot;china&quot;&gt;You can call the <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> operation to query the list of dedicated host IDs.</p>
      * <p>&lt;props=&quot;intl&quot;&gt;You can call the <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> operation to query the list of dedicated host IDs.</p>
      * <blockquote>
-     * <p>Notice: Dedicated hosts do not support spot instance. If you specify the DedicatedHostId parameter, the SpotStrategy and SpotPriceLimit Settings in the request are automatically ignored.</notice></p>
+     * <p>Notice: Dedicated hosts do not support spot instances. If you specify the DedicatedHostId parameter, the SpotStrategy and SpotPriceLimit parameters in the request are automatically ignored.</notice></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -116,10 +116,10 @@ public class CreateInstanceRequest extends TeaModel {
     public String dedicatedHostId;
 
     /**
-     * <p>The release protection attribute of the instance. It specifies whether the instance can be released through the console or by calling the <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a> operation.</p>
+     * <p>The release protection attribute of the instance. It specifies whether the instance can be released by using the ECS console or by calling the <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a> operation.</p>
      * <ul>
-     * <li>true: enables release protection for the instance.</li>
-     * <li>false: disables release protection for the instance. This is the default value.</li>
+     * <li>true: enables release protection.</li>
+     * <li>false: disables release protection. This is the default value.</li>
      * </ul>
      * <blockquote>
      * <p>This attribute applies only to pay-as-you-go instances and restricts only manual release operations. It does not take effect on system release operations.</p>
@@ -132,7 +132,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean deletionProtection;
 
     /**
-     * <p>The group number of the instance in the deployment set. This parameter is valid when the deployment set uses the high availability group strategy (AvailabilityGroup). Valid values: 1 to 7.</p>
+     * <p>The group number of the instance in the deployment set. This parameter is valid only when the deployment set uses the high availability group strategy (AvailabilityGroup). Valid values: 1 to 7.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -150,7 +150,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String deploymentSetId;
 
     /**
-     * <p>The description of the instance. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the instance. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
      * <p>Default value: empty.</p>
      * 
      * <strong>example:</strong>
@@ -162,8 +162,8 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run on the request. Valid values:</p>
      * <ul>
-     * <li>true: performs a dry run and does not create the instance. The system checks whether required parameters are specified, the request format, service limits, and ECS inventory. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</li>
-     * <li>false: performs a dry run and creates the instance if the check succeeds. This is the default value.</li>
+     * <li>true: performs a dry run and does not create the instance. The system checks whether the required parameters are specified, the request format is valid, the service limits are met, and the ECS inventory is sufficient. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+     * <li>false: performs a dry run and creates the instance if the request passes the dry run. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -173,11 +173,11 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The hostname of the instance.</p>
+     * <p>The hostname of the Elastic Compute Service (ECS) instance.</p>
      * <ul>
-     * <li>The hostname cannot start or end with a period (.) or a hyphen (-), and cannot contain consecutive periods (.) or hyphens (-).</li>
-     * <li>For Windows instances: The hostname must be 2 to 15 characters in length and cannot contain periods (.). It cannot contain only digits. It can contain uppercase and lowercase letters, digits, and hyphens (-).</li>
-     * <li>For other instances such as Linux instances: The hostname must be 2 to 64 characters in length and can contain multiple periods (.). The string between two consecutive periods is a segment, which can contain uppercase and lowercase letters, digits, and hyphens (-).</li>
+     * <li>The hostname cannot start or end with a period (.) or a hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).</li>
+     * <li>For a Windows instance: The hostname must be 2 to 15 characters in length and cannot contain periods (.). It cannot contain only digits. It can contain uppercase and lowercase letters, digits, and hyphens (-).</li>
+     * <li>For an instance of other operating systems such as Linux: The hostname must be 2 to 64 characters in length. It can contain multiple periods (.). The characters between two consecutive periods are considered as a segment, which can contain uppercase and lowercase letters, digits, and hyphens (-).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -231,7 +231,7 @@ public class CreateInstanceRequest extends TeaModel {
      * </ul>
      * <p>Default value: optional.</p>
      * <blockquote>
-     * <p>For more information about the modes for accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/150575.html">Access modes of instance metadata</a>.</p>
+     * <p>For more information about the modes of accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/150575.html">Access modes of instance metadata</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -241,10 +241,10 @@ public class CreateInstanceRequest extends TeaModel {
     public String httpTokens;
 
     /**
-     * <p>The name of the image family. You can set this parameter to use the latest available image in the image family to create the instance.</p>
+     * <p>The name of the image family. You can set this parameter to use the latest available image in the specified image family to create the instance.</p>
      * <ul>
-     * <li>If ImageId is specified, you cannot specify this parameter.</li>
-     * <li>If ImageId is not specified, you can specify this parameter.</li>
+     * <li>If you specify the ImageId parameter, you cannot specify this parameter.</li>
+     * <li>If you do not specify the ImageId parameter, you can specify this parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -254,7 +254,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String imageFamily;
 
     /**
-     * <p>The ID of the image used to start the instance. To use an Alibaba Cloud Marketplace image, you can view the ImageId on the image details page in Alibaba Cloud Marketplace. This parameter is required unless you specify ImageFamily to use the latest available image in the image family.</p>
+     * <p>The ID of the image used to start the instance. To use an Alibaba Cloud Marketplace image, you can view the ImageId on the image details page in Alibaba Cloud Marketplace. This parameter is required when you do not specify the ImageFamily parameter to use the latest available image in an image family.</p>
      * 
      * <strong>example:</strong>
      * <p>ubuntu_18_04_64_20G_alibase_20190624.vhd</p>
@@ -285,7 +285,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The name of the instance. The name must be 2 to 128 characters in length and can contain letters and digits. It can also contain colons (:), underscores (_), periods (.), and hyphens (-). If this parameter is not specified, the default value is the instance ID.</p>
+     * <p>The name of the instance. The name must be 2 to 128 characters in length and can contain letters and digits. It can also contain colons (:), underscores (_), periods (.), and hyphens (-). If you do not specify this parameter, the instance ID is used as the instance name by default.</p>
      * 
      * <strong>example:</strong>
      * <p>k8s-node-[1,4]-alibabacloud</p>
@@ -296,8 +296,8 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The instance type.</p>
      * <ul>
-     * <li>Instance type selection: See <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to view the performance data of the target instance type. Alternatively, see <a href="https://help.aliyun.com/document_detail/58291.html">Instance type selection</a> to learn how to select an instance type.</li>
-     * <li>Inventory query: Call the <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> operation to check the resource availability in a specified region or zone.</li>
+     * <li>Instance type selection: Refer to <a href="https://help.aliyun.com/document_detail/25378.html">instance family</a> or invoke the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to view the performance data of the target instance type. You can also refer to the instance type selection <a href="https://help.aliyun.com/document_detail/58291.html">Settings</a> to learn how to select an instance type.</li>
+     * <li>Inventory query: Invoke the <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> operation to check the active resources in a specified region or zone.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -314,7 +314,7 @@ public class CreateInstanceRequest extends TeaModel {
      * <li>PayByTraffic: pay-by-traffic. This is the default value.</li>
      * </ul>
      * <blockquote>
-     * <p>In <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are upper limits and are not guaranteed. When resource contention occurs, the peak bandwidths may be limited. If your business requires guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
+     * <p>In <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are the upper limits of bandwidths and are provided only for reference. When resource contention occurs, the peak bandwidths may be limited. If your business requires guaranteed bandwidths, use the <strong>pay-by-bandwidth</strong> mode.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -352,7 +352,7 @@ public class CreateInstanceRequest extends TeaModel {
      * <li>none: The instance is not I/O optimized.</li>
      * <li>optimized: The instance is I/O optimized.</li>
      * </ul>
-     * <p>For <a href="https://help.aliyun.com/document_detail/55263.html">phased-out instance types</a>, the default value is none.</p>
+     * <p>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, the default value is none.</p>
      * <p>For other instance types, the default value is optimized.</p>
      * 
      * <strong>example:</strong>
@@ -362,9 +362,9 @@ public class CreateInstanceRequest extends TeaModel {
     public String ioOptimized;
 
     /**
-     * <p>The name of the key pair.</p>
+     * <p>The name of the SSH key pair.</p>
      * <blockquote>
-     * <p>For Windows instances, this parameter is ignored. Default value: empty. Even if you specify this parameter, only the Password parameter takes effect.</p>
+     * <p>For a Windows instance, this parameter is ignored. Default value: empty. Even if you specify this parameter, only the Password parameter takes effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -374,7 +374,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String keyPairName;
 
     /**
-     * <p>The unique identifier of the platform-managed host, such as mh-f2d3647ca21****.</p>
+     * <p>The unique identifier of the managed host, such as mh-f2d3647ca21****.</p>
      * 
      * <strong>example:</strong>
      * <p>mh-f2d3647ca21****</p>
@@ -400,14 +400,14 @@ public class CreateInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</p>
+     * <p>The password of the instance. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The special characters can be:</p>
      * <pre><code>()`~!@#$%^&amp;*-_+=|{}[]:;\\&quot;&lt;&gt;,.?/
      * </code></pre>
-     * <p>Note:</p>
+     * <p>Take note of the following items:</p>
      * <ul>
-     * <li>If you specify the Password parameter, send requests over HTTPS to prevent password leaks.</li>
-     * <li>For Windows instances, the password cannot start with a forward slash (/).</li>
-     * <li>Instances running certain operating systems do not support password configuration and only support key pair configuration, such as Others Linux and Fedora CoreOS.</li>
+     * <li>If you specify the Password parameter, send the request over HTTPS to prevent password leaks.</li>
+     * <li>For a Windows instance, the password cannot start with a forward slash (/).</li>
+     * <li>Instances of some operating systems do not support passwords and only support SSH key pairs. Examples: Others Linux and Fedora CoreOS.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -417,7 +417,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>Specifies whether to use the preset password of the image. When you use this parameter, leave the Password parameter empty and make sure that the selected image has a preset password.</p>
+     * <p>Specifies whether to use the password preset in the image. When you specify this parameter, leave the Password parameter empty and make sure that the selected image has a preset password.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -426,14 +426,14 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean passwordInherit;
 
     /**
-     * <p>The subscription period of the resource. The unit is specified by PeriodUnit. This parameter is required and takes effect only when InstanceChargeType is set to PrePaid. If DedicatedHostId is specified, the subscription period cannot exceed the subscription period of the dedicated host. Valid values:</p>
+     * <p>The subscription period of the instance. The unit is specified by the PeriodUnit parameter. This parameter is required and takes effect only when the InstanceChargeType parameter is set to PrePaid. If you specify the DedicatedHostId parameter, the subscription period cannot exceed the subscription period of the dedicated host. Valid values:</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>When PeriodUnit is set to Week, valid values of Period are 1, 2, 3, and 4.</li>
-     * <li>When PeriodUnit is set to Month, valid values of Period are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
+     * <li>When the PeriodUnit parameter is set to Week, valid values of the Period parameter are 1, 2, 3, and 4.</li>
+     * <li>When the PeriodUnit parameter is set to Month, valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
      * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;When PeriodUnit is set to Month, valid values of Period are 1, 2, 3, 6, and 12.</p>
-     * <p>&lt;props=&quot;partner&quot;&gt;When PeriodUnit is set to Month, valid values of Period are 1, 2, 3, 6, and 12.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;When the PeriodUnit parameter is set to Month, valid values of the Period parameter are 1, 2, 3, 6, and 12.</p>
+     * <p>&lt;props=&quot;partner&quot;&gt;When the PeriodUnit parameter is set to Month, valid values of the Period parameter are 1, 2, 3, 6, and 12.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -445,8 +445,8 @@ public class CreateInstanceRequest extends TeaModel {
      * <p>The unit of the subscription period. Valid values:</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>Week</li>
-     * <li>Month</li>
+     * <li>Week.</li>
+     * <li>Month.</li>
      * </ul>
      * <p>&lt;props=&quot;intl&quot;&gt;Month.</p>
      * <p>&lt;props=&quot;partner&quot;&gt;Month.</p>
@@ -459,7 +459,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The private IP address of the instance. The IP address must be an available IP address within the CIDR block of the vSwitch specified by VSwitchId.</p>
+     * <p>The private IP address of the instance. The IP address must be an idle IP address within the CIDR block of the vSwitch specified by VSwitchId.</p>
      * 
      * <strong>example:</strong>
      * <p>172.16.236.*</p>
@@ -468,7 +468,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>The name of the instance RAM role. You can use the RAM API operation <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> to query the instance RAM roles that you have created.</p>
+     * <p>The name of the instance RAM role. You can use the RAM API operation <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> to query the RAM roles that you have created.</p>
      * 
      * <strong>example:</strong>
      * <p>RAMTestName</p>
@@ -524,16 +524,16 @@ public class CreateInstanceRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</p>
+     * <p>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</p>
      * <ul>
-     * <li>1: Alibaba Cloud guarantees that spot instance will not undergo automatic release within 1 hour after it is created. After 1 hour, the system automatically compares the bid price with the marketplace price and checks resource inventory to determine whether to retain or revoke spot instance.</li>
-     * <li>0: Alibaba Cloud does not guarantee that spot instance runs for 1 hour after it is created. The system automatically compares the bid price with the marketplace price and checks resource inventory to determine whether to retain or revoke spot instance.</li>
+     * <li>1: Alibaba Cloud guarantees that the instance is not subject to automatic release within 1 hour after it is created. After 1 hour, the system automatically compares the bid price with the marketplace price and checks the resource inventory to determine whether to retain or revoke the instance.</li>
+     * <li>0: Alibaba Cloud does not guarantee that the instance runs for 1 hour after it is created. The system automatically compares the bid price with the marketplace price and checks the resource inventory to determine whether to retain or revoke the instance.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>The Settings of this parameter can only be 0 or 1.</li>
-     * <li>Spot instances are billed by the second. Select an appropriate protection period based on the execution duration of your node.</li>
-     * <li>Alibaba Cloud sends you a notification through ECS system events 5 minutes before spot instance is revoked.</li>
+     * <li>This parameter currently only supports values of 0 or 1.</li>
+     * <li>Spot instances are billed by the second. Select an appropriate protection period based on the execution duration of your task.</li>
+     * <li>Alibaba Cloud sends you a notification by using ECS system events 5 minutes before the instance is reclaimed.</li>
      * </ul>
      * </blockquote>
      * 
@@ -544,12 +544,12 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer spotDuration;
 
     /**
-     * <p>The interruption behavior of the preemptible instance. Valid values:</p>
+     * <p>The break mode of the spot instance. Valid values:</p>
      * <ul>
-     * <li><p>Terminate: releases the instance.</p>
+     * <li><p>Terminate: The instance is released.</p>
      * </li>
-     * <li><p>Stop: puts the instance into the break mode.</p>
-     * <p>For more information about the break mode, see <a href="https://help.aliyun.com/document_detail/63353.html">Break mode for pay-as-you-go instances</a>.</p>
+     * <li><p>Stop: The instance enters economical mode.</p>
+     * <p>For more information about economical mode, see <a href="https://help.aliyun.com/document_detail/63353.html">economical mode for pay-as-you-go instances</a>.</p>
      * </li>
      * </ul>
      * <p>Default value: Terminate.</p>
@@ -561,7 +561,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String spotInterruptionBehavior;
 
     /**
-     * <p>The maximum hourly price of the instance. The value can be accurate to three decimal places. This parameter takes effect when SpotStrategy is set to SpotWithPriceLimit.</p>
+     * <p>The maximum hourly price of the instance. The value can be accurate to three decimal places. This parameter takes effect only when the SpotStrategy parameter is set to SpotWithPriceLimit.</p>
      * 
      * <strong>example:</strong>
      * <p>0.98</p>
@@ -570,11 +570,11 @@ public class CreateInstanceRequest extends TeaModel {
     public Float spotPriceLimit;
 
     /**
-     * <p>The preemption policy for spot instance. This parameter takes effect when InstanceChargeType is set to PostPaid. Valid values:</p>
+     * <p>The preemption policy for the pay-as-you-go instance. This parameter takes effect when the InstanceChargeType parameter is set to PostPaid. Valid values:</p>
      * <ul>
-     * <li>NoSpot: Spot instance is a regular pay-as-you-go instance. This is the default value.</li>
-     * <li>SpotWithPriceLimit: Spot instance is a preemptible instance with a maximum hourly price.</li>
-     * <li>SpotAsPriceGo: Spot instance is a preemptible instance for which the market price is automatically used as the bid price.</li>
+     * <li>NoSpot: The instance is a regular pay-as-you-go instance. This is the default value.</li>
+     * <li>SpotWithPriceLimit: The instance is a spot instance with a user-defined maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The instance is a spot instance whose price is based on the current market price.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -612,7 +612,7 @@ public class CreateInstanceRequest extends TeaModel {
      * <ul>
      * <li><p>default: The instance is created on a non-dedicated host.</p>
      * </li>
-     * <li><p>host: The instance is created on a dedicated host. If you do not specify DedicatedHostId, Alibaba Cloud automatically selects a dedicated host to deploy the instance.</p>
+     * <li><p>host: The instance is created on a dedicated host. If you do not specify the DedicatedHostId parameter, Alibaba Cloud automatically selects a dedicated host for the instance.</p>
      * </li>
      * </ul>
      * <p>Default value: default.</p>
@@ -624,7 +624,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String tenancy;
 
     /**
-     * <p>Specifies whether to use the virtual machine system configurations provided by Alibaba Cloud (Windows: NTP and KMS; Linux: NTP and YUM).</p>
+     * <p>Specifies whether to use the virtual machine system configurations provided by Alibaba Cloud. The configurations include NTP and KMS for Windows, and NTP and YUM for Linux.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -642,9 +642,9 @@ public class CreateInstanceRequest extends TeaModel {
     public String userData;
 
     /**
-     * <p>The ID of the vSwitch. This parameter is required when you create a VPC-type instance. You can call the <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> operation to query the information of created vSwitches.</p>
+     * <p>The ID of the vSwitch. This parameter is required when you create a VPC-connected instance. You can call the <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> operation to query the information about created vSwitches.</p>
      * <blockquote>
-     * <p>If you specify the VSwitchId parameter, the ZoneId parameter must match the zone of the vSwitch. You can also leave the ZoneId parameter empty, and the system automatically selects the zone of the specified vSwitch.</p>
+     * <p>If you specify the VSwitchId parameter, the specified ZoneId parameter must match the zone of the vSwitch. You can also leave the ZoneId parameter empty, and the system automatically selects the zone of the specified vSwitch.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -663,9 +663,9 @@ public class CreateInstanceRequest extends TeaModel {
     public String vlanId;
 
     /**
-     * <p>The zone ID of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> to obtain the zone list.</p>
+     * <p>The zone ID of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> to query the zone list.</p>
      * <blockquote>
-     * <p>If you specify the VSwitchId parameter, the ZoneId parameter must match the zone of the vSwitch. You can also leave the ZoneId parameter empty, and the system automatically selects the zone of the specified vSwitch.</p>
+     * <p>If you specify the VSwitchId parameter, the specified ZoneId parameter must match the zone of the vSwitch. You can also leave the ZoneId parameter empty, and the system automatically selects the zone of the specified vSwitch.</p>
      * </blockquote>
      * <p>Default value: empty. The system automatically selects a zone.</p>
      * 
@@ -1205,7 +1205,7 @@ public class CreateInstanceRequest extends TeaModel {
 
     public static class CreateInstanceRequestPrivatePoolOptions extends TeaModel {
         /**
-         * <p>The ID of the private pool. It is the ID of the elasticity assurance or capacity reservation.</p>
+         * <p>The ID of the private pool, which is the ID of the elasticity assurance or capacity reservation service.</p>
          * 
          * <strong>example:</strong>
          * <p>eap-bp67acfmxazb4****</p>
@@ -1214,17 +1214,17 @@ public class CreateInstanceRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The private pool options for starting spot instance. After an elasticity assurance or a capacity reservation takes effect, a private pool is generated for you to select when you start spot instance. Valid values:</p>
+         * <p>The private pool options for starting the instance. After the elasticity assurance or capacity reservation service takes effect, a private pool is generated for you to select when you start the instance. Valid values:</p>
          * <ul>
-         * <li>Open: open mode. The system automatically matches an open private pool. If no matching private pool is available, the system uses resources from the public pool to start spot instance. In this mode, you do not need to specify the PrivatePoolOptions.Id parameter.</li>
-         * <li>Target: specified mode. The system uses the specified private pool to start spot instance. If the specified private pool is unavailable, spot instance fails to start. In this mode, you must specify the private pool ID, which means the PrivatePoolOptions.Id parameter is required.</li>
-         * <li>None: no private pool. Spot instance is started without using private pool capacity.</li>
+         * <li>Open: open mode. The system automatically matches the capacity of an open private pool. If no eligible private pool capacity is available, the system uses public pool resources to start the instance. In this mode, you do not need to specify the PrivatePoolOptions.Id parameter.</li>
+         * <li>Target: specified mode. The system uses the capacity of the specified private pool to start the instance. If the specified private pool capacity is unavailable, the instance fails to be started. In this mode, you must specify the private pool ID by using the PrivatePoolOptions.Id parameter.</li>
+         * <li>None: no private pool. The instance is started without using private pool capacity.</li>
          * </ul>
          * <p>Default value: None.</p>
-         * <p>In any of the following scenarios, the private pool option for starting spot instance can only be set to None or left empty:</p>
+         * <p>In any of the following scenarios, the private pool options for starting the instance can only be set to None or left empty:</p>
          * <ul>
-         * <li>Create a preemptible instance.</li>
-         * <li>Create an ECS instance on a dedicated host.</li>
+         * <li>You create a spot instance.</li>
+         * <li>You create an ECS instance on a dedicated host.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1258,19 +1258,19 @@ public class CreateInstanceRequest extends TeaModel {
 
     public static class CreateInstanceRequestSystemDisk extends TeaModel {
         /**
-         * <p>The category of the system cloud disk. Valid values:</p>
+         * <p>The category of the system disk. Valid values:</p>
          * <ul>
-         * <li>cloud_efficiency: ultra cloud disk.</li>
+         * <li>cloud_efficiency: ultra disk.</li>
          * <li>cloud_ssd: standard SSD.</li>
-         * <li>cloud_essd: ESSD.</li>
-         * <li>cloud: basic cloud disk.</li>
-         * <li>cloud_auto: ESSD AutoPL.</li>
+         * <li>cloud_essd: enterprise SSD.</li>
+         * <li>cloud: basic disk.</li>
+         * <li>cloud_auto: ESSD AutoPL disk.</li>
          * <li>cloud_essd_entry: ESSD Entry disk.<blockquote>
-         * <p>This parameter supports the cloud_essd_entry value only when the InstanceType Settings are <a href="https://help.aliyun.com/document_detail/457079.html">general computing power instance family u1</a> (ecs.u1) or <a href="https://help.aliyun.com/document_detail/108489.html">Economy instance family e</a> (ecs.e).</p>
+         * <p>The <code>cloud_essd_entry</code> value is supported only when the <code>InstanceType</code> parameter is set to <a href="https://help.aliyun.com/document_detail/457079.html">u1, universal instance family</a> (<code>ecs.u1</code>) or <a href="https://help.aliyun.com/document_detail/108489.html">e, economy instance family</a> (<code>ecs.e</code>).</p>
          * </blockquote>
          * </li>
          * </ul>
-         * <p>For phased-out instance types that are not I/O optimized instances, the default value is cloud. For other instance types, the default value is cloud_efficiency.</p>
+         * <p>For retired instance types that do not support I/O optimization, the default value is cloud. For other instance types, the default value is cloud_efficiency.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>
@@ -1279,7 +1279,7 @@ public class CreateInstanceRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>The description of the system cloud disk. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description of the system disk. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
          * <p>Default value: empty.</p>
          * 
          * <strong>example:</strong>
@@ -1289,7 +1289,7 @@ public class CreateInstanceRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the system cloud disk. The name must be 2 to 128 characters in length and can contain letters and digits. It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The name of the system disk. The name must be 2 to 128 characters in length and can contain letters and digits. It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * <p>Default value: empty.</p>
          * 
          * <strong>example:</strong>
@@ -1299,14 +1299,14 @@ public class CreateInstanceRequest extends TeaModel {
         public String diskName;
 
         /**
-         * <p>Settings of the performance level of the ESSD used as the system cloud disk. Valid values:</p>
+         * <p>The performance level Settings of the enterprise SSD used as the system disk. Valid values:</p>
          * <ul>
-         * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-         * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS. This is the default value.</li>
-         * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
-         * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+         * <li>PL0: An enterprise SSD can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: An enterprise SSD can deliver up to 50,000 random read/write IOPS. This is the default value.</li>
+         * <li>PL2: An enterprise SSD can deliver up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: An enterprise SSD can deliver up to 1,000,000 random read/write IOPS.</li>
          * </ul>
-         * <p>For more information about how to select the performance level of an ESSD, see <a href="https://help.aliyun.com/document_detail/122389.html">standard SSD</a>.</p>
+         * <p>For more information about how to select an enterprise SSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">standard SSD</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -1315,11 +1315,11 @@ public class CreateInstanceRequest extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The size of the system cloud disk. Unit: GiB. Valid values:</p>
+         * <p>The size of the system disk. Unit: GiB. Valid values:</p>
          * <ul>
-         * <li><p>Basic cloud disk: 20 to 500.</p>
+         * <li><p>Basic disk: 20 to 500.</p>
          * </li>
-         * <li><p>Other cloud disk types: 20 to 2048.</p>
+         * <li><p>Other disk types: 20 to 2048.</p>
          * </li>
          * </ul>
          * <p>The value of this parameter must be greater than or equal to max{20, ImageSize}.</p>
@@ -1332,7 +1332,7 @@ public class CreateInstanceRequest extends TeaModel {
         public Integer size;
 
         /**
-         * <p>The dedicated block storage cluster ID. If you need to use a cloud disk in a dedicated block storage cluster as the system cloud disk when creating an ECS instance, specify this parameter.</p>
+         * <p>The dedicated block storage cluster ID. If you want to use a cloud disk in a dedicated block storage cluster as the system disk when you create an ECS instance, specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>dbsc-j5e1sf2vaf5he8m2****</p>
@@ -1462,19 +1462,19 @@ public class CreateInstanceRequest extends TeaModel {
 
     public static class CreateInstanceRequestDataDisk extends TeaModel {
         /**
-         * <p>The category of data cloud disk N. Valid values:</p>
+         * <p>The category of data disk N. Valid values:</p>
          * <ul>
-         * <li>cloud_efficiency: ultra cloud disk.</li>
+         * <li>cloud_efficiency: ultra disk.</li>
          * <li>cloud_ssd: standard SSD.</li>
-         * <li>cloud_essd: ESSD.</li>
-         * <li>cloud: basic cloud disk.</li>
-         * <li>cloud_auto: ESSD AutoPL.</li>
-         * <li>cloud_essd_entry: ESSD Entry.<blockquote>
-         * <p>The cloud_essd_entry value is supported only when InstanceType is set to the ecs.u1 or ecs.e instance family.</p>
+         * <li>cloud_essd: enterprise SSD.</li>
+         * <li>cloud: basic disk.</li>
+         * <li>cloud_auto: ESSD AutoPL disk.</li>
+         * <li>cloud_essd_entry: ESSD Entry disk.<blockquote>
+         * <p>The <code>cloud_essd_entry</code> value is supported only when the <code>InstanceType</code> parameter is set to the <code>ecs.u1</code> or <code>ecs.e</code> instance family.</p>
          * </blockquote>
          * </li>
-         * <li>elastic_ephemeral_disk_standard: standard ESSD Entry disk.</li>
-         * <li>elastic_ephemeral_disk_premium: premium ESSD Entry disk.</li>
+         * <li>elastic_ephemeral_disk_standard: standard elastic ephemeral disk.</li>
+         * <li>elastic_ephemeral_disk_premium: Premium Edition elastic ephemeral disk.</li>
          * </ul>
          * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</p>
          * 
@@ -1485,10 +1485,10 @@ public class CreateInstanceRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>Specifies whether to release data cloud disk N when the instance is released.</p>
+         * <p>Specifies whether to release the data disk when the instance is released.</p>
          * <ul>
-         * <li>true: releases the data cloud disk.</li>
-         * <li>false: does not release the data cloud disk.</li>
+         * <li>true: releases the data disk.</li>
+         * <li>false: does not release the data disk.</li>
          * </ul>
          * <p>Default value: true.</p>
          * 
@@ -1499,7 +1499,7 @@ public class CreateInstanceRequest extends TeaModel {
         public Boolean deleteWithInstance;
 
         /**
-         * <p>The description of data cloud disk N. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description of the data disk. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestDescription</p>
@@ -1508,9 +1508,9 @@ public class CreateInstanceRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The mount point of data cloud disk N.</p>
+         * <p>The mount point of the data disk.</p>
          * <blockquote>
-         * <p>This parameter is applicable only to full images. You can set this parameter to the mount point of the data cloud disk in the full image, and modify the DataDisk.N.Size and DataDisk.N.Category parameters to change the category and size of the data cloud disk in the full image.</p>
+         * <p>This parameter is applicable only to full images. You can set this parameter to the mount point of the data disk in the full image, and modify the DataDisk.N.Size and DataDisk.N.Category parameters to change the disk category and size of the data disk in the full image.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1520,7 +1520,7 @@ public class CreateInstanceRequest extends TeaModel {
         public String device;
 
         /**
-         * <p>The name of data cloud disk N. The name must be 2 to 128 characters in length and can contain letters and digits. It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The name of the data disk. The name must be 2 to 128 characters in length and can contain letters and digits. It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>DataDiskName</p>
@@ -1540,11 +1540,11 @@ public class CreateInstanceRequest extends TeaModel {
         public String encryptAlgorithm;
 
         /**
-         * <p>Specifies whether to encrypt data cloud disk N.</p>
+         * <p>Specifies whether to encrypt data disk N.</p>
          * <ul>
-         * <li><p>true: encrypts the data cloud disk.</p>
+         * <li><p>true: encrypts the data disk.</p>
          * </li>
-         * <li><p>false: does not encrypt the data cloud disk.</p>
+         * <li><p>false: does not encrypt the data disk.</p>
          * </li>
          * </ul>
          * <p>Default value: false.</p>
@@ -1556,7 +1556,7 @@ public class CreateInstanceRequest extends TeaModel {
         public Boolean encrypted;
 
         /**
-         * <p>The ID of the KMS key used by the cloud disk.</p>
+         * <p>The ID of the KMS key used by the disk.</p>
          * 
          * <strong>example:</strong>
          * <p>0e478b7a-4262-4802-b8cb-00d****</p>
@@ -1565,14 +1565,14 @@ public class CreateInstanceRequest extends TeaModel {
         public String KMSKeyId;
 
         /**
-         * <p>Settings of the performance level of the ESSD used as data cloud disk N. The value of N must be the same as the value of N in DataDisk.N.Category=cloud_essd. Valid values:</p>
+         * <p>The performance level Settings of the enterprise SSD used as the data disk. The value of N must be the same as the value of N in <code>DataDisk.N.Category=cloud_essd</code>. Valid values:</p>
          * <ul>
-         * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-         * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS. This is the default value.</li>
-         * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
-         * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+         * <li>PL0: An enterprise SSD can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: An enterprise SSD can deliver up to 50,000 random read/write IOPS. This is the default value.</li>
+         * <li>PL2: An enterprise SSD can deliver up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: An enterprise SSD can deliver up to 1,000,000 random read/write IOPS.</li>
          * </ul>
-         * <p>For more information about how to select the performance level of an ESSD, see <a href="https://help.aliyun.com/document_detail/122389.html">standard SSD</a>.</p>
+         * <p>For more information about how to select an enterprise SSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">standard SSD</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PL2</p>
@@ -1581,11 +1581,11 @@ public class CreateInstanceRequest extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The size of data cloud disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
+         * <p>The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
          * <ul>
          * <li>cloud_efficiency: 20 to 32768.</li>
          * <li>cloud_ssd: 20 to 32768.</li>
-         * <li>cloud_essd: The valid values depend on the value of DataDisk.N.PerformanceLevel.<ul>
+         * <li>cloud_essd: The valid values are related to the value of DataDisk.N.PerformanceLevel.<ul>
          * <li>PL0: 1 to 65,536.</li>
          * <li>PL1: 20 to 65,536.</li>
          * <li>PL2: 461 to 65,536.</li>
@@ -1605,11 +1605,11 @@ public class CreateInstanceRequest extends TeaModel {
         public Integer size;
 
         /**
-         * <p>The ID of the snapshot used to create data cloud disk N. Valid values of N: 1 to 16.</p>
+         * <p>The ID of the snapshot used to create data disk N. Valid values of N: 1 to 16.</p>
          * <ul>
-         * <li><p>If you specify the DataDisk.N.SnapshotId parameter, the DataDisk.N.Size parameter is ignored, and the actual size of the created cloud disk is the size of the specified snapshot.</p>
+         * <li><p>After you specify the DataDisk.N.SnapshotId parameter, the DataDisk.N.Size parameter is ignored. The actual size of the created disk is the size of the specified snapshot.</p>
          * </li>
-         * <li><p>You cannot use snapshots created on or before July 15, 2013. Otherwise, the request is rejected with an error.</p>
+         * <li><p>You cannot use snapshots created on or before July 15, 2013. If you use such a snapshot, the request is rejected and an error is returned.</p>
          * </li>
          * </ul>
          * 
@@ -1620,7 +1620,7 @@ public class CreateInstanceRequest extends TeaModel {
         public String snapshotId;
 
         /**
-         * <p>The ID of the dedicated block storage cluster. If you want to use cloud disk resources in a dedicated block storage cluster as data cloud disks when you create an ECS instance, specify this parameter.</p>
+         * <p>The ID of the dedicated block storage cluster. If you want to use disk resources in a dedicated block storage cluster as data disks when you create an ECS instance, specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>dbsc-j5e1sf2vaf5he8m2****</p>
@@ -1733,7 +1733,7 @@ public class CreateInstanceRequest extends TeaModel {
 
     public static class CreateInstanceRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the instance, cloud disk, and primary ENI. Valid values of N: 1 to 20. If this parameter is specified, it cannot be an empty string. The tag key can be up to 128 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the instance, cloud disk, and primary ENI. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string. The tag key can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -1742,7 +1742,7 @@ public class CreateInstanceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the instance, cloud disk, and primary ENI. Valid values of N: 1 to 20. If this parameter is specified, it can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the instance, cloud disk, and primary ENI. Valid values of N: 1 to 20. If you specify this parameter, it can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

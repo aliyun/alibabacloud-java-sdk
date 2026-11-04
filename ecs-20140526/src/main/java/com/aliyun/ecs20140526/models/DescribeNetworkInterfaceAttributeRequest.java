@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     /**
-     * <p>The property of the Elastic Network Interface (ENI). Valid values:</p>
-     * <p>attachment: queries the attachment information of member network interface controllers (NICs) for a trunk network interface controller (NIC). This parameter is in invitational preview and is not available for use.</p>
-     * <p>connectionTrackingConfiguration: queries the network connectivity tracking configuration.</p>
-     * <p>Default value: empty.</p>
+     * <p>The property of the elastic network interface controller (NIC). Valid values:</p>
+     * <p>attachment: Queries the attachment information of the member network interface controllers (NICs) of a trunk network interface controller (NIC). This parameter is in invitational preview and is not available.</p>
+     * <p>connectionTrackingConfiguration: The network connectivity tracking configuration.</p>
+     * <p>Default value: none.</p>
      * 
      * <strong>example:</strong>
      * <p>attachment</p>
@@ -17,7 +17,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     public String attribute;
 
     /**
-     * <p>The ID of the network interface controller (NIC).</p>
+     * <p>The ID of the elastic network interface controller (NIC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the network interface controller (NIC). You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the elastic network interface controller (NIC). You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not available for use.</p>
+     * <p>This parameter is not available.</p>
      * </blockquote>
      */
     @NameInMap("Tag")
@@ -128,7 +128,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     public static class DescribeNetworkInterfaceAttributeRequestTag extends TeaModel {
         /**
          * <blockquote>
-         * <p>This parameter is not available for use.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is not available for use.</p>
+         * <p>This parameter is not available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

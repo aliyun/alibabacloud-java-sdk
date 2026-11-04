@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeActivationsResponseBody extends TeaModel {
     /**
-     * <p>The activation codes and their usage information.</p>
+     * <p>The collection of activation codes and their usage information.</p>
      */
     @NameInMap("ActivationList")
     public java.util.List<DescribeActivationsResponseBodyActivationList> activationList;
 
     /**
-     * <p>The query token returned in the current response.</p>
+     * <p>The query token returned by the current call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -29,7 +29,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The Settings for the number of entries returned per page during paging in a paged query.</p>
+     * <p>Settings for the number of entries returned per page in a paged query. This parameter is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,9 +47,9 @@ public class DescribeActivationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records that meet the conditional query criteria.</p>
+     * <p>The total number of record entries that meet the conditional query.</p>
      * <blockquote>
-     * <p>When you perform paging in a paged query by using the MaxResults and NextToken parameters, the returned TotalCount value is meaningless.</p>
+     * <p>If you use the MaxResults and NextToken parameters for a paged query (paging), the returned TotalCount value is meaningless.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -164,7 +164,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         public String activationId;
 
         /**
-         * <p>The creation time. The time follows the ISO 8601 standard and is displayed in UTC.</p>
+         * <p>The creation time. The time follows the ISO 8601 standard in the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-20T06:00:00Z</p>

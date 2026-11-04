@@ -46,7 +46,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
     /**
      * <p>The total number of scripts.</p>
      * <blockquote>
-     * <p>When you use the MaxResults and NextToken parameters for paging, the returned TotalCount parameter value is meaningless.</p>
+     * <p>If you use the MaxResults and NextToken parameters to perform a paged query, the returned TotalCount value is meaningless.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

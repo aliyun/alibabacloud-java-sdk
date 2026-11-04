@@ -23,7 +23,7 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of entries per page for a paged query.</p>
+     * <p>The number of entries to return per page in a paging query.</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -43,7 +43,7 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The query token. Set the value to the NextToken value returned in the last API call.</p>
+     * <p>The query token. The value is the NextToken value returned from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -83,7 +83,7 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IDs of the snapshot-consistent groups. Valid values of N: 1 to 10.</p>
+     * <p>The ID of snapshot-consistent group N. Valid values of N: 1 to 10.</p>
      * 
      * <strong>example:</strong>
      * <p>ssg-j6ciyh3k52qp7ovm****</p>
@@ -92,7 +92,7 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     public java.util.List<String> snapshotGroupId;
 
     /**
-     * <p>The status of the snapshot-consistent group. Valid values of N: 1 to 3. Valid values:</p>
+     * <p>The status of snapshot-consistent group N. Valid values of N: 1 to 3. Valid values:</p>
      * <ul>
      * <li><p>progressing: The snapshot-consistent group is being created.</p>
      * </li>
@@ -233,7 +233,7 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
 
     public static class DescribeSnapshotGroupsRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the snapshot-consistent group. Valid values of N: 1 to 20.</p>
+         * <p>The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -242,7 +242,7 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the snapshot-consistent group. Valid values of N: 1 to 20.</p>
+         * <p>The value of tag N of the snapshot-consistent group. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

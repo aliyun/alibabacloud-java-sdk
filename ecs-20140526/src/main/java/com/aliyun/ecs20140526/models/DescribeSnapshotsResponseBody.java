@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotsResponseBody extends TeaModel {
     /**
-     * <p>The token for the next query.</p>
+     * <p>The pagination token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -50,7 +50,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     /**
      * <p>The total number of snapshots.</p>
      * <blockquote>
-     * <p>When you use the MaxResults and NextToken parameters for pagination, the returned value of the TotalCount parameter is invalid.</p>
+     * <p>When you use the MaxResults and NextToken parameters for pagination, the returned TotalCount value is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

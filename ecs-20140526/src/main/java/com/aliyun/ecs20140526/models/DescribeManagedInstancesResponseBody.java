@@ -47,9 +47,9 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of managed instances queried.</p>
+     * <p>The total number of managed instances returned.</p>
      * <blockquote>
-     * <p>When you use the MaxResults and NextToken parameters for paging, the returned TotalCount value is meaningless.</p>
+     * <p>When you use the MaxResults and NextToken parameters for paging and paged query, the returned TotalCount value is meaningless.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
     public static class DescribeManagedInstancesResponseBodyInstancesTags extends TeaModel {
         /**
          * <p>The tag key of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <p>If you use a single tag to filter resources, the resource count for that tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count for resources attached to multiple tags cannot exceed 1,000. If the resource count exceeds 1,000, you must call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
+         * <p>If you use a single tag to filter resources, the resource count returned cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources attached to multiple tags cannot exceed 1,000. If the resource count exceeds 1,000, you must call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
          * <p>The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +178,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the managed instance is connected. Valid values:</p>
          * <ul>
-         * <li><p>true: The managed instance is connected. You can use Cloud Assistant to manage the managed instance.</p>
+         * <li><p>true: The managed instance is connected. You can manage the managed instance by using Cloud Assistant.</p>
          * </li>
          * <li><p>false: The managed instance is not connected. The server may be stopped or the Cloud Assistant Agent is not properly installed.</p>
          * </li>
@@ -200,7 +200,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         public String hostname;
 
         /**
-         * <p>The instance ID of the managed instance.</p>
+         * <p>The managed instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mi-hz018jrc1o0****</p>
@@ -236,7 +236,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
-         * <p>The number of Cloud Assistant tasks executed on the managed instance.</p>
+         * <p>The number of times the managed instance executed Cloud Assistant tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -245,7 +245,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         public Long invocationCount;
 
         /**
-         * <p>The time when the last Cloud Assistant task was executed. The time follows the ISO 8601 standard in the UTC time zone.</p>
+         * <p>The time when the Cloud Assistant task was last executed. The time follows the ISO 8601 standard in the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-20T09:00:40Z</p>
@@ -254,7 +254,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         public String lastInvokedTime;
 
         /**
-         * <p>The machine ID of the managed instance.</p>
+         * <p>The machine code of the managed instance.</p>
          * 
          * <strong>example:</strong>
          * <p>e03231b37ab14e53b5795ad625fc****</p>

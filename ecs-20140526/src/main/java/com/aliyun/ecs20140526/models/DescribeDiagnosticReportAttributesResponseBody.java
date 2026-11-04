@@ -14,7 +14,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String attributes;
 
     /**
-     * <p>The time when the diagnostic report was created. The time is in ISO 8601 format in UTC.</p>
+     * <p>The time when the diagnostic report was created. The time follows the ISO 8601 standard and is in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-11T12:00:00Z</p>
@@ -23,7 +23,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String creationTime;
 
     /**
-     * <p>The end time. This is the parameter passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report. The time is in ISO 8601 format in UTC.</p>
+     * <p>The end time. This is the parameter passed when you call the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create a diagnostic report. The time follows the ISO 8601 standard and is in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-11T14:00:00Z</p>
@@ -32,7 +32,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time when the diagnostic report was completed. The time is in ISO 8601 format in UTC.</p>
+     * <p>The time when the diagnostic report was completed. The time follows the ISO 8601 standard and is in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-11T14:00:00Z</p>
@@ -53,7 +53,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String metricSetId;
 
     /**
-     * <p>The ID of the diagnostic report. This is the unique identifier of the resource diagnostic report.</p>
+     * <p>The ID of the diagnostic report, which uniquely identifies the resource diagnostic report.</p>
      * 
      * <strong>example:</strong>
      * <p>dr-uf6i0tv2refv8wz*****</p>
@@ -71,7 +71,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource ID.</p>
+     * <p>The ID of the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>i-uf6i0tv2refv8wz*****</p>
@@ -80,7 +80,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The resource type. The supported type is instance.</p>
+     * <p>The resource type. Valid value: instance.</p>
      * 
      * <strong>example:</strong>
      * <p>instance</p>
@@ -89,12 +89,12 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The severity level of the report. This is the most severe level among all metrics. The severity levels in ascending order are:</p>
+     * <p>The severity level of the report. This is the highest severity level among all metrics. The severity levels in ascending order are:</p>
      * <ul>
-     * <li>Unknown: The initial state. The diagnosis has not started, or the diagnostic process exited abnormally. No diagnostic conclusion is available.</li>
-     * <li>Normal: The diagnosis is normal. No issues were found.</li>
-     * <li>Info: Related information is available and may be associated with an exception.</li>
-     * <li>Warn: Related information is available and may cause an exception.</li>
+     * <li>Unknown: The initial state, which indicates that the diagnosis has not started or the diagnostic program exited abnormally, and no diagnostic conclusion is available.</li>
+     * <li>Normal: The diagnosis is normal and no issues are found.</li>
+     * <li>Info: Associated information is available, which may be related to an exception.</li>
+     * <li>Warn: Associated information is available, which may cause an exception.</li>
      * <li>Critical: A critical exception exists.</li>
      * </ul>
      * 
@@ -105,7 +105,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String severity;
 
     /**
-     * <p>The start time. This is the parameter passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report. The time is in ISO 8601 format in UTC.</p>
+     * <p>The start time. This is the parameter passed when you call the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create a diagnostic report. The time follows the ISO 8601 standard and is in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-11T12:00:00Z</p>
@@ -117,7 +117,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
      * <p>The status of the diagnostic report. Valid values:</p>
      * <ul>
      * <li>InProgress: The diagnosis is in progress.</li>
-     * <li>Finished: The diagnosis is complete.</li>
+     * <li>Finished: The diagnosis is completed.</li>
      * <li>Failed: The diagnosis failed.</li>
      * </ul>
      * 

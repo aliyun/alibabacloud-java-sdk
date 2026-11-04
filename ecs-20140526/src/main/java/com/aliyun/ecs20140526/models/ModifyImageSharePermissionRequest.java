@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyImageSharePermissionRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud account ID that is authorized to use the shared image. Valid values of N: 1 to 10. If more than 10 Alibaba Cloud accounts are submitted in a single commit, the system processes only the first 10 and ignores the rest.</p>
+     * <p>The Alibaba Cloud account ID for shared image authorization. Valid values of N: 1 to 10. If you commit more than 10 Alibaba Cloud account IDs at a time, the system processes only the first 10 account IDs and ignores the rest.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -13,13 +13,21 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     @NameInMap("AddAccount")
     public java.util.List<String> addAccount;
 
+    /**
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
+     * <ul>
+     * <li>true: sends a precheck request without modifying the image sharing permissions. If the check passes, the DryRunOperation error code is returned.</li>
+     * <li>false: sends a regular request and modifies the image sharing permissions if the check passes.</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>The ID of the custom image to be shared.</p>
      * <blockquote>
-     * <p>Notice: Images encrypted with a service key can no longer be shared. Only images encrypted with a customer master key (CMK) can be shared. An error is returned if you attempt to share an image encrypted with a service key.</p>
+     * <p>Notice: Images with service key encryption can no longer be shared. Only images encrypted by using a customer master key (CMK) can be shared. An error is reported if you attempt to share an image with service key encryption.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,10 +38,10 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>Specifies whether to publish or unpublish the image as a community image. Valid values:</p>
+     * <p>Specifies whether to publish or unpublish the community image. Valid values:</p>
      * <ul>
-     * <li>true: Publishes the image as a community image.</li>
-     * <li>false: Unpublishes the image and converts it to a regular image. If the image is already a regular image, no changes are made.</li>
+     * <li>true: publishes the image as a community image.</li>
+     * <li>false: unpublishes the image and changes it to a regular image. If the image is already a regular image, no changes are made.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -45,7 +53,7 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is in invitational preview and is not available for use.</p>
+     * <p>This parameter is in invitational preview and is not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,7 +69,7 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the custom image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,7 +79,7 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The Alibaba Cloud account ID from which you want to delete image sharing. Valid values of N: 1 to 10. If more than 10 Alibaba Cloud accounts are submitted in a single commit, the system processes only the first 10 and ignores the rest.</p>
+     * <p>The Alibaba Cloud account ID to delete from image sharing. Valid values of N: 1 to 10. If you commit more than 10 Alibaba Cloud account IDs at a time, the system processes only the first 10 account IDs and ignores the rest.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>

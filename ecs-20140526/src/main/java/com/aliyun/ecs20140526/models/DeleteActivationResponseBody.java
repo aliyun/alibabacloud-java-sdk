@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteActivationResponseBody extends TeaModel {
     /**
-     * <p>The information about the activation code and its usage.</p>
+     * <p>The activation code and its usage information.</p>
      */
     @NameInMap("Activation")
     public DeleteActivationResponseBodyActivation activation;
@@ -51,7 +51,7 @@ public class DeleteActivationResponseBody extends TeaModel {
         public String activationId;
 
         /**
-         * <p>The time when the activation code was created. The time is displayed in ISO 8601 format in UTC.</p>
+         * <p>The creation time. The time is formatted in ISO 8601 and in the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-20T06:00:00Z</p>
@@ -60,7 +60,7 @@ public class DeleteActivationResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The number of deregistered instances.</p>
+         * <p>The number of unregistered instances.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -78,7 +78,7 @@ public class DeleteActivationResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The maximum number of times that the activation code can be used to register managed instances.</p>
+         * <p>The maximum number of times the activation code can be used to register managed instances.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -96,7 +96,7 @@ public class DeleteActivationResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The IP addresses of hosts that are allowed to use the activation code.</p>
+         * <p>The IP addresses of the hosts that are allowed to use the activation code.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.0.0/0</p>

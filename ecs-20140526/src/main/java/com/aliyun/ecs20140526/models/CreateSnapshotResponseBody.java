@@ -14,7 +14,7 @@ public class CreateSnapshotResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the snapshot.</p>
+     * <p>The snapshot ID.</p>
      * 
      * <strong>example:</strong>
      * <p>s-bp17441ohwka0yuh****</p>

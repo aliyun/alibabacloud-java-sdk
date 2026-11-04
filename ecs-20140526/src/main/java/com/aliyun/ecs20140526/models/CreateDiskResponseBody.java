@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDiskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cloud disk.</p>
+     * <p>The disk ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d-bp131n0q38u3a4zi****</p>
@@ -14,9 +14,9 @@ public class CreateDiskResponseBody extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The ID of the generated order.</p>
+     * <p>The order ID.</p>
      * <blockquote>
-     * <p>The order ID is returned only when you create a subscription cloud disk.</p>
+     * <p>The order ID is returned only when you create a subscription disk.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

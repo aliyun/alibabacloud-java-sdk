@@ -23,7 +23,7 @@ public class DescribeActivationsRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The maximum number of entries to return on each page during paging in a paged query.</p>
+     * <p>The maximum number of entries to return per page in a paged query. This parameter is used for paging.</p>
      * <p>Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
@@ -34,7 +34,7 @@ public class DescribeActivationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token. Set the value to the NextToken value that is returned from the previous API call.</p>
+     * <p>The query token. The value is the <code>NextToken</code> value returned from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -58,7 +58,7 @@ public class DescribeActivationsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The Settings for the number of entries to return on each page during paging in a paged query.</p>
+     * <p>Settings for the number of entries to return per page in a paged query. This parameter is used for paging.</p>
      * <p>Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
@@ -70,7 +70,7 @@ public class DescribeActivationsRequest extends TeaModel {
 
     /**
      * <p>The region ID. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), Hong Kong (China), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).</p>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query information such as the region ID.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query region IDs and other information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -212,8 +212,8 @@ public class DescribeActivationsRequest extends TeaModel {
     public static class DescribeActivationsRequestTag extends TeaModel {
         /**
          * <p>The tag key of the managed instance activation code (dynamic code). Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <p>If you use a single tag to filter resources, the resource count under the tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources attached to multiple tags cannot exceed 1,000. If the resource count exceeds 1,000, you must invoke the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
-         * <p>The tag key can be up to 64 characters in length, and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
+         * <p>If you use a single tag to filter resources, the resource count that matches the tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources to which you attach multiple tags cannot exceed 1,000. If the resource count exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
+         * <p>The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -223,7 +223,7 @@ public class DescribeActivationsRequest extends TeaModel {
 
         /**
          * <p>The tag value of the managed instance activation code. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length, and cannot contain http:// or https://.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

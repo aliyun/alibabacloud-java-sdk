@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotLinksRequest extends TeaModel {
     /**
-     * <p>The disk IDs. You can specify up to 100 disk IDs at a time. Set the value of DiskIds to a JSON array. Separate multiple IDs with commas (,).</p>
+     * <p>The disk IDs. You can specify up to 100 disk IDs at a time. Set the DiskIds parameter to a JSON array. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;d-bp1d6tsvznfghy7y****&quot;, &quot;d-bp1ippxbaql9zet7****&quot;, … &quot;d-bp1ib7bcz07lcxa9****&quot;]</p>
@@ -23,11 +23,11 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The paging Settings for the maximum number of entries per page in a paged query. Maximum value: 100.
+     * <p>The number of entries per page in a paged query. Maximum value: 100.
      * Default value:</p>
      * <ul>
-     * <li>If you do not specify a value or the Settings value is less than 10, the default value is 10.</li>
-     * <li>If the Settings value is greater than 100, the default value is 100.</li>
+     * <li>If you do not specify this parameter or the specified value is less than 10, the default value is 10.</li>
+     * <li>If the specified value is greater than 100, the default value is 100.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set the value to the NextToken value returned from the last API call.</p>
+     * <p>The pagination token. Set the value to the NextToken value returned in the last API call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -52,7 +52,7 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the snapshot chain list. Pages start from 1.</p>
+     * <p>The page number of the list. Pages start from page 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The paging Settings for the number of entries per page in a paged query. Valid values: 1 to 100.</p>
+     * <p>The number of entries per page in a paged query. Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The snapshot chain IDs. You can specify up to 100 snapshot chain IDs at a time. Set the value of SnapshotLinkIds to a JSON array. Separate multiple IDs with commas (,).</p>
+     * <p>The snapshot chain IDs. You can specify up to 100 snapshot chain IDs at a time. Set the SnapshotLinkIds parameter to a JSON array. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;sl-bp1grgphbcc9brb5****&quot;, &quot;sl-bp1c4izumvq0i5bs****&quot;, … &quot;sl-bp1akk7isz866dds****&quot;]</p>

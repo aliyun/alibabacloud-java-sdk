@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDiagnosticMetricSetsRequest extends TeaModel {
     /**
-     * <p>The IDs of the diagnostic metric sets. You can specify up to 10 IDs.</p>
+     * <p>The IDs of the diagnostic metric sets. A maximum of 10 IDs are supported.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MetricSetIds")

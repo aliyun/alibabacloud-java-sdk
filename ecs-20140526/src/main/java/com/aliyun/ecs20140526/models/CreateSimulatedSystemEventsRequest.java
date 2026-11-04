@@ -25,7 +25,7 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The list of ECS instance IDs. You can specify up to 100 instance IDs.</p>
+     * <p>The IDs of the ECS instances. You can specify up to 100 instance IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,9 +37,8 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
     /**
      * <p>The scheduled start time of the event. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <blockquote>
-     * <p>For unexpected events caused by system errors or instance errors, the event is already in the Executing state after it is created. In this case, the NotBefore parameter specifies the time when the event enters the Executed state.</p>
+     * <p>When the TriggerRealOps parameter is set to false, you must specify the NotBefore parameter.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-12-01T06:32:31Z</p>
@@ -54,7 +53,7 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +69,7 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to trigger real O&amp;M operations. Valid values:<br>- true: Triggers real O&amp;M operations. The system will actually stop or release the instance. Test with caution or use instances that do not run workloads.<br>- false (default): Only simulates event notifications without affecting the actual lifecycle of the instance.</p>
+     * <p>Specifies whether to trigger actual O&amp;M operations. Valid values:<br>- true: Triggers actual O&amp;M operations. The system actually stops or releases the instance. Proceed with caution during testing, or select an instance that does not run business workloads for testing. The O&amp;M event is generated approximately 1 minute after the API call succeeds.<br>- false: Simulates only event notifications without affecting the actual lifecycle of the instance. This is the default value.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

@@ -8,17 +8,17 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public java.util.List<DescribeSnapshotsRequestFilter> filter;
 
     /**
-     * <p>The snapshot type. Valid values:</p>
+     * <p>The snapshot category. Valid values:</p>
      * <ul>
-     * <li>Standard: standard snapshot.</li>
-     * <li>Flash: local snapshot. This value will be deprecated soon. The local snapshot feature is replaced by the snapshot instant active feature. The parameter description is as follows:<ul>
-     * <li>If you used local snapshots before December 14, 2020, Normal use of this parameter is allowed.</li>
+     * <li>Standard: Standard snapshot.</li>
+     * <li>Flash: Local snapshot. This value will soon be deprecated. Local snapshots are replaced by the snapshot instant access feature. The parameter description is as follows:<ul>
+     * <li>If you used local snapshots before December 14, 2020, you can use this parameter normally.</li>
      * <li>If you did not use local snapshots before December 14, 2020, you cannot use this parameter.</li>
      * </ul>
      * </li>
-     * <li>archive: archive snapshot.</li>
+     * <li>archive: Archive snapshot.</li>
      * </ul>
-     * <p>&lt;props=&quot;china&quot;&gt;For more information, see <a href="https://help.aliyun.com/noticelist/articleid/1060755542.html">Notice on Alibaba Cloud Snapshot Service Upgrade and New billing Items on December 14</a>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;For more information, see <a href="https://help.aliyun.com/noticelist/articleid/1060755542.html">Notice on Alibaba Cloud Snapshot Service Upgrade and New Billing Items on December 14</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Standard</p>
@@ -27,7 +27,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The ID of the cloud disk.</p>
+     * <p>The ID of the disk.</p>
      * 
      * <strong>example:</strong>
      * <p>d-bp67acfmxazb4p****</p>
@@ -36,10 +36,10 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>Specifies whether to only perform a dry run for this request. Valid values:</p>
+     * <p>Specifies whether to only perform a dry run for this request.</p>
      * <ul>
-     * <li>true: The system performs a dry run without querying the resource status. The system checks whether your AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the dry run fails, the system returns an error. If the dry run succeeds, the system returns the error code DryRunOperation.</li>
-     * <li>false (default): The system sends a Normal request. If the dry run succeeds, the system returns a 2xx HTTP status code and queries the resource status.</li>
+     * <li>true: The system sends a check request without querying resources. The check items include whether the AccessKey pair is valid, the authorization of Resource Access Management (RAM) users, and whether required parameters are specified. If the check fails, the system returns an error. If the check succeeds, the system returns the error code DryRunOperation.</li>
+     * <li>false (default): The system sends a normal request. If the request passes the check, the system returns an HTTP status code 2xx and queries resources.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public Boolean encrypted;
 
     /**
-     * <p>The instance ID. This parameter specifies the instance whose cloud disk snapshots you want to query.</p>
+     * <p>The specified instance ID. This parameter specifies the instance whose disk snapshots you want to query.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp67acfmxazb4p****</p>
@@ -67,7 +67,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the KMS key that corresponds to the data cloud disk.</p>
+     * <p>The ID of the KMS key that corresponds to the data disk.</p>
      * 
      * <strong>example:</strong>
      * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
@@ -76,7 +76,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String KMSKeyId;
 
     /**
-     * <p>The number of rows per page for paging in a paged query. Maximum value: 100.</p>
+     * <p>The number of entries per page for a paged query. Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter will be deprecated soon. We recommend that you use the NextToken and MaxResults parameters to perform paging for the paged query.</p>
+     * <p>This parameter will be deprecated soon. We recommend that you use the NextToken and MaxResults parameters to perform a paged query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter will be deprecated soon. We recommend that you use the NextToken and MaxResults parameters to perform paging for the paged query.</p>
+     * <p>This parameter will be deprecated soon. We recommend that you use the NextToken and MaxResults parameters to perform a paged query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -123,7 +123,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the cloud disk. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the disk. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -151,7 +151,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IDs of the snapshots. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate multiple IDs with commas (,).</p>
+     * <p>The snapshot IDs. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;s-bp67acfmxazb4p****&quot;, &quot;s-bp67acfmxazb5p****&quot;, … &quot;s-bp67acfmxazb6p****&quot;]</p>
@@ -169,7 +169,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String snapshotLinkId;
 
     /**
-     * <p>The name of the snapshot.</p>
+     * <p>The snapshot name.</p>
      * 
      * <strong>example:</strong>
      * <p>testSnapshotName</p>
@@ -192,10 +192,10 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String snapshotType;
 
     /**
-     * <p>The type of the source cloud disk of the snapshot. Valid values: </p>
+     * <p>The type of the source disk from which the snapshot is created. Valid values: </p>
      * <ul>
-     * <li>system: system cloud disk.</li>
-     * <li>data: data cloud disk.</li>
+     * <li>system: System disk.</li>
+     * <li>data: Data disk.</li>
      * </ul>
      * <blockquote>
      * <p>The values are not case-sensitive.</p>
@@ -211,8 +211,8 @@ public class DescribeSnapshotsRequest extends TeaModel {
      * <p>The snapshot status. Valid values: </p>
      * <ul>
      * <li>progressing: The snapshot is being created.</li>
-     * <li>accomplished: The snapshot is successfully created.</li>
-     * <li>failed: The snapshot failed to be created.</li>
+     * <li>accomplished: The snapshot is created.</li>
+     * <li>failed: The snapshot fails to be created.</li>
      * <li>all (default): All snapshot statuses.</li>
      * </ul>
      * 
@@ -229,11 +229,11 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public java.util.List<DescribeSnapshotsRequestTag> tag;
 
     /**
-     * <p>Specifies whether the snapshot is used to create an image or a cloud disk. Valid values: </p>
+     * <p>The usage of the snapshot. Valid values: </p>
      * <ul>
      * <li>image: The snapshot is used to create a custom image.</li>
-     * <li>disk: The snapshot is used to create a cloud disk.</li>
-     * <li>image_disk: The snapshot is used to create a data cloud disk and a custom image.</li>
+     * <li>disk: The snapshot is used to create a disk.</li>
+     * <li>image_disk: The snapshot is used to create a data disk and a custom image.</li>
      * <li>none: The snapshot is not used.</li>
      * </ul>
      * 
@@ -450,7 +450,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
 
     public static class DescribeSnapshotsRequestFilter extends TeaModel {
         /**
-         * <p>The filter key used to query resources. The value must be CreationStartTime. If you specify both Filter.1.Key and Filter.1.Value, you can query the resources created after the specified point in time.</p>
+         * <p>The filter key used when querying resources. The value must be <code>CreationStartTime</code>. If you specify both <code>Filter.1.Key</code> and <code>Filter.1.Value</code>, you can query the resources created after the specified point in time.</p>
          * 
          * <strong>example:</strong>
          * <p>CreationStartTime</p>
@@ -459,7 +459,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The filter value used to query resources. If you specify this parameter, you must also specify the Filter.1.Key parameter. The value must be in the yyyy-MM-ddTHH:mmZ format and in UTC+0.</p>
+         * <p>The filter value used when querying resources. If you specify this parameter, you must also specify the <code>Filter.1.Key</code> parameter. The value must be in the <code>yyyy-MM-ddTHH:mmZ</code> format and use the UTC+0 time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-12-13T17:00Z</p>
@@ -493,7 +493,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public static class DescribeSnapshotsRequestTag extends TeaModel {
         /**
          * <p>The tag key of the snapshot. Valid values of N: 1 to 20.</p>
-         * <p>If you use a single tag to filter resources, the number of resources returned cannot exceed 1,000. If you use multiple tags to filter resources, the number of resources that are attached to all the specified tags cannot exceed 1,000. If the number of resources exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
+         * <p>If you use a single tag to filter resources, the resource count under this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that are attached with multiple tags cannot exceed 1,000. If the resource count exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>

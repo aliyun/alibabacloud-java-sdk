@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetDisksRequest extends TeaModel {
     /**
-     * <p>The list of cloud disks.</p>
+     * <p>The list of disks.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Disk")
@@ -14,8 +14,8 @@ public class ResetDisksRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
      * <ul>
-     * <li>true: performs a dry run. The system checks the required parameters, request format, and resource status. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li>false: performs a standard request. If the request passes the dry run, the cloud disks are rolled back.</li>
+     * <li>true: sends a dry run request and does not roll back the disk. The system checks whether required parameters are specified, the request format, and resource status limits. If the request fails the check, the corresponding error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li>false: sends a normal request and directly rolls back the disk after the request passes the check.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -32,7 +32,7 @@ public class ResetDisksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class ResetDisksRequest extends TeaModel {
 
     public static class ResetDisksRequestDisk extends TeaModel {
         /**
-         * <p>The ID of the cloud disk to be rolled back. Valid values of N: 1 to 10.</p>
+         * <p>The ID of the disk to be rolled back. Valid values of N: 1 to 10.</p>
          * 
          * <strong>example:</strong>
          * <p>d-j6cf7l0ewidb78lq****</p>
@@ -119,7 +119,7 @@ public class ResetDisksRequest extends TeaModel {
         public String diskId;
 
         /**
-         * <p>The ID of the snapshot that corresponds to the cloud disk in the instance snapshot. Valid values of N: 1 to 10.</p>
+         * <p>The ID of the snapshot that corresponds to the disk in the instance snapshot. Valid values of N: 1 to 10.</p>
          * 
          * <strong>example:</strong>
          * <p>s-j6cdofbycydvg7ey****</p>

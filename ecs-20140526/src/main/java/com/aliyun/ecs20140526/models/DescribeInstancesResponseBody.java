@@ -8,7 +8,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public DescribeInstancesResponseBodyInstances instances;
 
     /**
-     * <p>The pagination token returned in this call.</p>
+     * <p>The pagination token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -26,7 +26,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page that was specified in the request.</p>
+     * <p>The number of entries per page specified in the request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -44,9 +44,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of queried instances.</p>
+     * <p>The total number of instances returned.</p>
      * <blockquote>
-     * <p>When you use the <code>MaxResults</code> and <code>NextToken</code> parameters for paging query, the returned <code>TotalCount</code> parameter value is meaningless.</p>
+     * <p>When you use the <code>MaxResults</code> and <code>NextToken</code> parameters for paging, the returned value of the <code>TotalCount</code> parameter is meaningless.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

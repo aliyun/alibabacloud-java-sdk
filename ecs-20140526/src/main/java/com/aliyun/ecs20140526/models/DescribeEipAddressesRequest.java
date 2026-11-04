@@ -26,7 +26,7 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public String associatedInstanceId;
 
     /**
-     * <p>The type of the associated cloud service instance. Valid values: EcsInstance, SlbInstance, Nat, HaVip, NetworkInterface, and IpAddress.</p>
+     * <p>The type of the associated cloud service instance, such as EcsInstance, SlbInstance, Nat, HaVip, NetworkInterface, or IpAddress.</p>
      * 
      * <strong>example:</strong>
      * <p>EcsInstance</p>
@@ -35,7 +35,7 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public String associatedInstanceType;
 
     /**
-     * <p>The billing method of the EIP. Valid values: PostPaid (pay-as-you-go) and PrePaid (subscription).</p>
+     * <p>The billing method of the EIP. A value of PostPaid indicates pay-as-you-go, and a value of PrePaid indicates subscription.</p>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -62,7 +62,7 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public String ISP;
 
     /**
-     * <p>The lock type. Valid values: financial (locked due to overdue payment) and security (locked due to security reasons).</p>
+     * <p>The lock type. A value of financial indicates a lock due to an overdue payment, and a value of security indicates a lock due to security reasons.</p>
      * 
      * <strong>example:</strong>
      * <p>financial</p>
@@ -77,19 +77,25 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number for the paging query. Starting value: 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: 100. Default value: 10.</p>
+     * <p>The number of entries per page for the paging query. Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the EIP resides. You can call the DescribeRegions operation to query region IDs.</p>
+     * <p>The ID of the region where the elastic IP address (EIP) resides. You can call the DescribeRegions operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -248,7 +254,7 @@ public class DescribeEipAddressesRequest extends TeaModel {
 
     public static class DescribeEipAddressesRequestFilter extends TeaModel {
         /**
-         * <p>The first filter key. Set the value to CreationStartTime, which specifies the start time of resource creation.</p>
+         * <p>The first filter key. Valid value: CreationStartTime, which specifies the start time of resource creation.</p>
          * 
          * <strong>example:</strong>
          * <p>CreationStartTime</p>

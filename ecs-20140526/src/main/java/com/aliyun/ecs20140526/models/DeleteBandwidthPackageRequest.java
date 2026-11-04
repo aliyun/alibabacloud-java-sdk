@@ -7,6 +7,9 @@ public class DeleteBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The ID of the bandwidth package to delete.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bwp-bp1xea10o8qxwaswq****</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
@@ -18,8 +21,11 @@ public class DeleteBandwidthPackageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the bandwidth package. You can call the DescribeRegions operation to query the latest region list.</p>
+     * <p>The ID of the region where the bandwidth package is located. You can call the DescribeRegions operation to query the latest region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

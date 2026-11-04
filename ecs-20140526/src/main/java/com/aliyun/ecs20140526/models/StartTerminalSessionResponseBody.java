@@ -14,7 +14,7 @@ public class StartTerminalSessionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The security token that is appended to the WebSocket request header for system verification of the request.</p>
+     * <p>The security token appended to the WebSocket request header, which is used by the system to verify the request.</p>
      * 
      * <strong>example:</strong>
      * <p>d86c2df2-d19c-4bd8-b817-a19ef123****</p>
@@ -32,7 +32,7 @@ public class StartTerminalSessionResponseBody extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>The URL of the WebSocket session for establishing a remote connection to the ECS instance. The URL contains the session ID (<code>SessionId</code>) and the <code>SecurityToken</code> used for system verification.</p>
+     * <p>The URL corresponding to the WebSocket session for remotely connecting to the ECS instance. It includes the session ID (<code>SessionId</code>) and the <code>SecurityToken</code> used for system verification.</p>
      * 
      * <strong>example:</strong>
      * <p>wss://cn-hangzhou.axt.aliyuncs.com/session?sessionId=s-hz023od0x9****&amp;token=d86c2df2-d19c-4bd8-b817-a19ef123****</p>

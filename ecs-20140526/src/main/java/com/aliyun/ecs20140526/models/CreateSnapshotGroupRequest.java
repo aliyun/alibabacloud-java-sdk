@@ -14,7 +14,7 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the snapshot-consistent group. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>This is description.</p>
@@ -23,7 +23,7 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the disk for which you want to create a snapshot-consistent group. You can specify multiple disk IDs across instances in the same zone. Valid values of N: 1 to 128. A single snapshot-consistent group can contain up to 128 disks with a total capacity of up to 256 TiB.</p>
+     * <p>The ID of the disk for which you want to create a snapshot-consistent group. You can specify multiple disk IDs across instances within the same zone. Valid values of N: 1 to 128. A single snapshot-consistent group can contain up to 128 disks with a total capacity of up to 256 TiB.</p>
      * <p>Take note of the following items:</p>
      * <ul>
      * <li>This parameter and <code>ExcludeDiskId.N</code> cannot be set at the same time.</li>
@@ -56,14 +56,14 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies whether to enable the snapshot instant access feature. Valid values:</p>
+     * <p>Specifies whether to enable the snapshot instant access (active) feature. Valid values:</p>
      * <ul>
-     * <li>true: enables the feature.</li>
-     * <li>false: disables the feature.</li>
+     * <li>true: active.</li>
+     * <li>false: shutdown.</li>
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p>This parameter is deprecated. Standard snapshots of ESSDs are upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. You do not need to configure this parameter, and no additional fees are incurred.</p>
+     * <p>This parameter is deprecated. Standard snapshots of enterprise SSD and standard SSD disks have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. You do not need to configure this parameter, and no additional fees are incurred.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -73,11 +73,11 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     public Boolean instantAccess;
 
     /**
-     * <p>Sets the retention period for the snapshot instant access feature. Unit: days. Valid values: 1 to 65535.</p>
-     * <p>This parameter takes effect only when <code>InstantAccess</code> is set to true. The snapshot instant access feature is automatically disabled when the specified period expires.</p>
-     * <p>Default value: empty, which indicates that the retention period is the same as the snapshot release time.</p>
+     * <p>Specifies the Settings for the usage time of the snapshot instant access (active) feature. Unit: days. Valid values: 1 to 65535.</p>
+     * <p>This parameter takes effect only when <code>InstantAccess</code> is set to true. An automatic shutdown of the instant access (active) feature is triggered when the specified period expires.</p>
+     * <p>Default value: empty, which indicates that the retention period of the instant access feature is the same as the release time of the snapshot.</p>
      * <blockquote>
-     * <p>This parameter is deprecated. Standard snapshots of ESSDs are upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. You do not need to configure this parameter, and no additional fees are incurred.</p>
+     * <p>This parameter is deprecated. Standard snapshots of enterprise SSD and standard SSD disks have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. You do not need to configure this parameter, and no additional fees are incurred.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     public Integer instantAccessRetentionDays;
 
     /**
-     * <p>The name of the snapshot-consistent group. The name must be 2 to 128 characters in length and can contain letters and Chinese characters. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, periods (.), underscores (_), hyphens (-), and colons (:).</p>
+     * <p>The name of the snapshot consistency group. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character, and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, periods (.), underscores (_), hyphens (-), and colons (:).</p>
      * 
      * <strong>example:</strong>
      * <p>testName</p>
@@ -138,7 +138,7 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     public String storageLocationArn;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateSnapshotGroupRequestTag> tag;
@@ -278,7 +278,7 @@ public class CreateSnapshotGroupRequest extends TeaModel {
 
     public static class CreateSnapshotGroupRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -287,7 +287,7 @@ public class CreateSnapshotGroupRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

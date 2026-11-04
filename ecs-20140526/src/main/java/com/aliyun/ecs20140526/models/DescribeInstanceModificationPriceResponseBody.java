@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
     /**
-     * <p>The PriceInfo data type, which includes pricing and discount rule information.</p>
+     * <p>The pricing information, including the price and discount rule information.</p>
      */
     @NameInMap("PriceInfo")
     public DescribeInstanceModificationPriceResponseBodyPriceInfo priceInfo;
@@ -175,9 +175,9 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         /**
          * <p>The currency unit. Valid values:</p>
          * <ul>
-         * <li><p>China site: CNY.</p>
+         * <li><p>CNY: China site.</p>
          * </li>
-         * <li><p>International site: USD.</p>
+         * <li><p>USD: international site.</p>
          * </li>
          * </ul>
          * 
@@ -191,7 +191,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         public DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfos detailInfos;
 
         /**
-         * <p>The discount.</p>
+         * <p>The discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>61.320</p>
@@ -209,7 +209,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         public Float originalPrice;
 
         /**
-         * <p>The final price, which is the original price minus the discount.</p>
+         * <p>The final price, which is the original price minus the discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>113.880</p>
@@ -266,9 +266,13 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
 
     public static class DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice extends TeaModel {
         /**
-         * <p>The currency unit.</p>
-         * <p>China site: CNY.</p>
-         * <p>International site: USD.</p>
+         * <p>The currency unit. Valid values:</p>
+         * <ul>
+         * <li><p>CNY: China site.</p>
+         * </li>
+         * <li><p>USD: international site.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -277,7 +281,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The discount.</p>
+         * <p>The discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -295,7 +299,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         public Float originalPrice;
 
         /**
-         * <p>The final price, which is the original price minus the discount.</p>
+         * <p>The final price, which is the original price minus the discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -344,7 +348,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
 
     public static class DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPrice extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Marketplace image price.</p>
+         * <p>The price of the Alibaba Cloud Marketplace image.</p>
          */
         @NameInMap("MarketplaceImagePrice")
         public DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice marketplaceImagePrice;
@@ -421,7 +425,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice price;
 
         /**
-         * <p>The associated price.</p>
+         * <p>The related price.</p>
          */
         @NameInMap("RelatedPrice")
         public DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPrice relatedPrice;

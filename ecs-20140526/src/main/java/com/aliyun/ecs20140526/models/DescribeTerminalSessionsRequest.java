@@ -14,7 +14,7 @@ public class DescribeTerminalSessionsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries per page for a paged query.</p>
+     * <p>The maximum number of entries to return on each page in a paged query.</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -25,7 +25,7 @@ public class DescribeTerminalSessionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+     * <p>The pagination token. Set the value to the NextToken value returned from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>

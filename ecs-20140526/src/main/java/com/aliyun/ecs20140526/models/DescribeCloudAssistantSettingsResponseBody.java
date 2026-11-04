@@ -114,7 +114,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         public DescribeCloudAssistantSettingsResponseBodyAgentUpgradeConfigAllowedUpgradeWindows allowedUpgradeWindows;
 
         /**
-         * <p>Indicates whether the Cloud Assistant Agent checks for and performs updates immediately upon startup.</p>
+         * <p>Specifies whether to immediately check for and perform updates when the Cloud Assistant Agent starts.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -123,7 +123,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         public Boolean bootstrapUpgrade;
 
         /**
-         * <p>Indicates whether the Cloud Assistant Agent is prohibited from checking for and performing updates.</p>
+         * <p>Specifies whether to disable the Cloud Assistant Agent from checking for and performing updates.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -132,7 +132,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         public Boolean disableUpgrade;
 
         /**
-         * <p>Indicates whether the custom Agent upgrade configuration is enabled. If the query result is false or empty, the default behavior of attempting an upgrade every 30 minutes is retained.</p>
+         * <p>Specifies whether the custom Cloud Assistant Agent upgrade configuration is enabled. If the value is false or empty, the system attempts to upgrade the agent every 30 minutes by default.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -302,7 +302,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
 
     public static class DescribeCloudAssistantSettingsResponseBodyResourceUsageConfig extends TeaModel {
         /**
-         * <p>The maximum CPU usage allowed for the Cloud Assistant Agent main process.</p>
+         * <p>The maximum allowed CPU usage limit for the main process of the Cloud Assistant Agent.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -311,7 +311,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         public Integer cpuLimit;
 
         /**
-         * <p>Indicates whether the script file is retained in the Cloud Assistant directory after command execution is complete.</p>
+         * <p>Specifies whether to retain script files in the Cloud Assistant directory after command execution is complete.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -338,7 +338,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         public String logSizeLimit;
 
         /**
-         * <p>The maximum memory usage allowed for the Cloud Assistant Agent main process.</p>
+         * <p>The maximum allowed memory usage limit for the main process of the Cloud Assistant Agent.</p>
          * 
          * <strong>example:</strong>
          * <p>35MB</p>
@@ -347,7 +347,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         public String memoryLimit;
 
         /**
-         * <p>The maximum number of consecutive times that CPU or memory resources usage can exceed the limit. After this limit is reached, the Cloud Assistant Agent automatically stops running.</p>
+         * <p>The maximum number of consecutive times that the usage of CPU or memory resources exceeds the limit. After reaching this limit, the Cloud Assistant Agent automatically stops.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -412,10 +412,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
 
     public static class DescribeCloudAssistantSettingsResponseBodySessionManagerConfig extends TeaModel {
         /**
-         * <p>The toggle for the Cloud Assistant session feature. Valid values:</p>
+         * <p>The switch for the Cloud Assistant session feature. Valid values:</p>
          * <ul>
-         * <li>true: Enabled.</li>
-         * <li>false: Disabled.</li>
+         * <li>true: enabled</li>
+         * <li>false: disabled</li>
          * </ul>
          * <p>Precautions:</p>
          * <ul>
