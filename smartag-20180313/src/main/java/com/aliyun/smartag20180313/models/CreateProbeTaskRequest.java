@@ -5,137 +5,55 @@ import com.aliyun.tea.*;
 
 public class CreateProbeTaskRequest extends TeaModel {
     /**
-     * <p>The destination domain name of the probe node.
-     * For ICMP and TCP Protocol Type probes, set this parameter to the IP address or domain name of the destination service. For HTTP Protocol Type probes, set this parameter to the URL of the destination service.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
-     * <p>Specifies whether to enable the probe task. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong>: Enabled.</li>
-     * <li><strong>false</strong>: Disabled.</li>
-     * </ul>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
-    /**
-     * <p>The number of packets sent per minute for the probe protocol.</p>
-     * <p>Valid values: <strong>1</strong> to <strong>60</strong>.</p>
-     * <blockquote>
-     * <p>This parameter is required for ICMP Protocol Type probe tasks. Do not specify this parameter for other protocols.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("PacketNumber")
     public Integer packetNumber;
 
-    /**
-     * <p>The port number of the probe protocol.</p>
-     * <blockquote>
-     * <p>This parameter is required for TCP Protocol Type probe tasks. Do not specify this parameter for other protocols.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>80</p>
-     */
     @NameInMap("Port")
     public Integer port;
 
-    /**
-     * <p>The source address for the private network probe.</p>
-     * <blockquote>
-     * <p>This parameter is required for private network probe tasks.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>192.168.1.1</p>
-     */
     @NameInMap("ProbeTaskSourceAddress")
     public String probeTaskSourceAddress;
 
     /**
-     * <p>The protocol of the probe task. Valid values:</p>
-     * <ul>
-     * <li><strong>ICMP</strong>.</li>
-     * <li><strong>TCP</strong>.</li>
-     * <li><strong>HTTP</strong>.</li>
-     * </ul>
-     * <blockquote>
-     * <p>Private network probes support only the ICMP and TCP protocols.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ICMP</p>
      */
     @NameInMap("Protocol")
     public String protocol;
 
     /**
-     * <p>The region ID of the Smart Access Gateway instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The instance ID of the Smart Access Gateway.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>sag-asdfz6ac74oj5v****</p>
      */
     @NameInMap("SagId")
     public String sagId;
 
     /**
-     * <p>The serial number of the Smart Access Gateway device.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>sag****</p>
      */
     @NameInMap("Sn")
     public String sn;
 
-    /**
-     * <p>The name of the probe task.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>test-ping</p>
-     */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
-     * <p>The type of the probe task. Valid values:</p>
-     * <ul>
-     * <li><p><strong>Internet</strong>: public network probe.</p>
-     * </li>
-     * <li><p><strong>Intranet</strong>: private network probe.</p>
-     * </li>
-     * </ul>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Internet</p>
      */
     @NameInMap("Type")
     public String type;

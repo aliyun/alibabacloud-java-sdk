@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssociateACLResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C9A75915-0260-4335-851A-D866A7ED396C</p>

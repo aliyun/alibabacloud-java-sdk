@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddSmartAccessGatewayDnsForwardResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of 200 indicates that the call is successful.</p>
+     * <p>The error code. A value of 200 indicates that the task was queried successfully.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class AddSmartAccessGatewayDnsForwardResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information returned for the request.</p>
+     * <p>The business data.</p>
      */
     @NameInMap("Data")
     public AddSmartAccessGatewayDnsForwardResponseBodyData data;
@@ -29,7 +29,7 @@ public class AddSmartAccessGatewayDnsForwardResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful</p>
@@ -119,7 +119,7 @@ public class AddSmartAccessGatewayDnsForwardResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sagv3dnsforward-nc7qabskj17werc7su</p>
@@ -146,7 +146,7 @@ public class AddSmartAccessGatewayDnsForwardResponseBody extends TeaModel {
         public String mode;
 
         /**
-         * <p>The number of the egress port.</p>
+         * <p>The outbound port index.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -155,7 +155,7 @@ public class AddSmartAccessGatewayDnsForwardResponseBody extends TeaModel {
         public Integer outboundPortIndex;
 
         /**
-         * <p>The egress port.</p>
+         * <p>The outbound port.</p>
          * 
          * <strong>example:</strong>
          * <p>eth0</p>
@@ -164,7 +164,7 @@ public class AddSmartAccessGatewayDnsForwardResponseBody extends TeaModel {
         public String outboundPortName;
 
         /**
-         * <p>The type of the egress port.</p>
+         * <p>The outbound port type.</p>
          * 
          * <strong>example:</strong>
          * <p>PhysicalPort</p>

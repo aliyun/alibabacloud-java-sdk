@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSagStaticRouteListResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CE6642D4-21EB-4168-9BF9-F217953F9892</p>
@@ -14,13 +14,13 @@ public class DescribeSagStaticRouteListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the static route.</p>
+     * <p>The list of static routes.</p>
      */
     @NameInMap("StaticRoutes")
     public java.util.List<DescribeSagStaticRouteListResponseBodyStaticRoutes> staticRoutes;
 
     /**
-     * <p>The state of the query task.</p>
+     * <p>The status of the query tasks.</p>
      */
     @NameInMap("TaskStates")
     public java.util.List<DescribeSagStaticRouteListResponseBodyTaskStates> taskStates;
@@ -74,7 +74,7 @@ public class DescribeSagStaticRouteListResponseBody extends TeaModel {
         public String nextHop;
 
         /**
-         * <p>The name of the port.</p>
+         * <p>The port name.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -141,7 +141,7 @@ public class DescribeSagStaticRouteListResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The error code returned. A value of 200 indicates that the query task is successful.</p>
+         * <p>The error code. A value of 200 indicates that the query task is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -159,17 +159,17 @@ public class DescribeSagStaticRouteListResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The state of the query task. Valid values:</p>
+         * <p>The status of the asynchronous task. Valid values:</p>
          * <ul>
          * <li><strong>Initialized</strong>: The query task is initialized.</li>
-         * <li><strong>Offline</strong>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. After the SAG device is connected to Alibaba Cloud, Alibaba Cloud assigns the query task to the SAG device.</li>
-         * <li><strong>Succeed</strong>: Alibaba Cloud has assigned the query task to the SAG device.</li>
-         * <li><strong>Processing</strong>: Alibaba Cloud is assigning the query task to the SAG device.</li>
-         * <li><strong>VersionNotSupport</strong>: The query task is not supported by the current version of the SAG device.</li>
-         * <li><strong>BuildRequestError</strong>: The query task is not supported by the controller of the SAG device.</li>
-         * <li><strong>HardwareError</strong>: Alibaba Cloud failed to assign the query task to the SAG device because the SAG device is faulty.</li>
+         * <li><strong>Offline</strong>: The Smart Access Gateway device is offline and the query task is not delivered. The task will be delivered after the device goes online.</li>
+         * <li><strong>Succeed</strong>: The query task is delivered successfully.</li>
+         * <li><strong>Processing</strong>: The query task is being delivered.</li>
+         * <li><strong>VersionNotSupport</strong>: The current version of the Smart Access Gateway device does not support this feature.</li>
+         * <li><strong>BuildRequestError</strong>: The management and control system does not support the request.</li>
+         * <li><strong>HardwareError</strong>: The query task failed to be delivered due to a device error.</li>
          * <li><strong>TaskNotExist</strong>: The query task does not exist.</li>
-         * <li><strong>OfflineNotConfiged</strong>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. Alibaba Cloud does not assign the query task to the SAG device even after the SAG device is connected to Alibaba Cloud.</li>
+         * <li><strong>OfflineNotConfiged</strong>: The Smart Access Gateway device is offline and the query task is not delivered. The task will not be delivered even after the device goes online.</li>
          * </ul>
          * 
          * <strong>example:</strong>

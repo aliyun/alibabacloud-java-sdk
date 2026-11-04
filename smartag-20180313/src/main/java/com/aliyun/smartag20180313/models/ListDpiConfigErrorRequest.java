@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListDpiConfigErrorRequest extends TeaModel {
     /**
-     * <p>The type of instance for which the DPI feature is configured:</p>
+     * <p>The type of the instance for which the DPI feature is configured. Valid values:</p>
      * <ul>
-     * <li><strong>acl</strong>: a Resource Access Management instance.</li>
+     * <li><strong>acl</strong>: an access control instance.</li>
      * <li><strong>qos</strong>: a QoS policy instance.</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -19,7 +19,7 @@ public class ListDpiConfigErrorRequest extends TeaModel {
     public String dpiConfigType;
 
     /**
-     * <p>The maximum number of configuration errors to return on each page.</p>
+     * <p>The maximum number of entries allowed per page in a paged query.</p>
      * <p>Valid values: <strong>1</strong> to <strong>100</strong>.</p>
      * <p>Default value: <strong>10</strong>.</p>
      * 
@@ -30,7 +30,7 @@ public class ListDpiConfigErrorRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results.</p>
+     * <p>The token used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -39,7 +39,8 @@ public class ListDpiConfigErrorRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region where the Smart Access Gateway instance is deployed. You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the regions and their IDs that Smart Access Gateway supports.</p>
+     * <p>The region ID of the Smart Access Gateway instance.
+     * You can invoke the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the regions supported by Smart Access Gateway and the corresponding region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +50,7 @@ public class ListDpiConfigErrorRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the instance for which the DPI feature is configured.</p>
+     * <p>The instance ID for which the DPI feature is configured.</p>
      * 
      * <strong>example:</strong>
      * <p>qos-1strcafl4wghpb****</p>
@@ -58,7 +59,7 @@ public class ListDpiConfigErrorRequest extends TeaModel {
     public String ruleInstanceId;
 
     /**
-     * <p>The ID of the Smart Access Gateway instance.</p>
+     * <p>The instance ID of the Smart Access Gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>sag-1e8sgws6b133b8****</p>

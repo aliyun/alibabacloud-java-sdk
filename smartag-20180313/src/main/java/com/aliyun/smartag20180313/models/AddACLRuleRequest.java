@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddACLRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the ACL.</p>
+     * <p>The ID of the access control instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,8 @@ public class AddACLRuleRequest extends TeaModel {
     public String aclId;
 
     /**
-     * <p>The description of the ACL rule.</p>
-     * <p>The description must be 1 to <strong>512</strong> characters in length.</p>
+     * <p>The description of the access control rule.</p>
+     * <p>The description must be <strong>1</strong> to <strong>512</strong> characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -26,7 +26,7 @@ public class AddACLRuleRequest extends TeaModel {
 
     /**
      * <p>The destination CIDR block.</p>
-     * <p>For example: 192.168.10.0/24.</p>
+     * <p>The destination CIDR block must be in CIDR format, such as 192.168.10.0/24.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,8 +37,8 @@ public class AddACLRuleRequest extends TeaModel {
 
     /**
      * <p>The destination port range.</p>
-     * <p>Valid values: <strong>-1</strong> and <strong>1</strong> to <strong>65535</strong>.</p>
-     * <p>Use the format 1/200 or 80/80. A value of -1/-1 means all ports.</p>
+     * <p>Valid values: <strong>-1</strong> or <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The destination port range is in the format of 1/200 or 80/80. A value of -1/-1 specifies that all ports are allowed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,10 +48,10 @@ public class AddACLRuleRequest extends TeaModel {
     public String destPortRange;
 
     /**
-     * <p>The direction of traffic to which the ACL rule applies. Valid values:</p>
+     * <p>The direction in which the access control rule is applied. Valid values:</p>
      * <ul>
-     * <li><strong>in</strong>: inbound. Traffic from an external network to the local branch where the SAG instance is deployed.</li>
-     * <li><strong>out</strong>: outbound. Traffic from the local branch where the SAG instance is deployed to an external network.</li>
+     * <li><strong>in</strong>: inbound. This value specifies traffic from external networks to the local branch where the Smart Access Gateway (SAG) instance is deployed.</li>
+     * <li><strong>out</strong>: outbound. This value specifies traffic from the local branch where the SAG instance is deployed to external networks.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -62,8 +62,8 @@ public class AddACLRuleRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>A list of application group IDs. The ACL rule matches traffic of the specified application groups.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/196754.html">ListDpiGroups</a>. You can specify up to <strong>10</strong> application group IDs.</p>
+     * <p>The IDs of the application groups that match the access control rule.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/196754.html">ListDpiGroups</a> operation to query application group IDs and the included application information. Maximum value of N: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -72,8 +72,8 @@ public class AddACLRuleRequest extends TeaModel {
     public java.util.List<String> dpiGroupIds;
 
     /**
-     * <p>A list of application IDs. The ACL rule matches traffic of the specified applications.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/196630.html">ListDpiSignatures</a>. You can specify up to <strong>10</strong> application IDs.</p>
+     * <p>The IDs of the applications that match the access control rule.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/196630.html">ListDpiSignatures</a> operation to query application IDs and the corresponding application information. Maximum value of N: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -82,8 +82,8 @@ public class AddACLRuleRequest extends TeaModel {
     public java.util.List<String> dpiSignatureIds;
 
     /**
-     * <p>The protocol to which the ACL rule applies.</p>
-     * <p>For a list of supported protocols, see the console. The protocol is not case-sensitive.</p>
+     * <p>The protocol used by the access control rule.</p>
+     * <p>For the protocol types supported by the access control feature, refer to the console. The protocol format is not case-sensitive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -93,8 +93,8 @@ public class AddACLRuleRequest extends TeaModel {
     public String ipProtocol;
 
     /**
-     * <p>The name of the ACL rule.</p>
-     * <p>The name must be 2 to 100 characters in length, start with a letter, and can contain digits, periods (.), underscores (_), and hyphens (-).</p>
+     * <p>The name of the access control rule.</p>
+     * <p>The name must be 2 to 100 characters in length, and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>doctest</p>
@@ -109,10 +109,12 @@ public class AddACLRuleRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The authorization policy of the ACL rule. Valid values:</p>
+     * <p>The authorization policy of the access control rule. Valid values:</p>
      * <ul>
-     * <li><strong>accept</strong>: allows access.</li>
-     * <li><strong>drop</strong>: denies access.</li>
+     * <li><p><strong>accept</strong>: Allows the traffic.</p>
+     * </li>
+     * <li><p><strong>drop</strong>: Denies the traffic.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -123,9 +125,9 @@ public class AddACLRuleRequest extends TeaModel {
     public String policy;
 
     /**
-     * <p>The priority of the ACL rule.</p>
-     * <p>A smaller value indicates a higher priority. If multiple rules have the same priority, the rule that is first delivered to the Smart Access Gateway device takes precedence.</p>
-     * <p>Valid values: 1 to <strong>100</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The priority of the access control rule.</p>
+     * <p>A smaller value indicates a higher priority. If multiple rules have the same priority, the rule that is first delivered to the Smart Access Gateway device takes effect first.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -134,8 +136,8 @@ public class AddACLRuleRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The ID of the region where the access control list (ACL) is located.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a>.</p>
+     * <p>The region ID of the access control instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -152,7 +154,7 @@ public class AddACLRuleRequest extends TeaModel {
 
     /**
      * <p>The source CIDR block.</p>
-     * <p>For example: 192.168.1.0/24.</p>
+     * <p>The source CIDR block must be in CIDR format, such as 192.168.1.0/24.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -163,8 +165,8 @@ public class AddACLRuleRequest extends TeaModel {
 
     /**
      * <p>The source port range.</p>
-     * <p>Valid values: <strong>-1</strong> and <strong>1</strong> to <strong>65535</strong>.</p>
-     * <p>Use the format 1/200 or 80/80. A value of -1/-1 means all ports.</p>
+     * <p>Valid values: <strong>-1</strong> or <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The source port range is in the format of 1/200 or 80/80. A value of -1/-1 specifies that all ports are allowed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -174,10 +176,12 @@ public class AddACLRuleRequest extends TeaModel {
     public String sourcePortRange;
 
     /**
-     * <p>The type of the ACL rule. Valid values:</p>
+     * <p>The type of the access control rule. Valid values:</p>
      * <ul>
-     * <li><strong>LAN</strong>: (Default) private network. The ACL rule controls traffic on private networks.</li>
-     * <li><strong>WAN</strong>: public network. The ACL rule controls traffic on public networks.</li>
+     * <li><p><strong>LAN</strong>: private network. This is the default value. This value specifies that the access control rule is applied to traffic destined for private IP addresses.</p>
+     * </li>
+     * <li><p><strong>WAN</strong>: public network. This value specifies that the access control rule is applied to traffic destined for public IP addresses.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

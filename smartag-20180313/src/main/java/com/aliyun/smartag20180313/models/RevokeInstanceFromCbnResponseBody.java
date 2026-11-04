@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeInstanceFromCbnResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>07D73949-2508-4169-8C64-7CCDB33871C4</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudConnectNetworksRequest extends TeaModel {
     /**
-     * <p>The instance ID of the Cloud Connect Network (CCN).</p>
+     * <p>The Cloud Connect Network (CCN) instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ccn-l9340rlu5enst*****</p>
@@ -15,7 +15,7 @@ public class DescribeCloudConnectNetworksRequest extends TeaModel {
 
     /**
      * <p>The name of the Cloud Connect Network (CCN) instance.</p>
-     * <p>The name must be 2 to 100 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name must be 2 to 100 characters in length, and must start with a letter or a Chinese character. It can contain digits, underscores (_), periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>ccnname</p>
@@ -39,7 +39,7 @@ public class DescribeCloudConnectNetworksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>. Maximum value: <strong>50</strong>.</p>
+     * <p>The number of entries to return on each page during paging in a paged query. Default value: <strong>10</strong>. Maximum value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -64,7 +64,7 @@ public class DescribeCloudConnectNetworksRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The labels used to filter Cloud Connect Network (CCN) instances.</p>
+     * <p>The label information used to query Cloud Connect Network (CCN) instances.</p>
      * 
      * <strong>example:</strong>
      * <p>DescribeCloudConnectNetworks</p>

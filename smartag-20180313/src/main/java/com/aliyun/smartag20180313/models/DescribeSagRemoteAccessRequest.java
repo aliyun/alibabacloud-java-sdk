@@ -11,7 +11,7 @@ public class DescribeSagRemoteAccessRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>The region ID of the Smart Access Gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeSagRemoteAccessRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The serial number of the SAG device.</p>
+     * <p>The serial number of the Smart Access Gateway device.</p>
      * 
      * <strong>example:</strong>
      * <p>sage62x022502****</p>
@@ -36,7 +36,7 @@ public class DescribeSagRemoteAccessRequest extends TeaModel {
     public String serialNumber;
 
     /**
-     * <p>The ID of the SAG instance.</p>
+     * <p>The Smart Access Gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

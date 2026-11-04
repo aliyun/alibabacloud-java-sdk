@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateEnterpriseCodeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can generate a parameter value from your client and ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class CreateEnterpriseCodeRequest extends TeaModel {
 
     /**
      * <p>The enterprise code.</p>
-     * <p>The enterprise code must be 5 characters in length and contain both letters and digits. The letters can be uppercase or lowercase. The enterprise code must be globally unique and cannot be the same as that of another enterprise.</p>
+     * <p>The enterprise code must be 5 characters in length and contain both letters and digits. Letters can be uppercase or lowercase. The enterprise code must be globally unique and cannot be the same as other enterprise codes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class CreateEnterpriseCodeRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> to query the regions supported by Smart Access Gateway and the corresponding region IDs.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> to query the regions supported by Smart Access Gateway and their corresponding region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

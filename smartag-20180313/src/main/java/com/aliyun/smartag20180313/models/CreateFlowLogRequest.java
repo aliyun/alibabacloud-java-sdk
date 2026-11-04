@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFlowLogRequest extends TeaModel {
     /**
-     * <p>The output interval under active connections. Valid values: <strong>60 to 6000</strong>. Unit: seconds. Default value: <strong>300</strong>.</p>
+     * <p>The output interval for active flows. Valid values: <strong>60</strong> to <strong>6000</strong>. Unit: seconds. Default value: <strong>300</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -14,7 +14,7 @@ public class CreateFlowLogRequest extends TeaModel {
     public Integer activeAging;
 
     /**
-     * <p>The description of the flow log.</p>
+     * <p>The description of the flow log instance.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -23,7 +23,7 @@ public class CreateFlowLogRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The output interval under inactive connections. Valid values: <strong>10 to 600</strong>. Unit: seconds. Default value: <strong>15</strong>.</p>
+     * <p>The output interval for inactive flows. Valid values: <strong>10</strong> to <strong>600</strong>. Unit: seconds. Default value: <strong>15</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -32,8 +32,8 @@ public class CreateFlowLogRequest extends TeaModel {
     public Integer inactiveAging;
 
     /**
-     * <p>The Logstore in Log Service.</p>
-     * <p>If OutputType is set to <strong>sls</strong> or <strong>all</strong>, this parameter is required.</p>
+     * <p>The name of the Simple Log Service Logstore.</p>
+     * <p>This parameter is required when the output type of the flow log is <strong>sls</strong> or <strong>all</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>config-operation-log</p>
@@ -42,7 +42,7 @@ public class CreateFlowLogRequest extends TeaModel {
     public String logstoreName;
 
     /**
-     * <p>The name of the flow log.</p>
+     * <p>The name of the flow log instance.</p>
      * 
      * <strong>example:</strong>
      * <p>sag-flowlog-1</p>
@@ -51,8 +51,8 @@ public class CreateFlowLogRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The IP address of the NetFlow collector where the flow log is stored.</p>
-     * <p>If OutputType is set to <strong>netflow</strong> or <strong>all</strong>, this parameter is required.</p>
+     * <p>The IP address of the NetFlow server that stores the flow log.</p>
+     * <p>This parameter is required when the output type of the flow log is <strong>netflow</strong> or <strong>all</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.2</p>
@@ -61,8 +61,8 @@ public class CreateFlowLogRequest extends TeaModel {
     public String netflowServerIp;
 
     /**
-     * <p>The port number of the NetFlow collector where the flow log is stored. Default value: <strong>9995</strong>.</p>
-     * <p>If OutputType is set to <strong>netflow</strong> or <strong>all</strong>, this parameter is required.</p>
+     * <p>The server port of the NetFlow server that stores the flow log. Default value: <strong>9995</strong>.</p>
+     * <p>This parameter is required when the output type of the flow log is <strong>netflow</strong> or <strong>all</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>9995</p>
@@ -71,8 +71,8 @@ public class CreateFlowLogRequest extends TeaModel {
     public Integer netflowServerPort;
 
     /**
-     * <p>The version of the NetFlow collector where the flow log is stored. Valid values: <strong>V5</strong>, <strong>V9</strong>, and <strong>V10</strong>. Default value: <strong>V9</strong>.</p>
-     * <p>If OutputType is set to <strong>netflow</strong> or <strong>all</strong>, this parameter is required.</p>
+     * <p>The version of the NetFlow protocol used to store the flow log. Valid values: <strong>V5</strong>, <strong>V9</strong>, and <strong>V10</strong>. Default value: <strong>V9</strong>.</p>
+     * <p>This parameter is required when the output type of the flow log is <strong>netflow</strong> or <strong>all</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>V9</p>
@@ -81,11 +81,14 @@ public class CreateFlowLogRequest extends TeaModel {
     public String netflowVersion;
 
     /**
-     * <p>The type of the flow log. Valid values:</p>
+     * <p>The output type of the flow log. Valid values:</p>
      * <ul>
-     * <li><strong>sls</strong>: The flow log is stored in Log Service.</li>
-     * <li><strong>netflow</strong>: The flow log is stored on a NetFlow collector.</li>
-     * <li><strong>all</strong>: The flow log is stored both in Log Service and on a NetFlow collector.</li>
+     * <li><p><strong>sls</strong>: The flow log is stored in Simple Log Service.</p>
+     * </li>
+     * <li><p><strong>netflow</strong>: The flow log is stored on the NetFlow server that you configure.</p>
+     * </li>
+     * <li><p><strong>all</strong>: The flow log is stored in both Simple Log Service and the NetFlow server that you configure.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,8 +104,8 @@ public class CreateFlowLogRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The project in Log Service.</p>
-     * <p>If OutputType is set to <strong>sls</strong> or <strong>all</strong>, this parameter is required.</p>
+     * <p>The name of the Simple Log Service project.</p>
+     * <p>This parameter is required when the output type of the flow log is <strong>sls</strong> or <strong>all</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>sag-flowlog-shanghai</p>
@@ -111,8 +114,8 @@ public class CreateFlowLogRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The ID of the region to which the flow log belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the flow log instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -128,8 +131,8 @@ public class CreateFlowLogRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the region where Log Service is deployed.</p>
-     * <p>If OutputType is set to <strong>sls</strong> or <strong>all</strong>, this parameter is required.</p>
+     * <p>The region ID of Simple Log Service.</p>
+     * <p>This parameter is required when the output type of the flow log is <strong>sls</strong> or <strong>all</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>

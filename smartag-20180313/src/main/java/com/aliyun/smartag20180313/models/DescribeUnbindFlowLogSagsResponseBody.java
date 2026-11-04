@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUnbindFlowLogSagsResponseBody extends TeaModel {
     /**
-     * <p>The total number of the SAG instances.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class DescribeUnbindFlowLogSagsResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C850C10E-9856-45FF-8640-80288BA467DF</p>

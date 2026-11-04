@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateSmartAccessGatewaySoftwareRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically complete the payment of the order. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment for the bills of the Smart Access Gateway app instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong> (default): no</li>
+     * <li><strong>true</strong>: yes.</li>
+     * <li><strong>false</strong> (default): no.</li>
      * </ul>
-     * <p>If you set the parameter to false, go to Billing Management to complete the payment after you call this operation. The instance is created only after you complete the payment.</p>
+     * <p>If you set this parameter to false, you must go to the Orders page in the console to complete the payment after you invoke this operation. Otherwise, the instance cannot be created.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class CreateSmartAccessGatewaySoftwareRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The billing method of the SAG app instance. Set the value to <strong>PREPAY</strong>. This value indicates that the SAG app instance is a subscription resource.</p>
+     * <p>The billing method of the Smart Access Gateway app instance. Valid value: <strong>PREPAY</strong> (upfront). This value serves as an identity indicating that the Smart Access Gateway app instance is a resource that requires upfront payment before use.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,9 +30,9 @@ public class CreateSmartAccessGatewaySoftwareRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The size of the free data plan that is allocated to each client account per month. Unit: GB. Valid value: <strong>5</strong>.</p>
+     * <p>The monthly data plan provided for each client account. Unit: GB. Valid value: <strong>5</strong>.</p>
      * <blockquote>
-     * <p> This value specifies that a free data plan of 5 GB is allocated to each client account per month.</p>
+     * <p>Currently, only a free monthly data plan of 5 GB is supported for each client account.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -49,8 +49,7 @@ public class CreateSmartAccessGatewaySoftwareRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The subscription duration of the SAG app instance. Unit: months.</p>
-     * <p>Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
+     * <p>The purchase duration of the Smart Access Gateway app instance. Unit: months. Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +59,7 @@ public class CreateSmartAccessGatewaySoftwareRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The ID of the region where you want to create the SAG app instance.</p>
+     * <p>The region ID of the Smart Access Gateway app instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +75,7 @@ public class CreateSmartAccessGatewaySoftwareRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The maximum number of client accounts that can be created on the SAG app instance.</p>
+     * <p>The number of client accounts for the Smart Access Gateway app instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

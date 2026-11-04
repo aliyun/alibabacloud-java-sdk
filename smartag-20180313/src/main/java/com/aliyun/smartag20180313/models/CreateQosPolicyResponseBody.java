@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateQosPolicyResponseBody extends TeaModel {
     /**
-     * <p>The description of the traffic classification rule for the QoS policy.</p>
+     * <p>The description of the traffic classification rule.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -38,7 +38,7 @@ public class CreateQosPolicyResponseBody extends TeaModel {
     public CreateQosPolicyResponseBodyDpiSignatureIds dpiSignatureIds;
 
     /**
-     * <p>The time when the traffic classification rule expires.</p>
+     * <p>The end time when the traffic classification rule of the quality of service (QoS) policy takes effect. The time follows the ISO 8601 standard and uses the UTC+8 time zone, in the YYYY-MM-DDThh:mm:ss+0800 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-09-14T16:41:33+0800</p>
@@ -47,7 +47,7 @@ public class CreateQosPolicyResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The protocol type to which the traffic classification rule applies.</p>
+     * <p>The protocol type applied to the traffic classification rule.</p>
      * 
      * <strong>example:</strong>
      * <p>TCP</p>
@@ -56,7 +56,7 @@ public class CreateQosPolicyResponseBody extends TeaModel {
     public String ipProtocol;
 
     /**
-     * <p>The name of the traffic classification rule for the QoS policy.</p>
+     * <p>The name of the traffic classification rule.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -65,7 +65,7 @@ public class CreateQosPolicyResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The priority of the rate limiting rule to which the traffic classification rule belongs.</p>
+     * <p>The priority of the bandwidth throttling rule to which the traffic classification rule belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -119,7 +119,7 @@ public class CreateQosPolicyResponseBody extends TeaModel {
     public String sourcePortRange;
 
     /**
-     * <p>The time when the traffic classification rule takes effect.</p>
+     * <p>The effective start time of the traffic classification rule for the QoS policy. The time is expressed in the ISO 8601 standard and uses the UTC+8 time zone in the YYYY-MM-DDThh:mm:ss+0800 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-14T16:41:33+0800</p>

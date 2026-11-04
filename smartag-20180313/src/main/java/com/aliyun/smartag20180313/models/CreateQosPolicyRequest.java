@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateQosPolicyRequest extends TeaModel {
     /**
      * <p>The description of the traffic classification rule for the QoS policy.</p>
-     * <p>The description must be 1 to 512 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
+     * <p>The description must be 1 to 512 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter or a Chinese character.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -16,7 +16,7 @@ public class CreateQosPolicyRequest extends TeaModel {
 
     /**
      * <p>The destination CIDR block.</p>
-     * <p>The destination CIDR block is in CIDR notation. Example: 192.168.10.0/24.</p>
+     * <p>The destination CIDR block must be in CIDR format. Example: 192.168.10.0/24.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,11 +28,11 @@ public class CreateQosPolicyRequest extends TeaModel {
     /**
      * <p>The destination port range.</p>
      * <p>Valid values: <strong>-1</strong> or <strong>1</strong> to <strong>65535</strong>.</p>
-     * <p>Examples of destination port range formats:</p>
+     * <p>Examples of the destination port range format:</p>
      * <ul>
-     * <li><strong>1/200</strong>: port range 1 to 200.</li>
-     * <li><strong>80/80</strong>: port 80.</li>
-     * <li><strong>-1/-1</strong>: all ports.</li>
+     * <li><strong>1/200</strong>: specifies ports 1 to 200.</li>
+     * <li><strong>80/80</strong>: specifies port 80.</li>
+     * <li><strong>-1/-1</strong>: specifies all ports.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -61,8 +61,8 @@ public class CreateQosPolicyRequest extends TeaModel {
     public java.util.List<String> dpiSignatureIds;
 
     /**
-     * <p>The time when the traffic classification rule expires.</p>
-     * <p>The time is expressed in ISO 8601 format and uses UTC+8. Format: <code>YYYY-MM-DDThh:mm:ss+0800</code>.</p>
+     * <p>The end time when the traffic classification rule of the quality of service policy takes effect.</p>
+     * <p>The time is specified in the ISO 8601 standard in the UTC+8 time zone. Format: <code>YYYY-MM-DDThh:mm:ss+0800</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-09-14T16:41:33+0800</p>
@@ -71,8 +71,8 @@ public class CreateQosPolicyRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The protocol type to which the traffic classification rule applies.</p>
-     * <p>For the protocol types supported by the traffic classification rule, refer to the console.</p>
+     * <p>The protocol type applied to the traffic classification rule.</p>
+     * <p>For the protocol types supported by traffic classification rules, refer to the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,7 +83,7 @@ public class CreateQosPolicyRequest extends TeaModel {
 
     /**
      * <p>The name of the traffic classification rule for the QoS policy.</p>
-     * <p>The name must be 2 to 100 characters in length and must start with a letter or a Chinese character. It can contain digits, hyphens (-), and underscores (_).</p>
+     * <p>The name must be 2 to 100 characters in length and start with a letter or a Chinese character. It can contain digits, hyphens (-), and underscores (_).</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -98,7 +98,7 @@ public class CreateQosPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The priority of the rate limiting rule to which the traffic classification rule belongs.</p>
+     * <p>The priority of the bandwidth throttling rule to which the traffic classification rule belongs.</p>
      * <p>Valid values: <strong>1</strong> to <strong>3</strong>. A smaller value indicates a higher priority.</p>
      * <p>This parameter is required.</p>
      * 
@@ -119,7 +119,7 @@ public class CreateQosPolicyRequest extends TeaModel {
     public String qosId;
 
     /**
-     * <p>The region ID of the QoS policy instance.</p>
+     * <p>The region ID of the QoS policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -136,7 +136,7 @@ public class CreateQosPolicyRequest extends TeaModel {
 
     /**
      * <p>The source CIDR block.</p>
-     * <p>The source CIDR block is in CIDR notation. Example: 192.168.1.0/24.</p>
+     * <p>The source CIDR block must be in CIDR format. Example: 192.168.1.0/24.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -148,11 +148,11 @@ public class CreateQosPolicyRequest extends TeaModel {
     /**
      * <p>The source port range.</p>
      * <p>Valid values: <strong>-1</strong> or <strong>1</strong> to <strong>65535</strong>.</p>
-     * <p>Examples of source port range formats:</p>
+     * <p>Examples of the source port range format:</p>
      * <ul>
-     * <li><strong>1/200</strong>: port range 1 to 200.</li>
-     * <li><strong>80/80</strong>: port 80.</li>
-     * <li><strong>-1/-1</strong>: all ports.</li>
+     * <li><strong>1/200</strong>: specifies ports 1 to 200.</li>
+     * <li><strong>80/80</strong>: specifies port 80.</li>
+     * <li><strong>-1/-1</strong>: specifies all ports.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -163,8 +163,8 @@ public class CreateQosPolicyRequest extends TeaModel {
     public String sourcePortRange;
 
     /**
-     * <p>The effective period start time of the traffic categorization rule for the QoS policy.</p>
-     * <p>The time is expressed in ISO 8601 format and uses UTC+8. Format: <code>YYYY-MM-DDThh:mm:ss+0800</code>.</p>
+     * <p>The start time of the effective period for the traffic classification rule of the QoS policy.</p>
+     * <p>Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss+0800 format. The time must be in UTC+8.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-14T16:41:33+0800</p>

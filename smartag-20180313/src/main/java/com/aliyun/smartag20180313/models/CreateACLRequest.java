@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateACLRequest extends TeaModel {
     /**
-     * <p>The type of the Smart Access Gateway instance to be associated with the access control instance. Valid values:</p>
+     * <p>The type of the Smart Access Gateway (SAG) instance to be associated with the access control instance. Valid values:</p>
      * <ul>
-     * <li><strong>acl-hardware</strong> (default): Smart Access Gateway device instance.</li>
+     * <li><strong>acl-hardware</strong> (default): Smart Access Gateway hardware instance.</li>
      * <li><strong>acl-software</strong>: SAG app instance.</li>
      * </ul>
      * 
@@ -18,8 +18,7 @@ public class CreateACLRequest extends TeaModel {
     public String aclType;
 
     /**
-     * <p>The name of the access control instance.</p>
-     * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
+     * <p>The name of the access control instance. The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,8 +34,7 @@ public class CreateACLRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the access control instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query region IDs.</p>
+     * <p>The region ID of the access control instance. You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

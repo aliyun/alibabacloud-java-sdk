@@ -5,29 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListDpiGroupsRequest extends TeaModel {
     /**
-     * <p>The application group ID.</p>
-     * <p>You can query information about one or more application groups by specifying their IDs. You can query up to 10 application groups at a time.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
+     * <p>The list of application group IDs. You can specify one or more application group IDs to query their information. You can query up to 10 application groups at a time.</p>
      */
     @NameInMap("DpiGroupIds")
     public java.util.List<String> dpiGroupIds;
 
     /**
-     * <p>The application group name.</p>
-     * <p>You can query information about one or more application groups by specifying their names. You can query up to 10 application groups at a time.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>P2P</p>
+     * <p>The list of application group names. You can specify one or more application group names to query their information. You can query up to 10 application groups at a time.</p>
      */
     @NameInMap("DpiGroupNames")
     public java.util.List<String> dpiGroupNames;
 
     /**
-     * <p>The number of application groups to return on each page.</p>
-     * <p>Valid values: <strong>1</strong> to <strong>100</strong>.</p>
-     * <p>Default value: <strong>20</strong>.</p>
+     * <p>The number of application groups to return on each page in a paged query. This parameter is used for paging. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -36,7 +26,7 @@ public class ListDpiGroupsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results.</p>
+     * <p>The token used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>FFPSpX59Eb****</p>
@@ -51,8 +41,7 @@ public class ListDpiGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID.</p>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the regions and their IDs that Smart Access Gateway supports.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the regions supported by Smart Access Gateway and their corresponding region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

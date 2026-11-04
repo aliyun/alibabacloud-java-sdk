@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ViewSmartAccessGatewayDnsForwardsRequest extends TeaModel {
     /**
-     * <p>The ID of the region in which the SAG instance resides.</p>
+     * <p>The region ID of the Smart Access Gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ViewSmartAccessGatewayDnsForwardsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the Smart Access Gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ViewSmartAccessGatewayDnsForwardsRequest extends TeaModel {
     public String sagInsId;
 
     /**
-     * <p>The serial number (SN) of the device.</p>
+     * <p>The serial number of the device.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

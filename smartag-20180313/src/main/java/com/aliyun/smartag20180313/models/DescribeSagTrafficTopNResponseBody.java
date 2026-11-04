@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSagTrafficTopNResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AFF7E5A6-6897-4FDC-A5A8-1978B5B3E545</p>
@@ -14,7 +14,7 @@ public class DescribeSagTrafficTopNResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the data transfer rate of the SAG instance.</p>
+     * <p>The list of traffic rate information for Smart Access Gateway instances.</p>
      */
     @NameInMap("TrafficTopN")
     public java.util.List<DescribeSagTrafficTopNResponseBodyTrafficTopN> trafficTopN;
@@ -42,7 +42,7 @@ public class DescribeSagTrafficTopNResponseBody extends TeaModel {
 
     public static class DescribeSagTrafficTopNResponseBodyTrafficTopN extends TeaModel {
         /**
-         * <p>The ID of the SAG instance.</p>
+         * <p>The instance ID of the Smart Access Gateway instance.</p>
          * 
          * <strong>example:</strong>
          * <p>sag-whfn****</p>
@@ -51,7 +51,7 @@ public class DescribeSagTrafficTopNResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the SAG instance.</p>
+         * <p>The name of the Smart Access Gateway instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -60,7 +60,7 @@ public class DescribeSagTrafficTopNResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the region where the SAG instance is deployed.</p>
+         * <p>The region ID of the Smart Access Gateway instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -69,7 +69,7 @@ public class DescribeSagTrafficTopNResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The data transfer rate of the SAG instance. Unit: bit/s</p>
+         * <p>The traffic rate of the Smart Access Gateway instance. Unit: bps.</p>
          * 
          * <strong>example:</strong>
          * <p>3866.6666666666665</p>

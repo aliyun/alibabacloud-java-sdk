@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSagRemoteAccessResponseBody extends TeaModel {
     /**
-     * <p>The error code. The 200 error code indicates that the query task is successful.</p>
+     * <p>The error code. 200 indicates that the query task succeeded.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeSagRemoteAccessResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error message. The Successful error message indicates that the query task is successful.</p>
+     * <p>The error message. Successful indicates that the query task succeeded.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -26,7 +26,7 @@ public class DescribeSagRemoteAccessResponseBody extends TeaModel {
     public DescribeSagRemoteAccessResponseBodyRemoteAccesses remoteAccesses;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E38E950D-28A4-4C41-9428-A8908EC6AE5C</p>
@@ -35,7 +35,7 @@ public class DescribeSagRemoteAccessResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the SAG instance.</p>
+     * <p>The Smart Access Gateway instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sag-1um5x5nwhilymw****</p>
@@ -44,9 +44,9 @@ public class DescribeSagRemoteAccessResponseBody extends TeaModel {
     public String smartAGId;
 
     /**
-     * <p>Indicates whether the query task is successful. Valid values:</p>
+     * <p>Indicates whether the query task succeeded.</p>
      * <ul>
-     * <li><strong>true</strong>: The query task is successful.</li>
+     * <li><strong>true</strong>: The query task succeeded.</li>
      * <li><strong>false</strong>: The query task failed.</li>
      * </ul>
      * 

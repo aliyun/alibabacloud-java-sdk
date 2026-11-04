@@ -11,7 +11,7 @@ public class ListDpiGroupsResponseBody extends TeaModel {
     public java.util.List<ListDpiGroupsResponseBodyDpiGroup> dpiGroup;
 
     /**
-     * <p>The token for the next page of results.</p>
+     * <p>The token used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>FFPSpX59Ebw****</p>
@@ -29,7 +29,7 @@ public class ListDpiGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of application groups returned.</p>
+     * <p>The total number of application groups returned by the current query.</p>
      * 
      * <strong>example:</strong>
      * <p>22</p>
@@ -76,7 +76,7 @@ public class ListDpiGroupsResponseBody extends TeaModel {
 
     public static class ListDpiGroupsResponseBodyDpiGroup extends TeaModel {
         /**
-         * <p>The ID of the application group.</p>
+         * <p>The application group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -85,7 +85,7 @@ public class ListDpiGroupsResponseBody extends TeaModel {
         public String dpiGroupId;
 
         /**
-         * <p>The name of the application group.</p>
+         * <p>The application group name.</p>
          * 
          * <strong>example:</strong>
          * <p>P2P</p>
@@ -94,7 +94,7 @@ public class ListDpiGroupsResponseBody extends TeaModel {
         public String dpiGroupName;
 
         /**
-         * <p>The minimum version of the deep packet inspection (DPI) engine that supports the application group.</p>
+         * <p>The minimum database engine version of the DPI engine that supports the application group.</p>
          * 
          * <strong>example:</strong>
          * <p>0-0.0.1</p>
@@ -103,7 +103,7 @@ public class ListDpiGroupsResponseBody extends TeaModel {
         public String minEngineVersion;
 
         /**
-         * <p>The minimum version of the signature database that supports the application group.</p>
+         * <p>The minimum signature database version that supports the application group.</p>
          * 
          * <strong>example:</strong>
          * <p>20201117_1_0-0.0.1</p>

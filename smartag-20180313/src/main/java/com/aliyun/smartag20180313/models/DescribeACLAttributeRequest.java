@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeACLAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the access control list (ACL) instance.</p>
+     * <p>The ID of the access control instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class DescribeACLAttributeRequest extends TeaModel {
     public String aclId;
 
     /**
-     * <p>The direction of the access control rule. Valid values:</p>
+     * <p>The direction in which the access control rule is applied. Valid values:</p>
      * <ul>
-     * <li><strong>in</strong>: inbound. Refers to traffic from external sources accessing the local branch where the Smart Access Gateway (SAG) instance is deployed.</li>
-     * <li><strong>out</strong>: outbound. Refers to traffic from the local branch where the SAG instance is deployed accessing external destinations.</li>
+     * <li><strong>in</strong>: inbound, which indicates traffic from external networks to the local branch where the Smart Access Gateway instance is deployed.</li>
+     * <li><strong>out</strong>: outbound, which indicates traffic from the local branch where the Smart Access Gateway instance is deployed to external networks.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,10 +28,10 @@ public class DescribeACLAttributeRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The name of the ACL instance.</p>
-     * <p>The name must be 2 to 100 characters in length and must start with an uppercase letter, a lowercase letter, or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</p>
+     * <p>The name of the access control instance.</p>
+     * <p>The name must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter or Chinese character.</p>
      * <blockquote>
-     * <p>This parameter supports fuzzy search.</p>
+     * <p>Fuzzy search is supported for this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class DescribeACLAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number in a paginated query. Default value: <strong>1</strong>.</p>
+     * <p>The page number for a paging query. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,7 +65,7 @@ public class DescribeACLAttributeRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of access control rule entries to display per page in a paginated query.</p>
+     * <p>The number of access control rule entries to return on each page in a paging query.</p>
      * <p>Valid values: <strong>1</strong> to <strong>50</strong>.</p>
      * <p>Default value: <strong>10</strong>.</p>
      * 
@@ -76,7 +76,7 @@ public class DescribeACLAttributeRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the access control list (ACL) instance.</p>
+     * <p>The region ID of the access control instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -9,18 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("eu-central-1", "smartag.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "smartag.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "smartag.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "smartag.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "smartag.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "smartag.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "smartag.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "smartag.ap-southeast-2.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "smartag.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "smartag.ap-northeast-1.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("smartag", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -40,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Activates a Smart Access Gateway (SAG) device.</p>
+     * <p>Activates a Smart Access Gateway device.</p>
      * 
      * @param request ActivateSmartAccessGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -92,7 +80,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Activates a Smart Access Gateway (SAG) device.</p>
+     * <p>Activates a Smart Access Gateway device.</p>
      * 
      * @param request ActivateSmartAccessGatewayRequest
      * @return ActivateSmartAccessGatewayResponse
@@ -104,7 +92,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables a flow log.</p>
+     * <p>Activates a flow log.</p>
      * 
      * @param request ActiveFlowLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -156,7 +144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables a flow log.</p>
+     * <p>Activates a flow log.</p>
      * 
      * @param request ActiveFlowLogRequest
      * @return ActiveFlowLogResponse
@@ -284,7 +272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a destination network address translation (DNAT) entry to a Smart Access Gateway (SAG) instance.</p>
+     * <p>Adds a DNAT entry to a Smart Access Gateway instance.</p>
      * 
      * @param request AddDnatEntryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -360,7 +348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a destination network address translation (DNAT) entry to a Smart Access Gateway (SAG) instance.</p>
+     * <p>Adds a DNAT entry to a Smart Access Gateway instance.</p>
      * 
      * @param request AddDnatEntryRequest
      * @return AddDnatEntryResponse
@@ -372,7 +360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds DNS forwarding configurations to an SCG5000 or SCG5000-5G instance. The device version must be 3.4.2 or later.</p>
+     * <p>Adds DNS forwarding for Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</p>
      * 
      * @param request AddSmartAccessGatewayDnsForwardRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -440,7 +428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds DNS forwarding configurations to an SCG5000 or SCG5000-5G instance. The device version must be 3.4.2 or later.</p>
+     * <p>Adds DNS forwarding for Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</p>
      * 
      * @param request AddSmartAccessGatewayDnsForwardRequest
      * @return AddSmartAccessGatewayDnsForwardResponse
@@ -452,7 +440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a source network address translation (SNAT) entry to a Smart Access Gateway (SAG) instance.</p>
+     * <p>Adds a private SNAT entry to a Smart Access Gateway instance.</p>
      * 
      * @param request AddSnatEntryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -512,7 +500,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a source network address translation (SNAT) entry to a Smart Access Gateway (SAG) instance.</p>
+     * <p>Adds a private SNAT entry to a Smart Access Gateway instance.</p>
      * 
      * @param request AddSnatEntryRequest
      * @return AddSnatEntryResponse
@@ -524,7 +512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates an access control list (ACL) with a Smart Access Gateway (SAG) instance.</p>
+     * <p>Associates an access control list with a Smart Access Gateway instance.</p>
      * 
      * @param request AssociateACLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -580,7 +568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates an access control list (ACL) with a Smart Access Gateway (SAG) instance.</p>
+     * <p>Associates an access control list with a Smart Access Gateway instance.</p>
      * 
      * @param request AssociateACLRequest
      * @return AssociateACLResponse
@@ -660,7 +648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies a Quality of Service (QoS) policy to a Smart Access Gateway (SAG) instance.</p>
+     * <p>Associates a QoS policy with a Smart Access Gateway instance.</p>
      * 
      * @param request AssociateQosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -716,7 +704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies a Quality of Service (QoS) policy to a Smart Access Gateway (SAG) instance.</p>
+     * <p>Associates a QoS policy with a Smart Access Gateway instance.</p>
      * 
      * @param request AssociateQosRequest
      * @return AssociateQosResponse
@@ -728,17 +716,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you associate a bandwidth plan for application acceleration with an SAG instance, make sure that the following requirements are met:</p>
+     * <p>Before you associate a bandwidth plan for application acceleration with a Smart Access Gateway instance, make sure that the following conditions are met:</p>
      * <ul>
-     * <li>If you want to associate a bandwidth plan for application acceleration with an SAG CPE instance, the version of the SAG device associated with the SAG CPE instance must be 2.4.0 or later.
-     * If the version of the SAG device is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/163948.html">Update the version of an SAG device</a>.</li>
-     * <li>If you want to associate a bandwidth plan for application acceleration with an SAG app instance, the version of the SAG app must be 2.4.0 or later.
-     * If the version of the SAG app is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/102544.html">Install the SAG app</a>.</li>
-     * <li>The SAG instance to be associated is in the available state.</li>
+     * <li>If you want to associate the bandwidth plan with a Smart Access Gateway hardware instance, make sure that the version of the Smart Access Gateway device is 2.4.0 or later.
+     * If the version of your Smart Access Gateway device is earlier than 2.4.0, upgrade the device. For more information, see <a href="https://help.aliyun.com/document_detail/163948.html">Update the version</a>.</li>
+     * <li>If you want to associate the bandwidth plan with a SAG app instance, make sure that the version of the SAG app client you downloaded is 2.4.0 or later.
+     * If the version of your client is earlier than 2.4.0, upgrade the client. For more information, see <a href="https://help.aliyun.com/document_detail/102544.html">Install the client</a>.</li>
+     * <li>The Smart Access Gateway instance that you want to associate is in the Available state.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates a bandwidth plan for application acceleration with a Smart Access Gateway (SAG) instance.</p>
+     * <p>Associates a bandwidth plan for application acceleration with a Smart Access Gateway instance.</p>
      * 
      * @param request AssociateSmartAGWithApplicationBandwidthPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -786,17 +774,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you associate a bandwidth plan for application acceleration with an SAG instance, make sure that the following requirements are met:</p>
+     * <p>Before you associate a bandwidth plan for application acceleration with a Smart Access Gateway instance, make sure that the following conditions are met:</p>
      * <ul>
-     * <li>If you want to associate a bandwidth plan for application acceleration with an SAG CPE instance, the version of the SAG device associated with the SAG CPE instance must be 2.4.0 or later.
-     * If the version of the SAG device is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/163948.html">Update the version of an SAG device</a>.</li>
-     * <li>If you want to associate a bandwidth plan for application acceleration with an SAG app instance, the version of the SAG app must be 2.4.0 or later.
-     * If the version of the SAG app is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/102544.html">Install the SAG app</a>.</li>
-     * <li>The SAG instance to be associated is in the available state.</li>
+     * <li>If you want to associate the bandwidth plan with a Smart Access Gateway hardware instance, make sure that the version of the Smart Access Gateway device is 2.4.0 or later.
+     * If the version of your Smart Access Gateway device is earlier than 2.4.0, upgrade the device. For more information, see <a href="https://help.aliyun.com/document_detail/163948.html">Update the version</a>.</li>
+     * <li>If you want to associate the bandwidth plan with a SAG app instance, make sure that the version of the SAG app client you downloaded is 2.4.0 or later.
+     * If the version of your client is earlier than 2.4.0, upgrade the client. For more information, see <a href="https://help.aliyun.com/document_detail/102544.html">Install the client</a>.</li>
+     * <li>The Smart Access Gateway instance that you want to associate is in the Available state.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates a bandwidth plan for application acceleration with a Smart Access Gateway (SAG) instance.</p>
+     * <p>Associates a bandwidth plan for application acceleration with a Smart Access Gateway instance.</p>
      * 
      * @param request AssociateSmartAGWithApplicationBandwidthPackageRequest
      * @return AssociateSmartAGWithApplicationBandwidthPackageResponse
@@ -808,17 +796,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</p>
+     * <p>Attaches a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</p>
+     * <p>Attaches a Cloud Connect Network (CCN) to a Cloud Enterprise Network (CEN).</p>
      * 
-     * @param request AttachCcnInstanceToCenRequest
+     * @param tmpReq AttachCcnInstanceToCenRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AttachCcnInstanceToCenResponse
      */
-    public AttachCcnInstanceToCenResponse attachCcnInstanceToCenWithOptions(AttachCcnInstanceToCenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public AttachCcnInstanceToCenResponse attachCcnInstanceToCenWithOptions(AttachCcnInstanceToCenRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AttachCcnInstanceToCenShrinkRequest request = new AttachCcnInstanceToCenShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.regionBindingList)) {
+            request.regionBindingListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.regionBindingList, "RegionBindingList", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ccnId)) {
             query.put("CcnId", request.ccnId);
@@ -826,6 +820,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.cenId)) {
             query.put("CenId", request.cenId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cidrAllocationMode)) {
+            query.put("CidrAllocationMode", request.cidrAllocationMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionBindingListShrink)) {
+            query.put("RegionBindingList", request.regionBindingListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -855,10 +857,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</p>
+     * <p>Attaches a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</p>
+     * <p>Attaches a Cloud Connect Network (CCN) to a Cloud Enterprise Network (CEN).</p>
      * 
      * @param request AttachCcnInstanceToCenRequest
      * @return AttachCcnInstanceToCenResponse
@@ -938,7 +940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates a Smart Access Gateway (SAG) instance with a Cloud Connect Network (CCN) instance.</p>
+     * <p>Binds a Smart Access Gateway (SAG) instance to a specified Cloud Connect Network (CCN).</p>
      * 
      * @param request BindSmartAccessGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -998,7 +1000,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates a Smart Access Gateway (SAG) instance with a Cloud Connect Network (CCN) instance.</p>
+     * <p>Binds a Smart Access Gateway (SAG) instance to a specified Cloud Connect Network (CCN).</p>
      * 
      * @param request BindSmartAccessGatewayRequest
      * @return BindSmartAccessGatewayResponse
@@ -1086,7 +1088,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resets the password of a virtual customer-premises equipment (vCPE) device of Smart Access Gateway (SAG).</p>
+     * <p>Resets the key of a Smart Access Gateway (vCPE) device.</p>
      * 
      * @param request ClearSagCipherRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1142,7 +1144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resets the password of a virtual customer-premises equipment (vCPE) device of Smart Access Gateway (SAG).</p>
+     * <p>Resets the key of a Smart Access Gateway (vCPE) device.</p>
      * 
      * @param request ClearSagCipherRequest
      * @return ClearSagCipherResponse
@@ -1218,7 +1220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an access control instance by calling the CreateACL operation.</p>
+     * <p>Creates an access control instance.</p>
      * 
      * @param request CreateACLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1274,7 +1276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an access control instance by calling the CreateACL operation.</p>
+     * <p>Creates an access control instance.</p>
      * 
      * @param request CreateACLRequest
      * @return CreateACLResponse
@@ -1368,7 +1370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an enterprise code by calling CreateEnterpriseCode.</p>
+     * <p>Creates an enterprise code.</p>
      * 
      * @param request CreateEnterpriseCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1408,7 +1410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an enterprise code by calling CreateEnterpriseCode.</p>
+     * <p>Creates an enterprise code.</p>
      * 
      * @param request CreateEnterpriseCodeRequest
      * @return CreateEnterpriseCodeResponse
@@ -1420,7 +1422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a flow log.</p>
+     * <p>Creates a flow log instance.</p>
      * 
      * @param request CreateFlowLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1512,7 +1514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a flow log.</p>
+     * <p>Creates a flow log instance.</p>
      * 
      * @param request CreateFlowLogRequest
      * @return CreateFlowLogResponse
@@ -1639,15 +1641,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <ul>
-     * <li>Currently, only SAG-1000 devices with software version 2.7.0 or later support the probe monitoring feature.</li>
-     * <li>Before creating a probe task, enable the advanced monitoring feature for the Smart Access Gateway instance. You can call the <a href="https://help.aliyun.com/document_detail/476404.html">SetAdvancedMonitorState</a> operation to set the advanced monitoring status.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a probe task for a specified Smart Access Gateway device.</p>
-     * 
      * @param request CreateProbeTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateProbeTaskResponse
@@ -1717,15 +1710,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <ul>
-     * <li>Currently, only SAG-1000 devices with software version 2.7.0 or later support the probe monitoring feature.</li>
-     * <li>Before creating a probe task, enable the advanced monitoring feature for the Smart Access Gateway instance. You can call the <a href="https://help.aliyun.com/document_detail/476404.html">SetAdvancedMonitorState</a> operation to set the advanced monitoring status.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates a probe task for a specified Smart Access Gateway device.</p>
-     * 
      * @param request CreateProbeTaskRequest
      * @return CreateProbeTaskResponse
      */
@@ -1904,10 +1888,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you create a 5-tuple rule for a QoS policy, make sure that you have created a rate limiting rule for the QoS policy. For more information, see <a href="https://help.aliyun.com/document_detail/131806.html">CreateQosCar</a>.</p>
+     * <p>Before you create 5-tuple rules for a QoS policy, make sure that you have created a bandwidth throttling rule for the QoS policy. For more information, see <a href="https://help.aliyun.com/document_detail/131806.html">CreateQosCar</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a traffic classification rule for a QoS policy by calling the CreateQosPolicy operation.</p>
+     * <p>Creates a traffic classification rule for a quality of service (QoS) policy.</p>
      * 
      * @param request CreateQosPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2007,10 +1991,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you create a 5-tuple rule for a QoS policy, make sure that you have created a rate limiting rule for the QoS policy. For more information, see <a href="https://help.aliyun.com/document_detail/131806.html">CreateQosCar</a>.</p>
+     * <p>Before you create 5-tuple rules for a QoS policy, make sure that you have created a bandwidth throttling rule for the QoS policy. For more information, see <a href="https://help.aliyun.com/document_detail/131806.html">CreateQosCar</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a traffic classification rule for a QoS policy by calling the CreateQosPolicy operation.</p>
+     * <p>Creates a traffic classification rule for a quality of service (QoS) policy.</p>
      * 
      * @param request CreateQosPolicyRequest
      * @return CreateQosPolicyResponse
@@ -2022,7 +2006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a subinterface for an Express Connect circuit.</p>
+     * <p>Creates a dedicated connection sub-interface.</p>
      * 
      * @param request CreateSagExpressConnectInterfaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2094,7 +2078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a subinterface for an Express Connect circuit.</p>
+     * <p>Creates a dedicated connection sub-interface.</p>
      * 
      * @param request CreateSagExpressConnectInterfaceRequest
      * @return CreateSagExpressConnectInterfaceResponse
@@ -2189,9 +2173,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Configures a service address for a specified Smart Access Gateway device.</p>
-     * 
      * @param request CreateServiceAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateServiceAddressResponse
@@ -2237,9 +2218,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Configures a service address for a specified Smart Access Gateway device.</p>
-     * 
      * @param request CreateServiceAddressRequest
      * @return CreateServiceAddressResponse
      */
@@ -2902,14 +2880,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Before you delete an enterprise code, note the following information:</p>
      * <ul>
-     * <li>Default enterprise codes cannot be deleted.
-     * If the enterprise code that you want to delete is a default enterprise code, change it to a common enterprise code first, and then delete it. For more information, see <a href="https://help.aliyun.com/document_detail/197700.html">UpdateEnterpriseCode</a>.</li>
-     * <li>Enterprise codes that are attached to Smart Access Gateway app instances cannot be deleted.
-     * If the enterprise code that you want to delete is attached to Smart Access Gateway app instances, change the enterprise code of the Smart Access Gateway app instances to another enterprise code first, and then delete the current enterprise code. For more information, see <a href="https://help.aliyun.com/document_detail/197701.html">UpdateSmartAGEnterpriseCode</a>.</li>
+     * <li>You cannot delete the default enterprise code.
+     * If the enterprise code you want to delete is the default enterprise code, change the default enterprise code to a regular enterprise code and then delete it. For more information, see <a href="https://help.aliyun.com/document_detail/197700.html">UpdateEnterpriseCode</a>.</li>
+     * <li>You cannot delete an enterprise code that is attached to a Smart Access Gateway app instance.
+     * If the enterprise code you want to delete has an attached Smart Access Gateway app instance, change the enterprise code of the Smart Access Gateway app instance to another enterprise code and then delete the current enterprise code. For more information, see <a href="https://help.aliyun.com/document_detail/197701.html">UpdateSmartAGEnterpriseCode</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a specified enterprise code by calling DeleteEnterpriseCode.</p>
+     * <p>Deletes a specified enterprise code.</p>
      * 
      * @param request DeleteEnterpriseCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2951,14 +2929,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Before you delete an enterprise code, note the following information:</p>
      * <ul>
-     * <li>Default enterprise codes cannot be deleted.
-     * If the enterprise code that you want to delete is a default enterprise code, change it to a common enterprise code first, and then delete it. For more information, see <a href="https://help.aliyun.com/document_detail/197700.html">UpdateEnterpriseCode</a>.</li>
-     * <li>Enterprise codes that are attached to Smart Access Gateway app instances cannot be deleted.
-     * If the enterprise code that you want to delete is attached to Smart Access Gateway app instances, change the enterprise code of the Smart Access Gateway app instances to another enterprise code first, and then delete the current enterprise code. For more information, see <a href="https://help.aliyun.com/document_detail/197701.html">UpdateSmartAGEnterpriseCode</a>.</li>
+     * <li>You cannot delete the default enterprise code.
+     * If the enterprise code you want to delete is the default enterprise code, change the default enterprise code to a regular enterprise code and then delete it. For more information, see <a href="https://help.aliyun.com/document_detail/197700.html">UpdateEnterpriseCode</a>.</li>
+     * <li>You cannot delete an enterprise code that is attached to a Smart Access Gateway app instance.
+     * If the enterprise code you want to delete has an attached Smart Access Gateway app instance, change the enterprise code of the Smart Access Gateway app instance to another enterprise code and then delete the current enterprise code. For more information, see <a href="https://help.aliyun.com/document_detail/197701.html">UpdateSmartAGEnterpriseCode</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a specified enterprise code by calling DeleteEnterpriseCode.</p>
+     * <p>Deletes a specified enterprise code.</p>
      * 
      * @param request DeleteEnterpriseCodeRequest
      * @return DeleteEnterpriseCodeResponse
@@ -2970,7 +2948,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a flow log.</p>
+     * <p>Deletes a flow log instance.</p>
      * 
      * @param request DeleteFlowLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3022,7 +3000,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a flow log.</p>
+     * <p>Deletes a flow log instance.</p>
      * 
      * @param request DeleteFlowLogRequest
      * @return DeleteFlowLogResponse
@@ -3097,9 +3075,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Deletes a probe task.</p>
-     * 
      * @param request DeleteProbeTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteProbeTaskResponse
@@ -3141,9 +3116,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Deletes a probe task.</p>
-     * 
      * @param request DeleteProbeTaskRequest
      * @return DeleteProbeTaskResponse
      */
@@ -3585,9 +3557,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Deletes a service address configured on a Smart Access Gateway device.</p>
-     * 
      * @param request DeleteServiceAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteServiceAddressResponse
@@ -3633,9 +3602,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Deletes a service address configured on a Smart Access Gateway device.</p>
-     * 
      * @param request DeleteServiceAddressRequest
      * @return DeleteServiceAddressResponse
      */
@@ -3646,14 +3612,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The SAG instance that you want to delete is an SAG CPE instance or an SAG vCPE instance.</p>
      * <ul>
-     * <li>The SAG instance that you want to delete is locked due to overdue payments.</li>
-     * <li>The SAG instance that you want to delete is not associated with a Cloud Connect Network (CCN) instance or a virtual border router (VBR). If the SAG instance is associated with a CCN instance or a VBR, dissociate the SAG instance from the CCN instance or VBR first. For more information, see <a href="https://help.aliyun.com/document_detail/164903.html">Detach a network</a>.</li>
+     * <li>The Smart Access Gateway instance you want to delete is a hardware instance or a vCPE instance.</li>
+     * <li>The Smart Access Gateway instance you want to delete is in the financial lock state.</li>
+     * <li>The Smart Access Gateway instance you want to delete is not associated with any Cloud Connect Network (CCN) or Virtual Border Router (VBR) instances. If the instance is associated with network instances, disassociate them first. For more information, see <a href="https://help.aliyun.com/document_detail/164903.html">Disassociate a network instance</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a Smart Access Gateway (SAG) instance.</p>
+     * <p>Deletes a Smart Access Gateway instance.</p>
      * 
      * @param request DeleteSmartAccessGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3693,14 +3659,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The SAG instance that you want to delete is an SAG CPE instance or an SAG vCPE instance.</p>
      * <ul>
-     * <li>The SAG instance that you want to delete is locked due to overdue payments.</li>
-     * <li>The SAG instance that you want to delete is not associated with a Cloud Connect Network (CCN) instance or a virtual border router (VBR). If the SAG instance is associated with a CCN instance or a VBR, dissociate the SAG instance from the CCN instance or VBR first. For more information, see <a href="https://help.aliyun.com/document_detail/164903.html">Detach a network</a>.</li>
+     * <li>The Smart Access Gateway instance you want to delete is a hardware instance or a vCPE instance.</li>
+     * <li>The Smart Access Gateway instance you want to delete is in the financial lock state.</li>
+     * <li>The Smart Access Gateway instance you want to delete is not associated with any Cloud Connect Network (CCN) or Virtual Border Router (VBR) instances. If the instance is associated with network instances, disassociate them first. For more information, see <a href="https://help.aliyun.com/document_detail/164903.html">Disassociate a network instance</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a Smart Access Gateway (SAG) instance.</p>
+     * <p>Deletes a Smart Access Gateway instance.</p>
      * 
      * @param request DeleteSmartAccessGatewayRequest
      * @return DeleteSmartAccessGatewayResponse
@@ -3780,7 +3746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a DNS forwarding rule. This operation is applicable only to Smart Access Gateway (SAG) instances that are created using an SCG5000 or SCG5000-5G device with firmware version 3.4.2 or later.</p>
+     * <p>Deletes DNS forwarding for a Smart Access Gateway instance. This operation applies to instances with the SCG5000 or SCG5000-5G device type and a device version of 3.4.2 or later.</p>
      * 
      * @param request DeleteSmartAccessGatewayDnsForwardRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3824,7 +3790,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a DNS forwarding rule. This operation is applicable only to Smart Access Gateway (SAG) instances that are created using an SCG5000 or SCG5000-5G device with firmware version 3.4.2 or later.</p>
+     * <p>Deletes DNS forwarding for a Smart Access Gateway instance. This operation applies to instances with the SCG5000 or SCG5000-5G device type and a device version of 3.4.2 or later.</p>
      * 
      * @param request DeleteSmartAccessGatewayDnsForwardRequest
      * @return DeleteSmartAccessGatewayDnsForwardResponse
@@ -3904,7 +3870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls DescribeACLAttribute to query the information about a specified access control list (ACL) instance.</p>
+     * <p>Queries the details of a specified access control instance.</p>
      * 
      * @param request DescribeACLAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3976,7 +3942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls DescribeACLAttribute to query the information about a specified access control list (ACL) instance.</p>
+     * <p>Queries the details of a specified access control instance.</p>
      * 
      * @param request DescribeACLAttributeRequest
      * @return DescribeACLAttributeResponse
@@ -4152,7 +4118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the DNS settings of a Smart Access Gateway (SAG) instance associated with SAG app.</p>
+     * <p>Invokes DescribeClientUserDNS to query the DNS configuration of a Smart Access Gateway app instance.</p>
      * 
      * @param request DescribeClientUserDNSRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4204,7 +4170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the DNS settings of a Smart Access Gateway (SAG) instance associated with SAG app.</p>
+     * <p>Invokes DescribeClientUserDNS to query the DNS configuration of a Smart Access Gateway app instance.</p>
      * 
      * @param request DescribeClientUserDNSRequest
      * @return DescribeClientUserDNSResponse
@@ -4216,7 +4182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about Cloud Connect Network (CCN) instances created in a specified region.</p>
+     * <p>Queries the details of Cloud Connect Network (CCN) instances in a specified region.</p>
      * 
      * @param request DescribeCloudConnectNetworksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4284,7 +4250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about Cloud Connect Network (CCN) instances created in a specified region.</p>
+     * <p>Queries the details of Cloud Connect Network (CCN) instances in a specified region.</p>
      * 
      * @param request DescribeCloudConnectNetworksRequest
      * @return DescribeCloudConnectNetworksResponse
@@ -5216,7 +5182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries available regions.</p>
+     * <p>Queries the available regions.</p>
      * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5264,7 +5230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries available regions.</p>
+     * <p>Queries the available regions.</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -5488,7 +5454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the top 10 Smart Access Gateway instances with the highest packet loss rate in a specified region.</p>
+     * <p>Queries the top 10 Smart Access Gateway instances with the highest packet loss rates in a specified region.</p>
      * 
      * @param request DescribeSagDropTopNRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5540,7 +5506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the top 10 Smart Access Gateway instances with the highest packet loss rate in a specified region.</p>
+     * <p>Queries the top 10 Smart Access Gateway instances with the highest packet loss rates in a specified region.</p>
      * 
      * @param request DescribeSagDropTopNRequest
      * @return DescribeSagDropTopNResponse
@@ -5624,7 +5590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the global routing protocol.</p>
+     * <p>Retrieves the global routing protocol.</p>
      * 
      * @param request DescribeSagGlobalRouteProtocolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5680,7 +5646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the global routing protocol.</p>
+     * <p>Retrieves the global routing protocol.</p>
      * 
      * @param request DescribeSagGlobalRouteProtocolRequest
      * @return DescribeSagGlobalRouteProtocolResponse
@@ -5760,7 +5726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the LAN port settings of a Smart Access Gateway (SAG) device.</p>
+     * <p>Queries the LAN configurations of a Smart Access Gateway device.</p>
      * 
      * @param request DescribeSagLanListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5816,7 +5782,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the LAN port settings of a Smart Access Gateway (SAG) device.</p>
+     * <p>Queries the LAN configurations of a Smart Access Gateway device.</p>
      * 
      * @param request DescribeSagLanListRequest
      * @return DescribeSagLanListResponse
@@ -5828,7 +5794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the management port settings of a Smart Access Gateway (SAG) device.</p>
+     * <p>Queries the management port configuration of a Smart Access Gateway device.</p>
      * 
      * @param request DescribeSagManagementPortRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5884,7 +5850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the management port settings of a Smart Access Gateway (SAG) device.</p>
+     * <p>Queries the management port configuration of a Smart Access Gateway device.</p>
      * 
      * @param request DescribeSagManagementPortRequest
      * @return DescribeSagManagementPortResponse
@@ -5896,7 +5862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries online client statistics for Smart Access Gateway (SAG) app instances.</p>
+     * <p>Queries the online Connections data of Smart Access Gateway app instances for the current user.</p>
      * 
      * @param request DescribeSagOnlineClientStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5948,7 +5914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries online client statistics for Smart Access Gateway (SAG) app instances.</p>
+     * <p>Queries the online Connections data of Smart Access Gateway app instances for the current user.</p>
      * 
      * @param request DescribeSagOnlineClientStatisticsRequest
      * @return DescribeSagOnlineClientStatisticsResponse
@@ -5960,7 +5926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a physical port.</p>
+     * <p>Queries the physical port information of a Smart Access Gateway device.</p>
      * 
      * @param request DescribeSagPortListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6016,7 +5982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a physical port.</p>
+     * <p>Queries the physical port information of a Smart Access Gateway device.</p>
      * 
      * @param request DescribeSagPortListRequest
      * @return DescribeSagPortListResponse
@@ -6096,7 +6062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries remote logon information about a Smart Access Gateway (SAG) device.</p>
+     * <p>Queries the remote logon information of a Smart Access Gateway device.</p>
      * 
      * @param request DescribeSagRemoteAccessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6152,7 +6118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries remote logon information about a Smart Access Gateway (SAG) device.</p>
+     * <p>Queries the remote logon information of a Smart Access Gateway device.</p>
      * 
      * @param request DescribeSagRemoteAccessRequest
      * @return DescribeSagRemoteAccessResponse
@@ -6164,7 +6130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the routes of a Smart Access Gateway (SAG) instance.</p>
+     * <p>Queries the current route list.</p>
      * 
      * @param request DescribeSagRouteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6220,7 +6186,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the routes of a Smart Access Gateway (SAG) instance.</p>
+     * <p>Queries the current route list.</p>
      * 
      * @param request DescribeSagRouteListRequest
      * @return DescribeSagRouteListResponse
@@ -6232,7 +6198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of Border Gateway Protocol (BGP) dynamic routing.</p>
+     * <p>Retrieves the BGP configuration.</p>
      * 
      * @param request DescribeSagRouteProtocolBgpRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6288,7 +6254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of Border Gateway Protocol (BGP) dynamic routing.</p>
+     * <p>Retrieves the BGP configuration.</p>
      * 
      * @param request DescribeSagRouteProtocolBgpRequest
      * @return DescribeSagRouteProtocolBgpResponse
@@ -6368,7 +6334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the static routes of a Smart Access Gateway (SAG) instance.</p>
+     * <p>Queries the static routes.</p>
      * 
      * @param request DescribeSagStaticRouteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6424,7 +6390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the static routes of a Smart Access Gateway (SAG) instance.</p>
+     * <p>Queries the static routes.</p>
      * 
      * @param request DescribeSagStaticRouteListRequest
      * @return DescribeSagStaticRouteListResponse
@@ -6436,7 +6402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the top 10 Smart Access Gateway (SAG) instances that have the highest data transfer rates in a specific region.</p>
+     * <p>Queries the top 10 Smart Access Gateway instances by traffic rate in a specified region.</p>
      * 
      * @param request DescribeSagTrafficTopNRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6488,7 +6454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the top 10 Smart Access Gateway (SAG) instances that have the highest data transfer rates in a specific region.</p>
+     * <p>Queries the top 10 Smart Access Gateway instances by traffic rate in a specified region.</p>
      * 
      * @param request DescribeSagTrafficTopNRequest
      * @return DescribeSagTrafficTopNResponse
@@ -6568,7 +6534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether a specified virtual border router (VBR) is associated with a Smart Access Gateway (SAG) instance.</p>
+     * <p>Queries whether a specified virtual border router (VBR) instance is associated with a Smart Access Gateway instance in a specified region.</p>
      * 
      * @param request DescribeSagVbrRelationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6624,7 +6590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether a specified virtual border router (VBR) is associated with a Smart Access Gateway (SAG) instance.</p>
+     * <p>Queries whether a specified virtual border router (VBR) instance is associated with a Smart Access Gateway instance in a specified region.</p>
      * 
      * @param request DescribeSagVbrRelationsRequest
      * @return DescribeSagVbrRelationsResponse
@@ -6636,7 +6602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the 4G subscriber identity module (SIM) card used by the WAN port of a Smart Access Gateway (SAG) device.</p>
+     * <p>Retrieves the WAN 4G NIC information of a Smart Access Gateway device.</p>
      * 
      * @param request DescribeSagWan4GRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6692,7 +6658,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the 4G subscriber identity module (SIM) card used by the WAN port of a Smart Access Gateway (SAG) device.</p>
+     * <p>Retrieves the WAN 4G NIC information of a Smart Access Gateway device.</p>
      * 
      * @param request DescribeSagWan4GRequest
      * @return DescribeSagWan4GResponse
@@ -6840,7 +6806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Wi-Fi settings of a Smart Access Gateway (SAG) instance.</p>
+     * <p>Queries the Wi-Fi configuration of a Smart Access Gateway instance.</p>
      * 
      * @param request DescribeSagWifiRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6896,7 +6862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Wi-Fi settings of a Smart Access Gateway (SAG) instance.</p>
+     * <p>Queries the Wi-Fi configuration of a Smart Access Gateway instance.</p>
      * 
      * @param request DescribeSagWifiRequest
      * @return DescribeSagWifiResponse
@@ -6908,7 +6874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeSmartAccessGatewayAttribute operation to query the information about a specified Smart Access Gateway (SAG) instance.</p>
+     * <p>Queries the details of a specified Smart Access Gateway instance.</p>
      * 
      * @param request DescribeSmartAccessGatewayAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6960,7 +6926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeSmartAccessGatewayAttribute operation to query the information about a specified Smart Access Gateway (SAG) instance.</p>
+     * <p>Queries the details of a specified Smart Access Gateway instance.</p>
      * 
      * @param request DescribeSmartAccessGatewayAttributeRequest
      * @return DescribeSmartAccessGatewayAttributeResponse
@@ -7052,7 +7018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the high availability (HA) settings of a Smart Access Gateway (SAG) instance.</p>
+     * <p>Queries the high-availability configuration of a Smart Access Gateway instance.</p>
      * 
      * @param request DescribeSmartAccessGatewayHaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7104,7 +7070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the high availability (HA) settings of a Smart Access Gateway (SAG) instance.</p>
+     * <p>Queries the high-availability configuration of a Smart Access Gateway instance.</p>
      * 
      * @param request DescribeSmartAccessGatewayHaRequest
      * @return DescribeSmartAccessGatewayHaResponse
@@ -7116,7 +7082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the version of a Smart Access Gateway (SAG) device.</p>
+     * <p>Queries the software version information of Smart Access Gateway devices.</p>
      * 
      * @param request DescribeSmartAccessGatewayVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7176,7 +7142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the version of a Smart Access Gateway (SAG) device.</p>
+     * <p>Queries the software version information of Smart Access Gateway devices.</p>
      * 
      * @param request DescribeSmartAccessGatewayVersionsRequest
      * @return DescribeSmartAccessGatewayVersionsResponse
@@ -7188,7 +7154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Smart Access Gateway (SAG) instances.</p>
+     * <p>Queries Smart Access Gateway instances.</p>
      * 
      * @param request DescribeSmartAccessGatewaysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7308,7 +7274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Smart Access Gateway (SAG) instances.</p>
+     * <p>Queries Smart Access Gateway instances.</p>
      * 
      * @param request DescribeSmartAccessGatewaysRequest
      * @return DescribeSmartAccessGatewaysResponse
@@ -7392,7 +7358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Smart Access Gateway (SAG) instances that are not associated with a flow log in a specific region.</p>
+     * <p>Invokes DescribeUnbindFlowLogSags to query the Smart Access Gateway instances that are not attached to a flow log instance in a specified region.</p>
      * 
      * @param request DescribeUnbindFlowLogSagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7440,7 +7406,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Smart Access Gateway (SAG) instances that are not associated with a flow log in a specific region.</p>
+     * <p>Invokes DescribeUnbindFlowLogSags to query the Smart Access Gateway instances that are not attached to a flow log instance in a specified region.</p>
      * 
      * @param request DescribeUnbindFlowLogSagsRequest
      * @return DescribeUnbindFlowLogSagsResponse
@@ -7452,7 +7418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the amount of data transfer generated by each client account of a Smart Access Gateway (SAG) app instance.</p>
+     * <p>Queries the traffic statistics of users under a specified Smart Access Gateway app instance.</p>
      * 
      * @param request DescribeUserFlowStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7512,7 +7478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the amount of data transfer generated by each client account of a Smart Access Gateway (SAG) app instance.</p>
+     * <p>Queries the traffic statistics of users under a specified Smart Access Gateway app instance.</p>
      * 
      * @param request DescribeUserFlowStatisticsRequest
      * @return DescribeUserFlowStatisticsResponse
@@ -7660,17 +7626,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Unbinds a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN) instance.</p>
+     * <p>Disassociates a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN).</p>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN) instance.</p>
+     * <p>Disassociates a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN).</p>
      * 
-     * @param request DetachCcnInstanceFromCenRequest
+     * @param tmpReq DetachCcnInstanceFromCenRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DetachCcnInstanceFromCenResponse
      */
-    public DetachCcnInstanceFromCenResponse detachCcnInstanceFromCenWithOptions(DetachCcnInstanceFromCenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DetachCcnInstanceFromCenResponse detachCcnInstanceFromCenWithOptions(DetachCcnInstanceFromCenRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DetachCcnInstanceFromCenShrinkRequest request = new DetachCcnInstanceFromCenShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.regionBindingList)) {
+            request.regionBindingListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.regionBindingList, "RegionBindingList", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ccnId)) {
             query.put("CcnId", request.ccnId);
@@ -7678,6 +7650,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.cenId)) {
             query.put("CenId", request.cenId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionBindingListShrink)) {
+            query.put("RegionBindingList", request.regionBindingListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -7703,10 +7679,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Unbinds a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN) instance.</p>
+     * <p>Disassociates a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN).</p>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN) instance.</p>
+     * <p>Disassociates a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN).</p>
      * 
      * @param request DetachCcnInstanceFromCenRequest
      * @return DetachCcnInstanceFromCenResponse
@@ -7718,7 +7694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables diagnostics for Smart Access Gateway (SAG) devices</p>
+     * <p>Enables diagnostics for a Smart Access Gateway device.</p>
      * 
      * @param request DiagnoseSmartAccessGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7774,7 +7750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables diagnostics for Smart Access Gateway (SAG) devices</p>
+     * <p>Enables diagnostics for a Smart Access Gateway device.</p>
      * 
      * @param request DiagnoseSmartAccessGatewayRequest
      * @return DiagnoseSmartAccessGatewayResponse
@@ -7786,7 +7762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</p>
+     * <p>Disables the deep packet inspection (DPI) monitoring feature for a Smart Access Gateway instance.</p>
      * 
      * @param request DisableSmartAGDpiMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7846,7 +7822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</p>
+     * <p>Disables the deep packet inspection (DPI) monitoring feature for a Smart Access Gateway instance.</p>
      * 
      * @param request DisableSmartAGDpiMonitorRequest
      * @return DisableSmartAGDpiMonitorResponse
@@ -8198,10 +8174,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call <strong>DissociateSmartAGFromApplicationBandwidthPackage</strong>, you can set the <strong>SmartAGId</strong> parameter to specify an SAG instance, or set the <strong>SmartAGIdList</strong> to specify multiple SAG instances.</p>
+     * <p>When you call the <strong>DissociateSmartAGFromApplicationBandwidthPackage</strong> operation, you can specify the <strong>SmartAGId</strong> parameter to disassociate a bandwidth plan for application acceleration from a specified Smart Access Gateway instance. You can also specify the <strong>SmartAGIdList</strong> parameter to disassociate the bandwidth plan for application acceleration from multiple Smart Access Gateway instances at the same time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disassociates a Smart Access Gateway (SAG) instance from a bandwidth plan for application acceleration.</p>
+     * <p>Disassociates a bandwidth plan for application acceleration from a Smart Access Gateway instance.</p>
      * 
      * @param request DissociateSmartAGFromApplicationBandwidthPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8253,10 +8229,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call <strong>DissociateSmartAGFromApplicationBandwidthPackage</strong>, you can set the <strong>SmartAGId</strong> parameter to specify an SAG instance, or set the <strong>SmartAGIdList</strong> to specify multiple SAG instances.</p>
+     * <p>When you call the <strong>DissociateSmartAGFromApplicationBandwidthPackage</strong> operation, you can specify the <strong>SmartAGId</strong> parameter to disassociate a bandwidth plan for application acceleration from a specified Smart Access Gateway instance. You can also specify the <strong>SmartAGIdList</strong> parameter to disassociate the bandwidth plan for application acceleration from multiple Smart Access Gateway instances at the same time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disassociates a Smart Access Gateway (SAG) instance from a bandwidth plan for application acceleration.</p>
+     * <p>Disassociates a bandwidth plan for application acceleration from a Smart Access Gateway instance.</p>
      * 
      * @param request DissociateSmartAGFromApplicationBandwidthPackageRequest
      * @return DissociateSmartAGFromApplicationBandwidthPackageResponse
@@ -8635,9 +8611,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Queries the status of the advanced monitoring feature for a specified Smart Access Gateway instance.</p>
-     * 
      * @param request GetAdvancedMonitorStateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAdvancedMonitorStateResponse
@@ -8671,9 +8644,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Queries the status of the advanced monitoring feature for a specified Smart Access Gateway instance.</p>
-     * 
      * @param request GetAdvancedMonitorStateRequest
      * @return GetAdvancedMonitorStateResponse
      */
@@ -8744,7 +8714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attributes of a quality of service (QoS) policy.</p>
+     * <p>Queries the details of a quality of service (QoS) policy instance.</p>
      * 
      * @param request GetQosAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8780,7 +8750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attributes of a quality of service (QoS) policy.</p>
+     * <p>Queries the details of a quality of service (QoS) policy instance.</p>
      * 
      * @param request GetQosAttributeRequest
      * @return GetQosAttributeResponse
@@ -9353,9 +9323,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Lists the configured service addresses for a specified Smart Access Gateway device.</p>
-     * 
      * @param request ListAvailableServiceAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAvailableServiceAddressResponse
@@ -9397,9 +9364,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Lists the configured service addresses for a specified Smart Access Gateway device.</p>
-     * 
      * @param request ListAvailableServiceAddressRequest
      * @return ListAvailableServiceAddressResponse
      */
@@ -9410,10 +9374,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you configure an application-based Resource Access Management instance or a Quality of Service (QoS) policy instance and associate it with a Smart Access Gateway instance, you can call this operation to check whether the access control rules or QoS quintuple rules are successfully applied to the target Smart Access Gateway instance. If a configuration fails to apply, this operation returns information about the error.</p>
+     * <p>If you have configured an application-based access control instance or a quality of service (QoS) policy instance and associated it with a Smart Access Gateway instance, you can invoke this operation to check whether the access control rules or 5-tuple rules of the QoS policy that you created are successfully applied to the destination Smart Access Gateway instance. If any configurations fail to be applied, this operation returns the configuration exception information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries for deep packet inspection (DPI) configuration errors.</p>
+     * <p>Queries deep packet inspection (DPI) configuration exceptions.</p>
      * 
      * @param request ListDpiConfigErrorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9465,10 +9429,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you configure an application-based Resource Access Management instance or a Quality of Service (QoS) policy instance and associate it with a Smart Access Gateway instance, you can call this operation to check whether the access control rules or QoS quintuple rules are successfully applied to the target Smart Access Gateway instance. If a configuration fails to apply, this operation returns information about the error.</p>
+     * <p>If you have configured an application-based access control instance or a quality of service (QoS) policy instance and associated it with a Smart Access Gateway instance, you can invoke this operation to check whether the access control rules or 5-tuple rules of the QoS policy that you created are successfully applied to the destination Smart Access Gateway instance. If any configurations fail to be applied, this operation returns the configuration exception information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries for deep packet inspection (DPI) configuration errors.</p>
+     * <p>Queries deep packet inspection (DPI) configuration exceptions.</p>
      * 
      * @param request ListDpiConfigErrorRequest
      * @return ListDpiConfigErrorResponse
@@ -9480,7 +9444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the application groups that Smart Access Gateway supports in a specified region.</p>
+     * <p>Queries the application groups supported by Smart Access Gateway in a specified region.</p>
      * 
      * @param request ListDpiGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9544,7 +9508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the application groups that Smart Access Gateway supports in a specified region.</p>
+     * <p>Queries the application groups supported by Smart Access Gateway in a specified region.</p>
      * 
      * @param request ListDpiGroupsRequest
      * @return ListDpiGroupsResponse
@@ -9715,9 +9679,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Queries a probe task.</p>
-     * 
      * @param request ListProbeTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListProbeTaskResponse
@@ -9779,9 +9740,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Queries a probe task.</p>
-     * 
      * @param request ListProbeTaskRequest
      * @return ListProbeTaskResponse
      */
@@ -10972,7 +10930,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the password that is used to log on to a smart access gateway (SAG) device.</p>
+     * <p>Modifies the logon password of a Smart Access Gateway device.</p>
      * 
      * @param request ModifySAGAdminPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11032,7 +10990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the password that is used to log on to a smart access gateway (SAG) device.</p>
+     * <p>Modifies the logon password of a Smart Access Gateway device.</p>
      * 
      * @param request ModifySAGAdminPasswordRequest
      * @return ModifySAGAdminPasswordResponse
@@ -11128,7 +11086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the routing protocol of a Smart Access Gateway (SAG) instance.</p>
+     * <p>Modifies the global routing protocol.</p>
      * 
      * @param request ModifySagGlobalRouteProtocolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11188,7 +11146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the routing protocol of a Smart Access Gateway (SAG) instance.</p>
+     * <p>Modifies the global routing protocol.</p>
      * 
      * @param request ModifySagGlobalRouteProtocolRequest
      * @return ModifySagGlobalRouteProtocolResponse
@@ -11200,7 +11158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the high availability (HA) settings of a Smart Access Gateway (SAG) device.</p>
+     * <p>Modifies the high availability (HA) configuration of a Smart Access Gateway device.</p>
      * 
      * @param request ModifySagHaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11268,7 +11226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the high availability (HA) settings of a Smart Access Gateway (SAG) device.</p>
+     * <p>Modifies the high availability (HA) configuration of a Smart Access Gateway device.</p>
      * 
      * @param request ModifySagHaRequest
      * @return ModifySagHaResponse
@@ -11966,7 +11924,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the DNS servers used by a Smart Access Gateway (SAG) instance.</p>
+     * <p>Modifies the custom DNS settings of a Smart Access Gateway instance.</p>
      * 
      * @param request ModifySagUserDnsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12030,7 +11988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the DNS servers used by a Smart Access Gateway (SAG) instance.</p>
+     * <p>Modifies the custom DNS settings of a Smart Access Gateway instance.</p>
      * 
      * @param request ModifySagUserDnsRequest
      * @return ModifySagUserDnsResponse
@@ -12336,7 +12294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a Smart Access Gateway (SAG) instance.</p>
+     * <p>Modifies the configuration of a Smart Access Gateway instance.</p>
      * 
      * @param request ModifySmartAccessGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12416,7 +12374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a Smart Access Gateway (SAG) instance.</p>
+     * <p>Modifies the configuration of a Smart Access Gateway instance.</p>
      * 
      * @param request ModifySmartAccessGatewayRequest
      * @return ModifySmartAccessGatewayResponse
@@ -12576,7 +12534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Moves Smart Access Gateway (SAG) resources from one resource group to another.</p>
+     * <p>Modifies the resource group to which a Smart Access Gateway resource belongs.</p>
      * 
      * @param request MoveResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12636,7 +12594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Moves Smart Access Gateway (SAG) resources from one resource group to another.</p>
+     * <p>Modifies the resource group to which a Smart Access Gateway resource belongs.</p>
      * 
      * @param request MoveResourceGroupRequest
      * @return MoveResourceGroupResponse
@@ -12870,7 +12828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disallows a Cloud Enterprise Network (CEN) instance to communicate with a Cloud Connect Network (CCN) instance.</p>
+     * <p>Revokes the authorization of a Cloud Enterprise Network (CEN) for a Cloud Connect Network (CCN).</p>
      * 
      * @param request RevokeInstanceFromCbnRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12926,7 +12884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disallows a Cloud Enterprise Network (CEN) instance to communicate with a Cloud Connect Network (CCN) instance.</p>
+     * <p>Revokes the authorization of a Cloud Enterprise Network (CEN) for a Cloud Connect Network (CCN).</p>
      * 
      * @param request RevokeInstanceFromCbnRequest
      * @return RevokeInstanceFromCbnResponse
@@ -13074,10 +13032,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call <code>RoamClientUser</code>, we recommend that you read and understand the features and usage notes of roaming. For more information, see <a href="https://help.aliyun.com/document_detail/177220.html">Configure roaming on clients</a>.</p>
+     * <p>Before you invoke the <code>RoamClientUser</code> operation, understand the SAG app roaming feature and its description. For more information, see <a href="https://help.aliyun.com/document_detail/177220.html">Configure client roaming</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables roaming for the SAG app to allow clients to access Alibaba Cloud across regions.</p>
+     * <p>Enables client roaming for the SAG app, allowing clients to access the internal network across regions.</p>
      * 
      * @param request RoamClientUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13141,10 +13099,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call <code>RoamClientUser</code>, we recommend that you read and understand the features and usage notes of roaming. For more information, see <a href="https://help.aliyun.com/document_detail/177220.html">Configure roaming on clients</a>.</p>
+     * <p>Before you invoke the <code>RoamClientUser</code> operation, understand the SAG app roaming feature and its description. For more information, see <a href="https://help.aliyun.com/document_detail/177220.html">Configure client roaming</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables roaming for the SAG app to allow clients to access Alibaba Cloud across regions.</p>
+     * <p>Enables client roaming for the SAG app, allowing clients to access the internal network across regions.</p>
      * 
      * @param request RoamClientUserRequest
      * @return RoamClientUserResponse
@@ -13155,9 +13113,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Enables or disables the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</p>
-     * 
      * @param request SetAdvancedMonitorStateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetAdvancedMonitorStateResponse
@@ -13195,9 +13150,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Enables or disables the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</p>
-     * 
      * @param request SetAdvancedMonitorStateRequest
      * @return SetAdvancedMonitorStateResponse
      */
@@ -13358,7 +13310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates a Smart Access Gateway (SAG) instance from the associated Cloud Connect Network (CCN) instance.</p>
+     * <p>Invokes the UnbindSmartAccessGateway operation to disassociate a Smart Access Gateway instance from a specified Cloud Connect Network (CCN).</p>
      * 
      * @param request UnbindSmartAccessGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13418,7 +13370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates a Smart Access Gateway (SAG) instance from the associated Cloud Connect Network (CCN) instance.</p>
+     * <p>Invokes the UnbindSmartAccessGateway operation to disassociate a Smart Access Gateway instance from a specified Cloud Connect Network (CCN).</p>
      * 
      * @param request UnbindSmartAccessGatewayRequest
      * @return UnbindSmartAccessGatewayResponse
@@ -13430,7 +13382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates a Smart Access Gateway (SAG) instance from a virtual border router (VBR).</p>
+     * <p>Disassociates a virtual border router.</p>
      * 
      * @param request UnbindVbrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13494,7 +13446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates a Smart Access Gateway (SAG) instance from a virtual border router (VBR).</p>
+     * <p>Disassociates a virtual border router.</p>
      * 
      * @param request UnbindVbrRequest
      * @return UnbindVbrResponse
@@ -13625,9 +13577,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Modifies a probe task.</p>
-     * 
      * @param request UpdateProbeTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateProbeTaskResponse
@@ -13697,9 +13646,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Modifies a probe task.</p>
-     * 
      * @param request UpdateProbeTaskRequest
      * @return UpdateProbeTaskResponse
      */
@@ -13998,10 +13944,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can modify passwords that are used to log on to only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</p>
+     * <p>Only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support modifying the administrator password of the Smart Access Gateway device.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the password that is used to log on to an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</p>
+     * <p>Modifies the administrator password of a Smart Access Gateway (SAG) device. This operation applies to SAG instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</p>
      * 
      * @param request UpdateSmartAccessGatewayAdminPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14053,10 +13999,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can modify passwords that are used to log on to only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</p>
+     * <p>Only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support modifying the administrator password of the Smart Access Gateway device.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the password that is used to log on to an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</p>
+     * <p>Modifies the administrator password of a Smart Access Gateway (SAG) device. This operation applies to SAG instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</p>
      * 
      * @param request UpdateSmartAccessGatewayAdminPasswordRequest
      * @return UpdateSmartAccessGatewayAdminPasswordResponse
@@ -14378,10 +14324,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can modify the OSPF dynamic routing protocol configuration only for SCG5000 and SCG5000-5G devices that run device version 3.4.2 or later.</p>
+     * <p>Only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support modifying the OSPF dynamic routing protocol configurations of Smart Access Gateway devices.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the Open Shortest Path First (OSPF) dynamic routing protocol configuration of a Smart Access Gateway (SAG) device. This operation is supported only for SAG instances that use the SCG5000 or SCG5000-5G device model and run device version 3.4.2 or later.</p>
+     * <p>Modifies the Open Shortest Path First (OSPF) dynamic routing protocol configurations of a Smart Access Gateway device. This operation applies to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</p>
      * 
      * @param request UpdateSmartAccessGatewayOspfRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14481,10 +14427,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can modify the OSPF dynamic routing protocol configuration only for SCG5000 and SCG5000-5G devices that run device version 3.4.2 or later.</p>
+     * <p>Only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support modifying the OSPF dynamic routing protocol configurations of Smart Access Gateway devices.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the Open Shortest Path First (OSPF) dynamic routing protocol configuration of a Smart Access Gateway (SAG) device. This operation is supported only for SAG instances that use the SCG5000 or SCG5000-5G device model and run device version 3.4.2 or later.</p>
+     * <p>Modifies the Open Shortest Path First (OSPF) dynamic routing protocol configurations of a Smart Access Gateway device. This operation applies to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</p>
      * 
      * @param request UpdateSmartAccessGatewayOspfRouteRequest
      * @return UpdateSmartAccessGatewayOspfRouteResponse
@@ -14942,10 +14888,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query the DNS configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</p>
+     * <p>Currently, only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support querying the DNS information of Smart Access Gateway devices.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the DNS configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</p>
+     * <p>Queries the DNS information of a Smart Access Gateway device. This operation is applicable to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</p>
      * 
      * @param request ViewSmartAccessGatewayDnsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14993,10 +14939,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query the DNS configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</p>
+     * <p>Currently, only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support querying the DNS information of Smart Access Gateway devices.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the DNS configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</p>
+     * <p>Queries the DNS information of a Smart Access Gateway device. This operation is applicable to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</p>
      * 
      * @param request ViewSmartAccessGatewayDnsRequest
      * @return ViewSmartAccessGatewayDnsResponse
@@ -15008,7 +14954,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the DNS forwarding list of a Smart Access Gateway (SAG) SCG5000 or SCG5000-5G instance. The version of the device must be 3.4.2 or later.</p>
+     * <p>Queries the DNS forwarding list. This operation applies to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</p>
      * 
      * @param request ViewSmartAccessGatewayDnsForwardsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15048,7 +14994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the DNS forwarding list of a Smart Access Gateway (SAG) SCG5000 or SCG5000-5G instance. The version of the device must be 3.4.2 or later.</p>
+     * <p>Queries the DNS forwarding list. This operation applies to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</p>
      * 
      * @param request ViewSmartAccessGatewayDnsForwardsRequest
      * @return ViewSmartAccessGatewayDnsForwardsResponse
@@ -15060,10 +15006,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query the global protocol only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</p>
+     * <p>Only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support retrieving the global routing protocol of a Smart Access Gateway device.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the global routing protocol of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</p>
+     * <p>Retrieves the global routing protocol of a Smart Access Gateway device. This operation applies to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</p>
      * 
      * @param request ViewSmartAccessGatewayGlobalRouteProtocolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15111,10 +15057,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query the global protocol only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</p>
+     * <p>Only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support retrieving the global routing protocol of a Smart Access Gateway device.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the global routing protocol of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</p>
+     * <p>Retrieves the global routing protocol of a Smart Access Gateway device. This operation applies to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</p>
      * 
      * @param request ViewSmartAccessGatewayGlobalRouteProtocolRequest
      * @return ViewSmartAccessGatewayGlobalRouteProtocolResponse

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
     /**
-     * <p>The serial number of the standby SAG device.</p>
+     * <p>The serial number of the standby device.</p>
      * 
      * <strong>example:</strong>
      * <p>sag11axxxx</p>
@@ -14,10 +14,10 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
     public String backupDeviceId;
 
     /**
-     * <p>Indicates whether device-based HA is enabled. Valid values:</p>
+     * <p>The device-level backup state. Valid values:</p>
      * <ul>
-     * <li><strong>ON</strong>: enabled</li>
-     * <li><strong>OFF</strong>: disabled</li>
+     * <li><strong>ON</strong>: Enabled.</li>
+     * <li><strong>OFF</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,11 +27,11 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
     public String deviceLevelBackupState;
 
     /**
-     * <p>The deployment mode of the SAG devices that have HA enabled. Valid values:</p>
+     * <p>The device-level high-availability type. Valid values:</p>
      * <ul>
-     * <li><strong>warm_backup</strong>: active-active mode.</li>
-     * <li><strong>cold_backup</strong>: active-standby mode.</li>
-     * <li><strong>no_backup</strong>: HA is disabled.</li>
+     * <li><strong>warm_backup</strong>: Active-active mode.</li>
+     * <li><strong>cold_backup</strong>: Active-standby mode.</li>
+     * <li><strong>no_backup</strong>: No backup.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
     public DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoList linkBackupInfoList;
 
     /**
-     * <p>The serial number of the active SAG device.</p>
+     * <p>The serial number of the active device.</p>
      * 
      * <strong>example:</strong>
      * <p>sag11axxxx</p>
@@ -53,7 +53,7 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
     public String mainDeviceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>582FE511-FEFE-42BC-BBF4-4F8ECF92Exxx</p>
@@ -62,7 +62,7 @@ public class DescribeSmartAccessGatewayHaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the SAG instance.</p>
+     * <p>The instance ID of the Smart Access Gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>sag-i8mogwi9kisigc3xxxx</p>

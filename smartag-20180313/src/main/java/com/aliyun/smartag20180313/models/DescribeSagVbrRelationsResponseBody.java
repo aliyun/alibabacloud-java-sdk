@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSagVbrRelationsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>17D79124-104A-42DB-8FCA-CE2957CD1723</p>
@@ -14,7 +14,7 @@ public class DescribeSagVbrRelationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the specified VBR is associated with an SAG instance.</p>
+     * <p>The association information.</p>
      */
     @NameInMap("SagVbrRelations")
     public java.util.List<DescribeSagVbrRelationsResponseBodySagVbrRelations> sagVbrRelations;
@@ -42,7 +42,7 @@ public class DescribeSagVbrRelationsResponseBody extends TeaModel {
 
     public static class DescribeSagVbrRelationsResponseBodySagVbrRelations extends TeaModel {
         /**
-         * <p>The ID of the SAG instance.</p>
+         * <p>The instance ID of the Smart Access Gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>sag-0nnteglltw6z4b****</p>
@@ -51,7 +51,7 @@ public class DescribeSagVbrRelationsResponseBody extends TeaModel {
         public String sagInstanceId;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the SAG instance belongs.</p>
+         * <p>The ID of the Alibaba Cloud account to which the Smart Access Gateway instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>16884015121212****</p>
@@ -60,7 +60,7 @@ public class DescribeSagVbrRelationsResponseBody extends TeaModel {
         public String sagUid;
 
         /**
-         * <p>The ID of the VBR.</p>
+         * <p>The instance ID of the virtual border router (VBR) used for routing.</p>
          * 
          * <strong>example:</strong>
          * <p>vbr-bp15ihkk93ezxppk****</p>

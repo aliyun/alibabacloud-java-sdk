@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssociateACLRequest extends TeaModel {
     /**
-     * <p>The ID of ACL.</p>
+     * <p>The ID of the access control list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,8 +21,7 @@ public class AssociateACLRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the ACL is created.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +37,7 @@ public class AssociateACLRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the SAG instance to be associated with the ACL.</p>
+     * <p>The ID of the Smart Access Gateway instance to which you want to attach the access control list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

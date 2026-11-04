@@ -7,12 +7,9 @@ public class DescribeSagWifiResponseBody extends TeaModel {
     /**
      * <p>The authentication type. Valid values:</p>
      * <ul>
-     * <li><p><strong>NONE</strong>: authentication is disabled.</p>
-     * </li>
-     * <li><p><strong>WPA-PSK</strong>: WPA-PSK authentication is enabled.</p>
-     * </li>
-     * <li><p><strong>WPA2-PSK</strong>: WPA2-PSK authentication is enabled.</p>
-     * </li>
+     * <li><strong>NONE</strong>: Authentication is disabled.</li>
+     * <li><strong>WPA-PSK</strong>: WPA-PSK authentication is enabled.</li>
+     * <li><strong>WPA2-PSK</strong>: WPA2-PSK authentication is enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,14 +19,11 @@ public class DescribeSagWifiResponseBody extends TeaModel {
     public String authenticationType;
 
     /**
-     * <p>The bandwidth of the Wi-Fi channel. Valid values:</p>
+     * <p>The spectrum bandwidth. Valid values:</p>
      * <ul>
-     * <li><p><strong>Automatic</strong></p>
-     * </li>
-     * <li><p><strong>20 HMz</strong></p>
-     * </li>
-     * <li><p><strong>40 MHz</strong></p>
-     * </li>
+     * <li><strong>Auto</strong>.</li>
+     * <li><strong>20MHz</strong>.</li>
+     * <li><strong>40MHz</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +33,7 @@ public class DescribeSagWifiResponseBody extends TeaModel {
     public String bandwidth;
 
     /**
-     * <p>The Wi-Fi channel.</p>
+     * <p>The channel.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -48,14 +42,11 @@ public class DescribeSagWifiResponseBody extends TeaModel {
     public String channel;
 
     /**
-     * <p>The encryption algorithm.</p>
+     * <p>The encryption algorithm. Valid values:</p>
      * <ul>
-     * <li><p><strong>AUTO</strong>: automatically selects the encryption algorithm.</p>
-     * </li>
-     * <li><p><strong>TKIP</strong>: uses the Temporal Key Integrity Protocol (TKIP).</p>
-     * </li>
-     * <li><p><strong>AES</strong>: uses the Advanced Encryption Standard authorized by Wi-Fi®.</p>
-     * </li>
+     * <li><strong>AUTO</strong>: Automatic encryption.</li>
+     * <li><strong>TKIP</strong>: Temporal Key Integrity Protocol.</li>
+     * <li><strong>AES</strong>: Advanced Encryption Standard.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,12 +56,10 @@ public class DescribeSagWifiResponseBody extends TeaModel {
     public String encryptAlgorithm;
 
     /**
-     * <p>Indicates whether wireless security is enabled.</p>
+     * <p>Indicates whether the wireless security feature is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>True</strong>: wireless security is enabled.</p>
-     * </li>
-     * <li><p><strong>False</strong>: wireless security is disabled.</p>
-     * </li>
+     * <li><strong>True</strong>: The wireless security feature is enabled.</li>
+     * <li><strong>False</strong>: The wireless security feature is disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,12 +69,10 @@ public class DescribeSagWifiResponseBody extends TeaModel {
     public String isAuth;
 
     /**
-     * <p>Indicates whether broadcast over Wi-Fi is enabled. Valid values:</p>
+     * <p>Indicates whether the Wi-Fi broadcast feature is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>True</strong>: broadcast is enabled.</p>
-     * </li>
-     * <li><p><strong>False</strong>: broadcast is disabled.</p>
-     * </li>
+     * <li><strong>True</strong>: The Wi-Fi broadcast feature is enabled.</li>
+     * <li><strong>False</strong>: The Wi-Fi broadcast feature is disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,12 +82,10 @@ public class DescribeSagWifiResponseBody extends TeaModel {
     public String isBroadcast;
 
     /**
-     * <p>Indicates whether wireless connections are enabled. Valid values:</p>
+     * <p>Indicates whether the wireless feature is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>True</strong>: wireless connections are enabled.</p>
-     * </li>
-     * <li><p><strong>False</strong>: wireless connections are disabled.</p>
-     * </li>
+     * <li><strong>True</strong>: Enabled.</li>
+     * <li><strong>False</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -110,7 +95,7 @@ public class DescribeSagWifiResponseBody extends TeaModel {
     public String isEnable;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E93884AC-6C21-4FEA-8E3A-7377D33B194F</p>
@@ -119,7 +104,7 @@ public class DescribeSagWifiResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The service set identifier (SSID) of the Wi-Fi network.</p>
+     * <p>The Wi-Fi name.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyun_sag_123456***</p>
@@ -128,7 +113,7 @@ public class DescribeSagWifiResponseBody extends TeaModel {
     public String ssid;
 
     /**
-     * <p>The information about the query task.</p>
+     * <p>The status of the query task.</p>
      */
     @NameInMap("TaskStates")
     public java.util.List<DescribeSagWifiResponseBodyTaskStates> taskStates;
@@ -229,7 +214,7 @@ public class DescribeSagWifiResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The error code returned for a query task. The 200 error code indicates that the query task is successful.</p>
+         * <p>The error code. A value of 200 indicates that the query task is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -238,7 +223,7 @@ public class DescribeSagWifiResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message returned for a query task. The Successful error message indicates that the query task is successful.</p>
+         * <p>The error message. A value of Successful indicates that the query task is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -247,26 +232,17 @@ public class DescribeSagWifiResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The status of the query task. Valid values:</p>
+         * <p>The status of the asynchronous task. Valid values:</p>
          * <ul>
-         * <li><p><strong>Initialized</strong>: The query task has been initialized.</p>
-         * </li>
-         * <li><p><strong>Offline</strong>: The query task is not dispatched because the SAG device is disconnected from Alibaba Cloud. The task will be dispatched after the SAG device is connected to Alibaba Cloud.</p>
-         * </li>
-         * <li><p><strong>Succeed</strong>: The query task has been dispatched.</p>
-         * </li>
-         * <li><p><strong>Processing</strong>: The query task is being dispatched.</p>
-         * </li>
-         * <li><p><strong>VersionNotSupport</strong>: The current version of the SAG device does not support query tasks.</p>
-         * </li>
-         * <li><p><strong>BuildRequestError</strong>: The SAG control system does not support query tasks.</p>
-         * </li>
-         * <li><p><strong>HardwareError</strong>: The query task failed to be dispatched due to device errors.</p>
-         * </li>
-         * <li><p><strong>TaskNotExist</strong>: The query task does not exist.</p>
-         * </li>
-         * <li><p><strong>OfflineNotConfiged</strong>: The query task is not dispatched because the SAG device is disconnected from Alibaba Cloud. The task will not be dispatched after the device is connected to Alibaba Cloud.</p>
-         * </li>
+         * <li><strong>Initialized</strong>: The query task is initialized.</li>
+         * <li><strong>Offline</strong>: The Smart Access Gateway device is offline and the query task is not delivered. The task will be delivered after the device goes online.</li>
+         * <li><strong>Succeed</strong>: The query task is delivered.</li>
+         * <li><strong>Processing</strong>: The query task is being delivered.</li>
+         * <li><strong>VersionNotSupport</strong>: The current version of the Smart Access Gateway device does not support this feature.</li>
+         * <li><strong>BuildRequestError</strong>: The management system does not support the operation.</li>
+         * <li><strong>HardwareError</strong>: The query task fails to be delivered due to device errors.</li>
+         * <li><strong>TaskNotExist</strong>: The query task does not exist.</li>
+         * <li><strong>OfflineNotConfiged</strong>: The Smart Access Gateway device is offline and the query task is not delivered. The task will not be delivered even after the device goes online.</li>
          * </ul>
          * 
          * <strong>example:</strong>

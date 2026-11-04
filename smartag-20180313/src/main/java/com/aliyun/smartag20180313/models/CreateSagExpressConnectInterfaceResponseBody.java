@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSagExpressConnectInterfaceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AFF7E5A6-6897-4FDC-A5A8-1978B5B3E545</p>

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateSmartAccessGatewayAdminPasswordRequest extends TeaModel {
     /**
-     * <p>Specifies whether to query only the SAG instances that belong to another Alibaba Cloud account. Valid values:</p>
+     * <p>Specifies whether to query only Smart Access Gateway instances that belong to other Alibaba Cloud accounts. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default)</li>
-     * <li><strong>true</strong></li>
+     * <li><p><strong>false</strong> (default): no.</p>
+     * </li>
+     * <li><p><strong>true</strong>: yes.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,10 @@ public class UpdateSmartAccessGatewayAdminPasswordRequest extends TeaModel {
     public Boolean crossAccount;
 
     /**
-     * <p>The new password used to log on to the SAG device.</p>
-     * <p>The password must be 8 to 30 characters in length and can contain letters, digits, and underscores (_).</p>
+     * <p>The new logon password for the Smart Access Gateway device.</p>
+     * <p>Password format requirements: The password must be 8 to 30 characters in length and can contain uppercase letters, lowercase letters, digits, and underscores (_).</p>
      * <blockquote>
-     * <p>In the example, asterisks (\<em>) are used to conceal the real password. This does not mean that the password supports asterisks (\</em>). The actual format requirement prevails.</p>
+     * <p>Asterisks (*) are used in the sample value to mask the actual password. This does not mean that asterisks are supported in passwords. Specify the password based on the format requirements.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -32,8 +34,8 @@ public class UpdateSmartAccessGatewayAdminPasswordRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The region ID of the SAG instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the Smart Access Gateway instance resides.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +45,7 @@ public class UpdateSmartAccessGatewayAdminPasswordRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the SAG instance belongs.</p>
+     * <p>The ID of the Alibaba Cloud account to which the Smart Access Gateway instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>147304382796****</p>
@@ -52,7 +54,7 @@ public class UpdateSmartAccessGatewayAdminPasswordRequest extends TeaModel {
     public String resourceUid;
 
     /**
-     * <p>The ID of the Smart Access Gateway (SAG) instance.</p>
+     * <p>The Smart Access Gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +64,7 @@ public class UpdateSmartAccessGatewayAdminPasswordRequest extends TeaModel {
     public String sagInsId;
 
     /**
-     * <p>The serial number of the SAG device.</p>
+     * <p>The serial number of the Smart Access Gateway device.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

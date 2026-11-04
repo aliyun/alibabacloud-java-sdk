@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSmartAccessGatewayOspfRouteResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of 200 indicates that the request was successful.</p>
+     * <p>The status code. 200 indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -34,8 +34,10 @@ public class UpdateSmartAccessGatewayOspfRouteResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><p><strong>true</strong>: yes.</p>
+     * </li>
+     * <li><p><strong>false</strong>: no.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddACLRuleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the ACL.</p>
+     * <p>The ID of the access control instance.</p>
      * 
      * <strong>example:</strong>
      * <p>acl-xhwhyuo43l0*******</p>
@@ -14,7 +14,7 @@ public class AddACLRuleResponseBody extends TeaModel {
     public String aclId;
 
     /**
-     * <p>The ID of the ACL rule.</p>
+     * <p>The ID of the access control rule.</p>
      * 
      * <strong>example:</strong>
      * <p>acr-c1hkd054qywi******</p>
@@ -23,7 +23,7 @@ public class AddACLRuleResponseBody extends TeaModel {
     public String acrId;
 
     /**
-     * <p>The description of the ACL rule.</p>
+     * <p>The description of the access control rule.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -33,7 +33,7 @@ public class AddACLRuleResponseBody extends TeaModel {
 
     /**
      * <p>The destination CIDR block.</p>
-     * <p>For example: 192.168.10.0/24.</p>
+     * <p>The destination CIDR block must be in CIDR format, such as 192.168.10.0/24.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.10.0/24</p>
@@ -51,10 +51,10 @@ public class AddACLRuleResponseBody extends TeaModel {
     public String destPortRange;
 
     /**
-     * <p>The direction of traffic to which the ACL rule applies. Valid values:</p>
+     * <p>The direction in which the access control rule is applied. Valid values:</p>
      * <ul>
-     * <li><strong>in</strong>: inbound. Traffic from an external network to the local branch where the SAG instance is deployed.</li>
-     * <li><strong>out</strong>: outbound. Traffic from the local branch where the SAG instance is deployed to an external network.</li>
+     * <li><strong>in</strong>: inbound. This value specifies traffic from external networks to the local branch where the Smart Access Gateway (SAG) instance is deployed.</li>
+     * <li><strong>out</strong>: outbound. This value specifies traffic from the local branch where the SAG instance is deployed to external networks.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,8 +70,8 @@ public class AddACLRuleResponseBody extends TeaModel {
     public AddACLRuleResponseBodyDpiSignatureIds dpiSignatureIds;
 
     /**
-     * <p>The UNIX timestamp when the ACL rule was created.</p>
-     * <p>This value is a long integer. If rules have the same priority, the one with the earlier timestamp takes precedence.</p>
+     * <p>The timestamp when the access control rule was created.</p>
+     * <p>The timestamp is of the Long type. If multiple rules have the same priority, the rule with the smaller timestamp takes effect first.</p>
      * 
      * <strong>example:</strong>
      * <p>1553766882689</p>
@@ -80,7 +80,7 @@ public class AddACLRuleResponseBody extends TeaModel {
     public Long gmtCreate;
 
     /**
-     * <p>The protocol to which the ACL rule applies.</p>
+     * <p>The protocol used by the access control rule.</p>
      * 
      * <strong>example:</strong>
      * <p>TCP</p>
@@ -89,7 +89,7 @@ public class AddACLRuleResponseBody extends TeaModel {
     public String ipProtocol;
 
     /**
-     * <p>The name of the ACL rule.</p>
+     * <p>The name of the access control rule.</p>
      * 
      * <strong>example:</strong>
      * <p>doctest</p>
@@ -98,10 +98,12 @@ public class AddACLRuleResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The authorization policy of the ACL rule.</p>
+     * <p>The authorization policy of the access control rule.</p>
      * <ul>
-     * <li><strong>accept</strong>: allows access.</li>
-     * <li><strong>drop</strong>: denies access.</li>
+     * <li><p><strong>accept</strong>: Allows the traffic.</p>
+     * </li>
+     * <li><p><strong>drop</strong>: Denies the traffic.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -111,8 +113,8 @@ public class AddACLRuleResponseBody extends TeaModel {
     public String policy;
 
     /**
-     * <p>The priority of the ACL rule.</p>
-     * <p>A smaller value indicates a higher priority. If multiple rules have the same priority, the rule that is first delivered to the Smart Access Gateway device takes precedence.</p>
+     * <p>The priority of the access control rule.</p>
+     * <p>A smaller value indicates a higher priority. If multiple rules have the same priority, the rule that is first delivered to the Smart Access Gateway device takes effect first.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -131,7 +133,7 @@ public class AddACLRuleResponseBody extends TeaModel {
 
     /**
      * <p>The source CIDR block.</p>
-     * <p>The source CIDR block is in the CIDR format. For example: 192.168.1.0/24.</p>
+     * <p>The source CIDR block must be in CIDR format, such as 192.168.1.0/24.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.20.0/24</p>
@@ -149,10 +151,12 @@ public class AddACLRuleResponseBody extends TeaModel {
     public String sourcePortRange;
 
     /**
-     * <p>The type of the ACL rule.</p>
+     * <p>The type of the access control rule.</p>
      * <ul>
-     * <li><strong>LAN</strong>: private network. The ACL rule controls traffic on private networks.</li>
-     * <li><strong>WAN</strong>: public network. The ACL rule controls traffic on public networks.</li>
+     * <li><p><strong>LAN</strong>: private network. This value specifies that the access control rule is applied to traffic destined for private IP addresses.</p>
+     * </li>
+     * <li><p><strong>WAN</strong>: public network. This value specifies that the access control rule is applied to traffic destined for public IP addresses.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

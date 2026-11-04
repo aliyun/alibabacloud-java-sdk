@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSmartAccessGatewayVersionsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>765AB188-69BF-47C6-BEDD-B9FC72BFBB0</p>

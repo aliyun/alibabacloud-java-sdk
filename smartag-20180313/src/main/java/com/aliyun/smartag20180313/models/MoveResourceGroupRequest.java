@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class MoveResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the new resource group.</p>
-     * <p>You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a> to view resource group IDs.</p>
+     * <p>The ID of the destination resource group.</p>
+     * <p>You can view the resource group ID in the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,8 +22,8 @@ public class MoveResourceGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the SAG instance is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the Smart Access Gateway instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class MoveResourceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource.</p>
+     * <p>The resource ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,15 +49,15 @@ public class MoveResourceGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li><strong>smartag</strong>: an SAG CPE or SAG vCPE instance</li>
-     * <li><strong>smartag_s</strong>: an SAG app instance</li>
-     * <li><strong>acl</strong>: an access control list (ACL)</li>
-     * <li><strong>flowlog</strong>: a flow log</li>
-     * <li><strong>qos</strong>: a quality of service (QoS) policy</li>
-     * <li><strong>ccn</strong>: a Cloud Connect Network (CCN) instance</li>
-     * <li><strong>abwp</strong>: a bandwidth plan for application acceleration</li>
+     * <li><strong>smartag</strong>: Smart Access Gateway hardware instance or vCPE instance.</li>
+     * <li><strong>smartag_s</strong>: SAG app instance.</li>
+     * <li><strong>acl</strong>: Access control instance.</li>
+     * <li><strong>flowlog</strong>: Flow log instance.</li>
+     * <li><strong>qos</strong>: QoS policy instance.</li>
+     * <li><strong>ccn</strong>: Cloud Connect Network (CCN) instance.</li>
+     * <li><strong>abwp</strong>: Bandwidth plan for application acceleration instance.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

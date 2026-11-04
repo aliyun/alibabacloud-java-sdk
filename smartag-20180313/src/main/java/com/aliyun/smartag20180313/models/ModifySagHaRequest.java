@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifySagHaRequest extends TeaModel {
     /**
-     * <p>The HA mode. Valid values:</p>
+     * <p>The HA pattern. Valid values:</p>
      * <ul>
-     * <li><strong>NONE</strong>: disables HA.</li>
-     * <li><strong>STATIC</strong>: enables static HA.</li>
-     * <li><strong>DYNAMIC</strong>: enables dynamic HA.</li>
+     * <li><strong>NONE</strong>: The HA feature is disabled.</li>
+     * <li><strong>STATIC</strong>: static pattern</li>
+     * <li><strong>DYNAMIC</strong>: dynamic schema</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -28,7 +28,7 @@ public class ModifySagHaRequest extends TeaModel {
     /**
      * <p>The port name.</p>
      * <blockquote>
-     * <p> If Mode is set to STATIC, you must specify a port name.</p>
+     * <p>If the HA mode is set to STATIC, you must specify a port name.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class ModifySagHaRequest extends TeaModel {
     public String portName;
 
     /**
-     * <p>The region ID of the SAG instance.</p>
+     * <p>The region ID of the Smart Access Gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class ModifySagHaRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The SAG instance ID.</p>
+     * <p>The instance ID of the Smart Access Gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class ModifySagHaRequest extends TeaModel {
     public String smartAGId;
 
     /**
-     * <p>The serial number of the SAG device associated with the SAG instance.</p>
+     * <p>The serial number of the associated Smart Access Gateway device.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class ModifySagHaRequest extends TeaModel {
     /**
      * <p>The virtual IP address.</p>
      * <blockquote>
-     * <p> If Mode is set to STATIC, you must specify a virtual IP address.</p>
+     * <p>If the HA mode is set to STATIC, you must specify a virtual IP address.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

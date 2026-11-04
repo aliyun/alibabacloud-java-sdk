@@ -32,7 +32,7 @@ public class DeleteSmartAccessGatewayDnsForwardResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>0BAAF2B9-88B8-4574-BDBE-102A90EE3FEE</p>

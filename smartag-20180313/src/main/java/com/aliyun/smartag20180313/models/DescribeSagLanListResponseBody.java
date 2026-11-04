@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSagLanListResponseBody extends TeaModel {
     /**
-     * <p>The information about the LAN port.</p>
+     * <p>The list of LAN port information.</p>
      */
     @NameInMap("Lans")
     public java.util.List<DescribeSagLanListResponseBodyLans> lans;
@@ -20,7 +20,7 @@ public class DescribeSagLanListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The state of the query task.</p>
+     * <p>The status information of the query task.</p>
      */
     @NameInMap("TaskStates")
     public java.util.List<DescribeSagLanListResponseBodyTaskStates> taskStates;
@@ -56,7 +56,7 @@ public class DescribeSagLanListResponseBody extends TeaModel {
 
     public static class DescribeSagLanListResponseBodyLans extends TeaModel {
         /**
-         * <p>The last IP address of the DHCP pool.</p>
+         * <p>The end address of the DHCP address pool.</p>
          * 
          * <strong>example:</strong>
          * <p>192.XX.XX.254</p>
@@ -74,9 +74,9 @@ public class DescribeSagLanListResponseBody extends TeaModel {
         public String IP;
 
         /**
-         * <p>The connection type of the LAN port.</p>
-         * <p><strong>DHCP</strong>: a dynamic IP address. Uses the Dynamic Host Configuration Protocol (DHCP) to dynamically assign an IP address to a connected device.</p>
-         * <p><strong>STATIC</strong>: a static IP address. Specifies a static IP address for the LAN port.</p>
+         * <p>The connection type of the LAN port. Valid values:</p>
+         * <p><strong>DHCP</strong>: Dynamic IP. Uses the DHCP protocol to dynamically assign IP addresses to connected devices.</p>
+         * <p><strong>STATIC</strong>: Static IP. Statically specifies the IP address of the LAN port.</p>
          * 
          * <strong>example:</strong>
          * <p>DHCP</p>
@@ -85,7 +85,7 @@ public class DescribeSagLanListResponseBody extends TeaModel {
         public String IPType;
 
         /**
-         * <p>The time duration that the IP address is retained after it is assigned through DHCP. Unit: minutes.</p>
+         * <p>The DHCP lease time. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -94,7 +94,7 @@ public class DescribeSagLanListResponseBody extends TeaModel {
         public String lease;
 
         /**
-         * <p>The subnet mask of the IP address of the port.</p>
+         * <p>The subnet mask.</p>
          * 
          * <strong>example:</strong>
          * <p>255.255.255.0</p>
@@ -112,7 +112,7 @@ public class DescribeSagLanListResponseBody extends TeaModel {
         public String portName;
 
         /**
-         * <p>The first IP address of the DHCP pool.</p>
+         * <p>The start IP address of the DHCP address pool.</p>
          * 
          * <strong>example:</strong>
          * <p>192.XX.XX.2</p>
@@ -194,7 +194,7 @@ public class DescribeSagLanListResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The error code returned. A value of 200 indicates that the query task is successful.</p>
+         * <p>The error code. 200 indicates that the query task succeeded.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -203,7 +203,7 @@ public class DescribeSagLanListResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message. A value of Successful indicates that the query task is successful.</p>
+         * <p>The error message. Successful indicates that the query task succeeded.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -212,17 +212,17 @@ public class DescribeSagLanListResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The state of the query task. Valid values:</p>
+         * <p>The status of the asynchronous task. Valid values:</p>
          * <ul>
          * <li><strong>Initialized</strong>: The query task is initialized.</li>
-         * <li><strong>Offline</strong>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. After the SAG device is connected to Alibaba Cloud, Alibaba Cloud assigns the query task to the SAG device.</li>
-         * <li><strong>Succeed</strong>: Alibaba Cloud has assigned the query task to the SAG device.</li>
-         * <li><strong>Processing</strong>: Alibaba Cloud is assigning the query task to the SAG device.</li>
-         * <li><strong>VersionNotSupport</strong>: The query task is not supported by the current version of the SAG device.</li>
-         * <li><strong>BuildRequestError</strong>: The query task is not supported by the controller of the SAG device.</li>
-         * <li><strong>HardwareError</strong>: Alibaba Cloud failed to assign the query task to the SAG device because the SAG device is faulty.</li>
+         * <li><strong>Offline</strong>: The Smart Access Gateway device is offline and the query task is not delivered. The task will be delivered after the device comes online.</li>
+         * <li><strong>Succeed</strong>: The query task was delivered successfully.</li>
+         * <li><strong>Processing</strong>: The query task is being delivered.</li>
+         * <li><strong>VersionNotSupport</strong>: The current version of the Smart Access Gateway device does not support this operation.</li>
+         * <li><strong>BuildRequestError</strong>: The request is not supported by the management system.</li>
+         * <li><strong>HardwareError</strong>: The query task failed to be delivered due to a device error.</li>
          * <li><strong>TaskNotExist</strong>: The query task does not exist.</li>
-         * <li><strong>OfflineNotConfiged</strong>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. Alibaba Cloud does not assign the query task to the SAG device even after the SAG device is connected to Alibaba Cloud.</li>
+         * <li><strong>OfflineNotConfiged</strong>: The Smart Access Gateway device is offline and the query task is not delivered. The task will not be delivered even after the device comes online.</li>
          * </ul>
          * 
          * <strong>example:</strong>

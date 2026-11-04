@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSmartAccessGatewayDnsForwardRequest extends TeaModel {
     /**
-     * <p>The ID of the DNS forwarding rule.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteSmartAccessGatewayDnsForwardRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>The ID of the region where the Smart Access Gateway instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DeleteSmartAccessGatewayDnsForwardRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the SAG instance.</p>
+     * <p>The ID of the gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class DeleteSmartAccessGatewayDnsForwardRequest extends TeaModel {
     public String sagInsId;
 
     /**
-     * <p>The serial number (SN) of the device.</p>
+     * <p>The SN of the device.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

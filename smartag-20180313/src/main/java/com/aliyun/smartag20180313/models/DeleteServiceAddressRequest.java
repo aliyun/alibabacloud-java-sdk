@@ -5,52 +5,31 @@ import com.aliyun.tea.*;
 
 public class DeleteServiceAddressRequest extends TeaModel {
     /**
-     * <p>The service address of the Smart Access Gateway instance. Example: <strong>192.168.1.1</strong>.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>192.168.1.1</p>
      */
     @NameInMap("Address")
     public String address;
 
     /**
-     * <p>The type of the service address for the Smart Access Gateway instance. Set the value to <strong>ProbeTask</strong>.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ProbeTask</p>
      */
     @NameInMap("AddressType")
     public String addressType;
 
     /**
-     * <p>The ID of the region where the Smart Access Gateway instance is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The instance ID of the Smart Access Gateway instance.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>sag-****</p>
      */
     @NameInMap("SagId")
     public String sagId;
 
     /**
-     * <p>The serial number of the Smart Access Gateway device.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>sag****</p>
      */
     @NameInMap("Sn")
     public String sn;

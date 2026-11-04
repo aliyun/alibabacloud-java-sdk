@@ -11,8 +11,7 @@ public class DescribeSagVbrRelationsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the SAG instance is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the Smart Access Gateway instance. You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the regions supported by Smart Access Gateway and their corresponding region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -27,7 +26,7 @@ public class DescribeSagVbrRelationsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IDs of the VBRs.</p>
+     * <p>The instance IDs of the virtual border routers (VBRs) used for routing. You can query multiple VBR instance IDs at a time. The maximum value of N is <strong>20</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,8 +36,7 @@ public class DescribeSagVbrRelationsRequest extends TeaModel {
     public java.util.List<String> vbrInstanceIds;
 
     /**
-     * <p>The ID of the region where the VBR is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the virtual border router (VBR) instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

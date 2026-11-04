@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSmartAccessGatewaySoftwareResponseBody extends TeaModel {
     /**
-     * <p>The ID of the order that you placed to purchase the SAG app instance.</p>
+     * <p>The order ID for purchasing the Smart Access Gateway app instance.</p>
      * 
      * <strong>example:</strong>
      * <p>203000000000000</p>
@@ -14,7 +14,7 @@ public class CreateSmartAccessGatewaySoftwareResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>24675405-74DF-4C94-82C6-B749580C498E</p>
@@ -23,7 +23,7 @@ public class CreateSmartAccessGatewaySoftwareResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group to which the SAG app instance belongs.</p>
+     * <p>The ID of the resource group to which the Smart Access Gateway app instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm2iu4fnc****</p>
@@ -32,7 +32,7 @@ public class CreateSmartAccessGatewaySoftwareResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the SAG app instance.</p>
+     * <p>The instance ID of the Smart Access Gateway app.</p>
      * 
      * <strong>example:</strong>
      * <p>sag-gnhe6sywtare5******</p>

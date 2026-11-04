@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateACLResponseBody extends TeaModel {
     /**
-     * <p>The access control instance ID.</p>
+     * <p>The ID of the access control instance.</p>
      * 
      * <strong>example:</strong>
      * <p>acl-o6yol7zowii5n2****</p>
@@ -14,7 +14,7 @@ public class CreateACLResponseBody extends TeaModel {
     public String aclId;
 
     /**
-     * <p>The type of the Smart Access Gateway instance associated with the access control instance.</p>
+     * <p>The type of the Smart Access Gateway (SAG) instance associated with the access control instance.</p>
      * 
      * <strong>example:</strong>
      * <p>acl-hardware</p>
@@ -32,7 +32,7 @@ public class CreateACLResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource group ID of the access control instance.</p>
+     * <p>The ID of the resource group to which the access control instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm2iu4fnc****</p>

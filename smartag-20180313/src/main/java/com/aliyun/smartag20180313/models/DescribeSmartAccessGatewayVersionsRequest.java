@@ -11,7 +11,7 @@ public class DescribeSmartAccessGatewayVersionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the SAG instance is deployed.</p>
+     * <p>The region ID of the Smart Access Gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeSmartAccessGatewayVersionsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the SAG instance.</p>
+     * <p>The Smart Access Gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class DescribeSmartAccessGatewayVersionsRequest extends TeaModel {
     public String smartAGId;
 
     /**
-     * <p>The serial number of the SAG device.</p>
+     * <p>The serial number of the Smart Access Gateway device.</p>
      * 
      * <strong>example:</strong>
      * <p>sage62x022502****</p>
@@ -46,10 +46,10 @@ public class DescribeSmartAccessGatewayVersionsRequest extends TeaModel {
     public String smartAGSn;
 
     /**
-     * <p>The type of software run by the SAG device. Valid values:</p>
+     * <p>The software type of the Smart Access Gateway device. Valid values:</p>
      * <ul>
-     * <li><strong>Device</strong>: The operating system run by the SAG device. This is the default value.</li>
-     * <li><strong>Dpi</strong>: The signature database used by the SAG device.</li>
+     * <li><strong>Device</strong>: the operating system software that runs on the Smart Access Gateway device. Default value.</li>
+     * <li><strong>Dpi</strong>: the application signature library software that runs on the Smart Access Gateway device.</li>
      * </ul>
      * 
      * <strong>example:</strong>

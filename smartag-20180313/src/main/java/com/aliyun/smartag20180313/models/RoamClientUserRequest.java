@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RoamClientUserRequest extends TeaModel {
     /**
-     * <p>The region ID of the SAG app instance.</p>
+     * <p>The region ID of the source SAG app instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class RoamClientUserRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the SAG app instance.</p>
+     * <p>The region ID of the destination SAG app instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class RoamClientUserRequest extends TeaModel {
     public String targetSmartAGId;
 
     /**
-     * <p>The usernames of the client for which you want to enable roaming.</p>
+     * <p>The username of the client account to roam.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

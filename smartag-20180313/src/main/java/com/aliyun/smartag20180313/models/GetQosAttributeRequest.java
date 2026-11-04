@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetQosAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the QoS policy.</p>
+     * <p>The instance ID of the QoS policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,7 @@ public class GetQosAttributeRequest extends TeaModel {
     public String qosId;
 
     /**
-     * <p>The ID of the region where the QoS policy is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the QoS policy instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

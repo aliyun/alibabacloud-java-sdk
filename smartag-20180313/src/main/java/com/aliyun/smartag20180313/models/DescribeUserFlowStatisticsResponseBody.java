@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUserFlowStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9552AD68-18EA-4074-B27D-40040FBA9683</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFlowLogResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B05AF87C-0FE5-42D7-BEA3-665D90FAA71D</p>

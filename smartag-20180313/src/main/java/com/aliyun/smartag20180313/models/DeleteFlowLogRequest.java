@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFlowLogRequest extends TeaModel {
     /**
-     * <p>The instance ID of the flow log.</p>
+     * <p>The flow log instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DeleteFlowLogRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the flow log belongs.</p>
+     * <p>The region ID of the flow log.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -7,11 +7,11 @@ public class AddSmartAccessGatewayDnsForwardRequest extends TeaModel {
     /**
      * <p>The domain name.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>Wildcard domain names are supported. You can use the wildcard character asterisk (\*) to specify a wildcard domain name.</li>
+     * <li>Wildcard domain names and full match are supported. You can enter an asterisk (*) for the domain name to match all. Examples:
+     * *.baidu.com. The allowed input format is baidu.com.</li>
      * </ul>
-     * <p>For example, you can enter \*.baidu.com to specify the domain name baidu.com.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,10 +33,10 @@ public class AddSmartAccessGatewayDnsForwardRequest extends TeaModel {
     /**
      * <p>The forwarding mode.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>This parameter is not in use. Ignore this parameter.</li>
+     * <li>This field is invalid. You can ignore it.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>first</p>
@@ -45,13 +45,13 @@ public class AddSmartAccessGatewayDnsForwardRequest extends TeaModel {
     public String mode;
 
     /**
-     * <p>The number of the egress port.</p>
+     * <p>The outbound port index.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>This parameter is optional if OutboundPortType is set to PhysicalPort. Ignore this parameter if OutboundPortType is set to Tunnel.</li>
-     * <li>The value of OutboundPortIndex is the unique index of the port name specified by poOutboundPortName. For example, 0 is the index for the port named eth0, and 2 is the index for the port named lte.</li>
+     * <li>This parameter is optional when OutboundPortType is set to PhysicalPort, and is not required when OutboundPortType is set to Tunnel.</li>
+     * <li>OutboundPortIndex and OutboundPortName have a one-to-one mapping: 0 - eth0; 2 - lte.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -60,13 +60,13 @@ public class AddSmartAccessGatewayDnsForwardRequest extends TeaModel {
     public String outboundPortIndex;
 
     /**
-     * <p>The egress port.</p>
+     * <p>The outbound port.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>This parameter is optional if OutboundPortType is set to PhysicalPort. Ignore this parameter if OutboundPortType is set to Tunnel.</li>
-     * <li>The value of OutboundPortIndex is the unique index of the port name specified by poOutboundPortName. For example, 0 is the index for the port named eth0, and 2 is the index for the port named lte.</li>
+     * <li>This parameter is optional when OutboundPortType is set to PhysicalPort, and is not required when OutboundPortType is set to Tunnel.</li>
+     * <li>OutboundPortIndex and OutboundPortName have a one-to-one mapping: 0 - eth0; 2 - lte.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>eth0</p>
@@ -75,12 +75,12 @@ public class AddSmartAccessGatewayDnsForwardRequest extends TeaModel {
     public String outboundPortName;
 
     /**
-     * <p>The type of the egress port.</p>
+     * <p>The outbound port type.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>A value of Tunnel specifies a tunnel, and a value of PhysicalPort specifies a physical port.</li>
+     * <li>A value of Tunnel indicates a tunnel port, and a value of PhysicalPort indicates a physical port.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Tunnel</p>
@@ -89,7 +89,7 @@ public class AddSmartAccessGatewayDnsForwardRequest extends TeaModel {
     public String outboundPortType;
 
     /**
-     * <p>The ID of the region where the instance is deployed.</p>
+     * <p>The region ID of the Smart Access Gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -99,7 +99,7 @@ public class AddSmartAccessGatewayDnsForwardRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the Smart Access Gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class AddSmartAccessGatewayDnsForwardRequest extends TeaModel {
     public String sagInsId;
 
     /**
-     * <p>The serial number (SN) of the device.</p>
+     * <p>The serial number of the device.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

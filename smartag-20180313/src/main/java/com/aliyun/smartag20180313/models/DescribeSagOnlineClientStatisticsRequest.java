@@ -11,7 +11,7 @@ public class DescribeSagOnlineClientStatisticsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the SAG app instance.</p>
+     * <p>The region ID of the Smart Access Gateway app instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeSagOnlineClientStatisticsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IDs of the SAG app instances. The list can contain up to 50 instance IDs.</p>
+     * <p>The instance IDs of the Smart Access Gateway app instances. Maximum value of N: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>sag-va03wf4l4idaj*****</p>
