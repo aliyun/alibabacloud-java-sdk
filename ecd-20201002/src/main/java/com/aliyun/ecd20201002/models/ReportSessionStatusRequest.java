@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReportSessionStatusRequest extends TeaModel {
     /**
-     * <p>End user.</p>
+     * <p>The connected user.</p>
      * 
      * <strong>example:</strong>
      * <p>liming</p>
@@ -14,7 +14,7 @@ public class ReportSessionStatusRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ReportSessionStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ReportSessionStatusRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Duration of the session change.</p>
+     * <p>The duration of the session change.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class ReportSessionStatusRequest extends TeaModel {
     public Long sessionChangeTime;
 
     /**
-     * <p>Session ID.</p>
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,22 @@ public class ReportSessionStatusRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>Session status.</p>
+     * <p>The session status. Valid values:</p>
+     * <ul>
+     * <li>SessionLogOff: The session is closed.</li>
+     * <li>DesktopTimerDisconnection: The cloud computer is disconnected by a scheduled task.</li>
+     * <li>SessionReboot: The session is rebooted.</li>
+     * <li>DesktopTimerShutdown: The cloud computer is started by a scheduled task.</li>
+     * <li>SessionLock: The logged-on user locks the session.</li>
+     * <li>SessionShutdown: The session is shut down.</li>
+     * <li>SessionUnLock: The logged-on user unlocks the session.</li>
+     * <li>DesktopTimerReboot: The cloud computer is rebooted by a scheduled task.</li>
+     * <li>ConsoleConnect: The console is connected before the session starts.</li>
+     * <li>SessionLogOn: The session starts.</li>
+     * <li>SessionPopup: The session exits before disconnection.</li>
+     * <li>SessionDisconnect: The session is disconnected.</li>
+     * <li>ConsoleDisconnect: The console is disconnected after the session is logged off.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

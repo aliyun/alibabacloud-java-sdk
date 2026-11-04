@@ -4,6 +4,10 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class GetConnectionTicketResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ecd-1234567890abcdefg</p>
+     */
     @NameInMap("DesktopId")
     public String desktopId;
 
@@ -20,7 +24,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ticket used to connect to the user instance. Before you use the ticket, decode its content from Base64, save it as an .ica file, and then open the file. The following code provides a Python example:</p>
+     * <p>The ticket used to connect to the user instance. Before you use the ticket, you must decode its content by using Base64, save the decoded content as an .ica file (for example, xxx.ica), and then open the file. Python code example:</p>
      * <pre><code>import base64
      * response = {
      *     &quot;Ticket&quot;: &quot;W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********&quot;,
@@ -39,7 +43,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public String taskCode;
 
     /**
-     * <p>The ID of the cloud computer connection task.</p>
+     * <p>The ID of the cloud desktop connection task.</p>
      * 
      * <strong>example:</strong>
      * <p>2afbad19-778a-4fc5-9674-1f19c63862da</p>
@@ -48,7 +52,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The ID of the cloud computer connection task.</p>
+     * <p>The ID of the cloud desktop connection task.</p>
      * 
      * <strong>example:</strong>
      * <p>2afbad19-778a-4fc5-9674-1f19c638****</p>
@@ -66,7 +70,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public String taskStatus;
 
     /**
-     * <p>The connection ticket for the cloud computer.</p>
+     * <p>The connection credentials for the cloud desktop.</p>
      * 
      * <strong>example:</strong>
      * <p>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</p>

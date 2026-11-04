@@ -1,3 +1,15 @@
+2026-11-04 Version: 3.0.1
+- Update API DescribeUserResources: add request parameters Uuid.
+- Update API DescribeUserResources: add response parameters Body.AgentBriefSummary.AgentBriefs.$.PcAvatarUrl.
+- Update API DescribeUserResources: add response parameters Body.AgentBriefSummary.AgentBriefs.$.Watermark.
+- Update API DescribeUserResources: add response parameters Body.Resources.$.AgentProviderList.
+- Update API DescribeUserResources: add response parameters Body.Resources.$.Cpu.
+- Update API DescribeUserResources: add response parameters Body.Resources.$.Disks.
+- Update API DescribeUserResources: add response parameters Body.Resources.$.GpuSpec.
+- Update API DescribeUserResources: add response parameters Body.Resources.$.Memory.
+- Update API StopDesktops: add request parameters ForceStop.
+
+
 2026-07-29 Version: 3.0.0
 - Delete API IsKeepAlive.
 - Update API DescribeUserResources: add response parameters Body.AgentBriefSummary.

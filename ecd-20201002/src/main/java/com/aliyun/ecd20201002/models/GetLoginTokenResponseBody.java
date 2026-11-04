@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetLoginTokenResponseBody extends TeaModel {
     /**
-     * <p>The email address of the user. This value is returned with the LoginToken after logon.    </p>
+     * <p>The email address of the user. This parameter is returned along with LoginToken after logon.    </p>
      * <ul>
      * <li>For a convenience user, the email address specified when the convenience user was created is returned.</li>
-     * <li>For an AD user, the value is returned in the format of <code>username@AD domain name</code>.</li>
+     * <li>For an AD user, the email address is returned in the following format: Username@AD domain name.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
     public String email;
 
     /**
-     * <p>The convenience account username or AD username.</p>
+     * <p>The username of the convenience account or AD user.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -28,7 +28,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This is an internal field and is not available for public use.</p>
+     * <p>Internal private field. Not available for external use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
     public String industry;
 
     /**
-     * <p>The token used to keep the logon session alive. After a successful logon with the keep-alive option enabled, the operation returns a <code>KeepAliveToken</code>. If the keep-alive option is not enabled, an empty value is returned.</p>
+     * <p>The token used to keep the user logged on. After a successful logon and if the user enables the keep-logged-on option, the API returns KeepAliveToken. If the keep-logged-on option is not enabled, an empty value is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>006YwvYMsesWWsDBZnVB+Wq9AvJDVIqOY3YCktvtb7+KxMb3ClnNlV8+l/knhZYrXUmeP06IzkjF+IgcZ3vZKOyMprDyFHjCy1r27FRE/U7+geWCl8iQ+yF8GaCRHfJEkC2+ROs93HkT4tfHxyY1J8W7O7ZQGUC/cdCvm+cCP6FIy73IUuPuVR6PcKYXIpEZPW</p>
@@ -47,7 +47,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
     public String keepAliveToken;
 
     /**
-     * <p>The property of the convenience user. If the user is an AD user, an empty value is returned.</p>
+     * <p>The properties of the convenience user. If the user is an AD user, an empty value is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>test:wuying</p>
@@ -56,7 +56,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
     public String label;
 
     /**
-     * <p>The logon credential.</p>
+     * <p>The logon token.</p>
      * 
      * <strong>example:</strong>
      * <p>v18101ac6a9e69c66b04a163031680463660b4b216cd758f34b60b9ad6a7c7f7334b83dd8f75eef4209c68f9f1080b****</p>
@@ -65,9 +65,9 @@ public class GetLoginTokenResponseBody extends TeaModel {
     public String loginToken;
 
     /**
-     * <p>The expected next stage. For example, if the administrator has enabled MFA authentication in the Elastic Desktop Service console, after the username and password authentication is passed (the <code>ADPassword</code> stage), this parameter returns <code>MFAVerify</code>, indicating that MFA authentication is required.</p>
+     * <p>The expected next stage. For example, if the administrator enables MFA authentication in the Elastic Desktop Service console, this parameter returns <code>MFAVerify</code> after the username and password authentication succeeds (that is, after the <code>ADPassword</code> stage). This indicates that MFA authentication is required.</p>
      * <blockquote>
-     * <p>For more information about each authentication stage, see the parameter description of the <code>CurrentStage</code> request parameter of this operation.</p>
+     * <p>For more information about each authentication stage, see the metric description of the <code>CurrentStage</code> request parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -76,25 +76,43 @@ public class GetLoginTokenResponseBody extends TeaModel {
     @NameInMap("NextStage")
     public String nextStage;
 
+    /**
+     * <p>The nickname of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user-001</p>
+     */
     @NameInMap("NickName")
     public String nickName;
 
+    /**
+     * <p>The ID of the workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+dir-885351****</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    /**
+     * <p>The name of the workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("OfficeSiteName")
     public String officeSiteName;
 
     /**
      * <blockquote>
-     * <p>This is an internal field and is not available for public use.</p>
+     * <p>Internal private field. Not available for external use.</p>
      * </blockquote>
      */
     @NameInMap("PasswordStrategy")
     public GetLoginTokenResponseBodyPasswordStrategy passwordStrategy;
 
     /**
-     * <p>The phone number of the convenience user. If the user is an AD user, an empty value is returned.</p>
+     * <p>The mobile phone number of the convenience user. If the user is an AD user, an empty value is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1381111****</p>
@@ -104,16 +122,16 @@ public class GetLoginTokenResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This is an internal field and is not available for public use.</p>
+     * <p>Internal private field. Not available for external use.</p>
      * </blockquote>
      */
     @NameInMap("Props")
     public java.util.Map<String, String> props;
 
     /**
-     * <p>The QR code of the secret key used when attaching a virtual MFA device. The value uses Base64 encoding. This value can be empty and is used in the <code>MFABind</code> stage.</p>
+     * <p>The QR code of the secret key used to attach a virtual MFA device. Uses Base64 encoding. This parameter can be empty and is used in the <code>MFABind</code> stage.</p>
      * <blockquote>
-     * <p>For more information about each authentication stage, see the parameter description of the <code>CurrentStage</code> request parameter of this operation.</p>
+     * <p>For more information about each authentication stage, see the metric description of the <code>CurrentStage</code> request parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -124,7 +142,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This is an internal field and is not available for public use.</p>
+     * <p>Internal private field. Not available for external use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -149,9 +167,9 @@ public class GetLoginTokenResponseBody extends TeaModel {
     public GetLoginTokenResponseBodyRiskVerifyInfo riskVerifyInfo;
 
     /**
-     * <p>The secret key used when attaching a virtual MFA device. This value is used in the <code>MFABind</code> stage.</p>
+     * <p>The secret key used to attach a virtual MFA device. Used in the <code>MFABind</code> stage.</p>
      * <blockquote>
-     * <p>For more information about each authentication stage, see the parameter description of the <code>CurrentStage</code> request parameter of this operation.</p>
+     * <p>For more information about each authentication stage, see the metric description of the <code>CurrentStage</code> request parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -161,9 +179,9 @@ public class GetLoginTokenResponseBody extends TeaModel {
     public String secret;
 
     /**
-     * <p>The session ID. This value is returned only when <code>GetLoginToken</code> is invoked for the first time within the same session. For subsequent stages that require multiple authentications, pass in this parameter.</p>
+     * <p>The session ID. This parameter is returned only when <code>GetLoginToken</code> is invoked for the first time in the same session. If multiple authentication steps are required, you must pass this parameter in subsequent stages.</p>
      * <blockquote>
-     * <p>For more information about each authentication stage, see the parameter description of the <code>CurrentStage</code> request parameter of this operation.</p>
+     * <p>For more information about each authentication stage, see the metric description of the <code>CurrentStage</code> request parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -173,7 +191,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>The Alibaba Cloud account ID. This value is used for hardware terminal identification.</p>
+     * <p>The Alibaba Cloud account ID. This parameter is used for hardware terminal identification.</p>
      * 
      * <strong>example:</strong>
      * <p>166353906220****</p>
@@ -183,7 +201,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This is an internal field and is not available for public use.</p>
+     * <p>Internal private field. Not available for external use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -192,6 +210,10 @@ public class GetLoginTokenResponseBody extends TeaModel {
     @NameInMap("WindowDisplayMode")
     public String windowDisplayMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0123456789abcdef</p>
+     */
     @NameInMap("WyId")
     public String wyId;
 
@@ -379,7 +401,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
     public static class GetLoginTokenResponseBodyPasswordStrategy extends TeaModel {
         /**
          * <blockquote>
-         * <p>This is an internal field and is not available for public use.</p>
+         * <p>Internal private field. Not available for external use.</p>
          * </blockquote>
          */
         @NameInMap("TenantAlternativeChars")
@@ -387,7 +409,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This is an internal field and is not available for public use.</p>
+         * <p>Internal private field. Not available for external use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -421,7 +443,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
 
     public static class GetLoginTokenResponseBodyRiskVerifyInfo extends TeaModel {
         /**
-         * <p>The email address used for identity verification when risk verification is triggered.</p>
+         * <p>The email address used for verification when identity verification is triggered.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:user@example.com">user@example.com</a></p>
@@ -448,7 +470,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         public String locked;
 
         /**
-         * <p>The phone number used for identity verification when risk verification is triggered.</p>
+         * <p>The mobile phone number used for verification when identity verification is triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>1381111****</p>

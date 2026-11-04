@@ -15,7 +15,7 @@ public class SetFingerPrintTemplateRequest extends TeaModel {
     public String clientId;
 
     /**
-     * <p>Ensure request idempotence. Generate a parameter value from your client to ensure its uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
@@ -24,7 +24,7 @@ public class SetFingerPrintTemplateRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Description.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>testDescription</p>
@@ -42,7 +42,7 @@ public class SetFingerPrintTemplateRequest extends TeaModel {
     public String encryptedFingerPrintTemplate;
 
     /**
-     * <p>Encryption key.</p>
+     * <p>The encryption key.</p>
      * 
      * <strong>example:</strong>
      * <p>drjfspchj</p>
@@ -51,7 +51,7 @@ public class SetFingerPrintTemplateRequest extends TeaModel {
     public String encryptedKey;
 
     /**
-     * <p>Fingerprint template.</p>
+     * <p>The fingerprint template.</p>
      * 
      * <strong>example:</strong>
      * <p>goG3gG8AAABhujtscn</p>
@@ -60,7 +60,7 @@ public class SetFingerPrintTemplateRequest extends TeaModel {
     public String fingerPrintTemplate;
 
     /**
-     * <p>Logon credential.</p>
+     * <p>The logon credential.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class SetFingerPrintTemplateRequest extends TeaModel {
     public String loginToken;
 
     /**
-     * <p>Password.</p>
+     * <p>The password.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,7 +80,7 @@ public class SetFingerPrintTemplateRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class SetFingerPrintTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Session ID.</p>
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
