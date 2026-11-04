@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTeamsRequest extends TeaModel {
     /**
+     * <p>The page number. Default value: 1. Valid values: 1 to 10000.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListTeamsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of teams to return on each page. Default value: 10. Valid values: 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class ListTeamsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Filters teams by plan specification. Valid values: eco (Economy), std (Standard), pro (Professional), and ent (Enterprise).</p>
+     * 
      * <strong>example:</strong>
      * <p>pro</p>
      */
@@ -26,6 +32,8 @@ public class ListTeamsRequest extends TeaModel {
     public String plan;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmwxqyrgwabcd</p>
      */
@@ -33,8 +41,10 @@ public class ListTeamsRequest extends TeaModel {
     public String resourceGroupID;
 
     /**
+     * <p>The team name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>开发团队</p>
+     * <p>Development team</p>
      */
     @NameInMap("teamName")
     public String teamName;

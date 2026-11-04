@@ -4,10 +4,15 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class UpdateVolumeRequest extends TeaModel {
+    /**
+     * <p>The request parameters for updating the storage volume.</p>
+     */
     @NameInMap("body")
     public UpdateVolumeInput body;
 
     /**
+     * <p>The ID of the team to which the storage volume belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>9f5a1fe9-****</p>
      */

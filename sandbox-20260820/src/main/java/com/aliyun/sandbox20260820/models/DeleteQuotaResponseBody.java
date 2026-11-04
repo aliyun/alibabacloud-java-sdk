@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteQuotaResponseBody extends TeaModel {
     /**
+     * <p>The response code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteQuotaResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message. A value of success indicates a successful request.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class DeleteQuotaResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</p>
      */

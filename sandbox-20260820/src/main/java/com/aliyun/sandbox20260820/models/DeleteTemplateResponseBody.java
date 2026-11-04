@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteTemplateResponseBody extends TeaModel {
     /**
+     * <p>The error code. The value is 200 if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class DeleteTemplateResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</p>
      */

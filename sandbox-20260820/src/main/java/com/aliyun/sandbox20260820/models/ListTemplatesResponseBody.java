@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTemplatesResponseBody extends TeaModel {
     /**
+     * <p>The error code. The value 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListTemplatesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The maximum number of entries per page returned in the current response.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class ListTemplatesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,6 +32,8 @@ public class ListTemplatesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The pagination token for the next page. This parameter is empty if no more results are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>cae5f900-8b1d-4c0e-9c2a-1a2b3c4d5e6f</p>
      */
@@ -33,12 +41,17 @@ public class ListTemplatesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The list of template objects.</p>
+     */
     @NameInMap("templates")
     public java.util.List<PublicTemplate> templates;
 

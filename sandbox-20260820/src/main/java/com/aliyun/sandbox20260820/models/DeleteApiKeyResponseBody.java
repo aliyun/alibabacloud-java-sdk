@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteApiKeyResponseBody extends TeaModel {
     /**
+     * <p>The response code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteApiKeyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message. A value of success indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class DeleteApiKeyResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7ADFF8D8-D4BA-5F79-AD49-DDABFEA59B6C</p>
      */

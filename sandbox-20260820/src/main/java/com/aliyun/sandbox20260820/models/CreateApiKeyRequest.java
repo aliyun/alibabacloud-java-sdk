@@ -4,6 +4,9 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class CreateApiKeyRequest extends TeaModel {
+    /**
+     * <p>The request parameters for creating an API key.</p>
+     */
     @NameInMap("body")
     public CreateApiKeyInput body;
 

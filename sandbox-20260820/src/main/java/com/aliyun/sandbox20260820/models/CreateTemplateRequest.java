@@ -4,6 +4,9 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateRequest extends TeaModel {
+    /**
+     * <p>The request struct for creating a template.</p>
+     */
     @NameInMap("body")
     public CreateTemplateInput body;
 

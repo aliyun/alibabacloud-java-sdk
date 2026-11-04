@@ -14,7 +14,7 @@ public class E2BListedSandbox extends TeaModel {
     public Integer cpuCount;
 
     /**
-     * <p>The temporary disk specification.</p>
+     * <p>The ephemeral disk specification.</p>
      * 
      * <strong>example:</strong>
      * <p>10240</p>
@@ -65,6 +65,12 @@ public class E2BListedSandbox extends TeaModel {
     public String resourceGroupID;
 
     /**
+     * <p>The resource tags.</p>
+     */
+    @NameInMap("resourceTags")
+    public java.util.List<E2BListedSandboxResourceTags> resourceTags;
+
+    /**
      * <p>The sandbox ID.</p>
      * 
      * <strong>example:</strong>
@@ -83,16 +89,16 @@ public class E2BListedSandbox extends TeaModel {
     public String startedAt;
 
     /**
-     * <p>The sandbox status. Valid values:</p>
+     * <p>The sandbox state. Valid values:</p>
      * <ul>
      * <li>running: Running.</li>
-     * <li>pausing: Being paused.</li>
+     * <li>pausing: Pausing.</li>
      * <li>paused: Paused.</li>
-     * <li>resuming: Being resumed.</li>
-     * <li>pause_fail: Failed to pause.</li>
-     * <li>resume_fail: Failed to resume.</li>
+     * <li>resuming: Resuming.</li>
+     * <li>pause_fail: Pause failed.</li>
+     * <li>resume_fail: Resume failed.</li>
      * <li>snapshotting: Creating a snapshot.</li>
-     * <li>snapshot_failed: Failed to create a snapshot.</li>
+     * <li>snapshot_failed: Snapshot creation failed.</li>
      * <li>terminated: Terminated.</li>
      * </ul>
      * 
@@ -217,6 +223,14 @@ public class E2BListedSandbox extends TeaModel {
         return this.resourceGroupID;
     }
 
+    public E2BListedSandbox setResourceTags(java.util.List<E2BListedSandboxResourceTags> resourceTags) {
+        this.resourceTags = resourceTags;
+        return this;
+    }
+    public java.util.List<E2BListedSandboxResourceTags> getResourceTags() {
+        return this.resourceTags;
+    }
+
     public E2BListedSandbox setSandboxID(String sandboxID) {
         this.sandboxID = sandboxID;
         return this;
@@ -287,6 +301,48 @@ public class E2BListedSandbox extends TeaModel {
     }
     public String getUserID() {
         return this.userID;
+    }
+
+    public static class E2BListedSandboxResourceTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project</p>
+         */
+        @NameInMap("tagKey")
+        public String tagKey;
+
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
+        @NameInMap("tagValue")
+        public String tagValue;
+
+        public static E2BListedSandboxResourceTags build(java.util.Map<String, ?> map) throws Exception {
+            E2BListedSandboxResourceTags self = new E2BListedSandboxResourceTags();
+            return TeaModel.build(map, self);
+        }
+
+        public E2BListedSandboxResourceTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public E2BListedSandboxResourceTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
     }
 
 }

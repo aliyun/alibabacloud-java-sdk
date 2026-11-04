@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTemplateResponseBody extends TeaModel {
     /**
+     * <p>The error code. The value is 200 if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The creation time in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-09-19T10:00:00Z</p>
      */
@@ -19,6 +23,8 @@ public class GetTemplateResponseBody extends TeaModel {
     public String createdTime;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,6 +32,8 @@ public class GetTemplateResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The name of the template.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-template</p>
      */
@@ -33,6 +41,8 @@ public class GetTemplateResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</p>
      */
@@ -40,19 +50,35 @@ public class GetTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4ph6aiy</p>
      */
     @NameInMap("resourceGroupID")
     public String resourceGroupID;
 
+    /**
+     * <p>The resource tags.</p>
+     */
+    @NameInMap("resourceTags")
+    public java.util.List<GetTemplateResponseBodyResourceTags> resourceTags;
+
+    /**
+     * <p>The runtime configuration of the template.</p>
+     */
     @NameInMap("runtimeConfig")
     public PublicTemplateRuntimeConfig runtimeConfig;
 
+    /**
+     * <p>The status of the template.</p>
+     */
     @NameInMap("status")
     public PublicTemplateStatus status;
 
     /**
+     * <p>The team ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>13b721e6-8cc8-5df2-af13-80316f7508af</p>
      */
@@ -60,6 +86,8 @@ public class GetTemplateResponseBody extends TeaModel {
     public String teamID;
 
     /**
+     * <p>The team name.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-team</p>
      */
@@ -67,6 +95,8 @@ public class GetTemplateResponseBody extends TeaModel {
     public String teamName;
 
     /**
+     * <p>The unique identifier of the template.</p>
+     * 
      * <strong>example:</strong>
      * <p>us7dxqaezw5uu7aa2cm5</p>
      */
@@ -126,6 +156,14 @@ public class GetTemplateResponseBody extends TeaModel {
         return this.resourceGroupID;
     }
 
+    public GetTemplateResponseBody setResourceTags(java.util.List<GetTemplateResponseBodyResourceTags> resourceTags) {
+        this.resourceTags = resourceTags;
+        return this;
+    }
+    public java.util.List<GetTemplateResponseBodyResourceTags> getResourceTags() {
+        return this.resourceTags;
+    }
+
     public GetTemplateResponseBody setRuntimeConfig(PublicTemplateRuntimeConfig runtimeConfig) {
         this.runtimeConfig = runtimeConfig;
         return this;
@@ -164,6 +202,48 @@ public class GetTemplateResponseBody extends TeaModel {
     }
     public String getTemplateID() {
         return this.templateID;
+    }
+
+    public static class GetTemplateResponseBodyResourceTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project</p>
+         */
+        @NameInMap("tagKey")
+        public String tagKey;
+
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
+        @NameInMap("tagValue")
+        public String tagValue;
+
+        public static GetTemplateResponseBodyResourceTags build(java.util.Map<String, ?> map) throws Exception {
+            GetTemplateResponseBodyResourceTags self = new GetTemplateResponseBodyResourceTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTemplateResponseBodyResourceTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetTemplateResponseBodyResourceTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
     }
 
 }

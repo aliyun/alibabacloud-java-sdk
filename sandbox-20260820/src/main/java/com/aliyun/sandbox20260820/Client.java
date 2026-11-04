@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 ApiKey</p>
+     * <p>Creates an API key.</p>
      * 
      * @param request CreateApiKeyRequest
      * @param headers map
@@ -57,7 +57,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 ApiKey</p>
+     * <p>Creates an API key.</p>
      * 
      * @param request CreateApiKeyRequest
      * @return CreateApiKeyResponse
@@ -70,7 +70,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 Team</p>
+     * <p>Creates a team.</p>
      * 
      * @param request CreateTeamRequest
      * @param headers map
@@ -99,7 +99,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 Team</p>
+     * <p>Creates a team.</p>
      * 
      * @param request CreateTeamRequest
      * @return CreateTeamResponse
@@ -112,7 +112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 Template</p>
+     * <p>Creates a template.</p>
      * 
      * @param request CreateTemplateRequest
      * @param headers map
@@ -141,7 +141,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 Template</p>
+     * <p>Creates a template.</p>
      * 
      * @param request CreateTemplateRequest
      * @return CreateTemplateResponse
@@ -154,7 +154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建模板缓存</p>
+     * <p>Creates a template cache.</p>
      * 
      * @param request CreateTemplateCacheRequest
      * @param headers map
@@ -183,7 +183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建模板缓存</p>
+     * <p>Creates a template cache.</p>
      * 
      * @param request CreateTemplateCacheRequest
      * @return CreateTemplateCacheResponse
@@ -196,7 +196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 Volume</p>
+     * <p>Creates a storage volume.</p>
      * 
      * @param request CreateVolumeRequest
      * @param headers map
@@ -225,7 +225,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 Volume</p>
+     * <p>Creates a storage volume.</p>
      * 
      * @param request CreateVolumeRequest
      * @return CreateVolumeResponse
@@ -238,7 +238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除 ApiKey </p>
+     * <p>Deletes a specified API key.</p>
      * 
      * @param request DeleteApiKeyRequest
      * @param headers map
@@ -266,7 +266,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除 ApiKey </p>
+     * <p>Deletes a specified API key.</p>
      * 
      * @param request DeleteApiKeyRequest
      * @return DeleteApiKeyResponse
@@ -279,7 +279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除 quota 配置</p>
+     * <p>Deletes the quota configuration for a specified team.</p>
      * 
      * @param request DeleteQuotaRequest
      * @param headers map
@@ -313,7 +313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除 quota 配置</p>
+     * <p>Deletes the quota configuration for a specified team.</p>
      * 
      * @param request DeleteQuotaRequest
      * @return DeleteQuotaResponse
@@ -326,7 +326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除 Team</p>
+     * <p>Deletes a specified team.</p>
      * 
      * @param request DeleteTeamRequest
      * @param headers map
@@ -354,7 +354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除 Team</p>
+     * <p>Deletes a specified team.</p>
      * 
      * @param request DeleteTeamRequest
      * @return DeleteTeamResponse
@@ -367,7 +367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除 Template</p>
+     * <p>Deletes a template.</p>
      * 
      * @param request DeleteTemplateRequest
      * @param headers map
@@ -401,7 +401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除 Template</p>
+     * <p>Deletes a template.</p>
      * 
      * @param request DeleteTemplateRequest
      * @return DeleteTemplateResponse
@@ -414,7 +414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除模板缓存</p>
+     * <p>Deletes the template cache.</p>
      * 
      * @param request DeleteTemplateCacheRequest
      * @param headers map
@@ -448,7 +448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除模板缓存</p>
+     * <p>Deletes the template cache.</p>
      * 
      * @param request DeleteTemplateCacheRequest
      * @return DeleteTemplateCacheResponse
@@ -461,7 +461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除 Volume </p>
+     * <p>Deletes a specified storage volume.</p>
      * 
      * @param request DeleteVolumeRequest
      * @param headers map
@@ -495,7 +495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除 Volume </p>
+     * <p>Deletes a specified storage volume.</p>
      * 
      * @param request DeleteVolumeRequest
      * @return DeleteVolumeResponse
@@ -508,7 +508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看 ApiKey</p>
+     * <p>Queries the details of a specified API key.</p>
      * 
      * @param request DescribeApiKeyRequest
      * @param headers map
@@ -536,7 +536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看 ApiKey</p>
+     * <p>Queries the details of a specified API key.</p>
      * 
      * @param request DescribeApiKeyRequest
      * @return DescribeApiKeyResponse
@@ -549,7 +549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取 quota 配置</p>
+     * <p>Queries the quota configuration of a specified team.</p>
      * 
      * @param request DescribeQuotaRequest
      * @param headers map
@@ -583,7 +583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取 quota 配置</p>
+     * <p>Queries the quota configuration of a specified team.</p>
      * 
      * @param request DescribeQuotaRequest
      * @return DescribeQuotaResponse
@@ -596,7 +596,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询模板缓存</p>
+     * <p>Queries the template cache.</p>
      * 
      * @param request DescribeTemplateCacheRequest
      * @param headers map
@@ -630,7 +630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询模板缓存</p>
+     * <p>Queries the template cache.</p>
      * 
      * @param request DescribeTemplateCacheRequest
      * @return DescribeTemplateCacheResponse
@@ -643,7 +643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Team详情</p>
+     * <p>Queries the details of a specified team.</p>
      * 
      * @param request GetTeamRequest
      * @param headers map
@@ -671,7 +671,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Team详情</p>
+     * <p>Queries the details of a specified team.</p>
      * 
      * @param request GetTeamRequest
      * @return GetTeamResponse
@@ -684,7 +684,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 Template</p>
+     * <p>Queries a template.</p>
      * 
      * @param request GetTemplateRequest
      * @param headers map
@@ -718,7 +718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 Template</p>
+     * <p>Queries a template.</p>
      * 
      * @param request GetTemplateRequest
      * @return GetTemplateResponse
@@ -731,7 +731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看 Volume</p>
+     * <p>Queries the details of a specified storage volume.</p>
      * 
      * @param request GetVolumeRequest
      * @param headers map
@@ -765,7 +765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看 Volume</p>
+     * <p>Queries the details of a specified storage volume.</p>
      * 
      * @param request GetVolumeRequest
      * @return GetVolumeResponse
@@ -778,7 +778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询 ApiKey</p>
+     * <p>Queries the list of API keys by using paging.</p>
      * 
      * @param request ListApiKeysRequest
      * @param headers map
@@ -836,7 +836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询 ApiKey</p>
+     * <p>Queries the list of API keys by using paging.</p>
      * 
      * @param request ListApiKeysRequest
      * @return ListApiKeysResponse
@@ -849,7 +849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 quota 配置</p>
+     * <p>Performs a paging query on the quota configurations for the current account.</p>
      * 
      * @param request ListQuotaRequest
      * @param headers map
@@ -887,7 +887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 quota 配置</p>
+     * <p>Performs a paging query on the quota configurations for the current account.</p>
      * 
      * @param request ListQuotaRequest
      * @return ListQuotaResponse
@@ -900,7 +900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 Team 列表</p>
+     * <p>Queries the team list by using paging.</p>
      * 
      * @param request ListTeamsRequest
      * @param headers map
@@ -950,7 +950,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 Team 列表</p>
+     * <p>Queries the team list by using paging.</p>
      * 
      * @param request ListTeamsRequest
      * @return ListTeamsResponse
@@ -963,7 +963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询模板缓存</p>
+     * <p>Performs a paging query of template caches.</p>
      * 
      * @param request ListTemplateCacheRequest
      * @param headers map
@@ -1013,7 +1013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询模板缓存</p>
+     * <p>Performs a paging query of template caches.</p>
      * 
      * @param request ListTemplateCacheRequest
      * @return ListTemplateCacheResponse
@@ -1026,7 +1026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询 Template</p>
+     * <p>Performs a paged query on the template list by using paging.</p>
      * 
      * @param request ListTemplatesRequest
      * @param headers map
@@ -1068,7 +1068,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询 Template</p>
+     * <p>Performs a paged query on the template list by using paging.</p>
      * 
      * @param request ListTemplatesRequest
      * @return ListTemplatesResponse
@@ -1081,7 +1081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询 Volumes</p>
+     * <p>Queries a list of storage volumes by using paging.</p>
      * 
      * @param request ListVolumesRequest
      * @param headers map
@@ -1143,7 +1143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询 Volumes</p>
+     * <p>Queries a list of storage volumes by using paging.</p>
      * 
      * @param request ListVolumesRequest
      * @return ListVolumesResponse
@@ -1156,7 +1156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重置 ApiKey </p>
+     * <p>Resets a specified API key.</p>
      * 
      * @param request ResetApiKeyRequest
      * @param headers map
@@ -1184,7 +1184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重置 ApiKey </p>
+     * <p>Resets a specified API key.</p>
      * 
      * @param request ResetApiKeyRequest
      * @return ResetApiKeyResponse
@@ -1197,7 +1197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 ApiKey</p>
+     * <p>Updates the configuration of a specified API key.</p>
      * 
      * @param request UpdateApiKeyRequest
      * @param headers map
@@ -1226,7 +1226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 ApiKey</p>
+     * <p>Updates the configuration of a specified API key.</p>
      * 
      * @param request UpdateApiKeyRequest
      * @return UpdateApiKeyResponse
@@ -1239,7 +1239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 quota 配置</p>
+     * <p>Updates the quota configuration.</p>
      * 
      * @param request UpdateQuotaRequest
      * @param headers map
@@ -1268,7 +1268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 quota 配置</p>
+     * <p>Updates the quota configuration.</p>
      * 
      * @param request UpdateQuotaRequest
      * @return UpdateQuotaResponse
@@ -1281,7 +1281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 Team</p>
+     * <p>Updates the information of a specified team.</p>
      * 
      * @param request UpdateTeamRequest
      * @param headers map
@@ -1310,7 +1310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 Team</p>
+     * <p>Updates the information of a specified team.</p>
      * 
      * @param request UpdateTeamRequest
      * @return UpdateTeamResponse
@@ -1323,7 +1323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 Template</p>
+     * <p>Updates a template.</p>
      * 
      * @param request UpdateTemplateRequest
      * @param headers map
@@ -1358,7 +1358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 Template</p>
+     * <p>Updates a template.</p>
      * 
      * @param request UpdateTemplateRequest
      * @return UpdateTemplateResponse
@@ -1371,7 +1371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 Volume</p>
+     * <p>Updates the configuration of a specified storage volume.</p>
      * 
      * @param request UpdateVolumeRequest
      * @param headers map
@@ -1406,7 +1406,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 Volume</p>
+     * <p>Updates the configuration of a specified storage volume.</p>
      * 
      * @param request UpdateVolumeRequest
      * @return UpdateVolumeResponse

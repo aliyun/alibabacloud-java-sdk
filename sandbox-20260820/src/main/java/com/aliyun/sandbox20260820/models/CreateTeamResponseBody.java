@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTeamResponseBody extends TeaModel {
     /**
+     * <p>The response code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CreateTeamResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message. The value is success if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class CreateTeamResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The team information.</p>
+     */
     @NameInMap("team")
     public E2BTeam team;
 

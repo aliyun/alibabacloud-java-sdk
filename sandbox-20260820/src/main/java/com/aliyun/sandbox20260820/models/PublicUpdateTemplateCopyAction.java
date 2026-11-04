@@ -14,7 +14,7 @@ public class PublicUpdateTemplateCopyAction extends TeaModel {
     public String acrInstanceId;
 
     /**
-     * <p>Indicates whether image replication is enabled.</p>
+     * <p>Specifies whether image replication is enabled.</p>
      */
     @NameInMap("enabled")
     public Boolean enabled;
@@ -35,7 +35,7 @@ public class PublicUpdateTemplateCopyAction extends TeaModel {
     public PublicUpdateTemplateRegistryConfig registryConfig;
 
     /**
-     * <p>The type of the destination repository.</p>
+     * <p>The destination repository type.</p>
      * 
      * <strong>example:</strong>
      * <p>acr</p>

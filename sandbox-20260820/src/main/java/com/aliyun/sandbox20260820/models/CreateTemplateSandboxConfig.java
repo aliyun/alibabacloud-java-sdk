@@ -41,7 +41,7 @@ public class CreateTemplateSandboxConfig extends TeaModel {
     public String osType;
 
     /**
-     * <p>The sandbox readiness probe command. A successful execution indicates that the sandbox is ready to accept requests. This parameter is supported only for first-generation sandboxes.</p>
+     * <p>The readiness probe command for the sandbox. A successful execution indicates that the sandbox is ready to receive requests. This parameter is supported only by first-generation sandboxes.</p>
      * 
      * <strong>example:</strong>
      * <p>curl -sf <a href="http://127.0.0.1:49983/health">http://127.0.0.1:49983/health</a></p>
@@ -50,13 +50,13 @@ public class CreateTemplateSandboxConfig extends TeaModel {
     public String readyCommand;
 
     /**
-     * <p>The credential, TLS, and network configuration required to access the source image repository.</p>
+     * <p>The credentials, TLS, and network configurations required to access the source image repository.</p>
      */
     @NameInMap("registryConfig")
     public CreateTemplateRegistryConfig registryConfig;
 
     /**
-     * <p>The image repository type. Valid values: oci (standard OCI repository), acr (Container Registry Personal Edition), and acree (Container Registry Enterprise Edition). If not specified, the type is inferred from the image address.</p>
+     * <p>The type of the image repository. Valid values: oci (standard OCI repository), acr (Container Registry Personal Edition), and acree (Container Registry Enterprise Edition). The default value is inferred from the image address.</p>
      * 
      * <strong>example:</strong>
      * <p>acree</p>
@@ -65,7 +65,7 @@ public class CreateTemplateSandboxConfig extends TeaModel {
     public String registryType;
 
     /**
-     * <p>The startup command for the sandbox container. This parameter is supported only for first-generation sandboxes.</p>
+     * <p>The startup command for the sandbox container. This parameter is supported only by first-generation sandboxes.</p>
      * 
      * <strong>example:</strong>
      * <p>/usr/local/bin/start.sh</p>
@@ -74,7 +74,7 @@ public class CreateTemplateSandboxConfig extends TeaModel {
     public String startCommand;
 
     /**
-     * <p>The list of custom build instructions. This is not supported in the current version. Passing a non-empty list returns an error.</p>
+     * <p>The list of custom build steps.</p>
      */
     @NameInMap("steps")
     public java.util.List<CreateTemplateStep> steps;

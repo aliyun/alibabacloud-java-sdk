@@ -4,10 +4,15 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class UpdateTemplateRequest extends TeaModel {
+    /**
+     * <p>The request struct for updating a template. Specify only the fields to be updated.</p>
+     */
     @NameInMap("body")
     public PublicUpdateTemplateInput body;
 
     /**
+     * <p>The team ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>team-a1b2c3d4e5f6</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeApiKeyResponseBody extends TeaModel {
     /**
+     * <p>The API key information.</p>
+     * 
      * <strong>example:</strong>
      * <p>asdfjoY87-9IUHH</p>
      */
@@ -12,19 +14,29 @@ public class DescribeApiKeyResponseBody extends TeaModel {
     public ApiKey apiKey;
 
     /**
+     * <p>The response code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The list of IP blacklist rules.</p>
+     */
     @NameInMap("ipBlacklist")
     public java.util.List<IPConfig> ipBlacklist;
 
+    /**
+     * <p>The list of IP address whitelist rules.</p>
+     */
     @NameInMap("ipWhitelist")
     public java.util.List<IPConfig> ipWhitelist;
 
     /**
+     * <p>The response message. The value is success if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -32,6 +44,8 @@ public class DescribeApiKeyResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2BCFAE0A-9FA9-5F72-8E8B-724632BC19A9</p>
      */

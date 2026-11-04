@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTeamsResponseBody extends TeaModel {
     /**
+     * <p>The response code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListTeamsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message. The value is success if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class ListTeamsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The page number of the current query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListTeamsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page for the current query.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -33,16 +41,23 @@ public class ListTeamsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7ADFF8D8-D4BA-5F79-AD49-DDABFEA59B6C</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The list of teams.</p>
+     */
     @NameInMap("teams")
     public java.util.List<E2BTeam> teams;
 
     /**
+     * <p>The total number of teams that meet the query conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>65</p>
      */

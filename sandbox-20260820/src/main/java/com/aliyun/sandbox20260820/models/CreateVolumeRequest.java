@@ -4,6 +4,9 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class CreateVolumeRequest extends TeaModel {
+    /**
+     * <p>The request parameters for creating a storage volume.</p>
+     */
     @NameInMap("body")
     public CreateVolumeInput body;
 

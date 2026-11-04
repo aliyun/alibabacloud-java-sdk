@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PublicUpdateTemplateSandboxConfig extends TeaModel {
     /**
-     * <p>The ID of the Container Registry Enterprise instance.</p>
+     * <p>The ID of the ACR Enterprise instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cri-abc123</p>
@@ -14,7 +14,7 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
     public String acrInstanceId;
 
     /**
-     * <p>The sandbox generation. A value of 1 indicates rund, and a value of 2 indicates micro.</p>
+     * <p>The sandbox generation. Valid values: 1: rund. 2: micro.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -41,7 +41,7 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
     public String osType;
 
     /**
-     * <p>The readiness probe command for the micro sandbox. Only the second generation supports this parameter.</p>
+     * <p>The readiness probe command for the micro sandbox. This command is supported only by the second generation.</p>
      * 
      * <strong>example:</strong>
      * <p>/ready</p>
@@ -65,13 +65,19 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
     public String registryType;
 
     /**
-     * <p>The startup command for the micro sandbox. Only the second generation supports this parameter.</p>
+     * <p>The startup command for the micro sandbox. This command is supported only by the second generation.</p>
      * 
      * <strong>example:</strong>
      * <p>/start-coroutines.sh</p>
      */
     @NameInMap("startCommand")
     public String startCommand;
+
+    /**
+     * <p>The list of custom build steps. If you do not specify this parameter, the original steps are retained. If you pass an empty array, the steps are cleared.</p>
+     */
+    @NameInMap("steps")
+    public java.util.List<PublicUpdateTemplateStep> steps;
 
     public static PublicUpdateTemplateSandboxConfig build(java.util.Map<String, ?> map) throws Exception {
         PublicUpdateTemplateSandboxConfig self = new PublicUpdateTemplateSandboxConfig();
@@ -140,6 +146,14 @@ public class PublicUpdateTemplateSandboxConfig extends TeaModel {
     }
     public String getStartCommand() {
         return this.startCommand;
+    }
+
+    public PublicUpdateTemplateSandboxConfig setSteps(java.util.List<PublicUpdateTemplateStep> steps) {
+        this.steps = steps;
+        return this;
+    }
+    public java.util.List<PublicUpdateTemplateStep> getSteps() {
+        return this.steps;
     }
 
 }

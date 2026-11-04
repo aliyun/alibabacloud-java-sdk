@@ -4,6 +4,9 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class UpdateTeamRequest extends TeaModel {
+    /**
+     * <p>The request parameters for updating a team.</p>
+     */
     @NameInMap("body")
     public UpdateTeamInput body;
 

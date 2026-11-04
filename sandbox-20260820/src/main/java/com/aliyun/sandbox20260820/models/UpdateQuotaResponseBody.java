@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateQuotaResponseBody extends TeaModel {
     /**
+     * <p>The response code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,16 +14,23 @@ public class UpdateQuotaResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message. The value is success if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The quota configuration information.</p>
+     */
     @NameInMap("quota")
     public Quota quota;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2BCFAE0A-9FA9-5F72-8E8B-724632BC19A9</p>
      */

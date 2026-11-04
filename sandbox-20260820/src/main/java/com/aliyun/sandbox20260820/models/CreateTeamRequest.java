@@ -4,6 +4,9 @@ package com.aliyun.sandbox20260820.models;
 import com.aliyun.tea.*;
 
 public class CreateTeamRequest extends TeaModel {
+    /**
+     * <p>The request parameters for creating a team.</p>
+     */
     @NameInMap("body")
     public CreateTeamInput body;
 

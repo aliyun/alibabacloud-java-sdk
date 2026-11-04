@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateVolumeResponseBody extends TeaModel {
     /**
+     * <p>The response code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CreateVolumeResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message. The value is success if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class CreateVolumeResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The storage volume information.</p>
+     */
     @NameInMap("volume")
     public E2BVolume volume;
 

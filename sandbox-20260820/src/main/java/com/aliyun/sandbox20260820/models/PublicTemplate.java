@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PublicTemplate extends TeaModel {
     /**
-     * <p>The creation time of the template, in UTC and formatted as RFC 3339.</p>
+     * <p>The time when the template was created, in UTC and RFC 3339 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-08-20T08:30:00Z</p>
@@ -14,7 +14,7 @@ public class PublicTemplate extends TeaModel {
     public String createdTime;
 
     /**
-     * <p>The template name, which is unique within the same team.</p>
+     * <p>The name of the template, which is unique within a team.</p>
      * 
      * <strong>example:</strong>
      * <p>python-data-analysis</p>
@@ -32,7 +32,13 @@ public class PublicTemplate extends TeaModel {
     public String resourceGroupID;
 
     /**
-     * <p>The runtime configuration of the template, which determines the specifications and environment of sandbox instances created from this template.</p>
+     * <p>The resource tags.</p>
+     */
+    @NameInMap("resourceTags")
+    public java.util.List<PublicTemplateResourceTags> resourceTags;
+
+    /**
+     * <p>The runtime configuration of the template, which determines the specifications and environment of the sandbox instances created from the template.</p>
      */
     @NameInMap("runtimeConfig")
     public PublicTemplateRuntimeConfig runtimeConfig;
@@ -53,7 +59,7 @@ public class PublicTemplate extends TeaModel {
     public String teamID;
 
     /**
-     * <p>The team name.</p>
+     * <p>The name of the team.</p>
      * 
      * <strong>example:</strong>
      * <p>sandbox-dev</p>
@@ -62,7 +68,7 @@ public class PublicTemplate extends TeaModel {
     public String teamName;
 
     /**
-     * <p>The sandbox template ID.</p>
+     * <p>The ID of the sandbox template.</p>
      * 
      * <strong>example:</strong>
      * <p>tm-8f3a2c7b5e14d806</p>
@@ -97,6 +103,14 @@ public class PublicTemplate extends TeaModel {
     }
     public String getResourceGroupID() {
         return this.resourceGroupID;
+    }
+
+    public PublicTemplate setResourceTags(java.util.List<PublicTemplateResourceTags> resourceTags) {
+        this.resourceTags = resourceTags;
+        return this;
+    }
+    public java.util.List<PublicTemplateResourceTags> getResourceTags() {
+        return this.resourceTags;
     }
 
     public PublicTemplate setRuntimeConfig(PublicTemplateRuntimeConfig runtimeConfig) {
@@ -137,6 +151,48 @@ public class PublicTemplate extends TeaModel {
     }
     public String getTemplateID() {
         return this.templateID;
+    }
+
+    public static class PublicTemplateResourceTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project</p>
+         */
+        @NameInMap("tagKey")
+        public String tagKey;
+
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
+        @NameInMap("tagValue")
+        public String tagValue;
+
+        public static PublicTemplateResourceTags build(java.util.Map<String, ?> map) throws Exception {
+            PublicTemplateResourceTags self = new PublicTemplateResourceTags();
+            return TeaModel.build(map, self);
+        }
+
+        public PublicTemplateResourceTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public PublicTemplateResourceTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
     }
 
 }

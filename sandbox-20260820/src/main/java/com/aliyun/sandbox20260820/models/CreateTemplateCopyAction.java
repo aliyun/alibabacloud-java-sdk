@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateCopyAction extends TeaModel {
     /**
-     * <p>The ID of the destination Container Registry Enterprise instance. This field does not inherit the instance ID from the source image.</p>
+     * <p>The ID of the destination Container Registry Enterprise instance. This field does not inherit the instance ID of the source image.</p>
      * 
      * <strong>example:</strong>
      * <p>cri-****</p>
@@ -14,13 +14,13 @@ public class CreateTemplateCopyAction extends TeaModel {
     public String acrInstanceId;
 
     /**
-     * <p>Specifies whether to enable the image replication action. Required when this action block is included.</p>
+     * <p>Specifies whether to enable the image replication action. This parameter is required when this action block is passed.</p>
      */
     @NameInMap("enabled")
     public Boolean enabled;
 
     /**
-     * <p>The destination image address to push to. If not specified, the service derives a new tag under the repository where the source image resides.</p>
+     * <p>The destination image address for the push operation. If this parameter is not provided, the service derives a new tag in the repository where the source image is located.</p>
      * 
      * <strong>example:</strong>
      * <p>registry-vpc.cn-hangzhou.aliyuncs.com/sandbox-demo/python:3.12-envd</p>
@@ -29,13 +29,13 @@ public class CreateTemplateCopyAction extends TeaModel {
     public String image;
 
     /**
-     * <p>The credentials, TLS, and network configuration required to access the destination image repository.</p>
+     * <p>The credentials, TLS settings, and network configurations required to access the destination image repository.</p>
      */
     @NameInMap("registryConfig")
     public CreateTemplateRegistryConfig registryConfig;
 
     /**
-     * <p>The type of the destination image repository. Valid values: oci (standard OCI repository), acr (Container Registry Personal Edition), acree (Container Registry Enterprise Edition). If not specified, the type is inferred from the destination image address.</p>
+     * <p>The type of the destination image repository. Valid values: oci (standard OCI repository), acr (Container Registry Personal Edition), and acree (Container Registry Enterprise Edition). By default, the value is derived from the destination image address.</p>
      * 
      * <strong>example:</strong>
      * <p>acree</p>

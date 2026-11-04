@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteVolumeRequest extends TeaModel {
     /**
+     * <p>The ID of the team to which the storage volume belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>70d1c834-0383-58d8-97ac-5336eb91abcd</p>
      */

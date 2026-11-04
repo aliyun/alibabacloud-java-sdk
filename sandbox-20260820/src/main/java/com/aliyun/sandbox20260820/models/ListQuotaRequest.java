@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListQuotaRequest extends TeaModel {
     /**
+     * <p>The maximum number of records to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class ListQuotaRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token. Leave this parameter empty for the first request. To query the next page, specify the nextToken value returned in the previous response.</p>
+     * 
      * <strong>example:</strong>
      * <p>Trigger_fasdatalake_deductionfee</p>
      */

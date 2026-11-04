@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListVolumesResponseBody extends TeaModel {
     /**
+     * <p>The response code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListVolumesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The maximum number of entries per page used in this query.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -19,6 +23,8 @@ public class ListVolumesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The response message. A value of success indicates a successful request.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,6 +32,8 @@ public class ListVolumesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The pagination token for the next page, which is used for subsequent queries.</p>
+     * 
      * <strong>example:</strong>
      * <p>qxGrXje86XMrYQ51aJMy</p>
      */
@@ -33,12 +41,17 @@ public class ListVolumesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7ADFF8D8-D4BA-5F79-AD49-DDABFEA59B6C</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The list of storage volumes.</p>
+     */
     @NameInMap("volumes")
     public java.util.List<E2BVolume> volumes;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListApiKeysRequest extends TeaModel {
     /**
+     * <p>The name of the API key.</p>
+     * 
      * <strong>example:</strong>
      * <p>dev</p>
      */
@@ -12,6 +14,8 @@ public class ListApiKeysRequest extends TeaModel {
     public String apiKeyName;
 
     /**
+     * <p>The page number. Default value: 1. Valid values: 1 to 10000.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListApiKeysRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of API keys to return on each page. Default value: 10. Valid values: 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,6 +32,8 @@ public class ListApiKeysRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmwxqyrgwabcd</p>
      */
@@ -33,6 +41,12 @@ public class ListApiKeysRequest extends TeaModel {
     public String resourceGroupID;
 
     /**
+     * <p>Filters API keys by status. Valid values:</p>
+     * <ul>
+     * <li>active: Enabled.</li>
+     * <li>inactive: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -40,6 +54,8 @@ public class ListApiKeysRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The ID of the team.</p>
+     * 
      * <strong>example:</strong>
      * <p>70d1c834-0383-58d8-97ac-5336eb91abcd</p>
      */
@@ -47,6 +63,8 @@ public class ListApiKeysRequest extends TeaModel {
     public String teamID;
 
     /**
+     * <p>The user ID of the creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789</p>
      */

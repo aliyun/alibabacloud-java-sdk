@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteQuotaRequest extends TeaModel {
     /**
+     * <p>The ID of the team to which the quota belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>f79d6a95-abcd-47a8-9167-eccf0622a998</p>
      */

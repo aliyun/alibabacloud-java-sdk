@@ -11,6 +11,15 @@ public class PublicUpdateTemplateInput extends TeaModel {
     public PublicUpdateTemplateBuildConfig buildConfig;
 
     /**
+     * <p>The subscription plan for the team. Valid values: eco, std, and pro.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pro</p>
+     */
+    @NameInMap("plan")
+    public String plan;
+
+    /**
      * <p>The runtime configuration.</p>
      */
     @NameInMap("runtimeConfig")
@@ -27,6 +36,14 @@ public class PublicUpdateTemplateInput extends TeaModel {
     }
     public PublicUpdateTemplateBuildConfig getBuildConfig() {
         return this.buildConfig;
+    }
+
+    public PublicUpdateTemplateInput setPlan(String plan) {
+        this.plan = plan;
+        return this;
+    }
+    public String getPlan() {
+        return this.plan;
     }
 
     public PublicUpdateTemplateInput setRuntimeConfig(PublicUpdateTemplateRuntimeConfig runtimeConfig) {

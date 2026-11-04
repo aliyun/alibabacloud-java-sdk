@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateResponseBody extends TeaModel {
     /**
+     * <p>The error code. The value is 200 if the request succeeds.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CreateTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class CreateTemplateResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</p>
      */
@@ -26,6 +32,8 @@ public class CreateTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The unique identifier of the created template.</p>
+     * 
      * <strong>example:</strong>
      * <p>us7dxqaezw5uu7aa2cm5</p>
      */
