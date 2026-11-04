@@ -1,3 +1,6 @@
+2026-11-04 Version: 5.5.1
+- Generated java 2020-10-28 for mPaaS.
+
 2026-11-02 Version: 5.5.0
 - Support API CreateGatewayApi.
 - Support API CreateGatewayApiGroup.
