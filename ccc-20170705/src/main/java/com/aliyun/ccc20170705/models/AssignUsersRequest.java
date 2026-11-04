@@ -4,6 +4,9 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class AssignUsersRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,6 +19,9 @@ public class AssignUsersRequest extends TeaModel {
     @NameInMap("SkillLevel")
     public java.util.List<Integer> skillLevel;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserRamId")
     public java.util.List<String> userRamId;
 

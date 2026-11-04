@@ -7,9 +7,15 @@ public class AddPhoneTagsRequest extends TeaModel {
     @NameInMap("Concurrency")
     public Integer concurrency;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PhoneNumberList")
     public java.util.List<String> phoneNumberList;
 
@@ -22,6 +28,9 @@ public class AddPhoneTagsRequest extends TeaModel {
     @NameInMap("RegionNameProvince")
     public String regionNameProvince;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceTag")
     public String serviceTag;
 

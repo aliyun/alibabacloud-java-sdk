@@ -4,21 +4,36 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class DialExRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AnswerMode")
     public Integer answerMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Callee")
     public String callee;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Caller")
     public String caller;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("Provider")
     public String provider;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RoutPoint")
     public String routPoint;
 

@@ -4,12 +4,21 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class SendPredefinedShortMessageRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ConfigId")
     public Long configId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PhoneNumbers")
     public String phoneNumbers;
 

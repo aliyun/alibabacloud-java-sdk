@@ -4,15 +4,24 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class AddAgentDeviceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BrowserVersion")
     public String browserVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClientIp")
     public String clientIp;
 
     @NameInMap("ClientPort")
     public String clientPort;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

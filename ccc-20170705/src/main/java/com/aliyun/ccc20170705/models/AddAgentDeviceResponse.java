@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class AddAgentDeviceResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
     @NameInMap("body")
-    @Validation(required = true)
     public AddAgentDeviceResponseBody body;
 
     public static AddAgentDeviceResponse build(java.util.Map<String, ?> map) throws Exception {
@@ -23,6 +24,14 @@ public class AddAgentDeviceResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public AddAgentDeviceResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public AddAgentDeviceResponse setBody(AddAgentDeviceResponseBody body) {

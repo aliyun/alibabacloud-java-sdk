@@ -4,15 +4,27 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class LaunchShortMessageAppraiseRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Acid")
     public String acid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ContactType")
     public Integer contactType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PhoneNumbers")
     public String phoneNumbers;
 

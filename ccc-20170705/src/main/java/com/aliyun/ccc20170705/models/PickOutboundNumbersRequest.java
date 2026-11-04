@@ -4,15 +4,27 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class PickOutboundNumbersRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CalleeNumber")
     public String calleeNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CandidateNumber")
     public java.util.List<String> candidateNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

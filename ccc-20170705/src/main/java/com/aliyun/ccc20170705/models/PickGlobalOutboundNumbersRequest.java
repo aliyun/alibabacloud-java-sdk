@@ -4,18 +4,27 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class PickGlobalOutboundNumbersRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CalleeNumber")
     public String calleeNumber;
 
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("IsVirtual")
     public Boolean isVirtual;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SkillGroupId")
     public java.util.List<String> skillGroupId;
 

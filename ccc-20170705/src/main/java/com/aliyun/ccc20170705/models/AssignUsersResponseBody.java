@@ -7,6 +7,9 @@ public class AssignUsersResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public AssignUsersResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -30,6 +33,14 @@ public class AssignUsersResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public AssignUsersResponseBody setData(AssignUsersResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public AssignUsersResponseBodyData getData() {
+        return this.data;
     }
 
     public AssignUsersResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -62,6 +73,77 @@ public class AssignUsersResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class AssignUsersResponseBodyDataUser extends TeaModel {
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("Primary")
+        public Boolean primary;
+
+        @NameInMap("RamId")
+        public String ramId;
+
+        @NameInMap("UserId")
+        public String userId;
+
+        public static AssignUsersResponseBodyDataUser build(java.util.Map<String, ?> map) throws Exception {
+            AssignUsersResponseBodyDataUser self = new AssignUsersResponseBodyDataUser();
+            return TeaModel.build(map, self);
+        }
+
+        public AssignUsersResponseBodyDataUser setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public AssignUsersResponseBodyDataUser setPrimary(Boolean primary) {
+            this.primary = primary;
+            return this;
+        }
+        public Boolean getPrimary() {
+            return this.primary;
+        }
+
+        public AssignUsersResponseBodyDataUser setRamId(String ramId) {
+            this.ramId = ramId;
+            return this;
+        }
+        public String getRamId() {
+            return this.ramId;
+        }
+
+        public AssignUsersResponseBodyDataUser setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+    }
+
+    public static class AssignUsersResponseBodyData extends TeaModel {
+        @NameInMap("User")
+        public java.util.List<AssignUsersResponseBodyDataUser> user;
+
+        public static AssignUsersResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            AssignUsersResponseBodyData self = new AssignUsersResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public AssignUsersResponseBodyData setUser(java.util.List<AssignUsersResponseBodyDataUser> user) {
+            this.user = user;
+            return this;
+        }
+        public java.util.List<AssignUsersResponseBodyDataUser> getUser() {
+            return this.user;
+        }
+
     }
 
 }

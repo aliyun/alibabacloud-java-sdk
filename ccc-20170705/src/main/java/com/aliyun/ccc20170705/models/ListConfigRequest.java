@@ -7,6 +7,9 @@ public class ListConfigRequest extends TeaModel {
     @NameInMap("ConfigItem")
     public java.util.List<String> configItem;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

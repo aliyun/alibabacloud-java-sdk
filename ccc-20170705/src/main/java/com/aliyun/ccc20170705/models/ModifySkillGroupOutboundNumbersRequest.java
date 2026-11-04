@@ -4,15 +4,27 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ModifySkillGroupOutboundNumbersRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OperationType")
     public Integer operationType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OutboundPhoneNumberId")
     public java.util.List<String> outboundPhoneNumberId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SkillGroupId")
     public String skillGroupId;
 

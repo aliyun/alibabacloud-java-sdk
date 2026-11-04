@@ -13,12 +13,21 @@ public class ListIvrTrackingDetailRequest extends TeaModel {
     @NameInMap("ContactId")
     public String contactId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

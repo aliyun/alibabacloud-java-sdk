@@ -4,12 +4,18 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ModifyPrimaryTrunksOfSkillGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("PrimaryProviderName")
     public java.util.List<String> primaryProviderName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SkillGroupId")
     public String skillGroupId;
 

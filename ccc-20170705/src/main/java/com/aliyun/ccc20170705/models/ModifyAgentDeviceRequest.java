@@ -7,6 +7,9 @@ public class ModifyAgentDeviceRequest extends TeaModel {
     @NameInMap("AgentDeviceId")
     public Long agentDeviceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

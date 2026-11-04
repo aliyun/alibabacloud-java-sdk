@@ -4,9 +4,15 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListCallEventDetailByContactIdRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ContactId")
     public String contactId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

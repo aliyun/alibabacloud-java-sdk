@@ -3,7 +3,7 @@ package com.aliyun.ccc20170705.models;
 
 import com.aliyun.tea.*;
 
-public class AddJobsToPredictiveJobGroupResponseBody extends TeaModel {
+public class ModifySkillGroupBasicInfoResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
@@ -19,12 +19,12 @@ public class AddJobsToPredictiveJobGroupResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static AddJobsToPredictiveJobGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        AddJobsToPredictiveJobGroupResponseBody self = new AddJobsToPredictiveJobGroupResponseBody();
+    public static ModifySkillGroupBasicInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ModifySkillGroupBasicInfoResponseBody self = new ModifySkillGroupBasicInfoResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AddJobsToPredictiveJobGroupResponseBody setCode(String code) {
+    public ModifySkillGroupBasicInfoResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -32,7 +32,7 @@ public class AddJobsToPredictiveJobGroupResponseBody extends TeaModel {
         return this.code;
     }
 
-    public AddJobsToPredictiveJobGroupResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public ModifySkillGroupBasicInfoResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -40,7 +40,7 @@ public class AddJobsToPredictiveJobGroupResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public AddJobsToPredictiveJobGroupResponseBody setMessage(String message) {
+    public ModifySkillGroupBasicInfoResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -48,7 +48,7 @@ public class AddJobsToPredictiveJobGroupResponseBody extends TeaModel {
         return this.message;
     }
 
-    public AddJobsToPredictiveJobGroupResponseBody setRequestId(String requestId) {
+    public ModifySkillGroupBasicInfoResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -56,7 +56,7 @@ public class AddJobsToPredictiveJobGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AddJobsToPredictiveJobGroupResponseBody setSuccess(Boolean success) {
+    public ModifySkillGroupBasicInfoResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

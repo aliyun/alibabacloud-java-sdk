@@ -7,12 +7,21 @@ public class StartBack2BackCallRequest extends TeaModel {
     @NameInMap("CallCenterNumber")
     public String callCenterNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Callee")
     public String callee;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Caller")
     public String caller;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

@@ -7,9 +7,15 @@ public class ListAgentEventsRequest extends TeaModel {
     @NameInMap("Event")
     public java.util.List<String> event;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RamId")
     public java.util.List<String> ramId;
 

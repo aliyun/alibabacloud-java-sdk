@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateMediaResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
     @NameInMap("body")
-    @Validation(required = true)
     public CreateMediaResponseBody body;
 
     public static CreateMediaResponse build(java.util.Map<String, ?> map) throws Exception {
@@ -23,6 +24,14 @@ public class CreateMediaResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public CreateMediaResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public CreateMediaResponse setBody(CreateMediaResponseBody body) {

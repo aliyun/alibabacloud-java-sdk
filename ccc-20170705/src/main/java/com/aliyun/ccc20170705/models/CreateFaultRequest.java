@@ -7,6 +7,9 @@ public class CreateFaultRequest extends TeaModel {
     @NameInMap("AgentFilePath")
     public String agentFilePath;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AgentId")
     public Long agentId;
 
@@ -22,6 +25,9 @@ public class CreateFaultRequest extends TeaModel {
     @NameInMap("ClientPort")
     public String clientPort;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ConnectId")
     public String connectId;
 
@@ -34,9 +40,15 @@ public class CreateFaultRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -61,6 +73,9 @@ public class CreateFaultRequest extends TeaModel {
     @NameInMap("SpeakerList")
     public String speakerList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

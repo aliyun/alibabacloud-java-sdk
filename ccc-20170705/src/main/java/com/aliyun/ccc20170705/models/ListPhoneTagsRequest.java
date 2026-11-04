@@ -4,9 +4,15 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListPhoneTagsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,9 +22,15 @@ public class ListPhoneTagsRequest extends TeaModel {
     @NameInMap("NumberGroupIds")
     public java.util.List<String> numberGroupIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OutboundOnly")
     public Boolean outboundOnly;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

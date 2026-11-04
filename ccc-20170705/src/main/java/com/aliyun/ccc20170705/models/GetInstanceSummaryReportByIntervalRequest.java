@@ -4,9 +4,15 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceSummaryReportByIntervalRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -19,6 +25,9 @@ public class GetInstanceSummaryReportByIntervalRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

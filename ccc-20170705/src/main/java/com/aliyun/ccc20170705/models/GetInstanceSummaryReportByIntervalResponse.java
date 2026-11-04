@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetInstanceSummaryReportByIntervalResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
     @NameInMap("body")
-    @Validation(required = true)
     public GetInstanceSummaryReportByIntervalResponseBody body;
 
     public static GetInstanceSummaryReportByIntervalResponse build(java.util.Map<String, ?> map) throws Exception {
@@ -23,6 +24,14 @@ public class GetInstanceSummaryReportByIntervalResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public GetInstanceSummaryReportByIntervalResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public GetInstanceSummaryReportByIntervalResponse setBody(GetInstanceSummaryReportByIntervalResponseBody body) {

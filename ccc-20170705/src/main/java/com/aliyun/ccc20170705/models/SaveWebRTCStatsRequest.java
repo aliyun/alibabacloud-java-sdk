@@ -4,30 +4,57 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class SaveWebRTCStatsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CallId")
     public String callId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CallStartTime")
     public Long callStartTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CalleeNumber")
     public String calleeNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CallerNumber")
     public String callerNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RecordTime")
     public Long recordTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Stats")
     public String stats;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Uid")
     public String uid;
 

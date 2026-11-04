@@ -7,9 +7,15 @@ public class DownloadRecordingRequest extends TeaModel {
     @NameInMap("Channel")
     public String channel;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

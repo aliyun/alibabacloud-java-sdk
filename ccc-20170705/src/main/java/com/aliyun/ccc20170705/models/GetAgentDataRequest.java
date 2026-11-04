@@ -4,18 +4,33 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class GetAgentDataRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndDay")
     public String endDay;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartDay")
     public String startDay;
 

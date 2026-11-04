@@ -4,12 +4,18 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class CheckNumberAvaliableRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Callee")
     public String callee;
 
     @NameInMap("Caller")
     public String caller;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

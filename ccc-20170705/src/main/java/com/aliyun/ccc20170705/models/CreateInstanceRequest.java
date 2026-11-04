@@ -13,9 +13,15 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -25,9 +31,15 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("PhoneNumbers")
     public java.util.List<String> phoneNumbers;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StorageMaxDays")
     public Integer storageMaxDays;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StorageMaxSize")
     public Integer storageMaxSize;
 

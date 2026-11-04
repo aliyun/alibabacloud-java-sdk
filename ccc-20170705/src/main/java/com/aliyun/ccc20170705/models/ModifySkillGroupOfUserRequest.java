@@ -4,9 +4,15 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ModifySkillGroupOfUserRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RoleId")
     public java.util.List<String> roleId;
 
@@ -16,6 +22,9 @@ public class ModifySkillGroupOfUserRequest extends TeaModel {
     @NameInMap("SkillLevel")
     public java.util.List<Integer> skillLevel;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

@@ -7,9 +7,15 @@ public class GetCallMeasureSummaryReportRequest extends TeaModel {
     @NameInMap("Day")
     public Integer day;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IntervalType")
     public String intervalType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Month")
     public Integer month;
 
@@ -19,6 +25,9 @@ public class GetCallMeasureSummaryReportRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Year")
     public Integer year;
 

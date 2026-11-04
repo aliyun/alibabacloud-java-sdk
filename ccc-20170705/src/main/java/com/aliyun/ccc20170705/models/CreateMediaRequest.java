@@ -10,24 +10,45 @@ public class CreateMediaRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OssFileName")
     public String ossFileName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OssFilePath")
     public String ossFilePath;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UploadResult")
     public String uploadResult;
 

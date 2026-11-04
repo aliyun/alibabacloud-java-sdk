@@ -4,15 +4,24 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class GetConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("ObjectId")
     public String objectId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ObjectType")
     public String objectType;
 

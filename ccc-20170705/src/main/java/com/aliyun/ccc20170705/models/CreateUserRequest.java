@@ -4,15 +4,27 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class CreateUserRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LoginName")
     public String loginName;
 
@@ -22,6 +34,9 @@ public class CreateUserRequest extends TeaModel {
     @NameInMap("PrivateOutboundNumberId")
     public String privateOutboundNumberId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RoleId")
     public java.util.List<String> roleId;
 

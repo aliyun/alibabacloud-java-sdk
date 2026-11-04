@@ -7,9 +7,15 @@ public class ListAgentSummaryReportsRequest extends TeaModel {
     @NameInMap("AgentIds")
     public String agentIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -22,6 +28,9 @@ public class ListAgentSummaryReportsRequest extends TeaModel {
     @NameInMap("SkillGroupId")
     public String skillGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

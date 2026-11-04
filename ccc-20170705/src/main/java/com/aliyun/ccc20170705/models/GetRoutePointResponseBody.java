@@ -19,12 +19,6 @@ public class GetRoutePointResponseBody extends TeaModel {
     @NameInMap("RoutePoint")
     public String routePoint;
 
-    @NameInMap("StatusCode")
-    public String statusCode;
-
-    @NameInMap("StatusDesc")
-    public String statusDesc;
-
     @NameInMap("Success")
     public Boolean success;
 
@@ -71,22 +65,6 @@ public class GetRoutePointResponseBody extends TeaModel {
     }
     public String getRoutePoint() {
         return this.routePoint;
-    }
-
-    public GetRoutePointResponseBody setStatusCode(String statusCode) {
-        this.statusCode = statusCode;
-        return this;
-    }
-    public String getStatusCode() {
-        return this.statusCode;
-    }
-
-    public GetRoutePointResponseBody setStatusDesc(String statusDesc) {
-        this.statusDesc = statusDesc;
-        return this;
-    }
-    public String getStatusDesc() {
-        return this.statusDesc;
     }
 
     public GetRoutePointResponseBody setSuccess(Boolean success) {

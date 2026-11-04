@@ -4,6 +4,9 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListCallMeasureSummaryReportsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IntervalType")
     public String intervalType;
 

@@ -4,21 +4,39 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListAgentStateLogsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RamId")
     public Long ramId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

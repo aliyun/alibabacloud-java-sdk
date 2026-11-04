@@ -16,15 +16,24 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     @NameInMap("Criteria")
     public String criteria;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
