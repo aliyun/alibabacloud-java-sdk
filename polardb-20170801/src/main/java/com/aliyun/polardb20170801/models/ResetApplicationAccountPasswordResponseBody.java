@@ -1,0 +1,29 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.polardb20170801.models;
+
+import com.aliyun.tea.*;
+
+public class ResetApplicationAccountPasswordResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CD3FA5F3-FAF3-44CA-AFFF-BAF869******</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    public static ResetApplicationAccountPasswordResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ResetApplicationAccountPasswordResponseBody self = new ResetApplicationAccountPasswordResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public ResetApplicationAccountPasswordResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+}

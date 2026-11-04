@@ -1,3 +1,47 @@
+2026-11-04 Version: 9.2.0
+- Support API CreateInspectionTask.
+- Support API CreateLakebaseMountParameterGroup.
+- Support API CreatePolarClawSkillTemplate.
+- Support API DeleteLakebaseMountParameterGroup.
+- Support API DeletePolarClawSkill.
+- Support API DescribeAIAgentOrder.
+- Support API DescribeActiveOperationTask.
+- Support API DescribeDBClusterModelEnhancement.
+- Support API DescribeDBInstances.
+- Support API DescribeEdgeCloudRegion.
+- Support API DescribeKVCacheInstances.
+- Support API DescribeLakebaseMountParameterGroup.
+- Support API DescribeLakebaseMountParameterGroupChangeLogs.
+- Support API DescribeLakebaseMountParameterGroups.
+- Support API DescribeLakebaseMountParameterTemplateList.
+- Support API DescribePolarClawSkillAssessment.
+- Support API DescribePolarClawSkillTemplate.
+- Support API DescribePolarClawSkills.
+- Support API DescribePolarClawSkillsMarket.
+- Support API DescribeReplicationSlots.
+- Support API DescribeSQLExplorerPolicy.
+- Support API DescribeSQLExplorerRetention.
+- Support API DescribeStoragePlan.
+- Support API DisableDBClusterCTable.
+- Support API DisableDBClusterDocumentDB.
+- Support API EnableAIDBClusterDatasetService.
+- Support API EnableDBClusterCTable.
+- Support API EnableDBClusterDocumentDB.
+- Support API GetPolarClawSkillRegion.
+- Support API ModifyAIDBClusterTask.
+- Support API ModifyDBClusterAutoUpgradeMinorVersion.
+- Support API ModifyDBNodeRouterWeight.
+- Support API ModifyLakebaseMountParameterGroup.
+- Support API ModifyLakebaseS3AccountPolicy.
+- Support API ModifyPolarClawSkill.
+- Support API ModifyPolarFs.
+- Support API ModifyPolarFsInstanceDescription.
+- Support API ModifySecurityIps.
+- Support API ResetApplicationAccountPassword.
+- Support API RestartDBCluster.
+- Support API UninstallPolarClawSkills.
+
+
 2026-11-03 Version: 9.1.3
 - Update API CreateAgenticDBTenantApiKey: add request parameters TenantId.
 - Update API CreateBatchTask: add request parameters InstanceParams.

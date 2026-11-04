@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAgenticDBTenantRequest extends TeaModel {
     /**
-     * <p>The ID of the AgenticDB cluster.</p>
+     * <p>The AgenticDB cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DeleteAgenticDBTenantRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
