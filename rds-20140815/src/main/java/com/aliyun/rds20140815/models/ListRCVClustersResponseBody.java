@@ -35,6 +35,9 @@ public class ListRCVClustersResponseBody extends TeaModel {
         @NameInMap("DashboardPublicEndpoint")
         public String dashboardPublicEndpoint;
 
+        @NameInMap("DashboardPublicEndpointExpireTime")
+        public String dashboardPublicEndpointExpireTime;
+
         @NameInMap("DashboardUsername")
         public String dashboardUsername;
 
@@ -58,6 +61,14 @@ public class ListRCVClustersResponseBody extends TeaModel {
         }
         public String getDashboardPublicEndpoint() {
             return this.dashboardPublicEndpoint;
+        }
+
+        public ListRCVClustersResponseBodyVClustersMysqlOperator setDashboardPublicEndpointExpireTime(String dashboardPublicEndpointExpireTime) {
+            this.dashboardPublicEndpointExpireTime = dashboardPublicEndpointExpireTime;
+            return this;
+        }
+        public String getDashboardPublicEndpointExpireTime() {
+            return this.dashboardPublicEndpointExpireTime;
         }
 
         public ListRCVClustersResponseBodyVClustersMysqlOperator setDashboardUsername(String dashboardUsername) {

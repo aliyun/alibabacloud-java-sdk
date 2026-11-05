@@ -33,10 +33,10 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
      * <p>Indicates whether instance log backup is enabled. Valid values:</p>
      * <ul>
      * <li><strong>1</strong>: enabled.</li>
-     * <li><strong>0</strong>: shutdown.</li>
+     * <li><strong>0</strong>: disabled.</li>
      * </ul>
      * <blockquote>
-     * <p>Instance log backup is enabled by default and cannot be shut down for ApsaraDB RDS for SQL Server instances.</p>
+     * <p>Instance log backup is enabled by default and cannot be disabled for ApsaraDB RDS for SQL Server instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
     public Integer incBackupInterval;
 
     /**
-     * <p>The number of hours for which instance log backups are retained locally on the <strong>MySQL</strong> instance.</p>
+     * <p>The number of hours for which instance log backups are retained locally on the <strong>ApsaraDB RDS for MySQL</strong> instance.</p>
      * 
      * <strong>example:</strong>
      * <p>18</p>
@@ -85,7 +85,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
     public Integer localLogRetentionHours;
 
     /**
-     * <p>The maximum loop space usage of the local binary log on the <strong>MySQL</strong> instance.</p>
+     * <p>The maximum loop space usage of the binary log on the <strong>ApsaraDB RDS for MySQL</strong> instance.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -94,7 +94,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
     public String localLogRetentionSpace;
 
     /**
-     * <p>The number of binary log files retained locally on the <strong>ApsaraDB RDS for MySQL</strong> instance.</p>
+     * <p>The number of local binary log files retained on the <strong>ApsaraDB RDS for MySQL</strong> instance.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>

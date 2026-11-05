@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOperatorPermissionRequest extends TeaModel {
     /**
+     * <p>The ID of the ApsaraDB RDS instance. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

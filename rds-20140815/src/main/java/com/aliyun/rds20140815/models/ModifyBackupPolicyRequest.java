@@ -19,12 +19,12 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     /**
      * <p>The number of archived backups to retain. Default value: <strong>1</strong>. Valid values:</p>
      * <ul>
-     * <li>When <strong>ArchiveBackupKeepPolicy</strong> is set to <strong>ByMonth</strong>, valid values are <strong>1</strong> to <strong>31</strong>.</li>
-     * <li>When <strong>ArchiveBackupKeepPolicy</strong> is set to <strong>ByWeek</strong>, valid values are <strong>1</strong> to <strong>7</strong>.</li>
+     * <li>If <strong>ArchiveBackupKeepPolicy</strong> is set to <strong>ByMonth</strong>, valid values are <strong>1</strong> to <strong>31</strong>.</li>
+     * <li>If <strong>ArchiveBackupKeepPolicy</strong> is set to <strong>ByWeek</strong>, valid values are <strong>1</strong> to <strong>7</strong>.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>When <strong>ArchiveBackupKeepPolicy</strong> is set to <strong>KeepAll</strong>, you do not need to specify this parameter.</li>
+     * <li>If <strong>ArchiveBackupKeepPolicy</strong> is set to <strong>KeepAll</strong>, you do not need to specify this parameter.</li>
      * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
      * </ul>
      * </blockquote>
@@ -36,11 +36,11 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Integer archiveBackupKeepCount;
 
     /**
-     * <p>The retention period of archived backups. The number of archived backups that can be retained within this period is determined by <strong>ArchiveBackupKeepCount</strong>. Default value: <strong>0</strong>. Valid values:</p>
+     * <p>The retention period of archived backups. The number of backups that can be retained within this period is determined by <strong>ArchiveBackupKeepCount</strong>. Default value: <strong>0</strong>. Valid values:</p>
      * <ul>
      * <li><strong>ByMonth</strong>: month.</li>
      * <li><strong>ByWeek</strong>: week.</li>
-     * <li><strong>KeepAll</strong>: all archived backups are retained.</li>
+     * <li><strong>KeepAll</strong>: all backups are retained.</li>
      * </ul>
      * <blockquote>
      * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</p>
@@ -80,9 +80,9 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <blockquote>
      * <ul>
      * <li>This parameter and the <strong>PreferredBackupPeriod</strong> parameter determine the backup policy together.</li>
-     * <li>The MySQL instance must be a cloud disk instance of MySQL 5.7 or 8.0 <strong>High-availability Edition</strong> or <strong>Cluster Edition</strong>.</li>
-     * <li>The PostgreSQL instance must be a cloud disk instance.</li>
-     * <li><a href="https://help.aliyun.com/document_detail/211143.html"><strong>Snapshot backup</strong></a> must be <strong>enabled</strong> for the SQL Server instance.</li>
+     * <li>The ApsaraDB RDS for MySQL instance must be a high availability series or Cluster Edition cloud disk instance running MySQL 5.7 or 8.0.</li>
+     * <li>The ApsaraDB RDS for PostgreSQL instance must be a cloud disk instance.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/211143.html"><strong>Snapshot backup</strong></a> must be <strong>enabled</strong> for the ApsaraDB RDS for SQL Server instance.</li>
      * <li>This parameter does not take effect when <strong>Category</strong> is set to <strong>Flash</strong>.</li>
      * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
      * </ul>
@@ -100,11 +100,11 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <li><strong>Enable</strong>: enables log backup.</li>
      * <li><strong>Disabled</strong>: disables log backup.</li>
      * </ul>
-     * <p><strong>For ApsaraDB RDS for SQL Server instances</strong>, log backup is enabled by default and cannot be disabled. However, you can change the log backup frequency as follows:</p>
+     * <p><strong>For an ApsaraDB RDS for SQL Server instance</strong>, log backup is enabled by default and cannot be disabled. However, you can change the log backup frequency as follows:</p>
      * <ul>
-     * <li><strong>Every 5 minutes</strong>: Set BackupLog to Enable and leave LogBackupFrequency empty. For more information, see <a href="https://help.aliyun.com/document_detail/2861729.html">5-minute log backup</a>. <strong>This configuration is not supported when the preferred secondary instance is configured for backup (BackupPriority is set to 1). Otherwise, an error is reported.</strong></li>
-     * <li><strong>Every 30 minutes</strong>: Leave BackupLog empty and set LogBackupFrequency to LogInterval.</li>
-     * <li><strong>Same as data backup frequency</strong>: Leave both BackupLog and LogBackupFrequency empty.</li>
+     * <li>To set the log backup frequency to <strong>Every 5 Minutes</strong>: Set BackupLog to Enable and leave LogBackupFrequency empty. For more information, see <a href="https://help.aliyun.com/document_detail/2861729.html">5-minute log backup</a>. <strong>This configuration is not supported when the preferred secondary instance is configured for backup (BackupPriority is set to 1). Otherwise, an error is reported.</strong></li>
+     * <li>To set the log backup frequency to <strong>Every 30 Minutes</strong>: Leave BackupLog empty and set LogBackupFrequency to LogInterval.</li>
+     * <li>To set the log backup frequency to <strong>Same as Data Backup</strong>: Leave both BackupLog and LogBackupFrequency empty.</li>
      * </ul>
      * <blockquote>
      * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>. It is used to enable or disable log backup.</p>
@@ -117,7 +117,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String backupLog;
 
     /**
-     * <p>The backup method for <strong>ApsaraDB RDS for SQL Server instances with cloud disks</strong>. Valid values:</p>
+     * <p>The backup method for an <strong>ApsaraDB RDS for SQL Server instance with cloud disks</strong>. Valid values:</p>
      * <ul>
      * <li><strong>Physical</strong> (default): physical backup.</li>
      * <li><strong>Snapshot</strong>: snapshot backup.</li>
@@ -146,15 +146,15 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String backupPolicyMode;
 
     /**
-     * <p>The backup priority setting for <a href="https://help.aliyun.com/document_detail/95717.html">secondary instance backup</a> of <strong>ApsaraDB RDS for SQL Server Cluster Edition</strong> instances. Valid values:</p>
+     * <p>The setting for <a href="https://help.aliyun.com/document_detail/95717.html">secondary instance backup</a> of an <strong>ApsaraDB RDS for SQL Server Cluster Edition</strong> instance. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: prefer secondary instance.</li>
-     * <li><strong>2</strong>: force primary instance.</li>
+     * <li><strong>1</strong>: prefer the secondary instance.</li>
+     * <li><strong>2</strong>: force the primary instance.</li>
      * </ul>
      * <blockquote>
      * <ul>
      * <li>This parameter takes effect only when <strong>BackupMethod</strong> is set to <strong>Physical</strong>. If <strong>BackupMethod</strong> is set to <strong>Snapshot</strong>, backups are forcibly performed on the primary instance for ApsaraDB RDS for SQL Server Cluster Edition instances.</li>
-     * <li>After you set the backup priority to <strong>prefer secondary instance</strong> (BackupPriority is set to 1), the <strong>5-minute log backup</strong> policy (BackupLog is set to Enable and LogBackupFrequency is left empty) is <strong>not supported</strong>. Otherwise, an error is reported. Set the log backup frequency to every 30 minutes or the same as the data backup frequency.</li>
+     * <li>After you set <strong>BackupPriority</strong> to <strong>1</strong> (prefer the secondary instance), the <strong>5-minute log backup</strong> policy (BackupLog is set to Enable and LogBackupFrequency is left empty) is <strong>not supported</strong>. Otherwise, an error is reported. Set the log backup frequency to every 30 minutes or the same as the data backup frequency.</li>
      * </ul>
      * </blockquote>
      * 
@@ -201,7 +201,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <li><strong>0</strong>: no compression.</li>
      * <li><strong>1</strong>: zlib compression. The format is tar.gz.</li>
      * <li><strong>2</strong>: parallel zlib compression.</li>
-     * <li><strong>4</strong>: quicklz compression. The format is xb.gz. This method applies only to MySQL 5.6 and 5.7. You can use this compression method to <a href="https://help.aliyun.com/document_detail/103175.html">restore individual databases and tables</a>.</li>
+     * <li><strong>4</strong>: quicklz compression. The format is xb.gz. This method applies only to MySQL 5.6, MySQL 5.7, and PostgreSQL. You can use this compression method to <a href="https://help.aliyun.com/document_detail/103175.html">restore individual databases and tables</a>.</li>
      * <li><strong>8</strong>: quicklz compression. The format is xb.gz. This method applies only to MySQL 8.0. Restoration of individual databases and tables is not supported.</li>
      * </ul>
      * <blockquote>
@@ -215,7 +215,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String compressType;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the ID.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -234,15 +234,15 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Integer enableAdvancedBackupPolicy;
 
     /**
-     * <p>Specifies whether to enable log backup for <strong>MySQL</strong>, <strong>PostgreSQL</strong>, and <strong>MariaDB</strong> instances. Valid values:</p>
+     * <p>Specifies whether to enable instance log backup for an <strong>ApsaraDB RDS for MySQL</strong>, <strong>ApsaraDB RDS for PostgreSQL</strong>, or <strong>ApsaraDB RDS for MariaDB</strong> instance. Valid values:</p>
      * <ul>
-     * <li><strong>True</strong> or <strong>1</strong>: enabled.</li>
-     * <li><strong>False</strong> or <strong>0</strong>: shutdown.</li>
+     * <li><strong>True</strong> or <strong>1</strong>: enables instance log backup.</li>
+     * <li><strong>False</strong> or <strong>0</strong>: disables instance log backup.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>Instance log backup is enabled by default and cannot be shut down for <strong>SQL Server</strong> instances. Therefore, you do not need to configure this parameter for SQL Server instances.</li>
-     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>LogBackupPolicy</strong>. It is used to enable or shutdown instance log backup.</li>
+     * <li>Instance log backup is enabled by default and cannot be disabled for <strong>ApsaraDB RDS for SQL Server</strong> instances. Therefore, you do not need to configure this parameter for ApsaraDB RDS for SQL Server instances.</li>
+     * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>LogBackupPolicy</strong>. It is used to enable or disable instance log backup.</li>
      * </ul>
      * </blockquote>
      * 
@@ -253,7 +253,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String enableBackupLog;
 
     /**
-     * <p>Specifies whether to enable incremental backup for <strong>ApsaraDB RDS for SQL Server instances with cloud disks</strong> and <strong>ApsaraDB RDS for MySQL instances with local SSDs</strong>. Valid values:</p>
+     * <p>Specifies whether to enable incremental backup for an <strong>ApsaraDB RDS for SQL Server instance with cloud disks</strong> or an <strong>ApsaraDB RDS for MySQL instance with local SSDs</strong>. Valid values:</p>
      * <ul>
      * <li><strong>False</strong> (default): disables incremental backup.</li>
      * <li><strong>True</strong>: enables incremental backup.</li>
@@ -269,10 +269,10 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Boolean enableIncrementDataBackup;
 
     /**
-     * <p>Specifies whether to enable point-in-time recovery (PITR) for <strong>MySQL</strong> instances. Valid values:</p>
+     * <p>Specifies whether to enable point-in-time recovery (PITR) for an <strong>ApsaraDB RDS for MySQL</strong> instance. Valid values:</p>
      * <ul>
-     * <li><strong>True</strong>: enabled.</li>
-     * <li><strong>False</strong>: shutdown.</li>
+     * <li><strong>True</strong>: enables PITR.</li>
+     * <li><strong>False</strong>: disables PITR.</li>
      * </ul>
      * <blockquote>
      * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong> and <strong>BackupLog</strong> is set to <strong>Enable</strong>. For feature details, see <a href="https://help.aliyun.com/document_detail/2666046.html">Settings for point-in-time recovery policy</a>.</p>
@@ -297,7 +297,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String highSpaceUsageProtection;
 
     /**
-     * <p>The high-frequency incremental backup frequency for <strong>ApsaraDB RDS for MySQL instances with local SSDs</strong>. Valid values:</p>
+     * <p>The high-frequency incremental backup frequency for an <strong>ApsaraDB RDS for MySQL instance with local SSDs</strong>. Valid values:</p>
      * <ul>
      * <li><strong>60</strong>: 60 minutes.</li>
      * <li><strong>120</strong>: 120 minutes.</li>
@@ -316,7 +316,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Integer incBackupInterval;
 
     /**
-     * <p>The number of hours for which instance log backups are retained locally on the <strong>MySQL</strong> instance. Valid values: <strong>0</strong> to <strong>168</strong> (7 × 24). A value of 0 indicates that instance log backups are not retained locally.</p>
+     * <p>The number of hours for which instance log backups are retained locally on the <strong>ApsaraDB RDS for MySQL</strong> instance. Valid values: <strong>0</strong> to <strong>168</strong> (7 × 24). A value of 0 indicates that instance log backups are not retained.</p>
      * <blockquote>
      * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>LogBackupPolicy</strong>. In this case, this parameter is required.</p>
      * </blockquote>
@@ -340,10 +340,10 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String localLogRetentionSpace;
 
     /**
-     * <p>The log backup frequency for <strong>ApsaraDB RDS for SQL Server</strong> instances. Valid values:</p>
+     * <p>The log backup frequency for an <strong>ApsaraDB RDS for SQL Server</strong> instance. Valid values:</p>
      * <ul>
      * <li><strong>LogInterval</strong>: every 30 minutes.</li>
-     * <li><strong>Empty</strong> (no value required): every 5 minutes or same as the data backup frequency.</li>
+     * <li><strong>Empty</strong> (no value is required): every 5 minutes or the same as the data backup frequency.</li>
      * </ul>
      * <blockquote>
      * <p>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</p>
@@ -356,11 +356,11 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String logBackupFrequency;
 
     /**
-     * <p>The number of binary log files retained locally. Default value: <strong>60</strong>. Valid values: <strong>6</strong> to <strong>100</strong>.</p>
+     * <p>The number of local binary log files to retain. Default value: <strong>60</strong>. Valid values: <strong>6</strong> to <strong>100</strong>.</p>
      * <blockquote>
      * <ul>
      * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>LogBackupPolicy</strong>.</li>
-     * <li>If the instance is an ApsaraDB RDS for MySQL instance, you can set this parameter to -1, which indicates that the number of locally retained binary log files is not limited.</li>
+     * <li>If the instance is an ApsaraDB RDS for MySQL instance, you can set this parameter to -1, which indicates that the number of local binary log files to retain is not limited.</li>
      * </ul>
      * </blockquote>
      * 
@@ -404,7 +404,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>This parameter and the <strong>BackupInterval</strong> parameter determine the backup policy together. For example, if you set this parameter to Saturday and Sunday and set <strong>BackupInterval</strong> to 30 minutes, a backup is performed every 30 minutes on Saturdays and Sundays.</li>
+     * <li>This parameter and the <strong>BackupInterval</strong> parameter determine the backup policy together. For example, if this parameter is set to Saturday and Sunday, and the <strong>BackupInterval</strong> parameter is set to 30, a backup is performed every 30 minutes on Saturdays and Sundays.</li>
      * <li>This parameter is required when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
      * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
      * </ul>
@@ -432,16 +432,16 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String preferredBackupTime;
 
     /**
-     * <p>The data retention policy for archived backups of deleted <strong>MySQL</strong> instances. Valid values:</p>
+     * <p>The data retention policy for archived backups of a deleted <strong>ApsaraDB RDS for MySQL</strong> instance. Valid values:</p>
      * <ul>
-     * <li><strong>None</strong>: does not retain archived backups.</li>
-     * <li><strong>Lastest</strong>: retains the last archived backup.</li>
-     * <li><strong>All</strong>: retains all archived backups.</li>
+     * <li><strong>None</strong>: no backups are retained.</li>
+     * <li><strong>Lastest</strong>: the last backup is retained.</li>
+     * <li><strong>All</strong>: all backups are retained.</li>
      * </ul>
      * <blockquote>
      * <ul>
      * <li>This parameter takes effect only when <strong>BackupPolicyMode</strong> is set to <strong>DataBackupPolicy</strong>.</li>
-     * <li>For ApsaraDB RDS for MySQL cloud disk instances purchased on or after February 1, 2024, the default value of ReleasedKeepPolicy is <strong>Lastest</strong>. For instances with Premium Local SSDs, the default value is <strong>None</strong>. For feature details, see <a href="https://help.aliyun.com/document_detail/2836955.html">Backups of deleted instances</a>.</li>
+     * <li>For ApsaraDB RDS for MySQL cloud disk instances purchased on or after February 1, 2024, the default value of ReleasedKeepPolicy is <strong>Lastest</strong>. For an instance with Premium Local SSDs, the default value is <strong>None</strong>. For feature details, see <a href="https://help.aliyun.com/document_detail/2836955.html">Backups of deleted instances</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -719,24 +719,100 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     }
 
     public static class ModifyBackupPolicyRequestAdvancedDataPolicies extends TeaModel {
+        /**
+         * <p>The operation on the sub-policy.</p>
+         * <ul>
+         * <li><p>CREATE: creates a sub-policy.</p>
+         * </li>
+         * <li><p>UPDATE: updates a sub-policy.</p>
+         * </li>
+         * <li><p>DELETE: deletes a sub-policy.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>delete/update</p>
+         */
         @NameInMap("ActionType")
         public String actionType;
 
+        /**
+         * <p>The backup type.</p>
+         * <ul>
+         * <li><p>F: full backup.</p>
+         * </li>
+         * <li><p>L: log backup (used for SQL Server).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>F</p>
+         */
         @NameInMap("BakType")
         public String bakType;
 
+        /**
+         * <p>The region ID of the destination region for data backups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-northeast-1</p>
+         */
         @NameInMap("DestRegion")
         public String destRegion;
 
+        /**
+         * <p>The type of the destination storage pool.</p>
+         * <ul>
+         * <li><p>level1: level-1 storage.</p>
+         * </li>
+         * <li><p>level2Cross: cross-region backup.</p>
+         * </li>
+         * <li><p>level2: intra-region backup.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>level1</p>
+         */
         @NameInMap("DestType")
         public String destType;
 
+        /**
+         * <p>The filter option.</p>
+         * <ul>
+         * <li><p>backupInterval: fixed interval.</p>
+         * </li>
+         * <li><p>dayOfWeek: fixed day of the week.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dayOfWeek</p>
+         */
         @NameInMap("FilterKey")
         public String filterKey;
 
+        /**
+         * <p>The filter type. Valid value: crontab, which indicates periodic backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crontab</p>
+         */
         @NameInMap("FilterType")
         public String filterType;
 
+        /**
+         * <p>The filter condition value for data backups. If the filter option is crontab, enter a cron expression.</p>
+         * <ul>
+         * <li><p>If FilterKey is set to backupInterval, this value specifies the backup interval in minutes.</p>
+         * </li>
+         * <li><p>If FilterKey is set to dayOfWeek, this value specifies the fixed day of the week for backup.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0 2 * * 1-5</p>
+         */
         @NameInMap("FilterValue")
         public String filterValue;
 
@@ -752,18 +828,54 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         @NameInMap("OnlyPreserveOneEachHour")
         public Boolean onlyPreserveOneEachHour;
 
+        /**
+         * <p>The retention type.</p>
+         * <ul>
+         * <li><p>delay: fixed retention period.</p>
+         * </li>
+         * <li><p>never: long-term retention (LTR).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>delay</p>
+         */
         @NameInMap("RetentionType")
         public String retentionType;
 
+        /**
+         * <p>The number of days for which data backups are retained. This parameter is valid only when RetentionType is set to delay.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365</p>
+         */
         @NameInMap("RetentionValue")
         public Integer retentionValue;
 
+        /**
+         * <p>The region ID of the source region for data backups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("SrcRegion")
         public String srcRegion;
 
+        /**
+         * <p>The type of the source storage pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db</p>
+         */
         @NameInMap("SrcType")
         public String srcType;
 
+        /**
+         * <p>The ID of the sub-backup policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb875ec7f9809b284f02b88a229061ce</p>
+         */
         @NameInMap("StrategyId")
         public String strategyId;
 
@@ -887,36 +999,136 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     }
 
     public static class ModifyBackupPolicyRequestAdvancedLogPolicies extends TeaModel {
+        /**
+         * <p>The operation on the sub-policy.</p>
+         * <ul>
+         * <li><p>CREATE: creates a sub-policy.</p>
+         * </li>
+         * <li><p>UPDATE: updates a sub-policy.</p>
+         * </li>
+         * <li><p>DELETE: deletes a sub-policy.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>update</p>
+         */
         @NameInMap("ActionType")
         public String actionType;
 
+        /**
+         * <p>The region ID of the destination region for log backups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-northeast-1</p>
+         */
         @NameInMap("DestRegion")
         public String destRegion;
 
+        /**
+         * <p>The type of the destination storage pool.</p>
+         * <ul>
+         * <li><p>level1: level-1 storage.</p>
+         * </li>
+         * <li><p>level2Cross: cross-region backup.</p>
+         * </li>
+         * <li><p>level2: intra-region backup.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>level1</p>
+         */
         @NameInMap("DestType")
         public String destType;
 
+        /**
+         * <p>The flag that indicates whether log backup is enabled. Pass an integer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EnableLogBackup")
         public Integer enableLogBackup;
 
+        /**
+         * <p>The filter option.</p>
+         * <ul>
+         * <li><p>backupInterval: fixed interval.</p>
+         * </li>
+         * <li><p>dayOfWeek: fixed day of the week.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dayOfWeek</p>
+         */
         @NameInMap("FilterKey")
         public String filterKey;
 
+        /**
+         * <p>The filter condition value for log backups. If the filter option is crontab, enter a cron expression.</p>
+         * <ul>
+         * <li><p>If FilterKey is set to backupInterval, this value specifies the backup interval in minutes.</p>
+         * </li>
+         * <li><p>If FilterKey is set to dayOfWeek, this value specifies the fixed day of the week for backup.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0 2 * * 1-5</p>
+         */
         @NameInMap("FilterValue")
         public String filterValue;
 
+        /**
+         * <p>The log retention type.</p>
+         * <ul>
+         * <li><p>delay: fixed retention period.</p>
+         * </li>
+         * <li><p>never: long-term retention (LTR).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>delay</p>
+         */
         @NameInMap("LogRetentionType")
         public String logRetentionType;
 
+        /**
+         * <p>The number of days for which logs are retained. This parameter is valid only when LogRetentionType is set to delay.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("LogRetentionValue")
         public Integer logRetentionValue;
 
+        /**
+         * <p>The region ID of the source region for log backups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("SrcRegion")
         public String srcRegion;
 
+        /**
+         * <p>The type of the source storage pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db</p>
+         */
         @NameInMap("SrcType")
         public String srcType;
 
+        /**
+         * <p>The ID of the sub-backup policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb875ec7f9809b284f02b88a229061ce</p>
+         */
         @NameInMap("StrategyId")
         public String strategyId;
 

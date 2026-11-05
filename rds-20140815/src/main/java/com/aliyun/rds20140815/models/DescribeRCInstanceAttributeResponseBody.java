@@ -7,8 +7,8 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Enabled.</li>
-     * <li><strong>false</strong>: Disabled.</li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>The ID of the cluster to which the instance belongs.</p>
      * <blockquote>
-     * <p>This parameter will be deprecated. For better compatibility, use other parameters.</p>
+     * <p>This parameter will be deprecated. To ensure compatibility, use other parameters instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public Integer cpu;
 
     /**
-     * <p>Indicates whether the instance has joined an ACK cluster. Valid values:</p>
+     * <p>Indicates whether the instance is added to an ACK cluster. Valid values:</p>
      * <ul>
      * <li><strong>1</strong>: Yes.</li>
      * <li><strong>0</strong>: No.</li>
@@ -52,7 +52,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public Integer createMode;
 
     /**
-     * <p>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>
+     * <p>The time when the instance was created. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-04-22T06:52:23Z</p>
@@ -61,7 +61,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String creationTime;
 
     /**
-     * <p>The running mode of the burstable instance.</p>
+     * <p>The performance mode of the burstable instance.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -73,10 +73,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public DescribeRCInstanceAttributeResponseBodyDataDisks dataDisks;
 
     /**
-     * <p>The database type. Valid values:</p>
+     * <p>The database engine type. Valid values:</p>
      * <ul>
-     * <li><strong>mssql</strong>: SQL Server</li>
-     * <li><strong>mysql</strong>: MySQL</li>
+     * <li><strong>mssql</strong>: SQL Server.</li>
+     * <li><strong>mysql</strong>: MySQL.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,7 +95,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public DescribeRCInstanceAttributeResponseBodyDedicatedHostAttribute dedicatedHostAttribute;
 
     /**
-     * <p>Indicates whether the release protection feature is enabled. Valid values:</p>
+     * <p>Indicates whether release protection is enabled. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Enabled.</li>
      * <li><strong>false</strong>: Disabled.</li>
@@ -111,7 +111,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public Boolean deletionProtection;
 
     /**
-     * <p>The deployment set ID.</p>
+     * <p>The ID of the deployment set.</p>
      * 
      * <strong>example:</strong>
      * <p>ds-uf6c8qerk019bj1l****</p>
@@ -120,7 +120,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String deploymentSetId;
 
     /**
-     * <p>The instance description.</p>
+     * <p>The description of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -147,13 +147,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String ecsInstanceType;
 
     /**
-     * <p>The elastic IP address (EIP) binding information.</p>
+     * <p>The information about the associated elastic IP address (EIP).</p>
      */
     @NameInMap("EipAddress")
     public DescribeRCInstanceAttributeResponseBodyEipAddress eipAddress;
 
     /**
-     * <p>Indicates whether the Jumbo frame feature is enabled for the instance. Valid values:</p>
+     * <p>Indicates whether the jumbo frame feature is enabled for the instance. Valid values:</p>
      * <ul>
      * <li><p><strong>true</strong>: Enabled.</p>
      * </li>
@@ -168,7 +168,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public Boolean enableJumboFrame;
 
     /**
-     * <p>The expiration time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>
+     * <p>The expiration time. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-08-10T00:00:00Z</p>
@@ -209,8 +209,8 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>The host storage type. Valid values:</p>
      * <ul>
-     * <li><strong>dhg_cloud_ssd</strong>: ESSD cloud disk.</li>
-     * <li><strong>dhg_local_ssd</strong>: local standard SSD.</li>
+     * <li><strong>dhg_cloud_ssd</strong>: standard SSD.</li>
+     * <li><strong>dhg_local_ssd</strong>: local SSD.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -220,7 +220,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String hostType;
 
     /**
-     * <p>The ID of the image that the instance is running.</p>
+     * <p>The ID of the image that the instance runs.</p>
      * 
      * <strong>example:</strong>
      * <p>m-2oqiu973jwcxe****</p>
@@ -232,10 +232,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public DescribeRCInstanceAttributeResponseBodyInnerIpAddress innerIpAddress;
 
     /**
-     * <p>The billing method. Valid values:</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>PrePaid</strong>: subscription</li>
-     * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+     * <li><strong>PrePaid</strong>: subscription.</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -254,7 +254,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The instance name.</p>
+     * <p>The name of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -266,7 +266,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
      * <p>The network type. Valid values: </p>
      * <ul>
      * <li><strong>classic</strong>: classic network.</li>
-     * <li><strong>vpc</strong>: VPC.</li>
+     * <li><strong>vpc</strong>: virtual private cloud (VPC).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -288,10 +288,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
      * <p>The billing method for Internet bandwidth. Valid values:</p>
      * <ul>
      * <li><strong>PayByBandwidth</strong>: pay-by-bandwidth.</li>
-     * <li><strong>PayByTraffic</strong>: pay-by-data-transfer.</li>
+     * <li><strong>PayByTraffic</strong>: pay-by-traffic.</li>
      * </ul>
      * <blockquote>
-     * <p>In the <strong>pay-by-data-transfer</strong> mode, the peak inbound and outbound bandwidths are both bandwidth upper limits and are not guaranteed. When resource contention occurs, the peak bandwidth may be throttled. If your business requires guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
+     * <p>In the <strong>pay-by-traffic</strong> pattern, the peak inbound and outbound bandwidth values are upper limits and are not guaranteed. During resource contention, the peak bandwidth may be limited. If your business requires guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> pattern.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -301,7 +301,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String internetChargeType;
 
     /**
-     * <p>The maximum inbound Internet bandwidth. Unit: Mbit/s.</p>
+     * <p>The maximum inbound public bandwidth. Unit: Mbit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -310,7 +310,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public Integer internetMaxBandwidthIn;
 
     /**
-     * <p>The maximum outbound Internet bandwidth. Unit: Mbit/s.</p>
+     * <p>The maximum outbound public bandwidth. Unit: Mbit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -319,10 +319,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public Integer internetMaxBandwidthOut;
 
     /**
-     * <p>Indicates whether the instance is an I/O optimized instance.</p>
+     * <p>Indicates whether the instance is an I/O optimized instance. Valid values:</p>
      * <ul>
-     * <li><strong>optimized</strong>: I/O optimization enabled.</li>
-     * <li><strong>none</strong>: not I/O optimized.</li>
+     * <li><strong>optimized</strong>: I/O optimization.</li>
+     * <li><strong>none</strong>: No I/O optimization.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -350,7 +350,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public Integer memory;
 
     /**
-     * <p>The node type. If <strong>rds_vnode</strong> is returned, the node is a container node.</p>
+     * <p>The node type. A value of <strong>rds_vnode</strong> indicates that the node is a container node.</p>
      * 
      * <strong>example:</strong>
      * <p>rds_vnode</p>
@@ -383,7 +383,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aeky6z354ks****</p>
@@ -404,10 +404,10 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String serialNumber;
 
     /**
-     * <p>The bidding strategy for the pay-as-you-go instance. Valid values:</p>
+     * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
      * <ul>
-     * <li><strong>NoSpot</strong>: a regular pay-as-you-go instance.</li>
-     * <li><strong>SpotAsPriceGo</strong>: the system automatically bids, following the current market price.</li>
+     * <li><strong>NoSpot</strong>: The instance is a regular pay-as-you-go instance.</li>
+     * <li><strong>SpotAsPriceGo</strong>: The system automatically bids based on the current market price.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -419,11 +419,11 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li><strong>Pending</strong>: being created.</li>
-     * <li><strong>Running</strong>: running.</li>
-     * <li><strong>Starting</strong>: starting.</li>
-     * <li><strong>Stopping</strong>: stopping.</li>
-     * <li><strong>Stopped</strong>: stopped.</li>
+     * <li><strong>Pending</strong>: The instance is being created.</li>
+     * <li><strong>Running</strong>: The instance is running.</li>
+     * <li><strong>Starting</strong>: The instance is starting.</li>
+     * <li><strong>Stopping</strong>: The instance is pausing.</li>
+     * <li><strong>Stopped</strong>: The instance is in a pause state.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -435,9 +435,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the instance continues to be billed after it is stopped. Valid values:</p>
      * <ul>
-     * <li><strong>KeepCharging</strong>: The instance continues to be billed after it is stopped. Inventory resources are reserved for the instance.</li>
-     * <li><strong>StopCharging</strong>: The instance is not billed after it is stopped. After the instance is stopped, its resources such as vCPUs, memory, and public IP addresses are released. Whether the instance can be restarted depends on the available resource inventory in the current region.</li>
-     * <li><strong>Not-applicable</strong>: The instance does not support the No Fees for Stopped Instances feature.</li>
+     * <li><strong>KeepCharging</strong>: The instance continues to be billed after it is stopped, and resources are reserved.</li>
+     * <li><strong>StopCharging</strong>: The instance is not billed after it is stopped. After the instance is stopped, resources such as vCPUs, memory, and public IP addresses are released. Whether the instance can be successfully restarted depends on resource availability in the current region.</li>
+     * <li><strong>Not-applicable</strong>: The instance does not support the no fees for stopped instances feature.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -447,7 +447,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public String stoppedMode;
 
     /**
-     * <p>The system cloud disk specifications.</p>
+     * <p>The specifications of the system cloud disk.</p>
      */
     @NameInMap("SystemDisk")
     public DescribeRCInstanceAttributeResponseBodySystemDisk systemDisk;
@@ -456,7 +456,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public DescribeRCInstanceAttributeResponseBodyTags tags;
 
     /**
-     * <p>The custom data of the instance, in Base64-encoded format.</p>
+     * <p>The custom data of the instance, which is a Base64-encoded string.</p>
      * <blockquote>
      * <p>If the instance does not have custom data, an empty string is returned.</p>
      * </blockquote>
@@ -470,7 +470,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>The VLAN ID of the instance.</p>
      * <blockquote>
-     * <p>This parameter will be deprecated. For better compatibility, use other parameters.</p>
+     * <p>This parameter will be deprecated soon. To improve compatibility, use other parameters instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -1024,7 +1024,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeRCInstanceAttributeResponseBodyDedicatedHostAttribute extends TeaModel {
         /**
-         * <p>The dedicated host ID.</p>
+         * <p>The ID of the dedicated host.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -1084,11 +1084,11 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         public Integer bandwidth;
 
         /**
-         * <p>The billing method for the public network instance. Valid values:</p>
+         * <p>The billing method for network usage of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>paybytraffic</strong>: pay-by-data-transfer.</li>
+         * <li><strong>paybytraffic</strong>: pay-by-traffic.</li>
          * <li><strong>paybybandwidth</strong>: pay-by-bandwidth.<blockquote>
-         * <p>In <strong>pay-by-data-transfer</strong> mode, the peak inbound and outbound bandwidths are both bandwidth upper limits and are not guaranteed. When resource contention occurs, the peak bandwidth may be throttled. If your business requires guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
+         * <p>In <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidth values are upper limits and are not guaranteed. During resource contention, the peak bandwidth may be limited. If your business requires guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -1255,8 +1255,8 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the cloud disk is encrypted. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Encrypted.</li>
-         * <li><strong>false</strong>: Not encrypted.</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1266,9 +1266,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         public String encrypted;
 
         /**
-         * <p>The type of the system cloud disk. Valid values:</p>
+         * <p>The category of the system cloud disk. Valid values:</p>
          * <ul>
-         * <li><strong>cloud_efficiency</strong>: ultra cloud disk.</li>
+         * <li><strong>cloud_efficiency</strong>: ultra disk.</li>
          * <li><strong>cloud_ssd</strong>: standard SSD.</li>
          * <li><strong>cloud_essd</strong>: ESSD.</li>
          * <li><strong>cloud_auto</strong>: premium performance disk.</li>
@@ -1281,7 +1281,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>The performance level (PL) of the system cloud disk when it is an ESSD. When the system cloud disk is a standard SSD, this parameter is not returned. Valid values:</p>
+         * <p>The performance level of the system cloud disk when it is an ESSD. Valid values:</p>
          * <ul>
          * <li><strong>PL0</strong></li>
          * <li><strong>PL1</strong></li>
@@ -1443,7 +1443,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeRCInstanceAttributeResponseBodyVpcAttributes extends TeaModel {
         /**
-         * <p>The IP address of the cloud service, which is used for network communication between VPC-connected cloud services.</p>
+         * <p>The IP address of the cloud service, which is used for network connectivity between cloud services in a VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>

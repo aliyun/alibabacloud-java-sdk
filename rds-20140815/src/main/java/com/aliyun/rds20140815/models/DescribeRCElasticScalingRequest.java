@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCElasticScalingRequest extends TeaModel {
+    @NameInMap("AcuType")
+    public String acuType;
+
     /**
      * <strong>example:</strong>
      * <p>Prepaid</p>
@@ -42,6 +45,14 @@ public class DescribeRCElasticScalingRequest extends TeaModel {
     public static DescribeRCElasticScalingRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRCElasticScalingRequest self = new DescribeRCElasticScalingRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeRCElasticScalingRequest setAcuType(String acuType) {
+        this.acuType = acuType;
+        return this;
+    }
+    public String getAcuType() {
+        return this.acuType;
     }
 
     public DescribeRCElasticScalingRequest setInstanceChargeType(String instanceChargeType) {

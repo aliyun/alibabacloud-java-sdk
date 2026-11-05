@@ -18,6 +18,12 @@ public class DescribeRCElasticScalingResponseBody extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MaxAcu")
+    public Integer maxAcu;
+
+    @NameInMap("MinAcu")
+    public Integer minAcu;
+
     /**
      * <strong>example:</strong>
      * <p>1F7B8B09-36F3-1165-BADB-13E376FE9BD7</p>
@@ -67,6 +73,22 @@ public class DescribeRCElasticScalingResponseBody extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeRCElasticScalingResponseBody setMaxAcu(Integer maxAcu) {
+        this.maxAcu = maxAcu;
+        return this;
+    }
+    public Integer getMaxAcu() {
+        return this.maxAcu;
+    }
+
+    public DescribeRCElasticScalingResponseBody setMinAcu(Integer minAcu) {
+        this.minAcu = minAcu;
+        return this;
+    }
+    public Integer getMinAcu() {
+        return this.minAcu;
     }
 
     public DescribeRCElasticScalingResponseBody setRequestId(String requestId) {

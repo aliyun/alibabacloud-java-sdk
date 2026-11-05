@@ -41,8 +41,7 @@ public class DescribeRCMetricListRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of records to return on each page for paging in a paged query.</p>
-     * <p>Default value: 1000.</p>
+     * <p>The number of records to return on each page for paging in a paged query. Default value: 1000.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -51,7 +50,7 @@ public class DescribeRCMetricListRequest extends TeaModel {
     public String length;
 
     /**
-     * <p>The <a href="https://cms.console.aliyun.com/metric-meta/acs_ecs_dashboard/ecs">monitored metrics</a>.</p>
+     * <p>The <a href="https://cms.console.aliyun.com/metric-meta/acs_ecs_dashboard/ecs">monitored metric</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

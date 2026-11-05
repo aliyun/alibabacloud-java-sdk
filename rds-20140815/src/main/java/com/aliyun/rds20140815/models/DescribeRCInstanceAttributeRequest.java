@@ -23,11 +23,11 @@ public class DescribeRCInstanceAttributeRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The maximum number of disks returned in the response. Valid values: 10 to 500.</p>
+     * <p>Specifies the maximum number of disks attached to the instance to return. Valid values: 10 to 500.</p>
      * <ul>
      * <li>If this parameter is not specified, the default value is 20.</li>
-     * <li>If the specified value is less than 10, the value is set to 10.</li>
-     * <li>If the specified value is from 10 to 500, the specified value is used.</li>
+     * <li>If the specified value is less than 10, the value is fixed to 10.</li>
+     * <li>If the specified value is greater than or equal to 10 and less than or equal to 500, the specified value takes effect.</li>
      * </ul>
      * 
      * <strong>example:</strong>

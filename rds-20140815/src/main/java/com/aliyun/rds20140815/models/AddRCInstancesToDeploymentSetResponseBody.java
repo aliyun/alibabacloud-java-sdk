@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddRCInstancesToDeploymentSetResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</p>
@@ -44,8 +44,8 @@ public class AddRCInstancesToDeploymentSetResponseBody extends TeaModel {
         /**
          * <p>The node status. Valid values:</p>
          * <ul>
-         * <li><strong>activation</strong>: running.</li>
-         * <li><strong>creating</strong>: creating.</li>
+         * <li><strong>activation</strong>: The node is running.</li>
+         * <li><strong>creating</strong>: The node is being created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -66,8 +66,8 @@ public class AddRCInstancesToDeploymentSetResponseBody extends TeaModel {
         /**
          * <p>The node status. Valid values:</p>
          * <ul>
-         * <li><strong>Success</strong>: succeeded.</li>
-         * <li><strong>Failed</strong>: failed.</li>
+         * <li><strong>Success</strong>: Successful.</li>
+         * <li><strong>Failed</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
