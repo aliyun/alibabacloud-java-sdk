@@ -5,6 +5,20 @@ import com.aliyun.tea.*;
 
 public class ListAppInstancesRequest extends TeaModel {
     /**
+     * <p>The application type. Valid values: </p>
+     * <ul>
+     * <li>PC_WebSite: web application. </li>
+     * <li>Mini_Program: mini program. 
+     * If this parameter is not specified or left empty, applications are not filtered by type. For compatibility, historical missing, NULL, or empty types are treated as PC_WebSite.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PC_WebSite</p>
+     */
+    @NameInMap("ApplicationType")
+    public String applicationType;
+
+    /**
      * <p>The business ID.</p>
      * 
      * <strong>example:</strong>
@@ -47,8 +61,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public String extend;
 
     /**
-     * <p>The maximum number of results returned per query.</p>
-     * <p>Valid values: 10 to 100. Default value: 20.</p>
+     * <p>The maximum number of results returned per query. Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -102,7 +115,7 @@ public class ListAppInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The query parameters.</p>
+     * <p>The query parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;RequestId\&quot;:\&quot;\&quot;}</p>
@@ -111,7 +124,10 @@ public class ListAppInstancesRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>The query mode. A value of CONTENT_CREATION indicates a lightweight query for the content creation site selector, which queries only published sites and does not load aggregated information such as profiles, services, and AI staff.</p>
+     * <p>The query mode. Valid values: </p>
+     * <ul>
+     * <li>CONTENT_CREATION: specifies a lightweight query for the content creation site selector. It queries only published sites and does not load aggregated information such as profiles, services, and AI staff.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>CONTENT_CREATION</p>
@@ -128,6 +144,14 @@ public class ListAppInstancesRequest extends TeaModel {
     public static ListAppInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAppInstancesRequest self = new ListAppInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListAppInstancesRequest setApplicationType(String applicationType) {
+        this.applicationType = applicationType;
+        return this;
+    }
+    public String getApplicationType() {
+        return this.applicationType;
     }
 
     public ListAppInstancesRequest setBizId(String bizId) {

@@ -11,7 +11,7 @@ public class AppInstanceAggregate extends TeaModel {
     public java.util.List<AppAiStaff> aiStaffList;
 
     /**
-     * <p>The operation address of the application.</p>
+     * <p>The application operation address.</p>
      */
     @NameInMap("AppOperationAddress")
     public AppOperationAddress appOperationAddress;
@@ -59,7 +59,7 @@ public class AppInstanceAggregate extends TeaModel {
     public String buildType;
 
     /**
-     * <p>The associated conversation information. The value is null if no conversation is associated.</p>
+     * <p>The associated conversation information. This field is null if no associated conversation exists.</p>
      */
     @NameInMap("ConversationInfo")
     public AppInstanceAggregateConversationInfo conversationInfo;
@@ -101,7 +101,7 @@ public class AppInstanceAggregate extends TeaModel {
     public String designSpecBizId;
 
     /**
-     * <p>The ID of the design configuration.</p>
+     * <p>The ID of the design configuration sheet.</p>
      */
     @NameInMap("DesignSpecId")
     public String designSpecId;
@@ -152,7 +152,7 @@ public class AppInstanceAggregate extends TeaModel {
     public String gmtModified;
 
     /**
-     * <p>The publish time.</p>
+     * <p>The publication time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-01 00:00:00</p>
@@ -179,7 +179,13 @@ public class AppInstanceAggregate extends TeaModel {
     public String name;
 
     /**
-     * <p>The partner details.</p>
+     * <p>The current offline status. A value of true explicitly indicates that the website is currently offline. A value of false indicates that the website is not offline, and historical offline reasons do not determine the current status. If the current status cannot be determined or the legacy response does not contain this field, the caller must not default the unknown status to online.</p>
+     */
+    @NameInMap("Offline")
+    public Boolean offline;
+
+    /**
+     * <p>The details.</p>
      */
     @NameInMap("PartnerDetail")
     public AppInstanceAggregatePartnerDetail partnerDetail;
@@ -465,6 +471,14 @@ public class AppInstanceAggregate extends TeaModel {
         return this.name;
     }
 
+    public AppInstanceAggregate setOffline(Boolean offline) {
+        this.offline = offline;
+        return this;
+    }
+    public Boolean getOffline() {
+        return this.offline;
+    }
+
     public AppInstanceAggregate setPartnerDetail(AppInstanceAggregatePartnerDetail partnerDetail) {
         this.partnerDetail = partnerDetail;
         return this;
@@ -579,7 +593,7 @@ public class AppInstanceAggregate extends TeaModel {
 
     public static class AppInstanceAggregateConversationInfo extends TeaModel {
         /**
-         * <p>The number of conversation turns. A value of 0 indicates an empty conversation.</p>
+         * <p>The number of user conversation turns. A value of 0 indicates an empty conversation.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -760,7 +774,7 @@ public class AppInstanceAggregate extends TeaModel {
         public String partnerId;
 
         /**
-         * <p>The partner binding status. Valid values: BOUND (bound) and UNBOUND (unbound).</p>
+         * <p>The partner binding status. Valid values: BOUND (bound) and UNBOUND (to be bound).</p>
          * 
          * <strong>example:</strong>
          * <p>BOUND</p>
@@ -801,7 +815,8 @@ public class AppInstanceAggregate extends TeaModel {
 
     public static class AppInstanceAggregateTags extends TeaModel {
         /**
-         * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. The value cannot be an empty string. The value can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. The value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. If you specify this parameter, it cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Group</p>
@@ -810,7 +825,8 @@ public class AppInstanceAggregate extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. The value can be an empty string. The value can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. The value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>. If you specify this parameter, it can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>ufo</p>

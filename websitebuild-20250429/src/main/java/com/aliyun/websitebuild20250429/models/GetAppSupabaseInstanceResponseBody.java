@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppSupabaseInstanceResponseBody extends TeaModel {
     /**
-     * <p>The detailed reason why access is denied.</p>
+     * <p>The detailed reason for access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed.</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -41,9 +41,9 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> return parameter.</p>
+     * <p>The dynamic error message, which is used to replace <code>%s</code> in the error message of the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters returned.</p>
+     * <p>The returned error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -86,13 +86,13 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
      * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
-     * <p>System exception.</p>
+     * <p>System exception</p>
      */
     @NameInMap("RootErrorMsg")
     public String rootErrorMsg;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The backup parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -240,6 +240,8 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         public String instanceCreateStatus;
 
         /**
+         * <p>The read-only business schema name resolved by Builder trusted binding, which cannot be used as input for tenant switching.</p>
+         * 
          * <strong>example:</strong>
          * <p>tenant_00000000-0000-4000-8000-000000000001_schema</p>
          */
@@ -274,7 +276,7 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         public String supabaseInstanceId;
 
         /**
-         * <p>The public URL of the Supabase instance.</p>
+         * <p>The public URL of Supabase.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -283,6 +285,8 @@ public class GetAppSupabaseInstanceResponseBody extends TeaModel {
         public String supabasePublicUrl;
 
         /**
+         * <p>The read-only tenant mode. The schema is the legacy Builder pool, and db/agenticdb is the new platform. History records can be empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>schema</p>
          */

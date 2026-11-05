@@ -32,10 +32,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the information about the Supabase instance associated with a resource.</p>
+     * <p>Queries the Supabase instance information of a resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs resource allocation for a Supabase instance.</p>
+     * <p>Allocates a Supabase instance to a resource allocation.</p>
      * 
      * @param request AllocateSupabaseForAdminRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -91,10 +91,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the information about the Supabase instance associated with a resource.</p>
+     * <p>Queries the Supabase instance information of a resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs resource allocation for a Supabase instance.</p>
+     * <p>Allocates a Supabase instance to a resource allocation.</p>
      * 
      * @param request AllocateSupabaseForAdminRequest
      * @return AllocateSupabaseForAdminResponse
@@ -3237,10 +3237,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of application instances.</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of application instances.</p>
+     * <p>Queries application instance information.</p>
      * 
      * @param request GetAppInstanceForAdminRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3276,10 +3276,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of application instances.</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of application instances.</p>
+     * <p>Queries application instance information.</p>
      * 
      * @param request GetAppInstanceForAdminRequest
      * @return GetAppInstanceForAdminResponse
@@ -3947,10 +3947,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the information about an application instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves information about a Supabase instance.</p>
+     * <p>Retrieves the information about a Supabase instance.</p>
      * 
      * @param request GetAppSupabaseInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3982,10 +3982,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries application instance information.</p>
+     * <p>Queries the information about an application instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves information about a Supabase instance.</p>
+     * <p>Retrieves the information about a Supabase instance.</p>
      * 
      * @param request GetAppSupabaseInstanceRequest
      * @return GetAppSupabaseInstanceResponse
@@ -4625,12 +4625,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public GetTempDownloadUrlResponse getTempDownloadUrlWithOptions(GetTempDownloadUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ossKey)) {
             body.put("OssKey", request.ossKey);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -5573,7 +5579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of application instances.</p>
+     * <p>Queries the list of application instances.</p>
      * 
      * @param tmpReq ListAppInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5592,6 +5598,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationType)) {
+            query.put("ApplicationType", request.applicationType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
             query.put("BizId", request.bizId);
         }
@@ -5667,7 +5677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of application instances.</p>
+     * <p>Queries the list of application instances.</p>
      * 
      * @param request ListAppInstancesRequest
      * @return ListAppInstancesResponse
