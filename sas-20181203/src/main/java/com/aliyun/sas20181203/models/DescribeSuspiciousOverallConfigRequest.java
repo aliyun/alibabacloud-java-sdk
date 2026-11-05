@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSuspiciousOverallConfigRequest extends TeaModel {
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>39.161.XX.XX</p>
@@ -14,14 +14,14 @@ public class DescribeSuspiciousOverallConfigRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The type of the feature. Valid values:</p>
+     * <p>The switch type. Valid values:</p>
      * <ul>
-     * <li><strong>auto_breaking</strong>: Anti-Virus</li>
-     * <li><strong>ransomware_breaking</strong>: Anti-ransomware (Bait Capture)</li>
-     * <li><strong>webshell_cloud_breaking</strong>: Webshell Protection</li>
-     * <li><strong>alinet</strong>: Behavior prevention</li>
-     * <li><strong>k8s_log_analysis</strong>: K8s Threat Detection</li>
-     * <li><strong>alisecguard</strong>: Defense mode for Client Protection</li>
+     * <li><strong>auto_breaking</strong>: anti-virus</li>
+     * <li><strong>ransomware_breaking</strong>: anti-ransomware (decoy capture)</li>
+     * <li><strong>webshell_cloud_breaking</strong>: web shell connection defense</li>
+     * <li><strong>alinet</strong>: malicious network behavior defense</li>
+     * <li><strong>k8s_log_analysis</strong>: container Kubernetes threat detection</li>
+     * <li><strong>alisecguard</strong>: client self-protection mode</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

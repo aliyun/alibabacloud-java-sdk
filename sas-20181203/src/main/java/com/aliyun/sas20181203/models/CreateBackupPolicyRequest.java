@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBackupPolicyRequest extends TeaModel {
     /**
-     * <p>Sets the name of the anti-ransomware policy to create.</p>
+     * <p>The name of the anti-ransomware policy to create.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,14 +24,14 @@ public class CreateBackupPolicyRequest extends TeaModel {
      * <li><strong>Include</strong>: The file types to protect. To protect all file types, set this parameter to [].</li>
      * <li><strong>Source</strong>: The server directories to protect. To protect all directories, set this parameter to [].</li>
      * <li><strong>ExcludeSystemPath</strong>: Specifies whether to exclude the specified directories. To exclude the directories, set this parameter to <strong>true</strong>. If you do not want to exclude the directories, you do not need to set this parameter.</li>
-     * <li><strong>Exclude</strong>: Sets the specified protection directory addresses. If you do not want to specify protection directory addresses, set this parameter to [].</li>
-     * <li><strong>Schedule</strong>: Sets the execution time and execution interval of the data backup task. We recommend that you specify a non-integer hour during off-peak hours. Examples:<ul>
-     * <li>Example 1: I|1583216092|P21D indicates that the data backup starts at 14:14:52 on March 3, 2020, and the backup policy execution interval is 3 weeks.</li>
-     * <li>Example 2: I|1583216092|PT24H indicates that the data backup starts at 14:14:52 on March 3, 2020, and the backup policy execution interval is 24 hours.</li>
+     * <li><strong>Exclude</strong>: The specified directories for protection. If you do not specify directories, set this parameter to [].</li>
+     * <li><strong>Schedule</strong>: The execution time and interval of the data backup task. We recommend that you specify a time during off-peak hours and avoid exact hours. Examples:<ul>
+     * <li>Example 1: I|1583216092|P21D indicates that the data backup starts at 14:14:52 on March 3, 2020, and the execution interval of the backup policy is 3 weeks.</li>
+     * <li>Example 2: I|1583216092|PT24H indicates that the data backup starts at 14:14:52 on March 3, 2020, and the execution interval of the backup policy is 24 hours.</li>
      * </ul>
      * </li>
      * <li><strong>Retention</strong>: The retention period of the backup data. Unit: days. A value of 7 indicates 1 week, 365 indicates 1 year, and -1 indicates permanent retention.</li>
-     * <li><strong>SpeedLimiter</strong>: Sets the backup network bandwidth limit. Example: 0:24:30720 indicates that the network bandwidth limit for the backup network is 30 MByte/s from 00:00 to 24:00.</li>
+     * <li><strong>SpeedLimiter</strong>: The bandwidth limit for the backup network. Example: 0:24:30720 indicates that the bandwidth limit for the backup network is 30 MByte/s from 00:00 to 24:00.</li>
      * <li><strong>UseVss</strong>: Specifies whether to enable the Volume Shadow Copy Service (VSS) feature for Windows. Valid values:<ul>
      * <li><strong>true</strong>: enabled</li>
      * <li><strong>false</strong>: disabled</li>
@@ -39,7 +39,7 @@ public class CreateBackupPolicyRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>The VSS feature is available only for Windows systems. Enabling this feature effectively reduces the issue of individual file backup failures caused by process occupation. We recommend that you enable this feature. After this feature is enabled, file backup for exFAT and FAT32 disk formats is not supported.</p>
+     * <p>The VSS feature is available only for Windows. Enabling this feature effectively reduces backup failures caused by file occupation by processes. We recommend that you enable this feature. After you enable this feature, file backup is not supported for disks in exFAT or FAT32 format.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -52,7 +52,7 @@ public class CreateBackupPolicyRequest extends TeaModel {
     /**
      * <p>The region ID of the server that is not deployed on Alibaba Cloud.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeSupportRegion~~">DescribeSupportRegion</a> operation to query the regions supported by the anti-ransomware feature, and then select a supported region that is closest to the region of your server that is not deployed on Alibaba Cloud.</p>
+     * <p>You can call the <a href="~~DescribeSupportRegion~~">DescribeSupportRegion</a> operation to query the regions supported by the anti-ransomware feature, and then select a supported region that is closest to the region where your non-Alibaba Cloud server is deployed.</p>
      * </blockquote>
      * <p>This parameter is required when the ServerType parameter is set to OUT_CLOUD.</p>
      * 
@@ -63,7 +63,7 @@ public class CreateBackupPolicyRequest extends TeaModel {
     public String policyRegionId;
 
     /**
-     * <p>The version of the anti-ransomware policy. Fixed value: <strong>2.0.0</strong>.</p>
+     * <p>The version of the anti-ransomware policy. Set the value to <strong>2.0.0</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,10 +73,10 @@ public class CreateBackupPolicyRequest extends TeaModel {
     public String policyVersion;
 
     /**
-     * <p>The method to cover assets. Valid values:</p>
+     * <p>The asset selection method. Valid values:</p>
      * <ul>
      * <li><strong>ALL_MACHINE</strong>: all assets<blockquote>
-     * <p>To cover all assets of the specified type, set this parameter to <strong>ALL_MACHINE</strong>. In this case, the <strong>UuidList</strong> parameter is invalid. Only one policy that covers all assets can be created for each server type.</p>
+     * <p>If you want to protect all assets of the specified server type, set this parameter to <strong>ALL_MACHINE</strong>. In this case, the <strong>UuidList</strong> parameter does not take effect. You can create only one policy that covers all assets of the same server type.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -102,7 +102,7 @@ public class CreateBackupPolicyRequest extends TeaModel {
     public String serverType;
 
     /**
-     * <p>The UUIDs of the servers to protect.</p>
+     * <p>Specifies the UUIDs of the servers to protect.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;, &quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;]</p>

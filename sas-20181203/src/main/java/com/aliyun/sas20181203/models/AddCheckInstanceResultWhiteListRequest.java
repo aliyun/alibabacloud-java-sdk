@@ -26,36 +26,31 @@ public class AddCheckInstanceResultWhiteListRequest extends TeaModel {
     public Long checkId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run. Valid values:</p>
-     * <ul>
-     * <li>true: performs only a dry run without executing the actual operation.</li>
-     * <li>false: performs the actual operation.</li>
-     * </ul>
-     * <p>Default value: false.</p>
+     * <p>Specifies whether to perform only a dry run. A value of true indicates that only a dry run is performed and the actual operation is not performed. A value of false indicates that the actual operation is performed. Default value: false.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The collection of asset instance IDs.</p>
+     * <p>The instance IDs of the assets.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The collection of asset instance information.</p>
+     * <p>The information about the asset instances.</p>
      */
     @NameInMap("InstanceList")
     public java.util.List<AddCheckInstanceResultWhiteListRequestInstanceList> instanceList;
 
     /**
-     * <p>The remarks. Maximum length: 65,535 bytes.</p>
+     * <p>The remarks. The value can be up to 65,535 bytes in length.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -64,9 +59,9 @@ public class AddCheckInstanceResultWhiteListRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The rule type. Default value: <strong>WHITE</strong>. Valid values:</p>
+     * <p>The type of the rule. Default value: <strong>WHITE</strong>. Valid values:</p>
      * <ul>
-     * <li>WHITE: whitelist</li>
+     * <li>WHITE: Adds the instances to the whitelist.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -146,9 +141,9 @@ public class AddCheckInstanceResultWhiteListRequest extends TeaModel {
 
     public static class AddCheckInstanceResultWhiteListRequestInstanceList extends TeaModel {
         /**
-         * <p>The asset instance ID.</p>
+         * <p>The instance ID of the asset.</p>
          * <blockquote>
-         * <p>Call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> operation to obtain this parameter.</p>
+         * <p>Invoke the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUnknownThreatDetectMachineRequest extends TeaModel {
     /**
-     * <p>The page number of the current page in a paged query.</p>
+     * <p>The page number of the current page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,6 +14,18 @@ public class ListUnknownThreatDetectMachineRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The status of the alert event. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: pending</li>
+     * <li><strong>2</strong>: ignored</li>
+     * <li><strong>4</strong>: confirmed</li>
+     * <li><strong>8</strong>: marked as false positive</li>
+     * <li><strong>16</strong>: processing</li>
+     * <li><strong>32</strong>: handled</li>
+     * <li><strong>64</strong>: expired</li>
+     * <li><strong>604</strong>: marked as false positive by the system</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,7 +33,7 @@ public class ListUnknownThreatDetectMachineRequest extends TeaModel {
     public Integer eventStatus;
 
     /**
-     * <p>The maximum number of entries to display per page in a paged query.</p>
+     * <p>The maximum number of entries to return on each page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -30,7 +42,7 @@ public class ListUnknownThreatDetectMachineRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The server name or IP address.</p>
+     * <p>The name or IP address of the server.</p>
      * 
      * <strong>example:</strong>
      * <p>test-ecs</p>
@@ -39,11 +51,11 @@ public class ListUnknownThreatDetectMachineRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The machine running status. Valid values:</p>
+     * <p>The running status of the server. Valid values:</p>
      * <ul>
-     * <li><strong>monitoring</strong>: warning in progress</li>
-     * <li><strong>blocking</strong>: under control</li>
-     * <li><strong>studying</strong>: learning in progress</li>
+     * <li><strong>monitoring</strong>: alerting</li>
+     * <li><strong>blocking</strong>: blocking</li>
+     * <li><strong>studying</strong>: learning</li>
      * <li><strong>study_finish</strong>: learning completed</li>
      * </ul>
      * 
@@ -56,8 +68,8 @@ public class ListUnknownThreatDetectMachineRequest extends TeaModel {
     /**
      * <p>The whitelist mode. Valid values:</p>
      * <ul>
-     * <li><strong>hash</strong>: process hash</li>
-     * <li><strong>path</strong>: process path</li>
+     * <li><strong>hash</strong>: the hash of the process</li>
+     * <li><strong>path</strong>: the path of the process</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +79,7 @@ public class ListUnknownThreatDetectMachineRequest extends TeaModel {
     public String studyMode;
 
     /**
-     * <p>The end of the model creation time range. The value is a timestamp in milliseconds.</p>
+     * <p>The end time of the time range when the model was created. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1768891966346</p>
@@ -76,7 +88,7 @@ public class ListUnknownThreatDetectMachineRequest extends TeaModel {
     public Long studyTimeEnd;
 
     /**
-     * <p>The start of the model creation time range. The value is a timestamp in milliseconds.</p>
+     * <p>The start time of the time range when the model was created. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1768891966344</p>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetCommonSwitchConfigRequest extends TeaModel {
     /**
-     * <p>The type of the common switch.</p>
+     * <p>The general switch type.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> or <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> operation to obtain the switch type from the response parameter SwitchId.</p>
+     * <p>You can obtain this parameter from the SwitchId response parameter of the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> and <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

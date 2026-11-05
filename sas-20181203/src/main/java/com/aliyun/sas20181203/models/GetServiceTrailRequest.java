@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetServiceTrailRequest extends TeaModel {
     /**
-     * <p>The ID of the region in which the instance resides. Valid values:</p>
+     * <p>The ID of the region where the instance to be queried resides. Valid values:</p>
      * <ul>
      * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
-     * <li><strong>ap-southeast-1</strong>: Singapore.</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore</li>
      * </ul>
      * 
      * <strong>example:</strong>

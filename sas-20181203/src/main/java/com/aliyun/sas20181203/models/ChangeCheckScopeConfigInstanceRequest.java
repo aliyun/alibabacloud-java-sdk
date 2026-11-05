@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class ChangeCheckScopeConfigInstanceRequest extends TeaModel {
     /**
-     * <p>The list of unique IDs of cloud assets to add.</p>
+     * <p>The UUIDs of the cloud assets to add.</p>
      */
     @NameInMap("AddAssetUuids")
     public java.util.List<String> addAssetUuids;
 
     /**
-     * <p>The ID of the scan scope configuration.</p>
-     * <blockquote>
-     * <p>Call the <a href="~~GetCheckScopeConfig~~">GetCheckScopeConfig</a> operation to obtain this parameter.</p>
-     * </blockquote>
+     * <p>The ID of the scan scope configuration. You can call the <a href="~~GetCheckScopeConfig~~">GetCheckScopeConfig</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,13 +21,13 @@ public class ChangeCheckScopeConfigInstanceRequest extends TeaModel {
     public String configId;
 
     /**
-     * <p>The list of unique IDs of cloud assets to delete.</p>
+     * <p>The UUIDs of the cloud assets to delete.</p>
      */
     @NameInMap("DeleteAssetUuids")
     public java.util.List<String> deleteAssetUuids;
 
     /**
-     * <p>The key for cross-page select-all.</p>
+     * <p>The cross-page select-all key.</p>
      * 
      * <strong>example:</strong>
      * <p>b6d1a39a-f020-4782-af2c-c4b6522*****</p>

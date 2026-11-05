@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "Sas";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-qingdao", "tds.cn-shanghai.aliyuncs.com"),
@@ -193,7 +196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds instances to the whitelist at the instance level for a specific check item in cloud platform configuration checks.</p>
+     * <p>Adds instances to the whitelist for a check item in cloud platform configuration checks.</p>
      * 
      * @param request AddCheckInstanceResultWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -253,7 +256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds instances to the whitelist at the instance level for a specific check item in cloud platform configuration checks.</p>
+     * <p>Adds instances to the whitelist for a check item in cloud platform configuration checks.</p>
      * 
      * @param request AddCheckInstanceResultWhiteListRequest
      * @return AddCheckInstanceResultWhiteListResponse
@@ -441,7 +444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates multi-cloud asset configuration information.</p>
+     * <p>Adds multi-cloud asset configuration information.</p>
      * 
      * @param request AddCloudVendorAccountAKRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -502,6 +505,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("VendorAuthAlias", request.vendorAuthAlias);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.vendorUserName)) {
+            query.put("VendorUserName", request.vendorUserName);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -521,7 +528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates multi-cloud asset configuration information.</p>
+     * <p>Adds multi-cloud asset configuration information.</p>
      * 
      * @param request AddCloudVendorAccountAKRequest
      * @return AddCloudVendorAccountAKResponse
@@ -2058,6 +2065,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies the configuration of an existing check policy. This operation only modifies policies and does not create new ones. Breaking change: If any multi-policy field (such as StrategyName, Frequency, or DaysOfMonth) is provided, ConfigId is required. If ConfigId is missing, the system returns IllegalParam (paramName=configId). If ConfigId is not provided and no system default policy exists under the account, the system no longer silently creates a policy and returns success. Instead, it returns NoDefaultStrategy. In this case, use CreateCheckConfig to create a policy. If Frequency is not provided, the current value of the policy is retained. If Frequency is provided, time window parameters must also be provided. The time window supports two sets of parameters: hour-level (StartTime and EndTime) and second-level (StartTimeSeconds and EndTimeSeconds). If both sets are provided, the second-level parameters take precedence. If neither set is provided, the current value of the policy is retained. The frequency of the system default policy (ConfigId=default) is always 6HOURLY and cannot be switched. The system only accepts 6HOURLY and four on-the-hour time windows for requests to the default policy, and will deny requests with multi-policy frequencies or second-level parameters. The ConfigId in the response returns the actual ID of the modified policy. Timed scheduling will execute tasks sequentially by second within the same minute, and the concurrency is 1. During periods of high concurrency, the system may skip and not execute some policies in the current run without makeup runs on the same day. Callers that have strong consistency requirements for the time to execute should avoid peak hours.</p>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the configuration items for cloud platform configuration checks.</p>
      * 
@@ -2086,6 +2096,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.configRequirementIdsShrink)) {
             query.put("ConfigRequirementIds", request.configRequirementIdsShrink);
         }
@@ -2102,6 +2116,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CycleDays", request.cycleDays);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.daysOfMonth)) {
+            query.put("DaysOfMonth", request.daysOfMonth);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
         }
@@ -2116,6 +2134,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTimeSeconds)) {
+            query.put("EndTimeSeconds", request.endTimeSeconds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.frequency)) {
+            query.put("Frequency", request.frequency);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -2136,6 +2162,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTimeSeconds)) {
+            query.put("StartTimeSeconds", request.startTimeSeconds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyName)) {
+            query.put("StrategyName", request.strategyName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.systemConfig)) {
@@ -2164,6 +2198,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies the configuration of an existing check policy. This operation only modifies policies and does not create new ones. Breaking change: If any multi-policy field (such as StrategyName, Frequency, or DaysOfMonth) is provided, ConfigId is required. If ConfigId is missing, the system returns IllegalParam (paramName=configId). If ConfigId is not provided and no system default policy exists under the account, the system no longer silently creates a policy and returns success. Instead, it returns NoDefaultStrategy. In this case, use CreateCheckConfig to create a policy. If Frequency is not provided, the current value of the policy is retained. If Frequency is provided, time window parameters must also be provided. The time window supports two sets of parameters: hour-level (StartTime and EndTime) and second-level (StartTimeSeconds and EndTimeSeconds). If both sets are provided, the second-level parameters take precedence. If neither set is provided, the current value of the policy is retained. The frequency of the system default policy (ConfigId=default) is always 6HOURLY and cannot be switched. The system only accepts 6HOURLY and four on-the-hour time windows for requests to the default policy, and will deny requests with multi-policy frequencies or second-level parameters. The ConfigId in the response returns the actual ID of the modified policy. Timed scheduling will execute tasks sequentially by second within the same minute, and the concurrency is 1. During periods of high concurrency, the system may skip and not execute some policies in the current run without makeup runs on the same day. Callers that have strong consistency requirements for the time to execute should avoid peak hours.</p>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the configuration items for cloud platform configuration checks.</p>
      * 
@@ -2233,7 +2270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the check scope configuration instance.</p>
+     * <p>Modifies the instances in a check scope configuration.</p>
      * 
      * @param request ChangeCheckScopeConfigInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2277,7 +2314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the check scope configuration instance.</p>
+     * <p>Modifies the instances in a check scope configuration.</p>
      * 
      * @param request ChangeCheckScopeConfigInstanceRequest
      * @return ChangeCheckScopeConfigInstanceResponse
@@ -2393,7 +2430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether one or more alerts are generated on a specified server based on alert IDs.</p>
+     * <p>Verifies whether one or more alert event IDs belong to a specified server.</p>
      * 
      * @param request CheckSecurityEventIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2429,7 +2466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether one or more alerts are generated on a specified server based on alert IDs.</p>
+     * <p>Verifies whether one or more alert event IDs belong to a specified server.</p>
      * 
      * @param request CheckSecurityEventIdRequest
      * @return CheckSecurityEventIdResponse
@@ -3660,7 +3697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an epoch scan task, including image scans, emergency vulnerability scans, and virus scans.</p>
+     * <p>Creates an epoch scan node, including image scans, emergency vulnerability scanning, and virus scans.</p>
      * 
      * @param request CreateCycleTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3736,7 +3773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an epoch scan task, including image scans, emergency vulnerability scans, and virus scans.</p>
+     * <p>Creates an epoch scan node, including image scans, emergency vulnerability scanning, and virus scans.</p>
      * 
      * @param request CreateCycleTaskRequest
      * @return CreateCycleTaskResponse
@@ -3805,18 +3842,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Initiates deep analysis for a specified file and streams the progress of each analysis phase in real time by using Server-Sent Events (SSE).
-     * [Input parameters] You must provide at least one of the Hash and EventId parameters. If EventId is provided, the file hash is preferentially parsed from the details of the corresponding alert. Otherwise, the provided Hash (MD5 or SHA-256) is used. The Source parameter identifies the call source and is used for commercial edition verification based on the source.
-     * [Response] The response is of the text/event-stream type. The server pushes events sequentially based on the processing phases. Valid values for the event name (event):</p>
+     * [Input parameters] You must provide at least one of the Hash and EventId parameters. If EventId is provided, the file hash is preferentially parsed from the corresponding alert details. Otherwise, the provided Hash (MD5 or SHA-256) is used. The Source parameter identifies the call source and is used for commercial verification based on the source.
+     * [Response] The response is of the text/event-stream type. The server pushes events sequentially based on the processing phase. Valid values for the event name (event):</p>
      * <ul>
      * <li>accepted: The request is accepted.</li>
      * <li>authorized: The purchase verification for the source is passed.</li>
      * <li>alertResolved: The file hash is parsed from the alert or input parameters.</li>
      * <li>fileReady: The file download link is ready.</li>
      * <li>dispatched: The file is delivered to the detection engine, including the requestId.</li>
-     * <li>result: The analysis result is matched. This parameter is optional and pushed after the asynchronous result is ready.</li>
-     * <li>done: The current analysis process is completed.</li>
+     * <li>result: The analysis result is matched. This is optional and pushed after asynchronous processing is complete.</li>
+     * <li>done: The current analysis process is complete.</li>
      * <li>error: A processing exception occurs, including the error code and message.
-     * The data payload of each event is a JSON object in the data field. The fields vary depending on the event type. For more information, see the response structure description.</li>
+     * The data body of each event is a JSON object in the data field. The fields vary depending on the event type. For more information, see the response structure description.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -3869,18 +3906,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Initiates deep analysis for a specified file and streams the progress of each analysis phase in real time by using Server-Sent Events (SSE).
-     * [Input parameters] You must provide at least one of the Hash and EventId parameters. If EventId is provided, the file hash is preferentially parsed from the details of the corresponding alert. Otherwise, the provided Hash (MD5 or SHA-256) is used. The Source parameter identifies the call source and is used for commercial edition verification based on the source.
-     * [Response] The response is of the text/event-stream type. The server pushes events sequentially based on the processing phases. Valid values for the event name (event):</p>
+     * [Input parameters] You must provide at least one of the Hash and EventId parameters. If EventId is provided, the file hash is preferentially parsed from the corresponding alert details. Otherwise, the provided Hash (MD5 or SHA-256) is used. The Source parameter identifies the call source and is used for commercial verification based on the source.
+     * [Response] The response is of the text/event-stream type. The server pushes events sequentially based on the processing phase. Valid values for the event name (event):</p>
      * <ul>
      * <li>accepted: The request is accepted.</li>
      * <li>authorized: The purchase verification for the source is passed.</li>
      * <li>alertResolved: The file hash is parsed from the alert or input parameters.</li>
      * <li>fileReady: The file download link is ready.</li>
      * <li>dispatched: The file is delivered to the detection engine, including the requestId.</li>
-     * <li>result: The analysis result is matched. This parameter is optional and pushed after the asynchronous result is ready.</li>
-     * <li>done: The current analysis process is completed.</li>
+     * <li>result: The analysis result is matched. This is optional and pushed after asynchronous processing is complete.</li>
+     * <li>done: The current analysis process is complete.</li>
      * <li>error: A processing exception occurs, including the error code and message.
-     * The data payload of each event is a JSON object in the data field. The fields vary depending on the event type. For more information, see the response structure description.</li>
+     * The data body of each event is a JSON object in the data field. The fields vary depending on the event type. For more information, see the response structure description.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4000,12 +4037,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the parameters that are required to upload a file for detection. If the value of the response parameter FileExist is true, the file that you want to upload for detection already exists in the cloud. In this case, you can directly push the file for detection. If the value of the response parameter FileExist is false, you must use the form upload method to upload the file to the specified Object Storage Service (OSS) bucket based on the response parameters of this operation.
-     * The form upload method is provided by OSS. For more information, see <a href="https://help.aliyun.com/document_detail/84788.html">Form upload</a>.
-     * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.</p>
+     * <p>Retrieves file upload parameters. If the value of FileExist in the response parameters is true, the file to be checked already exists in the cloud and does not need to be uploaded. You can directly push the file for checking. If the value of FileExist is false, you must use the parameters returned by this operation to upload the file to the specified storage location by using form upload.
+     * The form upload service is provided by Object Storage Service (OSS). For more information, see <a href="https://help.aliyun.com/document_detail/84788.html">Form upload</a>.
+     * All file check-related operations include the HashKey parameter, which indicates the unique identifier of the file. Only the MD5 or SHA-256 hash value of the complete file content is supported. Calculate this value before you call the operation. Note that the push and query operations for a single file check must use the same HashKey. Otherwise, the check cannot be pushed and the results cannot be queried correctly.
+     * You can calculate the MD5 or SHA-256 hash value of the file content by performing the following steps:</p>
+     * <ol>
+     * <li>Use the MD5 or SHA-256 algorithm to encrypt the data and generate a 128-bit or 256-bit hash value. Available tool libraries include the MessageDigest tool in Java and the hashlib library in Python.</li>
+     * <li>Encode the generated hash value into a hexadecimal string. Available tool libraries include the Codec tool in Java and the hex function in Python. Make sure that the final string is a combination of digits and lowercase letters. The MD5 string contains 32 characters, and the SHA-256 string contains 64 characters.</li>
+     * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the parameters that are required to upload a file for detection.</p>
+     * <p>Retrieves file upload parameters.</p>
      * 
      * @param request CreateFileDetectUploadUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4045,12 +4087,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the parameters that are required to upload a file for detection. If the value of the response parameter FileExist is true, the file that you want to upload for detection already exists in the cloud. In this case, you can directly push the file for detection. If the value of the response parameter FileExist is false, you must use the form upload method to upload the file to the specified Object Storage Service (OSS) bucket based on the response parameters of this operation.
-     * The form upload method is provided by OSS. For more information, see <a href="https://help.aliyun.com/document_detail/84788.html">Form upload</a>.
-     * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.</p>
+     * <p>Retrieves file upload parameters. If the value of FileExist in the response parameters is true, the file to be checked already exists in the cloud and does not need to be uploaded. You can directly push the file for checking. If the value of FileExist is false, you must use the parameters returned by this operation to upload the file to the specified storage location by using form upload.
+     * The form upload service is provided by Object Storage Service (OSS). For more information, see <a href="https://help.aliyun.com/document_detail/84788.html">Form upload</a>.
+     * All file check-related operations include the HashKey parameter, which indicates the unique identifier of the file. Only the MD5 or SHA-256 hash value of the complete file content is supported. Calculate this value before you call the operation. Note that the push and query operations for a single file check must use the same HashKey. Otherwise, the check cannot be pushed and the results cannot be queried correctly.
+     * You can calculate the MD5 or SHA-256 hash value of the file content by performing the following steps:</p>
+     * <ol>
+     * <li>Use the MD5 or SHA-256 algorithm to encrypt the data and generate a 128-bit or 256-bit hash value. Available tool libraries include the MessageDigest tool in Java and the hashlib library in Python.</li>
+     * <li>Encode the generated hash value into a hexadecimal string. Available tool libraries include the Codec tool in Java and the hex function in Python. Make sure that the final string is a combination of digits and lowercase letters. The MD5 string contains 32 characters, and the SHA-256 string contains 64 characters.</li>
+     * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the parameters that are required to upload a file for detection.</p>
+     * <p>Retrieves file upload parameters.</p>
      * 
      * @param request CreateFileDetectUploadUrlRequest
      * @return CreateFileDetectUploadUrlResponse
@@ -4228,7 +4275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies the queries per second (QPS) limit on the files uploaded from the client.</p>
+     * <p>Sets the maximum QPS for client file uploads.</p>
      * 
      * @param request CreateFileUploadLimitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4260,7 +4307,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies the queries per second (QPS) limit on the files uploaded from the client.</p>
+     * <p>Sets the maximum QPS for client file uploads.</p>
      * 
      * @param request CreateFileUploadLimitRequest
      * @return CreateFileUploadLimitResponse
@@ -5640,10 +5687,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images that the image scan task covers and the number of authorizations consumed. Make sure that sufficient authorizations are available for the image scan task to prevent the image scan task from being overwritten due to insufficient authorizations.</p>
+     * <p>Before calling this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images covered by the container image security scan and the number of consumed authorizations. Ensure that you have sufficient authorizations to prevent the image scan node from being interrupted due to insufficient authorizations.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a scan policy for detecting malicious files in OSS under the malicious file detection feature.</p>
+     * <p>Creates a scan policy for detecting malicious files in Object Storage Service (OSS).</p>
      * 
      * @param request CreateOssScanConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5743,10 +5790,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images that the image scan task covers and the number of authorizations consumed. Make sure that sufficient authorizations are available for the image scan task to prevent the image scan task from being overwritten due to insufficient authorizations.</p>
+     * <p>Before calling this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images covered by the container image security scan and the number of consumed authorizations. Ensure that you have sufficient authorizations to prevent the image scan node from being interrupted due to insufficient authorizations.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a scan policy for detecting malicious files in OSS under the malicious file detection feature.</p>
+     * <p>Creates a scan policy for detecting malicious files in Object Storage Service (OSS).</p>
      * 
      * @param request CreateOssScanConfigRequest
      * @return CreateOssScanConfigResponse
@@ -6020,10 +6067,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The <strong>ActionTrail data delivery</strong> feature requires Cloud Security Posture Management (CSPM) and security alerting to read ActionTrail data. To use this feature, enable the <strong>ActionTrail data delivery</strong> toggle in the Security Center console and authorize the service-linked role <strong>AliyunServiceRoleForSas</strong> for Security Center. After authorization, ActionTrail data is delivered to the LogStore of Security Center.
-     * For more information about the service-linked role <strong>AliyunServiceRoleForSas</strong> for Security Center, see <a href="https://help.aliyun.com/document_detail/460226.html">Service-linked role for Security Center</a>.</p>
+     * <p>The <strong>ActionTrail data delivery</strong> feature requires authorization for Cloud Security Posture Management (CSPM) and security alerts to read ActionTrail data. Therefore, you must turn on the <strong>ActionTrail data delivery</strong> switch in the Security Center console and authorize the service-linked role for Security Center (<strong>AliyunServiceRoleForSas</strong>) to deliver ActionTrail data to the Logstore of Security Center.
+     * For more information about the <strong>AliyunServiceRoleForSas</strong> service-linked role for Security Center, see <a href="https://help.aliyun.com/document_detail/460226.html">Service-linked role for Security Center</a>.</p>
      * <h3>Before you begin</h3>
-     * <p>Before calling this operation, enable the <strong>ActionTrail data delivery</strong> toggle. For more information, see <a href="https://help.aliyun.com/document_detail/197302.html">Access control</a>.</p>
+     * <p>Before you call this operation, make sure that the <strong>ActionTrail data delivery</strong> switch is turned on. For more information, see <a href="https://help.aliyun.com/document_detail/197302.html">Access control</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a service trail.</p>
@@ -6058,10 +6105,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The <strong>ActionTrail data delivery</strong> feature requires Cloud Security Posture Management (CSPM) and security alerting to read ActionTrail data. To use this feature, enable the <strong>ActionTrail data delivery</strong> toggle in the Security Center console and authorize the service-linked role <strong>AliyunServiceRoleForSas</strong> for Security Center. After authorization, ActionTrail data is delivered to the LogStore of Security Center.
-     * For more information about the service-linked role <strong>AliyunServiceRoleForSas</strong> for Security Center, see <a href="https://help.aliyun.com/document_detail/460226.html">Service-linked role for Security Center</a>.</p>
+     * <p>The <strong>ActionTrail data delivery</strong> feature requires authorization for Cloud Security Posture Management (CSPM) and security alerts to read ActionTrail data. Therefore, you must turn on the <strong>ActionTrail data delivery</strong> switch in the Security Center console and authorize the service-linked role for Security Center (<strong>AliyunServiceRoleForSas</strong>) to deliver ActionTrail data to the Logstore of Security Center.
+     * For more information about the <strong>AliyunServiceRoleForSas</strong> service-linked role for Security Center, see <a href="https://help.aliyun.com/document_detail/460226.html">Service-linked role for Security Center</a>.</p>
      * <h3>Before you begin</h3>
-     * <p>Before calling this operation, enable the <strong>ActionTrail data delivery</strong> toggle. For more information, see <a href="https://help.aliyun.com/document_detail/197302.html">Access control</a>.</p>
+     * <p>Before you call this operation, make sure that the <strong>ActionTrail data delivery</strong> switch is turned on. For more information, see <a href="https://help.aliyun.com/document_detail/197302.html">Access control</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a service trail.</p>
@@ -8970,7 +9017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an ActionTrail data delivery configuration.</p>
+     * <p>Deletes ActionTrail data delivery.</p>
      * 
      * @param request DeleteServiceTrailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9002,7 +9049,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an ActionTrail data delivery configuration.</p>
+     * <p>Deletes ActionTrail data delivery.</p>
      * 
      * @param request DeleteServiceTrailRequest
      * @return DeleteServiceTrailResponse
@@ -10825,10 +10872,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries servers that have the anti-ransomware client installed in a specified region.</p>
+     * <p>This operation queries the servers on which the anti-ransomware client is installed in a specified region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries servers that have the anti-ransomware client installed in a specified region.</p>
+     * <p>Queries the servers on which the anti-ransomware client is installed in a specified region.</p>
      * 
      * @param request DescribeBackupClientsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10860,10 +10907,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries servers that have the anti-ransomware client installed in a specified region.</p>
+     * <p>This operation queries the servers on which the anti-ransomware client is installed in a specified region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries servers that have the anti-ransomware client installed in a specified region.</p>
+     * <p>Queries the servers on which the anti-ransomware client is installed in a specified region.</p>
      * 
      * @param request DescribeBackupClientsRequest
      * @return DescribeBackupClientsResponse
@@ -12181,7 +12228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource configuration information of a client.</p>
+     * <p>Queries the resource configuration information of the client.</p>
      * 
      * @param request DescribeClientConfSetupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12217,7 +12264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource configuration information of a client.</p>
+     * <p>Queries the resource configuration information of the client.</p>
      * 
      * @param request DescribeClientConfSetupRequest
      * @return DescribeClientConfSetupResponse
@@ -13152,7 +13199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configured asset information for a specific switch type.</p>
+     * <p>Queries the servers configured for a specified switch type.</p>
      * 
      * @param request DescribeCommonTargetResultListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13188,7 +13235,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configured asset information for a specific switch type.</p>
+     * <p>Queries the servers configured for a specified switch type.</p>
      * 
      * @param request DescribeCommonTargetResultListRequest
      * @return DescribeCommonTargetResultListResponse
@@ -16651,7 +16698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of clients connected to a specified hybrid cloud proxy by paging. This operation is part of the hybrid cloud proxy feature.</p>
+     * <p>Queries the list of clients connected to a specified hybrid cloud proxy by using paging. This API operation is part of the hybrid cloud proxy feature.</p>
      * 
      * @param request DescribeHybridProxyLinkedClientListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16703,7 +16750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of clients connected to a specified hybrid cloud proxy by paging. This operation is part of the hybrid cloud proxy feature.</p>
+     * <p>Queries the list of clients connected to a specified hybrid cloud proxy by using paging. This API operation is part of the hybrid cloud proxy feature.</p>
      * 
      * @param request DescribeHybridProxyLinkedClientListRequest
      * @return DescribeHybridProxyLinkedClientListResponse
@@ -17183,7 +17230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of baseline check results for image scanning.</p>
+     * <p>Queries the details of image scan baseline check results.</p>
      * 
      * @param request DescribeImageBaselineDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17223,7 +17270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of baseline check results for image scanning.</p>
+     * <p>Queries the details of image scan baseline check results.</p>
      * 
      * @param request DescribeImageBaselineDetailRequest
      * @return DescribeImageBaselineDetailResponse
@@ -20077,7 +20124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of client tasks.</p>
+     * <p>Queries the list of client tasks.</p>
      * 
      * @param request DescribeOnceTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20137,7 +20184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of client tasks.</p>
+     * <p>Queries the list of client tasks.</p>
      * 
      * @param request DescribeOnceTaskRequest
      * @return DescribeOnceTaskResponse
@@ -20225,7 +20272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries statistics on the client plug-in installation status.</p>
+     * <p>Queries the statistics on the installation status of client plug-ins.</p>
      * 
      * @param request DescribePluginSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20261,7 +20308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries statistics on the client plug-in installation status.</p>
+     * <p>Queries the statistics on the installation status of client plug-ins.</p>
      * 
      * @param request DescribePluginSummaryRequest
      * @return DescribePluginSummaryResponse
@@ -21307,7 +21354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Asset Fingerprints information of account assets on a server.</p>
+     * <p>Queries the asset fingerprint information of server accounts.</p>
      * 
      * @param request DescribePropertyUserDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21383,7 +21430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Asset Fingerprints information of account assets on a server.</p>
+     * <p>Queries the asset fingerprint information of server accounts.</p>
      * 
      * @param request DescribePropertyUserDetailRequest
      * @return DescribePropertyUserDetailResponse
@@ -24277,7 +24324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration of a specified feature.</p>
+     * <p>Queries the configuration of proactive defense switches.</p>
      * 
      * @param request DescribeSuspiciousOverallConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24313,7 +24360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration of a specified feature.</p>
+     * <p>Queries the configuration of proactive defense switches.</p>
      * 
      * @param request DescribeSuspiciousOverallConfigRequest
      * @return DescribeSuspiciousOverallConfigResponse
@@ -24358,7 +24405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the UUIDs of servers on which proactive defense of a specified type takes effect.</p>
+     * <p>Queries the UUIDs of assets for which proactive defense is enabled based on the defense type.</p>
      * 
      * @param request DescribeSuspiciousUUIDConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24390,7 +24437,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the UUIDs of servers on which proactive defense of a specified type takes effect.</p>
+     * <p>Queries the UUIDs of assets for which proactive defense is enabled based on the defense type.</p>
      * 
      * @param request DescribeSuspiciousUUIDConfigRequest
      * @return DescribeSuspiciousUUIDConfigResponse
@@ -25857,10 +25904,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A download link is returned when the export task status is success.</p>
+     * <p>Returns a download link when the export task status is success.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the progress of a vulnerability export task.</p>
+     * <p>Retrieves the progress of a vulnerability export task.</p>
      * 
      * @param request DescribeVulExportInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25896,10 +25943,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A download link is returned when the export task status is success.</p>
+     * <p>Returns a download link when the export task status is success.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the progress of a vulnerability export task.</p>
+     * <p>Retrieves the progress of a vulnerability export task.</p>
      * 
      * @param request DescribeVulExportInfoRequest
      * @return DescribeVulExportInfoResponse
@@ -28480,7 +28527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about network connectivity between two nodes.</p>
+     * <p>Retrieves the network connectivity information between two nodes.</p>
      * 
      * @param tmpReq FindContainerNetworkConnectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -28546,7 +28593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about network connectivity between two nodes.</p>
+     * <p>Retrieves the network connectivity information between two nodes.</p>
      * 
      * @param request FindContainerNetworkConnectRequest
      * @return FindContainerNetworkConnectResponse
@@ -28965,7 +29012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Only users of the Ultimate edition of Security Center can call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a container anti-escape rule.</p>
+     * <p>Queries the details of a container escape prevention rule.</p>
      * 
      * @param request GetAegisContainerPluginRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29008,7 +29055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Only users of the Ultimate edition of Security Center can call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a container anti-escape rule.</p>
+     * <p>Queries the details of a container escape prevention rule.</p>
      * 
      * @param request GetAegisContainerPluginRuleRequest
      * @return GetAegisContainerPluginRuleResponse
@@ -30087,8 +30134,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the check configuration of a specified policy. Behavior change: When the policy corresponding to ConfigId does not exist, IllegalParam is no longer returned. Instead, a success response is returned with empty configuration fields and Exists set to false. Callers must determine whether the policy exists based on Exists. API contract: When ConfigId is not passed (or an empty string or default is passed), only the system default policy configuration is returned. When a specific UUID ConfigId is explicitly passed, the specified policy is returned. Time field description: StartTimeSeconds and EndTimeSeconds are authoritative values in seconds and are directly passed through from the database. StartTime and EndTime on multi-policy rows are derived approximate values obtained by rounding the second-level values and are not active for reverse-engineering the exact window. For the system default policy (Frequency=6HOURLY) row, the second-level output parameters are always null (not 0), and callers must perform null checks. Timed scheduling executes sequentially by second within the same minute with a concurrency of 1. During periods of high concurrency, the current execution of some policies may be skipped without makeup runs on the same day. Callers with strong consistency requirements for execution time should avoid concentrated periods such as the top of the hour.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves the check item configurations for cloud platform configuration checks.</p>
+     * <p>Retrieves the configuration items for cloud platform configuration checks.</p>
      * 
      * @param request GetCheckConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30097,6 +30147,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCheckConfigResponse getCheckConfigWithOptions(GetCheckConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
             query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
@@ -30119,8 +30173,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the check configuration of a specified policy. Behavior change: When the policy corresponding to ConfigId does not exist, IllegalParam is no longer returned. Instead, a success response is returned with empty configuration fields and Exists set to false. Callers must determine whether the policy exists based on Exists. API contract: When ConfigId is not passed (or an empty string or default is passed), only the system default policy configuration is returned. When a specific UUID ConfigId is explicitly passed, the specified policy is returned. Time field description: StartTimeSeconds and EndTimeSeconds are authoritative values in seconds and are directly passed through from the database. StartTime and EndTime on multi-policy rows are derived approximate values obtained by rounding the second-level values and are not active for reverse-engineering the exact window. For the system default policy (Frequency=6HOURLY) row, the second-level output parameters are always null (not 0), and callers must perform null checks. Timed scheduling executes sequentially by second within the same minute with a concurrency of 1. During periods of high concurrency, the current execution of some policies may be skipped without makeup runs on the same day. Callers with strong consistency requirements for execution time should avoid concentrated periods such as the top of the hour.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves the check item configurations for cloud platform configuration checks.</p>
+     * <p>Retrieves the configuration items for cloud platform configuration checks.</p>
      * 
      * @param request GetCheckConfigRequest
      * @return GetCheckConfigResponse
@@ -30558,7 +30615,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the time trend pass rate statistics for Cloud Security Posture Management (CSPM) risk items.</p>
+     * <p>Retrieves the time-series pass rate statistics for Cloud Security Posture Management (CSPM) risk items.</p>
      * 
      * @param request GetCheckTimeDimensionStatisticRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30606,7 +30663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the time trend pass rate statistics for Cloud Security Posture Management (CSPM) risk items.</p>
+     * <p>Retrieves the time-series pass rate statistics for Cloud Security Posture Management (CSPM) risk items.</p>
      * 
      * @param request GetCheckTimeDimensionStatisticRequest
      * @return GetCheckTimeDimensionStatisticResponse
@@ -31139,7 +31196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration of a common switch.</p>
+     * <p>Retrieves the general switch configuration.</p>
      * 
      * @param request GetCommonSwitchConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31171,7 +31228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration of a common switch.</p>
+     * <p>Retrieves the general switch configuration.</p>
      * 
      * @param request GetCommonSwitchConfigRequest
      * @return GetCommonSwitchConfigResponse
@@ -31231,7 +31288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a defense rule for non-image programs.</p>
+     * <p>Retrieves the details of a non-image program defense rule.</p>
      * 
      * @param request GetContainerDefenseRuleDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31267,7 +31324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a defense rule for non-image programs.</p>
+     * <p>Retrieves the details of a non-image program defense rule.</p>
      * 
      * @param request GetContainerDefenseRuleDetailRequest
      * @return GetContainerDefenseRuleDetailResponse
@@ -31405,7 +31462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the rankings of images across different dimensions.</p>
+     * <p>Queries the rankings of images across various dimensions.</p>
      * 
      * @param request GetDockerhubImageRiskRankInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31437,7 +31494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the rankings of images across different dimensions.</p>
+     * <p>Queries the rankings of images across various dimensions.</p>
      * 
      * @param request GetDockerhubImageRiskRankInfoRequest
      * @return GetDockerhubImageRiskRankInfoResponse
@@ -32008,7 +32065,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the queries per second (QPS) limit on the files uploaded from the client.</p>
+     * <p>Retrieves the QPS limit for file uploads configured by the user.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetFileUploadLimitResponse
@@ -32031,7 +32088,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the queries per second (QPS) limit on the files uploaded from the client.</p>
+     * <p>Retrieves the QPS limit for file uploads configured by the user.</p>
      * @return GetFileUploadLimitResponse
      */
     public GetFileUploadLimitResponse getFileUploadLimit() throws Exception {
@@ -32041,7 +32098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the trial eligibility status of a feature.</p>
+     * <p>Retrieves the status of feature trial eligibility.</p>
      * 
      * @param request GetFunctionTrialStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32073,7 +32130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the trial eligibility status of a feature.</p>
+     * <p>Retrieves the status of feature trial eligibility.</p>
      * 
      * @param request GetFunctionTrialStatusRequest
      * @return GetFunctionTrialStatusResponse
@@ -34266,7 +34323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the audit trail delivery configuration.</p>
+     * <p>Retrieves ActionTrail data delivery.</p>
      * 
      * @param request GetServiceTrailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -34298,7 +34355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the audit trail delivery configuration.</p>
+     * <p>Retrieves ActionTrail data delivery.</p>
      * 
      * @param request GetServiceTrailRequest
      * @return GetServiceTrailResponse
@@ -36254,7 +36311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of vulnerable servers detected by agentless detection.</p>
+     * <p>Retrieves a list of vulnerable servers detected by agentless detection.</p>
      * 
      * @param request ListAgentlessRiskUuidRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36326,7 +36383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of vulnerable servers detected by agentless detection.</p>
+     * <p>Retrieves a list of vulnerable servers detected by agentless detection.</p>
      * 
      * @param request ListAgentlessRiskUuidRequest
      * @return ListAgentlessRiskUuidResponse
@@ -37179,7 +37236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves instances that failed a cloud platform configuration check item.</p>
+     * <p>Queries the instances that failed the cloud platform configuration check items.</p>
      * 
      * @param request ListCheckInstanceResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -37247,7 +37304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves instances that failed a cloud platform configuration check item.</p>
+     * <p>Queries the instances that failed the cloud platform configuration check items.</p>
      * 
      * @param request ListCheckInstanceResultRequest
      * @return ListCheckInstanceResultResponse
@@ -37923,7 +37980,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the alert settings of assets. The default alert setting for assets is balance mode. Only strict mode returns a detailed asset list.</p>
+     * <p>Queries the alert settings of assets. The default alert setting is balance mode. A detailed asset list is returned only in strict mode.</p>
      * 
      * @param request ListClientAlertModeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -37951,7 +38008,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the alert settings of assets. The default alert setting for assets is balance mode. Only strict mode returns a detailed asset list.</p>
+     * <p>Queries the alert settings of assets. The default alert setting is balance mode. A detailed asset list is returned only in strict mode.</p>
      * 
      * @param request ListClientAlertModeRequest
      * @return ListClientAlertModeResponse
@@ -40907,10 +40964,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only users who have purchased the cloud platform configuration check quota or enabled pay-as-you-go billing for cloud platform configuration checks can call this operation.</p>
+     * <p>Only users who have purchased cloud platform configuration check quotas or enabled the pay-as-you-go billing method for cloud platform configuration checks can call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a one-click fix or rollback task for cloud platform configuration checks.</p>
+     * <p>Queries the details of a one-click repair or rollback task for cloud platform configuration checks.</p>
      * 
      * @param request ListOperationCheckRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -40938,10 +40995,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only users who have purchased the cloud platform configuration check quota or enabled pay-as-you-go billing for cloud platform configuration checks can call this operation.</p>
+     * <p>Only users who have purchased cloud platform configuration check quotas or enabled the pay-as-you-go billing method for cloud platform configuration checks can call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a one-click fix or rollback task for cloud platform configuration checks.</p>
+     * <p>Queries the details of a one-click repair or rollback task for cloud platform configuration checks.</p>
      * 
      * @param request ListOperationCheckRequest
      * @return ListOperationCheckResponse
@@ -42127,7 +42184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List Database Backup Records</p>
+     * <p>Queries the list of database backup records.</p>
      * 
      * @param request ListUniBackupRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -42175,7 +42232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List Database Backup Records</p>
+     * <p>Queries the list of database backup records.</p>
      * 
      * @param request ListUniBackupRecordRequest
      * @return ListUniBackupRecordResponse
@@ -42339,7 +42396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of machines for intelligent behavior analytics.</p>
+     * <p>Queries the list of servers for intelligent behavior analytics.</p>
      * 
      * @param request ListUnknownThreatDetectMachineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -42403,7 +42460,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of machines for intelligent behavior analytics.</p>
+     * <p>Queries the list of servers for intelligent behavior analytics.</p>
      * 
      * @param request ListUnknownThreatDetectMachineRequest
      * @return ListUnknownThreatDetectMachineResponse
@@ -43921,7 +43978,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a client configuration policy.</p>
+     * <p>Modifies the client configuration policy.</p>
      * 
      * @param request ModifyClientConfStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -43969,7 +44026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a client configuration policy.</p>
+     * <p>Modifies the client configuration policy.</p>
      * 
      * @param request ModifyClientConfStrategyRequest
      * @return ModifyClientConfStrategyResponse
@@ -44152,6 +44209,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.vendorAuthAlias)) {
             query.put("VendorAuthAlias", request.vendorAuthAlias);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vendorUserName)) {
+            query.put("VendorUserName", request.vendorUserName);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -45896,6 +45957,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.edrModuleSwitchShrink)) {
             query.put("EdrModuleSwitch", request.edrModuleSwitchShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.freeTrial)) {
+            query.put("FreeTrial", request.freeTrial);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.postPaidHostAutoBind)) {
@@ -48085,7 +48150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the global switch based on the specified type.</p>
+     * <p>Sets a global switch based on the type.</p>
      * 
      * @param request OperateCommonOverallConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -48137,7 +48202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the global switch based on the specified type.</p>
+     * <p>Sets a global switch based on the type.</p>
      * 
      * @param request OperateCommonOverallConfigRequest
      * @return OperateCommonOverallConfigResponse
@@ -48149,7 +48214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures the general switch for a feature module by type, including image scanning, endpoint engine detection, container network visualization, and container escape prevention.</p>
+     * <p>Configures the general switches for feature modules by type, including image scanning, endpoint engine detection, container network visualization, and container escape prevention.</p>
      * 
      * @param request OperateCommonTargetConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -48201,7 +48266,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures the general switch for a feature module by type, including image scanning, endpoint engine detection, container network visualization, and container escape prevention.</p>
+     * <p>Configures the general switches for feature modules by type, including image scanning, endpoint engine detection, container network visualization, and container escape prevention.</p>
      * 
      * @param request OperateCommonTargetConfigRequest
      * @return OperateCommonTargetConfigResponse
@@ -48325,7 +48390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the global configuration for abnormal events.</p>
+     * <p>Configures the global settings for anomaly events.</p>
      * 
      * @param request OperateSuspiciousOverallConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -48373,7 +48438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the global configuration for abnormal events.</p>
+     * <p>Configures the global settings for anomaly events.</p>
      * 
      * @param request OperateSuspiciousOverallConfigRequest
      * @return OperateSuspiciousOverallConfigResponse
@@ -48385,7 +48450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures the scope on which proactive defense takes effect.</p>
+     * <p>Manages the defense scope of proactive defense.</p>
      * 
      * @param request OperateSuspiciousTargetConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -48433,7 +48498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures the scope on which proactive defense takes effect.</p>
+     * <p>Manages the defense scope of proactive defense.</p>
      * 
      * @param request OperateSuspiciousTargetConfigRequest
      * @return OperateSuspiciousTargetConfigResponse
@@ -51467,6 +51532,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Commits a cloud service configuration check task. When ScanRange is set to POLICY, you can specify ConfigId to trigger a scan based on a specific check policy: If this parameter is not specified or is set to default, the scan is triggered based on the system default policy. If the system default policy does not exist in the account, NoDefaultStrategy is returned and no policy records are added. If another value is specified, the scan is triggered based on the check items of the specified policy. If the policy does not exist or does not belong to the current account, IllegalParam (paramName=configId) is returned. If the hit policy does not have scheduled scanning enabled (EnableAutoCheck=false), requests from timed scheduling (SCHEDULE) return StrategyAutoCheckDisabled, while requests manually triggered from the console (CONSOLE) are processed normally. When ScanRange is set to FULL or FREE, the behavior is independent of ConfigId and remains unchanged. Note: The scan results in the current phase do not include the policy dimension. The check results and task lists are not categorized by policy. ThrottlingTimeSecond indicates that throttling is triggered, and you must retry after the specified number of seconds.</p>
+     * 
      * <b>summary</b> : 
      * <p>Submits a cloud service configuration check.</p>
      * 
@@ -51477,6 +51545,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitCheckResponse submitCheckWithOptions(SubmitCheckRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
             query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
@@ -51507,6 +51579,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Commits a cloud service configuration check task. When ScanRange is set to POLICY, you can specify ConfigId to trigger a scan based on a specific check policy: If this parameter is not specified or is set to default, the scan is triggered based on the system default policy. If the system default policy does not exist in the account, NoDefaultStrategy is returned and no policy records are added. If another value is specified, the scan is triggered based on the check items of the specified policy. If the policy does not exist or does not belong to the current account, IllegalParam (paramName=configId) is returned. If the hit policy does not have scheduled scanning enabled (EnableAutoCheck=false), requests from timed scheduling (SCHEDULE) return StrategyAutoCheckDisabled, while requests manually triggered from the console (CONSOLE) are processed normally. When ScanRange is set to FULL or FREE, the behavior is independent of ConfigId and remains unchanged. Note: The scan results in the current phase do not include the policy dimension. The check results and task lists are not categorized by policy. ThrottlingTimeSecond indicates that throttling is triggered, and you must retry after the specified number of seconds.</p>
+     * 
      * <b>summary</b> : 
      * <p>Submits a cloud service configuration check.</p>
      * 
@@ -51806,7 +51881,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uninstalls the anti-ransomware agent.</p>
+     * <p>Uninstalls the anti-ransomware client.</p>
      * 
      * @param request UninstallBackupClientRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -51846,7 +51921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uninstalls the anti-ransomware agent.</p>
+     * <p>Uninstalls the anti-ransomware client.</p>
      * 
      * @param request UninstallBackupClientRequest
      * @return UninstallBackupClientResponse
@@ -52370,7 +52445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the alert settings for servers.</p>
+     * <p>Modifies the alert settings for a server.</p>
      * 
      * @param request UpdateClientAlertModeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -52406,7 +52481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the alert settings for servers.</p>
+     * <p>Modifies the alert settings for a server.</p>
      * 
      * @param request UpdateClientAlertModeRequest
      * @return UpdateClientAlertModeResponse
@@ -52418,7 +52493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the settings of common switches.</p>
+     * <p>Modifies the general switch configuration.</p>
      * 
      * @param request UpdateCommonSwitchConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -52454,7 +52529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the settings of common switches.</p>
+     * <p>Modifies the general switch configuration.</p>
      * 
      * @param request UpdateCommonSwitchConfigRequest
      * @return UpdateCommonSwitchConfigResponse
@@ -54340,7 +54415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the strict mode configuration, including whether to enable alerting in strict mode. This is a full-update operation.</p>
+     * <p>Modifies the strict mode configuration to specify whether alerts are enabled in strict mode. This API operation performs a full update.</p>
      * 
      * @param request UpdateStrictEventNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -54380,7 +54455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the strict mode configuration, including whether to enable alerting in strict mode. This is a full-update operation.</p>
+     * <p>Modifies the strict mode configuration to specify whether alerts are enabled in strict mode. This API operation performs a full update.</p>
      * 
      * @param request UpdateStrictEventNameRequest
      * @return UpdateStrictEventNameResponse
@@ -55082,7 +55157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs instance-level verification for a check item.</p>
+     * <p>Validates the instance dimension under a check item.</p>
      * 
      * @param request VerifyCheckInstanceResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -55134,7 +55209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs instance-level verification for a check item.</p>
+     * <p>Validates the instance dimension under a check item.</p>
      * 
      * @param request VerifyCheckInstanceResultRequest
      * @return VerifyCheckInstanceResultResponse

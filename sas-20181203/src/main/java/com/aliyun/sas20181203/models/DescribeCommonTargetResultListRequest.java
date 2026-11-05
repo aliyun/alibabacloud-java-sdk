@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCommonTargetResultListRequest extends TeaModel {
     /**
-     * <p>The IP address of the access source to query.</p>
+     * <p>The source IP address to query.</p>
      * 
      * <strong>example:</strong>
      * <p>113.57.XX.XX</p>
@@ -14,15 +14,15 @@ public class DescribeCommonTargetResultListRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The configuration rule type. Valid values:</p>
+     * <p>The type of the configuration rule. Valid values:</p>
      * <ul>
-     * <li><strong>webshell_timescan</strong>: web shell scan.</li>
-     * <li><strong>aliscriptengine</strong>: deep detection engine.</li>
-     * <li><strong>alidetect</strong>: installation scope of the local file detection engine.</li>
-     * <li><strong>alidetect-scan-enable</strong>: detection scope of the local file detection engine.</li>
+     * <li><strong>webshell_timescan</strong>: Web shell detection and removal.</li>
+     * <li><strong>aliscriptengine</strong>: Deep inspection engine.</li>
+     * <li><strong>alidetect</strong>: Installation scope of the local file detection engine.</li>
+     * <li><strong>alidetect-scan-enable</strong>: Scan scope of the local file detection engine.</li>
      * </ul>
      * <blockquote>
-     * <p>You can call <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> and <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> to obtain more custom and system-configured rule types.</p>
+     * <p>You can call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> and <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> operations to obtain more custom and system-defined rule types.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

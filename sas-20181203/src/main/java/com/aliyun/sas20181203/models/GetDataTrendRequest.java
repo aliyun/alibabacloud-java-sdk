@@ -5,15 +5,18 @@ import com.aliyun.tea.*;
 
 public class GetDataTrendRequest extends TeaModel {
     /**
-     * <p>The type of security data to query. Valid values:</p>
+     * <p>The security data type. Valid values:</p>
      * <ul>
-     * <li><strong>HC_NEW</strong>: number of new baseline risks</li>
-     * <li><strong>HC_OPERATE</strong>: number of handled baseline risks</li>
-     * <li><strong>VUL_NEW</strong>: number of new vulnerability risks</li>
-     * <li><strong>VUL_OPERATE</strong>: number of handled vulnerability risks</li>
-     * <li><strong>SUSP_NEW</strong>: number of new alert risks</li>
-     * <li><strong>SUSP_OPERATE</strong>: number of handled alert risks</li>
+     * <li><strong>HC_NEW</strong>: the number of new baseline risks</li>
+     * <li><strong>HC_OPERATE</strong>: the number of handled baseline risks</li>
+     * <li><strong>VUL_NEW</strong>: the number of new vulnerability risks</li>
+     * <li><strong>VUL_OPERATE</strong>: the number of handled vulnerability risks</li>
+     * <li><strong>SUSP_NEW</strong>: the number of new alerts</li>
+     * <li><strong>SUSP_OPERATE</strong>: the number of handled alerts</li>
      * </ul>
+     * <blockquote>
+     * <p>You can specify multiple values separated by commas (,). Example: HC_NEW,VUL_NEW.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +27,9 @@ public class GetDataTrendRequest extends TeaModel {
 
     /**
      * <p>The end timestamp of the query. Unit: milliseconds.</p>
+     * <blockquote>
+     * <p>The value of StartTimestamp must be earlier than the value of EndTimestamp. Otherwise, the API returns HTTP 400 and the error code -101.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +41,7 @@ public class GetDataTrendRequest extends TeaModel {
     /**
      * <p>The interval for querying data. Unit: milliseconds.</p>
      * <blockquote>
-     * <p>Minimum value: 1000.</p>
+     * <p>The minimum value is 1000. A maximum of 100 data points are returned. Excess data points are not returned.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -46,9 +52,9 @@ public class GetDataTrendRequest extends TeaModel {
     public Integer interval;
 
     /**
-     * <p>The Alibaba Cloud account ID of the member accounts in the resource directory.</p>
+     * <p>The Alibaba Cloud account ID of member accounts in the resource folder.</p>
      * <blockquote>
-     * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

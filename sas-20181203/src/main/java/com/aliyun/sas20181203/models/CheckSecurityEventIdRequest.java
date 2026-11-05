@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CheckSecurityEventIdRequest extends TeaModel {
     /**
-     * <p>The IDs of alert events. You can specify up to 100 IDs. If you do not specify this parameter, the value of the response parameter <strong>Data</strong> is <strong>false</strong>. The value false indicates that no alert events are generated on the server.</p>
+     * <p>The IDs of the alert events to be verified. You can specify up to 100 alert event IDs. If this parameter is left empty, the verification result <strong>Data</strong> defaults to <strong>false</strong>, indicating that the events do not belong to the specified server.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the IDs of alert events.</p>
+     * <p>Call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to retrieve this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class CheckSecurityEventIdRequest extends TeaModel {
     public java.util.List<String> securityEventIds;
 
     /**
-     * <p>The UUID of the server.</p>
+     * <p>The UUID of the server to be verified.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+     * <p>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to retrieve this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

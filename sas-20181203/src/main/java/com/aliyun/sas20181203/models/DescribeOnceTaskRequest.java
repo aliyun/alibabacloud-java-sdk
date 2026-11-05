@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOnceTaskRequest extends TeaModel {
     /**
-     * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates the first page.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeOnceTaskRequest extends TeaModel {
     public Long endTimeQuery;
 
     /**
-     * <p>Settings for the number of client tasks on each page in a paged query. Default value: <strong>20</strong>, which indicates that each page contains 20 client tasks.</p>
+     * <p>The number of client tasks per page for paging. Default value: <strong>20</strong>, which indicates that each page contains 20 client tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -34,7 +34,8 @@ public class DescribeOnceTaskRequest extends TeaModel {
     /**
      * <p>The root task ID.</p>
      * <blockquote>
-     * <p><strong>TaskType</strong> and <strong>RootTaskId</strong> cannot both be empty.</p>
+     * <p>You can call the <a href="~~DescribeOnceTask~~">DescribeOnceTask</a> operation and specify TaskType to query the root task list. You can obtain this parameter from TaskManageResponseList[].TaskId in the response.
+     * <strong>TaskType</strong> and <strong>RootTaskId</strong> cannot be empty at the same time. If neither is provided, the API returns HTTP 400 with the error code -101.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,10 +45,10 @@ public class DescribeOnceTaskRequest extends TeaModel {
     public String rootTaskId;
 
     /**
-     * <p>The node source. Valid values include but are not limited to:</p>
+     * <p>The source of the task. Valid values include but are not limited to:</p>
      * <ul>
      * <li><strong>schedule</strong>: automatic scheduling of vulnerability scanning</li>
-     * <li><strong>console</strong>: one-click detection from the vulnerability scanning console</li>
+     * <li><strong>console</strong>: one-click detection in the vulnerability scanning console</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,14 +76,14 @@ public class DescribeOnceTaskRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The node type. Valid values:</p>
+     * <p>The task type. Valid values:</p>
      * <ul>
-     * <li><strong>VUL_CHECK_TASK</strong>: vulnerability scanning node</li>
-     * <li><strong>CLIENT_PROBLEM_CHECK</strong>: client node</li>
-     * <li><strong>CLIENT_DEV_OPS</strong>: cloud O&amp;M node</li>
-     * <li><strong>ASSET_SECURITY_CHECK</strong>: asset information collection node</li>
-     * <li><strong>ASSET_REFRESH_HOST</strong>: host asset synchronization node<blockquote>
-     * <p><strong>TaskType</strong> and <strong>RootTaskId</strong> cannot both be empty.</p>
+     * <li><strong>VUL_CHECK_TASK</strong>: vulnerability scanning task</li>
+     * <li><strong>CLIENT_PROBLEM_CHECK</strong>: client task</li>
+     * <li><strong>CLIENT_DEV_OPS</strong>: cloud O&amp;M task</li>
+     * <li><strong>ASSET_SECURITY_CHECK</strong>: asset collection task</li>
+     * <li><strong>ASSET_REFRESH_HOST</strong>: host asset synchronization task<blockquote>
+     * <p><strong>TaskType</strong> and <strong>RootTaskId</strong> cannot be empty at the same time. If neither is provided, the API returns HTTP 400 with the error code -101.</p>
      * </blockquote>
      * </li>
      * </ul>

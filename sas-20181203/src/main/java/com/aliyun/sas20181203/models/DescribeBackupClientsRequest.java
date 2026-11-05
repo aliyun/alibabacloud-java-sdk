@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupClientsRequest extends TeaModel {
     /**
-     * <p>The region supported by the anti-ransomware feature. You can call <a href="~~DescribeSupportRegion~~">DescribeSupportRegion</a> to query the regions supported by the anti-ransomware feature.</p>
+     * <p>The region supported by the anti-ransomware feature to query. You can call the <a href="~~DescribeSupportRegion~~">DescribeSupportRegion</a> operation to query the regions supported by the anti-ransomware feature.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateCommonSwitchConfigRequest extends TeaModel {
     /**
-     * <p>Specifies whether to turn on the switch for newly added servers. Valid values:</p>
+     * <p>Specifies whether the switch takes effect by default. Valid values:</p>
      * <ul>
-     * <li><p><strong>add</strong>: yes</p>
-     * </li>
-     * <li><p><strong>del</strong>: no</p>
-     * </li>
+     * <li><strong>add</strong>: Takes effect by default for newly added servers.</li>
+     * <li><strong>del</strong>: Does not take effect by default for newly added servers.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,9 +18,9 @@ public class UpdateCommonSwitchConfigRequest extends TeaModel {
     public String targetDefault;
 
     /**
-     * <p>The type of the switch.</p>
+     * <p>The general switch type.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> or <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> operation to obtain the type from the response parameter SwitchId.</p>
+     * <p>You can obtain this parameter from the SwitchId response parameter of the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> and <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

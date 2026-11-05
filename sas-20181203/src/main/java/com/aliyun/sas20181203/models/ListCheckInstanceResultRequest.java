@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCheckInstanceResultRequest extends TeaModel {
     /**
-     * <p>The check item ID.</p>
+     * <p>The ID of the check item.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListCheckInstanceResultRequest extends TeaModel {
     public Long checkId;
 
     /**
-     * <p>The page number of the current page in a paged query. This parameter is used for paging.</p>
+     * <p>The page number of the current page for a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class ListCheckInstanceResultRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The instance ID of the check item.</p>
+     * <p>The instance ID for the check item.</p>
      * 
      * <strong>example:</strong>
      * <p>i-uf64w4q6p9jti5gl****</p>
@@ -33,13 +33,13 @@ public class ListCheckInstanceResultRequest extends TeaModel {
     public String instanceIdKey;
 
     /**
-     * <p>The collection of cloud service instance IDs to query.</p>
+     * <p>The instance IDs of the cloud services to query.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The instance name of the check item.</p>
+     * <p>The instance name for the check item.</p>
      * 
      * <strong>example:</strong>
      * <p>i-uf64w4q6p9jti5gl****</p>
@@ -48,10 +48,10 @@ public class ListCheckInstanceResultRequest extends TeaModel {
     public String instanceNameKey;
 
     /**
-     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class ListCheckInstanceResultRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries per page in a paged query. Maximum value: 100. This parameter is used for paging.</p>
+     * <p>The maximum number of entries to return on each page for a paging query. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -79,13 +79,13 @@ public class ListCheckInstanceResultRequest extends TeaModel {
     public String regionIdKey;
 
     /**
-     * <p>The list of sort types for the check item.</p>
+     * <p>The sort types for the check items.</p>
      */
     @NameInMap("SortTypes")
     public java.util.List<String> sortTypes;
 
     /**
-     * <p>The collection of check item statuses.</p>
+     * <p>The statuses of the check items.</p>
      */
     @NameInMap("Statuses")
     public java.util.List<String> statuses;

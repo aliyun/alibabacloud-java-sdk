@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSuspiciousUUIDConfigRequest extends TeaModel {
     /**
-     * <p>The type of proactive defense. Valid values:</p>
+     * <p>The defense type of the proactive defense to query. Valid values:</p>
      * <ul>
-     * <li><strong>auto_breaking</strong>: virus defense</li>
-     * <li><strong>ransomware_breaking</strong>: ransomware capture</li>
-     * <li><strong>webshell_cloud_breaking</strong>: webshell defense</li>
-     * <li><strong>alinet</strong>: malicious behavior defense</li>
-     * <li><strong>alisecguard</strong>: client protection</li>
+     * <li><strong>auto_breaking</strong>: Anti-virus.</li>
+     * <li><strong>ransomware_breaking</strong>: Anti-ransomware (bait capture).</li>
+     * <li><strong>webshell_cloud_breaking</strong>: Web shell connection defense.</li>
+     * <li><strong>alinet</strong>: Malicious network behavior defense.</li>
+     * <li><strong>alisecguard</strong>: Client self-protection.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

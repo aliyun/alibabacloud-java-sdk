@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDockerhubImageRiskStatisticRequest extends TeaModel {
     /**
-     * <p>The risk types that you want to query.</p>
+     * <p>The image risk types to query. This parameter is required. You must specify at least one valid value. If this parameter is not specified or all specified values are invalid, the API returns HTTP 400 and the error code -101.</p>
      */
     @NameInMap("Types")
     public java.util.List<String> types;

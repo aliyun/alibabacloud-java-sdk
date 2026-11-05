@@ -5,31 +5,40 @@ import com.aliyun.tea.*;
 
 public class ChangeCheckConfigShrinkRequest extends TeaModel {
     /**
-     * <p>The list of check items to add to the policy.
-     * <notice> If the ConfigStandardIds or ConfigRequirementIds parameter is specified, this parameter does not take effect.</p>
+     * <p>The list of check items to be added to the policy.
+     * <notice> If the ConfigStandardIds or ConfigRequirementIds parameter is configured, this parameter does not take effect. </notice></p>
      */
     @NameInMap("AddedCheck")
     public java.util.List<ChangeCheckConfigShrinkRequestAddedCheck> addedCheck;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. Only ASCII characters are supported. The token can be up to 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Configures the check policy by specifying requirement IDs.</p>
+     * <p>The policy ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22222f91-57af-4907-87f1-f9046da*****</p>
+     */
+    @NameInMap("ConfigId")
+    public String configId;
+
+    /**
+     * <p>Configures the check policy by using the IDs of the specified regulations.</p>
      * <blockquote>
-     * <p>Call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain requirement IDs. If the ConfigStandardIds parameter is specified, this parameter does not take effect.</p>
+     * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the regulation IDs. If the ConfigStandardIds parameter is configured, this parameter does not take effect.</p>
      * </blockquote>
      */
     @NameInMap("ConfigRequirementIds")
     public String configRequirementIdsShrink;
 
     /**
-     * <p>Configures the check policy by specifying standard IDs.</p>
+     * <p>Configures the check policy by using the IDs of the specified standards.</p>
      * <blockquote>
-     * <p>Call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain standard IDs.</p>
+     * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the standard IDs.</p>
      * </blockquote>
      */
     @NameInMap("ConfigStandardIds")
@@ -38,7 +47,7 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
     /**
      * <p>The field configuration. Valid values:</p>
      * <ul>
-     * <li><strong>all</strong>: adds all check items.</li>
+     * <li><strong>all</strong>: Adds all check items.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,22 +57,33 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
     public String configure;
 
     /**
-     * <p>The periodic check schedule.</p>
+     * <p>The periodic check time.</p>
      */
     @NameInMap("CycleDays")
     public java.util.List<Integer> cycleDays;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values: true: performs only a dry run without performing the actual operation. false: performs the actual request. Default value: false.</p>
+     * <p>The list of days of the month when the policy cycle is monthly.</p>
+     */
+    @NameInMap("DaysOfMonth")
+    public java.util.List<Integer> daysOfMonth;
+
+    /**
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
+     * <ul>
+     * <li>true: Only checks the request without performing the actual operation.</li>
+     * <li>false: Executes the request normally.</li>
+     * </ul>
+     * <p>Default value: false.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to automatically check newly added check items in the selected requirements. Valid values:</p>
+     * <p>Specifies whether to check new check items by default when new check items are added to the selected regulations. Valid values:</p>
      * <ul>
-     * <li><strong>true:</strong> Enabled.</li>
-     * <li><strong>false:</strong> Disabled.</li>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,8 +95,8 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic periodic checks. Valid values:</p>
      * <ul>
-     * <li><strong>true:</strong> Enabled.</li>
-     * <li><strong>false:</strong> Disabled.</li>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,7 +106,7 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
     public Boolean enableAutoCheck;
 
     /**
-     * <p>The end hour of the check time window, indicating the hour of the day. The start time and end time must fall within one of the following time ranges. Valid values: 6, 12, 18, and 24.</p>
+     * <p>The end time of the check time period, which indicates the hour of the day. The start time and end time must be selected from the following time intervals. Valid values: 6, 12, 18, and 24.</p>
      * <ul>
      * <li><strong>0~6</strong>: If the start time is 0, the end time must be set to 6 on the same day.</li>
      * <li><strong>6~12</strong>: If the start time is 6, the end time must be set to 12 on the same day.</li>
@@ -101,10 +121,34 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
     public Integer endTime;
 
     /**
+     * <p>The end time of the check, in seconds from 00:00:00 of the current day. Valid values: 1 to 86400, where 86400 indicates 00:00:00 of the next day. This parameter is optional. If this parameter is not provided, the current value of the policy is retained. This parameter must be paired with StartTimeSeconds. If only one of them is provided, the system returns IllegalParam (paramName=scheduleTime). If both this parameter and StartTime/EndTime are provided, the second-level parameters take precedence, and the hour-level parameters are ignored. The time window span must not be less than 60 seconds. This parameter is not accepted for the system default policy (ConfigId=default) and will be rejected if provided.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32399</p>
+     */
+    @NameInMap("EndTimeSeconds")
+    public Integer endTimeSeconds;
+
+    /**
+     * <p>The frequency type. Valid values:</p>
+     * <ul>
+     * <li>DAILY: Daily.</li>
+     * <li>WEEKLY: Weekly.</li>
+     * <li>MONTHLY: Monthly.</li>
+     * <li>6HOURLY: Every 6 hours.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DAILY</p>
+     */
+    @NameInMap("Frequency")
+    public String frequency;
+
+    /**
      * <p>The region of the Security Center instance. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou:</strong> China</li>
-     * <li><strong>ap-southeast-1:</strong> Singapore</li>
+     * <li><strong>cn-hangzhou</strong>: Center</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,16 +158,16 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of check items to remove from the policy.
-     * <notice> If the ConfigStandardIds or ConfigRequirementIds parameter is specified, this parameter does not take effect.</p>
+     * <p>The list of check items to be removed from the policy.
+     * <notice> If the ConfigStandardIds or ConfigRequirementIds parameter is configured, this parameter does not take effect. </notice></p>
      */
     @NameInMap("RemovedCheck")
     public java.util.List<ChangeCheckConfigShrinkRequestRemovedCheck> removedCheck;
 
     /**
-     * <p>The ID of the member account in the resource directory (Alibaba Cloud account).</p>
+     * <p>The ID of the member accounts in the resource folder, which is an Alibaba Cloud account ID.</p>
      * <blockquote>
-     * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -133,13 +177,13 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>This parameter is deprecated and does not need to be specified.</p>
+     * <p>This parameter is deprecated and can be ignored.</p>
      */
     @NameInMap("StandardIds")
     public java.util.List<Long> standardIds;
 
     /**
-     * <p>The start hour of the check time window, indicating the hour of the day. The start time and end time must fall within one of the following time ranges. Valid values: 0, 6, 12, and 18.</p>
+     * <p>The start time of the check time period, which indicates the hour of the day. The start time and end time must be selected from the following time intervals. Valid values: 0, 6, 12, and 18.</p>
      * <ul>
      * <li><strong>0~6</strong>: If the start time is 0, the end time must be set to 6 on the same day.</li>
      * <li><strong>6~12</strong>: If the start time is 6, the end time must be set to 12 on the same day.</li>
@@ -154,7 +198,25 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
     public Integer startTime;
 
     /**
-     * <p>Specifies whether to use the system-generated configuration. Valid values:</p>
+     * <p>The start time of the check, in seconds from 00:00:00 of the current day. Valid values: 0 to 86399, which correspond to 00:00:00 to 23:59:59. This parameter is optional. If this parameter is not provided, the current value of the policy is retained. This parameter must be paired with EndTimeSeconds. If only one of them is provided, the system returns IllegalParam (paramName=scheduleTime). If both this parameter and StartTime/EndTime are provided, the second-level parameters take precedence, and the hour-level parameters are ignored. If the two sets of parameters are inconsistent, the server records a WARN log. The time window span must not be less than 60 seconds. The frequency of the system default policy (ConfigId=default) is always 6HOURLY. This parameter is not accepted for the default policy and will be rejected if provided. Under a multi-policy frequency, the actual scan execution time is exactly the second specified by this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25200</p>
+     */
+    @NameInMap("StartTimeSeconds")
+    public Integer startTimeSeconds;
+
+    /**
+     * <p>The policy name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
+    @NameInMap("StrategyName")
+    public String strategyName;
+
+    /**
+     * <p>Specifies whether to use the automatically generated system configuration. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Yes.</li>
      * <li><strong>false</strong>: No.</li>
@@ -167,7 +229,7 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
     public Boolean systemConfig;
 
     /**
-     * <p>The list of cloud service providers.</p>
+     * <p>The list of cloud providers.</p>
      */
     @NameInMap("Vendors")
     public java.util.List<String> vendors;
@@ -191,6 +253,14 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ChangeCheckConfigShrinkRequest setConfigId(String configId) {
+        this.configId = configId;
+        return this;
+    }
+    public String getConfigId() {
+        return this.configId;
     }
 
     public ChangeCheckConfigShrinkRequest setConfigRequirementIdsShrink(String configRequirementIdsShrink) {
@@ -225,6 +295,14 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
         return this.cycleDays;
     }
 
+    public ChangeCheckConfigShrinkRequest setDaysOfMonth(java.util.List<Integer> daysOfMonth) {
+        this.daysOfMonth = daysOfMonth;
+        return this;
+    }
+    public java.util.List<Integer> getDaysOfMonth() {
+        return this.daysOfMonth;
+    }
+
     public ChangeCheckConfigShrinkRequest setDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -255,6 +333,22 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
     }
     public Integer getEndTime() {
         return this.endTime;
+    }
+
+    public ChangeCheckConfigShrinkRequest setEndTimeSeconds(Integer endTimeSeconds) {
+        this.endTimeSeconds = endTimeSeconds;
+        return this;
+    }
+    public Integer getEndTimeSeconds() {
+        return this.endTimeSeconds;
+    }
+
+    public ChangeCheckConfigShrinkRequest setFrequency(String frequency) {
+        this.frequency = frequency;
+        return this;
+    }
+    public String getFrequency() {
+        return this.frequency;
     }
 
     public ChangeCheckConfigShrinkRequest setRegionId(String regionId) {
@@ -297,6 +391,22 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
         return this.startTime;
     }
 
+    public ChangeCheckConfigShrinkRequest setStartTimeSeconds(Integer startTimeSeconds) {
+        this.startTimeSeconds = startTimeSeconds;
+        return this;
+    }
+    public Integer getStartTimeSeconds() {
+        return this.startTimeSeconds;
+    }
+
+    public ChangeCheckConfigShrinkRequest setStrategyName(String strategyName) {
+        this.strategyName = strategyName;
+        return this;
+    }
+    public String getStrategyName() {
+        return this.strategyName;
+    }
+
     public ChangeCheckConfigShrinkRequest setSystemConfig(Boolean systemConfig) {
         this.systemConfig = systemConfig;
         return this;
@@ -317,7 +427,7 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
         /**
          * <p>The ID of the check item.</p>
          * <blockquote>
-         * <p>Call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain check item IDs.</p>
+         * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the check item ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -362,7 +472,7 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
         /**
          * <p>The ID of the check item.</p>
          * <blockquote>
-         * <p>Call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain check item IDs.</p>
+         * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the check item ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

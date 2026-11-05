@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUniBackupRecordRequest extends TeaModel {
     /**
-     * <p>The region where the anti-ransomware backup service is located.</p>
+     * <p>The region where the anti-ransomware backup service is deployed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListUniBackupRecordRequest extends TeaModel {
     public String backupRegionId;
 
     /**
-     * <p>When performing a paginated query, set the page number for the current page. The default value is <strong>1</strong>.</p>
+     * <p>The Settings of the paging page number for the paged query. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class ListUniBackupRecordRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The identification information of the server protected by the anti-ransomware policy. You can enter the IP address or instance ID of the server.</p>
+     * <p>The identification information of the server protected by the anti-ransomware policy that you want to query. You can enter the IP address or instance ID of the server.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1.XX.XX</p>
@@ -33,7 +33,7 @@ public class ListUniBackupRecordRequest extends TeaModel {
     public String machineRemark;
 
     /**
-     * <p>The maximum number of data entries to display per page in a paginated query.</p>
+     * <p>The maximum number of entries to return on each page for the paged query. This paging parameter defines the page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -42,11 +42,11 @@ public class ListUniBackupRecordRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Backup status. Values:</p>
+     * <p>The backup status. Valid values:</p>
      * <ul>
-     * <li><strong>completed</strong>: Success</li>
-     * <li><strong>error</strong>: Failure</li>
-     * <li><strong>canceled</strong>: Closed</li>
+     * <li><strong>completed</strong>: Successful.</li>
+     * <li><strong>error</strong>: Failed.</li>
+     * <li><strong>canceled</strong>: Canceled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

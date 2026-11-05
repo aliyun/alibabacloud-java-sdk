@@ -56,7 +56,7 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
 
     public static class ListUnknownThreatDetectMachineResponseBodyData extends TeaModel {
         /**
-         * <p>The number of days the policy has been in effect.</p>
+         * <p>The duration for which the policy has been in effect, in days.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -65,7 +65,7 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public Long effectDays;
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -111,7 +111,7 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public Long normalEventCount;
 
         /**
-         * <p>The plug-in status.</p>
+         * <p>The running status of the intelligent behavior analytics plugin.</p>
          * 
          * <strong>example:</strong>
          * <p>online</p>
@@ -129,7 +129,7 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public Integer processCount;
 
         /**
-         * <p>The number of recent deviation behaviors.</p>
+         * <p>The number of recent behavioral deviations.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -138,11 +138,11 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public Long recentDeviationBehaviorCount;
 
         /**
-         * <p>The machine running status. Valid values:</p>
+         * <p>The running status of the server. Valid values:</p>
          * <ul>
-         * <li><strong>monitoring</strong>: warning in progress</li>
-         * <li><strong>blocking</strong>: under control</li>
-         * <li><strong>studying</strong>: learning in progress</li>
+         * <li><strong>monitoring</strong>: alerting</li>
+         * <li><strong>blocking</strong>: blocking</li>
+         * <li><strong>studying</strong>: learning</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -154,8 +154,8 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         /**
          * <p>The whitelist mode. Valid values:</p>
          * <ul>
-         * <li><strong>hash</strong>: process hash</li>
-         * <li><strong>path</strong>: process path</li>
+         * <li><strong>hash</strong>: the hash of the process</li>
+         * <li><strong>path</strong>: the path of the process</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public String studyMode;
 
         /**
-         * <p>The number of remaining learning days.</p>
+         * <p>The remaining learning time, in days.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -174,7 +174,7 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public Long studyRemainDays;
 
         /**
-         * <p>The timestamp when learning started.</p>
+         * <p>The timestamp when the learning started.</p>
          * 
          * <strong>example:</strong>
          * <p>1766988192</p>
@@ -313,7 +313,7 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
 
     public static class ListUnknownThreatDetectMachineResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries displayed on the current page in a paged query.</p>
+         * <p>The number of entries returned on the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -322,7 +322,7 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the current page in a paged query.</p>
+         * <p>The page number of the current page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -331,7 +331,7 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The maximum number of entries to display per page in a paged query.</p>
+         * <p>The maximum number of entries to return on each page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

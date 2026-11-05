@@ -78,7 +78,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         public Integer baiduInstanceCount;
 
         /**
-         * <p>The number of CPU cores of exposed assets.</p>
+         * <p>The number of compute cores for exposed assets.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -150,7 +150,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         public Integer importantAssetCount;
 
         /**
-         * <p>The total number of CPU cores of all assets of the specified type. If no asset type is specified, this value is the sum of the CPU cores of all servers and cloud services in your assets.</p>
+         * <p>The total number of compute cores for all assets under the specified asset type. If you do not specify an asset type, this value is the sum of compute cores for all servers and cloud services in your assets.</p>
          * 
          * <strong>example:</strong>
          * <p>301</p>
@@ -159,7 +159,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         public Long instanceCoreCount;
 
         /**
-         * <p>The total number of assets of the specified type. If no asset type is specified, this value is the sum of all servers and cloud services in your assets.</p>
+         * <p>The total number of assets under the specified asset type. If you do not specify an asset type, this value is the sum of all servers and cloud services in your assets.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -168,7 +168,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         public Integer instanceCount;
 
         /**
-         * <p>The number of tasks for the specified asset type. If no asset type is specified, this value is the sum of tasks for all servers and cloud services in your assets.</p>
+         * <p>The number of tasks under the specified asset type. If you do not specify an asset type, this value is the sum of all servers and cloud services in your assets.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -186,7 +186,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         public Integer kingsoftInstanceCount;
 
         /**
-         * <p>The number of CPU cores of newly added servers.</p>
+         * <p>The number of compute cores for new servers.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -195,7 +195,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         public Long newInstanceCoreCount;
 
         /**
-         * <p>The number of newly added servers.</p>
+         * <p>The number of new servers.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -213,7 +213,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         public Integer noRiskInstanceCount;
 
         /**
-         * <p>The number of Asset Types that do not attach or have no authorization under the specified asset type.</p>
+         * <p>The number of unauthorized assets under the specified asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -222,7 +222,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         public Integer notBindMachineInstanceCount;
 
         /**
-         * <p>The number of CPU cores of stopped servers.</p>
+         * <p>The number of compute cores for servers that are not running or powered on.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -231,7 +231,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         public Long notRunningStatusCoreCount;
 
         /**
-         * <p>The number of stopped servers.</p>
+         * <p>The number of servers that are not running or powered on.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -285,7 +285,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         public Integer regionCount;
 
         /**
-         * <p>The number of CPU cores of assets with risks.</p>
+         * <p>The number of compute cores for assets with risks.</p>
          * 
          * <strong>example:</strong>
          * <p>201</p>
@@ -357,7 +357,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         public Integer unKnowStatusInstanceCount;
 
         /**
-         * <p>The number of CPU cores of unprotected assets.</p>
+         * <p>The number of compute cores for unprotected assets.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

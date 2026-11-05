@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateClientAlertModeRequest extends TeaModel {
     /**
-     * <p>The protection mode. Valid values:</p>
+     * <p>Specifies the protection mode. Valid values:</p>
      * <ul>
-     * <li><strong>strict</strong>: Strict mode. Defense mode has a risk of false positives. Use Defense mode during critical event protection periods.</li>
+     * <li><strong>strict</strong>: Strict mode. Defense mode has a certain risk of false positives and is recommended during critical event protection.</li>
      * <li><strong>balance</strong>: Balanced mode. Defense mode detects more suspicious risks while reducing false positives.</li>
      * </ul>
      * 

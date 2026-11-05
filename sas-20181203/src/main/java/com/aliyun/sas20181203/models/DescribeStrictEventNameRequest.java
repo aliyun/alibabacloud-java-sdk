@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeStrictEventNameRequest extends TeaModel {
     /**
-     * <p>Specifies the language for requests and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>Specifies the language type for requests and responses. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese.</li>
      * <li><strong>en</strong>: English.</li>

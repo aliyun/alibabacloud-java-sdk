@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridProxyLinkedClientListRequest extends TeaModel {
     /**
-     * <p>The name of the proxy cluster. You can view the proxy cluster name in the console.</p>
+     * <p>The name of the proxy cluster. You can view the name in the Security Center console.</p>
+     * <blockquote>
+     * <p><strong>ProxyUuid</strong> and <strong>ClusterName</strong> cannot be left empty at the same time. If neither is provided, the API returns an HTTP 400 error with the error code -101.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>office-proxy</p>
@@ -14,7 +17,7 @@ public class DescribeHybridProxyLinkedClientListRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The page number of the current page when paging is used.</p>
+     * <p>The page number of the current page returned in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +26,7 @@ public class DescribeHybridProxyLinkedClientListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The maximum number of entries per page when paging is used.</p>
+     * <p>The maximum number of entries to return on each page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,7 +35,11 @@ public class DescribeHybridProxyLinkedClientListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The UUID of the proxy node. You can call the DescribeHybridProxyList operation to obtain this value.</p>
+     * <p>The UUID of the proxy node.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeHybridProxyList~~">DescribeHybridProxyList</a> operation to obtain this parameter from the ProxyList[].ProxyUuid field in the response.
+     * <strong>ProxyUuid</strong> and <strong>ClusterName</strong> cannot be left empty at the same time. If neither is provided, the API returns an HTTP 400 error with the error code -101.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>inet-proxy-3bb11fad-37d6-4aee-9c37-b0ad1612XXXX</p>
@@ -50,7 +57,7 @@ public class DescribeHybridProxyLinkedClientListRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The unique key of the Security Center agent. You can call an asset query operation to obtain the UUID of the Security Center agent installed on the server.</p>
+     * <p>The unique key of the Security Center client. You can obtain the UUID of the Security Center client installed on a server by querying the asset.</p>
      * 
      * <strong>example:</strong>
      * <p>80d2f7d6-31a9-4d7f-8ff4-7ecc42f89ca****</p>

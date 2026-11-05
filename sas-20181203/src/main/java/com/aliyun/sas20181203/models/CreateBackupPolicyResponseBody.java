@@ -53,8 +53,8 @@ public class CreateBackupPolicyResponseBody extends TeaModel {
         /**
          * <p>The status of the policy. Valid values:</p>
          * <ul>
-         * <li><strong>enabled</strong>: Protection is enabled.</li>
-         * <li><strong>disabled</strong>: Protection is disabled.</li>
+         * <li><strong>enabled</strong>: The protection is enabled.</li>
+         * <li><strong>disabled</strong>: The protection is disabled.</li>
          * </ul>
          * <blockquote>
          * <p>By default, the protection is enabled after the policy is created.</p>

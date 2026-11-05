@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreateSimilarSecurityEventsQueryTaskRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use different tokens for different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run of the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run of the request. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run without executing the actual operation.</li>
-     * <li>false: performs the actual operation.</li>
+     * <li>true: performs a dry run without performing the actual operation.</li>
+     * <li>false: performs the actual operation.
+     * Default value: false.</li>
      * </ul>
-     * <p>Default value: false.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -38,7 +38,7 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends TeaModel {
     public Long securityEventId;
 
     /**
-     * <p>The code of the alerting event that has the same type or rule hits.</p>
+     * <p>The code value of alerting events of the same type or rule hits.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -47,7 +47,7 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends TeaModel {
     public String similarEventScenarioCode;
 
     /**
-     * <p>The IP address of the access source.</p>
+     * <p>The source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>1.2.XX.XX</p>

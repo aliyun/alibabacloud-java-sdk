@@ -7,7 +7,8 @@ public class GetAppNetworkRequest extends TeaModel {
     /**
      * <p>The ID of the container cluster to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
+     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.
+     * This parameter is required. If it is not provided, the API returns HTTP 400 with the error code -101.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +20,7 @@ public class GetAppNetworkRequest extends TeaModel {
     /**
      * <p>The timestamp of the end time. Unit: milliseconds.</p>
      * <blockquote>
-     * <p>The interval between the start timestamp and the end timestamp cannot exceed <strong>7</strong> days.</p>
+     * <p>Both <strong>StartTime</strong> and <strong>EndTime</strong> are required. <strong>StartTime</strong> must be earlier than <strong>EndTime</strong>, and the interval between them cannot exceed 7 days. If either parameter is not provided or the requirements are not met, the API returns HTTP 400 with the error code -101.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,7 +32,7 @@ public class GetAppNetworkRequest extends TeaModel {
     /**
      * <p>The timestamp of the start time. Unit: milliseconds.</p>
      * <blockquote>
-     * <p>The interval between the start timestamp and the end timestamp cannot exceed <strong>7</strong> days.</p>
+     * <p>Both <strong>StartTime</strong> and <strong>EndTime</strong> are required. <strong>StartTime</strong> must be earlier than <strong>EndTime</strong>, and the interval between them cannot exceed 7 days. If either parameter is not provided or the requirements are not met, the API returns HTTP 400 with the error code -101.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

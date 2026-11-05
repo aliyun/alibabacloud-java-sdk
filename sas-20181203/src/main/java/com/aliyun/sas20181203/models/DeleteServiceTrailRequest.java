@@ -7,8 +7,8 @@ public class DeleteServiceTrailRequest extends TeaModel {
     /**
      * <p>The region of the Security Center instance. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou:</strong> China</li>
-     * <li><strong>ap-southeast-1:</strong> Singapore.</li>
+     * <li><strong>cn-hangzhou</strong>: Center</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore</li>
      * </ul>
      * 
      * <strong>example:</strong>

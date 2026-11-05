@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePropertyUserDetailRequest extends TeaModel {
     /**
-     * <p>The page number of the page to return in a paginated query. Default value: <strong>1</strong>, which indicates the first page.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Specifies whether fuzzy match is supported for account names. Set this parameter to <strong>1</strong> to enable fuzzy match. Any other value or an empty value indicates that fuzzy match is not supported.</p>
+     * <p>Specifies whether fuzzy match is supported for the account name. To enable fuzzy match, set this parameter to <strong>1</strong>. Other values or an empty value indicate that fuzzy match is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     public String extend;
 
     /**
-     * <p>Specifies whether the account to query has ROOT permissions. Valid values:</p>
+     * <p>Specifies whether the account to query has root permissions. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: No.</li>
      * <li><strong>1</strong>: Yes.</li>
@@ -36,7 +36,7 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     public String isRoot;
 
     /**
-     * <p>The end timestamp for querying the last logon time of the account. Unit: milliseconds.</p>
+     * <p>The end timestamp for retrieving the last logon time of the account. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1651298836000</p>
@@ -45,7 +45,7 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     public Long lastLoginTimeEnd;
 
     /**
-     * <p>The start timestamp for querying the last logon time of the account. Unit: milliseconds.</p>
+     * <p>The start timestamp for retrieving the last logon time of the account. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>164922523600</p>
@@ -54,9 +54,9 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     public Long lastLoginTimeStart;
 
     /**
-     * <p>The token that marks the current position from which to start reading. Leave this parameter empty to start from the beginning.</p>
+     * <p>The token that specifies the position from which to start reading. If this parameter is left empty, the reading starts from the beginning.</p>
      * <blockquote>
-     * <p>Do not specify this parameter for the first call. The response includes the NextToken value for the second call. Each subsequent response contains the NextToken value for the next call.</p>
+     * <p>You do not need to specify this parameter for the first call. The response will contain the NextToken for the second call, and each subsequent response will contain the NextToken for the next call.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of account asset fingerprint entries per page in a paging query. Default value: <strong>10</strong>, which indicates 10 account asset fingerprint entries per page.</p>
+     * <p>The Settings for the number of account Asset fingerprint entries to return on each page during paging for a paged query. Default value: <strong>10</strong>, which indicates that 10 account Asset fingerprint entries are returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -84,6 +84,11 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     public String remark;
 
     /**
+     * <p>The ID of the management account for the member accounts in the resource folder.</p>
+     * <blockquote>
+     * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1234567890123456</p>
      */
@@ -91,10 +96,10 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>Specifies whether to use the NextToken method to retrieve the vulnerability list data. If this parameter is used, TotalCount is no longer returned. Valid values:</p>
+     * <p>Specifies whether to use the NextToken method to retrieve vulnerability list data. If this parameter is used, TotalCount is no longer returned. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Uses the NextToken method.</li>
-     * <li><strong>false</strong>: Does not use the NextToken method.</li>
+     * <li><strong>true</strong>: Use the NextToken method.</li>
+     * <li><strong>false</strong>: Do not use the NextToken method.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,7 +109,7 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     public Boolean useNextToken;
 
     /**
-     * <p>The account name on the server to query.</p>
+     * <p>The name of the account on the server to query.</p>
      * 
      * <strong>example:</strong>
      * <p>bin</p>

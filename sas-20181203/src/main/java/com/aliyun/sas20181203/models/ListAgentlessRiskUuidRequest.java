@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentlessRiskUuidRequest extends TeaModel {
     /**
-     * <p>The page number of the current page when using paging.</p>
+     * <p>The page number of the current page for paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +50,12 @@ public class ListAgentlessRiskUuidRequest extends TeaModel {
     public String intranetIp;
 
     /**
-     * <p>报告语言。取值：zh（中文）、en（英文）。不传或为空时使用 zh。</p>
+     * <p>The language of the report. Valid values:</p>
+     * <ul>
+     * <li><code>zh</code>: Chinese.</li>
+     * <li><code>en</code>: English.</li>
+     * </ul>
+     * <p>If this parameter is not specified or is left empty, a Chinese report is returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -59,7 +64,7 @@ public class ListAgentlessRiskUuidRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The instance name.</p>
+     * <p>The name of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>oracle-win-001****</p>
@@ -68,7 +73,7 @@ public class ListAgentlessRiskUuidRequest extends TeaModel {
     public String machineName;
 
     /**
-     * <p>The maximum number of entries to return per page when using paging.</p>
+     * <p>The maximum number of entries to return on each page for paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -77,10 +82,10 @@ public class ListAgentlessRiskUuidRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Specifies whether risks exist. Valid values:</p>
+     * <p>Specifies whether a risk exists. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Risks exist.</li>
-     * <li><strong>false</strong>: Risks do not exist.</li>
+     * <li><strong>true</strong>: A risk exists.</li>
+     * <li><strong>false</strong>: No risk exists.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,7 +95,7 @@ public class ListAgentlessRiskUuidRequest extends TeaModel {
     public Boolean risk;
 
     /**
-     * <p>The name of the detection target.</p>
+     * <p>The name of the scan target.</p>
      * 
      * <strong>example:</strong>
      * <p>source-test-obj-0****</p>
@@ -99,12 +104,12 @@ public class ListAgentlessRiskUuidRequest extends TeaModel {
     public String targetName;
 
     /**
-     * <p>The object type of the detection target. Valid values:</p>
+     * <p>The object type of the scan target. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: host snapshot</li>
-     * <li><strong>2</strong>: host image</li>
+     * <li><strong>1</strong>: server snapshot</li>
+     * <li><strong>2</strong>: server image</li>
      * <li><strong>3</strong>: user snapshot</li>
-     * <li><strong>4</strong>: user custom image</li>
+     * <li><strong>4</strong>: custom image</li>
      * </ul>
      * 
      * <strong>example:</strong>

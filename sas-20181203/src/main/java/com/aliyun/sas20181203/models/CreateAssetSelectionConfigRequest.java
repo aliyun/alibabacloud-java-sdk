@@ -7,11 +7,11 @@ public class CreateAssetSelectionConfigRequest extends TeaModel {
     /**
      * <p>The business type of the asset selection. Valid values:</p>
      * <ul>
-     * <li><strong>VIRUS_SCAN_CYCLE_CONFIG</strong>: trojan scan configuration.</li>
-     * <li><strong>VIRUS_SCAN_ONCE_TASK</strong>: trojan scan one-time scan.</li>
-     * <li><strong>AGENTLESS_MALICIOUS_WHITE_LIST_[ID]</strong>: agentless detection alert whitelisting rule.</li>
-     * <li><strong>AGENTLESS_VUL_WHITE_LIST_[ID]</strong>: agentless detection vulnerability whitelisting rule.</li>
-     * <li><strong>FILE_PROTECT_RULE_SWITCH_TYPE_[ID]</strong>: core file protection.</li>
+     * <li><strong>VIRUS_SCAN_CYCLE_CONFIG</strong>: Virus scan configuration.</li>
+     * <li><strong>VIRUS_SCAN_ONCE_TASK</strong>: One-time virus scan.</li>
+     * <li><strong>AGENTLESS_MALICIOUS_WHITE_LIST_[ID]</strong>: Whitelist rule for agentless detection alerts.</li>
+     * <li><strong>AGENTLESS_VUL_WHITE_LIST_[ID]</strong>: Whitelist rule for agentless detection vulnerabilities.</li>
+     * <li><strong>FILE_PROTECT_RULE_SWITCH_TYPE_[ID]</strong>: Core file protection.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -22,13 +22,18 @@ public class CreateAssetSelectionConfigRequest extends TeaModel {
     public String businessType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use different tokens for different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values: true: performs only a dry run without performing the actual operation. false: performs the actual request. Default value: false.</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
+     * <ul>
+     * <li>true: Prechecks the request without performing the actual operation.</li>
+     * <li>false: Performs the request.
+     * Default value: false.</li>
+     * </ul>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -36,16 +41,16 @@ public class CreateAssetSelectionConfigRequest extends TeaModel {
     /**
      * <p>The operating system of the target asset. Valid values:</p>
      * <ul>
-     * <li><strong>all</strong>: all operating systems.</li>
+     * <li><strong>all</strong>: All operating systems.</li>
      * <li><strong>windows</strong>: Windows operating system.</li>
      * <li><strong>linux</strong>: Linux operating system.<blockquote>
-     * <p>If this parameter is left empty, the default value is determined based on the <strong>BusinessType</strong> value.</p>
+     * <p>If this parameter is left empty, the default value is matched based on the <strong>BusinessType</strong> value.</p>
      * <ul>
-     * <li><strong>VIRUS_SCAN_CYCLE_CONFIG</strong>: the value is <strong>all</strong>.</li>
-     * <li><strong>VIRUS_SCAN_ONCE_TASK</strong>: the value is <strong>all</strong>.</li>
-     * <li><strong>AGENTLESS_MALICIOUS_WHITE_LIST_[ID]</strong>: the value is <strong>all</strong>.</li>
-     * <li><strong>AGENTLESS_VUL_WHITE_LIST_[ID]</strong>: the value is <strong>all</strong>.</li>
-     * <li><strong>FILE_PROTECT_RULE_SWITCH_TYPE_[ID]</strong>: the value is <strong>linux</strong>.</li>
+     * <li><strong>VIRUS_SCAN_CYCLE_CONFIG</strong>: The value is <strong>all</strong>.</li>
+     * <li><strong>VIRUS_SCAN_ONCE_TASK</strong>: The value is <strong>all</strong>.</li>
+     * <li><strong>AGENTLESS_MALICIOUS_WHITE_LIST_[ID]</strong>: The value is <strong>all</strong>.</li>
+     * <li><strong>AGENTLESS_VUL_WHITE_LIST_[ID]</strong>: The value is <strong>all</strong>.</li>
+     * <li><strong>FILE_PROTECT_RULE_SWITCH_TYPE_[ID]</strong>: The value is <strong>linux</strong>.</li>
      * </ul>
      * </blockquote>
      * </li>
@@ -58,12 +63,12 @@ public class CreateAssetSelectionConfigRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The Asset Type of the target. Valid values:</p>
+     * <p>The target Asset Type. Valid values:</p>
      * <ul>
-     * <li><strong>all_instance</strong>: all servers.</li>
-     * <li><strong>instance</strong>: selected by server.</li>
-     * <li><strong>group</strong>: selected by group.</li>
-     * <li><strong>vpc</strong>: selected by VPC.</li>
+     * <li><strong>all_instance</strong>: All servers.</li>
+     * <li><strong>instance</strong>: By server.</li>
+     * <li><strong>group</strong>: By group.</li>
+     * <li><strong>vpc</strong>: By VPC.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribePluginSummaryRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response.**** Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default)</li>
-     * <li><strong>en</strong></li>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,10 +20,20 @@ public class DescribePluginSummaryRequest extends TeaModel {
     /**
      * <p>The name of the plug-in. Valid values:</p>
      * <ul>
-     * <li>alinet: AliNet.</li>
-     * <li>alisecguard: client protection.</li>
-     * <li>alihips: AliHips.</li>
+     * <li><p>alinet: AliNet.</p>
+     * </li>
+     * <li><p>alisecguard: Self-protection.</p>
+     * </li>
+     * <li><p>alihips: AliHips.</p>
+     * </li>
+     * <li><p>alidetect: AliDetect.</p>
+     * </li>
+     * <li><p>yundunmonitor: YundunMonitor.</p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <p>This parameter is required. If this parameter is not specified, the API returns HTTP 400 and the error code -101.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>alihips</p>

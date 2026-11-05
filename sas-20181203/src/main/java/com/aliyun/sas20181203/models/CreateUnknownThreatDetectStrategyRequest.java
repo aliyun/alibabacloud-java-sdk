@@ -14,7 +14,7 @@ public class CreateUnknownThreatDetectStrategyRequest extends TeaModel {
     public String assetSelectionType;
 
     /**
-     * <p>The number of days after the model is initially created before the learning phase ends.</p>
+     * <p>The number of days to continue learning after the model is initially created.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class CreateUnknownThreatDetectStrategyRequest extends TeaModel {
     public Integer durationDaysAfterInit;
 
     /**
-     * <p>The number of days after which the model ends when no new processes are added.</p>
+     * <p>The number of days without new processes before the model stops.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class CreateUnknownThreatDetectStrategyRequest extends TeaModel {
     public Integer durationDaysAfterStop;
 
     /**
-     * <p>The policy name.</p>
+     * <p>The Policy Name.</p>
      * 
      * <strong>example:</strong>
      * <p>strategy****</p>
@@ -43,8 +43,8 @@ public class CreateUnknownThreatDetectStrategyRequest extends TeaModel {
     /**
      * <p>The whitelist mode. Valid values:</p>
      * <ul>
-     * <li><strong>hash</strong>: process hash</li>
-     * <li><strong>path</strong>: process path</li>
+     * <li><strong>hash</strong>: The process hash.</li>
+     * <li><strong>path</strong>: The process path.</li>
      * </ul>
      * 
      * <strong>example:</strong>

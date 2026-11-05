@@ -15,6 +15,8 @@ public class DescribeVulExportInfoRequest extends TeaModel {
     public Long exportId;
 
     /**
+     * <p>The ID of the resource directory account.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

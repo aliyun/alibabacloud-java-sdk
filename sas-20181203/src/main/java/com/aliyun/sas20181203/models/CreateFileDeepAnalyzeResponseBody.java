@@ -21,7 +21,7 @@ public class CreateFileDeepAnalyzeResponseBody extends TeaModel {
      *   &quot;result&quot;: 0,
      *   &quot;file_analysis&quot;: {
      *     &quot;summary&quot;: {
-     *       &quot;ai_interpretation&quot;: &quot;The file is a JetBrains PhpStorm stub generation tool script and is a legitimate developer tool. The code uses the PhpParser library to parse PHP source code and generate the PhpStormStubsMap.php mapping file. The DPI engine analysis did not detect any dangerous function invoke, external input processing, code obfuscation, or malicious behavior characteristics. The file is determined to be normal.&quot;
+     *       &quot;ai_interpretation&quot;: &quot;The file is a JetBrains PhpStorm stub generation tool script, which is a legitimate developer tool. The code uses the PhpParser library to parse PHP source code and generate the PhpStormStubsMap.php mapping file. Engine analysis did not find any dangerous function invocations, external input processing, encoding obfuscation, or malicious behavior characteristics. It is determined to be a normal file.&quot;
      *     }
      *   }
      * }</p>

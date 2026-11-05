@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UninstallBackupClientRequest extends TeaModel {
     /**
-     * <p>The version of the anti-ransomware policy. You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the versions of anti-ransomware policies. Valid values:</p>
+     * <p>The version of the protection policy. You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the version. Valid values:</p>
      * <ul>
-     * <li><strong>1.0.0</strong></li>
-     * <li><strong>2.0.0</strong></li>
+     * <li><strong>1.0.0</strong>: The version of the protection policy is 1.0.0.</li>
+     * <li><strong>2.0.0</strong>: The version of the protection policy is 2.0.0.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,9 +19,9 @@ public class UninstallBackupClientRequest extends TeaModel {
     public String policyVersion;
 
     /**
-     * <p>The UUID of the server from which you want to uninstall the anti-ransomware agent.</p>
+     * <p>The UUID of the server from which you want to uninstall the anti-ransomware client.</p>
      * <blockquote>
-     * <p>You must specify at least one of the UuidList and Uuid parameters.</p>
+     * <p>UuidList.N and UUID cannot both be empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,9 +31,9 @@ public class UninstallBackupClientRequest extends TeaModel {
     public String uuid;
 
     /**
-     * <p>The UUIDs of the servers from which you want to uninstall the anti-ransomware agent.</p>
+     * <p>The list of UUIDs of the servers from which you want to uninstall the anti-ransomware client.</p>
      * <blockquote>
-     * <p>You must specify at least one of the UuidList and Uuid parameters.</p>
+     * <p>UuidList and UUID cannot both be empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
