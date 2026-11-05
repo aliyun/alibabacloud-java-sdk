@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreateGroupRequest extends TeaModel {
     /**
-     * <p>The description.</p>
-     * <p>The description can be up to 128 characters in length.</p>
+     * <p>The comments.</p>
+     * <p>The maximum length is 128 characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>开发团队</p>
+     * <p>Development team</p>
      */
     @NameInMap("Comments")
     public String comments;
 
     /**
-     * <p>The display name of the RAM user group.</p>
-     * <p>The name can be up to 24 characters in length.</p>
+     * <p>The display name of the user group.</p>
+     * <p>The maximum length is 24 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>Dev-Team</p>
@@ -25,8 +25,8 @@ public class CreateGroupRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The name of the RAM user group. You must specify this parameter.</p>
-     * <p>The name can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+     * <p>The name of the user group. This parameter is required.</p>
+     * <p>The maximum length is 64 characters. It can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>Dev-Team</p>

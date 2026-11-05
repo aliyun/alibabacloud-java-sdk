@@ -15,8 +15,8 @@ public class CreateUserRequest extends TeaModel {
     public String comments;
 
     /**
-     * <p>The display name of the RAM user.</p>
-     * <p>The name must be 1 to 24 characters in length.</p>
+     * <p>The display name of the Resource Access Management (RAM) user.</p>
+     * <p>The display name must be 1 to 24 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,9 +26,9 @@ public class CreateUserRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The email address of the RAM user.</p>
+     * <p>The electron mailbox of the Resource Access Management (RAM) user.</p>
      * <blockquote>
-     * <p>This parameter is valid only on the China site (aliyun.com).</p>
+     * <p>This parameter is applicable only to the China site.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,10 +38,10 @@ public class CreateUserRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>The mobile number of the RAM user.</p>
-     * <p>Format: Country code-Mobile phone number.</p>
+     * <p>The mobile phone number of the Resource Access Management (RAM) user.</p>
+     * <p>Format: area code-phone number.</p>
      * <blockquote>
-     * <p>This parameter is valid only on the China site (aliyun.com).</p>
+     * <p>This parameter is applicable only to the China site.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,15 +51,15 @@ public class CreateUserRequest extends TeaModel {
     public String mobilePhone;
 
     /**
-     * <p>The tags. You can specify up to 20 tags.</p>
+     * <p>The list of tags. A maximum of 20 tags can be added.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateUserRequestTag> tag;
 
     /**
-     * <p>The logon name of the Resource Access Management (RAM) user.</p>
-     * <p>The name is in the format of <code>&lt;username&gt;@&lt;AccountAlias&gt;.onaliyun.com</code>. <code>&lt;username&gt;</code> indicates the name of the RAM user. <code>&lt;AccountAlias&gt;.onaliyun.com</code> indicates the default domain name. For more information about how to query the default domain name, see <a href="https://help.aliyun.com/document_detail/186720.html">GetDefaultDomain</a>.</p>
-     * <p>The value of <code>UserPrincipalName</code> must be <code>1 to 128</code> characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The value of <code>&lt;username&gt;</code> must be <code>1 to 64</code> characters in length.</p>
+     * <p>The logon Resource Access Management (RAM) user.</p>
+     * <p>The format is <code>&lt;username&gt;@&lt;AccountAlias&gt;.onaliyun.com</code>, where <code>&lt;username&gt;</code> is the Resource Access Management (RAM) user and <code>&lt;AccountAlias&gt;.onaliyun.com</code> is the default domain name. For more information about how to obtain the default domain name, see <a href="https://help.aliyun.com/document_detail/186720.html">GetDefaultDomain</a>.</p>
+     * <p>The UserPrincipalName parameter must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The <code>&lt;username&gt;</code> part must be 1 to 64 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -123,8 +123,8 @@ public class CreateUserRequest extends TeaModel {
 
     public static class CreateUserRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key.</p>
+         * <p>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>operator</p>
@@ -133,8 +133,8 @@ public class CreateUserRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
-         * <p>The tag value can be an empty string. The tag value can be up to 128 characters in length. The tag value cannot start with <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value.</p>
+         * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with acs:. It cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>

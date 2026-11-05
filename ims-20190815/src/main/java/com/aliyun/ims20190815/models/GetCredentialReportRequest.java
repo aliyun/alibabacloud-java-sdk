@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCredentialReportRequest extends TeaModel {
     /**
-     * <p>The number of entries per page. If a response is truncated because it reaches the value of <code>MaxItems</code>, the value of <code>IsTruncated</code> will be true.</p>
+     * <p>The maximum number of items to return. When the response is truncated because the maximum number of items is reached, the IsTruncated parameter is set to true.</p>
      * <p>Valid values: 1 to 3501. Default value: 3501.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetCredentialReportRequest extends TeaModel {
     public String maxItems;
 
     /**
-     * <p>The token that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.\<code>\\</code></p>
+     * <p>The token used to retrieve the next set of results when the response is truncated.</p>
      * 
      * <strong>example:</strong>
      * <p>EXAMPLE</p>

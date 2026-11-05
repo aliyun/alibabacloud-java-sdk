@@ -302,7 +302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an AccessKey pair for an Alibaba Cloud account or a Resource Access Management (RAM) user.</p>
+     * <p>Creates an access key for an Alibaba Cloud account or a Resource Access Management (RAM) user.</p>
      * 
      * @param request CreateAccessKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -334,7 +334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an AccessKey pair for an Alibaba Cloud account or a Resource Access Management (RAM) user.</p>
+     * <p>Creates an access key for an Alibaba Cloud account or a Resource Access Management (RAM) user.</p>
      * 
      * @param request CreateAccessKeyRequest
      * @return CreateAccessKeyResponse
@@ -346,7 +346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application secret for an application.</p>
+     * <p>Creates an application secret for a specified application.</p>
      * 
      * @param request CreateAppSecretRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -378,7 +378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application secret for an application.</p>
+     * <p>Creates an application secret for a specified application.</p>
      * 
      * @param request CreateAppSecretRequest
      * @return CreateAppSecretResponse
@@ -411,12 +411,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppType", request.appType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.assignmentType)) {
+            query.put("AssignmentType", request.assignmentType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
             query.put("DisplayName", request.displayName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.isMultiTenant)) {
             query.put("IsMultiTenant", request.isMultiTenant);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needPrincipalConsent)) {
+            query.put("NeedPrincipalConsent", request.needPrincipalConsent);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.predefinedScopes)) {
@@ -474,7 +482,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a Resource Access Management (RAM) user group.</p>
+     * <p>Creates an application assignment record to grant a specified principal the permissions to use a specified application.</p>
+     * 
+     * @param request CreateApplicationAssignmentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateApplicationAssignmentResponse
+     */
+    public CreateApplicationAssignmentResponse createApplicationAssignmentWithOptions(CreateApplicationAssignmentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalName)) {
+            query.put("PrincipalName", request.principalName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalType)) {
+            query.put("PrincipalType", request.principalType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateApplicationAssignment"),
+            new TeaPair("version", "2019-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateApplicationAssignmentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an application assignment record to grant a specified principal the permissions to use a specified application.</p>
+     * 
+     * @param request CreateApplicationAssignmentRequest
+     * @return CreateApplicationAssignmentResponse
+     */
+    public CreateApplicationAssignmentResponse createApplicationAssignment(CreateApplicationAssignmentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createApplicationAssignmentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a user group.</p>
      * 
      * @param request CreateGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -514,7 +574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a Resource Access Management (RAM) user group.</p>
+     * <p>Creates a user group.</p>
      * 
      * @param request CreateGroupRequest
      * @return CreateGroupResponse
@@ -526,7 +586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a logon configuration for a Resource Access Management (RAM) user.</p>
+     * <p>Creates a logon profile for a Resource Access Management (RAM) user.</p>
      * 
      * @param request CreateLoginProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -574,7 +634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a logon configuration for a Resource Access Management (RAM) user.</p>
+     * <p>Creates a logon profile for a Resource Access Management (RAM) user.</p>
      * 
      * @param request CreateLoginProfileRequest
      * @return CreateLoginProfileResponse
@@ -785,11 +845,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This topic provides an example on how to create a RAM user named <code>test</code>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Creates a RAM user.</p>
+     * <p>Creates a Resource Access Management (RAM) user.</p>
      * 
      * @param request CreateUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -840,11 +897,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This topic provides an example on how to create a RAM user named <code>test</code>.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Creates a RAM user.</p>
+     * <p>Creates a Resource Access Management (RAM) user.</p>
      * 
      * @param request CreateUserRequest
      * @return CreateUserResponse
@@ -1084,6 +1138,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteApplicationResponse deleteApplication(DeleteApplicationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteApplicationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an application assignment record and revokes the access of a specified principal to a specified application.</p>
+     * 
+     * @param request DeleteApplicationAssignmentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteApplicationAssignmentResponse
+     */
+    public DeleteApplicationAssignmentResponse deleteApplicationAssignmentWithOptions(DeleteApplicationAssignmentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalName)) {
+            query.put("PrincipalName", request.principalName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalType)) {
+            query.put("PrincipalType", request.principalType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteApplicationAssignment"),
+            new TeaPair("version", "2019-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteApplicationAssignmentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an application assignment record and revokes the access of a specified principal to a specified application.</p>
+     * 
+     * @param request DeleteApplicationAssignmentRequest
+     * @return DeleteApplicationAssignmentResponse
+     */
+    public DeleteApplicationAssignmentResponse deleteApplicationAssignment(DeleteApplicationAssignmentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteApplicationAssignmentWithOptions(request, runtime);
     }
 
     /**
@@ -1518,13 +1624,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you want to call this operation to uninstall an internal application, the type of the internal application must be <strong>ServerApp</strong>. Otherwise, an error occurs when you call this operation.</p>
+     * <p>When you uninstall an internal application, the application must be of the <strong>ServerApp</strong> type. Otherwise, the call fails.</p>
      * <blockquote>
-     * <p>For <strong>internal applications</strong>, only internal applications of the ServerApp type need to be <strong>installed or provisioned</strong>. Therefore, only internal applications of the ServerApp type <strong>can be uninstalled</strong>. Internal applications of the WebApp and NativeApp types <strong>do not need to and cannot be uninstalled</strong>.</p>
+     * <p>Among <strong>internal applications</strong>, only applications of the ServerApp type require the <strong>provisioning</strong> operation. Therefore, only internal applications of the ServerApp type <strong>can be uninstalled</strong>. Internal applications of the WebApp and NativeApp types <strong>do not require and cannot be uninstalled</strong>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Uninstalls an external application or an internal application of the ServerApp type.</p>
+     * <p>Uninstalls an installed external application or an internal application of the ServerApp type.</p>
      * 
      * @param request DeprovisionApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1556,13 +1662,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you want to call this operation to uninstall an internal application, the type of the internal application must be <strong>ServerApp</strong>. Otherwise, an error occurs when you call this operation.</p>
+     * <p>When you uninstall an internal application, the application must be of the <strong>ServerApp</strong> type. Otherwise, the call fails.</p>
      * <blockquote>
-     * <p>For <strong>internal applications</strong>, only internal applications of the ServerApp type need to be <strong>installed or provisioned</strong>. Therefore, only internal applications of the ServerApp type <strong>can be uninstalled</strong>. Internal applications of the WebApp and NativeApp types <strong>do not need to and cannot be uninstalled</strong>.</p>
+     * <p>Among <strong>internal applications</strong>, only applications of the ServerApp type require the <strong>provisioning</strong> operation. Therefore, only internal applications of the ServerApp type <strong>can be uninstalled</strong>. Internal applications of the WebApp and NativeApp types <strong>do not require and cannot be uninstalled</strong>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Uninstalls an external application or an internal application of the ServerApp type.</p>
+     * <p>Uninstalls an installed external application or an internal application of the ServerApp type.</p>
      * 
      * @param request DeprovisionApplicationRequest
      * @return DeprovisionApplicationResponse
@@ -1574,7 +1680,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an installed external application.</p>
+     * <p>Uninstalls an installed external application.</p>
      * 
      * @param request DeprovisionExternalApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1606,7 +1712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an installed external application.</p>
+     * <p>Uninstalls an installed external application.</p>
      * 
      * @param request DeprovisionExternalApplicationRequest
      * @return DeprovisionExternalApplicationResponse
@@ -1728,7 +1834,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a specific AccessKey pair of a Resource Access Management (RAM) user in the recycle bin.</p>
+     * <p>Queries the details of a specified revoked access key that belongs to a Resource Access Management (RAM) user.</p>
      * 
      * @param request GetAccessKeyInfoInRecycleBinRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1760,7 +1866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a specific AccessKey pair of a Resource Access Management (RAM) user in the recycle bin.</p>
+     * <p>Queries the details of a specified revoked access key that belongs to a Resource Access Management (RAM) user.</p>
      * 
      * @param request GetAccessKeyInfoInRecycleBinRequest
      * @return GetAccessKeyInfoInRecycleBinResponse
@@ -1772,7 +1878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the time when an AccessKey pair was used for the last time.</p>
+     * <p>Queries the last used time of a specified access key.</p>
      * 
      * @param request GetAccessKeyLastUsedRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1808,7 +1914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the time when an AccessKey pair was used for the last time.</p>
+     * <p>Queries the last used time of a specified access key.</p>
      * 
      * @param request GetAccessKeyLastUsedRequest
      * @return GetAccessKeyLastUsedResponse
@@ -2004,7 +2110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an application secret.</p>
+     * <p>Queries the app secret information of a specified application.</p>
      * 
      * @param request GetAppSecretRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2040,7 +2146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an application secret.</p>
+     * <p>Queries the app secret information of a specified application.</p>
      * 
      * @param request GetAppSecretRequest
      * @return GetAppSecretResponse
@@ -2052,10 +2158,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the configurations of an application named <code>472457090344041****</code>.</p>
+     * <p>This topic provides an example to query the configuration information of the application <code>472457090344041****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the configuration information of an application.</p>
+     * <p>Queries the configuration information of a specified application.</p>
      * 
      * @param request GetApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2087,10 +2193,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the configurations of an application named <code>472457090344041****</code>.</p>
+     * <p>This topic provides an example to query the configuration information of the application <code>472457090344041****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the configuration information of an application.</p>
+     * <p>Queries the configuration information of a specified application.</p>
      * 
      * @param request GetApplicationRequest
      * @return GetApplicationResponse
@@ -2152,7 +2258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the user credential reports of an Alibaba Cloud account.</p>
+     * <p>Queries the user credential report for an Alibaba Cloud account.</p>
      * 
      * @param request GetCredentialReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2188,7 +2294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the user credential reports of an Alibaba Cloud account.</p>
+     * <p>Queries the user credential report for an Alibaba Cloud account.</p>
      * 
      * @param request GetCredentialReportRequest
      * @return GetCredentialReportResponse
@@ -2368,7 +2474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a Resource Access Management (RAM) user group.</p>
+     * <p>Queries the details of a specified user group.</p>
      * 
      * @param request GetGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2400,7 +2506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a Resource Access Management (RAM) user group.</p>
+     * <p>Queries the details of a specified user group.</p>
      * 
      * @param request GetGroupRequest
      * @return GetGroupResponse
@@ -2412,10 +2518,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询前，目标 RAM 用户必须已有控制台登录配置（<code>LoginProfile</code>）；如果尚未配置，需先调用 <code>CreateLoginProfile</code> 创建登录配置。</p>
+     * <p>Before querying, the target RAM user must have a console logon profile (LoginProfile). If the profile is not configured, call CreateLoginProfile to create a logon profile first.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the console logon settings for a Resource Access Management (RAM) user.</p>
+     * <p>Queries the logon information of a specified Resource Access Management (RAM) user.</p>
      * 
      * @param request GetLoginProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2447,10 +2553,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询前，目标 RAM 用户必须已有控制台登录配置（<code>LoginProfile</code>）；如果尚未配置，需先调用 <code>CreateLoginProfile</code> 创建登录配置。</p>
+     * <p>Before querying, the target RAM user must have a console logon profile (LoginProfile). If the profile is not configured, call CreateLoginProfile to create a logon profile first.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the console logon settings for a Resource Access Management (RAM) user.</p>
+     * <p>Queries the logon information of a specified Resource Access Management (RAM) user.</p>
      * 
      * @param request GetLoginProfileRequest
      * @return GetLoginProfileResponse
@@ -2672,7 +2778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a RAM user.</p>
+     * <p>Queries the details of a specified Resource Access Management (RAM) user.</p>
      * 
      * @param request GetUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2712,7 +2818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a RAM user.</p>
+     * <p>Queries the details of a specified Resource Access Management (RAM) user.</p>
      * 
      * @param request GetUserRequest
      * @return GetUserResponse
@@ -3025,6 +3131,114 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Lists the assignment records of a specified application.</p>
+     * 
+     * @param request ListApplicationAssignmentsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListApplicationAssignmentsResponse
+     */
+    public ListApplicationAssignmentsResponse listApplicationAssignmentsWithOptions(ListApplicationAssignmentsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListApplicationAssignments"),
+            new TeaPair("version", "2019-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListApplicationAssignmentsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists the assignment records of a specified application.</p>
+     * 
+     * @param request ListApplicationAssignmentsRequest
+     * @return ListApplicationAssignmentsResponse
+     */
+    public ListApplicationAssignmentsResponse listApplicationAssignments(ListApplicationAssignmentsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listApplicationAssignmentsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists the application assignment records for a specified identity principal.</p>
+     * 
+     * @param request ListApplicationAssignmentsForPrincipalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListApplicationAssignmentsForPrincipalResponse
+     */
+    public ListApplicationAssignmentsForPrincipalResponse listApplicationAssignmentsForPrincipalWithOptions(ListApplicationAssignmentsForPrincipalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalName)) {
+            query.put("PrincipalName", request.principalName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalType)) {
+            query.put("PrincipalType", request.principalType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListApplicationAssignmentsForPrincipal"),
+            new TeaPair("version", "2019-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListApplicationAssignmentsForPrincipalResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists the application assignment records for a specified identity principal.</p>
+     * 
+     * @param request ListApplicationAssignmentsForPrincipalRequest
+     * @return ListApplicationAssignmentsForPrincipalResponse
+     */
+    public ListApplicationAssignmentsForPrincipalResponse listApplicationAssignmentsForPrincipal(ListApplicationAssignmentsForPrincipalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listApplicationAssignmentsForPrincipalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the installation information of all installed applications.</p>
      * 
      * @param request ListApplicationProvisionInfosRequest
@@ -3069,10 +3283,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to query the applications in your Alibaba Cloud account. The response shows that only one application, named <code>myapp</code>, exists in the account.</p>
+     * <p>This topic provides an example of querying the applications within the current account. The response indicates that the current account has only one application named <code>myapp</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the applications that you have created.</p>
+     * <p>Lists the applications.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListApplicationsResponse
@@ -3095,10 +3309,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to query the applications in your Alibaba Cloud account. The response shows that only one application, named <code>myapp</code>, exists in the account.</p>
+     * <p>This topic provides an example of querying the applications within the current account. The response indicates that the current account has only one application named <code>myapp</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the applications that you have created.</p>
+     * <p>Lists the applications.</p>
      * @return ListApplicationsResponse
      */
     public ListApplicationsResponse listApplications() throws Exception {
@@ -4636,7 +4850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Binds a mobile phone or email to a Resource Access Management (RAM) user.</p>
+     * <p>Attaches a secure phone or security email address to a Resource Access Management (RAM) user.</p>
      * 
      * @param request SetVerificationInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4680,7 +4894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Binds a mobile phone or email to a Resource Access Management (RAM) user.</p>
+     * <p>Attaches a secure phone or security email address to a Resource Access Management (RAM) user.</p>
      * 
      * @param request SetVerificationInfoRequest
      * @return SetVerificationInfoResponse
@@ -4792,7 +5006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unbinds a mobile phone or email from a Resource Access Management (RAM) user.</p>
+     * <p>Unbinds a secure phone or security email address from a Resource Access Management (RAM) user.</p>
      * 
      * @param request UnbindVerificationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4836,7 +5050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unbinds a mobile phone or email from a Resource Access Management (RAM) user.</p>
+     * <p>Unbinds a secure phone or security email address from a Resource Access Management (RAM) user.</p>
      * 
      * @param request UnbindVerificationRequest
      * @return UnbindVerificationResponse
@@ -4960,7 +5174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a specified application.</p>
+     * <p>Modifies the configuration information of a specified application.</p>
      * 
      * @param request UpdateApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4977,12 +5191,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NewAccessTokenValidity", request.newAccessTokenValidity);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.newAssignmentType)) {
+            query.put("NewAssignmentType", request.newAssignmentType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.newDisplayName)) {
             query.put("NewDisplayName", request.newDisplayName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.newIsMultiTenant)) {
             query.put("NewIsMultiTenant", request.newIsMultiTenant);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newNeedPrincipalConsent)) {
+            query.put("NewNeedPrincipalConsent", request.newNeedPrincipalConsent);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.newPredefinedScopes)) {
@@ -5024,7 +5246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a specified application.</p>
+     * <p>Modifies the configuration information of a specified application.</p>
      * 
      * @param request UpdateApplicationRequest
      * @return UpdateApplicationResponse

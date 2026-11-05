@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetLoginProfileResponseBody extends TeaModel {
     /**
-     * <p>The console logon settings for the RAM user.</p>
+     * <p>The console logon profile.</p>
      */
     @NameInMap("LoginProfile")
     public GetLoginProfileResponseBodyLoginProfile loginProfile;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E517F18B-632C-48FC-93F1-CDCBCC6F8444</p>
@@ -42,7 +42,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
 
     public static class GetLoginProfileResponseBodyLoginProfile extends TeaModel {
         /**
-         * <p>Indicates whether console logon is automatically disabled if the user is inactive. This feature is enabled by default and cannot be disabled.</p>
+         * <p>Specifies whether console logon is automatically disabled when the idle disablement conditions are met. This feature is enabled by default and cannot be disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -51,7 +51,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
         public String autoDisableLoginStatus;
 
         /**
-         * <p>The time when the RAM user last logged on to the console. The time is displayed in UTC.</p>
+         * <p>The last console logon time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-14T07:25:25Z</p>
@@ -60,12 +60,10 @@ public class GetLoginProfileResponseBody extends TeaModel {
         public String lastLoginTime;
 
         /**
-         * <p>Indicates whether multi-factor authentication (MFA) is required for the user. Valid values:</p>
+         * <p>Specifies whether the user is required to enable multi-factor authentication (MFA). Valid values:</p>
          * <ul>
-         * <li><p>false</p>
-         * </li>
-         * <li><p>true</p>
-         * </li>
+         * <li>false: MFA is not required.</li>
+         * <li>true: MFA is required.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -75,12 +73,10 @@ public class GetLoginProfileResponseBody extends TeaModel {
         public Boolean MFABindRequired;
 
         /**
-         * <p>Indicates whether the RAM user must reset the password at the next logon. Valid values:</p>
+         * <p>Specifies whether the Resource Access Management (RAM) user must reset the password upon the next logon. Valid values:</p>
          * <ul>
-         * <li><p>false.</p>
-         * </li>
-         * <li><p>true</p>
-         * </li>
+         * <li>false: The user is not required to reset the password.</li>
+         * <li>true: The user must reset the password.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -90,15 +86,11 @@ public class GetLoginProfileResponseBody extends TeaModel {
         public Boolean passwordResetRequired;
 
         /**
-         * <p>The status of the initial password. An initial password is the password that is configured when you create a logon profile or re-enable console logon.</p>
-         * <p>Valid values</p>
+         * <p>The status of the initial password. An initial password is the password set when console logon is newly created or re-enabled. Valid values:</p>
          * <ul>
-         * <li><p>&quot;NotInitial&quot;: The password is not an initial password.</p>
-         * </li>
-         * <li><p>&quot;InitialValid&quot;: The initial password is valid.</p>
-         * </li>
-         * <li><p>&quot;InitialExpired&quot;: The initial password has expired.</p>
-         * </li>
+         * <li>&quot;NotInitial&quot;: The password is not an initial password.</li>
+         * <li>&quot;InitialValid&quot;: The initial password is valid.</li>
+         * <li>&quot;InitialExpired&quot;: The initial password has expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,12 +100,10 @@ public class GetLoginProfileResponseBody extends TeaModel {
         public String passwordStatus;
 
         /**
-         * <p>The status of console logon. Valid values:</p>
+         * <p>Indicates whether console logon is enabled or disabled. Valid values:</p>
          * <ul>
-         * <li><p>Active: Console logon is enabled.</p>
-         * </li>
-         * <li><p>Inactive: Console logon is disabled.</p>
-         * </li>
+         * <li>Active: Console logon is enabled.</li>
+         * <li>Inactive: Console logon is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,7 +113,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the logon settings were last updated. The time is displayed in UTC.</p>
+         * <p>The update time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-14T06:56:45Z</p>
@@ -132,7 +122,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
         public String updateDate;
 
         /**
-         * <p>The logon name of the RAM user.</p>
+         * <p>The logon name of the Resource Access Management (RAM) user.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>

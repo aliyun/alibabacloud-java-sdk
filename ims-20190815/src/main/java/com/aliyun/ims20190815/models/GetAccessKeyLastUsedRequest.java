@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAccessKeyLastUsedRequest extends TeaModel {
     /**
-     * <p>The ID of the AccessKey pair that you want to query.</p>
+     * <p>The ID of the access key to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,7 @@ public class GetAccessKeyLastUsedRequest extends TeaModel {
     public String userAccessKeyId;
 
     /**
-     * <p>The logon name of the RAM user.</p>
-     * <p>If you do not specify this parameter, the AccessKey pair of the current user is queried.</p>
+     * <p>The logon name of the Resource Access Management (RAM) user. If this parameter is left empty, the access keys of the current user are queried by default.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>

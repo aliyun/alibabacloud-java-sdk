@@ -151,6 +151,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("AppType")
         public String appType;
 
+        @NameInMap("AssignmentType")
+        public String assignmentType;
+
         @NameInMap("CreateDate")
         public String createDate;
 
@@ -162,6 +165,9 @@ public class ListApplicationsResponseBody extends TeaModel {
 
         @NameInMap("IsMultiTenant")
         public Boolean isMultiTenant;
+
+        @NameInMap("NeedPrincipalConsent")
+        public Boolean needPrincipalConsent;
 
         @NameInMap("ProtocolVersion")
         public String protocolVersion;
@@ -223,6 +229,14 @@ public class ListApplicationsResponseBody extends TeaModel {
             return this.appType;
         }
 
+        public ListApplicationsResponseBodyApplicationsApplication setAssignmentType(String assignmentType) {
+            this.assignmentType = assignmentType;
+            return this;
+        }
+        public String getAssignmentType() {
+            return this.assignmentType;
+        }
+
         public ListApplicationsResponseBodyApplicationsApplication setCreateDate(String createDate) {
             this.createDate = createDate;
             return this;
@@ -253,6 +267,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
         public Boolean getIsMultiTenant() {
             return this.isMultiTenant;
+        }
+
+        public ListApplicationsResponseBodyApplicationsApplication setNeedPrincipalConsent(Boolean needPrincipalConsent) {
+            this.needPrincipalConsent = needPrincipalConsent;
+            return this;
+        }
+        public Boolean getNeedPrincipalConsent() {
+            return this.needPrincipalConsent;
         }
 
         public ListApplicationsResponseBodyApplicationsApplication setProtocolVersion(String protocolVersion) {

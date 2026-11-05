@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAccessKeyInfoInRecycleBinRequest extends TeaModel {
     /**
-     * <p>The AccessKey ID of the Resource Access Management (RAM) user.</p>
+     * <p>The access key ID of the Resource Access Management (RAM) user.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

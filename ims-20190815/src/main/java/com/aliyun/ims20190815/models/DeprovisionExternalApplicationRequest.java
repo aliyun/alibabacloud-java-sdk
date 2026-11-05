@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeprovisionExternalApplicationRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The ID of the external application installed for the current account. You can obtain the ID by calling ListExternalApplications or ListApplicationProvisionInfos with SourceType set to external. If the application is not installed, you must first call ProvisionExternalApplication.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppSecretResponseBody extends TeaModel {
     /**
-     * <p>The details of the application secret.</p>
+     * <p>The app secret information.</p>
      */
     @NameInMap("AppSecret")
     public GetAppSecretResponseBodyAppSecret appSecret;
@@ -42,7 +42,7 @@ public class GetAppSecretResponseBody extends TeaModel {
 
     public static class GetAppSecretResponseBodyAppSecret extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>472457090344041****</p>
@@ -51,7 +51,7 @@ public class GetAppSecretResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The ID of the application secret.</p>
+         * <p>The app secret ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2efd5004-005c-4f05-83c6-5b1dd176****</p>
@@ -60,7 +60,7 @@ public class GetAppSecretResponseBody extends TeaModel {
         public String appSecretId;
 
         /**
-         * <p>The content of the application secret.</p>
+         * <p>The app secret content.</p>
          * 
          * <strong>example:</strong>
          * <p>ai78ZmmxnlUG1jXlBZRDFKos9DIjY4m17Q7dCpMwn1rqXsTGb1X1XmrmveMp****</p>
@@ -70,6 +70,7 @@ public class GetAppSecretResponseBody extends TeaModel {
 
         /**
          * <p>The creation time.</p>
+         * <p>Format: RFC 3339 (UTC). Example: 2020-10-26T02:52:31Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-26T02:52:31Z</p>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetUserRequest extends TeaModel {
     /**
-     * <p>The AccessKey ID of the RAM user.</p>
+     * <p>The AccessKey ID of the Resource Access Management (RAM) user.</p>
      * <blockquote>
-     * <p>You must specify only one of the following parameters: <code>UserPrincipalName</code>, <code>UserId</code>, and <code>UserAccessKeyId</code>.</p>
+     * <p>You must specify exactly one of the following parameters: <code>UserPrincipalName</code>, <code>UserId</code>, and <code>UserAccessKeyId</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class GetUserRequest extends TeaModel {
     public String userAccessKeyId;
 
     /**
-     * <p>The ID of the RAM user.</p>
+     * <p>The ID of the Resource Access Management (RAM) user.</p>
      * <blockquote>
-     * <p>You must specify only one of the following parameters: <code>UserPrincipalName</code>, <code>UserId</code>, and <code>UserAccessKeyId</code>.</p>
+     * <p>You must specify exactly one of the following parameters: <code>UserPrincipalName</code>, <code>UserId</code>, and <code>UserAccessKeyId</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,11 +29,11 @@ public class GetUserRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>The logon name of the RAM user.</p>
-     * <p>The name is in the format of <code>&lt;username&gt;@&lt;AccountAlias&gt;.onaliyun.com</code>. <code>&lt;username&gt;</code> indicates the name of the RAM user. <code>&lt;AccountAlias&gt;.onaliyun.com</code> indicates the default domain name.</p>
-     * <p>The value of <code>UserPrincipalName</code> must be <code>1 to 128</code> characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The value of <code>&lt;username&gt;</code> must be <code>1 to 64</code> characters in length.</p>
+     * <p>The logon Resource Access Management (RAM) user.</p>
+     * <p>The format is <code>&lt;username&gt;@&lt;AccountAlias&gt;.onaliyun.com</code>, where <code>&lt;username&gt;</code> is the Resource Access Management (RAM) user and <code>&lt;AccountAlias&gt;.onaliyun.com</code> is the default domain name. </p>
+     * <p>The <code>UserPrincipalName</code> must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The <code>&lt;username&gt;</code> must be 1 to 64 characters in length.</p>
      * <blockquote>
-     * <p>You must specify only one of the following parameters: <code>UserPrincipalName</code>, <code>UserId</code>, and <code>UserAccessKeyId</code>.</p>
+     * <p>You must specify exactly one of the following parameters: <code>UserPrincipalName</code>, <code>UserId</code>, and <code>UserAccessKeyId</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetAccessKeyPolicyForAccountRequest extends TeaModel {
     /**
-     * <p>The network access restriction policy. The value is a JSON-formatted string. For more information, see the AccessKeyPolicy structure description in the SetAccessKeyPolicy documentation.</p>
+     * <p>The network access restriction policy. A JSON-formatted string. For more information about the AccessKeyPolicy structure, see the SetAccessKeyPolicy documentation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

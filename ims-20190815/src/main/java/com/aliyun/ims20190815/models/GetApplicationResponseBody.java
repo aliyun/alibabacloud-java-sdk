@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApplicationResponseBody extends TeaModel {
     /**
-     * <p>The information about the application.</p>
+     * <p>The application information.</p>
      */
     @NameInMap("Application")
     public GetApplicationResponseBodyApplication application;
@@ -101,9 +101,6 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyApplicationDelegatedScope extends TeaModel {
-        /**
-         * <p>The information about the permissions that are granted on the application.</p>
-         */
         @NameInMap("PredefinedScopes")
         public GetApplicationResponseBodyApplicationDelegatedScopePredefinedScopes predefinedScopes;
 
@@ -152,7 +149,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public Integer accessTokenValidity;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the application belongs.</p>
+         * <p>The Alibaba Cloud account ID to which the application belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>177242285274****</p>
@@ -181,12 +178,9 @@ public class GetApplicationResponseBody extends TeaModel {
         /**
          * <p>The application type. Valid values:</p>
          * <ul>
-         * <li><p>WebApp: a web application that is based on browser interaction.</p>
-         * </li>
-         * <li><p>NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.</p>
-         * </li>
-         * <li><p>ServerApp: an application that directly accesses Alibaba Cloud services without user logon. Currently, only applications that use the System for Cross-domain Identity Management (SCIM) protocol for user synchronization are supported.</p>
-         * </li>
+         * <li>WebApp: web applications that are based on browser interactions.</li>
+         * <li>NativeApp: local applications that run in operating systems, such as desktop or shift operating systems.</li>
+         * <li>ServerApp: applications that directly access Alibaba Cloud services without requiring user logon. Currently, only user synchronization applications based on the System for Cross-domain Identity Management protocol are supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -196,7 +190,20 @@ public class GetApplicationResponseBody extends TeaModel {
         public String appType;
 
         /**
-         * <p>The time when the application was created.</p>
+         * <p>The application assignment type. Valid values:</p>
+         * <ul>
+         * <li>AllowAll: full assignment. All RAM users and roles within the account are allowed to use the application.</li>
+         * <li>OnDemand: on-demand assignment. Only specified RAM users and roles within the account are allowed to use the application.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AllowAll</p>
+         */
+        @NameInMap("AssignmentType")
+        public String assignmentType;
+
+        /**
+         * <p>The creation time. Format: RFC 3339 (UTC). Example: 2020-10-23T08:06:57Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-23T08:06:57Z</p>
@@ -205,7 +212,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The information about the permissions that are granted on the application.</p>
+         * <p>The delegated scope information of the application.</p>
          */
         @NameInMap("DelegatedScope")
         public GetApplicationResponseBodyApplicationDelegatedScope delegatedScope;
@@ -220,7 +227,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>Indicates whether the application can be installed by using other Alibaba Cloud accounts.</p>
+         * <p>Specifies whether the application can be installed by other accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -229,12 +236,23 @@ public class GetApplicationResponseBody extends TeaModel {
         public Boolean isMultiTenant;
 
         /**
+         * <p>Specifies whether user authorization is required. Valid values:</p>
+         * <ul>
+         * <li>true: User authorization is required.</li>
+         * <li>false: User authorization is not required.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("NeedPrincipalConsent")
+        public Boolean needPrincipalConsent;
+
+        /**
          * <p>The OAuth protocol version of the application. Valid values:</p>
          * <ul>
-         * <li><p><code>2.0</code>: OAuth 2.0</p>
-         * </li>
-         * <li><p><code>2.1</code>: OAuth 2.1</p>
-         * </li>
+         * <li><code>2.0</code>: OAuth 2.0 protocol.</li>
+         * <li><code>2.1</code>: OAuth 2.1 protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -243,9 +261,6 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("ProtocolVersion")
         public String protocolVersion;
 
-        /**
-         * <p>The redirect URLs.</p>
-         */
         @NameInMap("RedirectUris")
         public GetApplicationResponseBodyApplicationRedirectUris redirectUris;
 
@@ -259,7 +274,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public Integer refreshTokenValidity;
 
         /**
-         * <p>Indicates whether a secret is required.</p>
+         * <p>Specifies whether an application secret is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -268,7 +283,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public Boolean secretRequired;
 
         /**
-         * <p>The time when the application was last updated.</p>
+         * <p>The update time. Format: RFC 3339 (UTC). Example: 2020-10-23T08:06:57Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-23T08:06:57Z</p>
@@ -321,6 +336,14 @@ public class GetApplicationResponseBody extends TeaModel {
             return this.appType;
         }
 
+        public GetApplicationResponseBodyApplication setAssignmentType(String assignmentType) {
+            this.assignmentType = assignmentType;
+            return this;
+        }
+        public String getAssignmentType() {
+            return this.assignmentType;
+        }
+
         public GetApplicationResponseBodyApplication setCreateDate(String createDate) {
             this.createDate = createDate;
             return this;
@@ -351,6 +374,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public Boolean getIsMultiTenant() {
             return this.isMultiTenant;
+        }
+
+        public GetApplicationResponseBodyApplication setNeedPrincipalConsent(Boolean needPrincipalConsent) {
+            this.needPrincipalConsent = needPrincipalConsent;
+            return this;
+        }
+        public Boolean getNeedPrincipalConsent() {
+            return this.needPrincipalConsent;
         }
 
         public GetApplicationResponseBodyApplication setProtocolVersion(String protocolVersion) {

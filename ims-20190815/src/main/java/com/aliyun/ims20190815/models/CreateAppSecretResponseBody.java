@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAppSecretResponseBody extends TeaModel {
     /**
-     * <p>The details of the application secret.</p>
+     * <p>The application secret information.</p>
      */
     @NameInMap("AppSecret")
     public CreateAppSecretResponseBodyAppSecret appSecret;
@@ -42,7 +42,7 @@ public class CreateAppSecretResponseBody extends TeaModel {
 
     public static class CreateAppSecretResponseBodyAppSecret extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>472457090344041****</p>
@@ -51,7 +51,7 @@ public class CreateAppSecretResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The ID of the application secret.</p>
+         * <p>The application secret ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2efd5004-005c-4f05-83c6-5b1dd176****</p>
@@ -60,7 +60,7 @@ public class CreateAppSecretResponseBody extends TeaModel {
         public String appSecretId;
 
         /**
-         * <p>The content of the application secret. This value can be used as the client secret for open authorization (OAuth).</p>
+         * <p>The application secret content. This value can be used as the client secret for OAuth.</p>
          * 
          * <strong>example:</strong>
          * <p>ai78ZmmxnlUG1jXlBZRDFKos9DIjY4m17Q7dCpMwn1rqXsTGb1X1XmrmveMp****</p>
@@ -70,6 +70,7 @@ public class CreateAppSecretResponseBody extends TeaModel {
 
         /**
          * <p>The creation time.</p>
+         * <p>Format: RFC 3339 (UTC). Example: 2020-10-26T02:52:31Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-26T02:52:31Z</p>

@@ -185,6 +185,19 @@ public class UpdateApplicationResponseBody extends TeaModel {
         public String appType;
 
         /**
+         * <p>The application assignment type. Valid values:</p>
+         * <ul>
+         * <li>AllowAll: Full assignment. All RAM users and roles under the account are allowed to use the application.</li>
+         * <li>OnDemand: On-demand assignment. Only specified RAM users and roles under the account are allowed to use the application.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AlloAll</p>
+         */
+        @NameInMap("AssignmentType")
+        public String assignmentType;
+
+        /**
          * <p>The creation time.</p>
          * <p>Format: RFC 3339 (UTC). Example: 2020-10-23T08:06:57Z.</p>
          * 
@@ -195,7 +208,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The permission scope information of the application.</p>
+         * <p>The application permission scope information.</p>
          */
         @NameInMap("DelegatedScope")
         public UpdateApplicationResponseBodyApplicationDelegatedScope delegatedScope;
@@ -210,13 +223,26 @@ public class UpdateApplicationResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>Indicates whether the application is allowed to be installed by other accounts.</p>
+         * <p>Indicates whether the application can be installed by other accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("IsMultiTenant")
         public Boolean isMultiTenant;
+
+        /**
+         * <p>Specifies whether user authorization is required. Valid values:</p>
+         * <ul>
+         * <li>true: User authorization is required.</li>
+         * <li>false: User authorization is not required.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("NeedPrincipalConsent")
+        public Boolean needPrincipalConsent;
 
         /**
          * <p>The OAuth protocol version of the application. Valid values:</p>
@@ -307,6 +333,14 @@ public class UpdateApplicationResponseBody extends TeaModel {
             return this.appType;
         }
 
+        public UpdateApplicationResponseBodyApplication setAssignmentType(String assignmentType) {
+            this.assignmentType = assignmentType;
+            return this;
+        }
+        public String getAssignmentType() {
+            return this.assignmentType;
+        }
+
         public UpdateApplicationResponseBodyApplication setCreateDate(String createDate) {
             this.createDate = createDate;
             return this;
@@ -337,6 +371,14 @@ public class UpdateApplicationResponseBody extends TeaModel {
         }
         public Boolean getIsMultiTenant() {
             return this.isMultiTenant;
+        }
+
+        public UpdateApplicationResponseBodyApplication setNeedPrincipalConsent(Boolean needPrincipalConsent) {
+            this.needPrincipalConsent = needPrincipalConsent;
+            return this;
+        }
+        public Boolean getNeedPrincipalConsent() {
+            return this.needPrincipalConsent;
         }
 
         public UpdateApplicationResponseBodyApplication setProtocolVersion(String protocolVersion) {

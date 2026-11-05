@@ -7,7 +7,7 @@ public class UnbindVerificationRequest extends TeaModel {
     /**
      * <p>The email address.</p>
      * <blockquote>
-     * <p>If you set <code>VerifyType</code> to <code>email</code>, you must specify this parameter.</p>
+     * <p>When VerifyType is set to email, this parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class UnbindVerificationRequest extends TeaModel {
     /**
      * <p>The mobile phone number.</p>
      * <blockquote>
-     * <p>If you set <code>VerifyType</code> to <code>sms</code>, you must specify this parameter.</p>
+     * <p>When VerifyType is set to sms, this parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class UnbindVerificationRequest extends TeaModel {
     public String mobilePhone;
 
     /**
-     * <p>The logon name of the RAM user.</p>
+     * <p>The logon name of the Resource Access Management (RAM) user.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
@@ -38,12 +38,10 @@ public class UnbindVerificationRequest extends TeaModel {
     public String userPrincipalName;
 
     /**
-     * <p>The multi-factor authentication (MFA) method. Valid values:</p>
+     * <p>The multi-factor authentication method. Valid values:</p>
      * <ul>
-     * <li><p>sms: mobile phone.</p>
-     * </li>
-     * <li><p>email: email.</p>
-     * </li>
+     * <li>sms: secure phone</li>
+     * <li>email: security email address</li>
      * </ul>
      * 
      * <strong>example:</strong>

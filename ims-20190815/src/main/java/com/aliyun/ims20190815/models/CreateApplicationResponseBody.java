@@ -101,9 +101,6 @@ public class CreateApplicationResponseBody extends TeaModel {
     }
 
     public static class CreateApplicationResponseBodyApplicationDelegatedScope extends TeaModel {
-        /**
-         * <p>The information about the permissions that are granted on the application.</p>
-         */
         @NameInMap("PredefinedScopes")
         public CreateApplicationResponseBodyApplicationDelegatedScopePredefinedScopes predefinedScopes;
 
@@ -152,7 +149,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public Integer accessTokenValidity;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the application belongs.</p>
+         * <p>The Alibaba Cloud account ID to which the application belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>177242285274****</p>
@@ -188,7 +185,21 @@ public class CreateApplicationResponseBody extends TeaModel {
         public String appType;
 
         /**
-         * <p>The time when the application was created.</p>
+         * <p>The application assignment type. Valid values:</p>
+         * <ul>
+         * <li>AllowAll: assigns the application to all RAM users and roles in the account, allowing them to use the application.</li>
+         * <li>OnDemand: assigns the application only to specified RAM users and roles in the account, allowing only them to use the application.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AllowAll</p>
+         */
+        @NameInMap("AssignmentType")
+        public String assignmentType;
+
+        /**
+         * <p>The creation time.</p>
+         * <p>Format: RFC 3339 (UTC). Example: 2020-10-23T08:06:57Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-23T08:06:57Z</p>
@@ -197,7 +208,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The information about the permissions that are granted on the application.</p>
+         * <p>The application scope information.</p>
          */
         @NameInMap("DelegatedScope")
         public CreateApplicationResponseBodyApplicationDelegatedScope delegatedScope;
@@ -212,7 +223,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>Indicates whether the application can be installed by using other Alibaba Cloud accounts.</p>
+         * <p>Indicates whether the application can be installed by other accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -221,12 +232,23 @@ public class CreateApplicationResponseBody extends TeaModel {
         public Boolean isMultiTenant;
 
         /**
+         * <p>Specifies whether user authorization is required. Valid values:</p>
+         * <ul>
+         * <li>true: User authorization is required.</li>
+         * <li>false: User authorization is not required.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("NeedPrincipalConsent")
+        public Boolean needPrincipalConsent;
+
+        /**
          * <p>The OAuth protocol version of the application. Valid values:</p>
          * <ul>
-         * <li><p><code>2.0</code>: OAuth 2.0</p>
-         * </li>
-         * <li><p><code>2.1</code>: OAuth 2.1</p>
-         * </li>
+         * <li>2.0: OAuth 2.0 protocol.</li>
+         * <li>2.1: OAuth 2.1 protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -235,9 +257,6 @@ public class CreateApplicationResponseBody extends TeaModel {
         @NameInMap("ProtocolVersion")
         public String protocolVersion;
 
-        /**
-         * <p>The redirect URLs.</p>
-         */
         @NameInMap("RedirectUris")
         public CreateApplicationResponseBodyApplicationRedirectUris redirectUris;
 
@@ -251,7 +270,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public Integer refreshTokenValidity;
 
         /**
-         * <p>Indicates whether a secret is required.</p>
+         * <p>Indicates whether an application secret is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -260,7 +279,8 @@ public class CreateApplicationResponseBody extends TeaModel {
         public Boolean secretRequired;
 
         /**
-         * <p>The time when the application information was last updated.</p>
+         * <p>The update time.</p>
+         * <p>Format: RFC 3339 (UTC). Example: 2020-10-23T08:06:57Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-23T08:06:57Z</p>
@@ -313,6 +333,14 @@ public class CreateApplicationResponseBody extends TeaModel {
             return this.appType;
         }
 
+        public CreateApplicationResponseBodyApplication setAssignmentType(String assignmentType) {
+            this.assignmentType = assignmentType;
+            return this;
+        }
+        public String getAssignmentType() {
+            return this.assignmentType;
+        }
+
         public CreateApplicationResponseBodyApplication setCreateDate(String createDate) {
             this.createDate = createDate;
             return this;
@@ -343,6 +371,14 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
         public Boolean getIsMultiTenant() {
             return this.isMultiTenant;
+        }
+
+        public CreateApplicationResponseBodyApplication setNeedPrincipalConsent(Boolean needPrincipalConsent) {
+            this.needPrincipalConsent = needPrincipalConsent;
+            return this;
+        }
+        public Boolean getNeedPrincipalConsent() {
+            return this.needPrincipalConsent;
         }
 
         public CreateApplicationResponseBodyApplication setProtocolVersion(String protocolVersion) {
