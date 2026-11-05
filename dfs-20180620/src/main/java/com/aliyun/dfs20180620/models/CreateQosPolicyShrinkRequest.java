@@ -37,6 +37,9 @@ public class CreateQosPolicyShrinkRequest extends TeaModel {
     @NameInMap("ZoneIds")
     public String zoneIdsShrink;
 
+    @NameInMap("storageType")
+    public String storageType;
+
     public static CreateQosPolicyShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateQosPolicyShrinkRequest self = new CreateQosPolicyShrinkRequest();
         return TeaModel.build(map, self);
@@ -120,6 +123,14 @@ public class CreateQosPolicyShrinkRequest extends TeaModel {
     }
     public String getZoneIdsShrink() {
         return this.zoneIdsShrink;
+    }
+
+    public CreateQosPolicyShrinkRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
 }

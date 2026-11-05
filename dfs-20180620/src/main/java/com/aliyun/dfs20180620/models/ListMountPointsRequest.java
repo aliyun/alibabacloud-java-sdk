@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListMountPointsRequest extends TeaModel {
     /**
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>37af8f42-2abc-4e74-889d-664f5163****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,16 +25,30 @@ public class ListMountPointsRequest extends TeaModel {
     public String inputRegionId;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * <p>Valid values: 1 to 1000.</p>
+     * <p>Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("Limit")
     public Integer limit;
 
+    /**
+     * <p>The token for the next page.</p>
+     * <p>If a query does not return all results, a non-empty NextToken is returned. You can include the NextToken in a subsequent query to retrieve the remaining results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MYR6sz6qkmauspAy8oxjHP-tOLtD4KSv3DzI7G6iywTx1ZCExO50GtSuiTB9z0JppvYQ2iUa8s4HbcFanMQfDIlds4da87_Ax4UJMva****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
+     * <p>The field by which to sort the returned results.</p>
+     * <p>Default value: CreateTime (sorted by creation time).</p>
+     * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
      */
@@ -37,6 +56,13 @@ public class ListMountPointsRequest extends TeaModel {
     public String orderBy;
 
     /**
+     * <p>The sort order of the returned results.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>ASC (default): ascending order</li>
+     * <li>DESC: descending order</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ASC</p>
      */
@@ -44,6 +70,9 @@ public class ListMountPointsRequest extends TeaModel {
     public String orderType;
 
     /**
+     * <p>Specifies the starting position of the query.</p>
+     * <p>Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

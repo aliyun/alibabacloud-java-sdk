@@ -4,10 +4,18 @@ package com.aliyun.dfs20180620.models;
 import com.aliyun.tea.*;
 
 public class CreateMountPointResponseBody extends TeaModel {
+    /**
+     * <p>The mount target ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f-37af8f42f****.cn-hangzhou.dfs.aliyuncs.com</p>
+     */
     @NameInMap("MountPointId")
     public String mountPointId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
      */

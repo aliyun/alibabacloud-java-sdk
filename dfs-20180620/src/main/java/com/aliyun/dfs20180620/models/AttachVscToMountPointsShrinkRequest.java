@@ -4,10 +4,14 @@ package com.aliyun.dfs20180620.models;
 import com.aliyun.tea.*;
 
 public class AttachVscToMountPointsShrinkRequest extends TeaModel {
+    /**
+     * <p>The mount information list.</p>
+     */
     @NameInMap("AttachInfos")
     public String attachInfosShrink;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,12 @@ public class AttachVscToMountPointsShrinkRequest extends TeaModel {
     public String inputRegionId;
 
     /**
+     * <p>Specifies whether to use an assumed role to check the permissions of the compute node. Valid values:</p>
+     * <ul>
+     * <li>true: Yes.</li>
+     * <li>false (default): No.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

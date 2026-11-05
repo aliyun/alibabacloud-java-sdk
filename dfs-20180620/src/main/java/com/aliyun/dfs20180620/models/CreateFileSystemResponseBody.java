@@ -4,10 +4,18 @@ package com.aliyun.dfs20180620.models;
 import com.aliyun.tea.*;
 
 public class CreateFileSystemResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the file system.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>37af8f42-2abc-4e74-889d-664f5163****</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
      */

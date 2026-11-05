@@ -4,13 +4,25 @@ package com.aliyun.dfs20180620.models;
 import com.aliyun.tea.*;
 
 public class ListAccessGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The access group information.</p>
+     */
     @NameInMap("AccessGroups")
     public java.util.List<ListAccessGroupsResponseBodyAccessGroups> accessGroups;
 
+    /**
+     * <p>The pagination token.</p>
+     * <p>If a single query does not return all results, a non-empty NextToken is returned. You can include the NextToken in the next request to continue the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PtHVCBwpddbWVRCFe3wlB_-tOLtD4KSv3DzI7G6iywQSm69vY0lvOlDTzqVWqXWApvYQ2iUa8s4HbcFanMQfDIlds4da87_Ax4UJMva****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
      */
@@ -18,6 +30,8 @@ public class ListAccessGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of returned results.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -63,6 +77,8 @@ public class ListAccessGroupsResponseBody extends TeaModel {
 
     public static class ListAccessGroupsResponseBodyAccessGroups extends TeaModel {
         /**
+         * <p>The ID of the access group.</p>
+         * 
          * <strong>example:</strong>
          * <p>acg-e3755fb0-358d-4286-9942-8d461048****</p>
          */
@@ -70,19 +86,40 @@ public class ListAccessGroupsResponseBody extends TeaModel {
         public String accessGroupId;
 
         /**
+         * <p>The name of the access group.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-cluster-policy</p>
          */
         @NameInMap("AccessGroupName")
         public String accessGroupName;
 
+        /**
+         * <p>The time when the access group was created. The time is displayed in UTC and follows the ISO 8601 standard. Example: 2022-04-18T08:02:09.986217Z.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-18T08:02:09.986217Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the access group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dedicated access group for test clusters</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Specifies whether the access group is the default access group.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: The access group is the default access group. A default access group allows access from all IP addresses. You cannot delete a default access group or the rules within it.</li>
+         * <li>false: The access group is not the default access group.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -90,6 +127,8 @@ public class ListAccessGroupsResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
+         * <p>The number of mount points associated with the access group.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -97,6 +136,8 @@ public class ListAccessGroupsResponseBody extends TeaModel {
         public Integer mountPointCount;
 
         /**
+         * <p>The network type of the access group.</p>
+         * 
          * <strong>example:</strong>
          * <p>VPC</p>
          */
@@ -104,6 +145,8 @@ public class ListAccessGroupsResponseBody extends TeaModel {
         public String networkType;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -111,6 +154,8 @@ public class ListAccessGroupsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The number of rules in the access group.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */

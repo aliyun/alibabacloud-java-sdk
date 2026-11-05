@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAccessGroupRequest extends TeaModel {
     /**
+     * <p>The access group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetAccessGroupRequest extends TeaModel {
     public String accessGroupId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

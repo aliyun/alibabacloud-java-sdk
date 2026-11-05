@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeVscMountPointsRequest extends TeaModel {
     /**
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>037****e1d</p>
+     * <p>e389e5c7-bcb4-4558-846a-e5afc444****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,26 +25,44 @@ public class DescribeVscMountPointsRequest extends TeaModel {
     public String inputRegionId;
 
     /**
+     * <p>The instance ID of the ECS instance on which the HDFS file system is mounted.</p>
+     * 
      * <strong>example:</strong>
-     * <p>[&quot;ecs-instance1&quot;, &quot;ecs-instance2&quot;]</p>
+     * <p>i-bp1g6zv0ce8oghu7****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>The mount point ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>037cb49e1d-c***5</p>
+     * <p>f-037cb49e1d-c****.dfs.aliyuncs.com</p>
      */
     @NameInMap("MountPointId")
     public String mountPointId;
 
     /**
+     * <p>The instance status of the ECS instance on which the HDFS file system is mounted. Valid values:</p>
+     * <ul>
+     * <li>NORMAL: The mount operation succeeded.</li>
+     * <li>CREATING: The mount operation is in progress.</li>
+     * <li>INVALID: The mount operation failed.</li>
+     * <li>OK: Returns instances in the NORMAL, CREATING, and INVALID states.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The ID of the VSC on which the HDFS file system is mounted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsc-asjodjoio****</p>
+     */
     @NameInMap("VscId")
     public String vscId;
 

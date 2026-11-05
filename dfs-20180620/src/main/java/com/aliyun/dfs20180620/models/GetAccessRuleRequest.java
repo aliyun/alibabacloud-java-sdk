@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAccessRuleRequest extends TeaModel {
     /**
+     * <p>Permission group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetAccessRuleRequest extends TeaModel {
     public String accessGroupId;
 
     /**
+     * <p>Permission group rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetAccessRuleRequest extends TeaModel {
     public String accessRuleId;
 
     /**
+     * <p>Region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

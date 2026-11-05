@@ -8,7 +8,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dfs", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -31,7 +31,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>挂载VSC挂载点</p>
+     * <p>Adds compute instances to a mount point.</p>
      * 
      * @param tmpReq AttachVscMountPointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -108,7 +108,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>挂载VSC挂载点</p>
+     * <p>Adds compute instances to a mount point.</p>
      * 
      * @param request AttachVscMountPointRequest
      * @return AttachVscMountPointResponse
@@ -119,8 +119,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Currently, only one VSC can be associated with multiple mount points. Specifically, the values of AttachInfos.InstanceId or AttachInfos.VscId must be equal.</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量挂载VSC挂载点</p>
+     * <p>Mounts multiple VSC mount points.</p>
      * 
      * @param tmpReq AttachVscToMountPointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -165,8 +168,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Currently, only one VSC can be associated with multiple mount points. Specifically, the values of AttachInfos.InstanceId or AttachInfos.VscId must be equal.</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量挂载VSC挂载点</p>
+     * <p>Mounts multiple VSC mount points.</p>
      * 
      * @param request AttachVscToMountPointsRequest
      * @return AttachVscToMountPointsResponse
@@ -177,6 +183,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Associates a VSC mount point alias with a file system.</p>
+     * 
      * @param request BindVscMountPointAliasRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BindVscMountPointAliasResponse
@@ -218,6 +227,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Associates a VSC mount point alias with a file system.</p>
+     * 
      * @param request BindVscMountPointAliasRequest
      * @return BindVscMountPointAliasResponse
      */
@@ -227,6 +239,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an access group.</p>
+     * 
      * @param request CreateAccessGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAccessGroupResponse
@@ -268,6 +283,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an access group.</p>
+     * 
      * @param request CreateAccessGroupRequest
      * @return CreateAccessGroupResponse
      */
@@ -277,6 +295,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an access group rule.</p>
+     * 
      * @param request CreateAccessRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAccessRuleResponse
@@ -326,6 +347,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an access group rule.</p>
+     * 
      * @param request CreateAccessRuleRequest
      * @return CreateAccessRuleResponse
      */
@@ -335,6 +359,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you create a file system, learn about the <a href="https://help.aliyun.com/document_detail/419020.html">billing methods</a> and <a href="https://www.aliyun.com/price/product?spm=a2c4g.11186623.0.0.476a13d7VQohVH#/alidfs/detail/alidfs">pricing of Apsara File Storage for HDFS</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a file system.</p>
+     * 
      * @param request CreateFileSystemRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateFileSystemResponse
@@ -360,6 +390,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.inputRegionId)) {
             query.put("InputRegionId", request.inputRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.meteringMode)) {
+            query.put("MeteringMode", request.meteringMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.partitionNumber)) {
@@ -412,6 +446,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you create a file system, learn about the <a href="https://help.aliyun.com/document_detail/419020.html">billing methods</a> and <a href="https://www.aliyun.com/price/product?spm=a2c4g.11186623.0.0.476a13d7VQohVH#/alidfs/detail/alidfs">pricing of Apsara File Storage for HDFS</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a file system.</p>
+     * 
      * @param request CreateFileSystemRequest
      * @return CreateFileSystemResponse
      */
@@ -421,6 +461,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a mount target.</p>
+     * 
      * @param request CreateMountPointRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateMountPointResponse
@@ -478,6 +521,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a mount target.</p>
+     * 
      * @param request CreateMountPointRequest
      * @return CreateMountPointResponse
      */
@@ -551,6 +597,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ZoneIds", request.zoneIdsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.storageType)) {
+            query.put("storageType", request.storageType);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -581,8 +631,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The user and group mapping feature is currently in invitational preview. To use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket?spm=a2c4g.11186623.0.0.24241ee9gQPwnE">submit a ticket</a>.</li>
+     * <li>File system permission management in Apsara File Storage for HDFS relies on the users and groups of files. You must manage user and group mappings by calling API operations. For more information about the directory and file access permissions of Apsara File Storage for HDFS file systems, see <a href="https://help.aliyun.com/document_detail/430865.html">Directory and file access permissions</a>.</li>
+     * <li>The number of users and groups in a single file system is subject to the following limits:<ul>
+     * <li>A single file system can have a maximum of 1,000 users.</li>
+     * <li>A single file system can have a maximum of 30 groups.</li>
+     * <li>Each user can belong to a maximum of 10 groups.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建 ugo</p>
+     * <p>Creates a user and group mapping for an Apsara File Storage for HDFS file system instance.</p>
      * 
      * @param tmpReq CreateUserGroupsMappingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -615,8 +677,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The user and group mapping feature is currently in invitational preview. To use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket?spm=a2c4g.11186623.0.0.24241ee9gQPwnE">submit a ticket</a>.</li>
+     * <li>File system permission management in Apsara File Storage for HDFS relies on the users and groups of files. You must manage user and group mappings by calling API operations. For more information about the directory and file access permissions of Apsara File Storage for HDFS file systems, see <a href="https://help.aliyun.com/document_detail/430865.html">Directory and file access permissions</a>.</li>
+     * <li>The number of users and groups in a single file system is subject to the following limits:<ul>
+     * <li>A single file system can have a maximum of 1,000 users.</li>
+     * <li>A single file system can have a maximum of 30 groups.</li>
+     * <li>Each user can belong to a maximum of 10 groups.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建 ugo</p>
+     * <p>Creates a user and group mapping for an Apsara File Storage for HDFS file system instance.</p>
      * 
      * @param request CreateUserGroupsMappingRequest
      * @return CreateUserGroupsMappingResponse
@@ -627,6 +701,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a VSC mount target.</p>
+     * 
      * @param tmpReq CreateVscMountPointRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateVscMountPointResponse
@@ -674,6 +751,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a VSC mount target.</p>
+     * 
      * @param request CreateVscMountPointRequest
      * @return CreateVscMountPointResponse
      */
@@ -683,6 +763,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The default VPC permission group (DefaultAccessGroupName) cannot be deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a permission group.</p>
+     * 
      * @param request DeleteAccessGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAccessGroupResponse
@@ -716,6 +802,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The default VPC permission group (DefaultAccessGroupName) cannot be deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a permission group.</p>
+     * 
      * @param request DeleteAccessGroupRequest
      * @return DeleteAccessGroupResponse
      */
@@ -725,6 +817,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a permission group rule.</p>
+     * 
      * @param request DeleteAccessRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAccessRuleResponse
@@ -762,6 +857,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a permission group rule.</p>
+     * 
      * @param request DeleteAccessRuleRequest
      * @return DeleteAccessRuleResponse
      */
@@ -771,6 +869,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>You can delete a file system instance only when the number of mount targets for the file system is 0.</li>
+     * <li>Once a file system instance is deleted, its data cannot be recovered. Proceed with caution.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an existing file system.</p>
+     * 
      * @param request DeleteFileSystemRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteFileSystemResponse
@@ -804,6 +911,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>You can delete a file system instance only when the number of mount targets for the file system is 0.</li>
+     * <li>Once a file system instance is deleted, its data cannot be recovered. Proceed with caution.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an existing file system.</p>
+     * 
      * @param request DeleteFileSystemRequest
      * @return DeleteFileSystemResponse
      */
@@ -813,6 +929,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>API Guide</h3>
+     * <p>After a mount target is deleted, it cannot be recovered. Proceed with caution.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete a mount target.</p>
+     * 
      * @param request DeleteMountPointRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteMountPointResponse
@@ -850,6 +973,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>API Guide</h3>
+     * <p>After a mount target is deleted, it cannot be recovered. Proceed with caution.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete a mount target.</p>
+     * 
      * @param request DeleteMountPointRequest
      * @return DeleteMountPointResponse
      */
@@ -915,8 +1045,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The user and group mapping feature is currently in invitational preview. To use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket?spm=a2c4g.11186623.0.0.24241ee9gQPwnE">submit a ticket</a>.</li>
+     * <li>Permission management for Apsara File Storage for HDFS file systems relies on file users and groups. You must manage user and group mappings by using OpenAPI. For more information about directory and file access permissions in Apsara File Storage for HDFS, see <a href="https://help.aliyun.com/document_detail/430865.html">Directory and file access permissions</a>.</li>
+     * <li>You cannot delete users and groups from a file system. You can only delete the mappings between users and groups. Once a user or group is added to a file system in any way, it cannot be deleted.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除 ugo</p>
+     * <p>Deletes the mappings between users and groups for an Apsara File Storage for HDFS file system instance.</p>
      * 
      * @param tmpReq DeleteUserGroupsMappingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -949,8 +1086,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The user and group mapping feature is currently in invitational preview. To use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket?spm=a2c4g.11186623.0.0.24241ee9gQPwnE">submit a ticket</a>.</li>
+     * <li>Permission management for Apsara File Storage for HDFS file systems relies on file users and groups. You must manage user and group mappings by using OpenAPI. For more information about directory and file access permissions in Apsara File Storage for HDFS, see <a href="https://help.aliyun.com/document_detail/430865.html">Directory and file access permissions</a>.</li>
+     * <li>You cannot delete users and groups from a file system. You can only delete the mappings between users and groups. Once a user or group is added to a file system in any way, it cannot be deleted.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除 ugo</p>
+     * <p>Deletes the mappings between users and groups for an Apsara File Storage for HDFS file system instance.</p>
      * 
      * @param request DeleteUserGroupsMappingRequest
      * @return DeleteUserGroupsMappingResponse
@@ -961,6 +1105,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes an existing VSC mount point.</p>
+     * 
      * @param request DeleteVscMountPointRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteVscMountPointResponse
@@ -998,6 +1145,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes an existing VSC mount point.</p>
+     * 
      * @param request DeleteVscMountPointRequest
      * @return DeleteVscMountPointResponse
      */
@@ -1007,8 +1157,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Supports only one-to-many mappings from a storage resource (MountPointId) to multiple compute resources (InstanceId and VscId), and one-to-many mappings from a compute resource (InstanceId and VscId) to multiple storage resources (MountPointId).</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量挂载VSC挂载点</p>
+     * <p>Queries the mount information of VSCs in batches.</p>
      * 
      * @param tmpReq DescribeMountPointsVscAttachInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1061,8 +1214,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Supports only one-to-many mappings from a storage resource (MountPointId) to multiple compute resources (InstanceId and VscId), and one-to-many mappings from a compute resource (InstanceId and VscId) to multiple storage resources (MountPointId).</p>
+     * 
      * <b>summary</b> : 
-     * <p>批量挂载VSC挂载点</p>
+     * <p>Queries the mount information of VSCs in batches.</p>
      * 
      * @param request DescribeMountPointsVscAttachInfoRequest
      * @return DescribeMountPointsVscAttachInfoResponse
@@ -1073,6 +1229,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the available Alibaba Cloud regions.</p>
+     * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRegionsResponse
@@ -1106,6 +1265,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the available Alibaba Cloud regions.</p>
+     * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
@@ -1116,7 +1278,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询VSC挂载信息</p>
+     * <p>Retrieves a list of VSC mount points.</p>
      * 
      * @param request DescribeVscMountPointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1168,7 +1330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询VSC挂载信息</p>
+     * <p>Retrieves a list of VSC mount points.</p>
      * 
      * @param request DescribeVscMountPointsRequest
      * @return DescribeVscMountPointsResponse
@@ -1180,7 +1342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量卸载VSC 挂载点</p>
+     * <p>Unmounts multiple VSC mount points.</p>
      * 
      * @param tmpReq DetachVscFromMountPointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1226,7 +1388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量卸载VSC 挂载点</p>
+     * <p>Unmounts multiple VSC mount points.</p>
      * 
      * @param request DetachVscFromMountPointsRequest
      * @return DetachVscFromMountPointsResponse
@@ -1237,6 +1399,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disassociates compute instances from a mount point.</p>
+     * 
      * @param tmpReq DetachVscMountPointRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DetachVscMountPointResponse
@@ -1300,6 +1465,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disassociates compute instances from a mount point.</p>
+     * 
      * @param request DetachVscMountPointRequest
      * @return DetachVscMountPointResponse
      */
@@ -1309,6 +1477,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the information about an access group.</p>
+     * 
      * @param request GetAccessGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAccessGroupResponse
@@ -1342,6 +1513,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the information about an access group.</p>
+     * 
      * @param request GetAccessGroupRequest
      * @return GetAccessGroupResponse
      */
@@ -1351,6 +1525,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Query permission group rule information.</p>
+     * 
      * @param request GetAccessRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAccessRuleResponse
@@ -1388,6 +1565,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Query permission group rule information.</p>
+     * 
      * @param request GetAccessRuleRequest
      * @return GetAccessRuleResponse
      */
@@ -1397,6 +1577,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the file system information.</p>
+     * 
      * @param request GetFileSystemRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetFileSystemResponse
@@ -1430,6 +1613,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the file system information.</p>
+     * 
      * @param request GetFileSystemRequest
      * @return GetFileSystemResponse
      */
@@ -1439,6 +1625,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a mount point.</p>
+     * 
      * @param request GetMountPointRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMountPointResponse
@@ -1476,6 +1665,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a mount point.</p>
+     * 
      * @param request GetMountPointRequest
      * @return GetMountPointResponse
      */
@@ -1485,6 +1677,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the configuration information for each zone in a specified region.</p>
+     * 
      * @param request GetRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRegionResponse
@@ -1514,6 +1709,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the configuration information for each zone in a specified region.</p>
+     * 
      * @param request GetRegionRequest
      * @return GetRegionResponse
      */
@@ -1523,6 +1721,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of access groups in batches.</p>
+     * 
      * @param request ListAccessGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAccessGroupsResponse
@@ -1572,6 +1773,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of access groups in batches.</p>
+     * 
      * @param request ListAccessGroupsRequest
      * @return ListAccessGroupsResponse
      */
@@ -1581,6 +1785,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries access group rules.</p>
+     * 
      * @param request ListAccessRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAccessRulesResponse
@@ -1634,6 +1841,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries access group rules.</p>
+     * 
      * @param request ListAccessRulesRequest
      * @return ListAccessRulesResponse
      */
@@ -1703,6 +1913,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of multiple file systems.</p>
+     * 
      * @param request ListFileSystemsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListFileSystemsResponse
@@ -1752,6 +1965,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of multiple file systems.</p>
+     * 
      * @param request ListFileSystemsRequest
      * @return ListFileSystemsResponse
      */
@@ -1761,6 +1977,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries mount point information in batches.</p>
+     * 
      * @param request ListMountPointsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListMountPointsResponse
@@ -1814,6 +2033,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries mount point information in batches.</p>
+     * 
      * @param request ListMountPointsRequest
      * @return ListMountPointsResponse
      */
@@ -1883,8 +2105,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The permission management of Apsara File Storage for HDFS file systems relies on file users and groups. You must manage user and group mappings by calling API operations. For more information about directory and file access permissions in Apsara File Storage for HDFS, see <a href="https://help.aliyun.com/document_detail/430865.html">Directory and file access permissions</a>.
+     * The number of users and groups in a single file system is subject to the following limits:</p>
+     * <ul>
+     * <li>A single file system supports up to 1,000 users.</li>
+     * <li>A single file system supports up to 30 groups.</li>
+     * <li>Each user can belong to up to 10 groups.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>list ugm</p>
+     * <p>Queries the user and group mappings of an Apsara File Storage for HDFS file system instance.</p>
      * 
      * @param request ListUserGroupsMappingsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1927,8 +2158,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The permission management of Apsara File Storage for HDFS file systems relies on file users and groups. You must manage user and group mappings by calling API operations. For more information about directory and file access permissions in Apsara File Storage for HDFS, see <a href="https://help.aliyun.com/document_detail/430865.html">Directory and file access permissions</a>.
+     * The number of users and groups in a single file system is subject to the following limits:</p>
+     * <ul>
+     * <li>A single file system supports up to 1,000 users.</li>
+     * <li>A single file system supports up to 30 groups.</li>
+     * <li>Each user can belong to up to 10 groups.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>list ugm</p>
+     * <p>Queries the user and group mappings of an Apsara File Storage for HDFS file system instance.</p>
      * 
      * @param request ListUserGroupsMappingsRequest
      * @return ListUserGroupsMappingsResponse
@@ -1939,6 +2179,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The default VPC permission group (DefaultAccessGroupName) cannot be modified.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the information of a permission group.</p>
+     * 
      * @param request ModifyAccessGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAccessGroupResponse
@@ -1980,6 +2226,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The default VPC permission group (DefaultAccessGroupName) cannot be modified.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the information of a permission group.</p>
+     * 
      * @param request ModifyAccessGroupRequest
      * @return ModifyAccessGroupResponse
      */
@@ -1989,6 +2241,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Rules in the default VPC permission group (DefaultAccessGroupName) cannot be modified.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a permission group rule.</p>
+     * 
      * @param request ModifyAccessRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAccessRuleResponse
@@ -2038,6 +2296,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Rules in the default VPC permission group (DefaultAccessGroupName) cannot be modified.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a permission group rule.</p>
+     * 
      * @param request ModifyAccessRuleRequest
      * @return ModifyAccessRuleResponse
      */
@@ -2047,6 +2311,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before modifying a file system, review the <a href="https://help.aliyun.com/document_detail/419020.html">billing methods</a> and <a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.3fbc281fRrtedx#/alidfs/detail/alidfs">pricing of Apsara File Storage for HDFS</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the attributes of a file system.</p>
+     * 
      * @param request ModifyFileSystemRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyFileSystemResponse
@@ -2068,6 +2338,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.inputRegionId)) {
             query.put("InputRegionId", request.inputRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.meteringMode)) {
+            query.put("MeteringMode", request.meteringMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.provisionedThroughputInMiBps)) {
@@ -2100,6 +2374,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before modifying a file system, review the <a href="https://help.aliyun.com/document_detail/419020.html">billing methods</a> and <a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.3fbc281fRrtedx#/alidfs/detail/alidfs">pricing of Apsara File Storage for HDFS</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the attributes of a file system.</p>
+     * 
      * @param request ModifyFileSystemRequest
      * @return ModifyFileSystemResponse
      */
@@ -2109,6 +2389,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the information of a mount point.</p>
+     * 
      * @param request ModifyMountPointRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyMountPointResponse
@@ -2158,6 +2441,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the information of a mount point.</p>
+     * 
      * @param request ModifyMountPointRequest
      * @return ModifyMountPointResponse
      */

@@ -4,10 +4,15 @@ package com.aliyun.dfs20180620.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The collection of region information.</p>
+     */
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2B51751B-F837-49AA-8EF3-B2B10703****</p>
      */
@@ -36,10 +41,18 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
+        /**
+         * <p>The region name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Hangzhou)</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
         /**
+         * <p>The endpoint of the region.</p>
+         * 
          * <strong>example:</strong>
          * <p>dfs.cn-hangzhou.aliyuncs.com</p>
          */
@@ -47,6 +60,8 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public String regionEndpoint;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -85,6 +100,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
+        /**
+         * <p>The region information.</p>
+         */
         @NameInMap("Region")
         public java.util.List<DescribeRegionsResponseBodyRegionsRegion> region;
 

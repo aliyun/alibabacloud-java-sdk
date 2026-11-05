@@ -4,10 +4,15 @@ package com.aliyun.dfs20180620.models;
 import com.aliyun.tea.*;
 
 public class DescribeVscMountPointsResponseBody extends TeaModel {
+    /**
+     * <p>The mount point information.</p>
+     */
     @NameInMap("MountPoints")
     public java.util.List<DescribeVscMountPointsResponseBodyMountPoints> mountPoints;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of returned entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -51,15 +58,42 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
     }
 
     public static class DescribeVscMountPointsResponseBodyMountPointsInstancesVscs extends TeaModel {
+        /**
+         * <p>VSC ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsc-asjodjoio****</p>
+         */
         @NameInMap("VscId")
         public String vscId;
 
         @NameInMap("VscName")
         public String vscName;
 
+        /**
+         * <p>The mount status of the VSC. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: The mount operation succeeded.</li>
+         * <li>CREATING: The mount operation is in progress.</li>
+         * <li>INVALID: The mount operation failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("VscStatus")
         public String vscStatus;
 
+        /**
+         * <p>The VSC type. Valid values:</p>
+         * <ul>
+         * <li>Primary (default): The reserved default VSC on the ECS instance.</li>
+         * <li>Secondary: The reusable VSC on the ECS instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Primary</p>
+         */
         @NameInMap("VscType")
         public String vscType;
 
@@ -104,19 +138,31 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
 
     public static class DescribeVscMountPointsResponseBodyMountPointsInstances extends TeaModel {
         /**
+         * <p>The instance ID of the ECS instance on which the HDFS file system is mounted.</p>
+         * 
          * <strong>example:</strong>
-         * <p>[&quot;ecs-instance1&quot;, &quot;ecs-instance2&quot;]</p>
+         * <p>i-bp1g6zv0ce8oghu7****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
+         * <p>The instance status of the ECS instance on which the HDFS file system is mounted. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: The mount operation succeeded.</li>
+         * <li>CREATING: The mount operation is in progress.</li>
+         * <li>INVALID: The mount operation failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>AVAILABLE</p>
+         * <p>NORMAL</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The list of VSCs on which the HDFS file system is mounted.</p>
+         */
         @NameInMap("Vscs")
         public java.util.List<DescribeVscMountPointsResponseBodyMountPointsInstancesVscs> vscs;
 
@@ -152,20 +198,33 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
     }
 
     public static class DescribeVscMountPointsResponseBodyMountPoints extends TeaModel {
+        /**
+         * <p>The description of the mount point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The HDFS file system mounted on the internal instance</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The number of ECS instances to which the HDFS file system is to be mounted.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("InstanceTotalCount")
         public Integer instanceTotalCount;
 
+        /**
+         * <p>The ECS instances on which the HDFS file system is mounted.</p>
+         */
         @NameInMap("Instances")
         public java.util.List<DescribeVscMountPointsResponseBodyMountPointsInstances> instances;
 
         /**
+         * <p>The alias of the mount point.</p>
+         * 
          * <strong>example:</strong>
          * <p>hdfs1</p>
          */
@@ -173,8 +232,10 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
         public String mountPointAlias;
 
         /**
+         * <p>The mount point ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>037cb49e1d-c***5</p>
+         * <p>f-037cb49e1d-c****.dfs.aliyuncs.com</p>
          */
         @NameInMap("MountPointId")
         public String mountPointId;

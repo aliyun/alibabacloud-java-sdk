@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetFileSystemRequest extends TeaModel {
     /**
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>37af8f42-2abc-4e74-889d-664f5163****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

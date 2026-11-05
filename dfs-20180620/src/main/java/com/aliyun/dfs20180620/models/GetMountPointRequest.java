@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetMountPointRequest extends TeaModel {
     /**
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>37af8f42-2abc-4e74-889d-664f5163****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,7 +25,11 @@ public class GetMountPointRequest extends TeaModel {
     public String inputRegionId;
 
     /**
+     * <p>The mount point ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f-37af8f42f****.cn-hangzhou.dfs.aliyuncs.com</p>
      */
     @NameInMap("MountPointId")
     public String mountPointId;

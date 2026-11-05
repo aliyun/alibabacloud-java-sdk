@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateVscMountPointResponseBody extends TeaModel {
     /**
+     * <p>The mount target ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>e389e5c7-bcb4-4558-846a-e5afc444****</p>
      */
@@ -12,6 +14,8 @@ public class CreateVscMountPointResponseBody extends TeaModel {
     public String mountPointId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
      */

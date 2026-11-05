@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BindVscMountPointAliasResponseBody extends TeaModel {
     /**
+     * <p>The mount point alias.</p>
+     * 
      * <strong>example:</strong>
      * <p>sdfe</p>
      */
@@ -12,6 +14,8 @@ public class BindVscMountPointAliasResponseBody extends TeaModel {
     public String mountPointAlias;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
      */

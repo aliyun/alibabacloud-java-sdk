@@ -4,10 +4,15 @@ package com.aliyun.dfs20180620.models;
 import com.aliyun.tea.*;
 
 public class GetRegionResponseBody extends TeaModel {
+    /**
+     * <p>The collection of zone information.</p>
+     */
     @NameInMap("AvailableZones")
     public java.util.List<GetRegionResponseBodyAvailableZones> availableZones;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AEC07154-5A4C-4B34-BB74-0893C6E9****</p>
      */
@@ -37,6 +42,8 @@ public class GetRegionResponseBody extends TeaModel {
 
     public static class GetRegionResponseBodyAvailableZonesOptions extends TeaModel {
         /**
+         * <p>The protocol type. Only Hadoop Distributed File System (HDFS) is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>HDFS</p>
          */
@@ -44,6 +51,12 @@ public class GetRegionResponseBody extends TeaModel {
         public String protocolType;
 
         /**
+         * <p>The storage medium type. Valid values:</p>
+         * <ul>
+         * <li>STANDARD: Standard.</li>
+         * <li>PERFORMANCE: Performance.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>STANDARD</p>
          */
@@ -74,10 +87,15 @@ public class GetRegionResponseBody extends TeaModel {
     }
 
     public static class GetRegionResponseBodyAvailableZones extends TeaModel {
+        /**
+         * <p>The list of configurations.</p>
+         */
         @NameInMap("Options")
         public java.util.List<GetRegionResponseBodyAvailableZonesOptions> options;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-b</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAccessRuleRequest extends TeaModel {
     /**
+     * <p>The ID of the permission group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyAccessRuleRequest extends TeaModel {
     public String accessGroupId;
 
     /**
+     * <p>The ID of the permission group rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +24,18 @@ public class ModifyAccessRuleRequest extends TeaModel {
     @NameInMap("AccessRuleId")
     public String accessRuleId;
 
+    /**
+     * <p>The description of the permission group rule.</p>
+     * <p>The description can be up to 32 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CIDR block of the log upload server</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +45,9 @@ public class ModifyAccessRuleRequest extends TeaModel {
     public String inputRegionId;
 
     /**
+     * <p>The priority of the permission group rule.</p>
+     * <p>Valid values: 1 to 100. A value of 1 indicates the highest priority.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -42,6 +55,13 @@ public class ModifyAccessRuleRequest extends TeaModel {
     public Integer priority;
 
     /**
+     * <p>The read and write permissions that the authorized object has on the file system.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>RDWR: read and write</li>
+     * <li>RDONLY: read-only</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>RDWR</p>
      */

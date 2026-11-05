@@ -4,10 +4,18 @@ package com.aliyun.dfs20180620.models;
 import com.aliyun.tea.*;
 
 public class CreateVscMountPointRequest extends TeaModel {
+    /**
+     * <p>The description of the mount target.</p>
+     * <p>The description must be 0 to 100 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HDFS file system mounted on internal instances</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +25,7 @@ public class CreateVscMountPointRequest extends TeaModel {
     public String fileSystemId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +35,9 @@ public class CreateVscMountPointRequest extends TeaModel {
     public String inputRegionId;
 
     /**
+     * <p>The IDs of the ECS instances to which you want to mount the Apsara File Storage for HDFS file system. </p>
+     * <p>Separate multiple ECS instance IDs with commas (,). You can specify up to 100 ECS instance IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>[
      *       &quot;i-bp1g6zv0ce8oghu7****&quot;,

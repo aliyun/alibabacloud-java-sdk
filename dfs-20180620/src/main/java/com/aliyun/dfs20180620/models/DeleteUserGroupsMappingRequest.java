@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteUserGroupsMappingRequest extends TeaModel {
     /**
+     * <p>The instance ID of the Apsara File Storage for HDFS file system.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,17 @@ public class DeleteUserGroupsMappingRequest extends TeaModel {
     public String fileSystemId;
 
     /**
+     * <p>The names of the groups to which the user belongs.
+     * Limits:</p>
+     * <ul>
+     * <li><p>Must start with a letter or an underscore (_).</p>
+     * </li>
+     * <li><p>Must be 1 to 32 characters in length and cannot be empty.</p>
+     * </li>
+     * <li><p>Can contain only lowercase letters, digits, and underscores (_).</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;group1&quot;,&quot;group2&quot;]</p>
      */
@@ -21,6 +33,7 @@ public class DeleteUserGroupsMappingRequest extends TeaModel {
     public java.util.List<String> groupNames;
 
     /**
+     * <p>The region where the file system resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +43,19 @@ public class DeleteUserGroupsMappingRequest extends TeaModel {
     public String inputRegionId;
 
     /**
+     * <p>The username.
+     * Limits:</p>
+     * <ul>
+     * <li><p>Must start with a letter or an underscore (_).</p>
+     * </li>
+     * <li><p>Must be 1 to 32 characters in length and cannot be empty.</p>
+     * </li>
+     * <li><p>Can contain only lowercase letters, digits, and underscores (_).</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>Each user can belong to up to 10 groups.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

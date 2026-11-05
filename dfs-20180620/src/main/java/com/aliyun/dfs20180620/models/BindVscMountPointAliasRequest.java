@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindVscMountPointAliasRequest extends TeaModel {
     /**
+     * <p>The mount point alias.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,15 +15,17 @@ public class BindVscMountPointAliasRequest extends TeaModel {
     public String aliasPrefix;
 
     /**
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>037****e1d</p>
+     * <p>e389e5c7-bcb4-4558-846a-e5afc444****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,10 +35,11 @@ public class BindVscMountPointAliasRequest extends TeaModel {
     public String inputRegionId;
 
     /**
+     * <p>The mount point ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>037cb49e1d-c***5</p>
+     * <p>f-037cb49e1d-c****.dfs.aliyuncs.com</p>
      */
     @NameInMap("MountPointId")
     public String mountPointId;

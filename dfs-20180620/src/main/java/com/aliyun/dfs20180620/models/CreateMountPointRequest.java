@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMountPointRequest extends TeaModel {
     /**
+     * <p>The access group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,16 +14,27 @@ public class CreateMountPointRequest extends TeaModel {
     @NameInMap("AccessGroupId")
     public String accessGroupId;
 
+    /**
+     * <p>The description of the mount target. The value can be up to 32 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Mount the online HDFS to the vSwitch of the VPC log cluster</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>37af8f42-2abc-4e74-889d-664f5163****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +44,7 @@ public class CreateMountPointRequest extends TeaModel {
     public String inputRegionId;
 
     /**
+     * <p>The network type of the mount target. Only VPC is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,10 +53,21 @@ public class CreateMountPointRequest extends TeaModel {
     @NameInMap("NetworkType")
     public String networkType;
 
+    /**
+     * <p>Specifies whether to use the high-performance mount target mode. Valid values:</p>
+     * <ul>
+     * <li>true: Uses the mode.</li>
+     * <li>false: Does not use the mode.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("UsePerformanceMode")
     public Boolean usePerformanceMode;
 
     /**
+     * <p>The vSwitch ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +77,7 @@ public class CreateMountPointRequest extends TeaModel {
     public String vSwitchId;
 
     /**
+     * <p>The VPC ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

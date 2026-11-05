@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAccessGroupRequest extends TeaModel {
     /**
+     * <p>The permission group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteAccessGroupRequest extends TeaModel {
     public String accessGroupId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAccessRuleRequest extends TeaModel {
     /**
+     * <p>The ID of the permission group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteAccessRuleRequest extends TeaModel {
     public String accessGroupId;
 
     /**
+     * <p>The ID of the permission group rule to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DeleteAccessRuleRequest extends TeaModel {
     public String accessRuleId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

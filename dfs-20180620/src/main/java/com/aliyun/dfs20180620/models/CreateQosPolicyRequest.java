@@ -37,6 +37,9 @@ public class CreateQosPolicyRequest extends TeaModel {
     @NameInMap("ZoneIds")
     public java.util.List<String> zoneIds;
 
+    @NameInMap("storageType")
+    public String storageType;
+
     public static CreateQosPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateQosPolicyRequest self = new CreateQosPolicyRequest();
         return TeaModel.build(map, self);
@@ -120,6 +123,14 @@ public class CreateQosPolicyRequest extends TeaModel {
     }
     public java.util.List<String> getZoneIds() {
         return this.zoneIds;
+    }
+
+    public CreateQosPolicyRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
 }

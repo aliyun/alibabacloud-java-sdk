@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUserGroupsMappingsResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether more data is available when paging is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class ListUserGroupsMappingsResponseBody extends TeaModel {
     public Boolean hasMore;
 
     /**
+     * <p>The NextToken value for the next paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>user1</p>
      */
@@ -19,12 +23,17 @@ public class ListUserGroupsMappingsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>55C5FFD6-BF99-41BD-9C66-FFF39189****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The mappings between users and groups in the file system.</p>
+     */
     @NameInMap("UserGroupsMappings")
     public java.util.List<ListUserGroupsMappingsResponseBodyUserGroupsMappings> userGroupsMappings;
 
@@ -66,10 +75,15 @@ public class ListUserGroupsMappingsResponseBody extends TeaModel {
     }
 
     public static class ListUserGroupsMappingsResponseBodyUserGroupsMappings extends TeaModel {
+        /**
+         * <p>The list of groups to which the user belongs.</p>
+         */
         @NameInMap("GroupNames")
         public java.util.List<String> groupNames;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>user1</p>
          */

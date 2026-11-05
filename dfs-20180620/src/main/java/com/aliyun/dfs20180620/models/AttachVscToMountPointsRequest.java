@@ -4,10 +4,14 @@ package com.aliyun.dfs20180620.models;
 import com.aliyun.tea.*;
 
 public class AttachVscToMountPointsRequest extends TeaModel {
+    /**
+     * <p>The mount information list.</p>
+     */
     @NameInMap("AttachInfos")
     public java.util.List<AttachVscToMountPointsRequestAttachInfos> attachInfos;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,12 @@ public class AttachVscToMountPointsRequest extends TeaModel {
     public String inputRegionId;
 
     /**
+     * <p>Specifies whether to use an assumed role to check the permissions of the compute node. Valid values:</p>
+     * <ul>
+     * <li>true: Yes.</li>
+     * <li>false (default): No.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -54,6 +64,8 @@ public class AttachVscToMountPointsRequest extends TeaModel {
 
     public static class AttachVscToMountPointsRequestAttachInfos extends TeaModel {
         /**
+         * <p>The instance ID of the ECS instance to which the HDFS file system is mounted.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-2zehyz70ednszl6rrfj6</p>
          */
@@ -61,6 +73,8 @@ public class AttachVscToMountPointsRequest extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The mount point ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>f-cfea9ae2ref87.cn-zhangjiakou.dfs.aliyuncs.com</p>
          */
@@ -68,6 +82,8 @@ public class AttachVscToMountPointsRequest extends TeaModel {
         public String mountPointId;
 
         /**
+         * <p>The VSC ID. You must specify either InstanceId or VscId, but not both.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsc-bp19yqmujug2r762cnabal</p>
          */
@@ -75,6 +91,8 @@ public class AttachVscToMountPointsRequest extends TeaModel {
         public String vscId;
 
         /**
+         * <p>The custom name of the VSC.</p>
+         * 
          * <strong>example:</strong>
          * <p>xc</p>
          */
@@ -82,6 +100,12 @@ public class AttachVscToMountPointsRequest extends TeaModel {
         public String vscName;
 
         /**
+         * <p>The VSC type. Valid values:</p>
+         * <ul>
+         * <li>Primary (default): the reserved default VSC on an ECS instance.</li>
+         * <li>Secondary: a repeatable VSC on an ECS instance.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Primary</p>
          */

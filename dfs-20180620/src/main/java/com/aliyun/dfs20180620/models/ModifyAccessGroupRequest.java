@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAccessGroupRequest extends TeaModel {
     /**
+     * <p>The ID of the permission group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,16 +15,33 @@ public class ModifyAccessGroupRequest extends TeaModel {
     public String accessGroupId;
 
     /**
+     * <p>The name of the permission group. The naming rules are as follows:</p>
+     * <ul>
+     * <li><p>The name must be 6 to 64 characters in length.</p>
+     * </li>
+     * <li><p>The name must be globally unique and cannot be an empty string.</p>
+     * </li>
+     * <li><p>The name can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>my-online-cluster-policy</p>
      */
     @NameInMap("AccessGroupName")
     public String accessGroupName;
 
+    /**
+     * <p>The description of the permission group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Dedicated policy for production cluster CIDR blocks</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
