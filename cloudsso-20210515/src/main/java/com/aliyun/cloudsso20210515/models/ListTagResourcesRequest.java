@@ -14,7 +14,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The token that is used to retrieve the next page of results when the response is truncated.</p>
+     * <p>The pagination token that is used to retrieve the next page of results when the response is truncated.</p>
      * 
      * <strong>example:</strong>
      * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
@@ -37,16 +37,18 @@ public class ListTagResourcesRequest extends TeaModel {
      * </li>
      * </ul>
      * </blockquote>
-     * <p><notice>If the DirectoryId parameter is not specified, you must add the prefix &quot;${DirectoryId}_&quot; to the resource ID.</notice></p>
+     * <p><notice>If the DirectoryId parameter is not specified, you must add the &quot;${DirectoryId}_&quot; prefix to the resource ID.</notice></p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Valid values:</p>
+     * <p>The resource type. Users and access configurations are supported. Valid values:</p>
      * <ul>
-     * <li>user: The resource is a user.</li>
-     * <li>accessConfiguration: The resource is an access configuration.</li>
+     * <li><p>user: user</p>
+     * </li>
+     * <li><p>accessConfiguration: access configuration</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

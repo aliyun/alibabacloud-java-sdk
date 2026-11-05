@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags. This parameter takes effect only when the list of tag keys is empty.</p>
+     * <p>Specifies whether to remove all tags. This parameter takes effect only when the tag key list is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -26,7 +26,7 @@ public class UntagResourcesRequest extends TeaModel {
      * <p>The list of resource IDs. You can specify up to 50 resource IDs in a single call.</p>
      * <blockquote>
      * <ul>
-     * <li>Supported resource types include users and access configurations:</li>
+     * <li>The resource type can be user or access configuration:</li>
      * <li><ul>
      * <li>If the resource type is user, specify the user ID.</li>
      * </ul>
@@ -37,14 +37,14 @@ public class UntagResourcesRequest extends TeaModel {
      * </li>
      * </ul>
      * </blockquote>
-     * <p><notice>If the DirectoryId parameter is not specified, you must add the prefix &quot;${DirectoryId}_&quot; to the resource ID.</notice></p>
+     * <p><notice>If the DirectoryId parameter is not specified, you must add the &quot;${DirectoryId}_&quot; prefix to the resource ID.</notice></p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Users and access configurations are supported. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
      * <li>user: user</li>
      * <li>accessConfiguration: access configuration</li>

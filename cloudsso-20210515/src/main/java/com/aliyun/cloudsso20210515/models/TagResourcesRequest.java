@@ -14,21 +14,21 @@ public class TagResourcesRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The list of resource IDs. You can specify up to 50 resource IDs in a single call.</p>
+     * <p>The list of resource IDs. You can add up to 50 resource IDs in a single call.</p>
      * <blockquote>
      * <ul>
      * <li>Supported resource types include users and access configurations:</li>
      * <li><ul>
-     * <li>If the resource type is user, specify the user ID.</li>
+     * <li>User: Enter the user ID.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>If the resource type is access configuration, specify the access configuration ID.</li>
+     * <li>Access configuration: Enter the access configuration ID.</li>
      * </ul>
      * </li>
      * </ul>
      * </blockquote>
-     * <p><notice>If the directory ID parameter is not specified, you must add the prefix &quot;${DirectoryId}_&quot; to the resource ID.</notice></p>
+     * <p><notice>If the DirectoryId parameter is not specified, you must add the prefix &quot;${DirectoryId}_&quot; to the resource ID.</notice></p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
@@ -37,9 +37,9 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The resource type. Users and access configurations are supported.</p>
      * <ul>
-     * <li><p>If the resource type is user, set the value to user.</p>
+     * <li><p>user: user.</p>
      * </li>
-     * <li><p>If the resource type is access configuration, set the value to accessConfiguration.</p>
+     * <li><p>accessConfiguration: access configuration.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

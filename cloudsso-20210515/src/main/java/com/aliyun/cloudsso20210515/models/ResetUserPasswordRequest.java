@@ -54,6 +54,13 @@ public class ResetUserPasswordRequest extends TeaModel {
     public Boolean requirePasswordResetForNextLogin;
 
     /**
+     * <strong>example:</strong>
+     * <p>DirectPassword</p>
+     */
+    @NameInMap("ResetMethod")
+    public String resetMethod;
+
+    /**
      * <p>The user ID.</p>
      * 
      * <strong>example:</strong>
@@ -97,6 +104,14 @@ public class ResetUserPasswordRequest extends TeaModel {
     }
     public Boolean getRequirePasswordResetForNextLogin() {
         return this.requirePasswordResetForNextLogin;
+    }
+
+    public ResetUserPasswordRequest setResetMethod(String resetMethod) {
+        this.resetMethod = resetMethod;
+        return this;
+    }
+    public String getResetMethod() {
+        return this.resetMethod;
     }
 
     public ResetUserPasswordRequest setUserId(String userId) {

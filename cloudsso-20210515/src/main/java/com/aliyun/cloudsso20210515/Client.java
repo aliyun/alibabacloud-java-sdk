@@ -3428,7 +3428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the relationships between resources and tags.</p>
+     * <p>Queries the associations between resources and tags.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3476,7 +3476,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the relationships between resources and tags.</p>
+     * <p>Queries the associations between resources and tags.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -4048,6 +4048,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RequirePasswordResetForNextLogin", request.requirePasswordResetForNextLogin);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resetMethod)) {
+            query.put("ResetMethod", request.resetMethod);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
             query.put("UserId", request.userId);
         }
@@ -4484,7 +4488,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tags resources.</p>
+     * <p>Adds tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4528,7 +4532,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tags resources.</p>
+     * <p>Adds tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -4540,7 +4544,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Untags resources.</p>
+     * <p>Removes tags from resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4588,7 +4592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Untags resources.</p>
+     * <p>Removes tags from resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
