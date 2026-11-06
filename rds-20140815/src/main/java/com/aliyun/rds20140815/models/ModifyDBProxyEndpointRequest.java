@@ -14,20 +14,20 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     public String causalConsistReadTimeout;
 
     /**
-     * <p>Specifies the proxy features to be enabled for the proxy endpoint. Separate multiple features with semicolons (;). Format: <code>Feature 1:Status;Feature 2:Status;...</code>. Do not add a semicolon (;) at the end.</p>
+     * <p>The proxy features to be enabled for the proxy endpoint. Separate multiple features with semicolons (;). Format: <code>Feature 1:Status;Feature 2:Status;...</code>. Do not add a semicolon (;) at the end.</p>
      * <p>Valid values for features:</p>
      * <ul>
-     * <li><strong>ReadWriteSpliting</strong>: Read/write splitting.</li>
-     * <li><strong>ConnectionPersist</strong>: Connection pool.</li>
-     * <li><strong>TransactionReadSqlRouteOptimizeStatus</strong>: Transaction splitting.</li>
-     * <li><strong>AZProximityAccess</strong>: Nearest access.</li>
-     * <li><strong>CausalConsistRead</strong>: Read consistency.</li>
-     * <li><strong>HtapFilter</strong>: Automatic request distribution among row store and column store nodes for HTAP.</li>
+     * <li><strong>ReadWriteSpliting</strong>: read/write splitting</li>
+     * <li><strong>ConnectionPersist</strong>: connection pool</li>
+     * <li><strong>TransactionReadSqlRouteOptimizeStatus</strong>: transaction splitting</li>
+     * <li><strong>AZProximityAccess</strong>: nearest access</li>
+     * <li><strong>CausalConsistRead</strong>: read consistency</li>
+     * <li><strong>HtapFilter</strong>: HTAP automatic request distribution among row store and column store nodes</li>
      * </ul>
-     * <p>Valid values for the status:</p>
+     * <p>Valid values for status:</p>
      * <ul>
-     * <li><strong>1</strong>: The feature is enabled.</li>
-     * <li><strong>0</strong>: The feature is disabled.</li>
+     * <li><strong>1</strong>: enabled</li>
+     * <li><strong>0</strong>: disabled</li>
      * </ul>
      * <blockquote>
      * <ul>
@@ -43,7 +43,7 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     public String configDBProxyFeatures;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the ID.</p>
+     * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,7 +68,7 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     public String DBProxyEndpointId;
 
     /**
-     * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be configured.</p>
+     * <p>The database proxy engine type. This parameter is deprecated and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>normal</p>
@@ -77,7 +77,7 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     public String DBProxyEngineType;
 
     /**
-     * <p>The description of the proxy endpoint.</p>
+     * <p>The description of the proxy terminal.</p>
      * 
      * <strong>example:</strong>
      * <p>test-proxy</p>
@@ -86,7 +86,7 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     public String dbEndpointAliases;
 
     /**
-     * <p>The execution cost threshold for SQL statements in automatic request distribution among row store and column store nodes for HTAP.</p>
+     * <p>The execution cost threshold to execute SQL in HTAP automatic request distribution among row store and column store nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>30000</p>
@@ -106,9 +106,9 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     /**
      * <p>The operation type. Valid values:</p>
      * <ul>
-     * <li><strong>Modify</strong>: Modifies the proxy endpoint. This is the default value.</li>
-     * <li><strong>Create</strong>: Creates a proxy endpoint.</li>
-     * <li><strong>Delete</strong>: Deletes a proxy endpoint.</li>
+     * <li><strong>Modify</strong>: Modifies the proxy terminal. This is the default value.</li>
+     * <li><strong>Create</strong>: Creates a proxy terminal.</li>
+     * <li><strong>Delete</strong>: Deletes a proxy terminal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     /**
      * <p>The read/write mode. Valid values:</p>
      * <ul>
-     * <li><strong>ReadWrite</strong>: Connects to the primary instance and can accept write requests.</li>
+     * <li><strong>ReadWrite</strong>: Connects to the primary instance and accepts write requests.</li>
      * <li><strong>ReadOnly</strong>: Does not connect to the primary instance and cannot accept write requests. This is the default value.</li>
      * </ul>
      * <blockquote>
@@ -137,7 +137,7 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     public String dbEndpointReadWriteMode;
 
     /**
-     * <p>The type of the proxy endpoint. This parameter is reserved and does not need to be specified.</p>
+     * <p>The type of the proxy terminal. This parameter is reserved and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>RWSplit</p>
@@ -160,9 +160,9 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     /**
      * <p>The effective period. Valid values:</p>
      * <ul>
-     * <li><strong>Immediate</strong>: The modification immediately takes effect.</li>
-     * <li><strong>MaintainTime</strong>: The modification takes effect within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
-     * <li><strong>SpecificTime</strong>: The modification takes effect at a specified time.</li>
+     * <li><strong>Immediate</strong>: Takes effect immediately.</li>
+     * <li><strong>MaintainTime</strong>: Takes effect within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
+     * <li><strong>SpecificTime</strong>: Takes effect at a specified time.</li>
      * </ul>
      * <p>Default value: <strong>MaintainTime</strong>.</p>
      * 
@@ -178,11 +178,11 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     /**
      * <p>The read weight allocation pattern. Valid values:</p>
      * <ul>
-     * <li><strong>Standard</strong>: Automatically allocates read weights based on instance specifications. This is the default value.</li>
-     * <li><strong>Custom</strong>: Custom allocated weights.</li>
+     * <li><strong>Standard</strong>: Automatically allocates weights based on instance specifications. This is the default value.</li>
+     * <li><strong>Custom</strong>: custom weight allocation</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required only when read/write splitting is enabled. For more information about the read weight allocation pattern, see <a href="https://help.aliyun.com/document_detail/96076.html">Read weight distribution</a> for MySQL and <a href="https://help.aliyun.com/document_detail/418272.html">Enable and configure the database proxy service</a> for PostgreSQL.</p>
+     * <p>This parameter is required only when read/write splitting is enabled. For more information about the weight allocation pattern, see <a href="https://help.aliyun.com/document_detail/96076.html">Read weight allocation</a> for MySQL and <a href="https://help.aliyun.com/document_detail/418272.html">Enable and configure the database proxy service</a> for PostgreSQL.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -196,7 +196,7 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
      * <blockquote>
      * <ul>
      * <li>This parameter is required only when read/write splitting is enabled.</li>
-     * <li>Default value: <strong>30</strong> when the read/write attribute is set to Read/Write (read/write splitting), and <strong>-1</strong> (disabled) when the read/write attribute is set to Read-only.</li>
+     * <li>Default value: <strong>30</strong> when the read/write property is set to read/write (read/write splitting), and <strong>-1</strong> (shutdown) when the read/write property is set to read-only.</li>
      * </ul>
      * </blockquote>
      * 
@@ -207,7 +207,7 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     public String readOnlyInstanceMaxDelayTime;
 
     /**
-     * <p>The custom read weights of the primary and read-only instances. The weight must be a multiple of 100 and cannot exceed 10000. Format:</p>
+     * <p>The custom read weight distribution. You can specify the read request weights for the primary instance and read-only instances. The weight must be a multiple of 100, and the maximum value is 10000. Format:</p>
      * <ul>
      * <li><p>Standard instance: <code>{&quot;Primary instance ID&quot;:&quot;Weight&quot;,&quot;Read-only instance ID&quot;:&quot;Weight&quot;...}</code></p>
      * <p>  Example: <code>{&quot;rm-uf6wjk5****&quot;:&quot;500&quot;,&quot;rr-tfhfgk5xxx&quot;:&quot;200&quot;...}</code></p>
@@ -215,7 +215,7 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
      * <li><p>ApsaraDB RDS for MySQL Cluster Edition instance: <code>{&quot;Read-only instance ID&quot;:&quot;Weight&quot;,&quot;DBClusterNode&quot;:{&quot;Primary node ID&quot;:&quot;Weight&quot;,&quot;Secondary node ID&quot;:&quot;Weight&quot;,&quot;Secondary node ID&quot;:&quot;Weight&quot;...}}</code></p>
      * <p>  Example: <code>{&quot;rr-tfhfgk5****&quot;:&quot;200&quot;,&quot;DBClusterNode&quot;:{&quot;rn-2z****&quot;:&quot;0&quot;,&quot;rn-2z****&quot;:&quot;400&quot;,&quot;rn-2z****&quot;:&quot;400&quot;...}}</code></p>
      * <blockquote>
-     * <p><strong>DBClusterNode</strong> is a request parameter specific to Cluster Edition instances. It contains the <strong>NodeID</strong> and <strong>Weight</strong> of the primary and secondary nodes.</p>
+     * <p><strong>DBClusterNode</strong> is a request parameter specific to Cluster Edition instances and contains the <strong>NodeID</strong> and <strong>Weight</strong> of the primary and secondary nodes.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -227,7 +227,7 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     public String readOnlyInstanceWeight;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the ID.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -242,7 +242,7 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the vSwitch in the zone of the database proxy endpoint. Default value: the ID of the vSwitch that corresponds to the default endpoint of the proxy instance. You can call the DescribeVSwitches operation to query created vSwitches.</p>
+     * <p>The ID of the vSwitch in the zone of the proxy endpoint. The default value is the ID of the vSwitch associated with the default terminal of the proxy instance. You can call the DescribeVSwitches operation to query existing vSwitches.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-uf6adz52c2p****</p>
@@ -251,7 +251,7 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC in the zone of the database proxy endpoint. Default value: the ID of the VPC that corresponds to the default endpoint of the proxy instance. You can call the DescribeDBInstanceAttribute operation to query the default VPC of the instance.</p>
+     * <p>The ID of the VPC in the zone of the proxy endpoint. The default value is the ID of the VPC associated with the default terminal of the proxy instance. You can call the DescribeDBInstanceAttribute operation to query the default VPC of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-2zeusejj******</p>

@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "Rds";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-qingdao", "rds.aliyuncs.com"),
@@ -3995,14 +3998,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported database engines</h3>
+     * <h3>Supported DPI engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></p>
+     * <p>Notice: Before you invoke this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and impacts of the operation.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/184921.html">Create internal and public database proxy endpoints for an ApsaraDB RDS for MySQL instance</a></li>
@@ -4082,14 +4085,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported database engines</h3>
+     * <h3>Supported DPI engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></p>
+     * <p>Notice: Before you invoke this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and impacts of the operation.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/184921.html">Create internal and public database proxy endpoints for an ApsaraDB RDS for MySQL instance</a></li>
@@ -10279,7 +10282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -10348,7 +10351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -25115,7 +25118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -25124,7 +25127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/98818.html">Configure an automatic backup policy for an ApsaraDB RDS for MySQL instance</a></li>
@@ -25205,6 +25208,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableBackupLog)) {
             query.put("EnableBackupLog", request.enableBackupLog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableImmutableBackup)) {
+            query.put("EnableImmutableBackup", request.enableImmutableBackup);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableIncrementDataBackup)) {
@@ -25290,7 +25297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -25299,7 +25306,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/98818.html">Configure an automatic backup policy for an ApsaraDB RDS for MySQL instance</a></li>
@@ -27589,12 +27596,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></p>
+     * <p>Notice: Before you call this operation, read the feature documentation to understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96120.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/229517.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for PostgreSQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95715.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96120.html">Settings for Secure Sockets Layer (SSL) encryption in ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/229517.html">Settings for Secure Sockets Layer (SSL) encryption in ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95715.html">Settings for Secure Sockets Layer (SSL) encryption in ApsaraDB RDS for SQL Server</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -27714,12 +27721,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></p>
+     * <p>Notice: Before you call this operation, read the feature documentation to understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96120.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/229517.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for PostgreSQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95715.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96120.html">Settings for Secure Sockets Layer (SSL) encryption in ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/229517.html">Settings for Secure Sockets Layer (SSL) encryption in ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95715.html">Settings for Secure Sockets Layer (SSL) encryption in ApsaraDB RDS for SQL Server</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -28361,17 +28368,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL<blockquote>
-     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated proxy service with one proxy instance across all units. For details, see <a href="https://help.aliyun.com/document_detail/2555466.html">Promotion: ApsaraDB RDS for MySQL Cluster Edition provides a free dedicated proxy service with one proxy instance</a>.</p>
+     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated proxy service with one proxy node in each unit. For details, see <a href="https://help.aliyun.com/document_detail/2555466.html">Promotion: Free dedicated proxy service with one proxy node for ApsaraDB RDS for MySQL Cluster Edition</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you use this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and the impacts of this operation.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/197456.html">Enable the database proxy for ApsaraDB RDS for MySQL</a></li>
@@ -28477,17 +28484,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL<blockquote>
-     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated proxy service with one proxy instance across all units. For details, see <a href="https://help.aliyun.com/document_detail/2555466.html">Promotion: ApsaraDB RDS for MySQL Cluster Edition provides a free dedicated proxy service with one proxy instance</a>.</p>
+     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated proxy service with one proxy node in each unit. For details, see <a href="https://help.aliyun.com/document_detail/2555466.html">Promotion: Free dedicated proxy service with one proxy node for ApsaraDB RDS for MySQL Cluster Edition</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you use this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and the impacts of this operation.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/197456.html">Enable the database proxy for ApsaraDB RDS for MySQL</a></li>
@@ -28507,14 +28514,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported database engines</h3>
+     * <h3>Supported DPI engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and the impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/2621331.html">Configure the access policy for a database proxy endpoint of an ApsaraDB RDS for MySQL instance</a></li>
@@ -28642,14 +28649,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported database engines</h3>
+     * <h3>Supported DPI engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and the impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/2621331.html">Configure the access policy for a database proxy endpoint of an ApsaraDB RDS for MySQL instance</a></li>

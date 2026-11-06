@@ -10,7 +10,7 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
      * <li><strong>cert</strong></li>
      * <li><strong>prefer</strong></li>
      * <li><strong>verify-ca</strong></li>
-     * <li><strong>verify-full</strong>: supported by ApsaraDB RDS for PostgreSQL 12 and later</li>
+     * <li><strong>verify-full</strong>: supported by ApsaraDB RDS for PostgreSQL 12 and later.</li>
      * </ul>
      * <blockquote>
      * <p>This parameter can be configured only when ClientCAEnabled is set to <strong>1</strong>.</p>
@@ -23,10 +23,10 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     public String ACL;
 
     /**
-     * <p>The type of the certificate for ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL instances that use cloud disks. Valid values:</p>
+     * <p>The certificate type for ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL instances that use cloud disks. Valid values:</p>
      * <ul>
      * <li><strong>aliyun</strong>: Alibaba Cloud certificate. This is the default value.</li>
-     * <li><strong>custom</strong>: custom certificate<blockquote>
+     * <li><strong>custom</strong>: custom certificate.<blockquote>
      * <p>This parameter is required when SSLEnabled is set to <strong>1</strong>.</p>
      * </blockquote>
      * </li>
@@ -39,10 +39,10 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     public String CAType;
 
     /**
-     * <p>The content of the custom certificate for ApsaraDB RDS for SQL Server instances. Only the pfx format is supported.</p>
+     * <p>The content of the custom certificate for ApsaraDB RDS for SQL Server instances. Only the <code>pfx</code> format is supported.</p>
      * <ul>
-     * <li>Public endpoint: <code>oss-&lt;Region ID&gt;.aliyuncs.com:&lt;Bucket name&gt;:&lt;Certificate file name (with extension)&gt;</code></li>
-     * <li>Internal endpoint: <code>oss-&lt;Region ID&gt;-internal.aliyuncs.com:&lt;Bucket name&gt;:&lt;Certificate file name (with extension)&gt;</code></li>
+     * <li>Public endpoint: <code>oss-&lt;region ID&gt;.aliyuncs.com:&lt;bucket name&gt;:&lt;certificate file name (with extension)&gt;</code></li>
+     * <li>Internal endpoint: <code>oss-&lt;region ID&gt;-internal.aliyuncs.com:&lt;bucket name&gt;:&lt;certificate file name (with extension)&gt;</code></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     public String certificate;
 
     /**
-     * <p>The client certificate authority (CA) public key for ApsaraDB RDS for PostgreSQL instances that use cloud disks.</p>
+     * <p>The public key of the client certificate authorization authority for ApsaraDB RDS for PostgreSQL instances that use cloud disks.</p>
      * <blockquote>
      * <p>This parameter is required when ClientCAEnabled is set to <strong>1</strong>.</p>
      * </blockquote>
@@ -66,8 +66,8 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the client certificate authority (CA) public key for ApsaraDB RDS for PostgreSQL instances that use cloud disks. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: enabled</li>
-     * <li><strong>0</strong>: disabled</li>
+     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,8 +91,8 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the client certificate revocation list (CRL) for ApsaraDB RDS for PostgreSQL instances that use cloud disks. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: enabled</li>
-     * <li><strong>0</strong>: disabled</li>
+     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
      * </ul>
      * <blockquote>
      * <p>This parameter can be configured only when ClientCAEnabled is set to <strong>1</strong>.</p>
@@ -115,7 +115,7 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     public String connectionString;
 
     /**
-     * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -125,10 +125,10 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The <a href="https://help.aliyun.com/document_detail/95715.html">SSL forced encryption switch</a> for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and ApsaraDB RDS for SQL Server instances. Valid values:</p>
+     * <p>The <a href="https://help.aliyun.com/document_detail/95715.html">forced SSL encryption switch</a> for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and ApsaraDB RDS for SQL Server instances. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: enabled</li>
-     * <li><strong>0</strong>: disabled</li>
+     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
      * <li><strong>cert</strong></li>
      * <li><strong>prefer</strong></li>
      * <li><strong>verify-ca</strong></li>
-     * <li><strong>verify-full</strong>: supported by ApsaraDB RDS for PostgreSQL 12 and later<blockquote>
+     * <li><strong>verify-full</strong>: supported by ApsaraDB RDS for PostgreSQL 12 and later.<blockquote>
      * <p>This parameter can be configured only when ClientCAEnabled is set to <strong>1</strong>.</p>
      * </blockquote>
      * </li>
@@ -179,8 +179,8 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable SSL encryption. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: enabled</li>
-     * <li><strong>0</strong>: disabled</li>
+     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     public Integer SSLEnabled;
 
     /**
-     * <p>The content of the custom server certificate for ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL instances that use cloud disks.</p>
+     * <p>The content of the custom certificate for the server of ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL instances that use cloud disks.</p>
      * <blockquote>
      * <p>This parameter is required when CAType is set to <strong>custom</strong>.</p>
      * </blockquote>
@@ -214,8 +214,8 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     public String serverKey;
 
     /**
-     * <p>The <a href="https://help.aliyun.com/document_detail/95715.html">minimum TLS version</a> for ApsaraDB RDS for SQL Server instances. Client connections that use a TLS version lower than the specified version are rejected. Valid values: 1.0, 1.1, and 1.2.</p>
-     * <p>For example, if you set this parameter to 1.1, the server accepts only client connection requests that use TLS 1.1 or TLS 1.2. Clients that attempt to establish connections by using TLS 1.0 are rejected.</p>
+     * <p>The <a href="https://help.aliyun.com/document_detail/95715.html">minimum TLS version</a> for ApsaraDB RDS for SQL Server instances. Connections that use a version lower than the specified version are rejected. Valid values: 1.0, 1.1, and 1.2.</p>
+     * <p>For example, if you set this parameter to 1.1, the server accepts only client connection requests that use TLS 1.1 and TLS 1.2. Clients that attempt to establish connections by using TLS 1.0 are rejected.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1</p>

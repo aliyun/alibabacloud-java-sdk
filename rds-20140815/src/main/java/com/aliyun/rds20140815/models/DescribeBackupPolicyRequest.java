@@ -23,8 +23,8 @@ public class DescribeBackupPolicyRequest extends TeaModel {
      * <li><strong>0</strong>: no compression</li>
      * <li><strong>1</strong>: zlib compression</li>
      * <li><strong>2</strong>: parallel zlib compression</li>
-     * <li><strong>4</strong>: quicklz compression with database and table restoration enabled</li>
-     * <li><strong>8</strong>: quicklz compression without database and table restoration supported</li>
+     * <li><strong>4</strong>: QuickLZ compression with database and table restoration enabled</li>
+     * <li><strong>8</strong>: QuickLZ compression without database and table restoration supported</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class DescribeBackupPolicyRequest extends TeaModel {
     public String compressType;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,11 +50,11 @@ public class DescribeBackupPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The data retention policy for archive backups of deleted <strong>MySQL</strong> instances. Valid values:</p>
+     * <p>The data retention policy for archived backups of a deleted <strong>ApsaraDB RDS for MySQL</strong> instance. Valid values:</p>
      * <ul>
-     * <li><strong>None</strong>: no retention</li>
-     * <li><strong>Lastest</strong>: retains the last archive backup</li>
-     * <li><strong>All</strong>: retains all archive backups</li>
+     * <li><strong>None</strong>: does not retain archived backups</li>
+     * <li><strong>Lastest</strong>: retains only the last archived backup</li>
+     * <li><strong>All</strong>: retains all archived backups</li>
      * </ul>
      * 
      * <strong>example:</strong>

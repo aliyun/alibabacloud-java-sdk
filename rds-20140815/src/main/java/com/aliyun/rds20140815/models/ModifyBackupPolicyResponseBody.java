@@ -10,8 +10,8 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
      * <li><strong>0</strong>: no compression.</li>
      * <li><strong>1</strong>: zlib compression.</li>
      * <li><strong>2</strong>: parallel zlib compression.</li>
-     * <li><strong>4</strong>: quicklz compression. Database and table restoration is enabled.</li>
-     * <li><strong>8</strong>: quicklz compression for MySQL 8.0. Database and table restoration is not supported.</li>
+     * <li><strong>4</strong>: QuickLZ compression. Database and table restoration is enabled.</li>
+     * <li><strong>8</strong>: QuickLZ compression for MySQL 8.0. Database and table restoration is not supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,13 +30,13 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
     public String DBInstanceID;
 
     /**
-     * <p>Indicates whether instance log backup is enabled. Valid values:</p>
+     * <p>Specifies whether instance log backup is enabled. Valid values:</p>
      * <ul>
      * <li><strong>1</strong>: enabled.</li>
      * <li><strong>0</strong>: disabled.</li>
      * </ul>
      * <blockquote>
-     * <p>Instance log backup is enabled by default and cannot be disabled for ApsaraDB RDS for SQL Server instances.</p>
+     * <p>Log backup is enabled by default and cannot be disabled for an ApsaraDB RDS for SQL Server instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
     public String highSpaceUsageProtection;
 
     /**
-     * <p>The high-frequency incremental backup interval. Unit: minutes. Valid values: 60, 120, 240, 360, and 720.</p>
+     * <p>The high-frequency incremental backup interval, in minutes. Valid values: 60, 120, 240, 360, and 720.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -76,7 +76,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
     public Integer incBackupInterval;
 
     /**
-     * <p>The number of hours for which instance log backups are retained locally on the <strong>ApsaraDB RDS for MySQL</strong> instance.</p>
+     * <p>The number of hours for which local instance log backups are retained on the <strong>ApsaraDB RDS for MySQL</strong> instance.</p>
      * 
      * <strong>example:</strong>
      * <p>18</p>
@@ -85,7 +85,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
     public Integer localLogRetentionHours;
 
     /**
-     * <p>The maximum loop space usage of the binary log on the <strong>ApsaraDB RDS for MySQL</strong> instance.</p>
+     * <p>The maximum usage of the local binary log loop space on the <strong>ApsaraDB RDS for MySQL</strong> instance.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
