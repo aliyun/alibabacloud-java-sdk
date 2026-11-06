@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "Dms";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dms", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -801,6 +804,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CallbackConfig", request.callbackConfigShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.createFrom)) {
+            query.put("CreateFrom", request.createFrom);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
             query.put("DMSUnit", request.DMSUnit);
         }
@@ -1500,6 +1507,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAgenticDataSourceResponse deleteAgenticDataSource(DeleteAgenticDataSourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAgenticDataSourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After the reverse endpoint is deleted, the data source can no longer establish connections and cannot be restored by calling the enable API.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits an asynchronous deletion request for a VPC endpoint and returns the acceptance result.</p>
+     * 
+     * @param request DeleteAgenticVpcEndpointRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAgenticVpcEndpointResponse
+     */
+    public DeleteAgenticVpcEndpointResponse deleteAgenticVpcEndpointWithOptions(DeleteAgenticVpcEndpointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointId)) {
+            query.put("EndpointId", request.endpointId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAgenticVpcEndpoint"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAgenticVpcEndpointResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After the reverse endpoint is deleted, the data source can no longer establish connections and cannot be restored by calling the enable API.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits an asynchronous deletion request for a VPC endpoint and returns the acceptance result.</p>
+     * 
+     * @param request DeleteAgenticVpcEndpointRequest
+     * @return DeleteAgenticVpcEndpointResponse
+     */
+    public DeleteAgenticVpcEndpointResponse deleteAgenticVpcEndpoint(DeleteAgenticVpcEndpointRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAgenticVpcEndpointWithOptions(request, runtime);
     }
 
     /**
@@ -2484,6 +2541,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDataAgentSessionResponse describeDataAgentSession(DescribeDataAgentSessionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDataAgentSessionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the download link for a DataAgent skill.</p>
+     * 
+     * @param request DescribeDataAgentSkillDownloadRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDataAgentSkillDownloadResponse
+     */
+    public DescribeDataAgentSkillDownloadResponse describeDataAgentSkillDownloadWithOptions(DescribeDataAgentSkillDownloadRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.skillId)) {
+            query.put("SkillId", request.skillId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDataAgentSkillDownload"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDataAgentSkillDownloadResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the download link for a DataAgent skill.</p>
+     * 
+     * @param request DescribeDataAgentSkillDownloadRequest
+     * @return DescribeDataAgentSkillDownloadResponse
+     */
+    public DescribeDataAgentSkillDownloadResponse describeDataAgentSkillDownload(DescribeDataAgentSkillDownloadRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDataAgentSkillDownloadWithOptions(request, runtime);
     }
 
     /**
@@ -7826,6 +7931,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.useSsl)) {
             query.put("UseSsl", request.useSsl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

@@ -7,8 +7,8 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
     /**
      * <p>The type of the custom agent. Valid values:</p>
      * <ul>
-     * <li>Default: the system-built-in custom agent. Each workspace can have at most one Default agent, and it cannot be deleted.</li>
-     * <li>Common: a regular custom agent.</li>
+     * <li>Default: The system-built-in custom agent. Each workspace can have at most one Default agent, and it cannot be deleted.</li>
+     * <li>Common: A common custom agent.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,23 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
     public String agentType;
 
     /**
-     * <p>The callback feature configuration.</p>
+     * <p>The callback feature configuration items.</p>
      */
     @NameInMap("CallbackConfig")
     public String callbackConfigShrink;
+
+    /**
+     * <p>The creation source. Valid values:</p>
+     * <ul>
+     * <li>Empty (default): Create the agent by using a form.</li>
+     * <li>SmartNew: Create the agent by using intelligent development.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SmartNew</p>
+     */
+    @NameInMap("CreateFrom")
+    public String createFrom;
 
     /**
      * <p>The current DMS unit.</p>
@@ -33,23 +46,23 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>The specified data scope, in <strong>JSON character string format</strong>.</p>
+     * <p>The specified data scope in <strong>JSON character string format</strong>.</p>
      * <ul>
-     * <li>General parameter descriptions<ul>
-     * <li>tableFlag: true specifies the data scope.</li>
-     * <li>scope: personal is a fixed value.</li>
-     * <li>personal: the parameters for file and database types.</li>
+     * <li>General parameter description:<ul>
+     * <li>tableFlag: Set to true to specify the data scope.</li>
+     * <li>scope: Set to personal as a fixed value.</li>
+     * <li>personal: The parameters for file and database types.</li>
      * </ul>
      * </li>
      * </ul>
-     * <p><strong>File type</strong>: pass parameters in the following format:</p>
+     * <p><strong>File type</strong>. Pass parameters in the following format:</p>
      * <ul>
-     * <li>DataSourceType: remote_data_center is a fixed value.</li>
-     * <li>FileId: the file ID.</li>
-     * <li>Database: the database name returned by the ListDataCenterTable operation, which is usually the file name.</li>
-     * <li>Tables: the table names returned by the ListDataCenterTable operation.</li>
-     * <li>TableIds: the table IDs returned by the ListDataCenterTable operation.</li>
-     * <li>RegionId: the current region.</li>
+     * <li>DataSourceType: Set to remote_data_center as a fixed value.</li>
+     * <li>FileId: The file ID.</li>
+     * <li>Database: The database name returned by the ListDataCenterTable operation, which is usually the file name.</li>
+     * <li>Tables: The table names returned by the ListDataCenterTable operation.</li>
+     * <li>TableIds: The table IDs returned by the ListDataCenterTable operation.</li>
+     * <li>RegionId: The current region.</li>
      * </ul>
      * <pre><code>{
      *   &quot;tableFlag&quot;: true,
@@ -68,18 +81,18 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
      *   }
      * }
      * </code></pre>
-     * <p><strong>Database type</strong>: pass parameters in the following format:</p>
+     * <p><strong>Database type</strong>. Pass parameters in the following format:</p>
      * <ul>
-     * <li>DataSourceType: database is a fixed value.</li>
-     * <li>DmsInstanceId: the DMS instance ID returned by the data center API.</li>
-     * <li>DmsDatabaseId: the DMS database ID returned by the data center API.</li>
-     * <li>FileId: the instance name (<strong>[Deprecated]</strong>).</li>
-     * <li>DbName: the database name returned by the data center API.</li>
-     * <li>Database: the database name returned by the data center API.</li>
-     * <li>Tables: the table names returned by the data center API.</li>
-     * <li>TableIds: the table IDs returned by the data center API.</li>
-     * <li>Engine: the database engine type, such as mysql or postgresql.</li>
-     * <li>RegionId: the current region.</li>
+     * <li>DataSourceType: Set to database as a fixed value.</li>
+     * <li>DmsInstanceId: The DMS instance ID returned by the data center operation.</li>
+     * <li>DmsDatabaseId: The DMS database ID returned by the data center operation.</li>
+     * <li>FileId: The instance name. <strong>[Deprecated]</strong></li>
+     * <li>DbName: The database name returned by the data center operation.</li>
+     * <li>Database: The database name returned by the data center operation.</li>
+     * <li>Tables: The table names returned by the data center operation.</li>
+     * <li>TableIds: The table IDs returned by the data center operation.</li>
+     * <li>Engine: The database engine type, such as mysql or postgresql.</li>
+     * <li>RegionId: The current region.</li>
      * </ul>
      * <pre><code>{
      *   &quot;tableFlag&quot;: true,
@@ -136,18 +149,18 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
     public String executionConfigShrink;
 
     /**
-     * <p>The instructions.</p>
+     * <p>The instruction.</p>
      * <ul>
-     * <li>Input limit: up to 10,000 characters.</li>
+     * <li>Input limit: Up to 10,000 characters.</li>
      * </ul>
      * 
      * <strong>example:</strong>
      * <p>Core metric definitions:</p>
      * <ol>
      * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</li>
-     * <li>Order volume refers to the number of valid daily orders.</li>
-     * <li>UV (Unique Visitors) refers to the number of deduplicated users visiting the website or app.</li>
-     * <li>Conversion rate = Paid orders / UV, reflecting the traffic conversion efficiency</li>
+     * <li>Order volume refers to the number of valid orders placed per day.</li>
+     * <li>UV (Unique Visitors) refers to the number of deduplicated users who visit the website or app.</li>
+     * <li>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</li>
      * </ol>
      */
     @NameInMap("Instruction")
@@ -156,16 +169,16 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
     /**
      * <p>The knowledge.</p>
      * <ul>
-     * <li>Input limit: up to 10,000 characters.</li>
+     * <li>Input limit: Up to 10,000 characters.</li>
      * </ul>
      * 
      * <strong>example:</strong>
      * <p>Core metric definitions:</p>
      * <ol>
      * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</li>
-     * <li>Order volume refers to the number of valid daily orders.</li>
-     * <li>UV (Unique Visitors) refers to the number of deduplicated users visiting the website or app.</li>
-     * <li>Conversion rate = Paid orders / UV, reflecting the traffic conversion efficiency</li>
+     * <li>Order volume refers to the number of valid orders placed per day.</li>
+     * <li>UV (Unique Visitors) refers to the number of deduplicated users who visit the website or app.</li>
+     * <li>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</li>
      * </ol>
      */
     @NameInMap("Knowledge")
@@ -220,7 +233,7 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
      * <p>The text report format.</p>
      * 
      * <strong>example:</strong>
-     * <p>The text report requires that all numbers be written as Chinese numerals instead of Arabic numerals</p>
+     * <p>The text report requires that all numbers be converted to Chinese numerals instead of Arabic numerals</p>
      */
     @NameInMap("TextReportConfig")
     public String textReportConfig;
@@ -235,7 +248,7 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
      * <p>The web report format.</p>
      * 
      * <strong>example:</strong>
-     * <p>The web report requires that all numbers be written as Chinese numerals instead of Arabic numerals</p>
+     * <p>The web report requires that all numbers be converted to Chinese numerals instead of Arabic numerals</p>
      */
     @NameInMap("WebReportConfig")
     public String webReportConfig;
@@ -277,6 +290,14 @@ public class CreateCustomAgentShrinkRequest extends TeaModel {
     }
     public String getCallbackConfigShrink() {
         return this.callbackConfigShrink;
+    }
+
+    public CreateCustomAgentShrinkRequest setCreateFrom(String createFrom) {
+        this.createFrom = createFrom;
+        return this;
+    }
+    public String getCreateFrom() {
+        return this.createFrom;
     }
 
     public CreateCustomAgentShrinkRequest setDMSUnit(String DMSUnit) {

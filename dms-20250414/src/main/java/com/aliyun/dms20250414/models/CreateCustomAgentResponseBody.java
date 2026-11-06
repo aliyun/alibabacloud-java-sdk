@@ -97,7 +97,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
 
     public static class CreateCustomAgentResponseBodyDataCallbackConfig extends TeaModel {
         /**
-         * <p>The callback tool invocation parameters.</p>
+         * <p>The parameters to invoke the callback tool.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;ID&quot;:&quot;test&quot;}</p>
@@ -106,7 +106,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String callbackArgs;
 
         /**
-         * <p>The prompt for generating callback tool invocation parameters.</p>
+         * <p>The prompt for generating parameters to invoke the callback tool.</p>
          * 
          * <strong>example:</strong>
          * <p>send web report to <a href="mailto:123456@163.com">123456@163.com</a></p>
@@ -115,7 +115,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String callbackPrompt;
 
         /**
-         * <p>The callback tool invocation timing.</p>
+         * <p>The timing to invoke the callback tool.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -285,8 +285,8 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         /**
          * <p>The access type. Valid values:</p>
          * <ul>
-         * <li>mcp: MCP access.</li>
-         * <li>dms_kb: DMS knowledge base access.</li>
+         * <li>mcp: Accessed through MCP.</li>
+         * <li>dms_kb: Accessed through the DMS knowledge base.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -305,7 +305,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String kbUuid;
 
         /**
-         * <p>The MCP server ID.</p>
+         * <p>The ID of the MCP server.</p>
          * 
          * <strong>example:</strong>
          * <p>nhdpt9adf6ac**********ca</p>
@@ -435,7 +435,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>The query for the scheduled task.</p>
+         * <p>The question for the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>Analyze this data and provide a brief report</p>
@@ -498,7 +498,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String agentType;
 
         /**
-         * <p>The Alibaba Cloud main account ID.</p>
+         * <p>The ID of the Alibaba Cloud main account.</p>
          * 
          * <strong>example:</strong>
          * <p>16738266********</p>
@@ -516,7 +516,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String aliyunUid;
 
         /**
-         * <p>The callback feature configuration.</p>
+         * <p>The callback feature configuration items.</p>
          */
         @NameInMap("CallbackConfig")
         public CreateCustomAgentResponseBodyDataCallbackConfig callbackConfig;
@@ -531,7 +531,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String creatorUserName;
 
         /**
-         * <p>The custom agent ID.</p>
+         * <p>The ID of the custom agent.</p>
          * 
          * <strong>example:</strong>
          * <p>ca-4y3ca4khkcu**********ysf</p>
@@ -611,21 +611,21 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The instructions.</p>
+         * <p>The instruction.</p>
          * 
          * <strong>example:</strong>
          * <p>Analysis framework:</p>
          * <ol>
-         * <li>Monitor core metrics (GMV, order volume, UV, and conversion rate) on a daily, weekly, and monthly basis to analyze trend changes and year-over-year or month-over-month fluctuations.</li>
-         * <li>Segment data by new and existing customers, channels, and regions to identify growth drivers and shortcomings.</li>
-         * <li>Conduct funnel analysis based on user behavior paths (browse &gt; add to cart &gt; checkout) to identify churn stages</li>
+         * <li>Monitor core metrics (GMV, order volume, UV, and conversion rate) on a daily, weekly, and monthly basis, and analyze trend changes and year-over-year or month-over-month fluctuations.</li>
+         * <li>Segment data by new and returning customers, channels, and regions to identify growth sources and shortcomings.</li>
+         * <li>Conduct funnel analysis based on user behavior paths (browse -&gt; add to cart -&gt; pay) to identify drop-off stages</li>
          * </ol>
          */
         @NameInMap("Instruction")
         public String instruction;
 
         /**
-         * <p>Indicates whether a scheduled task is configured.</p>
+         * <p>Indicates whether a periodic task is configured.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -640,9 +640,9 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <p>Core metric definitions:</p>
          * <ol>
          * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</li>
-         * <li>Order volume refers to the number of valid daily orders.</li>
-         * <li>UV (Unique Visitors) refers to the number of deduplicated users visiting the website or app.</li>
-         * <li>Conversion rate = Paid orders / UV, reflecting the traffic conversion efficiency</li>
+         * <li>Order volume refers to the number of valid orders placed per day.</li>
+         * <li>UV (Unique Visitors) refers to the number of deduplicated users who visit the website or app.</li>
+         * <li>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</li>
          * </ol>
          */
         @NameInMap("Knowledge")
@@ -688,7 +688,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The next run time of the scheduled task.</p>
+         * <p>The next execution time of the periodic task.</p>
          * <ul>
          * <li>Timestamp format.</li>
          * </ul>
@@ -745,7 +745,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String releaseTime;
 
         /**
-         * <p>The scheduled task configuration.</p>
+         * <p>The periodic task configuration.</p>
          */
         @NameInMap("ScheduleTaskConfig")
         public CreateCustomAgentResponseBodyDataScheduleTaskConfig scheduleTaskConfig;
@@ -763,7 +763,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <p>The text report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>The text report requires that all numbers be written as Chinese numerals instead of Arabic numerals</p>
+         * <p>The text report requires that all numbers be converted to Chinese numerals instead of Arabic numerals</p>
          */
         @NameInMap("TextReportConfig")
         public String textReportConfig;
@@ -778,7 +778,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <p>The web report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>The web report requires that all numbers be written as Chinese numerals instead of Arabic numerals</p>
+         * <p>The web report requires that all numbers be converted to Chinese numerals instead of Arabic numerals</p>
          */
         @NameInMap("WebReportConfig")
         public String webReportConfig;
@@ -788,7 +788,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <ul>
          * <li>default: Default.</li>
          * <li>journal: Journal.</li>
-         * <li>legacy: Classic.</li>
+         * <li>legacy: Legacy.</li>
          * <li>neobrutalism: Neobrutalism.</li>
          * <li>infographic: Infographic.</li>
          * </ul>
