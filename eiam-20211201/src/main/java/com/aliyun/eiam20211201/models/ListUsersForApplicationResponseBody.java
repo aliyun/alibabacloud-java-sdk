@@ -23,7 +23,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>The list of accounts.</p>
+     * <p>The list of account IDs.</p>
      */
     @NameInMap("Users")
     public java.util.List<ListUsersForApplicationResponseBodyUsers> users;
@@ -84,7 +84,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
 
     public static class ListUsersForApplicationResponseBodyUsers extends TeaModel {
         /**
-         * <p>The list of application roles.</p>
+         * <p>The list of application roles. No roles are returned for SAML applications.</p>
          */
         @NameInMap("ApplicationRoles")
         public java.util.List<ListUsersForApplicationResponseBodyUsersApplicationRoles> applicationRoles;

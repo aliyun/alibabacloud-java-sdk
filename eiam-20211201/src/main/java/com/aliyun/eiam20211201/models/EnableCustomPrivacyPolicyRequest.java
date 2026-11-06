@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableCustomPrivacyPolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the custom clause.</p>
+     * <p>The ID of the custom terms.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -31,13 +31,7 @@ public class ListApplicationsForAuthorizationRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries per page.</p>
-     * <ul>
-     * <li><p>Default value: 20.</p>
-     * </li>
-     * <li><p>Maximum value: 100.</p>
-     * </li>
-     * </ul>
+     * <p>The maximum number of entries per page. Default value: 20. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -46,10 +40,7 @@ public class ListApplicationsForAuthorizationRuleRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that indicates the start position of the next page.</p>
-     * <ul>
-     * <li>If this parameter is not specified, the query starts from the first page.</li>
-     * </ul>
+     * <p>The pagination token that specifies the starting position for the next page. If you do not specify this parameter, the query starts from the first page by default.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -106,7 +97,7 @@ public class ListApplicationsForAuthorizationRuleRequest extends TeaModel {
         /**
          * <p>The name of the filter field. Valid values:</p>
          * <ul>
-         * <li>ApplicationId: the application ID.</li>
+         * <li>ApplicationId: the application ID</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,7 +107,7 @@ public class ListApplicationsForAuthorizationRuleRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The values of the filter field.</p>
+         * <p>The list of filter field values.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

@@ -90,7 +90,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public GetCloudAccountResponseBodyCloudAccountCloudAccountHealthCheckResultErrorReason errorReason;
 
         /**
-         * <p>The time of the last check. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The last check time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -99,10 +99,10 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public Long lastCheckTime;
 
         /**
-         * <p>The health check result of the cloud account. Valid values:</p>
+         * <p>The cloud account health check result. Valid values:</p>
          * <ul>
-         * <li>success: The check succeeded.</li>
-         * <li>failed: The check failed.</li>
+         * <li>success: Success.</li>
+         * <li>failed: Failure.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String audience;
 
         /**
-         * <p>The ID of the authorization server.</p>
+         * <p>The authorization server ID.</p>
          * 
          * <strong>example:</strong>
          * <p>iauths_system</p>
@@ -220,7 +220,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
 
     public static class GetCloudAccountResponseBodyCloudAccountPrivilegeHostingError extends TeaModel {
         /**
-         * <p>The error code of the failure.</p>
+         * <p>The failure error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Error</p>
@@ -229,7 +229,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message of the failure.</p>
+         * <p>The failure message.</p>
          * 
          * <strong>example:</strong>
          * <p>test message</p>
@@ -271,11 +271,11 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String cloudAccountExternalId;
 
         /**
-         * <p>The health status of the cloud account. Valid values:</p>
+         * <p>The cloud account health status. Valid values:</p>
          * <ul>
-         * <li>healthy: The cloud account is healthy.</li>
-         * <li>unhealthy: The cloud account is unhealthy.</li>
-         * <li>unknown: The health status is unknown.</li>
+         * <li>healthy: Healthy.</li>
+         * <li>unhealthy: Unhealthy.</li>
+         * <li>unknown: Unknown.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -285,7 +285,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String cloudAccountHealth;
 
         /**
-         * <p>The health check result of the cloud account.</p>
+         * <p>The cloud account health check result.</p>
          */
         @NameInMap("CloudAccountHealthCheckResult")
         public GetCloudAccountResponseBodyCloudAccountCloudAccountHealthCheckResult cloudAccountHealthCheckResult;
@@ -300,7 +300,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String cloudAccountId;
 
         /**
-         * <p>The name of the cloud account.</p>
+         * <p>The cloud account name.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_accout_xxxx</p>
@@ -309,13 +309,13 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String cloudAccountName;
 
         /**
-         * <p>The configuration information of the identity provider.</p>
+         * <p>The identity provider configuration information.</p>
          */
         @NameInMap("CloudAccountProviderConfig")
         public GetCloudAccountResponseBodyCloudAccountCloudAccountProviderConfig cloudAccountProviderConfig;
 
         /**
-         * <p>The name of the identity provider.</p>
+         * <p>The identity provider name.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas-eiam-oidc-provider</p>
@@ -324,7 +324,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String cloudAccountProviderName;
 
         /**
-         * <p>The site of the cloud account. Valid values:</p>
+         * <p>The cloud account site. Valid values:</p>
          * <ul>
          * <li>china_mainland: The Chinese mainland.</li>
          * <li>global: Global.</li>
@@ -337,7 +337,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String cloudAccountSite;
 
         /**
-         * <p>The type of the cloud account. Valid values:</p>
+         * <p>The cloud account type. Valid values:</p>
          * <ul>
          * <li>alibaba_cloud: Alibaba Cloud.</li>
          * </ul>
@@ -358,7 +358,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The description of the cloud account.</p>
+         * <p>The cloud account description.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_accout_description</p>
@@ -376,7 +376,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The list of associated privileged application IDs.</p>
+         * <p>The list of associated privilege application IDs.</p>
          */
         @NameInMap("PrivilegeApplicationIds")
         public java.util.List<String> privilegeApplicationIds;
@@ -388,14 +388,14 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public GetCloudAccountResponseBodyCloudAccountPrivilegeHostingError privilegeHostingError;
 
         /**
-         * <p>The hosting status of the cloud account. Default value: hosting_unmanaged. Valid values:</p>
+         * <p>The cloud account hosting status. Default value: hosting_unmanaged. Valid values:</p>
          * <ul>
          * <li>hosting_unmanaged: Unmanaged. The cloud account has not initiated hosting and is in the initial state.</li>
-         * <li>hosting_pending: Hosting. The hosting task has been submitted and is being executed asynchronously. Wait for the hosting process to complete to enter the final state.</li>
-         * <li>hosting_completed: Hosting completed. The cloud account hosting process is executed successfully, and the relevant permission templates and hosting bindings have taken effect.</li>
-         * <li>hosting_failed: Hosting failed. The hosting process encounters an exception. You can view the cause of the failure and initiate hosting again.</li>
-         * <li>hosting_removing: Removing. The removal task has been submitted and is being executed asynchronously. Wait for the removal process to complete to enter the final state.</li>
-         * <li>hosting_remove_failed: Removal failed. The removal process encounters an exception. You can view the cause of the failure and initiate removal again.</li>
+         * <li>hosting_pending: Hosting. The hosting task is submitted and executed asynchronously. You must wait for the hosting process to complete to enter the final state.</li>
+         * <li>hosting_completed: Hosting completed. The hosting process is executed successfully, and the relevant permission templates and hosting bindings take effect.</li>
+         * <li>hosting_failed: Hosting failed. An exception occurs during the hosting process. You can view the failure cause and initiate hosting again.</li>
+         * <li>hosting_removing: Removing. The removal task is submitted and executed asynchronously. You must wait for the removal process to complete to enter the final state.</li>
+         * <li>hosting_remove_failed: Removal failed. An exception occurs during the removal process. You can view the failure cause and initiate removal again.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -405,10 +405,10 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String privilegeHostingState;
 
         /**
-         * <p>The status of the privilege switch. Valid values:</p>
+         * <p>The privilege switch status. Valid values:</p>
          * <ul>
-         * <li>enabled: Enabled. The resource is in the effective state and can be used normally.</li>
-         * <li>disabled: Disabled. The resource is in the stopped state and no longer takes effect. You can enable it again to restore it.</li>
+         * <li>enabled: Enabled. The resource is active and can be used normally.</li>
+         * <li>disabled: Disabled. The resource is deactivated and no longer takes effect. You can re-enable it to restore the resource.</li>
          * </ul>
          * 
          * <strong>example:</strong>

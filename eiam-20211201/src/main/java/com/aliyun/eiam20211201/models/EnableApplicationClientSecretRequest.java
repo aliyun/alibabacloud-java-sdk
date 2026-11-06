@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableApplicationClientSecretRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class EnableApplicationClientSecretRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class EnableApplicationClientSecretRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The client key ID of the application.</p>
+     * <p>The ID of the client secret for the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

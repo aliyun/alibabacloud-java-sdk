@@ -24,7 +24,7 @@ public class ListApplicationFederatedCredentialsForProviderRequest extends TeaMo
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries per page in a paged query.</p>
+     * <p>The maximum number of results per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -33,7 +33,7 @@ public class ListApplicationFederatedCredentialsForProviderRequest extends TeaMo
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page.</p>
+     * <p>The next token.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -42,7 +42,7 @@ public class ListApplicationFederatedCredentialsForProviderRequest extends TeaMo
     public String nextToken;
 
     /**
-     * <p>The pagination token for the previous page.</p>
+     * <p>The previous token.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxxxexample</p>

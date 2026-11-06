@@ -11,7 +11,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
     public java.util.List<ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentials> applicationFederatedCredentials;
 
     /**
-     * <p>The maximum number of entries per page in a paged query.</p>
+     * <p>The maximum number of rows per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
     public Integer maxResults;
 
     /**
-     * <p>The pagination token returned by this call.</p>
+     * <p>The pagination token returned by the current call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -29,7 +29,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
     public String nextToken;
 
     /**
-     * <p>The pagination token returned by this call.</p>
+     * <p>The pagination token returned by the current call.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxexample</p>
@@ -47,7 +47,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
     public String requestId;
 
     /**
-     * <p>The total number of entries in the list.</p>
+     * <p>The total number of items.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -119,7 +119,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String principalId;
 
         /**
-         * <p>The Azure resource group name.</p>
+         * <p>The name of the Azure resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>user_default</p>
@@ -189,7 +189,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public java.util.List<String> instanceIds;
 
         /**
-         * <p>The GCP project ID to which the resource belongs.</p>
+         * <p>The ID of the GCP project to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>turnkey-axiom-475109-xx</p>
@@ -198,7 +198,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String projectId;
 
         /**
-         * <p>The subject (sub) that corresponds to the service account.</p>
+         * <p>The sub claim corresponding to the service account.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -264,7 +264,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
 
     public static class ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentialsOidcVerificationConfigKubernetesConfig extends TeaModel {
         /**
-         * <p>The Kubernetes namespace.</p>
+         * <p>The K8s namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -282,7 +282,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String podNamePrefix;
 
         /**
-         * <p>The Kubernetes service account name.</p>
+         * <p>The name of the K8s service account.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -468,7 +468,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String applicationId;
 
         /**
-         * <p>The time when the credential was created. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1758785994982</p>
@@ -504,7 +504,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String instanceId;
 
         /**
-         * <p>The time when the credential was last used. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The last used time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1758785994982</p>
@@ -534,7 +534,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String status;
 
         /**
-         * <p>The time when the credential was last updated. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1758785994982</p>
@@ -554,8 +554,8 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         /**
          * <p>The verification mode. Valid values:</p>
          * <ul>
-         * <li>freedom: free mode.</li>
-         * <li>structured: structured mode.</li>
+         * <li>freedom: free mode</li>
+         * <li>structured: structured mode</li>
          * </ul>
          * 
          * <strong>example:</strong>

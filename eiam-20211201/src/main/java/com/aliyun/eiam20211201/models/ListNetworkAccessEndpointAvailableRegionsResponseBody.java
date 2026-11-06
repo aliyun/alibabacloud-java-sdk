@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNetworkAccessEndpointAvailableRegionsResponseBody extends TeaModel {
     /**
-     * <p>The collection of available regions.</p>
+     * <p>The list of available regions.</p>
      */
     @NameInMap("Regions")
     public java.util.List<ListNetworkAccessEndpointAvailableRegionsResponseBodyRegions> regions;

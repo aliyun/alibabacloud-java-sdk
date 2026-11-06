@@ -42,7 +42,7 @@ public class CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponseBo
 
     public static class CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponseBodyCheckApplicationProvisioningUserPrimaryOuResult extends TeaModel {
         /**
-         * <p>Indicates whether authorization is allowed.</p>
+         * <p>Indicates whether authorization is granted.</p>
          */
         @NameInMap("AllowAuthorization")
         public Boolean allowAuthorization;

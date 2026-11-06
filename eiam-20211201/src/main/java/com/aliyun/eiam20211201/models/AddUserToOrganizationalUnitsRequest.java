@@ -15,7 +15,7 @@ public class AddUserToOrganizationalUnitsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The list of organization IDs. The list can contain up to 100 elements.</p>
+     * <p>The list of organizational unit IDs. The list can contain up to 100 elements.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OrganizationalUnitIds")

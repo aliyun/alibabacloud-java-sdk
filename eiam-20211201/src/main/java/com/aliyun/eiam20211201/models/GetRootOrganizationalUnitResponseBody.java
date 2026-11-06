@@ -42,7 +42,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
 
     public static class GetRootOrganizationalUnitResponseBodyOrganizationalUnit extends TeaModel {
         /**
-         * <p>The time when the organizational unit was created, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The time when the organizational unit was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>
@@ -87,7 +87,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
         public String organizationalUnitName;
 
         /**
-         * <p>The time when the organizational unit was last updated, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The time when the organizational unit was last updated. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>

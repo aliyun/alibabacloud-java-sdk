@@ -15,7 +15,7 @@ public class UpdateNetworkAccessEndpointNameRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the private network access endpoint.</p>
+     * <p>The ID of the dedicated network access endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateNetworkAccessEndpointNameRequest extends TeaModel {
     public String networkAccessEndpointId;
 
     /**
-     * <p>The name of the private network access endpoint. The endpoint type must be private.</p>
+     * <p>The name of the dedicated network access endpoint. You can only update the name of a network access endpoint whose NetworkEndpointType is dedicated (private). xx business VPC access endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

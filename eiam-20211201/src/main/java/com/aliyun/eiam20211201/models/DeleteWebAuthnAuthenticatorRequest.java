@@ -25,7 +25,7 @@ public class DeleteWebAuthnAuthenticatorRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The user ID.</p>
+     * <p>UserID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

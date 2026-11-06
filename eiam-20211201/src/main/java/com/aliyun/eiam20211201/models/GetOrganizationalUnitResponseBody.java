@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetOrganizationalUnitResponseBody extends TeaModel {
     /**
-     * <p>Organizational unit data object.</p>
+     * <p>The organizational unit data object.</p>
      */
     @NameInMap("OrganizationalUnit")
     public GetOrganizationalUnitResponseBodyOrganizationalUnit organizationalUnit;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -42,7 +42,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
 
     public static class GetOrganizationalUnitResponseBodyOrganizationalUnit extends TeaModel {
         /**
-         * <p>The time when the organizational unit was created, in Unix timestamp format, in milliseconds.</p>
+         * <p>The time when the organizational unit was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>
@@ -51,7 +51,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Description of the organizational unit.</p>
+         * <p>The description of the organizational unit.</p>
          * 
          * <strong>example:</strong>
          * <p>Test organization</p>
@@ -60,7 +60,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -69,7 +69,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Indicates whether the organizational unit is a leaf node. A value of true indicates that the organizational unit has no child nodes, and a value of false indicates that the organizational unit has child nodes.</p>
+         * <p>Specifies whether the organizational unit is a leaf node. A value of true indicates that the organizational unit has no child nodes. A value of false indicates that the organizational unit has child nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -78,8 +78,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         public Boolean leaf;
 
         /**
-         * <p>Organizational unit external ID, used for mapping between external data and IDaaS organizational units. The default value is the IDaaS organizational unit ID.</p>
-         * <p>Note: The external ID is unique within the same source type and source ID.</p>
+         * <p>The external ID of the organizational unit. It is used to map external data to IDaaS organizational units. The default value is the IDaaS organizational unit ID. Note: The external ID must be unique within the same source type and source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
@@ -88,7 +87,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         public String organizationalUnitExternalId;
 
         /**
-         * <p>Organizational unit ID.</p>
+         * <p>The organizational unit ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
@@ -97,7 +96,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         public String organizationalUnitId;
 
         /**
-         * <p>Organizational unit name.</p>
+         * <p>The name of the organizational unit.</p>
          * 
          * <strong>example:</strong>
          * <p>test_organizationalUnit_name</p>
@@ -106,8 +105,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         public String organizationalUnitName;
 
         /**
-         * <p>Organizational unit source ID.</p>
-         * <p>The default value for the self-built type is the instance ID. For other types, the value corresponds to the enterprise ID of the respective source. For example, the DingTalk source corresponds to the corpId of the DingTalk enterprise.</p>
+         * <p>The source ID of the organizational unit. For self-managed organizational units, the default value is the instance ID. For other types, the value corresponds to the enterprise ID of the respective source. For example, for DingTalk, the value is the corpId of the DingTalk enterprise.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -116,13 +114,13 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         public String organizationalUnitSourceId;
 
         /**
-         * <p>Account source type. Valid values:</p>
+         * <p>The account source type. Valid values:</p>
          * <ul>
-         * <li>build_in: self-built.</li>
-         * <li>ding_talk: imported from DingTalk.</li>
-         * <li>ad: imported from AD.</li>
-         * <li>ldap: imported from LDAP.</li>
-         * <li>we_com: imported from WeCom.</li>
+         * <li>build_in: Self-managed.</li>
+         * <li>ding_talk: Imported from DingTalk.</li>
+         * <li>ad: Imported from AD.</li>
+         * <li>ldap: Imported from LDAP.</li>
+         * <li>we_com: Imported from WeCom.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,7 +130,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         public String organizationalUnitSourceType;
 
         /**
-         * <p>Parent organizational unit ID.</p>
+         * <p>The ID of the parent organizational unit.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
@@ -141,7 +139,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         public String parentId;
 
         /**
-         * <p>The time when the organizational unit was last updated, in Unix timestamp format, in milliseconds.</p>
+         * <p>The time when the organizational unit was last updated. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>

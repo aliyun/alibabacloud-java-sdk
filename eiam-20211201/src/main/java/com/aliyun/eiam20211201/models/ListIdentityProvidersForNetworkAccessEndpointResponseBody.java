@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListIdentityProvidersForNetworkAccessEndpointResponseBody extends TeaModel {
     /**
-     * <p>The collection of IdPs for the network endpoint.</p>
+     * <p>The IdPs under the network access endpoint.</p>
      */
     @NameInMap("IdentityProvidersForNetworkAccessEndpoint")
     public java.util.List<ListIdentityProvidersForNetworkAccessEndpointResponseBodyIdentityProvidersForNetworkAccessEndpoint> identityProvidersForNetworkAccessEndpoint;
 
     /**
-     * <p>The token that is returned from the call.</p>
+     * <p>The pagination token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -76,7 +76,7 @@ public class ListIdentityProvidersForNetworkAccessEndpointResponseBody extends T
 
     public static class ListIdentityProvidersForNetworkAccessEndpointResponseBodyIdentityProvidersForNetworkAccessEndpoint extends TeaModel {
         /**
-         * <p>The ID of the IdP.</p>
+         * <p>The IdP ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idp_nbq7i4ylodmm64iy6t5muxxxxx</p>
@@ -85,7 +85,7 @@ public class ListIdentityProvidersForNetworkAccessEndpointResponseBody extends T
         public String identityProviderId;
 
         /**
-         * <p>The name of the IdP.</p>
+         * <p>The IdP name.</p>
          * 
          * <strong>example:</strong>
          * <p>OIDC Provider</p>

@@ -24,7 +24,7 @@ public class ListGroupsForApplicationRequest extends TeaModel {
     public String applicationRoleId;
 
     /**
-     * <p>A list of group IDs. You can specify up to 100 group IDs in a single operation.</p>
+     * <p>The list of group IDs. You can specify up to 100 group IDs in a single operation.</p>
      * 
      * <strong>example:</strong>
      * <p>group_miu8e4t4d7i4u7uwezgr54xxxx</p>
@@ -43,7 +43,7 @@ public class ListGroupsForApplicationRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number of the list.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -52,7 +52,7 @@ public class ListGroupsForApplicationRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

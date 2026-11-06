@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnbindUserAuthnSourceMappingRequest extends TeaModel {
     /**
-     * <p>The ID of the source identity provider.</p>
+     * <p>The source IdP ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UnbindUserAuthnSourceMappingRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The external ID associated with the user.</p>
+     * <p>The external association ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

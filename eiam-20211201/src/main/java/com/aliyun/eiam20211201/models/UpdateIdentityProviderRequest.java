@@ -14,7 +14,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The DingTalk configuration basic information.</p>
+     * <p>The basic DingTalk configuration information.</p>
      */
     @NameInMap("DingtalkAppConfig")
     public UpdateIdentityProviderRequestDingtalkAppConfig dingtalkAppConfig;
@@ -55,7 +55,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
     public UpdateIdentityProviderRequestLarkConfig larkConfig;
 
     /**
-     * <p>The AD/LDAP basic information.</p>
+     * <p>The basic AD/LDAP information.</p>
      */
     @NameInMap("LdapConfig")
     public UpdateIdentityProviderRequestLdapConfig ldapConfig;
@@ -70,7 +70,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
     public String logoUrl;
 
     /**
-     * <p>The network endpoint ID.</p>
+     * <p>The network access endpoint ID.</p>
      * 
      * <strong>example:</strong>
      * <p>nae_examplexxxx</p>
@@ -91,7 +91,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
     public UpdateIdentityProviderRequestSamlConfig samlConfig;
 
     /**
-     * <p>The WeCom basic information.</p>
+     * <p>The basic WeCom information.</p>
      */
     @NameInMap("WeComConfig")
     public UpdateIdentityProviderRequestWeComConfig weComConfig;
@@ -217,7 +217,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String appSecret;
 
         /**
-         * <p>The DingTalk QR code login version.</p>
+         * <p>The DingTalk scan-to-logon version.</p>
          * 
          * <strong>example:</strong>
          * <p>new_version</p>
@@ -310,7 +310,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String appSecret;
 
         /**
-         * <p>The encryptKey of the custom Lark application.</p>
+         * <p>The EncryptKey of the custom Lark application.</p>
          * 
          * <strong>example:</strong>
          * <p>VkdWw91mdkrjVFr3ObNwefap21dfbZbKxxxx</p>
@@ -319,7 +319,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String encryptKey;
 
         /**
-         * <p>The verificationToken of the custom Lark application.</p>
+         * <p>The VerificationToken of the custom Lark application.</p>
          * 
          * <strong>example:</strong>
          * <p>feishuVerifyTokenxxxxx</p>
@@ -371,13 +371,13 @@ public class UpdateIdentityProviderRequest extends TeaModel {
          * <p>The administrator password.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxx</p>
+         * <p>ExamplePassword123!</p>
          */
         @NameInMap("AdministratorPassword")
         public String administratorPassword;
 
         /**
-         * <p>The administrator account.</p>
+         * <p>The administrator username.</p>
          * 
          * <strong>example:</strong>
          * <p>DC=example,DC=com</p>
@@ -434,7 +434,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public Integer ldapServerPort;
 
         /**
-         * <p>Specifies whether StartTLS is enabled. Valid values:</p>
+         * <p>Specifies whether to enable StartTLS. Valid values:</p>
          * <ul>
          * <li><p>disabled: Disabled.</p>
          * </li>
@@ -605,7 +605,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String tokenEndpoint;
 
         /**
-         * <p>The OIDC UserInfo endpoint.</p>
+         * <p>The OIDC userinfo endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/oauth/userinfo">https://example.com/oauth/userinfo</a></p>
@@ -707,7 +707,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String pkceChallengeMethod;
 
         /**
-         * <p>Specifies whether to use PKCE in the AuthorizationCode grant mode.</p>
+         * <p>Specifies whether to use PKCE in authorization code mode.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -772,7 +772,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
 
     public static class UpdateIdentityProviderRequestSamlConfigCertificates extends TeaModel {
         /**
-         * <p>The content of the certificate.</p>
+         * <p>The certificate content.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE----- MIIC0jCCAbqgAwIBAgIQXXXXX-----END CERTIFICATE-----</p>
@@ -797,7 +797,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
 
     public static class UpdateIdentityProviderRequestSamlConfig extends TeaModel {
         /**
-         * <p>The binding type.</p>
+         * <p>The binding method.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP-REDIRECT</p>
@@ -806,7 +806,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String bindingMethod;
 
         /**
-         * <p>The list of IdP certificates.</p>
+         * <p>The list of certificates for the IdP.</p>
          */
         @NameInMap("Certificates")
         public java.util.List<UpdateIdentityProviderRequestSamlConfigCertificates> certificates;
@@ -839,7 +839,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public Long maxClockSkew;
 
         /**
-         * <p>Specifies whether the request must be signed.</p>
+         * <p>Specifies whether to require the request to be signed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -848,7 +848,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public Boolean requireRequestSigned;
 
         /**
-         * <p>Specifies whether the external IdP is required to sign the Assertion.</p>
+         * <p>Specifies whether to require the external IdP to sign the assertion.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -857,7 +857,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public Boolean wantAssertionsSigned;
 
         /**
-         * <p>Specifies whether the external IdP is required to sign the Response.</p>
+         * <p>Specifies whether to require the external IdP to sign the response.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -938,7 +938,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
 
     public static class UpdateIdentityProviderRequestWeComConfig extends TeaModel {
         /**
-         * <p>The AgentId of the WeCom self-built application.</p>
+         * <p>The AgentId of the WeCom custom application.</p>
          * 
          * <strong>example:</strong>
          * <p>1237403</p>
@@ -965,7 +965,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String contactSecret;
 
         /**
-         * <p>The CorpSecret of the WeCom self-built application.</p>
+         * <p>The CorpSecret of the WeCom custom application.</p>
          * 
          * <strong>example:</strong>
          * <p>CSEHDddddddxxxxuxkJEHPveWRXBGqVqRsxxxx</p>

@@ -123,7 +123,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
 
     public static class GetCustomFieldResponseBodyCustomField extends TeaModel {
         /**
-         * <p>The time when the extended field was created, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The creation time of the extended field. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>17642960730</p>
@@ -159,7 +159,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
         public Boolean encrypted;
 
         /**
-         * <p>The entity type to which the field belongs.</p>
+         * <p>The entity type of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -168,7 +168,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
         public String entityType;
 
         /**
-         * <p>The field value configuration items.</p>
+         * <p>The configuration items for the field values.</p>
          */
         @NameInMap("FieldDataConfig")
         public GetCustomFieldResponseBodyCustomFieldFieldDataConfig fieldDataConfig;
@@ -255,7 +255,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
         public Boolean unique;
 
         /**
-         * <p>The time when the extended field was last updated, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The last update time of the extended field. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>17642960730</p>
@@ -264,7 +264,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>The user-side (portal-side) permission.</p>
+         * <p>The permissions on the user portal side.</p>
          * 
          * <strong>example:</strong>
          * <p>read_only</p>

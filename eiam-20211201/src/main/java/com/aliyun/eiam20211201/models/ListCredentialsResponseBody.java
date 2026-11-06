@@ -11,7 +11,7 @@ public class ListCredentialsResponseBody extends TeaModel {
     public java.util.List<ListCredentialsResponseBodyCredentials> credentials;
 
     /**
-     * <p>The maximum number of rows per page in a paging query.</p>
+     * <p>The number of entries per page for paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListCredentialsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token returned by this call.</p>
+     * <p>The pagination token returned by the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -118,7 +118,7 @@ public class ListCredentialsResponseBody extends TeaModel {
 
     public static class ListCredentialsResponseBodyCredentialsCredentialContent extends TeaModel {
         /**
-         * <p>The credential content for the OAuth client authentication credential type.</p>
+         * <p>The content of an OAuth client credential.</p>
          */
         @NameInMap("OAuthClientContent")
         public ListCredentialsResponseBodyCredentialsCredentialContentOAuthClientContent OAuthClientContent;
@@ -158,7 +158,7 @@ public class ListCredentialsResponseBody extends TeaModel {
          * <p>The creation type of the credential. Valid values:</p>
          * <ul>
          * <li>system_init: Created by the system.</li>
-         * <li>user_custom: Created by the user.</li>
+         * <li>user_custom: Created by a user.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -204,9 +204,9 @@ public class ListCredentialsResponseBody extends TeaModel {
         public String credentialName;
 
         /**
-         * <p>The usage scenario label of the credential. Valid values:</p>
+         * <p>The Scenarios label of the credential. Valid values:</p>
          * <ul>
-         * <li>llm: Large language model.</li>
+         * <li>llm: Large model.</li>
          * <li>saas: Third-party SaaS service.</li>
          * </ul>
          * 
@@ -219,8 +219,8 @@ public class ListCredentialsResponseBody extends TeaModel {
         /**
          * <p>The credential sharing scope. Valid values:</p>
          * <ul>
-         * <li>common: common</li>
-         * <li>user_exclusive: account-exclusive</li>
+         * <li>common: General.</li>
+         * <li>user_exclusive: Account-specific.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,7 +230,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         public String credentialSharingScope;
 
         /**
-         * <p>The subject ID of the credential.</p>
+         * <p>The ID of the subject to which the credential belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>apt_werthgfdsasffxxxxx</p>
@@ -239,7 +239,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         public String credentialSubjectId;
 
         /**
-         * <p>The subject type of the credential. Valid values:</p>
+         * <p>The subject type to which the credential belongs. Valid values:</p>
          * <ul>
          * <li>authentication_token_provider: Authentication token provider.</li>
          * </ul>
@@ -253,8 +253,8 @@ public class ListCredentialsResponseBody extends TeaModel {
         /**
          * <p>The credential type. Valid values:</p>
          * <ul>
-         * <li>api_key: API key authentication credential.</li>
-         * <li>oauth_client: OAuth client authentication credential.</li>
+         * <li>api_key: API key credential.</li>
+         * <li>oauth_client: OAuth client credential.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -273,7 +273,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The exclusive user ID of the credential.</p>
+         * <p>The ID of the exclusive user for the credential.</p>
          * 
          * <strong>example:</strong>
          * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>

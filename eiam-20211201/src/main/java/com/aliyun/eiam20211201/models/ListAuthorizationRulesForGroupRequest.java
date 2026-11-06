@@ -25,7 +25,7 @@ public class ListAuthorizationRulesForGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries per page.</p>
+     * <p>The maximum number of records per page.</p>
      * <ul>
      * <li><p>Default value: 20.</p>
      * </li>
@@ -40,9 +40,9 @@ public class ListAuthorizationRulesForGroupRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that identifies the start position of the next page.</p>
+     * <p>The token used to identify the starting position of the next page.</p>
      * <ul>
-     * <li>If this parameter is not specified, the query starts from the first page.</li>
+     * <li>If this parameter is not specified, the query starts from the first page by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>

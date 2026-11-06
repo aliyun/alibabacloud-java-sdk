@@ -15,7 +15,7 @@ public class AuthorizeApplicationToOrganizationalUnitsRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>应用角色ID。</p>
+     * <p>The application role ID.</p>
      * 
      * <strong>example:</strong>
      * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -34,7 +34,7 @@ public class AuthorizeApplicationToOrganizationalUnitsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The list of organization IDs. You can specify a maximum of 100 organization IDs per operation.</p>
+     * <p>The list of organizational unit IDs. A single operation supports up to 100 organizational unit IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

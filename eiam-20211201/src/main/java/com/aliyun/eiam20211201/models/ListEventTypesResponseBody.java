@@ -20,7 +20,7 @@ public class ListEventTypesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries in the list.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

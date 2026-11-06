@@ -15,7 +15,7 @@ public class AddCustomPrivacyPoliciesToBrandRequest extends TeaModel {
     public String brandId;
 
     /**
-     * <p>The list of term IDs.</p>
+     * <p>The IDs of the custom privacy policies.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CustomPrivacyPolicyIds")

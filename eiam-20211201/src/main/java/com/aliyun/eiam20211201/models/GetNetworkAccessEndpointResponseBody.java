@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetNetworkAccessEndpointResponseBody extends TeaModel {
     /**
-     * <p>The network access endpoint details.</p>
+     * <p>The network access endpoint information.</p>
      */
     @NameInMap("NetworkAccessEndpoint")
     public GetNetworkAccessEndpointResponseBodyNetworkAccessEndpoint networkAccessEndpoint;
@@ -42,7 +42,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
 
     public static class GetNetworkAccessEndpointResponseBodyNetworkAccessEndpointBackupVpcEndpoint extends TeaModel {
         /**
-         * <p>The private egress IP addresses of the backup network access endpoint.</p>
+         * <p>The list of private egress IP addresses of the backup network access endpoint.</p>
          */
         @NameInMap("BackupEgressPrivateIpAddresses")
         public java.util.List<String> backupEgressPrivateIpAddresses;
@@ -78,7 +78,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         public String backupVpcId;
 
         /**
-         * <p>The region ID of the backup VPC.</p>
+         * <p>The region of the backup VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -158,7 +158,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The private egress IP address ranges of the dedicated network access endpoint. This parameter is returned only when NetworkAccessEndpointType is set to private.</p>
+         * <p>The private egress IP address ranges of the dedicated network access endpoint. A value is returned only when NetworkEndpointType is set to private.</p>
          * 
          * <strong>example:</strong>
          * <p>172.168.x.x</p>
@@ -167,7 +167,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         public java.util.List<String> egressPrivateIpAddresses;
 
         /**
-         * <p>The public egress IP address ranges of the shared network access endpoint. This parameter is returned only when NetworkAccessEndpointType is set to shared.</p>
+         * <p>The public egress IP address ranges of the shared network access endpoint. A value is returned only when NetworkEndpointType is set to shared.</p>
          * 
          * <strong>example:</strong>
          * <p>8.xx.xx.xxx/27</p>
@@ -185,7 +185,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the network access endpoint.</p>
+         * <p>The dedicated network access endpoint ID.</p>
          * 
          * <strong>example:</strong>
          * <p>nae_examplexxx</p>
@@ -267,7 +267,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The region ID of the VPC to which the network access endpoint is connected.</p>
+         * <p>The region of the VPC to which the network access endpoint is connected.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

@@ -15,7 +15,7 @@ public class ListUsersForApplicationRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>应用角色ID。</p>
+     * <p>The application role ID.</p>
      * 
      * <strong>example:</strong>
      * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -43,7 +43,7 @@ public class ListUsersForApplicationRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -52,7 +52,7 @@ public class ListUsersForApplicationRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The list of account IDs. A maximum of 100 account IDs are supported in a single request.</p>
+     * <p>The list of account IDs. You can specify up to 100 account IDs in a single operation.</p>
      * 
      * <strong>example:</strong>
      * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>

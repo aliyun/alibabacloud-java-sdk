@@ -15,7 +15,7 @@ public class DeleteUsersRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>A list of account IDs.</p>
+     * <p>The list of account IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

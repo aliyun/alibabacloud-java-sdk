@@ -14,7 +14,7 @@ public class GetApplicationProvisioningUserPrimaryOrganizationalUnitResponseBody
     public String requestId;
 
     /**
-     * <p>The user\&quot;s primary organizational unit for application synchronization.</p>
+     * <p>The user primary organizational unit for application synchronization.</p>
      * 
      * <strong>example:</strong>
      * <p>ou_12121xxxxxx</p>

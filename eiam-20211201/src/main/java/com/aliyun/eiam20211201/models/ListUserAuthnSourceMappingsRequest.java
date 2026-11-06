@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserAuthnSourceMappingsRequest extends TeaModel {
     /**
-     * <p>The source identity provider (IdP) ID.</p>
+     * <p>The source IdP ID.</p>
      * 
      * <strong>example:</strong>
      * <p>idp_11111</p>
@@ -24,7 +24,7 @@ public class ListUserAuthnSourceMappingsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of rows per page in a paged query.</p>
+     * <p>The maximum number of entries to return per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -42,7 +42,7 @@ public class ListUserAuthnSourceMappingsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The token used to query the previous page.</p>
+     * <p>The pagination token for the previous page.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxxxexample</p>

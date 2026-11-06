@@ -15,7 +15,7 @@ public class ListOrganizationalUnitsForApplicationRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>应用角色ID。</p>
+     * <p>The application role ID.</p>
      * 
      * <strong>example:</strong>
      * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -34,7 +34,7 @@ public class ListOrganizationalUnitsForApplicationRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The list of organization IDs. A single request can contain up to 100 organization IDs.</p>
+     * <p>The organizational unit IDs. A maximum of 100 organizational unit IDs can be specified in a single operation.</p>
      * 
      * <strong>example:</strong>
      * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
@@ -52,7 +52,7 @@ public class ListOrganizationalUnitsForApplicationRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

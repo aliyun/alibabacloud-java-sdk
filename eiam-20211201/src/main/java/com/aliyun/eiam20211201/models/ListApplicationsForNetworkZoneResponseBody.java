@@ -11,7 +11,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
     public java.util.List<ListApplicationsForNetworkZoneResponseBodyApplications> applications;
 
     /**
-     * <p>The number of entries per page in a paged query.</p>
+     * <p>The number of entries to return per page for paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token returned by this call.</p>
+     * <p>The next token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -29,7 +29,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The pagination token returned by this call.</p>
+     * <p>The next token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxexample</p>
@@ -47,7 +47,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries in the list.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

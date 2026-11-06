@@ -34,7 +34,7 @@ public class AuthorizeApplicationToUsersRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The list of account IDs. You can specify up to 100 account IDs in a single request.</p>
+     * <p>The list of account IDs. A single operation supports a maximum of 100 account IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

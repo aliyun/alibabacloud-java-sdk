@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckInstanceModuleStatusResponseBody extends TeaModel {
     /**
-     * <p>The status information.</p>
+     * <p>The modification status information.</p>
      */
     @NameInMap("Module")
     public CheckInstanceModuleStatusResponseBodyModule module;

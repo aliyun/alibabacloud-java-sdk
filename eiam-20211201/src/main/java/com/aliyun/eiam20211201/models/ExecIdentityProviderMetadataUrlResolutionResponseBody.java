@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaModel {
     /**
-     * <p>The metadata of the identity provider.</p>
+     * <p>The identity provider metadata.</p>
      */
     @NameInMap("IdentityProviderMetadata")
     public ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadata identityProviderMetadata;
@@ -42,7 +42,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
 
     public static class ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataOidcOpenIdConfiguration extends TeaModel {
         /**
-         * <p>The OAuth2 authorization endpoint.</p>
+         * <p>The OAuth 2.0 authorization endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://demo.com/oauth2/default/v1/authorize">https://demo.com/oauth2/default/v1/authorize</a></p>
@@ -69,7 +69,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
         public String jwksUri;
 
         /**
-         * <p>The OAuth2 token endpoint.</p>
+         * <p>The OAuth 2.0 token endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://demo.com/api/bff/v1.2/developer/oidc/token">https://demo.com/api/bff/v1.2/developer/oidc/token</a></p>
@@ -78,7 +78,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
         public String tokenEndpoint;
 
         /**
-         * <p>The OIDC UserInfo endpoint.</p>
+         * <p>The OIDC userinfo endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://demo.com/api/bff/v1.2/developer/oidc/userinfo">https://demo.com/api/bff/v1.2/developer/oidc/userinfo</a></p>
@@ -160,13 +160,13 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
 
     public static class ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfiguration extends TeaModel {
         /**
-         * <p>The list of IdP certificates.</p>
+         * <p>The IdP certificate list.</p>
          */
         @NameInMap("Certificates")
         public java.util.List<ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfigurationCertificates> certificates;
 
         /**
-         * <p>The entity ID of the IdP.</p>
+         * <p>The IdP entity ID.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://dc.test.com/adfs/services/trust">http://dc.test.com/adfs/services/trust</a></p>
@@ -175,7 +175,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
         public String idPEntityId;
 
         /**
-         * <p>The single sign-on URL of the IdP.</p>
+         * <p>The IdP logon URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://dc.test.com/adfs/ls/">https://dc.test.com/adfs/ls/</a></p>
@@ -216,13 +216,13 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
 
     public static class ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadata extends TeaModel {
         /**
-         * <p>The metadata of the OIDC IdP.</p>
+         * <p>The OIDC IdP metadata.</p>
          */
         @NameInMap("OidcOpenIdConfiguration")
         public ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataOidcOpenIdConfiguration oidcOpenIdConfiguration;
 
         /**
-         * <p>The metadata of the SAML IdP.</p>
+         * <p>The SAML IdP metadata.</p>
          */
         @NameInMap("SamlMetadataConfiguration")
         public ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfiguration samlMetadataConfiguration;

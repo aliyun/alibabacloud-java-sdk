@@ -15,7 +15,7 @@ public class SetPasswordHistoryConfigurationRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of recent password records to retain. This parameter is required when PasswordHistoryStatus is set to enabled.</p>
+     * <p>The maximum number of recent password records to retain. This parameter is required when PasswordHistoryStatus is set to enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -24,7 +24,7 @@ public class SetPasswordHistoryConfigurationRequest extends TeaModel {
     public Integer passwordHistoryMaxRetention;
 
     /**
-     * <p>The status of the password history configuration. Valid values:</p>
+     * <p>The password history configuration status. Valid values:</p>
      * <ul>
      * <li>enabled: Enabled.</li>
      * <li>disabled: Disabled.</li>

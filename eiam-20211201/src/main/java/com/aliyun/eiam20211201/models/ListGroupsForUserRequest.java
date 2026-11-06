@@ -33,7 +33,7 @@ public class ListGroupsForUserRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The account ID.</p>
+     * <p>The user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

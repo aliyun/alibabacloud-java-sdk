@@ -34,7 +34,7 @@ public class CheckInstanceModuleStatusRequest extends TeaModel {
     public String moduleKey;
 
     /**
-     * <p>The resource label URN key.</p>
+     * <p>The URN key of the resource label.</p>
      * 
      * <strong>example:</strong>
      * <p>urn:alibaba:idaas:license:label:template:app</p>
@@ -43,7 +43,7 @@ public class CheckInstanceModuleStatusRequest extends TeaModel {
     public String resourceLabelKey;
 
     /**
-     * <p>The resource label name.</p>
+     * <p>The name of the resource label.</p>
      * 
      * <strong>example:</strong>
      * <p>apt_ram_user_sso</p>

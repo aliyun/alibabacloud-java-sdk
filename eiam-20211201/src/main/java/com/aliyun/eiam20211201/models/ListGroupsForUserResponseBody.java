@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGroupsForUserResponseBody extends TeaModel {
     /**
-     * <p>The list of account groups.</p>
+     * <p>The list of groups.</p>
      */
     @NameInMap("Groups")
     public java.util.List<ListGroupsForUserResponseBodyGroups> groups;
@@ -20,7 +20,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of matching records. The maximum number of records returned per page is determined by PageSize.</p>
+     * <p>The total number of matched entries. The maximum number of entries returned per page is specified by the PageSize parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -59,7 +59,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
 
     public static class ListGroupsForUserResponseBodyGroups extends TeaModel {
         /**
-         * <p>The account group ID.</p>
+         * <p>The group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>group_d6sbsuumeta4h66ec3il7yxxxx</p>
@@ -68,8 +68,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The source ID of the group member relationship.</p>
-         * <p>For the build_in type, this defaults to the instance ID. For other types, this corresponds to the enterprise ID of the respective source. For example, for a DingTalk source, this corresponds to the corpId of the DingTalk enterprise.</p>
+         * <p>The source ID of the group member relationship. For self-managed groups, the default value is the instance ID. For other types, the value corresponds to the enterprise ID of the source. For example, if the source is DingTalk, the value is the corpId of the DingTalk enterprise.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -79,11 +78,13 @@ public class ListGroupsForUserResponseBody extends TeaModel {
 
         /**
          * <p>The source type of the group member relationship. Valid values:</p>
-         * <p>build_in: built-in.</p>
-         * <p>ding_talk: imported from DingTalk.</p>
-         * <p>ad: imported from AD.</p>
-         * <p>ldap: imported from LDAP.</p>
-         * <p>we_com: imported from WeCom.</p>
+         * <ul>
+         * <li>build_in: Self-managed.</li>
+         * <li>ding_talk: Imported from DingTalk.</li>
+         * <li>ad: Imported from AD.</li>
+         * <li>ldap: Imported from LDAP.</li>
+         * <li>we_com: Imported from WeCom.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>build_in</p>

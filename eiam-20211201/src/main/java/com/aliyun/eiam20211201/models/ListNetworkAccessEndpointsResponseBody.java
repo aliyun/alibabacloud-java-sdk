@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
     /**
-     * <p>The list of network access endpoints.</p>
+     * <p>The network access endpoints.</p>
      */
     @NameInMap("NetworkAccessEndpoints")
     public java.util.List<ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpoints> networkAccessEndpoints;
 
     /**
-     * <p>The pagination token returned by this call.</p>
+     * <p>The pagination token returned for the current call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -20,7 +20,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -29,7 +29,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries in the list.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -76,19 +76,19 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
 
     public static class ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint extends TeaModel {
         /**
-         * <p>The list of private egress IP addresses of the backup network access endpoint.</p>
+         * <p>The private egress IP addresses of the backup network access endpoint.</p>
          */
         @NameInMap("BackupEgressPrivateIpAddresses")
         public java.util.List<String> backupEgressPrivateIpAddresses;
 
         /**
-         * <p>The list of public egress IP addresses of the backup network access endpoint.</p>
+         * <p>The public egress IP addresses of the backup network access endpoint.</p>
          */
         @NameInMap("BackupEgressPublicIpAddresses")
         public java.util.List<String> backupEgressPublicIpAddresses;
 
         /**
-         * <p>The security group ID of the backup network access endpoint.</p>
+         * <p>The ID of the security group for the backup network access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-examplexxx</p>
@@ -97,13 +97,13 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String backupSecurityGroupId;
 
         /**
-         * <p>The list of vSwitches for the backup network access endpoint.</p>
+         * <p>The IDs of the vSwitches for the backup network access endpoint.</p>
          */
         @NameInMap("BackupVSwitchIds")
         public java.util.List<String> backupVSwitchIds;
 
         /**
-         * <p>The VPC ID of the backup network access endpoint.</p>
+         * <p>The ID of the VPC for the backup network access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-examplexxx</p>
@@ -112,7 +112,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String backupVpcId;
 
         /**
-         * <p>The region of the backup network access endpoint VPC.</p>
+         * <p>The region of the VPC for the backup network access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -177,13 +177,13 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
 
     public static class ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpoints extends TeaModel {
         /**
-         * <p>The backup network access endpoint VPC configuration.</p>
+         * <p>The VPC configurations of the backup network access endpoint.</p>
          */
         @NameInMap("BackupVpcEndpoint")
         public ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint backupVpcEndpoint;
 
         /**
-         * <p>The creation time of the network access endpoint. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The time when the network access endpoint was created. The time is displayed in the UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -201,7 +201,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The network access endpoint ID.</p>
+         * <p>The ID of the network access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>nae_examplexxx</p>
@@ -210,7 +210,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String networkAccessEndpointId;
 
         /**
-         * <p>The network access endpoint name. For example, the VPC access endpoint for a specific business.</p>
+         * <p>The name of the network access endpoint, such as the xx business VPC access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC access endpoint for xx service</p>
@@ -222,7 +222,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
          * <p>The type of the network access endpoint. Valid values:</p>
          * <ul>
          * <li>shared: shared network access endpoint.</li>
-         * <li>private: dedicated network access endpoint.</li>
+         * <li>private: private network access endpoint.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,7 +232,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String networkAccessEndpointType;
 
         /**
-         * <p>The security group ID used by the dedicated network access endpoint.</p>
+         * <p>The ID of the security group used by the private network access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-examplexxx</p>
@@ -256,7 +256,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The last update time of the network access endpoint. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The time when the network access endpoint was last updated. The time is displayed in the UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -265,7 +265,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>The list of vSwitches for the dedicated network access endpoint.</p>
+         * <p>The IDs of the vSwitches to which the private network access endpoint is connected.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-examplexxx</p>
@@ -274,7 +274,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The VPC ID of the dedicated network access endpoint.</p>
+         * <p>The ID of the VPC to which the private network access endpoint is connected.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-examplexxx</p>
@@ -283,7 +283,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The region of the VPC for the dedicated network access endpoint.</p>
+         * <p>The region of the VPC to which the private network access endpoint is connected.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

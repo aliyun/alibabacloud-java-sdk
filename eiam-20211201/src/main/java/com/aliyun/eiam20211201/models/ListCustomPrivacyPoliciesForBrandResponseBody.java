@@ -11,7 +11,7 @@ public class ListCustomPrivacyPoliciesForBrandResponseBody extends TeaModel {
     public java.util.List<ListCustomPrivacyPoliciesForBrandResponseBodyBrandCustomPrivacyPolicies> brandCustomPrivacyPolicies;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The maximum number of entries to return per page for paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListCustomPrivacyPoliciesForBrandResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results.</p>
+     * <p>The pagination token returned for this call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -29,7 +29,7 @@ public class ListCustomPrivacyPoliciesForBrandResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The token to retrieve the previous page of results.</p>
+     * <p>The pagination token returned for this call.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxexample</p>
@@ -110,7 +110,7 @@ public class ListCustomPrivacyPoliciesForBrandResponseBody extends TeaModel {
 
     public static class ListCustomPrivacyPoliciesForBrandResponseBodyBrandCustomPrivacyPolicies extends TeaModel {
         /**
-         * <p>The privacy policy ID.</p>
+         * <p>The custom privacy policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pp_xxxx</p>

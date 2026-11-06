@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEventTypesRequest extends TeaModel {
     /**
-     * <p>The page number of the query.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListEventTypesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
