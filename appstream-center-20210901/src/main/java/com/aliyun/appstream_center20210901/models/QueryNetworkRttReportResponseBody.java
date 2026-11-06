@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryNetworkRttReportResponseBody extends TeaModel {
     /**
-     * <p>The business status code. <code>200</code> indicates that the request is successful. Other values indicate that the request failed.</p>
+     * <p>The business status code. <code>200</code> indicates that the request is processed successfully. Other values indicate that the processing failed.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class QueryNetworkRttReportResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The description of the request processing result. <code>success</code> is usually returned when the request is successful.</p>
+     * <p>The description of the request processing result. If the request is successful, <code>success</code> is usually returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -145,7 +145,7 @@ public class QueryNetworkRttReportResponseBody extends TeaModel {
         public Long lowRttUserCount;
 
         /**
-         * <p>The ratio of low-RTT users to the total number of users included in the statistics. Valid values: 0 to 1. To obtain the percentage, multiply the value by 100.</p>
+         * <p>The ratio of low-RTT users to the total number of users involved in the statistics. Valid values: 0 to 1. To obtain the percentage, multiply the value by 100.</p>
          * 
          * <strong>example:</strong>
          * <p>0.85</p>
@@ -163,7 +163,7 @@ public class QueryNetworkRttReportResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The average RTT of all users included in the statistics. Unit: milliseconds.</p>
+         * <p>The average RTT of all users involved in the statistics. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>35.8</p>
@@ -208,7 +208,7 @@ public class QueryNetworkRttReportResponseBody extends TeaModel {
         public String statStartDate;
 
         /**
-         * <p>The total number of users included in the RTT calculation for the current statistical window. Unit: users.</p>
+         * <p>The total number of users involved in the RTT calculation for the current statistical window. Unit: users.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

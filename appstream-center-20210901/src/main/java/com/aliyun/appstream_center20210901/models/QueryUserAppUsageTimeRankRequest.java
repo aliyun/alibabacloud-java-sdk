@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryUserAppUsageTimeRankRequest extends TeaModel {
     /**
-     * <p>The ID of the app instance group, which is used to filter data for a specified app instance group. If this parameter is not provided, data is not filtered by app instance group.</p>
+     * <p>The app instance group ID, which is used to filter data for a specified app instance group. If this parameter is not provided, data is not filtered by app instance group.</p>
      * 
      * <strong>example:</strong>
      * <p>aig-9ciijz60n4xsv****</p>
@@ -14,8 +14,7 @@ public class QueryUserAppUsageTimeRankRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The business region ID, which is used to filter application usage data. If this parameter is not provided, data is not filtered by business region. You can call the ListRegions operation to obtain the ID.
-     * <a href="~~ListRegions~~">ListRegions</a></p>
+     * <p>The business region ID, which is used to filter application usage data. If this parameter is not provided, data is not filtered by business region. You can call the <a href="~~ListRegions~~">ListRegions</a> operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -24,7 +23,7 @@ public class QueryUserAppUsageTimeRankRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The end date of the statistical period, in yyyyMMdd format. If this parameter is not provided, it defaults to yesterday. The date cannot be earlier than StartDate, and cannot be earlier than 90 days before the call date. The query range includes this date. The date is interpreted as a calendar date in the Asia/Shanghai (UTC+8) time zone.</p>
+     * <p>The end date of the statistical period, in <code>yyyyMMdd</code> format. If this parameter is not provided, it defaults to yesterday. The date cannot be earlier than <code>StartDate</code>, and cannot be earlier than 90 days before the call date. The query range includes this date. The date is interpreted as a calendar date in the Asia/Shanghai (UTC+8) time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>20260907</p>
@@ -33,7 +32,7 @@ public class QueryUserAppUsageTimeRankRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The region ID for OpenAPI access, which is used for request authentication and routing. To filter business data by region, use BizRegionId.</p>
+     * <p>The region ID for OpenAPI access, which is used for request authentication and routing. To filter business data by region, use <code>BizRegionId</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -42,7 +41,7 @@ public class QueryUserAppUsageTimeRankRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start date of the statistical period, in yyyyMMdd format. If this parameter is not provided, it defaults to yesterday. The date cannot be earlier than 90 days before the call date. The query range includes this date. The date is interpreted as a calendar date in the Asia/Shanghai (UTC+8) time zone.</p>
+     * <p>The start date of the statistical period, in <code>yyyyMMdd</code> format. If this parameter is not provided, it defaults to yesterday. The date cannot be earlier than 90 days before the call date. The query range includes this date. The date is interpreted as a calendar date in the Asia/Shanghai (UTC+8) time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>20260901</p>

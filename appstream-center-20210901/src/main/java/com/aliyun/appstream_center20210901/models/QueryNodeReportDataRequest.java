@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryNodeReportDataRequest extends TeaModel {
     /**
-     * <p>The ID of the app instance group, which is used to filter data for a specific app instance group. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID. If you do not specify this parameter, data is not filtered by app instance group.</p>
+     * <p>The ID of the app instance group, which is used to filter data for a specified app instance group. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID. If you do not specify this parameter, data is not filtered by app instance group.</p>
      * 
      * <strong>example:</strong>
      * <p>aig-9ciijz60n4xsv****</p>
@@ -14,7 +14,7 @@ public class QueryNodeReportDataRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The ID of the business region, which is used to filter report data. You can call the <a href="~~ListRegions~~">ListRegions</a> operation to obtain the ID.</p>
+     * <p>The business region ID, which is used to filter report data. You can call the <a href="~~ListRegions~~">ListRegions</a> operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -23,7 +23,7 @@ public class QueryNodeReportDataRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The end time of the statistics. <strong>Required</strong>. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The end time cannot be earlier than <code>StartDate</code>. The query span must meet the limit corresponding to <code>StatDateType</code>. The string itself does not carry a time zone and is interpreted as Asia/Shanghai (UTC+8).</p>
+     * <p>The end time of the statistics. This parameter is required. Format: yyyy-MM-dd HH:mm:ss. The end time cannot be earlier than the start time. The query span must meet the limit corresponding to the statistical granularity. The string itself does not carry a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-09-02 00:00:00</p>
@@ -32,7 +32,7 @@ public class QueryNodeReportDataRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The page number to query. We recommend that you explicitly specify a value starting from <code>1</code>. If you do not specify this parameter, the service processes the request as the first page, but the response may return <code>0</code>.</p>
+     * <p>The page number to query. Explicitly pass a value starting from 1. If you do not specify this parameter, the service processes the request as the first page, but the response may return 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class QueryNodeReportDataRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. If you do not specify this parameter, the default value is 200. If the specified value is greater than 1,500, it is processed as 1,500.</p>
+     * <p>The number of entries per page. If you do not specify this parameter, the default value is 200. If the value is greater than 1500, it is processed as 1500.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -50,18 +50,18 @@ public class QueryNodeReportDataRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The product type. Optional. If you do not specify this parameter, data is queried based on the Wuying Cloud App criteria.</p>
-     * <p>Specify the value in the exact case as shown below. Data that cannot be matched is not returned.</p>
+     * <p>The product type. This parameter is optional. If you do not specify this parameter, data is queried for Wuying Cloud App.</p>
+     * <p>Specify the value in the exact case shown below. Data that does not match the specified case is not returned.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><code>CloudApp</code>: Wuying Cloud App.</li>
-     * <li><code>CloudBrowser</code>: Cloud Browser.</li>
-     * <li><code>WuyingServer</code>: Enterprise Edition workstation.</li>
-     * <li><code>WuyingWorkstation</code>: Personal Edition Linggou container workstation.</li>
-     * <li><code>WuyingWorkstationTeam</code>: Linggou Team Edition container workstation.</li>
-     * <li><code>WuyingWorkstationBusiness</code>: Linggou Dedicated Edition container workstation.</li>
-     * <li><code>AndroidCloud</code>: Cloud Phone.</li>
-     * <li><code>AIAgent</code>: AgentBay (AI agent).</li>
+     * <li>CloudApp: Wuying Cloud App.</li>
+     * <li>CloudBrowser: Cloud Browser.</li>
+     * <li>WuyingServer: Enterprise Edition workstation.</li>
+     * <li>WuyingWorkstation: Personal Edition Linggou container workstation.</li>
+     * <li>WuyingWorkstationTeam: Linggou Team Edition container workstation.</li>
+     * <li>WuyingWorkstationBusiness: Linggou Dedicated Edition container workstation.</li>
+     * <li>AndroidCloud: Cloud Phone.</li>
+     * <li>AIAgent: AgentBay (AI agent).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class QueryNodeReportDataRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The start time of the statistics. <strong>Required</strong>. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The <code>1d</code> granularity calculates statistics by date, while other granularities are accurate to the minute. The query includes both the start and end boundaries. The string itself does not carry a time zone and is interpreted as Asia/Shanghai (UTC+8).</p>
+     * <p>The start time of the statistics. This parameter is required. Format: yyyy-MM-dd HH:mm:ss. The 1d granularity aggregates data by date, while other granularities aggregate data down to the minute. The query includes both the start and end boundaries. The string itself does not carry a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-09-01 00:00:00</p>
@@ -80,13 +80,13 @@ public class QueryNodeReportDataRequest extends TeaModel {
     public String startDate;
 
     /**
-     * <p>The statistical granularity. <strong>Required</strong>.</p>
+     * <p>The statistical granularity. This parameter is required.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><code>1m</code>: aggregates data by 1 minute. The maximum query span is 1 day.</li>
-     * <li><code>30m</code>: aggregates data by 30 minutes. The maximum query span is 1 day.</li>
-     * <li><code>6h</code>: aggregates data by 6 hours. The maximum query span is 15 days.</li>
-     * <li><code>1d</code>: aggregates data by day. The maximum query span is 180 days.</li>
+     * <li>1m: Aggregates data by 1 minute. The maximum query span is 1 day.</li>
+     * <li>30m: Aggregates data by 30 minutes. The maximum query span is 1 day.</li>
+     * <li>6h: Aggregates data by 6 hours. The maximum query span is 15 days.</li>
+     * <li>1d: Aggregates data by day. The maximum query span is 180 days.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryDauReportDataRequest extends TeaModel {
     /**
-     * <p>The ID of the app instance group. This parameter is used to filter data for a specific app instance group. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID. If this parameter is not specified, data is not filtered by app instance group.</p>
+     * <p>The ID of the app instance group, which is used to filter data for a specific app instance group. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID. If this parameter is not specified, data is not filtered by app instance group.</p>
      * 
      * <strong>example:</strong>
      * <p>aig-9ciijz60n4xsv****</p>
@@ -14,7 +14,7 @@ public class QueryDauReportDataRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The ID of the business region. This parameter is used to filter report data. You can call the <a href="~~ListRegions~~">ListRegions</a> operation to obtain the ID.</p>
+     * <p>The ID of the business region, which is used to filter report data. You can call the <a href="~~ListRegions~~">ListRegions</a> operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -23,7 +23,7 @@ public class QueryDauReportDataRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The end time of the statistical period. This parameter is <strong>required</strong>. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The value cannot be earlier than StartDate. The service extracts the calendar day in the <code>yyyy-MM-dd</code> format. The string does not contain time zone information and is interpreted in the Asia/Shanghai (UTC+8) time zone.</p>
+     * <p>The end time of the statistics period. This parameter is required. Format: yyyy-MM-dd HH:mm:ss. The value cannot be earlier than StartDate. The service extracts the natural day in the yyyy-MM-dd format. The string does not contain a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-09-30 23:59:59</p>
@@ -32,7 +32,7 @@ public class QueryDauReportDataRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The page number. Explicitly specify a value starting from <code>1</code>. If this parameter is not specified, the service returns the first page, but the response may return <code>0</code> for the page number.</p>
+     * <p>The page number to query. Specify a value starting from 1. If this parameter is not specified, the service processes the request as the first page, but the response may return 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class QueryDauReportDataRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 200. If the specified value is greater than 1,500, the value 1,500 is used.</p>
+     * <p>The number of records per page. Default value: 200. If the specified value is greater than 1,500, the value is processed as 1,500.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -50,16 +50,17 @@ public class QueryDauReportDataRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The product type. This parameter is optional. If this parameter is not specified or is unrecognized, the query defaults to <code>CloudApp</code>. Valid values:</p>
+     * <p>The product type. This parameter is optional. If this parameter is not specified or is unrecognized, the query defaults to CloudApp.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><code>CloudApp</code>: Wuying cloud application.</li>
-     * <li><code>CloudBrowser</code>: Cloud browser.</li>
-     * <li><code>WuyingServer</code>: Enterprise edition workstation.</li>
-     * <li><code>WuyingWorkstation</code>: Personal edition Linggou container workstation.</li>
-     * <li><code>WuyingWorkstationTeam</code>: Team edition Linggou container workstation.</li>
-     * <li><code>WuyingWorkstationBusiness</code>: Dedicated edition Linggou container workstation.</li>
-     * <li><code>AndroidCloud</code>: Cloud phone.</li>
-     * <li><code>AIAgent</code>: AgentBay (AI agent).</li>
+     * <li>CloudApp: Wuying Cloud App.</li>
+     * <li>CloudBrowser: Cloud browser.</li>
+     * <li>WuyingServer: Enterprise Edition workstation.</li>
+     * <li>WuyingWorkstation: Personal Edition Linggou container workstation.</li>
+     * <li>WuyingWorkstationTeam: Linggou Team Edition container workstation.</li>
+     * <li>WuyingWorkstationBusiness: Linggou Dedicated Edition container workstation.</li>
+     * <li>AndroidCloud: Cloud phone.</li>
+     * <li>AIAgent: AgentBay (AI agent).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,7 +70,7 @@ public class QueryDauReportDataRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The start time of the statistical period. This parameter is <strong>required</strong>. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The service extracts the calendar day in the <code>yyyy-MM-dd</code> format. The date range is inclusive and cannot exceed 180 days. The string does not contain time zone information and is interpreted in the Asia/Shanghai (UTC+8) time zone.</p>
+     * <p>The start time of the statistics period. This parameter is required. Format: yyyy-MM-dd HH:mm:ss. The service extracts the natural day in the yyyy-MM-dd format. The date range is inclusive and cannot exceed 180 days. The string does not contain a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-09-01 00:00:00</p>

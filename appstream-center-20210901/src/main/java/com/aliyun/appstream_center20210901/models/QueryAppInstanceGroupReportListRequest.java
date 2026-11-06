@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAppInstanceGroupReportListRequest extends TeaModel {
     /**
-     * <p>The filter condition for the delivery group ID, which matches the exact ID. If this parameter is not passed, the results are not filtered by ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the ID.</p>
+     * <p>The filter condition for the app instance group ID, which matches the exact ID. If this parameter is not specified, the results are not filtered by ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>aig-9ciijz60n4xsv****</p>
@@ -14,7 +14,7 @@ public class QueryAppInstanceGroupReportListRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The filter condition for the delivery group name, which supports inclusion matching. If this parameter is not passed, the results are not filtered by name.</p>
+     * <p>The filter condition for the app instance group name, which supports inclusion matching. If this parameter is not specified, the results are not filtered by name.</p>
      * 
      * <strong>example:</strong>
      * <p>R&amp;D workstation</p>
@@ -23,7 +23,7 @@ public class QueryAppInstanceGroupReportListRequest extends TeaModel {
     public String appInstanceGroupName;
 
     /**
-     * <p>The business region ID of the delivery group. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the ID. If this parameter is not passed, the results are not filtered by business region.</p>
+     * <p>The ID of the business region to which the app instance group belongs. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the ID. If this parameter is not specified, the results are not filtered by business region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -32,7 +32,7 @@ public class QueryAppInstanceGroupReportListRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The end date of the statistical period, in the <code>yyyyMMdd</code> format. This parameter must be passed in pairs with <code>StartDate</code> and cannot be earlier than the start date. The string itself does not carry a time zone and is interpreted as a natural date in the Asia/Shanghai (UTC+8) time zone.</p>
+     * <p>The end date of the statistics. Format: <code>yyyyMMdd</code>. This parameter must be specified in pairs with <code>StartDate</code> and cannot be earlier than the start date. The string itself does not carry a time zone and is interpreted as a natural date in the Asia/Shanghai (UTC+8) time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>20260930</p>
@@ -41,7 +41,7 @@ public class QueryAppInstanceGroupReportListRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The ID of the end user, which is used to filter delivery groups based on the current valid authorization relationship. Before calling this operation, make sure that the user has at least one valid authorization. If no valid authorization exists, the current version does not narrow down the results based on this parameter. If this parameter is not passed, the results are not filtered by user.</p>
+     * <p>The ID of the end user, which is used to filter app instance groups based on the current valid authorization relationship. Before the call, make sure that the user has at least one valid authorization. If no valid authorization exists, the current version does not narrow down the results based on this parameter. If this parameter is not specified, the results are not filtered by user.</p>
      * 
      * <strong>example:</strong>
      * <p>user01</p>
@@ -50,7 +50,7 @@ public class QueryAppInstanceGroupReportListRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The page number to query. Explicitly pass a value starting from <code>1</code>. If this parameter is not passed, the service processes the request as the first page, but the response may return <code>0</code>.</p>
+     * <p>The page number to query. Specify a value starting from <code>1</code>. If this parameter is not specified, the service processes the request as the first page, but the response may return <code>0</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class QueryAppInstanceGroupReportListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. If this parameter is not passed, the default value is 200. The current operation does not have an additional upper limit per page.</p>
+     * <p>The number of entries per page. Default value: 200. The current operation does not have an additional upper limit for a single page.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -77,7 +77,7 @@ public class QueryAppInstanceGroupReportListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start date of the statistical period, in the <code>yyyyMMdd</code> format. This parameter must be passed in pairs with <code>EndDate</code>, and the interval includes the start and end dates. The string itself does not carry a time zone and is interpreted as a natural date in the Asia/Shanghai (UTC+8) time zone.</p>
+     * <p>The start date of the statistics. Format: <code>yyyyMMdd</code>. This parameter must be specified in pairs with <code>EndDate</code>, and the interval includes the start and end dates. The string itself does not carry a time zone and is interpreted as a natural date in the Asia/Shanghai (UTC+8) time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>20260901</p>
@@ -86,7 +86,7 @@ public class QueryAppInstanceGroupReportListRequest extends TeaModel {
     public String startDate;
 
     /**
-     * <p>The statistical date for a single day, in the <code>yyyyMMdd</code> format. If this parameter is passed along with <code>StartDate</code> and <code>EndDate</code>, the results must meet both the single-day and interval conditions. The string itself does not carry a time zone and is interpreted as a natural date in the Asia/Shanghai (UTC+8) time zone.</p>
+     * <p>The statistical date for a single day. Format: <code>yyyyMMdd</code>. If this parameter is specified along with <code>StartDate</code> and <code>EndDate</code>, the results must meet both the single-day and interval conditions. The string itself does not carry a time zone and is interpreted as a natural date in the Asia/Shanghai (UTC+8) time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>20260901</p>
@@ -95,16 +95,16 @@ public class QueryAppInstanceGroupReportListRequest extends TeaModel {
     public String statDate;
 
     /**
-     * <p>The list of delivery group statuses. Multiple values have an OR relationship. Unrecognized values do not participate in filtering. If all values are unrecognized, it is equivalent to not filtering by status.</p>
+     * <p>The list of app instance group statuses. Multiple values have an OR relationship. Unrecognized values do not participate in filtering. If all values are unrecognized, the results are not filtered by status.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li><code>DEPLOYING</code>: Deploying.</li>
      * <li><code>DEPLOYED</code>: Deployed but not published.</li>
-     * <li><code>PUBLISHED</code>: Published and available for service based on the current configuration.</li>
+     * <li><code>PUBLISHED</code>: Published and available to provide services based on the current configurations.</li>
      * <li><code>STOPPING</code>: Stopping.</li>
      * <li><code>STOPPED</code>: Stopped.</li>
      * <li><code>MAINTAINING</code>: Maintaining.</li>
-     * <li><code>FAILED</code>: Deployment or operation failed.</li>
+     * <li><code>FAILED</code>: Deployment or running failed.</li>
      * <li><code>MAINTAIN_FAILED</code>: Maintenance failed.</li>
      * <li><code>DELETING</code>: Deleting.</li>
      * <li><code>DELETED</code>: Deleted.</li>

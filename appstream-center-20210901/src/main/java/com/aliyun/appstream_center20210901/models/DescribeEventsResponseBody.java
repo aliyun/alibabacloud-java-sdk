@@ -11,7 +11,7 @@ public class DescribeEventsResponseBody extends TeaModel {
     public java.util.List<DescribeEventsResponseBodyEventList> eventList;
 
     /**
-     * <p>The compatibility field. The current version does not set this field. Do not rely on its value.</p>
+     * <p>A compatibility field. The current version does not set this field. Do not rely on its value.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -20,7 +20,7 @@ public class DescribeEventsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The compatibility field. The current version does not generate a next page token. Do not use this field for pagination.</p>
+     * <p>A compatibility field. The current version does not generate a next page token. Do not use this field for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>unused</p>
@@ -47,7 +47,7 @@ public class DescribeEventsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The unique identifier of the request, which can be used to troubleshoot the request.</p>
+     * <p>The unique identifier of the request, which can be used to troubleshoot request issues.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -56,7 +56,7 @@ public class DescribeEventsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of events that meet all filter conditions within the retrievable window of the last 30 days. Unit: events.</p>
+     * <p>The total number of events that meet all filter conditions within the 30-day retrievable window. Unit: entries.</p>
      * 
      * <strong>example:</strong>
      * <p>36</p>
@@ -127,7 +127,7 @@ public class DescribeEventsResponseBody extends TeaModel {
 
     public static class DescribeEventsResponseBodyEventList extends TeaModel {
         /**
-         * <p>The ID of the delivery group associated with the event. This parameter may be empty if the event is not associated with a delivery group.</p>
+         * <p>The ID of the delivery group associated with the event. This field may be empty if the event is not associated with a delivery group.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-9ciijz60n4xsv****</p>
@@ -136,7 +136,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
-         * <p>The name of the delivery group associated with the event. This parameter may be empty if the event is not associated with a delivery group.</p>
+         * <p>The name of the delivery group associated with the event. This field may be empty if the event is not associated with a delivery group.</p>
          * 
          * <strong>example:</strong>
          * <p>R&amp;D workstation group</p>
@@ -145,7 +145,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String appInstanceGroupName;
 
         /**
-         * <p>The event detail text. The content varies with <code>EventType</code> and may be empty. For example, a session release event can return JSON text to describe the release reason.</p>
+         * <p>The event detail text. The content varies based on the <code>EventType</code> and may be empty. For example, a session release event may return a JSON text that describes the release cause.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Reason&quot;:&quot;ByUser&quot;}</p>
@@ -163,7 +163,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String eventId;
 
         /**
-         * <p>The event type identifier. Different products may return different values. You can use this value for subsequent accurate filtering.</p>
+         * <p>The event type identifier. Different products may return different values. You can use this value for subsequent exact filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>SessionDisconnected</p>
@@ -172,7 +172,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String eventType;
 
         /**
-         * <p>The private IP address of the member ENI of the cloud resource associated with the event. This parameter may be empty if it is not applicable.</p>
+         * <p>The private IP address of the member ENI of the cloud resource associated with the event. This field may be empty if it is not applicable.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.10</p>
@@ -190,7 +190,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String occurredTime;
 
         /**
-         * <p>The ID of the office network associated with the event. This parameter may be empty if it is not applicable.</p>
+         * <p>The ID of the office network associated with the event. This field may be empty if it is not applicable.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai+dir-123456****</p>
@@ -199,7 +199,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The product type to which the event belongs. This field is an open string and may be extended as supported event sources increase. Callers should not limit the value to the products currently listed in the <code>ProductType</code> request parameter.</p>
+         * <p>The product type to which the event belongs. This field is an open string and may be extended as supported event sources expand. Callers should not restrict the value to the products currently listed in the <code>ProductType</code> request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>CloudApp</p>
@@ -208,7 +208,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String productType;
 
         /**
-         * <p>The ID of the end user who generated the event. This parameter may be empty if the event is not associated with an end user.</p>
+         * <p>The ID of the end user who generated the event. This field may be empty if the event is not associated with an end user.</p>
          * 
          * <strong>example:</strong>
          * <p>user01</p>

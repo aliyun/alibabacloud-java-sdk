@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "appstream-center";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("appstream-center", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -419,6 +422,154 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Before you call this operation, make sure that the parent image is available and an available image distribution record exists in the region where the image is created.</p>
+     * <ol>
+     * <li>Call ListImage to obtain the parent image ID.</li>
+     * <li>Specify the creation mode, disk capacity, and resource type, and then call this operation.</li>
+     * <li>Save the returned ImageId, VersionId, and TaskId.</li>
+     * <li>Call GetTask to query the creation progress. <strong>A successful request does not indicate that the image creation is complete.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a custom image based on an existing image and starts an image creation task.</p>
+     * 
+     * @param tmpReq BuilderImageByParentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BuilderImageByParentResponse
+     */
+    public BuilderImageByParentResponse builderImageByParentWithOptions(BuilderImageByParentRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BuilderImageByParentShrinkRequest request = new BuilderImageByParentShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.propertyMap)) {
+            request.propertyMapShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.propertyMap, "PropertyMap", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            body.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataDiskSize)) {
+            body.put("DataDiskSize", request.dataDiskSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.distro)) {
+            body.put("Distro", request.distro);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.driverIdList)) {
+            body.put("DriverIdList", request.driverIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageCreateMode)) {
+            body.put("ImageCreateMode", request.imageCreateMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageName)) {
+            body.put("ImageName", request.imageName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            body.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeInstanceType)) {
+            body.put("NodeInstanceType", request.nodeInstanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
+            body.put("OfficeSiteId", request.officeSiteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.packageType)) {
+            body.put("PackageType", request.packageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentImageId)) {
+            body.put("ParentImageId", request.parentImageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.performanceType)) {
+            body.put("PerformanceType", request.performanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.propertyMapShrink)) {
+            body.put("PropertyMap", request.propertyMapShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceList)) {
+            body.put("ResourceList", request.resourceList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runMode)) {
+            body.put("RunMode", request.runMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceRegion)) {
+            body.put("SourceRegion", request.sourceRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.systemDiskSize)) {
+            body.put("SystemDiskSize", request.systemDiskSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchIdList)) {
+            body.put("VSwitchIdList", request.vSwitchIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionName)) {
+            body.put("VersionName", request.versionName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BuilderImageByParent"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BuilderImageByParentResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that the parent image is available and an available image distribution record exists in the region where the image is created.</p>
+     * <ol>
+     * <li>Call ListImage to obtain the parent image ID.</li>
+     * <li>Specify the creation mode, disk capacity, and resource type, and then call this operation.</li>
+     * <li>Save the returned ImageId, VersionId, and TaskId.</li>
+     * <li>Call GetTask to query the creation progress. <strong>A successful request does not indicate that the image creation is complete.</strong></li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a custom image based on an existing image and starts an image creation task.</p>
+     * 
+     * @param request BuilderImageByParentRequest
+     * @return BuilderImageByParentResponse
+     */
+    public BuilderImageByParentResponse builderImageByParent(BuilderImageByParentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.builderImageByParentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>You can authorize a model group for the resources to which agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent belong in the Wuying Agent Management Center. The model group serves as the inference engine for agents in the resource group to execute tasks.
      * If an agent runtime is configured with a model group and its resource group is also configured with a model group, the model group bound to the resource group takes effect. This means that the resource group settings take precedence over the agent runtime settings.
      * Make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you call this operation.</p>
@@ -613,6 +764,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ConfigRuntimeModelTemplateResponse configRuntimeModelTemplate(ConfigRuntimeModelTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.configRuntimeModelTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Only custom images and community images that can be managed by the current account are supported. If VersionId is omitted, the current active version of the image is used. If specified, the version must belong to the image specified by ImageId.
+     * Call ListImage to select an image first. After the application is created, save the returned AppId, AppVersionId, ImageId, and VersionId. To dissociate the application, call UnbindApp.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an application and binds it to a specified image version.</p>
+     * 
+     * @param request CreateAndBindAppRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAndBindAppResponse
+     */
+    public CreateAndBindAppResponse createAndBindAppWithOptions(CreateAndBindAppRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appIconUrl)) {
+            body.put("AppIconUrl", request.appIconUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            body.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            body.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originAppType)) {
+            body.put("OriginAppType", request.originAppType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.port)) {
+            body.put("Port", request.port);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.urlSuffix)) {
+            body.put("UrlSuffix", request.urlSuffix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            body.put("VersionId", request.versionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAndBindApp"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAndBindAppResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Only custom images and community images that can be managed by the current account are supported. If VersionId is omitted, the current active version of the image is used. If specified, the version must belong to the image specified by ImageId.
+     * Call ListImage to select an image first. After the application is created, save the returned AppId, AppVersionId, ImageId, and VersionId. To dissociate the application, call UnbindApp.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an application and binds it to a specified image version.</p>
+     * 
+     * @param request CreateAndBindAppRequest
+     * @return CreateAndBindAppResponse
+     */
+    public CreateAndBindAppResponse createAndBindApp(CreateAndBindAppRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAndBindAppWithOptions(request, runtime);
     }
 
     /**
@@ -1043,6 +1270,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateBrowserInstanceGroupResponse createBrowserInstanceGroup(CreateBrowserInstanceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createBrowserInstanceGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an export task and returns the task ID and initial status. The exported file is not returned synchronously.
+     * After the task is created, save the TaskId and call DescribeExportTasks to query the task status and progress. A polling interval of 5 to 10 seconds is recommended. When the status is FINISHED, use the DownloadUrl in the latest query result to download the XLSX file. When the status is FAILED, check the ErrorMsg and stop polling.
+     * The task is valid for 24 hours after creation. The download URL has an independent signature validity period of up to 1 hour, which does not exceed the remaining validity period of the task. Query the latest URL before downloading. You cannot obtain a valid download URL after the task expires.
+     * Exporting the WUYING server list only accepts the filter fields listed in QueryParamJson. Pagination is controlled by the server, and a single task can export up to 100,000 records. Exporting cloud browser bookmarks and the URL whitelist exports the complete list of the target delivery group, regardless of list search terms or the current page. The system verifies the delivery group ownership and product type before execution. Data is paginated during execution, and no consistent snapshot is provided. A successful creation does not guarantee that subsequent verification, querying, or file generation will succeed.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an asynchronous export task to export the WUYING server list, user usage report, cloud browser bookmarks, or URL whitelist.</p>
+     * 
+     * @param request CreateExportTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateExportTaskResponse
+     */
+    public CreateExportTaskResponse createExportTaskWithOptions(CreateExportTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.exportFields)) {
+            body.put("ExportFields", request.exportFields);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryParamJson)) {
+            body.put("QueryParamJson", request.queryParamJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
+            body.put("TaskType", request.taskType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateExportTask"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateExportTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an export task and returns the task ID and initial status. The exported file is not returned synchronously.
+     * After the task is created, save the TaskId and call DescribeExportTasks to query the task status and progress. A polling interval of 5 to 10 seconds is recommended. When the status is FINISHED, use the DownloadUrl in the latest query result to download the XLSX file. When the status is FAILED, check the ErrorMsg and stop polling.
+     * The task is valid for 24 hours after creation. The download URL has an independent signature validity period of up to 1 hour, which does not exceed the remaining validity period of the task. Query the latest URL before downloading. You cannot obtain a valid download URL after the task expires.
+     * Exporting the WUYING server list only accepts the filter fields listed in QueryParamJson. Pagination is controlled by the server, and a single task can export up to 100,000 records. Exporting cloud browser bookmarks and the URL whitelist exports the complete list of the target delivery group, regardless of list search terms or the current page. The system verifies the delivery group ownership and product type before execution. Data is paginated during execution, and no consistent snapshot is provided. A successful creation does not guarantee that subsequent verification, querying, or file generation will succeed.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an asynchronous export task to export the WUYING server list, user usage report, cloud browser bookmarks, or URL whitelist.</p>
+     * 
+     * @param request CreateExportTaskRequest
+     * @return CreateExportTaskResponse
+     */
+    public CreateExportTaskResponse createExportTask(CreateExportTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createExportTaskWithOptions(request, runtime);
     }
 
     /**
@@ -1520,6 +1811,148 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p><em>Confirm the deletion scope first.</em>*</p>
+     * <ul>
+     * <li>If both ImageId and VersionId are specified: only the association between the adaptation and the specified image version is dissociated.</li>
+     * <li>If ImageId and VersionId are not both specified: the adaptation deletion process starts. The adaptation cannot be deleted if it is still referenced by multiple images. If the application still has other adaptations, the application cannot be deleted along with it.
+     * <strong>AdaptorId, AppVersionId, and AppId must be provided together and correspond to the same application adaptation.</strong> Verify these identifiers by querying the application and image first.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified application adaptation, or dissociates the adaptation from a specified image version.</p>
+     * 
+     * @param request DeleteAdaptorRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAdaptorResponse
+     */
+    public DeleteAdaptorResponse deleteAdaptorWithOptions(DeleteAdaptorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adaptorId)) {
+            body.put("AdaptorId", request.adaptorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appVersionId)) {
+            body.put("AppVersionId", request.appVersionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            body.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            body.put("VersionId", request.versionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAdaptor"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAdaptorResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p><em>Confirm the deletion scope first.</em>*</p>
+     * <ul>
+     * <li>If both ImageId and VersionId are specified: only the association between the adaptation and the specified image version is dissociated.</li>
+     * <li>If ImageId and VersionId are not both specified: the adaptation deletion process starts. The adaptation cannot be deleted if it is still referenced by multiple images. If the application still has other adaptations, the application cannot be deleted along with it.
+     * <strong>AdaptorId, AppVersionId, and AppId must be provided together and correspond to the same application adaptation.</strong> Verify these identifiers by querying the application and image first.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified application adaptation, or dissociates the adaptation from a specified image version.</p>
+     * 
+     * @param request DeleteAdaptorRequest
+     * @return DeleteAdaptorResponse
+     */
+    public DeleteAdaptorResponse deleteAdaptor(DeleteAdaptorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAdaptorWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p><em>You must dissociate all image associations from the target application or version before deletion.</em>*</p>
+     * <ol>
+     * <li>Call ListApp to obtain the AppId and confirm whether the application can be deleted.</li>
+     * <li>Use UnbindApp or DeleteAdaptor to dissociate the related image associations.</li>
+     * <li>Specify AppVersionId to delete a single application version, or omit this parameter to delete the entire application.
+     * After an application version is deleted, if the application has no other valid adapters, the application record is also deleted.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified application version, or deletes the entire application and its adapters if the version ID is omitted.</p>
+     * 
+     * @param request DeleteAppRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAppResponse
+     */
+    public DeleteAppResponse deleteAppWithOptions(DeleteAppRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appVersionId)) {
+            body.put("AppVersionId", request.appVersionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteApp"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAppResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p><em>You must dissociate all image associations from the target application or version before deletion.</em>*</p>
+     * <ol>
+     * <li>Call ListApp to obtain the AppId and confirm whether the application can be deleted.</li>
+     * <li>Use UnbindApp or DeleteAdaptor to dissociate the related image associations.</li>
+     * <li>Specify AppVersionId to delete a single application version, or omit this parameter to delete the entire application.
+     * After an application version is deleted, if the application has no other valid adapters, the application record is also deleted.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified application version, or deletes the entire application and its adapters if the version ID is omitted.</p>
+     * 
+     * @param request DeleteAppRequest
+     * @return DeleteAppResponse
+     */
+    public DeleteAppResponse deleteApp(DeleteAppRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAppWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <blockquote>
      * <p>This operation does not support deleting delivery groups that use subscription resources.</p>
      * </blockquote>
@@ -1969,10 +2402,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the resource and session events of the current account. <code>StartTime</code> and <code>EndTime</code> must be specified at the same time, and the time range includes the start and end times. The service only retrieves logs from 30 days before the call time to the current time, so events outside this window are not returned. If multiple filter parameters are specified at the same time, the intersection is used. Results are returned in descending order of the event log time. To use page number-based pagination, specify <code>PageSize</code> and <code>PageNumber</code>. The current version does not use <code>MaxResults</code> and <code>NextToken</code>.</p>
+     * <p>Queries the resource and session events of the current account. Both StartTime and EndTime must be specified, and the time range is inclusive. The service only retrieves logs from 30 days before the call time to the current time, so events outside this window are not returned. If multiple filter parameters are specified, the intersection of the conditions is applied. The results are returned in descending order of the event log time. For pagination, specify PageSize and PageNumber. The current version does not use MaxResults and NextToken.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the resource and session events of the current account within the last 30 days by using paging.</p>
+     * <p>Performs a paged query for the resource and session events of the current account within the last 30 days. Paging is supported.</p>
      * 
      * @param request DescribeEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2064,10 +2497,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the resource and session events of the current account. <code>StartTime</code> and <code>EndTime</code> must be specified at the same time, and the time range includes the start and end times. The service only retrieves logs from 30 days before the call time to the current time, so events outside this window are not returned. If multiple filter parameters are specified at the same time, the intersection is used. Results are returned in descending order of the event log time. To use page number-based pagination, specify <code>PageSize</code> and <code>PageNumber</code>. The current version does not use <code>MaxResults</code> and <code>NextToken</code>.</p>
+     * <p>Queries the resource and session events of the current account. Both StartTime and EndTime must be specified, and the time range is inclusive. The service only retrieves logs from 30 days before the call time to the current time, so events outside this window are not returned. If multiple filter parameters are specified, the intersection of the conditions is applied. The results are returned in descending order of the event log time. For pagination, specify PageSize and PageNumber. The current version does not use MaxResults and NextToken.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the resource and session events of the current account within the last 30 days by using paging.</p>
+     * <p>Performs a paged query for the resource and session events of the current account within the last 30 days. Paging is supported.</p>
      * 
      * @param request DescribeEventsRequest
      * @return DescribeEventsResponse
@@ -2075,6 +2508,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeEventsResponse describeEvents(DescribeEventsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeEventsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Calls this operation to use paging to query the export tasks under the current Alibaba Cloud account to obtain the task status, execution progress, export file names, and download URLs. Export tasks are created by calling CreateExportTask. This operation only reads task information and does not create, modify, or retry tasks.
+     * The query results are returned in descending order of task creation time, with the most recently created tasks listed first. Only tasks in the INIT, RUNNING, FINISHED, and FAILED states are returned. Tasks marked as EXPIRED are not included in the results.
+     * When polling a single task by TaskId, set PageNumber to 1 and PageSize to 1, set the polling interval to 5 to 10 seconds, and stop polling after the task enters the FINISHED or FAILED state.
+     * A task is valid for 24 hours after creation and is marked as expired by a background task after 25 hours. Therefore, within the 24- to 25-hour window, a FINISHED task may still be queried, but its DownloadUrl is empty. After a task is marked as expired, the query result is an empty array.
+     * If the query result is an empty array, it may be because there are no visible tasks under the current account, the task type does not match, the page number is out of bounds, or the tasks have expired. This operation always returns an array structure and does not return an error when the query result is empty.
+     * DownloadUrl is an OSS pre-signed URL. The default maximum validity period is 1 hour and does not exceed the remaining validity period of the task. The server automatically refreshes the URL when it is about to expire. Use the URL returned by the most recent query for downloading and do not cache the initially returned URL for a long time.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the execution status, progress, and download URLs of export tasks by using paging.</p>
+     * 
+     * @param request DescribeExportTasksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeExportTasksResponse
+     */
+    public DescribeExportTasksResponse describeExportTasksWithOptions(DescribeExportTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
+            body.put("TaskType", request.taskType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeExportTasks"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeExportTasksResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Calls this operation to use paging to query the export tasks under the current Alibaba Cloud account to obtain the task status, execution progress, export file names, and download URLs. Export tasks are created by calling CreateExportTask. This operation only reads task information and does not create, modify, or retry tasks.
+     * The query results are returned in descending order of task creation time, with the most recently created tasks listed first. Only tasks in the INIT, RUNNING, FINISHED, and FAILED states are returned. Tasks marked as EXPIRED are not included in the results.
+     * When polling a single task by TaskId, set PageNumber to 1 and PageSize to 1, set the polling interval to 5 to 10 seconds, and stop polling after the task enters the FINISHED or FAILED state.
+     * A task is valid for 24 hours after creation and is marked as expired by a background task after 25 hours. Therefore, within the 24- to 25-hour window, a FINISHED task may still be queried, but its DownloadUrl is empty. After a task is marked as expired, the query result is an empty array.
+     * If the query result is an empty array, it may be because there are no visible tasks under the current account, the task type does not match, the page number is out of bounds, or the tasks have expired. This operation always returns an array structure and does not return an error when the query result is empty.
+     * DownloadUrl is an OSS pre-signed URL. The default maximum validity period is 1 hour and does not exceed the remaining validity period of the task. The server automatically refreshes the URL when it is about to expire. Use the URL returned by the most recent query for downloading and do not cache the initially returned URL for a long time.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the execution status, progress, and download URLs of export tasks by using paging.</p>
+     * 
+     * @param request DescribeExportTasksRequest
+     * @return DescribeExportTasksResponse
+     */
+    public DescribeExportTasksResponse describeExportTasks(DescribeExportTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeExportTasksWithOptions(request, runtime);
     }
 
     /**
@@ -2171,6 +2676,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the statistics of runtimes of a specified type under the current Alibaba Cloud account, grouped by agent platform and agent provider, including the total number of runtimes, the number of runtimes without model configurations, the number of runtimes without channel configurations, the number of risky runtimes, and the number of expired runtimes.</p>
+     * 
+     * @param request GetAgentRuntimeStatisticRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgentRuntimeStatisticResponse
+     */
+    public GetAgentRuntimeStatisticResponse getAgentRuntimeStatisticWithOptions(GetAgentRuntimeStatisticRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentPlatform)) {
+            query.put("AgentPlatform", request.agentPlatform);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentProvider)) {
+            query.put("AgentProvider", request.agentProvider);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runtimeType)) {
+            query.put("RuntimeType", request.runtimeType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgentRuntimeStatistic"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentRuntimeStatisticResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the statistics of runtimes of a specified type under the current Alibaba Cloud account, grouped by agent platform and agent provider, including the total number of runtimes, the number of runtimes without model configurations, the number of runtimes without channel configurations, the number of risky runtimes, and the number of expired runtimes.</p>
+     * 
+     * @param request GetAgentRuntimeStatisticRequest
+     * @return GetAgentRuntimeStatisticResponse
+     */
+    public GetAgentRuntimeStatisticResponse getAgentRuntimeStatistic(GetAgentRuntimeStatisticRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAgentRuntimeStatisticWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the details of a specified delivery group.</p>
      * 
      * @param request GetAppInstanceGroupRequest
@@ -2215,6 +2776,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAppInstanceGroupResponse getAppInstanceGroup(GetAppInstanceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAppInstanceGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before calling this operation, you must create a task, and the creation or validation resources corresponding to the task must be available.</p>
+     * <ol>
+     * <li>Obtain the TaskId and actual TaskType from the response of the task creation operation or GetTask.</li>
+     * <li>Specify ResourceType to obtain the connection information for the creation or validation environment.</li>
+     * <li>Use the returned authorization code along with the user, resource group, and application identifiers in the same response for connection.
+     * The authorization code is a sensitive connection credential. Do not record it in public documents or logs. When specifying AppId, you must also specify the matching AppVersionId.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the connection authorization code and required resource information for an existing image or application creation task.</p>
+     * 
+     * @param request GetAuthCodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAuthCodeResponse
+     */
+    public GetAuthCodeResponse getAuthCodeWithOptions(GetAuthCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appVersionId)) {
+            body.put("AppVersionId", request.appVersionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            body.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            body.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
+            body.put("TaskType", request.taskType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAuthCode"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAuthCodeResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before calling this operation, you must create a task, and the creation or validation resources corresponding to the task must be available.</p>
+     * <ol>
+     * <li>Obtain the TaskId and actual TaskType from the response of the task creation operation or GetTask.</li>
+     * <li>Specify ResourceType to obtain the connection information for the creation or validation environment.</li>
+     * <li>Use the returned authorization code along with the user, resource group, and application identifiers in the same response for connection.
+     * The authorization code is a sensitive connection credential. Do not record it in public documents or logs. When specifying AppId, you must also specify the matching AppVersionId.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the connection authorization code and required resource information for an existing image or application creation task.</p>
+     * 
+     * @param request GetAuthCodeRequest
+     * @return GetAuthCodeResponse
+     */
+    public GetAuthCodeResponse getAuthCode(GetAuthCodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAuthCodeWithOptions(request, runtime);
     }
 
     /**
@@ -2619,6 +3262,158 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the model settings of resource groups.</p>
+     * 
+     * @param request GetResourceGroupAgentModelSettingsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetResourceGroupAgentModelSettingsResponse
+     */
+    public GetResourceGroupAgentModelSettingsResponse getResourceGroupAgentModelSettingsWithOptions(GetResourceGroupAgentModelSettingsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentPlatform)) {
+            query.put("AgentPlatform", request.agentPlatform);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentProvider)) {
+            query.put("AgentProvider", request.agentProvider);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupIds)) {
+            query.put("ResourceGroupIds", request.resourceGroupIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetResourceGroupAgentModelSettings"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceGroupAgentModelSettingsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the model settings of resource groups.</p>
+     * 
+     * @param request GetResourceGroupAgentModelSettingsRequest
+     * @return GetResourceGroupAgentModelSettingsResponse
+     */
+    public GetResourceGroupAgentModelSettingsResponse getResourceGroupAgentModelSettings(GetResourceGroupAgentModelSettingsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getResourceGroupAgentModelSettingsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation queries the resource scale-out price of an existing delivery group. A successful call returns only a quote and does not create an order or add nodes.
+     * <strong>Verify the following conditions before you call this operation:</strong></p>
+     * <ul>
+     * <li>The delivery group belongs to the current account and is located in a supported region in the Chinese mainland.</li>
+     * <li>The product type is WUYING Cloud App or Cloud Browser, and the billing method is subscription and billed by node. Pay-as-you-go or browser groups billed by monthly active user (MAU) are not supported.</li>
+     * <li>The order status of the delivery group is normal, a resource node pool is associated, and no paid but ineffective renewal or scale-in orders exist.</li>
+     * <li>The target total number of nodes is greater than the current number of purchased nodes and does not exceed the node quota for the account in the corresponding region, product, and billing method.
+     * <strong>Parameter relationships:</strong></li>
+     * <li>ProductType, AppInstanceGroupId, and Amount are all required and must be specified together.</li>
+     * <li>ProductType must match the product corresponding to AppInstanceGroupId.</li>
+     * <li><strong>Amount is the total number of nodes after the scale-out, not the number of nodes added in this operation.</strong> The region, node specifications, and billing method are determined by the existing delivery group and do not need to be specified.
+     * <strong>Procedure:</strong></li>
+     * </ul>
+     * <ol>
+     * <li>Confirm the target delivery group and the current number of purchased nodes. For common scenarios of cloud apps, you can first invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListAppInstanceGroup">ListAppInstanceGroup</a> to obtain the identity, and then invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query the configuration and <code>NodePool.NodeAmount</code>.</li>
+     * <li>Invoke this operation with the same product type, delivery group identity, and target total number of nodes to read the price, coupons, and pricing rules.</li>
+     * <li>After confirming the quote, if you want to execute the scale-out, you can invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ModifyNodePoolAmount">ModifyNodePoolAmount</a> and specify the target total number in <code>NodePool.NodeAmount</code> as required by the operation. <strong>A successful price inquiry does not mean that an order is created or the scale-out is completed.</strong>
+     * <strong>Example scenario:</strong>
+     * If a cloud app delivery group currently has 1 purchased subscription node and you want to scale out to 2 nodes, specify ProductType=CloudApp, the AppInstanceGroupId of the delivery group, and Amount=2. Replace the masked resource IDs with the actual values under the current account. The example quantities do not represent default values or quota limits. The price examples only illustrate the relationship among the original price, discount amount, and final price, and do not represent the fixed selling price of the specifications.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the pricing and discount information required to scale out a subscription delivery group to a specified total number of nodes.</p>
+     * 
+     * @param request GetResourceModifyPriceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetResourceModifyPriceResponse
+     */
+    public GetResourceModifyPriceResponse getResourceModifyPriceWithOptions(GetResourceModifyPriceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
+            query.put("Amount", request.amount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
+            query.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetResourceModifyPrice"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceModifyPriceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation queries the resource scale-out price of an existing delivery group. A successful call returns only a quote and does not create an order or add nodes.
+     * <strong>Verify the following conditions before you call this operation:</strong></p>
+     * <ul>
+     * <li>The delivery group belongs to the current account and is located in a supported region in the Chinese mainland.</li>
+     * <li>The product type is WUYING Cloud App or Cloud Browser, and the billing method is subscription and billed by node. Pay-as-you-go or browser groups billed by monthly active user (MAU) are not supported.</li>
+     * <li>The order status of the delivery group is normal, a resource node pool is associated, and no paid but ineffective renewal or scale-in orders exist.</li>
+     * <li>The target total number of nodes is greater than the current number of purchased nodes and does not exceed the node quota for the account in the corresponding region, product, and billing method.
+     * <strong>Parameter relationships:</strong></li>
+     * <li>ProductType, AppInstanceGroupId, and Amount are all required and must be specified together.</li>
+     * <li>ProductType must match the product corresponding to AppInstanceGroupId.</li>
+     * <li><strong>Amount is the total number of nodes after the scale-out, not the number of nodes added in this operation.</strong> The region, node specifications, and billing method are determined by the existing delivery group and do not need to be specified.
+     * <strong>Procedure:</strong></li>
+     * </ul>
+     * <ol>
+     * <li>Confirm the target delivery group and the current number of purchased nodes. For common scenarios of cloud apps, you can first invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListAppInstanceGroup">ListAppInstanceGroup</a> to obtain the identity, and then invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query the configuration and <code>NodePool.NodeAmount</code>.</li>
+     * <li>Invoke this operation with the same product type, delivery group identity, and target total number of nodes to read the price, coupons, and pricing rules.</li>
+     * <li>After confirming the quote, if you want to execute the scale-out, you can invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ModifyNodePoolAmount">ModifyNodePoolAmount</a> and specify the target total number in <code>NodePool.NodeAmount</code> as required by the operation. <strong>A successful price inquiry does not mean that an order is created or the scale-out is completed.</strong>
+     * <strong>Example scenario:</strong>
+     * If a cloud app delivery group currently has 1 purchased subscription node and you want to scale out to 2 nodes, specify ProductType=CloudApp, the AppInstanceGroupId of the delivery group, and Amount=2. Replace the masked resource IDs with the actual values under the current account. The example quantities do not represent default values or quota limits. The price examples only illustrate the relationship among the original price, discount amount, and final price, and do not represent the fixed selling price of the specifications.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the pricing and discount information required to scale out a subscription delivery group to a specified total number of nodes.</p>
+     * 
+     * @param request GetResourceModifyPriceRequest
+     * @return GetResourceModifyPriceResponse
+     */
+    public GetResourceModifyPriceResponse getResourceModifyPrice(GetResourceModifyPriceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getResourceModifyPriceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the price information of a resource.</p>
      * 
      * @param request GetResourcePriceRequest
@@ -2687,6 +3482,96 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetResourcePriceResponse getResourcePrice(GetResourcePriceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getResourcePriceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation queries the maximum quantity quota. It does not query the used quota, remaining quota, or real-time resource inventory.
+     * <strong>Parameter relationships:</strong></p>
+     * <ul>
+     * <li>ResourceType and ProductType are required.</li>
+     * <li>BizRegionId and ChargeType are optional query conditions and can be specified at the same time. They must be consistent with subsequent purchase or authorization operations.</li>
+     * <li>If the region or billing method is omitted, the general quota for the corresponding dimension is queried. The quotas of different regions or billing methods are not added together.</li>
+     * <li>If multiple quotas apply at the same time, the larger limit is returned.
+     * <strong>Call sequence:</strong></li>
+     * </ul>
+     * <ol>
+     * <li>Select the resource type, product, business region, and billing method for the payer based on subsequent business needs.</li>
+     * <li>Invoke this operation to read <code>Data</code>. Query <code>AppInstanceGroup</code> before creating a delivery group, query <code>AppAuthUser</code> before authorizing an authorized user, and query <code>PoolNodeAmount</code> before purchasing or scaling out nodes.</li>
+     * <li>Query the current usage in combination with the resources, and then verify the current operation through subsequent creation, authorization, or scale-out operations. <strong>This query does not reserve quotas or guarantee the success of subsequent purchases.</strong>
+     * Data=2147483647 indicates that no smaller quota limit is obtained in this query. It does not mean that the physical inventory is unlimited.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the maximum quantity quota applicable to the current account for a specified product, resource type, business region, and billing method.</p>
+     * 
+     * @param request GetResourceQuotaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetResourceQuotaResponse
+     */
+    public GetResourceQuotaResponse getResourceQuotaWithOptions(GetResourceQuotaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            query.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            query.put("ChargeType", request.chargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetResourceQuota"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceQuotaResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation queries the maximum quantity quota. It does not query the used quota, remaining quota, or real-time resource inventory.
+     * <strong>Parameter relationships:</strong></p>
+     * <ul>
+     * <li>ResourceType and ProductType are required.</li>
+     * <li>BizRegionId and ChargeType are optional query conditions and can be specified at the same time. They must be consistent with subsequent purchase or authorization operations.</li>
+     * <li>If the region or billing method is omitted, the general quota for the corresponding dimension is queried. The quotas of different regions or billing methods are not added together.</li>
+     * <li>If multiple quotas apply at the same time, the larger limit is returned.
+     * <strong>Call sequence:</strong></li>
+     * </ul>
+     * <ol>
+     * <li>Select the resource type, product, business region, and billing method for the payer based on subsequent business needs.</li>
+     * <li>Invoke this operation to read <code>Data</code>. Query <code>AppInstanceGroup</code> before creating a delivery group, query <code>AppAuthUser</code> before authorizing an authorized user, and query <code>PoolNodeAmount</code> before purchasing or scaling out nodes.</li>
+     * <li>Query the current usage in combination with the resources, and then verify the current operation through subsequent creation, authorization, or scale-out operations. <strong>This query does not reserve quotas or guarantee the success of subsequent purchases.</strong>
+     * Data=2147483647 indicates that no smaller quota limit is obtained in this query. It does not mean that the physical inventory is unlimited.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the maximum quantity quota applicable to the current account for a specified product, resource type, business region, and billing method.</p>
+     * 
+     * @param request GetResourceQuotaRequest
+     * @return GetResourceQuotaResponse
+     */
+    public GetResourceQuotaResponse getResourceQuota(GetResourceQuotaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getResourceQuotaWithOptions(request, runtime);
     }
 
     /**
@@ -2884,6 +3769,192 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Supports two query methods:</p>
+     * <ul>
+     * <li><strong>By task ID</strong>: Pass the TaskId parameter. This method takes precedence over querying by resource information.</li>
+     * <li><strong>By resource</strong>: Omit the TaskId parameter, and pass the EntityId, EntityType, and TaskCategory parameters at the same time. You can use the EntityVersionId parameter to specify the resource version.
+     * The API returns the current task status and recorded step information. Determine the overall task result based on the Status parameter. The success of a single step does not mean the entire task is successful. You can call the ListTaskStep operation to query the names and categories of image creation and application adaptation steps.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a task by task ID, or by resource information and task category.</p>
+     * 
+     * @param request GetTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTaskResponse
+     */
+    public GetTaskResponse getTaskWithOptions(GetTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.entityId)) {
+            body.put("EntityId", request.entityId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityType)) {
+            body.put("EntityType", request.entityType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityVersionId)) {
+            body.put("EntityVersionId", request.entityVersionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskCategory)) {
+            body.put("TaskCategory", request.taskCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
+            body.put("TaskType", request.taskType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTask"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Supports two query methods:</p>
+     * <ul>
+     * <li><strong>By task ID</strong>: Pass the TaskId parameter. This method takes precedence over querying by resource information.</li>
+     * <li><strong>By resource</strong>: Omit the TaskId parameter, and pass the EntityId, EntityType, and TaskCategory parameters at the same time. You can use the EntityVersionId parameter to specify the resource version.
+     * The API returns the current task status and recorded step information. Determine the overall task result based on the Status parameter. The success of a single step does not mean the entire task is successful. You can call the ListTaskStep operation to query the names and categories of image creation and application adaptation steps.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a task by task ID, or by resource information and task category.</p>
+     * 
+     * @param request GetTaskRequest
+     * @return GetTaskResponse
+     */
+    public GetTaskResponse getTask(GetTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>When multiple filter conditions are specified at the same time, they take effect together. AppName supports contains matching. When a single-value filter and the corresponding list filter are specified at the same time, the intersection is used. To avoid empty results, specify only one of the forms.
+     * If PageSize is omitted, the value is 10. Start from 1 for PageNumber and query page by page until the number of retrieved records reaches Count. Before deleting an application, check Deletable.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the valid applications of the current account by paging based on conditions such as the application ID, name, type, and associated product.</p>
+     * 
+     * @param tmpReq ListAppRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAppResponse
+     */
+    public ListAppResponse listAppWithOptions(ListAppRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListAppShrinkRequest request = new ListAppShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.bizTypeList)) {
+            request.bizTypeListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.bizTypeList, "BizTypeList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.productTypeList)) {
+            request.productTypeListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.productTypeList, "ProductTypeList", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            body.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appType)) {
+            body.put("AppType", request.appType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            body.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizTypeListShrink)) {
+            body.put("BizTypeList", request.bizTypeListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originAppType)) {
+            body.put("OriginAppType", request.originAppType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.osType)) {
+            body.put("OsType", request.osType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productTypeListShrink)) {
+            body.put("ProductTypeList", request.productTypeListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subAppType)) {
+            body.put("SubAppType", request.subAppType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListApp"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAppResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>When multiple filter conditions are specified at the same time, they take effect together. AppName supports contains matching. When a single-value filter and the corresponding list filter are specified at the same time, the intersection is used. To avoid empty results, specify only one of the forms.
+     * If PageSize is omitted, the value is 10. Start from 1 for PageNumber and query page by page until the number of retrieved records reaches Count. Before deleting an application, check Deletable.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the valid applications of the current account by paging based on conditions such as the application ID, name, type, and associated product.</p>
+     * 
+     * @param request ListAppRequest
+     * @return ListAppResponse
+     */
+    public ListAppResponse listApp(ListAppRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAppWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries the details of multiple delivery groups. This operation queries all delivery groups that meet the specified conditions instead of a specific delivery group.</p>
      * 
@@ -2979,6 +4050,144 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAppInstanceGroupResponse listAppInstanceGroup(ListAppInstanceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAppInstanceGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation is used to select session instance types and does not create resources. The returned results are affected by the available instance types for the account and the business region. An empty result does not indicate a request failure.
+     * <strong>Filtering and pagination:</strong></p>
+     * <ul>
+     * <li><code>ProductType</code> is required. Explicitly specify <code>BizRegionId</code>, <code>PageNumber</code>, and <code>PageSize</code>.</li>
+     * <li>If <code>BizRegionId</code> is not provided, the region of the current request is used. You can call the <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> operation to obtain the business region.</li>
+     * <li>You can specify both <code>AppInstanceType</code> and <code>AppInstanceTypeList</code>. In this case, only the instance types that meet both conditions are returned. Neither parameter overrides the other. The list can contain up to 100 items.</li>
+     * <li>The instance type family, CPU, memory, GPU memory, operating system, and category conditions are filtered by intersection. The union is not automatically applied.</li>
+     * <li>Pass <code>PageNumber</code> starting from 1. Use <code>TotalCount</code>, <code>PageSize</code>, and <code>PageNumber</code> to continue pagination until all matching results are read.
+     * <strong>Inventory and subsequent calls:</strong></li>
+     * <li>Inventory is queried only when <code>QueryInventory</code> is set to <code>true</code>. If inventory information is not obtained, do not assume that the inventory is 0.</li>
+     * <li>The inventory reflects the current query result and does not indicate a successful reservation.</li>
+     * <li>After obtaining the <code>AppInstanceType</code>, you can query the price based on the session instance type parameter requirements of <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetResourcePrice">GetResourcePrice</a>.</li>
+     * <li>The current query does not use <code>AppCenterImageId</code> to filter instance types. Do not use this parameter to determine the compatibility between images and instance types.
+     * Field examples are used to demonstrate how to fill in the fields and do not guarantee that the example instance types exist in the selected region or account. The GPU count field currently does not provide a value. Use the GPU memory field to understand the instance type.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the available session instance types for the current account by paging based on the product, region, operating system, and instance type conditions.</p>
+     * 
+     * @param request ListAppInstanceTypeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAppInstanceTypeResponse
+     */
+    public ListAppInstanceTypeResponse listAppInstanceTypeWithOptions(ListAppInstanceTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appCenterImageId)) {
+            query.put("AppCenterImageId", request.appCenterImageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceType)) {
+            query.put("AppInstanceType", request.appInstanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceTypeFamily)) {
+            query.put("AppInstanceTypeFamily", request.appInstanceTypeFamily);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceTypeList)) {
+            query.put("AppInstanceTypeList", request.appInstanceTypeList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            query.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
+            query.put("Category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            query.put("ChargeType", request.chargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpu)) {
+            query.put("Cpu", request.cpu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuMemory)) {
+            query.put("GpuMemory", request.gpuMemory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memory)) {
+            query.put("Memory", request.memory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.osType)) {
+            query.put("OsType", request.osType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryInventory)) {
+            query.put("QueryInventory", request.queryInventory);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAppInstanceType"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAppInstanceTypeResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation is used to select session instance types and does not create resources. The returned results are affected by the available instance types for the account and the business region. An empty result does not indicate a request failure.
+     * <strong>Filtering and pagination:</strong></p>
+     * <ul>
+     * <li><code>ProductType</code> is required. Explicitly specify <code>BizRegionId</code>, <code>PageNumber</code>, and <code>PageSize</code>.</li>
+     * <li>If <code>BizRegionId</code> is not provided, the region of the current request is used. You can call the <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> operation to obtain the business region.</li>
+     * <li>You can specify both <code>AppInstanceType</code> and <code>AppInstanceTypeList</code>. In this case, only the instance types that meet both conditions are returned. Neither parameter overrides the other. The list can contain up to 100 items.</li>
+     * <li>The instance type family, CPU, memory, GPU memory, operating system, and category conditions are filtered by intersection. The union is not automatically applied.</li>
+     * <li>Pass <code>PageNumber</code> starting from 1. Use <code>TotalCount</code>, <code>PageSize</code>, and <code>PageNumber</code> to continue pagination until all matching results are read.
+     * <strong>Inventory and subsequent calls:</strong></li>
+     * <li>Inventory is queried only when <code>QueryInventory</code> is set to <code>true</code>. If inventory information is not obtained, do not assume that the inventory is 0.</li>
+     * <li>The inventory reflects the current query result and does not indicate a successful reservation.</li>
+     * <li>After obtaining the <code>AppInstanceType</code>, you can query the price based on the session instance type parameter requirements of <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetResourcePrice">GetResourcePrice</a>.</li>
+     * <li>The current query does not use <code>AppCenterImageId</code> to filter instance types. Do not use this parameter to determine the compatibility between images and instance types.
+     * Field examples are used to demonstrate how to fill in the fields and do not guarantee that the example instance types exist in the selected region or account. The GPU count field currently does not provide a value. Use the GPU memory field to understand the instance type.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the available session instance types for the current account by paging based on the product, region, operating system, and instance type conditions.</p>
+     * 
+     * @param request ListAppInstanceTypeRequest
+     * @return ListAppInstanceTypeResponse
+     */
+    public ListAppInstanceTypeResponse listAppInstanceType(ListAppInstanceTypeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAppInstanceTypeWithOptions(request, runtime);
     }
 
     /**
@@ -3824,7 +5033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of desktop agent runtimes.</p>
+     * <p>Queries a list of desktop Agent runtimes.</p>
      * 
      * @param request ListDesktopAgentRuntimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3960,7 +5169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of desktop agent runtimes.</p>
+     * <p>Queries a list of desktop Agent runtimes.</p>
      * 
      * @param request ListDesktopAgentRuntimeRequest
      * @return ListDesktopAgentRuntimeResponse
@@ -4244,6 +5453,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListModelProviderEndpointsResponse listModelProviderEndpoints(ListModelProviderEndpointsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listModelProviderEndpointsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of available large language model (LLM) codes for a specified model provider. Supports filtering by LLM code, model brand, recommendation level, and recommendation status, and returns model information such as the model name, description, release time, features, inference modality, pricing, credit multiplier, and risk type.</p>
+     * 
+     * @param request ListModelProviderLlmCodesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListModelProviderLlmCodesResponse
+     */
+    public ListModelProviderLlmCodesResponse listModelProviderLlmCodesWithOptions(ListModelProviderLlmCodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.llmCode)) {
+            query.put("LlmCode", request.llmCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelBrands)) {
+            query.put("ModelBrands", request.modelBrands);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.providerName)) {
+            query.put("ProviderName", request.providerName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.providerTemplateId)) {
+            query.put("ProviderTemplateId", request.providerTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recommended)) {
+            query.put("Recommended", request.recommended);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recommendedLevels)) {
+            query.put("RecommendedLevels", request.recommendedLevels);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListModelProviderLlmCodes"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListModelProviderLlmCodesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of available large language model (LLM) codes for a specified model provider. Supports filtering by LLM code, model brand, recommendation level, and recommendation status, and returns model information such as the model name, description, release time, features, inference modality, pricing, credit multiplier, and risk type.</p>
+     * 
+     * @param request ListModelProviderLlmCodesRequest
+     * @return ListModelProviderLlmCodesResponse
+     */
+    public ListModelProviderLlmCodesResponse listModelProviderLlmCodes(ListModelProviderLlmCodesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listModelProviderLlmCodesWithOptions(request, runtime);
     }
 
     /**
@@ -5010,6 +6295,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>The returned results are affected by the available region configurations of the account and the product type. If ProductType is omitted, the query is performed based on CloudApp.
+     * This operation returns the regions available for image services. You cannot use this information to determine whether a specific image has been distributed to these regions. Before you create or distribute an image based on a parent image, you must also check the region information of the destination image.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of region IDs available for image services under a specified product for the current account.</p>
+     * 
+     * @param request ListRegionIdRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRegionIdResponse
+     */
+    public ListRegionIdResponse listRegionIdWithOptions(ListRegionIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRegionId"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRegionIdResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The returned results are affected by the available region configurations of the account and the product type. If ProductType is omitted, the query is performed based on CloudApp.
+     * This operation returns the regions available for image services. You cannot use this information to determine whether a specific image has been distributed to these regions. Before you create or distribute an image based on a parent image, you must also check the region information of the destination image.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of region IDs available for image services under a specified product for the current account.</p>
+     * 
+     * @param request ListRegionIdRequest
+     * @return ListRegionIdResponse
+     */
+    public ListRegionIdResponse listRegionId(ListRegionIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listRegionIdWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <blockquote>
      * <p>The regions returned by this operation are not all available regions. For information about available regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Supported regions</a>.</p>
      * </blockquote>
@@ -5256,6 +6593,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Returns application adaptation steps when Type is set to ADAPTOR, and image creation steps when Type is set to IMAGE.
+     * This operation returns step definitions, not the actual progress of a specific task. Read the step definitions first, and then combine them with the current step and step status returned by GetTask to display the task progress. The step sets vary across different task types. Do not use the step index as the completion percentage.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the step identifiers, step categories, and interaction methods for application adaptation or image creation tasks.</p>
+     * 
+     * @param request ListTaskStepRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTaskStepResponse
+     */
+    public ListTaskStepResponse listTaskStepWithOptions(ListTaskStepRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTaskStep"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTaskStepResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Returns application adaptation steps when Type is set to ADAPTOR, and image creation steps when Type is set to IMAGE.
+     * This operation returns step definitions, not the actual progress of a specific task. Read the step definitions first, and then combine them with the current step and step status returned by GetTask to display the task progress. The step sets vary across different task types. Do not use the step index as the completion percentage.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the step identifiers, step categories, and interaction methods for application adaptation or image creation tasks.</p>
+     * 
+     * @param request ListTaskStepRequest
+     * @return ListTaskStepResponse
+     */
+    public ListTaskStepResponse listTaskStep(ListTaskStepRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTaskStepWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries the configuration information of an administrator account, such as whether resource expiration reminders are enabled.</p>
      * 
@@ -5425,10 +6814,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the available workload templates for a specified virtual node pool. Before calling this operation, call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the VirtualNodePoolId under the current account. This operation verifies the ownership of the node pool and returns up to 100 records sorted by the template configuration order. The template content is Base64-encoded after being UTF-8 encoded. You must perform Base64 decoding before use. The current version does not use MaxResults and NextToken for pagination.</p>
+     * <p>Queries the workload templates available for a specified virtual node pool. Before calling this operation, call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the <code>VirtualNodePoolId</code> of the current account. The operation verifies the ownership of the node pool and returns up to 100 records sorted by template configuration order. The template content is Base64-encoded after being encoded in UTF-8. You must decode the Base64 string before use. The current version does not use <code>MaxResults</code> and <code>NextToken</code> for pagination.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the available Wuying Workstation workload templates for a specified virtual node pool.</p>
+     * <p>Queries the Wuying Workstation workload templates available for a specified virtual node pool.</p>
      * 
      * @param request ListWuyingServerWorkloadTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5468,10 +6857,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the available workload templates for a specified virtual node pool. Before calling this operation, call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the VirtualNodePoolId under the current account. This operation verifies the ownership of the node pool and returns up to 100 records sorted by the template configuration order. The template content is Base64-encoded after being UTF-8 encoded. You must perform Base64 decoding before use. The current version does not use MaxResults and NextToken for pagination.</p>
+     * <p>Queries the workload templates available for a specified virtual node pool. Before calling this operation, call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the <code>VirtualNodePoolId</code> of the current account. The operation verifies the ownership of the node pool and returns up to 100 records sorted by template configuration order. The template content is Base64-encoded after being encoded in UTF-8. You must decode the Base64 string before use. The current version does not use <code>MaxResults</code> and <code>NextToken</code> for pagination.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the available Wuying Workstation workload templates for a specified virtual node pool.</p>
+     * <p>Queries the Wuying Workstation workload templates available for a specified virtual node pool.</p>
      * 
      * @param request ListWuyingServerWorkloadTemplateRequest
      * @return ListWuyingServerWorkloadTemplateResponse
@@ -5729,6 +7118,124 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyAppInstanceGroupAttributeResponse modifyAppInstanceGroupAttribute(ModifyAppInstanceGroupAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyAppInstanceGroupAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation performs billing method conversion, which may create orders and trigger subsequent billing changes. <strong>A successful response or a returned task ID does not indicate that the new billing method has taken effect.</strong>
+     * <strong>Prerequisites:</strong></p>
+     * <ul>
+     * <li>The resources belong to the current account, and the product and business region match the request. Only one delivery group can be specified per request.</li>
+     * <li>The target billing method must be different from the current billing method, and the target resource specifications must support the corresponding sales and Billable methods.</li>
+     * <li>Delivery groups that have been added to a valid collection cannot have their Billable methods converted individually.</li>
+     * <li>Multiple delivery groups created in the same batch of orders cannot have their Billable methods converted separately.
+     * <strong>Parameter relationships and call sequence:</strong></li>
+     * </ul>
+     * <ol>
+     * <li>Query the resource details first to confirm the product, business region, and current ChargeType. You can use <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query cloud application delivery groups.</li>
+     * <li>Explicitly specify the target ChargeType. If you need to purchase a subscription, specify the purchase duration by combining Period and PeriodUnit. The period combination must comply with the sales rules currently supported by the resource.</li>
+     * <li>Set AutoPay based on whether automatic payment is allowed. If auto-renewal is involved, explicitly set AutoRenew.</li>
+     * <li>After the call, save the returned AppInstanceGroupModel.TaskId. If there are unpaid orders, complete the payment first, and then query the resource details again to confirm that the billing method has been changed.
+     * This operation does not accept an expiration time parameter. Do not pass the expiration time from other operations into this request. The task examples only illustrate the purpose of the ID and do not define a fixed prefix or length for real task IDs.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the billing method of a specified delivery group to a target billing method and returns the ID of the billing conversion task to be created.</p>
+     * 
+     * @param tmpReq ModifyAppInstanceGroupChargeTypeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyAppInstanceGroupChargeTypeResponse
+     */
+    public ModifyAppInstanceGroupChargeTypeResponse modifyAppInstanceGroupChargeTypeWithOptions(ModifyAppInstanceGroupChargeTypeRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyAppInstanceGroupChargeTypeShrinkRequest request = new ModifyAppInstanceGroupChargeTypeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.appInstanceGroupIds)) {
+            request.appInstanceGroupIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.appInstanceGroupIds, "AppInstanceGroupIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupIdsShrink)) {
+            body.put("AppInstanceGroupIds", request.appInstanceGroupIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            body.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            body.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            body.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            body.put("ChargeType", request.chargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            body.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            body.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionId)) {
+            body.put("PromotionId", request.promotionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyAppInstanceGroupChargeType"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAppInstanceGroupChargeTypeResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation performs billing method conversion, which may create orders and trigger subsequent billing changes. <strong>A successful response or a returned task ID does not indicate that the new billing method has taken effect.</strong>
+     * <strong>Prerequisites:</strong></p>
+     * <ul>
+     * <li>The resources belong to the current account, and the product and business region match the request. Only one delivery group can be specified per request.</li>
+     * <li>The target billing method must be different from the current billing method, and the target resource specifications must support the corresponding sales and Billable methods.</li>
+     * <li>Delivery groups that have been added to a valid collection cannot have their Billable methods converted individually.</li>
+     * <li>Multiple delivery groups created in the same batch of orders cannot have their Billable methods converted separately.
+     * <strong>Parameter relationships and call sequence:</strong></li>
+     * </ul>
+     * <ol>
+     * <li>Query the resource details first to confirm the product, business region, and current ChargeType. You can use <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query cloud application delivery groups.</li>
+     * <li>Explicitly specify the target ChargeType. If you need to purchase a subscription, specify the purchase duration by combining Period and PeriodUnit. The period combination must comply with the sales rules currently supported by the resource.</li>
+     * <li>Set AutoPay based on whether automatic payment is allowed. If auto-renewal is involved, explicitly set AutoRenew.</li>
+     * <li>After the call, save the returned AppInstanceGroupModel.TaskId. If there are unpaid orders, complete the payment first, and then query the resource details again to confirm that the billing method has been changed.
+     * This operation does not accept an expiration time parameter. Do not pass the expiration time from other operations into this request. The task examples only illustrate the purpose of the ID and do not define a fixed prefix or length for real task IDs.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the billing method of a specified delivery group to a target billing method and returns the ID of the billing conversion task to be created.</p>
+     * 
+     * @param request ModifyAppInstanceGroupChargeTypeRequest
+     * @return ModifyAppInstanceGroupChargeTypeResponse
+     */
+    public ModifyAppInstanceGroupChargeTypeResponse modifyAppInstanceGroupChargeType(ModifyAppInstanceGroupChargeTypeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyAppInstanceGroupChargeTypeWithOptions(request, runtime);
     }
 
     /**
@@ -6259,10 +7766,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the delivery group ID, name, and status in delivery group reports. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the business region, and then call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the delivery group. <code>AppInstanceGroupId</code> matches the exact ID, and <code>AppInstanceGroupName</code> filters by inclusion. If multiple filter conditions are passed at the same time, the intersection is taken. When filtering by date, <code>StatDate</code> specifies a single day, and <code>StartDate</code> and <code>EndDate</code> must be passed in pairs to represent a closed interval. If both a single day and an interval are passed, the results must meet both conditions. Before using <code>EndUserId</code>, make sure that the user has a valid authorization relationship.</p>
+     * <p>Queries the IDs, names, and statuses of app instance groups in app instance group reports. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the business regions and then call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the app instance groups. <code>AppInstanceGroupId</code> matches the exact ID, and <code>AppInstanceGroupName</code> filters by inclusion. If multiple filter conditions are specified at the same time, the intersection is used. When filtering by date, <code>StatDate</code> specifies a single day, and <code>StartDate</code> and <code>EndDate</code> must be specified in pairs to represent a closed interval. If both a single day and an interval are specified, the results must meet both conditions. Before using <code>EndUserId</code>, make sure that the user has a valid authorization relationship.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries delivery group reports by region, delivery group, status, user authorization relationship, or statistical date.</p>
+     * <p>Queries app instance group reports by region, app instance group, status, user authorization relationship, or statistical date.</p>
      * 
      * @param request QueryAppInstanceGroupReportListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6334,10 +7841,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the delivery group ID, name, and status in delivery group reports. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the business region, and then call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the delivery group. <code>AppInstanceGroupId</code> matches the exact ID, and <code>AppInstanceGroupName</code> filters by inclusion. If multiple filter conditions are passed at the same time, the intersection is taken. When filtering by date, <code>StatDate</code> specifies a single day, and <code>StartDate</code> and <code>EndDate</code> must be passed in pairs to represent a closed interval. If both a single day and an interval are passed, the results must meet both conditions. Before using <code>EndUserId</code>, make sure that the user has a valid authorization relationship.</p>
+     * <p>Queries the IDs, names, and statuses of app instance groups in app instance group reports. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the business regions and then call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the app instance groups. <code>AppInstanceGroupId</code> matches the exact ID, and <code>AppInstanceGroupName</code> filters by inclusion. If multiple filter conditions are specified at the same time, the intersection is used. When filtering by date, <code>StatDate</code> specifies a single day, and <code>StartDate</code> and <code>EndDate</code> must be specified in pairs to represent a closed interval. If both a single day and an interval are specified, the results must meet both conditions. Before using <code>EndUserId</code>, make sure that the user has a valid authorization relationship.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries delivery group reports by region, delivery group, status, user authorization relationship, or statistical date.</p>
+     * <p>Queries app instance group reports by region, app instance group, status, user authorization relationship, or statistical date.</p>
      * 
      * @param request QueryAppInstanceGroupReportListRequest
      * @return QueryAppInstanceGroupReportListResponse
@@ -6349,7 +7856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries connection statistical reports. Before you invoke this operation, you can invoke <a href="~~ListRegions~~">ListRegions</a> and <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the <code>BizRegionId</code> and <code>AppInstanceGroupId</code> parameters. <code>ProductType</code>, <code>StartDate</code>, and <code>EndDate</code> are required for server-side validation. The statistical interval is <code>[StartDate, EndDate)</code>, which includes the start time but excludes the end time. Results are returned by page, with a maximum of 1,500 entries per page.</p>
+     * <p>Queries connection statistical reports. Before you invoke this operation, you can invoke <a href="~~ListRegions~~">ListRegions</a> and <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the <code>BizRegionId</code> and <code>AppInstanceGroupId</code> parameters. The <code>ProductType</code>, <code>StartDate</code>, and <code>EndDate</code> parameters are required for server-side validation. The statistical interval is <code>[StartDate, EndDate)</code>, which includes the start time but excludes the end time. Results are returned by page, with a maximum of 1,500 entries per page.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the number of successful connections, the number of failed connections, the success rate, and the average connection duration within a specified time range.</p>
@@ -6408,7 +7915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries connection statistical reports. Before you invoke this operation, you can invoke <a href="~~ListRegions~~">ListRegions</a> and <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the <code>BizRegionId</code> and <code>AppInstanceGroupId</code> parameters. <code>ProductType</code>, <code>StartDate</code>, and <code>EndDate</code> are required for server-side validation. The statistical interval is <code>[StartDate, EndDate)</code>, which includes the start time but excludes the end time. Results are returned by page, with a maximum of 1,500 entries per page.</p>
+     * <p>Queries connection statistical reports. Before you invoke this operation, you can invoke <a href="~~ListRegions~~">ListRegions</a> and <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the <code>BizRegionId</code> and <code>AppInstanceGroupId</code> parameters. The <code>ProductType</code>, <code>StartDate</code>, and <code>EndDate</code> parameters are required for server-side validation. The statistical interval is <code>[StartDate, EndDate)</code>, which includes the start time but excludes the end time. Results are returned by page, with a maximum of 1,500 entries per page.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the number of successful connections, the number of failed connections, the success rate, and the average connection duration within a specified time range.</p>
@@ -6423,7 +7930,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the daily active user (DAU) report. StartDate and EndDate are required. The date range is inclusive and cannot exceed 180 days. If ProductType is not specified or is unrecognized, the query defaults to <code>CloudApp</code>. You can use BizRegionId and AppInstanceGroupId to narrow the scope. If neither is specified, the query returns aggregated data for all business regions. Results are paginated, with a maximum of 1,500 records per page.</p>
+     * <p>Queries the daily active user (DAU) report. StartDate and EndDate are required. The date range is inclusive and cannot exceed 180 days. If ProductType is not specified or is unrecognized, the query defaults to CloudApp. You can use BizRegionId and AppInstanceGroupId to narrow down the scope. If neither is specified, the query returns aggregated data for all business regions. Results are returned in pages, with a maximum of 1,500 records per page.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the number of daily active users and streaming daily active users by date.</p>
@@ -6482,7 +7989,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the daily active user (DAU) report. StartDate and EndDate are required. The date range is inclusive and cannot exceed 180 days. If ProductType is not specified or is unrecognized, the query defaults to <code>CloudApp</code>. You can use BizRegionId and AppInstanceGroupId to narrow the scope. If neither is specified, the query returns aggregated data for all business regions. Results are paginated, with a maximum of 1,500 records per page.</p>
+     * <p>Queries the daily active user (DAU) report. StartDate and EndDate are required. The date range is inclusive and cannot exceed 180 days. If ProductType is not specified or is unrecognized, the query defaults to CloudApp. You can use BizRegionId and AppInstanceGroupId to narrow down the scope. If neither is specified, the query returns aggregated data for all business regions. Results are returned in pages, with a maximum of 1,500 records per page.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the number of daily active users and streaming daily active users by date.</p>
@@ -6645,7 +8152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the node quantity report. <code>StartDate</code>, <code>EndDate</code>, and <code>StatDateType</code> are required. The query span limit is determined by the statistical granularity: up to 1 day for <code>1m</code> and <code>30m</code>, up to 15 days for <code>6h</code>, and up to 180 days for <code>1d</code>. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 entries per page.</p>
+     * <p>Queries node quantity reports. StartDate, EndDate, and StatDateType are required. The query span limit is determined by the statistical granularity: up to 1 day for 1m and 30m, up to 15 days for 6h, and up to 180 days for 1d. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 entries per page.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the total number of nodes, the number of subscription nodes, and the number of pay-as-you-go nodes by statistical granularity.</p>
@@ -6708,7 +8215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the node quantity report. <code>StartDate</code>, <code>EndDate</code>, and <code>StatDateType</code> are required. The query span limit is determined by the statistical granularity: up to 1 day for <code>1m</code> and <code>30m</code>, up to 15 days for <code>6h</code>, and up to 180 days for <code>1d</code>. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 entries per page.</p>
+     * <p>Queries node quantity reports. StartDate, EndDate, and StatDateType are required. The query span limit is determined by the statistical granularity: up to 1 day for 1m and 30m, up to 15 days for 6h, and up to 180 days for 1d. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 entries per page.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the total number of nodes, the number of subscription nodes, and the number of pay-as-you-go nodes by statistical granularity.</p>
@@ -6801,7 +8308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the application usage of a specified user on an hourly basis. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to be queried. A maximum of the top five applications by usage duration are returned for each hour.</p>
+     * <p>Queries the application usage of a specified user on an hourly basis. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to query. A maximum of the top five applications by usage duration are returned for each hour.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the cumulative duration of application usage by a specified user on an hourly basis and returns the top five applications for each hour.</p>
@@ -6856,7 +8363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the application usage of a specified user on an hourly basis. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to be queried. A maximum of the top five applications by usage duration are returned for each hour.</p>
+     * <p>Queries the application usage of a specified user on an hourly basis. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to query. A maximum of the top five applications by usage duration are returned for each hour.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the cumulative duration of application usage by a specified user on an hourly basis and returns the top five applications for each hour.</p>
@@ -6871,7 +8378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the ranking of application usage duration for a specified user within a statistical range. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to be queried. The results are sorted in descending order of cumulative application usage duration.</p>
+     * <p>Queries the ranking of application usage duration for a specified user within a statistical range. <code>StartDate</code> and <code>EndDate</code> use the <code>yyyyMMdd</code> format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. <code>UserId</code> must be set to the ID of the user to be queried. The results are sorted in descending order of cumulative application usage duration.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the ranking of cumulative application usage duration for a specified user within a date range.</p>
@@ -6926,7 +8433,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the ranking of application usage duration for a specified user within a statistical range. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to be queried. The results are sorted in descending order of cumulative application usage duration.</p>
+     * <p>Queries the ranking of application usage duration for a specified user within a statistical range. <code>StartDate</code> and <code>EndDate</code> use the <code>yyyyMMdd</code> format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. <code>UserId</code> must be set to the ID of the user to be queried. The results are sorted in descending order of cumulative application usage duration.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the ranking of cumulative application usage duration for a specified user within a date range.</p>
@@ -6941,7 +8448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries user usage reports. ProductType, StartDate, and EndDate are required for server-side validation, and the time span cannot exceed 60 months. During the query, the start and end times are converted to the <code>yyyyMMdd</code> format and aggregated based on a closed interval of natural days. The results are paginated in descending order of cumulative usage duration, with a maximum of 1,500 records per page. You can combine ConnectionStatus, UserId, BizRegionId, and AppInstanceGroupId for filtering.</p>
+     * <p>Queries user usage reports. ProductType, StartDate, and EndDate are required for server-side validation, and the time span cannot exceed 60 months. During the query, the start and end times are converted to <code>yyyyMMdd</code> and aggregated by natural days in a closed interval. The results are paginated in descending order of cumulative usage duration, with a maximum of 1,500 records per page. You can combine ConnectionStatus, UserId, BizRegionId, and AppInstanceGroupId for filtering.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the connection status, last connection time, cumulative usage duration, and session persistence duration of users.</p>
@@ -7008,7 +8515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries user usage reports. ProductType, StartDate, and EndDate are required for server-side validation, and the time span cannot exceed 60 months. During the query, the start and end times are converted to the <code>yyyyMMdd</code> format and aggregated based on a closed interval of natural days. The results are paginated in descending order of cumulative usage duration, with a maximum of 1,500 records per page. You can combine ConnectionStatus, UserId, BizRegionId, and AppInstanceGroupId for filtering.</p>
+     * <p>Queries user usage reports. ProductType, StartDate, and EndDate are required for server-side validation, and the time span cannot exceed 60 months. During the query, the start and end times are converted to <code>yyyyMMdd</code> and aggregated by natural days in a closed interval. The results are paginated in descending order of cumulative usage duration, with a maximum of 1,500 records per page. You can combine ConnectionStatus, UserId, BizRegionId, and AppInstanceGroupId for filtering.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the connection status, last connection time, cumulative usage duration, and session persistence duration of users.</p>
@@ -7867,6 +9374,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only custom images and community images manageable by the current account are supported. If VersionId is omitted, the current active version is used. If specified, the version must belong to the image specified by ImageId. Verify the association between the applications and the version through the image query results before submitting AppIdList. <strong>Dissociating applications does not directly delete application records.</strong> To delete applications, call DeleteApp separately.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Dissociates applications from a specified image version in batches.</p>
+     * 
+     * @param request UnbindAppRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UnbindAppResponse
+     */
+    public UnbindAppResponse unbindAppWithOptions(UnbindAppRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appIdList)) {
+            bodyFlat.put("AppIdList", request.appIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            body.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            body.put("VersionId", request.versionId);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UnbindApp"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UnbindAppResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Only custom images and community images manageable by the current account are supported. If VersionId is omitted, the current active version is used. If specified, the version must belong to the image specified by ImageId. Verify the association between the applications and the version through the image query results before submitting AppIdList. <strong>Dissociating applications does not directly delete application records.</strong> To delete applications, call DeleteApp separately.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Dissociates applications from a specified image version in batches.</p>
+     * 
+     * @param request UnbindAppRequest
+     * @return UnbindAppResponse
+     */
+    public UnbindAppResponse unbindApp(UnbindAppRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.unbindAppWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Unbinds tags from cloud resources in a unified manner.</p>
      * 
@@ -8038,6 +9608,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>The AdaptorId must correspond to a valid application adapter manageable by the current account. Pass only the configurations that need to be modified in this request.
+     * SilenceParam is used for application startup parameters. UserConfig is used for application runtime configurations. <strong>This operation does not support modifying application scripts or executable file paths through AppScript or ExecuteFileAddress. Do not pass these two parameters.</strong></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the runtime parameters, optimization configurations, and user configurations of a specified application adapter.</p>
+     * 
+     * @param tmpReq UpdateAdaptorRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAdaptorResponse
+     */
+    public UpdateAdaptorResponse updateAdaptorWithOptions(UpdateAdaptorRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateAdaptorShrinkRequest request = new UpdateAdaptorShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userConfig)) {
+            request.userConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userConfig, "UserConfig", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adaptorId)) {
+            body.put("AdaptorId", request.adaptorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appScript)) {
+            body.put("AppScript", request.appScript);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executeFileAddress)) {
+            body.put("ExecuteFileAddress", request.executeFileAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.optimizeParam)) {
+            body.put("OptimizeParam", request.optimizeParam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.silenceParam)) {
+            body.put("SilenceParam", request.silenceParam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userConfigShrink)) {
+            body.put("UserConfig", request.userConfigShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAdaptor"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAdaptorResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The AdaptorId must correspond to a valid application adapter manageable by the current account. Pass only the configurations that need to be modified in this request.
+     * SilenceParam is used for application startup parameters. UserConfig is used for application runtime configurations. <strong>This operation does not support modifying application scripts or executable file paths through AppScript or ExecuteFileAddress. Do not pass these two parameters.</strong></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the runtime parameters, optimization configurations, and user configurations of a specified application adapter.</p>
+     * 
+     * @param request UpdateAdaptorRequest
+     * @return UpdateAdaptorResponse
+     */
+    public UpdateAdaptorResponse updateAdaptor(UpdateAdaptorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAdaptorWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <blockquote>
      * <p>Warning: After the image update starts, sessions of end users who are accessing cloud applications will be disconnected. Proceed with caution to avoid data loss for end users.
      * Before calling this API, the delivery group must be in the PUBLISHED, DEPLOYED, or MAINTAIN_FAILED state. You can call GetAppInstanceGroup to query the current state of the delivery group.
@@ -8104,6 +9752,162 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAppInstanceGroupImageResponse updateAppInstanceGroupImage(UpdateAppInstanceGroupImageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateAppInstanceGroupImageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can only modify images that are owned by the current account and allow modifications. Images shared with the current account cannot be modified.
+     * You must provide at least one of ImageId and VersionId. If both are provided, they must point to the same image. If VersionId is omitted, the current effective version of the image is used. Passing a non-empty AdaptorIdList updates the application adapter associations for the selected version based on the complete list. Make sure to include the adapters that you still want to retain.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the name, description, version information, and associated application adapters of an image.</p>
+     * 
+     * @param request UpdateImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateImageResponse
+     */
+    public UpdateImageResponse updateImageWithOptions(UpdateImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adaptorIdList)) {
+            body.put("AdaptorIdList", request.adaptorIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.distro)) {
+            body.put("Distro", request.distro);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            body.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageName)) {
+            body.put("ImageName", request.imageName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            body.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            body.put("VersionId", request.versionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionName)) {
+            body.put("VersionName", request.versionName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateImage"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateImageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can only modify images that are owned by the current account and allow modifications. Images shared with the current account cannot be modified.
+     * You must provide at least one of ImageId and VersionId. If both are provided, they must point to the same image. If VersionId is omitted, the current effective version of the image is used. Passing a non-empty AdaptorIdList updates the application adapter associations for the selected version based on the complete list. Make sure to include the adapters that you still want to retain.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the name, description, version information, and associated application adapters of an image.</p>
+     * 
+     * @param request UpdateImageRequest
+     * @return UpdateImageResponse
+     */
+    public UpdateImageResponse updateImage(UpdateImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateImageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The task must exist before you call this operation, and the corresponding creation resource and resource node must be available. The TaskType must match the actual type of the task.
+     * <strong>This operation does not support modifying the task step, image version, or destination region by using TaskStep, VersionId, or BizRegionId. Do not pass these three parameters.</strong> A successful request only indicates that the status update call is completed. To query the final status of the task, call GetTask.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Sends a status update request for an existing image creation task to the corresponding creation resource.</p>
+     * 
+     * @param request UpdateImageTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateImageTaskResponse
+     */
+    public UpdateImageTaskResponse updateImageTaskWithOptions(UpdateImageTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            body.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.code)) {
+            body.put("Code", request.code);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskStep)) {
+            body.put("TaskStep", request.taskStep);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
+            body.put("TaskType", request.taskType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            body.put("VersionId", request.versionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateImageTask"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateImageTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The task must exist before you call this operation, and the corresponding creation resource and resource node must be available. The TaskType must match the actual type of the task.
+     * <strong>This operation does not support modifying the task step, image version, or destination region by using TaskStep, VersionId, or BizRegionId. Do not pass these three parameters.</strong> A successful request only indicates that the status update call is completed. To query the final status of the task, call GetTask.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Sends a status update request for an existing image creation task to the corresponding creation resource.</p>
+     * 
+     * @param request UpdateImageTaskRequest
+     * @return UpdateImageTaskResponse
+     */
+    public UpdateImageTaskResponse updateImageTask(UpdateImageTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateImageTaskWithOptions(request, runtime);
     }
 
     /**

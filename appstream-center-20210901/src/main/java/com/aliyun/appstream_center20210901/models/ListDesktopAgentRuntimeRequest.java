@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDesktopAgentRuntimeRequest extends TeaModel {
     /**
-     * <p>The agent IM online status filter.</p>
+     * <p>The Agent IM online status filter.</p>
      * 
      * <strong>example:</strong>
      * <p>Online</p>
@@ -14,7 +14,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public String agentImOnlineStatus;
 
     /**
-     * <p>The list of agent instance statuses.</p>
+     * <p>The list of Agent instance statuses.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -23,7 +23,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public java.util.List<String> agentInstanceStatuses;
 
     /**
-     * <p>The list of agent instance versions.</p>
+     * <p>The list of Agent instance versions.</p>
      * 
      * <strong>example:</strong>
      * <p>OpenClaw 2026.4.15</p>
@@ -32,7 +32,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public java.util.List<String> agentInstanceVersions;
 
     /**
-     * <p>The agent platform.</p>
+     * <p>The Agent platform.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE_AGENTIC_COMPUTER</p>
@@ -41,7 +41,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public String agentPlatform;
 
     /**
-     * <p>The list of agent platforms. If both AgentPlatformList and AgentPlatform are specified, AgentPlatform takes precedence and this list is ignored.</p>
+     * <p>The list of Agent platforms. If both AgentPlatform and AgentPlatformList are specified, AgentPlatform takes precedence and this list is ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -50,7 +50,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public java.util.List<String> agentPlatformList;
 
     /**
-     * <p>The agent provider name.</p>
+     * <p>The name of the Agent provider.</p>
      * 
      * <strong>example:</strong>
      * <p>AgenticComputer</p>
@@ -59,7 +59,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public String agentProvider;
 
     /**
-     * <p>The list of agent providers. If both AgentProviderList and AgentProvider are specified, AgentProvider takes precedence and this list is ignored.</p>
+     * <p>The list of Agent providers. If both AgentProvider and AgentProviderList are specified, AgentProvider takes precedence and this list is ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>OpenClaw</p>
@@ -68,7 +68,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public java.util.List<String> agentProviderList;
 
     /**
-     * <p>The list of agent template IDs. A match occurs only when all valid templates are assigned.</p>
+     * <p>The list of Agent template IDs. A match occurs only when all valid templates are assigned.</p>
      * 
      * <strong>example:</strong>
      * <p>at-xxxxx</p>
@@ -122,7 +122,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public String deploymentSource;
 
     /**
-     * <p>The list of agent runtime IDs.</p>
+     * <p>The list of Agent runtime IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>jvs-xxxxx</p>
@@ -131,7 +131,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public java.util.List<String> desktopIds;
 
     /**
-     * <p>The list of agent runtime names.</p>
+     * <p>The list of Agent runtime names.</p>
      * 
      * <strong>example:</strong>
      * <p>Desktop001</p>
@@ -140,7 +140,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public java.util.List<String> desktopNames;
 
     /**
-     * <p>The list of Cloud Desktop statuses.</p>
+     * <p>The list of cloud desktop statuses.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -149,7 +149,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public java.util.List<String> desktopStatuses;
 
     /**
-     * <p>Indicates whether authorization is granted to an authorized user.</p>
+     * <p>Specifies whether authorization is granted to an authorized user.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -158,8 +158,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public Boolean hasAuthUser;
 
     /**
-     * <p>Specifies whether risks exist. This parameter is used to filter Cloud Desktops with or without risks. It takes effect only when IncludeRiskInfo is set to true.</p>
-     * <p>Set this parameter to true to return only records with risks. Set this parameter to false to return only records without risks. If this parameter is not specified, no filtering is applied.</p>
+     * <p>Specifies whether a risk exists. This parameter is used to filter cloud desktops with or without risks and takes effect only when IncludeRiskInfo is set to true. If set to true, only records with risks are returned. If set to false, only records without risks are returned. If this parameter is not specified, no filtering is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -168,7 +167,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public Boolean hasRisk;
 
     /**
-     * <p>Specifies whether to query and return risk information. Default value: false. If this parameter is set to true, the RiskInfo field is included in the response, and the HasRisk filter takes effect.</p>
+     * <p>Specifies whether to query and return risk information. Default value: false. If set to true, the response includes the RiskInfo field, and the HasRisk filter takes effect.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -213,7 +212,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The page number, starting from 1. Values 0 and 1 return the same result.</p>
+     * <p>The page number, starting from 1. Entering 0 or 1 returns the same result.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -222,7 +221,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -240,7 +239,7 @@ public class ListDesktopAgentRuntimeRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The list of resource IDs (underlying actual resource IDs).</p>
+     * <p>The list of resource IDs, which are the underlying actual resource IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>ecd-xxxxx</p>

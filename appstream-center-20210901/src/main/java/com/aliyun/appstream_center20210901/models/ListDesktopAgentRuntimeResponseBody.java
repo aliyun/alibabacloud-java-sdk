@@ -20,7 +20,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total count.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -93,7 +93,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
 
     public static class ListDesktopAgentRuntimeResponseBodyDataAgentImInfo extends TeaModel {
         /**
-         * <p>The agent IM online status (Online/Offline). Default value: Offline.</p>
+         * <p>The online status of the agent IM. Valid values: Online and Offline. Default value: Offline.</p>
          * 
          * <strong>example:</strong>
          * <p>Online</p>
@@ -170,7 +170,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public String agentInstanceVersion;
 
         /**
-         * <p>The agent platform.</p>
+         * <p>The Agent platform.</p>
          * 
          * <strong>example:</strong>
          * <p>ENTERPRISE_AGENTIC_COMPUTER</p>
@@ -188,7 +188,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public String agentProvider;
 
         /**
-         * <p>Indicates whether the agent instance has a third-party channel configured.</p>
+         * <p>Indicates whether a third-party channel is configured for the agent instance.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -212,7 +212,16 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public String deploymentSource;
 
         /**
-         * <p>Indicates whether the agent instance has a model configured.</p>
+         * <p>The latest reported MindCenter version in the instance properties. This value is null if the version is not reported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v0.3.20-D-20261105.181002</p>
+         */
+        @NameInMap("MindCenterVersion")
+        public String mindCenterVersion;
+
+        /**
+         * <p>Indicates whether a model is configured for the agent instance.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -221,7 +230,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public Boolean modelConfigure;
 
         /**
-         * <p>The configured model group ID.</p>
+         * <p>The ID of the configured model group.</p>
          * 
          * <strong>example:</strong>
          * <p>mt-xxxx</p>
@@ -290,6 +299,14 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             return this.deploymentSource;
         }
 
+        public ListDesktopAgentRuntimeResponseBodyDataAgentInstanceInfoList setMindCenterVersion(String mindCenterVersion) {
+            this.mindCenterVersion = mindCenterVersion;
+            return this;
+        }
+        public String getMindCenterVersion() {
+            return this.mindCenterVersion;
+        }
+
         public ListDesktopAgentRuntimeResponseBodyDataAgentInstanceInfoList setModelConfigure(Boolean modelConfigure) {
             this.modelConfigure = modelConfigure;
             return this;
@@ -319,7 +336,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The resource group name.</p>
+         * <p>The name of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>resource-group-001</p>
@@ -352,7 +369,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
 
     public static class ListDesktopAgentRuntimeResponseBodyDataRiskInfo extends TeaModel {
         /**
-         * <p>Indicates whether the agent has been uninstalled.</p>
+         * <p>Indicates whether the agent is uninstalled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -361,7 +378,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public Boolean agentUninstalled;
 
         /**
-         * <p>Indicates whether the third-party channel configuration has been modified (inconsistent with the configuration distributed by the administrator).</p>
+         * <p>Indicates whether the third-party channel configuration is modified and inconsistent with the configuration delivered by the administrator.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -370,7 +387,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public Boolean channelModified;
 
         /**
-         * <p>Indicates whether the model configuration has been modified (inconsistent with the configuration distributed by the administrator).</p>
+         * <p>Indicates whether the model configuration is modified and inconsistent with the configuration delivered by the administrator.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -453,7 +470,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The agent runtime name.</p>
+         * <p>The Agent runtime name.</p>
          * 
          * <strong>example:</strong>
          * <p>Agent-001</p>
@@ -462,7 +479,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public String desktopName;
 
         /**
-         * <p>The Cloud Desktop status.</p>
+         * <p>The cloud desktop status.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -471,7 +488,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public String desktopStatus;
 
         /**
-         * <p>Indicates whether there is an authorized user with authorization.</p>
+         * <p>Indicates whether users are authorized.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -480,7 +497,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public Boolean hasAuthUser;
 
         /**
-         * <p>The management status list, parsed from the managementStatus combined value.</p>
+         * <p>The list of management statuses parsed from the aggregated managementStatus value.</p>
          */
         @NameInMap("ManagementStatuses")
         public java.util.List<String> managementStatuses;
@@ -495,7 +512,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public Boolean modelConfigure;
 
         /**
-         * <p>The active model template ID. This parameter is returned only when modelConfigure is set to true.</p>
+         * <p>The ID of the effective model template. This parameter is returned only when modelConfigure is set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>mt-xxxx</p>
@@ -504,7 +521,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public String modelTemplateId;
 
         /**
-         * <p>The active model template name. This parameter is returned only when modelConfigure is set to true.</p>
+         * <p>The name of the effective model template. This parameter is returned only when modelConfigure is set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>model-template-001</p>
@@ -522,7 +539,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The list of channel codes in QR code configuration.</p>
+         * <p>The list of channel codes in the QR code configuration.</p>
          */
         @NameInMap("QrCodeConfiguringList")
         public java.util.List<String> qrCodeConfiguringList;
@@ -537,7 +554,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The region location (the Chinese mainland or outside the Chinese mainland).</p>
+         * <p>The region location (mainland China or overseas).</p>
          * 
          * <strong>example:</strong>
          * <p>Mainland</p>
@@ -552,7 +569,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public ListDesktopAgentRuntimeResponseBodyDataResourceGroup resourceGroup;
 
         /**
-         * <p>The resource ID, which is the Cloud Desktop ID.</p>
+         * <p>The resource ID, which is the cloud desktop ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-xxxx</p>
@@ -561,7 +578,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The risk information. This parameter is returned only when the request parameter IncludeRiskInfo is set to true. Otherwise, null is returned.</p>
+         * <p>The risk information. This parameter is returned only when the IncludeRiskInfo request parameter is set to true. Otherwise, null is returned.</p>
          */
         @NameInMap("RiskInfo")
         public ListDesktopAgentRuntimeResponseBodyDataRiskInfo riskInfo;

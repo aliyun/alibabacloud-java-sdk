@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryConnectionReportResponseBody extends TeaModel {
     /**
-     * <p>The business status code. A value of <code>200</code> indicates that the request is processed successfully. Other values indicate that the request fails to be processed.</p>
+     * <p>The business status code. <code>200</code> indicates that the request is successful. Other values indicate that the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -136,7 +136,7 @@ public class QueryConnectionReportResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
-         * <p>The average duration of successful connections. In the current version, the return value is in milliseconds. Parse it as milliseconds. The <code>Seconds</code> in the field name is retained for compatibility and cannot be used as the unit basis. This value may not be returned when there are no successful connections.</p>
+         * <p>The average duration of successful connections. In the current version, the return value is in milliseconds, so parse it as milliseconds. The <code>Seconds</code> in the field name is retained for compatibility and does not indicate the unit. This value may not be returned if there are no successful connections.</p>
          * 
          * <strong>example:</strong>
          * <p>1250</p>
@@ -145,7 +145,7 @@ public class QueryConnectionReportResponseBody extends TeaModel {
         public Double connectionAvgDurationSeconds;
 
         /**
-         * <p>The number of failed connections within the statistical window. Unit: count.</p>
+         * <p>The number of connection failures within the statistical window.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -154,7 +154,7 @@ public class QueryConnectionReportResponseBody extends TeaModel {
         public Long connectionFailureCount;
 
         /**
-         * <p>The number of successful connections within the statistical window. Unit: count.</p>
+         * <p>The number of successful connections within the statistical window.</p>
          * 
          * <strong>example:</strong>
          * <p>98</p>
@@ -163,7 +163,7 @@ public class QueryConnectionReportResponseBody extends TeaModel {
         public Long connectionSuccessCount;
 
         /**
-         * <p>The connection success rate, which is calculated by dividing the number of successful connections by the sum of successful and failed connections. The value ranges from 0 to 1. Multiply by 100 to get the percentage. This value may not be returned when there are no connection records.</p>
+         * <p>The connection success rate, which is calculated by dividing the number of successful connections by the sum of successful and failed connections. The value ranges from 0 to 1. Multiply the value by 100 to get the percentage. This value may not be returned if there are no connection records.</p>
          * 
          * <strong>example:</strong>
          * <p>0.98</p>
@@ -181,7 +181,7 @@ public class QueryConnectionReportResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The end time of the statistical window. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The string itself does not carry a time zone and is interpreted as Asia/Shanghai (UTC+8).</p>
+         * <p>The end time of the statistical window. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The string itself does not carry a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-01 10:05:00</p>
@@ -190,7 +190,7 @@ public class QueryConnectionReportResponseBody extends TeaModel {
         public String statEndDate;
 
         /**
-         * <p>The start time of the statistical window. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The string itself does not carry a time zone and is interpreted as Asia/Shanghai (UTC+8).</p>
+         * <p>The start time of the statistical window. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The string itself does not carry a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-01 10:00:00</p>

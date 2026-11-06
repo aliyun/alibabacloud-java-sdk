@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryUserAppUsageAggregateByHourResponseBody extends TeaModel {
     /**
-     * <p>The business status code. A value of 200 indicates that the request is processed successfully. Other values indicate that the processing failed.</p>
+     * <p>The business status code. A value of 200 indicates that the request is successful. Other values indicate that the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -103,7 +103,7 @@ public class QueryUserAppUsageAggregateByHourResponseBody extends TeaModel {
         public String appTimeCnt;
 
         /**
-         * <p>The statistical hour, which is a two-digit 24-hour format string with values ranging from 00 to 23. Hour boundaries are divided based on the Asia/Shanghai (UTC+8) time zone.</p>
+         * <p>The statistical hour in a two-digit 24-hour format string. Valid values: 00 to 23. Hour boundaries are divided based on the Asia/Shanghai (UTC+8) time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>02</p>
