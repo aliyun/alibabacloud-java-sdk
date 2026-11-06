@@ -4,18 +4,9 @@ package com.aliyun.paimodelgallery20250630.models;
 import com.aliyun.tea.*;
 
 public class UpdateJobPlanRequest extends TeaModel {
-    /**
-     * <p>The current step of the task plan. Set this parameter to <code>DatasetSynthesisAndModelTrain</code> for the full process or <code>DatasetSynthesisModelTrain</code> for step-by-step execution.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>DatasetSynthesisAndModelTrain</p>
-     */
     @NameInMap("JobPlanCurrentStep")
     public String jobPlanCurrentStep;
 
-    /**
-     * <p>The list of tags.</p>
-     */
     @NameInMap("Tag")
     public java.util.List<UpdateJobPlanRequestTag> tag;
 
@@ -41,21 +32,9 @@ public class UpdateJobPlanRequest extends TeaModel {
     }
 
     public static class UpdateJobPlanRequestTag extends TeaModel {
-        /**
-         * <p>The tag key. If the tag key already exists, the tag is updated. Otherwise, a new tag is added.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>foo</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag key. If the tag key already exists, the tag is updated. Otherwise, a new tag is added.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>bar</p>
-         */
         @NameInMap("Value")
         public String value;
 

@@ -4,362 +4,114 @@ package com.aliyun.paimodelgallery20250630.models;
 import com.aliyun.tea.*;
 
 public class ModelGalleryModel extends TeaModel {
-    /**
-     * <p>The collection to which the model belongs.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>QuickStart</p>
-     */
     @NameInMap("Collection")
     public String collection;
 
-    /**
-     * <p>Indicates whether compression is supported.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Compressible")
     public Boolean compressible;
 
-    /**
-     * <p>Indicates whether deep thinking is supported.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("DeepThink")
     public Boolean deepThink;
 
-    /**
-     * <p>Indicates whether online experience is supported.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Demonstrable")
     public Boolean demonstrable;
 
-    /**
-     * <p>Indicates whether deployment is supported.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Deployable")
     public Boolean deployable;
 
-    /**
-     * <p>Indicates whether distillation is supported.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Distillable")
     public Boolean distillable;
 
-    /**
-     * <p>The domain. For example, aigc (generative AI), nlp (natural language processing), or cv (computer vision).</p>
-     * 
-     * <strong>example:</strong>
-     * <p>aigc</p>
-     */
     @NameInMap("Domain")
     public String domain;
 
-    /**
-     * <p>Indicates whether evaluation is supported.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Evaluable")
     public Boolean evaluable;
 
-    /**
-     * <p>The additional information.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("ExtraInfo")
     public java.util.Map<String, ?> extraInfo;
 
-    /**
-     * <p>Indicates whether FunctionCall is supported.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("FunctionCall")
     public Boolean functionCall;
 
-    /**
-     * <p>The creation time.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2025-12-03T07:21:28.000Z</p>
-     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
-    /**
-     * <p>The update time of the latest model version.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2025-12-03T07:21:28.000Z</p>
-     */
     @NameInMap("GmtLatestVersionModified")
     public String gmtLatestVersionModified;
 
-    /**
-     * <p>The update time.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2025-12-03T07:21:28.000Z</p>
-     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
-    /**
-     * <p>The latest model version.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1.0.0</p>
-     */
     @NameInMap("LatestVersionName")
     public String latestVersionName;
 
-    /**
-     * <p>The model description.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Large language model</p>
-     */
     @NameInMap("ModelDescription")
     public String modelDescription;
 
-    /**
-     * <p>The model documentation.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>http://</p>
-     */
     @NameInMap("ModelDoc")
     public String modelDoc;
 
-    /**
-     * <p>The model ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>model-8npjorqxl8gmdo72nj</p>
-     */
     @NameInMap("ModelId")
     public String modelId;
 
-    /**
-     * <p>The model name.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Qwen3-235B-A22B-Thinking-2507</p>
-     */
     @NameInMap("ModelName")
     public String modelName;
 
-    /**
-     * <p>The model series.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Qwen</p>
-     */
     @NameInMap("ModelSeries")
     public String modelSeries;
 
-    /**
-     * <p>The model type.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>LoRA</p>
-     */
     @NameInMap("ModelType")
     public String modelType;
 
-    /**
-     * <p>The ordinal number.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("OrderNumber")
     public Long orderNumber;
 
-    /**
-     * <p>The model source, used to filter the list of models that belong to a specific community or organization. For example, ModelScope, PAI, or NIM.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>PAI</p>
-     */
     @NameInMap("Origin")
     public String origin;
 
-    /**
-     * <p>The number of parameters, in millions (M).</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1024</p>
-     */
     @NameInMap("ParameterSize")
     public Long parameterSize;
 
-    /**
-     * <p>The search keywords.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>llm</p>
-     */
     @NameInMap("SearchWords")
     public String searchWords;
 
-    /**
-     * <p>The supported compression methods.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{
-     *   &quot;Methods&quot;: [{
-     *     &quot;Method&quot;: &quot;Quantization&quot;,
-     *     &quot;SubMethod&quot;: &quot;MinMax-8Bit&quot;,
-     *     &quot;Resource&quot;: &quot;GPU&quot;
-     *   }]
-     * }</p>
-     */
     @NameInMap("SupportedCompressionMethods")
     public java.util.Map<String, ?> supportedCompressionMethods;
 
-    /**
-     * <p>The resources supported for compression.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>GPU,GP7V</p>
-     */
     @NameInMap("SupportedCompressionResources")
     public String supportedCompressionResources;
 
-    /**
-     * <p>The supported distillation methods.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{
-     *   &quot;Methods&quot;: [{
-     *     &quot;Method&quot;: &quot;EasyDistill&quot;,
-     *     &quot;SubMethod&quot;: &quot;DataSynthesis&quot;,
-     *     &quot;Resource&quot;: &quot;GPU&quot;
-     *   }]
-     * }</p>
-     */
     @NameInMap("SupportedDistillationMethods")
     public java.util.Map<String, ?> supportedDistillationMethods;
 
-    /**
-     * <p>The resources supported for distillation.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>GPU,GP7V</p>
-     */
     @NameInMap("SupportedDistillationResources")
     public String supportedDistillationResources;
 
-    /**
-     * <p>The supported evaluation methods.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{
-     *   &quot;Methods&quot;: [{
-     *     &quot;Method&quot;: &quot;Single-Node-Standard&quot;,
-     *     &quot;Resource&quot;: &quot;GPU&quot;
-     *   }]
-     * }</p>
-     */
     @NameInMap("SupportedEvaluationMethods")
     public java.util.Map<String, ?> supportedEvaluationMethods;
 
-    /**
-     * <p>The resources supported for evaluation.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>GPU,GP7V</p>
-     */
     @NameInMap("SupportedEvaluationResources")
     public String supportedEvaluationResources;
 
-    /**
-     * <p>The supported deployment methods.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{
-     *   &quot;Methods&quot;: [{
-     *     &quot;framework&quot;: &quot;blade&quot;,
-     *     &quot;scenario&quot;: &quot;nvidia-standard&quot;,
-     *     &quot;Resource&quot;: &quot;GPU&quot;
-     *   }]
-     * }</p>
-     */
     @NameInMap("SupportedInferenceMethods")
     public java.util.Map<String, ?> supportedInferenceMethods;
 
-    /**
-     * <p>The resources supported for deployment.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>GPU,GP7V</p>
-     */
     @NameInMap("SupportedInferenceResources")
     public String supportedInferenceResources;
 
-    /**
-     * <p>The supported training methods.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{
-     *   &quot;Methods&quot;: [{
-     *     &quot;Method&quot;: &quot;SFT&quot;,
-     *     &quot;SubMethod&quot;: &quot;LoRA_LLM&quot;,
-     *     &quot;Resource&quot;: &quot;GPU&quot;
-     *   }]
-     * }</p>
-     */
     @NameInMap("SupportedTrainingMethods")
     public java.util.Map<String, ?> supportedTrainingMethods;
 
-    /**
-     * <p>The resources supported for training.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>GPU,GP7V</p>
-     */
     @NameInMap("SupportedTrainingResources")
     public String supportedTrainingResources;
 
-    /**
-     * <p>The list of tags.</p>
-     */
     @NameInMap("Tags")
     public ModelGalleryModelTags tags;
 
-    /**
-     * <p>The task. For example, large-language-model (large language model), image-classification (image classification), or embedding.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>large-language-model</p>
-     */
     @NameInMap("Task")
     public String task;
 
-    /**
-     * <p>Indicates whether training is supported.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Trainable")
     public Boolean trainable;
 
@@ -665,21 +417,9 @@ public class ModelGalleryModel extends TeaModel {
     }
 
     public static class ModelGalleryModelTags extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>k1</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>v1</p>
-         */
         @NameInMap("Value")
         public String value;
 

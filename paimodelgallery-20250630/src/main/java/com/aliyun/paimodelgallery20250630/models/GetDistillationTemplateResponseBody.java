@@ -4,18 +4,9 @@ package com.aliyun.paimodelgallery20250630.models;
 import com.aliyun.tea.*;
 
 public class GetDistillationTemplateResponseBody extends TeaModel {
-    /**
-     * <p>The distillation template details.</p>
-     */
     @NameInMap("DistillationTemplate")
     public DistillationTemplate distillationTemplate;
 
-    /**
-     * <p><strong>Request ID</strong></p>
-     * 
-     * <strong>example:</strong>
-     * <p>40325405-579C-4D82****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

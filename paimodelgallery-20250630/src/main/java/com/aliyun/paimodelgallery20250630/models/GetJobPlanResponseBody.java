@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetJobPlanResponseBody extends TeaModel {
     /**
-     * <p>The creation time of the job plan.</p>
-     * 
      * <strong>example:</strong>
      * <p>2026-09-18 10:00:00</p>
      */
@@ -14,83 +12,41 @@ public class GetJobPlanResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The last modified time of the job plan.</p>
-     * 
      * <strong>example:</strong>
      * <p>2026-09-18 10:30:00</p>
      */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
-    /**
-     * <p>The current step.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>DatasetSynthesis</p>
-     */
     @NameInMap("JobPlanCurrentStep")
     public String jobPlanCurrentStep;
 
-    /**
-     * <p>The job plan ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>jp-xxxxxx</p>
-     */
     @NameInMap("JobPlanId")
     public String jobPlanId;
 
-    /**
-     * <p>The job plan name, which is unique within the workspace.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ModelGalleryxxx</p>
-     */
     @NameInMap("JobPlanName")
     public String jobPlanName;
 
-    /**
-     * <p>The job plan steps.</p>
-     */
     @NameInMap("JobPlanSteps")
     public java.util.List<GetJobPlanResponseBodyJobPlanSteps> jobPlanSteps;
 
-    /**
-     * <p>The job plan type.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Distillation</p>
-     */
     @NameInMap("JobPlanType")
     public String jobPlanType;
 
     /**
-     * <p>The Alibaba Cloud account ID that owns the job plan.</p>
-     * 
      * <strong>example:</strong>
      * <p>1234567890123456</p>
      */
     @NameInMap("OwnerId")
     public String ownerId;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>40325405-579C-4D82-9624-EC2B1779848E</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The list of tags.</p>
-     */
     @NameInMap("Tags")
     public java.util.List<GetJobPlanResponseBodyTags> tags;
 
     /**
-     * <p>The distillation template ID used to create the job plan. An empty value indicates that this is not a scenario-based distillation task.</p>
-     * 
      * <strong>example:</strong>
      * <p>advanced_cot_distill</p>
      */
@@ -98,8 +54,6 @@ public class GetJobPlanResponseBody extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The display name of the distillation template, localized based on the requested language.</p>
-     * 
      * <strong>example:</strong>
      * <p>思维链推理蒸馏</p>
      */
@@ -107,20 +61,12 @@ public class GetJobPlanResponseBody extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The Alibaba Cloud account ID that created the job plan.</p>
-     * 
      * <strong>example:</strong>
      * <p>1234567890123456</p>
      */
     @NameInMap("UserId")
     public String userId;
 
-    /**
-     * <p>The workspace ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>62469</p>
-     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -242,36 +188,15 @@ public class GetJobPlanResponseBody extends TeaModel {
     }
 
     public static class GetJobPlanResponseBodyJobPlanSteps extends TeaModel {
-        /**
-         * <p>The generated PAIFlow PipelineRunId.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pipeline-xxxxx</p>
-         */
         @NameInMap("JobPlanStepId")
         public String jobPlanStepId;
 
-        /**
-         * <p>The job plan step name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DistillationDatasetSynthesis</p>
-         */
         @NameInMap("JobPlanStepName")
         public String jobPlanStepName;
 
-        /**
-         * <p>The job plan step configuration.</p>
-         */
         @NameInMap("JobPlanStepSpec")
         public java.util.Map<String, ?> jobPlanStepSpec;
 
-        /**
-         * <p>The job plan step type.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PAIFlow</p>
-         */
         @NameInMap("JobPlanStepType")
         public String jobPlanStepType;
 
@@ -315,21 +240,9 @@ public class GetJobPlanResponseBody extends TeaModel {
     }
 
     public static class GetJobPlanResponseBodyTags extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>foo</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>bar</p>
-         */
         @NameInMap("Value")
         public String value;
 

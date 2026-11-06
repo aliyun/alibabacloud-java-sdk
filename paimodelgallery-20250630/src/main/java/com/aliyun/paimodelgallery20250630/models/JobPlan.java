@@ -32,8 +32,6 @@ public class JobPlan extends TeaModel {
     public java.util.List<JobPlanTags> tags;
 
     /**
-     * <p>The distillation template ID used when creating the task plan. An empty value indicates that this is not a scenario-specific distillation task.</p>
-     * 
      * <strong>example:</strong>
      * <p>advanced_cot_distill</p>
      */
@@ -41,10 +39,8 @@ public class JobPlan extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The display name of the distillation template used, localized based on the language specified in the request.</p>
-     * 
      * <strong>example:</strong>
-     * <p>Chain-of-Thought Reasoning Distillation</p>
+     * <p>思维链推理蒸馏</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

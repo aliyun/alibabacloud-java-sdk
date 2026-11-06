@@ -4,27 +4,12 @@ package com.aliyun.paimodelgallery20250630.models;
 import com.aliyun.tea.*;
 
 public class ListJobPlansResponseBody extends TeaModel {
-    /**
-     * <p>The list of job plans.</p>
-     */
     @NameInMap("JobPlans")
     public java.util.List<JobPlan> jobPlans;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>40325405-579C-4D82-9624-EC2B1779848E</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of entries.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>15</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

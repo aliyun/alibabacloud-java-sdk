@@ -4,15 +4,10 @@ package com.aliyun.paimodelgallery20250630.models;
 import com.aliyun.tea.*;
 
 public class DistillationTemplateSummary extends TeaModel {
-    /**
-     * <p>The list of capability tags, used for scenario card display.</p>
-     */
     @NameInMap("CapabilityTags")
     public java.util.List<String> capabilityTags;
 
     /**
-     * <p>The template category. The frontend uses this value to filter scenario cards.</p>
-     * 
      * <strong>example:</strong>
      * <p>reasoning</p>
      */
@@ -20,17 +15,13 @@ public class DistillationTemplateSummary extends TeaModel {
     public String category;
 
     /**
-     * <p>The template description, localized based on the language specified in the request. The description specifies applicable scenarios and outputs.</p>
-     * 
      * <strong>example:</strong>
-     * <p>Designed for scenarios that require multi-step reasoning, such as math, logic, and code. Produces an SFT dataset</p>
+     * <p>面向数学、逻辑、代码等需要多步推理的场景，产出 SFT 数据集。</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The algorithm job type. The value is the same as TemplateId.</p>
-     * 
      * <strong>example:</strong>
      * <p>advanced_cot_distill</p>
      */
@@ -38,23 +29,16 @@ public class DistillationTemplateSummary extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The display order. A smaller value indicates a higher position.</p>
-     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("OrderNumber")
     public Integer orderNumber;
 
-    /**
-     * <p>The list of pipeline stages. The order of the stages represents the execution order.</p>
-     */
     @NameInMap("PipelineStages")
     public java.util.List<DistillationTemplateSummaryPipelineStages> pipelineStages;
 
     /**
-     * <p>The distillation template ID, which is the same as the algorithm job_type. Pass this value as TemplateId when creating a task plan.</p>
-     * 
      * <strong>example:</strong>
      * <p>advanced_cot_distill</p>
      */
@@ -62,17 +46,19 @@ public class DistillationTemplateSummary extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The template display name, localized based on the language specified in the request.</p>
-     * 
      * <strong>example:</strong>
-     * <p>Chain-of-Thought Reasoning Distillation</p>
+     * <p>scenario</p>
+     */
+    @NameInMap("TemplateKind")
+    public String templateKind;
+
+    /**
+     * <strong>example:</strong>
+     * <p>思维链推理蒸馏</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
-    /**
-     * <p>The capability declaration for the second stage, in which the distilled data is used to train the student model. An empty value indicates that the template supports only the distillation stage.</p>
-     */
     @NameInMap("TrainingOptions")
     public java.util.List<DistillationTemplateSummaryTrainingOptions> trainingOptions;
 
@@ -137,6 +123,14 @@ public class DistillationTemplateSummary extends TeaModel {
         return this.templateId;
     }
 
+    public DistillationTemplateSummary setTemplateKind(String templateKind) {
+        this.templateKind = templateKind;
+        return this;
+    }
+    public String getTemplateKind() {
+        return this.templateKind;
+    }
+
     public DistillationTemplateSummary setTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -155,17 +149,13 @@ public class DistillationTemplateSummary extends TeaModel {
 
     public static class DistillationTemplateSummaryPipelineStages extends TeaModel {
         /**
-         * <p>The stage description, localized based on the language specified in the request.</p>
-         * 
          * <strong>example:</strong>
-         * <p>The teacher model generates reasoning-augmented responses for each question</p>
+         * <p>由教师模型对每个问题生成带推理过程的回答。</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The stage identifier, which corresponds to the pipeline[].stage value in the algorithm configuration.</p>
-         * 
          * <strong>example:</strong>
          * <p>cot_distill</p>
          */
@@ -173,10 +163,8 @@ public class DistillationTemplateSummary extends TeaModel {
         public String key;
 
         /**
-         * <p>The stage display name, localized based on the language specified in the request.</p>
-         * 
          * <strong>example:</strong>
-         * <p>Generate Chain-of-Thought</p>
+         * <p>生成思维链</p>
          */
         @NameInMap("Name")
         public String name;
@@ -213,21 +201,13 @@ public class DistillationTemplateSummary extends TeaModel {
     }
 
     public static class DistillationTemplateSummaryTrainingOptions extends TeaModel {
-        /**
-         * <p>The available Model Gallery Task values for the student model.</p>
-         */
         @NameInMap("ModelTasks")
         public java.util.List<String> modelTasks;
 
-        /**
-         * <p>The list of supported training method families.</p>
-         */
         @NameInMap("TrainingMethods")
         public java.util.List<String> trainingMethods;
 
         /**
-         * <p>The training type. The frontend uses this value to select the training workflow and display text.</p>
-         * 
          * <strong>example:</strong>
          * <p>sft</p>
          */

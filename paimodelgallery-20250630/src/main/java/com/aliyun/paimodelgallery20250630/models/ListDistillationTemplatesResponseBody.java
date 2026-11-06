@@ -4,45 +4,18 @@ package com.aliyun.paimodelgallery20250630.models;
 import com.aliyun.tea.*;
 
 public class ListDistillationTemplatesResponseBody extends TeaModel {
-    /**
-     * <p>The list of distillation template summaries, sorted by OrderNumber in ascending order.</p>
-     */
     @NameInMap("DistillationTemplates")
     public java.util.List<DistillationTemplateSummary> distillationTemplates;
 
-    /**
-     * <p>The page number, which echoes the PageNumber value in the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>4</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries per page, which echoes the PageSize value in the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>40325405-579C-4D82****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of templates that match the filter conditions.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>15</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

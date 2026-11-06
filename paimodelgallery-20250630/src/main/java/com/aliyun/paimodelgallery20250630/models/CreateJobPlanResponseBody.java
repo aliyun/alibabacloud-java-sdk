@@ -4,21 +4,9 @@ package com.aliyun.paimodelgallery20250630.models;
 import com.aliyun.tea.*;
 
 public class CreateJobPlanResponseBody extends TeaModel {
-    /**
-     * <p>The job plan ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>jp-xxxxxx</p>
-     */
     @NameInMap("JobPlanId")
     public String jobPlanId;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>40325405-579C-4D82-9624-EC2B1779848E</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class DistillationTemplate extends TeaModel {
     /**
-     * <p>The algorithm name.</p>
-     * 
      * <strong>example:</strong>
      * <p>easydistill</p>
      */
@@ -14,8 +12,6 @@ public class DistillationTemplate extends TeaModel {
     public String algorithmName;
 
     /**
-     * <p>The algorithm provider.</p>
-     * 
      * <strong>example:</strong>
      * <p>pai</p>
      */
@@ -23,23 +19,16 @@ public class DistillationTemplate extends TeaModel {
     public String algorithmProvider;
 
     /**
-     * <p>The algorithm version.</p>
-     * 
      * <strong>example:</strong>
      * <p>v2.0.0</p>
      */
     @NameInMap("AlgorithmVersion")
     public String algorithmVersion;
 
-    /**
-     * <p>The list of capability tags used for displaying scenario cards.</p>
-     */
     @NameInMap("CapabilityTags")
     public java.util.List<String> capabilityTags;
 
     /**
-     * <p>The template category. The frontend uses this value to filter scenario cards.</p>
-     * 
      * <strong>example:</strong>
      * <p>reasoning</p>
      */
@@ -47,8 +36,6 @@ public class DistillationTemplate extends TeaModel {
     public String category;
 
     /**
-     * <p>The raw YAML content of the EasyDistill default configurations. The frontend uses this content for rendering the configuration form and supports recovering to default configurations. The model and credential fields are intentionally left empty and are populated by the user in the form upon commit.</p>
-     * 
      * <strong>example:</strong>
      * <p>job_type: advanced_cot_distill</p>
      */
@@ -56,23 +43,16 @@ public class DistillationTemplate extends TeaModel {
     public String defaultConfig;
 
     /**
-     * <p>The template description, localized based on the requested language. The description specifies the applicable scenarios and outputs.</p>
-     * 
      * <strong>example:</strong>
-     * <p>Designed for scenarios that require multi-step reasoning such as math, logic, and code. Produces an SFT dataset</p>
+     * <p>面向数学、逻辑、代码等需要多步推理的场景，产出 SFT 数据集。</p>
      */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>Specifies whether the input data must be an entire directory. If this parameter is set to true, only a directory can be selected on the form, not a single file. If this parameter is absent or set to false, either a file or a directory can be selected. This value is true when seed files reference other files in the same directory by relative path.</p>
-     */
     @NameInMap("InputDatasetMustBeDirectory")
     public Boolean inputDatasetMustBeDirectory;
 
     /**
-     * <p>The OSS address of the sample input data, rendered based on the region. Users can download the sample and prepare their own data in the same format. An empty value indicates that the template does not provide a sample.</p>
-     * 
      * <strong>example:</strong>
      * <p>oss://pai-quickstart-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/public_datasets/distillation_examples/advanced_cot_distill/input.jsonl</p>
      */
@@ -80,44 +60,36 @@ public class DistillationTemplate extends TeaModel {
     public String inputExampleUri;
 
     /**
-     * <p>The algorithm job type. The value is the same as TemplateId.</p>
-     * 
      * <strong>example:</strong>
      * <p>advanced_cot_distill</p>
      */
     @NameInMap("JobType")
     public String jobType;
 
-    /**
-     * <p>The list of model slots that require user selection. The frontend uses this list to render the model selection form.</p>
-     */
     @NameInMap("ModelSlots")
     public java.util.List<DistillationTemplateModelSlots> modelSlots;
 
     /**
-     * <p>The display order. A smaller value indicates a higher priority.</p>
-     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("OrderNumber")
     public Integer orderNumber;
 
-    /**
-     * <p>The list of pipeline stages. The order of the stages represents the execution order.</p>
-     */
     @NameInMap("PipelineStages")
     public java.util.List<DistillationTemplatePipelineStages> pipelineStages;
 
-    /**
-     * <p>The content of the preset configuration card, displayed in order to show the key default configurations of the template.</p>
-     */
     @NameInMap("PresetConfig")
     public java.util.List<DistillationTemplatePresetConfig> presetConfig;
 
     /**
-     * <p>The distillation template ID, which is the same as the algorithm job_type. Pass this value as TemplateId when creating a task plan.</p>
-     * 
+     * <strong>example:</strong>
+     * <p>oss://pai-quickstart-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/public_datasets/distillation_examples/custom_distill/processor_example.py</p>
+     */
+    @NameInMap("ProcessorExampleUri")
+    public String processorExampleUri;
+
+    /**
      * <strong>example:</strong>
      * <p>advanced_cot_distill</p>
      */
@@ -125,17 +97,19 @@ public class DistillationTemplate extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The template display name, localized based on the requested language.</p>
-     * 
      * <strong>example:</strong>
-     * <p>Chain-of-thought reasoning distillation</p>
+     * <p>scenario</p>
+     */
+    @NameInMap("TemplateKind")
+    public String templateKind;
+
+    /**
+     * <strong>example:</strong>
+     * <p>思维链推理蒸馏</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
-    /**
-     * <p>The capability declaration for the second stage (training the student model with the distilled data). An empty value indicates that the template supports only the distillation stage.</p>
-     */
     @NameInMap("TrainingOptions")
     public java.util.List<DistillationTemplateTrainingOptions> trainingOptions;
 
@@ -256,12 +230,28 @@ public class DistillationTemplate extends TeaModel {
         return this.presetConfig;
     }
 
+    public DistillationTemplate setProcessorExampleUri(String processorExampleUri) {
+        this.processorExampleUri = processorExampleUri;
+        return this;
+    }
+    public String getProcessorExampleUri() {
+        return this.processorExampleUri;
+    }
+
     public DistillationTemplate setTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
     public String getTemplateId() {
         return this.templateId;
+    }
+
+    public DistillationTemplate setTemplateKind(String templateKind) {
+        this.templateKind = templateKind;
+        return this;
+    }
+    public String getTemplateKind() {
+        return this.templateKind;
     }
 
     public DistillationTemplate setTemplateName(String templateName) {
@@ -282,8 +272,6 @@ public class DistillationTemplate extends TeaModel {
 
     public static class DistillationTemplateModelSlotsBackends extends TeaModel {
         /**
-         * <p>The channel name of the PAI-Token gateway. The frontend uses this value to retrieve the list of available models for the channel. This value must be passed back as-is upon submission. This parameter is returned only when Type is pai_token.</p>
-         * 
          * <strong>example:</strong>
          * <p>distillation</p>
          */
@@ -291,8 +279,6 @@ public class DistillationTemplate extends TeaModel {
         public String channel;
 
         /**
-         * <p>The model access method. pai_token indicates the PAI-Token gateway, where the user selects from the list of available models for the channel. pai_eas indicates the user\&quot;s own PAI-EAS service instance, which requires the service address and token.</p>
-         * 
          * <strong>example:</strong>
          * <p>pai_token</p>
          */
@@ -323,24 +309,17 @@ public class DistillationTemplate extends TeaModel {
     }
 
     public static class DistillationTemplateModelSlots extends TeaModel {
-        /**
-         * <p>The list of model access methods supported by this slot.</p>
-         */
         @NameInMap("Backends")
         public java.util.List<DistillationTemplateModelSlotsBackends> backends;
 
         /**
-         * <p>The slot description, localized based on the requested language.</p>
-         * 
          * <strong>example:</strong>
-         * <p>The teacher model used to generate distillation data. We recommend selecting a model with strong reasoning capabilities</p>
+         * <p>用于生成蒸馏数据的教师模型，建议选择推理能力强的模型。</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The slot identifier, which corresponds to the backend section name in the submitted configuration.</p>
-         * 
          * <strong>example:</strong>
          * <p>backend</p>
          */
@@ -348,17 +327,12 @@ public class DistillationTemplate extends TeaModel {
         public String key;
 
         /**
-         * <p>The slot display name, localized based on the requested language.</p>
-         * 
          * <strong>example:</strong>
-         * <p>Teacher model</p>
+         * <p>教师模型</p>
          */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>Specifies whether this slot is required. If this parameter is set to false, the user can skip the selection, and the algorithm falls back to other slots.</p>
-         */
         @NameInMap("Required")
         public Boolean required;
 
@@ -411,17 +385,13 @@ public class DistillationTemplate extends TeaModel {
 
     public static class DistillationTemplatePipelineStages extends TeaModel {
         /**
-         * <p>The stage description, localized based on the requested language.</p>
-         * 
          * <strong>example:</strong>
-         * <p>The teacher model generates responses with reasoning processes for each question</p>
+         * <p>由教师模型对每个问题生成带推理过程的回答。</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The stage identifier, which corresponds to the value of pipeline[].stage in the algorithm configuration.</p>
-         * 
          * <strong>example:</strong>
          * <p>cot_distill</p>
          */
@@ -429,10 +399,8 @@ public class DistillationTemplate extends TeaModel {
         public String key;
 
         /**
-         * <p>The stage display name, localized based on the requested language.</p>
-         * 
          * <strong>example:</strong>
-         * <p>Generate chain of thought</p>
+         * <p>生成思维链</p>
          */
         @NameInMap("Name")
         public String name;
@@ -470,17 +438,13 @@ public class DistillationTemplate extends TeaModel {
 
     public static class DistillationTemplatePresetConfig extends TeaModel {
         /**
-         * <p>The configuration item name, localized based on the requested language. Names are matched by position across languages, so the same row can have different names in different languages.</p>
-         * 
          * <strong>example:</strong>
-         * <p>Task type</p>
+         * <p>任务类型</p>
          */
         @NameInMap("Label")
         public String label;
 
         /**
-         * <p>The configuration item value, localized based on the requested language.</p>
-         * 
          * <strong>example:</strong>
          * <p>advanced_cot_distill</p>
          */
@@ -511,21 +475,13 @@ public class DistillationTemplate extends TeaModel {
     }
 
     public static class DistillationTemplateTrainingOptions extends TeaModel {
-        /**
-         * <p>The range of Model Gallery tasks available for the student model.</p>
-         */
         @NameInMap("ModelTasks")
         public java.util.List<String> modelTasks;
 
-        /**
-         * <p>The list of supported training method families.</p>
-         */
         @NameInMap("TrainingMethods")
         public java.util.List<String> trainingMethods;
 
         /**
-         * <p>The training type. The frontend uses this value to select the training workflow and display text.</p>
-         * 
          * <strong>example:</strong>
          * <p>sft</p>
          */

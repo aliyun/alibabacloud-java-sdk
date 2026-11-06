@@ -5,31 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListJobPlansRequest extends TeaModel {
     /**
-     * <p>Specifies whether to filter by template association. Valid values:</p>
-     * <ul>
-     * <li>true: Returns only scenario-specific job plans that have a template.</li>
-     * <li>false: Returns only general-purpose job plans that do not have a template.</li>
-     * </ul>
-     * <p>If this parameter is not specified, no filtering is applied. If both this parameter and TemplateId are specified, the value of TemplateId takes precedence.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("HasTemplate")
     public Boolean hasTemplate;
 
-    /**
-     * <p>The name of the job plan.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>JobPlan1</p>
-     */
     @NameInMap("JobPlanName")
     public String jobPlanName;
 
     /**
-     * <p>The type of the job plan.</p>
-     * 
      * <strong>example:</strong>
      * <p>Distillation</p>
      */
@@ -37,8 +22,6 @@ public class ListJobPlansRequest extends TeaModel {
     public String jobPlanType;
 
     /**
-     * <p>The sort order.</p>
-     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -46,8 +29,6 @@ public class ListJobPlansRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number.</p>
-     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -55,8 +36,6 @@ public class ListJobPlansRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
-     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -64,23 +43,16 @@ public class ListJobPlansRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The field by which to sort the results.</p>
-     * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
-    /**
-     * <p>The list of tags.</p>
-     */
     @NameInMap("Tag")
     public java.util.List<ListJobPlansRequestTag> tag;
 
     /**
-     * <p>The distillation template ID. Filters results to return only scenario-specific tasks that use the specified template.</p>
-     * 
      * <strong>example:</strong>
      * <p>advanced_cot_distill</p>
      */
@@ -88,8 +60,6 @@ public class ListJobPlansRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The workspace ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>32495</p>
      */
@@ -182,21 +152,9 @@ public class ListJobPlansRequest extends TeaModel {
     }
 
     public static class ListJobPlansRequestTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>key</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>value</p>
-         */
         @NameInMap("Value")
         public String value;
 
