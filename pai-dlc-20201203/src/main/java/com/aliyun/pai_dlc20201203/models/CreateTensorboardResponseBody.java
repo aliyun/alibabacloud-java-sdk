@@ -32,7 +32,7 @@ public class CreateTensorboardResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The TensorBoard ID.</p>
+     * <p>The Tensorboard ID.</p>
      * 
      * <strong>example:</strong>
      * <p>tbxxxxxxxx</p>

@@ -5,10 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetWebTerminalRequest extends TeaModel {
     /**
-     * <p>Specifies whether to create a shared link for accessing the container. Valid values:</p>
+     * <p>The name of the container. If this parameter is not specified, the WebTerminal of the primary container is accessed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sidecar-test</p>
+     */
+    @NameInMap("ContainerName")
+    public String containerName;
+
+    /**
+     * <p>Specifies whether to create a shareable link for accessing the container. Valid values:</p>
      * <ul>
-     * <li>true: Returns a shared link for accessing the container. The link expires after 30 seconds and can be used only once. After someone accesses the container through this link, subsequent requests using the same link are invalid.</li>
-     * <li>false: Returns a regular link for accessing the container. Alibaba Cloud identity authentication is required when using this link. The link expires after 30 seconds.</li>
+     * <li>true: Returns a shareable link for accessing the container. The link expires after 30 seconds and can be used only once. After the container is accessed through this link, subsequent requests to access the container by using the same link become invalid.</li>
+     * <li>false: Returns a regular link for accessing the container. Alibaba Cloud identity verification is required when you use the link. The link expires after 30 seconds.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +27,7 @@ public class GetWebTerminalRequest extends TeaModel {
     public Boolean isShared;
 
     /**
-     * <p>Pod UID。</p>
+     * <p>The Pod UID.</p>
      * 
      * <strong>example:</strong>
      * <p>94a7cc7c-0033-48b5-85bd-71c63592****</p>
@@ -29,6 +38,14 @@ public class GetWebTerminalRequest extends TeaModel {
     public static GetWebTerminalRequest build(java.util.Map<String, ?> map) throws Exception {
         GetWebTerminalRequest self = new GetWebTerminalRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetWebTerminalRequest setContainerName(String containerName) {
+        this.containerName = containerName;
+        return this;
+    }
+    public String getContainerName() {
+        return this.containerName;
     }
 
     public GetWebTerminalRequest setIsShared(Boolean isShared) {

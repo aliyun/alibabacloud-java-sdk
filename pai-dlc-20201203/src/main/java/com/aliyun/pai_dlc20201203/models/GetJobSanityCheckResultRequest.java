@@ -17,11 +17,11 @@ public class GetJobSanityCheckResultRequest extends TeaModel {
     /**
      * <p>The phase of the computing power health check. Valid values:</p>
      * <ul>
-     * <li>CheckInit: environment preparation.</li>
-     * <li>DeviceCheck: single-device computing power check.</li>
-     * <li>SingleNodeCommCheck: intra-node communication check.</li>
-     * <li>TwoNodeCommCheck: inter-node communication check between two nodes.</li>
-     * <li>AllNodeCommCheck: communication check across all nodes.</li>
+     * <li>CheckInit: environment preparation</li>
+     * <li>DeviceCheck: single-device computing power check</li>
+     * <li>SingleNodeCommCheck: intra-node communication check</li>
+     * <li>TwoNodeCommCheck: inter-node communication check between two nodes</li>
+     * <li>AllNodeCommCheck: all-node communication check</li>
      * </ul>
      * 
      * <strong>example:</strong>

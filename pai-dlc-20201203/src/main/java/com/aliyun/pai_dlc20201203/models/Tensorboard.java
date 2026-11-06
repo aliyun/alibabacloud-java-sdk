@@ -113,7 +113,7 @@ public class Tensorboard extends TeaModel {
     public Long memory;
 
     /**
-     * <p>The extended fields of the dataset in JSON format. Currently, MountPath is supported, which specifies the mount path for a custom dataset.</p>
+     * <p>The extended fields of the dataset in JSON format. Currently, MountPath is supported to specify the mount path for a custom dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;mountpath&quot;:&quot;/root/data/&quot;}</p>
@@ -260,7 +260,7 @@ public class Tensorboard extends TeaModel {
     public String username;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>123***</p>

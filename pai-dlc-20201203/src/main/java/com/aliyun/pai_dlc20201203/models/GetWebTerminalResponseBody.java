@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWebTerminalResponseBody extends TeaModel {
     /**
-     * <p>The request ID for this call, used for diagnostics and troubleshooting.</p>
+     * <p>The ID of the request. This ID is used for diagnostics and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -14,7 +14,7 @@ public class GetWebTerminalResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The WebSocket link for accessing the container. You need to build a WebSocket client. For the detailed communication format, refer to the following code:</p>
+     * <p>The WebSocket link for accessing the container. You must build a WebSocket client. For the detailed communication format, refer to the following code:</p>
      * <pre><code>ws = new WebSocket(
      *   `wss://xxxxx`,
      * );
@@ -28,7 +28,7 @@ public class GetWebTerminalResponseBody extends TeaModel {
      *   term.write(\\&quot;Connection closed\\&quot;);
      * };
      * 
-     * // Receive response from the backend
+     * // Receive a response from the backend
      * ws.onmessage = function incoming(event) {
      *   const msg = JSON.parse(event.data);
      *   console.warn(msg);

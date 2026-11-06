@@ -23,7 +23,7 @@ public class GetJobSanityCheckResultResponseBody extends TeaModel {
     public String requestID;
 
     /**
-     * <p>The result of the computing power health check.</p>
+     * <p>The results of the computing power health check.</p>
      */
     @NameInMap("SanityCheckResult")
     public java.util.List<SanityCheckResultItem> sanityCheckResult;

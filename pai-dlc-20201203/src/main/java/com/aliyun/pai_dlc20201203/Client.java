@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "pai-dlc";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-northeast-2-pop", "pai-dlc.aliyuncs.com"),
@@ -73,13 +76,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <p>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before you call this operation.</p>
      * <blockquote>
-     * <p>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * <p>Notice: The total length of the parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a job to run in a cluster. You can specify configurations such as datasource config, code sources, startup commands, and compute resources for each node where the job runs.</p>
+     * <p>Creates a job to run in a cluster. You can specify the data source configuration, code source configuration, startup command, and compute resource configuration for each node where the job runs.</p>
      * 
      * @param request CreateJobRequest
      * @param headers map
@@ -217,13 +220,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <p>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before you call this operation.</p>
      * <blockquote>
-     * <p>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * <p>Notice: The total length of the parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a job to run in a cluster. You can specify configurations such as datasource config, code sources, startup commands, and compute resources for each node where the job runs.</p>
+     * <p>Creates a job to run in a cluster. You can specify the data source configuration, code source configuration, startup command, and compute resource configuration for each node where the job runs.</p>
      * 
      * @param request CreateJobRequest
      * @return CreateJobResponse
@@ -453,7 +456,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a TensorBoard instance by using a node or a specified datasource config.</p>
+     * <p>Creates a TensorBoard instance by using a node or specifying a datasource config.</p>
      * 
      * @param request CreateTensorboardRequest
      * @param headers map
@@ -563,7 +566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a TensorBoard instance by using a node or a specified datasource config.</p>
+     * <p>Creates a TensorBoard instance by using a node or specifying a datasource config.</p>
      * 
      * @param request CreateTensorboardRequest
      * @return CreateTensorboardResponse
@@ -701,7 +704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a stopped TensorBoard.</p>
+     * <p>Deletes a stopped Tensorboard.</p>
      * 
      * @param request DeleteTensorboardRequest
      * @param headers map
@@ -735,7 +738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a stopped TensorBoard.</p>
+     * <p>Deletes a stopped Tensorboard.</p>
      * 
      * @param request DeleteTensorboardRequest
      * @return DeleteTensorboardResponse
@@ -972,7 +975,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a specific computing power health check result for a DLC job.</p>
+     * <p>Retrieves the results of a specific computing power health check for a DLC job.</p>
      * 
      * @param request GetJobSanityCheckResultRequest
      * @param headers map
@@ -1014,7 +1017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a specific computing power health check result for a DLC job.</p>
+     * <p>Retrieves the results of a specific computing power health check for a DLC job.</p>
      * 
      * @param request GetJobSanityCheckResultRequest
      * @return GetJobSanityCheckResultResponse
@@ -1470,7 +1473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a TensorBoard.</p>
+     * <p>Retrieves the details of a Tensorboard.</p>
      * 
      * @param request GetTensorboardRequest
      * @param headers map
@@ -1512,7 +1515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a TensorBoard.</p>
+     * <p>Retrieves the details of a Tensorboard.</p>
      * 
      * @param request GetTensorboardRequest
      * @return GetTensorboardResponse
@@ -1631,7 +1634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides the method and steps to obtain an HTTP link for accessing a container.</p>
+     * <p>Provides the methods and steps to obtain the HTTP link for container access.</p>
      * 
      * @param request GetWebTerminalRequest
      * @param headers map
@@ -1641,6 +1644,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetWebTerminalResponse getWebTerminalWithOptions(String JobId, String PodId, GetWebTerminalRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.containerName)) {
+            query.put("ContainerName", request.containerName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.isShared)) {
             query.put("IsShared", request.isShared);
         }
@@ -1669,7 +1676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides the method and steps to obtain an HTTP link for accessing a container.</p>
+     * <p>Provides the methods and steps to obtain the HTTP link for container access.</p>
      * 
      * @param request GetWebTerminalRequest
      * @return GetWebTerminalResponse
@@ -1879,7 +1886,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of jobs with support for pagination, sorting, and conditional filtering.</p>
+     * <p>Queries a list of jobs, with support for pagination, sorting, and conditional filtering.</p>
      * 
      * @param tmpReq ListJobsRequest
      * @param headers map
@@ -2063,7 +2070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of jobs with support for pagination, sorting, and conditional filtering.</p>
+     * <p>Queries a list of jobs, with support for pagination, sorting, and conditional filtering.</p>
      * 
      * @param request ListJobsRequest
      * @return ListJobsResponse
@@ -2872,7 +2879,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a task template.</p>
+     * <p>Updates a job template.</p>
      * 
      * @param request UpdateJobTemplateRequest
      * @param headers map
@@ -2930,7 +2937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a task template.</p>
+     * <p>Updates a job template.</p>
      * 
      * @param request UpdateJobTemplateRequest
      * @return UpdateJobTemplateResponse
