@@ -14,7 +14,7 @@ public class ModifyClusterResponseBody extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>687C5BAA-D103-4993-884B-C35E4314****</p>
@@ -23,7 +23,7 @@ public class ModifyClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The ID of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>T-5a54309c80282e39ea00****</p>

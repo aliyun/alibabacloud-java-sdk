@@ -7,8 +7,10 @@ public class UpdateClusterAuditLogConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to disable the cluster audit log feature. Valid values:</p>
      * <ul>
-     * <li>false: enables the audit log feature or updates the audit log configurations.</li>
-     * <li>true: disables the audit log feature.</li>
+     * <li><p>false: enables the audit log feature or updates the audit log configuration.</p>
+     * </li>
+     * <li><p>true: disables the audit log feature.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,9 +20,9 @@ public class UpdateClusterAuditLogConfigRequest extends TeaModel {
     public Boolean disable;
 
     /**
-     * <p>The <a href="https://help.aliyun.com/document_detail/48873.html">SLS project</a> where the <a href="https://help.aliyun.com/document_detail/48874.html">Logstore</a> for cluster audit logs is located.</p>
+     * <p>The <a href="https://help.aliyun.com/document_detail/48873.html">SLS project</a> where the <a href="https://help.aliyun.com/document_detail/48874.html">Logstore</a> for cluster audit logs is stored.</p>
      * <ul>
-     * <li><p>The default value is k8s-log-{clusterid}.</p>
+     * <li><p>Default value: k8s-log-{clusterid}.</p>
      * </li>
      * <li><p>After you enable the cluster audit log feature, a Logstore for cluster audit logs is created in the specified SLS project.</p>
      * </li>

@@ -27,16 +27,10 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     public Long expired;
 
     /**
-     * <p>Specifies whether to mount a data cloud disk to the instance when manually adding an existing instance to the cluster, and store containers and images on the data cloud disk. Valid values:</p>
+     * <p><strong>[Deprecated]</strong> Use <code>format_disk_option</code> instead.</p>
      * <ul>
-     * <li><code>true</code>: Mounts a data cloud disk to the instance. The existing data on the data cloud disk will be lost. Back up your data first.</li>
-     * <li><code>false</code>: Does not mount a data cloud disk to the instance.</li>
-     * </ul>
-     * <p>Default value: <code>false</code>.</p>
-     * <p>Data mounting rules:</p>
-     * <ul>
-     * <li>If the ECS instance has a data cloud disk mounted and the file system of the last data cloud disk is not initialized, the system automatically formats the data cloud disk to ext4 to store the /var/lib/docker and /var/lib/kubelet directories.</li>
-     * <li>If the ECS instance does not have a data cloud disk mounted, no new data cloud disk is mounted.</li>
+     * <li><code>true</code>: equivalent to setting <code>format_disk_option</code> to <code>DataDisk</code>.</li>
+     * <li><code>false</code>: equivalent to setting <code>format_disk_option</code> to <code>SystemDisk</code>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,10 +40,10 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     public Boolean formatDisk;
 
     /**
-     * <p>Specifies whether to retain the instance name when adding an existing instance to the cluster. If you do not retain the instance name, the instance name format is <code>worker-k8s-for-cs-&lt;clusterid&gt;</code>. Valid values:</p>
+     * <p>Specifies whether to retain the instance name when adding an existing instance to the cluster. If the instance name is not retained, the instance name format is <code>worker-k8s-for-cs-&lt;clusterid&gt;</code>. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: Retains the instance name.</li>
-     * <li><code>false</code>: Does not retain the instance name. The instance name is replaced based on system rules.</li>
+     * <li><code>true</code>: retains the instance name.</li>
+     * <li><code>false</code>: does not retain the instance name. The instance name is replaced based on system rules.</li>
      * </ul>
      * <p>Default value: <code>true</code>.</p>
      * 
@@ -60,9 +54,9 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     public Boolean keepInstanceName;
 
     /**
-     * <p>The node pool ID. You can add the node to a specified node pool when adding nodes.</p>
+     * <p>The node pool ID. When you add a node, you can add the node to a specified node pool.</p>
      * <blockquote>
-     * <p>If you do not specify a node pool ID, the node is added to the default node pool.</p>
+     * <p>If you do not specify a node pool ID, the node is added to the default node pool by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,7 +69,7 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     public Boolean oneTimeToken;
 
     /**
-     * <p>The access configuration parameters for the node.</p>
+     * <p>The onboarding configuration parameters for the node.</p>
      * <blockquote>
      * <p>This parameter is required when the cluster type is ACK Edge.</p>
      * </blockquote>

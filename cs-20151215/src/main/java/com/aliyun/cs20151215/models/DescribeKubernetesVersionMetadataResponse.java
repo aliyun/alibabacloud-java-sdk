@@ -44,7 +44,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
 
     public static class DescribeKubernetesVersionMetadataResponseBodyImages extends TeaModel {
         /**
-         * <p>The image architecture.</p>
+         * <p>The architecture of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>x86_64</p>
@@ -53,12 +53,12 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String architecture;
 
         /**
-         * <p>The image category. Some valid values:</p>
+         * <p>The category of the image. Valid values:</p>
          * <ul>
-         * <li><code>system</code>: public images.</li>
-         * <li><code>self</code>: your custom images.</li>
-         * <li><code>others</code>: public images from other users.</li>
-         * <li><code>marketplace</code>: Alibaba Cloud Marketplace images.</li>
+         * <li><code>system</code>: public images</li>
+         * <li><code>self</code>: custom images</li>
+         * <li><code>others</code>: public images from other users</li>
+         * <li><code>marketplace</code>: marketplace images</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -68,7 +68,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String imageCategory;
 
         /**
-         * <p>The image ID.</p>
+         * <p>The ID of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun_3_x64_20G_alibase_20241218.vhd</p>
@@ -77,7 +77,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The image name.</p>
+         * <p>The name of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>Alibaba Cloud Linux 3.2104</p>
@@ -86,7 +86,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String imageName;
 
         /**
-         * <p>The operating system distribution type. Use this field to specify the operating system for nodes. Valid values:</p>
+         * <p>The operating system distribution type. Use this field to specify the node operating system. Valid values:</p>
          * <ul>
          * <li><code>CentOS</code></li>
          * <li><code>AliyunLinux</code></li>
@@ -106,7 +106,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String imageType;
 
         /**
-         * <p>The operating system type. Examples:</p>
+         * <p>The operating system type. Valid values:</p>
          * <ul>
          * <li><code>Windows</code></li>
          * <li><code>Linux</code></li>
@@ -236,7 +236,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public Boolean creatable;
 
         /**
-         * <p>The expiration time of the Kubernetes version. The time is in ISO 8601 format and includes time zone information.</p>
+         * <p>The expiration time of the Kubernetes version, in ISO 8601 format with time zone information.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-30T00:00:00Z</p>
@@ -245,6 +245,8 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String expirationDate;
 
         /**
+         * <p>The expiration time of the extended support for the Kubernetes version. An empty value indicates that extended support is not provided for this version.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-30T00:00:00Z</p>
          */
@@ -258,7 +260,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public java.util.List<DescribeKubernetesVersionMetadataResponseBodyImages> images;
 
         /**
-         * <p>The metadata of the Kubernetes version.</p>
+         * <p>The metadata information of the Kubernetes version.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -271,7 +273,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public java.util.Map<String, ?> metaData;
 
         /**
-         * <p>The release time of the Kubernetes version. The time is in ISO 8601 format and includes time zone information.</p>
+         * <p>The release time of the Kubernetes version, in ISO 8601 format with time zone information.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-30T00:00:00Z</p>
@@ -286,6 +288,13 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public java.util.List<Runtime> runtimes;
 
         /**
+         * <p>The support policy required to obtain this patch version. The value is case-sensitive. Valid values:</p>
+         * <ul>
+         * <li>Standard: regular patch versions</li>
+         * <li>Extended: patch versions exclusive to the extended support period, which include backported CVE and critical bug fixes. Only clusters with extended support enabled can be upgraded to these versions.
+         * This field always has a value. It shares the same name and value range as the support_policy of the cluster. You can directly compare the policy enabled for the cluster with the policy required for this version.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Extended</p>
          */
@@ -299,7 +308,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public java.util.List<String> upgradableVersions;
 
         /**
-         * <p>The Kubernetes version released by ACK. For more information about versions, see <a href="https://help.aliyun.com/document_detail/185269.html">Overview of Kubernetes version releases</a>.</p>
+         * <p>The Kubernetes version released by ACK. For more version information, see <a href="https://help.aliyun.com/document_detail/185269.html">Kubernetes version release overview</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1.31.1-aliyun.1</p>

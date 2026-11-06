@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteClusterNodesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically drain the pods on the nodes. Valid values:</p>
+     * <p>Specifies whether to automatically drain pods from the nodes. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: Automatically drains the pods on the nodes.</li>
-     * <li><code>false</code>: Does not automatically drain the pods on the nodes.</li>
+     * <li><code>true</code>: Automatically drains pods from the nodes.</li>
+     * <li><code>false</code>: Does not automatically drain pods from the nodes.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
      * 
@@ -19,6 +19,15 @@ public class DeleteClusterNodesRequest extends TeaModel {
     public Boolean drainNode;
 
     /**
+     * <p>The drain timeout period in seconds. Valid values: (0, 1800]. If this parameter is not specified, the default value 1800 is used. This parameter takes effect only when drain_node is set to true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>600</p>
+     */
+    @NameInMap("drain_timeout_seconds")
+    public Long drainTimeoutSeconds;
+
+    /**
      * <p>The list of nodes to remove. The node name must be the name of the node in the cluster, such as <code>cn-hangzhou.192.168.xx.xx</code>.</p>
      * <p>This parameter is required.</p>
      */
@@ -26,14 +35,14 @@ public class DeleteClusterNodesRequest extends TeaModel {
     public java.util.List<String> nodes;
 
     /**
-     * <p>Specifies whether to release the ECS instances at the same time. Valid values:</p>
+     * <p>Specifies whether to release the associated ECS instances. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: Releases the ECS instances at the same time.</li>
-     * <li><code>false</code>: Retains the ECS instances.</li>
+     * <li><code>true</code>: Releases the associated ECS instances.</li>
+     * <li><code>false</code>: Retains the associated ECS instances.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
      * <blockquote>
-     * <p>If the nodes are subscription instances, you cannot release the ECS instances at the same time.</p>
+     * <p>When a node is a subscription instance, you cannot release the associated ECS instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,6 +62,14 @@ public class DeleteClusterNodesRequest extends TeaModel {
     }
     public Boolean getDrainNode() {
         return this.drainNode;
+    }
+
+    public DeleteClusterNodesRequest setDrainTimeoutSeconds(Long drainTimeoutSeconds) {
+        this.drainTimeoutSeconds = drainTimeoutSeconds;
+        return this;
+    }
+    public Long getDrainTimeoutSeconds() {
+        return this.drainTimeoutSeconds;
     }
 
     public DeleteClusterNodesRequest setNodes(java.util.List<String> nodes) {

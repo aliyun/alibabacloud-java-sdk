@@ -63,9 +63,9 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
          * <li><code>ack.pro.small</code>: Pro Edition.</li>
          * <li><code>ack.pro.xlarge</code>: Pro XL.</li>
          * <li><code>ack.pro.2xlarge</code>: Pro 2XL.</li>
-         * <li><code>ack.pro.4xlarge</code>: Pro 4XL. To use this specification, submit a ticket to contact customer service and apply for whitelist access.</li>
+         * <li><code>ack.pro.4xlarge</code>: Pro 4XL. To use this specification, you must contact customer service to apply for whitelist access.</li>
          * </ul>
-         * <p>Pro XL, Pro 2XL, and Pro 4XL are the three tiers provided by the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>. By pre-allocating and reserving control plane resources, these tiers ensure that API concurrency and pod scheduling capabilities remain consistently at a high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
+         * <p>Pro XL, Pro 2XL, and Pro 4XL are the three tiers provided by the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>. These tiers pre-allocate and reserve control plane resources to ensure that API concurrency and pod scheduling capabilities remain consistently high. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</p>
          * <p>For more information about the cluster management fees for the Pro Edition and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</p>
          * 
          * <strong>example:</strong>
@@ -75,10 +75,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String clusterSpec;
 
         /**
-         * <p>The cluster type. Valid values:</p>
+         * <p>The type of the cluster. Valid values:</p>
          * <ul>
          * <li>Kubernetes: ACK dedicated cluster.</li>
-         * <li>ManagedKubernetes: ACK managed clusters, including ACK managed clusters (ACK Pro and ACK Basic), ACK Serverless clusters (Pro and Basic), ACK Edge clusters (Pro and Basic), and ACK Lingjun clusters (Pro).</li>
+         * <li>ManagedKubernetes: ACK managed cluster, including ACK managed clusters (Pro Edition and Basic Edition), ACK Serverless clusters (Pro Edition and Basic Edition), ACK Edge clusters (Pro Edition and Basic Edition), and ACK Lingjun clusters (Pro Edition).</li>
          * <li>ExternalKubernetes: registered cluster.</li>
          * </ul>
          * 
@@ -167,10 +167,10 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         /**
          * <p>The subtype of the cluster. Valid values:</p>
          * <ul>
-         * <li>Default: ACK managed clusters, including ACK Pro and ACK Basic.</li>
-         * <li>Edge: ACK Edge clusters, including ACK Edge Pro and ACK Edge Basic.</li>
-         * <li>Serverless: ACK Serverless clusters, including ACK Serverless Pro and ACK Serverless Basic.</li>
-         * <li>LingJun: ACK Lingjun clusters, which provide the Pro edition.</li>
+         * <li>Default: ACK managed cluster, including ACK managed cluster Pro Edition and Basic Edition.</li>
+         * <li>Edge: ACK Edge cluster, including ACK Edge cluster Pro Edition and Basic Edition.</li>
+         * <li>Serverless: ACK Serverless cluster, including ACK Serverless cluster Pro Edition and Basic Edition.</li>
+         * <li>LingJun: ACK Lingjun cluster, which provides only the Pro Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String profile;
 
         /**
-         * <p>The proxy mode of kube-proxy in the cluster.</p>
+         * <p>The kube-proxy mode of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>ipvs</p>
@@ -216,7 +216,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The CIDR block for services.</p>
+         * <p>The CIDR block for services in the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
          * <li><code>running</code>: The cluster is running.</li>
          * <li><code>updating</code>: The cluster is being updated.</li>
          * <li><code>upgrading</code>: The cluster is being upgraded.</li>
-         * <li><code>removing</code>: Nodes are being removed.</li>
+         * <li><code>removing</code>: Nodes are being removed from the cluster.</li>
          * <li><code>draining</code>: Nodes are being drained.</li>
          * <li><code>scaling</code>: The cluster is being scaled.</li>
          * <li><code>inactive</code>: The cluster is inactive.</li>
@@ -250,7 +250,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
          * <li><code>deleting</code>: The cluster is being deleted.</li>
          * <li><code>deleted</code>: The cluster is deleted.</li>
          * <li><code>delete_failed</code>: The cluster failed to be deleted.</li>
-         * <li><code>waiting</code>: The cluster is waiting to be accessed.</li>
+         * <li><code>waiting</code>: The cluster is waiting for the accessed state.</li>
          * <li><code>disconnected</code>: The cluster is disconnected.</li>
          * </ul>
          * 
@@ -261,6 +261,13 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>The version support policy of the cluster. The values are case-sensitive. Valid values:</p>
+         * <ul>
+         * <li>Standard: standard support.</li>
+         * <li>Extended: extended support. After the standard support period ends, the cluster enters the extended support period and continues to receive CVE patch updates.
+         * If this policy is not configured for an existing cluster, Standard is returned.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Extended</p>
          */
