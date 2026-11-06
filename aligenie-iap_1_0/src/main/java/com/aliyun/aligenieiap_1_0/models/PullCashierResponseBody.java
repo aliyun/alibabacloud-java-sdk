@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class PullCashierResponseBody extends TeaModel {
     /**
+     * <p>The returned error code. <code>0</code> indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("RetCode")
     public Integer retCode;
 
+    /**
+     * <p>The returned error message. No message is returned upon success.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>请求成功</p>
+     */
     @NameInMap("RetMsg")
     public String retMsg;
 
     /**
+     * <p>The result of pulling up the checkout page. true indicates success, and false indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

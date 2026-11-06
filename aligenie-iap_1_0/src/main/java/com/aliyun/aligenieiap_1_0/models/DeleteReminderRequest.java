@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class DeleteReminderRequest extends TeaModel {
     /**
+     * <p>device identity information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public DeleteReminderRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>Input parameters for the service request</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Payload")
     public DeleteReminderRequestPayload payload;
 
     /**
+     * <p>User identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -53,6 +56,7 @@ public class DeleteReminderRequest extends TeaModel {
 
     public static class DeleteReminderRequestDeviceInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type. When the encoding type is <code>SKILL_ID</code>, the value is the application\&quot;s Skill ID. When the encoding type is <code>PACKAGE_NAME</code>, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -62,6 +66,11 @@ public class DeleteReminderRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>encoding type; there are multiple ways to obtain the Tmall Genie device ID, and each method corresponds to a different encoding type  </p>
+         * <ul>
+         * <li>PACKAGE_NAME: APK package name, used in the Android application customer flow  </li>
+         * <li>SKILL_ID: skill ID, used in the cloud-based flow</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -71,6 +80,7 @@ public class DeleteReminderRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>device ID (deviceOpenId or deviceUnionId)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,6 +90,11 @@ public class DeleteReminderRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>type of device ID  </p>
+         * <ul>
+         * <li>OPEN_ID: default device ID  </li>
+         * <li>UNION_ID: organization-level device ID; available only after an organization has been requested on the Tmall Genie Skill Application Open Platform</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -89,6 +104,8 @@ public class DeleteReminderRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>organization ID; required if IdType is <code>UNION_ID</code></p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */
@@ -144,6 +161,7 @@ public class DeleteReminderRequest extends TeaModel {
 
     public static class DeleteReminderRequestPayload extends TeaModel {
         /**
+         * <p>Unique ID of the reminder</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +171,7 @@ public class DeleteReminderRequest extends TeaModel {
         public Long id;
 
         /**
+         * <p>Debug flag</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,6 +205,7 @@ public class DeleteReminderRequest extends TeaModel {
 
     public static class DeleteReminderRequestUserInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type. When the encoding type is <code>SKILL_ID</code>, the value is the application\&quot;s Skill ID. When the encoding type is <code>PACKAGE_NAME</code>, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,6 +215,11 @@ public class DeleteReminderRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the user identifier for Maojing, and each method corresponds to a different encoding type:  </p>
+         * <ul>
+         * <li>PACKAGE_NAME: APK package name, used for the Android application customer ingest endpoint  </li>
+         * <li>SKILL_ID: Skill ID, used for the cloud service ingest endpoint</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,6 +229,7 @@ public class DeleteReminderRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User Identifier (userOpenId or userUnionId)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,6 +239,11 @@ public class DeleteReminderRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of the User ID:</p>
+         * <ul>
+         * <li>OPEN_ID: The default User ID identity.</li>
+         * <li>UNION_ID: The User ID identity at the organization dimension. This is available only after an organization has been requested on the Maojing Skill Application Open Platform.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,6 +253,8 @@ public class DeleteReminderRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required when IdType is <code>UNION_ID</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

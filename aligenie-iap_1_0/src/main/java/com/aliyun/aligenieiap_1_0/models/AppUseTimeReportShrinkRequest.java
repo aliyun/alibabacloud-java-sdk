@@ -4,13 +4,20 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class AppUseTimeReportShrinkRequest extends TeaModel {
+    /**
+     * <p>Device identity information</p>
+     */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
+    /**
+     * <p>Business parameters</p>
+     */
     @NameInMap("Payload")
     public String payloadShrink;
 
     /**
+     * <p>User identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

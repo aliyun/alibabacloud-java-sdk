@@ -4,13 +4,20 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetBusAppConfigRequest extends TeaModel {
+    /**
+     * <p>Device ID information</p>
+     */
     @NameInMap("DeviceInfo")
     public GetBusAppConfigRequestDeviceInfo deviceInfo;
 
+    /**
+     * <p>Business parameters</p>
+     */
     @NameInMap("Payload")
     public GetBusAppConfigRequestPayload payload;
 
     /**
+     * <p>User identity information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -47,6 +54,8 @@ public class GetBusAppConfigRequest extends TeaModel {
 
     public static class GetBusAppConfigRequestDeviceInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type. When the encoding type is SKILL_ID, the value is the application\&quot;s Skill ID. When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
+         * 
          * <strong>example:</strong>
          * <p>12**45</p>
          */
@@ -54,6 +63,8 @@ public class GetBusAppConfigRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the device ID for Maojing, and each method corresponds to a different encoding type: PACKAGE_NAME: APK package name, used for Android application customer journeys; SKILL_ID: skill ID, used for cloud-based journeys.</p>
+         * 
          * <strong>example:</strong>
          * <p>SKILL_ID</p>
          */
@@ -61,6 +72,8 @@ public class GetBusAppConfigRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID (deviceOpenId or deviceUnionId)</p>
+         * 
          * <strong>example:</strong>
          * <p>DAFE****ce3ej=</p>
          */
@@ -68,6 +81,8 @@ public class GetBusAppConfigRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of device ID: OPEN_ID: default device ID; UNION_ID: organization-dimension device ID, available only after an organization has been requested on the Maojing Skill Application Open Platform.</p>
+         * 
          * <strong>example:</strong>
          * <p>OPEN_ID</p>
          */
@@ -75,6 +90,8 @@ public class GetBusAppConfigRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */
@@ -130,6 +147,8 @@ public class GetBusAppConfigRequest extends TeaModel {
 
     public static class GetBusAppConfigRequestPayload extends TeaModel {
         /**
+         * <p>Plaintext UUID</p>
+         * 
          * <strong>example:</strong>
          * <p>731D5F********DC3B</p>
          */
@@ -137,6 +156,8 @@ public class GetBusAppConfigRequest extends TeaModel {
         public String originUuid;
 
         /**
+         * <p>Phone number</p>
+         * 
          * <strong>example:</strong>
          * <p>136****1111</p>
          */
@@ -168,6 +189,7 @@ public class GetBusAppConfigRequest extends TeaModel {
 
     public static class GetBusAppConfigRequestUserInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type. If the encoding type is SKILL_ID, the value is the application\&quot;s Skill ID. If the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -177,6 +199,7 @@ public class GetBusAppConfigRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the user identifier for Maojing, and each method corresponds to a different encoding type: PACKAGE_NAME: APK package name, used for Android application customer ingest endpoints; SKILL_ID: skill ID, used for cloud-based ingest endpoints.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,6 +209,7 @@ public class GetBusAppConfigRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User Identifier (UserOpenId or UserUnionId)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,6 +219,7 @@ public class GetBusAppConfigRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of User ID: OPEN_ID: default User ID identity; UNION_ID: organization-dimension User ID identity, available only after an organization has been requested on the Maojing Skill Application Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,6 +229,8 @@ public class GetBusAppConfigRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

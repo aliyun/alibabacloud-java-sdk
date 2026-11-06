@@ -4,13 +4,20 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class AppUseTimeReportRequest extends TeaModel {
+    /**
+     * <p>Device identity information</p>
+     */
     @NameInMap("DeviceInfo")
     public AppUseTimeReportRequestDeviceInfo deviceInfo;
 
+    /**
+     * <p>Business parameters</p>
+     */
     @NameInMap("Payload")
     public AppUseTimeReportRequestPayload payload;
 
     /**
+     * <p>User identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -47,6 +54,12 @@ public class AppUseTimeReportRequest extends TeaModel {
 
     public static class AppUseTimeReportRequestDeviceInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type.</p>
+         * <ul>
+         * <li>When the encoding type is SKILL_ID, the value is the application\&quot;s Skill ID.</li>
+         * <li>When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client application.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>12**45</p>
          */
@@ -54,6 +67,12 @@ public class AppUseTimeReportRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the device identity for Tmall Genie, and each method corresponds to a different encoding type.  </p>
+         * <ul>
+         * <li>PACKAGE_NAME: APK package name, used for Android application customer-side integration.  </li>
+         * <li>SKILL_ID: Skill ID, used for cloud-side integration.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PACKAGE_NAME</p>
          */
@@ -61,6 +80,8 @@ public class AppUseTimeReportRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID, set to deviceOpenId or deviceUnionId.</p>
+         * 
          * <strong>example:</strong>
          * <p>DAFE****ce3ej=</p>
          */
@@ -68,6 +89,12 @@ public class AppUseTimeReportRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of device ID  </p>
+         * <ul>
+         * <li>OPEN_ID: Default device ID.  </li>
+         * <li>UNION_ID: Organization-dimension device ID, available only after an organization has been requested in the Tmall Genie Skill Application Open Platform.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>OPEN_ID</p>
          */
@@ -75,6 +102,8 @@ public class AppUseTimeReportRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID, required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */
@@ -130,6 +159,11 @@ public class AppUseTimeReportRequest extends TeaModel {
 
     public static class AppUseTimeReportRequestPayload extends TeaModel {
         /**
+         * <p>Action item</p>
+         * <ul>
+         * <li>start indicates Start</li>
+         * <li>end indicates End</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +173,11 @@ public class AppUseTimeReportRequest extends TeaModel {
         public String action;
 
         /**
+         * <p>Indicates whether the benefit is exclusive to members:</p>
+         * <ul>
+         * <li>1 indicates Yes  </li>
+         * <li>0 indicates No</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,6 +187,7 @@ public class AppUseTimeReportRequest extends TeaModel {
         public Integer isPrivilege;
 
         /**
+         * <p>Resource ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +197,12 @@ public class AppUseTimeReportRequest extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>Resource type:</p>
+         * <ul>
+         * <li>0 indicates game</li>
+         * <li>1 indicates audio</li>
+         * <li>2 indicates video</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +212,7 @@ public class AppUseTimeReportRequest extends TeaModel {
         public Integer resourceType;
 
         /**
+         * <p>Step code. The start and end actions must be uniquely matched.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,6 +222,11 @@ public class AppUseTimeReportRequest extends TeaModel {
         public String stepCode;
 
         /**
+         * <p>Membership type:</p>
+         * <ul>
+         * <li>0 indicates Cat Spirit Membership</li>
+         * <li>1 indicates third-party proprietary membership</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +236,8 @@ public class AppUseTimeReportRequest extends TeaModel {
         public Integer vipType;
 
         /**
+         * <p>Plaintext UUID</p>
+         * 
          * <strong>example:</strong>
          * <p>731D5F********DC3B</p>
          */
@@ -255,6 +309,11 @@ public class AppUseTimeReportRequest extends TeaModel {
 
     public static class AppUseTimeReportRequestUserInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type  </p>
+         * <ul>
+         * <li>When the encoding type is SKILL_ID, the value is the application\&quot;s Skill ID.  </li>
+         * <li>When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client application.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -264,6 +323,11 @@ public class AppUseTimeReportRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the user identifier from Tmall Genie, and each method corresponds to a different encoding type.  </p>
+         * <ul>
+         * <li>PACKAGE_NAME: APK package name, used for the Android application customer flow.  </li>
+         * <li>SKILL_ID: Skill ID, used for the cloud-based flow.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -273,6 +337,7 @@ public class AppUseTimeReportRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User identifier, set to either userOpenId or userUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -282,6 +347,11 @@ public class AppUseTimeReportRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of User ID  </p>
+         * <ul>
+         * <li>OPEN_ID: Default User ID identifier.  </li>
+         * <li>UNION_ID: Organization-dimension User ID identifier. This value is available only after an organization has been requested on the Tmall Genie Skill Application Open Platform.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -291,6 +361,8 @@ public class AppUseTimeReportRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

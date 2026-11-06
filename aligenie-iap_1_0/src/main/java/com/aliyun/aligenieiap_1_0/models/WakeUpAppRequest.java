@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class WakeUpAppRequest extends TeaModel {
     /**
+     * <p>The debug identity. When the skill application is in the debugging phase, this setting determines whether the retrieved skill application information is from the editing state or the online state.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,7 @@ public class WakeUpAppRequest extends TeaModel {
     public Boolean isDebug;
 
     /**
+     * <p>The path to launch the application, similar to the Link you enter in the skill application console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class WakeUpAppRequest extends TeaModel {
     public String path;
 
     /**
+     * <p>Device Information of the target to be launched.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TargetInfo")
@@ -57,6 +61,11 @@ public class WakeUpAppRequest extends TeaModel {
 
     public static class WakeUpAppRequestTargetInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type.  </p>
+         * <ul>
+         * <li>When the encoding type is SKILLID, the value is the skill ID obtained from the webhook service.  </li>
+         * <li>When the encoding type is PACKAGENAME, the value is the packageName of the corresponding client application.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -66,6 +75,11 @@ public class WakeUpAppRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the MeowGenie device ID, and each method corresponds to a different encoding type:  </p>
+         * <ul>
+         * <li>PACKAGE_NAME: APK package name  </li>
+         * <li>SKILL_ID: Skill ID</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -75,6 +89,8 @@ public class WakeUpAppRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Organization ID. This is required only when the push type is <code>XX_UNION_XX</code>. If you have multiple methods to obtain MeowGenie device IDs and need interoperability among them, you must request an organization from the platform. After approval, the platform will assign an organization ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -82,6 +98,7 @@ public class WakeUpAppRequest extends TeaModel {
         public String organizationId;
 
         /**
+         * <p>The identity value corresponding to the Push Target Type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -91,6 +108,11 @@ public class WakeUpAppRequest extends TeaModel {
         public String targetIdentity;
 
         /**
+         * <p>Push Target Type, which indicates the type of the obtained device identity:  </p>
+         * <ul>
+         * <li><code>DEVICE_UNION_ID</code>: Device unionId  </li>
+         * <li><code>DEVICE_OPEN_ID</code>: Device openId</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CallBackThirdRightSendPlanResponseBody extends TeaModel {
     /**
+     * <p>fault status code</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -12,16 +14,23 @@ public class CallBackThirdRightSendPlanResponseBody extends TeaModel {
     public String retCode;
 
     /**
+     * <p>error message</p>
+     * 
      * <strong>example:</strong>
      * <p>系统异常</p>
      */
     @NameInMap("RetMsg")
     public String retMsg;
 
+    /**
+     * <p>Return Result true/false</p>
+     */
     @NameInMap("RetValue")
     public Boolean retValue;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>908FA068-529C-0C20-8DB5-63B0EF7CFF1F</p>
      */

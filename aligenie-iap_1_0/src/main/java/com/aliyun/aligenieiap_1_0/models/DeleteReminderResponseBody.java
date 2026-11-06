@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteReminderResponseBody extends TeaModel {
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -12,6 +14,8 @@ public class DeleteReminderResponseBody extends TeaModel {
     public Integer errorCode;
 
     /**
+     * <p>error message</p>
+     * 
      * <strong>example:</strong>
      * <p>参数错误。</p>
      */
@@ -19,6 +23,8 @@ public class DeleteReminderResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>service success indicator</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,16 +5,30 @@ import com.aliyun.tea.*;
 
 public class AppUseTimeReportResponseBody extends TeaModel {
     /**
+     * <p>Error code returned; <code>0</code> indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("RetCode")
     public Integer retCode;
 
+    /**
+     * <p>Error message returned; no message is returned upon success.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>请求异常</p>
+     */
     @NameInMap("RetMsg")
     public String retMsg;
 
     /**
+     * <p>Result of invoking the API  </p>
+     * <ul>
+     * <li>true indicates success  </li>
+     * <li>false indicates failure</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

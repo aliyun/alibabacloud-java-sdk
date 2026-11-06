@@ -5,21 +5,27 @@ import com.aliyun.tea.*;
 
 public class SendNotificationsRequest extends TeaModel {
     /**
+     * <p>Device identity information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public SendNotificationsRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>Input parameter object for message push.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NotificationUnicastRequest")
     public SendNotificationsRequestNotificationUnicastRequest notificationUnicastRequest;
 
+    /**
+     * <p>Identity information.</p>
+     */
     @NameInMap("TenantInfo")
     public SendNotificationsRequestTenantInfo tenantInfo;
 
     /**
+     * <p>User Identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -64,6 +70,7 @@ public class SendNotificationsRequest extends TeaModel {
 
     public static class SendNotificationsRequestDeviceInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type. If the encoding type is SKILL_ID, the value is the application\&quot;s Skill ID. If the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -73,6 +80,11 @@ public class SendNotificationsRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the device ID for Maojing, and each method corresponds to a different encoding type:  </p>
+         * <ul>
+         * <li>PACKAGE_NAME: APK package name, used for the Android application customer link  </li>
+         * <li>SKILL_ID: Skill ID, used for the cloud link</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -82,6 +94,7 @@ public class SendNotificationsRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID (deviceOpenId or deviceUnionId)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -91,6 +104,11 @@ public class SendNotificationsRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of device ID:  </p>
+         * <ul>
+         * <li>OPEN_ID: Default device ID  </li>
+         * <li>UNION_ID: Organization-dimension device ID, available only after an organization has been requested on the Maojing Skill Application Open Platform</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,6 +118,8 @@ public class SendNotificationsRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */
@@ -163,6 +183,8 @@ public class SendNotificationsRequest extends TeaModel {
 
     public static class SendNotificationsRequestNotificationUnicastRequest extends TeaModel {
         /**
+         * <p>Debug flag. When the skill application is in the debugging phase, setting this flag determines whether the retrieved skill application information is from the editing state or the online state.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -170,6 +192,7 @@ public class SendNotificationsRequest extends TeaModel {
         public Boolean isDebug;
 
         /**
+         * <p>Message template ID obtained when requesting a message template in the Tmall Genie Application Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +202,8 @@ public class SendNotificationsRequest extends TeaModel {
         public String messageTemplateId;
 
         /**
+         * <p>Placeholder information. For example, for the template [&quot;Hello, {nick}!&quot;], this can be: {&quot;nick&quot;:&quot;Xiao Tian Tian&quot;}. Additionally, within the placeholder parameters, you can append parameters to the application launch link to support hyperlinking to a specific address, such as: <code>{&quot;nick&quot;:&quot;Xiao Tian Tian&quot;,&quot;_URL_SUFFIX_&quot;:&quot;xxx&quot;}</code>. The hyperlink address in the message pop-up will then be: application launch link + <code>${_URL_SUFFIX_}</code>. This feature is only effective for applications that have configured a launch link.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;nick&quot;:&quot;张三&quot;}</p>
          */
@@ -186,6 +211,7 @@ public class SendNotificationsRequest extends TeaModel {
         public java.util.Map<String, String> placeHolder;
 
         /**
+         * <p>Target information for message push.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("SendTarget")
@@ -240,6 +266,7 @@ public class SendNotificationsRequest extends TeaModel {
 
     public static class SendNotificationsRequestUserInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type. If the encoding type is SKILL_ID, the value is the application\&quot;s Skill ID. If the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,6 +276,11 @@ public class SendNotificationsRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the Maojing User Identifier, and each method corresponds to a different encoding type:  </p>
+         * <ul>
+         * <li>PACKAGE_NAME: APK package name, used for the Android application customer link  </li>
+         * <li>SKILL_ID: Skill ID, used for the cloud-based link</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -258,6 +290,7 @@ public class SendNotificationsRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User Identifier (userOpenId or userUnionId)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,6 +300,11 @@ public class SendNotificationsRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of the User ID:  </p>
+         * <ul>
+         * <li>OPEN_ID: Default User ID identifier  </li>
+         * <li>UNION_ID: Organization-dimension User ID identifier, available only after an organization has been requested on the Maojing Skill Application Open Platform</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,6 +314,8 @@ public class SendNotificationsRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateReminderResponseBody extends TeaModel {
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -12,6 +14,8 @@ public class CreateReminderResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>Detailed description of the error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>不能设置过去的时间。</p>
      */
@@ -19,6 +23,8 @@ public class CreateReminderResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>The ID of the created reminder.</p>
+     * 
      * <strong>example:</strong>
      * <p>20****1</p>
      */
@@ -26,6 +32,8 @@ public class CreateReminderResponseBody extends TeaModel {
     public Long model;
 
     /**
+     * <p>Indicates the result of the API call. true indicates success, and false indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

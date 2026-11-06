@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateReminderRequest extends TeaModel {
     /**
+     * <p>Device identification information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public CreateReminderRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>The input parameters for this service request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Payload")
     public CreateReminderRequestPayload payload;
 
     /**
+     * <p>User identifier information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -53,6 +56,11 @@ public class CreateReminderRequest extends TeaModel {
 
     public static class CreateReminderRequestDeviceInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type.</p>
+         * <ul>
+         * <li>When the encoding type is set to SKILL_ID, the value is the application\&quot;s Skill ID.</li>
+         * <li>When the encoding type is set to PACKAGE_NAME, the value is the packageName of the corresponding client app.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -62,6 +70,11 @@ public class CreateReminderRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the device ID for Tmall Genie, and each method corresponds to a different encoding type.  </p>
+         * <ul>
+         * <li>PACKAGE_NAME: APK package name, used in the Android application customer flow.  </li>
+         * <li>SKILL_ID: Skill ID, used in the cloud-based flow.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -71,6 +84,7 @@ public class CreateReminderRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID, set to either deviceOpenId or deviceUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,6 +94,11 @@ public class CreateReminderRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of the device ID:  </p>
+         * <ul>
+         * <li>OPEN_ID: Default device ID identifier.  </li>
+         * <li>UNION_ID: Organization-level device ID identifier. This value is available only after an organization has been registered on the Tmall Genie Skill Application Open Platform.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -89,6 +108,8 @@ public class CreateReminderRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. This parameter is required when <strong>IdType</strong> is set to <strong>UNION_ID</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */
@@ -144,19 +165,28 @@ public class CreateReminderRequest extends TeaModel {
 
     public static class CreateReminderRequestPayloadRecurrenceRule extends TeaModel {
         /**
+         * <p>The date on which the reminder is triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>25</p>
          */
         @NameInMap("Day")
         public Integer day;
 
+        /**
+         * <p>Configure monthly reminders, indicating the day of the month when the reminder is triggered.</p>
+         */
         @NameInMap("DaysOfMonth")
         public java.util.List<Integer> daysOfMonth;
 
+        /**
+         * <p>Configure weekly reminders, indicating on which days of the week the reminder is triggered.</p>
+         */
         @NameInMap("DaysOfWeek")
         public java.util.List<Integer> daysOfWeek;
 
         /**
+         * <p>The expiration time when the reminder ends, in milliseconds UNIX timestamp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +196,13 @@ public class CreateReminderRequest extends TeaModel {
         public Long endDateTime;
 
         /**
+         * <p>Loop type:</p>
+         * <ul>
+         * <li>ONCE: One-time</li>
+         * <li>DAILY: Daily</li>
+         * <li>WEEKLY: Weekly</li>
+         * <li>MONTHLY: Monthly</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,6 +212,7 @@ public class CreateReminderRequest extends TeaModel {
         public String freq;
 
         /**
+         * <p>The hour of the time when the reminder is triggered.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +222,8 @@ public class CreateReminderRequest extends TeaModel {
         public Integer hour;
 
         /**
+         * <p>The minute of the time when the reminder is triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -191,6 +231,8 @@ public class CreateReminderRequest extends TeaModel {
         public Integer minute;
 
         /**
+         * <p>The month in which the reminder is triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -198,6 +240,8 @@ public class CreateReminderRequest extends TeaModel {
         public Integer month;
 
         /**
+         * <p>The second of the time when the reminder is triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -205,6 +249,7 @@ public class CreateReminderRequest extends TeaModel {
         public Integer second;
 
         /**
+         * <p>The effective start time of the reminder, in milliseconds as a UNIX timestamp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,6 +259,8 @@ public class CreateReminderRequest extends TeaModel {
         public Long startDateTime;
 
         /**
+         * <p>The year of the time when the reminder is triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021</p>
          */
@@ -317,6 +364,7 @@ public class CreateReminderRequest extends TeaModel {
 
     public static class CreateReminderRequestPayload extends TeaModel {
         /**
+         * <p>The detailed content of the reminder message.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -326,6 +374,7 @@ public class CreateReminderRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>Indicates whether this invocation is for debug purposes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -335,6 +384,7 @@ public class CreateReminderRequest extends TeaModel {
         public Boolean isDebug;
 
         /**
+         * <p>Scheduling information for the reminder.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("RecurrenceRule")
@@ -373,6 +423,11 @@ public class CreateReminderRequest extends TeaModel {
 
     public static class CreateReminderRequestUserInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type:  </p>
+         * <ul>
+         * <li>When the encoding type is SKILL_ID, the value is the Skill ID of the application.  </li>
+         * <li>When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -382,6 +437,11 @@ public class CreateReminderRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the user identifier for Tmall Genie, and each method corresponds to a different encoding type.  </p>
+         * <ul>
+         * <li>PACKAGE_NAME: APK package name, used in the Android application customer flow  </li>
+         * <li>SKILL_ID: Skill ID, used in the cloud-based flow</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -391,6 +451,7 @@ public class CreateReminderRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User identifier, set to either userOpenId or userUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -400,6 +461,11 @@ public class CreateReminderRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of the User ID:  </p>
+         * <ul>
+         * <li>OPEN_ID: The default User ID identity.  </li>
+         * <li>UNION_ID: The User ID identity at the organization dimension. This value is available only after an organization has been requested on the Tmall Genie Skills Application Platform.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -409,6 +475,8 @@ public class CreateReminderRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. This parameter is required when <strong>IdType</strong> is configured as <strong>UNION_ID</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

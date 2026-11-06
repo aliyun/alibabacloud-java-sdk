@@ -5,11 +5,15 @@ import com.aliyun.tea.*;
 
 public class PushNotificationsShrinkRequest extends TeaModel {
     /**
+     * <p>Input parameter object for message push.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NotificationUnicastRequest")
     public String notificationUnicastRequestShrink;
 
+    /**
+     * <p>Identity information.</p>
+     */
     @NameInMap("TenantInfo")
     public String tenantInfoShrink;
 

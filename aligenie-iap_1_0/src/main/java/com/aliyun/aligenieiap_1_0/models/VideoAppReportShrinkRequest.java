@@ -4,13 +4,20 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class VideoAppReportShrinkRequest extends TeaModel {
+    /**
+     * <p>Device identity information</p>
+     */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
+    /**
+     * <p>业务参数</p>
+     */
     @NameInMap("Payload")
     public String payloadShrink;
 
     /**
+     * <p>用户标识信息</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

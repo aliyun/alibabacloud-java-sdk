@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetReminderRequest extends TeaModel {
     /**
+     * <p>List of device identity information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public GetReminderRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>Input parameters for the service request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Payload")
     public GetReminderRequestPayload payload;
 
     /**
+     * <p>List of user identity information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -53,6 +56,11 @@ public class GetReminderRequest extends TeaModel {
 
     public static class GetReminderRequestDeviceInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type.</p>
+         * <ul>
+         * <li>When the encoding type is SKILLID, the value is the application\&quot;s Skill ID.</li>
+         * <li>When the encoding type is PACKAGENAME, the value is the packageName of the corresponding client app.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -62,6 +70,11 @@ public class GetReminderRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the device ID for Tmall Genie, and each method corresponds to a different encoding type.  </p>
+         * <ul>
+         * <li>PACKAGE_NAME: APK package name, used for the Android application customer link.  </li>
+         * <li>SKILL_ID: Skill ID, used for the cloud-based link.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -71,6 +84,7 @@ public class GetReminderRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID, set to either deviceOpenId or deviceUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,6 +94,11 @@ public class GetReminderRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of device ID.  </p>
+         * <ul>
+         * <li>OPEN_ID: The default device ID.  </li>
+         * <li>UNION_ID: Organization-level device ID, available only after an organization has been requested on the Tmall Genie Skill Application Platform.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -89,6 +108,8 @@ public class GetReminderRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required when <strong>IdType</strong> is set to <strong>UNION_ID</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */
@@ -144,6 +165,7 @@ public class GetReminderRequest extends TeaModel {
 
     public static class GetReminderRequestPayload extends TeaModel {
         /**
+         * <p>The unique ID of the reminder.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +175,7 @@ public class GetReminderRequest extends TeaModel {
         public Long id;
 
         /**
+         * <p>Indicates whether this invocation is for debug purposes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,6 +209,11 @@ public class GetReminderRequest extends TeaModel {
 
     public static class GetReminderRequestUserInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type.  </p>
+         * <ul>
+         * <li>When the encoding type is SKILLID, the value is the application\&quot;s Skill ID.  </li>
+         * <li>When the encoding type is PACKAGENAME, the value is the packageName of the corresponding client app.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,6 +223,11 @@ public class GetReminderRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the user identifier for Tmall Genie, and each method corresponds to a different encoding type.</p>
+         * <ul>
+         * <li>PACKAGE_NAME: APK package name, used for the Android application customer ingest endpoint.</li>
+         * <li>SKILL_ID: Skill ID, used for the cloud-based ingest endpoint.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,6 +237,7 @@ public class GetReminderRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User identifier, set to either userOpenId or userUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,6 +247,11 @@ public class GetReminderRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of the User ID  </p>
+         * <ul>
+         * <li>OPEN_ID: The default User ID identifier.  </li>
+         * <li>UNION_ID: The organization-dimension User ID identifier. This value is available only after an organization has been requested on the Tmall Genie Skills Application Open Platform.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,6 +261,8 @@ public class GetReminderRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required when <strong>IdType</strong> is set to <strong>UNION_ID</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

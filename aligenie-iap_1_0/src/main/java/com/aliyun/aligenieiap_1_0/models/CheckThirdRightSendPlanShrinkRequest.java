@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckThirdRightSendPlanShrinkRequest extends TeaModel {
     /**
+     * <p>Device group</p>
+     * 
      * <strong>example:</strong>
      * <p>cc</p>
      */
@@ -12,6 +14,8 @@ public class CheckThirdRightSendPlanShrinkRequest extends TeaModel {
     public String bizGroup;
 
     /**
+     * <p>Device type</p>
+     * 
      * <strong>example:</strong>
      * <p>ailabs</p>
      */
@@ -19,6 +23,8 @@ public class CheckThirdRightSendPlanShrinkRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <p>Extension field</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -26,6 +32,8 @@ public class CheckThirdRightSendPlanShrinkRequest extends TeaModel {
     public String extendInfoShrink;
 
     /**
+     * <p>Device SN</p>
+     * 
      * <strong>example:</strong>
      * <p>01000019100307010000600</p>
      */
@@ -33,6 +41,8 @@ public class CheckThirdRightSendPlanShrinkRequest extends TeaModel {
     public String sn;
 
     /**
+     * <p>Supplier ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

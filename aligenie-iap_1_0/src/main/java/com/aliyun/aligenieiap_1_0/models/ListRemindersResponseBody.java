@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRemindersResponseBody extends TeaModel {
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -12,16 +14,23 @@ public class ListRemindersResponseBody extends TeaModel {
     public Integer errorCode;
 
     /**
+     * <p>Detailed description of the error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>参数不合法。</p>
      */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <p>Reminder information.</p>
+     */
     @NameInMap("Model")
     public ListRemindersResponseBodyModel model;
 
     /**
+     * <p>Indicates the result of the API call. true indicates success, and false indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -67,19 +76,29 @@ public class ListRemindersResponseBody extends TeaModel {
 
     public static class ListRemindersResponseBodyModelRemindResponsesRecurrenceRule extends TeaModel {
         /**
+         * <p>The date on which the reminder is triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>27</p>
          */
         @NameInMap("Day")
         public Integer day;
 
+        /**
+         * <p>Information for monthly reminders.</p>
+         */
         @NameInMap("DaysOfMonth")
         public java.util.List<Integer> daysOfMonth;
 
+        /**
+         * <p>Information for weekly reminders.</p>
+         */
         @NameInMap("DaysOfWeek")
         public java.util.List<Integer> daysOfWeek;
 
         /**
+         * <p>The end time when the reminder becomes inactive.</p>
+         * 
          * <strong>example:</strong>
          * <p>1661598000000</p>
          */
@@ -87,6 +106,8 @@ public class ListRemindersResponseBody extends TeaModel {
         public String endDateTime;
 
         /**
+         * <p>The recurrence epoch of the reminder.</p>
+         * 
          * <strong>example:</strong>
          * <p>WEEKLY</p>
          */
@@ -94,6 +115,8 @@ public class ListRemindersResponseBody extends TeaModel {
         public String freq;
 
         /**
+         * <p>The hour of the time when the reminder is triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>18</p>
          */
@@ -101,6 +124,8 @@ public class ListRemindersResponseBody extends TeaModel {
         public Integer hour;
 
         /**
+         * <p>The minute of the hour when the reminder is triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -108,6 +133,8 @@ public class ListRemindersResponseBody extends TeaModel {
         public Integer minute;
 
         /**
+         * <p>The month when the reminder is triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -115,6 +142,8 @@ public class ListRemindersResponseBody extends TeaModel {
         public Integer month;
 
         /**
+         * <p>The second of the time when the reminder is triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -122,6 +151,8 @@ public class ListRemindersResponseBody extends TeaModel {
         public Integer second;
 
         /**
+         * <p>The start time when the reminder becomes effective.</p>
+         * 
          * <strong>example:</strong>
          * <p>1630054800000</p>
          */
@@ -129,6 +160,8 @@ public class ListRemindersResponseBody extends TeaModel {
         public String startDateTime;
 
         /**
+         * <p>The year when the reminder is triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021</p>
          */
@@ -232,6 +265,8 @@ public class ListRemindersResponseBody extends TeaModel {
 
     public static class ListRemindersResponseBodyModelRemindResponses extends TeaModel {
         /**
+         * <p>The topic of the action executed by the reminder.</p>
+         * 
          * <strong>example:</strong>
          * <p>宝宝快去刷牙</p>
          */
@@ -239,16 +274,23 @@ public class ListRemindersResponseBody extends TeaModel {
         public String actionTopic;
 
         /**
+         * <p>Description of the trigger condition for the reminder.</p>
+         * 
          * <strong>example:</strong>
          * <p>每天</p>
          */
         @NameInMap("DayDesc")
         public String dayDesc;
 
+        /**
+         * <p>The schedule information list, which contains detailed timing information for the reminder.</p>
+         */
         @NameInMap("RecurrenceRule")
         public ListRemindersResponseBodyModelRemindResponsesRecurrenceRule recurrenceRule;
 
         /**
+         * <p>The ID of the reminder message.</p>
+         * 
          * <strong>example:</strong>
          * <p>20****1</p>
          */
@@ -256,6 +298,8 @@ public class ListRemindersResponseBody extends TeaModel {
         public Long remindId;
 
         /**
+         * <p>The next reminder time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1629850800000</p>
          */
@@ -263,6 +307,8 @@ public class ListRemindersResponseBody extends TeaModel {
         public String remindTime;
 
         /**
+         * <p>The number of times the reminder repeats.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -270,6 +316,8 @@ public class ListRemindersResponseBody extends TeaModel {
         public Integer repeatCount;
 
         /**
+         * <p>The day of the week on which the reminder is triggered weekly.</p>
+         * 
          * <strong>example:</strong>
          * <p>周三</p>
          */
@@ -340,6 +388,9 @@ public class ListRemindersResponseBody extends TeaModel {
     }
 
     public static class ListRemindersResponseBodyModel extends TeaModel {
+        /**
+         * <p>The list of reminder information returned by invoking this API.</p>
+         */
         @NameInMap("RemindResponses")
         public java.util.List<ListRemindersResponseBodyModelRemindResponses> remindResponses;
 

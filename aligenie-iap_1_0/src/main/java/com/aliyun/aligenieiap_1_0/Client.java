@@ -8,7 +8,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._productId = "AliGenie";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
+        this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("aligenie", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +31,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>应用使用时长上报</p>
+     * <p>Used to report application usage duration on Tmall Genie devices.</p>
      * 
      * @param tmpReq AppUseTimeReportRequest
      * @param headers AppUseTimeReportHeaders
@@ -97,7 +100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>应用使用时长上报</p>
+     * <p>Used to report application usage duration on Tmall Genie devices.</p>
      * 
      * @param request AppUseTimeReportRequest
      * @return AppUseTimeReportResponse
@@ -110,7 +113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>三方领取回调接口</p>
+     * <p>Third-party membership redemption callback API.</p>
      * 
      * @param tmpReq CallBackThirdRightSendPlanRequest
      * @param headers CallBackThirdRightSendPlanHeaders
@@ -195,7 +198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>三方领取回调接口</p>
+     * <p>Third-party membership redemption callback API.</p>
      * 
      * @param request CallBackThirdRightSendPlanRequest
      * @return CallBackThirdRightSendPlanResponse
@@ -208,7 +211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>商业化移动屏三方app领卡校验</p>
+     * <p>Commercial mobile screen third-party app card issuance validation.</p>
      * 
      * @param tmpReq CheckThirdRightSendPlanRequest
      * @param headers CheckThirdRightSendPlanHeaders
@@ -277,7 +280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>商业化移动屏三方app领卡校验</p>
+     * <p>Commercial mobile screen third-party app card issuance validation.</p>
      * 
      * @param request CheckThirdRightSendPlanRequest
      * @return CheckThirdRightSendPlanResponse
@@ -290,7 +293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建提醒</p>
+     * <p>Used to create a reminder on a Tmall Genie device.</p>
      * 
      * @param tmpReq CreateReminderRequest
      * @param headers CreateReminderHeaders
@@ -359,7 +362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建提醒</p>
+     * <p>Used to create a reminder on a Tmall Genie device.</p>
      * 
      * @param request CreateReminderRequest
      * @return CreateReminderResponse
@@ -372,7 +375,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除提醒</p>
+     * <p>携程订单状态变更推送</p>
+     * 
+     * @param request CtripOrderPushRequest
+     * @param headers CtripOrderPushHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CtripOrderPushResponse
+     */
+    public CtripOrderPushResponse ctripOrderPushWithOptions(CtripOrderPushRequest request, CtripOrderPushHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleItem)) {
+            query.put("ScheduleItem", request.scheduleItem);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uid)) {
+            query.put("Uid", request.uid);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CtripOrderPush"),
+            new TeaPair("version", "iap_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/iap/ctripOrderPush"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CtripOrderPushResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>携程订单状态变更推送</p>
+     * 
+     * @param request CtripOrderPushRequest
+     * @return CtripOrderPushResponse
+     */
+    public CtripOrderPushResponse ctripOrderPush(CtripOrderPushRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CtripOrderPushHeaders headers = new CtripOrderPushHeaders();
+        return this.ctripOrderPushWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>User deletes a reminder created on a Tmall Genie device.</p>
      * 
      * @param tmpReq DeleteReminderRequest
      * @param headers DeleteReminderHeaders
@@ -441,7 +508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除提醒</p>
+     * <p>User deletes a reminder created on a Tmall Genie device.</p>
      * 
      * @param request DeleteReminderRequest
      * @return DeleteReminderResponse
@@ -454,7 +521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取会员信息</p>
+     * <p>Used by developers to obtain membership information in business scenarios that depend on CatGenie Membership.</p>
      * 
      * @param tmpReq GetAccountForAppRequest
      * @param headers GetAccountForAppHeaders
@@ -523,7 +590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取会员信息</p>
+     * <p>Used by developers to obtain membership information in business scenarios that depend on CatGenie Membership.</p>
      * 
      * @param request GetAccountForAppRequest
      * @return GetAccountForAppResponse
@@ -536,7 +603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取应用配置</p>
+     * <p>Obtain application configuration.</p>
      * 
      * @param tmpReq GetBusAppConfigRequest
      * @param headers GetBusAppConfigHeaders
@@ -605,7 +672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取应用配置</p>
+     * <p>Obtain application configuration.</p>
      * 
      * @param request GetBusAppConfigRequest
      * @return GetBusAppConfigResponse
@@ -618,7 +685,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户手机号获取</p>
+     * <p>Obtain the phone number bound to the user\&quot;s Maojing device. You must first request this capability on the Maojing Skill Application Platform and obtain user authorization on the device side.</p>
      * 
      * @param tmpReq GetPhoneNumberRequest
      * @param headers GetPhoneNumberHeaders
@@ -679,7 +746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用户手机号获取</p>
+     * <p>Obtain the phone number bound to the user\&quot;s Maojing device. You must first request this capability on the Maojing Skill Application Platform and obtain user authorization on the device side.</p>
      * 
      * @param request GetPhoneNumberRequest
      * @return GetPhoneNumberResponse
@@ -692,7 +759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询提醒</p>
+     * <p>User retrieves reminders created on Tmall Genie devices.</p>
      * 
      * @param tmpReq GetReminderRequest
      * @param headers GetReminderHeaders
@@ -761,7 +828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询提醒</p>
+     * <p>User retrieves reminders created on Tmall Genie devices.</p>
      * 
      * @param request GetReminderRequest
      * @return GetReminderResponse
@@ -774,7 +841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询提醒列表</p>
+     * <p>The User batch retrieves reminders created on Tmall Genie devices.</p>
      * 
      * @param tmpReq ListRemindersRequest
      * @param headers ListRemindersHeaders
@@ -843,7 +910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询提醒列表</p>
+     * <p>The User batch retrieves reminders created on Tmall Genie devices.</p>
      * 
      * @param request ListRemindersRequest
      * @return ListRemindersResponse
@@ -856,7 +923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>拉取收银台</p>
+     * <p>The user launches the checkout page on a Tmall Genie device.</p>
      * 
      * @param tmpReq PullCashierRequest
      * @param headers PullCashierHeaders
@@ -925,7 +992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>拉取收银台</p>
+     * <p>The user launches the checkout page on a Tmall Genie device.</p>
      * 
      * @param request PullCashierRequest
      * @return PullCashierResponse
@@ -938,7 +1005,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>猫精系统消息推送</p>
+     * <p>Execute the message push feature of Tmall Genie. You must first request the capability and configure the message template on the Tmall Genie Skill Application Platform.</p>
      * 
      * @param tmpReq PushNotificationsRequest
      * @param headers PushNotificationsHeaders
@@ -999,7 +1066,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>猫精系统消息推送</p>
+     * <p>Execute the message push feature of Tmall Genie. You must first request the capability and configure the message template on the Tmall Genie Skill Application Platform.</p>
      * 
      * @param request PushNotificationsRequest
      * @return PushNotificationsResponse
@@ -1012,7 +1079,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>消息推送服务（普通版）</p>
+     * <p>Execute the message push feature of Tmall Genie. You must first request the capability and configure the message template in the Tmall Genie Skill Application Platform.</p>
      * 
      * @param tmpReq SendNotificationsRequest
      * @param headers SendNotificationsHeaders
@@ -1089,7 +1156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>消息推送服务（普通版）</p>
+     * <p>Execute the message push feature of Tmall Genie. You must first request the capability and configure the message template in the Tmall Genie Skill Application Platform.</p>
      * 
      * @param request SendNotificationsRequest
      * @return SendNotificationsResponse
@@ -1194,7 +1261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新提醒</p>
+     * <p>The user updates a reminder created on a Tmall Genie device.</p>
      * 
      * @param tmpReq UpdateReminderRequest
      * @param headers UpdateReminderHeaders
@@ -1263,7 +1330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新提醒</p>
+     * <p>The user updates a reminder created on a Tmall Genie device.</p>
      * 
      * @param request UpdateReminderRequest
      * @return UpdateReminderResponse
@@ -1276,7 +1343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>视频类应用会员信息上报</p>
+     * <p>Used by developers to report membership information in scenarios involving membership collaboration with CatGenie.</p>
      * 
      * @param tmpReq VideoAppReportRequest
      * @param headers VideoAppReportHeaders
@@ -1345,7 +1412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>视频类应用会员信息上报</p>
+     * <p>Used by developers to report membership information in scenarios involving membership collaboration with CatGenie.</p>
      * 
      * @param request VideoAppReportRequest
      * @return VideoAppReportResponse
@@ -1358,7 +1425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>猫精应用唤起</p>
+     * <p>On a smart speaker with a screen, proactively launch the MeowGenie screen-display application. You must first request this capability on the MeowGenie skill application platform.</p>
      * 
      * @param request WakeUpAppRequest
      * @param headers WakeUpAppHeaders
@@ -1413,7 +1480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>猫精应用唤起</p>
+     * <p>On a smart speaker with a screen, proactively launch the MeowGenie screen-display application. You must first request this capability on the MeowGenie skill application platform.</p>
      * 
      * @param request WakeUpAppRequest
      * @return WakeUpAppResponse

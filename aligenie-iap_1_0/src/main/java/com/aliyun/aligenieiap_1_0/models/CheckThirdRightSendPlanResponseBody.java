@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckThirdRightSendPlanResponseBody extends TeaModel {
     /**
+     * <p>Return code</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,12 +14,17 @@ public class CheckThirdRightSendPlanResponseBody extends TeaModel {
     public Integer retCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>系统异常</p>
      */
     @NameInMap("RetMsg")
     public String retMsg;
 
+    /**
+     * <p>Result of invoking the API</p>
+     */
     @NameInMap("RetValue")
     public CheckThirdRightSendPlanResponseBodyRetValue retValue;
 
@@ -52,6 +59,8 @@ public class CheckThirdRightSendPlanResponseBody extends TeaModel {
 
     public static class CheckThirdRightSendPlanResponseBodyRetValue extends TeaModel {
         /**
+         * <p>Activation time</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;1713262192005&quot;</p>
          */
@@ -59,6 +68,8 @@ public class CheckThirdRightSendPlanResponseBody extends TeaModel {
         public String activateDate;
 
         /**
+         * <p>Card type</p>
+         * 
          * <strong>example:</strong>
          * <p>1001 日卡 1002 月卡 1003 季卡 1004 年卡</p>
          */
@@ -66,6 +77,8 @@ public class CheckThirdRightSendPlanResponseBody extends TeaModel {
         public Integer cardType;
 
         /**
+         * <p>Channel code</p>
+         * 
          * <strong>example:</strong>
          * <p>TB</p>
          */
@@ -73,6 +86,8 @@ public class CheckThirdRightSendPlanResponseBody extends TeaModel {
         public String channelCode;
 
         /**
+         * <p>Channel Name</p>
+         * 
          * <strong>example:</strong>
          * <p>淘宝</p>
          */
@@ -80,6 +95,8 @@ public class CheckThirdRightSendPlanResponseBody extends TeaModel {
         public String channelName;
 
         /**
+         * <p>Extension field</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -87,6 +104,8 @@ public class CheckThirdRightSendPlanResponseBody extends TeaModel {
         public java.util.Map<String, ?> extendInfo;
 
         /**
+         * <p>Request ID</p>
+         * 
          * <strong>example:</strong>
          * <p>908FA068-529C-0C20-8DB5-63B0EF7CFF1F</p>
          */
@@ -94,6 +113,8 @@ public class CheckThirdRightSendPlanResponseBody extends TeaModel {
         public String requestId;
 
         /**
+         * <p>Rights expiration time</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;1713262192005&quot;</p>
          */

@@ -4,13 +4,20 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class PullCashierRequest extends TeaModel {
+    /**
+     * <p>device ID information</p>
+     */
     @NameInMap("DeviceInfo")
     public PullCashierRequestDeviceInfo deviceInfo;
 
+    /**
+     * <p>Business parameters</p>
+     */
     @NameInMap("Payload")
     public PullCashierRequestPayload payload;
 
     /**
+     * <p>User identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -47,6 +54,12 @@ public class PullCashierRequest extends TeaModel {
 
     public static class PullCashierRequestDeviceInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type.</p>
+         * <ul>
+         * <li>When the encoding type is SKILL_ID, the value is the Skill ID of the application.</li>
+         * <li>When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>12**45</p>
          */
@@ -54,6 +67,12 @@ public class PullCashierRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the device ID of Tmall Genie, and each method corresponds to a different encoding type.  </p>
+         * <ul>
+         * <li>PACKAGE_NAME: APK package name, used in the Android application customer flow.  </li>
+         * <li>SKILL_ID: Skill ID, used in the cloud-based flow.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PACKAGE_NAME</p>
          */
@@ -61,6 +80,8 @@ public class PullCashierRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID, set to deviceOpenId or deviceUnionId.</p>
+         * 
          * <strong>example:</strong>
          * <p>DAFE****ce3ej=</p>
          */
@@ -68,6 +89,12 @@ public class PullCashierRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of device ID  </p>
+         * <ul>
+         * <li>OPEN_ID: The default device ID.  </li>
+         * <li>UNION_ID: Organization-level device ID. This value is available only after an organization has been requested on the Tmall Genie skill application Open Platform.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>OPEN_ID</p>
          */
@@ -75,6 +102,8 @@ public class PullCashierRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */
@@ -130,6 +159,8 @@ public class PullCashierRequest extends TeaModel {
 
     public static class PullCashierRequestPayload extends TeaModel {
         /**
+         * <p>Plaintext UUID</p>
+         * 
          * <strong>example:</strong>
          * <p>731D5F********DC3B</p>
          */
@@ -153,6 +184,11 @@ public class PullCashierRequest extends TeaModel {
 
     public static class PullCashierRequestUserInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type.</p>
+         * <ul>
+         * <li>When the encoding type is SKILL_ID, the value is the application\&quot;s Skill ID.</li>
+         * <li>When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,6 +198,11 @@ public class PullCashierRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the user identifier from Tmall Genie, and each method corresponds to a different encoding type.</p>
+         * <ul>
+         * <li>PACKAGE_NAME: APK package name, used for the Android application customer ingest endpoint.</li>
+         * <li>SKILL_ID: Skill ID, used for the cloud-based ingest endpoint.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,6 +212,7 @@ public class PullCashierRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User identifier, set to either userOpenId or userUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,6 +222,11 @@ public class PullCashierRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of the User ID.</p>
+         * <ul>
+         * <li>OPEN_ID: The default User ID identity.</li>
+         * <li>UNION_ID: Organization-dimension User ID identity. This value is available only after an organization has been requested on the Tmall Genie Skill Application Platform.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,6 +236,8 @@ public class PullCashierRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

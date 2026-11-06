@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CallBackThirdRightSendPlanRequest extends TeaModel {
     /**
+     * <p>device group</p>
+     * 
      * <strong>example:</strong>
      * <p>cc</p>
      */
@@ -12,6 +14,8 @@ public class CallBackThirdRightSendPlanRequest extends TeaModel {
     public String bizGroup;
 
     /**
+     * <p>device Type</p>
+     * 
      * <strong>example:</strong>
      * <p>ailabs</p>
      */
@@ -19,6 +23,8 @@ public class CallBackThirdRightSendPlanRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <p>1001 daily card, 1002 monthly card, 1003 quarterly card, 1004 annual card</p>
+     * 
      * <strong>example:</strong>
      * <p>1001</p>
      */
@@ -26,6 +32,8 @@ public class CallBackThirdRightSendPlanRequest extends TeaModel {
     public Integer cardType;
 
     /**
+     * <p>error message</p>
+     * 
      * <strong>example:</strong>
      * <p>领取异常</p>
      */
@@ -33,6 +41,8 @@ public class CallBackThirdRightSendPlanRequest extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>Extension fields</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -40,6 +50,8 @@ public class CallBackThirdRightSendPlanRequest extends TeaModel {
     public java.util.Map<String, ?> extendInfo;
 
     /**
+     * <p>Genie ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1dsds2FzCXFGVA1ADS</p>
      */
@@ -47,6 +59,8 @@ public class CallBackThirdRightSendPlanRequest extends TeaModel {
     public String genieOpenId;
 
     /**
+     * <p>redemption status</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -54,6 +68,8 @@ public class CallBackThirdRightSendPlanRequest extends TeaModel {
     public Integer receiveStatus;
 
     /**
+     * <p>SN of the device</p>
+     * 
      * <strong>example:</strong>
      * <p>01000019100307010000600</p>
      */
@@ -61,6 +77,8 @@ public class CallBackThirdRightSendPlanRequest extends TeaModel {
     public String sn;
 
     /**
+     * <p>Supplier ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateReminderShrinkRequest extends TeaModel {
     /**
+     * <p>Device identification information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
     /**
+     * <p>The input parameters for this service request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Payload")
     public String payloadShrink;
 
     /**
+     * <p>User identifier information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

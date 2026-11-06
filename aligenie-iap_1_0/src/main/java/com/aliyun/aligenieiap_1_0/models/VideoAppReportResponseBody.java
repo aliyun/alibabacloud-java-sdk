@@ -5,16 +5,30 @@ import com.aliyun.tea.*;
 
 public class VideoAppReportResponseBody extends TeaModel {
     /**
+     * <p>The returned error code. <code>0</code> indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("RetCode")
     public Integer retCode;
 
+    /**
+     * <p>The returned error message. This field is not returned if the operation succeeded.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>请求异常</p>
+     */
     @NameInMap("RetMsg")
     public String retMsg;
 
     /**
+     * <p>The returned invocation result.</p>
+     * <ul>
+     * <li>true indicates success.</li>
+     * <li>false indicates failure.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

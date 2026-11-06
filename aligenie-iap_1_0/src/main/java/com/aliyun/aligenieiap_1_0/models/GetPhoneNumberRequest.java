@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetPhoneNumberRequest extends TeaModel {
     /**
+     * <p>Device identification information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public GetPhoneNumberRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>User identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -39,6 +41,7 @@ public class GetPhoneNumberRequest extends TeaModel {
 
     public static class GetPhoneNumberRequestDeviceInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type. If the encoding type is <code>SKILL_ID</code>, the value is the application\&quot;s Skill ID. If the encoding type is <code>PACKAGE_NAME</code>, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -48,6 +51,11 @@ public class GetPhoneNumberRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the Maojing device ID, and each method corresponds to a different encoding type:  </p>
+         * <ul>
+         * <li>PACKAGE_NAME: APK package name, used in the Android application customer flow  </li>
+         * <li>SKILL_ID: Skill ID, used in the cloud-based flow</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -57,6 +65,7 @@ public class GetPhoneNumberRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID (deviceOpenId or deviceUnionId)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -66,6 +75,11 @@ public class GetPhoneNumberRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of device ID:  </p>
+         * <ul>
+         * <li>OPEN_ID: Default device ID  </li>
+         * <li>UNION_ID: Organization-dimension device ID, available only after an organization has been requested on the Maojing Skill Application Open Platform</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -75,6 +89,8 @@ public class GetPhoneNumberRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is <code>UNION_ID</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */
@@ -130,6 +146,7 @@ public class GetPhoneNumberRequest extends TeaModel {
 
     public static class GetPhoneNumberRequestUserInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type. When the encoding type is <code>SKILL_ID</code>, the value is the application\&quot;s Skill ID. When the encoding type is <code>PACKAGE_NAME</code>, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +156,11 @@ public class GetPhoneNumberRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the user identifier for Maojing, and each method corresponds to a different encoding type:  </p>
+         * <ul>
+         * <li>PACKAGE_NAME: APK package name, used for Android application customer journeys  </li>
+         * <li>SKILL_ID: Skill ID, used for cloud-based journeys</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,6 +170,7 @@ public class GetPhoneNumberRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User Identifier (userOpenId or userUnionId)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +180,11 @@ public class GetPhoneNumberRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of User ID:  </p>
+         * <ul>
+         * <li>OPEN_ID: Default User ID identifier  </li>
+         * <li>UNION_ID: Organization-dimension User ID identifier, available only after an organization has been requested on the Maojing Skill Application Open Platform</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +194,8 @@ public class GetPhoneNumberRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is <code>UNION_ID</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

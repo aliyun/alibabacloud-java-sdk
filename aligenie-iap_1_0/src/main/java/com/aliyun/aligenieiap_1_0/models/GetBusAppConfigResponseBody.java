@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetBusAppConfigResponseBody extends TeaModel {
     /**
+     * <p>Error code returned. 0 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,12 +14,17 @@ public class GetBusAppConfigResponseBody extends TeaModel {
     public Integer retCode;
 
     /**
+     * <p>Error message returned. No message is returned if the operation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>请求异常</p>
      */
     @NameInMap("RetMsg")
     public String retMsg;
 
+    /**
+     * <p>Configuration Information (VIP label, shopping guide bar, shopping guide pop-up)</p>
+     */
     @NameInMap("RetValue")
     public GetBusAppConfigResponseBodyRetValue retValue;
 
@@ -51,10 +58,15 @@ public class GetBusAppConfigResponseBody extends TeaModel {
     }
 
     public static class GetBusAppConfigResponseBodyRetValue extends TeaModel {
+        /**
+         * <p>Cashier URL</p>
+         */
         @NameInMap("Cashier")
         public String cashier;
 
         /**
+         * <p>Shopping guide bar URL</p>
+         * 
          * <strong>example:</strong>
          * <p>https://<strong><strong><strong>.com/design/</strong></strong></strong>?imageId=xxxxx</p>
          */
@@ -62,6 +74,8 @@ public class GetBusAppConfigResponseBody extends TeaModel {
         public String shoppingBar;
 
         /**
+         * <p>Shopping guide pop-up URL</p>
+         * 
          * <strong>example:</strong>
          * <p>https://<strong><strong><strong>.com/design/</strong></strong></strong>?imageId=xxxxx</p>
          */
@@ -69,6 +83,8 @@ public class GetBusAppConfigResponseBody extends TeaModel {
         public String shoppingWindow;
 
         /**
+         * <p>VIP label transparency URL</p>
+         * 
          * <strong>example:</strong>
          * <p>https://<strong><strong><strong>.com/design/</strong></strong></strong>?imageId=xxxxx</p>
          */

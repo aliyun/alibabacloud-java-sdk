@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetPhoneNumberShrinkRequest extends TeaModel {
     /**
+     * <p>Device identification information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
     /**
+     * <p>User identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

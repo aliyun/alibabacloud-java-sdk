@@ -4,13 +4,20 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetBusAppConfigShrinkRequest extends TeaModel {
+    /**
+     * <p>Device ID information</p>
+     */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
+    /**
+     * <p>Business parameters</p>
+     */
     @NameInMap("Payload")
     public String payloadShrink;
 
     /**
+     * <p>User identity information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

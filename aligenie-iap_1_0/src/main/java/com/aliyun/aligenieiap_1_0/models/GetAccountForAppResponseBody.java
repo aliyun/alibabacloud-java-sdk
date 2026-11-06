@@ -5,15 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetAccountForAppResponseBody extends TeaModel {
     /**
+     * <p>Error code returned. A value of <code>0</code> indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("RetCode")
     public Integer retCode;
 
+    /**
+     * <p>Error message returned. No message is returned upon success.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>请求异常</p>
+     */
     @NameInMap("RetMsg")
     public String retMsg;
 
+    /**
+     * <p>List of result objects returned.</p>
+     */
     @NameInMap("RetValue")
     public GetAccountForAppResponseBodyRetValue retValue;
 
@@ -48,6 +59,8 @@ public class GetAccountForAppResponseBody extends TeaModel {
 
     public static class GetAccountForAppResponseBodyRetValue extends TeaModel {
         /**
+         * <p>Indicates whether the user is an authorized member.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -55,6 +68,8 @@ public class GetAccountForAppResponseBody extends TeaModel {
         public Boolean isVip;
 
         /**
+         * <p>Membership expiration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-05-12 15:22:18</p>
          */
@@ -62,6 +77,12 @@ public class GetAccountForAppResponseBody extends TeaModel {
         public String strVipExpire;
 
         /**
+         * <p>Millisecond-level UNIX timestamp.</p>
+         * <ul>
+         * <li>If the user has activated membership, returns the membership expiration time.</li>
+         * <li>If the user has never activated membership, the value is always <code>0</code>.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1652340138347</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPhoneNumberResponseBody extends TeaModel {
     /**
+     * <p>User\&quot;s phone number</p>
+     * 
      * <strong>example:</strong>
      * <p>137****</p>
      */
