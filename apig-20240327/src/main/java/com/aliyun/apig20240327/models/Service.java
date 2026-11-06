@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Service extends TeaModel {
     /**
-     * <p>The address information, which is a list of IP addresses or domain names.</p>
+     * <p>The address information, such as IP addresses or domain names.</p>
      */
     @NameInMap("addresses")
     public java.util.List<String> addresses;
@@ -23,7 +23,7 @@ public class Service extends TeaModel {
     public AiServiceConfig aiServiceConfig;
 
     /**
-     * <p>The time when the service was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>1725617840096</p>
@@ -38,7 +38,7 @@ public class Service extends TeaModel {
     public java.util.List<String> dnsServers;
 
     /**
-     * <p>The execution mode of CloudFlow.</p>
+     * <p>The execution method of CloudFlow.</p>
      * 
      * <strong>example:</strong>
      * <p>StartExecution</p>
@@ -47,7 +47,7 @@ public class Service extends TeaModel {
     public String expressType;
 
     /**
-     * <p>The instance ID of the gateway.</p>
+     * <p>The gateway instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-xxxx</p>
@@ -71,7 +71,7 @@ public class Service extends TeaModel {
     public ServiceHealthCheck healthCheck;
 
     /**
-     * <p>The health check status. Valid values: Healthy and Unhealthy.</p>
+     * <p>The monitoring check status.</p>
      * 
      * <strong>example:</strong>
      * <p>Healthy</p>
@@ -122,13 +122,13 @@ public class Service extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The outlier detection configuration for removing abnormal instances.</p>
+     * <p>The outlier detection configuration.</p>
      */
     @NameInMap("outlierDetection")
     public ServiceOutlierDetection outlierDetection;
 
     /**
-     * <p>The circuit-broken endpoints.</p>
+     * <p>The ejected endpoints.</p>
      */
     @NameInMap("outlierEndpoints")
     public java.util.List<String> outlierEndpoints;
@@ -167,7 +167,7 @@ public class Service extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The masked error code of the runtime details.</p>
+     * <p>The masked error code in the runtime details.</p>
      * 
      * <strong>example:</strong>
      * <p>RuntimeEndpointTimeout</p>
@@ -194,6 +194,12 @@ public class Service extends TeaModel {
     public String serviceId;
 
     /**
+     * <p>The ExtProc reference status in the service list. This field is not returned if the relationship read fails.</p>
+     */
+    @NameInMap("serviceMetaData")
+    public ServiceServiceMetaData serviceMetaData;
+
+    /**
      * <p>The source type of the service.</p>
      * 
      * <strong>example:</strong>
@@ -209,7 +215,7 @@ public class Service extends TeaModel {
     public java.util.List<String> unhealthyEndpoints;
 
     /**
-     * <p>The time when the service was updated.</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>1725868548440</p>
@@ -420,6 +426,14 @@ public class Service extends TeaModel {
         return this.serviceId;
     }
 
+    public Service setServiceMetaData(ServiceServiceMetaData serviceMetaData) {
+        this.serviceMetaData = serviceMetaData;
+        return this;
+    }
+    public ServiceServiceMetaData getServiceMetaData() {
+        return this.serviceMetaData;
+    }
+
     public Service setSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -454,7 +468,7 @@ public class Service extends TeaModel {
 
     public static class ServiceOutlierDetection extends TeaModel {
         /**
-         * <p>The base ejection duration in seconds. Valid values: 1 to 3600.</p>
+         * <p>The base ejection time in seconds. Valid values: 1 to 3600.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -463,7 +477,7 @@ public class Service extends TeaModel {
         public Integer baseEjectionTime;
 
         /**
-         * <p>Specifies whether to enable outlier detection.</p>
+         * <p>Specifies whether to enable the feature.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -472,7 +486,7 @@ public class Service extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The minimum number of hosts. The value must be greater than or equal to 0.</p>
+         * <p>The minimum number of hosts. Valid values: 0 or greater.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -481,7 +495,7 @@ public class Service extends TeaModel {
         public Integer failurePercentageMinimumHosts;
 
         /**
-         * <p>The failure rate threshold in percentage. Valid values: 1 to 100.</p>
+         * <p>The failure percentage threshold. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -565,7 +579,7 @@ public class Service extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The protocol. Valid values: TCP and UDP.</p>
+         * <p>The protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>TCP</p>
@@ -600,6 +614,42 @@ public class Service extends TeaModel {
         }
         public String getProtocol() {
             return this.protocol;
+        }
+
+    }
+
+    public static class ServiceServiceMetaData extends TeaModel {
+        /**
+         * <p>Specifies whether the current service is referenced by an explicit DFP ExtProc binding of the gateway.</p>
+         */
+        @NameInMap("dfpReferenced")
+        public Boolean dfpReferenced;
+
+        /**
+         * <p>Specifies whether the current service is referenced by an ExtProc configuration of the same user and gateway.</p>
+         */
+        @NameInMap("extProc")
+        public Boolean extProc;
+
+        public static ServiceServiceMetaData build(java.util.Map<String, ?> map) throws Exception {
+            ServiceServiceMetaData self = new ServiceServiceMetaData();
+            return TeaModel.build(map, self);
+        }
+
+        public ServiceServiceMetaData setDfpReferenced(Boolean dfpReferenced) {
+            this.dfpReferenced = dfpReferenced;
+            return this;
+        }
+        public Boolean getDfpReferenced() {
+            return this.dfpReferenced;
+        }
+
+        public ServiceServiceMetaData setExtProc(Boolean extProc) {
+            this.extProc = extProc;
+            return this;
+        }
+        public Boolean getExtProc() {
+            return this.extProc;
         }
 
     }

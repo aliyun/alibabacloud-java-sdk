@@ -76,7 +76,7 @@ public class GetDeveloperResponseBody extends TeaModel {
 
     public static class GetDeveloperResponseBodyData extends TeaModel {
         /**
-         * <p>The developer ID. You can use this ID to locate the developer in API operations such as SetHiMarketDeveloperStatus and DeleteHiMarketDeveloper.</p>
+         * <p>The developer ID. You can use it to identify the developer in API operations such as SetHiMarketDeveloperStatus and DeleteHiMarketDeveloper.</p>
          * 
          * <strong>example:</strong>
          * <p>dev-xxxxxxxx</p>
@@ -85,7 +85,7 @@ public class GetDeveloperResponseBody extends TeaModel {
         public String developerId;
 
         /**
-         * <p>The ID of the portal to which the developer belongs. You can use this ID to locate the portal in API operations such as GetPortal, UpdatePortal, and DeletePortal.</p>
+         * <p>The ID of the portal to which the developer belongs. You can use it to identify the portal in API operations such as GetPortal, UpdatePortal, and DeletePortal.</p>
          * 
          * <strong>example:</strong>
          * <p>portal-xxxxxxxx</p>

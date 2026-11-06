@@ -23,7 +23,7 @@ public class ListPortalPublicationsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The API product name. This is the same field as productName in the response list items.</p>
+     * <p>The API product name. This corresponds to the productName field in the response list items.</p>
      * 
      * <strong>example:</strong>
      * <p>model-service</p>

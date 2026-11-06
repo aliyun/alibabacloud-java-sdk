@@ -76,13 +76,13 @@ public class GetHiMarketConsumerCredentialResponseBody extends TeaModel {
 
     public static class GetHiMarketConsumerCredentialResponseBodyData extends TeaModel {
         /**
-         * <p>The API key consumer credential configuration, which corresponds to the common data structure HiMarketApiKeyConfig. The members include key, source, and the credential list credentials, where each list item contains an apiKey.</p>
+         * <p>The API key credential configuration of the consumer, which corresponds to the common data structure HiMarketApiKeyConfig. The members include key, source, and the credentials list, where each list item contains an apiKey.</p>
          */
         @NameInMap("apiKeyConfig")
         public HiMarketApiKeyConfig apiKeyConfig;
 
         /**
-         * <p>The HMAC consumer credential configuration, which corresponds to the common data structure HiMarketHmacConfig. The members include the credential list credentials, where each list item contains ak and sk.</p>
+         * <p>The HMAC credential configuration of the consumer, which corresponds to the common data structure HiMarketHmacConfig. The members include the credentials list, where each list item contains ak and sk.</p>
          */
         @NameInMap("hmacConfig")
         public HiMarketHmacConfig hmacConfig;

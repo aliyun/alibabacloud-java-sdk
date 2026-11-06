@@ -135,7 +135,7 @@ public class ListApiPathFieldTemplatesResponseBody extends TeaModel {
 
     public static class ListApiPathFieldTemplatesResponseBodyData extends TeaModel {
         /**
-         * <p>The list of field templates. Each element in the items list is a field template record that contains the templateId, path, and protocol.</p>
+         * <p>The list of field templates. The list element is named items, and each element is a field template record that contains the templateId, path, and protocol.</p>
          */
         @NameInMap("items")
         public java.util.List<ListApiPathFieldTemplatesResponseBodyDataItems> items;
@@ -159,7 +159,7 @@ public class ListApiPathFieldTemplatesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of items.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

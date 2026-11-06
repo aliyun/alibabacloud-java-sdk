@@ -14,7 +14,7 @@ public class UpdateProductCategoryRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The icon of the product category, which consists of the icon type (type) and icon information (value) fields.</p>
+     * <p>The icon of the product category. It consists of two fields: icon type (type) and icon information (value).</p>
      */
     @NameInMap("icon")
     public HiMarketIcon icon;

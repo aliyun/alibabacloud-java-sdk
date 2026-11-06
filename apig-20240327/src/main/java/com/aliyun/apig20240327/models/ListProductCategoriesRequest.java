@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProductCategoriesRequest extends TeaModel {
     /**
-     * <p>The keyword used to search for product categories by name.</p>
+     * <p>The keyword for the category name. This parameter is used to search for product categories by name.</p>
      * 
      * <strong>example:</strong>
      * <p>ai-capabilities</p>
@@ -23,7 +23,7 @@ public class ListProductCategoriesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Minimum value: 1.</p>
+     * <p>The number of entries per page. The minimum value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

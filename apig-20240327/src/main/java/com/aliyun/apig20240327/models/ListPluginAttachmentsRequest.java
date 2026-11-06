@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPluginAttachmentsRequest extends TeaModel {
     /**
-     * <p>The ID of the mount resource.</p>
+     * <p>The ID of the mounted resource.</p>
      * 
      * <strong>example:</strong>
      * <p>hr-cv2h58em1hkg7c6vt43g</p>
@@ -77,7 +77,7 @@ public class ListPluginAttachmentsRequest extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>Specifies whether to return parent resource mounts.&gt;Notice: When this parameter is set to true, it must be used together with a single value of attachResourceTypes. The valid values are GatewayRoute and Operation.</notice></p>
+     * <p>Specifies whether to return the mounts of parent resources. <notice>If this parameter is set to true, it must be used together with a single value of attachResourceTypes. Valid values: GatewayRoute and Operation.</notice></p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

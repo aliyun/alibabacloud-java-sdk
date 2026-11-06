@@ -23,8 +23,7 @@ public class UpdateHttpApiRequest extends TeaModel {
     public AuthConfig authConfig;
 
     /**
-     * <p>The base path of the API. The value must start with a forward slash (/).</p>
-     * <p>This parameter is required.</p>
+     * <p>The base path of the API. It must start with a forward slash (/).</p>
      * 
      * <strong>example:</strong>
      * <p>/v1</p>
@@ -39,10 +38,10 @@ public class UpdateHttpApiRequest extends TeaModel {
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
     /**
-     * <p>The API description.</p>
+     * <p>The description of the API.</p>
      * 
      * <strong>example:</strong>
-     * <p>Update API description</p>
+     * <p>Updated API description</p>
      */
     @NameInMap("description")
     public String description;
@@ -57,7 +56,7 @@ public class UpdateHttpApiRequest extends TeaModel {
     public Boolean enableAuth;
 
     /**
-     * <p>The first byte timeout period. Unit: seconds.</p>
+     * <p>The first byte timeout period, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -66,13 +65,13 @@ public class UpdateHttpApiRequest extends TeaModel {
     public Integer firstByteTimeout;
 
     /**
-     * <p>The configuration of the HTTP Ingress API.</p>
+     * <p>The configuration information of the HTTP Ingress API.</p>
      */
     @NameInMap("ingressConfig")
     public UpdateHttpApiRequestIngressConfig ingressConfig;
 
     /**
-     * <p>Specifies whether to only modify the configuration. If this parameter is set to true, only the configuration is modified without triggering redeployment.</p>
+     * <p>Specifies whether to only modify the configuration. A value of true indicates that only the configuration is modified without triggering a redeployment.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -87,7 +86,7 @@ public class UpdateHttpApiRequest extends TeaModel {
     public java.util.List<String> protocols;
 
     /**
-     * <p>Specifies whether to remove the base path when forwarding requests.</p>
+     * <p>Specifies whether to remove the base path during forwarding.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -96,13 +95,13 @@ public class UpdateHttpApiRequest extends TeaModel {
     public Boolean removeBasePathOnForward;
 
     /**
-     * <p>The API versioning configuration.</p>
+     * <p>The versioning configuration of the API.</p>
      */
     @NameInMap("versionConfig")
     public HttpApiVersionConfig versionConfig;
 
     /**
-     * <p>The idempotency token. If you call this operation for the same HTTP API by using the same clientToken value and request parameters, the result of the first successful call is returned.</p>
+     * <p>The idempotent request token. If you call the same HTTP API with the same client token and request parameters, the result of the first successful call is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>update-http-api-client-token-001</p>
@@ -111,7 +110,7 @@ public class UpdateHttpApiRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run. If this parameter is set to true, all synchronous validations identical to an actual update are performed, but no configurations are updated and no side effects are produced. If this parameter is not specified or is set to false, the behavior is the same as the existing version.</p>
+     * <p>Specifies whether to perform a dry run. If you set this parameter to true, all synchronization checks consistent with a real update are performed, but no configurations are updated and no side effects are generated. If this parameter is left empty or set to false, the behavior remains the same as the existing version.</p>
      */
     @NameInMap("dryRun")
     public Boolean dryRun;
@@ -261,7 +260,7 @@ public class UpdateHttpApiRequest extends TeaModel {
         public String ingressClass;
 
         /**
-         * <p>Specifies whether to update the address in the Ingress status.</p>
+         * <p>Specifies whether to update the IP address in the Ingress status.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -279,7 +278,7 @@ public class UpdateHttpApiRequest extends TeaModel {
         public String sourceId;
 
         /**
-         * <p>The namespace to listen on.</p>
+         * <p>The namespace to watch.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

@@ -47,7 +47,13 @@ public class HttpRoute extends TeaModel {
     public String description;
 
     /**
-     * <p>The domain name information list.</p>
+     * <p>The ExtProc service selected for the fixed dynamic forwarding route. This field is not returned when no matching binding exists.</p>
+     */
+    @NameInMap("dfpConfig")
+    public HttpRouteDfpConfig dfpConfig;
+
+    /**
+     * <p>The list of domain information.</p>
      */
     @NameInMap("domainInfos")
     public java.util.List<HttpRouteDomainInfos> domainInfos;
@@ -148,6 +154,14 @@ public class HttpRoute extends TeaModel {
         return this.description;
     }
 
+    public HttpRoute setDfpConfig(HttpRouteDfpConfig dfpConfig) {
+        this.dfpConfig = dfpConfig;
+        return this;
+    }
+    public HttpRouteDfpConfig getDfpConfig() {
+        return this.dfpConfig;
+    }
+
     public HttpRoute setDomainInfos(java.util.List<HttpRouteDomainInfos> domainInfos) {
         this.domainInfos = domainInfos;
         return this;
@@ -212,9 +226,34 @@ public class HttpRoute extends TeaModel {
         return this.updateTimestamp;
     }
 
+    public static class HttpRouteDfpConfig extends TeaModel {
+        /**
+         * <p>The ExtProc gRPC service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-cr8k0udlhtgt80sh7png</p>
+         */
+        @NameInMap("serviceId")
+        public String serviceId;
+
+        public static HttpRouteDfpConfig build(java.util.Map<String, ?> map) throws Exception {
+            HttpRouteDfpConfig self = new HttpRouteDfpConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpRouteDfpConfig setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+    }
+
     public static class HttpRouteDomainInfos extends TeaModel {
         /**
-         * <p>The domain name ID.</p>
+         * <p>The domain ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-cr3v7dllhtgi9s***</p>
@@ -332,7 +371,7 @@ public class HttpRoute extends TeaModel {
 
     public static class HttpRouteEnvironmentInfoSubDomains extends TeaModel {
         /**
-         * <p>The domain name ID.</p>
+         * <p>The domain ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-cqu19hdlhtgjuv4***</p>
@@ -408,7 +447,7 @@ public class HttpRoute extends TeaModel {
 
     public static class HttpRouteEnvironmentInfo extends TeaModel {
         /**
-         * <p>The environment name alias.</p>
+         * <p>The alias of the environment name.</p>
          * 
          * <strong>example:</strong>
          * <p>商品中心预发环境</p>
@@ -441,7 +480,7 @@ public class HttpRoute extends TeaModel {
         public String name;
 
         /**
-         * <p>The list of default subdomains of the environment.</p>
+         * <p>The list of default subdomains for the environment.</p>
          */
         @NameInMap("subDomains")
         public java.util.List<HttpRouteEnvironmentInfoSubDomains> subDomains;

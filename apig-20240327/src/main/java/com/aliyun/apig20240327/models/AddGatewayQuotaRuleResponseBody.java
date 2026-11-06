@@ -79,7 +79,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems extends TeaModel {
         /**
-         * <p>The period type of the existing conflicting rule on the consumption subject. A value of day, week, or month indicates that the period of the existing conflicting rule is day, week, or month, respectively.</p>
+         * <p>The period type of the existing conflicting rule on the subject. This is a legacy field. Use periodType in the actual response instead. This field is not guaranteed to be returned. A value of day, week, or month indicates that the period of the existing conflicting rule is day, week, or month.</p>
          * 
          * <strong>example:</strong>
          * <p>week</p>
@@ -89,7 +89,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         public String conflictPeriodType;
 
         /**
-         * <p>The type of the existing conflicting rule on the consumption subject. A value of calendar indicates that the existing conflicting rule is a natural period rule. A value of epoch indicates that the existing conflicting rule is a custom period rule.</p>
+         * <p>The type of the existing conflicting rule on the subject. A value of calendar indicates that the existing conflicting rule uses a natural period. A value of epoch indicates that the existing conflicting rule uses a custom period.</p>
          * 
          * <strong>example:</strong>
          * <p>calendar</p>
@@ -98,7 +98,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         public String conflictType;
 
         /**
-         * <p>The ID of the conflicting consumer. This parameter is deprecated. Use subjectId instead.</p>
+         * <p>The ID of the conflicting consumer. You can use subjectId instead.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-xxxxxx</p>
@@ -107,7 +107,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         public String consumerId;
 
         /**
-         * <p>The name of the conflicting consumer. This parameter is deprecated. Use subjectName instead.</p>
+         * <p>The name of the conflicting consumer. You can use subjectName instead.</p>
          * 
          * <strong>example:</strong>
          * <p>consumer-a</p>
@@ -116,6 +116,8 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         public String consumerName;
 
         /**
+         * <p>The period type of the existing conflicting rule. Valid values: day, week, and month.</p>
+         * 
          * <strong>example:</strong>
          * <p>day</p>
          */
@@ -223,7 +225,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class AddGatewayQuotaRuleResponseBodyDataConflictPreview extends TeaModel {
         /**
-         * <p>The hash of the conflict.</p>
+         * <p>The hash of the conflicts.</p>
          * 
          * <strong>example:</strong>
          * <p>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</p>
@@ -279,7 +281,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class AddGatewayQuotaRuleResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the semantics of the current write request can be accepted by the system. A value of false typically occurs in retryable scenarios, such as when a conflict is not confirmed for overwriting.</p>
+         * <p>Indicates whether the semantics of the write request can be accepted by the system. A value of false typically occurs in retryable scenarios, such as when conflicts are not confirmed for overwriting.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -14,7 +14,7 @@ public class GetServiceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The service details.</p>
+     * <p>The service details data.</p>
      */
     @NameInMap("data")
     public Service data;

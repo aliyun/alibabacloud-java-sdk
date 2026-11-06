@@ -76,7 +76,7 @@ public class CreatePluginClassResponseBody extends TeaModel {
 
     public static class CreatePluginClassResponseBodyData extends TeaModel {
         /**
-         * <p>The plugin class ID.</p>
+         * <p>The ID of the plug-in class.</p>
          * 
          * <strong>example:</strong>
          * <p>pls-csqmjxxxxxxx</p>

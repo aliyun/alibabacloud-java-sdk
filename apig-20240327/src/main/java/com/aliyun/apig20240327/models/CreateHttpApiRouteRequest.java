@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHttpApiRouteRequest extends TeaModel {
     /**
-     * <p>The backend service configuration of the route.</p>
+     * <p>The backend service configuration for the route.</p>
      */
     @NameInMap("backendConfig")
     public CreateHttpApiRouteRequestBackendConfig backendConfig;
@@ -25,6 +25,12 @@ public class CreateHttpApiRouteRequest extends TeaModel {
      */
     @NameInMap("description")
     public String description;
+
+    /**
+     * <p>The fixed dynamic forwarding and ExtProc combination configuration. When you use this configuration, specify only serviceId, and do not specify environmentId or backendConfig.</p>
+     */
+    @NameInMap("dfpConfig")
+    public CreateHttpApiRouteRequestDfpConfig dfpConfig;
 
     /**
      * <p>The domain name IDs.</p>
@@ -63,7 +69,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The policy type.</p>
+     * <p>The policy types.</p>
      */
     @NameInMap("policyConfigs")
     public java.util.List<HttpApiPolicyConfigs> policyConfigs;
@@ -96,6 +102,14 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateHttpApiRouteRequest setDfpConfig(CreateHttpApiRouteRequestDfpConfig dfpConfig) {
+        this.dfpConfig = dfpConfig;
+        return this;
+    }
+    public CreateHttpApiRouteRequestDfpConfig getDfpConfig() {
+        return this.dfpConfig;
     }
 
     public CreateHttpApiRouteRequest setDomainIds(java.util.List<String> domainIds) {
@@ -148,7 +162,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
 
     public static class CreateHttpApiRouteRequestBackendConfigServices extends TeaModel {
         /**
-         * <p>The service group. Used in HTTP-to-Dubbo transcoding scenarios.</p>
+         * <p>The service group. Used for HTTP-to-Dubbo conversion scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT_GROUP</p>
@@ -157,7 +171,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The HTTP-to-Dubbo protocol transcoding configuration. Only supported for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</p>
+         * <p>The HTTP-to-Dubbo protocol conversion configuration. This configuration only supports SingleService MSE_NACOS DUBBO backends for HTTP APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;dubboServiceName&quot;:&quot;com.alibaba.nacos.example.dubbo.service.DemoService&quot;,&quot;dubboServiceVersion&quot;:&quot;1.0.0&quot;,&quot;dubboServiceGroup&quot;:&quot;DEV&quot;,&quot;methodMapList&quot;:[{&quot;dubboMethodName&quot;:&quot;sayName&quot;,&quot;httpMethod&quot;:&quot;ALL_GET&quot;,&quot;methodPath&quot;:&quot;/dubbo/sayName&quot;,&quot;passThroughAllHeaders&quot;:&quot;PASS_ALL&quot;}]}</p>
@@ -166,7 +180,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public HttpDubboTranscoder httpDubboTranscoder;
 
         /**
-         * <p>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewrite semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If not specified in the AiAutoRouter scenario, the default model of the AI service is used.</p>
+         * <p>The target model name. This field is shared by multiple existing model backend scenarios, and the specific routing or model rewriting semantics are determined by backendConfig.scene. It is required for the SemanticRouter scenario. If not configured for the AiAutoRouter scenario, the default model of the AI service is used.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
@@ -175,7 +189,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String modelName;
 
         /**
-         * <p>The service namespace. Used in HTTP-to-Dubbo transcoding scenarios.</p>
+         * <p>The service namespace. Used for HTTP-to-Dubbo conversion scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>public</p>
@@ -195,8 +209,8 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         /**
          * <p>The service protocol. Valid values:</p>
          * <ul>
-         * <li>HTTP</li>
-         * <li>HTTPS</li>
+         * <li>HTTP.</li>
+         * <li>HTTPS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,7 +229,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String serviceId;
 
         /**
-         * <p>The service source type. Used in HTTP-to-Dubbo transcoding scenarios.</p>
+         * <p>The service source type. Used for HTTP-to-Dubbo conversion scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>MSE_NACOS</p>
@@ -224,7 +238,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The service version. This parameter takes effect only in the by-tag scenario.</p>
+         * <p>The service version. This parameter is valid only in the tag-based scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -333,7 +347,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
          * <p>The backend service scenario. Valid values:</p>
          * <ul>
          * <li>SingleService: Single service.</li>
-         * <li>MultiServiceByRatio: Multi-service canary release by ratio.</li>
+         * <li>MultiServiceByRatio: Multiple services with ratio-based canary release.</li>
          * <li>Mock: Mock service.</li>
          * <li>Redirect: Redirect service.</li>
          * </ul>
@@ -373,6 +387,31 @@ public class CreateHttpApiRouteRequest extends TeaModel {
 
     }
 
+    public static class CreateHttpApiRouteRequestDfpConfig extends TeaModel {
+        /**
+         * <p>The ID of the imported ExtProc gRPC service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-cr8k0udlhtgt80sh7png</p>
+         */
+        @NameInMap("serviceId")
+        public String serviceId;
+
+        public static CreateHttpApiRouteRequestDfpConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateHttpApiRouteRequestDfpConfig self = new CreateHttpApiRouteRequestDfpConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateHttpApiRouteRequestDfpConfig setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+    }
+
     public static class CreateHttpApiRouteRequestMcpRouteConfig extends TeaModel {
         /**
          * <p>The exposed URI path.</p>
@@ -395,9 +434,9 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         /**
          * <p>The service protocol. Valid values:</p>
          * <ul>
-         * <li>TCP</li>
-         * <li>HTTP</li>
-         * <li>DUBBO</li>
+         * <li>TCP.</li>
+         * <li>HTTP.</li>
+         * <li>DUBBO.</li>
          * </ul>
          * 
          * <strong>example:</strong>

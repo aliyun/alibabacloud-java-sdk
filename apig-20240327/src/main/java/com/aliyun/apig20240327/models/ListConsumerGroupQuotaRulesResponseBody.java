@@ -88,7 +88,7 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
-         * <p>The name of the gateway. Falls back to the gateway ID if the name is unavailable.</p>
+         * <p>The name of the gateway. If the name is unavailable, the gateway ID is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>prod-gateway</p>
@@ -97,7 +97,7 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         public String gatewayName;
 
         /**
-         * <p>The period multiplier, which specifies the number of days before the quota resets. A positive integer is returned for custom periods. This field is not returned for calendar-based periods.</p>
+         * <p>The period multiplier, which indicates the interval in days for quota reset. A positive integer is returned for a custom period. This field is not returned for a natural period.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -151,11 +151,7 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The status of the rule. Valid values:</p>
-         * <ul>
-         * <li>enabled</li>
-         * <li>disabled</li>
-         * </ul>
+         * <p>The status of the rule. Valid values: enabled and disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -173,11 +169,7 @@ public class ListConsumerGroupQuotaRulesResponseBody extends TeaModel {
         public String timezone;
 
         /**
-         * <p>The window alignment type. Valid values:</p>
-         * <ul>
-         * <li>calendar: calendar-based period.</li>
-         * <li>epoch: custom period.</li>
-         * </ul>
+         * <p>The period type. A value of calendar indicates a natural period. A value of epoch indicates a custom period.</p>
          * 
          * <strong>example:</strong>
          * <p>calendar</p>

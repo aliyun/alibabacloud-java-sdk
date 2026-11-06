@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConsumerGroupQuotaRulesRequest extends TeaModel {
     /**
-     * <p>The ID of the gateway. This parameter is optional. If specified, the results are filtered by the exact gateway ID.</p>
+     * <p>The gateway ID. This parameter is optional. If specified, the results are filtered by the exact gateway ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-123456</p>
@@ -14,7 +14,7 @@ public class ListConsumerGroupQuotaRulesRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The keyword for the rule name. This parameter is optional. If specified, the results are filtered by fuzzy match on the rule name.</p>
+     * <p>The keyword for the rule name. This parameter is optional. If specified, fuzzy matching is performed on the rule name.</p>
      * 
      * <strong>example:</strong>
      * <p>daily</p>

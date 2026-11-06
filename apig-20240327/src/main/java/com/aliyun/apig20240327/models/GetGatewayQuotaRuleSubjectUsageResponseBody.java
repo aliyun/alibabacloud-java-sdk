@@ -79,7 +79,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
 
     public static class GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems extends TeaModel {
         /**
-         * <p>The consumption of cached tokens.</p>
+         * <p>The cached token consumption.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -88,7 +88,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long cachedAmount;
 
         /**
-         * <p>The exact value of the cached consumption. Decimals are supported in credit scenarios.</p>
+         * <p>The exact cached consumption. Decimals are supported in credit scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>10.5</p>
@@ -106,7 +106,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public String consumer;
 
         /**
-         * <p>The consumption of input tokens.</p>
+         * <p>The input token consumption.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -115,7 +115,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long inputAmount;
 
         /**
-         * <p>The exact value of the input consumption. Decimals are supported in credit scenarios.</p>
+         * <p>The exact input consumption. Decimals are supported in credit scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>120.5</p>
@@ -133,7 +133,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public String model;
 
         /**
-         * <p>The consumption of output tokens.</p>
+         * <p>The output token consumption.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -142,7 +142,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long outputAmount;
 
         /**
-         * <p>The exact value of the output consumption. Decimals are supported in credit scenarios.</p>
+         * <p>The exact output consumption. Decimals are supported in credit scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>80.5</p>
@@ -160,7 +160,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public String requestId;
 
         /**
-         * <p>The consumption or request time in YYYY-MM-DD format.</p>
+         * <p>The consumption or request time in the YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-05</p>
@@ -178,7 +178,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long usedAmount;
 
         /**
-         * <p>The exact value of the total consumption. Decimals are supported in credit scenarios.</p>
+         * <p>The exact total consumption. Decimals are supported in credit scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>210.5</p>
@@ -367,7 +367,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
 
     public static class GetGatewayQuotaRuleSubjectUsageResponseBodyData extends TeaModel {
         /**
-         * <p>The total consumption of cached tokens.</p>
+         * <p>The total cached token consumption.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -376,7 +376,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long cachedAmount;
 
         /**
-         * <p>The exact value of the total cached consumption. Decimals are supported in credit scenarios.</p>
+         * <p>The exact total cached consumption. Decimals are supported in credit scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>20.5</p>
@@ -394,7 +394,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetails details;
 
         /**
-         * <p>The total consumption of input tokens.</p>
+         * <p>The total input token consumption.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -403,7 +403,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long inputAmount;
 
         /**
-         * <p>The exact value of the total input consumption. Decimals are supported in credit scenarios.</p>
+         * <p>The exact total input consumption. Decimals are supported in credit scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>300.5</p>
@@ -412,7 +412,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Double inputAmountDecimal;
 
         /**
-         * <p>The total consumption of output tokens.</p>
+         * <p>The total output token consumption.</p>
          * 
          * <strong>example:</strong>
          * <p>180</p>
@@ -421,7 +421,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long outputAmount;
 
         /**
-         * <p>The exact value of the total output consumption. Decimals are supported in credit scenarios.</p>
+         * <p>The exact total output consumption. Decimals are supported in credit scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>180.5</p>
@@ -430,7 +430,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Double outputAmountDecimal;
 
         /**
-         * <p>Indicates whether the limit is exceeded.</p>
+         * <p>Indicates whether the quota is exceeded.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -475,7 +475,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long usedAmount;
 
         /**
-         * <p>The exact value of the total used quota of the subject. Decimals are supported in credit scenarios.</p>
+         * <p>The exact total used quota of the subject. Decimals are supported in credit scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>500.5</p>

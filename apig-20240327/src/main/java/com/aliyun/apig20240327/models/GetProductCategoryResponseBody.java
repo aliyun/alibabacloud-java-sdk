@@ -76,7 +76,7 @@ public class GetProductCategoryResponseBody extends TeaModel {
 
     public static class GetProductCategoryResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the product category. This ID can be used as the categoryId path parameter for GetProductCategory, UpdateProductCategory, and DeleteProductCategory, or as an element in the categories array for SetProductCategories and CreateProduct.</p>
+         * <p>The product category ID. This ID can be used as the categoryId path parameter for GetProductCategory, UpdateProductCategory, and DeleteProductCategory, or as an element in the categories array for SetProductCategories and CreateProduct.</p>
          * 
          * <strong>example:</strong>
          * <p>category-xxxxxxxx</p>
@@ -85,22 +85,22 @@ public class GetProductCategoryResponseBody extends TeaModel {
         public String categoryId;
 
         /**
-         * <p>The description of the product category.</p>
+         * <p>The product category description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Product category that includes AI-related capabilities</p>
+         * <p>Product category containing AI-related capabilities</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The icon of the product category, which consists of the icon type (type) and icon information (value) fields.</p>
+         * <p>The product category icon, which consists of two fields: icon type (type) and icon information (value).</p>
          */
         @NameInMap("icon")
         public HiMarketIcon icon;
 
         /**
-         * <p>The name of the product category.</p>
+         * <p>The product category name.</p>
          * 
          * <strong>example:</strong>
          * <p>ai-capabilities</p>

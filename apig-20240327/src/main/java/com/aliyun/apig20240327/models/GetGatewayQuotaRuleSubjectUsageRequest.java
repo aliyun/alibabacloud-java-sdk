@@ -23,7 +23,7 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends TeaModel {
     public Boolean filterFailedRequests;
 
     /**
-     * <p>The page number of the detailed consumption (request) records for the consumer subject within the period.</p>
+     * <p>The page number of the detailed consumption (request) records for the consumption subject within the period.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for the detailed consumption (request) records of the consumer subject within the period. Maximum value: 10.</p>
+     * <p>The number of entries per page for the detailed consumption (request) records of the consumption subject within the period. Maximum value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchAddConsumerGroupConsumersResponseBody extends TeaModel {
     /**
-     * <p>The response status code. Ok is returned if the request is successful.</p>
+     * <p>The response status code. The value is Ok if the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -82,13 +82,13 @@ public class BatchAddConsumerGroupConsumersResponseBody extends TeaModel {
         public java.util.List<String> failedConsumerIds;
 
         /**
-         * <p>The list of consumer IDs that already exist in the consumer group and were skipped.</p>
+         * <p>The list of consumer IDs that are already in the consumer group and are skipped in this operation.</p>
          */
         @NameInMap("skippedConsumerIds")
         public java.util.List<String> skippedConsumerIds;
 
         /**
-         * <p>The list of consumer IDs that were successfully added to the consumer group.</p>
+         * <p>The list of consumer IDs successfully added to the consumer group.</p>
          */
         @NameInMap("successConsumerIds")
         public java.util.List<String> successConsumerIds;

@@ -14,7 +14,7 @@ public class CreateDeveloperRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The logon username of the developer. The length must not exceed 64 characters.</p>
+     * <p>The logon username of the developer. The length cannot exceed 64 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>developer-demo</p>

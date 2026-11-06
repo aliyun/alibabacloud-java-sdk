@@ -20,6 +20,12 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The current ExtProc service selection for fixed DFP routes. You can only edit mounted routes. This parameter cannot be submitted together with backendConfig, mcpRouteConfig, or policyConfigs.</p>
+     */
+    @NameInMap("dfpConfig")
+    public UpdateHttpApiRouteRequestDfpConfig dfpConfig;
+
+    /**
      * <p>The list of domain name IDs.</p>
      */
     @NameInMap("domainIds")
@@ -73,6 +79,14 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         return this.description;
     }
 
+    public UpdateHttpApiRouteRequest setDfpConfig(UpdateHttpApiRouteRequestDfpConfig dfpConfig) {
+        this.dfpConfig = dfpConfig;
+        return this;
+    }
+    public UpdateHttpApiRouteRequestDfpConfig getDfpConfig() {
+        return this.dfpConfig;
+    }
+
     public UpdateHttpApiRouteRequest setDomainIds(java.util.List<String> domainIds) {
         this.domainIds = domainIds;
         return this;
@@ -124,7 +138,7 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The HTTP-to-Dubbo protocol conversion configuration. This is only supported for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</p>
+         * <p>The HTTP-to-Dubbo protocol conversion configuration. This configuration is only supported for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;dubboServiceName&quot;:&quot;com.alibaba.nacos.example.dubbo.service.DemoService&quot;,&quot;dubboServiceVersion&quot;:&quot;1.0.0&quot;,&quot;dubboServiceGroup&quot;:&quot;DEV&quot;,&quot;methodMapList&quot;:[{&quot;dubboMethodName&quot;:&quot;sayName&quot;,&quot;httpMethod&quot;:&quot;ALL_GET&quot;,&quot;methodPath&quot;:&quot;/dubbo/sayName&quot;,&quot;passThroughAllHeaders&quot;:&quot;PASS_ALL&quot;}]}</p>
@@ -133,7 +147,7 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         public HttpDubboTranscoder httpDubboTranscoder;
 
         /**
-         * <p>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewriting semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If this field is not configured for the AiAutoRouter scenario, the default model of the AI service is used.</p>
+         * <p>The name of the target model. This field is shared by multiple existing model backend scenarios. The specific routing or model rewriting semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If it is not configured for the AiAutoRouter scenario, the default model of the AI service is used.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
@@ -162,8 +176,8 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         /**
          * <p>The service protocol. Valid values:</p>
          * <ul>
-         * <li>HTTP</li>
-         * <li>HTTPS</li>
+         * <li>HTTP.</li>
+         * <li>HTTPS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -182,7 +196,7 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         public String serviceId;
 
         /**
-         * <p>The service source type. MSE_NACOS is used in HTTP-to-Dubbo conversion scenarios.</p>
+         * <p>The service source type. Use MSE_NACOS for HTTP-to-Dubbo conversion scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>MSE_NACOS</p>
@@ -330,6 +344,31 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         }
         public java.util.List<UpdateHttpApiRouteRequestBackendConfigServices> getServices() {
             return this.services;
+        }
+
+    }
+
+    public static class UpdateHttpApiRouteRequestDfpConfig extends TeaModel {
+        /**
+         * <p>The ID of the ExtProc service mounted to the current route. When updating a fixed DFP route, this ID must match the existing service. Service switching is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-cr8k0udlhtgt80sh7png</p>
+         */
+        @NameInMap("serviceId")
+        public String serviceId;
+
+        public static UpdateHttpApiRouteRequestDfpConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateHttpApiRouteRequestDfpConfig self = new UpdateHttpApiRouteRequestDfpConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateHttpApiRouteRequestDfpConfig setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
         }
 
     }

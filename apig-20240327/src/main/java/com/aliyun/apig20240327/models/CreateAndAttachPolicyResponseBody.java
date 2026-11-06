@@ -14,7 +14,7 @@ public class CreateAndAttachPolicyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response struct.</p>
+     * <p>The response structure.</p>
      */
     @NameInMap("data")
     public CreateAndAttachPolicyResponseBodyData data;
@@ -76,7 +76,7 @@ public class CreateAndAttachPolicyResponseBody extends TeaModel {
 
     public static class CreateAndAttachPolicyResponseBodyData extends TeaModel {
         /**
-         * <p>The attachment information.</p>
+         * <p>The attachment relationship information.</p>
          */
         @NameInMap("attachment")
         public Attachment attachment;

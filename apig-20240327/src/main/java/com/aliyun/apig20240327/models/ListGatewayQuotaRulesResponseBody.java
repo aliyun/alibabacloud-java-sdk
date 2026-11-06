@@ -23,7 +23,7 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
     public ListGatewayQuotaRulesResponseBodyData data;
 
     /**
-     * <p>The maximum number of records to retrieve at a time. This parameter is not supported.</p>
+     * <p>The maximum number of records to return in a single request. This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

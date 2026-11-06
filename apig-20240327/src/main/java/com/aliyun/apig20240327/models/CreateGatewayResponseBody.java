@@ -76,7 +76,7 @@ public class CreateGatewayResponseBody extends TeaModel {
 
     public static class CreateGatewayResponseBodyData extends TeaModel {
         /**
-         * <p>The gateway ID.</p>
+         * <p>The ID of the gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cq2vundlhtg***</p>

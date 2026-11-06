@@ -106,7 +106,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         public ParentResourceInfo parentResourceInfo;
 
         /**
-         * <p>The plugin mount ID.</p>
+         * <p>The ID of the plugin mount.</p>
          * 
          * <strong>example:</strong>
          * <p>pa-d0j9t5em1hkncrlo51mg</p>
@@ -115,7 +115,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         public String pluginAttachmentId;
 
         /**
-         * <p>The plugin type information.</p>
+         * <p>The plugin class information.</p>
          */
         @NameInMap("pluginClassInfo")
         public PluginClassInfo pluginClassInfo;
@@ -139,7 +139,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         public String pluginId;
 
         /**
-         * <p>The mount resource information.</p>
+         * <p>The mounted resource information.</p>
          */
         @NameInMap("resourceInfos")
         public java.util.List<ResourceInfo> resourceInfos;

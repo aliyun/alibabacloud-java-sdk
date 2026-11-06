@@ -91,7 +91,7 @@ public class GetApiPathFieldTemplateResponseBody extends TeaModel {
         public java.util.Map<String, java.util.List<DataFieldPathsValue>> fieldPaths;
 
         /**
-         * <p>The API request path corresponding to the field template.</p>
+         * <p>The URI of the request corresponding to the field template.</p>
          * 
          * <strong>example:</strong>
          * <p>/v1/chat/completions</p>

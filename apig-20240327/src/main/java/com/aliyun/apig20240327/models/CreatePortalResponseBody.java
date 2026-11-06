@@ -76,7 +76,7 @@ public class CreatePortalResponseBody extends TeaModel {
 
     public static class CreatePortalResponseBodyData extends TeaModel {
         /**
-         * <p>The portal ID. It can be used to locate the portal in API operations such as GetPortal, UpdatePortal, and DeletePortal.</p>
+         * <p>The portal ID. You can use this ID to locate the portal in API operations such as GetPortal, UpdatePortal, and DeletePortal.</p>
          * 
          * <strong>example:</strong>
          * <p>portal-xxxxxxxx</p>

@@ -69,9 +69,7 @@ public class CreateAndAttachPolicyRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The policy name.
-     * This parameter is required when className is set to IpAccessControl, JWTAuth, OIDCAuth, or ExternalZAuth, and the name must be unique within the same gateway instance (gatewayId) under the current account. If a policy with the same name already exists, a PolicyExisted error is returned. When retrying after receiving this error, use a different name. Submitting the same name repeatedly will always fail.
-     * For other className values such as RateLimit, Timeout, Retry, ServiceTls, and AiProxy, this parameter is optional and used only for display purposes.</p>
+     * <p>The policy name. This parameter is required when className is set to IpAccessControl, JWTAuth, OIDCAuth, or ExternalZAuth, and must be unique within the same gateway instance specified by gatewayId under the current account. If the name duplicates an existing policy, a PolicyExisted error is returned. When you retry after receiving this error, you must use a new name. Resubmitting the same name will always fail. For other className values such as RateLimit, Timeout, Retry, ServiceTls, and AiProxy, this parameter is optional, used only for display purposes, and can be omitted.</p>
      * 
      * <strong>example:</strong>
      * <p>my-fallback-policy</p>

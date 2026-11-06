@@ -79,7 +79,7 @@ public class GetGatewayResourceQuotaUsageResponseBody extends TeaModel {
 
     public static class GetGatewayResourceQuotaUsageResponseBodyDataItems extends TeaModel {
         /**
-         * <p>Indicates whether quota numerical values are provided.</p>
+         * <p>Specifies whether the quota value is provided.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -97,7 +97,7 @@ public class GetGatewayResourceQuotaUsageResponseBody extends TeaModel {
         public Long limit;
 
         /**
-         * <p>The scope to which the limit applies.</p>
+         * <p>The applicable scope of the limit.</p>
          * 
          * <strong>example:</strong>
          * <p>GATEWAY</p>
@@ -124,7 +124,7 @@ public class GetGatewayResourceQuotaUsageResponseBody extends TeaModel {
         public Long used;
 
         /**
-         * <p>The scope for usage statistics.</p>
+         * <p>The scope of usage statistics.</p>
          * 
          * <strong>example:</strong>
          * <p>GATEWAY</p>

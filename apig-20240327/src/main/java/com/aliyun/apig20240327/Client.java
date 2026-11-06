@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "APIG";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("apig", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -28,7 +31,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation adds a quota rule based on consumers or consumer groups to an AI gateway. Note that this operation takes effect only for AI gateways of a version later than 2.1.21.</p>
+     * <p>This operation adds a quota rule based on consumers or consumer groups for an AI gateway. Note that this operation takes effect only for AI gateways of a version later than 2.1.21.</p>
      * <blockquote>
      * <p> Recommended call logic:</p>
      * <ul>
@@ -37,23 +40,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * </li>
      * <li><ul>
-     * <li>Set dryRun=true.</li>
+     * <li>Set dryRun to true.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response returns a conflict preview containing a conflictHash.</li>
+     * <li>The response returns a conflict preview that contains conflictHash.</li>
      * </ul>
      * </li>
      * <li><ol start="2">
-     * <li>Formally submit the request after confirmation.</li>
+     * <li>Submit the request after confirmation.</li>
      * </ol>
      * </li>
      * <li><ul>
-     * <li>If no conflicts exist: Set dryRun=false and overwrite=false.</li>
+     * <li>If no conflicts exist: Set dryRun to false and overwrite to false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>If conflicts exist and you confirm to overwrite: Set dryRun=false, overwrite=true, and conflictHash=<the value returned in the previous step>.</li>
+     * <li>If conflicts exist and you confirm to overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
      * </ul>
      * </li>
      * </ul>
@@ -142,7 +145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation adds a quota rule based on consumers or consumer groups to an AI gateway. Note that this operation takes effect only for AI gateways of a version later than 2.1.21.</p>
+     * <p>This operation adds a quota rule based on consumers or consumer groups for an AI gateway. Note that this operation takes effect only for AI gateways of a version later than 2.1.21.</p>
      * <blockquote>
      * <p> Recommended call logic:</p>
      * <ul>
@@ -151,23 +154,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * </li>
      * <li><ul>
-     * <li>Set dryRun=true.</li>
+     * <li>Set dryRun to true.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response returns a conflict preview containing a conflictHash.</li>
+     * <li>The response returns a conflict preview that contains conflictHash.</li>
      * </ul>
      * </li>
      * <li><ol start="2">
-     * <li>Formally submit the request after confirmation.</li>
+     * <li>Submit the request after confirmation.</li>
      * </ol>
      * </li>
      * <li><ul>
-     * <li>If no conflicts exist: Set dryRun=false and overwrite=false.</li>
+     * <li>If no conflicts exist: Set dryRun to false and overwrite to false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>If conflicts exist and you confirm to overwrite: Set dryRun=false, overwrite=true, and conflictHash=<the value returned in the previous step>.</li>
+     * <li>If conflicts exist and you confirm to overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
      * </ul>
      * </li>
      * </ul>
@@ -242,7 +245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds members to a consumer group in batches.</p>
+     * <p>Adds consumer group members in batches.</p>
      * 
      * @param request BatchAddConsumerGroupConsumersRequest
      * @param headers map
@@ -276,7 +279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds members to a consumer group in batches.</p>
+     * <p>Adds consumer group members in batches.</p>
      * 
      * @param request BatchAddConsumerGroupConsumersRequest
      * @return BatchAddConsumerGroupConsumersResponse
@@ -482,7 +485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes consumer group members in batches.</p>
+     * <p>Removes multiple members from a consumer group.</p>
      * 
      * @param request BatchRemoveConsumerGroupConsumersRequest
      * @param headers map
@@ -516,7 +519,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes consumer group members in batches.</p>
+     * <p>Removes multiple members from a consumer group.</p>
      * 
      * @param request BatchRemoveConsumerGroupConsumersRequest
      * @return BatchRemoveConsumerGroupConsumersResponse
@@ -643,7 +646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the activation status of the API management service.</p>
+     * <p>Retrieves the activation status of the API Management service.</p>
      * 
      * @param request CheckCommodityStatusRequest
      * @param headers map
@@ -671,7 +674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the activation status of the API management service.</p>
+     * <p>Retrieves the activation status of the API Management service.</p>
      * 
      * @param request CheckCommodityStatusRequest
      * @return CheckCommodityStatusResponse
@@ -684,8 +687,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs model creation for a model card under an existing model provider in a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider must reference a model provider that already exists in the gateway.
-     * The modelName must be unique within the same AI gateway instance and the same model provider. A maximum of 1,000 model cards can be created for a single gateway instance. The credit parameter currently supports only the fixed type, and the cost unit is Credits per million tokens. If this parameter is not specified, type defaults to fixed and all cost values default to 0. Each entry in availablePaths must include both path and type.</p>
+     * <p>Creates a model card for model creation under an existing model provider of a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider parameter must reference an existing model provider in the gateway. The modelName must be unique within the same AI gateway instance and model provider. You can create up to 1,000 model cards per gateway instance. The credit parameter currently supports only the fixed type, and the billing unit is Credits per million tokens. If this parameter is not specified, the type defaults to fixed and all costs default to 0. Each item in availablePaths must include both path and type.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an AI model card.</p>
@@ -746,8 +748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs model creation for a model card under an existing model provider in a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider must reference a model provider that already exists in the gateway.
-     * The modelName must be unique within the same AI gateway instance and the same model provider. A maximum of 1,000 model cards can be created for a single gateway instance. The credit parameter currently supports only the fixed type, and the cost unit is Credits per million tokens. If this parameter is not specified, type defaults to fixed and all cost values default to 0. Each entry in availablePaths must include both path and type.</p>
+     * <p>Creates a model card for model creation under an existing model provider of a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider parameter must reference an existing model provider in the gateway. The modelName must be unique within the same AI gateway instance and model provider. You can create up to 1,000 model cards per gateway instance. The credit parameter currently supports only the fixed type, and the billing unit is Credits per million tokens. If this parameter is not specified, the type defaults to fixed and all costs default to 0. Each item in availablePaths must include both path and type.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an AI model card.</p>
@@ -958,7 +959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an API consumer.</p>
+     * <p>Creates a consumer.</p>
      * 
      * @param request CreateConsumerRequest
      * @param headers map
@@ -1026,7 +1027,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an API consumer.</p>
+     * <p>Creates a consumer.</p>
      * 
      * @param request CreateConsumerRequest
      * @return CreateConsumerResponse
@@ -1102,15 +1103,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Prerequisites: Before creating consumer authorization rules, prepare resources in the following dependency chain (the corresponding creation API and ID passing relationships are shown in parentheses):
-     * Gateway instance (CreateGateway → gatewayId, gw- prefix)
-     * Environment (A default environment is automatically created with the gateway. You can also call CreateEnvironment → environmentId, env- prefix. The gatewayId from step 1 must be associated.)
-     * HTTP API (CreateHttpApi → httpApiId, api- prefix)
-     * Route and publish (CreateHttpApiRoute → routeId, hr- prefix, which belongs to the API in step 3. Then call DeployHttpApi to publish the route to the environment in step 2. Unpublished routes cannot be authorized.)
-     * Consumer (CreateConsumer → consumerId, cs- prefix; or consumer group consumerGroupId, csg- prefix. Specify either consumerId or consumerGroupId.)</p>
+     * <p>Prerequisites: Before creating a consumer authorization rule, prepare resources according to the following dependency chain (the corresponding creation APIs and ID passing relationships are in parentheses):
+     * Gateway instance (CreateGateway → gatewayId, with the gw- prefix)
+     * Environment (A default environment is automatically created after the gateway is created. You can also call CreateEnvironment → environmentId, with the env- prefix. The gatewayId from Step 1 is required.)
+     * HTTP API (CreateHttpApi → httpApiId, with the api- prefix)
+     * Route and publish (CreateHttpApiRoute → routeId, with the hr- prefix, which belongs to the API in Step 3. Then, call DeployHttpApi to publish it to the environment in Step 2. Unpublished routes cannot be authorized.)
+     * Consumer (CreateConsumer → consumerId, with the cs- prefix, or consumerGroupId, with the csg- prefix. Choose either consumerId or consumerGroupId.)</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates consumer authorization rules.</p>
+     * <p>Creates a consumer authorization rule.</p>
      * 
      * @param request CreateConsumerAuthorizationRulesRequest
      * @param headers map
@@ -1144,15 +1145,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Prerequisites: Before creating consumer authorization rules, prepare resources in the following dependency chain (the corresponding creation API and ID passing relationships are shown in parentheses):
-     * Gateway instance (CreateGateway → gatewayId, gw- prefix)
-     * Environment (A default environment is automatically created with the gateway. You can also call CreateEnvironment → environmentId, env- prefix. The gatewayId from step 1 must be associated.)
-     * HTTP API (CreateHttpApi → httpApiId, api- prefix)
-     * Route and publish (CreateHttpApiRoute → routeId, hr- prefix, which belongs to the API in step 3. Then call DeployHttpApi to publish the route to the environment in step 2. Unpublished routes cannot be authorized.)
-     * Consumer (CreateConsumer → consumerId, cs- prefix; or consumer group consumerGroupId, csg- prefix. Specify either consumerId or consumerGroupId.)</p>
+     * <p>Prerequisites: Before creating a consumer authorization rule, prepare resources according to the following dependency chain (the corresponding creation APIs and ID passing relationships are in parentheses):
+     * Gateway instance (CreateGateway → gatewayId, with the gw- prefix)
+     * Environment (A default environment is automatically created after the gateway is created. You can also call CreateEnvironment → environmentId, with the env- prefix. The gatewayId from Step 1 is required.)
+     * HTTP API (CreateHttpApi → httpApiId, with the api- prefix)
+     * Route and publish (CreateHttpApiRoute → routeId, with the hr- prefix, which belongs to the API in Step 3. Then, call DeployHttpApi to publish it to the environment in Step 2. Unpublished routes cannot be authorized.)
+     * Consumer (CreateConsumer → consumerId, with the cs- prefix, or consumerGroupId, with the csg- prefix. Choose either consumerId or consumerGroupId.)</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates consumer authorization rules.</p>
+     * <p>Creates a consumer authorization rule.</p>
      * 
      * @param request CreateConsumerAuthorizationRulesRequest
      * @return CreateConsumerAuthorizationRulesResponse
@@ -1671,7 +1672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates operations for an HTTP API.</p>
+     * <p>Creates an API operation for an HTTP API.</p>
      * 
      * @param request CreateHttpApiOperationRequest
      * @param headers map
@@ -1705,7 +1706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates operations for an HTTP API.</p>
+     * <p>Creates an API operation for an HTTP API.</p>
      * 
      * @param request CreateHttpApiOperationRequest
      * @return CreateHttpApiOperationResponse
@@ -1738,6 +1739,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dfpConfig)) {
+            body.put("dfpConfig", request.dfpConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.domainIds)) {
@@ -2024,7 +2029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Mounts a plug-in.</p>
+     * <p>Mounts a plugin.</p>
      * 
      * @param request CreatePluginAttachmentRequest
      * @param headers map
@@ -2082,7 +2087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Mounts a plug-in.</p>
+     * <p>Mounts a plugin.</p>
      * 
      * @param request CreatePluginAttachmentRequest
      * @return CreatePluginAttachmentResponse
@@ -2095,7 +2100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom plugin class.</p>
+     * <p>Creates a custom plug-in class.</p>
      * 
      * @param request CreatePluginClassRequest
      * @param headers map
@@ -2165,7 +2170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom plugin class.</p>
+     * <p>Creates a custom plug-in class.</p>
      * 
      * @param request CreatePluginClassRequest
      * @return CreatePluginClassResponse
@@ -2178,7 +2183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a WebIDE workspace for a plugin.</p>
+     * <p>Creates a plugin WebIDE workspace.</p>
      * 
      * @param request CreatePluginWorkspaceRequest
      * @param headers map
@@ -2224,7 +2229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a WebIDE workspace for a plugin.</p>
+     * <p>Creates a plugin WebIDE workspace.</p>
      * 
      * @param request CreatePluginWorkspaceRequest
      * @return CreatePluginWorkspaceResponse
@@ -2296,7 +2301,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a policy attachment to a resource.</p>
+     * <p>Creates a policy resource attachment.</p>
      * 
      * @param request CreatePolicyAttachmentRequest
      * @param headers map
@@ -2346,7 +2351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a policy attachment to a resource.</p>
+     * <p>Creates a policy resource attachment.</p>
      * 
      * @param request CreatePolicyAttachmentRequest
      * @return CreatePolicyAttachmentResponse
@@ -2359,7 +2364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a HiMarket developer portal and returns the ID of the newly created portal upon success.</p>
+     * <p>Creates a HiMarket developer portal and returns the ID of the newly created portal.</p>
      * 
      * @param request CreatePortalRequest
      * @param headers map
@@ -2403,7 +2408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a HiMarket developer portal and returns the ID of the newly created portal upon success.</p>
+     * <p>Creates a HiMarket developer portal and returns the ID of the newly created portal.</p>
      * 
      * @param request CreatePortalRequest
      * @return CreatePortalResponse
@@ -2552,7 +2557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates an API configuration with a specified API product by submitting the gatewayId and apigRefConfig parameters to the /himarket/v1/products/{productId}/ref endpoint. You can query the association result by calling GetProductRef or remove the association by calling DeleteProductRef at the same path.</p>
+     * <p>Associates an API configuration with a specified API product by submitting the gatewayId and apigRefConfig parameters to the /himarket/v1/products/{productId}/ref endpoint. You can query the association result by calling GetProductRef on the same path or remove the association by calling DeleteProductRef.</p>
      * 
      * @param request CreateProductRefRequest
      * @param headers map
@@ -2590,7 +2595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates an API configuration with a specified API product by submitting the gatewayId and apigRefConfig parameters to the /himarket/v1/products/{productId}/ref endpoint. You can query the association result by calling GetProductRef or remove the association by calling DeleteProductRef at the same path.</p>
+     * <p>Associates an API configuration with a specified API product by submitting the gatewayId and apigRefConfig parameters to the /himarket/v1/products/{productId}/ref endpoint. You can query the association result by calling GetProductRef on the same path or remove the association by calling DeleteProductRef.</p>
      * 
      * @param request CreateProductRefRequest
      * @return CreateProductRefResponse
@@ -2711,7 +2716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports creating multiple services.</p>
+     * <p>Creates multiple services.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a service.</p>
@@ -2766,7 +2771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports creating multiple services.</p>
+     * <p>Creates multiple services.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a service.</p>
@@ -2833,7 +2838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before creating a source, prepare the required dependency resources. For the K8S type, an existing ACK container service cluster is required. You can invoke ListK8sClusterSources to query active clusters. For the MSE_NACOS type, an existing MSE Nacos instance is required. You can invoke ListMseNacosSources to query active instances.</p>
+     * <p>Before creating a source, you must prepare the dependent resources for the source. For the K8S type, an existing ACK container service cluster is required. You can invoke ListK8sClusterSources to query active clusters. For the MSE_NACOS type, an existing MSE Nacos instance is required. You can invoke ListMseNacosSources to query active instances.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a source.</p>
@@ -2886,7 +2891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before creating a source, prepare the required dependency resources. For the K8S type, an existing ACK container service cluster is required. You can invoke ListK8sClusterSources to query active clusters. For the MSE_NACOS type, an existing MSE Nacos instance is required. You can invoke ListMseNacosSources to query active instances.</p>
+     * <p>Before creating a source, you must prepare the dependent resources for the source. For the K8S type, an existing ACK container service cluster is required. You can invoke ListK8sClusterSources to query active clusters. For the MSE_NACOS type, an existing MSE Nacos instance is required. You can invoke ListMseNacosSources to query active instances.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a source.</p>
@@ -3218,10 +3223,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation deletes a consumer-based or consumer group-based quota rule from an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</p>
+     * <p>Deletes a quota rule based on a consumer or consumer group for an AI gateway. Note that this operation takes effect only for AI gateways whose version is later than 2.1.19.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a quota throttling rule from a gateway.</p>
+     * <p>Deletes a quota throttling rule for a gateway.</p>
      * 
      * @param request DeleteGatewayQuotaRuleRequest
      * @param headers map
@@ -3249,10 +3254,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation deletes a consumer-based or consumer group-based quota rule from an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</p>
+     * <p>Deletes a quota rule based on a consumer or consumer group for an AI gateway. Note that this operation takes effect only for AI gateways whose version is later than 2.1.19.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a quota throttling rule from a gateway.</p>
+     * <p>Deletes a quota throttling rule for a gateway.</p>
      * 
      * @param request DeleteGatewayQuotaRuleRequest
      * @return DeleteGatewayQuotaRuleResponse
@@ -3790,7 +3795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Dissociates an API product from an API by API product ID. The association is established by CreateProductRef on the same resource path and can be queried by GetProductRef.</p>
+     * <p>Dissociates an API from an API product by API product ID. The association is established by CreateProductRef on the same resource path and can be queried by using GetProductRef.</p>
      * 
      * @param request DeleteProductRefRequest
      * @param headers map
@@ -3818,7 +3823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Dissociates an API product from an API by API product ID. The association is established by CreateProductRef on the same resource path and can be queried by GetProductRef.</p>
+     * <p>Dissociates an API from an API product by API product ID. The association is established by CreateProductRef on the same resource path and can be queried by using GetProductRef.</p>
      * 
      * @param request DeleteProductRefRequest
      * @return DeleteProductRefResponse
@@ -3985,10 +3990,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before deployment, the following prerequisites must be met in order: (1) A gateway has been created. (2) An HTTP API has been created and associated with a gateway (belongGatewayId). (3) A route has been created and associated with an environment (environmentId). (4) The route has been associated with the default subdomain of the environment. Associating only a custom Dedicated domain name is not sufficient to trigger deployment. Call UpdateHttpApiRoute first to add the default subdomain of the environment to the route.</p>
+     * <p>Before deployment, the following prerequisites must be met in order: (1) A gateway is created. (2) An HTTP API is created and associated with the gateway by using belongGatewayId. (3) A route is created and associated with an environment by using environmentId. (4) The route is associated with the default subdomain of the environment. Associating only a custom dedicated domain name is insufficient to trigger deployment. You must first call UpdateHttpApiRoute to add the default subdomain of the environment to the route.</p>
      * 
      * <b>summary</b> : 
-     * <p>Publishes an HTTP API. This includes REST APIs and routes within HTTP APIs.</p>
+     * <p>Publishes an HTTP API, including routes in REST APIs and HTTP APIs.</p>
      * 
      * @param request DeployHttpApiRequest
      * @param headers map
@@ -4030,10 +4035,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before deployment, the following prerequisites must be met in order: (1) A gateway has been created. (2) An HTTP API has been created and associated with a gateway (belongGatewayId). (3) A route has been created and associated with an environment (environmentId). (4) The route has been associated with the default subdomain of the environment. Associating only a custom Dedicated domain name is not sufficient to trigger deployment. Call UpdateHttpApiRoute first to add the default subdomain of the environment to the route.</p>
+     * <p>Before deployment, the following prerequisites must be met in order: (1) A gateway is created. (2) An HTTP API is created and associated with the gateway by using belongGatewayId. (3) A route is created and associated with an environment by using environmentId. (4) The route is associated with the default subdomain of the environment. Associating only a custom dedicated domain name is insufficient to trigger deployment. You must first call UpdateHttpApiRoute to add the default subdomain of the environment to the route.</p>
      * 
      * <b>summary</b> : 
-     * <p>Publishes an HTTP API. This includes REST APIs and routes within HTTP APIs.</p>
+     * <p>Publishes an HTTP API, including routes in REST APIs and HTTP APIs.</p>
      * 
      * @param request DeployHttpApiRequest
      * @return DeployHttpApiResponse
@@ -4320,7 +4325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the effective field collection configurations for each request path of an HTTP API in a specified cloud-native API gateway, including the field source, JSONPath, whether it is collected, whether switching is allowed, and whether it is from a field template.</p>
+     * <p>Queries the effective field collection configurations for each request path of an HTTP API under a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and template origin.</p>
      * 
      * @param request GetApiPathFieldConfigRequest
      * @param headers map
@@ -4358,7 +4363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the effective field collection configurations for each request path of an HTTP API in a specified cloud-native API gateway, including the field source, JSONPath, whether it is collected, whether switching is allowed, and whether it is from a field template.</p>
+     * <p>Queries the effective field collection configurations for each request path of an HTTP API under a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and template origin.</p>
      * 
      * @param request GetApiPathFieldConfigRequest
      * @return GetApiPathFieldConfigResponse
@@ -4371,7 +4376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the field template corresponding to an API request path and returns the template name, applicable protocol, template description, and the set of fields defined by the template, including field keys, JSONPaths, value sources, and statistical categories.</p>
+     * <p>Queries the field template corresponding to a URI of the request and returns the template name, applicable protocol, template description, and the set of fields defined by the template, including field keys, JSONPaths, value sources, and statistical categories.</p>
      * 
      * @param request GetApiPathFieldTemplateRequest
      * @param headers map
@@ -4405,7 +4410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the field template corresponding to an API request path and returns the template name, applicable protocol, template description, and the set of fields defined by the template, including field keys, JSONPaths, value sources, and statistical categories.</p>
+     * <p>Queries the field template corresponding to a URI of the request and returns the template name, applicable protocol, template description, and the set of fields defined by the template, including field keys, JSONPaths, value sources, and statistical categories.</p>
      * 
      * @param request GetApiPathFieldTemplateRequest
      * @return GetApiPathFieldTemplateResponse
@@ -4537,7 +4542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves consumer authorization rules.</p>
+     * <p>Retrieves a consumer authorization rule.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4563,7 +4568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves consumer authorization rules.</p>
+     * <p>Retrieves a consumer authorization rule.</p>
      * @return GetConsumerAuthorizationRuleResponse
      */
     public GetConsumerAuthorizationRuleResponse getConsumerAuthorizationRule(String consumerAuthorizationRuleId, String consumerId) throws Exception {
@@ -4847,7 +4852,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the basic information of a gateway, such as the associated VPC, vSwitch, and gateway endpoint.</p>
+     * <p>Retrieves the basic information of a gateway, such as the associated VPC, vSwitch, and gateway ingress.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4873,13 +4878,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the basic information of a gateway, such as the associated VPC, vSwitch, and gateway endpoint.</p>
+     * <p>Retrieves the basic information of a gateway, such as the associated VPC, vSwitch, and gateway ingress.</p>
      * @return GetGatewayResponse
      */
     public GetGatewayResponse getGateway(String gatewayId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getGatewayWithOptions(gatewayId, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the dynamic forwarding ExtProc gRPC service and port currently bound to the specified gateway. If no service is bound, bound=false is returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the dynamic forwarding ExtProc service bound to a gateway.</p>
+     * 
+     * @param request GetGatewayDfpExtProcServiceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetGatewayDfpExtProcServiceResponse
+     */
+    public GetGatewayDfpExtProcServiceResponse getGatewayDfpExtProcServiceWithOptions(String gatewayId, GetGatewayDfpExtProcServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetGatewayDfpExtProcService"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/gateways/" + com.aliyun.openapiutil.Client.getEncodeParam(gatewayId) + "/dfp-ext-proc-service"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGatewayDfpExtProcServiceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the dynamic forwarding ExtProc gRPC service and port currently bound to the specified gateway. If no service is bound, bound=false is returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the dynamic forwarding ExtProc service bound to a gateway.</p>
+     * 
+     * @param request GetGatewayDfpExtProcServiceRequest
+     * @return GetGatewayDfpExtProcServiceResponse
+     */
+    public GetGatewayDfpExtProcServiceResponse getGatewayDfpExtProcService(String gatewayId, GetGatewayDfpExtProcServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getGatewayDfpExtProcServiceWithOptions(gatewayId, request, headers, runtime);
     }
 
     /**
@@ -4925,7 +4977,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries a consumer quota rule on an AI gateway.</p>
+     * <p>This operation queries a specific consumer quota rule on an AI gateway.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a gateway quota throttling rule.</p>
@@ -4974,7 +5026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries a consumer quota rule on an AI gateway.</p>
+     * <p>This operation queries a specific consumer quota rule on an AI gateway.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a gateway quota throttling rule.</p>
@@ -4990,11 +5042,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves the usage details of a consumer subject under a quota rule. Note that this operation applies only to AI gateways whose version is later than 2.1.19.
-     * Before you begin: Before calling this operation, ensure that the Simple Log Service (SLS) log delivery feature is enabled for the target gateway by using UpdateGatewayFeature(name=log-config, value={&quot;enable&quot;:true}). Otherwise, the CloudProductInactive.LogDeliveryNotEnabled error is returned.</p>
+     * <p>This operation retrieves the usage details of a specific consumption subject under a quota rule. Note that this operation takes effect only for AI gateways of a version later than 2.1.19. Prerequisites: Before calling this operation, make sure that Simple Log Service (SLS) log delivery is enabled for the target gateway by calling UpdateGatewayFeature(name=log-config, value={&quot;enable&quot;:true}). Otherwise, the CloudProductInactive.LogDeliveryNotEnabled error is returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the usage details of a subject for a gateway quota throttling rule, including the used quota, total quota, over-limit status, usage details, and consumption records.</p>
+     * <p>Queries the usage details of a subject under a gateway quota throttling rule, including the used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</p>
      * 
      * @param request GetGatewayQuotaRuleSubjectUsageRequest
      * @param headers map
@@ -5044,11 +5095,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves the usage details of a consumer subject under a quota rule. Note that this operation applies only to AI gateways whose version is later than 2.1.19.
-     * Before you begin: Before calling this operation, ensure that the Simple Log Service (SLS) log delivery feature is enabled for the target gateway by using UpdateGatewayFeature(name=log-config, value={&quot;enable&quot;:true}). Otherwise, the CloudProductInactive.LogDeliveryNotEnabled error is returned.</p>
+     * <p>This operation retrieves the usage details of a specific consumption subject under a quota rule. Note that this operation takes effect only for AI gateways of a version later than 2.1.19. Prerequisites: Before calling this operation, make sure that Simple Log Service (SLS) log delivery is enabled for the target gateway by calling UpdateGatewayFeature(name=log-config, value={&quot;enable&quot;:true}). Otherwise, the CloudProductInactive.LogDeliveryNotEnabled error is returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the usage details of a subject for a gateway quota throttling rule, including the used quota, total quota, over-limit status, usage details, and consumption records.</p>
+     * <p>Queries the usage details of a subject under a gateway quota throttling rule, including the used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</p>
      * 
      * @param request GetGatewayQuotaRuleSubjectUsageRequest
      * @return GetGatewayQuotaRuleSubjectUsageResponse
@@ -5061,7 +5111,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the usage, effective limits, and statistical scopes of nine resource quota items for a specified API gateway or AI gateway. This operation is read-only. A successful response contains all nine items. Custom plugin quotas do not display numerical values. The result represents the current observation read independently from each source and does not guarantee that new resources can be created successfully.</p>
+     * <p>Queries the usage, effective limits, and statistical scopes of nine resource quotas for a specified API gateway or AI gateway. This operation is read-only. A successful response includes all nine items. Quota values for custom plug-ins are not displayed. The result is a current observation read independently from various sources and does not guarantee the success of subsequent resource creation.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the resource quotas and usage of a gateway.</p>
@@ -5092,7 +5142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the usage, effective limits, and statistical scopes of nine resource quota items for a specified API gateway or AI gateway. This operation is read-only. A successful response contains all nine items. Custom plugin quotas do not display numerical values. The result represents the current observation read independently from each source and does not guarantee that new resources can be created successfully.</p>
+     * <p>Queries the usage, effective limits, and statistical scopes of nine resource quotas for a specified API gateway or AI gateway. This operation is read-only. A successful response includes all nine items. Quota values for custom plug-ins are not displayed. The result is a current observation read independently from various sources and does not guarantee the success of subsequent resource creation.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the resource quotas and usage of a gateway.</p>
@@ -5149,7 +5199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the credential information of a HiMarket consumer by consumer ID and returns two types of containers: API key credential configuration and HMAC credential configuration. The credential members are defined by the common data structures HiMarketApiKeyConfig and HiMarketHmacConfig.</p>
+     * <p>Queries the credential information of a HiMarket consumer by consumer ID. The response returns two types of containers: API key credential configuration and HMAC credential configuration. The credential members are defined by the common data structures HiMarketApiKeyConfig and HiMarketHmacConfig.</p>
      * 
      * @param request GetHiMarketConsumerCredentialRequest
      * @param headers map
@@ -5177,7 +5227,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the credential information of a HiMarket consumer by consumer ID and returns two types of containers: API key credential configuration and HMAC credential configuration. The credential members are defined by the common data structures HiMarketApiKeyConfig and HiMarketHmacConfig.</p>
+     * <p>Queries the credential information of a HiMarket consumer by consumer ID. The response returns two types of containers: API key credential configuration and HMAC credential configuration. The credential members are defined by the common data structures HiMarketApiKeyConfig and HiMarketHmacConfig.</p>
      * 
      * @param request GetHiMarketConsumerCredentialRequest
      * @return GetHiMarketConsumerCredentialResponse
@@ -5190,7 +5240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves HTTP API information.</p>
+     * <p>Retrieves the HTTP API information.</p>
      * 
      * @param request GetHttpApiRequest
      * @param headers map
@@ -5224,7 +5274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves HTTP API information.</p>
+     * <p>Retrieves the HTTP API information.</p>
      * 
      * @param request GetHttpApiRequest
      * @return GetHttpApiResponse
@@ -5237,7 +5287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of an API operation.</p>
+     * <p>Retrieves API operation information.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5263,7 +5313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of an API operation.</p>
+     * <p>Retrieves API operation information.</p>
      * @return GetHttpApiOperationResponse
      */
     public GetHttpApiOperationResponse getHttpApiOperation(String httpApiId, String operationId) throws Exception {
@@ -5274,7 +5324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the route details of an HTTP API.</p>
+     * <p>Retrieves the details of a route for an HTTP API.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5300,7 +5350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the route details of an HTTP API.</p>
+     * <p>Retrieves the details of a route for an HTTP API.</p>
      * @return GetHttpApiRouteResponse
      */
     public GetHttpApiRouteResponse getHttpApiRoute(String httpApiId, String routeId) throws Exception {
@@ -5311,7 +5361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves an MCP server.</p>
@@ -5340,7 +5390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves an MCP server.</p>
@@ -5354,7 +5404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the namespaced services for a migration task.</p>
+     * <p>Retrieves the namespaced services for migration.</p>
      * 
      * @param request GetMigrationNamespacedServicesRequest
      * @param headers map
@@ -5382,7 +5432,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the namespaced services for a migration task.</p>
+     * <p>Retrieves the namespaced services for migration.</p>
      * 
      * @param request GetMigrationNamespacedServicesRequest
      * @return GetMigrationNamespacedServicesResponse
@@ -5629,7 +5679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a single HiMarket developer portal by portal ID and returns the portal name, description, region ID, portal settings, and portal domain configurations.</p>
+     * <p>Queries the details of a single HiMarket developer portal by portal ID, including the portal name, description, region ID, portal settings, and portal domain name configurations.</p>
      * 
      * @param request GetPortalRequest
      * @param headers map
@@ -5657,7 +5707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a single HiMarket developer portal by portal ID and returns the portal name, description, region ID, portal settings, and portal domain configurations.</p>
+     * <p>Queries the details of a single HiMarket developer portal by portal ID, including the portal name, description, region ID, portal settings, and portal domain name configurations.</p>
      * 
      * @param request GetPortalRequest
      * @return GetPortalResponse
@@ -5670,7 +5720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a single API product by API product ID and returns information such as the name, description, status, type, documentation, icon, automatic subscription approval status, MCP, Agent, and model configurations, product capability configurations, and the region.</p>
+     * <p>Queries the details of a single API product by API product ID, and returns information such as the name, description, status, type, documentation, icon, whether subscription requests are automatically approved, MCP, agent, and model configurations, product capability configurations, and the region to which the product belongs.</p>
      * 
      * @param request GetProductRequest
      * @param headers map
@@ -5698,7 +5748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a single API product by API product ID and returns information such as the name, description, status, type, documentation, icon, automatic subscription approval status, MCP, Agent, and model configurations, product capability configurations, and the region.</p>
+     * <p>Queries the details of a single API product by API product ID, and returns information such as the name, description, status, type, documentation, icon, whether subscription requests are automatically approved, MCP, agent, and model configurations, product capability configurations, and the region to which the product belongs.</p>
      * 
      * @param request GetProductRequest
      * @return GetProductResponse
@@ -5711,7 +5761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a single product category by category ID and returns the ID, name, description, and icon of the category.</p>
+     * <p>Queries the details of a product category by category ID and returns the ID, name, description, and icon of the category.</p>
      * 
      * @param request GetProductCategoryRequest
      * @param headers map
@@ -5739,7 +5789,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a single product category by category ID and returns the ID, name, description, and icon of the category.</p>
+     * <p>Queries the details of a product category by category ID and returns the ID, name, description, and icon of the category.</p>
      * 
      * @param request GetProductCategoryRequest
      * @return GetProductCategoryResponse
@@ -5752,7 +5802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the API configurations associated with an API product by product ID, and returns the gateway ID and APIG association configuration.</p>
+     * <p>Queries the API configurations associated with an API product by API product ID, and returns the ID of the gateway where the association resides and the APIG association configuration.</p>
      * 
      * @param request GetProductRefRequest
      * @param headers map
@@ -5780,7 +5830,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the API configurations associated with an API product by product ID, and returns the gateway ID and APIG association configuration.</p>
+     * <p>Queries the API configurations associated with an API product by API product ID, and returns the ID of the gateway where the association resides and the APIG association configuration.</p>
      * 
      * @param request GetProductRefRequest
      * @return GetProductRefResponse
@@ -6094,7 +6144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Executes the callback step in the OIDC logon flow by submitting the code and state query parameters carried in the callback via a GET request, and returns the accessToken, tokenType, and expiresIn fields in the response data.</p>
+     * <p>Submits the code and state query parameters via a GET request during the callback step of the OIDC logon process. The response data includes the accessToken, tokenType, and expiresIn fields.</p>
      * 
      * @param request HandleOidcCallbackRequest
      * @param headers map
@@ -6132,7 +6182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Executes the callback step in the OIDC logon flow by submitting the code and state query parameters carried in the callback via a GET request, and returns the accessToken, tokenType, and expiresIn fields in the response data.</p>
+     * <p>Submits the code and state query parameters via a GET request during the callback step of the OIDC logon process. The response data includes the accessToken, tokenType, and expiresIn fields.</p>
      * 
      * @param request HandleOidcCallbackRequest
      * @return HandleOidcCallbackResponse
@@ -6145,7 +6195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Imports an HTTP API by importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST APIs.</p>
+     * <p>Imports an HTTP API and supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST APIs.</p>
      * 
      * @param request ImportHttpApiRequest
      * @param headers map
@@ -6231,7 +6281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Imports an HTTP API by importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST APIs.</p>
+     * <p>Imports an HTTP API and supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST APIs.</p>
      * 
      * @param request ImportHttpApiRequest
      * @return ImportHttpApiResponse
@@ -6244,7 +6294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initiates the Authorize step in the OpenID Connect (OIDC) logon process based on the OIDC provider identifier. The response body defined by the API operation contains only the requestId, code, and message fields, and does not declare the data business output parameter.</p>
+     * <p>Initiates the Authorize step in the OIDC logon process based on the OIDC provider identifier. The response body defined by the API operation contains only the requestId, code, and message fields, and does not declare the data business output parameter.</p>
      * 
      * @param request InitiateOidcAuthRequest
      * @param headers map
@@ -6278,7 +6328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initiates the Authorize step in the OpenID Connect (OIDC) logon process based on the OIDC provider identifier. The response body defined by the API operation contains only the requestId, code, and message fields, and does not declare the data business output parameter.</p>
+     * <p>Initiates the Authorize step in the OIDC logon process based on the OIDC provider identifier. The response body defined by the API operation contains only the requestId, code, and message fields, and does not declare the data business output parameter.</p>
      * 
      * @param request InitiateOidcAuthRequest
      * @return InitiateOidcAuthResponse
@@ -6523,7 +6573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of field templates by using paging and returns the template ID, corresponding API request path, and applicable protocol for each template record.</p>
+     * <p>Performs a paging query on the list of field templates and returns the template ID, API request path, and applicable protocol for each template record.</p>
      * 
      * @param request ListApiPathFieldTemplatesRequest
      * @param headers map
@@ -6561,7 +6611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of field templates by using paging and returns the template ID, corresponding API request path, and applicable protocol for each template record.</p>
+     * <p>Performs a paging query on the list of field templates and returns the template ID, API request path, and applicable protocol for each template record.</p>
      * 
      * @param request ListApiPathFieldTemplatesRequest
      * @return ListApiPathFieldTemplatesResponse
@@ -6708,7 +6758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of consumer authorization rules.</p>
+     * <p>Retrieves a list of consumer authorization rules.</p>
      * 
      * @param request ListConsumerAuthorizationRulesRequest
      * @param headers map
@@ -6750,7 +6800,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of consumer authorization rules.</p>
+     * <p>Retrieves a list of consumer authorization rules.</p>
      * 
      * @param request ListConsumerAuthorizationRulesRequest
      * @return ListConsumerAuthorizationRulesResponse
@@ -6818,10 +6868,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the quota rules directly bound to a specified consumer group. Rules individually bound to consumers within the group are not included. An empty list is returned if no rules are directly bound.</p>
+     * <p>Queries the quota rules directly bound to the specified consumer group without expanding the rules bound to individual consumers within the group. Returns an empty list if no direct binding exists.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of quota throttling rules for a consumer group.</p>
+     * <p>Queries the quota throttling rules for a consumer group.</p>
      * 
      * @param request ListConsumerGroupQuotaRulesRequest
      * @param headers map
@@ -6867,10 +6917,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the quota rules directly bound to a specified consumer group. Rules individually bound to consumers within the group are not included. An empty list is returned if no rules are directly bound.</p>
+     * <p>Queries the quota rules directly bound to the specified consumer group without expanding the rules bound to individual consumers within the group. Returns an empty list if no direct binding exists.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of quota throttling rules for a consumer group.</p>
+     * <p>Queries the quota throttling rules for a consumer group.</p>
      * 
      * @param request ListConsumerGroupQuotaRulesRequest
      * @return ListConsumerGroupQuotaRulesResponse
@@ -7060,7 +7110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query on the HiMarket developer list. You can filter the results by portal ID, username, and developer status. The response includes the developer ID, portal ID, username, and status.</p>
+     * <p>Queries the HiMarket developer list by using paging. You can filter developers by portal ID, username, and developer status. The response includes the developer ID, portal ID, username, and status.</p>
      * 
      * @param request ListDevelopersRequest
      * @param headers map
@@ -7118,7 +7168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query on the HiMarket developer list. You can filter the results by portal ID, username, and developer status. The response includes the developer ID, portal ID, username, and status.</p>
+     * <p>Queries the HiMarket developer list by using paging. You can filter developers by portal ID, username, and developer status. The response includes the developer ID, portal ID, username, and status.</p>
      * 
      * @param request ListDevelopersRequest
      * @return ListDevelopersResponse
@@ -7866,7 +7916,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the API product subscriptions of a specified HiMarket consumer. You can filter the paging results by status. Each subscription record includes the subscription ID, the ID, name, and type of the subscribed API product, the consumer ID and name, and the subscription status.</p>
+     * <p>Performs a paging query for the API product subscriptions of a specified HiMarket consumer. You can filter the subscriptions by status. Each subscription record includes the subscription ID, the ID, name, and type of the subscribed API product, the consumer ID and name, and the subscription status.</p>
      * 
      * @param request ListHiMarketConsumerSubscriptionsRequest
      * @param headers map
@@ -7916,7 +7966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the API product subscriptions of a specified HiMarket consumer. You can filter the paging results by status. Each subscription record includes the subscription ID, the ID, name, and type of the subscribed API product, the consumer ID and name, and the subscription status.</p>
+     * <p>Performs a paging query for the API product subscriptions of a specified HiMarket consumer. You can filter the subscriptions by status. Each subscription record includes the subscription ID, the ID, name, and type of the subscribed API product, the consumer ID and name, and the subscription status.</p>
      * 
      * @param request ListHiMarketConsumerSubscriptionsRequest
      * @return ListHiMarketConsumerSubscriptionsResponse
@@ -7929,7 +7979,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query on the HiMarket consumer list. You can filter the results by consumer name keyword, portal ID, or developer ID. The paging result includes the consumer ID, name, description, and whether each consumer is a primary consumer.</p>
+     * <p>Performs a paging query on the HiMarket consumer list. You can filter the results by consumer name keyword, portal ID, or developer ID. The response includes the consumer ID, name, description, and primary consumer status for each consumer.</p>
      * 
      * @param request ListHiMarketConsumersRequest
      * @param headers map
@@ -7987,7 +8037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query on the HiMarket consumer list. You can filter the results by consumer name keyword, portal ID, or developer ID. The paging result includes the consumer ID, name, description, and whether each consumer is a primary consumer.</p>
+     * <p>Performs a paging query on the HiMarket consumer list. You can filter the results by consumer name keyword, portal ID, or developer ID. The response includes the consumer ID, name, description, and primary consumer status for each consumer.</p>
      * 
      * @param request ListHiMarketConsumersRequest
      * @return ListHiMarketConsumersResponse
@@ -8000,7 +8050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of API operations.</p>
+     * <p>Retrieves the list of API operations.</p>
      * 
      * @param request ListHttpApiOperationsRequest
      * @param headers map
@@ -8082,7 +8132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of API operations.</p>
+     * <p>Retrieves the list of API operations.</p>
      * 
      * @param request ListHttpApiOperationsRequest
      * @return ListHttpApiOperationsResponse
@@ -8411,7 +8461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of MCP tools included in an API product of the MCP Server type and returns a list of tools. Each tool contains three text members (name, title, and description) and four map structure members (inputSchema, outputSchema, annotations, and meta).</p>
+     * <p>Queries the details of Model Context Protocol (MCP) tools in an API product of the MCP Server type. The response returns a list of tools. Each tool includes three text members (name, title, and description) and four map members (inputSchema, outputSchema, annotations, and meta).</p>
      * 
      * @param request ListMcpProductToolsRequest
      * @param headers map
@@ -8439,7 +8489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of MCP tools included in an API product of the MCP Server type and returns a list of tools. Each tool contains three text members (name, title, and description) and four map structure members (inputSchema, outputSchema, annotations, and meta).</p>
+     * <p>Queries the details of Model Context Protocol (MCP) tools in an API product of the MCP Server type. The response returns a list of tools. Each tool includes three text members (name, title, and description) and four map members (inputSchema, outputSchema, annotations, and meta).</p>
      * 
      * @param request ListMcpProductToolsRequest
      * @return ListMcpProductToolsResponse
@@ -8580,7 +8630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of model cards and returns the model name, provider, and source identifier for each card, along with its features, pricing, meta, availablePaths, and snapshots structures. The only request parameter is the provider identifier.</p>
+     * <p>Queries a list of model cards and returns the model name, provider, and source identifier for each card, along with the features, pricing, meta, availablePaths, and snapshots structures. The only request parameter is the provider identifier.</p>
      * 
      * @param request ListModelCardsRequest
      * @param headers map
@@ -8614,7 +8664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of model cards and returns the model name, provider, and source identifier for each card, along with its features, pricing, meta, availablePaths, and snapshots structures. The only request parameter is the provider identifier.</p>
+     * <p>Queries a list of model cards and returns the model name, provider, and source identifier for each card, along with the features, pricing, meta, availablePaths, and snapshots structures. The only request parameter is the provider identifier.</p>
      * 
      * @param request ListModelCardsRequest
      * @return ListModelCardsResponse
@@ -8840,7 +8890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of repositories and organization information for custom plugins hosted on Codeup. Before calling this operation, enable code hosting on Codeup, create organizations and repositories, and authorize API Gateway to access the Codeup account.</p>
+     * <p>Queries the repositories and organization information for custom plug-ins hosted on Codeup. Before calling this operation, enable code hosting on Codeup, create an organization and repositories, and authorize APIG to access your Codeup account.</p>
      * 
      * @param request ListPluginRepositoriesRequest
      * @param headers map
@@ -8868,7 +8918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of repositories and organization information for custom plugins hosted on Codeup. Before calling this operation, enable code hosting on Codeup, create organizations and repositories, and authorize API Gateway to access the Codeup account.</p>
+     * <p>Queries the repositories and organization information for custom plug-ins hosted on Codeup. Before calling this operation, enable code hosting on Codeup, create an organization and repositories, and authorize APIG to access your Codeup account.</p>
      * 
      * @param request ListPluginRepositoriesRequest
      * @return ListPluginRepositoriesResponse
@@ -9149,7 +9199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the list of published API products on a specified HiMarket developer portal. This paging operation returns a list where each item includes the publication record ID, API product ID, API product name, and API product type.</p>
+     * <p>Queries the list of published API products on a specified HiMarket developer portal with paging. Each list item returns the publication record ID, API product ID, API product name, and API product type.</p>
      * 
      * @param request ListPortalPublicationsRequest
      * @param headers map
@@ -9191,7 +9241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the list of published API products on a specified HiMarket developer portal. This paging operation returns a list where each item includes the publication record ID, API product ID, API product name, and API product type.</p>
+     * <p>Queries the list of published API products on a specified HiMarket developer portal with paging. Each list item returns the publication record ID, API product ID, API product name, and API product type.</p>
      * 
      * @param request ListPortalPublicationsRequest
      * @return ListPortalPublicationsResponse
@@ -9204,7 +9254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of HiMarket developer portals under the current tenant by using paging. Each list item returns the portal ID, portal name, portal description, region ID, portal configuration, and portal domain configuration.</p>
+     * <p>Performs a paged query to retrieve the list of HiMarket developer portals under the current tenant. Each list item in the paging result returns the portal ID, portal name, portal description, region ID, portal settings, and portal domain configurations.</p>
      * 
      * @param request ListPortalsRequest
      * @param headers map
@@ -9254,7 +9304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of HiMarket developer portals under the current tenant by using paging. Each list item returns the portal ID, portal name, portal description, region ID, portal configuration, and portal domain configuration.</p>
+     * <p>Performs a paged query to retrieve the list of HiMarket developer portals under the current tenant. Each list item in the paging result returns the portal ID, portal name, portal description, region ID, portal settings, and portal domain configurations.</p>
      * 
      * @param request ListPortalsRequest
      * @return ListPortalsResponse
@@ -9267,10 +9317,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The API operation supports creating multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the unmanaged security groups available for private endpoints.</p>
+     * <p>Queries the list of unmanaged security groups available for a private endpoint.</p>
      * 
      * @param request ListPrivateLinkSecurityGroupsRequest
      * @param headers map
@@ -9312,10 +9362,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The API operation supports creating multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the unmanaged security groups available for private endpoints.</p>
+     * <p>Queries the list of unmanaged security groups available for a private endpoint.</p>
      * 
      * @param request ListPrivateLinkSecurityGroupsRequest
      * @return ListPrivateLinkSecurityGroupsResponse
@@ -9328,7 +9378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query on the product categories under the current tenant. You can search for categories by name keywords. The list items return the category ID, name, description, and icon.</p>
+     * <p>Queries the list of product categories under the current tenant by using paging. You can search by category name keywords. Each item in the list returns the category ID, category name, category description, and category icon.</p>
      * 
      * @param request ListProductCategoriesRequest
      * @param headers map
@@ -9370,7 +9420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query on the product categories under the current tenant. You can search for categories by name keywords. The list items return the category ID, name, description, and icon.</p>
+     * <p>Queries the list of product categories under the current tenant by using paging. You can search by category name keywords. Each item in the list returns the category ID, category name, category description, and category icon.</p>
      * 
      * @param request ListProductCategoriesRequest
      * @return ListProductCategoriesResponse
@@ -9383,7 +9433,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query on the publication information of a specified API product, which is the list of portal records to which the product is published. Each list item includes the publication record ID, portal ID, portal name, API product ID, API product name, and API product type. You can query the records by portal name and perform a parameter query by using paging parameters.</p>
+     * <p>Performs a paged query to retrieve the publication information of a specified API product, which is a list of portal records to which the product is published. Each list item includes the publication record ID, portal ID, portal name, API product ID, API product name, and API product type. You can perform a parameter query by portal name and paging parameters.</p>
      * 
      * @param request ListProductPublicationsRequest
      * @param headers map
@@ -9425,7 +9475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query on the publication information of a specified API product, which is the list of portal records to which the product is published. Each list item includes the publication record ID, portal ID, portal name, API product ID, API product name, and API product type. You can query the records by portal name and perform a parameter query by using paging parameters.</p>
+     * <p>Performs a paged query to retrieve the publication information of a specified API product, which is a list of portal records to which the product is published. Each list item includes the publication record ID, portal ID, portal name, API product ID, API product name, and API product type. You can perform a parameter query by portal name and paging parameters.</p>
      * 
      * @param request ListProductPublicationsRequest
      * @return ListProductPublicationsResponse
@@ -9438,7 +9488,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query to retrieve the list of subscription records for a specified API product. The records can be filtered by subscription status and searched by consumer name keywords. Each record includes the subscription ID, API product ID and name, API product type, consumer ID and name, and subscription status.</p>
+     * <p>Performs a paged query to retrieve the subscribe records for a specified API product. You can use paging to filter the records by subscribe status or search for them by using consumer name keywords. Each record returns the subscribe ID, API product ID and name, API product type, consumer ID and name, and subscribe status.</p>
      * 
      * @param request ListProductSubscriptionsRequest
      * @param headers map
@@ -9484,7 +9534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query to retrieve the list of subscription records for a specified API product. The records can be filtered by subscription status and searched by consumer name keywords. Each record includes the subscription ID, API product ID and name, API product type, consumer ID and name, and subscription status.</p>
+     * <p>Performs a paged query to retrieve the subscribe records for a specified API product. You can use paging to filter the records by subscribe status or search for them by using consumer name keywords. Each record returns the subscribe ID, API product ID and name, API product type, consumer ID and name, and subscribe status.</p>
      * 
      * @param request ListProductSubscriptionsRequest
      * @return ListProductSubscriptionsResponse
@@ -9497,7 +9547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the list of API products under the current tenant. Request parameters can specify the product name, product type, product status, product categories, and the portal where the product is published. List items return the product ID, name, description, status, type, plaintext documentation, icon, product categorization, whether to automatically approve subscribe requests, and MCP, agent, model, and product capability configurations.</p>
+     * <p>Queries the API product list under the current tenant by using paging. Request parameters can specify the product name, product type, product status, product category, and the portal where the product is published. List items return the product ID, name, product description, status, type, documentation, icon, product categorization, whether automatic approval is enabled for subscription requests, and MCP, agent, model, and product capability configurations.</p>
      * 
      * @param request ListProductsRequest
      * @param headers map
@@ -9563,7 +9613,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the list of API products under the current tenant. Request parameters can specify the product name, product type, product status, product categories, and the portal where the product is published. List items return the product ID, name, description, status, type, plaintext documentation, icon, product categorization, whether to automatically approve subscribe requests, and MCP, agent, model, and product capability configurations.</p>
+     * <p>Queries the API product list under the current tenant by using paging. Request parameters can specify the product name, product type, product status, product category, and the portal where the product is published. List items return the product ID, name, product description, status, type, documentation, icon, product categorization, whether automatic approval is enabled for subscription requests, and MCP, agent, model, and product capability configurations.</p>
      * 
      * @param request ListProductsRequest
      * @return ListProductsResponse
@@ -9576,7 +9626,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the list of API products that can be published to a specified HiMarket developer portal. The request accepts the portal ID, API product name, and paging parameters, and the response returns the API product ID, API product name, and API product description for each item.</p>
+     * <p>Queries the list of API products that can be published to a specified HiMarket developer portal. This paged query accepts the portal ID, API product name, and paging parameters. Each item in the response includes the API product ID, name, and description.</p>
      * 
      * @param request ListPublishableProductsRequest
      * @param headers map
@@ -9618,7 +9668,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the list of API products that can be published to a specified HiMarket developer portal. The request accepts the portal ID, API product name, and paging parameters, and the response returns the API product ID, API product name, and API product description for each item.</p>
+     * <p>Queries the list of API products that can be published to a specified HiMarket developer portal. This paged query accepts the portal ID, API product name, and paging parameters. Each item in the response includes the API product ID, name, and description.</p>
      * 
      * @param request ListPublishableProductsRequest
      * @return ListPublishableProductsResponse
@@ -9812,7 +9862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of services.</p>
+     * <p>Retrieves a list of services.</p>
      * 
      * @param request ListServicesRequest
      * @param headers map
@@ -9870,7 +9920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of services.</p>
+     * <p>Retrieves a list of services.</p>
      * 
      * @param request ListServicesRequest
      * @return ListServicesResponse
@@ -10005,7 +10055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists MCP servers that are pending synchronization.</p>
+     * <p>Lists the MCP servers to be synchronized.</p>
      * 
      * @param request ListSyncMCPServerRequest
      * @param headers map
@@ -10047,7 +10097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists MCP servers that are pending synchronization.</p>
+     * <p>Lists the MCP servers to be synchronized.</p>
      * 
      * @param request ListSyncMCPServerRequest
      * @return ListSyncMCPServerResponse
@@ -10227,7 +10277,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Logs out a HiMarket developer account. This operation has no business request parameters. A successful response returns only the requestId, code, and message fields.</p>
+     * <p>Logs a developer out of a HiMarket developer account. This operation has no business request parameters, and a successful response returns only the requestId, code, and message fields.</p>
      * 
      * @param request LogoutDeveloperRequest
      * @param headers map
@@ -10255,7 +10305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Logs out a HiMarket developer account. This operation has no business request parameters. A successful response returns only the requestId, code, and message fields.</p>
+     * <p>Logs a developer out of a HiMarket developer account. This operation has no business request parameters, and a successful response returns only the requestId, code, and message fields.</p>
      * 
      * @param request LogoutDeveloperRequest
      * @return LogoutDeveloperResponse
@@ -10268,7 +10318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Publishes a specified API product to a specified HiMarket portal. The path parameter specifies the API product ID, and the request body specifies the target portal ID. This operation returns the publication record ID for the publication. You can query the publication record by calling ListProductPublications and unpublish the product by calling UnpublishProduct at /himarket/v1/products/{productId}/publications/{publicationId}.</p>
+     * <p>Publishes a specified API product to a specified HiMarket portal. The path parameter specifies the API product ID, and the request body specifies the target portal ID. This operation returns the publication record ID for the current publication. You can query the publication record by calling ListProductPublications and unpublish the API product by calling UnpublishProduct at /himarket/v1/products/{productId}/publications/{publicationId}.</p>
      * 
      * @param request PublishProductRequest
      * @param headers map
@@ -10302,7 +10352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Publishes a specified API product to a specified HiMarket portal. The path parameter specifies the API product ID, and the request body specifies the target portal ID. This operation returns the publication record ID for the publication. You can query the publication record by calling ListProductPublications and unpublish the product by calling UnpublishProduct at /himarket/v1/products/{productId}/publications/{publicationId}.</p>
+     * <p>Publishes a specified API product to a specified HiMarket portal. The path parameter specifies the API product ID, and the request body specifies the target portal ID. This operation returns the publication record ID for the current publication. You can query the publication record by calling ListProductPublications and unpublish the API product by calling UnpublishProduct at /himarket/v1/products/{productId}/publications/{publicationId}.</p>
      * 
      * @param request PublishProductRequest
      * @return PublishProductResponse
@@ -10498,32 +10548,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resets a quota throttling rule on a gateway. This operation takes effect only on AI gateways of version 2.1.21 or later. Resetting clears the historical usage of consumption subjects on the rule.</p>
+     * <p>This operation resets a quota throttling rule on a gateway. Note that this operation takes effect only on AI gateways of a version later than 2.1.21. The reset clears the historical usage of the consumption subjects on the rule.</p>
      * <blockquote>
-     * <p> Recommended call logic:</p>
+     * <p>Recommended call logic:</p>
      * <ul>
      * <li><ol>
      * <li>Perform a dry run to check for rule conflicts.</li>
      * </ol>
      * </li>
      * <li><ul>
-     * <li>Set dryRun to true.</li>
+     * <li>Set dryRun=true.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response contains a conflict preview with conflictHash.</li>
+     * <li>The response returns a conflict preview containing a conflictHash.</li>
      * </ul>
      * </li>
      * <li><ol start="2">
-     * <li>Submit the request after confirmation.</li>
+     * <li>Formally submit the request after confirmation.</li>
      * </ol>
      * </li>
      * <li><ul>
-     * <li>No conflicts: Set dryRun to false and overwrite to false.</li>
+     * <li>No conflicts: Set dryRun=false and overwrite=false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
+     * <li>Conflicts exist and overwrite is confirmed: Set dryRun=false, overwrite=true, and conflictHash=<value returned in the previous step>.</li>
      * </ul>
      * </li>
      * </ul>
@@ -10592,32 +10642,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Resets a quota throttling rule on a gateway. This operation takes effect only on AI gateways of version 2.1.21 or later. Resetting clears the historical usage of consumption subjects on the rule.</p>
+     * <p>This operation resets a quota throttling rule on a gateway. Note that this operation takes effect only on AI gateways of a version later than 2.1.21. The reset clears the historical usage of the consumption subjects on the rule.</p>
      * <blockquote>
-     * <p> Recommended call logic:</p>
+     * <p>Recommended call logic:</p>
      * <ul>
      * <li><ol>
      * <li>Perform a dry run to check for rule conflicts.</li>
      * </ol>
      * </li>
      * <li><ul>
-     * <li>Set dryRun to true.</li>
+     * <li>Set dryRun=true.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response contains a conflict preview with conflictHash.</li>
+     * <li>The response returns a conflict preview containing a conflictHash.</li>
      * </ul>
      * </li>
      * <li><ol start="2">
-     * <li>Submit the request after confirmation.</li>
+     * <li>Formally submit the request after confirmation.</li>
      * </ol>
      * </li>
      * <li><ul>
-     * <li>No conflicts: Set dryRun to false and overwrite to false.</li>
+     * <li>No conflicts: Set dryRun=false and overwrite=false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
+     * <li>Conflicts exist and overwrite is confirmed: Set dryRun=false, overwrite=true, and conflictHash=<value returned in the previous step>.</li>
      * </ul>
      * </li>
      * </ul>
@@ -10674,10 +10724,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the currently active credentials for the AI service.</p>
+     * <p>Queries the currently active credentials for an AI service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the currently active credentials for the AI service.</p>
+     * <p>Queries the currently active credentials for an AI service.</p>
      * 
      * @param request RevealServiceCredentialRequest
      * @param headers map
@@ -10705,10 +10755,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the currently active credentials for the AI service.</p>
+     * <p>Queries the currently active credentials for an AI service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the currently active credentials for the AI service.</p>
+     * <p>Queries the currently active credentials for an AI service.</p>
      * 
      * @param request RevealServiceCredentialRequest
      * @return RevealServiceCredentialResponse
@@ -10762,7 +10812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Subscribes to an API product for a specified HiMarket consumer. The path parameter specifies the consumer ID, and the request body specifies the ID of the API product to subscribe to. The response includes the subscription ID, API product ID and name, API product type, consumer ID and name, and subscription status of the subscription record.</p>
+     * <p>Subscribes to an API product for a specified HiMarket Consumer. The path parameter specifies the consumer ID, the request body specifies the ID of the API product to subscribe to, and the response returns the subscription ID, API product ID and name, API product type, consumer ID and name, and subscription status.</p>
      * 
      * @param request SubscribeProductRequest
      * @param headers map
@@ -10796,7 +10846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Subscribes to an API product for a specified HiMarket consumer. The path parameter specifies the consumer ID, and the request body specifies the ID of the API product to subscribe to. The response includes the subscription ID, API product ID and name, API product type, consumer ID and name, and subscription status of the subscription record.</p>
+     * <p>Subscribes to an API product for a specified HiMarket Consumer. The path parameter specifies the consumer ID, the request body specifies the ID of the API product to subscribe to, and the response returns the subscription ID, API product ID and name, API product type, consumer ID and name, and subscription status.</p>
      * 
      * @param request SubscribeProductRequest
      * @return SubscribeProductResponse
@@ -11406,7 +11456,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds or removes API products in batches under a specified product category. The path parameter specifies the category ID, the action in the request body specifies the operation direction, and productIds specifies the list of API product IDs to process. The response returns only the requestId, code, and message without returning item-by-item processing results.</p>
+     * <p>Adds or removes API products from a specified product category in bulk. The path parameter specifies the category ID. The action field in the request body specifies the operation type, and the productIds field specifies the list of API product IDs to be processed. The response returns only the request ID, status code, and message, and does not return the processing result for each item.</p>
      * 
      * @param request UpdateCategoryProductsRequest
      * @param headers map
@@ -11444,7 +11494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds or removes API products in batches under a specified product category. The path parameter specifies the category ID, the action in the request body specifies the operation direction, and productIds specifies the list of API product IDs to process. The response returns only the requestId, code, and message without returning item-by-item processing results.</p>
+     * <p>Adds or removes API products from a specified product category in bulk. The path parameter specifies the category ID. The action field in the request body specifies the operation type, and the productIds field specifies the list of API product IDs to be processed. The response returns only the request ID, status code, and message, and does not return the processing result for each item.</p>
      * 
      * @param request UpdateCategoryProductsRequest
      * @return UpdateCategoryProductsResponse
@@ -11523,7 +11573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This API operation is replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a consumer authorization rule.</p>
+     * <p>Updates consumer authorization rules.</p>
      * 
      * @param request UpdateConsumerAuthorizationRuleRequest
      * @param headers map
@@ -11568,7 +11618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This API operation is replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a consumer authorization rule.</p>
+     * <p>Updates consumer authorization rules.</p>
      * 
      * @param request UpdateConsumerAuthorizationRuleRequest
      * @return UpdateConsumerAuthorizationRuleResponse
@@ -11632,7 +11682,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the status of a HiMarket developer by developer ID. The request body specifies the target status and portal ID. A successful response returns only the requestId, code, and message, without returning the updated developer information.</p>
+     * <p>Updates the status of a HiMarket developer by developer ID. The request body specifies the target status and portal ID. A successful response returns only the requestId, code, and message, and does not return the updated developer information.</p>
      * 
      * @param request UpdateDeveloperStatusRequest
      * @param headers map
@@ -11670,7 +11720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the status of a HiMarket developer by developer ID. The request body specifies the target status and portal ID. A successful response returns only the requestId, code, and message, without returning the updated developer information.</p>
+     * <p>Updates the status of a HiMarket developer by developer ID. The request body specifies the target status and portal ID. A successful response returns only the requestId, code, and message, and does not return the updated developer information.</p>
      * 
      * @param request UpdateDeveloperStatusRequest
      * @return UpdateDeveloperStatusResponse
@@ -12092,7 +12142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation updates a quota rule on a gateway. Note that this operation takes effect only on AI gateways of a version later than 2.1.21. The update retains the historical usage of the consumption subjects on the rule.</p>
+     * <p>This operation modifies a quota rule on a gateway. Note that this operation takes effect only on AI gateways of a version later than 2.1.21. The modification retains the historical usage of the consumers associated with the rule.</p>
      * <blockquote>
      * <p>Recommended call logic:</p>
      * <ul>
@@ -12105,11 +12155,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response returns a conflict preview containing a conflictHash.</li>
+     * <li>The response returns a conflict preview that contains a conflictHash.</li>
      * </ul>
      * </li>
      * <li><ol start="2">
-     * <li>Formally submit the request after confirmation.</li>
+     * <li>Submit the request after confirmation.</li>
      * </ol>
      * </li>
      * <li><ul>
@@ -12124,7 +12174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Updates a quota throttling rule on a gateway.</p>
+     * <p>Modifies a quota throttling rule on a gateway.</p>
      * 
      * @param request UpdateGatewayQuotaRuleRequest
      * @param headers map
@@ -12186,7 +12236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation updates a quota rule on a gateway. Note that this operation takes effect only on AI gateways of a version later than 2.1.21. The update retains the historical usage of the consumption subjects on the rule.</p>
+     * <p>This operation modifies a quota rule on a gateway. Note that this operation takes effect only on AI gateways of a version later than 2.1.21. The modification retains the historical usage of the consumers associated with the rule.</p>
      * <blockquote>
      * <p>Recommended call logic:</p>
      * <ul>
@@ -12199,11 +12249,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response returns a conflict preview containing a conflictHash.</li>
+     * <li>The response returns a conflict preview that contains a conflictHash.</li>
      * </ul>
      * </li>
      * <li><ol start="2">
-     * <li>Formally submit the request after confirmation.</li>
+     * <li>Submit the request after confirmation.</li>
      * </ol>
      * </li>
      * <li><ul>
@@ -12218,7 +12268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Updates a quota throttling rule on a gateway.</p>
+     * <p>Modifies a quota throttling rule on a gateway.</p>
      * 
      * @param request UpdateGatewayQuotaRuleRequest
      * @return UpdateGatewayQuotaRuleResponse
@@ -12231,7 +12281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Enables or disables a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.21.</p>
+     * <p>This operation enables or disables a quota rule on a gateway. Note that this operation applies only to AI gateways of a version later than 2.1.21.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables or disables a quota throttling rule for a gateway.</p>
@@ -12272,7 +12322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Enables or disables a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.21.</p>
+     * <p>This operation enables or disables a quota rule on a gateway. Note that this operation applies only to AI gateways of a version later than 2.1.21.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables or disables a quota throttling rule for a gateway.</p>
@@ -12440,7 +12490,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a route for an HTTP API.</p>
+     * <p>Updates the route of an HTTP API.</p>
      * 
      * @param request UpdateHttpApiRouteRequest
      * @param headers map
@@ -12456,6 +12506,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dfpConfig)) {
+            body.put("dfpConfig", request.dfpConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.domainIds)) {
@@ -12498,7 +12552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a route for an HTTP API.</p>
+     * <p>Updates the route of an HTTP API.</p>
      * 
      * @param request UpdateHttpApiRouteRequest
      * @return UpdateHttpApiRouteResponse
@@ -12511,7 +12565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only sources of the <strong>Container Service</strong> type can update the Ingress listener configuration.</p>
+     * <p>Only sources of the <strong>Container Service</strong> type are allowed to update the Ingress listener configurations.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an MCP server.</p>
@@ -12592,7 +12646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only sources of the <strong>Container Service</strong> type can update the Ingress listener configuration.</p>
+     * <p>Only sources of the <strong>Container Service</strong> type are allowed to update the Ingress listener configurations.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an MCP server.</p>
@@ -12840,7 +12894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the name, description, and portal configurations of a HiMarket developer portal by portal ID. The request body is in JSON format. A successful response returns the ID of the updated portal.</p>
+     * <p>Updates the name, description, and portal configuration of a HiMarket developer portal by portal ID. The request body is in JSON format, and a successful response returns the ID of the updated portal.</p>
      * 
      * @param request UpdatePortalRequest
      * @param headers map
@@ -12888,7 +12942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the name, description, and portal configurations of a HiMarket developer portal by portal ID. The request body is in JSON format. A successful response returns the ID of the updated portal.</p>
+     * <p>Updates the name, description, and portal configuration of a HiMarket developer portal by portal ID. The request body is in JSON format, and a successful response returns the ID of the updated portal.</p>
      * 
      * @param request UpdatePortalRequest
      * @return UpdatePortalResponse
@@ -12982,7 +13036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the name, description, and icon of a product category by ID. The request body is in JSON format, and the response returns only the request ID, status code, and response message.</p>
+     * <p>Updates the name, description, and icon of a product category by category ID. The request body is in JSON format, and the response returns only the request ID, response status code, and response message.</p>
      * 
      * @param request UpdateProductCategoryRequest
      * @param headers map
@@ -13024,7 +13078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the name, description, and icon of a product category by ID. The request body is in JSON format, and the response returns only the request ID, status code, and response message.</p>
+     * <p>Updates the name, description, and icon of a product category by category ID. The request body is in JSON format, and the response returns only the request ID, response status code, and response message.</p>
      * 
      * @param request UpdateProductCategoryRequest
      * @return UpdateProductCategoryResponse

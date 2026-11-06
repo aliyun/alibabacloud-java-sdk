@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHiMarketConsumerSubscriptionsRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries per page. The default value and valid values are not specified in the API definition.</p>
+     * <p>The maximum number of entries per page. The default value and valid values are not declared in the API definition.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListHiMarketConsumerSubscriptionsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of the page to return. Pages start from 1.</p>
+     * <p>The page number. Pages start from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class ListHiMarketConsumerSubscriptionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The subscription status, which is used to filter subscriptions. Valid values: PENDING and APPROVED.</p>
+     * <p>The subscription status. Filters subscriptions by status. Valid values: PENDING and APPROVED.</p>
      * 
      * <strong>example:</strong>
      * <p>APPROVED</p>

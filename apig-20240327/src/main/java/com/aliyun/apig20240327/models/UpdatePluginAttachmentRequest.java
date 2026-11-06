@@ -11,7 +11,7 @@ public class UpdatePluginAttachmentRequest extends TeaModel {
     public java.util.List<String> attachResourceIds;
 
     /**
-     * <p>Specifies whether to enable the plugin mount.</p>
+     * <p>Specifies whether the plugin mount is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHttpApiRoutesRequest extends TeaModel {
     /**
-     * <p>The backend service name. You can use this parameter to filter routes.</p>
+     * <p>The backend service name. You can use this name to filter routes.</p>
      * 
      * <strong>example:</strong>
      * <p>test-svc</p>
@@ -14,7 +14,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String backendServiceName;
 
     /**
-     * <p>Filters the API list by a specific consumer authorization rule ID. The API list in the response contains only authorized APIs.</p>
+     * <p>The ID of the consumer authorization rule used to filter the route list. The route list in the response contains only authorized routes.</p>
      * 
      * <strong>example:</strong>
      * <p>cas-xxx</p>
@@ -32,7 +32,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String deployStatuses;
 
     /**
-     * <p>Filters route information by domain name ID.</p>
+     * <p>The ID of the domain name used to filter route information.</p>
      * 
      * <strong>example:</strong>
      * <p>d-xxx</p>
@@ -50,7 +50,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>Specifies whether the request is for a deployment scenario.</p>
+     * <p>Specifies whether the query is for a deployment scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,7 +77,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Performs a fuzzy match by route name.</p>
+     * <p>The route name used for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>item</p>
@@ -86,7 +86,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String nameLike;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. If you do not specify this parameter, the default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -95,7 +95,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The page size. Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -104,7 +104,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Performs a fuzzy match by route path.</p>
+     * <p>The route path used for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>/v1</p>
@@ -113,7 +113,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String pathLike;
 
     /**
-     * <p>Includes consumer authorization information in the response.</p>
+     * <p>Specifies whether to include consumer authorization information in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -122,7 +122,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public Boolean withAuthPolicyInfo;
 
     /**
-     * <p>Includes the authorization rule list of the specified consumer ID in each route in the response.</p>
+     * <p>Specifies whether to include the authorization rule list of the specified consumer ID in each route in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>cs-xxx</p>
@@ -131,7 +131,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String withConsumerInfoById;
 
     /**
-     * <p>Includes the mount information of the specified plug-in ID in each route in the response.</p>
+     * <p>Specifies whether to include the mount information of the specified plugin ID in each route in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>pl-xxx</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDashboardRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language. Valid values:</p>
      * <ul>
      * <li>zh: Chinese.</li>
      * <li>en: English.</li>
@@ -35,12 +35,10 @@ public class GetDashboardRequest extends TeaModel {
     /**
      * <p>The name of the dashboard. Valid values:</p>
      * <ul>
-     * <li>LOG: access log.</li>
-     * <li>PLUGIN: plugin log.</li>
+     * <li>LOG: Access log.</li>
+     * <li>PLUGIN: Plugin log.
+     * Note: This parameter is required. If it is not specified, the API returns the InvalidParameter.IsEmpty(400) error.</li>
      * </ul>
-     * <blockquote>
-     * <p>Note: This parameter is required. If this parameter is not specified, the API returns InvalidParameter.IsEmpty (400).</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>PLUGIN</p>
@@ -49,7 +47,7 @@ public class GetDashboardRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The plugin type ID.</p>
+     * <p>The plugin class ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pls-dn82a9djd8z****</p>
@@ -78,11 +76,9 @@ public class GetDashboardRequest extends TeaModel {
     /**
      * <p>The source of the dashboard. Valid values:</p>
      * <ul>
-     * <li>SLS: log dashboard.</li>
+     * <li>SLS: Log dashboard.
+     * Note: This parameter is required. If it is not specified, the API returns the InvalidParameter.IsEmpty(400) error.</li>
      * </ul>
-     * <blockquote>
-     * <p>Note: This parameter is required. If this parameter is not specified, the API returns InvalidParameter.IsEmpty (400).</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>SLS</p>

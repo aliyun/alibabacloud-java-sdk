@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewayQuotaRulesRequest extends TeaModel {
     /**
-     * <p>The keyword used for fuzzy matching of rule names.</p>
+     * <p>The keyword in the rule name for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>daily</p>
@@ -14,7 +14,7 @@ public class ListGatewayQuotaRulesRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The maximum number of records to retrieve at a time. This parameter is not supported.</p>
+     * <p>The maximum number of records to return in a single request. This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

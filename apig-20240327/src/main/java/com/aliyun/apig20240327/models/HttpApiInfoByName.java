@@ -41,7 +41,7 @@ public class HttpApiInfoByName extends TeaModel {
     public Boolean versionEnabled;
 
     /**
-     * <p>The versioned API version information.</p>
+     * <p>The version information of the versioned APIs.</p>
      */
     @NameInMap("versionedHttpApis")
     public java.util.List<HttpApiApiInfo> versionedHttpApis;

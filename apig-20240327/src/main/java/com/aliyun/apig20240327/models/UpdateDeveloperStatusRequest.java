@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDeveloperStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the portal to which the developer belongs. This is the primary ID of the portal resource. You can obtain this ID from the portalId field in the CreatePortal response or the portalId field of an item in the ListPortals response.</p>
+     * <p>The ID of the portal to which the developer belongs. This is the primary ID of the portal resource. You can obtain this ID from the portalId field in the response of CreatePortal or the portalId field of an item in the ListPortals response.</p>
      * 
      * <strong>example:</strong>
      * <p>portal-xxxxxxxx</p>

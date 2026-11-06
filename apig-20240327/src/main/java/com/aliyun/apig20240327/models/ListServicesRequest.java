@@ -14,7 +14,7 @@ public class ListServicesRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The service name for exact match.</p>
+     * <p>The exact name of the service to query.</p>
      * 
      * <strong>example:</strong>
      * <p>user-service</p>

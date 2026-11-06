@@ -85,7 +85,7 @@ public class VerifyMigrationTaskResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The summary of the incompatible rule, in the format of request URI → destination service.</p>
+         * <p>The summary of the incompatible rule, including the request URI and the destination service.</p>
          * 
          * <strong>example:</strong>
          * <p>/api/v1/pets -&gt; pet-service</p>
@@ -141,7 +141,7 @@ public class VerifyMigrationTaskResponseBody extends TeaModel {
         public Boolean isSupported;
 
         /**
-         * <p>The description of the check result, such as the failure reason or incompatibility summary. This value is from the Istio validation Reason.</p>
+         * <p>The description of the check result, such as the failure cause or incompatibility summary, which is derived from the Istio validation reason.</p>
          * 
          * <strong>example:</strong>
          * <p>all routes supported</p>
@@ -150,7 +150,7 @@ public class VerifyMigrationTaskResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Indicates whether the check is successful, which means whether the Istiod query link is working properly.</p>
+         * <p>Indicates whether the check is successfully executed, which reflects whether the Istiod query link is functioning properly.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

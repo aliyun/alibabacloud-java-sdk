@@ -29,16 +29,16 @@ public class CreateServiceRequest extends TeaModel {
     public java.util.List<CreateServiceRequestServiceConfigs> serviceConfigs;
 
     /**
-     * <p>The service source. Valid values:</p>
+     * <p>The source of the service. Valid values:</p>
      * <ul>
-     * <li>MSE_NACOS: a service in Microservices Engine (MSE) Nacos.</li>
-     * <li>K8S: a service in a Kubernetes cluster of Container Service.</li>
-     * <li>VIP: a fixed address service.</li>
-     * <li>DNS: a DNS domain name service.</li>
-     * <li>FC3: a service in Function Compute.</li>
-     * <li>SAE_K8S_SERVICE: a Serverless App Engine (SAE) Kubernetes service.</li>
-     * <li>AI: an AI service.</li>
-     * <li>AGENT: an agent service.</li>
+     * <li>MSE_NACOS: services in MSE Nacos.</li>
+     * <li>K8S: services in Container Service for Kubernetes clusters.</li>
+     * <li>VIP: fixed address services.</li>
+     * <li>DNS: DNS domain name services.</li>
+     * <li>FC3: services in Function Compute.</li>
+     * <li>SAE_K8S_SERVICE: SAE Kubernetes services.</li>
+     * <li>AI: AI services.</li>
+     * <li>AGENT: agent services.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -131,13 +131,13 @@ public class CreateServiceRequest extends TeaModel {
         public java.util.List<String> addresses;
 
         /**
-         * <p>The agent service configuration. This parameter is required when sourceType is set to AGENT.</p>
+         * <p>The agent service configuration. This parameter is required when the sourceType is AGENT.</p>
          */
         @NameInMap("agentServiceConfig")
         public AgentServiceConfig agentServiceConfig;
 
         /**
-         * <p>The AI service configuration. This parameter is required when sourceType is set to AI.</p>
+         * <p>The AI service configuration. This parameter is required when the sourceType is AI.</p>
          */
         @NameInMap("aiServiceConfig")
         public AiServiceConfig aiServiceConfig;
@@ -158,7 +158,7 @@ public class CreateServiceRequest extends TeaModel {
         public String expressType;
 
         /**
-         * <p>The name of the service group. This parameter is required when sourceType is set to MSE_NACOS.</p>
+         * <p>The name of the service group. This parameter is required when the sourceType is MSE_NACOS.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT_GROUP</p>
@@ -176,7 +176,7 @@ public class CreateServiceRequest extends TeaModel {
         public String modelProviderId;
 
         /**
-         * <p>The name of the service. This parameter is required for FC3.</p>
+         * <p>The name of the service. This parameter is required when the sourceType is FC3.</p>
          * 
          * <strong>example:</strong>
          * <p>user-service</p>
@@ -185,12 +185,12 @@ public class CreateServiceRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The namespace of the service.</p>
+         * <p>The namespace of the service:</p>
          * <ul>
-         * <li>When sourceType is set to K8S, this parameter specifies the namespace where the Kubernetes service resides.</li>
-         * <li>When sourceType is set to MSE_NACOS, this parameter specifies the namespace in Nacos.</li>
+         * <li>When the sourceType is K8S, this parameter specifies the namespace where the Kubernetes service resides.</li>
+         * <li>When the sourceType is MSE_NACOS, this parameter specifies the namespace in Nacos.
+         * This parameter is required when the sourceType is K8S or MSE_NACOS.</li>
          * </ul>
-         * <p>This parameter is required when sourceType is set to K8S or MSE_NACOS.</p>
          * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>
@@ -217,7 +217,7 @@ public class CreateServiceRequest extends TeaModel {
         public String sourceId;
 
         /**
-         * <p>The validation options, which include configuration options related to service validation.</p>
+         * <p>The validation options, which are configuration options related to service validation.</p>
          */
         @NameInMap("validationOptions")
         public CreateServiceRequestServiceConfigsValidationOptions validationOptions;

@@ -76,7 +76,7 @@ public class GetProductResponseBody extends TeaModel {
 
     public static class GetProductResponseBodyData extends TeaModel {
         /**
-         * <p>The Agent-related configurations of the API product. The agentAPIConfig member includes agentProtocols, which is a list of protocols supported by the agent, and routes, which is a list of routes.</p>
+         * <p>The agent-related configurations of the API product. The agentAPIConfig member includes agentProtocols (the list of protocols supported by the agent) and routes (the list of routes).</p>
          */
         @NameInMap("agentConfig")
         public HiMarketAgentConfig agentConfig;
@@ -91,7 +91,7 @@ public class GetProductResponseBody extends TeaModel {
          * <p>The description of the API product.</p>
          * 
          * <strong>example:</strong>
-         * <p>An API product that provides weather query capabilities</p>
+         * <p>API product that provides weather query capabilities</p>
          */
         @NameInMap("description")
         public String description;
@@ -100,31 +100,31 @@ public class GetProductResponseBody extends TeaModel {
          * <p>The documentation content of the API product.</p>
          * 
          * <strong>example:</strong>
-         * <p>The invocation methods, parameters, and billing instructions for this product</p>
+         * <p>Invocation methods, parameters, and billing instructions for this product</p>
          */
         @NameInMap("document")
         public String document;
 
         /**
-         * <p>The capability configurations of the API product. Currently, this includes only the modelFeature member for model capabilities, which contains model, maxTokens, temperature, streaming, webSearch, enableThinking, and enableMultiModal.</p>
+         * <p>The capability configurations of the API product. Currently, this includes only the modelFeature (model capabilities) member, which contains model, maxTokens, temperature, streaming, webSearch, enableThinking, and enableMultiModal.</p>
          */
         @NameInMap("feature")
         public HiMarketProductFeature feature;
 
         /**
-         * <p>The icon configurations of the API product, which consist of two fields: the icon type (type) and the icon information (value).</p>
+         * <p>The icon configuration of the API product, which consists of two fields: icon type (type) and icon information (value).</p>
          */
         @NameInMap("icon")
         public HiMarketIcon icon;
 
         /**
-         * <p>The MCP-related configurations of the API product. The members include mcpServerName for the MCP server name, tools, mcpServerConfig for the path and domains, and meta for the protocol.</p>
+         * <p>The MCP-related configurations of the API product. The members include mcpServerName (the name of the MCP server), tools, mcpServerConfig (path and domains), and meta (protocol).</p>
          */
         @NameInMap("mcpConfig")
         public HiMarketMcpConfig mcpConfig;
 
         /**
-         * <p>The model API-related configurations of the API product. The modelAPIConfig member includes modelCategory for the AI model category, aiProtocols for the list of AI API protocols, and routes for the list of routes.</p>
+         * <p>The model API-related configurations of the API product. The modelAPIConfig member includes modelCategory (the AI model category), aiProtocols (the list of AI API protocols), and routes (the list of routes).</p>
          */
         @NameInMap("modelConfig")
         public HiMarketModelConfig modelConfig;
@@ -166,7 +166,7 @@ public class GetProductResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the API product. The set of valid values is not declared in the API definition. Refer to the types displayed in the console.</p>
+         * <p>The type of the API product. The valid values are not declared in the API definition. Refer to the types displayed in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>

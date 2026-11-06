@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHiMarketConsumersRequest extends TeaModel {
     /**
-     * <p>The developer ID. This parameter is used to filter consumers by developer.</p>
+     * <p>The developer ID used to filter consumers.</p>
      * 
      * <strong>example:</strong>
      * <p>dev-xxxxxxxx</p>
@@ -32,7 +32,7 @@ public class ListHiMarketConsumersRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token. Pass the nextToken value returned in the previous response to retrieve the next page. Do not pass this parameter for the first query.</p>
+     * <p>The pagination cursor. Pass the nextToken value returned in the previous response to retrieve the next page. Do not specify this parameter for the first query.</p>
      * 
      * <strong>example:</strong>
      * <p>token-xxxxxxxx</p>
@@ -59,7 +59,7 @@ public class ListHiMarketConsumersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The portal ID. This parameter is used to filter consumers by portal.</p>
+     * <p>The portal ID used to filter consumers.</p>
      * 
      * <strong>example:</strong>
      * <p>portal-xxxxxxxx</p>

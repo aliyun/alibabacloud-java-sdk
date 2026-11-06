@@ -41,7 +41,7 @@ public class CreateAiModelProviderRequest extends TeaModel {
     public java.util.List<String> serviceIds;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>The client token that ensures the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>

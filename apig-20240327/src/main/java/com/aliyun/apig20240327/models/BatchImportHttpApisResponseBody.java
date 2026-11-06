@@ -76,7 +76,7 @@ public class BatchImportHttpApisResponseBody extends TeaModel {
 
     public static class BatchImportHttpApisResponseBodyData extends TeaModel {
         /**
-         * <p>The asynchronous task ID. You can call the GetBatchImportTask operation to query the task progress.</p>
+         * <p>The ID of the asynchronous task. You can call the GetBatchImportTask operation to query the task progress.</p>
          * 
          * <strong>example:</strong>
          * <p>async-task-xxx</p>

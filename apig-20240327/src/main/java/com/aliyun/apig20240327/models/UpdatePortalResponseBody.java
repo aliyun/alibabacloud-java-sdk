@@ -76,7 +76,7 @@ public class UpdatePortalResponseBody extends TeaModel {
 
     public static class UpdatePortalResponseBodyData extends TeaModel {
         /**
-         * <p>The portal ID. It is the ID of the updated portal, which corresponds to the primary ID of the portal resource specified by the portalId path parameter.</p>
+         * <p>The portal ID. This is the ID of the updated portal and corresponds to the primary ID of the portal resource specified by the portalId path parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>portal-xxxxxxxx</p>

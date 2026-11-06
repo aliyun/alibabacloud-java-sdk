@@ -59,7 +59,7 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>Specifies whether to group the results by API.</p>
+     * <p>Specifies whether to group by API.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

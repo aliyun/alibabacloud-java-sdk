@@ -87,8 +87,8 @@ public class ListGatewaysResponseBody extends TeaModel {
         /**
          * <p>The protocol. Valid values:</p>
          * <ul>
-         * <li>TCP.</li>
-         * <li>UDP.</li>
+         * <li>TCP: TCP.</li>
+         * <li>UDP: UDP.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,7 +205,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public java.util.List<ListGatewaysResponseBodyDataItemsLoadBalancersPorts> ports;
 
         /**
-         * <p>The status of the load balancing. Valid values:</p>
+         * <p>The load balancing status. Valid values:</p>
          * <ul>
          * <li>Ready: Active.</li>
          * <li>NotCreate: Not associated with an instance.</li>
@@ -220,7 +220,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         /**
          * <p>The load balancing type of the gateway. Valid values:</p>
          * <ul>
-         * <li>NLB: Network load balancing.</li>
+         * <li>NLB: Network Load Balancer (NLB) load balancing.</li>
          * <li>CLB: Classic load balancing.</li>
          * </ul>
          * 
@@ -327,7 +327,7 @@ public class ListGatewaysResponseBody extends TeaModel {
 
     public static class ListGatewaysResponseBodyDataItemsNetworkAccessConfig extends TeaModel {
         /**
-         * <p>The ID of the security group configured for the internal endpoint. The security group belongs to the VPC selected by the user and is a non-managed security group.</p>
+         * <p>The ID of the security group configured for the private endpoint. The security group belongs to the VPC selected by the user and is a non-managed security group.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp1example123456789</p>
@@ -336,7 +336,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public String endpointSecurityGroupId;
 
         /**
-         * <p>The access ingress type of the gateway.</p>
+         * <p>The gateway access ingress type.</p>
          * 
          * <strong>example:</strong>
          * <p>UnionSearchMCP</p>
@@ -411,7 +411,7 @@ public class ListGatewaysResponseBody extends TeaModel {
 
     public static class ListGatewaysResponseBodyDataItemsPrivateLink extends TeaModel {
         /**
-         * <p>The connection status between the internal endpoint and the endpoint service.</p>
+         * <p>The connection status between the private endpoint and the endpoint service.</p>
          * 
          * <strong>example:</strong>
          * <p>Connected</p>
@@ -438,7 +438,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public String endpointId;
 
         /**
-         * <p>The ID of the security group configured for the internal endpoint.</p>
+         * <p>The ID of the security group configured for the private endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp1example123456789</p>
@@ -447,7 +447,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public String endpointSecurityGroupId;
 
         /**
-         * <p>The status of the internal endpoint.</p>
+         * <p>The status of the private endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -456,7 +456,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public String endpointStatus;
 
         /**
-         * <p>The error code of the most recent fault that occurred during the create or delete procedure of the private network ingress. This parameter is not returned if no error message is available.</p>
+         * <p>The error code of the most recent fault that occurred during the private network ingress creation or delete procedure. This parameter is not returned if no error message is available.</p>
          * 
          * <strong>example:</strong>
          * <p>Forbidden.RAM</p>
@@ -465,7 +465,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public String lastErrorCode;
 
         /**
-         * <p>The description of the most recent fault that occurred during the create or delete procedure of the private network ingress. You can use this description along with the error code to troubleshoot the issue. This parameter is not returned if no error message is available.</p>
+         * <p>The description of the most recent fault that occurred during the private network ingress creation or delete procedure. You can use this description along with the error code to troubleshoot the issue. This parameter is not returned if no error message is available.</p>
          * 
          * <strong>example:</strong>
          * <p>private ingress CheckProductOpen failed (Forbidden.RAM)</p>
@@ -474,7 +474,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public String lastErrorMessage;
 
         /**
-         * <p>The time when the system last obtained the status of the internal endpoint. The time is in RFC 3339 format, such as 2026-11-02T10:00:00Z. This parameter is not returned if the status has not been obtained.</p>
+         * <p>The time when the system last obtained the status of the private endpoint. The time is in RFC 3339 format, such as 2026-11-02T10:00:00Z. This parameter is not returned if the status has not been obtained.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-11-02T10:00:00Z</p>
@@ -483,7 +483,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public String observedAt;
 
         /**
-         * <p>Indicates whether the internal endpoint may continue to incur charges. A value of true indicates that the endpoint has been created and its release has not been confirmed. A value of false indicates that there is no such charge prompt currently. The actual charges are subject to the bill.</p>
+         * <p>Indicates whether the private endpoint may continue to incur charges. A value of true indicates that the endpoint has been created and its release has not been confirmed. A value of false indicates that there is no charge prompt. Actual charges are subject to the bill.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -492,7 +492,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public Boolean resourceMayBeCharged;
 
         /**
-         * <p>The current processing stage of the internal ingress. A value of Ready indicates that the internal ingress is ready.</p>
+         * <p>The current processing stage of the private ingress. A value of Ready indicates that the private ingress is ready.</p>
          * 
          * <strong>example:</strong>
          * <p>Ready</p>
@@ -799,7 +799,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         /**
          * <p>The source from which the gateway was created. Valid values:</p>
          * <ul>
-         * <li>Console: Alibaba Cloud Management Console.</li>
+         * <li>Console: The console.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -809,7 +809,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public String createFrom;
 
         /**
-         * <p>The timestamp when the gateway was created. Unit: milliseconds.</p>
+         * <p>The creation timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
@@ -818,7 +818,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>Indicates whether elastic scaling is enabled. A value of true indicates that elastic scaling is enabled. A value of false indicates that elastic scaling is disabled. A value of null or a missing value indicates that the status is unknown. This parameter is for query and display purposes only.</p>
+         * <p>Indicates whether elastic scaling is enabled. A value of true indicates that elastic scaling is enabled. A value of false indicates that elastic scaling is disabled. A value of null or an empty value indicates that the status is unknown. This parameter is for query and display purposes only.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -827,7 +827,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public Boolean elasticEnabled;
 
         /**
-         * <p>The expiration timestamp of the subscription gateway. Unit: milliseconds.</p>
+         * <p>The expiration timestamp for subscription instances. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>172086834548</p>
@@ -905,7 +905,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The network access configuration of the gateway, including the access ingress type and the security group used by the internal endpoint. This parameter is returned only when the gateway is configured with an internal ingress.</p>
+         * <p>The network access configuration of the gateway, including the access ingress type and the security group used by the private endpoint. This parameter is returned only when the gateway is configured with a private ingress.</p>
          */
         @NameInMap("networkAccessConfig")
         public ListGatewaysResponseBodyDataItemsNetworkAccessConfig networkAccessConfig;
@@ -943,7 +943,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         /**
          * <p>The gateway specification. Valid values:</p>
          * <ul>
-         * <li>apigw.small.x1: Small.</li>
+         * <li>apigw.small.x1: Small specification.</li>
          * </ul>
          * 
          * <strong>example:</strong>

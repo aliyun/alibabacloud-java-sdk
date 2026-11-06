@@ -91,7 +91,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String consumerAuthorizationRuleId;
 
         /**
-         * <p>The ID of the consumer.</p>
+         * <p>The consumer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-csheiftlhtgmp0j0hp4g</p>
@@ -124,7 +124,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public EnvironmentInfo environmentInfo;
 
         /**
-         * <p>The expiration mode. Valid values: LongTerm, ShortTerm.</p>
+         * <p>The expiration mode. Valid values: LongTerm and ShortTerm.</p>
          * 
          * <strong>example:</strong>
          * <p>ShortTerm</p>
@@ -142,7 +142,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String expireStatus;
 
         /**
-         * <p>The expiration timestamp.</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>172086834548</p>
@@ -157,7 +157,7 @@ public class ListConsumerAuthorizationRulesResponseBody extends TeaModel {
         public GatewayInfo gatewayInfo;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2351944</p>

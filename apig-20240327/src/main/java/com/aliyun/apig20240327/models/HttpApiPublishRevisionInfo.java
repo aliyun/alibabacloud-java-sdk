@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HttpApiPublishRevisionInfo extends TeaModel {
     /**
-     * <p>The API publish scenario.</p>
+     * <p>The API release scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>SingleService</p>
@@ -44,7 +44,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
     public java.util.List<HttpApiDomainInfo> customDomains;
 
     /**
-     * <p>The DNS domain name configuration. In the single-service scenario, only one entry can be configured. In the by-ratio or by-content scenario, multiple entries can be configured.</p>
+     * <p>The DNS domain name configuration. Only one entry can be configured in the single service scenario, and multiple entries can be configured in the by ratio and by content scenarios.</p>
      */
     @NameInMap("dnsConfigs")
     public java.util.List<HttpApiPublishRevisionInfoDnsConfigs> dnsConfigs;
@@ -68,13 +68,13 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
     public Boolean isCurrentVersion;
 
     /**
-     * <p>The list of API operations.</p>
+     * <p>The API operation list.</p>
      */
     @NameInMap("operations")
     public java.util.List<HttpApiOperationInfo> operations;
 
     /**
-     * <p>The version number of the published API.</p>
+     * <p>The version number of the API release.</p>
      * 
      * <strong>example:</strong>
      * <p>apr-xxx</p>
@@ -83,7 +83,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
     public String revisionId;
 
     /**
-     * <p>The existing service configurations. In a single-service scenario, only one entry can be configured. In proportion-based, content-based, or tag-based scenarios, multiple entries can be configured.</p>
+     * <p>The existing service configuration. Only one entry can be configured in the single service scenario, and multiple entries can be configured in the by ratio, by content, and by tag scenarios.</p>
      */
     @NameInMap("serviceConfigs")
     public java.util.List<HttpApiPublishRevisionInfoServiceConfigs> serviceConfigs;
@@ -98,7 +98,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
     public java.util.List<HttpApiDomainInfo> subDomains;
 
     /**
-     * <p>The static address configurations. In a single-service scenario, only one entry can be configured. In proportion-based or content-based scenarios, multiple entries can be configured.</p>
+     * <p>The fixed address configuration. Only one entry can be configured in the single service scenario, and multiple entries can be configured in the by ratio and by content scenarios.</p>
      */
     @NameInMap("vipConfigs")
     public java.util.List<HttpApiPublishRevisionInfoVipConfigs> vipConfigs;
@@ -214,7 +214,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
 
     public static class HttpApiPublishRevisionInfoCloudProductConfigContainerServiceConfigs extends TeaModel {
         /**
-         * <p>The ID of the associated service.</p>
+         * <p>The associated service ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gs-xxx</p>
@@ -256,7 +256,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The service protocol.</p>
+         * <p>The terms of service.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -338,7 +338,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
 
     public static class HttpApiPublishRevisionInfoCloudProductConfigFunctionConfigs extends TeaModel {
         /**
-         * <p>The ID of the associated service.</p>
+         * <p>The associated service ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gs-xxx</p>
@@ -428,7 +428,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
 
     public static class HttpApiPublishRevisionInfoCloudProductConfigMseNacosConfigs extends TeaModel {
         /**
-         * <p>The ID of the associated service.</p>
+         * <p>The associated service ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gs-xxx</p>
@@ -550,7 +550,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         public java.util.List<HttpApiPublishRevisionInfoCloudProductConfigContainerServiceConfigs> containerServiceConfigs;
 
         /**
-         * <p>The Function Compute (FC) configuration.</p>
+         * <p>The FC configuration.</p>
          */
         @NameInMap("functionConfigs")
         public java.util.List<HttpApiPublishRevisionInfoCloudProductConfigFunctionConfigs> functionConfigs;
@@ -608,13 +608,13 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         public java.util.List<String> dnsList;
 
         /**
-         * <p>The match condition. This parameter is valid only in the by-content scenario.</p>
+         * <p>The match condition. This parameter takes effect only in the by content scenario.</p>
          */
         @NameInMap("match")
         public HttpApiBackendMatchConditions match;
 
         /**
-         * <p>The weight. Valid values: 1 to 100. This parameter is valid only in the by-ratio scenario.</p>
+         * <p>The weight. Valid values: 1 to 100. This parameter takes effect only in the by ratio scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -667,7 +667,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
          * <p>The gateway name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Instance1</p>
+         * <p>Instance 1</p>
          */
         @NameInMap("name")
         public String name;
@@ -877,19 +877,19 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
 
     public static class HttpApiPublishRevisionInfoVipConfigs extends TeaModel {
         /**
-         * <p>The list of static addresses.</p>
+         * <p>The list of fixed addresses.</p>
          */
         @NameInMap("endpoints")
         public java.util.List<String> endpoints;
 
         /**
-         * <p>The match condition. This parameter is valid only in the by-content scenario.</p>
+         * <p>The match condition. This parameter takes effect only in the by content scenario.</p>
          */
         @NameInMap("match")
         public HttpApiBackendMatchConditions match;
 
         /**
-         * <p>The weight. Valid values: 1 to 100. This parameter is valid only in the by-ratio scenario.</p>
+         * <p>The weight. Valid values: 1 to 100. This parameter takes effect only in the by ratio scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

@@ -118,7 +118,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public HttpApiApiInfo apiInfo;
 
         /**
-         * <p>The consumer authorization rule ID.</p>
+         * <p>The ID of the consumer authorization rule.</p>
          * 
          * <strong>example:</strong>
          * <p>car-csgeka5lhtggrjcprok0</p>

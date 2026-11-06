@@ -76,7 +76,7 @@ public class ListPluginRepositoriesResponseBody extends TeaModel {
 
     public static class ListPluginRepositoriesResponseBodyDataRepositories extends TeaModel {
         /**
-         * <p>The Codeup repository ID (numeric string).</p>
+         * <p>The Codeup repository ID, which is a numeric string.</p>
          * 
          * <strong>example:</strong>
          * <p>12345678</p>

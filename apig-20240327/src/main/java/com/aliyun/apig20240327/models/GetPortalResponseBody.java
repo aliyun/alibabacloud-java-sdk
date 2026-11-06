@@ -76,7 +76,7 @@ public class GetPortalResponseBody extends TeaModel {
 
     public static class GetPortalResponseBodyData extends TeaModel {
         /**
-         * <p>The creation time in ISO 8601 format (RFC 3339) in UTC, such as 2026-05-15T10:00:00Z.</p>
+         * <p>The creation time in ISO 8601 (RFC 3339) format in the UTC time zone, such as 2026-05-15T10:00:00Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-15T10:00:00Z</p>
@@ -85,7 +85,7 @@ public class GetPortalResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The description of the portal, which corresponds to the Description property of the portal resource.</p>
+         * <p>The portal description, which is the Description property of the portal resource.</p>
          * 
          * <strong>example:</strong>
          * <p>HiMarket portal for internal developers</p>
@@ -94,7 +94,7 @@ public class GetPortalResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the portal, which corresponds to the Name property of the portal resource.</p>
+         * <p>The portal name, which is the Name property of the portal resource.</p>
          * 
          * <strong>example:</strong>
          * <p>developer-portal</p>
@@ -103,13 +103,13 @@ public class GetPortalResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The list of portal domain configurations. Each element in the list is named domainConfig.</p>
+         * <p>The list of portal domain name configurations. The list element is named domainConfig.</p>
          */
         @NameInMap("portalDomainConfig")
         public java.util.List<HiMarketPortalDomainConfig> portalDomainConfig;
 
         /**
-         * <p>The primary ID of the portal resource. This ID points to the same portal as the portalId request parameter.</p>
+         * <p>The portal ID, which is the primary ID of the portal resource and points to the same portal as the portalId request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>portal-xxxxxxxx</p>
@@ -118,13 +118,13 @@ public class GetPortalResponseBody extends TeaModel {
         public String portalId;
 
         /**
-         * <p>The portal settings, including whether account and password authentication is enabled, whether developer registrations are automatically approved, and whether subscription requests are automatically approved.</p>
+         * <p>The portal settings, which specify whether username and password authentication is enabled, whether developer registrations are automatically approved, and whether subscription requests are automatically approved.</p>
          */
         @NameInMap("portalSettingConfig")
         public HiMarketPortalSettingConfig portalSettingConfig;
 
         /**
-         * <p>The region ID, which corresponds to the RegionId property of the portal resource.</p>
+         * <p>The region ID, which is the RegionId property of the portal resource.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

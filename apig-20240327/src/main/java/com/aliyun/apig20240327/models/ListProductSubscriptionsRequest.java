@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProductSubscriptionsRequest extends TeaModel {
     /**
-     * <p>The keyword of the consumer name, which is used to search for subscription records of the API product by consumer name.</p>
+     * <p>The keyword of the consumer name. This parameter is used to search for subscription records of the API product by consumer name.</p>
      * 
      * <strong>example:</strong>
      * <p>consumer-1</p>
@@ -32,7 +32,7 @@ public class ListProductSubscriptionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The subscription status, which is used to filter subscriptions by status. Valid values:</p>
+     * <p>The subscription status. This parameter is used to filter subscriptions by status. Valid values: PENDING and APPROVED.</p>
      * 
      * <strong>example:</strong>
      * <p>APPROVED</p>

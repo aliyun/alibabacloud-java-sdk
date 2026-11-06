@@ -76,7 +76,7 @@ public class GetGatewayResponseBody extends TeaModel {
 
     public static class GetGatewayResponseBodyDataEnvironments extends TeaModel {
         /**
-         * <p>The alias of the environment.</p>
+         * <p>The environment alias.</p>
          * 
          * <strong>example:</strong>
          * <p>Default environment</p>
@@ -203,9 +203,9 @@ public class GetGatewayResponseBody extends TeaModel {
         public String addressIpVersion;
 
         /**
-         * <p>The type of the load balancing address. Valid values:</p>
+         * <p>The load balancing address type. Valid values:</p>
          * <ul>
-         * <li>Internet: Internet-facing.</li>
+         * <li>Internet: Internet.</li>
          * <li>Intranet: Private network.</li>
          * </ul>
          * 
@@ -246,7 +246,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String loadBalancerId;
 
         /**
-         * <p>The load balancing pattern of the gateway. Valid values:</p>
+         * <p>The load balancing provisioning pattern for the gateway. Valid values:</p>
          * <ul>
          * <li>Managed: Managed by Cloud-native API Gateway.</li>
          * </ul>
@@ -258,7 +258,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String mode;
 
         /**
-         * <p>The list of listener ports.</p>
+         * <p>The list of listened ports.</p>
          */
         @NameInMap("ports")
         public java.util.List<GetGatewayResponseBodyDataLoadBalancersPorts> ports;
@@ -277,7 +277,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the load balancing. Valid values:</p>
+         * <p>The load balancing type. Valid values:</p>
          * <ul>
          * <li>NLB: Network Load Balancer (NLB).</li>
          * <li>CLB: Classic Load Balancer.</li>
@@ -386,7 +386,7 @@ public class GetGatewayResponseBody extends TeaModel {
 
     public static class GetGatewayResponseBodyDataMaintenancePeriod extends TeaModel {
         /**
-         * <p>The end time of the O&amp;M window in the HH:mm format.</p>
+         * <p>The O&amp;M end time in HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>06:00</p>
@@ -395,7 +395,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The start time of the O&amp;M window in the HH:mm format.</p>
+         * <p>The O&amp;M start time in HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>02:00</p>
@@ -428,7 +428,7 @@ public class GetGatewayResponseBody extends TeaModel {
 
     public static class GetGatewayResponseBodyDataNetworkAccessConfig extends TeaModel {
         /**
-         * <p>The ID of the security group configured for the private endpoint. The security group belongs to the VPC selected by the user and is an unmanaged security group.</p>
+         * <p>The ID of the security group configured for the internal endpoint. The security group belongs to the VPC selected by the user and is an unmanaged security group.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp1example123456789</p>
@@ -439,8 +439,8 @@ public class GetGatewayResponseBody extends TeaModel {
         /**
          * <p>The access endpoint type of the gateway. Valid values:</p>
          * <ul>
-         * <li>Intranet: Private endpoint only.</li>
-         * <li>InternetAndIntranet: Both Internet and private endpoints.</li>
+         * <li>Intranet: Internal endpoint only.</li>
+         * <li>InternetAndIntranet: Internet and internal endpoints.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -516,7 +516,7 @@ public class GetGatewayResponseBody extends TeaModel {
 
     public static class GetGatewayResponseBodyDataPrivateLink extends TeaModel {
         /**
-         * <p>The connection status between the private endpoint and the endpoint service. A value of Connected indicates that the endpoint is connected.</p>
+         * <p>The connection status between the internal endpoint and the endpoint service. A value of Connected indicates that the endpoint is connected.</p>
          * 
          * <strong>example:</strong>
          * <p>Connected</p>
@@ -525,7 +525,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String connectionStatus;
 
         /**
-         * <p>The access domain name of the private endpoint, which can be used to access the gateway from the user VPC.</p>
+         * <p>The access domain name of the internal endpoint, which can be used to access the gateway from the user VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>ep-bp1example123456789.epsrv-bp1example123456789.cn-hangzhou.privatelink.aliyuncs.com</p>
@@ -534,7 +534,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String endpointDomain;
 
         /**
-         * <p>The ID of the private endpoint.</p>
+         * <p>The internal endpoint ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ep-bp1example123456789</p>
@@ -543,7 +543,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String endpointId;
 
         /**
-         * <p>The ID of the security group configured for the private endpoint.</p>
+         * <p>The ID of the security group configured for the internal endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp1example123456789</p>
@@ -552,7 +552,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String endpointSecurityGroupId;
 
         /**
-         * <p>The status of the private endpoint. A value of Active indicates that the endpoint is available.</p>
+         * <p>The status of the internal endpoint. A value of Active indicates that the endpoint is available.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -561,7 +561,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String endpointStatus;
 
         /**
-         * <p>The error code of the most recent error that occurred during the creation or delete operations of the private endpoint. This parameter is not returned if no error message is available.</p>
+         * <p>The error code of the most recent fault that occurred during the creation or delete procedure of the private network ingress. This parameter is not returned if no error message is available.</p>
          * 
          * <strong>example:</strong>
          * <p>Forbidden.RAM</p>
@@ -570,7 +570,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String lastErrorCode;
 
         /**
-         * <p>The description of the most recent error that occurred during the creation or delete operations of the private endpoint. You can use this description along with the error code to troubleshoot the issue. This parameter is not returned if no error message is available.</p>
+         * <p>The description of the most recent fault that occurred during the creation or delete procedure of the private network ingress. You can use this description along with the error code to troubleshoot the issue. This parameter is not returned if no error message is available.</p>
          * 
          * <strong>example:</strong>
          * <p>private ingress CheckProductOpen failed (Forbidden.RAM)</p>
@@ -588,7 +588,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String observedAt;
 
         /**
-         * <p>Indicates whether the private endpoint may continue to incur fees. A value of true indicates that the endpoint is created and its release is not confirmed. A value of false indicates that no fee prompt is available. The actual fees are subject to the bill.</p>
+         * <p>Indicates whether the private endpoint may continue to incur charges. A value of true indicates that the endpoint is created and its release is not confirmed. A value of false indicates that no charge prompt is available. Actual charges are subject to the bill.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -987,7 +987,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The creation source of the gateway. Valid values:</p>
+         * <p>The source from which the gateway was created. Valid values:</p>
          * <ul>
          * <li>Console: The console.</li>
          * </ul>
@@ -1032,7 +1032,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public Long expireTimestamp;
 
         /**
-         * <p>The edition of the gateway instance. Valid values:</p>
+         * <p>The gateway edition. Valid values:</p>
          * <ul>
          * <li>Professional: Professional instance.</li>
          * <li>Serverless: Serverless instance.</li>
@@ -1054,7 +1054,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
-         * <p>The operation mode for AI multi-tenant V2. The default value is ENTERPRISE. This parameter is applicable only to AI and MultiTenantServerless gateways.</p>
+         * <p>The AI multi-tenant V2 operation mode. The default value is ENTERPRISE. This parameter is allowed only for AI and MultiTenantServerless.</p>
          * 
          * <strong>example:</strong>
          * <p>STANDARD</p>
@@ -1076,7 +1076,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String gatewayType;
 
         /**
-         * <p>The type of the Internet service provider (ISP).</p>
+         * <p>The network ISP type.</p>
          * 
          * <strong>example:</strong>
          * <p>BGP</p>
@@ -1106,7 +1106,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The network access configuration of the gateway, including the access endpoint type and the security group used by the private endpoint. This parameter is returned only when the gateway is configured with a private endpoint.</p>
+         * <p>The network access configuration of the gateway, including the access endpoint type and the security group used by the internal endpoint. This parameter is returned only when the gateway is configured with an internal endpoint.</p>
          */
         @NameInMap("networkAccessConfig")
         public GetGatewayResponseBodyDataNetworkAccessConfig networkAccessConfig;
@@ -1144,7 +1144,7 @@ public class GetGatewayResponseBody extends TeaModel {
         /**
          * <p>The gateway specifications. Valid values:</p>
          * <ul>
-         * <li>apigw.small.x1: Small specifications.</li>
+         * <li>apigw.small.x1: Small.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1186,7 +1186,7 @@ public class GetGatewayResponseBody extends TeaModel {
         public java.util.List<GetGatewayResponseBodyDataTags> tags;
 
         /**
-         * <p>The target version of the gateway. If this value is different from the current version, you can upgrade the gateway.</p>
+         * <p>The target version of the gateway. You can upgrade the gateway if this value is different from the current version.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0.2</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
     /**
-     * <p>The response status code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -20,7 +20,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
     public ListHiMarketConsumerSubscriptionsResponseBodyData data;
 
     /**
-     * <p>The maximum number of entries on the current page.</p>
+     * <p>The maximum number of entries returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token for the next page. An empty value indicates that the last page is reached.</p>
+     * <p>The pagination token for the next page. An empty value indicates that the last page has been reached.</p>
      * 
      * <strong>example:</strong>
      * <p>token-xxxxxxxx</p>
@@ -146,7 +146,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
         public String productName;
 
         /**
-         * <p>The type of the subscribed API product. No enum is specified for this response parameter. However, the related ListProductSubscriptions operation specifies the following valid values for the parameter with the same name: REST_API, HTTP_API, MCP_SERVER, AGENT_API, and MODEL_API.</p>
+         * <p>The type of the subscribed API product. This response parameter does not have an enum annotation. For the response parameter with the same name in the related ListProductSubscriptions operation, the valid values are REST_API, HTTP_API, MCP_SERVER, AGENT_API, and MODEL_API.</p>
          * 
          * <strong>example:</strong>
          * <p>MCP_SERVER</p>
@@ -155,7 +155,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
         public String productType;
 
         /**
-         * <p>The subscription status. Valid values: PENDING and APPROVED. These valid values are declared in the enum of the status request parameter, and no enum is specified for this response parameter.</p>
+         * <p>The subscription status. Valid values: PENDING and APPROVED. These valid values are declared in the enum of the status request parameter. This response parameter does not have an enum annotation.</p>
          * 
          * <strong>example:</strong>
          * <p>APPROVED</p>
@@ -164,7 +164,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The subscription ID. You can use this ID to cancel the subscription by calling UnsubscribeHiMarketProduct or approve the subscription by calling ApproveProductSubscription. Both operations locate the subscription by using the /himarket/v1/consumers/{consumerId}/subscriptions/{subscriptionId} path.</p>
+         * <p>The subscription ID. You can use this ID to cancel a subscription by calling UnsubscribeHiMarketProduct or approve a subscription by calling ApproveProductSubscription. Both operations use the /himarket/v1/consumers/{consumerId}/subscriptions/{subscriptionId} path to locate the subscription.</p>
          * 
          * <strong>example:</strong>
          * <p>sub-xxxxxxxx</p>
@@ -237,7 +237,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
 
     public static class ListHiMarketConsumerSubscriptionsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of API product subscriptions for the consumer. The list element is named subscription, and each element represents an API product subscription record.</p>
+         * <p>The API product subscriptions of the consumer. Each element in the list is named subscription and represents an API product subscription record.</p>
          */
         @NameInMap("content")
         public java.util.List<ListHiMarketConsumerSubscriptionsResponseBodyDataContent> content;
@@ -252,7 +252,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

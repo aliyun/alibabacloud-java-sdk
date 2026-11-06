@@ -32,7 +32,7 @@ public class HttpApiApiInfo extends TeaModel {
     public String basePath;
 
     /**
-     * <p>The deployment status of the API operation.</p>
+     * <p>The API operation deployment status.</p>
      */
     @NameInMap("deployCntMap")
     public java.util.Map<String, HttpApiApiInfoDeployCntMapValue> deployCntMap;
@@ -47,13 +47,13 @@ public class HttpApiApiInfo extends TeaModel {
      * <p>The API description.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test API</p>
+     * <p>Test-specific API</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>Specifies whether authentication is enabled.</p>
+     * <p>Specifies whether to enable authentication.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -86,7 +86,7 @@ public class HttpApiApiInfo extends TeaModel {
     public String httpApiId;
 
     /**
-     * <p>The HTTP Ingress API information.</p>
+     * <p>The HTTP ingress API information.</p>
      */
     @NameInMap("ingressInfo")
     public HttpApiApiInfoIngressInfo ingressInfo;
@@ -290,7 +290,7 @@ public class HttpApiApiInfo extends TeaModel {
 
     public static class HttpApiApiInfoEnvironmentsGatewayInfo extends TeaModel {
         /**
-         * <p>The edition of the gateway instance. Valid values: Professional, Serverless, MultiTenantServerless, and Unknown.</p>
+         * <p>The gateway instance edition. Valid values: Professional, Serverless, MultiTenantServerless, and Unknown.</p>
          * 
          * <strong>example:</strong>
          * <p>MultiTenantServerless</p>
@@ -358,7 +358,7 @@ public class HttpApiApiInfo extends TeaModel {
         public String gatewayServiceId;
 
         /**
-         * <p>The match condition.</p>
+         * <p>The match conditions.</p>
          */
         @NameInMap("match")
         public HttpApiBackendMatchConditions match;
@@ -575,7 +575,7 @@ public class HttpApiApiInfo extends TeaModel {
         public String alias;
 
         /**
-         * <p>The deployment scenario.</p>
+         * <p>The release scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>SingleService</p>
@@ -593,13 +593,13 @@ public class HttpApiApiInfo extends TeaModel {
         public String backendType;
 
         /**
-         * <p>The information about the custom domain names published by the user.</p>
+         * <p>The published domain name information.</p>
          */
         @NameInMap("customDomains")
         public java.util.List<HttpApiDomainInfo> customDomains;
 
         /**
-         * <p>The deployment status of the API in the current environment.</p>
+         * <p>The API deployment status in the current environment.</p>
          * 
          * <strong>example:</strong>
          * <p>Deployed</p>
@@ -617,7 +617,7 @@ public class HttpApiApiInfo extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The information about the gateway instance to which the current environment belongs.</p>
+         * <p>The gateway instance information for the current environment.</p>
          */
         @NameInMap("gatewayInfo")
         public HttpApiApiInfoEnvironmentsGatewayInfo gatewayInfo;
@@ -788,7 +788,7 @@ public class HttpApiApiInfo extends TeaModel {
         public HttpApiApiInfoIngressInfoEnvironmentInfo environmentInfo;
 
         /**
-         * <p>The Ingress class being listened to.</p>
+         * <p>The ingress class to listen on.</p>
          * 
          * <strong>example:</strong>
          * <p>mse</p>
@@ -803,7 +803,7 @@ public class HttpApiApiInfo extends TeaModel {
         public HttpApiApiInfoIngressInfoK8sClusterInfo k8sClusterInfo;
 
         /**
-         * <p>Specifies whether to override the IP address in the Ingress status.</p>
+         * <p>Specifies whether to update the address in the ingress status.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

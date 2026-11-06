@@ -38,7 +38,7 @@ public class ListPortalsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token for the next page.</p>
+     * <p>The cursor token for querying the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>next-token-xxxxxxxx</p>
@@ -137,13 +137,13 @@ public class ListPortalsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The list of portal domain configurations. The list elements are named domainConfig.</p>
+         * <p>The portal domain configuration list. The list element is named domainConfig.</p>
          */
         @NameInMap("portalDomainConfig")
         public java.util.List<HiMarketPortalDomainConfig> portalDomainConfig;
 
         /**
-         * <p>The portal ID. This is the primary ID of the portal resource and can be used to locate the portal in the GetPortal, UpdatePortal, and DeletePortal operations through the /himarket/v1/portals/{portalId} path.</p>
+         * <p>The portal ID, which is the primary ID of the portal resource. It can be used in GetPortal, UpdatePortal, and DeletePortal to locate the portal at /himarket/v1/portals/{portalId}.</p>
          * 
          * <strong>example:</strong>
          * <p>portal-xxxxxxxx</p>
@@ -152,7 +152,7 @@ public class ListPortalsResponseBody extends TeaModel {
         public String portalId;
 
         /**
-         * <p>The portal configuration, which specifies whether username and password authentication is enabled, whether developer registrations are automatically approved, and whether subscription requests are automatically approved.</p>
+         * <p>The portal settings, including whether to enable username and password authentication, whether to automatically approve developer registrations, and whether to automatically approve subscription requests.</p>
          */
         @NameInMap("portalSettingConfig")
         public HiMarketPortalSettingConfig portalSettingConfig;
@@ -231,7 +231,7 @@ public class ListPortalsResponseBody extends TeaModel {
 
     public static class ListPortalsResponseBodyData extends TeaModel {
         /**
-         * <p>The portal list. Each element in the list is named portalConfig and contains information about a HiMarket developer portal.</p>
+         * <p>The portal list. The list element is named portalConfig, and each element contains the information of a HiMarket developer portal.</p>
          */
         @NameInMap("content")
         public java.util.List<ListPortalsResponseBodyDataContent> content;

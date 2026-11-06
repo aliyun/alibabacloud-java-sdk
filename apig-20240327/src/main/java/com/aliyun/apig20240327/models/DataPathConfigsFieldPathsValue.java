@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DataPathConfigsFieldPathsValue extends TeaModel {
     /**
-     * <p>The identifier key of the field, which is unique within the same request path, such as input_token.</p>
+     * <p>The identity key of the field, which is unique within the same request path, such as input_token.</p>
      * 
      * <strong>example:</strong>
      * <p>input_token</p>
@@ -23,7 +23,7 @@ public class DataPathConfigsFieldPathsValue extends TeaModel {
     public String jsonPath;
 
     /**
-     * <p>The value extraction rule of the field.</p>
+     * <p>The value rule for the field.</p>
      * 
      * <strong>example:</strong>
      * <p>first</p>
@@ -50,7 +50,7 @@ public class DataPathConfigsFieldPathsValue extends TeaModel {
     public String description;
 
     /**
-     * <p>The source of the field value, indicating which part of the message the field is read from, such as response_body.</p>
+     * <p>The source of the field value, which indicates the part of the message from which the field is read, such as response_body.</p>
      * 
      * <strong>example:</strong>
      * <p>response_body</p>
@@ -68,7 +68,7 @@ public class DataPathConfigsFieldPathsValue extends TeaModel {
     public String category;
 
     /**
-     * <p>The message direction to which the field belongs, indicating whether it is extracted from the request or the response.</p>
+     * <p>The message direction of the field, which indicates whether it is extracted from the request or the response.</p>
      * 
      * <strong>example:</strong>
      * <p>response</p>
@@ -86,7 +86,7 @@ public class DataPathConfigsFieldPathsValue extends TeaModel {
     public Boolean sensitive;
 
     /**
-     * <p>Indicates whether collection is enabled for the field.</p>
+     * <p>Indicates whether the collection of the field is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

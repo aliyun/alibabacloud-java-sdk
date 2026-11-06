@@ -76,7 +76,7 @@ public class GetPluginAttachmentResponseBody extends TeaModel {
 
     public static class GetPluginAttachmentResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the plugin attachment is enabled.</p>
+         * <p>Indicates whether the plugin is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

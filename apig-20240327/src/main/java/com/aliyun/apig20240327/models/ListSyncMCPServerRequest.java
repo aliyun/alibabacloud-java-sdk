@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSyncMCPServerRequest extends TeaModel {
     /**
-     * <p>The AI gateway ID. This parameter is required. If this parameter is not specified, the API returns InvalidParameter.IsEmpty(400).</p>
+     * <p>The ID of the AI gateway. Note: This parameter is required. If it is not provided, the API returns InvalidParameter.IsEmpty(400).</p>
      * 
      * <strong>example:</strong>
      * <p>gw-xxxx</p>
@@ -14,7 +14,7 @@ public class ListSyncMCPServerRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The Nacos namespace ID. This parameter is required. If this parameter is not specified, the API returns InvalidParameter.IsEmpty(400).</p>
+     * <p>The Nacos namespace ID. Note: This parameter is required. If it is not provided, the API returns InvalidParameter.IsEmpty(400).</p>
      * 
      * <strong>example:</strong>
      * <p>public</p>
@@ -23,7 +23,7 @@ public class ListSyncMCPServerRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The Nacos service source ID. In a single Nacos source scenario, this parameter can be omitted because the server automatically populates the unique source. In a multi-Nacos source scenario, this parameter is required. Otherwise, a parameter error indicating that sourceId is empty is returned. If the gateway has no Nacos source, the error ErrServiceSourceNotFound is returned.</p>
+     * <p>The Nacos service source ID. This parameter can be omitted in single Nacos source scenarios because the server automatically populates the unique source. It is required in multiple Nacos source scenarios. Otherwise, a parameter error indicating that sourceId is empty is returned. If the gateway has no Nacos source, ErrServiceSourceNotFound is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>src-xxxx</p>

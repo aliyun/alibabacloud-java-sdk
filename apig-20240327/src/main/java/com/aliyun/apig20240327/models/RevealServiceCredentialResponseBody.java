@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevealServiceCredentialResponseBody extends TeaModel {
     /**
-     * <p>The response code. The value is Ok if the request is successful.</p>
+     * <p>The response code. A value of Ok indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -23,7 +23,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
     public RevealServiceCredentialResponseBodyData data;
 
     /**
-     * <p>The response message. The value is success if the request is successful.</p>
+     * <p>The response message. A value of success indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -79,7 +79,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
 
     public static class RevealServiceCredentialResponseBodyDataCredential extends TeaModel {
         /**
-         * <p>The API key generation mode. Valid values: Custom and Reference. Historical null values are processed as Custom.</p>
+         * <p>The API key generation mode. Valid values: Custom and Reference. Historical null values are treated as Custom.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom</p>
@@ -88,7 +88,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
         public String apiKeyGenerateMode;
 
         /**
-         * <p>The list of Key Management Service (KMS) reference names. This parameter is returned only in Reference mode. The reference values are not returned.</p>
+         * <p>The list of Key Management Service (KMS) reference names. This field is returned only in Reference mode. Reference values are not returned.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;my-kms-ref&quot;]</p>
@@ -97,7 +97,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
         public java.util.List<String> apiKeyReferences;
 
         /**
-         * <p>The list of custom API keys. This parameter is returned only when apiKeyGenerateMode is set to Custom. The keys are returned in their original order without deduplication.</p>
+         * <p>The list of custom API keys. This field is returned only when apiKeyGenerateMode is set to Custom. The keys are returned in their original order without deduplication.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;sk-xxxxxxxx&quot;,&quot;sk-yyyyyyyy&quot;]</p>
@@ -133,7 +133,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
         public String awsSecretKey;
 
         /**
-         * <p>The source of the credential. The value is pai-eas when backfilled by the PAI-EAS system.</p>
+         * <p>The source of the credential. When backfilled by the PAI-EAS system, the value is pai-eas.</p>
          * 
          * <strong>example:</strong>
          * <p>pai-eas</p>
@@ -142,7 +142,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
         public String credentialSource;
 
         /**
-         * <p>The Bedrock endpoint mode. The value runtime is returned for historical null values.</p>
+         * <p>The Bedrock endpoint mode. A value of runtime is returned for historical null values.</p>
          * 
          * <strong>example:</strong>
          * <p>runtime</p>
@@ -308,7 +308,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
 
     public static class RevealServiceCredentialResponseBodyData extends TeaModel {
         /**
-         * <p>The current configuration revision. The value is legacy for historical objects.</p>
+         * <p>The current configuration revision. For legacy objects, the value is legacy.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -326,7 +326,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
         public RevealServiceCredentialResponseBodyDataCredential credential;
 
         /**
-         * <p>The type of the currently active credential. Valid values: apiKey, bedrock, vertex, and kling.</p>
+         * <p>The currently active credential type. Valid values: apiKey, bedrock, vertex, and kling.</p>
          * 
          * <strong>example:</strong>
          * <p>apiKey</p>
