@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeJVSInstanceResponseBody extends TeaModel {
     /**
-     * <p>The returned result object.</p>
+     * <p>The response object.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeJVSInstanceResponseBodyData> data;
 
     /**
-     * <p>The maximum number of results returned in the current request.</p>
+     * <p>The maximum number of data entries returned in the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -20,7 +20,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that specifies the starting position for the query. An empty value indicates that the query starts from the beginning.</p>
+     * <p>The token that specifies the starting position for the current query. If this parameter is left empty, the query starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
@@ -161,7 +161,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public Long creditLimit;
 
         /**
-         * <p>The credit limit period.</p>
+         * <p>The limit period.</p>
          * 
          * <strong>example:</strong>
          * <p>day</p>
@@ -313,7 +313,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public Long credit;
 
         /**
-         * <p>The dimension of the current credit.</p>
+         * <p>The period of the current credit.</p>
          * 
          * <strong>example:</strong>
          * <p>day</p>
@@ -352,7 +352,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public DescribeJVSInstanceResponseBodyDataAgentVersion agentVersion;
 
         /**
-         * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard.</p>
+         * <p>The creation time. The time is in UTC and follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-10T01:31:32Z</p>
@@ -361,13 +361,13 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The credit limit configuration. Subsequent quota configurations overwrite previous configurations.</p>
+         * <p>The credit limit configuration. Subsequent quota configurations overwrite previous ones.</p>
          */
         @NameInMap("CreditConfig")
         public java.util.List<DescribeJVSInstanceResponseBodyDataCreditConfig> creditConfig;
 
         /**
-         * <p>The expiration time. The time is displayed in UTC and follows the ISO 8601 standard.</p>
+         * <p>The expiration time. The time is in UTC and follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-10T01:31:32Z</p>
@@ -391,6 +391,15 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceName</p>
+         */
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        /**
          * <p>This parameter is not supported.</p>
          * 
          * <strong>example:</strong>
@@ -400,7 +409,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public String jvsPackageId;
 
         /**
-         * <p>The modification time. The time is displayed in UTC and follows the ISO 8601 standard.</p>
+         * <p>The modification time. The time is in UTC and follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-10T01:31:32Z</p>
@@ -474,6 +483,14 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeJVSInstanceResponseBodyData setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
         }
 
         public DescribeJVSInstanceResponseBodyData setJvsPackageId(String jvsPackageId) {

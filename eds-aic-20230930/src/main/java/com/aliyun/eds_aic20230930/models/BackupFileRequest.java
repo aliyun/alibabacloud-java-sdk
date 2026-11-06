@@ -40,6 +40,13 @@ public class BackupFileRequest extends TeaModel {
     public String backupFilePath;
 
     /**
+     * <strong>example:</strong>
+     * <p>[{&quot;OssBucket&quot;:&quot;my-bucket&quot;,&quot;OssObjectKey&quot;:&quot;script/backup.sh&quot;,&quot;OssEndpoint&quot;:&quot;oss-cn-hangzhou-internal.aliyuncs.com&quot;,&quot;OssRegion&quot;:&quot;cn-hangzhou&quot;}]</p>
+     */
+    @NameInMap("CustomScripts")
+    public java.util.List<BackupFileRequestCustomScripts> customScripts;
+
+    /**
      * <p>The description of the backup file.</p>
      * 
      * <strong>example:</strong>
@@ -130,6 +137,14 @@ public class BackupFileRequest extends TeaModel {
         return this.backupFilePath;
     }
 
+    public BackupFileRequest setCustomScripts(java.util.List<BackupFileRequestCustomScripts> customScripts) {
+        this.customScripts = customScripts;
+        return this;
+    }
+    public java.util.List<BackupFileRequestCustomScripts> getCustomScripts() {
+        return this.customScripts;
+    }
+
     public BackupFileRequest setDescription(String description) {
         this.description = description;
         return this;
@@ -184,6 +199,89 @@ public class BackupFileRequest extends TeaModel {
     }
     public String getUploadType() {
         return this.uploadType;
+    }
+
+    public static class BackupFileRequestCustomScripts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>my-bucket</p>
+         */
+        @NameInMap("OssBucket")
+        public String ossBucket;
+
+        /**
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
+         */
+        @NameInMap("OssEndpoint")
+        public String ossEndpoint;
+
+        /**
+         * <strong>example:</strong>
+         * <p>script/backup.sh</p>
+         */
+        @NameInMap("OssObjectKey")
+        public String ossObjectKey;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        @NameInMap("OssRegion")
+        public String ossRegion;
+
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;acp-0n4k52uiyon472rq0&quot;]</p>
+         */
+        @NameInMap("TestInstanceIds")
+        public java.util.List<String> testInstanceIds;
+
+        public static BackupFileRequestCustomScripts build(java.util.Map<String, ?> map) throws Exception {
+            BackupFileRequestCustomScripts self = new BackupFileRequestCustomScripts();
+            return TeaModel.build(map, self);
+        }
+
+        public BackupFileRequestCustomScripts setOssBucket(String ossBucket) {
+            this.ossBucket = ossBucket;
+            return this;
+        }
+        public String getOssBucket() {
+            return this.ossBucket;
+        }
+
+        public BackupFileRequestCustomScripts setOssEndpoint(String ossEndpoint) {
+            this.ossEndpoint = ossEndpoint;
+            return this;
+        }
+        public String getOssEndpoint() {
+            return this.ossEndpoint;
+        }
+
+        public BackupFileRequestCustomScripts setOssObjectKey(String ossObjectKey) {
+            this.ossObjectKey = ossObjectKey;
+            return this;
+        }
+        public String getOssObjectKey() {
+            return this.ossObjectKey;
+        }
+
+        public BackupFileRequestCustomScripts setOssRegion(String ossRegion) {
+            this.ossRegion = ossRegion;
+            return this;
+        }
+        public String getOssRegion() {
+            return this.ossRegion;
+        }
+
+        public BackupFileRequestCustomScripts setTestInstanceIds(java.util.List<String> testInstanceIds) {
+            this.testInstanceIds = testInstanceIds;
+            return this;
+        }
+        public java.util.List<String> getTestInstanceIds() {
+            return this.testInstanceIds;
+        }
+
     }
 
 }
