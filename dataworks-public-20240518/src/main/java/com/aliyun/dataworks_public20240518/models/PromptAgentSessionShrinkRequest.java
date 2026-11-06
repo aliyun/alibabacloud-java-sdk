@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PromptAgentSessionShrinkRequest extends TeaModel {
     /**
-     * <p>The ID passed by the requester. The value is returned as is.</p>
+     * <p>The ID passed by the requester, which is echoed back as is.</p>
      * 
      * <strong>example:</strong>
      * <p>1021418411</p>
@@ -14,7 +14,7 @@ public class PromptAgentSessionShrinkRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The JSON-RPC version. Set the value to 2.0.</p>
+     * <p>The JSON-RPC version. Fixed to 2.0.</p>
      * 
      * <strong>example:</strong>
      * <p>2.0</p>

@@ -42,8 +42,8 @@ public class ListTaskInstanceOperationLogsResponseBody extends TeaModel {
 
     public static class ListTaskInstanceOperationLogsResponseBodyPagingInfoOperationLogs extends TeaModel {
         /**
-         * <p>The generation time of Operation logs.</p>
-         * <p>The format is a 13-digit number, such as <code>1710239005403</code>.</p>
+         * <p>The time when the operation log was generated.</p>
+         * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -70,7 +70,7 @@ public class ListTaskInstanceOperationLogsResponseBody extends TeaModel {
         public Long operationSeq;
 
         /**
-         * <p>The ID of the node instance on which the operation was performed.</p>
+         * <p>The ID of the task instance on which the operation was performed.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>

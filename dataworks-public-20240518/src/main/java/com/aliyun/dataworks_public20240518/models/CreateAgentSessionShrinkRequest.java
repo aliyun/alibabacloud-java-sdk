@@ -14,7 +14,7 @@ public class CreateAgentSessionShrinkRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The JSON-RPC version. This value is always 2.0.</p>
+     * <p>The JSON-RPC version. Fixed to 2.0.</p>
      * 
      * <strong>example:</strong>
      * <p>2.0</p>

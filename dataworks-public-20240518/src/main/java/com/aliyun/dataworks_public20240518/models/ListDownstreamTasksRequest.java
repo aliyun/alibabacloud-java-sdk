@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDownstreamTasksRequest extends TeaModel {
     /**
-     * <p>The node ID.</p>
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

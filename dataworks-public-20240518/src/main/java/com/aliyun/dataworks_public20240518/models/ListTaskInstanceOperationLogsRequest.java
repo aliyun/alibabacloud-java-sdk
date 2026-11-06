@@ -14,7 +14,7 @@ public class ListTaskInstanceOperationLogsRequest extends TeaModel {
     public Long date;
 
     /**
-     * <p>The node instance ID.</p>
+     * <p>The task instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

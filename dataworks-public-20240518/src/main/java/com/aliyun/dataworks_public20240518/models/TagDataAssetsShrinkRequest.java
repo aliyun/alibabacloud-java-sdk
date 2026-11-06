@@ -23,8 +23,8 @@ public class TagDataAssetsShrinkRequest extends TeaModel {
     /**
      * <p>The data asset type. Valid values:</p>
      * <ul>
-     * <li>DataWorks table (ACS::DataWorks::Table)</li>
-     * <li>DataWorks scheduled task (ACS::DataWorks::Task)</li>
+     * <li>Data table (ACS::DataWorks::Table)</li>
+     * <li>Scheduling task (ACS::DataWorks::Task)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -37,8 +37,8 @@ public class TagDataAssetsShrinkRequest extends TeaModel {
     /**
      * <p>The workspace environment to which the data asset belongs. Valid values:</p>
      * <ul>
-     * <li>Dev (development environment)</li>
-     * <li>Prod (production environment)</li>
+     * <li>Dev: development environment</li>
+     * <li>Prod: production environment</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class TagDataAssetsShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The list of data asset tags to attach.</p>
+     * <p>The list of tags to attach to the data assets.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tags")

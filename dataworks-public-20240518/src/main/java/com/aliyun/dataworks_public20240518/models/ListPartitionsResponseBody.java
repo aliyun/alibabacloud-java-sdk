@@ -20,7 +20,7 @@ public class ListPartitionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,7 +77,7 @@ public class ListPartitionsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The partition list of the table.</p>
+         * <p>The list of partitions in the table.</p>
          */
         @NameInMap("PartitionList")
         public java.util.List<Partition> partitionList;

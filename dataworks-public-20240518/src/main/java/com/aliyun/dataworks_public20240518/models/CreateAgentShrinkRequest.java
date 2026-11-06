@@ -34,7 +34,7 @@ public class CreateAgentShrinkRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The released expert suites bound to the agent. For personal or enterprise suites, use SuiteId and optionally specify a fixed Version or VersionSelector. For official suites, you must explicitly set Source to OFFICIAL and specify the SuiteId from the official catalog. Do not specify Version or VersionSelector. If this parameter is not specified, an empty list is created, and official suites are not loaded by default.</p>
+     * <p>The published expert suites bound to the agent. For personal or enterprise suites, use SuiteId, and optionally specify a fixed Version or VersionSelector. For official suites, you must explicitly specify Source=OFFICIAL and the SuiteId from the official catalog, and do not specify Version or VersionSelector. If not specified, an empty list is created, and all official suites are not loaded by default.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;Source&quot;:&quot;OFFICIAL&quot;,&quot;SuiteId&quot;:&quot;dataworks-data-analysis-extension&quot;},{&quot;SuiteId&quot;:&quot;suite_example&quot;,&quot;Version&quot;:1}]</p>
@@ -43,7 +43,7 @@ public class CreateAgentShrinkRequest extends TeaModel {
     public String expertSuitesShrink;
 
     /**
-     * <p>The extended metadata as key-value pairs.</p>
+     * <p>The extended metadata in key-value pairs.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -63,7 +63,7 @@ public class CreateAgentShrinkRequest extends TeaModel {
     public String modelShrink;
 
     /**
-     * <p>The name of the agent. It must be unique within the current account.</p>
+     * <p>The name of the agent. The name must be unique within the current account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,12 +73,7 @@ public class CreateAgentShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Specifies whether to publish the agent immediately after creation. Valid values:</p>
-     * <ul>
-     * <li>true: Publishes the created version.</li>
-     * <li>false or omitted: Retains the original behavior of creating a draft only.
-     * Saving and publishing are not atomic operations. If publishing fails, the draft may already exist. Query the agent before retrying to avoid duplicate creation.</li>
-     * </ul>
+     * <p>Specifies whether to publish the agent immediately after creation. A value of true publishes the created version. A value of false or omitting this parameter maintains the original behavior of creating a draft only. Saving and publishing are not atomic operations. If publishing fails, the draft may already exist. Before retrying, query the agent first to avoid duplicate creation.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -130,7 +125,7 @@ public class CreateAgentShrinkRequest extends TeaModel {
     public String visibility;
 
     /**
-     * <p>The visibility scope. The corresponding fields are used based on the Visibility parameter.</p>
+     * <p>The visibility scope. Specify the corresponding fields based on the Visibility value.</p>
      */
     @NameInMap("VisibilityScope")
     public String visibilityScopeShrink;

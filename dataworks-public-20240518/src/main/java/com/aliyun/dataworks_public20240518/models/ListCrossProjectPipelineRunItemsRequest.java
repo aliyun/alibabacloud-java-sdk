@@ -14,7 +14,7 @@ public class ListCrossProjectPipelineRunItemsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of items per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListCrossProjectPipelineRunItemsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the cross-workspace publish pipeline.</p>
+     * <p>The cross-workspace deployment pipeline ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCrossProjectDeploymentCandidatesResponseBody extends TeaModel {
     /**
-     * <p>The business response.</p>
+     * <p>The response data.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;RequestId&quot;:&quot;735894D1-D5E5-50B8-8A6D-041C90A98B23&quot;,&quot;PageNumber&quot;:1,&quot;PageSize&quot;:10,&quot;TotalCount&quot;:1,&quot;DeploymentCandidates&quot;:[{&quot;ObjectId&quot;:&quot;1&quot;,&quot;ObjectType&quot;:&quot;ODPS_SQL&quot;,&quot;ObjectName&quot;:&quot;object-1&quot;,&quot;ObjectVersion&quot;:&quot;7&quot;,&quot;ChangeType&quot;:&quot;ADD&quot;,&quot;CommitUser&quot;:&quot;operator&quot;,&quot;CommitTime&quot;:1788739200000}]}</p>
@@ -14,7 +14,7 @@ public class ListCrossProjectDeploymentCandidatesResponseBody extends TeaModel {
     public ListCrossProjectDeploymentCandidatesResponseBodyData data;
 
     /**
-     * <p>The request ID, which is used to locate and troubleshoot this API call.</p>
+     * <p>The request ID. You can use the ID to locate and troubleshoot the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>735894D1-D5E5-50B8-8A6D-041C90A98B23</p>
@@ -23,7 +23,7 @@ public class ListCrossProjectDeploymentCandidatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -71,7 +71,7 @@ public class ListCrossProjectDeploymentCandidatesResponseBody extends TeaModel {
         public String changeType;
 
         /**
-         * <p>The commit time. This value is a UNIX timestamp in milliseconds.</p>
+         * <p>The commit time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1788739200000</p>
@@ -80,7 +80,7 @@ public class ListCrossProjectDeploymentCandidatesResponseBody extends TeaModel {
         public Long commitTime;
 
         /**
-         * <p>The committer.</p>
+         * <p>The submitter.</p>
          * 
          * <strong>example:</strong>
          * <p>operator</p>
@@ -98,7 +98,7 @@ public class ListCrossProjectDeploymentCandidatesResponseBody extends TeaModel {
         public String objectId;
 
         /**
-         * <p>The candidate object name.</p>
+         * <p>The name of the candidate object.</p>
          * 
          * <strong>example:</strong>
          * <p>object-1</p>
@@ -116,7 +116,7 @@ public class ListCrossProjectDeploymentCandidatesResponseBody extends TeaModel {
         public String objectType;
 
         /**
-         * <p>The candidate object version.</p>
+         * <p>The version of the candidate object.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -189,7 +189,7 @@ public class ListCrossProjectDeploymentCandidatesResponseBody extends TeaModel {
 
     public static class ListCrossProjectDeploymentCandidatesResponseBodyData extends TeaModel {
         /**
-         * <p>The list of candidate objects from the source workspace that are available for cross-workspace deployment.</p>
+         * <p>The list of candidate objects in the source workspace that are available for cross-workspace deployment.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;ObjectId&quot;:&quot;1&quot;,&quot;ObjectType&quot;:&quot;ODPS_SQL&quot;,&quot;ObjectName&quot;:&quot;object-1&quot;,&quot;ObjectVersion&quot;:&quot;7&quot;,&quot;ChangeType&quot;:&quot;ADD&quot;,&quot;CommitUser&quot;:&quot;operator&quot;,&quot;CommitTime&quot;:1788739200000}]</p>

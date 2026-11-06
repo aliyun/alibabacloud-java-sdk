@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataAssetTagsRequest extends TeaModel {
     /**
-     * <p>The tag type.</p>
+     * <p>The tag category. Valid values:</p>
      * <ul>
      * <li>Normal</li>
      * <li>System</li>

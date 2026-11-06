@@ -36,7 +36,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The name of the general-purpose resource group. It must start with a letter and can contain letters, digits, and underscores (_). It can be up to 128 characters in length.</p>
+     * <p>The name of the general-purpose resource group. The name must start with a letter and can contain letters, digits, and underscores (_). It can be up to 128 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The billing duration.</p>
+     * <p>The subscription duration.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -55,7 +55,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public Integer paymentDuration;
 
     /**
-     * <p>The unit of the billing duration. Month indicates months, and Year indicates years.</p>
+     * <p>The unit of the subscription duration. Valid values: Month (monthly subscription) and Year (annual subscription).</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -64,7 +64,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String paymentDurationUnit;
 
     /**
-     * <p>The billing method of the resource group. PrePaid indicates subscription, and PostPaid indicates pay-as-you-go.</p>
+     * <p>The billing method of the resource group. Valid values: PrePaid: subscription. PostPaid: pay-as-you-go.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The remark of the general-purpose resource group. It can contain letters, Chinese characters, digits, and underscores (_). It can be up to 128 characters in length.</p>
+     * <p>The remark of the general-purpose resource group. The remark can contain letters, Chinese characters, digits, and underscores (_). It can be up to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>Create a serverless resource group for common tasks</p>
@@ -83,7 +83,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The specifications of the resource group. Unit: CU. This parameter is required when the billing method of the resource group is PrePaid.</p>
+     * <p>The specifications of the resource group. Unit: CU. This parameter is required when the billing method is set to PrePaid.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -92,7 +92,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public Integer spec;
 
     /**
-     * <p>The ID of the default VPC.</p>
+     * <p>The ID of the VPC to which the resource group is bound by default.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the default vSwitch.</p>
+     * <p>The ID of the vSwitch to which the resource group is bound by default.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

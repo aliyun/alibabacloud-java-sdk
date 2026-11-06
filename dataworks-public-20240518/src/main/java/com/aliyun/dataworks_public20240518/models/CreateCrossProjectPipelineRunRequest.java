@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCrossProjectPipelineRunRequest extends TeaModel {
     /**
-     * <p>The cross-workspace deployment environment ID.</p>
+     * <p>The ID of the cross-workspace deployment environment.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class CreateCrossProjectPipelineRunRequest extends TeaModel {
      * <p>The deployment description.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is a business process created through the API</p>
+     * <p>This is a workflow created by calling the API operation</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The list of top-level object IDs from the source project to deploy. The list must contain exactly one object. Child objects of composite objects such as workflows are automatically included by the system.</p>
+     * <p>The list of top-level object IDs from the source project to be deployed. The list must contain exactly one object. Sub-objects of composite objects such as workflows are automatically included by the system.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,11 +44,7 @@ public class CreateCrossProjectPipelineRunRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The deployment type. Valid values:</p>
-     * <ul>
-     * <li>Offline: Deployment to take the object offline.</li>
-     * <li>Online: Deployment to bring the object online.</li>
-     * </ul>
+     * <p>The deployment type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

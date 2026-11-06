@@ -70,23 +70,21 @@ public class ListCustomAgentsResponseBody extends TeaModel {
 
         /**
          * <p><strong>The creation time (UNIX timestamp in milliseconds).</strong></p>
-         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
          * <p>1780555634000</p>
          */
         @NameInMap("GmtCreateTime")
-        public String gmtCreateTime;
+        public Long gmtCreateTime;
 
         /**
          * <p><strong>The last modification time (UNIX timestamp in milliseconds).</strong></p>
-         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
          * <p>1780555634000</p>
          */
         @NameInMap("GmtModifiedTime")
-        public String gmtModifiedTime;
+        public Long gmtModifiedTime;
 
         /**
          * <p><strong>The last modifier ID.</strong></p>
@@ -144,19 +142,19 @@ public class ListCustomAgentsResponseBody extends TeaModel {
             return this.displayName;
         }
 
-        public ListCustomAgentsResponseBodyPagingInfoAgents setGmtCreateTime(String gmtCreateTime) {
+        public ListCustomAgentsResponseBodyPagingInfoAgents setGmtCreateTime(Long gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
             return this;
         }
-        public String getGmtCreateTime() {
+        public Long getGmtCreateTime() {
             return this.gmtCreateTime;
         }
 
-        public ListCustomAgentsResponseBodyPagingInfoAgents setGmtModifiedTime(String gmtModifiedTime) {
+        public ListCustomAgentsResponseBodyPagingInfoAgents setGmtModifiedTime(Long gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
             return this;
         }
-        public String getGmtModifiedTime() {
+        public Long getGmtModifiedTime() {
             return this.gmtModifiedTime;
         }
 

@@ -14,6 +14,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "dataworks-public";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-northeast-1", "dataworks.ap-northeast-1.aliyuncs.com"),
@@ -526,6 +529,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ApproveProcessInstanceResponse approveProcessInstance(ApproveProcessInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.approveProcessInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the destination region.
+     * Archiving only modifies the archive flag of the session and does not stop or delete the session. If Archived is set to true, the session is archived. If Archived is set to false, the session is unarchived. If this parameter is omitted, the default value true is used. You can use the Archived parameter of ListAgentSessions to query archived and unarchived sessions separately.
+     * The caller must have access permissions on the current session and the corresponding OpenAPI action permissions. An HTTP 200 status code does not indicate that the business operation is successful. You must check JsonRpcResponse.Error. The successful result is located in JsonRpcResponse.Result.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Sets the archive status of a specified agent session to archived or unarchived. This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the destination region.</p>
+     * 
+     * @param tmpReq ArchiveAgentSessionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ArchiveAgentSessionResponse
+     */
+    public ArchiveAgentSessionResponse archiveAgentSessionWithOptions(ArchiveAgentSessionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ArchiveAgentSessionShrinkRequest request = new ArchiveAgentSessionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.params)) {
+            request.paramsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.params, "Params", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jsonrpc)) {
+            body.put("Jsonrpc", request.jsonrpc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramsShrink)) {
+            body.put("Params", request.paramsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ArchiveAgentSession"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ArchiveAgentSessionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the destination region.
+     * Archiving only modifies the archive flag of the session and does not stop or delete the session. If Archived is set to true, the session is archived. If Archived is set to false, the session is unarchived. If this parameter is omitted, the default value true is used. You can use the Archived parameter of ListAgentSessions to query archived and unarchived sessions separately.
+     * The caller must have access permissions on the current session and the corresponding OpenAPI action permissions. An HTTP 200 status code does not indicate that the business operation is successful. You must check JsonRpcResponse.Error. The successful result is located in JsonRpcResponse.Result.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Sets the archive status of a specified agent session to archived or unarchived. This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the destination region.</p>
+     * 
+     * @param request ArchiveAgentSessionRequest
+     * @return ArchiveAgentSessionResponse
+     */
+    public ArchiveAgentSessionResponse archiveAgentSession(ArchiveAgentSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.archiveAgentSessionWithOptions(request, runtime);
     }
 
     /**
@@ -1166,13 +1237,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request instructions</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li><strong>Agent name</strong>: Must be unique within the current account.</li>
-     * <li><strong>Model configuration</strong>: Optional parameter used to specify the model used by the agent and its related settings.</li>
-     * <li><strong>Visibility level</strong>: Defines who can access the agent. Supports visibility within the account, project, or specific users.</li>
-     * <li><strong>Visibility scope</strong>: When <code>PROJECT</code> or <code>USER</code> is selected as the visibility level, you must further specify the specific project IDs or user ID lists.</li>
-     * <li><strong>Other parameters</strong>: Display name and description are optional and can be filled in as needed.</li>
+     * <li><strong>Model configuration</strong>: Optional. Specifies the model used by the agent and its related settings.</li>
+     * <li><strong>Visibility level</strong>: Defines who can access the agent. Supports account-wide, project-specific, or user-specific visibility.</li>
+     * <li><strong>Visibility scope</strong>: When <code>PROJECT</code> or <code>USER</code> is selected as the visibility level, you must specify the specific project IDs or user IDs.</li>
+     * <li><strong>Other parameters</strong>: Parameters such as the display name and description are optional. Specify them as needed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1286,13 +1357,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request instructions</h2>
+     * <h2>Request description</h2>
      * <ul>
      * <li><strong>Agent name</strong>: Must be unique within the current account.</li>
-     * <li><strong>Model configuration</strong>: Optional parameter used to specify the model used by the agent and its related settings.</li>
-     * <li><strong>Visibility level</strong>: Defines who can access the agent. Supports visibility within the account, project, or specific users.</li>
-     * <li><strong>Visibility scope</strong>: When <code>PROJECT</code> or <code>USER</code> is selected as the visibility level, you must further specify the specific project IDs or user ID lists.</li>
-     * <li><strong>Other parameters</strong>: Display name and description are optional and can be filled in as needed.</li>
+     * <li><strong>Model configuration</strong>: Optional. Specifies the model used by the agent and its related settings.</li>
+     * <li><strong>Visibility level</strong>: Defines who can access the agent. Supports account-wide, project-specific, or user-specific visibility.</li>
+     * <li><strong>Visibility scope</strong>: When <code>PROJECT</code> or <code>USER</code> is selected as the visibility level, you must specify the specific project IDs or user IDs.</li>
+     * <li><strong>Other parameters</strong>: Parameters such as the display name and description are optional. Specify them as needed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1310,19 +1381,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation creates an agent session.</li>
-     * <li>You must specify the name of the bound agent by using <code>_meta.agent.agentName</code>. This parameter is required.<ul>
+     * <li>This operation creates a new agent session.</li>
+     * <li>Specify the name of the bound agent by using <code>Params.Meta.Agent.AgentName</code>. This parameter is required.<ul>
      * <li>dataworks_data_agent: DataWorks built-in agent - Data Agent. It provides AI capabilities for the entire data development lifecycle, including data integration, development, O&amp;M, governance, and analysis.</li>
      * <li>dataworks_chatbi_agent: DataWorks built-in agent - ChatBI. Based on natural language processing and intelligent analysis technologies, it automates the entire analysis process from requirement parsing, data extraction, and automatic code generation to visual report output through conversational interaction.</li>
      * <li>dataworks_ai_assistant_agent: DataWorks built-in agent - AI Assistant. An enterprise-grade AI assistant for DataWorks built on open-source frameworks such as OpenClaw and Hermes Agent.</li>
      * </ul>
      * </li>
-     * <li>You can pass through the session source identifier by using <code>_meta.config.sessionSource</code> to facilitate subsequent retrieval by source.</li>
-     * <li>You can pass session tags by using <code>_meta.config.sessionTags[].sessionTagCode</code>.</li>
+     * <li>You can specify the session source by using <code>Params.Meta.Config.SessionSource</code> to facilitate subsequent retrieval by source.</li>
+     * <li>You can pass session tags by using <code>Params.Meta.Config.SessionTags[].SessionTagCode</code>.</li>
+     * <li>Set optional initial session configurations by using <code>Params.Meta.InitialConfigOptions</code>. Use <code>Model</code>, <code>Mode</code>, and <code>ReasoningEffort</code> for the model, authorization mode, and reasoning configuration, respectively. After the session is created, save the session ID from the response to send prompts or subscribe to session events later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an agent session and returns the session ID.</p>
+     * <p>Creates a new agent session and returns the session ID.</p>
      * 
      * @param tmpReq CreateAgentSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1370,19 +1442,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation creates an agent session.</li>
-     * <li>You must specify the name of the bound agent by using <code>_meta.agent.agentName</code>. This parameter is required.<ul>
+     * <li>This operation creates a new agent session.</li>
+     * <li>Specify the name of the bound agent by using <code>Params.Meta.Agent.AgentName</code>. This parameter is required.<ul>
      * <li>dataworks_data_agent: DataWorks built-in agent - Data Agent. It provides AI capabilities for the entire data development lifecycle, including data integration, development, O&amp;M, governance, and analysis.</li>
      * <li>dataworks_chatbi_agent: DataWorks built-in agent - ChatBI. Based on natural language processing and intelligent analysis technologies, it automates the entire analysis process from requirement parsing, data extraction, and automatic code generation to visual report output through conversational interaction.</li>
      * <li>dataworks_ai_assistant_agent: DataWorks built-in agent - AI Assistant. An enterprise-grade AI assistant for DataWorks built on open-source frameworks such as OpenClaw and Hermes Agent.</li>
      * </ul>
      * </li>
-     * <li>You can pass through the session source identifier by using <code>_meta.config.sessionSource</code> to facilitate subsequent retrieval by source.</li>
-     * <li>You can pass session tags by using <code>_meta.config.sessionTags[].sessionTagCode</code>.</li>
+     * <li>You can specify the session source by using <code>Params.Meta.Config.SessionSource</code> to facilitate subsequent retrieval by source.</li>
+     * <li>You can pass session tags by using <code>Params.Meta.Config.SessionTags[].SessionTagCode</code>.</li>
+     * <li>Set optional initial session configurations by using <code>Params.Meta.InitialConfigOptions</code>. Use <code>Model</code>, <code>Mode</code>, and <code>ReasoningEffort</code> for the model, authorization mode, and reasoning configuration, respectively. After the session is created, save the session ID from the response to send prompts or subscribe to session events later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an agent session and returns the session ID.</p>
+     * <p>Creates a new agent session and returns the session ID.</p>
      * 
      * @param request CreateAgentSessionRequest
      * @return CreateAgentSessionResponse
@@ -1628,6 +1701,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateCalendarResponse createCalendar(CreateCalendarRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createCalendarWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a code review.</p>
+     * 
+     * @param request CreateCodeReviewRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCodeReviewResponse
+     */
+    public CreateCodeReviewResponse createCodeReviewWithOptions(CreateCodeReviewRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pipelineRunId)) {
+            body.put("PipelineRunId", request.pipelineRunId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reviewers)) {
+            body.put("Reviewers", request.reviewers);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCodeReview"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCodeReviewResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a code review.</p>
+     * 
+     * @param request CreateCodeReviewRequest
+     * @return CreateCodeReviewResponse
+     */
+    public CreateCodeReviewResponse createCodeReview(CreateCodeReviewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCodeReviewWithOptions(request, runtime);
     }
 
     /**
@@ -1882,10 +2011,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates and persists a cross-workspace deployment flow. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Child objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call ListCrossProjectDeploymentCandidates to query candidate objects, call ExecCrossProjectPipelineRun to execute the deployment after creation, and call GetCrossProjectPipelineRun to query the deployment status.</p>
+     * <p>Creates and solidifies a cross-project deployment pipeline. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Sub-objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call the ListCrossProjectDeploymentCandidates operation to query candidate objects. After the pipeline is created, call the ExecCrossProjectPipelineRun operation to execute the deployment, and call the GetCrossProjectPipelineRun operation to query the status.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a cross-workspace deployment flow.</p>
+     * <p>Creates a cross-workspace deployment pipeline.</p>
      * 
      * @param tmpReq CreateCrossProjectPipelineRunRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1939,10 +2068,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates and persists a cross-workspace deployment flow. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Child objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call ListCrossProjectDeploymentCandidates to query candidate objects, call ExecCrossProjectPipelineRun to execute the deployment after creation, and call GetCrossProjectPipelineRun to query the deployment status.</p>
+     * <p>Creates and solidifies a cross-project deployment pipeline. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Sub-objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call the ListCrossProjectDeploymentCandidates operation to query candidate objects. After the pipeline is created, call the ExecCrossProjectPipelineRun operation to execute the deployment, and call the GetCrossProjectPipelineRun operation to query the status.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a cross-workspace deployment flow.</p>
+     * <p>Creates a cross-workspace deployment pipeline.</p>
      * 
      * @param request CreateCrossProjectPipelineRunRequest
      * @return CreateCrossProjectPipelineRunResponse
@@ -5021,9 +5150,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>DataWorks Basic Edition or later is required.</li>
-     * <li><strong>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of DataWorks general-purpose resource groups.</strong></li>
-     * <li><strong>Before you call this operation, make sure that you have created the service-linked role AliyunServiceRoleForDataWorks.</strong></li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</li>
+     * <li><strong>Before you call this API operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of DataWorks general-purpose resource groups.</strong></li>
+     * <li><strong>Before you call this API operation, make sure that you have created the service-linked role AliyunServiceRoleForDataWorks.</strong></li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -5110,9 +5239,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>DataWorks Basic Edition or later is required.</li>
-     * <li><strong>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of DataWorks general-purpose resource groups.</strong></li>
-     * <li><strong>Before you call this operation, make sure that you have created the service-linked role AliyunServiceRoleForDataWorks.</strong></li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</li>
+     * <li><strong>Before you call this API operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of DataWorks general-purpose resource groups.</strong></li>
+     * <li><strong>Before you call this API operation, make sure that you have created the service-linked role AliyunServiceRoleForDataWorks.</strong></li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -5914,6 +6043,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAgentResponse deleteAgent(DeleteAgentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAgentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.
+     * Verify the target session before proceeding. A deleted session cannot be recovered by unarchiving it through ArchiveAgentSession. To temporarily hide a session, use ArchiveAgentSession. To stop the current execution, use CancelAgentSession.
+     * The caller must have access permissions for the current session and the corresponding OpenAPI action permissions. An HTTP 200 status code does not indicate a successful business operation. You must check JsonRpcResponse.Error for errors. Successful results are located in JsonRpcResponse.Result.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified agent session. This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.</p>
+     * 
+     * @param tmpReq DeleteAgentSessionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAgentSessionResponse
+     */
+    public DeleteAgentSessionResponse deleteAgentSessionWithOptions(DeleteAgentSessionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteAgentSessionShrinkRequest request = new DeleteAgentSessionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.params)) {
+            request.paramsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.params, "Params", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jsonrpc)) {
+            body.put("Jsonrpc", request.jsonrpc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramsShrink)) {
+            body.put("Params", request.paramsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAgentSession"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAgentSessionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.
+     * Verify the target session before proceeding. A deleted session cannot be recovered by unarchiving it through ArchiveAgentSession. To temporarily hide a session, use ArchiveAgentSession. To stop the current execution, use CancelAgentSession.
+     * The caller must have access permissions for the current session and the corresponding OpenAPI action permissions. An HTTP 200 status code does not indicate a successful business operation. You must check JsonRpcResponse.Error for errors. Successful results are located in JsonRpcResponse.Result.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified agent session. This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.</p>
+     * 
+     * @param request DeleteAgentSessionRequest
+     * @return DeleteAgentSessionResponse
+     */
+    public DeleteAgentSessionResponse deleteAgentSession(DeleteAgentSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAgentSessionWithOptions(request, runtime);
     }
 
     /**
@@ -8282,7 +8479,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or later to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a specified task.</p>
@@ -8321,7 +8518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or later to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a specified task.</p>
@@ -9328,8 +9525,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This operation retrieves the detailed configuration information of an agent by its name, including but not limited to model configurations, system prompts, and tool lists. You must provide the exact agent name as a parameter in the request.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation retrieves the detailed configuration information of an agent by its name, including but not limited to model configurations, system prompts, and tool lists. You must provide the exact agent name as a parameter in the request.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of an agent.</p>
@@ -9368,8 +9565,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This operation retrieves the detailed configuration information of an agent by its name, including but not limited to model configurations, system prompts, and tool lists. You must provide the exact agent name as a parameter in the request.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation retrieves the detailed configuration information of an agent by its name, including but not limited to model configurations, system prompts, and tool lists. You must provide the exact agent name as a parameter in the request.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of an agent.</p>
@@ -9452,6 +9649,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAgentSessionArtifactMetaResponse getAgentSessionArtifactMeta(GetAgentSessionArtifactMetaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAgentSessionArtifactMetaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the corresponding canary release is enabled for your account and the target region.
+     * This API operation provides a read-only SSE subscription and does not submit questions. Use a GET request and maintain streaming reads. Do not read the response as a standard JSON object at once. For long-running tasks that may exceed the timeout of a single request, establish an independent event subscription before calling PromptAgentSession. After creating a session, set SessionCode to the SessionId and read both streams in parallel. The Events stream displays real-time progress, while the built-in SSE of the Prompt stream is used to read the final state and business errors of the current turn.
+     * Events display messages, tool invoke, and execution progress. The establishment of a subscription connection, heartbeats, or an HTTP 200 status code does not indicate task completion. Determine task completion based on the actual final state events and the Prompt invoke results.
+     * When resuming after a disconnection, pass the ID of the last consumed remote event as Last-Event-Id. Also, save and pass back the EventEpoch of the same event stream if the server has returned it. When subscribing for the first time without a cursor, omit these two parameters to receive only real-time events after the subscription is established. Explicitly setting Last-Event-Id to 0 attempts to replay from the starting point still in the cache, which does not mean the complete history can be retrieved. Retrieve the complete history by calling LoadAgentSession. Do not generate cursors or epochs yourself, or use local message sequence numbers as replacements.
+     * The event cache is bounded. If you receive a resynchronization prompt such as state_resync_required or the cursor is no longer available, restore the history by calling LoadAgentSession and then re-establish the subscription. LoadAgentSession is used for refreshing and exception recovery, and should not be called repeatedly to replace real-time event subscriptions. If the Prompt stream times out or disconnects before receiving the business final state, the result of the current turn is unknown, and you can continue to observe the progress through the Events stream. Avoid automatically resending the Prompt. Closing the Events subscription does not trigger CancelAgentSession.
+     * Servers that support epoch information return eventEpoch in the data of the stream_open control frame and provide a mapping between the business sessionId and nativeSessionId. Save the identifiers returned by the server. Do not assume that the business session ID is the same as the native session ID. The cursor and eventEpoch must come from the same event stream epoch of the same native session, and cannot be reused across native sessions or epochs. Do not advance the cursor when the control frame does not have an ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Subscribes to real-time Server-Sent Events (SSE) for a specified agent session independently, with support for resumption using a remote cursor. This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the corresponding canary release is enabled for your account and the target region.</p>
+     * 
+     * @param request GetAgentSessionEventsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgentSessionEventsResponse
+     */
+    public GetAgentSessionEventsResponse getAgentSessionEventsWithOptions(GetAgentSessionEventsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventEpoch)) {
+            query.put("EventEpoch", request.eventEpoch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionCode)) {
+            query.put("SessionCode", request.sessionCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgentSessionEvents"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgentSessionEventsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the corresponding canary release is enabled for your account and the target region.
+     * This API operation provides a read-only SSE subscription and does not submit questions. Use a GET request and maintain streaming reads. Do not read the response as a standard JSON object at once. For long-running tasks that may exceed the timeout of a single request, establish an independent event subscription before calling PromptAgentSession. After creating a session, set SessionCode to the SessionId and read both streams in parallel. The Events stream displays real-time progress, while the built-in SSE of the Prompt stream is used to read the final state and business errors of the current turn.
+     * Events display messages, tool invoke, and execution progress. The establishment of a subscription connection, heartbeats, or an HTTP 200 status code does not indicate task completion. Determine task completion based on the actual final state events and the Prompt invoke results.
+     * When resuming after a disconnection, pass the ID of the last consumed remote event as Last-Event-Id. Also, save and pass back the EventEpoch of the same event stream if the server has returned it. When subscribing for the first time without a cursor, omit these two parameters to receive only real-time events after the subscription is established. Explicitly setting Last-Event-Id to 0 attempts to replay from the starting point still in the cache, which does not mean the complete history can be retrieved. Retrieve the complete history by calling LoadAgentSession. Do not generate cursors or epochs yourself, or use local message sequence numbers as replacements.
+     * The event cache is bounded. If you receive a resynchronization prompt such as state_resync_required or the cursor is no longer available, restore the history by calling LoadAgentSession and then re-establish the subscription. LoadAgentSession is used for refreshing and exception recovery, and should not be called repeatedly to replace real-time event subscriptions. If the Prompt stream times out or disconnects before receiving the business final state, the result of the current turn is unknown, and you can continue to observe the progress through the Events stream. Avoid automatically resending the Prompt. Closing the Events subscription does not trigger CancelAgentSession.
+     * Servers that support epoch information return eventEpoch in the data of the stream_open control frame and provide a mapping between the business sessionId and nativeSessionId. Save the identifiers returned by the server. Do not assume that the business session ID is the same as the native session ID. The cursor and eventEpoch must come from the same event stream epoch of the same native session, and cannot be reused across native sessions or epochs. Do not advance the cursor when the control frame does not have an ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Subscribes to real-time Server-Sent Events (SSE) for a specified agent session independently, with support for resumption using a remote cursor. This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the corresponding canary release is enabled for your account and the target region.</p>
+     * 
+     * @param request GetAgentSessionEventsRequest
+     * @return GetAgentSessionEventsResponse
+     */
+    public GetAgentSessionEventsResponse getAgentSessionEvents(GetAgentSessionEventsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAgentSessionEventsWithOptions(request, runtime);
     }
 
     /**
@@ -9872,6 +10133,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCertificateResponse getCertificate(GetCertificateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getCertificateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the metadata of a code review.</p>
+     * 
+     * @param request GetCodeReviewRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCodeReviewResponse
+     */
+    public GetCodeReviewResponse getCodeReviewWithOptions(GetCodeReviewRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCodeReview"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCodeReviewResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the metadata of a code review.</p>
+     * 
+     * @param request GetCodeReviewRequest
+     * @return GetCodeReviewResponse
+     */
+    public GetCodeReviewResponse getCodeReview(GetCodeReviewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCodeReviewWithOptions(request, runtime);
     }
 
     /**
@@ -13197,7 +13506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This feature requires DataWorks Basic Edition or later.</p>
+     * <p>This feature requires DataWorks Basic Edition or a higher edition.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of a specified workflow.</p>
@@ -13228,7 +13537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This feature requires DataWorks Basic Edition or later.</p>
+     * <p>This feature requires DataWorks Basic Edition or a higher edition.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of a specified workflow.</p>
@@ -13769,13 +14078,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Request instructions</h2>
      * <ul>
-     * <li>You must specify at least one of agentName and sessionSourceList.</li>
-     * <li>You can combine tagList, sessionId, and sessionTitle for filtering.</li>
-     * <li>The response follows the Alibaba Cloud OpenAPI paging specification, including totalCount, maxResults, nextToken, and sessionList.</li>
-     * <li>If nextToken is an invalid string, it is processed as 1 by default.</li>
-     * <li>By default, 50 records are returned per page. You can adjust this by using the maxResults parameter.</li>
+     * <li>You must specify at least one of <code>Params.AgentName</code> and <code>Params.SessionSourceList</code>. You can also filter sessions by <code>Params.TagList</code>, <code>Params.SessionId</code>, and <code>Params.SessionTitle</code>.</li>
+     * <li>If <code>Params.Archived</code> is set to <code>true</code>, only archived sessions are queried. If it is set to <code>false</code> or omitted, only unarchived sessions are queried. To query both types of sessions, send separate requests and handle the pagination for each.</li>
+     * <li>The session list is located in <code>JsonRpcResponse.Result.AgentSessions</code>. The pagination information is located in <code>TotalCount</code>, <code>MaxResults</code>, and <code>NextToken</code> under the same <code>Result</code>.</li>
+     * <li>The default value of <code>Params.MaxResults</code> is 50. For the first page, you can pass <code>Params.NextToken=1</code>. For subsequent pages, pass the <code>NextToken</code> value from the response as is.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -13825,13 +14133,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Request instructions</h2>
      * <ul>
-     * <li>You must specify at least one of agentName and sessionSourceList.</li>
-     * <li>You can combine tagList, sessionId, and sessionTitle for filtering.</li>
-     * <li>The response follows the Alibaba Cloud OpenAPI paging specification, including totalCount, maxResults, nextToken, and sessionList.</li>
-     * <li>If nextToken is an invalid string, it is processed as 1 by default.</li>
-     * <li>By default, 50 records are returned per page. You can adjust this by using the maxResults parameter.</li>
+     * <li>You must specify at least one of <code>Params.AgentName</code> and <code>Params.SessionSourceList</code>. You can also filter sessions by <code>Params.TagList</code>, <code>Params.SessionId</code>, and <code>Params.SessionTitle</code>.</li>
+     * <li>If <code>Params.Archived</code> is set to <code>true</code>, only archived sessions are queried. If it is set to <code>false</code> or omitted, only unarchived sessions are queried. To query both types of sessions, send separate requests and handle the pagination for each.</li>
+     * <li>The session list is located in <code>JsonRpcResponse.Result.AgentSessions</code>. The pagination information is located in <code>TotalCount</code>, <code>MaxResults</code>, and <code>NextToken</code> under the same <code>Result</code>.</li>
+     * <li>The default value of <code>Params.MaxResults</code> is 50. For the first page, you can pass <code>Params.NextToken=1</code>. For subsequent pages, pass the <code>NextToken</code> value from the response as is.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -14292,6 +14599,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Performs a paging query of code reviews.</p>
+     * 
+     * @param request ListCodeReviewsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCodeReviewsResponse
+     */
+    public ListCodeReviewsResponse listCodeReviewsWithOptions(ListCodeReviewsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.creator)) {
+            query.put("Creator", request.creator);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reviewer)) {
+            query.put("Reviewer", request.reviewer);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCodeReviews"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCodeReviewsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paging query of code reviews.</p>
+     * 
+     * @param request ListCodeReviewsRequest
+     * @return ListCodeReviewsResponse
+     */
+    public ListCodeReviewsResponse listCodeReviews(ListCodeReviewsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCodeReviewsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <ol>
      * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
@@ -14734,7 +15105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries cross-workspace deployment candidate objects.</p>
+     * <p>Queries cross-workspace deployment candidates.</p>
      * 
      * @param request ListCrossProjectDeploymentCandidatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14806,7 +15177,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries cross-workspace deployment candidate objects.</p>
+     * <p>Queries cross-workspace deployment candidates.</p>
      * 
      * @param request ListCrossProjectDeploymentCandidatesRequest
      * @return ListCrossProjectDeploymentCandidatesResponse
@@ -14870,7 +15241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the publish items of a cross-workspace publish pipeline.</p>
+     * <p>Queries the deployment items of a cross-workspace deployment pipeline.</p>
      * 
      * @param request ListCrossProjectPipelineRunItemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14914,7 +15285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the publish items of a cross-workspace publish pipeline.</p>
+     * <p>Queries the deployment items of a cross-workspace deployment pipeline.</p>
      * 
      * @param request ListCrossProjectPipelineRunItemsRequest
      * @return ListCrossProjectPipelineRunItemsResponse
@@ -15394,7 +15765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Enterprise Edition or a higher edition is required.</p>
+     * <p>You must purchase DataWorks Enterprise Edition or higher to use this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a list of tags.</p>
@@ -15425,7 +15796,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Enterprise Edition or a higher edition is required.</p>
+     * <p>You must purchase DataWorks Enterprise Edition or higher to use this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a list of tags.</p>
@@ -15616,10 +15987,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or later to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query on the data quality monitoring task list.</p>
+     * <p>Queries the data quality monitoring task list by page.</p>
      * 
      * @deprecated OpenAPI ListDataQualityEvaluationTasks is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScans instead.
      * 
@@ -15651,10 +16022,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or later to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query on the data quality monitoring task list.</p>
+     * <p>Queries the data quality monitoring task list by page.</p>
      * 
      * @deprecated OpenAPI ListDataQualityEvaluationTasks is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScans instead.
      * 
@@ -16604,10 +16975,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or later is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a paginated list of downstream nodes for a specified node.</p>
+     * <p>Retrieves a paginated list of downstream tasks for a specified task.</p>
      * 
      * @param request ListDownstreamTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16635,10 +17006,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or later is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a paginated list of downstream nodes for a specified node.</p>
+     * <p>Retrieves a paginated list of downstream tasks for a specified task.</p>
      * 
      * @param request ListDownstreamTasksRequest
      * @return ListDownstreamTasksResponse
@@ -18179,13 +18550,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
-     * <li>Only MaxCompute and HMS (EMR cluster) table types are supported.</li>
-     * <li>Before calling this API, call ListCrawlers to obtain the MetaEntityId of the metadata crawler, then call ListDatabases to obtain the database ID. For MaxCompute projects with Schema enabled, call ListSchemas to obtain the schema ID. Then call ListTables to obtain the TableId, and pass the returned table ID to this API.</li>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>Currently, only MaxCompute and HMS (EMR cluster) tables are supported.</li>
+     * <li>Before you call this API operation, call ListCrawlers to obtain the MetaEntityId of the metadata crawler, and then call ListDatabases to obtain the database ID. For MaxCompute projects with the schema feature enabled, call ListSchemas to obtain the schema ID. Then, call ListTables to obtain the TableId, and pass the returned table ID to this API operation.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the partition list of a specified table in DataWorks Data Map. Currently supports MaxCompute and HMS (EMR cluster) types.</p>
+     * <p>Queries the partitions of a specified table in DataWorks Data Map. MaxCompute and HMS (EMR cluster) tables are supported.</p>
      * 
      * @param request ListPartitionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18214,13 +18585,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
-     * <li>Only MaxCompute and HMS (EMR cluster) table types are supported.</li>
-     * <li>Before calling this API, call ListCrawlers to obtain the MetaEntityId of the metadata crawler, then call ListDatabases to obtain the database ID. For MaxCompute projects with Schema enabled, call ListSchemas to obtain the schema ID. Then call ListTables to obtain the TableId, and pass the returned table ID to this API.</li>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>Currently, only MaxCompute and HMS (EMR cluster) tables are supported.</li>
+     * <li>Before you call this API operation, call ListCrawlers to obtain the MetaEntityId of the metadata crawler, and then call ListDatabases to obtain the database ID. For MaxCompute projects with the schema feature enabled, call ListSchemas to obtain the schema ID. Then, call ListTables to obtain the TableId, and pass the returned table ID to this API operation.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the partition list of a specified table in DataWorks Data Map. Currently supports MaxCompute and HMS (EMR cluster) types.</p>
+     * <p>Queries the partitions of a specified table in DataWorks Data Map. MaxCompute and HMS (EMR cluster) tables are supported.</p>
      * 
      * @param request ListPartitionsRequest
      * @return ListPartitionsResponse
@@ -19770,11 +20141,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or later to use this API.
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this API.
      * You can only query operation logs generated within the past 31 days.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a paginated list of operation logs for a specified node instance.</p>
+     * <p>Retrieves a paginated list of operation logs for a specified task instance.</p>
      * 
      * @param request ListTaskInstanceOperationLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19802,11 +20173,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or later to use this API.
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this API.
      * You can only query operation logs generated within the past 31 days.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a paginated list of operation logs for a specified node instance.</p>
+     * <p>Retrieves a paginated list of operation logs for a specified task instance.</p>
      * 
      * @param request ListTaskInstanceOperationLogsRequest
      * @return ListTaskInstanceOperationLogsResponse
@@ -20456,15 +20827,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation is used to recover the details of a specified session and return the agent response in a Server-Sent Events (SSE) stream.</li>
-     * <li>If the target session does not exist, an error frame with an error code of 400 is returned.</li>
-     * <li>The response contains process information about how the agent handles the request, such as message chunks, reasoning steps, and tool call status updates.</li>
-     * <li>The stopReason field indicates the reason why the agent stops the current conversation turn. Valid values include but are not limited to reaching the maximum turn limit and being canceled.</li>
-     * <li>The returned content complies with the open-source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a>.</li>
+     * <li>This operation recovers the details of a specified session and returns the agent response in a streaming manner by using Server-Sent Events (SSE).</li>
+     * <li>If the target session does not exist, an error frame with the error code 400 is returned.</li>
+     * <li>The response includes processing information about how the agent handles the request, such as message chunks, thinking process, and tool invocation status updates.</li>
+     * <li>The <code>stopReason</code> field indicates the reason why the agent stops the current conversation turn. Valid values include but are not limited to reaching the maximum number of turns and being canceled.</li>
+     * <li>The returned content complies with the open source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Loads the historical messages of an existing session and returns them in a Server-Sent Events (SSE) stream. If the session does not exist, a JSONRPCResponse.error with a code of 400 is output through SSE. The Content-Type is text/event-stream. This operation applies to session context restoration scenarios.</p>
+     * <p>Loads the historical messages of an existing agent session and returns them by using Server-Sent Events (SSE) for page refreshes and history recovery after exceptions.</p>
      * 
      * @param tmpReq LoadAgentSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20512,15 +20883,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This operation is used to recover the details of a specified session and return the agent response in a Server-Sent Events (SSE) stream.</li>
-     * <li>If the target session does not exist, an error frame with an error code of 400 is returned.</li>
-     * <li>The response contains process information about how the agent handles the request, such as message chunks, reasoning steps, and tool call status updates.</li>
-     * <li>The stopReason field indicates the reason why the agent stops the current conversation turn. Valid values include but are not limited to reaching the maximum turn limit and being canceled.</li>
-     * <li>The returned content complies with the open-source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a>.</li>
+     * <li>This operation recovers the details of a specified session and returns the agent response in a streaming manner by using Server-Sent Events (SSE).</li>
+     * <li>If the target session does not exist, an error frame with the error code 400 is returned.</li>
+     * <li>The response includes processing information about how the agent handles the request, such as message chunks, thinking process, and tool invocation status updates.</li>
+     * <li>The <code>stopReason</code> field indicates the reason why the agent stops the current conversation turn. Valid values include but are not limited to reaching the maximum number of turns and being canceled.</li>
+     * <li>The returned content complies with the open source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Loads the historical messages of an existing session and returns them in a Server-Sent Events (SSE) stream. If the session does not exist, a JSONRPCResponse.error with a code of 400 is output through SSE. The Content-Type is text/event-stream. This operation applies to session context restoration scenarios.</p>
+     * <p>Loads the historical messages of an existing agent session and returns them by using Server-Sent Events (SSE) for page refreshes and history recovery after exceptions.</p>
      * 
      * @param request LoadAgentSessionRequest
      * @return LoadAgentSessionResponse
@@ -20790,17 +21161,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Previews the parameter parsing results for each cycle based on the provided script parameters, business date, and scheduling configuration. A task ID is not required.</p>
+     * <ul>
+     * <li>This operation only performs a simulated preview and does not create or run actual tasks. The simulated cycles returned for weekly and monthly schedules cannot be used as the basis for determining actual trigger dates.</li>
+     * <li><code>Bizdate</code> is the starting business date, normalized to 00:00:00 on that date in the time zone of the service region. <code>TriggerTime</code> is the scheduled trigger time for the corresponding simulated cycle.</li>
+     * <li>System identifiers such as <code>$nodeid</code> use a simulated context. The preview value of <code>$nodeid</code> is <code>0</code>, which does not represent an actual task.</li>
+     * <li>The parsing result for each cycle is indicated by <code>Success</code>. If the parsing is successful, <code>Parameters</code> is returned. If the parsing fails, <code>ErrorMessage</code> is returned, and partial parsing results for the cycle are not returned.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Previews scheduling parameters without creating actual nodes or running instances.</p>
+     * 
+     * @param request PreviewTaskParametersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PreviewTaskParametersResponse
+     */
+    public PreviewTaskParametersResponse previewTaskParametersWithOptions(PreviewTaskParametersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizdate)) {
+            body.put("Bizdate", request.bizdate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cron)) {
+            body.put("Cron", request.cron);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
+            body.put("Parameters", request.parameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.previewCount)) {
+            body.put("PreviewCount", request.previewCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectEnv)) {
+            body.put("ProjectEnv", request.projectEnv);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PreviewTaskParameters"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PreviewTaskParametersResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Previews the parameter parsing results for each cycle based on the provided script parameters, business date, and scheduling configuration. A task ID is not required.</p>
+     * <ul>
+     * <li>This operation only performs a simulated preview and does not create or run actual tasks. The simulated cycles returned for weekly and monthly schedules cannot be used as the basis for determining actual trigger dates.</li>
+     * <li><code>Bizdate</code> is the starting business date, normalized to 00:00:00 on that date in the time zone of the service region. <code>TriggerTime</code> is the scheduled trigger time for the corresponding simulated cycle.</li>
+     * <li>System identifiers such as <code>$nodeid</code> use a simulated context. The preview value of <code>$nodeid</code> is <code>0</code>, which does not represent an actual task.</li>
+     * <li>The parsing result for each cycle is indicated by <code>Success</code>. If the parsing is successful, <code>Parameters</code> is returned. If the parsing fails, <code>ErrorMessage</code> is returned, and partial parsing results for the cycle are not returned.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Previews scheduling parameters without creating actual nodes or running instances.</p>
+     * 
+     * @param request PreviewTaskParametersRequest
+     * @return PreviewTaskParametersResponse
+     */
+    public PreviewTaskParametersResponse previewTaskParameters(PreviewTaskParametersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.previewTaskParametersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation sends a user prompt to a specified session ID and accepts the response from the agent in a streaming manner by using Server-Sent Events (SSE).</li>
-     * <li>The response may include information such as message chunks, thinking procedures, and tool calling status updates.</li>
-     * <li>If the specified session does not exist, a 400 fault is returned in an SSE fault frame.</li>
-     * <li>The stopReason field indicates the reason why the agent stopped the current conversation.</li>
-     * <li>Multiple types of content blocks are supported as prompt inputs, such as text and OSS file download links.</li>
-     * <li>You can optionally provide additional metadata in the Meta field to pass more context to the server.</li>
+     * <li>This API operation sends a user prompt to a specified session ID and accepts the agent response as Server-Sent Events (SSE) streams.</li>
+     * <li>The response may include message chunks, thinking procedures, and tool invocation status updates.</li>
+     * <li>If the specified session does not exist, a 400 error is returned in an SSE error frame.</li>
+     * <li>The <code>stopReason</code> field indicates the reason why the agent stopped the current conversation turn.</li>
+     * <li>This operation supports multiple types of content blocks as prompt input, such as text and OSS file download links.</li>
+     * <li>You can optionally provide additional metadata in <code>Meta</code> to pass more context to the server.</li>
      * <li>The returned content complies with the open-source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a>.</li>
-     * <li><strong>Before you invoke this operation, make sure that you fully understand the billing methods and pricing of the Data Agent product</strong>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></li>
+     * <li><strong>Before you use this API operation, make sure that you fully understand the billing methods and pricing of Data Agent</strong>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></li>
      * </ul>
+     * <h2>Long-running tasks and timeout recovery</h2>
+     * <p>For long-running tasks that may exceed the single-request timeout, after the GetAgentSessionEvents canary release is enabled for the current account and target region, first establish an Events subscription and then call PromptAgentSession to read both streams in parallel. Use Events to display real-time progress, and use the Prompt stream to read the final state and business errors of the current turn. Each message is displayed only once.
+     * If the Prompt stream times out or disconnects before the final business state is received, the result of the current turn is unknown. Continue to observe Events, and call LoadAgentSession when you need to verify the session history. Do not automatically resend the prompt.</p>
      * 
      * <b>summary</b> : 
      * <p>Sends a user prompt to an existing session and streams the agent response.</p>
@@ -20851,15 +21311,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation sends a user prompt to a specified session ID and accepts the response from the agent in a streaming manner by using Server-Sent Events (SSE).</li>
-     * <li>The response may include information such as message chunks, thinking procedures, and tool calling status updates.</li>
-     * <li>If the specified session does not exist, a 400 fault is returned in an SSE fault frame.</li>
-     * <li>The stopReason field indicates the reason why the agent stopped the current conversation.</li>
-     * <li>Multiple types of content blocks are supported as prompt inputs, such as text and OSS file download links.</li>
-     * <li>You can optionally provide additional metadata in the Meta field to pass more context to the server.</li>
+     * <li>This API operation sends a user prompt to a specified session ID and accepts the agent response as Server-Sent Events (SSE) streams.</li>
+     * <li>The response may include message chunks, thinking procedures, and tool invocation status updates.</li>
+     * <li>If the specified session does not exist, a 400 error is returned in an SSE error frame.</li>
+     * <li>The <code>stopReason</code> field indicates the reason why the agent stopped the current conversation turn.</li>
+     * <li>This operation supports multiple types of content blocks as prompt input, such as text and OSS file download links.</li>
+     * <li>You can optionally provide additional metadata in <code>Meta</code> to pass more context to the server.</li>
      * <li>The returned content complies with the open-source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a>.</li>
-     * <li><strong>Before you invoke this operation, make sure that you fully understand the billing methods and pricing of the Data Agent product</strong>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></li>
+     * <li><strong>Before you use this API operation, make sure that you fully understand the billing methods and pricing of Data Agent</strong>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></li>
      * </ul>
+     * <h2>Long-running tasks and timeout recovery</h2>
+     * <p>For long-running tasks that may exceed the single-request timeout, after the GetAgentSessionEvents canary release is enabled for the current account and target region, first establish an Events subscription and then call PromptAgentSession to read both streams in parallel. Use Events to display real-time progress, and use the Prompt stream to read the final state and business errors of the current turn. Each message is displayed only once.
+     * If the Prompt stream times out or disconnects before the final business state is received, the result of the current turn is unknown. Continue to observe Events, and call LoadAgentSession when you need to verify the session history. Do not automatically resend the prompt.</p>
      * 
      * <b>summary</b> : 
      * <p>Sends a user prompt to an existing session and streams the agent response.</p>
@@ -22702,7 +23165,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation requires DataWorks Enterprise Edition or later.</p>
+     * <p>You must purchase DataWorks Enterprise Edition or higher to use this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Attaches tags to data assets.</p>
@@ -22767,7 +23230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation requires DataWorks Enterprise Edition or later.</p>
+     * <p>You must purchase DataWorks Enterprise Edition or higher to use this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Attaches tags to data assets.</p>
@@ -22980,6 +23443,146 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UnTagDataAssetsResponse unTagDataAssets(UnTagDataAssetsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unTagDataAssetsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.
+     * Updates a custom agent that the current identity has administrative permissions for. The Name parameter is used to locate the target agent and cannot be used to rename the agent. Call the GetAgent operation first to read the current AgentVersion, and then explicitly pass the ExpectedVersion parameter during the update. If a conflict occurs, read the version again and verify the differences instead of blindly overwriting the agent.
+     * Omit reference lists that do not need to be modified. The current new backend retains existing references for empty arrays of Tools, Skills, and CallableAgents, but clears references for an empty array of ExpertSuites. A unified empty array clearing rule cannot be used. The Tools parameter already includes Kind and the corresponding tool configurations, and uses the same structure as CreateAgent. Specifying only Name does not constitute a valid tool configuration.
+     * For official skills, specify only Source=OFFICIAL and SkillId. For official suites, specify only Source=OFFICIAL and SuiteId. Do not mix in name, version, or artifact fields. The integer Version and VersionSelector parameters for custom resources are mutually exclusive. The version selection capability depends on the deployment of the target server.
+     * If PublishImmediately is omitted or set to false, only the definition is saved. If it is set to true, a new draft version is saved first and then a publish request is initiated. Saving and publishing are not atomic operations. If publishing fails, the draft version may have already been incremented. In this case, call GetAgent to read the current version back before deciding whether to retry, to avoid generating duplicate versions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the definition of a specified agent, increments the definition version, and optionally publishes the agent immediately. This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.</p>
+     * 
+     * @param tmpReq UpdateAgentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAgentResponse
+     */
+    public UpdateAgentResponse updateAgentWithOptions(UpdateAgentRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateAgentShrinkRequest request = new UpdateAgentShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.callableAgents)) {
+            request.callableAgentsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.callableAgents, "CallableAgents", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.expertSuites)) {
+            request.expertSuitesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.expertSuites, "ExpertSuites", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.metadata)) {
+            request.metadataShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.metadata, "Metadata", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.model)) {
+            request.modelShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.model, "Model", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.skills)) {
+            request.skillsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.skills, "Skills", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tools)) {
+            request.toolsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tools, "Tools", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.visibilityScope)) {
+            request.visibilityScopeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.visibilityScope, "VisibilityScope", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callableAgentsShrink)) {
+            body.put("CallableAgents", request.callableAgentsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("DisplayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedVersion)) {
+            body.put("ExpectedVersion", request.expectedVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expertSuitesShrink)) {
+            body.put("ExpertSuites", request.expertSuitesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metadataShrink)) {
+            body.put("Metadata", request.metadataShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelShrink)) {
+            body.put("Model", request.modelShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.publishImmediately)) {
+            body.put("PublishImmediately", request.publishImmediately);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillsShrink)) {
+            body.put("Skills", request.skillsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.systemPrompt)) {
+            body.put("SystemPrompt", request.systemPrompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toolsShrink)) {
+            body.put("Tools", request.toolsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.visibility)) {
+            body.put("Visibility", request.visibility);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.visibilityScopeShrink)) {
+            body.put("VisibilityScope", request.visibilityScopeShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAgent"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAgentResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.
+     * Updates a custom agent that the current identity has administrative permissions for. The Name parameter is used to locate the target agent and cannot be used to rename the agent. Call the GetAgent operation first to read the current AgentVersion, and then explicitly pass the ExpectedVersion parameter during the update. If a conflict occurs, read the version again and verify the differences instead of blindly overwriting the agent.
+     * Omit reference lists that do not need to be modified. The current new backend retains existing references for empty arrays of Tools, Skills, and CallableAgents, but clears references for an empty array of ExpertSuites. A unified empty array clearing rule cannot be used. The Tools parameter already includes Kind and the corresponding tool configurations, and uses the same structure as CreateAgent. Specifying only Name does not constitute a valid tool configuration.
+     * For official skills, specify only Source=OFFICIAL and SkillId. For official suites, specify only Source=OFFICIAL and SuiteId. Do not mix in name, version, or artifact fields. The integer Version and VersionSelector parameters for custom resources are mutually exclusive. The version selection capability depends on the deployment of the target server.
+     * If PublishImmediately is omitted or set to false, only the definition is saved. If it is set to true, a new draft version is saved first and then a publish request is initiated. Saving and publishing are not atomic operations. If publishing fails, the draft version may have already been incremented. In this case, call GetAgent to read the current version back before deciding whether to retry, to avoid generating duplicate versions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the definition of a specified agent, increments the definition version, and optionally publishes the agent immediately. This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.</p>
+     * 
+     * @param request UpdateAgentRequest
+     * @return UpdateAgentResponse
+     */
+    public UpdateAgentResponse updateAgent(UpdateAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAgentWithOptions(request, runtime);
     }
 
     /**
@@ -23288,6 +23891,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateCalendarResponse updateCalendar(UpdateCalendarRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateCalendarWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Approves or rejects a code review.</p>
+     * 
+     * @param request UpdateCodeReviewRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCodeReviewResponse
+     */
+    public UpdateCodeReviewResponse updateCodeReviewWithOptions(UpdateCodeReviewRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCodeReview"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCodeReviewResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Approves or rejects a code review.</p>
+     * 
+     * @param request UpdateCodeReviewRequest
+     * @return UpdateCodeReviewResponse
+     */
+    public UpdateCodeReviewResponse updateCodeReview(UpdateCodeReviewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCodeReviewWithOptions(request, runtime);
     }
 
     /**

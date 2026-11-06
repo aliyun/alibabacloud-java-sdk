@@ -120,7 +120,7 @@ public class GetAgentResponseBody extends TeaModel {
 
     public static class GetAgentResponseBodyAgentExpertSuites extends TeaModel {
         /**
-         * <p>If the suite is deleted, the release snapshot is missing, or the caller does not have permission to view it, the suite summary is not returned, and only the ID and version number are retained.</p>
+         * <p>If the suite is deleted, the published snapshot is missing, or the caller does not have permission to view it, the suite summary is not returned, and only the ID and version number are retained.</p>
          * 
          * <strong>example:</strong>
          * <p>Data analytics expert capability set</p>
@@ -147,7 +147,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The fixed official artifact version returned when explicitly querying a released version of the agent. This is not returned when querying a draft or a custom suite.</p>
+         * <p>Returns the fixed official artifact version when explicitly querying a published version of the agent. Not returned when querying a draft or a custom suite.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1.0.202610211408</p>
@@ -156,7 +156,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String packageVersion;
 
         /**
-         * <p>An optional suite summary field that is not returned by current new DataAgent applications. A default value does not indicate version 0. This cannot be used as the Version for UpdateAgent and must be omitted when writing back references. For the fixed version of official artifacts, read PackageVersion.</p>
+         * <p>An optional suite summary field that is not returned by current new DataAgent applications. A missing value does not indicate version 0. This field cannot be used as the Version for UpdateAgent and must be omitted when writing back references. For the fixed version of official artifacts, read PackageVersion.</p>
          * 
          * <strong>example:</strong>
          * <p>1.2.0</p>
@@ -174,7 +174,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The expert suite ID.</p>
+         * <p>The ID of the expert suite.</p>
          * 
          * <strong>example:</strong>
          * <p>suite_example</p>
@@ -183,7 +183,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String suiteId;
 
         /**
-         * <p>Returned only when a personal or enterprise suite explicitly specifies a fixed integer version in the reference. This is not returned for official suites. An unreturned value is not 0. If the SDK initializes the default integer to 0, it must be omitted when writing back. For official items, only Source and SuiteId are written back, and Version, VersionSelector, SemanticVersion, or PackageVersion are not passed.</p>
+         * <p>Returned only when a personal or enterprise suite explicitly specifies a fixed integer version in the reference. Not returned for official suites. A missing value is not 0. If the SDK initializes a missing integer to 0, it must be omitted when writing back. For official items, only Source and SuiteId are written back, and Version, VersionSelector, SemanticVersion, or PackageVersion are not passed.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -192,7 +192,7 @@ public class GetAgentResponseBody extends TeaModel {
         public Integer version;
 
         /**
-         * <p>Returned only for personal or enterprise resources to indicate the saved version selection strategy, which is mutually exclusive with the fixed integer Version. It does not represent the specific revision actually loaded in the session. This is not returned for official resources.</p>
+         * <p>Returned only for personal or enterprise resources to indicate the saved version selection policy, which is mutually exclusive with the fixed integer Version. It does not represent the specific revision actually loaded in the session. Not returned for official resources.</p>
          * 
          * <strong>example:</strong>
          * <p>^1.2.3</p>
@@ -290,7 +290,7 @@ public class GetAgentResponseBody extends TeaModel {
         public java.util.Map<String, ?> config;
 
         /**
-         * <p>The maximum number of output tokens per generation.</p>
+         * <p>The maximum number of output tokens per request.</p>
          * 
          * <strong>example:</strong>
          * <p>8192</p>
@@ -299,7 +299,7 @@ public class GetAgentResponseBody extends TeaModel {
         public Integer maxTokens;
 
         /**
-         * <p>The model name.</p>
+         * <p>The name of the model.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen3-max</p>
@@ -308,7 +308,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String modelName;
 
         /**
-         * <p>Specifies whether streaming output is enabled.</p>
+         * <p>Specifies whether to use streaming output.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -326,7 +326,7 @@ public class GetAgentResponseBody extends TeaModel {
         public Double temperature;
 
         /**
-         * <p>The nucleus sampling Top-P value.</p>
+         * <p>The top-P value for nucleus sampling.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -391,7 +391,7 @@ public class GetAgentResponseBody extends TeaModel {
 
     public static class GetAgentResponseBodyAgentSkills extends TeaModel {
         /**
-         * <p>The skill name.</p>
+         * <p>The name of the skill.</p>
          * 
          * <strong>example:</strong>
          * <p>my-skill</p>
@@ -400,7 +400,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The fixed official artifact version returned when querying a released snapshot with a specified AgentVersion. This is not returned when querying a draft or a custom skill.</p>
+         * <p>Returns the fixed official artifact version when querying a published snapshot with a specified AgentVersion. Not returned when querying a draft or a custom skill.</p>
          * 
          * <strong>example:</strong>
          * <p>0.6.0.202608201110</p>
@@ -409,7 +409,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String packageVersion;
 
         /**
-         * <p>The official skill ID.</p>
+         * <p>The ID of the official skill.</p>
          * 
          * <strong>example:</strong>
          * <p>dataworks-semantic</p>
@@ -427,7 +427,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The skill version number.</p>
+         * <p>The version number of the skill.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -438,7 +438,7 @@ public class GetAgentResponseBody extends TeaModel {
         public Integer version;
 
         /**
-         * <p>Returned only for personal or enterprise resources to indicate the saved version selection strategy, which is mutually exclusive with the fixed integer Version. It does not represent the specific revision actually loaded in the session. This is not returned for official resources.</p>
+         * <p>Returned only for personal or enterprise resources to indicate the saved version selection policy, which is mutually exclusive with the fixed integer Version. It does not represent the specific revision actually loaded in the session. Not returned for official resources.</p>
          * 
          * <strong>example:</strong>
          * <p>^1.2.3</p>
@@ -503,7 +503,7 @@ public class GetAgentResponseBody extends TeaModel {
 
     public static class GetAgentResponseBodyAgentTools extends TeaModel {
         /**
-         * <p><strong>The built-in tool name. Valid when Kind is <code>builtin</code>.</strong></p>
+         * <p><strong>The name of the built-in tool. Valid when Kind is builtin.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>builtin_sql</p>
@@ -521,13 +521,13 @@ public class GetAgentResponseBody extends TeaModel {
         public String kind;
 
         /**
-         * <p><strong>The selected MCP tool items. Valid when Kind is <code>mcp</code>.</strong></p>
+         * <p><strong>The selected MCP tool items. Valid when Kind is mcp.</strong></p>
          */
         @NameInMap("McpItems")
         public java.util.List<String> mcpItems;
 
         /**
-         * <p><strong>The associated MCP server name. Valid when Kind is <code>mcp</code>.</strong></p>
+         * <p><strong>The name of the associated MCP server. Valid when Kind is mcp.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>server-name</p>
@@ -654,30 +654,28 @@ public class GetAgentResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The expert suites associated with the agent definition, including a fixed integer revision number or a version selection strategy. Official resources continue to use PackageVersion to indicate the artifact version.</p>
+         * <p>The expert suites bound to the agent definition, including a fixed integer revision number or a version selection policy. Official resources continue to use PackageVersion to indicate the artifact version.</p>
          */
         @NameInMap("ExpertSuites")
         public java.util.List<GetAgentResponseBodyAgentExpertSuites> expertSuites;
 
         /**
-         * <p>The creation time (millisecond timestamp).</p>
-         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * <p>The creation time, expressed as a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1780555634000</p>
          */
         @NameInMap("GmtCreateTime")
-        public String gmtCreateTime;
+        public Long gmtCreateTime;
 
         /**
-         * <p>The last modification time (millisecond timestamp).</p>
-         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * <p>The last modified time, expressed as a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1780555634000</p>
          */
         @NameInMap("GmtModifiedTime")
-        public String gmtModifiedTime;
+        public Long gmtModifiedTime;
 
         /**
          * <p><strong>The extended metadata.</strong></p>
@@ -713,7 +711,7 @@ public class GetAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The environment dependencies required for execution.</p>
+         * <p>The environment dependencies required for runtime.</p>
          */
         @NameInMap("RequiredRuntime")
         public java.util.List<String> requiredRuntime;
@@ -807,19 +805,19 @@ public class GetAgentResponseBody extends TeaModel {
             return this.expertSuites;
         }
 
-        public GetAgentResponseBodyAgent setGmtCreateTime(String gmtCreateTime) {
+        public GetAgentResponseBodyAgent setGmtCreateTime(Long gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
             return this;
         }
-        public String getGmtCreateTime() {
+        public Long getGmtCreateTime() {
             return this.gmtCreateTime;
         }
 
-        public GetAgentResponseBodyAgent setGmtModifiedTime(String gmtModifiedTime) {
+        public GetAgentResponseBodyAgent setGmtModifiedTime(Long gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
             return this;
         }
-        public String getGmtModifiedTime() {
+        public Long getGmtModifiedTime() {
             return this.gmtModifiedTime;
         }
 

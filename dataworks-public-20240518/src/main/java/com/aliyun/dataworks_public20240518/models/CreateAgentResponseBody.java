@@ -42,7 +42,7 @@ public class CreateAgentResponseBody extends TeaModel {
 
     public static class CreateAgentResponseBodyAgentExpertSuites extends TeaModel {
         /**
-         * <p>This parameter is not returned upon creation. Call GetAgent to explicitly query the published version to obtain the fixed official suite artifact version.</p>
+         * <p>This field is not returned during creation. Use GetAgent to explicitly query the published version to obtain the fixed official suite artifact version.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1.0.202610211408</p>
@@ -78,7 +78,7 @@ public class CreateAgentResponseBody extends TeaModel {
         public Integer version;
 
         /**
-         * <p>The saved version selection strategy is returned only for personal or enterprise resources and is mutually exclusive with the fixed integer Version. It does not represent the specific revision actually loaded in the session. This parameter is not returned for official resources.</p>
+         * <p>The saved version selection strategy is returned only for personal or enterprise resources and is mutually exclusive with the fixed integer Version. It does not represent the specific revision actually loaded in the session. This field is not returned for official resources.</p>
          * 
          * <strong>example:</strong>
          * <p>^1.2.3</p>
@@ -144,7 +144,7 @@ public class CreateAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>This parameter is not returned upon creation. Call GetAgent to explicitly query the published version to obtain the fixed official artifact version.</p>
+         * <p>This field is not returned during creation. Use GetAgent to explicitly query the published version to obtain the fixed official artifact version.</p>
          * 
          * <strong>example:</strong>
          * <p>0.6.0.202608201110</p>
@@ -180,7 +180,7 @@ public class CreateAgentResponseBody extends TeaModel {
         public Integer version;
 
         /**
-         * <p>The saved version selection strategy is returned only for personal or enterprise resources and is mutually exclusive with the fixed integer Version. It does not represent the specific revision actually loaded in the session. This parameter is not returned for official resources.</p>
+         * <p>The saved version selection strategy is returned only for personal or enterprise resources and is mutually exclusive with the fixed integer Version. It does not represent the specific revision actually loaded in the session. This field is not returned for official resources.</p>
          * 
          * <strong>example:</strong>
          * <p>^1.2.3</p>
@@ -251,24 +251,22 @@ public class CreateAgentResponseBody extends TeaModel {
         public java.util.List<CreateAgentResponseBodyAgentExpertSuites> expertSuites;
 
         /**
-         * <p>The creation time, in milliseconds.</p>
-         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * <p>The creation time, expressed as a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1780555634000</p>
          */
         @NameInMap("GmtCreateTime")
-        public String gmtCreateTime;
+        public Long gmtCreateTime;
 
         /**
-         * <p>The last modification time, in milliseconds.</p>
-         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * <p>The last modification time, expressed as a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1780555634000</p>
          */
         @NameInMap("GmtModifiedTime")
-        public String gmtModifiedTime;
+        public Long gmtModifiedTime;
 
         /**
          * <p>The name of the agent.</p>
@@ -280,7 +278,7 @@ public class CreateAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The saved skill references. For official skills, a fixed PackageVersion is returned after the agent is published.</p>
+         * <p>The saved skill references. Official skills return a fixed PackageVersion after the agent is published.</p>
          */
         @NameInMap("Skills")
         public java.util.List<CreateAgentResponseBodyAgentSkills> skills;
@@ -298,19 +296,19 @@ public class CreateAgentResponseBody extends TeaModel {
             return this.expertSuites;
         }
 
-        public CreateAgentResponseBodyAgent setGmtCreateTime(String gmtCreateTime) {
+        public CreateAgentResponseBodyAgent setGmtCreateTime(Long gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
             return this;
         }
-        public String getGmtCreateTime() {
+        public Long getGmtCreateTime() {
             return this.gmtCreateTime;
         }
 
-        public CreateAgentResponseBodyAgent setGmtModifiedTime(String gmtModifiedTime) {
+        public CreateAgentResponseBodyAgent setGmtModifiedTime(Long gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
             return this;
         }
-        public String getGmtModifiedTime() {
+        public Long getGmtModifiedTime() {
             return this.gmtModifiedTime;
         }
 

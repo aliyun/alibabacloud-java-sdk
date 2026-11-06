@@ -68,7 +68,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The ID of the order for the general-purpose resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>2391982058XXXXX</p>
@@ -77,7 +77,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         public Long orderId;
 
         /**
-         * <p>The instance ID of the order.</p>
+         * <p>The instance ID of the order for the general-purpose resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>c442b330-3b10-4584-959e-736e4edXXXXX</p>

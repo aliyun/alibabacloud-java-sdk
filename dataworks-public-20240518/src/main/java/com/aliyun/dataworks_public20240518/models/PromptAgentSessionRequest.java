@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PromptAgentSessionRequest extends TeaModel {
     /**
-     * <p>The ID passed by the requester. The value is returned as is.</p>
+     * <p>The ID passed by the requester, which is echoed back as is.</p>
      * 
      * <strong>example:</strong>
      * <p>1021418411</p>
@@ -14,7 +14,7 @@ public class PromptAgentSessionRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The JSON-RPC version. Set the value to 2.0.</p>
+     * <p>The JSON-RPC version. Fixed to 2.0.</p>
      * 
      * <strong>example:</strong>
      * <p>2.0</p>
@@ -59,7 +59,7 @@ public class PromptAgentSessionRequest extends TeaModel {
 
     public static class PromptAgentSessionRequestParamsMeta extends TeaModel {
         /**
-         * <p>The map-type context. In custom agent scenarios, you can use this value to replace specific placeholder parameters.</p>
+         * <p>A map. In custom agent scenarios, you can use this value to replace specific placeholder parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -87,7 +87,7 @@ public class PromptAgentSessionRequest extends TeaModel {
 
     public static class PromptAgentSessionRequestParamsPromptMeta extends TeaModel {
         /**
-         * <p>Specifies whether to hide the prompt from the user. For example, if a user asks a question in the chat dialog box, such as &quot;Sales amount in the last 7 days&quot;, and the calling system retrieves some business domain knowledge through RAG before calling the API operation, the knowledge needs to be added to the agent context but not displayed to the user. In this case, you can set this parameter to true.</p>
+         * <p>Specifies whether to hide the prompt from the user. For example, if a user asks a question in the chat dialog box, such as &quot;Sales amount in the last 7 days&quot;, and the calling system retrieves business domain knowledge through RAG before calling the API operation to supplement the agent context without displaying it to the user, set this parameter to true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -145,8 +145,8 @@ public class PromptAgentSessionRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The size of the file. Unit: bytes.</p>
-         * <p>Valid only when Type is set to resource_link.</p>
+         * <p>The size of the file, in bytes.</p>
+         * <p>Valid only when Type is set to <code>resource_link</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1231231</p>
@@ -176,7 +176,7 @@ public class PromptAgentSessionRequest extends TeaModel {
          * <p><strong>Content block type</strong></p>
          * 
          * <strong>example:</strong>
-         * <p>Valid values: text and resource_link</p>
+         * <p>Currently supported values: text and resource_link</p>
          */
         @NameInMap("Type")
         public String type;
@@ -273,7 +273,7 @@ public class PromptAgentSessionRequest extends TeaModel {
         /**
          * <p>The extended metadata.</p>
          * <blockquote>
-         * <p>Notice: If the name of the agent bound to the specified session is dataworks_ai_assistant_agent (AI Assistant), you must provide the instance ID of the AI Assistant in the Context.agent.instanceId field of the extended metadata.</notice></p>
+         * <p>Notice: If the agent name bound to the specified session is dataworks_ai_assistant_agent (AI Assistant Service), you must provide the instance ID of the AI Assistant Service in the Context.agent.instanceId field of the extended metadata.</notice></p>
          * </blockquote>
          */
         @NameInMap("Meta")

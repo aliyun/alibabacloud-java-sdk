@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataAssetTagsResponseBody extends TeaModel {
     /**
-     * <p>The paginated query results for the tag list.</p>
+     * <p>The paginated query results of the tag list.</p>
      */
     @NameInMap("PagingInfo")
     public ListDataAssetTagsResponseBodyPagingInfo pagingInfo;
@@ -42,7 +42,7 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
 
     public static class ListDataAssetTagsResponseBodyPagingInfoDataAssetTags extends TeaModel {
         /**
-         * <p>The tag type.</p>
+         * <p>The tag category. Valid values:</p>
          * <ul>
          * <li>Normal</li>
          * <li>System</li>
@@ -55,7 +55,7 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The creation time of the tag.</p>
+         * <p>The time when the tag was created.</p>
          * <p>The value is a 13-digit number, such as <code>1735890003000</code>.</p>
          * 
          * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The creator of the tag.</p>
+         * <p>The user who created the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -98,7 +98,7 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
         public java.util.List<String> managers;
 
         /**
-         * <p>The last modification time of the tag.</p>
+         * <p>The time when the tag was last modified.</p>
          * <p>The value is a 13-digit number, such as <code>1735890003000</code>.</p>
          * 
          * <strong>example:</strong>

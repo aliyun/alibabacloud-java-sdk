@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
     /**
-     * <p>The paging query results of the data quality evaluation tasks.</p>
+     * <p>The paged query results of the data quality check tasks.</p>
      */
     @NameInMap("PagingInfo")
     public ListDataQualityEvaluationTasksResponseBodyPagingInfo pagingInfo;
@@ -51,7 +51,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public String condition;
 
         /**
-         * <p>The type of the subsequent action. Valid values:</p>
+         * <p>The type of the subsequent action.</p>
          * <ul>
          * <li>BlockTaskInstance: Blocks the execution of the DataWorks task instance.</li>
          * </ul>
@@ -118,13 +118,13 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public String extension;
 
         /**
-         * <p>The type of the notification recipient. Valid values:</p>
+         * <p>The type of the alert recipient.</p>
          * <ul>
-         * <li>AliUid: the UID of the Alibaba Cloud account</li>
-         * <li>WebhookUrl: the custom webhook URL</li>
-         * <li>DingdingUrl: the DingTalk chatbot URL</li>
-         * <li>FeishuUrl: the Lark chatbot URL</li>
-         * <li>WeixinUrl: the WeCom chatbot URL</li>
+         * <li>AliUid: Alibaba Cloud account UID</li>
+         * <li>WebhookUrl: Custom webhook URL</li>
+         * <li>DingdingUrl: DingTalk chatbot webhook URL</li>
+         * <li>FeishuUrl: Lark chatbot webhook URL</li>
+         * <li>WeixinUrl: WeCom chatbot webhook URL</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public String receiverType;
 
         /**
-         * <p>The specific value of the notification recipient.</p>
+         * <p>The specific value of the alert recipient.</p>
          */
         @NameInMap("ReceiverValues")
         public java.util.List<String> receiverValues;
@@ -178,7 +178,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public java.util.List<ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksNotificationsNotificationsNotificationChannels> notificationChannels;
 
         /**
-         * <p>The notification recipient configuration.</p>
+         * <p>The alert recipient configuration.</p>
          */
         @NameInMap("NotificationReceivers")
         public java.util.List<ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksNotificationsNotificationsNotificationReceivers> notificationReceivers;
@@ -247,7 +247,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
 
     public static class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksTarget extends TeaModel {
         /**
-         * <p>The database type of the table dataset. Valid values:</p>
+         * <p>The database type of the table for table-type datasets. Valid values:</p>
          * <ul>
          * <li>maxcompute</li>
          * <li>emr</li>
@@ -283,7 +283,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public String tableGuid;
 
         /**
-         * <p>The monitored object type. Valid values:</p>
+         * <p>The type of the monitored object.</p>
          * <ul>
          * <li>Table</li>
          * </ul>
@@ -341,7 +341,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public java.util.List<Long> taskIds;
 
         /**
-         * <p>The event that triggers the execution of the data quality evaluation task. Valid values:</p>
+         * <p>The event that triggers the execution of the data quality check task.</p>
          * <ul>
          * <li>ByScheduledTaskInstance: The scheduled instance runs successfully.</li>
          * </ul>
@@ -377,6 +377,8 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
 
     public static class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasks extends TeaModel {
         /**
+         * <p>The ID of the data source used by the data quality monitoring task.</p>
+         * 
          * <strong>example:</strong>
          * <p>45238</p>
          */
@@ -384,7 +386,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public Long dataSourceId;
 
         /**
-         * <p>The description of the data quality evaluation task. The description can be up to 65,535 characters in length.</p>
+         * <p>The description of the data quality check task. The description can be up to 65,535 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a daily run data quality evaluation plan</p>
@@ -393,13 +395,13 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The callback settings in the instance lifecycle epoch of the data quality evaluation task. Currently, only one hook that blocks scheduling tasks is supported.</p>
+         * <p>The callback settings in the lifecycle of the data quality check task instance. Currently, only one hook that blocks the scheduled task is supported.</p>
          */
         @NameInMap("Hooks")
         public java.util.List<ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksHooks> hooks;
 
         /**
-         * <p>The ID of the data quality evaluation task.</p>
+         * <p>The ID of the data quality check task.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>
@@ -408,7 +410,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the data quality evaluation task. The name can contain digits, letters, Chinese characters, and half-width or full-width punctuation marks, and can be up to 255 characters in length.</p>
+         * <p>The name of the data quality check task. The name can contain digits, letters, Chinese characters, and half-width or full-width punctuation marks, and can be up to 255 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>Data quality verification task</p>
@@ -432,7 +434,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The settings for using the data source. Currently, you can only specify the YARN queue for EMR and set the SQL engine to SPARK_SQL, KYUUBI, PRESTO_SQL, or HIVE_SQL when collecting EMR tables.</p>
+         * <p>The settings used when accessing the data source. Currently, you can only specify the YARN queue for EMR and set the SQL engine to SPARK_SQL, KYUUBI, PRESTO_SQL, or HIVE_SQL when collecting EMR tables.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;queue&quot;: &quot;default&quot;, &quot;sqlEngine&quot;: &quot;SPARK_SQL&quot; }</p>
@@ -441,13 +443,13 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public String runtimeConf;
 
         /**
-         * <p>The monitored object of the data quality evaluation task.</p>
+         * <p>The monitored object of the data quality check task.</p>
          */
         @NameInMap("Target")
         public ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksTarget target;
 
         /**
-         * <p>The trigger configuration of the data quality evaluation task.</p>
+         * <p>The trigger configuration of the data quality check task.</p>
          */
         @NameInMap("Trigger")
         public ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksTrigger trigger;
@@ -541,7 +543,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
 
     public static class ListDataQualityEvaluationTasksResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The data quality evaluation tasks.</p>
+         * <p>The data quality check tasks.</p>
          */
         @NameInMap("DataQualityEvaluationTasks")
         public java.util.List<ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasks> dataQualityEvaluationTasks;
