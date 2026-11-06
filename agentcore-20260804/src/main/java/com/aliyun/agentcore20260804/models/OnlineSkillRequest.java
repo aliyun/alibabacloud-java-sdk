@@ -25,11 +25,7 @@ public class OnlineSkillRequest extends TeaModel {
 
     public static class OnlineSkillRequestBody extends TeaModel {
         /**
-         * <p>The operation scope. Valid values:</p>
-         * <ul>
-         * <li>skill: the entire Skill.</li>
-         * <li>version: a specified version.</li>
-         * </ul>
+         * <p>The operation scope. Valid values: skill (the entire skill) and version (a specified version).</p>
          * 
          * <strong>example:</strong>
          * <p>version</p>
@@ -38,7 +34,7 @@ public class OnlineSkillRequest extends TeaModel {
         public String scope;
 
         /**
-         * <p>The Skill version number.</p>
+         * <p>The skill version number.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.1</p>

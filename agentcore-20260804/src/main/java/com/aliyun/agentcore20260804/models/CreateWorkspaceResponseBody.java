@@ -166,7 +166,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
 
     public static class CreateWorkspaceResponseBodyDataNetworkConfiguration extends TeaModel {
         /**
-         * <p>Returns the target configuration value. Updating indicates that the change is still in progress, and UpdateFailed indicates that the current change failed. This parameter only controls whether the latest versions of managed and custom agents use the public egress of the platform. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</p>
+         * <p>Returns the target configuration value. Updating indicates that the change is still being executed, and UpdateFailed indicates that the current change failed. This parameter only controls whether the latest versions of managed and custom agents use the public egress of the platform. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -266,7 +266,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
 
     public static class CreateWorkspaceResponseBodyData extends TeaModel {
         /**
-         * <p>The AI Registry namespace ID. This value is returned after related resources are bound and may be empty during initialization.</p>
+         * <p>The AI Registry namespace ID. This value is returned after the related resources are bound and may be empty during initialization.</p>
          * 
          * <strong>example:</strong>
          * <p>namespace-0123456789abcdef</p>
@@ -296,7 +296,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The CloudMonitor workspace ID. This value is returned after related resources are bound and may be empty during initialization.</p>
+         * <p>The CloudMonitor workspace ID. This value is returned after the related resources are bound and may be empty during initialization.</p>
          * 
          * <strong>example:</strong>
          * <p>cms-ws-0123456789abcdef</p>
@@ -308,7 +308,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String cmsWorkspaceId;
 
         /**
-         * <p>The time when the workspace was created. The time follows the ISO 8601 standard.</p>
+         * <p>The time when the workspace was created. The time is displayed in the ISO 8601 format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -333,7 +333,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public CreateWorkspaceResponseBodyDataNetworkConfiguration networkConfiguration;
 
         /**
-         * <p>The ID of the region where the workspace resides.</p>
+         * <p>The ID of the region where the workspace is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -400,7 +400,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ws-123456</p>

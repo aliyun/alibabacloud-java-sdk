@@ -47,7 +47,7 @@ public class GetMemoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -132,7 +132,7 @@ public class GetMemoryResponseBody extends TeaModel {
 
     public static class GetMemoryResponseBodyDataScope extends TeaModel {
         /**
-         * <p>The agent ID. The length is limited to 1 to 128 UTF-8 bytes, and it must not contain / or *. This field is not returned if the memory is not associated with an agent ID.</p>
+         * <p>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. Slashes (/) and asterisks (*) are not allowed. This field is not returned if the memory is not associated with an agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-001</p>
@@ -141,7 +141,7 @@ public class GetMemoryResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The session ID. The length is limited to 1 to 128 UTF-8 bytes, and it must not contain / or *. This field is not returned if the memory is not associated with a session ID.</p>
+         * <p>The session ID. The length is limited to 1 to 128 UTF-8 bytes. Slashes (/) and asterisks (*) are not allowed. This field is not returned if the memory is not associated with a session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>session-001</p>
@@ -150,7 +150,7 @@ public class GetMemoryResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The user ID. The length is limited to 1 to 128 UTF-8 bytes, and it must not contain / or *. This field is not returned if the memory is not associated with a user ID.</p>
+         * <p>The user ID. The length is limited to 1 to 128 UTF-8 bytes. Slashes (/) and asterisks (*) are not allowed. This field is not returned if the memory is not associated with a user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>user-001</p>
@@ -197,7 +197,7 @@ public class GetMemoryResponseBody extends TeaModel {
         public GetMemoryResponseBodyDataContent content;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:00:00Z</p>
@@ -227,7 +227,7 @@ public class GetMemoryResponseBody extends TeaModel {
         public GetMemoryResponseBodyDataScope scope;
 
         /**
-         * <p>The last update time.</p>
+         * <p>The last update time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:05:00Z</p>

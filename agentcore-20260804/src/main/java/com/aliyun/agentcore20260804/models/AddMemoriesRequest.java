@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddMemoriesRequest extends TeaModel {
     /**
-     * <p>The request body for writing to memory.</p>
+     * <p>The write memory request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")
@@ -26,7 +26,7 @@ public class AddMemoriesRequest extends TeaModel {
 
     public static class AddMemoriesRequestBodyMessages extends TeaModel {
         /**
-         * <p>The content of the message.</p>
+         * <p>The message content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class AddMemoriesRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>The role of the message.</p>
+         * <p>The message role.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class AddMemoriesRequest extends TeaModel {
 
     public static class AddMemoriesRequestBodyScope extends TeaModel {
         /**
-         * <p>The ID of the agent. The length is limited to 1 to 128 UTF-8 bytes. The ID cannot contain a forward slash (/) or an asterisk (*).</p>
+         * <p>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*).</p>
          * 
          * <strong>example:</strong>
          * <p>agent-001</p>
@@ -79,7 +79,7 @@ public class AddMemoriesRequest extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The ID of the session. The length is limited to 1 to 128 UTF-8 bytes. The ID cannot contain a forward slash (/) or an asterisk (*).</p>
+         * <p>The session ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*).</p>
          * 
          * <strong>example:</strong>
          * <p>session-001</p>
@@ -88,7 +88,7 @@ public class AddMemoriesRequest extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The ID of the user. The length is limited to 1 to 128 UTF-8 bytes. The ID cannot contain a forward slash (/) or an asterisk (*).</p>
+         * <p>The user ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*).</p>
          * 
          * <strong>example:</strong>
          * <p>user-001</p>
@@ -129,7 +129,7 @@ public class AddMemoriesRequest extends TeaModel {
 
     public static class AddMemoriesRequestBody extends TeaModel {
         /**
-         * <p>The list of messages. You must provide either this parameter or Text, but not both. The list must contain 1 to 20 messages, and the total size of the content must not exceed 32,000 UTF-8 bytes.</p>
+         * <p>The message list. You must provide either this parameter or Text, but not both. You can specify 1 to 20 messages, and the total size of the content cannot exceed 32,000 UTF-8 bytes.</p>
          */
         @NameInMap("messages")
         public java.util.List<AddMemoriesRequestBodyMessages> messages;
@@ -150,19 +150,19 @@ public class AddMemoriesRequest extends TeaModel {
         public String referenceTime;
 
         /**
-         * <p>The scope of the write operation. UserId, AgentId, and SessionId are all optional.</p>
+         * <p>The write scope. UserId, AgentId, and SessionId are all optional.</p>
          */
         @NameInMap("scope")
         public AddMemoriesRequestBodyScope scope;
 
         /**
-         * <p>Specifies whether to synchronously wait for memory extraction to complete. Default value: true.</p>
+         * <p>Specifies whether to synchronously wait for the memory extraction to complete. Default value: true.</p>
          */
         @NameInMap("sync")
         public Boolean sync;
 
         /**
-         * <p>The text to be written directly. You must provide either this parameter or Messages, but not both. The size of the text must not exceed 32,000 UTF-8 bytes.</p>
+         * <p>The text to be written directly. You must provide either this parameter or Messages, but not both. The size cannot exceed 32,000 UTF-8 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>The user likes hiking</p>

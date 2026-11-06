@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VerifyConnectorRequest extends TeaModel {
     /**
-     * <p>The validation request body.</p>
+     * <p>The verification request body.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")
@@ -26,7 +26,7 @@ public class VerifyConnectorRequest extends TeaModel {
 
     public static class VerifyConnectorRequestBody extends TeaModel {
         /**
-         * <p>The Connector configuration JSON string to validate. Set site to global or cn. The serviceAccountKeys field must contain at least one item with a serviceAccountKey.</p>
+         * <p>The JSON string of the connector configuration to be verified. The site value can be global or cn, and serviceAccountKeys must contain at least one item with a serviceAccountKey.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

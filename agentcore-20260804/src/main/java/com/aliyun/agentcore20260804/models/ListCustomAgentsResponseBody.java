@@ -14,7 +14,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code of the current request. The value is 200 if the request is successful.</p>
+     * <p>The HTTP status code of the request. The value is 200 if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,13 +23,13 @@ public class ListCustomAgentsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The list of custom agent summaries on the current page. To query the complete configuration and the execution result of the latest version, call the GetCustomAgent operation.</p>
+     * <p>The list of summaries for custom code or image agents on the current page. To query the complete configuration and the execution results of the latest version, call the GetCustomAgent operation.</p>
      */
     @NameInMap("items")
     public java.util.List<ListCustomAgentsResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of items to return per page in this query.</p>
+     * <p>The maximum number of results to return per page for the current query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The processing result message for this request. The value is success if the request succeeds.</p>
+     * <p>The message that describes the processing result of the request. The value is success if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The opaque token used to query the next page. An empty value indicates that no more pages are available. Pass this token as is in subsequent requests.</p>
+     * <p>The opaque token used to retrieve the next page of results. An empty value indicates that there are no more pages. Pass this token as-is in subsequent requests.</p>
      * 
      * <strong>example:</strong>
      * <p>djE6YWdlbnRjb3JlLmFnZW50Lmxpc3QuY3VzdG9tOjIw</p>
@@ -56,7 +56,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The unique identifier of the request, used to locate and troubleshoot issues.</p>
+     * <p>The unique identifier of the request, which is used to locate and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>550E8400-E29B-41D4-A716-446655440000</p>
@@ -65,13 +65,13 @@ public class ListCustomAgentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was processed successfully. A value of true indicates success. A successful creation, update, or deletion does not mean that the background operation is complete.</p>
+     * <p>Indicates whether the request was processed successfully. true indicates that the request was successful. A successful creation, update, or deletion response does not mean that the background operation is complete.</p>
      */
     @NameInMap("success")
     public Boolean success;
 
     /**
-     * <p>The total number of custom agents that meet the query conditions in the specified workspace.</p>
+     * <p>The total number of custom code or image agents that match the query conditions in the specified workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>40</p>
@@ -168,7 +168,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String entrypoint;
 
         /**
-         * <p>The identifier of the code runtime environment in the currently saved configuration. The runtime image uses the saved snapshot. Adding a new version to the directory does not automatically change the existing configuration.</p>
+         * <p>The identifier of the code runtime environment in the currently saved configuration. The runtime image uses the saved snapshot. Adding a new version to the catalog does not automatically change the existing configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,7 +229,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String entrypoint;
 
         /**
-         * <p>The ID of the ACR Enterprise instance.</p>
+         * <p>The ID of the ACR Enterprise Edition instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-example</p>
@@ -238,7 +238,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The namespace of Container Registry.</p>
+         * <p>The Container Registry namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>team</p>
@@ -265,7 +265,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String tag;
 
         /**
-         * <p>The source type of the container image.</p>
+         * <p>The image source type. A value of acr indicates a Container Registry image. A value of custom indicates a custom image source. For the corresponding source configurations, refer to the descriptions of artifact.container and customImage.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -478,7 +478,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
 
     public static class ListCustomAgentsResponseBodyItemsProtocolPaths extends TeaModel {
         /**
-         * <p>The description of the purpose for the current API path.</p>
+         * <p>The purpose description of the current API path.</p>
          * 
          * <strong>example:</strong>
          * <p>AG-UI conversation API</p>
@@ -533,12 +533,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public java.util.List<ListCustomAgentsResponseBodyItemsProtocolPaths> paths;
 
         /**
-         * <p>The invoke Protocol Type. Valid values:</p>
-         * <ul>
-         * <li>agui: AG-UI protocol.</li>
-         * <li>openai-chat-completion: OpenAI Chat Completions compatible protocol.</li>
-         * <li>custom: Custom protocol.</li>
-         * </ul>
+         * <p>The invocation protocol type. agui indicates the AG-UI protocol. openai-chat-completion indicates the OpenAI Chat Completions compatible protocol. custom indicates a custom protocol.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -580,7 +575,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
 
     public static class ListCustomAgentsResponseBodyItems extends TeaModel {
         /**
-         * <p>The inbound access mode.</p>
+         * <p>The inbound access method.</p>
          * 
          * <strong>example:</strong>
          * <p>API_KEY</p>
@@ -598,7 +593,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String accessScope;
 
         /**
-         * <p>The unique identifier of the custom agent. You can obtain this ID from the response of the CreateCustomAgent or ListCustomAgents operation.</p>
+         * <p>The unique identifier of the custom code or image agent. You can obtain this ID from the response of the CreateCustomAgent or ListCustomAgents operation.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-550e8400e29b41d4a716446655440000</p>
@@ -619,7 +614,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public ListCustomAgentsResponseBodyItemsCodePackageInfo codePackageInfo;
 
         /**
-         * <p>The creation mode of the agent. The value is CUSTOM for custom agents.</p>
+         * <p>The creation method of the agent. The value is CUSTOM for custom code or image agents.</p>
          * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
@@ -628,7 +623,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String createMode;
 
         /**
-         * <p>The time when the agent was created. The time is in ISO 8601 format. A trailing Z indicates the UTC time zone. Fractional seconds may be included.</p>
+         * <p>The time when the agent was created. The time is in ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds may be included.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-10T06:00:00Z</p>
@@ -637,7 +632,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The deployment mode of the agent. Custom agents are deployed and managed by the platform. The value is MANAGED for custom agents.</p>
+         * <p>The deployment method of the agent. Custom code or image agents are deployed and managed by the platform. The value is MANAGED.</p>
          * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
@@ -664,7 +659,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public Long latestSpecVersion;
 
         /**
-         * <p>The name of the custom agent.</p>
+         * <p>The name of the custom code or image agent.</p>
          * 
          * <strong>example:</strong>
          * <p>my-custom-agent</p>
@@ -688,16 +683,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String runtime;
 
         /**
-         * <p>The overall status of the agent. Valid values:</p>
-         * <ul>
-         * <li>Creating: The agent is being created.</li>
-         * <li>Running: The agent is running.</li>
-         * <li>Failed: The agent failed.</li>
-         * <li>Updating: The agent is being updated.</li>
-         * <li>Deleting: The agent is being deleted.</li>
-         * <li>Deleted: The agent is deleted.
-         * To query the execution progress of the latest configuration, call the GetCustomAgent operation.</li>
-         * </ul>
+         * <p>The overall status of the agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted. To query the latest configuration execution progress, call GetCustomAgent.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -706,7 +692,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the agent was last updated. The time follows the ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds are supported.</p>
+         * <p>The time when the agent was last updated. The time is in the ISO 8601 format, with a trailing Z indicating the UTC time zone. Fractional seconds are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-10T06:05:00Z</p>
@@ -715,7 +701,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
-         * <p>The ID of the workspace to which the custom agent belongs.</p>
+         * <p>The ID of the workspace to which the custom code or image agents belong.</p>
          * 
          * <strong>example:</strong>
          * <p>ws-a1b2c3d4e5f6</p>

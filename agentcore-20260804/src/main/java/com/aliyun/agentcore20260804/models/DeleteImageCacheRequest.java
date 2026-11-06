@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteImageCacheRequest extends TeaModel {
     /**
-     * <p>The region ID of the service endpoint, which is determined by the selected regional endpoint.</p>
+     * <p>The region ID. It is passed as a query parameter and must match the selected region endpoint and the workspace region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteImageCacheRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the current workspace. The server verifies the account, region, and resource ownership. This parameter cannot be omitted or used to access other workspaces.</p>
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

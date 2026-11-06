@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstallWorkspacePluginRequest extends TeaModel {
     /**
-     * <p>The request body for installing a plugin.</p>
+     * <p>The request body for installing the component.</p>
      */
     @NameInMap("body")
     public InstallWorkspacePluginRequestBody body;
@@ -42,7 +42,7 @@ public class InstallWorkspacePluginRequest extends TeaModel {
 
     public static class InstallWorkspacePluginRequestBodyConfigNetworkInternet extends TeaModel {
         /**
-         * <p>Specifies whether to enable Internet access. If set to true and no VPC is specified, PUB_NET is used. If set to true and a VPC is specified, PRIVATE_PUBNET is used. If only a VPC is specified, PRIVATE_NET is used. At least one of Internet access and VPC must be configured.</p>
+         * <p>Specifies whether to enable Internet access. If this parameter is set to true and no VPC is specified, PUB_NET is used. If this parameter is set to true and a VPC is specified, PRIVATE_PUBNET is used. If only a VPC is specified, PRIVATE_NET is used. You must configure at least one of Internet access and VPC access.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -67,7 +67,7 @@ public class InstallWorkspacePluginRequest extends TeaModel {
 
     public static class InstallWorkspacePluginRequestBodyConfigNetworkVpc extends TeaModel {
         /**
-         * <p>Explicitly controls whether the collaboration plugin uses the VPC network. If set to false, vpcId and vSwitchIds are ignored. If set to true, you must provide both vpcId and at least two vSwitchIds.</p>
+         * <p>Explicitly controls whether the collaboration component uses a VPC network. If this parameter is set to false, vpcId and vSwitchIds are ignored. If this parameter is set to true, you must provide a vpcId and at least two vSwitchIds.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -76,14 +76,14 @@ public class InstallWorkspacePluginRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The list of vSwitch IDs. The collaboration plugin requires that the vSwitches cover at least two different zones, and all vSwitches must belong to the VPC specified by vpcId.</p>
+         * <p>The list of vSwitch IDs. The collaboration component requires that the vSwitches cover at least two different zones, and all vSwitches must belong to the VPC specified by vpcId.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("vSwitchIds")
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The user VPC ID.</p>
+         * <p>The ID of the user VPC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,13 +125,13 @@ public class InstallWorkspacePluginRequest extends TeaModel {
 
     public static class InstallWorkspacePluginRequestBodyConfigNetwork extends TeaModel {
         /**
-         * <p>Specifies whether to allow public network access for collaboration components. This configuration only controls public network access capabilities and does not expose component services to the public network.</p>
+         * <p>Specifies whether the collaboration component is allowed to access the public network. This configuration only controls the public network access capability and does not expose the component service to the public network.</p>
          */
         @NameInMap("internet")
         public InstallWorkspacePluginRequestBodyConfigNetworkInternet internet;
 
         /**
-         * <p>The user VPC and vSwitch list used for deploying the collaboration plugin. The zones corresponding to the vSwitches are queried by the server, and users do not need to pass in Zones.</p>
+         * <p>The user VPC and the list of vSwitches used to deploy the collaboration component. The zones corresponding to the vSwitches are queried by the server. You do not need to pass the Zones parameter.</p>
          */
         @NameInMap("vpc")
         public InstallWorkspacePluginRequestBodyConfigNetworkVpc vpc;
@@ -161,7 +161,7 @@ public class InstallWorkspacePluginRequest extends TeaModel {
 
     public static class InstallWorkspacePluginRequestBodyConfig extends TeaModel {
         /**
-         * <p>The network configuration used by the collaboration plugin. If not specified, the server uses the existing network configuration of the workspace.</p>
+         * <p>The network configuration used by the collaboration component. If not specified, the server uses the existing network configuration of the workspace.</p>
          */
         @NameInMap("network")
         public InstallWorkspacePluginRequestBodyConfigNetwork network;
@@ -183,7 +183,7 @@ public class InstallWorkspacePluginRequest extends TeaModel {
 
     public static class InstallWorkspacePluginRequestBody extends TeaModel {
         /**
-         * <p>The plugin-specific configuration. The configuration structure is determined by pluginName. Currently, the collaboration plugin supports network.</p>
+         * <p>The component-specific configuration. The configuration structure is determined by the pluginName parameter. Currently, the collaboration component supports the network configuration.</p>
          */
         @NameInMap("config")
         public InstallWorkspacePluginRequestBodyConfig config;

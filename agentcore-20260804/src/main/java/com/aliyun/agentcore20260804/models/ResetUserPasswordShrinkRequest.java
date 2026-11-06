@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetUserPasswordShrinkRequest extends TeaModel {
     /**
-     * <p>The request body for resetting the user password.</p>
+     * <p>The request body for resetting a user password.</p>
      */
     @NameInMap("body")
     public String bodyShrink;

@@ -29,7 +29,7 @@ public class GetModelResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request processing result message.</p>
+     * <p>The message indicating the request processing result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -119,7 +119,7 @@ public class GetModelResponseBody extends TeaModel {
         public Boolean document;
 
         /**
-         * <p>Indicates whether the model supports tool calling and is able to invoke multiple tools in a single response.</p>
+         * <p>Indicates whether the model is able to invoke multiple tool calling operations in a single response.</p>
          */
         @NameInMap("multiToolCall")
         public Boolean multiToolCall;
@@ -131,7 +131,7 @@ public class GetModelResponseBody extends TeaModel {
         public Boolean reasoning;
 
         /**
-         * <p>Indicates whether the model supports tool calling and is able to invoke tools in a streaming manner.</p>
+         * <p>Indicates whether the model supports streaming tool calling.</p>
          */
         @NameInMap("streamToolCall")
         public Boolean streamToolCall;
@@ -242,7 +242,7 @@ public class GetModelResponseBody extends TeaModel {
         public String connectionId;
 
         /**
-         * <p>The context window size of the model, in tokens. It must be a positive integer.</p>
+         * <p>The context window size of the model, in tokens. The value must be a positive integer.</p>
          * 
          * <strong>example:</strong>
          * <p>128000</p>
@@ -251,7 +251,7 @@ public class GetModelResponseBody extends TeaModel {
         public Long contextSize;
 
         /**
-         * <p>The time when the resource was created, in RFC 3339 UTC format.</p>
+         * <p>The creation time of the resource, in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-09T00:00:00Z</p>
@@ -260,7 +260,7 @@ public class GetModelResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The description of the model, up to 255 characters in length.</p>
+         * <p>The model description. The maximum length is 255 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>description</p>
@@ -287,7 +287,7 @@ public class GetModelResponseBody extends TeaModel {
         public String modelId;
 
         /**
-         * <p>The name of the upstream model.</p>
+         * <p>The upstream model name.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-max</p>
@@ -305,7 +305,7 @@ public class GetModelResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The time when the resource was last updated, in RFC 3339 UTC format.</p>
+         * <p>The last update time of the resource, in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-09T00:00:00Z</p>

@@ -215,7 +215,7 @@ public class UpdateTeamResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The team name. The name can contain only lowercase letters, digits, and hyphens. It must start and end with a lowercase letter or a digit, and must be 1 to 128 characters in length.</p>
+         * <p>The team name. It can contain only lowercase letters, digits, and hyphens. It must start and end with a lowercase letter or a digit, and must be 1 to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>team-01</p>

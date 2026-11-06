@@ -11,7 +11,7 @@ public class CreateMcpShrinkRequest extends TeaModel {
     public String bodyShrink;
 
     /**
-     * <p>The client token for idempotency.</p>
+     * <p>The reserved query request identifier. The console backend currently does not read this parameter and does not provide idempotency guarantees for deduplication or restoring the original processing result based on this identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426614174000</p>

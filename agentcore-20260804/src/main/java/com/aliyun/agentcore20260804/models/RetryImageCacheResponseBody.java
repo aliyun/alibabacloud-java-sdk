@@ -15,7 +15,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The retry image cache result.</p>
+     * <p>The result of retrying image cache creation.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("data")
@@ -52,7 +52,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. This does not mean that the cache production is complete.</p>
+     * <p>Indicates whether the request is successful. A successful request does not mean that the cache creation is complete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
 
     public static class RetryImageCacheResponseBodyDataError extends TeaModel {
         /**
-         * <p>The secure and non-empty error code for the current production failure.</p>
+         * <p>The error code for the creation failure.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,11 +126,11 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The secure and non-empty display reason for the production failure, excluding credentials, internal addresses, or stack traces.</p>
+         * <p>The description of the creation failure.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Image cache production failed. Try again</p>
+         * <p>The image cache creation failed. Please retry</p>
          */
         @NameInMap("message")
         public String message;
@@ -160,7 +160,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
 
     public static class RetryImageCacheResponseBodyData extends TeaModel {
         /**
-         * <p>The source ACR Enterprise instance ID.</p>
+         * <p>The ID of the source ACR instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +170,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public String acrInstanceId;
 
         /**
-         * <p>The deduplicated number of agents in the current workspace that have useImageCache set to true and are associated with this logical resource. The value is greater than or equal to 0. This is the same set as the imageCacheId filter in ListAllAgents. Agents with the feature disabled are not counted, regardless of the number of occupied instances.</p>
+         * <p>The number of agents that use the cache.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public Long agentCount;
 
         /**
-         * <p>The actual cache size in bytes. Known values are greater than or equal to 0. If unknown, the value is null. The compressed size of the source image cannot be used as a substitute.</p>
+         * <p>The size of the cache in bytes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,7 +193,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public Long cacheSizeBytes;
 
         /**
-         * <p>Indicates whether deletion is allowed. The value is true when the current workspace has no configuration references with the switch enabled, no valid instances occupy the resource, and the resource is not being deleted. If the reference status is unknown, the query should fail instead of allowing deletion by default.</p>
+         * <p>Indicates whether the cache can be deleted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public Boolean canDelete;
 
         /**
-         * <p>The creation time of the logical resource in the current workspace, in RFC3339 format with time zone. Content updates for the &quot;latest&quot; tag do not refresh this time.</p>
+         * <p>The time when the resource was created. The time follows the RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The reason for blocking deletion. The value is null when canDelete is true. Otherwise, the value is returned based on the priority of DELETING, AGENT_ENABLED, and INSTANCES_RELEASING. Old instances may still occupy the resource even if the agent count is 0.</p>
+         * <p>The reason why the cache cannot be deleted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +226,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public String deleteBlockReason;
 
         /**
-         * <p>The current content digest in the sha256: format followed by a 64-character lowercase hexadecimal string. It only describes the currently registered content and does not prove that old instances have been switched.</p>
+         * <p>The current content digest.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +236,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public String digest;
 
         /**
-         * <p>The cache failure reason. It must be a non-empty object when the status is FAILED, and null for other statuses. It only describes the current content and the current production round.</p>
+         * <p>The reason for the cache failure.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>if can be null:</strong>
@@ -246,7 +246,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public RetryImageCacheResponseBodyDataError error;
 
         /**
-         * <p>The logical resource ID manageable by the current workspace, not the shared physical cache ID.</p>
+         * <p>The image cache ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,7 +256,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The source image domain name, excluding the protocol, path, and credentials.</p>
+         * <p>The domain name of the source image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,7 +266,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public String registry;
 
         /**
-         * <p>The source image repository path in the namespace/repository format, which includes the namespace.</p>
+         * <p>The path of the source image repository.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,13 +276,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public String repository;
 
         /**
-         * <p>The image cache status. Valid values:</p>
-         * <ul>
-         * <li>PENDING: creating</li>
-         * <li>READY: available</li>
-         * <li>FAILED: abnormal</li>
-         * <li>DELETING: deleting in the current workspace</li>
-         * </ul>
+         * <p>The cache status.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -292,7 +286,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The source image tag. Case is preserved. Regular tags cannot be registered with different digests, except for the exact lowercase &quot;latest&quot; tag.</p>
+         * <p>The tag of the source image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -302,7 +296,7 @@ public class RetryImageCacheResponseBody extends TeaModel {
         public String tag;
 
         /**
-         * <p>The workspace ID. It is consistent with the requested workspace. Resources with the same content from other workspaces are not returned.</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

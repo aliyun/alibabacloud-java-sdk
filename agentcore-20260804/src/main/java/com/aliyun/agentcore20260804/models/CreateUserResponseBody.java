@@ -116,7 +116,7 @@ public class CreateUserResponseBody extends TeaModel {
         public String agentCoreUserId;
 
         /**
-         * <p>The authentication method of the user. A value of password indicates that local password authentication in the workspace is used. A value of dingtalk or feishu indicates that the user is synchronized and authenticated by the corresponding external identity provider.</p>
+         * <p>The authentication method of the user. A value of password indicates that local password authentication in the workspace is used. A value of dingtalk or feishu indicates that the user is synchronized and authenticated by the corresponding external identity provider (IdP).</p>
          * 
          * <strong>example:</strong>
          * <p>password</p>
@@ -125,7 +125,7 @@ public class CreateUserResponseBody extends TeaModel {
         public String authMethod;
 
         /**
-         * <p>The time when the user was created. The time is displayed in UTC and follows the RFC 3339 format.</p>
+         * <p>The creation time. The time is displayed in UTC and follows the RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
@@ -170,10 +170,10 @@ public class CreateUserResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The note for the user. The note can be up to 1,024 characters in length.</p>
+         * <p>The remarks for the user. The remarks can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>Agent operations team member</p>
+         * <p>Agent operation team member</p>
          */
         @NameInMap("note")
         public String note;
@@ -197,7 +197,7 @@ public class CreateUserResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the user was last modified. The time is displayed in UTC and follows the RFC 3339 format.</p>
+         * <p>The time of the last update. The time is displayed in UTC and follows the RFC 3339 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>

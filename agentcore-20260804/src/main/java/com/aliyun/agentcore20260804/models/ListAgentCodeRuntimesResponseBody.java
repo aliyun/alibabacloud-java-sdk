@@ -23,7 +23,7 @@ public class ListAgentCodeRuntimesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The list of supported code runtime environments.</p>
+     * <p>The supported code runtime environments.</p>
      */
     @NameInMap("items")
     public java.util.List<ListAgentCodeRuntimesResponseBodyItems> items;
@@ -47,7 +47,7 @@ public class ListAgentCodeRuntimesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The token for the next page.</p>
+     * <p>The next page token.</p>
      * 
      * <strong>example:</strong>
      * <p>d3MtYTFiMmMzZDRlNWY2CmNvZGUtcnVudGltZS1leGFtcGxlCjE</p>

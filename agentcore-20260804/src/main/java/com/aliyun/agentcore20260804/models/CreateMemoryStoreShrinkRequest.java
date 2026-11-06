@@ -12,7 +12,7 @@ public class CreateMemoryStoreShrinkRequest extends TeaModel {
     public String bodyShrink;
 
     /**
-     * <p>The client token.</p>
+     * <p>The client request token.</p>
      * 
      * <strong>example:</strong>
      * <p>memory-store-create-20260909-001</p>

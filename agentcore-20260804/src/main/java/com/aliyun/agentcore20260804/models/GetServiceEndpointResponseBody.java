@@ -47,7 +47,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
 
     public static class GetServiceEndpointResponseBodyDataAccessUrls extends TeaModel {
         /**
-         * <p>The access URL type. Valid values: INTERNET, VPC.</p>
+         * <p>The access address type. Valid values: INTERNET and VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>INTERNET</p>
@@ -116,7 +116,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public String accessType;
 
         /**
-         * <p>The access URL status. Valid values: CREATING, READY, DEGRADED.</p>
+         * <p>The access address status. Valid values: CREATING, READY, and DEGRADED.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -125,7 +125,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The reason for the access URL status. A specific reason is returned when the status is abnormal.</p>
+         * <p>The reason for the access address status. A specific reason is returned when the status is abnormal.</p>
          * 
          * <strong>example:</strong>
          * <p>ServiceEndpoint.Provider.Unavailable: no provider for the target type</p>
@@ -134,7 +134,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public String statusReason;
 
         /**
-         * <p>The access URL.</p>
+         * <p>The access address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://endpoint.example.com">https://endpoint.example.com</a></p>
@@ -183,7 +183,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
 
     public static class GetServiceEndpointResponseBodyDataAuthentication extends TeaModel {
         /**
-         * <p>The authentication method. NONE indicates that no authentication is required. API_KEY indicates that an API key is passed through the x-api-key request header for authentication.</p>
+         * <p>The authentication method. NONE indicates that no authentication is required. API_KEY indicates that authentication is performed by passing an API key in the x-api-key request header.</p>
          * 
          * <strong>example:</strong>
          * <p>API_KEY</p>
@@ -202,6 +202,65 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+    }
+
+    public static class GetServiceEndpointResponseBodyDataElasticityPolicy extends TeaModel {
+        /**
+         * <p>是否开启弹性。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        /**
+         * <p>最大实例数，不小于 1。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        @NameInMap("maxSandboxCount")
+        public Integer maxSandboxCount;
+
+        /**
+         * <p>最小实例数，不小于 0 且不大于 maxSandboxCount。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("minSandboxCount")
+        public Integer minSandboxCount;
+
+        public static GetServiceEndpointResponseBodyDataElasticityPolicy build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceEndpointResponseBodyDataElasticityPolicy self = new GetServiceEndpointResponseBodyDataElasticityPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceEndpointResponseBodyDataElasticityPolicy setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public GetServiceEndpointResponseBodyDataElasticityPolicy setMaxSandboxCount(Integer maxSandboxCount) {
+            this.maxSandboxCount = maxSandboxCount;
+            return this;
+        }
+        public Integer getMaxSandboxCount() {
+            return this.maxSandboxCount;
+        }
+
+        public GetServiceEndpointResponseBodyDataElasticityPolicy setMinSandboxCount(Integer minSandboxCount) {
+            this.minSandboxCount = minSandboxCount;
+            return this;
+        }
+        public Integer getMinSandboxCount() {
+            return this.minSandboxCount;
         }
 
     }
@@ -244,7 +303,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public String resourceBindingId;
 
         /**
-         * <p>The target type. Valid values: AGENT_VERSION, TEAM_COLLABORATION.</p>
+         * <p>The target type. Valid values: AGENT_VERSION and TEAM_COLLABORATION.</p>
          * 
          * <strong>example:</strong>
          * <p>AGENT_VERSION</p>
@@ -301,7 +360,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
 
     public static class GetServiceEndpointResponseBodyData extends TeaModel {
         /**
-         * <p>The list of access URLs for the service endpoint.</p>
+         * <p>The list of access addresses for the service endpoint.</p>
          */
         @NameInMap("accessUrls")
         public java.util.List<GetServiceEndpointResponseBodyDataAccessUrls> accessUrls;
@@ -313,7 +372,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public GetServiceEndpointResponseBodyDataAuthentication authentication;
 
         /**
-         * <p>The creation time in UTC, formatted in RFC 3339.</p>
+         * <p>The creation time in UTC format compliant with RFC 3339.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
@@ -322,7 +381,19 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The service endpoint type. DEFAULT indicates a default endpoint created and maintained by the platform. NAMED indicates a named endpoint explicitly created by the user.</p>
+         * <p>publicAccessEnabled 与工作空间公网入向上限叠加后的结果：二者均允许时为 true。仅表示策略目标，不代表公网入口已发布完成，实际状态以 accessUrls 与 status 为准。</p>
+         */
+        @NameInMap("effectivePublicAccessEnabled")
+        public Boolean effectivePublicAccessEnabled;
+
+        /**
+         * <p>仅在服务端点设置过弹性覆盖值时返回，可设置的为 Router 类型服务端点与 GATEWAY_API_WITH_VPC_INGRESS 类型的 DEFAULT 服务端点；未设置覆盖值时不返回该对象，表示继承智能体源配置，不得当作空对象或默认策略。返回时三个字段必全。</p>
+         */
+        @NameInMap("elasticityPolicy")
+        public GetServiceEndpointResponseBodyDataElasticityPolicy elasticityPolicy;
+
+        /**
+         * <p>The service endpoint type. DEFAULT indicates a default endpoint created and maintained by the platform. NAMED indicates a named endpoint explicitly created by a user.</p>
          * 
          * <strong>example:</strong>
          * <p>NAMED</p>
@@ -331,13 +402,19 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public String endpointType;
 
         /**
-         * <p>The service endpoint name. The name must be unique within the workspace and can be 1 to 128 characters in length.</p>
+         * <p>The service endpoint name. It must be unique within the workspace and is 1 to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent-endpoint</p>
          */
         @NameInMap("name")
         public String name;
+
+        /**
+         * <p>用户在服务端点上设置的公网入向期望；未设置过的历史服务端点按 true 返回。仅表示配置期望，实际公网地址是否可用以 accessUrls 与 status 为准。</p>
+         */
+        @NameInMap("publicAccessEnabled")
+        public Boolean publicAccessEnabled;
 
         /**
          * <p>The region ID of the service endpoint.</p>
@@ -358,7 +435,7 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public String serviceEndpointId;
 
         /**
-         * <p>The service endpoint status. Valid values: CREATING, READY, UPDATING, DEGRADED, DISABLED, DELETING.</p>
+         * <p>The service endpoint status. Valid values: CREATING, READY, UPDATING, DEGRADED, DISABLED, and DELETING.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -376,13 +453,13 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         public String statusReason;
 
         /**
-         * <p>The target routing configuration of the service endpoint.</p>
+         * <p>The target route configuration of the service endpoint.</p>
          */
         @NameInMap("target")
         public GetServiceEndpointResponseBodyDataTarget target;
 
         /**
-         * <p>The time of the last modification in UTC, formatted in RFC 3339.</p>
+         * <p>The last modification time in UTC format compliant with RFC 3339.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
@@ -428,6 +505,22 @@ public class GetServiceEndpointResponseBody extends TeaModel {
             return this.createdAt;
         }
 
+        public GetServiceEndpointResponseBodyData setEffectivePublicAccessEnabled(Boolean effectivePublicAccessEnabled) {
+            this.effectivePublicAccessEnabled = effectivePublicAccessEnabled;
+            return this;
+        }
+        public Boolean getEffectivePublicAccessEnabled() {
+            return this.effectivePublicAccessEnabled;
+        }
+
+        public GetServiceEndpointResponseBodyData setElasticityPolicy(GetServiceEndpointResponseBodyDataElasticityPolicy elasticityPolicy) {
+            this.elasticityPolicy = elasticityPolicy;
+            return this;
+        }
+        public GetServiceEndpointResponseBodyDataElasticityPolicy getElasticityPolicy() {
+            return this.elasticityPolicy;
+        }
+
         public GetServiceEndpointResponseBodyData setEndpointType(String endpointType) {
             this.endpointType = endpointType;
             return this;
@@ -442,6 +535,14 @@ public class GetServiceEndpointResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetServiceEndpointResponseBodyData setPublicAccessEnabled(Boolean publicAccessEnabled) {
+            this.publicAccessEnabled = publicAccessEnabled;
+            return this;
+        }
+        public Boolean getPublicAccessEnabled() {
+            return this.publicAccessEnabled;
         }
 
         public GetServiceEndpointResponseBodyData setRegionId(String regionId) {

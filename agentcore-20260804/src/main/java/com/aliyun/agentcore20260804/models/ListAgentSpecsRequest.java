@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentSpecsRequest extends TeaModel {
     /**
-     * <p>The AgentSpec name used as a search keyword. This parameter is used together with the search parameter.</p>
+     * <p>The name of the AgentSpec, used as a search keyword in combination with the search parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>my-worker</p>
@@ -23,7 +23,7 @@ public class ListAgentSpecsRequest extends TeaModel {
     public String bizTag;
 
     /**
-     * <p>The field by which to sort the results. Set the value to download_count to sort by download count. By default, results are sorted by update time.</p>
+     * <p>The field by which to sort the results. Supports download_count. By default, the results are sorted by update time.</p>
      * 
      * <strong>example:</strong>
      * <p>download_count</p>
@@ -32,7 +32,7 @@ public class ListAgentSpecsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The owner used to filter the results.</p>
+     * <p>The owner filter.</p>
      * 
      * <strong>example:</strong>
      * <p>user1</p>
@@ -59,11 +59,7 @@ public class ListAgentSpecsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The visibility scope used to filter the results. Valid values:</p>
-     * <ul>
-     * <li>PUBLIC</li>
-     * <li>PRIVATE</li>
-     * </ul>
+     * <p>The visibility scope filter. Valid values: PUBLIC and PRIVATE.</p>
      * 
      * <strong>example:</strong>
      * <p>PUBLIC</p>
@@ -72,12 +68,7 @@ public class ListAgentSpecsRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>The search mode. Valid values:</p>
-     * <ul>
-     * <li>accurate: exact match.</li>
-     * <li>blur: fuzzy match.</li>
-     * </ul>
-     * <p>Default value: blur.</p>
+     * <p>The search mode. Valid values: accurate (exact match) and blur (fuzzy match). Default value: blur.</p>
      * 
      * <strong>example:</strong>
      * <p>blur</p>
@@ -86,7 +77,7 @@ public class ListAgentSpecsRequest extends TeaModel {
     public String search;
 
     /**
-     * <p>Specifies whether to return the Skills and McpServers lists. Default value: false.</p>
+     * <p>Specifies whether to return the lists of skills and MCP servers. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

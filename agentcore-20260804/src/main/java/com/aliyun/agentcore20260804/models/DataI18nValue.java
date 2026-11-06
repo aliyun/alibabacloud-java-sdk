@@ -5,28 +5,28 @@ import com.aliyun.tea.*;
 
 public class DataI18nValue extends TeaModel {
     /**
-     * <p>The MCP service description in the corresponding language.</p>
+     * <p>The MCP service description in this language.</p>
      * 
      * <strong>example:</strong>
-     * <p>An MCP service for querying knowledge bases</p>
+     * <p>MCP service for querying knowledge bases</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The MCP marketplace template name in the corresponding language.</p>
+     * <p>The MCP marketplace template name in this language.</p>
      * 
      * <strong>example:</strong>
-     * <p>Knowledge Base</p>
+     * <p>Knowledge base</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>The MCP marketplace template usage instructions in the corresponding language.</p>
+     * <p>The MCP marketplace template instructions in this language.</p>
      * 
      * <strong>example:</strong>
-     * <h1>Knowledge Base\nKnowledge base query service</h1>
+     * <h1>Knowledge base\nKnowledge base query service</h1>
      */
     @NameInMap("readme")
     public String readme;

@@ -65,7 +65,7 @@ public class ListMcpsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -269,7 +269,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The location of the credential.</p>
+         * <p>The position of the credential.</p>
          * 
          * <strong>example:</strong>
          * <p>header</p>
@@ -335,7 +335,7 @@ public class ListMcpsResponseBody extends TeaModel {
 
     public static class ListMcpsResponseBodyItemsAuth extends TeaModel {
         /**
-         * <p>The caller API key authentication configuration for code-deployed MCP.</p>
+         * <p>The API key authentication configuration for callers of code-deployed MCP.</p>
          */
         @NameInMap("codePackage")
         public ListMcpsResponseBodyItemsAuthCodePackage codePackage;
@@ -347,7 +347,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public ListMcpsResponseBodyItemsAuthDirectProxy directProxy;
 
         /**
-         * <p>Specifies whether the feature is enabled.</p>
+         * <p>Specifies whether it is enabled.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
@@ -399,7 +399,7 @@ public class ListMcpsResponseBody extends TeaModel {
 
     public static class ListMcpsResponseBodyItemsDeploymentConfigAccessControl extends TeaModel {
         /**
-         * <p>References the AgentCore credential when mode is set to CREDENTIAL.</p>
+         * <p>References the AgentCore credential when mode is CREDENTIAL.</p>
          * 
          * <strong>example:</strong>
          * <p>credential-id</p>
@@ -408,13 +408,13 @@ public class ListMcpsResponseBody extends TeaModel {
         public String credentialId;
 
         /**
-         * <p>Specifies whether entry access control is enabled.</p>
+         * <p>Specifies whether ingress access control is enabled.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>ANONYMOUS indicates anonymous access. CREDENTIAL indicates the use of AgentCore access credentials.</p>
+         * <p>ANONYMOUS indicates anonymous access, and CREDENTIAL indicates the use of AgentCore access credentials.</p>
          * 
          * <strong>example:</strong>
          * <p>CREDENTIAL</p>
@@ -540,7 +540,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public java.util.List<String> command;
 
         /**
-         * <p>The code package runtime. Valid values: python3.13, nodejs22, and java17.</p>
+         * <p>The runtime environment of the code package, such as python3.13, nodejs22, or java17.</p>
          * 
          * <strong>example:</strong>
          * <p>python3.13</p>
@@ -596,13 +596,13 @@ public class ListMcpsResponseBody extends TeaModel {
         public java.util.List<String> command;
 
         /**
-         * <p>The container entrypoint arguments.</p>
+         * <p>The container entrypoint parameters.</p>
          */
         @NameInMap("entrypoint")
         public java.util.List<String> entrypoint;
 
         /**
-         * <p>The container image address.</p>
+         * <p>The address of the container image.</p>
          * 
          * <strong>example:</strong>
          * <p>registry.cn-hangzhou.aliyuncs.com/example/mcp:1.0.0</p>
@@ -611,7 +611,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>The image registry type.</p>
+         * <p>The type of the image registry.</p>
          * 
          * <strong>example:</strong>
          * <p>ACR</p>
@@ -620,7 +620,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String imageRegistryType;
 
         /**
-         * <p>The MCP runtime mode. Custom containers must currently expose the standard MCP themselves. Valid value: SELF_HOSTED.</p>
+         * <p>Custom containers must currently expose the standard MCP themselves. Valid value: SELF_HOSTED.</p>
          * 
          * <strong>example:</strong>
          * <p>SELF_HOSTED</p>
@@ -629,7 +629,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String mcpRuntimeMode;
 
         /**
-         * <p>The container source type. The value is fixed to CONTAINER_IMAGE.</p>
+         * <p>The source type of the container. Currently fixed to CONTAINER_IMAGE.</p>
          * 
          * <strong>example:</strong>
          * <p>CONTAINER_IMAGE</p>
@@ -702,7 +702,7 @@ public class ListMcpsResponseBody extends TeaModel {
 
     public static class ListMcpsResponseBodyItemsDeploymentConfigHookConfigurationHooks extends TeaModel {
         /**
-         * <p>The hook API version.</p>
+         * <p>The API version of the hook.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -711,10 +711,10 @@ public class ListMcpsResponseBody extends TeaModel {
         public String apiVersion;
 
         /**
-         * <p>The hook description.</p>
+         * <p>The description of the hook.</p>
          * 
          * <strong>example:</strong>
-         * <p>Record MCP tool invocations</p>
+         * <p>Record MCP tool invocation</p>
          */
         @NameInMap("description")
         public String description;
@@ -735,13 +735,13 @@ public class ListMcpsResponseBody extends TeaModel {
         public String event;
 
         /**
-         * <p>The hook request headers.</p>
+         * <p>The request headers for the hook.</p>
          */
         @NameInMap("headers")
         public java.util.Map<String, String> headers;
 
         /**
-         * <p>The hook timeout in milliseconds.</p>
+         * <p>The timeout period for the hook, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3000</p>
@@ -750,7 +750,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public Integer timeout;
 
         /**
-         * <p>The hook callback URL.</p>
+         * <p>The callback URL for the hook.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/mcp-hook">https://example.com/mcp-hook</a></p>
@@ -823,7 +823,7 @@ public class ListMcpsResponseBody extends TeaModel {
 
     public static class ListMcpsResponseBodyItemsDeploymentConfigHookConfiguration extends TeaModel {
         /**
-         * <p>The ordered list of hooks. Executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in array order.</p>
+         * <p>Executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the order of the array.</p>
          */
         @NameInMap("hooks")
         public java.util.List<ListMcpsResponseBodyItemsDeploymentConfigHookConfigurationHooks> hooks;
@@ -857,7 +857,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public Boolean enableRequestMetrics;
 
         /**
-         * <p>The Function Compute log splitting start rule.</p>
+         * <p>The start rule for Function Compute log splitting.</p>
          * 
          * <strong>example:</strong>
          * <p>DefaultRegex</p>
@@ -932,7 +932,7 @@ public class ListMcpsResponseBody extends TeaModel {
 
     public static class ListMcpsResponseBodyItemsDeploymentConfigMcpConfiguration extends TeaModel {
         /**
-         * <p>The MCP endpoint path, such as /mcp or /sse.</p>
+         * <p>The path for the MCP endpoint, such as /mcp or /sse.</p>
          * 
          * <strong>example:</strong>
          * <p>/mcp</p>
@@ -941,7 +941,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String endpointPath;
 
         /**
-         * <p>The number of concurrent sessions per instance. The value is fixed to 1.</p>
+         * <p>Currently fixed at 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -950,7 +950,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public Integer sessionConcurrencyPerInstance;
 
         /**
-         * <p>The session idle timeout in seconds. Default value: 1800.</p>
+         * <p>The unit is seconds. Default value: 1800.</p>
          * 
          * <strong>example:</strong>
          * <p>1800</p>
@@ -959,7 +959,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public Integer sessionIdleTimeoutSeconds;
 
         /**
-         * <p>The maximum session lifetime in seconds. Default value: 21600.</p>
+         * <p>The unit is seconds. Default value: 21600.</p>
          * 
          * <strong>example:</strong>
          * <p>21600</p>
@@ -1008,7 +1008,7 @@ public class ListMcpsResponseBody extends TeaModel {
 
     public static class ListMcpsResponseBodyItemsDeploymentConfigNasConfigurationMountPoints extends TeaModel {
         /**
-         * <p>Specifies whether TLS is enabled.</p>
+         * <p>Specifies whether to enable TLS.</p>
          */
         @NameInMap("enableTls")
         public Boolean enableTls;
@@ -1023,7 +1023,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String mountDir;
 
         /**
-         * <p>The NAS service address.</p>
+         * <p>The NAS server address.</p>
          * 
          * <strong>example:</strong>
          * <p>example.cn-hangzhou.nas.aliyuncs.com</p>
@@ -1064,7 +1064,7 @@ public class ListMcpsResponseBody extends TeaModel {
 
     public static class ListMcpsResponseBodyItemsDeploymentConfigNasConfiguration extends TeaModel {
         /**
-         * <p>The ID of the runtime user group.</p>
+         * <p>The runtime user group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -1079,7 +1079,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public java.util.List<ListMcpsResponseBodyItemsDeploymentConfigNasConfigurationMountPoints> mountPoints;
 
         /**
-         * <p>The ID of the user that runs the service.</p>
+         * <p>The runtime user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -1144,7 +1144,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-example</p>
@@ -1193,7 +1193,7 @@ public class ListMcpsResponseBody extends TeaModel {
 
     public static class ListMcpsResponseBodyItemsDeploymentConfigOssMountConfigurationMountPoints extends TeaModel {
         /**
-         * <p>The name of the OSS bucket.</p>
+         * <p>The OSS bucket name.</p>
          * 
          * <strong>example:</strong>
          * <p>example-bucket</p>
@@ -1202,7 +1202,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The path in the OSS bucket.</p>
+         * <p>The OSS bucket path.</p>
          * 
          * <strong>example:</strong>
          * <p>/data</p>
@@ -1211,7 +1211,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String bucketPath;
 
         /**
-         * <p>The endpoint of the OSS service.</p>
+         * <p>The OSS service endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></p>
@@ -1311,7 +1311,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The reserved reference to the rule set for parameter transformation and result enhancement.</p>
+         * <p>The reserved reference to the parameter transformation and result enhancement rule set.</p>
          * 
          * <strong>example:</strong>
          * <p>rules-1</p>
@@ -1320,7 +1320,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String ruleSetId;
 
         /**
-         * <p>The version of the transformation rule.</p>
+         * <p>The transformation rule version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -1383,7 +1383,7 @@ public class ListMcpsResponseBody extends TeaModel {
 
     public static class ListMcpsResponseBodyItemsDeploymentConfigRuntimeConfiguration extends TeaModel {
         /**
-         * <p>The CPU specifications, in cores. Default value: 0.25.</p>
+         * <p>The unit is cores. Default value: 0.25.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -1392,7 +1392,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public Double cpu;
 
         /**
-         * <p>The size of the ephemeral disk, in MB. Valid values: 512 and 10240.</p>
+         * <p>The unit is MB. Valid values: 512 and 10240.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -1407,7 +1407,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public java.util.Map<String, String> environmentVariables;
 
         /**
-         * <p>The ARN of the RAM role used by user code to access downstream Alibaba Cloud resources.</p>
+         * <p>The ARN of the RAM role used when user code accesses downstream Alibaba Cloud resources.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::1234567890123456:role/agentcore-mcp-execution</p>
@@ -1416,7 +1416,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String executionRoleArn;
 
         /**
-         * <p>The maximum number of concurrent requests per instance. Default value: 200.</p>
+         * <p>Default value: 200.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -1425,7 +1425,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public Integer instanceConcurrency;
 
         /**
-         * <p>The memory specifications, in MB. Default value: 512.</p>
+         * <p>The unit is MB. Default value: 512.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -1434,7 +1434,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public Integer memory;
 
         /**
-         * <p>The service port. Default value: 9000.</p>
+         * <p>Default value: 9000.</p>
          * 
          * <strong>example:</strong>
          * <p>9000</p>
@@ -1443,7 +1443,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The function timeout period, in seconds. Default value: 300.</p>
+         * <p>The unit is seconds. Default value: 300.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -1524,7 +1524,7 @@ public class ListMcpsResponseBody extends TeaModel {
 
     public static class ListMcpsResponseBodyItemsDeploymentConfig extends TeaModel {
         /**
-         * <p>The MCP entry access control.</p>
+         * <p>The MCP ingress access control.</p>
          */
         @NameInMap("accessControl")
         public ListMcpsResponseBodyItemsDeploymentConfigAccessControl accessControl;
@@ -1536,7 +1536,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public ListMcpsResponseBodyItemsDeploymentConfigAgentIdentityConfiguration agentIdentityConfiguration;
 
         /**
-         * <p>Code indicates a ZIP code package. Container indicates a custom container.</p>
+         * <p>Code indicates a ZIP code package, and Container indicates a custom container.</p>
          * 
          * <strong>example:</strong>
          * <p>Code</p>
@@ -1593,7 +1593,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public ListMcpsResponseBodyItemsDeploymentConfigOssMountConfiguration ossMountConfiguration;
 
         /**
-         * <p>The configuration for parameter transformation and result enhancement.</p>
+         * <p>The parameter transformation and result enhancement configuration.</p>
          */
         @NameInMap("parameterTransformConfiguration")
         public ListMcpsResponseBodyItemsDeploymentConfigParameterTransformConfiguration parameterTransformConfiguration;
@@ -1731,7 +1731,7 @@ public class ListMcpsResponseBody extends TeaModel {
 
     public static class ListMcpsResponseBodyItemsMarketSource extends TeaModel {
         /**
-         * <p>The ID of the MCP marketplace template.</p>
+         * <p>The ID of the marketplace template.</p>
          * 
          * <strong>example:</strong>
          * <p>market-1</p>
@@ -1762,13 +1762,13 @@ public class ListMcpsResponseBody extends TeaModel {
         public java.util.List<String> addresses;
 
         /**
-         * <p>The backend authentication configuration. enabled specifies whether the feature is enabled. directProxy specifies the custom authentication header for the direct proxy. httpToMcp specifies the list of OpenAPI credentials for HTTP_TO_MCP.</p>
+         * <p>The backend authentication configuration. enabled specifies whether it is enabled. directProxy specifies the custom authentication header for the direct proxy. httpToMcp specifies the list of OpenAPI credentials for HTTP_TO_MCP.</p>
          */
         @NameInMap("auth")
         public ListMcpsResponseBodyItemsAuth auth;
 
         /**
-         * <p>The time when the MCP was created, in ISO 8601 UTC format.</p>
+         * <p>The creation time of the MCP, in ISO 8601 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-23T00:00:00Z</p>
@@ -1792,7 +1792,7 @@ public class ListMcpsResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>A sample description that illustrates the purpose of the resource</p>
+         * <p>A sample description to illustrate the purpose of the resource</p>
          */
         @NameInMap("description")
         public String description;
@@ -1816,7 +1816,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String functionName;
 
         /**
-         * <p>The marketplace template from which the MCP is sourced.</p>
+         * <p>The marketplace source template of the MCP.</p>
          */
         @NameInMap("marketSource")
         public ListMcpsResponseBodyItemsMarketSource marketSource;
@@ -1849,7 +1849,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String officialTag;
 
         /**
-         * <p>The access permission mode. PUBLIC indicates public access. CONTROLLED indicates that access is controlled based on permission rules.</p>
+         * <p>The access permission mode.</p>
          * 
          * <strong>example:</strong>
          * <p>CONTROLLED</p>
@@ -1903,7 +1903,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The last update time of the MCP, in ISO 8601 UTC format.</p>
+         * <p>The last time the MCP was updated, in ISO 8601 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-23T01:00:00Z</p>
@@ -1912,7 +1912,7 @@ public class ListMcpsResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
-         * <p>Specifies whether the MCP is still subject to the usage constraints of the official template.</p>
+         * <p>Indicates whether the MCP is still subject to the usage constraints of the official template.</p>
          */
         @NameInMap("usageActive")
         public Boolean usageActive;

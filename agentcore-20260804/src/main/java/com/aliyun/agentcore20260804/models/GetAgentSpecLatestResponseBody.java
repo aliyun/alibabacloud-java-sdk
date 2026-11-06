@@ -67,11 +67,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
 
     public static class GetAgentSpecLatestResponseBodyDataSkillsVersionSelector extends TeaModel {
         /**
-         * <p>The version selector type. Valid values:</p>
-         * <ul>
-         * <li>LABEL: selects by label.</li>
-         * <li>VERSION: selects by specific version.</li>
-         * </ul>
+         * <p>The type of the version selector.</p>
          * 
          * <strong>example:</strong>
          * <p>LABEL</p>
@@ -80,7 +76,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The selector value. If the type is LABEL, this value is a label name such as latest. If the type is VERSION, this value is a specific version number.</p>
+         * <p>The value of the selector. If the type is LABEL, the value is the label name, such as latest. If the type is VERSION, the value is the specific version number.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>
@@ -122,11 +118,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The Skill source type. Valid values:</p>
-         * <ul>
-         * <li>REFERENCE: references AI Registry.</li>
-         * <li>STATIC: statically bundled with the package.</li>
-         * </ul>
+         * <p>The source type of the skill.</p>
          * 
          * <strong>example:</strong>
          * <p>REFERENCE</p>
@@ -135,7 +127,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The version selector for the reference. Defaults to LABEL/latest if omitted.</p>
+         * <p>The referenced version selector. If omitted, the default is LABEL/latest.</p>
          */
         @NameInMap("versionSelector")
         public GetAgentSpecLatestResponseBodyDataSkillsVersionSelector versionSelector;
@@ -194,7 +186,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>A sample description that explains the purpose of the resource</p>
+         * <p>A sample description used to explain the purpose of the resource</p>
          */
         @NameInMap("description")
         public String description;
@@ -209,13 +201,13 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
         public Long downloadCount;
 
         /**
-         * <p>Indicates whether the AgentSpec is enabled.</p>
+         * <p>Indicates whether it is enabled.</p>
          */
         @NameInMap("enable")
         public Boolean enable;
 
         /**
-         * <p>The list of MCP server references.</p>
+         * <p>The list of MCP service references.</p>
          */
         @NameInMap("mcpServers")
         public java.util.List<GetAgentSpecLatestResponseBodyDataMcpServers> mcpServers;
@@ -245,13 +237,13 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The list of Skill references.</p>
+         * <p>The list of skill references.</p>
          */
         @NameInMap("skills")
         public java.util.List<GetAgentSpecLatestResponseBodyDataSkills> skills;
 
         /**
-         * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
+         * <p>The update time. It is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787671022000</p>

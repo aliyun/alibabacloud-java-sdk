@@ -107,7 +107,7 @@ public class UpdateMemoryStoreResponseBody extends TeaModel {
 
     public static class UpdateMemoryStoreResponseBodyData extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. It is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:00:00Z</p>
@@ -119,7 +119,7 @@ public class UpdateMemoryStoreResponseBody extends TeaModel {
          * <p>The MemoryStore description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Used to save long-term user preferences</p>
+         * <p>Used to save the user\&quot;s long-term preferences</p>
          */
         @NameInMap("description")
         public String description;
@@ -152,7 +152,7 @@ public class UpdateMemoryStoreResponseBody extends TeaModel {
         public String memoryStoreName;
 
         /**
-         * <p>The lifecycle status of the MemoryStore.</p>
+         * <p>The lifecycle state of the MemoryStore.</p>
          * 
          * <strong>example:</strong>
          * <p>Ready</p>
@@ -161,7 +161,7 @@ public class UpdateMemoryStoreResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The last updated time.</p>
+         * <p>The last update time. It is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:05:00Z</p>

@@ -34,7 +34,7 @@ public class UploadSkillViaOssRequest extends TeaModel {
         public String commitMsg;
 
         /**
-         * <p>The OSS object name (path).</p>
+         * <p>The name or path of the OSS object.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class UploadSkillViaOssRequest extends TeaModel {
         public String ossObjectName;
 
         /**
-         * <p>Specifies whether to overwrite an existing Skill. Default value: false.</p>
+         * <p>Specifies whether to overwrite an existing skill. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -53,7 +53,7 @@ public class UploadSkillViaOssRequest extends TeaModel {
         public Boolean overwrite;
 
         /**
-         * <p>The target upload version number. This parameter is optional and serves as a fallback when the ZIP package does not contain version information.</p>
+         * <p>The target version to upload. This parameter is optional and serves as a fallback when no version information is included in the ZIP package.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>

@@ -26,7 +26,7 @@ public class GetAgentCodePackageUploadUrlRequest extends TeaModel {
 
     public static class GetAgentCodePackageUploadUrlRequestBody extends TeaModel {
         /**
-         * <p>The file name of the code package.</p>
+         * <p>The name of the code package file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

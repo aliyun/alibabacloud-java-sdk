@@ -146,7 +146,7 @@ public class GetWorkspaceAcrRamAuthorizeUrlResponseBody extends TeaModel {
         public String roleName;
 
         /**
-         * <p>The source of the shared role. This does not indicate that authorization is complete.</p>
+         * <p>The source of the shared role. This does not indicate that the authorization is complete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

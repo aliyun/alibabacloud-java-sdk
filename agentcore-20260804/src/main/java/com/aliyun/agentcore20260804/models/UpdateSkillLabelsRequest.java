@@ -25,7 +25,7 @@ public class UpdateSkillLabelsRequest extends TeaModel {
 
     public static class UpdateSkillLabelsRequestBody extends TeaModel {
         /**
-         * <p>A JSON string of version label mappings.</p>
+         * <p>The JSON string for version label mapping.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

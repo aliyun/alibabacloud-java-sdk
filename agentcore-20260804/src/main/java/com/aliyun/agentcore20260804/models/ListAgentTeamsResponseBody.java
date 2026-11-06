@@ -38,7 +38,7 @@ public class ListAgentTeamsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The response message. Returns an error description when the request fails.</p>
+     * <p>The response message. Returns an error description if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class ListAgentTeamsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The cursor used to retrieve the next page. An empty value indicates that no more data is available.</p>
+     * <p>The cursor used to obtain the next page. An empty value indicates that no more data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>dXNlci1vZmZzZXQ6MTA</p>
@@ -71,7 +71,7 @@ public class ListAgentTeamsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of records that match the query conditions.</p>
+     * <p>The total number of records that meet the conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

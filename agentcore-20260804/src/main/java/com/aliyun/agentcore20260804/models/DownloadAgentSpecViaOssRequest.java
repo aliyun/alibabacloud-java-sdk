@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DownloadAgentSpecViaOssRequest extends TeaModel {
     /**
-     * <p>The version number. If you do not specify this parameter, the version associated with the latest tag is downloaded.</p>
+     * <p>The version number. If you do not specify this parameter, the version corresponding to the latest tag is downloaded.</p>
      * 
      * <strong>example:</strong>
      * <p>1.0.0</p>

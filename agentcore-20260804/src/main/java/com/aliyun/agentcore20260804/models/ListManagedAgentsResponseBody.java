@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListManagedAgentsResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value is SUCCESS if the request is successful.</p>
+     * <p>The business status code. The value is SUCCESS when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,7 +14,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code. The value is 200 if the request is successful.</p>
+     * <p>The HTTP status code. The value is 200 when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The list of managed agents.</p>
+     * <p>The list of managed Harness agents.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;agentId&quot;:&quot;agent-xxxxxx&quot;,&quot;workspaceId&quot;:&quot;ws-xxxxxx&quot;,&quot;agentName&quot;:&quot;demo-agent&quot;,&quot;status&quot;:&quot;Running&quot;,&quot;template&quot;:{&quot;templateId&quot;:&quot;tpl-xxxxxx&quot;,&quot;templateVersion&quot;:&quot;v1.0.0&quot;},&quot;spec&quot;:{&quot;replicas&quot;:1,&quot;cpu&quot;:&quot;2&quot;,&quot;memory&quot;:&quot;4Gi&quot;},&quot;createTime&quot;:&quot;2026-01-01T00:00:00Z&quot;,&quot;updateTime&quot;:&quot;2026-01-01T00:00:00Z&quot;}]</p>
@@ -41,7 +41,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The request processing result message.</p>
+     * <p>The message about the request processing result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -164,7 +164,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
 
     public static class ListManagedAgentsResponseBodyItemsHarnessConfiguration extends TeaModel {
         /**
-         * <p>Connector Service Account Key</p>
+         * <p>The ID of the connector account key record bound to qodercli, not the original service account key.</p>
          * 
          * <strong>example:</strong>
          * <p>key-xxxx</p>
@@ -173,7 +173,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         public String connectorServiceAccountKey;
 
         /**
-         * <p>Connector Service Account Name</p>
+         * <p>The name of the connector account bound to qodercli.</p>
          * 
          * <strong>example:</strong>
          * <p>my-connector-key</p>
@@ -245,7 +245,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
 
     public static class ListManagedAgentsResponseBodyItems extends TeaModel {
         /**
-         * <p>The inbound access mode.</p>
+         * <p>The inbound access method.</p>
          * 
          * <strong>example:</strong>
          * <p>API_KEY</p>
@@ -263,7 +263,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         public String accessScope;
 
         /**
-         * <p>The ID of the managed agent.</p>
+         * <p>The ID of the managed Harness agent.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-1</p>
@@ -299,7 +299,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         public String deployType;
 
         /**
-         * <p>The description of the managed agent.</p>
+         * <p>The description of the managed Harness agent.</p>
          * 
          * <strong>example:</strong>
          * <p>Agent for code review</p>
@@ -323,7 +323,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         public Long latestSpecVersion;
 
         /**
-         * <p>The name of the managed agent.</p>
+         * <p>The name of the managed Harness agent.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent</p>
@@ -341,7 +341,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         public String runtime;
 
         /**
-         * <p>The status of the managed agent.</p>
+         * <p>The status of the managed Harness agent.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>

@@ -119,7 +119,7 @@ public class CreatePermissionRulesResponseBody extends TeaModel {
          * <p>The authorization effect.</p>
          * 
          * <strong>example:</strong>
-         * <p>ALLOW</p>
+         * <p>PERMIT</p>
          */
         @NameInMap("effect")
         public String effect;
@@ -197,10 +197,10 @@ public class CreatePermissionRulesResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The details of the rule source.</p>
+         * <p>The rule source details.</p>
          * 
          * <strong>example:</strong>
-         * <p>OpenAPI</p>
+         * <p>EXPLICIT</p>
          */
         @NameInMap("sourceDetail")
         public String sourceDetail;

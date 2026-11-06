@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgentIMChannelResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value is SUCCESS when the request is successful.</p>
+     * <p>The business status code. The value is SUCCESS if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,13 +14,13 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The IM channel information after creation.</p>
+     * <p>The information about the created IM channel.</p>
      */
     @NameInMap("data")
     public CreateAgentIMChannelResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. The value is 200 when the request is successful.</p>
+     * <p>The HTTP status code. The value is 200 if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request processing result message.</p>
+     * <p>The message about the request processing result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -212,7 +212,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The channel credential summary. Only non-sensitive fields and configured secret field names are returned. Secret values are not returned.</p>
+         * <p>The summary of the channel credentials. Only non-sensitive fields and the names of configured secret fields are returned. Secret values are not returned.</p>
          */
         @NameInMap("credentialSummary")
         public CreateAgentIMChannelResponseBodyDataCredentialSummary credentialSummary;
@@ -224,7 +224,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The public network access address of the bound ServiceEndpoint.</p>
+         * <p>The public network access address of the attached ServiceEndpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://agent.example.com">https://agent.example.com</a></p>
@@ -242,7 +242,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
         public String imChannelId;
 
         /**
-         * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, and must be ready and have a public network address.</p>
+         * <p>The ID of the bound service endpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a publicly accessible address.</p>
          * 
          * <strong>example:</strong>
          * <p>se-1</p>
@@ -251,15 +251,7 @@ public class CreateAgentIMChannelResponseBody extends TeaModel {
         public String serviceEndpointId;
 
         /**
-         * <p>The IM channel status. Valid values:</p>
-         * <ul>
-         * <li>CREATING: Creating.</li>
-         * <li>READY: Ready.</li>
-         * <li>UPDATING: Updating.</li>
-         * <li>FAILED: Failed.</li>
-         * <li>DELETING: Deleting.</li>
-         * <li>DELETE_FAILED: Deletion failed.</li>
-         * </ul>
+         * <p>The status of the IM channel. Valid values: CREATING (creating), READY (ready), UPDATING (updating), FAILED (failed), DELETING (deleting), and DELETE_FAILED (deletion failed).</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>

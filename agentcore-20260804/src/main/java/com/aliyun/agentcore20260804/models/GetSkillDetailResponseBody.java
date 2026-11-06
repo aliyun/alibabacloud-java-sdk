@@ -42,7 +42,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
 
     public static class GetSkillDetailResponseBodyDataVersions extends TeaModel {
         /**
-         * <p>The author of the version.</p>
+         * <p>The version author.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -247,7 +247,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public Long downloadCount;
 
         /**
-         * <p>The draft pattern. HEAD indicates that the skill has a persistent draft, and VERSIONED indicates that a draft with a version number is created for each edit. This pattern is determined by the server, and the invoker uses this value for routing What to do next.</p>
+         * <p>The draft pattern. A value of HEAD indicates that the skill has a persistent draft, and a value of VERSIONED indicates that a draft with a version number is created for each edit. This is determined by the server, and the client uses this value to invoke routing for What to do next.</p>
          * 
          * <strong>example:</strong>
          * <p>HEAD</p>

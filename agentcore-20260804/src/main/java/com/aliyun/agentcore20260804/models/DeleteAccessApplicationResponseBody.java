@@ -23,7 +23,7 @@ public class DeleteAccessApplicationResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request processing result message.</p>
+     * <p>The message about the request processing result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

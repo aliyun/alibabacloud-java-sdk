@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VerifyConnectorShrinkRequest extends TeaModel {
     /**
-     * <p>The validation request body.</p>
+     * <p>The verification request body.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

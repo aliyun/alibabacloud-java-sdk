@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchUploadSkillsViaOssResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public BatchUploadSkillsViaOssResponseBodyData data;

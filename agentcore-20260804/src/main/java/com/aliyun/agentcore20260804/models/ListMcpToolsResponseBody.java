@@ -29,7 +29,7 @@ public class ListMcpToolsResponseBody extends TeaModel {
     public java.util.List<ListMcpToolsResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of results per page.</p>
+     * <p>The maximum number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -65,7 +65,7 @@ public class ListMcpToolsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;

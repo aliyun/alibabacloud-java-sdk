@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListImageCachesRequest extends TeaModel {
     /**
-     * <p>The ID of the source ACR Enterprise instance. Exact match is required. Empty character strings are invalid.</p>
+     * <p>The ID of the source ACR Enterprise instance. The match must be exact. An empty string (a string with no characters) is invalid.</p>
      * 
      * <strong>example:</strong>
      * <p>cri-example</p>
@@ -14,7 +14,7 @@ public class ListImageCachesRequest extends TeaModel {
     public String acrInstanceId;
 
     /**
-     * <p>The complete image digest in the sha256: format followed by a 64-character lowercase hexadecimal string. The format is verified by the console. Exact match is required, and prefixes are not supported.</p>
+     * <p>The image digest.</p>
      * 
      * <strong>example:</strong>
      * <p>sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
@@ -23,7 +23,7 @@ public class ListImageCachesRequest extends TeaModel {
     public String digest;
 
     /**
-     * <p>Performs a case-insensitive literal substring search on the complete source image reference in the registry/repository:tag format, where the repository already includes the namespace. If the value is empty after trimming leading and trailing whitespace, it is treated as not provided. Percent signs, underscores, and backslashes are treated as literal characters.</p>
+     * <p>Performs a case-insensitive literal substring search on the full source image reference in the format of registry/repository:tag. The repository already includes the namespace. If the value is empty after trimming leading and trailing whitespace, it is treated as not provided. Percent signs, underscores, and backslashes are treated as literal characters.</p>
      * 
      * <strong>example:</strong>
      * <p>team/app</p>
@@ -32,7 +32,7 @@ public class ListImageCachesRequest extends TeaModel {
     public String imageRefContains;
 
     /**
-     * <p>The maximum number of results to return. If this parameter is not provided or is set to 0, the default value is 20. If the value exceeds 100, it is treated as 100. Negative values return an InvalidMaxResults error. The value can be adjusted for subsequent pages.</p>
+     * <p>The maximum number of results to return. Default value: 20. If you explicitly specify this parameter, the value must be an integer from 1 to 100. Otherwise, an InvalidMaxResults error is returned. When you paginate, this value must remain the same as the previous page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -41,7 +41,7 @@ public class ListImageCachesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The source namespace. Exact and case-sensitive match is required. Empty strings are invalid.</p>
+     * <p>The source namespace. The match is case-sensitive and must be exact. An empty string is invalid.</p>
      * 
      * <strong>example:</strong>
      * <p>team</p>
@@ -50,7 +50,7 @@ public class ListImageCachesRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>Omit this parameter for the first request. For subsequent requests, pass the nextToken value from the previous response exactly as returned. If the filter conditions change, you must query the first page again.</p>
+     * <p>The pagination token. Omit this parameter for the first request. For subsequent requests, pass the nextToken value returned in the previous response as is. When you paginate, you must keep the filter conditions and maxResults unchanged. If you change any of these parameters, you must query the first page again.</p>
      * 
      * <strong>example:</strong>
      * <p>opaque-token</p>
@@ -59,7 +59,7 @@ public class ListImageCachesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The product entry region, which is determined by the selected region endpoint.</p>
+     * <p>The region ID. The region ID must be passed as a query parameter and must match the selected region endpoint and the workspace region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class ListImageCachesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The domain name of the source repository. Exact and case-insensitive match is required. The value must not include the protocol, path, or tag. Public network and VPC domain names are not considered equal. Empty strings are invalid.</p>
+     * <p>The domain name of the source registry. The match is case-insensitive and must be exact. Do not include the protocol, path, or tag. Public network and VPC domain names are not considered equal. An empty string is invalid.</p>
      * 
      * <strong>example:</strong>
      * <p>example-registry.cn-hangzhou.cr.aliyuncs.com</p>
@@ -78,7 +78,7 @@ public class ListImageCachesRequest extends TeaModel {
     public String registry;
 
     /**
-     * <p>The repository name under the namespace. Exact and case-sensitive match is required. The value must not include the namespace. If this parameter is provided, the namespace parameter must also be provided. Empty strings are invalid.</p>
+     * <p>The repository name under the namespace. The match is case-sensitive and must be exact. Do not include the namespace. If you specify this parameter, you must also specify the namespace. An empty string is invalid.</p>
      * 
      * <strong>example:</strong>
      * <p>app</p>
@@ -87,7 +87,7 @@ public class ListImageCachesRequest extends TeaModel {
     public String repository;
 
     /**
-     * <p>Filters the results by a single cache status. Omit this parameter to query all statuses.</p>
+     * <p>The cache status used to filter the results. To query all caches, omit this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>READY</p>
@@ -96,7 +96,7 @@ public class ListImageCachesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The source image tag. Exact and case-sensitive match is required. The latest tag is not inferred. Empty strings are invalid.</p>
+     * <p>The source image tag. The match is case-sensitive and must be exact. The latest tag is not inferred. An empty string is invalid.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -105,7 +105,7 @@ public class ListImageCachesRequest extends TeaModel {
     public String tag;
 
     /**
-     * <p>The current routed workspace. The server verifies the account, region, and resource ownership. This parameter cannot be omitted or used to access other workspaces.</p>
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

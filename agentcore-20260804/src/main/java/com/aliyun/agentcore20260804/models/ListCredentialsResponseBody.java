@@ -29,7 +29,7 @@ public class ListCredentialsResponseBody extends TeaModel {
     public java.util.List<ListCredentialsResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of records per page that takes effect in this query.</p>
+     * <p>The maximum number of records per page that takes effect in the current query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +47,7 @@ public class ListCredentialsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The cursor for the next page. It is empty if there is no next page.</p>
+     * <p>The cursor for the next page. This parameter is empty if no next page exists.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -158,28 +158,28 @@ public class ListCredentialsResponseBody extends TeaModel {
 
     public static class ListCredentialsResponseBodyItemsResourceRefs extends TeaModel {
         /**
-         * <p>The unique identifier of the resource.</p>
+         * <p>The ID of the applicable MCP service.</p>
          * 
          * <strong>example:</strong>
-         * <p>agent-xxxx</p>
+         * <p>mcp-example</p>
          */
         @NameInMap("resourceId")
         public String resourceId;
 
         /**
-         * <p>The resource name. It is empty if the resource has been deleted.</p>
+         * <p>The resource name. This parameter is empty if the resource is deleted.</p>
          * 
          * <strong>example:</strong>
-         * <p>my-agent</p>
+         * <p>my-mcp-service</p>
          */
         @NameInMap("resourceName")
         public String resourceName;
 
         /**
-         * <p>The resource type, such as agent.</p>
+         * <p>The resource type. Currently, the value is mcpServer, which indicates an MCP service.</p>
          * 
          * <strong>example:</strong>
-         * <p>agent</p>
+         * <p>mcpServer</p>
          */
         @NameInMap("resourceType")
         public String resourceType;
@@ -244,7 +244,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         public String credentialId;
 
         /**
-         * <p>The masked credential content. When credentialType is apiKey, the apiKey value is returned as asterisks (*) of the same length.</p>
+         * <p>The desensitized credential content. For the apiKey type, a key mask is returned. For the mcpHeader type, only the header name is returned, and the value is not returned.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;apiKey&quot;:&quot;****************&quot;}</p>
@@ -253,7 +253,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         public String credentialMetadata;
 
         /**
-         * <p>The credential type. Currently, only apiKey is supported.</p>
+         * <p>The credential type. Valid values: apiKey (API key) and mcpHeader (MCP request header).</p>
          * 
          * <strong>example:</strong>
          * <p>apiKey</p>
@@ -262,7 +262,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         public String credentialType;
 
         /**
-         * <p>The credential description, which cannot exceed 256 characters in length.</p>
+         * <p>The credential description. The description can be up to 256 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>API key used to call model services in the production environment</p>
@@ -271,7 +271,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The credential name. It must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 128 characters in length. Runtime reserved names cannot be used.</p>
+         * <p>The credential name. The name must be unique within the workspace, can contain only letters, digits, periods, underscores, and hyphens, and must be 3 to 99 characters in length. Runtime reserved names cannot be used.</p>
          * 
          * <strong>example:</strong>
          * <p>model-api-key</p>
@@ -289,13 +289,13 @@ public class ListCredentialsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The list of resources to which the credential can be applied.</p>
+         * <p>The list of MCP services to which the credential applies.</p>
          */
         @NameInMap("resourceRefs")
         public java.util.List<ListCredentialsResponseBodyItemsResourceRefs> resourceRefs;
 
         /**
-         * <p>The application scope of the credential resource.</p>
+         * <p>The application scope of the credential. ALL indicates all scopes. SPECIFIED indicates specified MCP services.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>

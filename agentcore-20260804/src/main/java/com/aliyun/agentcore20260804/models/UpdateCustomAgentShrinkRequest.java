@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomAgentShrinkRequest extends TeaModel {
     /**
-     * <p>The update configuration of the custom agent. Provide at least one top-level field. Omitted top-level fields retain their original values. When artifact retains the existing source, partial subfields can be updated. Provide compute and sessionPolicy for runtime based on the structure, and include the complete hpa to be retained. Replace environment.variables and other arrays with the complete lists.</p>
+     * <p>The update configuration of the custom code or image agent. You must provide at least one top-level field. Omitted top-level fields retain their original values. When submitting <code>artifact</code>, specify <code>port</code> and the required fields for the corresponding artifact source. When submitting <code>runtime</code>, specify <code>compute</code> and <code>sessionPolicy</code>, and include the complete <code>hpa</code> that needs to be retained. <code>environment.variables</code> and other arrays are replaced as complete lists.</p>
      */
     @NameInMap("body")
     public String bodyShrink;
 
     /**
-     * <p>The idempotency token for the submission. The token must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), colons (:), and hyphens (-). This parameter is required when you explicitly submit customImage. Once provided, the submission is recorded by tenant and workspace. Retrying with the same parameters returns the existing acceptance result. You must use a new token for different submission content. If this parameter is not provided, query the update status before retrying.</p>
+     * <p>The idempotency token passed through query parameters. Required when explicitly submitting customImage or container.type=custom. Optional for ACR image and code package submissions. The length is 1 to 128 characters. Letters, digits, periods, underscores, colons, and hyphens are allowed. Reuse the same token for retries of the same submission. Using the same token for different parameters is rejected.</p>
      * 
      * <strong>example:</strong>
      * <p>custom-agent-request-20261010-001</p>

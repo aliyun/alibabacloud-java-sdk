@@ -25,14 +25,14 @@ public class ListImageCachesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The records on the current page. An empty array is returned if no matches are found.</p>
+     * <p>The records on the current page. If no matching items are found, an empty array is returned.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("items")
     public java.util.List<ListImageCachesResponseBodyItems> items;
 
     /**
-     * <p>The actual page size used for this request, not the number of items on the current page.</p>
+     * <p>The actual page size used for this request. This is not the number of items on the current page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class ListImageCachesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The opaque cursor for the next page. An empty string indicates the end.</p>
+     * <p>The opaque cursor for the next page. An empty string indicates that there are no more pages.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class ListImageCachesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. This does not indicate that the cache creation is complete.</p>
+     * <p>Indicates whether the request is successful. A successful request does not indicate that the cache creation is complete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,7 +82,7 @@ public class ListImageCachesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of records under the current filter conditions. Do not use this value to determine the end of traversal.</p>
+     * <p>The total number of records that match the current filter conditions. Do not use this value to determine whether the traversal is complete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -170,7 +170,7 @@ public class ListImageCachesResponseBody extends TeaModel {
 
     public static class ListImageCachesResponseBodyItemsError extends TeaModel {
         /**
-         * <p>The secure and non-null error code for the current creation attempt.</p>
+         * <p>The error code for the creation failure.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The secure and non-null description of the failure, excluding credentials, internal addresses, or stack traces.</p>
+         * <p>The description of the creation failure.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,7 +214,7 @@ public class ListImageCachesResponseBody extends TeaModel {
 
     public static class ListImageCachesResponseBodyItems extends TeaModel {
         /**
-         * <p>The ID of the source ACR Enterprise instance.</p>
+         * <p>The ID of the source ACR instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,7 +224,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         public String acrInstanceId;
 
         /**
-         * <p>The deduplicated number of agents in the current workspace that have useImageCache set to true and are associated with this logical resource. The value is greater than or equal to 0. This matches the set filtered by imageCacheId in ListAllAgents. Disabled agents are not counted, and this value is independent of the number of occupied instances.</p>
+         * <p>The number of agents that use the cache.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,7 +234,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         public Long agentCount;
 
         /**
-         * <p>The actual cache size in bytes. A known value is greater than or equal to 0. If the size is unknown, the value is null. The compressed size of the source image cannot be used as a substitute.</p>
+         * <p>The size of the cache in bytes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,7 +247,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         public Long cacheSizeBytes;
 
         /**
-         * <p>Indicates whether deletion is allowed. The value is true if the current workspace has no configuration references with the switch enabled, no valid instances are occupying the resource, and the resource is not being deleted. If the reference status is unknown, the query fails instead of defaulting to true.</p>
+         * <p>Indicates whether deletion is allowed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -257,7 +257,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         public Boolean canDelete;
 
         /**
-         * <p>The creation time of the logical resource in the current workspace, in RFC 3339 format with the time zone. Content updates for the latest tag do not refresh this time.</p>
+         * <p>The time when the resource was created. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,7 +267,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The reason for blocking deletion. The value is null when canDelete is true. Otherwise, the value is returned based on the priority of DELETING, AGENT_ENABLED, and INSTANCES_RELEASING. Even if the number of agents is 0, old instances may still occupy the resource.</p>
+         * <p>The reason why deletion is blocked.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -280,7 +280,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         public String deleteBlockReason;
 
         /**
-         * <p>The content digest in the sha256: format followed by a 64-character lowercase hexadecimal string. It only describes the currently registered content and does not indicate that old instances have been switched.</p>
+         * <p>The current content digest.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,7 +290,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         public String digest;
 
         /**
-         * <p>The reason for the cache failure. This is a non-null object when the status is FAILED, and null for other statuses. It only describes the current content and the current creation attempt.</p>
+         * <p>The reason for the cache failure.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>if can be null:</strong>
@@ -300,7 +300,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         public ListImageCachesResponseBodyItemsError error;
 
         /**
-         * <p>The logical resource ID manageable by the current workspace. This is not the shared physical cache ID.</p>
+         * <p>The ID of the image cache.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -310,7 +310,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The domain name of the source image, excluding the protocol, path, and credentials.</p>
+         * <p>The domain name of the source image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,7 +320,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         public String registry;
 
         /**
-         * <p>The path of the source image repository in the namespace/repository format. The namespace is included.</p>
+         * <p>The repository path of the source image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -330,7 +330,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         public String repository;
 
         /**
-         * <p>The status of the image cache. Valid values: PENDING: creating, READY: available, FAILED: abnormal, DELETING: deleting in the current workspace.</p>
+         * <p>The cache status.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -340,7 +340,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tag of the source image. It is case-sensitive. Regular tags cannot be registered with different digests, except for the exact lowercase latest.</p>
+         * <p>The tag of the source image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -350,7 +350,7 @@ public class ListImageCachesResponseBody extends TeaModel {
         public String tag;
 
         /**
-         * <p>The workspace ID. It is consistent with the requested workspace. Resources with the same content from other workspaces must not be returned.</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

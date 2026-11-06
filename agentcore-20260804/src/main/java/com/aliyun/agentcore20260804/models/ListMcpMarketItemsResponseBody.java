@@ -29,7 +29,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
     public java.util.List<ListMcpMarketItemsResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of records to return in this query.</p>
+     * <p>The maximum number of records to return for this query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +47,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token used to retrieve the next page of results.</p>
+     * <p>The pagination token used to query the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -56,7 +56,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID used to locate and troubleshoot the request.</p>
      * 
      * <strong>example:</strong>
      * <p>request-123456</p>
@@ -65,13 +65,13 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;
 
     /**
-     * <p>The total number of records that match the specified conditions.</p>
+     * <p>The total number of records that meet the conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -170,7 +170,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
          * <p>The description of the MCP service.</p>
          * 
          * <strong>example:</strong>
-         * <p>An MCP service for querying knowledge bases</p>
+         * <p>MCP service for querying knowledge bases</p>
          */
         @NameInMap("description")
         public String description;
@@ -182,7 +182,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
         public java.util.Map<String, ?> displayMetadata;
 
         /**
-         * <p>The multilingual display content organized by BCP-47 language tags. Falls back to default fields if the specified language is not matched.</p>
+         * <p>The multilingual display content organized by BCP-47 language tags. If a language is not matched, the system falls back to the default fields.</p>
          */
         @NameInMap("i18n")
         public java.util.Map<String, ItemsI18nValue> i18n;
@@ -269,7 +269,7 @@ public class ListMcpMarketItemsResponseBody extends TeaModel {
         public String schemaVersion;
 
         /**
-         * <p>The template input schema, represented as a JSON Schema string.</p>
+         * <p>The input schema of the template, represented as a JSON Schema string.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;addresses&quot;:{&quot;type&quot;:&quot;array&quot;,&quot;items&quot;:{&quot;type&quot;:&quot;string&quot;}}}}</p>

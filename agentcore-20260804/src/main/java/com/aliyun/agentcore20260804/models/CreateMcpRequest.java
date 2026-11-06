@@ -11,7 +11,7 @@ public class CreateMcpRequest extends TeaModel {
     public CreateMcpRequestBody body;
 
     /**
-     * <p>The client token for idempotency.</p>
+     * <p>The reserved query request identifier. The console backend currently does not read this parameter and does not provide idempotency guarantees for deduplication or restoring the original processing result based on this identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426614174000</p>
@@ -153,7 +153,7 @@ public class CreateMcpRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The position of the credential.</p>
+         * <p>The location of the credential.</p>
          * 
          * <strong>example:</strong>
          * <p>header</p>
@@ -162,7 +162,7 @@ public class CreateMcpRequest extends TeaModel {
         public String position;
 
         /**
-         * <p>The type.</p>
+         * <p>The MCP type.</p>
          * 
          * <strong>example:</strong>
          * <p>basic</p>
@@ -219,13 +219,13 @@ public class CreateMcpRequest extends TeaModel {
 
     public static class CreateMcpRequestBodyAuth extends TeaModel {
         /**
-         * <p>The API Key authentication configuration for callers of code-deployed MCP.</p>
+         * <p>The API Key authentication configuration for callers of the code deployment MCP.</p>
          */
         @NameInMap("codePackage")
         public CreateMcpRequestBodyAuthCodePackage codePackage;
 
         /**
-         * <p>The direct proxy authentication configuration.</p>
+         * <p>The authentication configuration for the direct proxy.</p>
          */
         @NameInMap("directProxy")
         public CreateMcpRequestBodyAuthDirectProxy directProxy;
@@ -237,7 +237,7 @@ public class CreateMcpRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The list of HTTP_TO_MCP authentication configurations.</p>
+         * <p>The list of authentication configurations for HTTP_TO_MCP.</p>
          */
         @NameInMap("httpToMcp")
         public java.util.List<CreateMcpRequestBodyAuthHttpToMcp> httpToMcp;
@@ -283,7 +283,7 @@ public class CreateMcpRequest extends TeaModel {
 
     public static class CreateMcpRequestBodyDeploymentConfigAccessControl extends TeaModel {
         /**
-         * <p>References the AgentCore credential when mode is CREDENTIAL.</p>
+         * <p>The access credential ID. This parameter references an AgentCore credential when the mode is set to CREDENTIAL.</p>
          * 
          * <strong>example:</strong>
          * <p>credential-id</p>
@@ -292,13 +292,13 @@ public class CreateMcpRequest extends TeaModel {
         public String credentialId;
 
         /**
-         * <p>Specifies whether to enable entry point access control.</p>
+         * <p>Specifies whether to enable entry access control.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The access control mode. ANONYMOUS indicates anonymous access. CREDENTIAL indicates the use of AgentCore access credentials.</p>
+         * <p>The access control mode. ANONYMOUS indicates anonymous access, and CREDENTIAL indicates that AgentCore access credentials are used.</p>
          * 
          * <strong>example:</strong>
          * <p>CREDENTIAL</p>
@@ -345,7 +345,7 @@ public class CreateMcpRequest extends TeaModel {
         public Boolean authorizationEnabled;
 
         /**
-         * <p>The ARN of the credential provider.</p>
+         * <p>The credential provider ARN.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:agentidentity:cn-hangzhou:1234567890123456:provider/example</p>
@@ -354,7 +354,7 @@ public class CreateMcpRequest extends TeaModel {
         public String credentialProviderArn;
 
         /**
-         * <p>The type of the credential provider.</p>
+         * <p>The credential provider type.</p>
          * 
          * <strong>example:</strong>
          * <p>oauth2</p>
@@ -363,7 +363,7 @@ public class CreateMcpRequest extends TeaModel {
         public String credentialProviderType;
 
         /**
-         * <p>Specifies whether to enable Agent Identity.</p>
+         * <p>Specifies whether to enable agent identity.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
@@ -409,7 +409,7 @@ public class CreateMcpRequest extends TeaModel {
 
     public static class CreateMcpRequestBodyDeploymentConfigCodeConfiguration extends TeaModel {
         /**
-         * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl. It is used to create a code deployment after a presigned upload is completed. You must specify either this parameter or CodePackageUrl.</p>
+         * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl. Used to create a code deployment after a presigned upload is completed. Mutually exclusive with CodePackageUrl.</p>
          * 
          * <strong>example:</strong>
          * <p>upload-token</p>
@@ -418,7 +418,7 @@ public class CreateMcpRequest extends TeaModel {
         public String codePackageToken;
 
         /**
-         * <p>The public Alibaba Cloud OSS HTTP(S) URL that can be directly passed when creating a code deployment. You must specify either this parameter or CodePackageToken. This parameter is supported only by CreateMcp, and is not supported for update and query operations.</p>
+         * <p>The public Alibaba Cloud OSS HTTP(S) URL that can be directly passed when creating a code deployment. Mutually exclusive with CodePackageToken. Only supported by CreateMcp, and not supported for update and query operations.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example-bucket.oss-cn-hangzhou.aliyuncs.com/server.zip">https://example-bucket.oss-cn-hangzhou.aliyuncs.com/server.zip</a></p>
@@ -433,7 +433,7 @@ public class CreateMcpRequest extends TeaModel {
         public java.util.List<String> command;
 
         /**
-         * <p>The runtime of the code package. Valid values: python3.13, nodejs22, and java17.</p>
+         * <p>The runtime environment for the code package.</p>
          * 
          * <strong>example:</strong>
          * <p>python3.13</p>
@@ -482,7 +482,7 @@ public class CreateMcpRequest extends TeaModel {
 
     public static class CreateMcpRequestBodyDeploymentConfigContainerConfiguration extends TeaModel {
         /**
-         * <p>The ID of the ACR instance.</p>
+         * <p>The ACR instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-example</p>
@@ -503,7 +503,7 @@ public class CreateMcpRequest extends TeaModel {
         public java.util.List<String> entrypoint;
 
         /**
-         * <p>The URL of the container image.</p>
+         * <p>The container image URL.</p>
          * 
          * <strong>example:</strong>
          * <p>registry.cn-hangzhou.aliyuncs.com/example/mcp:1.0.0</p>
@@ -512,7 +512,7 @@ public class CreateMcpRequest extends TeaModel {
         public String image;
 
         /**
-         * <p>The type of the image registry.</p>
+         * <p>The image registry type.</p>
          * 
          * <strong>example:</strong>
          * <p>ACR</p>
@@ -521,7 +521,7 @@ public class CreateMcpRequest extends TeaModel {
         public String imageRegistryType;
 
         /**
-         * <p>The MCP Runtime mode. Custom containers must currently expose standard MCP by themselves. Valid value: SELF_HOSTED.</p>
+         * <p>The MCP runtime mode. Custom containers currently need to expose the standard MCP themselves. Set the value to SELF_HOSTED.</p>
          * 
          * <strong>example:</strong>
          * <p>SELF_HOSTED</p>
@@ -530,7 +530,7 @@ public class CreateMcpRequest extends TeaModel {
         public String mcpRuntimeMode;
 
         /**
-         * <p>The source type of the container. Currently fixed to CONTAINER_IMAGE.</p>
+         * <p>The container source type. Currently fixed to CONTAINER_IMAGE.</p>
          * 
          * <strong>example:</strong>
          * <p>CONTAINER_IMAGE</p>
@@ -615,7 +615,7 @@ public class CreateMcpRequest extends TeaModel {
          * <p>The description of the hook.</p>
          * 
          * <strong>example:</strong>
-         * <p>Log MCP tool invoke</p>
+         * <p>Log MCP tool invocation</p>
          */
         @NameInMap("description")
         public String description;
@@ -636,7 +636,7 @@ public class CreateMcpRequest extends TeaModel {
         public String event;
 
         /**
-         * <p>The request headers of the hook.</p>
+         * <p>The hook request headers.</p>
          */
         @NameInMap("headers")
         public java.util.Map<String, String> headers;
@@ -724,7 +724,7 @@ public class CreateMcpRequest extends TeaModel {
 
     public static class CreateMcpRequestBodyDeploymentConfigHookConfiguration extends TeaModel {
         /**
-         * <p>Executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the order of the array.</p>
+         * <p>The ordered list of hooks. Executes PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the order of the array.</p>
          */
         @NameInMap("hooks")
         public java.util.List<CreateMcpRequestBodyDeploymentConfigHookConfigurationHooks> hooks;
@@ -758,7 +758,7 @@ public class CreateMcpRequest extends TeaModel {
         public Boolean enableRequestMetrics;
 
         /**
-         * <p>The start rule for Function Compute log splitting.</p>
+         * <p>The start rule for splitting Function Compute logs.</p>
          * 
          * <strong>example:</strong>
          * <p>DefaultRegex</p>
@@ -833,7 +833,7 @@ public class CreateMcpRequest extends TeaModel {
 
     public static class CreateMcpRequestBodyDeploymentConfigMcpConfiguration extends TeaModel {
         /**
-         * <p>The path of the MCP endpoint, such as /mcp or /sse.</p>
+         * <p>The MCP endpoint path, such as /mcp or /sse.</p>
          * 
          * <strong>example:</strong>
          * <p>/mcp</p>
@@ -842,7 +842,7 @@ public class CreateMcpRequest extends TeaModel {
         public String endpointPath;
 
         /**
-         * <p>The number of concurrent sessions per instance. Currently, this value is fixed at 1.</p>
+         * <p>The number of concurrent sessions per instance. Currently fixed to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -851,7 +851,7 @@ public class CreateMcpRequest extends TeaModel {
         public Integer sessionConcurrencyPerInstance;
 
         /**
-         * <p>The idle timeout for a session, in seconds. Default value: 1800.</p>
+         * <p>The session idle timeout period in seconds. Default value: 1800.</p>
          * 
          * <strong>example:</strong>
          * <p>1800</p>
@@ -860,7 +860,7 @@ public class CreateMcpRequest extends TeaModel {
         public Integer sessionIdleTimeoutSeconds;
 
         /**
-         * <p>The maximum lifetime of a session, in seconds. Default value: 21600.</p>
+         * <p>The maximum session lifetime in seconds. Default value: 21600.</p>
          * 
          * <strong>example:</strong>
          * <p>21600</p>
@@ -924,7 +924,7 @@ public class CreateMcpRequest extends TeaModel {
         public String mountDir;
 
         /**
-         * <p>The address of the NAS server.</p>
+         * <p>The NAS service address.</p>
          * 
          * <strong>example:</strong>
          * <p>example.cn-hangzhou.nas.aliyuncs.com</p>
@@ -965,7 +965,7 @@ public class CreateMcpRequest extends TeaModel {
 
     public static class CreateMcpRequestBodyDeploymentConfigNasConfiguration extends TeaModel {
         /**
-         * <p>The ID of the user group.</p>
+         * <p>The runtime user group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -980,7 +980,7 @@ public class CreateMcpRequest extends TeaModel {
         public java.util.List<CreateMcpRequestBodyDeploymentConfigNasConfigurationMountPoints> mountPoints;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The runtime user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -1030,7 +1030,7 @@ public class CreateMcpRequest extends TeaModel {
         public String networkMode;
 
         /**
-         * <p>The ID of the security group.</p>
+         * <p>The security group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-example</p>
@@ -1045,7 +1045,7 @@ public class CreateMcpRequest extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-example</p>
@@ -1103,7 +1103,7 @@ public class CreateMcpRequest extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The path in the OSS bucket.</p>
+         * <p>The path of the OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>/data</p>
@@ -1112,7 +1112,7 @@ public class CreateMcpRequest extends TeaModel {
         public String bucketPath;
 
         /**
-         * <p>The endpoint of the OSS service.</p>
+         * <p>The OSS service endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></p>
@@ -1212,7 +1212,7 @@ public class CreateMcpRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The reserved reference to the rule set for parameter transformation and result enhancement.</p>
+         * <p>The reserved reference to the parameter transformation and result enhancement rule set.</p>
          * 
          * <strong>example:</strong>
          * <p>rules-1</p>
@@ -1221,7 +1221,7 @@ public class CreateMcpRequest extends TeaModel {
         public String ruleSetId;
 
         /**
-         * <p>The version of the transformation rules.</p>
+         * <p>The transformation rule version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -1284,7 +1284,7 @@ public class CreateMcpRequest extends TeaModel {
 
     public static class CreateMcpRequestBodyDeploymentConfigRuntimeConfiguration extends TeaModel {
         /**
-         * <p>The CPU specification, in cores. Default value: 0.25.</p>
+         * <p>The CPU specification in cores. Default value: 0.25.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -1293,7 +1293,7 @@ public class CreateMcpRequest extends TeaModel {
         public Double cpu;
 
         /**
-         * <p>The size of the ephemeral disk, in MB. Valid values: 512 and 10240.</p>
+         * <p>The temporary disk size in MB. Valid values: 512 or 10240.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -1317,7 +1317,7 @@ public class CreateMcpRequest extends TeaModel {
         public String executionRoleArn;
 
         /**
-         * <p>Default value: 200.</p>
+         * <p>The maximum number of concurrent requests per instance. Default value: 200.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -1326,7 +1326,7 @@ public class CreateMcpRequest extends TeaModel {
         public Integer instanceConcurrency;
 
         /**
-         * <p>Unit: MB. Default value: 512.</p>
+         * <p>The memory specification in MB. Default value: 512.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -1335,7 +1335,7 @@ public class CreateMcpRequest extends TeaModel {
         public Integer memory;
 
         /**
-         * <p>Default value: 9000.</p>
+         * <p>The service port. Default value: 9000.</p>
          * 
          * <strong>example:</strong>
          * <p>9000</p>
@@ -1344,7 +1344,7 @@ public class CreateMcpRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>Unit: seconds. Default value: 300.</p>
+         * <p>The function timeout period in seconds. Default value: 300.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -1425,19 +1425,19 @@ public class CreateMcpRequest extends TeaModel {
 
     public static class CreateMcpRequestBodyDeploymentConfig extends TeaModel {
         /**
-         * <p>The MCP entry point access control.</p>
+         * <p>The MCP entry access control.</p>
          */
         @NameInMap("accessControl")
         public CreateMcpRequestBodyDeploymentConfigAccessControl accessControl;
 
         /**
-         * <p>The Agent Identity configuration.</p>
+         * <p>The agent identity configuration.</p>
          */
         @NameInMap("agentIdentityConfiguration")
         public CreateMcpRequestBodyDeploymentConfigAgentIdentityConfiguration agentIdentityConfiguration;
 
         /**
-         * <p>The artifact type. Code indicates a ZIP code package. Container indicates a custom container.</p>
+         * <p>The artifact type. A value of Code indicates a ZIP code package, and a value of Container indicates a custom container.</p>
          * 
          * <strong>example:</strong>
          * <p>Code</p>
@@ -1494,7 +1494,7 @@ public class CreateMcpRequest extends TeaModel {
         public CreateMcpRequestBodyDeploymentConfigOssMountConfiguration ossMountConfiguration;
 
         /**
-         * <p>The configuration for parameter transformation and result enhancement.</p>
+         * <p>The parameter transformation and result enhancement configuration.</p>
          */
         @NameInMap("parameterTransformConfiguration")
         public CreateMcpRequestBodyDeploymentConfigParameterTransformConfiguration parameterTransformConfiguration;
@@ -1632,13 +1632,13 @@ public class CreateMcpRequest extends TeaModel {
 
     public static class CreateMcpRequestBody extends TeaModel {
         /**
-         * <p>The list of MCP service addresses.</p>
+         * <p>The list of MCP service addresses. This parameter is required when Type is set to DIRECT_PROXY or HTTP_TO_MCP. Do not specify this parameter when Type is set to CODE_PACKAGE.</p>
          */
         @NameInMap("addresses")
         public java.util.List<String> addresses;
 
         /**
-         * <p>The backend authentication configuration. When enabled is true, specify directProxy (name/value) for DIRECT_PROXY, and the httpToMcp array (id, type, and credential for each item, and position and name for apiKey) for HTTP_TO_MCP. Multiple authentication objects are supported, and the first one is the default upstream credential. HTTP_TO_MCP credentials are merged into the securitySchemes of Swagger.</p>
+         * <p>The backend authentication configuration. When enabled is set to true, specify directProxy (name and value) for DIRECT_PROXY, specify the httpToMcp array (each item includes id, type, and credential; apiKey also requires position and name) for HTTP_TO_MCP, and specify codePackage (headerName and apiKey) for CODE_PACKAGE to verify MCP callers. Multiple authentication objects are supported, and the first one is the default upstream credential. HTTP_TO_MCP credentials are merged into the securitySchemes of Swagger.</p>
          */
         @NameInMap("auth")
         public CreateMcpRequestBodyAuth auth;
@@ -1650,7 +1650,7 @@ public class CreateMcpRequest extends TeaModel {
         public java.util.List<String> customTags;
 
         /**
-         * <p>The code deployment configuration. Required when Type is CODE_PACKAGE. When creating a Code artifact, you must specify either CodeConfiguration.CodePackageToken or CodePackageUrl, but not both. CodePackageUrl supports only public Alibaba Cloud OSS HTTP(S) URLs.</p>
+         * <p>The code deployment configuration. Required when Type is set to CODE_PACKAGE. When creating a Code artifact, you must specify either CodeConfiguration.CodePackageToken or CodePackageUrl, but not both. CodePackageUrl only supports public Alibaba Cloud OSS HTTP(S) URLs.</p>
          */
         @NameInMap("deploymentConfig")
         public CreateMcpRequestBodyDeploymentConfig deploymentConfig;
@@ -1659,7 +1659,7 @@ public class CreateMcpRequest extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>A sample description used to illustrate the purpose of the resource</p>
+         * <p>A sample description that illustrates the purpose of the resource</p>
          */
         @NameInMap("description")
         public String description;
@@ -1693,7 +1693,7 @@ public class CreateMcpRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>Specify this field if Type is set to HTTP_TO_MCP.</p>
+         * <p>The Swagger configuration. Specify this field when Type is set to HTTP_TO_MCP.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;object&quot;}</p>
@@ -1702,7 +1702,7 @@ public class CreateMcpRequest extends TeaModel {
         public String swaggerConfig;
 
         /**
-         * <p>The type.</p>
+         * <p>The MCP type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

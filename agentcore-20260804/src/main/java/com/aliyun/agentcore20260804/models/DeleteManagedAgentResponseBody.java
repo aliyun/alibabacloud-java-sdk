@@ -14,7 +14,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The summary information of the deleted managed agent.</p>
+     * <p>The summary information of the managed Harness agent after deletion.</p>
      */
     @NameInMap("data")
     public DeleteManagedAgentResponseBodyData data;
@@ -29,7 +29,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request processing result message.</p>
+     * <p>The message about the request processing result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -128,7 +128,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         public String accessScope;
 
         /**
-         * <p>The managed agent ID.</p>
+         * <p>The ID of the managed Harness agent.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-1</p>
@@ -164,7 +164,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         public String deployType;
 
         /**
-         * <p>The description of the managed agent.</p>
+         * <p>The description of the managed Harness agent.</p>
          * 
          * <strong>example:</strong>
          * <p>Agent for code review</p>
@@ -182,7 +182,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         public Long latestSpecVersion;
 
         /**
-         * <p>The name of the managed agent.</p>
+         * <p>The name of the managed Harness agent.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent</p>
@@ -200,7 +200,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         public String runtime;
 
         /**
-         * <p>The status of the managed agent.</p>
+         * <p>The status of the managed Harness agent.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>

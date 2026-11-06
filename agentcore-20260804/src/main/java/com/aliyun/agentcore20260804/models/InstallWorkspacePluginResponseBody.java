@@ -14,7 +14,7 @@ public class InstallWorkspacePluginResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The details of the plugin installation operation.</p>
+     * <p>The details of the component installation operation.</p>
      */
     @NameInMap("data")
     public InstallWorkspacePluginResponseBodyData data;
@@ -29,7 +29,7 @@ public class InstallWorkspacePluginResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message. Returns an error description when the request fails.</p>
+     * <p>The response message. An error description is returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -110,7 +110,7 @@ public class InstallWorkspacePluginResponseBody extends TeaModel {
 
     public static class InstallWorkspacePluginResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the plugin is enabled.</p>
+         * <p>Indicates whether the component is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -119,7 +119,7 @@ public class InstallWorkspacePluginResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The plugin name.</p>
+         * <p>The component name.</p>
          * 
          * <strong>example:</strong>
          * <p>collaboration</p>
@@ -128,7 +128,7 @@ public class InstallWorkspacePluginResponseBody extends TeaModel {
         public String pluginName;
 
         /**
-         * <p>The plugin status. Valid values: DISABLED, ENABLING, ENABLED, ENABLE_FAILED, DISABLING, and DISABLE_FAILED.</p>
+         * <p>The component status. Valid values: DISABLED, ENABLING, ENABLED, ENABLE_FAILED, DISABLING, and DISABLE_FAILED.</p>
          * 
          * <strong>example:</strong>
          * <p>ENABLING</p>

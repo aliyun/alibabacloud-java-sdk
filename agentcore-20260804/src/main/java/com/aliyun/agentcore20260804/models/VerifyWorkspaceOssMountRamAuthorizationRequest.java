@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VerifyWorkspaceOssMountRamAuthorizationRequest extends TeaModel {
     /**
-     * <p>The OSS bucket name.</p>
+     * <p>The name of the OSS bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>bucket-001</p>

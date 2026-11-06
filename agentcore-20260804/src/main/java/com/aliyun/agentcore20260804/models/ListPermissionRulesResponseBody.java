@@ -29,7 +29,7 @@ public class ListPermissionRulesResponseBody extends TeaModel {
     public java.util.List<ListPermissionRulesResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of results returned in this response.</p>
+     * <p>The maximum number of entries returned in the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class ListPermissionRulesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The request processing result message.</p>
+     * <p>The message about the request processing result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class ListPermissionRulesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token for the next page.</p>
+     * <p>The token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>token-example</p>
@@ -71,7 +71,7 @@ public class ListPermissionRulesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of rules that match the query conditions.</p>
+     * <p>The total number of rules that meet the conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -170,7 +170,7 @@ public class ListPermissionRulesResponseBody extends TeaModel {
          * <p>The authorization effect.</p>
          * 
          * <strong>example:</strong>
-         * <p>ALLOW</p>
+         * <p>PERMIT</p>
          */
         @NameInMap("effect")
         public String effect;
@@ -251,7 +251,7 @@ public class ListPermissionRulesResponseBody extends TeaModel {
          * <p>The rule source details.</p>
          * 
          * <strong>example:</strong>
-         * <p>OpenAPI</p>
+         * <p>EXPLICIT</p>
          */
         @NameInMap("sourceDetail")
         public String sourceDetail;
@@ -266,7 +266,7 @@ public class ListPermissionRulesResponseBody extends TeaModel {
         public String targetScope;
 
         /**
-         * <p>The list of rule targets.</p>
+         * <p>The list of targets to which the rule applies.</p>
          */
         @NameInMap("targets")
         public java.util.List<String> targets;

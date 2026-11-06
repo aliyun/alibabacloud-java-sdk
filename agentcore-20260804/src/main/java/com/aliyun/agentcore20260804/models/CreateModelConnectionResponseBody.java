@@ -107,7 +107,7 @@ public class CreateModelConnectionResponseBody extends TeaModel {
 
     public static class CreateModelConnectionResponseBodyData extends TeaModel {
         /**
-         * <p>The number of API keys configured for the model connection.</p>
+         * <p>The number of API keys configured in the model connection.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class CreateModelConnectionResponseBody extends TeaModel {
         public String connectionId;
 
         /**
-         * <p>The time when the resource was created. The time is in RFC 3339 UTC format.</p>
+         * <p>The time when the resource was created. The time is in the RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-09T00:00:00Z</p>
@@ -158,7 +158,7 @@ public class CreateModelConnectionResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The name of the model connection. The name must be 1 to 128 non-whitespace characters in length.</p>
+         * <p>The name of the model connection. It must be 1 to 128 non-whitespace characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -167,7 +167,7 @@ public class CreateModelConnectionResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The model invoke protocol. Currently, only OpenAI/v1 is supported. If the Settings are not specified during model creation, this default value is used.</p>
+         * <p>The model invoke protocol. Currently, only OpenAI/v1 is supported. If this parameter is not specified in Settings during model creation, this default value is used.</p>
          * 
          * <strong>example:</strong>
          * <p>OpenAI/v1</p>
@@ -194,7 +194,7 @@ public class CreateModelConnectionResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The failure summary returned when the model connection fails to be published, or when deletion fails but the connection remains in the Deleting state. This field is empty in other states.</p>
+         * <p>The failure summary returned when the model connection fails to be published, or when the deletion fails but the connection remains in the Deleting state. This field is empty in other states.</p>
          * 
          * <strong>example:</strong>
          * <p>GatewayOperationException</p>
@@ -203,7 +203,7 @@ public class CreateModelConnectionResponseBody extends TeaModel {
         public String statusReason;
 
         /**
-         * <p>The time when the resource was last updated. The time is in RFC 3339 UTC format.</p>
+         * <p>The time when the resource was last updated. The time is in the RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-09T00:00:00Z</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSandboxSessionsResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value SUCCESS is returned if the request was successful.</p>
+     * <p>The business status code. The value is SUCCESS if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,7 +14,7 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code. The value 200 is returned if the request was successful.</p>
+     * <p>The HTTP status code. The value is 200 if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
     public java.util.List<ListSandboxSessionsResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of records per page for this query.</p>
+     * <p>The maximum number of records per page for the current query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The response message. The value success is returned if the request was successful.</p>
+     * <p>The response message. The value is success if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -65,17 +65,13 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
-     * </ul>
+     * <p>Indicates whether the request is successful. A value of true indicates that the request is successful. A value of false indicates that the request fails.</p>
      */
     @NameInMap("success")
     public Boolean success;
 
     /**
-     * <p>The total number of records that match the query conditions.</p>
+     * <p>The total number of records that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>27</p>
@@ -162,7 +158,7 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
 
     public static class ListSandboxSessionsResponseBodyItems extends TeaModel {
         /**
-         * <p>The external channel type, such as DINGTALK, FEISHU, or WECOM. This parameter is empty for non-external channels.</p>
+         * <p>The type of the external channel, such as DINGTALK, FEISHU, or WECOM. This parameter is empty for non-external channels.</p>
          * 
          * <strong>example:</strong>
          * <p>DINGTALK</p>
@@ -180,13 +176,7 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The session source type. Valid values:</p>
-         * <ul>
-         * <li>API: API call.</li>
-         * <li>CONSOLE_DEBUG: Console debugging.</li>
-         * <li>EXTERNAL_CHANNEL: External channel.</li>
-         * <li>UNKNOWN: Unknown source.</li>
-         * </ul>
+         * <p>The source type of the session. A value of API indicates an API call. A value of CONSOLE_DEBUG indicates console debugging. A value of EXTERNAL_CHANNEL indicates an external channel. A value of UNKNOWN indicates an unknown source.</p>
          * 
          * <strong>example:</strong>
          * <p>EXTERNAL_CHANNEL</p>

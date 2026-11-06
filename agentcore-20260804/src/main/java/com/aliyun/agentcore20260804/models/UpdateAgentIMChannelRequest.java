@@ -11,7 +11,7 @@ public class UpdateAgentIMChannelRequest extends TeaModel {
     public UpdateAgentIMChannelRequestBody body;
 
     /**
-     * <p>The reserved idempotence token. The backend does not provide persistent idempotence guarantees in the current phase.</p>
+     * <p>The reserved idempotence token. Persistent idempotence guarantees are not provided by the backend in the current phase.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-1</p>
@@ -78,7 +78,7 @@ public class UpdateAgentIMChannelRequest extends TeaModel {
 
     public static class UpdateAgentIMChannelRequestBody extends TeaModel {
         /**
-         * <p>The channel behavior configuration. This configuration is fully replaced when passed. An empty object indicates that the default values are restored.</p>
+         * <p>The channel behavior configuration. A full replacement is applied when this parameter is passed. An empty object restores the default values.</p>
          */
         @NameInMap("channelConfig")
         public UpdateAgentIMChannelRequestBodyChannelConfig channelConfig;

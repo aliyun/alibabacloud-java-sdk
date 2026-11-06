@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetImageCacheRequest extends TeaModel {
     /**
-     * <p>The product entry region, which is determined by the selected region endpoint.</p>
+     * <p>The product entry region. It is passed as a query parameter and must match the selected region endpoint and the workspace region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetImageCacheRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The current routed workspace. The server verifies the account, region, and resource ownership. This parameter cannot be omitted or used to access other workspaces.</p>
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

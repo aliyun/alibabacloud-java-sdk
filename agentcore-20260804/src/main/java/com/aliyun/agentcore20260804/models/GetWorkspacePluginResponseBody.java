@@ -14,7 +14,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The plugin details.</p>
+     * <p>The component details.</p>
      */
     @NameInMap("data")
     public GetWorkspacePluginResponseBodyData data;
@@ -29,7 +29,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message. An error description is returned if the request fails.</p>
+     * <p>The response message. An error description is returned when the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -107,7 +107,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
 
     public static class GetWorkspacePluginResponseBodyDataConfigAgentLoop extends TeaModel {
         /**
-         * <p>The name of the AgentSpace associated with the AgentLoop plugin.</p>
+         * <p>The name of the AgentSpace associated with the AgentLoop component.</p>
          * 
          * <strong>example:</strong>
          * <p>agentcore-ws-123456</p>
@@ -125,7 +125,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The region ID of the AgentSpace.</p>
+         * <p>The region ID where the AgentSpace resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -191,7 +191,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
 
     public static class GetWorkspacePluginResponseBodyDataConfigNetworkVpc extends TeaModel {
         /**
-         * <p>Indicates whether VPC networking is currently enabled for the collaboration plugin.</p>
+         * <p>Indicates whether VPC network access is currently enabled for the collaboration component.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -200,13 +200,13 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The list of vSwitch IDs used for plugin deployment.</p>
+         * <p>The list of vSwitch IDs used for component deployment.</p>
          */
         @NameInMap("vSwitchIds")
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The VPC ID used for plugin deployment.</p>
+         * <p>The VPC ID used for component deployment.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1example</p>
@@ -283,13 +283,13 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
 
     public static class GetWorkspacePluginResponseBodyDataConfig extends TeaModel {
         /**
-         * <p>The AgentLoop plugin configuration.</p>
+         * <p>The AgentLoop component configuration.</p>
          */
         @NameInMap("agentLoop")
         public GetWorkspacePluginResponseBodyDataConfigAgentLoop agentLoop;
 
         /**
-         * <p>The network configuration of the plugin, including the public network access configuration and VPC configuration.</p>
+         * <p>The network configuration of the component, including the public network access configuration and VPC configuration.</p>
          */
         @NameInMap("network")
         public GetWorkspacePluginResponseBodyDataConfigNetwork network;
@@ -319,19 +319,19 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
 
     public static class GetWorkspacePluginResponseBodyData extends TeaModel {
         /**
-         * <p>The user-configurable properties that are currently in effect for the plugin. This field is empty if the plugin is not installed.</p>
+         * <p>The user-configurable properties that currently take effect for the component. This field is empty when the component is not installed.</p>
          */
         @NameInMap("config")
         public GetWorkspacePluginResponseBodyDataConfig config;
 
         /**
-         * <p>Indicates whether the plugin is enabled. The value is true if the status is ENABLED.</p>
+         * <p>Indicates whether the component is enabled. The value is true when the status is ENABLED.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The plugin name.</p>
+         * <p>The component name.</p>
          * 
          * <strong>example:</strong>
          * <p>collaboration</p>
@@ -340,7 +340,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
         public String pluginName;
 
         /**
-         * <p>The plugin status. Valid values: DISABLED, ENABLING, ENABLED, ENABLE_FAILED, DISABLING, and DISABLE_FAILED.</p>
+         * <p>The component status. Valid values: DISABLED, ENABLING, ENABLED, ENABLE_FAILED, DISABLING, and DISABLE_FAILED.</p>
          * 
          * <strong>example:</strong>
          * <p>ENABLED</p>

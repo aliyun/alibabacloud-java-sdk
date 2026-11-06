@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstallWorkspacePluginShrinkRequest extends TeaModel {
     /**
-     * <p>The request body for installing a plugin.</p>
+     * <p>The request body for installing the component.</p>
      */
     @NameInMap("body")
     public String bodyShrink;

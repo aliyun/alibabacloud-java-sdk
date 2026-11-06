@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIdentityProviderSCIMCredentialsResponseBody extends TeaModel {
     /**
-     * <p>The business result code. Handle failures by combining the HTTP status code and the message.</p>
+     * <p>The business result code. In case of failure, evaluate this code together with the HTTP status code and message.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,13 +14,13 @@ public class ListIdentityProviderSCIMCredentialsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The operation result. For the result structure, see the response fields of this operation. The response of an asynchronous write operation indicates that the request is accepted, but does not guarantee that the background node is completed.</p>
+     * <p>The operation result. For the result structure, see the response fields of this operation. The response of an asynchronous write operation indicates that the request is accepted, but does not guarantee that the background task is completed.</p>
      */
     @NameInMap("data")
     public java.util.List<ListIdentityProviderSCIMCredentialsResponseBodyData> data;
 
     /**
-     * <p>The processing status of this request. This is not equivalent to the final result of the background node.</p>
+     * <p>The processing status of the current request. This does not indicate the final result of the background task.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class ListIdentityProviderSCIMCredentialsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request acceptance or error message. For asynchronous tasks, check the result by using the corresponding query operation.</p>
+     * <p>The message indicating request acceptance or an error. For asynchronous task results, verify them by using the corresponding query operation.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,7 +38,7 @@ public class ListIdentityProviderSCIMCredentialsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID. Retain this ID for troubleshooting if the call fails.</p>
+     * <p>The request ID. Used to correlate this call for troubleshooting. Retain this ID in case of failure.</p>
      * 
      * <strong>example:</strong>
      * <p>request-example</p>
@@ -47,7 +47,7 @@ public class ListIdentityProviderSCIMCredentialsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. A value of true indicates that the request is processed successfully. For asynchronous writes, you must continue to query the task results.</p>
+     * <p>Indicates whether the request was successful. A value of true indicates that the request was processed successfully. For asynchronous writes, you must continue to query the task result.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -116,7 +116,7 @@ public class ListIdentityProviderSCIMCredentialsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The credential ID. This parameter is required and cannot be empty when you delete a credential. Use the ID returned in the credential list, not the plaintext token.</p>
+         * <p>The credential ID. This field is required and cannot be empty when deleting a credential. Use the ID returned in the credential list, not the plaintext token.</p>
          * 
          * <strong>example:</strong>
          * <p>credential-example</p>
@@ -125,7 +125,7 @@ public class ListIdentityProviderSCIMCredentialsResponseBody extends TeaModel {
         public String credentialId;
 
         /**
-         * <p>The expiration time returned by AgentIdentity. Only credentials with the status Enabled and that have not expired are considered available.</p>
+         * <p>The expiration time returned by AgentIdentity. Only credentials with the Enabled status that have not expired are considered available.</p>
          * 
          * <strong>example:</strong>
          * <p>2027-10-26T00:00:00Z</p>
@@ -134,7 +134,7 @@ public class ListIdentityProviderSCIMCredentialsResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The credential status. Only credentials with the status Enabled and that have not expired are considered available. This field is not the operationStatus of a SCIM task.</p>
+         * <p>The credential status. Only credentials with the Enabled status that have not expired are considered available. This field is not the operationStatus of a SCIM task.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>

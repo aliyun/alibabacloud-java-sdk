@@ -47,7 +47,7 @@ public class DeleteUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -116,7 +116,7 @@ public class DeleteUserResponseBody extends TeaModel {
         public String agentCoreUserId;
 
         /**
-         * <p>The username. The username must be unique within the workspace. It can contain only lowercase letters, digits, and hyphens (-), and must start and end with a lowercase letter or digit. The username must be 1 to 32 characters in length.</p>
+         * <p>The username. It must be unique within the workspace and can contain only lowercase letters, digits, and hyphens. It must start and end with a lowercase letter or a digit, and must be 1 to 32 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>user-01</p>

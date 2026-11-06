@@ -14,7 +14,7 @@ public class GetServiceEndpointApiKeyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information about the currently active API key for the service endpoint.</p>
+     * <p>The active API key information of the service endpoint.</p>
      */
     @NameInMap("data")
     public GetServiceEndpointApiKeyResponseBodyData data;
@@ -107,7 +107,7 @@ public class GetServiceEndpointApiKeyResponseBody extends TeaModel {
 
     public static class GetServiceEndpointApiKeyResponseBodyData extends TeaModel {
         /**
-         * <p>The currently active API key for the service endpoint. The service reads this value from the gateway consumer in real time, and AgentCore does not persist the plaintext. When calling the service endpoint, include this value in the request header specified by apiKeyName. Do not log this value or expose it in public configurations.</p>
+         * <p>The active API key of the service endpoint. The service reads this value in real time from the gateway consumer, and AgentCore does not persist the plaintext. When calling the service endpoint, place this value in the request header specified by apiKeyName. Do not log this value or expose it in public configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>example-api-key-value</p>
@@ -116,7 +116,7 @@ public class GetServiceEndpointApiKeyResponseBody extends TeaModel {
         public String apiKey;
 
         /**
-         * <p>The fingerprint of the API key, which consists of the first 12 lowercase hexadecimal characters of the SHA-256 hash of the API key. It can be used to identify the key version but cannot be used in place of the API key for authentication.</p>
+         * <p>The API key fingerprint, which consists of the first 12 lowercase hexadecimal characters of the SHA-256 digest of the API key. It can be used to identify the key version but cannot replace the API key for authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>b2520bf19231</p>
@@ -125,7 +125,7 @@ public class GetServiceEndpointApiKeyResponseBody extends TeaModel {
         public String apiKeyFingerprint;
 
         /**
-         * <p>The name of the HTTP request header used to pass the API key. The value is fixed to x-api-key.</p>
+         * <p>The name of the HTTP request header used to pass the API key. Currently, this is fixed to x-api-key.</p>
          * 
          * <strong>example:</strong>
          * <p>x-api-key</p>
@@ -134,7 +134,7 @@ public class GetServiceEndpointApiKeyResponseBody extends TeaModel {
         public String apiKeyName;
 
         /**
-         * <p>The location where the API key is passed. The value is fixed to Header, which indicates that the API key is passed through an HTTP request header.</p>
+         * <p>The delivery location of the API key. Currently, this is fixed to Header, which indicates that the API key is passed through an HTTP request header.</p>
          * 
          * <strong>example:</strong>
          * <p>Header</p>
@@ -143,12 +143,7 @@ public class GetServiceEndpointApiKeyResponseBody extends TeaModel {
         public String apiKeySource;
 
         /**
-         * <p>The authentication type of the service endpoint. Valid values:</p>
-         * <ul>
-         * <li>NONE: Authentication is not enabled.</li>
-         * <li>API_KEY: API key authentication is used.
-         * This operation succeeds only when the authentication type is API_KEY. Therefore, a successful response always returns API_KEY.</li>
-         * </ul>
+         * <p>The authentication type of the service endpoint. Valid values: NONE (authentication is disabled) and API_KEY (API key authentication is used). This operation succeeds only when the authentication type is API_KEY. Therefore, a successful response always returns API_KEY.</p>
          * 
          * <strong>example:</strong>
          * <p>API_KEY</p>

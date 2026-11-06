@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListManagedAgentsRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return per page. Default value: 20. Valid values: 1 to 100.</p>
+     * <p>The maximum number of entries to return per page. Valid values: 0 to 100. If this parameter is omitted or set to 0, the default value is 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListManagedAgentsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Leave this parameter empty for the first call. For subsequent calls, use the nextToken value returned in the previous response.</p>
+     * <p>The pagination token. Leave this parameter empty for the first call. For subsequent calls, use the <code>nextToken</code> value returned in the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>next-token-1</p>

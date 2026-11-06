@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateManagedAgentResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value is SUCCESS when the operation succeeds.</p>
+     * <p>The business status code. The value is SUCCESS when the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,13 +14,13 @@ public class CreateManagedAgentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information about the managed agent after creation.</p>
+     * <p>The information about the managed Harness agent after creation.</p>
      */
     @NameInMap("data")
     public CreateManagedAgentResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. 200 is returned if the request is successful.</p>
+     * <p>The HTTP status code. The value is 200 if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned for the request.</p>
+     * <p>The message that describes the request processing result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
 
     public static class CreateManagedAgentResponseBodyDataAgenticFsMounts extends TeaModel {
         /**
-         * <p>The subdirectory under /mnt/agenticfs/ in the container. This parameter is required and validated by the backend for each mount item. Mount targets must not be duplicated or overlap in parent-child relationships.</p>
+         * <p>The absolute mount path in the container, such as /data/train. Mount targets cannot be duplicated or form parent-child directory overwrites, and must avoid platform-reserved directories.</p>
          * 
          * <strong>example:</strong>
          * <p>/mnt/agenticfs/data</p>
@@ -119,7 +119,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>The existing non-empty relative directory under the access point. This parameter is required and validated by the backend for each mount item. Root directories, absolute paths, and parent directory segments are not allowed.</p>
+         * <p>The existing non-empty relative directory under the access point. This parameter is required for each mount item and validated by the backend. Root directories, absolute paths, and parent directory segments are not allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace/data</p>
@@ -128,7 +128,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>Specifies whether the mount is read-only. If omitted, the default value is false. This parameter does not represent a read-only policy for a RAM role.</p>
+         * <p>Specifies whether to mount the directory in read-only mode. If omitted, the default value is false. This parameter does not represent a RAM role read-only policy.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -137,7 +137,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public Boolean readOnly;
 
         /**
-         * <p>The domain name of the access point. This parameter is required and validated by the backend for each mount item. Do not include the protocol, port, or path. Use the DomainName value from the NAS ListAccessPoints response.</p>
+         * <p>The access point domain name. This parameter is required for each mount item and validated by the backend. The domain name cannot contain a protocol, port, or path. Use the DomainName value from the NAS ListAccessPoints response.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-0123456789abcdef0.0123456789-vlm36.cn-hangzhou.nas.aliyuncs.com</p>
@@ -186,11 +186,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
 
     public static class CreateManagedAgentResponseBodyDataConfiguredSkillsVersionSelector extends TeaModel {
         /**
-         * <p>The version selector type. Valid values:</p>
-         * <ul>
-         * <li>LABEL: selects by label</li>
-         * <li>VERSION: selects by specific version</li>
-         * </ul>
+         * <p>The version selector type.</p>
          * 
          * <strong>example:</strong>
          * <p>LABEL</p>
@@ -199,7 +195,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The selector value. When the type is LABEL, this value is the label name, such as latest. When the type is VERSION, this value is the specific version number.</p>
+         * <p>The selector value. When the type is LABEL, this is the tag name, such as latest. When the type is VERSION, this is the specific version number.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>
@@ -242,11 +238,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The skill source type. Valid values:</p>
-         * <ul>
-         * <li>REFERENCE: references the AI Registry</li>
-         * <li>STATIC: statically provided with the package</li>
-         * </ul>
+         * <p>The skill source type.</p>
          * 
          * <strong>example:</strong>
          * <p>REFERENCE</p>
@@ -264,7 +256,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String version;
 
         /**
-         * <p>The referenced version selector. If omitted, the default value is LABEL/latest. Currently, only LABEL/latest is supported.</p>
+         * <p>The version selector for the skill reference. Supports LABEL for tags and VERSION for specific versions. If omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</p>
          */
         @NameInMap("versionSelector")
         public CreateManagedAgentResponseBodyDataConfiguredSkillsVersionSelector versionSelector;
@@ -416,7 +408,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
 
     public static class CreateManagedAgentResponseBodyDataHarnessConfiguration extends TeaModel {
         /**
-         * <p>The connector service account key.</p>
+         * <p>The ID of the connector account key record bound to qodercli. This is not the original service account key.</p>
          * 
          * <strong>example:</strong>
          * <p>key-xxxx</p>
@@ -425,7 +417,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String connectorServiceAccountKey;
 
         /**
-         * <p>The connector service account name.</p>
+         * <p>The name of the connector account bound to qodercli.</p>
          * 
          * <strong>example:</strong>
          * <p>my-connector-key</p>
@@ -458,13 +450,13 @@ public class CreateManagedAgentResponseBody extends TeaModel {
 
     public static class CreateManagedAgentResponseBodyDataHarness extends TeaModel {
         /**
-         * <p>The runtime framework configuration.</p>
+         * <p>The runtime framework configurations.</p>
          */
         @NameInMap("configuration")
         public CreateManagedAgentResponseBodyDataHarnessConfiguration configuration;
 
         /**
-         * <p>The type of the runtime framework.</p>
+         * <p>The runtime framework type.</p>
          * 
          * <strong>example:</strong>
          * <p>qodercli</p>
@@ -515,7 +507,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String limitType;
 
         /**
-         * <p>Indicates whether the quota is exceeded in the current period. This is a read-only field returned by the backend.</p>
+         * <p>Indicates whether the quota is exceeded in the current cycle. This field is read-only and returned by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -524,7 +516,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public Boolean overLimit;
 
         /**
-         * <p>The quota statistical period. A value of day indicates daily, and a value of month indicates monthly.</p>
+         * <p>The quota statistical epoch. Valid values: day (daily) and month (monthly).</p>
          * 
          * <strong>example:</strong>
          * <p>day</p>
@@ -533,7 +525,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String periodType;
 
         /**
-         * <p>The status of the gateway quota rule. This is a read-only field returned by the backend.</p>
+         * <p>The status of the gateway quota rule. This field is read-only and returned by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
@@ -542,7 +534,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String ruleStatus;
 
         /**
-         * <p>The maximum number of tokens allowed to be consumed in a single period.</p>
+         * <p>The maximum number of tokens that can be consumed in a single period.</p>
          * 
          * <strong>example:</strong>
          * <p>1000000</p>
@@ -551,7 +543,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public Long usageLimit;
 
         /**
-         * <p>The number of tokens consumed in the current period. This is a read-only field returned by the backend.</p>
+         * <p>The number of tokens consumed in the current period. This field is read-only and returned by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -633,7 +625,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String modelConnectionId;
 
         /**
-         * <p>The name of the upstream model.</p>
+         * <p>The upstream model name.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-max</p>
@@ -642,7 +634,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String modelName;
 
         /**
-         * <p>The model token quota configuration and usage status for the current period. This field is empty if no quota is configured.</p>
+         * <p>The model token quota configuration and the quota usage status for the current cycle. This field is empty if no quota is configured.</p>
          */
         @NameInMap("quota")
         public CreateManagedAgentResponseBodyDataModelQuota quota;
@@ -736,7 +728,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public CreateManagedAgentResponseBodyDataNetworkAccessInternet accessInternet;
 
         /**
-         * <p>The VPC access configuration.</p>
+         * <p>The VPC access configurations.</p>
          */
         @NameInMap("accessVpc")
         public CreateManagedAgentResponseBodyDataNetworkAccessVpc accessVpc;
@@ -766,7 +758,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
 
     public static class CreateManagedAgentResponseBodyDataOssMounts extends TeaModel {
         /**
-         * <p>The name of the OSS bucket. This parameter is required and validated by the backend for each mount item.</p>
+         * <p>The name of the OSS bucket. This parameter is required for each mount item and validated by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>bucket-001</p>
@@ -775,7 +767,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The absolute mount path in the container. This parameter is required and validated by the backend for each mount item.</p>
+         * <p>The absolute mount path in the container, such as /data/train. Mount targets cannot be duplicated or form parent-child directory overwrites, and must avoid platform-reserved directories.</p>
          * 
          * <strong>example:</strong>
          * <p>/mnt/oss/datasets</p>
@@ -784,7 +776,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>The relative object prefix in the bucket. If not specified, the entire bucket is mounted.</p>
+         * <p>The non-empty relative directory prefix in the currently configured bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>datasets</p>
@@ -793,7 +785,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>Specifies whether the mount is read-only. If not specified, the default value is false.</p>
+         * <p>Specifies whether to mount the directory in read-only mode. If not specified, the default value is false.</p>
          */
         @NameInMap("readOnly")
         public Boolean readOnly;
@@ -848,7 +840,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
-         * <p>The description of the variable.</p>
+         * <p>The variable description.</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -857,7 +849,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the variable.</p>
+         * <p>The variable name.</p>
          * 
          * <strong>example:</strong>
          * <p>brand</p>
@@ -898,7 +890,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
 
     public static class CreateManagedAgentResponseBodyDataRuntimeCompute extends TeaModel {
         /**
-         * <p>The compute class.</p>
+         * <p>The compute specifications.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -924,13 +916,13 @@ public class CreateManagedAgentResponseBody extends TeaModel {
 
     public static class CreateManagedAgentResponseBodyDataRuntimeHpa extends TeaModel {
         /**
-         * <p>Specifies whether to enable auto-scaling. This parameter is required and validated by the backend when HPA is specified.</p>
+         * <p>Specifies whether auto-scaling is enabled in the current configuration.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The maximum number of active sessions per sandbox. This parameter is required and validated by the backend when HPA is specified.</p>
+         * <p>The maximum number of concurrent sessions per instance in the current configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -939,7 +931,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public Integer maxConcurrentSessionsPerSandbox;
 
         /**
-         * <p>The maximum number of sandboxes. This parameter is required when HPA is enabled and must not be less than the minimum value.</p>
+         * <p>The maximum number of instances in the current configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -948,7 +940,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public Integer maxSandboxCount;
 
         /**
-         * <p>The minimum number of sandboxes. This parameter is required when HPA is enabled.</p>
+         * <p>The minimum number of instances in the current configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -957,7 +949,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public Integer minSandboxCount;
 
         /**
-         * <p>The idle timeout period for a session before it is reclaimed, in seconds. This parameter is required and validated by the backend when HPA is specified.</p>
+         * <p>The maximum idle time of a session in the current configuration, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -1109,11 +1101,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
 
     public static class CreateManagedAgentResponseBodyDataSkillsVersionSelector extends TeaModel {
         /**
-         * <p>The version selector type. Valid values:</p>
-         * <ul>
-         * <li>LABEL: selects by label</li>
-         * <li>VERSION: selects by specific version</li>
-         * </ul>
+         * <p>The version selector type.</p>
          * 
          * <strong>example:</strong>
          * <p>LABEL</p>
@@ -1122,7 +1110,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The selector value. When the type is LABEL, this value is the label name, such as latest. When the type is VERSION, this value is the specific version number.</p>
+         * <p>The selector value. When the type is LABEL, this is the tag name, such as latest. When the type is VERSION, this is the specific version number.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>
@@ -1155,7 +1143,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
 
     public static class CreateManagedAgentResponseBodyDataSkills extends TeaModel {
         /**
-         * <p>The applied version in the runtime. This field is read-only.</p>
+         * <p>The applied runtime version. This field is read-only.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -1164,7 +1152,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String appliedVersion;
 
         /**
-         * <p>Specifies whether the skill is from a fixed template. This field is read-only. Template items cannot be removed.</p>
+         * <p>Indicates whether the item is sourced from a fixed template. This field is read-only. Items from templates cannot be removed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1191,11 +1179,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String resolvedVersion;
 
         /**
-         * <p>The skill source type. Valid values:</p>
-         * <ul>
-         * <li>REFERENCE: references the AI Registry</li>
-         * <li>STATIC: statically provided with the package</li>
-         * </ul>
+         * <p>The skill source type.</p>
          * 
          * <strong>example:</strong>
          * <p>REFERENCE</p>
@@ -1204,7 +1188,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The skill version.</p>
+         * <p>The current target version compatible with legacy clients. New clients use resolvedVersion and determine the effective runtime version based on appliedVersion.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -1213,7 +1197,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String version;
 
         /**
-         * <p>The referenced version selector. If omitted, the default value is LABEL/latest.</p>
+         * <p>The version selector for the skill reference. Supports LABEL for tags and VERSION for specific versions. If omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</p>
          */
         @NameInMap("versionSelector")
         public CreateManagedAgentResponseBodyDataSkillsVersionSelector versionSelector;
@@ -1510,7 +1494,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String accessScope;
 
         /**
-         * <p>The ID of the managed agent.</p>
+         * <p>The ID of the managed Harness agent.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-1</p>
@@ -1519,7 +1503,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The list of additional AgenticFS mounts. The total number of AgenticFS mounts and OSS mounts cannot exceed 10.</p>
+         * <p>The NAS storage mount configuration. Currently, only the AgenticFS type is supported, which is used to mount file directories in access points to agent runtime instances. The total number of NAS mounts and ossMounts cannot exceed 10.</p>
          */
         @NameInMap("agenticFsMounts")
         public java.util.List<CreateManagedAgentResponseBodyDataAgenticFsMounts> agenticFsMounts;
@@ -1558,7 +1542,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public String deployType;
 
         /**
-         * <p>The description of the managed agent.</p>
+         * <p>The description of the managed Harness agent.</p>
          * 
          * <strong>example:</strong>
          * <p>Agent for code review</p>
@@ -1579,7 +1563,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public CreateManagedAgentResponseBodyDataHarness harness;
 
         /**
-         * <p>The agent instruction used to guide the behavior of the agent.</p>
+         * <p>The agent instructions, which are used to guide the behavior of the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>You are a code review assistant</p>
@@ -1597,7 +1581,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public Long latestSpecVersion;
 
         /**
-         * <p>The status of the latest version.</p>
+         * <p>The latest version status.</p>
          * 
          * <strong>example:</strong>
          * <p>succeeded</p>
@@ -1612,7 +1596,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public CreateManagedAgentResponseBodyDataModel model;
 
         /**
-         * <p>The name of the managed agent.</p>
+         * <p>The name of the managed Harness agent.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent</p>
@@ -1627,7 +1611,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public CreateManagedAgentResponseBodyDataNetwork network;
 
         /**
-         * <p>The list of OSS mounts. A maximum of 10 items are allowed.</p>
+         * <p>The list of OSS mounts. A maximum of 10 items are supported.</p>
          */
         @NameInMap("ossMounts")
         public java.util.List<CreateManagedAgentResponseBodyDataOssMounts> ossMounts;
@@ -1654,7 +1638,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public CreateManagedAgentResponseBodyDataRuntime runtime;
 
         /**
-         * <p>The number of managed agent instances by sandbox phase. Current keys: PENDING (creating or initializing), RUNNING (running), HIBERNATING (hibernating), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (terminating), and FAILED (runtime failure). Only phases that actually occur are returned, and missing keys are treated as 0. This field is a dynamic mapping and new keys may be added in the future. The frontend can use FAILED &gt; 0 to determine whether abnormal instances exist.</p>
+         * <p>The number of managed harness agent instances grouped by sandbox phase. Current keys: PENDING (creating or initializing), RUNNING (running), HIBERNATING (hibernating), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (terminating), and FAILED (failed during runtime). Only phases that actually occur are returned. Missing keys are treated as 0. This field is a dynamic map and new keys may be added in the future. The frontend can use FAILED &gt; 0 to determine whether abnormal instances exist.</p>
          */
         @NameInMap("sandboxPhaseCounts")
         public java.util.Map<String, Long> sandboxPhaseCounts;
@@ -1666,7 +1650,7 @@ public class CreateManagedAgentResponseBody extends TeaModel {
         public java.util.List<CreateManagedAgentResponseBodyDataSkills> skills;
 
         /**
-         * <p>The status of the managed agent.</p>
+         * <p>The status of the managed Harness agent.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>

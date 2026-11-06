@@ -38,7 +38,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID used to locate and troubleshoot the request.</p>
      * 
      * <strong>example:</strong>
      * <p>request-123456</p>
@@ -47,7 +47,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -119,7 +119,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
          * <p>The MCP service description.</p>
          * 
          * <strong>example:</strong>
-         * <p>An MCP service for querying knowledge bases</p>
+         * <p>MCP service for querying knowledge bases</p>
          */
         @NameInMap("description")
         public String description;
@@ -131,7 +131,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
         public java.util.Map<String, ?> displayMetadata;
 
         /**
-         * <p>The multilingual display content, organized by BCP-47 language tags. Falls back to default fields when the specified language is not matched.</p>
+         * <p>The multilingual display content organized by BCP-47 language tags. If a language is not matched, the default fields are used.</p>
          */
         @NameInMap("i18n")
         public java.util.Map<String, DataI18nValue> i18n;
@@ -146,7 +146,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
         public String iconUrl;
 
         /**
-         * <p>The number of times the template has been installed.</p>
+         * <p>The template installation count.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -200,7 +200,7 @@ public class GetMcpMarketItemResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The usage instructions for the MCP marketplace template.</p>
+         * <p>The MCP marketplace template instructions.</p>
          * 
          * <strong>example:</strong>
          * <h1>Knowledge\nKnowledge base query service</h1>

@@ -25,7 +25,7 @@ public class DebugModelRequest extends TeaModel {
 
     public static class DebugModelRequestBody extends TeaModel {
         /**
-         * <p>The prompt used to verify the model call chain.</p>
+         * <p>The prompt used to verify the model invocation pipeline.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -107,28 +107,28 @@ public class UpdateCredentialResponseBody extends TeaModel {
 
     public static class UpdateCredentialResponseBodyDataResourceRefs extends TeaModel {
         /**
-         * <p>The unique identifier of the resource.</p>
+         * <p>The ID of the applicable MCP service.</p>
          * 
          * <strong>example:</strong>
-         * <p>agent-xxxx</p>
+         * <p>mcp-example</p>
          */
         @NameInMap("resourceId")
         public String resourceId;
 
         /**
-         * <p>The resource name. This parameter is empty if the resource is deleted.</p>
+         * <p>The resource name. This field is empty if the resource has been deleted.</p>
          * 
          * <strong>example:</strong>
-         * <p>my-agent</p>
+         * <p>my-mcp-service</p>
          */
         @NameInMap("resourceName")
         public String resourceName;
 
         /**
-         * <p>The resource type, such as agent.</p>
+         * <p>The resource type. Currently, the value is mcpServer, which indicates an MCP service.</p>
          * 
          * <strong>example:</strong>
-         * <p>agent</p>
+         * <p>mcpServer</p>
          */
         @NameInMap("resourceType")
         public String resourceType;
@@ -184,7 +184,7 @@ public class UpdateCredentialResponseBody extends TeaModel {
         public String credentialId;
 
         /**
-         * <p>The desensitized result of the credential content. If credentialType is apiKey, the value of apiKey is returned as asterisks (*) of the same length.</p>
+         * <p>The masked result of the credential content. For the apiKey type, a key mask is returned. For the mcpHeader type, only the header names are returned, and the values are not returned.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;apiKey&quot;:&quot;****************&quot;}</p>
@@ -193,7 +193,7 @@ public class UpdateCredentialResponseBody extends TeaModel {
         public String credentialMetadata;
 
         /**
-         * <p>The credential type. Currently, only apiKey is supported.</p>
+         * <p>The credential type. Valid values: apiKey (API key) and mcpHeader (MCP request header).</p>
          * 
          * <strong>example:</strong>
          * <p>apiKey</p>
@@ -202,16 +202,16 @@ public class UpdateCredentialResponseBody extends TeaModel {
         public String credentialType;
 
         /**
-         * <p>The credential description, which can be up to 256 characters in length.</p>
+         * <p>The credential description. The description can be up to 256 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>API key used to call model services in the production environment</p>
+         * <p>API key used to call the model service in the production environment</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The credential name. The name must be unique within the workspace, can only contain letters, digits, periods (.), underscores (_), and hyphens (-), must be 3 to 128 characters in length, and cannot be a runtime reserved name.</p>
+         * <p>The credential name. The name must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. Runtime reserved names cannot be used.</p>
          * 
          * <strong>example:</strong>
          * <p>model-api-key</p>
@@ -229,13 +229,13 @@ public class UpdateCredentialResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Each item includes resourceType, resourceId, and resourceName. resourceName is empty if the resource is deleted.</p>
+         * <p>The list of MCP services to which the credential applies.</p>
          */
         @NameInMap("resourceRefs")
         public java.util.List<UpdateCredentialResponseBodyDataResourceRefs> resourceRefs;
 
         /**
-         * <p>The application scope of the credential resources.</p>
+         * <p>The application scope of the credential. ALL indicates all scopes, and SPECIFIED indicates the specified MCP services.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>

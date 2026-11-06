@@ -14,7 +14,7 @@ public class DisableConnectorResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The Connector details.</p>
+     * <p>The connector details.</p>
      */
     @NameInMap("data")
     public DisableConnectorResponseBodyData data;
@@ -47,7 +47,7 @@ public class DisableConnectorResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class DisableConnectorResponseBody extends TeaModel {
 
     public static class DisableConnectorResponseBodyData extends TeaModel {
         /**
-         * <p>The number of Agents bound to the Connector.</p>
+         * <p>The number of bound agents.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -119,7 +119,7 @@ public class DisableConnectorResponseBody extends TeaModel {
         public Long boundAgentCount;
 
         /**
-         * <p>The time when the Connector was enabled.</p>
+         * <p>The time when the connector was enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-01T08:00:00Z</p>
@@ -128,7 +128,7 @@ public class DisableConnectorResponseBody extends TeaModel {
         public String enabledAt;
 
         /**
-         * <p>The Connector configuration JSON string before the Connector was disabled. This is sensitive data.</p>
+         * <p>The JSON string of the connector configuration before it was disabled. This is sensitive information.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;site&quot;:&quot;global&quot;,&quot;organizationId&quot;:&quot;org-xxxx&quot;}</p>
@@ -137,7 +137,7 @@ public class DisableConnectorResponseBody extends TeaModel {
         public String metadata;
 
         /**
-         * <p>The Connector name. Currently, the value is qodercli.</p>
+         * <p>The connector name. The current value is qodercli.</p>
          * 
          * <strong>example:</strong>
          * <p>qodercli</p>
@@ -146,7 +146,7 @@ public class DisableConnectorResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The Connector status.</p>
+         * <p>The connector status.</p>
          * 
          * <strong>example:</strong>
          * <p>ENABLED</p>

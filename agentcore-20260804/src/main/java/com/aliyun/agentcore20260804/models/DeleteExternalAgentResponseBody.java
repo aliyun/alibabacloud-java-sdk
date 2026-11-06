@@ -14,7 +14,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The summary information of the deleted external agent.</p>
+     * <p>The summary information of the deleted managed agent.</p>
      */
     @NameInMap("data")
     public DeleteExternalAgentResponseBodyData data;
@@ -29,7 +29,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request processing result message.</p>
+     * <p>The message about the request processing result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -125,7 +125,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
         public String accessScope;
 
         /**
-         * <p>The external agent ID.</p>
+         * <p>The managed agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-1</p>
@@ -161,7 +161,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
         public String deployType;
 
         /**
-         * <p>The description of the external agent.</p>
+         * <p>The description of the managed agent.</p>
          * 
          * <strong>example:</strong>
          * <p>Code review agent running in the user environment</p>
@@ -179,7 +179,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
         public Long latestSpecVersion;
 
         /**
-         * <p>The name of the external agent.</p>
+         * <p>The name of the managed agent.</p>
          * 
          * <strong>example:</strong>
          * <p>my-external-agent</p>
@@ -188,7 +188,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The runtime type reported by the external agent.</p>
+         * <p>The runtime type reported by the managed agent.</p>
          * 
          * <strong>example:</strong>
          * <p>qwenpaw</p>
@@ -197,7 +197,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
         public String runtime;
 
         /**
-         * <p>The status of the external agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted.</p>
+         * <p>The status of the managed agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>

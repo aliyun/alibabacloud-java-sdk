@@ -116,7 +116,7 @@ public class ValidateAgentCodePackageFromOssResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The compressed size of the code package.</p>
+         * <p>The compressed file size of the code package, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTeamRequest extends TeaModel {
     /**
-     * <p>The request body for updating a team.</p>
+     * <p>The request body for updating the team.</p>
      */
     @NameInMap("body")
     public UpdateTeamRequestBody body;
@@ -126,13 +126,13 @@ public class UpdateTeamRequest extends TeaModel {
 
     public static class UpdateTeamRequestBody extends TeaModel {
         /**
-         * <p>The new list of agent members. The existing agent members are replaced based on full overwrite semantics. If this parameter is not specified, the existing agent members remain unchanged.</p>
+         * <p>The new list of agent members. This list replaces the existing agent members based on full overwrite semantics. If not specified, the existing list remains unchanged.</p>
          */
         @NameInMap("agents")
         public java.util.List<UpdateTeamRequestBodyAgents> agents;
 
         /**
-         * <p>The new team description. If this parameter is not specified, the existing description remains unchanged.</p>
+         * <p>The new team description. If not specified, the existing description remains unchanged.</p>
          * 
          * <strong>example:</strong>
          * <p>Team responsible for intelligent customer service</p>
@@ -141,7 +141,7 @@ public class UpdateTeamRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The new list of user members. The existing user members are replaced based on full overwrite semantics. If this parameter is specified, it must contain exactly one member with the ADMIN role. If this parameter is not specified, the existing user members remain unchanged.</p>
+         * <p>The new list of user members. This list replaces the existing user members based on full overwrite semantics. If this parameter is specified, it must contain exactly one member with the ADMIN role. If not specified, the existing list remains unchanged.</p>
          */
         @NameInMap("users")
         public java.util.List<UpdateTeamRequestBodyUsers> users;

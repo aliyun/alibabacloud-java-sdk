@@ -25,7 +25,7 @@ public class CreateSkillDraftRequest extends TeaModel {
 
     public static class CreateSkillDraftRequestBody extends TeaModel {
         /**
-         * <p>The version from which to fork the draft. If not specified, a new Skill is created.</p>
+         * <p>The version to fork from. If you do not specify this parameter, a new skill is created.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.1</p>
@@ -43,7 +43,7 @@ public class CreateSkillDraftRequest extends TeaModel {
         public String commitMsg;
 
         /**
-         * <p>The Skill card JSON string that contains the complete Skill information.</p>
+         * <p>The JSON string of the skill card, which contains the complete skill information.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;name&quot;:&quot;customer-service-skill&quot;,&quot;description&quot;:&quot;...&quot;}</p>
@@ -52,7 +52,7 @@ public class CreateSkillDraftRequest extends TeaModel {
         public String skillCard;
 
         /**
-         * <p>The Skill name.</p>
+         * <p>The skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class CreateSkillDraftRequest extends TeaModel {
         public String skillName;
 
         /**
-         * <p>The draft version number. If not specified, the version number is automatically incremented.</p>
+         * <p>Specifies the draft version number. If not specified, the version number automatically increments.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.2</p>

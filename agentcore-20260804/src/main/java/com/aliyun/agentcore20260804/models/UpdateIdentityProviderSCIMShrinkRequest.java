@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateIdentityProviderSCIMShrinkRequest extends TeaModel {
     /**
-     * <p>Submit business parameters as described in this API document. The body parameters of the public API are mapped to the backend wrapper by the gateway. Do not mix them with the body wrapper of the backend direct connection API.</p>
+     * <p>The business parameters submitted in the request body. The body parameters of public APIs are mapped to backend wrappers by the gateway and must not be mixed with direct backend body wrappers.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

@@ -14,7 +14,7 @@ public class GetAgentCodePackageUploadUrlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("data")
     public GetAgentCodePackageUploadUrlResponseBodyData data;
@@ -116,7 +116,7 @@ public class GetAgentCodePackageUploadUrlResponseBody extends TeaModel {
         public String expiresAt;
 
         /**
-         * <p>The HTTP headers required for direct upload.</p>
+         * <p>The required HTTP request headers for direct upload.</p>
          */
         @NameInMap("headers")
         public java.util.Map<String, String> headers;
@@ -131,7 +131,7 @@ public class GetAgentCodePackageUploadUrlResponseBody extends TeaModel {
         public Long maxSize;
 
         /**
-         * <p>The temporary OSS URI of the code package.</p>
+         * <p>The OSS URI of the temporary code package.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://agentcore-platform-example/code-package-uploads/workspaces/ws-a1b2c3d4e5f6/550e8400-e29b-41d4-a716-446655440000/package.zip</p>

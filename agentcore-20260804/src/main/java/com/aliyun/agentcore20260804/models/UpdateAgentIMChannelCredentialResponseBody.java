@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAgentIMChannelCredentialResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value is SUCCESS when the request is successful.</p>
+     * <p>The business status code. The value is SUCCESS if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -20,7 +20,7 @@ public class UpdateAgentIMChannelCredentialResponseBody extends TeaModel {
     public UpdateAgentIMChannelCredentialResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. The value is 200 when the request is successful.</p>
+     * <p>The HTTP status code. The value is 200 if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class UpdateAgentIMChannelCredentialResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message indicating the request processing result.</p>
+     * <p>The message about the request processing result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

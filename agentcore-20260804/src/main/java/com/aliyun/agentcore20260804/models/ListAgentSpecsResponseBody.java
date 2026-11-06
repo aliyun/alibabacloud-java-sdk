@@ -67,11 +67,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
 
     public static class ListAgentSpecsResponseBodyDataPageItemsSkillsVersionSelector extends TeaModel {
         /**
-         * <p>The version selector type. Valid values:</p>
-         * <ul>
-         * <li>LABEL: selects by label.</li>
-         * <li>VERSION: selects by specific version.</li>
-         * </ul>
+         * <p>The type of the version selector. Valid values: LABEL (by label) and VERSION (by specific version).</p>
          * 
          * <strong>example:</strong>
          * <p>LABEL</p>
@@ -80,7 +76,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The selector value. If the type is LABEL, this value is a label name such as latest. If the type is VERSION, this value is a specific version number.</p>
+         * <p>The value of the selector. If the type is LABEL, the value is the label name, such as latest. If the type is VERSION, the value is the specific version number.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>
@@ -122,11 +118,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The Skill source type. Valid values:</p>
-         * <ul>
-         * <li>REFERENCE: references the AI Registry.</li>
-         * <li>STATIC: statically bundled with the package.</li>
-         * </ul>
+         * <p>The source type of the skill. Valid values: REFERENCE (references the AI Registry) and STATIC (statically provided with the package).</p>
          * 
          * <strong>example:</strong>
          * <p>REFERENCE</p>
@@ -185,13 +177,13 @@ public class ListAgentSpecsResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>A sample description that explains the purpose of the resource</p>
+         * <p>Sample description used to explain the purpose of the resource</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The download count.</p>
+         * <p>The number of downloads.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -200,7 +192,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
         public Long downloadCount;
 
         /**
-         * <p>The version that is currently being edited.</p>
+         * <p>The version currently being edited.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -209,7 +201,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
         public String editingVersion;
 
         /**
-         * <p>Indicates whether the AgentSpec is enabled.</p>
+         * <p>Indicates whether it is enabled.</p>
          */
         @NameInMap("enable")
         public Boolean enable;
@@ -230,7 +222,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
         public java.util.Map<String, String> labels;
 
         /**
-         * <p>The list of MCP server references.</p>
+         * <p>The list of referenced MCP servers.</p>
          */
         @NameInMap("mcpServers")
         public java.util.List<ListAgentSpecsResponseBodyDataPageItemsMcpServers> mcpServers;
@@ -254,7 +246,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
         public Integer onlineCnt;
 
         /**
-         * <p>The version that is currently under review.</p>
+         * <p>The version currently under review.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -272,13 +264,13 @@ public class ListAgentSpecsResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The list of Skill references.</p>
+         * <p>The list of referenced skills.</p>
          */
         @NameInMap("skills")
         public java.util.List<ListAgentSpecsResponseBodyDataPageItemsSkills> skills;
 
         /**
-         * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787671022000</p>

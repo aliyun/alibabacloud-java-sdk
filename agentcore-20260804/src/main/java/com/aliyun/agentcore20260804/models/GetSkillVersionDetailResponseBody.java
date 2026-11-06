@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSkillVersionDetailResponseBody extends TeaModel {
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public GetSkillVersionDetailResponseBodyData data;
@@ -45,7 +45,7 @@ public class GetSkillVersionDetailResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>A sample description that explains the purpose of the resource</p>
+         * <p>Sample description to illustrate the purpose of the resource</p>
          */
         @NameInMap("description")
         public String description;
@@ -60,17 +60,17 @@ public class GetSkillVersionDetailResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The resource mapping in which the key is the resource name.</p>
+         * <p>The resource mapping, where the key is the resource name.</p>
          */
         @NameInMap("resource")
         public java.util.Map<String, DataResourceValue> resource;
 
         /**
-         * <p>The Skill card content (SKILL.md).</p>
+         * <p>The skill card content (SKILL.md).</p>
          * 
          * <strong>example:</strong>
-         * <h1>Sample Skill</h1>
-         * <p>Used to demonstrate Skill document content</p>
+         * <h1>Sample skill</h1>
+         * <p>Used to demonstrate skill document content</p>
          */
         @NameInMap("skillMd")
         public String skillMd;

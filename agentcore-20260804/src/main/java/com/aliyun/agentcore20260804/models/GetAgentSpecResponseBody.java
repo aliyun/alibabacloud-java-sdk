@@ -51,7 +51,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
         public String author;
 
         /**
-         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The creation time. It is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787671022000</p>
@@ -63,7 +63,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>A sample description used to explain the purpose of the resource</p>
+         * <p>A sample description used to illustrate the purpose of the resource</p>
          */
         @NameInMap("description")
         public String description;
@@ -96,7 +96,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The update time. It is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787671022000</p>
@@ -198,7 +198,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>A sample description used to explain the purpose of the resource</p>
+         * <p>A sample description used to illustrate the purpose of the resource</p>
          */
         @NameInMap("description")
         public String description;
@@ -279,7 +279,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The update time. It is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1787671022000</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSkillReferencesResponseBody extends TeaModel {
     /**
-     * <p>The skill reference relationship data returned by the paging query.</p>
+     * <p>The skill reference data returned in the paging query.</p>
      */
     @NameInMap("data")
     public ListSkillReferencesResponseBodyData data;
@@ -42,7 +42,7 @@ public class ListSkillReferencesResponseBody extends TeaModel {
 
     public static class ListSkillReferencesResponseBodyDataPageItems extends TeaModel {
         /**
-         * <p>The ID of the referencing entity, which is the identifier of the agent or agent spec.</p>
+         * <p>The ID of the referencing entity, which is the identifier of the agent or AgentSpec.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-1234567890abcdef</p>
@@ -175,7 +175,7 @@ public class ListSkillReferencesResponseBody extends TeaModel {
         public java.util.List<ListSkillReferencesResponseBodyDataPageItems> pageItems;
 
         /**
-         * <p>The current page number, starting from 1.</p>
+         * <p>The current page number. Pages start from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -184,7 +184,7 @@ public class ListSkillReferencesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The total number of available pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -193,7 +193,7 @@ public class ListSkillReferencesResponseBody extends TeaModel {
         public Integer pagesAvailable;
 
         /**
-         * <p>The total number of reference relationships that meet the conditions.</p>
+         * <p>The total number of reference relationships that meet the specified conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

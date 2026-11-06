@@ -11,7 +11,7 @@ public class CreatePermissionRulesRequest extends TeaModel {
     public CreatePermissionRulesRequestBody body;
 
     /**
-     * <p>The client token.</p>
+     * <p>The idempotency token.</p>
      * 
      * <strong>example:</strong>
      * <p>550e8400-e29b-41d4-a716-446655440000</p>
@@ -46,7 +46,7 @@ public class CreatePermissionRulesRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ALLOW</p>
+         * <p>PERMIT</p>
          */
         @NameInMap("effect")
         public String effect;

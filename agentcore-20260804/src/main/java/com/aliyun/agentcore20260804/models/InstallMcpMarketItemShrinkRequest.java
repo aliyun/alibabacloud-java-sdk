@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class InstallMcpMarketItemShrinkRequest extends TeaModel {
     /**
-     * <p>The MCP configuration submitted during template installation. The configuration must conform to the input schema of the template.</p>
+     * <p>The MCP configuration submitted when installing the template. The configuration must comply with the input schema of the template.</p>
      */
     @NameInMap("body")
     public String bodyShrink;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>The reserved query request identifier. The console backend does not read this parameter and does not provide idempotency guarantees, such as deduplication or recovery of the original processing result, based on this identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -20,7 +20,7 @@ public class InstallMcpMarketItemShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The template version to install. You can call GetMcpMarketItem to query available versions.</p>
+     * <p>The template version to install. You can query available versions by calling GetMcpMarketItem.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

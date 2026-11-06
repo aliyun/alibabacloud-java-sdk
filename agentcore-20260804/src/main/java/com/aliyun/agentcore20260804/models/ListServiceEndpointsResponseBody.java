@@ -29,7 +29,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
     public java.util.List<ListServiceEndpointsResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of records per page that takes effect in this query.</p>
+     * <p>The maximum number of entries returned on a single page for this query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -158,7 +158,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
 
     public static class ListServiceEndpointsResponseBodyItemsAccessUrls extends TeaModel {
         /**
-         * <p>The access URL type. Valid values: INTERNET and VPC.</p>
+         * <p>The type of the access URL. Valid values: INTERNET and VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>INTERNET</p>
@@ -167,7 +167,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String accessType;
 
         /**
-         * <p>The access URL status. Valid values: CREATING, READY, and DEGRADED.</p>
+         * <p>The status of the access URL. Valid values: CREATING, READY, and DEGRADED.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -234,7 +234,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
 
     public static class ListServiceEndpointsResponseBodyItemsAuthentication extends TeaModel {
         /**
-         * <p>The authentication method. NONE indicates that no authentication is required. API_KEY indicates that authentication is performed by passing an API key in the x-api-key request header.</p>
+         * <p>The authentication method. NONE indicates that no authentication is required. API_KEY indicates that authentication is performed by passing an API key in the <code>x-api-key</code> request header.</p>
          * 
          * <strong>example:</strong>
          * <p>API_KEY</p>
@@ -257,9 +257,68 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
 
     }
 
+    public static class ListServiceEndpointsResponseBodyItemsElasticityPolicy extends TeaModel {
+        /**
+         * <p>是否开启弹性。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        /**
+         * <p>最大实例数，不小于 1。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        @NameInMap("maxSandboxCount")
+        public Integer maxSandboxCount;
+
+        /**
+         * <p>最小实例数，不小于 0 且不大于 maxSandboxCount。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("minSandboxCount")
+        public Integer minSandboxCount;
+
+        public static ListServiceEndpointsResponseBodyItemsElasticityPolicy build(java.util.Map<String, ?> map) throws Exception {
+            ListServiceEndpointsResponseBodyItemsElasticityPolicy self = new ListServiceEndpointsResponseBodyItemsElasticityPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicy setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicy setMaxSandboxCount(Integer maxSandboxCount) {
+            this.maxSandboxCount = maxSandboxCount;
+            return this;
+        }
+        public Integer getMaxSandboxCount() {
+            return this.maxSandboxCount;
+        }
+
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicy setMinSandboxCount(Integer minSandboxCount) {
+            this.minSandboxCount = minSandboxCount;
+            return this;
+        }
+        public Integer getMinSandboxCount() {
+            return this.minSandboxCount;
+        }
+
+    }
+
     public static class ListServiceEndpointsResponseBodyItemsTarget extends TeaModel {
         /**
-         * <p>The target agent ID. This parameter is returned when the target type is AGENT_VERSION.</p>
+         * <p>The ID of the target agent. This parameter is returned when the target type is AGENT_VERSION.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-123456</p>
@@ -268,7 +327,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The target agent version. This parameter is returned when the target type is AGENT_VERSION.</p>
+         * <p>The version of the target agent. This parameter is returned when the target type is AGENT_VERSION.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -277,7 +336,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String agentVersion;
 
         /**
-         * <p>The collaboration component type. This parameter is returned when the target type is TEAM_COLLABORATION.</p>
+         * <p>The type of the collaboration component. This parameter is returned when the target type is TEAM_COLLABORATION.</p>
          * 
          * <strong>example:</strong>
          * <p>ELEMENT_WEB</p>
@@ -373,7 +432,19 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The service endpoint type. DEFAULT indicates a default endpoint created and maintained by the platform. NAMED indicates a named endpoint explicitly created by a user.</p>
+         * <p>publicAccessEnabled 与工作空间公网入向上限叠加后的结果：二者均允许时为 true。仅表示策略目标，不代表公网入口已发布完成，实际状态以 accessUrls 与 status 为准。</p>
+         */
+        @NameInMap("effectivePublicAccessEnabled")
+        public Boolean effectivePublicAccessEnabled;
+
+        /**
+         * <p>仅在服务端点设置过弹性覆盖值时返回，可设置的为 Router 类型服务端点与 GATEWAY_API_WITH_VPC_INGRESS 类型的 DEFAULT 服务端点；未设置覆盖值时不返回该对象，表示继承智能体源配置，不得当作空对象或默认策略。返回时三个字段必全。</p>
+         */
+        @NameInMap("elasticityPolicy")
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicy elasticityPolicy;
+
+        /**
+         * <p>The type of the service endpoint. DEFAULT indicates a default endpoint created and maintained by the platform. NAMED indicates a named endpoint explicitly created by the user.</p>
          * 
          * <strong>example:</strong>
          * <p>NAMED</p>
@@ -382,7 +453,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String endpointType;
 
         /**
-         * <p>The service endpoint name. The name must be unique within the workspace and 1 to 128 characters in length.</p>
+         * <p>The name of the service endpoint. The name must be unique within the workspace and be 1 to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent-endpoint</p>
@@ -391,7 +462,13 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The region ID of the service endpoint.</p>
+         * <p>用户在服务端点上设置的公网入向期望；未设置过的历史服务端点按 true 返回。仅表示配置期望，实际公网地址是否可用以 accessUrls 与 status 为准。</p>
+         */
+        @NameInMap("publicAccessEnabled")
+        public Boolean publicAccessEnabled;
+
+        /**
+         * <p>The ID of the region where the service endpoint resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -400,7 +477,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The service endpoint ID.</p>
+         * <p>The ID of the service endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>se-123456</p>
@@ -409,7 +486,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public String serviceEndpointId;
 
         /**
-         * <p>The service endpoint status. Valid values: CREATING, READY, UPDATING, DEGRADED, DISABLED, and DELETING.</p>
+         * <p>The status of the service endpoint. Valid values: CREATING, READY, UPDATING, DEGRADED, DISABLED, and DELETING.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -433,7 +510,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         public ListServiceEndpointsResponseBodyItemsTarget target;
 
         /**
-         * <p>The last update time in UTC format compliant with RFC 3339.</p>
+         * <p>The time of the last modification in UTC format compliant with RFC 3339.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
@@ -479,6 +556,22 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             return this.createdAt;
         }
 
+        public ListServiceEndpointsResponseBodyItems setEffectivePublicAccessEnabled(Boolean effectivePublicAccessEnabled) {
+            this.effectivePublicAccessEnabled = effectivePublicAccessEnabled;
+            return this;
+        }
+        public Boolean getEffectivePublicAccessEnabled() {
+            return this.effectivePublicAccessEnabled;
+        }
+
+        public ListServiceEndpointsResponseBodyItems setElasticityPolicy(ListServiceEndpointsResponseBodyItemsElasticityPolicy elasticityPolicy) {
+            this.elasticityPolicy = elasticityPolicy;
+            return this;
+        }
+        public ListServiceEndpointsResponseBodyItemsElasticityPolicy getElasticityPolicy() {
+            return this.elasticityPolicy;
+        }
+
         public ListServiceEndpointsResponseBodyItems setEndpointType(String endpointType) {
             this.endpointType = endpointType;
             return this;
@@ -493,6 +586,14 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListServiceEndpointsResponseBodyItems setPublicAccessEnabled(Boolean publicAccessEnabled) {
+            this.publicAccessEnabled = publicAccessEnabled;
+            return this;
+        }
+        public Boolean getPublicAccessEnabled() {
+            return this.publicAccessEnabled;
         }
 
         public ListServiceEndpointsResponseBodyItems setRegionId(String regionId) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FindCustomAgentImagePreparationRequest extends TeaModel {
     /**
-     * <p>The client token submitted when creating or explicitly updating an image. Do not specify AgentId or the operation type.</p>
+     * <p>The idempotency token passed as a query parameter. This parameter is required when you explicitly submit customImage or container.type=custom, and optional for ACR image and code package submissions. The value must be 1 to 128 characters in length and can contain letters, digits, periods, underscores, colons, and hyphens. Reuse the same token for retries of the same submission. If the same token is used for different parameters, the request will be rejected.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -25,7 +25,7 @@ public class GetWorkspaceAgenticFsMountRamAuthorizeUrlRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The domain name of the target access point. Obtain this value from the DomainName field in the NAS ListAccessPoints response. Do not include the protocol, port, or path.</p>
+     * <p>The domain name of the target access point. Obtain the value from the DomainName parameter returned by the NAS ListAccessPoints operation. Do not include the protocol, port, or path.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

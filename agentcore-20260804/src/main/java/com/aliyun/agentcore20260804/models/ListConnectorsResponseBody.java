@@ -23,7 +23,7 @@ public class ListConnectorsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The list of connectors.</p>
+     * <p>The connector list.</p>
      */
     @NameInMap("items")
     public java.util.List<ListConnectorsResponseBodyItems> items;
@@ -47,7 +47,7 @@ public class ListConnectorsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The next page token. The current version does not return this field.</p>
+     * <p>The next token. This field is not returned in the current version.</p>
      * 
      * <strong>example:</strong>
      * <p>dGVzdA==</p>
@@ -65,7 +65,7 @@ public class ListConnectorsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -170,7 +170,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         public Long boundAgentCount;
 
         /**
-         * <p>The time when the connector was enabled.</p>
+         * <p>The activation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-01T08:00:00Z</p>
@@ -179,7 +179,7 @@ public class ListConnectorsResponseBody extends TeaModel {
         public String enabledAt;
 
         /**
-         * <p>The connector configuration JSON string. After the connector is enabled, this string may contain sensitive credentials.</p>
+         * <p>The JSON string of the connector configuration. It may contain sensitive credentials after being enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;site&quot;:&quot;global&quot;,&quot;organizationId&quot;:&quot;org-xxxx&quot;}</p>

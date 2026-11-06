@@ -126,7 +126,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
         public String acrInstanceId;
 
         /**
-         * <p>The current attachment status of the policy for the target repository.</p>
+         * <p>The mount status of the policy for the current target repository.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +136,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
         public String authorizationStatus;
 
         /**
-         * <p>The access prerequisite status, which does not indicate Secret Ready.</p>
+         * <p>The onboarding prerequisite, which is not Secret Ready.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
         public String eligibilityStatus;
 
         /**
-         * <p>The stable reason code for unauthorized or unmet conditions. This field is omitted if no reason exists.</p>
+         * <p>The stable reason code for unauthorized or unmet conditions. This field is omitted when no reason is available.</p>
          * 
          * <strong>example:</strong>
          * <p>AcrRamUnauthorized</p>
@@ -158,7 +158,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
         public String reasonCode;
 
         /**
-         * <p>The user-readable reason. This field is omitted if no reason exists.</p>
+         * <p>The user-readable reason. This field is omitted when no reason is available.</p>
          * 
          * <strong>example:</strong>
          * <p>Authorize the Workspace role for this ACR instance.</p>
@@ -180,7 +180,7 @@ public class VerifyWorkspaceAcrRamAuthorizationResponseBody extends TeaModel {
         public String roleName;
 
         /**
-         * <p>The source of the shared role. This does not indicate that authorization is complete.</p>
+         * <p>The source of the shared role. This does not indicate that the authorization is complete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

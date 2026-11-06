@@ -68,7 +68,7 @@ public class CreateModelConnectionRequest extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The name of the model connection. The name must be 1 to 128 non-whitespace characters in length.</p>
+         * <p>The name of the model connection. It must be 1 to 128 non-whitespace characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class CreateModelConnectionRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The model invoke protocol. Currently, only OpenAI/v1 is supported. If the Settings are not specified during model creation, this default value is used.</p>
+         * <p>The model invoke protocol. Currently, only OpenAI/v1 is supported. If this parameter is not specified in Settings during model creation, this default value is used.</p>
          * 
          * <strong>example:</strong>
          * <p>OpenAI/v1</p>

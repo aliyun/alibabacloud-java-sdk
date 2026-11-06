@@ -29,7 +29,7 @@ public class DeleteTeamResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message. An error description is returned if the request failed.</p>
+     * <p>The response message. An error description is returned when the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class DeleteTeamResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class DeleteTeamResponseBody extends TeaModel {
 
     public static class DeleteTeamResponseBodyData extends TeaModel {
         /**
-         * <p>The team name. The name can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit and must be 1 to 128 characters in length.</p>
+         * <p>The team name. The name can contain only lowercase letters, digits, and hyphens, must start and end with a lowercase letter or a digit, and must be 1 to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>team-01</p>
@@ -116,15 +116,7 @@ public class DeleteTeamResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The team status. Valid values:</p>
-         * <ul>
-         * <li>Creating</li>
-         * <li>Active</li>
-         * <li>Updating</li>
-         * <li>Deleting</li>
-         * <li>Failed</li>
-         * <li>Deleted</li>
-         * </ul>
+         * <p>The team status. Valid values: Creating, Active, Updating, Deleting, Failed, and Deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>

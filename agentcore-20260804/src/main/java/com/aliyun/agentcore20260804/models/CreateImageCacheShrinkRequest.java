@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateImageCacheShrinkRequest extends TeaModel {
     /**
-     * <p>The business parameters for creating an image cache.</p>
+     * <p>The request body for creating an image cache.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")
     public String bodyShrink;
 
     /**
-     * <p>Required and non-empty. This parameter is reserved for API compatibility. It currently does not provide request deduplication or original result recovery based on this field. If a timeout occurs or the result is unconfirmed, query the cache status first before deciding whether to resubmit.</p>
+     * <p>The non-empty request token passed as a query parameter. The current implementation does not guarantee deduplication by this token or recovery of the original acceptance result.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class CreateImageCacheShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The product entry region, which is determined by the selected region endpoint.</p>
+     * <p>The product entry region, passed as a query parameter. It must match the selected region endpoint and the workspace region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class CreateImageCacheShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The current routed workspace. The server verifies the account, region, and resource ownership. This parameter cannot be omitted or used to access other workspaces.</p>
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

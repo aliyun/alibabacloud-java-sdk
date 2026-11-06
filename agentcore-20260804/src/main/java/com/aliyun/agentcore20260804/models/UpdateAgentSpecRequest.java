@@ -43,11 +43,7 @@ public class UpdateAgentSpecRequest extends TeaModel {
         public String labels;
 
         /**
-         * <p>The visibility scope. Valid values:</p>
-         * <ul>
-         * <li>PUBLIC</li>
-         * <li>PRIVATE</li>
-         * </ul>
+         * <p>The visibility scope. Valid values: PUBLIC and PRIVATE.</p>
          * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>

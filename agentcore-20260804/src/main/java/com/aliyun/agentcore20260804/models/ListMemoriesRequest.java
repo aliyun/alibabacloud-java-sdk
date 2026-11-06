@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMemoriesRequest extends TeaModel {
     /**
-     * <p>The agent ID. If you do not specify this parameter, all agents are matched. The value must be 1 to 128 bytes in length and encoded in UTF-8. The value cannot contain a forward slash (/) or an asterisk (*).</p>
+     * <p>The agent ID. If you do not specify this parameter, all agents are matched. The value must be 1 to 128 UTF-8 bytes in length and cannot contain slashes (/) or asterisks (*).</p>
      * 
      * <strong>example:</strong>
      * <p>agent-001</p>
@@ -32,7 +32,7 @@ public class ListMemoriesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The session ID. If you do not specify this parameter, all sessions are matched. The value must be 1 to 128 bytes in length and encoded in UTF-8. The value cannot contain a forward slash (/) or an asterisk (*).</p>
+     * <p>The session ID. If you do not specify this parameter, all sessions are matched. The value must be 1 to 128 UTF-8 bytes in length and cannot contain slashes (/) or asterisks (*).</p>
      * 
      * <strong>example:</strong>
      * <p>session-001</p>
@@ -41,7 +41,7 @@ public class ListMemoriesRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>The user ID. If you do not specify this parameter, all users are matched. The value must be 1 to 128 bytes in length and encoded in UTF-8. The value cannot contain a forward slash (/) or an asterisk (*).</p>
+     * <p>The user ID. If you do not specify this parameter, all users are matched. The value must be 1 to 128 UTF-8 bytes in length and cannot contain slashes (/) or asterisks (*).</p>
      * 
      * <strong>example:</strong>
      * <p>user-001</p>

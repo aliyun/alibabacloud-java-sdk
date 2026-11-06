@@ -14,7 +14,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The summary of the custom agent whose deletion is accepted. The runtime resources are subsequently cleaned up in the background.</p>
+     * <p>The summary of the custom code or image agent whose deletion is accepted. Runtime resources are subsequently cleaned up in the background.</p>
      */
     @NameInMap("data")
     public DeleteCustomAgentResponseBodyData data;
@@ -38,7 +38,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique identifier of the request. You can use this ID to locate and troubleshoot issues.</p>
+     * <p>The unique identifier of the request, which is used to locate and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>550E8400-E29B-41D4-A716-446655440000</p>
@@ -47,7 +47,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was processed successfully. A value of true indicates success. A successful creation, update, or deletion does not mean that the background operations are complete.</p>
+     * <p>Indicates whether the request was successful. A value of true indicates that the request was successful. A successful creation, update, or deletion does not mean that the background operations are complete.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -125,7 +125,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         public String accessScope;
 
         /**
-         * <p>The unique identifier of the custom agent. You can obtain it from the response of CreateCustomAgent or ListCustomAgents.</p>
+         * <p>The unique identifier of the custom code or image agent. You can obtain this value from the response of CreateCustomAgent or ListCustomAgents.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-550e8400e29b41d4a716446655440000</p>
@@ -134,7 +134,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The creation mode of the agent. The value is CUSTOM for custom agents.</p>
+         * <p>The creation mode of the agent. The value is CUSTOM for custom code or image agents.</p>
          * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
@@ -143,7 +143,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         public String createMode;
 
         /**
-         * <p>The time when the agent was created. The time is in ISO 8601 format. A trailing Z indicates the UTC time zone. Fractional seconds may be included.</p>
+         * <p>The time when the agent was created. The time is in ISO 8601 format, with a trailing Z indicating the UTC time zone. Fractional seconds may be included.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-10T06:00:00Z</p>
@@ -152,7 +152,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The deployment mode of the agent. Custom agents are deployed and managed by the platform, so the value is MANAGED.</p>
+         * <p>The deployment mode of the agent. The value is MANAGED for custom code or image agents because they are deployed and managed by the platform.</p>
          * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
@@ -161,10 +161,10 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         public String deployType;
 
         /**
-         * <p>The description of the agent.</p>
+         * <p>The description of the agent\&quot;s purpose.</p>
          * 
          * <strong>example:</strong>
-         * <p>Custom agent that provides conversation services</p>
+         * <p>Custom agent providing conversation services</p>
          */
         @NameInMap("description")
         public String description;
@@ -179,7 +179,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         public Long latestSpecVersion;
 
         /**
-         * <p>The name of the custom agent.</p>
+         * <p>The name of the custom code or image agent.</p>
          * 
          * <strong>example:</strong>
          * <p>my-custom-agent</p>
@@ -188,7 +188,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The compute specifications of the agent. Valid values: INTERACTIVE, STANDARD, and HEAVY.</p>
+         * <p>The compute specification of the agent. Valid values: INTERACTIVE, STANDARD, and HEAVY.</p>
          * 
          * <strong>example:</strong>
          * <p>STANDARD</p>
@@ -204,9 +204,9 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
          * <li>Failed: The agent failed.</li>
          * <li>Updating: The agent is being updated.</li>
          * <li>Deleting: The agent is being deleted.</li>
-         * <li>Deleted: The agent is deleted.
-         * Call GetCustomAgent to query the execution progress of the latest configuration.</li>
+         * <li>Deleted: The agent is deleted.</li>
          * </ul>
+         * <p>Call GetCustomAgent to query the execution progress of the latest configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -215,7 +215,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the agent was last updated. The time is in ISO 8601 format. A trailing Z indicates the UTC time zone. Fractional seconds may be included.</p>
+         * <p>The time when the agent was last updated. The time is in ISO 8601 format, with a trailing Z indicating the UTC time zone. Fractional seconds may be included.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-10T06:05:00Z</p>
@@ -224,7 +224,7 @@ public class DeleteCustomAgentResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
-         * <p>The ID of the workspace to which the custom agent belongs.</p>
+         * <p>The ID of the workspace to which the custom code or image agent belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ws-a1b2c3d4e5f6</p>

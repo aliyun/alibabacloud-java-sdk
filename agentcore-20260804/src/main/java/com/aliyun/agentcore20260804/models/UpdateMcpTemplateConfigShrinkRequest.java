@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateMcpTemplateConfigShrinkRequest extends TeaModel {
     /**
-     * <p>The MCP configuration to update by the specified template version. The configuration must conform to the input schema of the template.</p>
+     * <p>The MCP configuration updated based on the specified template version, which must comply with the input schema of the template.</p>
      */
     @NameInMap("body")
     public String bodyShrink;
 
     /**
-     * <p>The client token that is used to ensure the idempotency of the request.</p>
+     * <p>The reserved query request identifier. The current console backend does not read this parameter and does not provide idempotency guarantees such as deduplication or restoring the original processing result based on this identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>

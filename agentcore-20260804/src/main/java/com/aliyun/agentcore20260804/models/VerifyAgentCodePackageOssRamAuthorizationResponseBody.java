@@ -107,7 +107,7 @@ public class VerifyAgentCodePackageOssRamAuthorizationResponseBody extends TeaMo
 
     public static class VerifyAgentCodePackageOssRamAuthorizationResponseBodyData extends TeaModel {
         /**
-         * <p>The binding status of the policy.</p>
+         * <p>The policy binding status.</p>
          * 
          * <strong>example:</strong>
          * <p>AUTHORIZED</p>

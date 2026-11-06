@@ -29,7 +29,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message. An error description is returned if the request fails.</p>
+     * <p>The response message. If the request fails, an error description is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -107,7 +107,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
 
     public static class GetIdentityProviderResponseBodyDataConfiguration extends TeaModel {
         /**
-         * <p>The SAML binding type, which is HTTP-Redirect or HTTP-POST. Required for manual entry. Queries return the short name.</p>
+         * <p>HTTP-Redirect or HTTP-POST. This parameter is required for manual entry. Queries return the short name.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP-Redirect</p>
@@ -116,7 +116,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String bindingType;
 
         /**
-         * <p>The IdP entity ID. Required for manual entry. Must be non-empty and no more than 2,048 characters in length. Existing configurations cannot be changed. This is different from the entity ID of the service provider (SP) returned in queries.</p>
+         * <p>This parameter is required for manual entry. It must be non-empty and contain a maximum of 2,048 characters. Existing configurations cannot be replaced. This is different from the Entity ID of the service provider (SP) returned in queries.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
@@ -125,7 +125,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String entityId;
 
         /**
-         * <p>The IdP logon URL. Required for manual entry. Must be an absolute HTTPS URL without user credentials or fragments.</p>
+         * <p>This parameter is required for manual entry. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
@@ -134,7 +134,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String loginUrl;
 
         /**
-         * <p>The actual switch value, which is Enabled or Disabled. This is not equivalent to the expected loginEnabled value saved in AC.</p>
+         * <p>The actual switch value, which is Enabled or Disabled. This is not equivalent to the expected loginEnabled value saved in the access configuration (AC).</p>
          * 
          * <strong>example:</strong>
          * <p>Enabled</p>
@@ -183,7 +183,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
 
     public static class GetIdentityProviderResponseBodyDataMetadata extends TeaModel {
         /**
-         * <p>The App ID of the Lark application. Required when the binding type is Feishu.</p>
+         * <p>The App ID of the Lark application. This parameter is required when the binding type is Feishu.</p>
          * 
          * <strong>example:</strong>
          * <p>cli_exampleappid01</p>
@@ -192,7 +192,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The AppKey of the DingTalk application. Required when the binding type is DingTalk.</p>
+         * <p>The AppKey of the DingTalk application. This parameter is required when the binding type is DingTalk.</p>
          * 
          * <strong>example:</strong>
          * <p>dingexampleappkey01</p>
@@ -201,7 +201,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String appKey;
 
         /**
-         * <p>The SAML binding URI in the historical metadata snapshot. To update CustomSSO, use saml.bindingType.</p>
+         * <p>The SAML Binding URI in the historical metadata snapshot. To update CustomSSO, use saml.bindingType.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect</p>
@@ -219,7 +219,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String certificates;
 
         /**
-         * <p>The CorpId of the DingTalk enterprise. Required when the binding type is DingTalk.</p>
+         * <p>The CorpId of the DingTalk enterprise. This parameter is required when the binding type is DingTalk.</p>
          * 
          * <strong>example:</strong>
          * <p>dingexamplecorpid01</p>
@@ -228,7 +228,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String corpId;
 
         /**
-         * <p>The IdP entity ID. Required for manual entry. Must be non-empty and no more than 2,048 characters in length. Existing configurations cannot be changed. This is different from the entity ID of the service provider (SP) returned in queries.</p>
+         * <p>This parameter is required for manual entry. It must be non-empty and contain a maximum of 2,048 characters. Existing configurations cannot be replaced. This is different from the Entity ID of the service provider (SP) returned in queries.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
@@ -237,7 +237,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String entityId;
 
         /**
-         * <p>The IdP logon URL. Required for manual entry. Must be an absolute HTTPS URL without user credentials or fragments.</p>
+         * <p>This parameter is required for manual entry. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
@@ -310,7 +310,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
 
     public static class GetIdentityProviderResponseBodyDataSaml extends TeaModel {
         /**
-         * <p>The SAML binding type, which is HTTP-Redirect or HTTP-POST. Required for manual entry. Queries return the short name.</p>
+         * <p>HTTP-Redirect or HTTP-POST. This parameter is required for manual entry. Queries return the short name.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP-Redirect</p>
@@ -319,7 +319,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String bindingType;
 
         /**
-         * <p>The IdP entity ID. Required for manual entry. Must be non-empty and no more than 2,048 characters in length. Existing configurations cannot be changed. This is different from the entity ID of the service provider (SP) returned in queries.</p>
+         * <p>This parameter is required for manual entry. It must be non-empty and contain a maximum of 2,048 characters. Existing configurations cannot be replaced. This is different from the Entity ID of the service provider (SP) returned in queries.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
@@ -328,7 +328,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String entityId;
 
         /**
-         * <p>The IdP logon URL. Required for manual entry. Must be an absolute HTTPS URL without user credentials or fragments.</p>
+         * <p>This parameter is required for manual entry. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
@@ -337,7 +337,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String loginUrl;
 
         /**
-         * <p>The list of IdP signing certificates. Required for manual entry. Must be a non-empty array using PEM X.509 certificate text. The current validity period is verified. A maximum of two certificates are allowed after deduplication.</p>
+         * <p>A non-empty array is required for manual entry. Use PEM X.509 certificate text. The current validity period is verified. A maximum of two certificates are allowed after deduplication.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;-----BEGIN CERTIFICATE-----\\nMIICwDCCAaigAwIBAgIULlsHLfcADyBax5ZtFlj+YGzZVo0wDQYJKoZIhvcNAQEL\\nBQAwGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMB4XDTI2MDEwMTAwMDAwMFoX\\nDTM2MDEwMTAwMDAwMFowGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMIIBIjAN\\nBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAto0DN0W1CrPRzK9QZ9A1aApb4Lg8\\noGlp2c0PbN3LokXe/HzwxCMXx65IDnrenttxzTwp9BgUnUN/3LRzWaOL2UQ/vNYN\\nW9LFLkI1T64UPyI7eyi28YlALhb41xkYhEp7rz+MjqifBzVZeTDUxBYtbK2hAhbY\\nEL1+udwsXEx0KB7xuQ/rbI2OKeqAEAD1tfYg7T/SM2wrXNYhx+o1HtchM4/0I8Ok\\nkk27JQ4y3ofzC5sTySmFF1Y7XcpSd+5WSyazedhkAieo8AB01DkJV6nnKfH8sH0E\\nBsnH3FP8FhqCLrIeEkjX9B9OcIRLGjiZqx4u/ryW1QhMldnv+pFfNjWy/wIDAQAB\\nMA0GCSqGSIb3DQEBCwUAA4IBAQC1hSQG8AwtGOoX2gKBK4Hi5XBrBreij8WlLTUW\\nld0FINQ0Rg84f/27CjDthywj6wgxCesCuOVFhpxQa1UacsP/Gcai1aKABtLWImca\\nWECRYK5gDkwhTMFKM9mXA26hH1l4v/UR2iTpEK9H78egC4W7bs2LDTpPryuaNKTq\\nP2O0tMbNkAHB8yecz5LxHXnxadL9Egow25g2RClvpifWqDnuS9TSbKkIWLcPLjoc\\nJj2K9ILpBwhXiXi/BiSgyYTLiYvVvih9vX4s+hKGZNJc0j92YLiOHDF0XH1oxgdV\\njfTmRiedeb2VZJZElptD92z0AqFR7z2d5B+OqpPA2gjuMLV5\\n-----END CERTIFICATE-----&quot;]</p>
@@ -386,7 +386,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
 
     public static class GetIdentityProviderResponseBodyDataSyncScope extends TeaModel {
         /**
-         * <p>The list of department IDs. When the mode is SelectedDepartments, at least one non-empty department ID must be included, which should be obtained from ListIdentityProviderDepartments. When the mode is AllAuthorized, pass an empty array or omit this field.</p>
+         * <p>When the mode is SelectedDepartments, this parameter must contain at least one non-empty department ID, which should be obtained from ListIdentityProviderDepartments. When the mode is AllAuthorized, pass an empty array or omit this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;10001&quot;]</p>
@@ -395,7 +395,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public java.util.List<String> departmentIds;
 
         /**
-         * <p>The scope mode. Valid values:</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li>AllAuthorized: All authorized scopes, subject to the application address book authorization limits.</li>
          * <li>SelectedDepartments: The selected departments and all their sub-departments.
@@ -439,7 +439,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public GetIdentityProviderResponseBodyDataConfiguration configuration;
 
         /**
-         * <p>The creation time in UTC format based on RFC 3339.</p>
+         * <p>The creation time in UTC format compliant with RFC 3339.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
@@ -457,7 +457,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String eventSubscriptionCallbackUrl;
 
         /**
-         * <p>The external identity provider type. Valid values: DingTalk and Feishu.</p>
+         * <p>The type of the external identity provider. Valid values: DingTalk and Feishu.</p>
          * 
          * <strong>example:</strong>
          * <p>DingTalk</p>
@@ -487,7 +487,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public GetIdentityProviderResponseBodyDataMetadata metadata;
 
         /**
-         * <p>The logon protocol. Only SAML is currently supported. This field may not be returned if no valid configuration is saved. OIDC placeholder initialization is not supported.</p>
+         * <p>Only SAML is currently supported. This parameter may not be returned if no valid configuration is saved. Placeholder initialization with OIDC is not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>SAML</p>
@@ -496,7 +496,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The SAML logon configuration. The input supports either XML or complete manual entry. Queries return the standardized configuration and do not echo the original XML. This field can be omitted if it is not configured.</p>
+         * <p>The input supports either XML or complete manual entry. Queries return the standardized configuration and do not echo the original XML. This parameter can be omitted if it is not configured.</p>
          */
         @NameInMap("saml")
         public GetIdentityProviderResponseBodyDataSaml saml;
@@ -504,15 +504,15 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         /**
          * <p>The status. Valid values:</p>
          * <ul>
-         * <li>CONFIGURED: The configuration is accepted and the system is waiting for the user pool to be activated.</li>
+         * <li>CONFIGURED: The configuration is accepted and waiting for user pool activation.</li>
          * <li>SYNCING: Organization members are being synchronized.</li>
-         * <li>SYNCED: Organization members are synchronized.</li>
+         * <li>SYNCED: Organization member synchronization is complete.</li>
          * <li>READY: The binding is in effect.</li>
          * <li>SYNC_FAILED: Organization member synchronization failed.</li>
          * <li>UPDATING: The configuration is being updated.</li>
          * <li>UPDATE_FAILED: Configuration update failed.</li>
-         * <li>DISCONNECTING: The binding is being removed.</li>
-         * <li>DISCONNECT_FAILED: Binding removal failed.</li>
+         * <li>DISCONNECTING: The binding is being disconnected.</li>
+         * <li>DISCONNECT_FAILED: Disconnection failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -522,19 +522,19 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Specifies whether organization member synchronization is enabled. After it is enabled, organization members are synchronized as workspace users by the external identity provider.</p>
+         * <p>Specifies whether to enable organization member synchronization. If enabled, organization members are synchronized as workspace users by the external identity provider.</p>
          */
         @NameInMap("syncEnabled")
         public Boolean syncEnabled;
 
         /**
-         * <p>The configured synchronization scope, which follows the synchronization scope definition by department. If omitted during creation, the default value is AllAuthorized, and the first vendor synchronization is determined by syncOnBind. If omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically trigger full synchronization.</p>
+         * <p>Follows the synchronization scope definition by department. If omitted during creation, the default value is AllAuthorized, and the first vendor synchronization is determined by syncOnBind. If omitted or set to null during an update, the original value is retained. Updating the saved scope does not automatically trigger full synchronization.</p>
          */
         @NameInMap("syncScope")
         public GetIdentityProviderResponseBodyDataSyncScope syncScope;
 
         /**
-         * <p>The time of the last modification in UTC format based on RFC 3339.</p>
+         * <p>The time when the binding was last modified, in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>

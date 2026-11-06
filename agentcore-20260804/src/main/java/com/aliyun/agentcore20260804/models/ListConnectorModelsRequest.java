@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConnectorModelsRequest extends TeaModel {
     /**
-     * <p>The Connector Key ID. This parameter is not supported in the current version.</p>
+     * <p>The connector key ID. This parameter is not supported in the current version.</p>
      * 
      * <strong>example:</strong>
      * <p>ckey-xxxx</p>
@@ -23,7 +23,7 @@ public class ListConnectorModelsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The next page token. This parameter is not supported in the current version.</p>
+     * <p>The next token. This parameter is not supported in the current version.</p>
      * 
      * <strong>example:</strong>
      * <p>dGVzdA==</p>

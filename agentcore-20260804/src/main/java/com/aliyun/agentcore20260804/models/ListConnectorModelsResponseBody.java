@@ -29,7 +29,7 @@ public class ListConnectorModelsResponseBody extends TeaModel {
     public java.util.List<ListConnectorModelsResponseBodyItems> items;
 
     /**
-     * <p>The number of models returned in this request.</p>
+     * <p>The number of models returned in this response.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +47,7 @@ public class ListConnectorModelsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The next page token. This field is not returned in the current version.</p>
+     * <p>The next token. This field is not returned in the current version.</p>
      * 
      * <strong>example:</strong>
      * <p>dGVzdA==</p>
@@ -65,7 +65,7 @@ public class ListConnectorModelsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -179,7 +179,7 @@ public class ListConnectorModelsResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The associated Connector Key ID. This field is not returned in the current version.</p>
+         * <p>The associated connector key ID. This field is not returned in the current version.</p>
          * 
          * <strong>example:</strong>
          * <p>ckey-xxxx</p>
@@ -188,7 +188,7 @@ public class ListConnectorModelsResponseBody extends TeaModel {
         public String keyId;
 
         /**
-         * <p>The associated Connector Key name. This field is not returned in the current version.</p>
+         * <p>The name of the associated connector key. This field is not returned in the current version.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

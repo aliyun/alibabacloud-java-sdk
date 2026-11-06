@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIdentityProviderSCIMCredentialResponseBody extends TeaModel {
     /**
-     * <p>The business result code. Handle it in combination with the HTTP status and message when a failure occurs.</p>
+     * <p>The business result code. If the call fails, handle the error based on the HTTP status code and the message.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,13 +14,13 @@ public class CreateIdentityProviderSCIMCredentialResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The operation result. For the result structure, see the response fields of this operation. The response of an asynchronous write operation indicates acceptance and does not guarantee that the background node is completed.</p>
+     * <p>The operation result. For the result structure, see the response parameters of this operation. The response of an asynchronous write operation indicates that the request is accepted, but does not guarantee that the background task is complete.</p>
      */
     @NameInMap("data")
     public CreateIdentityProviderSCIMCredentialResponseBodyData data;
 
     /**
-     * <p>The processing status of the current request, which is not equivalent to the final result of the background node.</p>
+     * <p>The processing status of the current request. This status does not indicate the final result of the background task.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class CreateIdentityProviderSCIMCredentialResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request acceptance or error message. Check the result of the asynchronous task by using the corresponding query operation.</p>
+     * <p>The request acceptance or error message. For asynchronous node results, you must verify them by calling the corresponding query operation.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,7 +38,7 @@ public class CreateIdentityProviderSCIMCredentialResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID. Used to associate this call with troubleshooting. Keep it when a failure occurs.</p>
+     * <p>The request ID. You can use this ID to associate the current call with troubleshooting. Keep the ID if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>request-example</p>
@@ -47,7 +47,7 @@ public class CreateIdentityProviderSCIMCredentialResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the current request is processed successfully. A value of true indicates success. For asynchronous writes, you still need to query the task results.</p>
+     * <p>Indicates whether the current request is successful. A value of true indicates that the request is processed successfully. For asynchronous write operations, you must continue to query the task result.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class CreateIdentityProviderSCIMCredentialResponseBody extends TeaModel {
 
     public static class CreateIdentityProviderSCIMCredentialResponseBodyDataConfiguration extends TeaModel {
         /**
-         * <p>The URL configured for the external provisioning system. The presence of a URL does not mean that the external configuration is completed or AC synchronization is enabled.</p>
+         * <p>The URL configured for the external provisioning system. The presence of a URL does not indicate that the external configuration is complete or that AgentCore synchronization is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/scim/v2">https://example.com/scim/v2</a></p>
@@ -116,7 +116,7 @@ public class CreateIdentityProviderSCIMCredentialResponseBody extends TeaModel {
         public String baseUrl;
 
         /**
-         * <p>The receiver status of AgentIdentity. Enabled indicates that the SCIM receiver is enabled, and Disabled indicates that it is disabled. This is not equivalent to the expected value of syncEnabled in AC.</p>
+         * <p>The receiving status of AgentIdentity. A value of Enabled indicates that SCIM receiving is enabled. A value of Disabled indicates that SCIM receiving is disabled. This value is not equivalent to the expected value of syncEnabled in AgentCore.</p>
          * 
          * <strong>example:</strong>
          * <p>Enabled</p>
@@ -158,7 +158,7 @@ public class CreateIdentityProviderSCIMCredentialResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The credential ID. It must be non-empty when deleting. Use the ID returned in the credential list, not the plaintext token.</p>
+         * <p>The credential ID. This parameter is required when you delete a credential. Use the ID returned in the credential list, not the plaintext token.</p>
          * 
          * <strong>example:</strong>
          * <p>credential-example</p>
@@ -167,7 +167,7 @@ public class CreateIdentityProviderSCIMCredentialResponseBody extends TeaModel {
         public String credentialId;
 
         /**
-         * <p>The expiration time returned by AgentIdentity. Only credentials that are Enabled and not expired are considered available.</p>
+         * <p>The expiration time returned by AgentIdentity. Only credentials that are enabled and not expired are considered available.</p>
          * 
          * <strong>example:</strong>
          * <p>2027-10-26T00:00:00Z</p>
@@ -176,7 +176,7 @@ public class CreateIdentityProviderSCIMCredentialResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The credential status of AgentIdentity. Only credentials that are Enabled and not expired are considered available. This field is not the operationStatus of the SCIM task.</p>
+         * <p>The credential status of AgentIdentity. Only credentials that are enabled and not expired are considered available. This field is not the operationStatus of a SCIM task.</p>
          * 
          * <strong>example:</strong>
          * <p>Enabled</p>
@@ -225,19 +225,19 @@ public class CreateIdentityProviderSCIMCredentialResponseBody extends TeaModel {
 
     public static class CreateIdentityProviderSCIMCredentialResponseBodyData extends TeaModel {
         /**
-         * <p>The actual SAML configuration is read back on demand only in GetIdentityProvider. SCIM queries and preparations return the actual receiver status and URL.</p>
+         * <p>The actual SAML configuration is read on demand only by calling GetIdentityProvider. SCIM query and preparation operations return the actual receiving status and URL.</p>
          */
         @NameInMap("configuration")
         public CreateIdentityProviderSCIMCredentialResponseBodyDataConfiguration configuration;
 
         /**
-         * <p>The current credential summary, including credentialId, status, createTime, and expireTime. It does not include the repeatedly retrievable token.</p>
+         * <p>The current credential summary, including credentialId, status, createTime, and expireTime. The plaintext token is not included and cannot be repeatedly obtained.</p>
          */
         @NameInMap("credential")
         public CreateIdentityProviderSCIMCredentialResponseBodyDataCredential credential;
 
         /**
-         * <p>The plaintext token. It is returned only when a new credential is created. If the prepare operation reuses a valid credential, this value is null. It cannot be retrieved again from the list. If the response is lost, query the list first instead of automatically reissuing. Do not write it to logs or frontend persistent cache.</p>
+         * <p>The plaintext token is returned only when a new credential is created. If the prepare operation reuses a valid credential, this value is null. The token cannot be retrieved from the list. If the response is lost, query the list first. The token is not automatically reissued and is not written to logs or persistent frontend caches.</p>
          * 
          * <strong>example:</strong>
          * <p>example-scim-token</p>

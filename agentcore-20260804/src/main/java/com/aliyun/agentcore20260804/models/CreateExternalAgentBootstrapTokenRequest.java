@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateExternalAgentBootstrapTokenRequest extends TeaModel {
     /**
-     * <p>The network type for onboarding. Valid values: INTRANET (internal network) and INTERNET (Internet).</p>
+     * <p>The access network type. Valid values: INTRANET (internal network) and INTERNET (Internet).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

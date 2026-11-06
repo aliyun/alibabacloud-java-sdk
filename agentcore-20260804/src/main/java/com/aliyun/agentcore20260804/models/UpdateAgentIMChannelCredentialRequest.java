@@ -42,7 +42,7 @@ public class UpdateAgentIMChannelCredentialRequest extends TeaModel {
 
     public static class UpdateAgentIMChannelCredentialRequestBody extends TeaModel {
         /**
-         * <p>The channel credentials. All fields must be provided and the field values must be non-empty strings. For DingTalk, use clientID and clientSecret. For Lark, use appId and appSecret. For WeCom, use botId and secret.</p>
+         * <p>The channel credentials. You must pass all fields and ensure that the field values are non-empty strings. DingTalk uses clientID and clientSecret. Lark uses appId and appSecret. WeCom uses botId and secret.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("credential")

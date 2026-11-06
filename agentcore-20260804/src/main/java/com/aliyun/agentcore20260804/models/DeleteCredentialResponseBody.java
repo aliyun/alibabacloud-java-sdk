@@ -116,7 +116,7 @@ public class DeleteCredentialResponseBody extends TeaModel {
         public String credentialId;
 
         /**
-         * <p>The credential name. It must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 128 characters in length. Runtime reserved names cannot be used.</p>
+         * <p>The credential name. The name must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. You cannot use runtime reserved names.</p>
          * 
          * <strong>example:</strong>
          * <p>model-api-key</p>

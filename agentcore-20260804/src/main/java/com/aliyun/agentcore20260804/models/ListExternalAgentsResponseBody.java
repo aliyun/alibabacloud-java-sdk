@@ -23,10 +23,10 @@ public class ListExternalAgentsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The list of external agents.</p>
+     * <p>The list of managed agents.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;agentId&quot;:&quot;agent-1&quot;,&quot;workspaceId&quot;:&quot;ws-1&quot;,&quot;name&quot;:&quot;my-external-agent&quot;,&quot;description&quot;:&quot;Code review agent running in the user environment&quot;,&quot;status&quot;:&quot;Running&quot;,&quot;latestSpecVersion&quot;:1,&quot;effectiveSpecVersion&quot;:1,&quot;createMode&quot;:&quot;CUSTOM&quot;,&quot;runtime&quot;:&quot;qwenpaw&quot;,&quot;deployType&quot;:&quot;SELF_HOSTED&quot;,&quot;createdAt&quot;:&quot;2026-01-01T00:00:00Z&quot;,&quot;updatedAt&quot;:&quot;2026-01-01T00:00:00Z&quot;}]</p>
+     * <p>[{&quot;agentId&quot;:&quot;agent-1&quot;,&quot;workspaceId&quot;:&quot;ws-1&quot;,&quot;name&quot;:&quot;my-external-agent&quot;,&quot;description&quot;:&quot;运行在用户环境中的代码评审智能体&quot;,&quot;status&quot;:&quot;Running&quot;,&quot;latestSpecVersion&quot;:1,&quot;effectiveSpecVersion&quot;:1,&quot;createMode&quot;:&quot;CUSTOM&quot;,&quot;runtime&quot;:&quot;qwenpaw&quot;,&quot;deployType&quot;:&quot;SELF_HOSTED&quot;,&quot;createdAt&quot;:&quot;2026-01-01T00:00:00Z&quot;,&quot;updatedAt&quot;:&quot;2026-01-01T00:00:00Z&quot;}]</p>
      */
     @NameInMap("items")
     public java.util.List<ListExternalAgentsResponseBodyItems> items;
@@ -164,7 +164,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
 
     public static class ListExternalAgentsResponseBodyItems extends TeaModel {
         /**
-         * <p>The ID of the external agent.</p>
+         * <p>The ID of the managed agent.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-1</p>
@@ -200,7 +200,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
         public String deployType;
 
         /**
-         * <p>The description of the external agent.</p>
+         * <p>The description of the managed agent.</p>
          * 
          * <strong>example:</strong>
          * <p>Code review agent running in the user environment</p>
@@ -218,7 +218,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
         public Long latestSpecVersion;
 
         /**
-         * <p>The name of the external agent.</p>
+         * <p>The name of the managed agent.</p>
          * 
          * <strong>example:</strong>
          * <p>my-external-agent</p>
@@ -227,7 +227,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The runtime type reported by the external agent.</p>
+         * <p>The runtime type reported by the managed agent.</p>
          * 
          * <strong>example:</strong>
          * <p>qwenpaw</p>
@@ -236,7 +236,7 @@ public class ListExternalAgentsResponseBody extends TeaModel {
         public String runtime;
 
         /**
-         * <p>The status of the external agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted.</p>
+         * <p>The status of the managed agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>

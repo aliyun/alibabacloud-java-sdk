@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSandboxesResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value SUCCESS is returned if the request was successful.</p>
+     * <p>The business status code. The value is SUCCESS when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,7 +14,7 @@ public class ListSandboxesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code. The value 200 is returned if the request was successful.</p>
+     * <p>The HTTP status code. The value is 200 when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class ListSandboxesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The list of sandboxes that match the filter conditions.</p>
+     * <p>The list of sandboxes that meet the filter conditions.</p>
      */
     @NameInMap("items")
     public java.util.List<ListSandboxesResponseBodyItems> items;
@@ -38,7 +38,7 @@ public class ListSandboxesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The response message. The value success is returned if the request was successful.</p>
+     * <p>The response message. The value is success when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -65,17 +65,13 @@ public class ListSandboxesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
-     * </ul>
+     * <p>Indicates whether the request is successful. A value of true indicates success, and a value of false indicates failure.</p>
      */
     @NameInMap("success")
     public Boolean success;
 
     /**
-     * <p>The total number of records that match the query conditions.</p>
+     * <p>The total number of records that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>27</p>
@@ -162,7 +158,7 @@ public class ListSandboxesResponseBody extends TeaModel {
 
     public static class ListSandboxesResponseBodyItems extends TeaModel {
         /**
-         * <p>The number of active sessions for this sandbox.</p>
+         * <p>The number of active sessions in the sandbox.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -171,7 +167,7 @@ public class ListSandboxesResponseBody extends TeaModel {
         public Integer activeSessionCount;
 
         /**
-         * <p>The time when the sandbox was created, in RFC 3339 UTC format.</p>
+         * <p>The time when the sandbox was created. The time is in the RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-29T00:00:00Z</p>
@@ -180,7 +176,7 @@ public class ListSandboxesResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The time of the last activity on the sandbox, in RFC 3339 UTC format.</p>
+         * <p>The time of the last activity of the sandbox. The time is in the RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-29T00:02:00Z</p>
@@ -189,7 +185,7 @@ public class ListSandboxesResponseBody extends TeaModel {
         public String lastActiveAt;
 
         /**
-         * <p>The time of the last heartbeat from the sandbox, in RFC 3339 UTC format.</p>
+         * <p>The time of the last heartbeat of the sandbox. The time is in the RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-29T00:01:00Z</p>
@@ -198,7 +194,7 @@ public class ListSandboxesResponseBody extends TeaModel {
         public String lastHeartbeatAt;
 
         /**
-         * <p>The maximum number of concurrent sessions allowed for this sandbox, derived from the auto scaling configuration in effect at runtime. This value is empty if auto scaling is not enabled or the configuration is unavailable.</p>
+         * <p>The maximum number of concurrent sessions allowed for the sandbox. This value is obtained from the auto-scaling configuration that takes effect at runtime. If auto-scaling is disabled or the configuration is unavailable, this value is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -216,7 +212,7 @@ public class ListSandboxesResponseBody extends TeaModel {
         public String phase;
 
         /**
-         * <p>The sandbox ID. You can call the ListSandboxes operation to query sandbox IDs.</p>
+         * <p>The sandbox ID, which can be queried by calling ListSandboxes.</p>
          * 
          * <strong>example:</strong>
          * <p>sbx-2</p>

@@ -23,7 +23,7 @@ public class ListMemorySessionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The list of sessions.</p>
+     * <p>The session list.</p>
      */
     @NameInMap("items")
     public java.util.List<ListMemorySessionsResponseBodyItems> items;
@@ -150,7 +150,7 @@ public class ListMemorySessionsResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>Session ID</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>session-001</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateModelResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value is SUCCESS when the request is successful.</p>
+     * <p>The business status code. The value is SUCCESS if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -20,7 +20,7 @@ public class UpdateModelResponseBody extends TeaModel {
     public UpdateModelResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. The value is 200 when the request is successful.</p>
+     * <p>The HTTP status code. The value is 200 if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -119,7 +119,7 @@ public class UpdateModelResponseBody extends TeaModel {
         public Boolean document;
 
         /**
-         * <p>Indicates whether the model is able to invoke tool calling multiple times in a single response.</p>
+         * <p>Indicates whether the model is able to invoke multiple tool calling in a single response.</p>
          */
         @NameInMap("multiToolCall")
         public Boolean multiToolCall;
@@ -251,7 +251,7 @@ public class UpdateModelResponseBody extends TeaModel {
         public Long contextSize;
 
         /**
-         * <p>The time when the resource was created. The time is in RFC 3339 UTC format.</p>
+         * <p>The time when the resource was created. The time is displayed in the RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-09T00:00:00Z</p>
@@ -269,7 +269,7 @@ public class UpdateModelResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The maximum number of output tokens supported for a single generation of the model.</p>
+         * <p>The maximum number of output tokens supported by the model in a single generation.</p>
          * 
          * <strong>example:</strong>
          * <p>131072</p>
@@ -296,7 +296,7 @@ public class UpdateModelResponseBody extends TeaModel {
         public String modelName;
 
         /**
-         * <p>The time when the resource was last updated. The time is in RFC 3339 UTC format.</p>
+         * <p>The time when the resource was last updated. The time is displayed in the RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-09T00:00:00Z</p>

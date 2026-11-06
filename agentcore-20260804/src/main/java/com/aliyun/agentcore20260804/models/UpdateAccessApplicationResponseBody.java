@@ -29,7 +29,7 @@ public class UpdateAccessApplicationResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message about the request processing result.</p>
+     * <p>The request processing result message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -170,7 +170,7 @@ public class UpdateAccessApplicationResponseBody extends TeaModel {
          * <p>The user source.</p>
          * 
          * <strong>example:</strong>
-         * <p>RAM</p>
+         * <p>LOCAL</p>
          */
         @NameInMap("userSource")
         public String userSource;

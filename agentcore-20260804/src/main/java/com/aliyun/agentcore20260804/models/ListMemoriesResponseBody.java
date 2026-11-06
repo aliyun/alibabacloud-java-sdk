@@ -166,7 +166,7 @@ public class ListMemoriesResponseBody extends TeaModel {
 
     public static class ListMemoriesResponseBodyItemsScope extends TeaModel {
         /**
-         * <p>The agent ID. The value must be 1 to 128 bytes in length and encoded in UTF-8. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with an agent ID.</p>
+         * <p>The agent ID. The value must be 1 to 128 UTF-8 bytes in length and cannot contain slashes (/) or asterisks (*). This field is not returned if the memory is not associated with an agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-001</p>
@@ -175,7 +175,7 @@ public class ListMemoriesResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The session ID. The value must be 1 to 128 bytes in length and encoded in UTF-8. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a session ID.</p>
+         * <p>The session ID. The value must be 1 to 128 UTF-8 bytes in length and cannot contain slashes (/) or asterisks (*). This field is not returned if the memory is not associated with a session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>session-001</p>
@@ -184,7 +184,7 @@ public class ListMemoriesResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The user ID. The value must be 1 to 128 bytes in length and encoded in UTF-8. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a user ID.</p>
+         * <p>The user ID. The value must be 1 to 128 UTF-8 bytes in length and cannot contain slashes (/) or asterisks (*). This field is not returned if the memory is not associated with a user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>user-001</p>
@@ -231,7 +231,7 @@ public class ListMemoriesResponseBody extends TeaModel {
         public ListMemoriesResponseBodyItemsContent content;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:00:00Z</p>
@@ -261,7 +261,7 @@ public class ListMemoriesResponseBody extends TeaModel {
         public ListMemoriesResponseBodyItemsScope scope;
 
         /**
-         * <p>The last update time.</p>
+         * <p>The last update time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:05:00Z</p>

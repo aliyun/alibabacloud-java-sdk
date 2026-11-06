@@ -149,10 +149,10 @@ public class GetCredentialResponseBody extends TeaModel {
 
     public static class GetCredentialResponseBodyDataResourceRefs extends TeaModel {
         /**
-         * <p>The unique identifier of the resource.</p>
+         * <p>The ID of the applicable MCP service.</p>
          * 
          * <strong>example:</strong>
-         * <p>agent-xxxx</p>
+         * <p>mcp-example</p>
          */
         @NameInMap("resourceId")
         public String resourceId;
@@ -161,16 +161,16 @@ public class GetCredentialResponseBody extends TeaModel {
          * <p>The resource name. This field is empty if the resource is deleted.</p>
          * 
          * <strong>example:</strong>
-         * <p>my-agent</p>
+         * <p>my-mcp-service</p>
          */
         @NameInMap("resourceName")
         public String resourceName;
 
         /**
-         * <p>The resource type, such as agent.</p>
+         * <p>The resource type. Currently, the value is mcpServer, which indicates an MCP service.</p>
          * 
          * <strong>example:</strong>
-         * <p>agent</p>
+         * <p>mcpServer</p>
          */
         @NameInMap("resourceType")
         public String resourceType;
@@ -214,7 +214,7 @@ public class GetCredentialResponseBody extends TeaModel {
         public java.util.List<GetCredentialResponseBodyDataBoundAgents> boundAgents;
 
         /**
-         * <p>The creation time in UTC format compliant with RFC 3339.</p>
+         * <p>The creation time in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
@@ -232,7 +232,7 @@ public class GetCredentialResponseBody extends TeaModel {
         public String credentialId;
 
         /**
-         * <p>The masked result of the credential content. When credentialType is apiKey, the value of apiKey is returned as asterisks (*) of the same length.</p>
+         * <p>The masked result of the credential content. For the apiKey type, the key mask is returned. For the mcpHeader type, only the header name is returned without the value.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;apiKey&quot;:&quot;****************&quot;}</p>
@@ -241,7 +241,7 @@ public class GetCredentialResponseBody extends TeaModel {
         public String credentialMetadata;
 
         /**
-         * <p>The credential type. Currently, only apiKey is supported.</p>
+         * <p>The credential type. Valid values: apiKey (API key) and mcpHeader (MCP request header).</p>
          * 
          * <strong>example:</strong>
          * <p>apiKey</p>
@@ -250,16 +250,16 @@ public class GetCredentialResponseBody extends TeaModel {
         public String credentialType;
 
         /**
-         * <p>The credential description, which cannot exceed 256 characters in length.</p>
+         * <p>The credential description. The length cannot exceed 256 characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>API key used for calling model services in the production environment</p>
+         * <p>API key used to call the model service in the production environment</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The credential name. It must be unique within the workspace, contain only letters, digits, periods (.), underscores (_), and hyphens (-), be 3 to 128 characters in length, and cannot use runtime reserved names.</p>
+         * <p>The credential name. It must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. Runtime reserved names cannot be used.</p>
          * 
          * <strong>example:</strong>
          * <p>model-api-key</p>
@@ -277,13 +277,13 @@ public class GetCredentialResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Each item includes resourceType, resourceId, and resourceName. If the resource is deleted, resourceName is empty.</p>
+         * <p>The list of MCP services to which the credential applies.</p>
          */
         @NameInMap("resourceRefs")
         public java.util.List<GetCredentialResponseBodyDataResourceRefs> resourceRefs;
 
         /**
-         * <p>The application scope of the credential resource.</p>
+         * <p>The application scope of the credential. ALL indicates all scopes, and SPECIFIED indicates specified MCP services.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>
@@ -292,7 +292,7 @@ public class GetCredentialResponseBody extends TeaModel {
         public String resourceScope;
 
         /**
-         * <p>The time of the last modification in UTC format compliant with RFC 3339.</p>
+         * <p>The time of the last modification in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>

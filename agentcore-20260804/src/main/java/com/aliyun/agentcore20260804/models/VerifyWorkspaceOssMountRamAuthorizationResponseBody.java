@@ -47,7 +47,7 @@ public class VerifyWorkspaceOssMountRamAuthorizationResponseBody extends TeaMode
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class VerifyWorkspaceOssMountRamAuthorizationResponseBody extends TeaMode
 
     public static class VerifyWorkspaceOssMountRamAuthorizationResponseBodyData extends TeaModel {
         /**
-         * <p>The OSS storage authorization status.</p>
+         * <p>The authorization status of the OSS storage.</p>
          * 
          * <strong>example:</strong>
          * <p>AUTHORIZED</p>

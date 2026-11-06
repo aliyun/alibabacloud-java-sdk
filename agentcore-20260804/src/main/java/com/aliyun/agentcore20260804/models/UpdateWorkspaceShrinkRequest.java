@@ -11,7 +11,7 @@ public class UpdateWorkspaceShrinkRequest extends TeaModel {
     public String bodyShrink;
 
     /**
-     * <p>The client token used to ensure idempotence.</p>
+     * <p>The client idempotency token.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-update-20260805-001</p>

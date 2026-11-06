@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConvertMcpToFreeEditRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure request idempotence.</p>
+     * <p>The reserved query request identifier. The current console backend does not read this parameter and does not provide idempotency guarantees for deduplication or recovery of the original processing result based on this identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>

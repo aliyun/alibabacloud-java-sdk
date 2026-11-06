@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUserRequest extends TeaModel {
     /**
-     * <p>The request body for updating a user.</p>
+     * <p>The request body for updating the user.</p>
      */
     @NameInMap("body")
     public UpdateUserRequestBody body;
@@ -42,10 +42,10 @@ public class UpdateUserRequest extends TeaModel {
 
     public static class UpdateUserRequestBody extends TeaModel {
         /**
-         * <p>The display name of the user. The name must be 1 to 32 characters in length. You must specify at least one of the displayName, email, and note parameters.</p>
+         * <p>The display name of the user. The name must be 1 to 32 characters in length. At least one of displayName, email, and note must be specified.</p>
          * 
          * <strong>example:</strong>
-         * <p>Zhang San</p>
+         * <p>John Doe</p>
          */
         @NameInMap("displayName")
         public String displayName;

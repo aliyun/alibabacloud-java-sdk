@@ -116,7 +116,7 @@ public class GetUserResponseBody extends TeaModel {
         public String agentCoreUserId;
 
         /**
-         * <p>The authentication method of the user. A value of password indicates that local password authentication of the workspace is used. Values of dingtalk and feishu indicate that the user is synchronized and authenticated by the corresponding external identity provider.</p>
+         * <p>The authentication method of the user. A value of password indicates that local password authentication in the workspace is used. A value of dingtalk or feishu indicates that the user is synchronized and authenticated by the corresponding external identity provider.</p>
          * 
          * <strong>example:</strong>
          * <p>password</p>
@@ -125,7 +125,7 @@ public class GetUserResponseBody extends TeaModel {
         public String authMethod;
 
         /**
-         * <p>The creation time in UTC format that complies with RFC 3339.</p>
+         * <p>The creation time in UTC format compliant with RFC 3339.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
@@ -152,7 +152,7 @@ public class GetUserResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The username. The name must be unique within the workspace, contain only lowercase letters, digits, and hyphens, start and end with a lowercase letter or digit, and be 1 to 32 characters in length.</p>
+         * <p>The username. The name must be unique within the workspace, contain only lowercase letters, digits, and hyphens, start and end with a lowercase letter or a digit, and be 1 to 32 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>user-01</p>
@@ -161,7 +161,7 @@ public class GetUserResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The notes for the user. The notes can be up to 1,024 characters in length.</p>
+         * <p>The note for the user. The note can be up to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>Agent operations team member</p>
@@ -188,7 +188,7 @@ public class GetUserResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time of the last update in UTC format that complies with RFC 3339.</p>
+         * <p>The time of the last modification in UTC format compliant with RFC 3339.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
