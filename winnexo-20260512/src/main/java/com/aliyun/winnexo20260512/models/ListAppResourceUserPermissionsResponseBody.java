@@ -20,7 +20,7 @@ public class ListAppResourceUserPermissionsResponseBody extends TeaModel {
     public java.util.List<ListAppResourceUserPermissionsResponseBodyItems> items;
 
     /**
-     * <p>The error description. This parameter is empty if the request is successful.</p>
+     * <p>The error description. This field is empty when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>The requested resource does not exist</p>
@@ -29,7 +29,7 @@ public class ListAppResourceUserPermissionsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page number.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class ListAppResourceUserPermissionsResponseBody extends TeaModel {
     public Long page;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The permission filter.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +47,7 @@ public class ListAppResourceUserPermissionsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -127,7 +127,7 @@ public class ListAppResourceUserPermissionsResponseBody extends TeaModel {
 
     public static class ListAppResourceUserPermissionsResponseBodyItems extends TeaModel {
         /**
-         * <p>The stored and valid permission points.</p>
+         * <p>The permission filter.</p>
          */
         @NameInMap("permissions")
         public java.util.List<String> permissions;
@@ -142,7 +142,7 @@ public class ListAppResourceUserPermissionsResponseBody extends TeaModel {
         public String resourceKey;
 
         /**
-         * <p>The resource type.</p>
+         * <p>The application key or its subpath.</p>
          * 
          * <strong>example:</strong>
          * <p>APP_RESOURCE</p>

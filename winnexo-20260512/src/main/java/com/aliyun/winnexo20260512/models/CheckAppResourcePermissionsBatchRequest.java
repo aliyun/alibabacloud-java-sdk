@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class CheckAppResourcePermissionsBatchRequest extends TeaModel {
     /**
-     * <p>The check items.</p>
+     * <p>The check item.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("checks")
     public java.util.List<CheckAppResourcePermissionsBatchRequestChecks> checks;
 
     /**
-     * <p>The ID of the tenant to which the resource belongs. If not specified, the current tenant of the caller is used.</p>
+     * <p>The ID of the target platform user.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -21,7 +21,7 @@ public class CheckAppResourcePermissionsBatchRequest extends TeaModel {
     public String resourceTenantId;
 
     /**
-     * <p>The ID of the target platform user.</p>
+     * <p>The tenant to which the target user belongs. This parameter is required for cross-tenant targets.</p>
      * 
      * <strong>example:</strong>
      * <p>10086</p>
@@ -30,7 +30,7 @@ public class CheckAppResourcePermissionsBatchRequest extends TeaModel {
     public Long targetUserId;
 
     /**
-     * <p>The tenant to which the target user belongs. This parameter is required for cross-tenant targets.</p>
+     * <p>The check item.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -39,7 +39,7 @@ public class CheckAppResourcePermissionsBatchRequest extends TeaModel {
     public String targetUserTenantId;
 
     /**
-     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
+     * <p>The ID of the tenant to which the resource belongs. If this parameter is not specified, the current tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -104,7 +104,7 @@ public class CheckAppResourcePermissionsBatchRequest extends TeaModel {
         public String permission;
 
         /**
-         * <p>The dot-separated resource key whose first segment is the APP application key.</p>
+         * <p>The dot-separated resource key whose first segment is the application key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

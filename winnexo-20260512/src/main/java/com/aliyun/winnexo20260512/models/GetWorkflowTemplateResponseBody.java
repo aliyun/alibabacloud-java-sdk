@@ -26,10 +26,19 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
      * <p>The description of the template.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>Standard process for handling customer complaints</p>
      */
     @NameInMap("description")
     public String description;
+
+    /**
+     * <p>节点依赖边；每项包含from/to，引用稳定stepId；显式空数组表示没有依赖</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;from&quot;:&quot;collect&quot;,&quot;to&quot;:&quot;deliver&quot;}]</p>
+     */
+    @NameInMap("edges")
+    public java.util.List<java.util.Map<String, ?>> edges;
 
     /**
      * <p>The current effective version number of the template. An empty value indicates that only a draft exists and it cannot be used for work items.</p>
@@ -44,7 +53,7 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
      * <p>The creation time in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>2026-11-05T08:00:00Z</p>
      */
     @NameInMap("gmtCreate")
     public String gmtCreate;
@@ -53,13 +62,22 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
      * <p>The modification time in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>2026-11-05T08:00:00Z</p>
      */
     @NameInMap("gmtModified")
     public String gmtModified;
 
     /**
-     * <p>The error description.</p>
+     * <p>可选画布布局，按stepId索引；只影响展示，不决定依赖</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;collect&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;review&quot;:{&quot;x&quot;:240,&quot;y&quot;:0}}</p>
+     */
+    @NameInMap("layout")
+    public java.util.Map<String, ?> layout;
+
+    /**
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The requested resource does not exist</p>
@@ -71,7 +89,7 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
      * <p>The name of the template.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>Customer complaint handling process</p>
      */
     @NameInMap("name")
     public String name;
@@ -86,10 +104,19 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>模板结构版本，当前为2，与业务版本vN独立</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
+    @NameInMap("schemaVersion")
+    public Long schemaVersion;
+
+    /**
      * <p>The ordered steps.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>[{\&quot;stepId\&quot;:\&quot;collect\&quot;,\&quot;sortOrder\&quot;:1,\&quot;name\&quot;:\&quot;收集客户信息\&quot;}]</p>
      */
     @NameInMap("steps")
     public java.util.List<GetWorkflowTemplateResponseBodySteps> steps;
@@ -98,13 +125,13 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
      * <p>The ID of the template.</p>
      * 
      * <strong>example:</strong>
-     * <p>tpl_example</p>
+     * <p>tpl_9401</p>
      */
     @NameInMap("templateId")
     public String templateId;
 
     /**
-     * <p>The version number to which the returned content belongs.</p>
+     * <p>The optimistic version number.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -113,7 +140,7 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
     public String version;
 
     /**
-     * <p>The change description for this version. If this field is empty for v1, the template description can be displayed.</p>
+     * <p>The version description.</p>
      * 
      * <strong>example:</strong>
      * <p>Added a review step</p>
@@ -163,6 +190,14 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
         return this.description;
     }
 
+    public GetWorkflowTemplateResponseBody setEdges(java.util.List<java.util.Map<String, ?>> edges) {
+        this.edges = edges;
+        return this;
+    }
+    public java.util.List<java.util.Map<String, ?>> getEdges() {
+        return this.edges;
+    }
+
     public GetWorkflowTemplateResponseBody setEffectiveVersion(String effectiveVersion) {
         this.effectiveVersion = effectiveVersion;
         return this;
@@ -187,6 +222,14 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
         return this.gmtModified;
     }
 
+    public GetWorkflowTemplateResponseBody setLayout(java.util.Map<String, ?> layout) {
+        this.layout = layout;
+        return this;
+    }
+    public java.util.Map<String, ?> getLayout() {
+        return this.layout;
+    }
+
     public GetWorkflowTemplateResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -209,6 +252,14 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetWorkflowTemplateResponseBody setSchemaVersion(Long schemaVersion) {
+        this.schemaVersion = schemaVersion;
+        return this;
+    }
+    public Long getSchemaVersion() {
+        return this.schemaVersion;
     }
 
     public GetWorkflowTemplateResponseBody setSteps(java.util.List<GetWorkflowTemplateResponseBodySteps> steps) {
@@ -265,7 +316,7 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
          * <p>The name of the step.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>Customer complaint handling process</p>
          */
         @NameInMap("name")
         public String name;
@@ -302,6 +353,15 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
         public Long ownerUserId;
 
         /**
+         * <p>是否人工审核产出物，默认关闭；仅数字员工可开启，审核待办自动发负责人</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("reviewOutput")
+        public Boolean reviewOutput;
+
+        /**
          * <p>The list of user IDs of the reviewers.</p>
          * 
          * <strong>example:</strong>
@@ -311,7 +371,7 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
         public java.util.List<Long> reviewerUserIds;
 
         /**
-         * <p>The order of the step.</p>
+         * <p>The sort order of the step.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -323,16 +383,16 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
          * <p>The processing instructions for the step.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>Collect customer information and submit it to the owner for review</p>
          */
         @NameInMap("specification")
         public String specification;
 
         /**
-         * <p>The array of structured segments for the step instructions. Supported segment types include text, mention, skill, app, files, and web_search. The fields and nested attachments of each segment are preserved exactly as returned by the backend.</p>
+         * <p>The array of structured segments for the step instructions. Supported types include text, mention, skill, app, files, and web_search. The fields and nested attachments of each segment are preserved exactly as returned by the backend.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;Organize input materials&quot;}]</p>
+         * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;整理输入资料&quot;}]</p>
          */
         @NameInMap("specificationJson")
         public java.util.List<java.util.Map<String, ?>> specificationJson;
@@ -389,6 +449,14 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
         }
         public Long getOwnerUserId() {
             return this.ownerUserId;
+        }
+
+        public GetWorkflowTemplateResponseBodySteps setReviewOutput(Boolean reviewOutput) {
+            this.reviewOutput = reviewOutput;
+            return this;
+        }
+        public Boolean getReviewOutput() {
+            return this.reviewOutput;
         }
 
         public GetWorkflowTemplateResponseBodySteps setReviewerUserIds(java.util.List<Long> reviewerUserIds) {

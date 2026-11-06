@@ -17,22 +17,31 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
      * <p>The user ID of the creator.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>10001</p>
      */
     @NameInMap("createdByUserId")
     public Long createdByUserId;
 
     /**
-     * <p>The description of the template.</p>
+     * <p>The template description.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>Standard process for handling customer complaints</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The current effective version number of the template. An empty value indicates that only a draft exists and the template cannot be used for work items.</p>
+     * <p>节点依赖边；每项包含from/to，引用稳定stepId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
+    @NameInMap("edges")
+    public java.util.List<java.util.Map<String, ?>> edges;
+
+    /**
+     * <p>The current effective version number of the template. An empty value indicates that only a draft exists and it cannot be used for work items.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -44,7 +53,7 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
      * <p>The creation time in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>2026-11-05T08:00:00Z</p>
      */
     @NameInMap("gmtCreate")
     public String gmtCreate;
@@ -53,10 +62,19 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
      * <p>The modification time in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>2026-11-05T08:00:00Z</p>
      */
     @NameInMap("gmtModified")
     public String gmtModified;
+
+    /**
+     * <p>可选画布布局，按stepId索引；只影响展示，不决定依赖</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;collect&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;review&quot;:{&quot;x&quot;:240,&quot;y&quot;:0}}</p>
+     */
+    @NameInMap("layout")
+    public java.util.Map<String, ?> layout;
 
     /**
      * <p>The error description.</p>
@@ -68,10 +86,10 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The name of the template.</p>
+     * <p>The step name. This field can be empty for drafts but is required upon submission.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>Customer complaint handling process</p>
      */
     @NameInMap("name")
     public String name;
@@ -86,25 +104,34 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>模板结构版本，当前为2，与业务版本vN独立</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
+    @NameInMap("schemaVersion")
+    public Long schemaVersion;
+
+    /**
      * <p>The ordered steps.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;收集客户信息&quot;}]</p>
      */
     @NameInMap("steps")
     public java.util.List<SetWorkflowTemplateEffectiveVersionResponseBodySteps> steps;
 
     /**
-     * <p>The ID of the template.</p>
+     * <p>The template ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>tpl_example</p>
+     * <p>tpl_9401</p>
      */
     @NameInMap("templateId")
     public String templateId;
 
     /**
-     * <p>The version number to which the returned content belongs.</p>
+     * <p>The version number of the returned content.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -113,7 +140,7 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
     public String version;
 
     /**
-     * <p>The change description of the version. An empty value indicates that no description is provided.</p>
+     * <p>The change description for this version. An empty value indicates that no description is provided.</p>
      * 
      * <strong>example:</strong>
      * <p>Added a review step</p>
@@ -163,6 +190,14 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
         return this.description;
     }
 
+    public SetWorkflowTemplateEffectiveVersionResponseBody setEdges(java.util.List<java.util.Map<String, ?>> edges) {
+        this.edges = edges;
+        return this;
+    }
+    public java.util.List<java.util.Map<String, ?>> getEdges() {
+        return this.edges;
+    }
+
     public SetWorkflowTemplateEffectiveVersionResponseBody setEffectiveVersion(String effectiveVersion) {
         this.effectiveVersion = effectiveVersion;
         return this;
@@ -187,6 +222,14 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
         return this.gmtModified;
     }
 
+    public SetWorkflowTemplateEffectiveVersionResponseBody setLayout(java.util.Map<String, ?> layout) {
+        this.layout = layout;
+        return this;
+    }
+    public java.util.Map<String, ?> getLayout() {
+        return this.layout;
+    }
+
     public SetWorkflowTemplateEffectiveVersionResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -209,6 +252,14 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public SetWorkflowTemplateEffectiveVersionResponseBody setSchemaVersion(Long schemaVersion) {
+        this.schemaVersion = schemaVersion;
+        return this;
+    }
+    public Long getSchemaVersion() {
+        return this.schemaVersion;
     }
 
     public SetWorkflowTemplateEffectiveVersionResponseBody setSteps(java.util.List<SetWorkflowTemplateEffectiveVersionResponseBodySteps> steps) {
@@ -262,16 +313,16 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
         public String modelMode;
 
         /**
-         * <p>The name of the step.</p>
+         * <p>The step name. This field can be empty for drafts but is required upon submission.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>Collect customer information</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The name of the digital worker executor. This parameter is required when ownerType is set to AGENT.</p>
+         * <p>The name of the agent owner.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -280,10 +331,10 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
         public String ownerAgentName;
 
         /**
-         * <p>The type of the executor. Valid values:</p>
+         * <p>The owner type. Valid values:</p>
          * <ul>
-         * <li>MEMBER: Workspace member.</li>
-         * <li>AGENT: Digital worker.</li>
+         * <li>MEMBER: Human.</li>
+         * <li>AGENT: Agent.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -293,7 +344,7 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
         public String ownerType;
 
         /**
-         * <p>The user ID of the member executor. This parameter is required when ownerType is set to MEMBER.</p>
+         * <p>The user ID of the human owner.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -302,7 +353,16 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
         public Long ownerUserId;
 
         /**
-         * <p>The list of user IDs of the owners (formerly reviewers). This parameter is valid only for steps with a digital worker executor and is always empty for steps with a member executor.</p>
+         * <p>是否人工审核产出物，默认关闭；仅数字员工可开启，审核待办自动发负责人</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("reviewOutput")
+        public Boolean reviewOutput;
+
+        /**
+         * <p>The list of user IDs of the reviewers.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -311,7 +371,7 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
         public java.util.List<Long> reviewerUserIds;
 
         /**
-         * <p>The order of the step.</p>
+         * <p>The step order.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -320,25 +380,25 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
         public Long sortOrder;
 
         /**
-         * <p>The array of ordered step description segments. Supported types include text, mention, skill, app, files, and web_search. When plain text is entered, a single text segment is returned. The fields and nested attachments of each segment are retained as-is by the backend.</p>
+         * <p>The display text derived from ordered segments. Fixed titles are not added, and the text is not stored independently.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;Organize input materials&quot;}]</p>
+         * <p>Collect customer information and submit it to the person in charge for review</p>
          */
         @NameInMap("specification")
         public String specification;
 
         /**
-         * <p>The array of structured step description segments. Supported types include text, mention, skill, app, files, and web_search. The fields and nested attachments of each segment are retained as-is by the backend.</p>
+         * <p>The array of ordered segments. Supports text, mention, skill, app, files, and web_search. Retains reference identities and order.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;Organize input materials&quot;}]</p>
+         * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;收集客户信息&quot;}]</p>
          */
         @NameInMap("specificationJson")
         public java.util.List<java.util.Map<String, ?>> specificationJson;
 
         /**
-         * <p>The ID of the step.</p>
+         * <p>The step ID.</p>
          * 
          * <strong>example:</strong>
          * <p>collect</p>
@@ -389,6 +449,14 @@ public class SetWorkflowTemplateEffectiveVersionResponseBody extends TeaModel {
         }
         public Long getOwnerUserId() {
             return this.ownerUserId;
+        }
+
+        public SetWorkflowTemplateEffectiveVersionResponseBodySteps setReviewOutput(Boolean reviewOutput) {
+            this.reviewOutput = reviewOutput;
+            return this;
+        }
+        public Boolean getReviewOutput() {
+            return this.reviewOutput;
         }
 
         public SetWorkflowTemplateEffectiveVersionResponseBodySteps setReviewerUserIds(java.util.List<Long> reviewerUserIds) {

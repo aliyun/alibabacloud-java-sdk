@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TransferTodoRequest extends TeaModel {
     /**
-     * <p>The handover description.</p>
+     * <p>The handover note.</p>
      * 
      * <strong>example:</strong>
      * <p>Please continue processing</p>
@@ -14,7 +14,7 @@ public class TransferTodoRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The list of target user IDs to whom the task is reassigned. You can specify 1 to 100 user IDs.</p>
+     * <p>The list of target user IDs for the transfer (1 to 100).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class TransferTodoRequest extends TeaModel {
     public java.util.List<String> targetUserIds;
 
     /**
-     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
+     * <p>The to-do item ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -33,7 +33,7 @@ public class TransferTodoRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The ID of the to-do task.</p>
+     * <p>The list of target user IDs for the transfer (1 to 100).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -9,7 +9,7 @@ public class CreateWorkflowTemplateDraftVersionRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>group_example</p>
+     * <p>cg_9401</p>
      */
     @NameInMap("collaborationGroupId")
     public String collaborationGroupId;
@@ -19,7 +19,7 @@ public class CreateWorkflowTemplateDraftVersionRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>tpl_example</p>
+     * <p>tpl_9401</p>
      */
     @NameInMap("templateId")
     public String templateId;
@@ -34,7 +34,7 @@ public class CreateWorkflowTemplateDraftVersionRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The version number of the template on which the edit is based. The format is a lowercase v followed by a positive integer, such as v1. A draft version is returned as-is.</p>
+     * <p>The version number to which the returned content belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

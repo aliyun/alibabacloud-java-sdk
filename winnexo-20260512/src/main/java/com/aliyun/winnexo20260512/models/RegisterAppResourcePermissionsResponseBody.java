@@ -14,7 +14,7 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error message. This parameter is empty if the request is successful.</p>
+     * <p>The error description. Empty if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>The requested resource does not exist</p>
@@ -23,13 +23,13 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The newly created or idempotently matched permission records.</p>
+     * <p>The created or idempotently matched permission records.</p>
      */
     @NameInMap("records")
     public java.util.List<RegisterAppResourcePermissionsResponseBodyRecords> records;
 
     /**
-     * <p>The request tracking ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -85,7 +85,7 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration time with a time zone. If omitted, the permissions never expire.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-12-31T23:59:59+08:00</p>
@@ -103,7 +103,7 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
         public String grantedBy;
 
         /**
-         * <p>The principal ID.</p>
+         * <p>The principal ID. Omit this parameter for ALL_USERS.</p>
          * 
          * <strong>example:</strong>
          * <p>10086</p>
@@ -157,7 +157,7 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
         public Long permissionId;
 
         /**
-         * <p>The resource key.</p>
+         * <p>The dot-separated resource key with the first segment as the APP application key.</p>
          * 
          * <strong>example:</strong>
          * <p>app.demo.resource_1</p>
@@ -166,7 +166,7 @@ public class RegisterAppResourcePermissionsResponseBody extends TeaModel {
         public String resourceKey;
 
         /**
-         * <p>The resource type.</p>
+         * <p>The resource type. Fixed to APP_RESOURCE.</p>
          * 
          * <strong>example:</strong>
          * <p>APP_RESOURCE</p>

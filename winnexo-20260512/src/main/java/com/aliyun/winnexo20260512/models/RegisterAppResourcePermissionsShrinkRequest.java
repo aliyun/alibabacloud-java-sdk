@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class RegisterAppResourcePermissionsShrinkRequest extends TeaModel {
     /**
-     * <p>The batch authorization items.</p>
+     * <p>The batch authorization item.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("items")
     public String itemsShrink;
 
     /**
-     * <p>The ID of the tenant to which the resource belongs. If not specified, the current tenant of the caller is used.</p>
+     * <p>The batch authorization item.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -21,7 +21,7 @@ public class RegisterAppResourcePermissionsShrinkRequest extends TeaModel {
     public String resourceTenantId;
 
     /**
-     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
+     * <p>The ID of the tenant to which the resource belongs. If omitted, the current tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

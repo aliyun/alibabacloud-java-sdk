@@ -9,7 +9,7 @@ public class GetWorkflowTemplateRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>group_example</p>
+     * <p>cg_9401</p>
      */
     @NameInMap("collaborationGroupId")
     public String collaborationGroupId;
@@ -19,7 +19,7 @@ public class GetWorkflowTemplateRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>tpl_example</p>
+     * <p>tpl_9401</p>
      */
     @NameInMap("templateId")
     public String templateId;

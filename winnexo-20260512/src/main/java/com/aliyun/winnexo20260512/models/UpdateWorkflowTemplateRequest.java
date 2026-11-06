@@ -7,8 +7,8 @@ public class UpdateWorkflowTemplateRequest extends TeaModel {
     /**
      * <p>The write action. Valid values:</p>
      * <ul>
-     * <li>SAVE: Saves the template as a draft without taking effect.</li>
-     * <li>SUBMIT: Saves and submits the template, setting it as the only effective version.
+     * <li>SAVE: Saves the template as a draft. The changes do not take effect. Node names and assignees can be left empty.</li>
+     * <li>SUBMIT: Requires complete nodes. Saves and submits the template as the only effective version.
      * Default value: SUBMIT.</li>
      * </ul>
      * 
@@ -23,23 +23,23 @@ public class UpdateWorkflowTemplateRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>group_example</p>
+     * <p>cg_9401</p>
      */
     @NameInMap("collaborationGroupId")
     public String collaborationGroupId;
 
     /**
-     * <p>The complete JSON definition of the template to overwrite the existing one.</p>
+     * <p>The complete JSON definition of the template. This overwrites the existing definition.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>{&quot;name&quot;:&quot;Customer Complaint Handling Process&quot;,&quot;schemaVersion&quot;:2,&quot;steps&quot;:[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;Collect Customer Information&quot;}]}</p>
      */
     @NameInMap("definition")
     public java.util.Map<String, ?> definition;
 
     /**
-     * <p>The submitted version number on which the new version is based. This parameter is mutually exclusive with the version parameter. If not specified, the current effective version is used as the fallback.</p>
+     * <p>The submitted version number on which the new version is based. This parameter is mutually exclusive with version. If you do not specify this parameter, the current effective version is used.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -52,7 +52,7 @@ public class UpdateWorkflowTemplateRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>tpl_example</p>
+     * <p>tpl_9401</p>
      */
     @NameInMap("templateId")
     public String templateId;
@@ -67,7 +67,7 @@ public class UpdateWorkflowTemplateRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The draft template version number to write. The format is a lowercase v followed by a positive integer, such as v1. Submitted versions cannot be written. If not specified, a new version is generated.</p>
+     * <p>The version number to which the content belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>v2</p>
@@ -76,10 +76,10 @@ public class UpdateWorkflowTemplateRequest extends TeaModel {
     public String version;
 
     /**
-     * <p>The version description. The maximum length is 500 characters. When writing a draft, if this parameter is not specified or is null, the original value is retained. An empty string clears the value.</p>
+     * <p>The change description for this version. An empty value indicates that no description is provided.</p>
      * 
      * <strong>example:</strong>
-     * <p>Add a review step</p>
+     * <p>Added a review step</p>
      */
     @NameInMap("versionDescription")
     public String versionDescription;

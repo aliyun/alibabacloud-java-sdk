@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitTodoRequest extends TeaModel {
     /**
-     * <p>The array of answers. The original text of the question must match the to-do question.</p>
+     * <p>The answer array. The original text of the question must align with the to-do question.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class SubmitTodoRequest extends TeaModel {
     public java.util.List<SubmitTodoRequestAnswers> answers;
 
     /**
-     * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
+     * <p>The to-do task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -24,7 +24,7 @@ public class SubmitTodoRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The ID of the to-do item.</p>
+     * <p>The answer array. The original text of the question must align with the to-do question.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class SubmitTodoRequest extends TeaModel {
         public java.util.List<String> answer;
 
         /**
-         * <p>The original text that corresponds to questions[].question.</p>
+         * <p>The original text corresponding to questions[].question.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

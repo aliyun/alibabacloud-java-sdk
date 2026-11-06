@@ -9,7 +9,7 @@ public class ListWorkflowTemplatesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>group_example</p>
+     * <p>cg_9401</p>
      */
     @NameInMap("collaborationGroupId")
     public String collaborationGroupId;
@@ -18,7 +18,7 @@ public class ListWorkflowTemplatesRequest extends TeaModel {
      * <p>The keyword for fuzzy search in the template name or description.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>Weekly report</p>
      */
     @NameInMap("keyword")
     public String keyword;
@@ -36,7 +36,7 @@ public class ListWorkflowTemplatesRequest extends TeaModel {
      * <p>The pagination token. Obtain the token from the nextToken parameter in the previous response. This parameter takes precedence over page if both are specified.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>tok_9401</p>
      */
     @NameInMap("nextToken")
     public String nextToken;

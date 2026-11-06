@@ -5,27 +5,27 @@ import com.aliyun.tea.*;
 
 public class ImportWorkflowTemplateRequest extends TeaModel {
     /**
-     * <p>The collaboration workspace ID.</p>
+     * <p>The ID of the collaboration workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>group_example</p>
+     * <p>cg_9401</p>
      */
     @NameInMap("collaborationGroupId")
     public String collaborationGroupId;
 
     /**
-     * <p>The portable template JSON. The stepId and sortOrder fields can be omitted.</p>
+     * <p>The portable template in JSON format. The stepId and sortOrder fields can be omitted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>{&quot;name&quot;:&quot;Customer Complaint Handling Process&quot;,&quot;schemaVersion&quot;:2}</p>
      */
     @NameInMap("template")
     public java.util.Map<String, ?> template;
 
     /**
-     * <p>The tenant ID. This is a common parameter. If omitted, the default tenant of the caller is used.</p>
+     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

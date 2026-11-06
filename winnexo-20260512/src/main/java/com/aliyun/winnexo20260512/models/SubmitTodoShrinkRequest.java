@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitTodoShrinkRequest extends TeaModel {
     /**
-     * <p>The array of answers. The original text of the question must match the to-do question.</p>
+     * <p>The answer array. The original text of the question must align with the to-do question.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class SubmitTodoShrinkRequest extends TeaModel {
     public String answersShrink;
 
     /**
-     * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
+     * <p>The to-do task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -24,7 +24,7 @@ public class SubmitTodoShrinkRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The ID of the to-do item.</p>
+     * <p>The answer array. The original text of the question must align with the to-do question.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

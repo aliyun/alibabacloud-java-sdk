@@ -32,7 +32,7 @@ public class GetAgentWorkLogResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The current page number, starting from 1.</p>
+     * <p>The page number, starting from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class GetAgentWorkLogResponseBody extends TeaModel {
     public Long page;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * <p>The number of entries per page. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -59,7 +59,7 @@ public class GetAgentWorkLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of filtered operation log entries.</p>
+     * <p>The total number of filtered operation logs.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -139,7 +139,7 @@ public class GetAgentWorkLogResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The saved raw record content. Tool invocations and artifact metadata are represented as JSON strings.</p>
+         * <p>The saved original record content. Tool invocations and artifact metadata are JSON strings.</p>
          * 
          * <strong>example:</strong>
          * <p>The data query for the current round is completed</p>
@@ -148,7 +148,7 @@ public class GetAgentWorkLogResponseBody extends TeaModel {
         public String detail;
 
         /**
-         * <p>The duration of this operation record, in milliseconds. The value is 0 for artifact records.</p>
+         * <p>The time consumed by the operation record, in milliseconds. The value is 0 for artifact records.</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>
@@ -157,7 +157,7 @@ public class GetAgentWorkLogResponseBody extends TeaModel {
         public Long duration;
 
         /**
-         * <p>The key of the node to which the record belongs. This is not the session ID.</p>
+         * <p>The optional node key.</p>
          * 
          * <strong>example:</strong>
          * <p>query.amount</p>
@@ -166,7 +166,7 @@ public class GetAgentWorkLogResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The time when the event was recorded, in ISO 8601 format. If the source record has no time, an empty string is returned.</p>
+         * <p>The event time of the record in ISO 8601 format. If the source record has no time, an empty string is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-14T08:00:00Z</p>

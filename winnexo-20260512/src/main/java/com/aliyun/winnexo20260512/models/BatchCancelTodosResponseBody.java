@@ -23,7 +23,7 @@ public class BatchCancelTodosResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error description.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The requested resource does not exist</p>

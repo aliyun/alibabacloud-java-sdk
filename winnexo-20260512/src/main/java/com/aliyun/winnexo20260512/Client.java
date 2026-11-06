@@ -14,6 +14,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "WinNexo";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("winnexo", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -214,10 +217,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Cancels to-do items in batches based on a set of to-do IDs. No error is reported for completed or non-existent items, ensuring idempotence.</p>
+     * <p>Cancels multiple to-do items based on a list of IDs. This operation is idempotent and does not return errors for completed or non-existent items.</p>
      * 
      * <b>summary</b> : 
-     * <p>Cancels to-do items in batches.</p>
+     * <p>Cancels multiple to-do items.</p>
      * 
      * @param tmpReq BatchCancelTodosRequest
      * @param headers map
@@ -263,10 +266,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Cancels to-do items in batches based on a set of to-do IDs. No error is reported for completed or non-existent items, ensuring idempotence.</p>
+     * <p>Cancels multiple to-do items based on a list of IDs. This operation is idempotent and does not return errors for completed or non-existent items.</p>
      * 
      * <b>summary</b> : 
-     * <p>Cancels to-do items in batches.</p>
+     * <p>Cancels multiple to-do items.</p>
      * 
      * @param request BatchCancelTodosRequest
      * @return BatchCancelTodosResponse
@@ -575,10 +578,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After authenticating each application in the batch, reuses the constant-time query of the service.</p>
+     * <p>Authenticates applications in batches and reuses constant-time service queries.</p>
      * 
      * <b>summary</b> : 
-     * <p>Checks resource permissions within applications in batches.</p>
+     * <p>Checks the permissions of resources within applications in batches.</p>
      * 
      * @param tmpReq CheckAppResourcePermissionsBatchRequest
      * @param headers map
@@ -636,10 +639,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After authenticating each application in the batch, reuses the constant-time query of the service.</p>
+     * <p>Authenticates applications in batches and reuses constant-time service queries.</p>
      * 
      * <b>summary</b> : 
-     * <p>Checks resource permissions within applications in batches.</p>
+     * <p>Checks the permissions of resources within applications in batches.</p>
      * 
      * @param request CheckAppResourcePermissionsBatchRequest
      * @return CheckAppResourcePermissionsBatchResponse
@@ -1218,6 +1221,91 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createCustomOrgWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建与页面一致的自由探索工作项及群话题，配置数字员工和可见范围；不发送消息，不自动执行；非幂等，超时先查询 queryWorkItemFeed</p>
+     * 
+     * <b>summary</b> : 
+     * <p>CreateFreeExplorationWorkItem</p>
+     * 
+     * @param tmpReq CreateFreeExplorationWorkItemRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateFreeExplorationWorkItemResponse
+     */
+    public CreateFreeExplorationWorkItemResponse createFreeExplorationWorkItemWithOptions(CreateFreeExplorationWorkItemRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateFreeExplorationWorkItemShrinkRequest request = new CreateFreeExplorationWorkItemShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.agentNames)) {
+            request.agentNamesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.agentNames, "agentNames", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.memberUserIds)) {
+            request.memberUserIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.memberUserIds, "memberUserIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentNamesShrink)) {
+            body.put("agentNames", request.agentNamesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.collaborationGroupId)) {
+            body.put("collaborationGroupId", request.collaborationGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberUserIdsShrink)) {
+            body.put("memberUserIds", request.memberUserIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            body.put("title", request.title);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.visibility)) {
+            body.put("visibility", request.visibility);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateFreeExplorationWorkItem"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/createFreeExplorationWorkItem"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFreeExplorationWorkItemResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建与页面一致的自由探索工作项及群话题，配置数字员工和可见范围；不发送消息，不自动执行；非幂等，超时先查询 queryWorkItemFeed</p>
+     * 
+     * <b>summary</b> : 
+     * <p>CreateFreeExplorationWorkItem</p>
+     * 
+     * @param request CreateFreeExplorationWorkItemRequest
+     * @return CreateFreeExplorationWorkItemResponse
+     */
+    public CreateFreeExplorationWorkItemResponse createFreeExplorationWorkItem(CreateFreeExplorationWorkItemRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createFreeExplorationWorkItemWithOptions(request, headers, runtime);
     }
 
     /**
@@ -5137,7 +5225,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Generates a draft version of a workflow template for editing by a storage management administrator. If the selected version is a draft, it is returned as-is (idempotent, no new version is created). If the selected version is committed, replication of its content is performed for content generation of a v(maximum version number + 1) draft. The effective version remains unchanged. You can subsequently use UpdateWorkflowTemplate and pass the returned version to save or commit the draft.</p>
+     * <p>Generates a draft version for editing a workflow template as a storage management administrator. If the selected version is a draft, it is returned as-is (idempotent, no new version is created). If the selected version is committed, replication of its content generation is performed to produce a v(maximum version number + 1) draft. The effective version remains unchanged. You can subsequently call UpdateWorkflowTemplate and pass the returned version to save or commit the draft.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a draft of a workflow template.</p>
@@ -5188,7 +5276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Generates a draft version of a workflow template for editing by a storage management administrator. If the selected version is a draft, it is returned as-is (idempotent, no new version is created). If the selected version is committed, replication of its content is performed for content generation of a v(maximum version number + 1) draft. The effective version remains unchanged. You can subsequently use UpdateWorkflowTemplate and pass the returned version to save or commit the draft.</p>
+     * <p>Generates a draft version for editing a workflow template as a storage management administrator. If the selected version is a draft, it is returned as-is (idempotent, no new version is created). If the selected version is committed, replication of its content generation is performed to produce a v(maximum version number + 1) draft. The effective version remains unchanged. You can subsequently call UpdateWorkflowTemplate and pass the returned version to save or commit the draft.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a draft of a workflow template.</p>
@@ -5204,10 +5292,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Verifies MANAGE permissions for each application and then calls the original atomic deletion capability.</p>
+     * <p>Invokes the original atomic deletion capability after passing MANAGE verification for each application.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes multiple resource permissions within an application.</p>
+     * <p>Deletes resource permissions within applications in batches.</p>
      * 
      * @param tmpReq DeleteAppResourcePermissionsRequest
      * @param headers map
@@ -5257,10 +5345,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Verifies MANAGE permissions for each application and then calls the original atomic deletion capability.</p>
+     * <p>Invokes the original atomic deletion capability after passing MANAGE verification for each application.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes multiple resource permissions within an application.</p>
+     * <p>Deletes resource permissions within applications in batches.</p>
      * 
      * @param request DeleteAppResourcePermissionsRequest
      * @return DeleteAppResourcePermissionsResponse
@@ -5829,10 +5917,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Exports a simplified template definition that can be re-imported by valid members.</p>
+     * <p>Exports a simplified template definition that can be re-imported.</p>
      * 
      * <b>summary</b> : 
-     * <p>Exports a simplified template definition that can be re-imported by valid members.</p>
+     * <p>Exports a simplified template definition that can be re-imported.</p>
      * 
      * @param request ExportWorkflowTemplateRequest
      * @param headers map
@@ -5880,10 +5968,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Exports a simplified template definition that can be re-imported by valid members.</p>
+     * <p>Exports a simplified template definition that can be re-imported.</p>
      * 
      * <b>summary</b> : 
-     * <p>Exports a simplified template definition that can be re-imported by valid members.</p>
+     * <p>Exports a simplified template definition that can be re-imported.</p>
      * 
      * @param request ExportWorkflowTemplateRequest
      * @return ExportWorkflowTemplateResponse
@@ -6182,6 +6270,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getChatSessionWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>获取数字员工对话生成文件的正文、预览地址或短期下载地址，支持工作流节点中的USER_OUTPUT_ITEM文件引用。调用者需通过租户、空间成员和文件来源权限校验。无需将文件登记为工作项产物；本接口不接受artifactId。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>预览和下载协作空间对话文件</p>
+     * 
+     * @param request GetCollaborationGroupOutputItemPreviewRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCollaborationGroupOutputItemPreviewResponse
+     */
+    public GetCollaborationGroupOutputItemPreviewResponse getCollaborationGroupOutputItemPreviewWithOptions(GetCollaborationGroupOutputItemPreviewRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collaborationGroupId)) {
+            body.put("collaborationGroupId", request.collaborationGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.itemId)) {
+            body.put("itemId", request.itemId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCollaborationGroupOutputItemPreview"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/getCollaborationGroupOutputItemPreview"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCollaborationGroupOutputItemPreviewResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>获取数字员工对话生成文件的正文、预览地址或短期下载地址，支持工作流节点中的USER_OUTPUT_ITEM文件引用。调用者需通过租户、空间成员和文件来源权限校验。无需将文件登记为工作项产物；本接口不接受artifactId。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>预览和下载协作空间对话文件</p>
+     * 
+     * @param request GetCollaborationGroupOutputItemPreviewRequest
+     * @return GetCollaborationGroupOutputItemPreviewResponse
+     */
+    public GetCollaborationGroupOutputItemPreviewResponse getCollaborationGroupOutputItemPreview(GetCollaborationGroupOutputItemPreviewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getCollaborationGroupOutputItemPreviewWithOptions(request, headers, runtime);
     }
 
     /**
@@ -6864,19 +7015,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation uploads files to an enterprise knowledge base.</li>
-     * <li>You must have the <code>DEVELOPMENT_KB_MANAGE</code> feature permission to call this operation.</li>
-     * <li>You must provide the OSS persistent address (<code>filePath</code>) of the file when uploading.</li>
-     * <li>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</li>
-     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base folder. Otherwise, the file is bound to the default root folder of the current digital employee.</li>
-     * <li>You can add tags to resources by using <code>sourceTags</code> for subsequent management and retrieval.</li>
-     * <li>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</li>
+     * <li>This API operation uploads files to the enterprise knowledge base.</li>
+     * <li>You must have the <code>DEVELOPMENT_KB_MANAGE</code> feature permission to call this API operation.</li>
+     * <li>When uploading a file, you must provide the OSS persistence address (<code>filePath</code>) of the file.</li>
+     * <li>Optional parameters include the public access URL and original file name of the file to enhance the completeness of the file information.</li>
+     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</li>
+     * <li>You can use <code>sourceTags</code> to add tags to resources for subsequent management and retrieval.</li>
+     * <li>This operation generates a bill (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves execution records of scheduled tasks.</p>
+     * <p>Retrieves the execution records of scheduled tasks.</p>
      * 
      * @param request GetScheduledTaskExecutionRecordsRequest
      * @param headers map
@@ -6934,19 +7085,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation uploads files to an enterprise knowledge base.</li>
-     * <li>You must have the <code>DEVELOPMENT_KB_MANAGE</code> feature permission to call this operation.</li>
-     * <li>You must provide the OSS persistent address (<code>filePath</code>) of the file when uploading.</li>
-     * <li>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</li>
-     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base folder. Otherwise, the file is bound to the default root folder of the current digital employee.</li>
-     * <li>You can add tags to resources by using <code>sourceTags</code> for subsequent management and retrieval.</li>
-     * <li>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</li>
+     * <li>This API operation uploads files to the enterprise knowledge base.</li>
+     * <li>You must have the <code>DEVELOPMENT_KB_MANAGE</code> feature permission to call this API operation.</li>
+     * <li>When uploading a file, you must provide the OSS persistence address (<code>filePath</code>) of the file.</li>
+     * <li>Optional parameters include the public access URL and original file name of the file to enhance the completeness of the file information.</li>
+     * <li>If <code>directoryId</code> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</li>
+     * <li>You can use <code>sourceTags</code> to add tags to resources for subsequent management and retrieval.</li>
+     * <li>This operation generates a bill (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves execution records of scheduled tasks.</p>
+     * <p>Retrieves the execution records of scheduled tasks.</p>
      * 
      * @param request GetScheduledTaskExecutionRecordsRequest
      * @return GetScheduledTaskExecutionRecordsResponse
@@ -8209,6 +8360,124 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询工作项审计记录</p>
+     * 
+     * @param request GetWorkItemAuditRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWorkItemAuditResponse
+     */
+    public GetWorkItemAuditResponse getWorkItemAuditWithOptions(GetWorkItemAuditRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collaborationGroupId)) {
+            body.put("collaborationGroupId", request.collaborationGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workItemId)) {
+            body.put("workItemId", request.workItemId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWorkItemAudit"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/getWorkItemAudit"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWorkItemAuditResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询工作项审计记录</p>
+     * 
+     * @param request GetWorkItemAuditRequest
+     * @return GetWorkItemAuditResponse
+     */
+    public GetWorkItemAuditResponse getWorkItemAudit(GetWorkItemAuditRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getWorkItemAuditWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询工作项运行总结</p>
+     * 
+     * @param request GetWorkItemRunSummariesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWorkItemRunSummariesResponse
+     */
+    public GetWorkItemRunSummariesResponse getWorkItemRunSummariesWithOptions(GetWorkItemRunSummariesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collaborationGroupId)) {
+            body.put("collaborationGroupId", request.collaborationGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeKey)) {
+            body.put("nodeKey", request.nodeKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workItemId)) {
+            body.put("workItemId", request.workItemId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWorkItemRunSummaries"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/getWorkItemRunSummaries"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWorkItemRunSummariesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询工作项运行总结</p>
+     * 
+     * @param request GetWorkItemRunSummariesRequest
+     * @return GetWorkItemRunSummariesResponse
+     */
+    public GetWorkItemRunSummariesResponse getWorkItemRunSummaries(GetWorkItemRunSummariesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getWorkItemRunSummariesWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Retrieves the instance based on the current member and work item visibility.</p>
      * 
@@ -8265,6 +8534,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getWorkflowInstanceWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>读取工作流节点配置</p>
+     * 
+     * @param request GetWorkflowNodeConfigurationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWorkflowNodeConfigurationResponse
+     */
+    public GetWorkflowNodeConfigurationResponse getWorkflowNodeConfigurationWithOptions(GetWorkflowNodeConfigurationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collaborationGroupId)) {
+            body.put("collaborationGroupId", request.collaborationGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("instanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            body.put("nodeId", request.nodeId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWorkflowNodeConfiguration"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/getWorkflowNodeConfiguration"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWorkflowNodeConfigurationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>读取工作流节点配置</p>
+     * 
+     * @param request GetWorkflowNodeConfigurationRequest
+     * @return GetWorkflowNodeConfigurationResponse
+     */
+    public GetWorkflowNodeConfigurationResponse getWorkflowNodeConfiguration(GetWorkflowNodeConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getWorkflowNodeConfigurationWithOptions(request, headers, runtime);
     }
 
     /**
@@ -8437,10 +8767,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Imports a portable template JSON and creates a new template. A new template is created regardless of whether the name is identical.</p>
+     * <p>Imports a portable template in JSON format and creates a new template regardless of the template name.</p>
      * 
      * <b>summary</b> : 
-     * <p>Imports a portable template JSON and creates a new template. A new template is created regardless of whether the name is identical.</p>
+     * <p>Imports a portable template in JSON format and creates a new template regardless of the template name.</p>
      * 
      * @param tmpReq ImportWorkflowTemplateRequest
      * @param headers map
@@ -8490,10 +8820,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Imports a portable template JSON and creates a new template. A new template is created regardless of whether the name is identical.</p>
+     * <p>Imports a portable template in JSON format and creates a new template regardless of the template name.</p>
      * 
      * <b>summary</b> : 
-     * <p>Imports a portable template JSON and creates a new template. A new template is created regardless of whether the name is identical.</p>
+     * <p>Imports a portable template in JSON format and creates a new template regardless of the template name.</p>
      * 
      * @param request ImportWorkflowTemplateRequest
      * @return ImportWorkflowTemplateResponse
@@ -8903,7 +9233,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Pages results by secure application prefix after APP/MANAGE authorization.</p>
+     * <p>Pages the resource authorization records by secure application prefix after APP/MANAGE authorization.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the resource authorization records within an application.</p>
@@ -8984,7 +9314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Pages results by secure application prefix after APP/MANAGE authorization.</p>
+     * <p>Pages the resource authorization records by secure application prefix after APP/MANAGE authorization.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the resource authorization records within an application.</p>
@@ -9000,10 +9330,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>An application prefix is required. The VIEW permission is required to query your own permissions, and the MANAGE permission is required to query permissions on behalf of others.</p>
+     * <p>Enforces the application prefix. The VIEW permission is required for querying your own resources, and the MANAGE permission is required for querying resources on behalf of others.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the valid resource permissions of a user within an application.</p>
+     * <p>Queries the effective resource permissions of a user within an application.</p>
      * 
      * @param tmpReq ListAppResourceUserPermissionsRequest
      * @param headers map
@@ -9077,10 +9407,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>An application prefix is required. The VIEW permission is required to query your own permissions, and the MANAGE permission is required to query permissions on behalf of others.</p>
+     * <p>Enforces the application prefix. The VIEW permission is required for querying your own resources, and the MANAGE permission is required for querying resources on behalf of others.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the valid resource permissions of a user within an application.</p>
+     * <p>Queries the effective resource permissions of a user within an application.</p>
      * 
      * @param request ListAppResourceUserPermissionsRequest
      * @return ListAppResourceUserPermissionsResponse
@@ -9498,6 +9828,144 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listChatSessionsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>分页查询指定空间的有效成员，支持按成员显示名称搜索。调用者必须是当前租户内该空间的有效成员。isActive表示租户账号启用状态，不表示人事在职状态。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询协作空间成员</p>
+     * 
+     * @param request ListCollaborationGroupMembersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCollaborationGroupMembersResponse
+     */
+    public ListCollaborationGroupMembersResponse listCollaborationGroupMembersWithOptions(ListCollaborationGroupMembersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collaborationGroupId)) {
+            body.put("collaborationGroupId", request.collaborationGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            body.put("keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            body.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCollaborationGroupMembers"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/listCollaborationGroupMembers"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCollaborationGroupMembersResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>分页查询指定空间的有效成员，支持按成员显示名称搜索。调用者必须是当前租户内该空间的有效成员。isActive表示租户账号启用状态，不表示人事在职状态。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询协作空间成员</p>
+     * 
+     * @param request ListCollaborationGroupMembersRequest
+     * @return ListCollaborationGroupMembersResponse
+     */
+    public ListCollaborationGroupMembersResponse listCollaborationGroupMembers(ListCollaborationGroupMembersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listCollaborationGroupMembersWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>分页查询当前调用用户在当前租户中有效加入的协作空间，支持按空间名称搜索。仅返回ACTIVE空间；需要关联平台用户的调用身份，不支持无用户身份的部署凭证。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询当前用户可见的协作空间</p>
+     * 
+     * @param request ListCollaborationGroupsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCollaborationGroupsResponse
+     */
+    public ListCollaborationGroupsResponse listCollaborationGroupsWithOptions(ListCollaborationGroupsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            body.put("keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            body.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCollaborationGroups"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/listCollaborationGroups"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCollaborationGroupsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>分页查询当前调用用户在当前租户中有效加入的协作空间，支持按空间名称搜索。仅返回ACTIVE空间；需要关联平台用户的调用身份，不支持无用户身份的部署凭证。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询当前用户可见的协作空间</p>
+     * 
+     * @param request ListCollaborationGroupsRequest
+     * @return ListCollaborationGroupsResponse
+     */
+    public ListCollaborationGroupsResponse listCollaborationGroups(ListCollaborationGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listCollaborationGroupsWithOptions(request, headers, runtime);
     }
 
     /**
@@ -10094,12 +10562,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If collaborationGroupId is not provided, queries the personal outputs of the current invoker. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The invoker identity and tenant permissions are determined by the authentication context.
-     * sessionId requires an exact match for a regular session, skill session, or node execution session. tags requires all labels to match simultaneously. bizId requires an exact match for the business ID of the file registration or associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using AND, and are executed before counting and paging.
-     * Labels and business IDs are derived from file registrations or workflow instance associations. Unregistered labels or business IDs are not inferred from titles. Paging defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API.</p>
+     * <p>If collaborationGroupId is not provided, queries the personal outputs of the current caller. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The caller identity and tenant permissions are determined by the authentication context.
+     * The sessionId parameter performs an exact match on a regular session, skill session, or node execution session. The tags parameter requires all specified labels to match simultaneously. The bizId parameter performs an exact match on the business ID of the file registration or associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using the AND operator, and are executed before counting and paging.
+     * Tags and business IDs are derived from file registrations or workflow instance associations. Unregistered tags or business IDs are not inferred from titles. Pagination defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API.
+     * For versioned files, the latest published version is returned by default without expanding historical versions. This API does not currently support querying specific versions. Pagination and the total count are still based on the primary output records, deduplicated by outputId, and are not counted by the number of files or historical versions.
+     * For versioned files, fileInfo.path is a time-sensitive download link attached to the published version and content revisions selected during the query. Downloads do not perform an automatic switchover to other versions published later. Invoke this API again to obtain a new link after the current one expires. Historical files that have not yet formed a published version may not return download information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the visible outputs of the current user or a specified collaboration workspace. Supports paging and filtering by session, labels, business ID, and existing output filter conditions.</p>
+     * <p>Performs a paged query of the visible outputs and the latest published file versions for the current user or a specified collaboration workspace. Supports filtering by session, label, and business ID. The paging and total count are calculated based on the primary output records.</p>
      * 
      * @param tmpReq ListOutputFilesRequest
      * @param headers map
@@ -10181,12 +10651,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If collaborationGroupId is not provided, queries the personal outputs of the current invoker. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The invoker identity and tenant permissions are determined by the authentication context.
-     * sessionId requires an exact match for a regular session, skill session, or node execution session. tags requires all labels to match simultaneously. bizId requires an exact match for the business ID of the file registration or associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using AND, and are executed before counting and paging.
-     * Labels and business IDs are derived from file registrations or workflow instance associations. Unregistered labels or business IDs are not inferred from titles. Paging defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API.</p>
+     * <p>If collaborationGroupId is not provided, queries the personal outputs of the current caller. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The caller identity and tenant permissions are determined by the authentication context.
+     * The sessionId parameter performs an exact match on a regular session, skill session, or node execution session. The tags parameter requires all specified labels to match simultaneously. The bizId parameter performs an exact match on the business ID of the file registration or associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using the AND operator, and are executed before counting and paging.
+     * Tags and business IDs are derived from file registrations or workflow instance associations. Unregistered tags or business IDs are not inferred from titles. Pagination defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API.
+     * For versioned files, the latest published version is returned by default without expanding historical versions. This API does not currently support querying specific versions. Pagination and the total count are still based on the primary output records, deduplicated by outputId, and are not counted by the number of files or historical versions.
+     * For versioned files, fileInfo.path is a time-sensitive download link attached to the published version and content revisions selected during the query. Downloads do not perform an automatic switchover to other versions published later. Invoke this API again to obtain a new link after the current one expires. Historical files that have not yet formed a published version may not return download information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the visible outputs of the current user or a specified collaboration workspace. Supports paging and filtering by session, labels, business ID, and existing output filter conditions.</p>
+     * <p>Performs a paged query of the visible outputs and the latest published file versions for the current user or a specified collaboration workspace. Supports filtering by session, label, and business ID. The paging and total count are calculated based on the primary output records.</p>
      * 
      * @param request ListOutputFilesRequest
      * @return ListOutputFilesResponse
@@ -11638,10 +12110,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Searches for valid templates in the current collaboration space with pagination. Supports both page/pageSize and nextToken/maxResults parameters, with token-based pagination taking precedence.</p>
+     * <p>Queries valid templates in the current collaboration space with pagination. If both page/pageSize and nextToken/maxResults are specified, the token takes precedence.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries valid templates in the current collaboration space with pagination. Supports both page/pageSize and nextToken/maxResults parameters, with token-based pagination taking precedence.</p>
+     * <p>Queries valid templates in the current collaboration space with pagination. If both page/pageSize and nextToken/maxResults are specified, the token takes precedence.</p>
      * 
      * @param request ListWorkflowTemplatesRequest
      * @param headers map
@@ -11701,10 +12173,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Searches for valid templates in the current collaboration space with pagination. Supports both page/pageSize and nextToken/maxResults parameters, with token-based pagination taking precedence.</p>
+     * <p>Queries valid templates in the current collaboration space with pagination. If both page/pageSize and nextToken/maxResults are specified, the token takes precedence.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries valid templates in the current collaboration space with pagination. Supports both page/pageSize and nextToken/maxResults parameters, with token-based pagination taking precedence.</p>
+     * <p>Queries valid templates in the current collaboration space with pagination. If both page/pageSize and nextToken/maxResults are specified, the token takes precedence.</p>
      * 
      * @param request ListWorkflowTemplatesRequest
      * @return ListWorkflowTemplatesResponse
@@ -11717,7 +12189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Marks the to-do items of the current user as read. The markAllRead parameter takes precedence over the todoIds parameter. If both parameters are empty, no error is returned.</p>
+     * <p>Marks the to-do items of the current user as read. The markAllRead parameter takes precedence over todoIds. No error is reported if both are empty.</p>
      * 
      * <b>summary</b> : 
      * <p>Marks to-do items as read.</p>
@@ -11770,7 +12242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Marks the to-do items of the current user as read. The markAllRead parameter takes precedence over the todoIds parameter. If both parameters are empty, no error is returned.</p>
+     * <p>Marks the to-do items of the current user as read. The markAllRead parameter takes precedence over todoIds. No error is reported if both are empty.</p>
      * 
      * <b>summary</b> : 
      * <p>Marks to-do items as read.</p>
@@ -12818,10 +13290,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Checks the MANAGE permission for all applications first, and then performs an atomic batch registration.</p>
+     * <p>Checks the MANAGE permissions for all applications and then performs an atomic batch registration.</p>
      * 
      * <b>summary</b> : 
-     * <p>Registers in-app resource permissions in bulk.</p>
+     * <p>Registers permissions for in-app resources in batches.</p>
      * 
      * @param tmpReq RegisterAppResourcePermissionsRequest
      * @param headers map
@@ -12871,10 +13343,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Checks the MANAGE permission for all applications first, and then performs an atomic batch registration.</p>
+     * <p>Checks the MANAGE permissions for all applications and then performs an atomic batch registration.</p>
      * 
      * <b>summary</b> : 
-     * <p>Registers in-app resource permissions in bulk.</p>
+     * <p>Registers permissions for in-app resources in batches.</p>
      * 
      * @param request RegisterAppResourcePermissionsRequest
      * @return RegisterAppResourcePermissionsResponse
@@ -13823,6 +14295,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>从工作项指定节点重跑；沿用业务权限和状态校验，命令接受不代表异步执行完成</p>
+     * 
+     * <b>summary</b> : 
+     * <p>RerunWorkflowNode</p>
+     * 
+     * @param request RerunWorkflowNodeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RerunWorkflowNodeResponse
+     */
+    public RerunWorkflowNodeResponse rerunWorkflowNodeWithOptions(RerunWorkflowNodeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collaborationGroupId)) {
+            body.put("collaborationGroupId", request.collaborationGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeKey)) {
+            body.put("nodeKey", request.nodeKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planId)) {
+            body.put("planId", request.planId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RerunWorkflowNode"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/rerunWorkflowNode"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RerunWorkflowNodeResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>从工作项指定节点重跑；沿用业务权限和状态校验，命令接受不代表异步执行完成</p>
+     * 
+     * <b>summary</b> : 
+     * <p>RerunWorkflowNode</p>
+     * 
+     * @param request RerunWorkflowNodeRequest
+     * @return RerunWorkflowNodeResponse
+     */
+    public RerunWorkflowNodeResponse rerunWorkflowNode(RerunWorkflowNodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.rerunWorkflowNodeWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Resets the password of a user through OpenAPI.
      *     Business orchestration:
      *     1. Call UserManagementService.reset_member_password with password_encrypted (required).
@@ -13973,6 +14512,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.resetTokenWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>恢复工作流节点默认配置</p>
+     * 
+     * @param request ResetWorkflowNodeConfigurationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResetWorkflowNodeConfigurationResponse
+     */
+    public ResetWorkflowNodeConfigurationResponse resetWorkflowNodeConfigurationWithOptions(ResetWorkflowNodeConfigurationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collaborationGroupId)) {
+            body.put("collaborationGroupId", request.collaborationGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedVersion)) {
+            body.put("expectedVersion", request.expectedVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("instanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            body.put("nodeId", request.nodeId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResetWorkflowNodeConfiguration"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/resetWorkflowNodeConfiguration"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResetWorkflowNodeConfigurationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>恢复工作流节点默认配置</p>
+     * 
+     * @param request ResetWorkflowNodeConfigurationRequest
+     * @return ResetWorkflowNodeConfigurationResponse
+     */
+    public ResetWorkflowNodeConfigurationResponse resetWorkflowNodeConfiguration(ResetWorkflowNodeConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.resetWorkflowNodeConfigurationWithOptions(request, headers, runtime);
     }
 
     /**
@@ -15349,13 +15953,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</li>
-     * <li><code>source_type</code> is fixed to <code>FILE</code>, <code>scope</code> is fixed to <code>PERSONAL</code>, and <code>platform</code> is fixed to <code>LOCAL</code>.</li>
-     * <li>You must provide an OSS persistent address (<code>filePath</code>) for the file. Other information such as the public access URL and original file name is optional.</li>
-     * <li>If you do not specify a target folder ID (<code>directoryId</code>), the file is automatically attached to the default root folder of the current digital employee. If you specify a folder ID, make sure the folder belongs to the invoker\&quot;s personal folder.</li>
-     * <li>Multiple authentication methods (AK, BearerToken, and APP) are supported for security authentication.</li>
+     * <li>This API is used to upload a file to My Resources of a specified digital employee.</li>
+     * <li>The source_type is fixed to FILE, the scope is fixed to PERSONAL, and the platform is fixed to LOCAL.</li>
+     * <li>The file must be provided with an OSS persistence address (filePath). Other information, such as the public access URL and original file name, is optional.</li>
+     * <li>If the destination folder ID (directoryId) is not specified, the file is automatically attached to the default root folder of the current digital employee. If it is specified, ensure that the folder belongs to the personal folder of the invoker.</li>
+     * <li>Multiple methods to authenticate (such as AK, BearerToken, and APP) are supported for security authentication.</li>
      * <li>The operation type is write, and operation logs are recorded for subsequent auditing.</li>
      * </ul>
      * 
@@ -15458,13 +16062,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</li>
-     * <li><code>source_type</code> is fixed to <code>FILE</code>, <code>scope</code> is fixed to <code>PERSONAL</code>, and <code>platform</code> is fixed to <code>LOCAL</code>.</li>
-     * <li>You must provide an OSS persistent address (<code>filePath</code>) for the file. Other information such as the public access URL and original file name is optional.</li>
-     * <li>If you do not specify a target folder ID (<code>directoryId</code>), the file is automatically attached to the default root folder of the current digital employee. If you specify a folder ID, make sure the folder belongs to the invoker\&quot;s personal folder.</li>
-     * <li>Multiple authentication methods (AK, BearerToken, and APP) are supported for security authentication.</li>
+     * <li>This API is used to upload a file to My Resources of a specified digital employee.</li>
+     * <li>The source_type is fixed to FILE, the scope is fixed to PERSONAL, and the platform is fixed to LOCAL.</li>
+     * <li>The file must be provided with an OSS persistence address (filePath). Other information, such as the public access URL and original file name, is optional.</li>
+     * <li>If the destination folder ID (directoryId) is not specified, the file is automatically attached to the default root folder of the current digital employee. If it is specified, ensure that the folder belongs to the personal folder of the invoker.</li>
+     * <li>Multiple methods to authenticate (such as AK, BearerToken, and APP) are supported for security authentication.</li>
      * <li>The operation type is write, and operation logs are recorded for subsequent auditing.</li>
      * </ul>
      * 
@@ -15478,6 +16082,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.sendChatMessageWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>向当前租户、指定协作空间内的已有自由探索会话发送文本消息，立即返回消息提交回执，AI回复在后台异步生成。调用者需关联平台用户并具有话题发送权限。workItemId与conversationId至少传一个，同时传入时必须指向同一会话。不创建新会话，不支持工作流节点话题或Master话题。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>向自由探索工作项发送消息</p>
+     * 
+     * @param request SendWorkItemMessageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendWorkItemMessageResponse
+     */
+    public SendWorkItemMessageResponse sendWorkItemMessageWithOptions(SendWorkItemMessageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collaborationGroupId)) {
+            body.put("collaborationGroupId", request.collaborationGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            body.put("content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conversationId)) {
+            body.put("conversationId", request.conversationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workItemId)) {
+            body.put("workItemId", request.workItemId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SendWorkItemMessage"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/sendWorkItemMessage"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendWorkItemMessageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>向当前租户、指定协作空间内的已有自由探索会话发送文本消息，立即返回消息提交回执，AI回复在后台异步生成。调用者需关联平台用户并具有话题发送权限。workItemId与conversationId至少传一个，同时传入时必须指向同一会话。不创建新会话，不支持工作流节点话题或Master话题。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>向自由探索工作项发送消息</p>
+     * 
+     * @param request SendWorkItemMessageRequest
+     * @return SendWorkItemMessageResponse
+     */
+    public SendWorkItemMessageResponse sendWorkItemMessage(SendWorkItemMessageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.sendWorkItemMessageWithOptions(request, headers, runtime);
     }
 
     /**
@@ -15549,10 +16224,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The workspace administrator configures the Settings for the effective version of a workflow template. Only versions with a commit are allowed, and each template can have only one effective version. Before taking effect, the version is re-verified based on the current workspace members, digital workers, capabilities, and storage management. Existing work items use their own execute snapshots and are not affected.</p>
+     * <p>The storage management administrator configures the Settings for the effective version of a workflow template. Only versions with a commit are allowed, and each template can have only one effective version. Before the version takes effect, it is revalidated against the current workspace members, digital employees, and capabilities. Existing work items use their own execute snapshots and remain unaffected.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets the effective version of a workflow.</p>
+     * <p>Sets the Settings of the effective version of a workflow template for the storage management administrator. Only versions with a commit are allowed, and each template can have only one effective version. Before the version takes effect, it is revalidated against the current workspace members, digital employees, and capabilities. Existing work items use their own execute snapshots and remain unaffected.</p>
      * 
      * @param request SetWorkflowTemplateEffectiveVersionRequest
      * @param headers map
@@ -15600,10 +16275,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The workspace administrator configures the Settings for the effective version of a workflow template. Only versions with a commit are allowed, and each template can have only one effective version. Before taking effect, the version is re-verified based on the current workspace members, digital workers, capabilities, and storage management. Existing work items use their own execute snapshots and are not affected.</p>
+     * <p>The storage management administrator configures the Settings for the effective version of a workflow template. Only versions with a commit are allowed, and each template can have only one effective version. Before the version takes effect, it is revalidated against the current workspace members, digital employees, and capabilities. Existing work items use their own execute snapshots and remain unaffected.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets the effective version of a workflow.</p>
+     * <p>Sets the Settings of the effective version of a workflow template for the storage management administrator. Only versions with a commit are allowed, and each template can have only one effective version. Before the version takes effect, it is revalidated against the current workspace members, digital employees, and capabilities. Existing work items use their own execute snapshots and remain unaffected.</p>
      * 
      * @param request SetWorkflowTemplateEffectiveVersionRequest
      * @return SetWorkflowTemplateEffectiveVersionResponse
@@ -15724,10 +16399,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submits the answers for a to-do item. Repeated submissions by the same user are idempotent and return the initial result. If another user completes the item first, a 409 AlreadyCompleted error is returned.</p>
+     * <p>Submits the answers for a to-do task. If the same user submits the answers repeatedly, the operation is idempotent and returns the first result. If another user completes the task first, a 409 AlreadyCompleted error is returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits answers for a to-do item.</p>
+     * <p>Submits the answers for a to-do task.</p>
      * 
      * @param tmpReq SubmitTodoRequest
      * @param headers map
@@ -15777,10 +16452,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submits the answers for a to-do item. Repeated submissions by the same user are idempotent and return the initial result. If another user completes the item first, a 409 AlreadyCompleted error is returned.</p>
+     * <p>Submits the answers for a to-do task. If the same user submits the answers repeatedly, the operation is idempotent and returns the first result. If another user completes the task first, a 409 AlreadyCompleted error is returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits answers for a to-do item.</p>
+     * <p>Submits the answers for a to-do task.</p>
      * 
      * @param request SubmitTodoRequest
      * @return SubmitTodoResponse
@@ -16257,10 +16932,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Reassigns a to-do task to specified users. The operator is excluded from the target list, and atomic validation is performed for the entire task.</p>
+     * <p>Transfers a to-do item to specified users, excludes the operator from the targets, and performs atomic validation for the entire task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Reassigns a to-do task.</p>
+     * <p>Transfers a to-do item.</p>
      * 
      * @param tmpReq TransferTodoRequest
      * @param headers map
@@ -16314,10 +16989,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Reassigns a to-do task to specified users. The operator is excluded from the target list, and atomic validation is performed for the entire task.</p>
+     * <p>Transfers a to-do item to specified users, excludes the operator from the targets, and performs atomic validation for the entire task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Reassigns a to-do task.</p>
+     * <p>Transfers a to-do item.</p>
      * 
      * @param request TransferTodoRequest
      * @return TransferTodoResponse
@@ -17780,11 +18455,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>编辑工作流节点配置</p>
+     * 
+     * @param tmpReq UpdateWorkflowNodeConfigurationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateWorkflowNodeConfigurationResponse
+     */
+    public UpdateWorkflowNodeConfigurationResponse updateWorkflowNodeConfigurationWithOptions(UpdateWorkflowNodeConfigurationRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateWorkflowNodeConfigurationShrinkRequest request = new UpdateWorkflowNodeConfigurationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.executor)) {
+            request.executorShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.executor, "executor", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.responsibleUserIds)) {
+            request.responsibleUserIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.responsibleUserIds, "responsibleUserIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collaborationGroupId)) {
+            body.put("collaborationGroupId", request.collaborationGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executorShrink)) {
+            body.put("executor", request.executorShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedVersion)) {
+            body.put("expectedVersion", request.expectedVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("instanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            body.put("model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            body.put("nodeId", request.nodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responsibleUserIdsShrink)) {
+            body.put("responsibleUserIds", request.responsibleUserIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateWorkflowNodeConfiguration"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/updateWorkflowNodeConfiguration"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateWorkflowNodeConfigurationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>编辑工作流节点配置</p>
+     * 
+     * @param request UpdateWorkflowNodeConfigurationRequest
+     * @return UpdateWorkflowNodeConfigurationResponse
+     */
+    public UpdateWorkflowNodeConfigurationResponse updateWorkflowNodeConfiguration(UpdateWorkflowNodeConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateWorkflowNodeConfigurationWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>Overwrites and updates a workflow template. The last save takes effect.</p>
+     * <p>Updates a workflow template by overwriting it with valid members. The last save takes effect.</p>
      * 
      * <b>summary</b> : 
-     * <p>Overwrites and updates a workflow template. The last save takes effect.</p>
+     * <p>Updates a workflow template by overwriting it with valid members. The last save takes effect.</p>
      * 
      * @param tmpReq UpdateWorkflowTemplateRequest
      * @param headers map
@@ -17854,10 +18616,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Overwrites and updates a workflow template. The last save takes effect.</p>
+     * <p>Updates a workflow template by overwriting it with valid members. The last save takes effect.</p>
      * 
      * <b>summary</b> : 
-     * <p>Overwrites and updates a workflow template. The last save takes effect.</p>
+     * <p>Updates a workflow template by overwriting it with valid members. The last save takes effect.</p>
      * 
      * @param request UpdateWorkflowTemplateRequest
      * @return UpdateWorkflowTemplateResponse

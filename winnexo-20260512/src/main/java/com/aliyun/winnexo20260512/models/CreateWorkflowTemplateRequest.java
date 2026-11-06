@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateWorkflowTemplateRequest extends TeaModel {
     /**
-     * <p>The write action. Valid values: SAVE: Saves the template as a draft without taking effect. SUBMIT: Saves and submits the template and sets it as the only effective version. Default value: SUBMIT.</p>
+     * <p>The write action. Valid values:</p>
+     * <ul>
+     * <li>SAVE: Saves the template as a draft. The draft does not take effect. Node names and assignees can be left empty.</li>
+     * <li>SUBMIT: Requires complete nodes. The template is saved and submitted as the only effective version.
+     * Default value: SUBMIT.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>SUBMIT</p>
@@ -18,7 +23,7 @@ public class CreateWorkflowTemplateRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>group_example</p>
+     * <p>cg_9401</p>
      */
     @NameInMap("collaborationGroupId")
     public String collaborationGroupId;
@@ -28,13 +33,13 @@ public class CreateWorkflowTemplateRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>{&quot;name&quot;:&quot;Customer Complaint Handling Process&quot;,&quot;schemaVersion&quot;:2,&quot;steps&quot;:[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;Collect Customer Information&quot;}]}</p>
      */
     @NameInMap("definition")
     public java.util.Map<String, ?> definition;
 
     /**
-     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
+     * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

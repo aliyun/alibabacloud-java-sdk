@@ -29,7 +29,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page number.</p>
+     * <p>The number of items per page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
     public Long page;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The principal type filter.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +47,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -154,7 +154,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
         public String grantedBy;
 
         /**
-         * <p>The grantee ID.</p>
+         * <p>The tenant filter for cross-tenant users.</p>
          * 
          * <strong>example:</strong>
          * <p>10086</p>
@@ -163,7 +163,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
         public String granteeId;
 
         /**
-         * <p>The grantee name.</p>
+         * <p>The principal name.</p>
          * 
          * <strong>example:</strong>
          * <p>Zhang San</p>
@@ -172,7 +172,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
         public String granteeName;
 
         /**
-         * <p>The ID of the tenant to which the cross-tenant user belongs.</p>
+         * <p>The permission filter.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -181,7 +181,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
         public String granteeTenantId;
 
         /**
-         * <p>The grantee type.</p>
+         * <p>The principal ID filter.</p>
          * 
          * <strong>example:</strong>
          * <p>USER</p>
@@ -199,7 +199,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
         public String permission;
 
         /**
-         * <p>The ID of the permission record.</p>
+         * <p>The permission record ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1001</p>
@@ -217,7 +217,7 @@ public class ListAppResourcePermissionRecordsResponseBody extends TeaModel {
         public String resourceKey;
 
         /**
-         * <p>The resource type.</p>
+         * <p>The application key or its subpath.</p>
          * 
          * <strong>example:</strong>
          * <p>APP_RESOURCE</p>

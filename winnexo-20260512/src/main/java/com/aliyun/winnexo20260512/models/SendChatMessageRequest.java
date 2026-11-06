@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendChatMessageRequest extends TeaModel {
     /**
-     * <p>The message body from the user.</p>
+     * <p>The body of the user message.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class SendChatMessageRequest extends TeaModel {
     public String contentType;
 
     /**
-     * <p>The list of digital employee names. A single string can be passed for backward compatibility with the legacy format.</p>
+     * <p>The list of digital employee names. For compatibility with the legacy format, a single string can be passed.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -33,7 +33,7 @@ public class SendChatMessageRequest extends TeaModel {
     public java.util.List<String> digitalEmployeeName;
 
     /**
-     * <p>Specifies whether to enable direct connection mode. If set to true, the standard scenario routing is skipped and the direct conversation scenario is entered directly.</p>
+     * <p>Specifies whether to enable the direct connection mode. If this parameter is set to true, the regular scenario routing is skipped and the direct connection conversation scenario is directly entered.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -42,7 +42,7 @@ public class SendChatMessageRequest extends TeaModel {
     public Boolean directChat;
 
     /**
-     * <p>Specifies whether to enable web search. Default value: False. In task execution scenarios (when taskExecution is provided), the task configuration takes precedence.</p>
+     * <p>Specifies whether to enable web search. Default value: false. In the task execution scenario where taskExecution is passed, the task configuration prevails.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -51,13 +51,13 @@ public class SendChatMessageRequest extends TeaModel {
     public Boolean enableWebSearch;
 
     /**
-     * <p>The list of file references. Each item is an object, and fileId is required (returned by uploadChatFile).</p>
+     * <p>The list of file references. Each item is an object, and the fileId parameter is required, which is returned by uploadChatFile.</p>
      */
     @NameInMap("files")
     public java.util.List<SendChatMessageRequestFiles> files;
 
     /**
-     * <p>The abstract model tier. Valid values: quick, standard, and flagship. If not specified, new sessions use standard, and existing sessions retain the current session tier.</p>
+     * <p>The abstract model tier. Valid values: quick, standard, and flagship. If this parameter is not specified, standard is used for new sessions, and the current tier is used for existing sessions.</p>
      * 
      * <strong>example:</strong>
      * <p>quick</p>
@@ -66,7 +66,7 @@ public class SendChatMessageRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>Specifies whether to reuse the most recent session of the digital employee when sessionId is not provided (CLI scenario). Default value: false, which creates a new session.</p>
+     * <p>Specifies whether to reuse the most recent session under the digital employee when sessionId is not passed, which applies to CLI scenarios. Default value: false, which indicates that a new session is created.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -93,7 +93,7 @@ public class SendChatMessageRequest extends TeaModel {
     public Boolean stream;
 
     /**
-     * <p>The task execution metadata returned by executeScheduledTask. When provided, the request is processed through the task execution pipeline.</p>
+     * <p>The task execution metadata returned by executeScheduledTask. If this parameter is passed, the request is processed according to the task execution link.</p>
      */
     @NameInMap("taskExecution")
     public SendChatMessageRequestTaskExecution taskExecution;
@@ -108,13 +108,7 @@ public class SendChatMessageRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The session work mode. Valid values:</p>
-     * <ul>
-     * <li>ask: Quick Q&amp;A. Tools, skills, and connectors are trimmed, and single-turn direct answers are provided.</li>
-     * <li>work: Deep work. This is the default value.</li>
-     * <li>direct: Direct connection mode (request-level). The sandbox is not started and no context pollution occurs. This is equivalent to directChat=true.</li>
-     * </ul>
-     * <p>The ask and work modes are session-level: the mode is selected and fixed when a session is created. By default, follow-up messages inherit the session mode. If an explicitly provided value is inconsistent with the session mode, a parameter error is returned. To switch modes, create a new session or fork the existing one. In multi-digital-employee or task execution scenarios, if ask is provided, work takes effect instead. When directChat=true, this parameter is ignored.</p>
+     * <p>The session work mode. Valid values: ask (quick Q&amp;A, which trims tools, skills, and connectors for single-turn direct answers), work (deep work, which is the default value), and direct (direct connection mode at the request level, which does not start the sandbox and prevents context pollution, equivalent to directChat=true). The ask and work modes are at the session level. The mode is fixed when a new session is created. Subsequent chats inherit the session mode by default. If the explicitly passed value is inconsistent with the session mode, a parameter error is returned. To switch the mode, create a new session or fork the session. If ask is passed in the multi-digital employee or task execution scenario, it takes effect as work. If directChat is set to true, this parameter is ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>work</p>
@@ -304,7 +298,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String executionId;
 
         /**
-         * <p>The digital employee name.</p>
+         * <p>The name of the digital employee.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -350,7 +344,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String taskUnderstand;
 
         /**
-         * <p>The tenant ID to which the task belongs.</p>
+         * <p>The ID of the tenant to which the task belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -359,7 +353,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>The user ID to which the task belongs.</p>
+         * <p>The ID of the user to which the task belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleUserId</p>

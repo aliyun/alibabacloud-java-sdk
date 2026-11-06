@@ -14,7 +14,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The output list.</p>
+     * <p>The list of output main records on the current page. By default, the latest published version is returned for file details.</p>
      */
     @NameInMap("items")
     public java.util.List<ListOutputFilesResponseBodyItems> items;
@@ -29,7 +29,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The current page number.</p>
+     * <p>The current page number, starting from 1. Pagination is based on primary output records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
     public Long page;
 
     /**
-     * <p>The number of items per page.</p>
+     * <p>The number of primary output records per page. Default value: 20. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -56,7 +56,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of matching outputs.</p>
+     * <p>The total number of primary output records that meet the filter conditions. The count is deduplicated by outputId and does not include the number of files or historical versions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -130,7 +130,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The email content.</p>
          * 
          * <strong>example:</strong>
-         * <p>The quarterly business report has been generated. Please review</p>
+         * <p>The quarterly business report has been generated. Please check your inbox</p>
          */
         @NameInMap("body")
         public String body;
@@ -145,7 +145,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The recipient list.</p>
+         * <p>The list of recipients.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;<a href="mailto:reader@example.com">reader@example.com</a>&quot;]</p>
@@ -157,7 +157,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The email subject.</p>
          * 
          * <strong>example:</strong>
-         * <p>Quarterly business analysis report</p>
+         * <p>Quarterly Business Analysis Report</p>
          */
         @NameInMap("subject")
         public String subject;
@@ -215,16 +215,16 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Quarterly business analysis report.pdf</p>
+         * <p>Quarterly Business Analysis Report.pdf</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The file location. It is compatible with file URLs and legacy OSS object keys. The specific value is derived from the output registration information.</p>
+         * <p>The file download link. For versioned files, it is bound to the published version and content revision at the time of query. The link has a time-to-live. If it expires, query the list again to obtain a new link.</p>
          * 
          * <strong>example:</strong>
-         * <p>reports/2026/quarterly-report.pdf</p>
+         * <p><a href="https://winnexo.agentone.console.aliyun.com/api/v1/output-preview/demo_download_ticket/download">https://winnexo.agentone.console.aliyun.com/api/v1/output-preview/demo_download_ticket/download</a></p>
          */
         @NameInMap("path")
         public String path;
@@ -300,7 +300,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The PPT name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Quarterly Business Analysis Report</p>
+         * <p>Quarterly Business Analysis Presentation</p>
          */
         @NameInMap("pptName")
         public String pptName;
@@ -355,7 +355,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
 
     public static class ListOutputFilesResponseBodyItemsOutputItems extends TeaModel {
         /**
-         * <p>The creation time of the output detail, serialized from a backend datetime value into an ISO 8601 string, with time zone information returned along with the original value.</p>
+         * <p>The creation time of the output detail, serialized from a backend datetime value into an ISO 8601 string. The time zone information is returned with the original value.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-12T03:10:00+00:00</p>
@@ -364,19 +364,19 @@ public class ListOutputFilesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The email information, present when the type is email.</p>
+         * <p>The email information. This field is present when the type is email.</p>
          */
         @NameInMap("emailInfo")
         public ListOutputFilesResponseBodyItemsOutputItemsEmailInfo emailInfo;
 
         /**
-         * <p>The file information, present when the type is file.</p>
+         * <p>The file information. This field is present when the type is file.</p>
          */
         @NameInMap("fileInfo")
         public ListOutputFilesResponseBodyItemsOutputItemsFileInfo fileInfo;
 
         /**
-         * <p>The creation time of the output or detail, serialized from a backend datetime value into an ISO 8601 string, with time zone information returned along with the original value.</p>
+         * <p>The creation time of the output or detail, serialized from a backend datetime value into an ISO 8601 string. The time zone information is returned with the original value.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-12T03:10:00+00:00</p>
@@ -385,7 +385,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The update time of the output or detail, serialized from a backend datetime value into an ISO 8601 string, with time zone information returned along with the original value.</p>
+         * <p>The update time of the output or detail, serialized from a backend datetime value into an ISO 8601 string. The time zone information is returned with the original value.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-12T03:12:00+00:00</p>
@@ -397,7 +397,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The output name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Quarterly business analysis report.pdf</p>
+         * <p>Quarterly Business Analysis Report.pdf</p>
          */
         @NameInMap("itemName")
         public String itemName;
@@ -439,7 +439,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         public String outputItemId;
 
         /**
-         * <p>Indicates whether sharing is enabled.</p>
+         * <p>Specifies whether sharing is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -448,7 +448,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         public Boolean shareEnabled;
 
         /**
-         * <p>The share token, present when sharing is enabled. You can use this token to access the public share preview API.</p>
+         * <p>The share token. This field is present when sharing is enabled. You can use this token to access the public share preview API.</p>
          * 
          * <strong>example:</strong>
          * <p>demo_public_preview_token</p>
@@ -466,7 +466,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         public String skillOutputId;
 
         /**
-         * <p>The slide deck information, present when the type is slide deck.</p>
+         * <p>The slide deck information. This field is present when the type is slide deck.</p>
          */
         @NameInMap("slidesInfo")
         public ListOutputFilesResponseBodyItemsOutputItemsSlidesInfo slidesInfo;
@@ -618,7 +618,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         public String conversationId;
 
         /**
-         * <p>The creation time of the output or detail, serialized from a backend datetime value into an ISO 8601 string, with time zone information returned along with the original value.</p>
+         * <p>The creation time of the output or detail, serialized from a backend datetime value into an ISO 8601 string. The time zone information is returned with the original value.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-12T03:10:00+00:00</p>
@@ -627,7 +627,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The update time of the output or detail, serialized from a backend datetime value into an ISO 8601 string, with time zone information returned along with the original value.</p>
+         * <p>The update time of the output or detail, serialized from a backend datetime value into an ISO 8601 string. The time zone information is returned with the original value.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-12T03:12:00+00:00</p>
@@ -639,13 +639,13 @@ public class ListOutputFilesResponseBody extends TeaModel {
          * <p>The output name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Quarterly business analysis report.pdf</p>
+         * <p>Quarterly Business Analysis Report.pdf</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The name of the digital worker (operating object).</p>
+         * <p>The name of the digital employee (operating object).</p>
          * 
          * <strong>example:</strong>
          * <p>Business Analysis Assistant</p>
@@ -663,7 +663,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         public String outputId;
 
         /**
-         * <p>The output detail list.</p>
+         * <p>The list of details under the current output main record. For versioned files, only the latest published version is returned, and historical versions are not expanded.</p>
          */
         @NameInMap("outputItems")
         public java.util.List<ListOutputFilesResponseBodyItemsOutputItems> outputItems;

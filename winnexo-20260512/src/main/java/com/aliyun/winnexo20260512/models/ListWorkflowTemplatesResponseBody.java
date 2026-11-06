@@ -14,7 +14,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether more data is available.</p>
+     * <p>Indicates whether more data exists.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -26,13 +26,13 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
      * <p>The list of template summaries on the current page.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>[{\&quot;id\&quot;:\&quot;item_9401\&quot;}]</p>
      */
     @NameInMap("items")
     public java.util.List<ListWorkflowTemplatesResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of entries returned per page in the current request.</p>
+     * <p>The effective maximum number of entries to return per page for the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,10 +50,10 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token for the next page. An empty string indicates that no more data is available.</p>
+     * <p>The pagination token for the next page. An empty string indicates that no more data exists.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>tok_9401</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
@@ -68,7 +68,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
     public Long page;
 
     /**
-     * <p>The number of entries per page in the current request.</p>
+     * <p>The effective number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -77,7 +77,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -86,7 +86,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of visible entries that match the filter conditions.</p>
+     * <p>The total number of visible items under the filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -184,7 +184,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
          * <p>The description of the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>Standard process for handling customer complaints</p>
          */
         @NameInMap("description")
         public String description;
@@ -199,10 +199,10 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
         public String effectiveVersion;
 
         /**
-         * <p>The time when the template was last modified. The time is in the ISO 8601 standard.</p>
+         * <p>The time of the last modification. The time follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>2026-11-05T08:00:00Z</p>
          */
         @NameInMap("gmtModified")
         public String gmtModified;
@@ -219,7 +219,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
         /**
          * <p>The status of the latest version. Valid values:</p>
          * <ul>
-         * <li>DRAFT: Draft. The version contains uncommitted edits.</li>
+         * <li>DRAFT: Draft. Unsubmitted edits exist.</li>
          * <li>SUBMITTED: Submitted.</li>
          * </ul>
          * 
@@ -233,13 +233,13 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
          * <p>The name of the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>Customer complaint handling process</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The number of unique owners.</p>
+         * <p>The number of owners.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -269,7 +269,7 @@ public class ListWorkflowTemplatesResponseBody extends TeaModel {
          * <p>The ID of the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>tpl_9401</p>
          */
         @NameInMap("templateId")
         public String templateId;

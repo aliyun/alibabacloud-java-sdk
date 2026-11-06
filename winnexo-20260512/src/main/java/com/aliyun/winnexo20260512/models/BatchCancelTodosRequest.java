@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchCancelTodosRequest extends TeaModel {
     /**
-     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
+     * <p>The list of to-do item IDs. You can specify 1 to 100 IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -14,7 +14,7 @@ public class BatchCancelTodosRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The list of to-do IDs. You can specify 1 to 100 IDs.</p>
+     * <p>The list of to-do item IDs. You can specify 1 to 100 IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

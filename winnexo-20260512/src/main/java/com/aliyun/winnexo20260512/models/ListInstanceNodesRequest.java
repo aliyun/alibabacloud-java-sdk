@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstanceNodesRequest extends TeaModel {
     /**
-     * <p>The collaboration workspace ID.</p>
+     * <p>The ID of the collaboration workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

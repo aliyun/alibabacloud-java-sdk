@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppResourcePermissionRecordsShrinkRequest extends TeaModel {
     /**
-     * <p>The grantee ID filter.</p>
+     * <p>The tenant filter for cross-tenant users.</p>
      * 
      * <strong>example:</strong>
      * <p>10086</p>
@@ -14,7 +14,7 @@ public class ListAppResourcePermissionRecordsShrinkRequest extends TeaModel {
     public String granteeId;
 
     /**
-     * <p>The tenant ID filter for cross-tenant users.</p>
+     * <p>The permission filter.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -23,7 +23,7 @@ public class ListAppResourcePermissionRecordsShrinkRequest extends TeaModel {
     public String granteeTenantId;
 
     /**
-     * <p>The grantee type filter.</p>
+     * <p>The principal ID filter.</p>
      * 
      * <strong>example:</strong>
      * <p>USER</p>
@@ -32,7 +32,7 @@ public class ListAppResourcePermissionRecordsShrinkRequest extends TeaModel {
     public String granteeType;
 
     /**
-     * <p>The page number.</p>
+     * <p>The number of items per page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class ListAppResourcePermissionRecordsShrinkRequest extends TeaModel {
     public Long page;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The principal type filter.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -56,7 +56,7 @@ public class ListAppResourcePermissionRecordsShrinkRequest extends TeaModel {
     public String permissionsShrink;
 
     /**
-     * <p>The application key or its subpath.</p>
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class ListAppResourcePermissionRecordsShrinkRequest extends TeaModel {
     public String resourceKeyPrefix;
 
     /**
-     * <p>The ID of the tenant to which the resource belongs. If not specified, the current tenant of the caller is used.</p>
+     * <p>The resource tenant ID. This parameter is fixed to APP_RESOURCE.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -75,7 +75,7 @@ public class ListAppResourcePermissionRecordsShrinkRequest extends TeaModel {
     public String resourceTenantId;
 
     /**
-     * <p>The resource type. Set this parameter to APP_RESOURCE.</p>
+     * <p>The application key or its subpath.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,7 +85,7 @@ public class ListAppResourcePermissionRecordsShrinkRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
+     * <p>The ID of the tenant to which the resource belongs. If omitted, the current tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

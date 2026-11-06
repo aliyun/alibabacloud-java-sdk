@@ -17,13 +17,13 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
      * <p>The generated non-persistent template draft.</p>
      * 
      * <strong>example:</strong>
-     * <p>example</p>
+     * <p>{\&quot;schemaVersion\&quot;:2,\&quot;steps\&quot;:[]}</p>
      */
     @NameInMap("draft")
     public GenerateWorkflowTemplateDraftResponseBodyDraft draft;
 
     /**
-     * <p>The error description.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The requested resource does not exist</p>
@@ -32,7 +32,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request tracking ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -91,13 +91,13 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
          * <p>The name of the step.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>Customer complaint handling process</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The name of the responsible agent.</p>
+         * <p>The name of the agent owner.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -106,7 +106,11 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         public String ownerAgentName;
 
         /**
-         * <p>The type of the owner. Valid values: MEMBER: Human. AGENT: Agent.</p>
+         * <p>The type of the owner. Valid values:</p>
+         * <ul>
+         * <li>MEMBER: human</li>
+         * <li>AGENT: agent</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>MEMBER</p>
@@ -124,6 +128,15 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         public Long ownerUserId;
 
         /**
+         * <p>是否人工审核产出物，默认关闭；仅数字员工可开启，审核待办自动发负责人</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("reviewOutput")
+        public Boolean reviewOutput;
+
+        /**
          * <p>The list of user IDs of the reviewers.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +146,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         public java.util.List<Long> reviewerUserIds;
 
         /**
-         * <p>The order of the step.</p>
+         * <p>The sort order of the step.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -142,19 +155,19 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         public Long sortOrder;
 
         /**
-         * <p>The processing instructions for the step.</p>
+         * <p>The processing instructions of the step.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>Collect customer information and submit it to the owner for review</p>
          */
         @NameInMap("specification")
         public String specification;
 
         /**
-         * <p>The array of structured segments for the step instructions. Supported types include text, mention, skill, app, files, and web_search. The fields and nested attachments of each segment are retained as returned by the backend.</p>
+         * <p>The ordered array of fragments. Supported types include text, mention, skill, app, files, and web_search. The referenced identities and order are preserved.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;Organize input materials&quot;}]</p>
+         * <p>[{\&quot;type\&quot;:\&quot;text\&quot;,\&quot;text\&quot;:\&quot;收集客户信息\&quot;}]</p>
          */
         @NameInMap("specificationJson")
         public java.util.List<java.util.Map<String, ?>> specificationJson;
@@ -213,6 +226,14 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
             return this.ownerUserId;
         }
 
+        public GenerateWorkflowTemplateDraftResponseBodyDraftSteps setReviewOutput(Boolean reviewOutput) {
+            this.reviewOutput = reviewOutput;
+            return this;
+        }
+        public Boolean getReviewOutput() {
+            return this.reviewOutput;
+        }
+
         public GenerateWorkflowTemplateDraftResponseBodyDraftSteps setReviewerUserIds(java.util.List<Long> reviewerUserIds) {
             this.reviewerUserIds = reviewerUserIds;
             return this;
@@ -260,25 +281,52 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
          * <p>The description of the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>Standard process for handling customer complaints</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>节点依赖边；每项包含from/to，引用稳定stepId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
+        @NameInMap("edges")
+        public java.util.List<java.util.Map<String, ?>> edges;
+
+        /**
+         * <p>可选画布布局，按stepId索引；只影响展示，不决定依赖</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;collect&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;review&quot;:{&quot;x&quot;:240,&quot;y&quot;:0}}</p>
+         */
+        @NameInMap("layout")
+        public java.util.Map<String, ?> layout;
+
+        /**
          * <p>The name of the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>Customer complaint handling process</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
+         * <p>模板结构版本，当前为2，与业务版本vN独立</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("schemaVersion")
+        public Long schemaVersion;
+
+        /**
          * <p>The ordered steps.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>[{\&quot;stepId\&quot;:\&quot;collect\&quot;,\&quot;sortOrder\&quot;:1,\&quot;name\&quot;:\&quot;收集客户信息\&quot;}]</p>
          */
         @NameInMap("steps")
         public java.util.List<GenerateWorkflowTemplateDraftResponseBodyDraftSteps> steps;
@@ -296,12 +344,36 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
             return this.description;
         }
 
+        public GenerateWorkflowTemplateDraftResponseBodyDraft setEdges(java.util.List<java.util.Map<String, ?>> edges) {
+            this.edges = edges;
+            return this;
+        }
+        public java.util.List<java.util.Map<String, ?>> getEdges() {
+            return this.edges;
+        }
+
+        public GenerateWorkflowTemplateDraftResponseBodyDraft setLayout(java.util.Map<String, ?> layout) {
+            this.layout = layout;
+            return this;
+        }
+        public java.util.Map<String, ?> getLayout() {
+            return this.layout;
+        }
+
         public GenerateWorkflowTemplateDraftResponseBodyDraft setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public GenerateWorkflowTemplateDraftResponseBodyDraft setSchemaVersion(Long schemaVersion) {
+            this.schemaVersion = schemaVersion;
+            return this;
+        }
+        public Long getSchemaVersion() {
+            return this.schemaVersion;
         }
 
         public GenerateWorkflowTemplateDraftResponseBodyDraft setSteps(java.util.List<GenerateWorkflowTemplateDraftResponseBodyDraftSteps> steps) {
