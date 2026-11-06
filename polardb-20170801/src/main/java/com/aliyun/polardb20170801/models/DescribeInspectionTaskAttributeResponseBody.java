@@ -14,7 +14,7 @@ public class DescribeInspectionTaskAttributeResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The cron expression for scheduling periodic inspections.</p>
+     * <p>The cron expression for periodic inspections.</p>
      * 
      * <strong>example:</strong>
      * <p>0 0 2 * * ?</p>

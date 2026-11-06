@@ -59,7 +59,7 @@ public class DescribeBudgetUsageResponseBody extends TeaModel {
     public String gmtModified;
 
     /**
-     * <p>The ID of the gateway instance.</p>
+     * <p>The gateway instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-123</p>
@@ -248,7 +248,7 @@ public class DescribeBudgetUsageResponseBody extends TeaModel {
         public String budgetPoints;
 
         /**
-         * <p>The ID of the budget policy.</p>
+         * <p>The budget policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>bp-001</p>
@@ -275,7 +275,7 @@ public class DescribeBudgetUsageResponseBody extends TeaModel {
         public String resetDayOfMonth;
 
         /**
-         * <p>The status of the budget policy.</p>
+         * <p>The budget policy status.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>

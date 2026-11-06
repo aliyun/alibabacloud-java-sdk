@@ -1745,10 +1745,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This operation prechecks a skill before it is uploaded to a PolarClaw instance.</p>
+     * <p>This operation pre-validates a skill before uploading it to a PolarClaw instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Prechecks a skill.</p>
+     * <p>Pre-checks a skill.</p>
      * 
      * @param request CheckPolarClawSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1813,10 +1813,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This operation prechecks a skill before it is uploaded to a PolarClaw instance.</p>
+     * <p>This operation pre-validates a skill before uploading it to a PolarClaw instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Prechecks a skill.</p>
+     * <p>Pre-checks a skill.</p>
      * 
      * @param request CheckPolarClawSkillRequest
      * @return CheckPolarClawSkillResponse
@@ -5334,7 +5334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a task to process data in PolarFS based on a specified template and write it to a PolarDB database.</p>
+     * <p>Creates a task to process data in PolarFS based on a specified template and write the data to a PolarDB database.</p>
      * 
      * @param request CreateDataProcessJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5414,7 +5414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a task to process data in PolarFS based on a specified template and write it to a PolarDB database.</p>
+     * <p>Creates a task to process data in PolarFS based on a specified template and write the data to a PolarDB database.</p>
      * 
      * @param request CreateDataProcessJobRequest
      * @return CreateDataProcessJobResponse
@@ -7364,7 +7364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上传skill</p>
+     * <p>Uploads a skill.</p>
      * 
      * @param request CreatePolarClawSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7432,7 +7432,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上传skill</p>
+     * <p>Uploads a skill.</p>
      * 
      * @param request CreatePolarClawSkillRequest
      * @return CreatePolarClawSkillResponse
@@ -13855,7 +13855,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of versions to which a specified application type can be upgraded.</p>
+     * <p>Queries the upgradable versions for a specified application type.</p>
      * 
      * @param tmpReq DescribeApplicationAvailableVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13905,7 +13905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of versions to which a specified application type can be upgraded.</p>
+     * <p>Queries the upgradable versions for a specified application type.</p>
      * 
      * @param request DescribeApplicationAvailableVersionRequest
      * @return DescribeApplicationAvailableVersionResponse
@@ -13969,7 +13969,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the backup sets of a specified application by time range and backup status, and returns the backup details in a paginated list.</p>
+     * <p>Queries the backup sets of a specified application by time range and backup status, and returns paginated backup details.</p>
      * 
      * @param request DescribeApplicationBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14029,7 +14029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the backup sets of a specified application by time range and backup status, and returns the backup details in a paginated list.</p>
+     * <p>Queries the backup sets of a specified application by time range and backup status, and returns paginated backup details.</p>
      * 
      * @param request DescribeApplicationBackupsRequest
      * @return DescribeApplicationBackupsResponse
@@ -14579,7 +14579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Logs for different roles may contain different fields. User messages may include Content. Assistant messages may include the model, token usage, and cost statistics. Tool execution results may include the tool name and execution status. Cost statistics are returned exactly as provided by the log source, and this API operation does not perform currency conversion.</p>
+     * <p>The fields included in logs may vary by role. User messages may include content. Assistant messages may include the model, token usage, and cost statistics. Tool execution results may include the tool name and execution status. Cost statistics are returned as-is from the log source, and this operation does not perform currency conversion.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the session logs of a specified application, supports filtering by agent, session, and role, and returns paginated log records.</p>
@@ -14662,7 +14662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Logs for different roles may contain different fields. User messages may include Content. Assistant messages may include the model, token usage, and cost statistics. Tool execution results may include the tool name and execution status. Cost statistics are returned exactly as provided by the log source, and this API operation does not perform currency conversion.</p>
+     * <p>The fields included in logs may vary by role. User messages may include content. Assistant messages may include the model, token usage, and cost statistics. Tool execution results may include the tool name and execution status. Cost statistics are returned as-is from the log source, and this operation does not perform currency conversion.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the session logs of a specified application, supports filtering by agent, session, and role, and returns paginated log records.</p>
@@ -18927,7 +18927,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status, data source, destination database, and processing configuration of a specified data processing job.</p>
+     * <p>Queries the status, data source, destination database, and processing configuration of a specified data processing task.</p>
      * 
      * @param request DescribeDataProcessJobAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18963,7 +18963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status, data source, destination database, and processing configuration of a specified data processing job.</p>
+     * <p>Queries the status, data source, destination database, and processing configuration of a specified data processing task.</p>
      * 
      * @param request DescribeDataProcessJobAttributeRequest
      * @return DescribeDataProcessJobAttributeResponse
@@ -19035,7 +19035,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the data processing jobs of a specified PolarFS instance, with support for filtering by job ID and pagination.</p>
+     * <p>Queries the data processing jobs of a specified PolarFS instance. You can filter the jobs by job ID and paginate the results.</p>
      * 
      * @param request DescribeDataProcessJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19083,7 +19083,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the data processing jobs of a specified PolarFS instance, with support for filtering by job ID and pagination.</p>
+     * <p>Queries the data processing jobs of a specified PolarFS instance. You can filter the jobs by job ID and paginate the results.</p>
      * 
      * @param request DescribeDataProcessJobsRequest
      * @return DescribeDataProcessJobsResponse
@@ -20698,7 +20698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of reports for a specified inspection task. Supports time-based filtering and pagination.</p>
+     * <p>Queries the reports of a specified inspection task. You can filter the reports by time and return the report details in a paginated format.</p>
      * 
      * @param request DescribeInspectionReportListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20750,7 +20750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of reports for a specified inspection task. Supports time-based filtering and pagination.</p>
+     * <p>Queries the reports of a specified inspection task. You can filter the reports by time and return the report details in a paginated format.</p>
      * 
      * @param request DescribeInspectionReportListRequest
      * @return DescribeInspectionReportListResponse
@@ -20810,7 +20810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries inspection tasks, their execution plans, and associated clusters by paging based on the inspection space.</p>
+     * <p>Queries inspection tasks, their execution plans, and associated clusters by paging based on the inspection workspace.</p>
      * 
      * @param request DescribeInspectionTaskListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20854,7 +20854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries inspection tasks, their execution plans, and associated clusters by paging based on the inspection space.</p>
+     * <p>Queries inspection tasks, their execution plans, and associated clusters by paging based on the inspection workspace.</p>
      * 
      * @param request DescribeInspectionTaskListRequest
      * @return DescribeInspectionTaskListResponse
@@ -20866,7 +20866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the overall score, status, and check results of an instance inspection report based on the report ID.</p>
+     * <p>Queries the overall score, status, and inspection results of an instance inspection report based on the report ID.</p>
      * 
      * @param request DescribeInstanceReportAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20902,7 +20902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the overall score, status, and check results of an instance inspection report based on the report ID.</p>
+     * <p>Queries the overall score, status, and inspection results of an instance inspection report based on the report ID.</p>
      * 
      * @param request DescribeInstanceReportAttributeRequest
      * @return DescribeInstanceReportAttributeResponse
@@ -23578,7 +23578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries PolarClaw skill templates. You can filter the templates by template ID and time range, and the results are paginated.</p>
+     * <p>Queries a list of PolarClaw skill templates. You can filter the results by template ID and time range, and the results are returned in pages.</p>
      * 
      * @param request DescribePolarClawSkillTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23638,7 +23638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries PolarClaw skill templates. You can filter the templates by template ID and time range, and the results are paginated.</p>
+     * <p>Queries a list of PolarClaw skill templates. You can filter the results by template ID and time range, and the results are returned in pages.</p>
      * 
      * @param request DescribePolarClawSkillTemplatesRequest
      * @return DescribePolarClawSkillTemplatesResponse
@@ -35397,7 +35397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the proxy performance level of a specified PolarDB cluster and supports scheduled execution.</p>
+     * <p>Modifies the proxy performance level of a specified PolarDB cluster. You can schedule the execution time.</p>
      * 
      * @param request RefreshProxyLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35465,7 +35465,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the proxy performance level of a specified PolarDB cluster and supports scheduled execution.</p>
+     * <p>Modifies the proxy performance level of a specified PolarDB cluster. You can schedule the execution time.</p>
      * 
      * @param request RefreshProxyLevelRequest
      * @return RefreshProxyLevelResponse

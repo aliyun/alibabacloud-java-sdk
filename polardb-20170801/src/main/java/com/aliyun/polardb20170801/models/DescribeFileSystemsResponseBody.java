@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFileSystemsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the bucket.</p>
+     * <p>The bucket ID.</p>
      * 
      * <strong>example:</strong>
      * <p>bucket-456</p>
@@ -14,7 +14,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     public String bucketId;
 
     /**
-     * <p>The total number of files that meet the specified conditions.</p>
+     * <p>The total number of files that match the conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -23,7 +23,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     public Integer fileCount;
 
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID.</p>
      * 
      * <strong>example:</strong>
      * <p>fs-123</p>
@@ -38,7 +38,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     public java.util.List<DescribeFileSystemsResponseBodyFileSystems> fileSystems;
 
     /**
-     * <p>Indicates whether the results are truncated. If the value is true, you can use NextToken to query subsequent results.</p>
+     * <p>Indicates whether the results are truncated. If true, you can use NextToken to retrieve subsequent results.</p>
      */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
@@ -62,7 +62,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2921D843-433A-5FB3-A03B-4EC093B219F8</p>
@@ -141,7 +141,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
     public static class DescribeFileSystemsResponseBodyFileSystems extends TeaModel {
         /**
-         * <p>The capacity of the file.</p>
+         * <p>The file capacity.</p>
          * 
          * <strong>example:</strong>
          * <p>100GB</p>
@@ -150,7 +150,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public String capacity;
 
         /**
-         * <p>The name of the file.</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
          * <p>test.txt</p>
@@ -159,7 +159,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The time when the file was last modified. The time is in the RFC 3339 UTC format.</p>
+         * <p>The last modified time of the file, in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-25T09:37:10Z</p>

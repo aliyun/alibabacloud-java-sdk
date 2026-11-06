@@ -42,7 +42,7 @@ public class DescribeInspectionTaskListResponseBody extends TeaModel {
 
     public static class DescribeInspectionTaskListResponseBodyTaskLists extends TeaModel {
         /**
-         * <p>The date when the task was last modified.</p>
+         * <p>The last modification date of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-01</p>
@@ -51,7 +51,7 @@ public class DescribeInspectionTaskListResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The cron expression for periodic inspections.</p>
+         * <p>The cron expression for periodically executing the inspection.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 2 * * ?</p>
@@ -60,7 +60,7 @@ public class DescribeInspectionTaskListResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>The IDs of the PolarDB clusters to be inspected. Separate multiple IDs with commas.</p>
+         * <p>The IDs of the PolarDB clusters to be inspected. Multiple IDs are separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-001,pc-002</p>

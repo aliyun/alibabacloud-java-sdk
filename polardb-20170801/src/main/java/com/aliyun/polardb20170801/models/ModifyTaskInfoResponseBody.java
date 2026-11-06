@@ -32,7 +32,7 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of tasks that were successfully updated.</p>
+     * <p>The number of successfully updated tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

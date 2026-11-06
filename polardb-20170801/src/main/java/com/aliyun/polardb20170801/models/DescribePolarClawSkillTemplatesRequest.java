@@ -16,7 +16,7 @@ public class DescribePolarClawSkillTemplatesRequest extends TeaModel {
     /**
      * <p>The application type.</p>
      * <blockquote>
-     * <p>If this is your first time calling this operation, you do not need to specify this parameter.</p>
+     * <p>If you are calling this operation for the first time, you do not need to specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class DescribePolarClawSkillTemplatesRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -55,7 +55,7 @@ public class DescribePolarClawSkillTemplatesRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view all available regions for the current account, including region IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions for the current account, including region IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

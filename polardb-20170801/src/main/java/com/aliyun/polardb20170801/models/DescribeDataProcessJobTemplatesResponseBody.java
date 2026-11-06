@@ -93,7 +93,7 @@ public class DescribeDataProcessJobTemplatesResponseBody extends TeaModel {
 
     public static class DescribeDataProcessJobTemplatesResponseBodyItems extends TeaModel {
         /**
-         * <p>Specifies whether it is required to fetch the summary or video synopsis.</p>
+         * <p>Specifies whether it is to fetch the image summary or video synopsis.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -120,7 +120,7 @@ public class DescribeDataProcessJobTemplatesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>Specifies whether to convert content into vectors.</p>
+         * <p>Indicates whether content is converted into vectors.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -129,7 +129,7 @@ public class DescribeDataProcessJobTemplatesResponseBody extends TeaModel {
         public Boolean embedding;
 
         /**
-         * <p>The output dimension of the vector.</p>
+         * <p>The vector output dimensions.</p>
          * 
          * <strong>example:</strong>
          * <p>768</p>

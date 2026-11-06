@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataProcessJobAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the data processing job to query.</p>
+     * <p>The ID of the data processing task to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeDataProcessJobAttributeRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The ID of the region where the job is located.</p>
+     * <p>The region ID of the region where the task is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

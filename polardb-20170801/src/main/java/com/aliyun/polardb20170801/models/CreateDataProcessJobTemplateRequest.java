@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateDataProcessJobTemplateRequest extends TeaModel {
     /**
-     * <p>Specifies whether to fetch the image summary or video synopsis. When Settings is set to true, CaptioningPrompt must be specified.</p>
+     * <p>Specifies whether to fetch the image summary or video synopsis. When Settings is true, CaptioningPrompt must be provided.</p>
      */
     @NameInMap("Captioning")
     public Boolean captioning;
 
     /**
-     * <p>The prompt used for extracting summaries. This parameter takes effect only when Captioning is set to true.</p>
+     * <p>The prompt used for extracting captions. This parameter takes effect only when Captioning is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>Summarize the image content</p>
@@ -64,7 +64,7 @@ public class CreateDataProcessJobTemplateRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The templatetype of the node. Valid values: image.</p>
+     * <p>The templatetype of the node template. Valid value: image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

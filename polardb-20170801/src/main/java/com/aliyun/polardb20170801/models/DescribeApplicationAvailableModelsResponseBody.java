@@ -44,7 +44,7 @@ public class DescribeApplicationAvailableModelsResponseBody extends TeaModel {
     public DescribeApplicationAvailableModelsResponseBodyDefaultRerankModel defaultRerankModel;
 
     /**
-     * <p>The default vision-language model.</p>
+     * <p>The default visual language model.</p>
      */
     @NameInMap("DefaultVLModel")
     public DescribeApplicationAvailableModelsResponseBodyDefaultVLModel defaultVLModel;
@@ -110,7 +110,7 @@ public class DescribeApplicationAvailableModelsResponseBody extends TeaModel {
     public java.util.List<DescribeApplicationAvailableModelsResponseBodyRerankModels> rerankModels;
 
     /**
-     * <p>The list of available vision-language models.</p>
+     * <p>The list of available visual language models.</p>
      */
     @NameInMap("VLModels")
     public java.util.List<DescribeApplicationAvailableModelsResponseBodyVLModels> VLModels;

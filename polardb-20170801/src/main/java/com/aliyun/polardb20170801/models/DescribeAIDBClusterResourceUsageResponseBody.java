@@ -32,7 +32,7 @@ public class DescribeAIDBClusterResourceUsageResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>The DPI engine version of the cluster.</p>
+     * <p>The database engine version of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>3.0</p>
@@ -41,7 +41,7 @@ public class DescribeAIDBClusterResourceUsageResponseBody extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The resource usage information of the nodes in the cluster.</p>
+     * <p>The list of resource usage details for the nodes in the cluster.</p>
      */
     @NameInMap("NodeItems")
     public java.util.List<DescribeAIDBClusterResourceUsageResponseBodyNodeItems> nodeItems;
@@ -146,7 +146,7 @@ public class DescribeAIDBClusterResourceUsageResponseBody extends TeaModel {
         public String podIP;
 
         /**
-         * <p>The requested resources of the pod.</p>
+         * <p>The resource configuration requested by the pod.</p>
          * 
          * <strong>example:</strong>
          * <p>cpu=1,memory=2Gi</p>
@@ -155,7 +155,7 @@ public class DescribeAIDBClusterResourceUsageResponseBody extends TeaModel {
         public String resourceRequest;
 
         /**
-         * <p>The status of the pod.</p>
+         * <p>The running status of the pod.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -220,7 +220,7 @@ public class DescribeAIDBClusterResourceUsageResponseBody extends TeaModel {
 
     public static class DescribeAIDBClusterResourceUsageResponseBodyNodeItems extends TeaModel {
         /**
-         * <p>The total CPU capacity of the node.</p>
+         * <p>The total CPU resources of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -229,7 +229,7 @@ public class DescribeAIDBClusterResourceUsageResponseBody extends TeaModel {
         public String CPU;
 
         /**
-         * <p>The used CPU capacity of the node.</p>
+         * <p>The amount of CPU resources used on the node.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -247,7 +247,7 @@ public class DescribeAIDBClusterResourceUsageResponseBody extends TeaModel {
         public String DBNodeId;
 
         /**
-         * <p>The total GPU capacity of the node.</p>
+         * <p>The total GPU resources of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -265,7 +265,7 @@ public class DescribeAIDBClusterResourceUsageResponseBody extends TeaModel {
         public String GPUModel;
 
         /**
-         * <p>The used GPU capacity of the node.</p>
+         * <p>The amount of GPU resources used on the node.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -274,7 +274,7 @@ public class DescribeAIDBClusterResourceUsageResponseBody extends TeaModel {
         public String GPUUsed;
 
         /**
-         * <p>The total memory capacity of the node.</p>
+         * <p>The total memory of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>16Gi</p>
@@ -283,7 +283,7 @@ public class DescribeAIDBClusterResourceUsageResponseBody extends TeaModel {
         public String memory;
 
         /**
-         * <p>The used memory capacity of the node.</p>
+         * <p>The amount of memory used on the node.</p>
          * 
          * <strong>example:</strong>
          * <p>8Gi</p>
@@ -292,13 +292,13 @@ public class DescribeAIDBClusterResourceUsageResponseBody extends TeaModel {
         public String memoryUsed;
 
         /**
-         * <p>The resource information of the pods on the node.</p>
+         * <p>The list of resource information for the pods on the node.</p>
          */
         @NameInMap("PodItems")
         public java.util.List<DescribeAIDBClusterResourceUsageResponseBodyNodeItemsPodItems> podItems;
 
         /**
-         * <p>The ID of the virtual node associated with the database node.</p>
+         * <p>The ID of the virtual node corresponding to the database node.</p>
          * 
          * <strong>example:</strong>
          * <p>vnode-001</p>

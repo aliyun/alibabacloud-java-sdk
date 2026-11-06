@@ -40,7 +40,7 @@ public class DescribePolarClawSkillTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The skill templates.</p>
+     * <p>The skill template group.</p>
      */
     @NameInMap("SkillTemplates")
     public java.util.List<DescribePolarClawSkillTemplatesResponseBodySkillTemplates> skillTemplates;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckPolarClawSkillRequest extends TeaModel {
     /**
-     * <p>The region ID of the OSS bucket where the skill files are stored.</p>
+     * <p>The region ID of the OSS bucket that stores the skill files.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -23,7 +23,7 @@ public class CheckPolarClawSkillRequest extends TeaModel {
     public String bucketType;
 
     /**
-     * <p>The name of the OSS bucket to be unbound.</p>
+     * <p>The name of the OSS bucket to be disassociated.</p>
      * 
      * <strong>example:</strong>
      * <p>oss-bucket-test</p>
@@ -41,7 +41,7 @@ public class CheckPolarClawSkillRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the skill.</p>
+     * <p>The skill name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class CheckPolarClawSkillRequest extends TeaModel {
     public String skillName;
 
     /**
-     * <p>The version number of the skill.</p>
+     * <p>The skill version number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class CheckPolarClawSkillRequest extends TeaModel {
      * <p>The brief description of the skill.</p>
      * 
      * <strong>example:</strong>
-     * <p>An example for managing PolarDB skills</p>
+     * <p>An example used to manage PolarDB skills</p>
      */
     @NameInMap("Summary")
     public String summary;

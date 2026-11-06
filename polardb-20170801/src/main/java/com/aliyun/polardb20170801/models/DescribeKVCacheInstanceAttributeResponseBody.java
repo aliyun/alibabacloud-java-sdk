@@ -23,7 +23,7 @@ public class DescribeKVCacheInstanceAttributeResponseBody extends TeaModel {
     public String creationTime;
 
     /**
-     * <p>The time when the instance expires, in ISO 8601 format. An empty character string is returned for pay-as-you-go instances.</p>
+     * <p>The time when the instance expires, in ISO 8601 format. An empty string is returned for pay-as-you-go instances.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-12-31T00:00:00Z</p>

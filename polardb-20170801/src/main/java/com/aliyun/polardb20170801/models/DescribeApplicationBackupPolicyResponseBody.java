@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationBackupPolicyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
@@ -41,7 +41,7 @@ public class DescribeApplicationBackupPolicyResponseBody extends TeaModel {
     public Integer preferredBackupRetentionPeriod;
 
     /**
-     * <p>The time window when automatic backups are performed. The time follows the HH:mmZ-HH:mmZ format in UTC.</p>
+     * <p>The time period when automatic backups are performed. The time is in the HH:mmZ-HH:mmZ format and in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>07:00Z-08:00Z</p>

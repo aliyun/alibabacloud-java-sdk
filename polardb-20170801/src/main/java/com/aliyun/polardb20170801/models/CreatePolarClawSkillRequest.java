@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePolarClawSkillRequest extends TeaModel {
     /**
+     * <p>The ID of the region where the OSS bucket that stores the skill files resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class CreatePolarClawSkillRequest extends TeaModel {
     public String bucketRegionId;
 
     /**
+     * <p>The type of the bucket used for skill files. UserOwned indicates a user-owned bucket. Hosted indicates a hosted bucket. You must have the required permissions to use a hosted bucket.</p>
+     * 
      * <strong>example:</strong>
      * <p>UserOwned</p>
      */
@@ -19,6 +23,7 @@ public class CreatePolarClawSkillRequest extends TeaModel {
     public String bucketType;
 
     /**
+     * <p>The name of the OSS bucket that resides in the same region as the current project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class CreatePolarClawSkillRequest extends TeaModel {
     public String OSSBucket;
 
     /**
+     * <p>The prefix of the OSS object. The prefix can contain digits and letters and must be 1 to 30 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,11 @@ public class CreatePolarClawSkillRequest extends TeaModel {
     public String OSSPrefix;
 
     /**
+     * <p>The ID of the region where the parameter template resides.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region IDs.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -44,6 +55,7 @@ public class CreatePolarClawSkillRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the skill.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +65,7 @@ public class CreatePolarClawSkillRequest extends TeaModel {
     public String skillName;
 
     /**
+     * <p>The version of the skill.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,13 +75,17 @@ public class CreatePolarClawSkillRequest extends TeaModel {
     public String skillVersion;
 
     /**
+     * <p>The brief description of the skill.</p>
+     * 
      * <strong>example:</strong>
-     * <p>用于管理 PolarDB 技能的示例。</p>
+     * <p>An example for managing PolarDB skills</p>
      */
     @NameInMap("Summary")
     public String summary;
 
     /**
+     * <p>The tag details.</p>
+     * 
      * <strong>example:</strong>
      * <p>[\&quot;PolarDB\&quot;]</p>
      */
@@ -76,6 +93,7 @@ public class CreatePolarClawSkillRequest extends TeaModel {
     public String tags;
 
     /**
+     * <p>The title.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

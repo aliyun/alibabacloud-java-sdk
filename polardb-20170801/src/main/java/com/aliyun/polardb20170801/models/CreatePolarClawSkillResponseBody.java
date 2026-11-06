@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePolarClawSkillResponseBody extends TeaModel {
     /**
+     * <p>Used for system scheduled task checks. Modifications are not supported for the current scheduled task.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class CreatePolarClawSkillResponseBody extends TeaModel {
     public String isUpdate;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
      */
@@ -19,6 +23,8 @@ public class CreatePolarClawSkillResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The name of the skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>polarclawhub</p>
      */

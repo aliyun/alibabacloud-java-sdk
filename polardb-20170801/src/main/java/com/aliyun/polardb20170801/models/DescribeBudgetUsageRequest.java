@@ -23,7 +23,7 @@ public class DescribeBudgetUsageRequest extends TeaModel {
     public String budgetDimensionType;
 
     /**
-     * <p>The ID of the gateway instance to query.</p>
+     * <p>The ID of the gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-123</p>

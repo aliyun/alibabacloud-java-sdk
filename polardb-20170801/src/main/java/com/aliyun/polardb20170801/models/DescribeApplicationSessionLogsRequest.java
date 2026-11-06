@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationSessionLogsRequest extends TeaModel {
     /**
-     * <p>The agent name. This parameter must be specified together with the SessionId parameter, or neither of them is specified.</p>
+     * <p>The agent name. This parameter must be specified together with the SessionId parameter, or neither is specified.</p>
      * 
      * <strong>example:</strong>
      * <p>test-agent</p>
@@ -71,7 +71,7 @@ public class DescribeApplicationSessionLogsRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The role filter for logs. Valid values: user, assistant, and toolResult.</p>
+     * <p>The role filter for logs. A value of user indicates a user, assistant indicates an assistant, and toolResult indicates a tool execution result.</p>
      * 
      * <strong>example:</strong>
      * <p>assistant</p>
@@ -80,7 +80,7 @@ public class DescribeApplicationSessionLogsRequest extends TeaModel {
     public String role;
 
     /**
-     * <p>The session ID. This parameter must be specified together with the Agent parameter, or neither of them is specified.</p>
+     * <p>The session ID. This parameter must be specified together with the Agent parameter, or neither is specified.</p>
      * 
      * <strong>example:</strong>
      * <p>session-123</p>
@@ -99,7 +99,7 @@ public class DescribeApplicationSessionLogsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The log type. This API operation only queries session logs. Set the value to session.</p>
+     * <p>The log type. This operation only queries session logs.</p>
      * 
      * <strong>example:</strong>
      * <p>session</p>

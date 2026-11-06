@@ -14,7 +14,7 @@ public class DescribeInspectionReportListResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -110,7 +110,7 @@ public class DescribeInspectionReportListResponseBody extends TeaModel {
 
     public static class DescribeInspectionReportListResponseBodyReportItemsSubItems extends TeaModel {
         /**
-         * <p>The number of check items at the Critical level.</p>
+         * <p>The number of check items at the critical level.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -119,7 +119,7 @@ public class DescribeInspectionReportListResponseBody extends TeaModel {
         public Long critical;
 
         /**
-         * <p>The number of check items at the Info level.</p>
+         * <p>The number of check items at the info level.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -128,7 +128,7 @@ public class DescribeInspectionReportListResponseBody extends TeaModel {
         public Long info;
 
         /**
-         * <p>The number of check items at the Normal level.</p>
+         * <p>The number of normal check items.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -137,7 +137,7 @@ public class DescribeInspectionReportListResponseBody extends TeaModel {
         public Long normal;
 
         /**
-         * <p>The number of check items at the Warning level.</p>
+         * <p>The number of check items at the warning level.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -195,7 +195,7 @@ public class DescribeInspectionReportListResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
-         * <p>Indicates whether this is the latest inspection report. The value is returned as a string.</p>
+         * <p>Indicates whether the inspection report is the latest report. The value is returned as a string.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -44,7 +44,7 @@ public class DescribeApplicationComponentPerformanceRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>The performance metrics to query. Separate multiple metrics with commas (,). You can specify up to 5 metrics.</p>
+     * <p>The performance metrics to query. Separate multiple metrics with commas. You can specify up to 5 metrics.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class CreateDataProcessJobRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The JSON string for the destination database connection configuration, including Account and Password.</p>
+     * <p>The JSON string for the destination database connection configuration, which includes the account and password.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Account&quot;:&quot;example_user&quot;,&quot;Password&quot;:&quot;example_password&quot;}</p>
@@ -43,7 +43,7 @@ public class CreateDataProcessJobRequest extends TeaModel {
     public String destinationPath;
 
     /**
-     * <p>The type of the destination. Only PolarDB is supported.</p>
+     * <p>The destination type. Currently, only PolarDB is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,7 +82,7 @@ public class CreateDataProcessJobRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The additional configuration for the data source in JSON string format. This parameter can be left empty.</p>
+     * <p>The additional configuration for the data source in JSON string format. You can leave this parameter empty.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -111,7 +111,7 @@ public class CreateDataProcessJobRequest extends TeaModel {
     public String sourcePath;
 
     /**
-     * <p>The type of the data source. Only PolarFS is supported.</p>
+     * <p>The data source type. Currently, only PolarFS is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class DescribeInspectionReportListRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The number of the page to return. Pages start from 1. Maximum value: 2147483647. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Maximum value: 2147483647. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

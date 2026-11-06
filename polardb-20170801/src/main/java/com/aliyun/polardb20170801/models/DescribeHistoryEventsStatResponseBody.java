@@ -42,7 +42,7 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
 
     public static class DescribeHistoryEventsStatResponseBodyItems extends TeaModel {
         /**
-         * <p>The category of the system event. For example, Exception indicates an exception event.</p>
+         * <p>The system event category. For example, Exception indicates an exception event.</p>
          * 
          * <strong>example:</strong>
          * <p>Exception</p>

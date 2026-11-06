@@ -38,7 +38,7 @@ public class DescribeDataProcessJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of jobs that meet the query conditions.</p>
+     * <p>The total number of jobs that match the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -129,7 +129,7 @@ public class DescribeDataProcessJobsResponseBody extends TeaModel {
         public String destinationPath;
 
         /**
-         * <p>The destination type. Currently, only PolarDB is supported.</p>
+         * <p>The type of the destination. Currently, only PolarDB is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>PolarDB</p>

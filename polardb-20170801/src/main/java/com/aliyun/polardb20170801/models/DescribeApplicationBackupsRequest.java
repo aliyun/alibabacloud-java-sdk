@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationBackupsRequest extends TeaModel {
     /**
-     * <p>The application ID.</p>
+     * <p>The ID of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeApplicationBackupsRequest extends TeaModel {
     public String applicationType;
 
     /**
-     * <p>The filter condition for the backup status. A value of Success indicates that the backup is completed, and a value of Failed indicates that the backup failed.</p>
+     * <p>The backup status filter. Valid values: Success: The backup is completed. Failed: The backup failed.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -42,7 +42,7 @@ public class DescribeApplicationBackupsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The page number. The value must be an integer greater than 0 and less than or equal to 2147483647. Default value: 1.</p>
+     * <p>The page number. The value must be a positive integer up to 2147483647. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -60,7 +60,7 @@ public class DescribeApplicationBackupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the application.</p>
+     * <p>The ID of the region where the application resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

@@ -23,7 +23,7 @@ public class DescribeInspectionTaskListRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the region where the task is located.</p>
+     * <p>The region ID of the region where the task is located.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -32,7 +32,7 @@ public class DescribeInspectionTaskListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the inspection space used to filter tasks.</p>
+     * <p>The ID of the inspection workspace, which is used to filter tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>space-123</p>

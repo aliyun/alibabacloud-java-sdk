@@ -68,7 +68,7 @@ public class DescribeApplicationAvailableVersionResponseBody extends TeaModel {
         public String releaseDate;
 
         /**
-         * <p>The release notes of the version.</p>
+         * <p>The release notes.</p>
          * 
          * <strong>example:</strong>
          * <p>release</p>

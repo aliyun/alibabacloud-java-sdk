@@ -47,7 +47,7 @@ public class DescribeInstanceReportAttributeResponseBody extends TeaModel {
     public String reportStatus;
 
     /**
-     * <p>The check results in the report.</p>
+     * <p>The inspection results for each item in the report.</p>
      */
     @NameInMap("ReportSubItems")
     public java.util.List<DescribeInstanceReportAttributeResponseBodyReportSubItems> reportSubItems;
@@ -158,7 +158,7 @@ public class DescribeInstanceReportAttributeResponseBody extends TeaModel {
 
     public static class DescribeInstanceReportAttributeResponseBodyReportSubItems extends TeaModel {
         /**
-         * <p>The risk level of the check item.</p>
+         * <p>The risk level of the inspection item.</p>
          * 
          * <strong>example:</strong>
          * <p>low</p>
@@ -167,7 +167,7 @@ public class DescribeInstanceReportAttributeResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>The score of the check item.</p>
+         * <p>The score of the inspection item.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -176,7 +176,7 @@ public class DescribeInstanceReportAttributeResponseBody extends TeaModel {
         public Long score;
 
         /**
-         * <p>The name of the inspection skill that generated the check result.</p>
+         * <p>The name of the inspection skill that generated the result.</p>
          * 
          * <strong>example:</strong>
          * <p>performance</p>
@@ -185,7 +185,7 @@ public class DescribeInstanceReportAttributeResponseBody extends TeaModel {
         public String skillName;
 
         /**
-         * <p>The result summary of the check item.</p>
+         * <p>The result summary of the inspection item.</p>
          * 
          * <strong>example:</strong>
          * <p>No anomalies found</p>
