@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetConsumerApiKeyRequest extends TeaModel {
     /**
-     * <p>The user ID.</p>
+     * <p>The ID of the consumer. You can obtain the ID by calling the DescribeConsumers operation. Call sequence: CreateGateway, CreateConsumer, and then ResetConsumerApiKey.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ResetConsumerApiKeyRequest extends TeaModel {
     public String consumerId;
 
     /**
-     * <p>The gateway instance ID.</p>
+     * <p>Instance ID of the gateway instance. You can obtain instance ID by calling the DescribeGatewayAttribute operation. Before calling this operation, create a gateway and confirm its VPC, vSwitch, and zone configurations.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -23,7 +23,7 @@ public class DescribePolarClawSkillsMarketResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>
@@ -32,7 +32,7 @@ public class DescribePolarClawSkillsMarketResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of skills.</p>
+     * <p>The skill list.</p>
      */
     @NameInMap("SkillList")
     public java.util.List<DescribePolarClawSkillsMarketResponseBodySkillList> skillList;
@@ -138,7 +138,7 @@ public class DescribePolarClawSkillsMarketResponseBody extends TeaModel {
         public String summary;
 
         /**
-         * <p>The tag group.</p>
+         * <p>The tag list.</p>
          */
         @NameInMap("TagList")
         public java.util.List<String> tagList;

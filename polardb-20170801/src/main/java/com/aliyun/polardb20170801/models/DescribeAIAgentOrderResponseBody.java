@@ -23,7 +23,7 @@ public class DescribeAIAgentOrderResponseBody extends TeaModel {
     public String capacityPack;
 
     /**
-     * <p>The expiration time of the order, in RFC 3339 format.</p>
+     * <p>The expiration time of the order in RFC 3339 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2027-01-01T00:00:00Z</p>

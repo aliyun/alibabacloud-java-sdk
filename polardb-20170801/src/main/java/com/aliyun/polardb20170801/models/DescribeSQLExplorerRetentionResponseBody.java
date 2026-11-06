@@ -7,11 +7,11 @@ public class DescribeSQLExplorerRetentionResponseBody extends TeaModel {
     /**
      * <p>The retention period of SQL Explorer logs. Valid values:</p>
      * <ul>
-     * <li><strong>30</strong>: 30 days.</li>
-     * <li><strong>180</strong>: 180 days.</li>
-     * <li><strong>365</strong>: 1 year.</li>
-     * <li><strong>1095</strong>: 3 years.</li>
-     * <li><strong>1825</strong>: 5 years.</li>
+     * <li><strong>30</strong>: 30 days</li>
+     * <li><strong>180</strong>: 180 days</li>
+     * <li><strong>365</strong>: 1 year</li>
+     * <li><strong>1095</strong>: 3 years</li>
+     * <li><strong>1825</strong>: 5 years</li>
      * </ul>
      * 
      * <strong>example:</strong>

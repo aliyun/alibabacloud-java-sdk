@@ -25,7 +25,7 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be greater than 0 and less than or equal to the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -56,11 +56,11 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
      * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the regions and zones supported by PolarDB.</p>
      * <blockquote>
      * <ul>
-     * <li>You can enter <strong>all</strong> to query all pending tasks under your account.</li>
+     * <li>You can enter <strong>all</strong> to view all pending tasks under your account.</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>When Region is set to <strong>all</strong>, TaskType must also be set to <strong>all</strong>.</li>
+     * <li>When <code>Region</code> is set to <strong>all</strong>, <code>TaskType</code> must also be set to <strong>all</strong>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -80,14 +80,14 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The task type. You can call the <a href="%E8%BF%98%E6%9C%AA%E7%94%9F%E6%88%90ID">DescribeActiveOperationTaskType</a> operation to query the task types of pending tasks.</p>
+     * <p>The task type. You can call the [DescribeActiveOperationTaskType](ID not yet generated) operation to query the task types of pending tasks.</p>
      * <blockquote>
      * <ul>
-     * <li>You can also enter <strong>all</strong> to query all pending tasks under your account.</li>
+     * <li>You can also enter <strong>all</strong> to view all pending tasks under your account.</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>When TaskType is set to <strong>all</strong>, Region must also be set to <strong>all</strong>.</li>
+     * <li>When <code>TaskType</code> is set to <strong>all</strong>, <code>Region</code> must also be set to <strong>all</strong>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

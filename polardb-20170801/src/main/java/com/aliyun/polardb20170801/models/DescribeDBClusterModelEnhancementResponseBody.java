@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterModelEnhancementResponseBody extends TeaModel {
     /**
-     * <p>The time when the model enhancement feature was enabled, in ISO 8601 UTC format (YYYY-MM-DDThh:mm:ssZ).</p>
+     * <p>The time when the model enhancement feature was enabled, in the ISO 8601 UTC format (YYYY-MM-DDThh:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-01T00:00:00Z</p>
@@ -29,7 +29,7 @@ public class DescribeDBClusterModelEnhancementResponseBody extends TeaModel {
     public java.util.List<DescribeDBClusterModelEnhancementResponseBodyModelEnhancementKeys> modelEnhancementKeys;
 
     /**
-     * <p>The status of the model enhancement feature. ON indicates that the feature is enabled.</p>
+     * <p>The status of the model enhancement feature. A value of ON indicates that the feature is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>ON</p>
@@ -111,7 +111,7 @@ public class DescribeDBClusterModelEnhancementResponseBody extends TeaModel {
         public String apiKeyId;
 
         /**
-         * <p>The time when the API key was created, in ISO 8601 UTC format (YYYY-MM-DDThh:mm:ssZ).</p>
+         * <p>The time when the API key was created, in the ISO 8601 UTC format (YYYY-MM-DDThh:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-01T00:00:00Z</p>
@@ -129,7 +129,7 @@ public class DescribeDBClusterModelEnhancementResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The expiration time of the API key, in ISO 8601 UTC format (YYYY-MM-DDThh:mm:ssZ).</p>
+         * <p>The expiration time of the API key, in the ISO 8601 UTC format (YYYY-MM-DDThh:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-31T23:59:59Z</p>

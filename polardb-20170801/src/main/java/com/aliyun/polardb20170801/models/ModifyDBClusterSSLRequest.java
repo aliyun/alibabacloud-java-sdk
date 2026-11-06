@@ -17,7 +17,7 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
      * <p>The connection string.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>example.cluster.rds.aliyuncs.com</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
@@ -36,8 +36,8 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
      * <p>The endpoint ID.</p>
      * <blockquote>
      * <ul>
-     * <li>If the cluster is a PolarDB for MySQL cluster, this parameter is required.</li>
-     * <li>If the cluster is a PolarDB for PostgreSQL cluster or a PolarDB for PostgreSQL (Compatible with Oracle) cluster, you do not need to specify this parameter. SSL encryption is enabled for all endpoints by default.</li>
+     * <li>This parameter is required if the target cluster is a PolarDB for MySQL cluster.</li>
+     * <li>This parameter is not required if the target cluster is a PolarDB for PostgreSQL cluster or a PolarDB for PostgreSQL (Compatible with Oracle) cluster. By default, Secure Sockets Layer (SSL) encryption is enabled for all endpoints.</li>
      * <li>You can call the <a href="https://help.aliyun.com/document_detail/2319159.html">DescribeDBClusterSSL</a> operation to query endpoint details.</li>
      * </ul>
      * </blockquote>
@@ -49,16 +49,16 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
     public String DBEndpointId;
 
     /**
-     * <p>The network type of the endpoint. The value must be the same as the network type of the endpoint specified by <strong>DBEndpointId</strong>. Valid values:</p>
+     * <p>The network type of the endpoint. The value must be the same as the network type of the endpoint specified by the <strong>DBEndpointId</strong> parameter. Valid values:</p>
      * <ul>
-     * <li><strong>Public</strong>: public network</li>
-     * <li><strong>Private</strong>: private network</li>
-     * <li><strong>Inner</strong>: private network (classic network)</li>
+     * <li><strong>Public</strong>: Internet</li>
+     * <li><strong>Private</strong>: Private network</li>
+     * <li><strong>Inner</strong>: Private network (classic network)</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>If the cluster is a PolarDB for MySQL cluster, this parameter is required.</li>
-     * <li>If the cluster is a PolarDB for PostgreSQL cluster or a PolarDB for PostgreSQL (Compatible with Oracle) cluster, you do not need to specify this parameter. SSL encryption is enabled for all endpoints by default.</li>
+     * <li>This parameter is required if the target cluster is a PolarDB for MySQL cluster.</li>
+     * <li>This parameter is not required if the target cluster is a PolarDB for PostgreSQL cluster or a PolarDB for PostgreSQL (Compatible with Oracle) cluster. By default, Secure Sockets Layer (SSL) encryption is enabled for all endpoints.</li>
      * </ul>
      * </blockquote>
      * 
@@ -90,11 +90,11 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to enable automatic SSL certificate rotation. Valid values:</p>
+     * <p>Specifies whether to enable automatic rotation for SSL certificates. Valid values:</p>
      * <ul>
-     * <li><p><strong>Enable</strong>: Enabled.</p>
+     * <li><p><strong>Enable</strong>: Enables automatic rotation.</p>
      * </li>
-     * <li><p><strong>Disable</strong>: Disabled.</p>
+     * <li><p><strong>Disable</strong>: Disables automatic rotation.</p>
      * </li>
      * </ul>
      * 
@@ -105,14 +105,14 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
     public String SSLAutoRotate;
 
     /**
-     * <p>The SSL status to set. Valid values:</p>
+     * <p>Modifies the Secure Sockets Layer (SSL) encryption status. Valid values:</p>
      * <ul>
-     * <li><strong>Disable</strong>: Shutdown SSL encryption.</li>
-     * <li><strong>Enable</strong>: Enables SSL encryption.</li>
+     * <li><strong>Disable</strong>: Performs a shutdown of Secure Sockets Layer (SSL) encryption.</li>
+     * <li><strong>Enable</strong>: Enables Secure Sockets Layer (SSL) encryption.</li>
      * <li><strong>Update</strong>: Updates the CA certificate.</li>
      * </ul>
      * <blockquote>
-     * <p>After you enable SSL encryption or update the CA certificate, you must download and configure the certificate. For details, see <a href="https://help.aliyun.com/document_detail/153182.html">Settings for SSL encryption</a>.</p>
+     * <p>After you enable Secure Sockets Layer (SSL) encryption or update the CA certificate, you must download and configure the certificate. For details, see <a href="https://help.aliyun.com/document_detail/153182.html">Configure SSL encryption</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

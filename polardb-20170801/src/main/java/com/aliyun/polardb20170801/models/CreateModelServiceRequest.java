@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateModelServiceRequest extends TeaModel {
     /**
-     * <p>The API key for the model service.</p>
+     * <p>The API key of the model service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>6c4b1f0317cd4fd7a5b446d3503d**</p>
      */
     @NameInMap("ApiKey")
     public String apiKey;
 
     /**
-     * <p>The URL of the upstream service.</p>
+     * <p>The address of the upstream service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p><a href="https://example.com/v1">https://example.com/v1</a></p>
      */
     @NameInMap("BaseUrl")
     public String baseUrl;
@@ -35,7 +35,7 @@ public class CreateModelServiceRequest extends TeaModel {
     public String gwClusterId;
 
     /**
-     * <p>The billing cost for input, measured in points per one million tokens.</p>
+     * <p>The number of input points.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -64,7 +64,7 @@ public class CreateModelServiceRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The billing cost for output, measured in points per one million tokens.</p>
+     * <p>The number of output points.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -92,7 +92,7 @@ public class CreateModelServiceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The billing cost per request, measured in points.</p>
+     * <p>The number of requests.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -101,7 +101,7 @@ public class CreateModelServiceRequest extends TeaModel {
     public String requestCostPoints;
 
     /**
-     * <p>The model service provider. The example value <code>bailian</code> is a pinyin-based identifier that corresponds to the product name Model Studio.</p>
+     * <p>The model service provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

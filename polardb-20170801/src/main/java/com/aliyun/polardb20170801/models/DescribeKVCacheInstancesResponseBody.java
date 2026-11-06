@@ -35,7 +35,7 @@ public class DescribeKVCacheInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of instances that meet the query conditions.</p>
+     * <p>The total number of instances that match the filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

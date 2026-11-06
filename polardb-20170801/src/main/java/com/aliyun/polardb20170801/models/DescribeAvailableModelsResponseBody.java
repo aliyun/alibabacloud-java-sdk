@@ -38,7 +38,7 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
     public String modelType;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3AA69096-757C-4647-B36C-29EBC2******</p>
@@ -113,7 +113,7 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
          * <p>The minimum number of GPUs.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx</p>
+         * <p>1</p>
          */
         @NameInMap("GpuMinCount")
         public String gpuMinCount;
@@ -122,7 +122,7 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
          * <p>The GPU model.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>NVIDIA A10</p>
          */
         @NameInMap("GpuModel")
         public String gpuModel;
@@ -206,7 +206,7 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         public String displayModelName;
 
         /**
-         * <p>The time when the registration was last modified.</p>
+         * <p>The last modification time of the registration.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-07 20:57:20</p>

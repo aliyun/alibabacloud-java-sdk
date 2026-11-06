@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribePolarClawSkillsMarketRequest extends TeaModel {
     /**
-     * <p>The sorting condition.</p>
+     * <p>The sorting condition. DOWNLOAD_COUNT indicates sorting by download count.</p>
      * 
      * <strong>example:</strong>
-     * <p>NewSessionPerSecond</p>
+     * <p>DOWNLOAD_COUNT</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;
@@ -40,7 +40,7 @@ public class DescribePolarClawSkillsMarketRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions under the current account, including region IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions for the current account, including region IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class DescribePolarClawSkillsMarketRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The skill name to search for.</p>
+     * <p>The skill name to search by.</p>
      * 
      * <strong>example:</strong>
      * <p>polarclawhub</p>
@@ -59,7 +59,7 @@ public class DescribePolarClawSkillsMarketRequest extends TeaModel {
     public String searchBySkillName;
 
     /**
-     * <p>The tag name to search for.</p>
+     * <p>The tag name to search by.</p>
      * 
      * <strong>example:</strong>
      * <p>PolarDB</p>
@@ -68,15 +68,10 @@ public class DescribePolarClawSkillsMarketRequest extends TeaModel {
     public String searchByTagName;
 
     /**
-     * <p>The source of the skill. Valid values:</p>
-     * <ol>
-     * <li><code>PUBLIC</code>: Public.</li>
-     * <li><code>SELF</code>: Private.</li>
-     * <li><code>OTHER</code>: Other.</li>
-     * </ol>
+     * <p>The source of the skill. SELF indicates private skills of the current user, and PUBLIC indicates public skills.</p>
      * 
      * <strong>example:</strong>
-     * <p>polardb-console</p>
+     * <p>PUBLIC</p>
      */
     @NameInMap("Source")
     public String source;

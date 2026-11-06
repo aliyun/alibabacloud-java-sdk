@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationPerformanceResponseBody extends TeaModel {
     /**
-     * <p>The application cluster ID.</p>
+     * <p>The ID of the application cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>pa-**************</p>
@@ -23,7 +23,7 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
     public String applicationType;
 
     /**
-     * <p>The end of the time range to query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format (UTC).</p>
+     * <p>The end time of the query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-05-23T02:21:00Z</p>
@@ -44,7 +44,7 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
     public DescribeApplicationPerformanceResponseBodyPerformanceKeys performanceKeys;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>
@@ -53,7 +53,7 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range to query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format (UTC).</p>
+     * <p>The start time of the query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-11-15T16:00Z</p>

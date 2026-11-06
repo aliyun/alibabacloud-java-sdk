@@ -72,22 +72,22 @@ public class CreateApplicationRequest extends TeaModel {
      * <p>The authentication provider configuration.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>{&quot;github&quot;:{&quot;authAppId&quot;:&quot;example-app-id&quot;,&quot;authAppSecret&quot;:&quot;example-secret&quot;,&quot;trustedDomain&quot;:&quot;example.com&quot;}}</p>
      */
     @NameInMap("AuthProviderConfig")
     public String authProviderConfig;
 
     /**
-     * <p>Specifies whether the automatic creation is enabled and whether to attach and associate with an EIP.</p>
+     * <p>Specifies whether an elastic IP address is automatically created and attached.</p>
      */
     @NameInMap("AutoAllocatePublicEip")
     public Boolean autoAllocatePublicEip;
 
     /**
-     * <p>Specifies whether to automatically create a Polarlakebase cold storage edition instance. Valid values:</p>
+     * <p>Specifies whether to enable automatic creation of a Polarlakebase cold storage instance. Valid values:</p>
      * <ul>
-     * <li>false (default): Do not automatically create the instance.</li>
-     * <li>true: Automatically create the instance.</li>
+     * <li>false (default): disables automatic creation.</li>
+     * <li>true: enables automatic creation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -108,8 +108,8 @@ public class CreateApplicationRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically use coupons. Valid values:</p>
      * <ul>
-     * <li>true (default): Use coupons.</li>
-     * <li>false: Do not use coupons.</li>
+     * <li>true: uses coupons. This is the default value.</li>
+     * <li>false: does not use coupons.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -125,7 +125,7 @@ public class CreateApplicationRequest extends TeaModel {
     public java.util.List<CreateApplicationRequestComponents> components;
 
     /**
-     * <p>The ID of the PolarDB instance on which the application depends.</p>
+     * <p>The PolarDB instance ID on which the application depends.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-**************</p>
@@ -149,7 +149,7 @@ public class CreateApplicationRequest extends TeaModel {
     public java.util.List<CreateApplicationRequestDnatEntries> dnatEntries;
 
     /**
-     * <p>The dedicated NAT IP address allocated for DNAT, which is separate from the SNAT IP address. The IP address must belong to the specified gateway, be in the available state, and the vSwitch where the gateway resides must belong to a primary CIDR block reachable from the office network. This parameter must be specified together with VpcNatGatewayId. Prerequisite: An SNAT entry is associated with the vSwitch where the application resides.</p>
+     * <p>The dedicated NAT IP address allocated for DNAT, which is separate from the SNAT IP address. The IP address must belong to the gateway, be in the available state, and the vSwitch where the gateway resides must belong to the primary CIDR block reachable from the office network. This parameter must be specified together with VpcNatGatewayId. Prerequisite: An SNAT entry is bound to the vSwitch where the application resides.</p>
      * 
      * <strong>example:</strong>
      * <p>10.64.0.10</p>
@@ -158,7 +158,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String dnatIpAddress;
 
     /**
-     * <p>Specifies whether to perform a dry run. Default value: <code>false</code>. If you set this parameter to <code>true</code>, only parameter and resource validations are performed, and no resources are actually created.</p>
+     * <p>Specifies whether to perform a dry run. Default value: <code>false</code>. If you set this parameter to <code>true</code>, only parameter and resource validation is performed, and no resources are actually created.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -173,13 +173,13 @@ public class CreateApplicationRequest extends TeaModel {
     public java.util.List<CreateApplicationRequestEndpoints> endpoints;
 
     /**
-     * <p>The knowledge application specification. This parameter is required for knowledge applications.</p>
+     * <p>The required specification for knowledge applications.</p>
      */
     @NameInMap("KnowledgeApplicationSpec")
     public CreateApplicationRequestKnowledgeApplicationSpec knowledgeApplicationSpec;
 
     /**
-     * <p>The Mem0 application specification. This parameter is required for mem0 applications.</p>
+     * <p>The required specification for mem0 applications.</p>
      */
     @NameInMap("MemApplicationSpec")
     public CreateApplicationRequestMemApplicationSpec memApplicationSpec;
@@ -259,8 +259,8 @@ public class CreateApplicationRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The ID of the Polarlakebase cold storage or high-performance edition instance. Default value: empty. If you specify this parameter, the corresponding storage is mounted to the application.</p>
-     * <p>Currently, only the following applications support this parameter:</p>
+     * <p>The Polarlakebase cold storage or high-performance instance ID. Default value: empty. If you specify this parameter, the corresponding storage is mounted to the application.</p>
+     * <p>Currently, only the following applications are supported:</p>
      * <ul>
      * <li>supabase</li>
      * <li>raycluster</li>
@@ -336,10 +336,10 @@ public class CreateApplicationRequest extends TeaModel {
     public String securityIPType;
 
     /**
-     * <p>The skill template ID.</p>
+     * <p>The ID of the skill template.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>pst-123456</p>
      */
     @NameInMap("SkillTemplateId")
     public String skillTemplateId;
@@ -354,7 +354,7 @@ public class CreateApplicationRequest extends TeaModel {
     public java.util.List<CreateApplicationRequestStorages> storages;
 
     /**
-     * <p>The tag.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateApplicationRequestTag> tag;
@@ -396,7 +396,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The VPC NAT gateway ID for NAT mapping. If you specify this parameter, NAT mapping is enabled when the instance is created. The gateway must reside in the same VPC as the application, be of the private network (intranet) type, and be active.</p>
+     * <p>NAT mapping: the NAT gateway ID of the self-managed VPC NAT gateway. If you specify this parameter, NAT mapping is enabled when the instance is created. The gateway must be in the same VPC as the application, be of the private network type (intranet), and be in the active state.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-xxx</p>
@@ -901,7 +901,7 @@ public class CreateApplicationRequest extends TeaModel {
         /**
          * <p>The maximum number of application subcomponents of the same specifications. Default value: the value of ComponentReplica.</p>
          * <ul>
-         * <li>This parameter is supported only by raycluster.</li>
+         * <li>This parameter is supported only for raycluster.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1089,7 +1089,7 @@ public class CreateApplicationRequest extends TeaModel {
         public Integer frontPort;
 
         /**
-         * <p>The port name. Valid values: webui, hermesagent, dashboard, and ssh.</p>
+         * <p>The name of the port. Valid values: webui, hermesagent, dashboard, and ssh.</p>
          * 
          * <strong>example:</strong>
          * <p>webui</p>
@@ -1697,7 +1697,7 @@ public class CreateApplicationRequest extends TeaModel {
         public String storageCapacity;
 
         /**
-         * <p>The access endpoint of the storage.</p>
+         * <p>The access address of the storage.</p>
          * 
          * <strong>example:</strong>
          * <p>polarfs.example.com</p>
@@ -1706,7 +1706,7 @@ public class CreateApplicationRequest extends TeaModel {
         public String storageEndpoint;
 
         /**
-         * <p>The ID of the storage instance.</p>
+         * <p>The storage instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pfs-xxxx</p>

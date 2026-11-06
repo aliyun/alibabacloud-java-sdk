@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolarClawSkillTemplateRequest extends TeaModel {
     /**
-     * <p>The application ID.</p>
+     * <p>The application ID. This parameter is required when you call this operation. If this parameter is not specified, InvalidApplicationId.Malformed is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>pa-**************</p>

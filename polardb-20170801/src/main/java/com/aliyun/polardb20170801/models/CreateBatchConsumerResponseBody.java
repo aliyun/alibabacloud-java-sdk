@@ -44,7 +44,7 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>
@@ -142,10 +142,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
         public Boolean active;
 
         /**
-         * <p>The complete API key. This value is returned only in the current response.</p>
+         * <p>The complete API key. This value is returned only in this response.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxxxx</p>
+         * <p>6c4b1f0317cd4fd7a5b446d3503d**</p>
          */
         @NameInMap("ApiKey")
         public String apiKey;
@@ -196,7 +196,7 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
         public String budgetPolicyId;
 
         /**
-         * <p>The used quota.</p>
+         * <p>The used budget.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -242,7 +242,7 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
 
         /**
          * <p>The expiration time.</p>
-         * <p>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time is in ISO 8601 format and UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-25T09:37:10Z</p>

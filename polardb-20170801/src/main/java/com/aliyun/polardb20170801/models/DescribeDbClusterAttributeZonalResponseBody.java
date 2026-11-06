@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
     /**
-     * <p>The start time of the free AI feature. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The start time of the free AI feature. The time is in the YYYY-MM-DDTHH:mm:ssZ format (UTC time).</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-13T01:20:28Z</p>
@@ -40,7 +40,7 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
     public String architecture;
 
     /**
-     * <p>The minor version update policy. Valid values:</p>
+     * <p>The minor version update method. Valid values:</p>
      * <ul>
      * <li>Auto: Automatic update.</li>
      * <li>Manual: Manual update.</li>
@@ -56,22 +56,22 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
      * <p>The maximum number of blktags in the file system.</p>
      * 
      * <strong>example:</strong>
-     * <p>7,864,320</p>
+     * <p>7864320</p>
      */
     @NameInMap("BlktagTotal")
     public Long blktagTotal;
 
     /**
-     * <p>The number of used blktags.</p>
+     * <p>The current blktag usage.</p>
      * 
      * <strong>example:</strong>
-     * <p>5,242,880</p>
+     * <p>5242880</p>
      */
     @NameInMap("BlktagUsed")
     public Long blktagUsed;
 
     /**
-     * <p>Specifies whether I/O performance burst is enabled for ESSD AutoPL cloud disks. Valid values:</p>
+     * <p>Indicates whether I/O performance burst is enabled for the ESSD AutoPL cloud disk. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Enabled.</li>
      * <li><strong>false</strong>: Disabled.</li>
@@ -86,11 +86,11 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
     /**
      * <p>The <a href="https://help.aliyun.com/document_detail/183258.html">edition</a>. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong>: Cluster Edition</li>
-     * <li><strong>Basic</strong>: Single Node Edition</li>
-     * <li><strong>Archive</strong>: X-Engine</li>
-     * <li><strong>NormalMultimaster</strong>: Multi-master Cluster Edition</li>
-     * <li><strong>SENormal</strong>: Standard Edition</li>
+     * <li><strong>Normal</strong>: Cluster Edition.</li>
+     * <li><strong>Basic</strong>: Single Node Edition.</li>
+     * <li><strong>Archive</strong>: X-Engine.</li>
+     * <li><strong>NormalMultimaster</strong>: Multi-master Cluster Edition.</li>
+     * <li><strong>SENormal</strong>: Standard Edition.</li>
      * </ul>
      * <blockquote>
      * <ul>
@@ -179,20 +179,20 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
     /**
      * <p>The cluster status. Valid values:</p>
      * <ul>
-     * <li><strong>Creating</strong>: The cluster is being created.</li>
-     * <li><strong>Running</strong>: The cluster is running.</li>
-     * <li><strong>Deleting</strong>: The cluster is being released.</li>
-     * <li><strong>Rebooting</strong>: The cluster is restarting.</li>
-     * <li><strong>DBNodeCreating</strong>: Nodes are being increased.</li>
-     * <li><strong>DBNodeDeleting</strong>: A node is being deleted.</li>
-     * <li><strong>ClassChanging</strong>: The node specifications are being changed.</li>
-     * <li><strong>NetAddressCreating</strong>: Network connectivity is being created.</li>
-     * <li><strong>NetAddressDeleting</strong>: Network connectivity is being deleted.</li>
-     * <li><strong>NetAddressModifying</strong>: Network connectivity is being modified. </li>
-     * <li><strong>Deleted</strong>: The cluster is released.</li>
+     * <li><strong>Creating</strong>: Creating.</li>
+     * <li><strong>Running</strong>: Running.</li>
+     * <li><strong>Deleting</strong>: Releasing.</li>
+     * <li><strong>Rebooting</strong>: Restarting.</li>
+     * <li><strong>DBNodeCreating</strong>: Increasing nodes.</li>
+     * <li><strong>DBNodeDeleting</strong>: Deleting nodes.</li>
+     * <li><strong>ClassChanging</strong>: Changing node specifications.</li>
+     * <li><strong>NetAddressCreating</strong>: Creating network connectivity.</li>
+     * <li><strong>NetAddressDeleting</strong>: Deleting network connectivity.</li>
+     * <li><strong>NetAddressModifying</strong>: Modifying network connectivity. </li>
+     * <li><strong>Deleted</strong>: Released.</li>
      * </ul>
      * <ul>
-     * <li><strong>ClassChanged</strong>: The upgrade or decrease the quota is completed and resources are being revoked.</li>
+     * <li><strong>ClassChanged</strong>: Revoking resources after specification upgrade and downgrade.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -235,7 +235,7 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>For more information about how to upgrade the minor engine version, see <a href="https://help.aliyun.com/document_detail/158572.html">Upgrade minor engine versions</a>.</li>
+     * <li>For more information about how to upgrade the minor engine version, see <a href="https://help.aliyun.com/document_detail/158572.html">Upgrade the minor engine version</a>.</li>
      * <li>This parameter is returned only when the database engine type (<strong>DBType</strong>) is <strong>MySQL</strong>.</li>
      * </ul>
      * </blockquote>
@@ -293,7 +293,7 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
     /**
      * <p>The expiration time of the cluster.</p>
      * <blockquote>
-     * <p>A specific value is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription). An empty value is returned for clusters whose billing method is <strong>Postpaid</strong> (pay-as-you-go). The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>A specific value is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription). For clusters whose billing method is <strong>Postpaid</strong> (pay-as-you-go), an empty value is returned. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -315,7 +315,7 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
     public String expired;
 
     /**
-     * <p>Indicates whether to replenish the resources of the new primary database after a cross-zone switch. Valid values:</p>
+     * <p>Indicates whether the resources of the new primary database are supplemented after a cross-zone switch. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Yes.</li>
      * <li><strong>false</strong>: No.</li>
@@ -330,8 +330,8 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the Hot Standby Cluster (and standby compute nodes) is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>StandbyClusterON</strong>: Enables the Hot Standby Cluster, or enables both the Hot Standby Cluster and standby compute nodes. </li>
-     * <li><strong>StandbyClusterOFF</strong>: shutdown the Hot Standby Cluster, or shutdown both the Hot Standby Cluster and standby compute nodes.</li>
+     * <li><strong>StandbyClusterON</strong>: The Hot Standby Cluster is enabled, or both the Hot Standby Cluster and standby compute nodes are enabled. </li>
+     * <li><strong>StandbyClusterOFF</strong>: The Hot Standby Cluster is shut down, or both the Hot Standby Cluster and standby compute nodes are shut down.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -370,16 +370,16 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
      * <p>The maximum number of inodes in the file system.</p>
      * 
      * <strong>example:</strong>
-     * <p>6,291,456</p>
+     * <p>6291456</p>
      */
     @NameInMap("InodeTotal")
     public Long inodeTotal;
 
     /**
-     * <p>The number of used inodes.</p>
+     * <p>The current inode usage.</p>
      * 
      * <strong>example:</strong>
-     * <p>4,194,304</p>
+     * <p>4194304</p>
      */
     @NameInMap("InodeUsed")
     public Long inodeUsed;
@@ -415,9 +415,9 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
     /**
      * <p>The lock mode. Valid values: </p>
      * <ul>
-     * <li><strong>Unlock</strong>: The cluster is not locked.</li>
-     * <li><strong>ManualLock</strong>: The cluster is manually locked. </li>
-     * <li><strong>LockByExpiration</strong>: The cluster is automatically locked due to expiration.</li>
+     * <li><strong>Unlock</strong>: Unlocked.</li>
+     * <li><strong>ManualLock</strong>: Manually locked. </li>
+     * <li><strong>LockByExpiration</strong>: Automatically locked due to cluster expiration.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -427,7 +427,7 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
     public String lockMode;
 
     /**
-     * <p>The maintenance window of the cluster. The time follows the ISO 8601 standard in the <code>HH:mmZ-HH:mmZ</code> format. The time is displayed in UTC. For example, <code>16:00Z-17:00Z</code> indicates that routine maintenance can be performed from 00:00 to 01:00 (UTC+8).</p>
+     * <p>The maintenance window of the cluster. The time follows the ISO 8601 standard in the HH:mmZ-HH:mmZ format. The time is displayed in UTC. For example, <code>16:00Z-17:00Z</code> indicates that routine maintenance can be performed from 00:00 to 01:00 (UTC+8).</p>
      * 
      * <strong>example:</strong>
      * <p>18:00Z-19:00Z</p>
@@ -464,8 +464,8 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
     public String payType;
 
     /**
-     * <p id="p_wyg_t4a_glm" props="china" icmsditafragmentmagic=1>The provisioned read and write IOPS of the ESSD AutoPL cloud disk. Valid values: 0 to min{50,000, 1000 × Capacity - Baseline performance}.</p>
-     * <p id="p_6de_jxy_k2g" props="china" icmsditafragmentmagic=1>Baseline performance = min{1,800 + 50 × Capacity, 50,000}.</p>
+     * <p id="p_wyg_t4a_glm" props="china" icmsditafragmentmagic=1>The provisioned read and write IOPS for the ESSD AutoPL cloud disk. Valid values: 0 to min{50,000, 1000 × capacity - baseline performance}.</p>
+     * <p id="p_6de_jxy_k2g" props="china" icmsditafragmentmagic=1>Baseline performance = min{1,800 + 50 × capacity, 50,000}.</p>
      * <note id="note_7kj_j0o_rgs" props="china" icmsditafragmentmagic=1>This parameter is supported only when StorageType is set to ESSDAUTOPL.</note>
      * 
      * <strong>example:</strong>
@@ -487,7 +487,7 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
      * <p>The serverless type of the database proxy. Valid values:</p>
      * <ul>
      * <li>AgileServerless: Agile mode, which indicates a serverless cluster.</li>
-     * <li>SteadyServerless: Steady mode, which indicates a cluster with defined specifications (a cluster whose billing is subscription or pay-as-you-go).</li>
+     * <li>SteadyServerless: Steady mode, which indicates a cluster with defined specifications (a cluster whose billing type is subscription or pay-as-you-go).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -508,17 +508,17 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
     /**
      * <p>The status of the database proxy. Valid values:</p>
      * <ul>
-     * <li><strong>Creating</strong>: The database proxy is being created.</li>
-     * <li><strong>Running</strong>: The database proxy is running.</li>
-     * <li><strong>Deleting</strong>: The database proxy is being released.</li>
-     * <li><strong>Rebooting</strong>: The database proxy is restarting.</li>
-     * <li><strong>DBNodeCreating</strong>: Nodes are being increased.</li>
-     * <li><strong>DBNodeDeleting</strong>: A node is being deleted.</li>
-     * <li><strong>ClassChanging</strong>: The node specifications are being changed.</li>
-     * <li><strong>NetAddressCreating</strong>: Network connectivity is being created.</li>
-     * <li><strong>NetAddressDeleting</strong>: Network connectivity is being deleted.</li>
-     * <li><strong>NetAddressModifying</strong>: Network connectivity is being modified.</li>
-     * <li><strong>Deleted</strong>: The database proxy is released.</li>
+     * <li><strong>Creating</strong>: Creating.</li>
+     * <li><strong>Running</strong>: Running.</li>
+     * <li><strong>Deleting</strong>: Releasing.</li>
+     * <li><strong>Rebooting</strong>: Restarting.</li>
+     * <li><strong>DBNodeCreating</strong>: Increasing nodes.</li>
+     * <li><strong>DBNodeDeleting</strong>: Deleting nodes.</li>
+     * <li><strong>ClassChanging</strong>: Changing node specifications.</li>
+     * <li><strong>NetAddressCreating</strong>: Creating network connectivity.</li>
+     * <li><strong>NetAddressDeleting</strong>: Deleting network connectivity.</li>
+     * <li><strong>NetAddressModifying</strong>: Modifying network connectivity.</li>
+     * <li><strong>Deleted</strong>: Released.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -583,10 +583,10 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
     /**
      * <p>The cluster restoration method. Valid values:</p>
      * <ul>
-     * <li><strong>RestoreByTime</strong>: Restores the cluster from a level-1 backup to a specific point in time.</li>
-     * <li><strong>RestoreByBackupSet</strong>: Restores the cluster from a level-1 backup set.</li>
-     * <li><strong>RestoreByTimeOss</strong>: Restores the cluster from a level-2 backup to a specific point in time.</li>
-     * <li><strong>RestoreByBackupSetOss</strong>: Restores the cluster from a level-2 backup set.</li>
+     * <li><strong>RestoreByTime</strong>: Restores the cluster from a point in time based on a level-1 backup.</li>
+     * <li><strong>RestoreByBackupSet</strong>: Restores the cluster from a backup set based on a level-1 backup.</li>
+     * <li><strong>RestoreByTimeOss</strong>: Restores the cluster from a point in time based on a level-2 backup.</li>
+     * <li><strong>RestoreByBackupSetOss</strong>: Restores the cluster from a backup set based on a level-2 backup.</li>
      * <li><strong>CloneFromSourceCluster</strong>: Clones the cluster from the source cluster.</li>
      * </ul>
      * <p><note>This parameter is supported only for clusters restored from a backup set or a point in time after June 1, 2024.</note></p>
@@ -598,7 +598,7 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
     public String restoreType;
 
     /**
-     * <p>RowCompression</p>
+     * <p>The row compression status.</p>
      * 
      * <strong>example:</strong>
      * <p>OFF</p>
@@ -675,7 +675,7 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
      * <p>The storage billing method. Valid values:</p>
      * <ul>
      * <li><strong>Postpaid</strong>: Pay-as-you-go based on capacity.</li>
-     * <li><strong>Prepaid</strong>: Subscription based on storage space.</li>
+     * <li><strong>Prepaid</strong>: Subscription based on space.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -694,12 +694,12 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
     public Long storageSpace;
 
     /**
-     * <p>The storage type of the Enterprise Edition. Valid values:</p>
+     * <p>Valid values for the storage type of the Enterprise Edition:</p>
      * <ul>
      * <li><strong>PSL5</strong></li>
      * <li><strong>PSL4</strong></li>
      * </ul>
-     * <p>The storage type of the Standard Edition. Valid values:</p>
+     * <p>Valid values for the storage type of the Standard Edition:</p>
      * <ul>
      * <li><strong>ESSDPL0</strong></li>
      * <li><strong>ESSDPL1</strong></li>
@@ -715,7 +715,7 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The amount of used storage space. Unit: bytes.</p>
+     * <p>The used storage space. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>3012558848</p>
@@ -741,8 +741,8 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
     /**
      * <p>The specification type of the compute nodes. Valid values:</p>
      * <ul>
-     * <li><strong>Exclusive</strong>: Dedicated</li>
-     * <li><strong>General</strong>: General-purpose</li>
+     * <li><strong>Exclusive</strong>: Dedicated.</li>
+     * <li><strong>General</strong>: General-purpose.</li>
      * </ul>
      * <blockquote>
      * <p>This parameter is returned only for PolarDB for MySQL Cluster Edition clusters.</p>
@@ -755,7 +755,7 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
     public String subCategory;
 
     /**
-     * <p>Indicates whether the failover with hot replica feature compatible with IMCI is supported.</p>
+     * <p>Indicates whether failover with hot replica compatible with In-Memory Column Index (IMCI) is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>ON</p>
@@ -1339,7 +1339,7 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
 
     public static class DescribeDbClusterAttributeZonalResponseBodyDBNodes extends TeaModel {
         /**
-         * <p>The number of CPU cores added by the automatic scaling of local resources.</p>
+         * <p>The number of CPU cores added by automatically scaling local resources.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -1408,19 +1408,19 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
         /**
          * <p>The node status. Valid values:</p>
          * <ul>
-         * <li><strong>Creating</strong>: The node is being created. </li>
-         * <li><strong>Running</strong>: The node is running. </li>
-         * <li><strong>Deleting</strong>: The node is being deleted.  </li>
-         * <li><strong>Rebooting</strong>: The node is restarting.  </li>
-         * <li><strong>DBNodeCreating</strong>: Nodes are being increased.  </li>
-         * <li><strong>DBNodeDeleting</strong>: A node is being deleted. </li>
-         * <li><strong>ClassChanging</strong>: The node specifications are being changed.  </li>
-         * <li><strong>NetAddressCreating</strong>: Network connectivity is being created.  </li>
-         * <li><strong>NetAddressDeleting</strong>: Network connectivity is being deleted.  </li>
-         * <li><strong>NetAddressModifying</strong>: Network connectivity is being modified.</li>
-         * <li><strong>MinorVersionUpgrading</strong>: The minor version is being upgraded.</li>
-         * <li><strong>Maintaining</strong>: The instance is under maintenance.  </li>
-         * <li><strong>Switching</strong>: A switchover is in progress.</li>
+         * <li><strong>Creating</strong>: Creating. </li>
+         * <li><strong>Running</strong>: Running. </li>
+         * <li><strong>Deleting</strong>: Deleting.  </li>
+         * <li><strong>Rebooting</strong>: Restarting.  </li>
+         * <li><strong>DBNodeCreating</strong>: Increasing nodes.  </li>
+         * <li><strong>DBNodeDeleting</strong>: Deleting nodes. </li>
+         * <li><strong>ClassChanging</strong>: Changing node specifications.  </li>
+         * <li><strong>NetAddressCreating</strong>: Creating network connectivity.  </li>
+         * <li><strong>NetAddressDeleting</strong>: Deleting network connectivity.  </li>
+         * <li><strong>NetAddressModifying</strong>: Modifying network connectivity.</li>
+         * <li><strong>MinorVersionUpgrading</strong>: Minor version upgrade in progress.</li>
+         * <li><strong>Maintaining</strong>: Instance maintenance in progress.  </li>
+         * <li><strong>Switching</strong>: Switching.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1430,7 +1430,7 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
         public String DBNodeStatus;
 
         /**
-         * <p>The failover priority. Each node has a failover priority, which determines the probability of the node being elected as the primary node during a failover. A higher value indicates a higher priority.
+         * <p>The failover priority. Each node has a failover priority, which determines the probability of the node being elected as the primary node during a failover. A larger value indicates a higher priority.
          * Valid values: 1 to 15.</p>
          * 
          * <strong>example:</strong>
@@ -1440,7 +1440,7 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
         public Integer failoverPriority;
 
         /**
-         * <p>Indicates whether the hot standby feature is enabled. Valid values:</p>
+         * <p>Indicates whether hot standby is enabled. Valid values:</p>
          * <ul>
          * <li><p><strong>ON</strong>: Enabled.</p>
          * </li>
@@ -1455,7 +1455,7 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
         public String hotReplicaMode;
 
         /**
-         * <p>Indicates whether the In-Memory Column Index (IMCI) feature is enabled. Valid values:</p>
+         * <p>Indicates whether the column store index is enabled. Valid values:</p>
          * <ul>
          * <li><p><strong>ON</strong>: Enabled.</p>
          * </li>
@@ -1470,7 +1470,7 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
         public String imciSwitch;
 
         /**
-         * <p>The primary node ID of the Multi-master Cluster Edition.</p>
+         * <p>The ID of the primary node in the Multi-master Cluster Edition.</p>
          * 
          * <strong>example:</strong>
          * <p>pi-bp18z52akld3*****</p>
@@ -1506,7 +1506,7 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
         public String memorySize;
 
         /**
-         * <p>The name of the hot replica corresponding to the node in the hot standby storage and compute architecture.</p>
+         * <p>The name of the hot replica corresponding to the node in the architecture with hot standby storage and hot standby compute enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>pi-bp18z52mirror*****</p>
@@ -1515,7 +1515,7 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
         public String mirrorInsName;
 
         /**
-         * <p>MultiMasterLocalStandby</p>
+         * <p>The identifier of the local read-only node in the multi-master architecture.</p>
          * 
          * <strong>example:</strong>
          * <p>MultiMasterLocalStandby</p>
@@ -1524,7 +1524,7 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
         public String multiMasterLocalStandby;
 
         /**
-         * <p>MultiMasterPrimaryNode</p>
+         * <p>The identifier of the primary node in the multi-master architecture.</p>
          * 
          * <strong>example:</strong>
          * <p>MultiMasterPrimaryNode</p>
@@ -1596,11 +1596,11 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
         public String serverlessType;
 
         /**
-         * <p>The zone where the node is deployed. This parameter is mainly used for resource symmetry.
+         * <p>Indicates whether the node is in the primary zone or the secondary zone. This is mainly used for resource symmetry.
          * Valid values:</p>
          * <ul>
-         * <li>Primary: The primary zone.</li>
-         * <li>Standby: The secondary zone.</li>
+         * <li>Primary: Primary zone.</li>
+         * <li>Standby: Secondary zone.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1610,7 +1610,7 @@ public class DescribeDbClusterAttributeZonalResponseBody extends TeaModel {
         public String subCluster;
 
         /**
-         * <p>SubGroupDescription</p>
+         * <p>The description of the node subgroup.</p>
          * 
          * <strong>example:</strong>
          * <p>SubGroupDescription</p>

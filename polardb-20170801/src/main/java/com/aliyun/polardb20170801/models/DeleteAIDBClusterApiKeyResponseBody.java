@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DeleteAIDBClusterApiKeyResponseBody extends TeaModel {
     /**
-     * <p>The API key of the model service.</p>
+     * <p>The API key for the model service.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>6c4b1f0317cd4fd7a5b446d3503d**</p>
      */
     @NameInMap("ApiKey")
     public String apiKey;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>068F730C-9130-596E-B696-5B4388C840DF</p>

@@ -23,7 +23,7 @@ public class ResizeAIDBClusterModelResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Indicates whether the current request performs a capacity dry run only.</p>
+     * <p>Indicates whether the current request only performs a capacity dry run.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

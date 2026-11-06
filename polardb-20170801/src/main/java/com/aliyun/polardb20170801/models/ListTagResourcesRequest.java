@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>A token to retrieve the next page of results. You do not need to specify this parameter for the first request. If the first request does not return all results, the response returns a token. You can use this token in the next request to continue the query.</p>
+     * <p>The token used to return more results. You do not need to specify this parameter for the first query. If the first query does not return all results, you can pass the token returned in the previous response to the next query to obtain more results.</p>
      * 
      * <strong>example:</strong>
      * <p>212db86sca4384811e0b5e8707*******</p>
@@ -20,7 +20,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view the available region IDs.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,18 +30,16 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of a cluster. You can specify multiple cluster IDs to query the tags of multiple clusters.</p>
+     * <p>The ID of the target cluster. To query the tags of multiple clusters, click <strong>Add</strong> to add more cluster IDs.</p>
      * <blockquote>
      * <ul>
-     * <li><p>You must specify either the <code>ResourceId.N</code> parameter or the <code>Tag.N.Key</code> parameter.</p>
-     * </li>
-     * <li><p>If you specify the <code>ResourceId.N</code> parameter, you can add up to 50 cluster IDs.</p>
-     * </li>
+     * <li>You must specify at least one of the ResourceId.N and Tag.N.Key parameters.</li>
+     * <li>If you specify the ResourceId.N parameter, you can add up to 50 cluster IDs at a time.</li>
      * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>pc-****************</p>
+     * <p>[&quot;pc-***************&quot;]</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -147,13 +145,11 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of a tag. You can specify multiple tags to query for resources that have all of the specified tags.</p>
+         * <p>The tag key. To query the details of all target clusters under multiple tags, click <strong>Add</strong> to add more tags.</p>
          * <blockquote>
          * <ul>
-         * <li><p>You must specify either the <code>ResourceId.N</code> parameter or the <code>Tag.N.Key</code> parameter.</p>
-         * </li>
-         * <li><p>If you specify the <code>Tag.N.Key</code> parameter, you can add up to 20 tag pairs.</p>
-         * </li>
+         * <li>You must specify at least one of the ResourceId.N and Tag.N.Key parameters.</li>
+         * <li>If you specify the Tag.N.Key parameter, you can add up to 20 tag key-value pairs at a time.</li>
          * </ul>
          * </blockquote>
          * 
@@ -164,7 +160,7 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value that corresponds to the tag key. An empty string is allowed.</p>
+         * <p>The tag value corresponding to the tag key. An empty string is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

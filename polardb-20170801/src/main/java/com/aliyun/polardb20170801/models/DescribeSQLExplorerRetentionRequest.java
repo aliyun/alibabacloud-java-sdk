@@ -7,7 +7,7 @@ public class DescribeSQLExplorerRetentionRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, such as the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, such as cluster IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -26,7 +26,7 @@ public class DescribeSQLExplorerRetentionRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region information of all clusters under the target account.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the regions of all clusters under the target account.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

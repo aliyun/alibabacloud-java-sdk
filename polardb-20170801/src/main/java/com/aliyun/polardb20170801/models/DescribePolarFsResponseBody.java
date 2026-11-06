@@ -26,7 +26,7 @@ public class DescribePolarFsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8CD1852F-8176-55E4-891C-4478DC00CC7A</p>

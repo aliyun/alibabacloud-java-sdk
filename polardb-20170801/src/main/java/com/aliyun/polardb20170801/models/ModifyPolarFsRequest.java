@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyPolarFsRequest extends TeaModel {
     /**
-     * <p>The custom OSS AccessKey ID.</p>
+     * <p>The custom OSS AccessKey ID. You must specify this parameter together with CustomOssSk when you call the ModifyPolarFs operation. Otherwise, the InvalidCustomIdentityInfo.Malformed (400) error is returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>LTAI5tExample1234</p>
      */
     @NameInMap("CustomOssAk")
     public String customOssAk;
 
     /**
-     * <p>The custom OSS AccessKey secret.</p>
+     * <p>The custom OSS AccessKey Secret. You must specify this parameter together with CustomOssAk when you call the ModifyPolarFs operation. Otherwise, the InvalidCustomIdentityInfo.Malformed (400) error is returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>example-oss-secret</p>
      */
     @NameInMap("CustomOssSk")
     public String customOssSk;
@@ -25,7 +25,7 @@ public class ModifyPolarFsRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters in the target region, including cluster IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters in the specified region, including cluster IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ModifyPolarFsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The PolarFS instance ID.</p>
+     * <p>The PolarFs instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pfs-2ze0i74ka607*****</p>

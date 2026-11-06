@@ -15,7 +15,7 @@ public class DescribePolarClawPluginsRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>A list of plugin IDs. If omitted, all plugins are returned.</p>
+     * <p>The list of plugin IDs to query. If this parameter is empty, all plugins are returned.</p>
      */
     @NameInMap("PluginList")
     public java.util.List<String> pluginList;

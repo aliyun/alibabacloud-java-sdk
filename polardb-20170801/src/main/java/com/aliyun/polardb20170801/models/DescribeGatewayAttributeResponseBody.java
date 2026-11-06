@@ -14,7 +14,8 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     public String classCode;
 
     /**
-     * <p>The creation time. The time is in ISO 8601 format and the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The creation time.</p>
+     * <p>The time is in ISO 8601 format and the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2020-02-24T11:57:54Z</p>
@@ -47,7 +48,9 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     public java.util.List<DescribeGatewayAttributeResponseBodyEndpoints> endpoints;
 
     /**
-     * <p>The expiration time. This parameter is empty when the billing method is pay-as-you-go. The time is in ISO 8601 format and the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The expiration time.</p>
+     * <p>This parameter is empty when the billing method is Postpaid.</p>
+     * <p>The time is in ISO 8601 format and the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2027-04-22T16:00:00Z</p>
@@ -98,7 +101,8 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     public String latestVersion;
 
     /**
-     * <p>The last modification time. The time is in ISO 8601 format and the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The last modification time.</p>
+     * <p>The time is in ISO 8601 format and the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2025-10-07T02:19:55Z</p>
@@ -109,8 +113,8 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-     * <li><strong>Prepaid</strong>: subscription.</li>
+     * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+     * <li><strong>Prepaid</strong>: subscription</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -153,10 +157,16 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     public java.util.List<DescribeGatewayAttributeResponseBodySecurityIPArrays> securityIPArrays;
 
     /**
+     * <p>Indicates whether the semantic cache is enabled. If the semantic cache is disabled or has never been enabled, the value is false.</p>
+     */
+    @NameInMap("SemanticCacheEnabled")
+    public Boolean semanticCacheEnabled;
+
+    /**
      * <p>The application status. Valid values:</p>
      * <ul>
-     * <li>CREATE: Creating.</li>
-     * <li>ACTIVATION: Running.</li>
+     * <li>CREATE: creating</li>
+     * <li>ACTIVATION: running</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -166,7 +176,7 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The vSwitch ID.</p>
+     * <p>The ID of the vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-*********************</p>
@@ -316,6 +326,14 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         return this.securityIPArrays;
     }
 
+    public DescribeGatewayAttributeResponseBody setSemanticCacheEnabled(Boolean semanticCacheEnabled) {
+        this.semanticCacheEnabled = semanticCacheEnabled;
+        return this;
+    }
+    public Boolean getSemanticCacheEnabled() {
+        return this.semanticCacheEnabled;
+    }
+
     public DescribeGatewayAttributeResponseBody setStatus(String status) {
         this.status = status;
         return this;
@@ -351,7 +369,7 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         public String address;
 
         /**
-         * <p>The endpoint ID.</p>
+         * <p>The ID of the endpoint node.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -369,10 +387,10 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         public String gwClusterId;
 
         /**
-         * <p>The endpoint type. Valid values:</p>
+         * <p>The type of the endpoint address. Valid values:</p>
          * <ul>
-         * <li>Private: VPC address.</li>
-         * <li>Public: Internet address.</li>
+         * <li>Private: VPC address</li>
+         * <li>Public: Internet address</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -473,7 +491,7 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
 
     public static class DescribeGatewayAttributeResponseBodySecurityIPArrays extends TeaModel {
         /**
-         * <p>The name of the IP address whitelist. Default value: <code>default</code>.</p>
+         * <p>The name of the IP address group. Default value: <code>default</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -482,7 +500,7 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         public String securityIPArrayName;
 
         /**
-         * <p>The tag of the IP address whitelist.</p>
+         * <p>The tag of the IP address group.</p>
          * 
          * <strong>example:</strong>
          * <p>mytag</p>

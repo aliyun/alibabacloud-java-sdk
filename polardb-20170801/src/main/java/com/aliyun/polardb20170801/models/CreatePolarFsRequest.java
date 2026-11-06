@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreatePolarFsRequest extends TeaModel {
     /**
-     * <p>The acceleration space for the Basic Edition. Unit: GB.</p>
+     * <p>The size of the acceleration space. Unit: GB. The value must be no less than 5000 and must be a multiple of 1000. This parameter is required when acceleration is enabled for the Basic Edition.</p>
      * 
      * <strong>example:</strong>
-     * <p>500</p>
+     * <p>5000</p>
      */
     @NameInMap("AccelerateStorageSize")
     public Long accelerateStorageSize;
 
     /**
-     * <p>Specifies whether to enable acceleration. Valid values:</p>
+     * <p>The acceleration startup mode. Valid values:</p>
      * <ul>
      * <li><strong>ONLY</strong>: enables acceleration only.</li>
      * <li><strong>ON</strong>: enables cold data and acceleration.</li>
@@ -40,7 +40,7 @@ public class CreatePolarFsRequest extends TeaModel {
     public String accelerateType;
 
     /**
-     * <p>The list of authorized accounts for the cold storage instance. Separate multiple accounts with commas (<code>,</code>).</p>
+     * <p>The list of authorized accounts for the Cold Storage Edition instance, separated by commas (<code>,</code>).</p>
      * 
      * <strong>example:</strong>
      * <p>128***********，198***********</p>
@@ -56,7 +56,7 @@ public class CreatePolarFsRequest extends TeaModel {
      * </ul>
      * <p>Default value: <strong>false</strong>.</p>
      * <blockquote>
-     * <p>This parameter takes effect only when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+     * <p>This parameter takes effect only when the <strong>PayType</strong> parameter is set to <strong>Prepaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,7 +68,7 @@ public class CreatePolarFsRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically use coupons. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: uses coupons (default).</li>
+     * <li><strong>true</strong>: uses coupons. This is the default value.</li>
      * <li><strong>false</strong>: does not use coupons.</li>
      * </ul>
      * 
@@ -79,12 +79,7 @@ public class CreatePolarFsRequest extends TeaModel {
     public Boolean autoUseCoupon;
 
     /**
-     * <p>The edition. Valid values:</p>
-     * <ul>
-     * <li><strong>basic</strong>: Basic Edition (default).</li>
-     * <li><strong>cold</strong>: cold storage edition.</li>
-     * <li><strong>high_performance</strong>: high-performance edition.</li>
-     * </ul>
+     * <p>The edition. Valid values: basic (Basic Edition, default), high_performance (High-performance Edition), and cold (Cold Storage Edition). For the basic edition, you must specify AccelerateSwitch and AccelerateStorageSize. For the high_performance edition, you must specify StorageType (essdpl0 or essdpl1). For the cold edition, StorageType (local_redundancy or city_redundancy) is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>basic</p>
@@ -129,7 +124,7 @@ public class CreatePolarFsRequest extends TeaModel {
      * <p>The custom AccessKey ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>LTAIExampleCustomOssKeyId</p>
      */
     @NameInMap("CustomOssAk")
     public String customOssAk;
@@ -138,13 +133,13 @@ public class CreatePolarFsRequest extends TeaModel {
      * <p>The custom AccessKey secret.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>ExampleCustomOssSecret123</p>
      */
     @NameInMap("CustomOssSk")
     public String customOssSk;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The PolarDB cluster ID. This parameter is required when you call this operation. If this parameter is not specified, the InvalidDBClusterId.Malformed error is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-**************</p>
@@ -168,8 +163,8 @@ public class CreatePolarFsRequest extends TeaModel {
     /**
      * <p>The billing method. Valid values: </p>
      * <ul>
-     * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-     * <li><strong>Prepaid</strong>: subscription.</li>
+     * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+     * <li><strong>Prepaid</strong>: subscription</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -179,10 +174,10 @@ public class CreatePolarFsRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>If <strong>PayType</strong> is set to <strong>Prepaid</strong>, you must pass parameter. Specifies the upfront cluster as yearly or monthly. Valid values: </p>
+     * <p>If the <strong>PayType</strong> parameter is set to <strong>Prepaid</strong>, this parameter is required. Specifies the billing cycle of the upfront cluster. Valid values: </p>
      * <ul>
-     * <li><strong>Year</strong>: yearly. When you select subscription, the unit is year.</li>
-     * <li><strong>Month</strong>: monthly. When you select subscription, the unit is month.</li>
+     * <li><strong>Year</strong>: year.</li>
+     * <li><strong>Month</strong>: month.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -192,7 +187,7 @@ public class CreatePolarFsRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The coupon code. If not specified, the default coupon is used.</p>
+     * <p>The coupon code. If this parameter is not specified, the default coupon is used.</p>
      * 
      * <strong>example:</strong>
      * <p>727xxxxxx934</p>
@@ -232,20 +227,7 @@ public class CreatePolarFsRequest extends TeaModel {
     public Long storageSpace;
 
     /**
-     * <p>The storage type. Valid values for high-performance clusters:</p>
-     * <ul>
-     * <li><strong>ESSDPL0</strong></li>
-     * <li><strong>ESSDPL1</strong></li>
-     * </ul>
-     * <p>Valid values for Basic Edition clusters:</p>
-     * <ul>
-     * <li><strong>city_redundancy</strong> (zone redundancy)</li>
-     * </ul>
-     * <p>Valid values for cold storage clusters:</p>
-     * <ul>
-     * <li><strong>city_redundancy</strong> (zone redundancy)</li>
-     * <li><strong>local_redundancy</strong> (local redundancy)</li>
-     * </ul>
+     * <p>The storage type. For the high_performance edition, use lowercase essdpl0 or essdpl1. For the cold edition, use local_redundancy or city_redundancy. Select the value based on the edition. The value is case-sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>local_redundancy</p>
@@ -254,10 +236,10 @@ public class CreatePolarFsRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The subscription duration. This parameter is required when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+     * <p>This parameter is required when the <strong>PayType</strong> parameter is set to <strong>Prepaid</strong>.</p>
      * <ul>
-     * <li>When <strong>Period</strong> is set to <strong>Month</strong>, the value of <strong>UsedTime</strong> is an integer ranging from <code>1</code> to <code>9</code>.</li>
-     * <li>When <strong>Period</strong> is set to <strong>Year</strong>, the value of <strong>UsedTime</strong> is an integer ranging from <code>1</code> to <code>3</code>.</li>
+     * <li>If the <strong>Period</strong> parameter is set to <strong>Month</strong>, the value of <strong>UsedTime</strong> must be an integer in the range of <code>[1-9]</code>.</li>
+     * <li>If the <strong>Period</strong> parameter is set to <strong>Year</strong>, the value of <strong>UsedTime</strong> must be an integer in the range of <code>[1-3]</code>.</li>
      * </ul>
      * 
      * <strong>example:</strong>

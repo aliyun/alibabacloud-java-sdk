@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateKnowledgeSpaceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the PolarDB instance created by automatic creation.</p>
+     * <p>The PolarDB instance ID for automatic creation.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-**************</p>
@@ -32,7 +32,7 @@ public class CreateKnowledgeSpaceResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2F029645-FED9-4FE8-A6D3-488954******</p>

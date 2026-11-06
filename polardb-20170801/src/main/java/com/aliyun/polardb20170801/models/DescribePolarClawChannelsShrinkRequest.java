@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolarClawChannelsShrinkRequest extends TeaModel {
     /**
-     * <p>The application ID.</p>
+     * <p>The PolarClaw application ID. First call DescribeApplications to filter applications where ApplicationType is polardb_polarclaw and Status is Activated, and then use the returned ApplicationId to query channels.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribePolarClawChannelsShrinkRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The channel IDs to query. Leave this parameter empty to return all channels.</p>
+     * <p>The list of channel IDs to query. If this parameter is left empty, all channels are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>feishu,telegram</p>

@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "polardb";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-qingdao", "polardb.aliyuncs.com"),
@@ -370,6 +373,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Adds a transparent acceleration path for a PolarFS instance. Before you call this operation, make sure that you have a running PolarDB cluster, a valid OSS bucket in the same region, and a PolarFS instance of the basic type with acceleration enabled. The bucket endpoint format is {bucket-name}.oss-{regionId}-internal.aliyuncs.com. This operation is not applicable to instances of the cold type or instances with acceleration disabled. You can call the DescribePolarFs and DescribePolarFsAttribute operations to verify the instance type and acceleration status.</p>
+     * 
      * <b>summary</b> : 
      * <p>Adds a transparent acceleration path.</p>
      * 
@@ -410,6 +416,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Adds a transparent acceleration path for a PolarFS instance. Before you call this operation, make sure that you have a running PolarDB cluster, a valid OSS bucket in the same region, and a PolarFS instance of the basic type with acceleration enabled. The bucket endpoint format is {bucket-name}.oss-{regionId}-internal.aliyuncs.com. This operation is not applicable to instances of the cold type or instances with acceleration disabled. You can call the DescribePolarFs and DescribePolarFsAttribute operations to verify the instance type and acceleration status.</p>
+     * 
      * <b>summary</b> : 
      * <p>Adds a transparent acceleration path.</p>
      * 
@@ -705,13 +714,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <ul>
-     * <li>Applies prompts to a specified application instance.</li>
-     * </ul>
+     * <p>Before you begin: This operation applies only to mem0 applications created by calling CreateApplication with MemApplicationSpec specified. Create a mem0 application, call CreateApplicationPrompt to create a prompt, and then call this operation to apply the prompt policy.</p>
      * 
      * <b>summary</b> : 
-     * <p>Applies prompts to an application instance.</p>
+     * <p>Applies a prompt policy to an instance.</p>
      * 
      * @param tmpReq ApplyApplicationPromptsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -761,13 +767,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <ul>
-     * <li>Applies prompts to a specified application instance.</li>
-     * </ul>
+     * <p>Before you begin: This operation applies only to mem0 applications created by calling CreateApplication with MemApplicationSpec specified. Create a mem0 application, call CreateApplicationPrompt to create a prompt, and then call this operation to apply the prompt policy.</p>
      * 
      * <b>summary</b> : 
-     * <p>Applies prompts to an application instance.</p>
+     * <p>Applies a prompt policy to an instance.</p>
      * 
      * @param request ApplyApplicationPromptsRequest
      * @return ApplyApplicationPromptsResponse
@@ -1741,6 +1744,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This operation prechecks a skill before it is uploaded to a PolarClaw instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Prechecks a skill.</p>
+     * 
+     * @param request CheckPolarClawSkillRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckPolarClawSkillResponse
+     */
+    public CheckPolarClawSkillResponse checkPolarClawSkillWithOptions(CheckPolarClawSkillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bucketRegionId)) {
+            query.put("BucketRegionId", request.bucketRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bucketType)) {
+            query.put("BucketType", request.bucketType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.OSSBucket)) {
+            query.put("OSSBucket", request.OSSBucket);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillName)) {
+            query.put("SkillName", request.skillName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillVersion)) {
+            query.put("SkillVersion", request.skillVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.summary)) {
+            query.put("Summary", request.summary);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            query.put("Title", request.title);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckPolarClawSkill"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckPolarClawSkillResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This operation prechecks a skill before it is uploaded to a PolarClaw instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Prechecks a skill.</p>
+     * 
+     * @param request CheckPolarClawSkillRequest
+     * @return CheckPolarClawSkillResponse
+     */
+    public CheckPolarClawSkillResponse checkPolarClawSkill(CheckPolarClawSkillRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkPolarClawSkillWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Description</h2>
      * <p>This operation verifies the consistency of quota configurations within a specified PolarFS instance. These configurations include storage capacity and inode limits on directory paths. If inconsistencies are found, the operation returns a list of the inconsistent paths and any related error information.</p>
      * <h3>Usage notes</h3>
@@ -2349,7 +2436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a model creation service API key.</p>
+     * <p>Creates an API key for the model creation service.</p>
      * 
      * @param request CreateAIDBClusterApiKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2389,7 +2476,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a model creation service API key.</p>
+     * <p>Creates an API key for the model creation service.</p>
      * 
      * @param request CreateAIDBClusterApiKeyRequest
      * @return CreateAIDBClusterApiKeyResponse
@@ -3497,6 +3584,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a backup for a specified PolarDB application and returns the backup job ID and workflow task ID.</p>
+     * 
+     * @param request CreateApplicationBackupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateApplicationBackupResponse
+     */
+    public CreateApplicationBackupResponse createApplicationBackupWithOptions(CreateApplicationBackupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationType)) {
+            query.put("ApplicationType", request.applicationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobMode)) {
+            query.put("JobMode", request.jobMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateApplicationBackup"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateApplicationBackupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a backup for a specified PolarDB application and returns the backup job ID and workflow task ID.</p>
+     * 
+     * @param request CreateApplicationBackupRequest
+     * @return CreateApplicationBackupResponse
+     */
+    public CreateApplicationBackupResponse createApplicationBackup(CreateApplicationBackupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createApplicationBackupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a connection address for a specified application.</p>
      * 
      * @param request CreateApplicationEndpointAddressRequest
@@ -3691,16 +3834,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <ul>
-     * <li>A maximum of three manually created backups can exist for each cluster at the same time.</li>
-     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> is returned, it indicates that three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation.</li>
-     * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the task may take a long time to complete.</li>
-     * </ul>
-     * </blockquote>
+     * <p>Prerequisites: Call CreateGwConsumerOrder first, providing GatewayId, PackageSpec, KeyCount, RegionId, and ExpireTime to obtain a CreditToken, and then call this operation to create consumers in batches. Before the call, you must also obtain a valid ConsumerGroupId by calling DescribeConsumerGroups with GwClusterId and RegionId, and explicitly pass it in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates multiple API keys.</p>
+     * <p>Creates API keys in batches.</p>
      * 
      * @param request CreateBatchConsumerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3756,16 +3893,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <ul>
-     * <li>A maximum of three manually created backups can exist for each cluster at the same time.</li>
-     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> is returned, it indicates that three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation.</li>
-     * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the task may take a long time to complete.</li>
-     * </ul>
-     * </blockquote>
+     * <p>Prerequisites: Call CreateGwConsumerOrder first, providing GatewayId, PackageSpec, KeyCount, RegionId, and ExpireTime to obtain a CreditToken, and then call this operation to create consumers in batches. Before the call, you must also obtain a valid ConsumerGroupId by calling DescribeConsumerGroups with GwClusterId and RegionId, and explicitly pass it in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates multiple API keys.</p>
+     * <p>Creates API keys in batches.</p>
      * 
      * @param request CreateBatchConsumerRequest
      * @return CreateBatchConsumerResponse
@@ -5202,6 +5333,170 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a task to process data in PolarFS based on a specified template and write it to a PolarDB database.</p>
+     * 
+     * @param request CreateDataProcessJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDataProcessJobResponse
+     */
+    public CreateDataProcessJobResponse createDataProcessJobWithOptions(CreateDataProcessJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationConfig)) {
+            query.put("DestinationConfig", request.destinationConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationId)) {
+            query.put("DestinationId", request.destinationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationPath)) {
+            query.put("DestinationPath", request.destinationPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationType)) {
+            query.put("DestinationType", request.destinationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelName)) {
+            query.put("ModelName", request.modelName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processingMode)) {
+            query.put("ProcessingMode", request.processingMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceConfig)) {
+            query.put("SourceConfig", request.sourceConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            query.put("SourceId", request.sourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourcePath)) {
+            query.put("SourcePath", request.sourcePath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("SourceType", request.sourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDataProcessJob"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataProcessJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a task to process data in PolarFS based on a specified template and write it to a PolarDB database.</p>
+     * 
+     * @param request CreateDataProcessJobRequest
+     * @return CreateDataProcessJobResponse
+     */
+    public CreateDataProcessJobResponse createDataProcessJob(CreateDataProcessJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDataProcessJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a task template for image data processing in a specified region.</p>
+     * 
+     * @param request CreateDataProcessJobTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDataProcessJobTemplateResponse
+     */
+    public CreateDataProcessJobTemplateResponse createDataProcessJobTemplateWithOptions(CreateDataProcessJobTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.captioning)) {
+            query.put("Captioning", request.captioning);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.captioningPrompt)) {
+            query.put("CaptioningPrompt", request.captioningPrompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.embedding)) {
+            query.put("Embedding", request.embedding);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.embeddingDimension)) {
+            query.put("EmbeddingDimension", request.embeddingDimension);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateConfig)) {
+            query.put("TemplateConfig", request.templateConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
+            query.put("TemplateType", request.templateType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDataProcessJobTemplate"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDataProcessJobTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a task template for image data processing in a specified region.</p>
+     * 
+     * @param request CreateDataProcessJobTemplateRequest
+     * @return CreateDataProcessJobTemplateResponse
+     */
+    public CreateDataProcessJobTemplateResponse createDataProcessJobTemplate(CreateDataProcessJobTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDataProcessJobTemplateWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, make sure that the following requirements are met:</p>
      * <ul>
@@ -6128,6 +6423,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: Before you call this operation, you must activate the PrivateLink service in your current account. If the service is not activated, the API returns the PrivateLinkService.NotOpen (400) error. You can check the activation status of the service in the PrivateLink console. Before creating a knowledge space, you must also prepare the VpcId, VSwitchId, SecurityGroupId, and OSSBucket parameters. You can query VPCs and vSwitches by calling the DescribeVpcs and DescribeVSwitches operations of VPC, query security groups by calling the DescribeSecurityGroups operation of ECS, and query buckets by calling the ListBuckets operation of OSS. If the resources do not exist, create them in the corresponding services first.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a knowledge space.</p>
      * 
@@ -6228,6 +6526,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: Before you call this operation, you must activate the PrivateLink service in your current account. If the service is not activated, the API returns the PrivateLinkService.NotOpen (400) error. You can check the activation status of the service in the PrivateLink console. Before creating a knowledge space, you must also prepare the VpcId, VSwitchId, SecurityGroupId, and OSSBucket parameters. You can query VPCs and vSwitches by calling the DescribeVpcs and DescribeVSwitches operations of VPC, query security groups by calling the DescribeSecurityGroups operation of ECS, and query buckets by calling the ListBuckets operation of OSS. If the resources do not exist, create them in the corresponding services first.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a knowledge space.</p>
      * 
@@ -6449,7 +6750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a model service.</p>
+     * <p>Creates a model creation service.</p>
      * 
      * @param request CreateModelServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6521,7 +6822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a model service.</p>
+     * <p>Creates a model creation service.</p>
      * 
      * @param request CreateModelServiceRequest
      * @return CreateModelServiceResponse
@@ -6938,7 +7239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>You can use this API to define and create a scheduled task. The task is triggered periodically based on a specified schedule and carries specific messages or instructions. This API supports advanced options such as custom execution frequency, time zone settings, and failure alert mechanisms. You can also configure details such as message content, target channels, and recipients.</p>
+     * <p>This API allows you to define and create a new scheduled task (cron job). The task is triggered periodically based on a given schedule and carries specific messages or instructions. It supports advanced options such as customizing the execution frequency, time zone settings, and alert mechanisms for failures. In addition, you can configure detailed information such as the message content, destination channel, and recipients.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a PolarClaw scheduled task.</p>
@@ -7048,7 +7349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>You can use this API to define and create a scheduled task. The task is triggered periodically based on a specified schedule and carries specific messages or instructions. This API supports advanced options such as custom execution frequency, time zone settings, and failure alert mechanisms. You can also configure details such as message content, target channels, and recipients.</p>
+     * <p>This API allows you to define and create a new scheduled task (cron job). The task is triggered periodically based on a given schedule and carries specific messages or instructions. It supports advanced options such as customizing the execution frequency, time zone settings, and alert mechanisms for failures. In addition, you can configure detailed information such as the message content, destination channel, and recipients.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a PolarClaw scheduled task.</p>
@@ -7059,6 +7360,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreatePolarClawCronJobResponse createPolarClawCronJob(CreatePolarClawCronJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createPolarClawCronJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>上传skill</p>
+     * 
+     * @param request CreatePolarClawSkillRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePolarClawSkillResponse
+     */
+    public CreatePolarClawSkillResponse createPolarClawSkillWithOptions(CreatePolarClawSkillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bucketRegionId)) {
+            query.put("BucketRegionId", request.bucketRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bucketType)) {
+            query.put("BucketType", request.bucketType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.OSSBucket)) {
+            query.put("OSSBucket", request.OSSBucket);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.OSSPrefix)) {
+            query.put("OSSPrefix", request.OSSPrefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillName)) {
+            query.put("SkillName", request.skillName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillVersion)) {
+            query.put("SkillVersion", request.skillVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.summary)) {
+            query.put("Summary", request.summary);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            query.put("Title", request.title);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePolarClawSkill"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePolarClawSkillResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>上传skill</p>
+     * 
+     * @param request CreatePolarClawSkillRequest
+     * @return CreatePolarClawSkillResponse
+     */
+    public CreatePolarClawSkillResponse createPolarClawSkill(CreatePolarClawSkillRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createPolarClawSkillWithOptions(request, runtime);
     }
 
     /**
@@ -7673,7 +8054,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an API key for a model service.</p>
+     * <p>Deletes an API key for the model service.</p>
      * 
      * @param request DeleteAIDBClusterApiKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7713,7 +8094,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an API key for a model service.</p>
+     * <p>Deletes an API key for the model service.</p>
      * 
      * @param request DeleteAIDBClusterApiKeyRequest
      * @return DeleteAIDBClusterApiKeyResponse
@@ -9198,8 +9579,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a read-only node from a PolarDB cluster. Before you call this operation, the cluster must be in the Running state. You can call the DescribeDBClusters operation to query the DBClusterStatus parameter and check the cluster state. If the cluster is in a transitional state such as DBNodeCreating or DBNodeDeleting, wait until the cluster returns to the Running state before you call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes read-only nodes from a PolarDB cluster.</p>
+     * <p>Deletes a read-only node from a PolarDB cluster.</p>
      * 
      * @param request DeleteDBNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9262,8 +9646,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a read-only node from a PolarDB cluster. Before you call this operation, the cluster must be in the Running state. You can call the DescribeDBClusters operation to query the DBClusterStatus parameter and check the cluster state. If the cluster is in a transitional state such as DBNodeCreating or DBNodeDeleting, wait until the cluster returns to the Running state before you call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes read-only nodes from a PolarDB cluster.</p>
+     * <p>Deletes a read-only node from a PolarDB cluster.</p>
      * 
      * @param request DeleteDBNodesRequest
      * @return DeleteDBNodesResponse
@@ -9271,6 +9658,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDBNodesResponse deleteDBNodes(DeleteDBNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDBNodesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a data processing task template in a specified region.</p>
+     * 
+     * @param request DeleteDataProcessJobTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDataProcessJobTemplateResponse
+     */
+    public DeleteDataProcessJobTemplateResponse deleteDataProcessJobTemplateWithOptions(DeleteDataProcessJobTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDataProcessJobTemplate"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDataProcessJobTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a data processing task template in a specified region.</p>
+     * 
+     * @param request DeleteDataProcessJobTemplateRequest
+     * @return DeleteDataProcessJobTemplateResponse
+     */
+    public DeleteDataProcessJobTemplateResponse deleteDataProcessJobTemplate(DeleteDataProcessJobTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDataProcessJobTemplateWithOptions(request, runtime);
     }
 
     /**
@@ -11424,7 +11859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the performance metrics of an AI container.</p>
+     * <p>Retrieves AI container performance metrics.</p>
      * 
      * @param request DescribeAIDBClusterPerformanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11472,7 +11907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the performance metrics of an AI container.</p>
+     * <p>Retrieves AI container performance metrics.</p>
      * 
      * @param request DescribeAIDBClusterPerformanceRequest
      * @return DescribeAIDBClusterPerformanceResponse
@@ -11480,6 +11915,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAIDBClusterPerformanceResponse describeAIDBClusterPerformance(DescribeAIDBClusterPerformanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAIDBClusterPerformanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the node resource usage and pod resource requests in an AI database cluster.</p>
+     * 
+     * @param request DescribeAIDBClusterResourceUsageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAIDBClusterResourceUsageResponse
+     */
+    public DescribeAIDBClusterResourceUsageResponse describeAIDBClusterResourceUsageWithOptions(DescribeAIDBClusterResourceUsageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAIDBClusterResourceUsage"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAIDBClusterResourceUsageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the node resource usage and pod resource requests in an AI database cluster.</p>
+     * 
+     * @param request DescribeAIDBClusterResourceUsageRequest
+     * @return DescribeAIDBClusterResourceUsageResponse
+     */
+    public DescribeAIDBClusterResourceUsageResponse describeAIDBClusterResourceUsage(DescribeAIDBClusterResourceUsageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAIDBClusterResourceUsageWithOptions(request, runtime);
     }
 
     /**
@@ -12296,7 +12795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of active operation tasks.</p>
+     * <p>Queries the details of pending tasks.</p>
      * 
      * @param request DescribeActiveOperationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12368,7 +12867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of active operation tasks.</p>
+     * <p>Queries the details of pending tasks.</p>
      * 
      * @param request DescribeActiveOperationTaskRequest
      * @return DescribeActiveOperationTaskResponse
@@ -12540,7 +13039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the branch connection information of an AgenticDB cluster.</p>
+     * <p>Queries the connection information of an AgenticDB branch.</p>
      * 
      * @param request DescribeAgenticDBBranchEndpointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12588,7 +13087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the branch connection information of an AgenticDB cluster.</p>
+     * <p>Queries the connection information of an AgenticDB branch.</p>
      * 
      * @param request DescribeAgenticDBBranchEndpointsRequest
      * @return DescribeAgenticDBBranchEndpointsResponse
@@ -13308,6 +13807,308 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the available models, default models, and memory capability configurations for a specified region and application type.</p>
+     * 
+     * @param request DescribeApplicationAvailableModelsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeApplicationAvailableModelsResponse
+     */
+    public DescribeApplicationAvailableModelsResponse describeApplicationAvailableModelsWithOptions(DescribeApplicationAvailableModelsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationType)) {
+            query.put("ApplicationType", request.applicationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeApplicationAvailableModels"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApplicationAvailableModelsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the available models, default models, and memory capability configurations for a specified region and application type.</p>
+     * 
+     * @param request DescribeApplicationAvailableModelsRequest
+     * @return DescribeApplicationAvailableModelsResponse
+     */
+    public DescribeApplicationAvailableModelsResponse describeApplicationAvailableModels(DescribeApplicationAvailableModelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeApplicationAvailableModelsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of versions to which a specified application type can be upgraded.</p>
+     * 
+     * @param tmpReq DescribeApplicationAvailableVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeApplicationAvailableVersionResponse
+     */
+    public DescribeApplicationAvailableVersionResponse describeApplicationAvailableVersionWithOptions(DescribeApplicationAvailableVersionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeApplicationAvailableVersionShrinkRequest request = new DescribeApplicationAvailableVersionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.components)) {
+            request.componentsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.components, "Components", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationType)) {
+            query.put("ApplicationType", request.applicationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.componentsShrink)) {
+            query.put("Components", request.componentsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeApplicationAvailableVersion"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApplicationAvailableVersionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of versions to which a specified application type can be upgraded.</p>
+     * 
+     * @param request DescribeApplicationAvailableVersionRequest
+     * @return DescribeApplicationAvailableVersionResponse
+     */
+    public DescribeApplicationAvailableVersionResponse describeApplicationAvailableVersion(DescribeApplicationAvailableVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeApplicationAvailableVersionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the automatic backup cycle, backup time window, and level-1 backup retention period of a specified application.</p>
+     * 
+     * @param request DescribeApplicationBackupPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeApplicationBackupPolicyResponse
+     */
+    public DescribeApplicationBackupPolicyResponse describeApplicationBackupPolicyWithOptions(DescribeApplicationBackupPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationType)) {
+            query.put("ApplicationType", request.applicationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeApplicationBackupPolicy"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApplicationBackupPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the automatic backup cycle, backup time window, and level-1 backup retention period of a specified application.</p>
+     * 
+     * @param request DescribeApplicationBackupPolicyRequest
+     * @return DescribeApplicationBackupPolicyResponse
+     */
+    public DescribeApplicationBackupPolicyResponse describeApplicationBackupPolicy(DescribeApplicationBackupPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeApplicationBackupPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the backup sets of a specified application by time range and backup status, and returns the backup details in a paginated list.</p>
+     * 
+     * @param request DescribeApplicationBackupsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeApplicationBackupsResponse
+     */
+    public DescribeApplicationBackupsResponse describeApplicationBackupsWithOptions(DescribeApplicationBackupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationType)) {
+            query.put("ApplicationType", request.applicationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backupStatus)) {
+            query.put("BackupStatus", request.backupStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeApplicationBackups"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApplicationBackupsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the backup sets of a specified application by time range and backup status, and returns the backup details in a paginated list.</p>
+     * 
+     * @param request DescribeApplicationBackupsRequest
+     * @return DescribeApplicationBackupsResponse
+     */
+    public DescribeApplicationBackupsResponse describeApplicationBackups(DescribeApplicationBackupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeApplicationBackupsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the performance metrics and sample data of a specified application component within a specified time range.</p>
+     * 
+     * @param request DescribeApplicationComponentPerformanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeApplicationComponentPerformanceResponse
+     */
+    public DescribeApplicationComponentPerformanceResponse describeApplicationComponentPerformanceWithOptions(DescribeApplicationComponentPerformanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.componentId)) {
+            query.put("ComponentId", request.componentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.key)) {
+            query.put("Key", request.key);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeApplicationComponentPerformance"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApplicationComponentPerformanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the performance metrics and sample data of a specified application component within a specified time range.</p>
+     * 
+     * @param request DescribeApplicationComponentPerformanceRequest
+     * @return DescribeApplicationComponentPerformanceResponse
+     */
+    public DescribeApplicationComponentPerformanceResponse describeApplicationComponentPerformance(DescribeApplicationComponentPerformanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeApplicationComponentPerformanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the details of AI application logs.</p>
      * 
      * @param request DescribeApplicationLogsRequest
@@ -13458,7 +14259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the performance of a PolarDB AI application.</p>
+     * <p>Queries the performance of PolarDB AI applications.</p>
      * 
      * @param tmpReq DescribeApplicationPerformanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13544,7 +14345,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the performance of a PolarDB AI application.</p>
+     * <p>Queries the performance of PolarDB AI applications.</p>
      * 
      * @param request DescribeApplicationPerformanceRequest
      * @return DescribeApplicationPerformanceResponse
@@ -13555,8 +14356,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: First, create a PostgreSQL cluster, and then call the CreateApplication operation to create an application with ApplicationType set to mem0. When creating the application, you must prepare a VPC, a vSwitch, and a security group. After obtaining the ApplicationId, call this operation to query application prompts. Call sequence: CreateDBCluster → CreateApplication → DescribeApplicationPrompts.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Lists the Application Prompts for a specific Application.</p>
+     * <p>Queries all application prompt policies for the current application.</p>
      * 
      * @param request DescribeApplicationPromptsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13595,8 +14399,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: First, create a PostgreSQL cluster, and then call the CreateApplication operation to create an application with ApplicationType set to mem0. When creating the application, you must prepare a VPC, a vSwitch, and a security group. After obtaining the ApplicationId, call this operation to query application prompts. Call sequence: CreateDBCluster → CreateApplication → DescribeApplicationPrompts.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Lists the Application Prompts for a specific Application.</p>
+     * <p>Queries all application prompt policies for the current application.</p>
      * 
      * @param request DescribeApplicationPromptsRequest
      * @return DescribeApplicationPromptsResponse
@@ -13768,6 +14575,104 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeApplicationSessionIdsResponse describeApplicationSessionIds(DescribeApplicationSessionIdsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeApplicationSessionIdsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Logs for different roles may contain different fields. User messages may include Content. Assistant messages may include the model, token usage, and cost statistics. Tool execution results may include the tool name and execution status. Cost statistics are returned exactly as provided by the log source, and this API operation does not perform currency conversion.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the session logs of a specified application, supports filtering by agent, session, and role, and returns paginated log records.</p>
+     * 
+     * @param request DescribeApplicationSessionLogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeApplicationSessionLogsResponse
+     */
+    public DescribeApplicationSessionLogsResponse describeApplicationSessionLogsWithOptions(DescribeApplicationSessionLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agent)) {
+            query.put("Agent", request.agent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.role)) {
+            query.put("Role", request.role);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeApplicationSessionLogs"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApplicationSessionLogsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Logs for different roles may contain different fields. User messages may include Content. Assistant messages may include the model, token usage, and cost statistics. Tool execution results may include the tool name and execution status. Cost statistics are returned exactly as provided by the log source, and this API operation does not perform currency conversion.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the session logs of a specified application, supports filtering by agent, session, and role, and returns paginated log records.</p>
+     * 
+     * @param request DescribeApplicationSessionLogsRequest
+     * @return DescribeApplicationSessionLogsResponse
+     */
+    public DescribeApplicationSessionLogsResponse describeApplicationSessionLogs(DescribeApplicationSessionLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeApplicationSessionLogsWithOptions(request, runtime);
     }
 
     /**
@@ -14678,6 +15583,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeBudgetPoliciesResponse describeBudgetPolicies(DescribeBudgetPoliciesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeBudgetPoliciesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the used quota, statistical window, and associated budget policies for a PolarDB gateway instance by budget dimension.</p>
+     * 
+     * @param request DescribeBudgetUsageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeBudgetUsageResponse
+     */
+    public DescribeBudgetUsageResponse describeBudgetUsageWithOptions(DescribeBudgetUsageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.budgetDimensionRefId)) {
+            query.put("BudgetDimensionRefId", request.budgetDimensionRefId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.budgetDimensionType)) {
+            query.put("BudgetDimensionType", request.budgetDimensionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gwClusterId)) {
+            query.put("GwClusterId", request.gwClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeBudgetUsage"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBudgetUsageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the used quota, statistical window, and associated budget policies for a PolarDB gateway instance by budget dimension.</p>
+     * 
+     * @param request DescribeBudgetUsageRequest
+     * @return DescribeBudgetUsageResponse
+     */
+    public DescribeBudgetUsageResponse describeBudgetUsage(DescribeBudgetUsageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeBudgetUsageWithOptions(request, runtime);
     }
 
     /**
@@ -15986,7 +16947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the model enhancement status and API key list of a specified PolarDB cluster.</p>
+     * <p>Queries the model enhancement status and the list of API keys for a specified PolarDB cluster.</p>
      * 
      * @param request DescribeDBClusterModelEnhancementRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16018,7 +16979,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the model enhancement status and API key list of a specified PolarDB cluster.</p>
+     * <p>Queries the model enhancement status and the list of API keys for a specified PolarDB cluster.</p>
      * 
      * @param request DescribeDBClusterModelEnhancementRequest
      * @return DescribeDBClusterModelEnhancementResponse
@@ -16218,21 +17179,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>If the monitoring frequency is 5 seconds:
+     *     - When the query time range is less than or equal to 1 hour, the display granularity is 5 seconds.
+     *     - When the query time range is less than or equal to 1 day, the display granularity is 1 minute.
+     *     - When the query time range is less than or equal to 7 days, the display granularity is 10 minutes.
+     *     - When the query time range is less than or equal to 30 days, the display granularity is 1 hour.
+     *     - When the query time range is greater than 30 days, the display granularity is 1 day.</p>
      * <ul>
-     * <li>If the monitoring frequency is once every 5 seconds:<ul>
-     * <li>If the query time range is 1 hour or less, the data granularity is 5 seconds.</li>
-     * <li>If the query time range is 1 day or less, the data granularity is 1 minute.</li>
-     * <li>If the query time range is 7 days or less, the data granularity is 10 minutes.</li>
-     * <li>If the query time range is 30 days or less, the data granularity is 1 hour.</li>
-     * <li>If the query time range is more than 30 days, the data granularity is 1 day.</li>
-     * </ul>
-     * </li>
-     * <li>If the monitoring frequency is once every 60 seconds:<ul>
-     * <li>If the query time range is 1 day or less, the data granularity is 1 minute.</li>
-     * <li>If the query time range is 7 days or less, the data granularity is 10 minutes.</li>
-     * <li>If the query time range is 30 days or less, the data granularity is 1 hour.</li>
-     * <li>If the query time range is more than 30 days, the data granularity is 1 day.<blockquote>
-     * <p>The default monitoring frequency is once every 60 seconds. You can call the <a href="https://help.aliyun.com/document_detail/159557.html">ModifyDBClusterMonitor</a> operation to set the frequency to once every 5 seconds.</p>
+     * <li>If the monitoring frequency is 60 seconds:<ul>
+     * <li>When the query time range is less than or equal to 1 day, the display granularity is 1 minute.</li>
+     * <li>When the query time range is less than or equal to 7 days, the display granularity is 10 minutes.</li>
+     * <li>When the query time range is less than or equal to 30 days, the display granularity is 1 hour.</li>
+     * <li>When the query time range is greater than 30 days, the display granularity is 1 day.<blockquote>
+     * <p>The default monitoring frequency is 60 seconds. You can call the <a href="https://help.aliyun.com/document_detail/159557.html">ModifyDBClusterMonitor</a> operation to set it to 5 seconds.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -16296,21 +17255,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>If the monitoring frequency is 5 seconds:
+     *     - When the query time range is less than or equal to 1 hour, the display granularity is 5 seconds.
+     *     - When the query time range is less than or equal to 1 day, the display granularity is 1 minute.
+     *     - When the query time range is less than or equal to 7 days, the display granularity is 10 minutes.
+     *     - When the query time range is less than or equal to 30 days, the display granularity is 1 hour.
+     *     - When the query time range is greater than 30 days, the display granularity is 1 day.</p>
      * <ul>
-     * <li>If the monitoring frequency is once every 5 seconds:<ul>
-     * <li>If the query time range is 1 hour or less, the data granularity is 5 seconds.</li>
-     * <li>If the query time range is 1 day or less, the data granularity is 1 minute.</li>
-     * <li>If the query time range is 7 days or less, the data granularity is 10 minutes.</li>
-     * <li>If the query time range is 30 days or less, the data granularity is 1 hour.</li>
-     * <li>If the query time range is more than 30 days, the data granularity is 1 day.</li>
-     * </ul>
-     * </li>
-     * <li>If the monitoring frequency is once every 60 seconds:<ul>
-     * <li>If the query time range is 1 day or less, the data granularity is 1 minute.</li>
-     * <li>If the query time range is 7 days or less, the data granularity is 10 minutes.</li>
-     * <li>If the query time range is 30 days or less, the data granularity is 1 hour.</li>
-     * <li>If the query time range is more than 30 days, the data granularity is 1 day.<blockquote>
-     * <p>The default monitoring frequency is once every 60 seconds. You can call the <a href="https://help.aliyun.com/document_detail/159557.html">ModifyDBClusterMonitor</a> operation to set the frequency to once every 5 seconds.</p>
+     * <li>If the monitoring frequency is 60 seconds:<ul>
+     * <li>When the query time range is less than or equal to 1 day, the display granularity is 1 minute.</li>
+     * <li>When the query time range is less than or equal to 7 days, the display granularity is 10 minutes.</li>
+     * <li>When the query time range is less than or equal to 30 days, the display granularity is 1 hour.</li>
+     * <li>When the query time range is greater than 30 days, the display granularity is 1 day.<blockquote>
+     * <p>The default monitoring frequency is 60 seconds. You can call the <a href="https://help.aliyun.com/document_detail/159557.html">ModifyDBClusterMonitor</a> operation to set it to 5 seconds.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -17970,6 +18927,174 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the status, data source, destination database, and processing configuration of a specified data processing job.</p>
+     * 
+     * @param request DescribeDataProcessJobAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDataProcessJobAttributeResponse
+     */
+    public DescribeDataProcessJobAttributeResponse describeDataProcessJobAttributeWithOptions(DescribeDataProcessJobAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDataProcessJobAttribute"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDataProcessJobAttributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status, data source, destination database, and processing configuration of a specified data processing job.</p>
+     * 
+     * @param request DescribeDataProcessJobAttributeRequest
+     * @return DescribeDataProcessJobAttributeResponse
+     */
+    public DescribeDataProcessJobAttributeResponse describeDataProcessJobAttribute(DescribeDataProcessJobAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDataProcessJobAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries data processing task templates by region, template ID, or type, and returns paginated template configurations.</p>
+     * 
+     * @param request DescribeDataProcessJobTemplatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDataProcessJobTemplatesResponse
+     */
+    public DescribeDataProcessJobTemplatesResponse describeDataProcessJobTemplatesWithOptions(DescribeDataProcessJobTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
+            query.put("TemplateType", request.templateType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDataProcessJobTemplates"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDataProcessJobTemplatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries data processing task templates by region, template ID, or type, and returns paginated template configurations.</p>
+     * 
+     * @param request DescribeDataProcessJobTemplatesRequest
+     * @return DescribeDataProcessJobTemplatesResponse
+     */
+    public DescribeDataProcessJobTemplatesResponse describeDataProcessJobTemplates(DescribeDataProcessJobTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDataProcessJobTemplatesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the data processing jobs of a specified PolarFS instance, with support for filtering by job ID and pagination.</p>
+     * 
+     * @param request DescribeDataProcessJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDataProcessJobsResponse
+     */
+    public DescribeDataProcessJobsResponse describeDataProcessJobsWithOptions(DescribeDataProcessJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            query.put("SourceId", request.sourceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDataProcessJobs"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDataProcessJobsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the data processing jobs of a specified PolarFS instance, with support for filtering by job ID and pagination.</p>
+     * 
+     * @param request DescribeDataProcessJobsRequest
+     * @return DescribeDataProcessJobsResponse
+     */
+    public DescribeDataProcessJobsResponse describeDataProcessJobs(DescribeDataProcessJobsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDataProcessJobsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries for the details of databases in a specified PolarDB cluster.</p>
      * 
      * @param request DescribeDatabasesRequest
@@ -18290,7 +19415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the available edge cloud regions for the current account, along with their central control regions and standby edge cloud regions.</p>
+     * <p>Queries the available edge cloud regions for the current account, including their central control regions and standby edge cloud regions.</p>
      * 
      * @param request DescribeEdgeCloudRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18315,7 +19440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the available edge cloud regions for the current account, along with their central control regions and standby edge cloud regions.</p>
+     * <p>Queries the available edge cloud regions for the current account, including their central control regions and standby edge cloud regions.</p>
      * 
      * @param request DescribeEdgeCloudRegionRequest
      * @return DescribeEdgeCloudRegionResponse
@@ -18503,6 +19628,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the file information under a specified path of a PolarFS instance and uses a pagination token to retrieve subsequent results.</p>
+     * 
+     * @param request DescribeFileSystemsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeFileSystemsResponse
+     */
+    public DescribeFileSystemsResponse describeFileSystemsWithOptions(DescribeFileSystemsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeFileSystems"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeFileSystemsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the file information under a specified path of a PolarFS instance and uses a pagination token to retrieve subsequent results.</p>
+     * 
+     * @param request DescribeFileSystemsRequest
+     * @return DescribeFileSystemsResponse
+     */
+    public DescribeFileSystemsResponse describeFileSystems(DescribeFileSystemsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeFileSystemsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Describes SQL firewall rules.</p>
      * 
      * @param request DescribeFirewallRulesRequest
@@ -18567,7 +19748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all API keys under the current UID.</p>
+     * <p>Queries all API keys for the specified UID.</p>
      * 
      * @param request DescribeGatewayApikeyListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18607,7 +19788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all API keys under the current UID.</p>
+     * <p>Queries all API keys for the specified UID.</p>
      * 
      * @param request DescribeGatewayApikeyListRequest
      * @return DescribeGatewayApikeyListResponse
@@ -19157,7 +20338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the historical events in Event Center.</p>
+     * <p>Queries the list of events in Event Center.</p>
      * 
      * @param request DescribeHistoryEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19245,7 +20426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the historical events in Event Center.</p>
+     * <p>Queries the list of events in Event Center.</p>
      * 
      * @param request DescribeHistoryEventsRequest
      * @return DescribeHistoryEventsResponse
@@ -19253,6 +20434,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeHistoryEventsResponse describeHistoryEvents(DescribeHistoryEventsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeHistoryEventsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the number of events in the Event Center by event category.</p>
+     * 
+     * @param request DescribeHistoryEventsStatRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHistoryEventsStatResponse
+     */
+    public DescribeHistoryEventsStatResponse describeHistoryEventsStatWithOptions(DescribeHistoryEventsStatRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.archiveStatus)) {
+            query.put("ArchiveStatus", request.archiveStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fromStartTime)) {
+            query.put("FromStartTime", request.fromStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toStartTime)) {
+            query.put("ToStartTime", request.toStartTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeHistoryEventsStat"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHistoryEventsStatResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the number of events in the Event Center by event category.</p>
+     * 
+     * @param request DescribeHistoryEventsStatRequest
+     * @return DescribeHistoryEventsStatResponse
+     */
+    public DescribeHistoryEventsStatResponse describeHistoryEventsStat(DescribeHistoryEventsStatRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeHistoryEventsStatWithOptions(request, runtime);
     }
 
     /**
@@ -19461,6 +20698,222 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries a list of reports for a specified inspection task. Supports time-based filtering and pagination.</p>
+     * 
+     * @param request DescribeInspectionReportListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInspectionReportListResponse
+     */
+    public DescribeInspectionReportListResponse describeInspectionReportListWithOptions(DescribeInspectionReportListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInspectionReportList"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInspectionReportListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of reports for a specified inspection task. Supports time-based filtering and pagination.</p>
+     * 
+     * @param request DescribeInspectionReportListRequest
+     * @return DescribeInspectionReportListResponse
+     */
+    public DescribeInspectionReportListResponse describeInspectionReportList(DescribeInspectionReportListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInspectionReportListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the execution plan, associated clusters, and validity period of a specified inspection task.</p>
+     * 
+     * @param request DescribeInspectionTaskAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInspectionTaskAttributeResponse
+     */
+    public DescribeInspectionTaskAttributeResponse describeInspectionTaskAttributeWithOptions(DescribeInspectionTaskAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInspectionTaskAttribute"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInspectionTaskAttributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the execution plan, associated clusters, and validity period of a specified inspection task.</p>
+     * 
+     * @param request DescribeInspectionTaskAttributeRequest
+     * @return DescribeInspectionTaskAttributeResponse
+     */
+    public DescribeInspectionTaskAttributeResponse describeInspectionTaskAttribute(DescribeInspectionTaskAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInspectionTaskAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries inspection tasks, their execution plans, and associated clusters by paging based on the inspection space.</p>
+     * 
+     * @param request DescribeInspectionTaskListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInspectionTaskListResponse
+     */
+    public DescribeInspectionTaskListResponse describeInspectionTaskListWithOptions(DescribeInspectionTaskListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.spaceId)) {
+            query.put("SpaceId", request.spaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInspectionTaskList"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInspectionTaskListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries inspection tasks, their execution plans, and associated clusters by paging based on the inspection space.</p>
+     * 
+     * @param request DescribeInspectionTaskListRequest
+     * @return DescribeInspectionTaskListResponse
+     */
+    public DescribeInspectionTaskListResponse describeInspectionTaskList(DescribeInspectionTaskListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInspectionTaskListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the overall score, status, and check results of an instance inspection report based on the report ID.</p>
+     * 
+     * @param request DescribeInstanceReportAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInstanceReportAttributeResponse
+     */
+    public DescribeInstanceReportAttributeResponse describeInstanceReportAttributeWithOptions(DescribeInstanceReportAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportId)) {
+            query.put("ReportId", request.reportId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInstanceReportAttribute"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceReportAttributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the overall score, status, and check results of an instance inspection report based on the report ID.</p>
+     * 
+     * @param request DescribeInstanceReportAttributeRequest
+     * @return DescribeInstanceReportAttributeResponse
+     */
+    public DescribeInstanceReportAttributeResponse describeInstanceReportAttribute(DescribeInstanceReportAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInstanceReportAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the details of a knowledge base synchronization link.</p>
      * 
      * @param request DescribeKBSyncLinkAttributeRequest
@@ -19573,7 +21026,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of KVCache instances filtered by region, associated cluster, or instance ID, and returns the results in pages.</p>
+     * <p>Queries the region, status, capacity, network, billing method, and expiration information of a specified KVCache instance.</p>
+     * 
+     * @param request DescribeKVCacheInstanceAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeKVCacheInstanceAttributeResponse
+     */
+    public DescribeKVCacheInstanceAttributeResponse describeKVCacheInstanceAttributeWithOptions(DescribeKVCacheInstanceAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.KVCacheInstanceId)) {
+            query.put("KVCacheInstanceId", request.KVCacheInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeKVCacheInstanceAttribute"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeKVCacheInstanceAttributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the region, status, capacity, network, billing method, and expiration information of a specified KVCache instance.</p>
+     * 
+     * @param request DescribeKVCacheInstanceAttributeRequest
+     * @return DescribeKVCacheInstanceAttributeResponse
+     */
+    public DescribeKVCacheInstanceAttributeResponse describeKVCacheInstanceAttribute(DescribeKVCacheInstanceAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeKVCacheInstanceAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries KVCache instances filtered by region, associated cluster, or instance ID, and returns paginated instance details.</p>
      * 
      * @param request DescribeKVCacheInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19625,7 +21122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of KVCache instances filtered by region, associated cluster, or instance ID, and returns the results in pages.</p>
+     * <p>Queries KVCache instances filtered by region, associated cluster, or instance ID, and returns paginated instance details.</p>
      * 
      * @param request DescribeKVCacheInstancesRequest
      * @return DescribeKVCacheInstancesResponse
@@ -20741,7 +22238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the model service list.</p>
+     * <p>Queries the list of model services.</p>
      * 
      * @param request DescribeModelServicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20805,7 +22302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the model service list.</p>
+     * <p>Queries the list of model services.</p>
      * 
      * @param request DescribeModelServicesRequest
      * @return DescribeModelServicesResponse
@@ -21360,8 +22857,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: Use Signature Version 3.0 to call GetPolarAgent to initiate a conversation and obtain the SessionId from the returned stream. Then, call this operation to query the chat history of the session.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the chat records of a specified session.</p>
+     * <p>Queries the details of a specified session.</p>
      * 
      * @param request DescribePolarAgentChatRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21396,8 +22896,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: Use Signature Version 3.0 to call GetPolarAgent to initiate a conversation and obtain the SessionId from the returned stream. Then, call this operation to query the chat history of the session.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the chat records of a specified session.</p>
+     * <p>Queries the details of a specified session.</p>
      * 
      * @param request DescribePolarAgentChatRecordsRequest
      * @return DescribePolarAgentChatRecordsResponse
@@ -21715,12 +23218,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>You can use this API to retrieve all scheduled tasks in a PolarClaw application or filter specific tasks using the <code>JobIdList</code> parameter.</li>
-     * <li>If you do not specify the <code>JobIdList</code> parameter, the API returns all scheduled tasks in the application.</li>
+     * <li>You can use this API operation to retrieve all scheduled jobs in a PolarClaw application, or filter specific jobs by using the JobIdList parameter.</li>
+     * <li>If the JobIdList parameter is not provided, all scheduled jobs in the application are returned.
+     * Before you begin: Call DescribeApplications to filter applications where ApplicationType is polardb_polarclaw, obtain the ApplicationId, and then call this operation to query scheduled jobs.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query all or specific scheduled tasks in PolarClaw and their details.</p>
+     * <p>Queries all or specified scheduled jobs and their details in PolarClaw.</p>
      * 
      * @param tmpReq DescribePolarClawCronJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21776,12 +23280,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>You can use this API to retrieve all scheduled tasks in a PolarClaw application or filter specific tasks using the <code>JobIdList</code> parameter.</li>
-     * <li>If you do not specify the <code>JobIdList</code> parameter, the API returns all scheduled tasks in the application.</li>
+     * <li>You can use this API operation to retrieve all scheduled jobs in a PolarClaw application, or filter specific jobs by using the JobIdList parameter.</li>
+     * <li>If the JobIdList parameter is not provided, all scheduled jobs in the application are returned.
+     * Before you begin: Call DescribeApplications to filter applications where ApplicationType is polardb_polarclaw, obtain the ApplicationId, and then call this operation to query scheduled jobs.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query all or specific scheduled tasks in PolarClaw and their details.</p>
+     * <p>Queries all or specified scheduled jobs and their details in PolarClaw.</p>
      * 
      * @param request DescribePolarClawCronJobsRequest
      * @return DescribePolarClawCronJobsResponse
@@ -21841,14 +23346,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API gets information about all plugins for a given application, including built-in and user-installed plugins.</li>
-     * <li>Use the <code>PluginList</code> parameter to request information for specific plugins. If you omit this parameter, the API returns details for all plugins.</li>
+     * <li>Retrieves information about all plugins in a specified application, including built-in and user-installed plugins.</li>
+     * <li>You can use the PluginList parameter to request information about specific plugins. If this parameter is not provided, details of all plugins are returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists all installed PolarClaw plugins and their status.</p>
+     * <p>Lists all installed PolarClaw plugins and their status information.</p>
      * 
      * @param request DescribePolarClawPluginsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21884,14 +23389,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API gets information about all plugins for a given application, including built-in and user-installed plugins.</li>
-     * <li>Use the <code>PluginList</code> parameter to request information for specific plugins. If you omit this parameter, the API returns details for all plugins.</li>
+     * <li>Retrieves information about all plugins in a specified application, including built-in and user-installed plugins.</li>
+     * <li>You can use the PluginList parameter to request information about specific plugins. If this parameter is not provided, details of all plugins are returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists all installed PolarClaw plugins and their status.</p>
+     * <p>Lists all installed PolarClaw plugins and their status information.</p>
      * 
      * @param request DescribePolarClawPluginsRequest
      * @return DescribePolarClawPluginsResponse
@@ -21903,7 +23408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of the PolarClaw skill security assessment.</p>
+     * <p>Retrieves the details of a PolarClaw skill security assessment.</p>
      * 
      * @param request DescribePolarClawSkillAssessmentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21951,7 +23456,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of the PolarClaw skill security assessment.</p>
+     * <p>Retrieves the details of a PolarClaw skill security assessment.</p>
      * 
      * @param request DescribePolarClawSkillAssessmentRequest
      * @return DescribePolarClawSkillAssessmentResponse
@@ -22011,14 +23516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <ul>
-     * <li>This API operation queries all quota rules under a specific Polarlakebase instance and supports fuzzy matching by using the QuotaNameMatch and PatternMatch parameters.</li>
-     * <li>The pagination feature is not yet public and will be available after the kernel is ready. Currently, there is no pagination limit on the returned results.</li>
-     * <li>PolarFsInstanceId is required and specifies the Polarlakebase instance to query.</li>
-     * <li>Optional parameters such as QuotaNameMatch and PatternMatch can be used to further filter the matching quota rules.</li>
-     * <li>The returned data includes but is not limited to the total number of quota rules, the number of rules on the current page, and specific rule details such as the rule ID, name, description, and capacity limit.</li>
-     * </ul>
+     * <p>Queries the PolarClaw skill templates associated with a specified application. You must provide ApplicationId when calling this operation. If this parameter is not specified, InvalidApplicationId.Malformed is returned. The SkillTemplates field in the response is a list of templates, and Skills is a map of keys to strings. Each string can be parsed into an array of skill details, where each array element contains skillName and version.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a PolarClaw skill template.</p>
@@ -22065,14 +23563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <ul>
-     * <li>This API operation queries all quota rules under a specific Polarlakebase instance and supports fuzzy matching by using the QuotaNameMatch and PatternMatch parameters.</li>
-     * <li>The pagination feature is not yet public and will be available after the kernel is ready. Currently, there is no pagination limit on the returned results.</li>
-     * <li>PolarFsInstanceId is required and specifies the Polarlakebase instance to query.</li>
-     * <li>Optional parameters such as QuotaNameMatch and PatternMatch can be used to further filter the matching quota rules.</li>
-     * <li>The returned data includes but is not limited to the total number of quota rules, the number of rules on the current page, and specific rule details such as the rule ID, name, description, and capacity limit.</li>
-     * </ul>
+     * <p>Queries the PolarClaw skill templates associated with a specified application. You must provide ApplicationId when calling this operation. If this parameter is not specified, InvalidApplicationId.Malformed is returned. The SkillTemplates field in the response is a list of templates, and Skills is a map of keys to strings. Each string can be parsed into an array of skill details, where each array element contains skillName and version.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a PolarClaw skill template.</p>
@@ -22083,6 +23574,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribePolarClawSkillTemplateResponse describePolarClawSkillTemplate(DescribePolarClawSkillTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePolarClawSkillTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries PolarClaw skill templates. You can filter the templates by template ID and time range, and the results are paginated.</p>
+     * 
+     * @param request DescribePolarClawSkillTemplatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePolarClawSkillTemplatesResponse
+     */
+    public DescribePolarClawSkillTemplatesResponse describePolarClawSkillTemplatesWithOptions(DescribePolarClawSkillTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationType)) {
+            query.put("ApplicationType", request.applicationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillTemplateId)) {
+            query.put("SkillTemplateId", request.skillTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePolarClawSkillTemplates"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolarClawSkillTemplatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries PolarClaw skill templates. You can filter the templates by template ID and time range, and the results are paginated.</p>
+     * 
+     * @param request DescribePolarClawSkillTemplatesRequest
+     * @return DescribePolarClawSkillTemplatesResponse
+     */
+    public DescribePolarClawSkillTemplatesResponse describePolarClawSkillTemplates(DescribePolarClawSkillTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePolarClawSkillTemplatesWithOptions(request, runtime);
     }
 
     /**
@@ -22263,7 +23826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the PolarFS information.</p>
+     * <p>Queries PolarFS information.</p>
      * 
      * @param request DescribePolarFsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22331,7 +23894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the PolarFS information.</p>
+     * <p>Queries PolarFS information.</p>
      * 
      * @param request DescribePolarFsRequest
      * @return DescribePolarFsResponse
@@ -22451,16 +24014,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>Path</strong> 参数必须提供一个绝对路径。</li>
-     * <li><strong>Recursive</strong> 参数默认为 <code>false</code>，如果设置为 <code>true</code>，则会递归列出所有子目录的内容。</li>
-     * <li><strong>Depth</strong> 参数用于限制递归深度，默认值为 <code>1</code>。</li>
-     * <li><strong>Filter</strong> 参数支持通配符或正则表达式过滤结果。</li>
+     * <li>The <strong>Path</strong> parameter must be an absolute path.</li>
+     * <li>The <strong>Recursive</strong> parameter defaults to <code>false</code>. If set to <code>true</code>, the contents of all subdirectories are listed recursively.</li>
+     * <li>The <strong>Depth</strong> parameter limits the recursion depth. Default value: <code>1</code>.</li>
+     * <li>The <strong>Filter</strong> parameter supports wildcards or regular expressions to filter results.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists the files and subdirectories under a specified path.</p>
+     * <p>Lists the files and subdirectories in a specified path.</p>
      * 
      * @param request DescribePolarFsObjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22496,16 +24059,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>Path</strong> 参数必须提供一个绝对路径。</li>
-     * <li><strong>Recursive</strong> 参数默认为 <code>false</code>，如果设置为 <code>true</code>，则会递归列出所有子目录的内容。</li>
-     * <li><strong>Depth</strong> 参数用于限制递归深度，默认值为 <code>1</code>。</li>
-     * <li><strong>Filter</strong> 参数支持通配符或正则表达式过滤结果。</li>
+     * <li>The <strong>Path</strong> parameter must be an absolute path.</li>
+     * <li>The <strong>Recursive</strong> parameter defaults to <code>false</code>. If set to <code>true</code>, the contents of all subdirectories are listed recursively.</li>
+     * <li>The <strong>Depth</strong> parameter limits the recursion depth. Default value: <code>1</code>.</li>
+     * <li>The <strong>Filter</strong> parameter supports wildcards or regular expressions to filter results.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists the files and subdirectories under a specified path.</p>
+     * <p>Lists the files and subdirectories in a specified path.</p>
      * 
      * @param request DescribePolarFsObjectsRequest
      * @return DescribePolarFsObjectsResponse
@@ -22513,6 +24076,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribePolarFsObjectsResponse describePolarFsObjects(DescribePolarFsObjectsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePolarFsObjectsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Use Key to specify the metric group to query and Interval to specify the sampling granularity. The end time of the query must not be earlier than the start time, and the start time must not be later than the current time.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the performance metrics and sampling data of a specified PolarFS instance within a specified time range.</p>
+     * 
+     * @param request DescribePolarFsPerformanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePolarFsPerformanceResponse
+     */
+    public DescribePolarFsPerformanceResponse describePolarFsPerformanceWithOptions(DescribePolarFsPerformanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.key)) {
+            query.put("Key", request.key);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePolarFsPerformance"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolarFsPerformanceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Use Key to specify the metric group to query and Interval to specify the sampling granularity. The end time of the query must not be earlier than the start time, and the start time must not be later than the current time.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the performance metrics and sampling data of a specified PolarFS instance within a specified time range.</p>
+     * 
+     * @param request DescribePolarFsPerformanceRequest
+     * @return DescribePolarFsPerformanceResponse
+     */
+    public DescribePolarFsPerformanceResponse describePolarFsPerformance(DescribePolarFsPerformanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePolarFsPerformanceWithOptions(request, runtime);
     }
 
     /**
@@ -22597,7 +24234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the quota list.</p>
+     * <p>Queries the list of quotas.</p>
      * 
      * @param request DescribePolarFsQuotaListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22649,7 +24286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the quota list.</p>
+     * <p>Queries the list of quotas.</p>
      * 
      * @param request DescribePolarFsQuotaListRequest
      * @return DescribePolarFsQuotaListResponse
@@ -22977,7 +24614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the replication slots of a specified PolarDB cluster. You can filter the results by the child node name of the distributed instance.</p>
+     * <p>Queries the replication slots of a specified PolarDB cluster. You can filter the results by the child node name of a distributed instance.</p>
      * 
      * @param request DescribeReplicationSlotsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23013,7 +24650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the replication slots of a specified PolarDB cluster. You can filter the results by the child node name of the distributed instance.</p>
+     * <p>Queries the replication slots of a specified PolarDB cluster. You can filter the results by the child node name of a distributed instance.</p>
      * 
      * @param request DescribeReplicationSlotsRequest
      * @return DescribeReplicationSlotsResponse
@@ -23358,6 +24995,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the parameter modification history of PolarDB Search.</p>
+     * 
+     * @param request DescribeSearchModifyParameterLogRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSearchModifyParameterLogResponse
+     */
+    public DescribeSearchModifyParameterLogResponse describeSearchModifyParameterLogWithOptions(DescribeSearchModifyParameterLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSearchModifyParameterLog"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSearchModifyParameterLogResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the parameter modification history of PolarDB Search.</p>
+     * 
+     * @param request DescribeSearchModifyParameterLogRequest
+     * @return DescribeSearchModifyParameterLogResponse
+     */
+    public DescribeSearchModifyParameterLogResponse describeSearchModifyParameterLog(DescribeSearchModifyParameterLogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSearchModifyParameterLogWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the parameters of a PolarDB Search cluster.</p>
+     * 
+     * @param request DescribeSearchParametersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSearchParametersResponse
+     */
+    public DescribeSearchParametersResponse describeSearchParametersWithOptions(DescribeSearchParametersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSearchParameters"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSearchParametersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the parameters of a PolarDB Search cluster.</p>
+     * 
+     * @param request DescribeSearchParametersRequest
+     * @return DescribeSearchParametersResponse
+     */
+    public DescribeSearchParametersResponse describeSearchParameters(DescribeSearchParametersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSearchParametersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries shared backup sets.</p>
      * 
      * @param request DescribeSharedBackupsRequest
@@ -23663,7 +25396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is only supported in regions where the endpoint is polardb.aliyuncs.com.</p>
+     * <p>This operation is supported only in regions where the endpoint is polardb.aliyuncs.com.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -23724,7 +25457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is only supported in regions where the endpoint is polardb.aliyuncs.com.</p>
+     * <p>This operation is supported only in regions where the endpoint is polardb.aliyuncs.com.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -24264,7 +25997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the available zones.</p>
+     * <p>Queries zones.</p>
      * 
      * @param request DescribeZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24308,7 +26041,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the available zones.</p>
+     * <p>Queries zones.</p>
      * 
      * @param request DescribeZonesRequest
      * @return DescribeZonesResponse
@@ -24752,7 +26485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the dataset management service for a cold storage instance.</p>
+     * <p>Enables the dataset service for a cold storage instance.</p>
      * 
      * @param request EnableAIDBClusterDatasetServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24808,7 +26541,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the dataset management service for a cold storage instance.</p>
+     * <p>Enables the dataset service for a cold storage instance.</p>
      * 
      * @param request EnableAIDBClusterDatasetServiceRequest
      * @return EnableAIDBClusterDatasetServiceResponse
@@ -24820,7 +26553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the column store table feature for a specified PolarDB cluster.</p>
+     * <p>Enables the column store table feature for the specified PolarDB cluster.</p>
      * 
      * @param request EnableDBClusterCTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24852,7 +26585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the column store table feature for a specified PolarDB cluster.</p>
+     * <p>Enables the column store table feature for the specified PolarDB cluster.</p>
      * 
      * @param request EnableDBClusterCTableRequest
      * @return EnableDBClusterCTableResponse
@@ -25787,6 +27520,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the token required for mounting a Lakebase tenant. Only PolarFS instances whose CreationCategory is basic (Basic Edition) are supported. The server verifies the instance category before calling the backend, and returns OperationDenied.PolarFsCategory for other categories. Before calling this operation, provide PolarFsInstanceId and specify the associated DBClusterId, mount subdirectory, and tenant identifier as needed.</p>
+     * 
      * <b>summary</b> : 
      * <p>Retrieves the Lakebase tenant token (SPG tenant mount URL).</p>
      * 
@@ -25831,6 +27567,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the token required for mounting a Lakebase tenant. Only PolarFS instances whose CreationCategory is basic (Basic Edition) are supported. The server verifies the instance category before calling the backend, and returns OperationDenied.PolarFsCategory for other categories. Before calling this operation, provide PolarFsInstanceId and specify the associated DBClusterId, mount subdirectory, and tenant identifier as needed.</p>
+     * 
      * <b>summary</b> : 
      * <p>Retrieves the Lakebase tenant token (SPG tenant mount URL).</p>
      * 
@@ -25949,7 +27688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This operation sets file quota rules for specific directories in a Polarlakebase instance. By configuring the <code>FilePathQuotas</code> parameter, you can specify the directories to which the quota rules apply and their related attributes. Note that when you use <code>FilePathId</code> to specify a directory, ensure that the path is an absolute path starting from the root directory rather than a mount point path. Additionally, you can use the <code>Strategy</code> parameter to control how the rules take effect on existing files. By default, the rules take effect only when a rule is missing.</p>
+     * <p>This operation sets file quota rules for specific directories in a Polarlakebase instance. By configuring the <code>FilePathQuotas</code> parameter, you can specify the directories to which the quota rules apply and their related attributes. Note that when you use <code>FilePathId</code> to specify a directory, ensure that the path is an absolute path starting from the root directory rather than a mount point path. Additionally, you can use the <code>Strategy</code> parameter to control how the rules take effect on existing files. By default, the rules take effect only when no rules exist.</p>
      * <h3>Important notes</h3>
      * <ul>
      * <li>The maximum length of the <code>FilePathQuotas</code> list is 21.</li>
@@ -25957,7 +27696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the central bucket of polarClawSkill.</p>
+     * <p>Retrieves the central bucket for polarClawSkill.</p>
      * 
      * @param request GetPolarClawSkillRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25990,7 +27729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This operation sets file quota rules for specific directories in a Polarlakebase instance. By configuring the <code>FilePathQuotas</code> parameter, you can specify the directories to which the quota rules apply and their related attributes. Note that when you use <code>FilePathId</code> to specify a directory, ensure that the path is an absolute path starting from the root directory rather than a mount point path. Additionally, you can use the <code>Strategy</code> parameter to control how the rules take effect on existing files. By default, the rules take effect only when a rule is missing.</p>
+     * <p>This operation sets file quota rules for specific directories in a Polarlakebase instance. By configuring the <code>FilePathQuotas</code> parameter, you can specify the directories to which the quota rules apply and their related attributes. Note that when you use <code>FilePathId</code> to specify a directory, ensure that the path is an absolute path starting from the root directory rather than a mount point path. Additionally, you can use the <code>Strategy</code> parameter to control how the rules take effect on existing files. By default, the rules take effect only when no rules exist.</p>
      * <h3>Important notes</h3>
      * <ul>
      * <li>The maximum length of the <code>FilePathQuotas</code> list is 21.</li>
@@ -25998,7 +27737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the central bucket of polarClawSkill.</p>
+     * <p>Retrieves the central bucket for polarClawSkill.</p>
      * 
      * @param request GetPolarClawSkillRegionRequest
      * @return GetPolarClawSkillRegionResponse
@@ -26552,7 +28291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags that are attached to one or more PolarDB clusters, or the PolarDB clusters that are attached to one or more tags.</p>
+     * <p>Queries the tags bound to one or more PolarDB clusters, or the PolarDB clusters bound to one or more tags.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26616,7 +28355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags that are attached to one or more PolarDB clusters, or the PolarDB clusters that are attached to one or more tags.</p>
+     * <p>Queries the tags bound to one or more PolarDB clusters, or the PolarDB clusters bound to one or more tags.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -26628,7 +28367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags that are attached to resources in a specified region.</p>
+     * <p>Queries the resource tags in a region.</p>
      * 
      * @param request ListTagResourcesForRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26684,7 +28423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags that are attached to resources in a specified region.</p>
+     * <p>Queries the resource tags in a region.</p>
      * 
      * @param request ListTagResourcesForRegionRequest
      * @return ListTagResourcesForRegionResponse
@@ -27540,7 +29279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the history retention window of an AgenticDB project.</p>
+     * <p>Modifies the history retention window for an AgenticDB project.</p>
      * 
      * @param request ModifyAgenticDBProjectHistoryRetentionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27588,7 +29327,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the history retention window of an AgenticDB project.</p>
+     * <p>Modifies the history retention window for an AgenticDB project.</p>
      * 
      * @param request ModifyAgenticDBProjectHistoryRetentionRequest
      * @return ModifyAgenticDBProjectHistoryRetentionResponse
@@ -27596,6 +29335,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyAgenticDBProjectHistoryRetentionResponse modifyAgenticDBProjectHistoryRetention(ModifyAgenticDBProjectHistoryRetentionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyAgenticDBProjectHistoryRetentionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the automatic backup cycle, backup time window, and level-1 backup retention period of a specified application.</p>
+     * 
+     * @param request ModifyApplicationBackupPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyApplicationBackupPolicyResponse
+     */
+    public ModifyApplicationBackupPolicyResponse modifyApplicationBackupPolicyWithOptions(ModifyApplicationBackupPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationType)) {
+            query.put("ApplicationType", request.applicationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.preferredBackupPeriod)) {
+            query.put("PreferredBackupPeriod", request.preferredBackupPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.preferredBackupRetentionPeriod)) {
+            query.put("PreferredBackupRetentionPeriod", request.preferredBackupRetentionPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.preferredBackupTime)) {
+            query.put("PreferredBackupTime", request.preferredBackupTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyApplicationBackupPolicy"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyApplicationBackupPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the automatic backup cycle, backup time window, and level-1 backup retention period of a specified application.</p>
+     * 
+     * @param request ModifyApplicationBackupPolicyRequest
+     * @return ModifyApplicationBackupPolicyResponse
+     */
+    public ModifyApplicationBackupPolicyResponse modifyApplicationBackupPolicy(ModifyApplicationBackupPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyApplicationBackupPolicyWithOptions(request, runtime);
     }
 
     /**
@@ -28992,7 +30795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the minor engine version update policy of a specified PolarDB cluster.</p>
+     * <p>Modifies the minor engine version update policy for a specified PolarDB cluster.</p>
      * 
      * @param request ModifyDBClusterAutoUpgradeMinorVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29028,7 +30831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the minor engine version update policy of a specified PolarDB cluster.</p>
+     * <p>Modifies the minor engine version update policy for a specified PolarDB cluster.</p>
      * 
      * @param request ModifyDBClusterAutoUpgradeMinorVersionRequest
      * @return ModifyDBClusterAutoUpgradeMinorVersionResponse
@@ -30022,7 +31825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or shuts down the Secure Sockets Layer (SSL) encryption feature for a PolarDB cluster, or updates the CA certificate of a PolarDB cluster.</p>
+     * <p>Enables or performs a shutdown of the Secure Sockets Layer (SSL) encryption feature for a PolarDB cluster, or updates the CA certificate of a PolarDB cluster.</p>
      * 
      * @param request ModifyDBClusterSSLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30098,7 +31901,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or shuts down the Secure Sockets Layer (SSL) encryption feature for a PolarDB cluster, or updates the CA certificate of a PolarDB cluster.</p>
+     * <p>Enables or performs a shutdown of the Secure Sockets Layer (SSL) encryption feature for a PolarDB cluster, or updates the CA certificate of a PolarDB cluster.</p>
      * 
      * @param request ModifyDBClusterSSLRequest
      * @return ModifyDBClusterSSLResponse
@@ -30414,15 +32217,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li><p>You must activate Key Management Service (KMS) before you perform this operation. For more information, see <a href="https://help.aliyun.com/document_detail/153781.html">Purchase a dedicated KMS instance</a>.</p>
-     * </li>
-     * <li><p>You cannot disable transparent data encryption (TDE) after you enable it.</p>
-     * </li>
+     * <li>You must activate KMS before you perform this operation. For more information, see <a href="https://help.aliyun.com/document_detail/153781.html">Purchase a dedicated KMS instance</a>.</li>
+     * <li>TDE cannot be disabled after it is enabled.
+     * Before you call this operation, call the OpenKmsService operation of KMS (version 2016-01-20) to activate KMS, and then call this operation to enable TDE for the cluster.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>ModifyDBClusterTDE</p>
+     * <p>Enables Transparent Data Encryption (TDE) for a specified PolarDB cluster. You must activate Key Management Service (KMS) before you enable TDE. TDE cannot be disabled after it is enabled.</p>
      * 
      * @param request ModifyDBClusterTDERequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30492,15 +32294,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li><p>You must activate Key Management Service (KMS) before you perform this operation. For more information, see <a href="https://help.aliyun.com/document_detail/153781.html">Purchase a dedicated KMS instance</a>.</p>
-     * </li>
-     * <li><p>You cannot disable transparent data encryption (TDE) after you enable it.</p>
-     * </li>
+     * <li>You must activate KMS before you perform this operation. For more information, see <a href="https://help.aliyun.com/document_detail/153781.html">Purchase a dedicated KMS instance</a>.</li>
+     * <li>TDE cannot be disabled after it is enabled.
+     * Before you call this operation, call the OpenKmsService operation of KMS (version 2016-01-20) to activate KMS, and then call this operation to enable TDE for the cluster.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>ModifyDBClusterTDE</p>
+     * <p>Enables Transparent Data Encryption (TDE) for a specified PolarDB cluster. You must activate Key Management Service (KMS) before you enable TDE. TDE cannot be disabled after it is enabled.</p>
      * 
      * @param request ModifyDBClusterTDERequest
      * @return ModifyDBClusterTDEResponse
@@ -31124,7 +32925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures the routing access weights of nodes.</p>
+     * <p>Modifies the routing access weights of nodes.</p>
      * 
      * @param request ModifyDBNodeRouterWeightRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31180,7 +32981,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures the routing access weights of nodes.</p>
+     * <p>Modifies the routing access weights of nodes.</p>
      * 
      * @param request ModifyDBNodeRouterWeightRequest
      * @return ModifyDBNodeRouterWeightResponse
@@ -32552,7 +34353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the PolarFS configuration.</p>
+     * <p>Modifies the PolarFs configuration.</p>
      * 
      * @param request ModifyPolarFsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32596,7 +34397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the PolarFS configuration.</p>
+     * <p>Modifies the PolarFs configuration.</p>
      * 
      * @param request ModifyPolarFsRequest
      * @return ModifyPolarFsResponse
@@ -33066,6 +34867,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Modifies the parameters of a PolarDB Search cluster.</p>
+     * 
+     * @param request ModifySearchParametersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifySearchParametersResponse
+     */
+    public ModifySearchParametersResponse modifySearchParametersWithOptions(ModifySearchParametersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
+            query.put("Parameters", request.parameters);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifySearchParameters"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySearchParametersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the parameters of a PolarDB Search cluster.</p>
+     * 
+     * @param request ModifySearchParametersRequest
+     * @return ModifySearchParametersResponse
+     */
+    public ModifySearchParametersResponse modifySearchParameters(ModifySearchParametersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifySearchParametersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies the IP address whitelist of a specified PolarDB cluster.</p>
      * 
      * @param request ModifySecurityIpsRequest
@@ -33134,6 +34983,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifySecurityIpsResponse modifySecurityIps(ModifySecurityIpsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifySecurityIpsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates task information in the task center.</p>
+     * 
+     * @param request ModifyTaskInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyTaskInfoResponse
+     */
+    public ModifyTaskInfoResponse modifyTaskInfoWithOptions(ModifyTaskInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.actionParams)) {
+            query.put("ActionParams", request.actionParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stepName)) {
+            query.put("StepName", request.stepName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskAction)) {
+            query.put("TaskAction", request.taskAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyTaskInfo"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyTaskInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates task information in the task center.</p>
+     * 
+     * @param request ModifyTaskInfoRequest
+     * @return ModifyTaskInfoResponse
+     */
+    public ModifyTaskInfoResponse modifyTaskInfo(ModifyTaskInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyTaskInfoWithOptions(request, runtime);
     }
 
     /**
@@ -33472,6 +35393,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RefreshDBClusterStorageUsageResponse refreshDBClusterStorageUsage(RefreshDBClusterStorageUsageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.refreshDBClusterStorageUsageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the proxy performance level of a specified PolarDB cluster and supports scheduled execution.</p>
+     * 
+     * @param request RefreshProxyLevelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RefreshProxyLevelResponse
+     */
+    public RefreshProxyLevelResponse refreshProxyLevelWithOptions(RefreshProxyLevelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fromTimeService)) {
+            query.put("FromTimeService", request.fromTimeService);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.plannedEndTime)) {
+            query.put("PlannedEndTime", request.plannedEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.plannedStartTime)) {
+            query.put("PlannedStartTime", request.plannedStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyTargetClass)) {
+            query.put("ProxyTargetClass", request.proxyTargetClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RefreshProxyLevel"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RefreshProxyLevelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the proxy performance level of a specified PolarDB cluster and supports scheduled execution.</p>
+     * 
+     * @param request RefreshProxyLevelRequest
+     * @return RefreshProxyLevelResponse
+     */
+    public RefreshProxyLevelResponse refreshProxyLevel(RefreshProxyLevelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.refreshProxyLevelWithOptions(request, runtime);
     }
 
     /**
@@ -34818,6 +36819,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Restores a PolarDB application from a specified backup set.</p>
+     * 
+     * @param request RestoreApplicationByBackupSetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RestoreApplicationByBackupSetResponse
+     */
+    public RestoreApplicationByBackupSetResponse restoreApplicationByBackupSetWithOptions(RestoreApplicationByBackupSetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationType)) {
+            query.put("ApplicationType", request.applicationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backupSetId)) {
+            query.put("BackupSetId", request.backupSetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RestoreApplicationByBackupSet"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RestoreApplicationByBackupSetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Restores a PolarDB application from a specified backup set.</p>
+     * 
+     * @param request RestoreApplicationByBackupSetRequest
+     * @return RestoreApplicationByBackupSetResponse
+     */
+    public RestoreApplicationByBackupSetResponse restoreApplicationByBackupSet(RestoreApplicationByBackupSetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.restoreApplicationByBackupSetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Restores databases or tables to a PolarDB cluster.</p>
      * 
      * @param request RestoreTableRequest
@@ -35498,7 +37555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds tags to PolarDB clusters.</p>
+     * <p>Adds tags to an instance.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35558,7 +37615,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds tags to PolarDB clusters.</p>
+     * <p>Adds tags to an instance.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -36020,8 +38077,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><code>PolarFsInstanceId</code> is required and identifies the Polarlakebase instance to operate on.</li>
-     * <li>The <code>FilePathIds</code> parameter is also required. It accepts a list of file path IDs in string format. These IDs correspond to the specific file paths whose quota rules need to be deleted. Ensure that each provided ID is valid and belongs to the specified Polarlakebase instance.</li>
+     * <li>PolarFsInstanceId is required to identify the Polarlakebase instance to operate.</li>
+     * <li>The FilePathIds parameter is also required. It accepts a list of file path IDs in string format, which correspond to the specific file paths whose quota rules are to be deleted. Ensure that each provided ID is valid and belongs to the specified Polarlakebase instance.</li>
      * <li>A single API call can process quota deletion requests for multiple file paths. However, control the request size to avoid performance issues.</li>
      * </ul>
      * 
@@ -36076,8 +38133,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><code>PolarFsInstanceId</code> is required and identifies the Polarlakebase instance to operate on.</li>
-     * <li>The <code>FilePathIds</code> parameter is also required. It accepts a list of file path IDs in string format. These IDs correspond to the specific file paths whose quota rules need to be deleted. Ensure that each provided ID is valid and belongs to the specified Polarlakebase instance.</li>
+     * <li>PolarFsInstanceId is required to identify the Polarlakebase instance to operate.</li>
+     * <li>The FilePathIds parameter is also required. It accepts a list of file path IDs in string format, which correspond to the specific file paths whose quota rules are to be deleted. Ensure that each provided ID is valid and belongs to the specified Polarlakebase instance.</li>
      * <li>A single API call can process quota deletion requests for multiple file paths. However, control the request size to avoid performance issues.</li>
      * </ul>
      * 
@@ -36094,7 +38151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detaches tags from a PolarDB cluster.</p>
+     * <p>Removes tags from one or more PolarDB clusters.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36158,7 +38215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detaches tags from a PolarDB cluster.</p>
+     * <p>Removes tags from one or more PolarDB clusters.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -36316,7 +38373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a knowledge base synchronization link.</p>
+     * <p>Updates the synchronization link for a knowledge base.</p>
      * 
      * @param request UpdateKBSyncLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36396,7 +38453,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a knowledge base synchronization link.</p>
+     * <p>Updates the synchronization link for a knowledge base.</p>
      * 
      * @param request UpdateKBSyncLinkRequest
      * @return UpdateKBSyncLinkResponse

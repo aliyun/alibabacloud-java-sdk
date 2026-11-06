@@ -25,10 +25,10 @@ public class DescribeColdStorageInstanceRequest extends TeaModel {
     /**
      * <p>The supported engine types. The return value is the sum of the following engine type values:</p>
      * <ul>
-     * <li>1: search engine</li>
-     * <li>2: time series engine</li>
-     * <li>4: wide table engine</li>
-     * <li>8: file engine</li>
+     * <li>1: Search engine</li>
+     * <li>2: Time series engine</li>
+     * <li>4: Wide table engine</li>
+     * <li>8: File engine</li>
      * </ul>
      * <blockquote>
      * <p>For example, if the EngineType value is 15, 15 = 8 + 4 + 2 + 1, which indicates that the instance supports the search engine, time series engine, wide table engine, and file engine. If the EngineType value is 6, 6 = 4 + 2, which indicates that the instance supports the time series engine and wide table engine.</p>
@@ -41,18 +41,18 @@ public class DescribeColdStorageInstanceRequest extends TeaModel {
     public String engineType;
 
     /**
-     * <p>The expiration time of the cluster. Note: A specific value is returned only for clusters whose billing method is Prepaid (subscription). For Postpaid (pay-as-you-go) clusters, a null value is returned.</p>
+     * <p>The validity period of the download URL, in seconds. If you query the download URL of a specified data table and do not specify this parameter, the default value is 3600.</p>
      * 
      * <strong>example:</strong>
-     * <p>2020-11-14T16:00:00Z</p>
+     * <p>3600</p>
      */
     @NameInMap("ExpireTime")
     public Integer expireTime;
 
     /**
      * <ul>
-     * <li>If you do not specify the <strong>MaxResults</strong> parameter, batch query is not required. The value of the <strong>MaxResults</strong> parameter returned after the API call indicates the total number of list entries.</li>
-     * <li>If you specify the <strong>MaxResults</strong> parameter, batch query is required. The value of <strong>MaxResults</strong> indicates the number of entries displayed per batch. Valid values: <strong>1</strong> to <strong>100</strong>. The value of the <strong>MaxResults</strong> parameter returned after the API call indicates the number of list entries in the current query batch. Set the <strong>MaxResults</strong> parameter to <strong>20</strong>.</li>
+     * <li>If you do not specify the <strong>MaxResults</strong> parameter, it indicates that you do not need to query in batches. The value of the <strong>MaxResults</strong> parameter returned in the response indicates the total number of entries.</li>
+     * <li>If you specify the <strong>MaxResults</strong> parameter, it indicates that you need to query in batches. The value of <strong>MaxResults</strong> indicates the number of entries to return per batch. Valid values: <strong>1</strong> to <strong>100</strong>. The value of the <strong>MaxResults</strong> parameter returned in the response indicates the number of entries in the current batch. We recommend that you set the <strong>MaxResults</strong> parameter to <strong>20</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,11 +107,11 @@ public class DescribeColdStorageInstanceRequest extends TeaModel {
      * <p>The region ID.</p>
      * <blockquote>
      * <ul>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region information of all clusters under the target account.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view the region information of all clusters under the target account.</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>If this parameter is left empty, scheduled tasks in all regions under the current account are queried by default.</li>
+     * <li>If you leave this parameter empty, scheduled tasks in all regions of the current account are queried by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>

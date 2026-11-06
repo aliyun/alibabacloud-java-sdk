@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeReplicationSlotsRequest extends TeaModel {
     /**
-     * <p>The ID of the PolarDB cluster.</p>
+     * <p>The ID of the PolarDB cluster to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeReplicationSlotsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The name of the child node of the distributed instance, used to filter replication slots.</p>
+     * <p>The child node name of the distributed instance, which is used to filter replication slots.</p>
      * 
      * <strong>example:</strong>
      * <p>testGroup</p>

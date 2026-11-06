@@ -8,7 +8,7 @@ public class CreateModelApiResponseBody extends TeaModel {
      * <p>The invocation endpoint.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p><a href="https://model-api.example.com/v1/chat/completions">https://model-api.example.com/v1/chat/completions</a></p>
      */
     @NameInMap("InvokeEndpoint")
     public String invokeEndpoint;
@@ -23,7 +23,7 @@ public class CreateModelApiResponseBody extends TeaModel {
     public String modelApiId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</p>

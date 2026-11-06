@@ -23,7 +23,7 @@ public class CreateModelServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the model service.</p>
+     * <p>The model status.</p>
      * 
      * <strong>example:</strong>
      * <p>Enable</p>

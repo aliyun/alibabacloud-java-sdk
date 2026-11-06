@@ -33,7 +33,7 @@ public class UpdatePolarClawSkillRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The environment variables. This is a map of key-value pairs. An empty value indicates that the variable is deleted.</p>
+     * <p>The environment variables. This is a key-value pair map. An empty value indicates that the variable is deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;NETA_TOKEN&quot;:&quot;my-token&quot;}</p>

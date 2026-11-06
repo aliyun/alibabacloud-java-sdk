@@ -26,7 +26,7 @@ public class UninstallPolarClawSkillsRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view region details.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region details.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class UninstallPolarClawSkillsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The task-level scope: workspace (default) or global. This parameter is mutually exclusive with AgentId.</p>
+     * <p>The task-level scope. Valid values: workspace (default) and global. This parameter is mutually exclusive with AgentId.</p>
      * 
      * <strong>example:</strong>
      * <p>global</p>

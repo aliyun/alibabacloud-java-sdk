@@ -42,7 +42,7 @@ public class DescribePolarClawSkillTemplateResponseBody extends TeaModel {
 
     public static class DescribePolarClawSkillTemplateResponseBodySkillTemplates extends TeaModel {
         /**
-         * <p>Indicates whether it is actually created.</p>
+         * <p>Indicates whether the template is actually created.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-21 12:00:00</p>
@@ -87,7 +87,10 @@ public class DescribePolarClawSkillTemplateResponseBody extends TeaModel {
         public String skillTemplateName;
 
         /**
-         * <p>The list of associated skill details.</p>
+         * <p>The map of associated skill details. The key is the skill identifier, and the value is a JSON string that can be parsed into an array of skill details. Each array element contains skillName and version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;skill1&quot;:&quot;[{\&quot;skillName\&quot;:\&quot;example-skill\&quot;,\&quot;version\&quot;:\&quot;1.0.0\&quot;}]&quot;}</p>
          */
         @NameInMap("Skills")
         public java.util.Map<String, String> skills;

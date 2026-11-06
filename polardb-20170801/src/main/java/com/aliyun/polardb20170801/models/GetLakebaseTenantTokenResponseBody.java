@@ -14,7 +14,7 @@ public class GetLakebaseTenantTokenResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CD35F3-F3-44CA-AFFF-BAF869******</p>
@@ -53,7 +53,7 @@ public class GetLakebaseTenantTokenResponseBody extends TeaModel {
      * <p>The tenant token.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>example-tenant-token-123456</p>
      */
     @NameInMap("Token")
     public String token;

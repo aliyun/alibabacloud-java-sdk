@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDBNodesResponseBody extends TeaModel {
     /**
-     * <p>The database cluster ID.</p>
+     * <p>The ID of the database cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-**************</p>
@@ -14,7 +14,7 @@ public class DeleteDBNodesResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The order ID.</p>
+     * <p>The ID of the order.</p>
      * 
      * <strong>example:</strong>
      * <p>2035638*******</p>
@@ -23,7 +23,7 @@ public class DeleteDBNodesResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6566B2E6-3157-4B57-A693-AFB751******</p>

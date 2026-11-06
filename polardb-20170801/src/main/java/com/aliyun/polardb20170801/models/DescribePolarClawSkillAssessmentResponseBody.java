@@ -8,13 +8,13 @@ public class DescribePolarClawSkillAssessmentResponseBody extends TeaModel {
      * <p>The assessment result.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;zhReportContent&quot;:&quot;# Skill Security Assessment Report\n\n&gt; <strong>Risk level:</strong> ...}</p>
+     * <p>{&quot;zhReportContent&quot;:&quot;# Skill Security Assessment Report\n\n&gt; <strong>Risk Level:</strong> ...}</p>
      */
     @NameInMap("AssessmentResult")
     public String assessmentResult;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CD3FA5F3-FAF3-44CA-AFFF-BAF869******</p>

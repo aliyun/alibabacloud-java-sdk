@@ -15,7 +15,7 @@ public class DescribePolarFsObjectsRequest extends TeaModel {
     public String path;
 
     /**
-     * <p>The PolarFs instance ID.</p>
+     * <p>The PolarFS instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

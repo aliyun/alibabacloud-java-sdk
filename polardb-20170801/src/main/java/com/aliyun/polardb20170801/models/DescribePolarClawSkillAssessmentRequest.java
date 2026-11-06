@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolarClawSkillAssessmentRequest extends TeaModel {
     /**
-     * <p>The application ID.</p>
+     * <p>The ID of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>pa-**************</p>

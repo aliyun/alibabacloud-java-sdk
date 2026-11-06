@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolarClawCronJobShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the specified execution agent.</p>
+     * <p>The specified execution agent.</p>
      * 
      * <strong>example:</strong>
      * <p>main</p>
@@ -83,7 +83,7 @@ public class CreatePolarClawCronJobShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;Kind&quot;:&quot;agentTurn&quot;,&quot;Message&quot;:&quot;Generate the daily report.&quot;}</p>
+     * <p>{&quot;Kind&quot;:&quot;systemEvent&quot;,&quot;Text&quot;:&quot;Generate the daily report.&quot;}</p>
      */
     @NameInMap("Payload")
     public String payloadShrink;
@@ -98,7 +98,7 @@ public class CreatePolarClawCronJobShrinkRequest extends TeaModel {
     public Boolean restart;
 
     /**
-     * <p>Specifies whether to run it once immediately after creation. Default value: false.</p>
+     * <p>Specifies whether to run the task immediately after creation. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -126,7 +126,7 @@ public class CreatePolarClawCronJobShrinkRequest extends TeaModel {
     public String sessionKey;
 
     /**
-     * <p>The session target. Valid values: main, isolated, current.</p>
+     * <p>The execution session target. If set to main, it indicates the main session, and Payload.Kind must be systemEvent. If set to isolated or current, it supports agentTurn or systemEvent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -136,7 +136,7 @@ public class CreatePolarClawCronJobShrinkRequest extends TeaModel {
     public String sessionTarget;
 
     /**
-     * <p>The wake mode. Valid values: now, next-heartbeat.</p>
+     * <p>The wake mode. Valid values: now and next-heartbeat.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

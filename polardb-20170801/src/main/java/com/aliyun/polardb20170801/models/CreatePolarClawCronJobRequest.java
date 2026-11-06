@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolarClawCronJobRequest extends TeaModel {
     /**
-     * <p>The ID of the specified execution agent.</p>
+     * <p>The specified execution agent.</p>
      * 
      * <strong>example:</strong>
      * <p>main</p>
@@ -83,7 +83,7 @@ public class CreatePolarClawCronJobRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;Kind&quot;:&quot;agentTurn&quot;,&quot;Message&quot;:&quot;Generate the daily report.&quot;}</p>
+     * <p>{&quot;Kind&quot;:&quot;systemEvent&quot;,&quot;Text&quot;:&quot;Generate the daily report.&quot;}</p>
      */
     @NameInMap("Payload")
     public CreatePolarClawCronJobRequestPayload payload;
@@ -98,7 +98,7 @@ public class CreatePolarClawCronJobRequest extends TeaModel {
     public Boolean restart;
 
     /**
-     * <p>Specifies whether to run it once immediately after creation. Default value: false.</p>
+     * <p>Specifies whether to run the task immediately after creation. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -126,7 +126,7 @@ public class CreatePolarClawCronJobRequest extends TeaModel {
     public String sessionKey;
 
     /**
-     * <p>The session target. Valid values: main, isolated, current.</p>
+     * <p>The execution session target. If set to main, it indicates the main session, and Payload.Kind must be systemEvent. If set to isolated or current, it supports agentTurn or systemEvent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -136,7 +136,7 @@ public class CreatePolarClawCronJobRequest extends TeaModel {
     public String sessionTarget;
 
     /**
-     * <p>The wake mode. Valid values: now, next-heartbeat.</p>
+     * <p>The wake mode. Valid values: now and next-heartbeat.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -272,7 +272,7 @@ public class CreatePolarClawCronJobRequest extends TeaModel {
 
     public static class CreatePolarClawCronJobRequestDelivery extends TeaModel {
         /**
-         * <p>The channel account ID.</p>
+         * <p>The ID of the channel account.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -299,7 +299,7 @@ public class CreatePolarClawCronJobRequest extends TeaModel {
         public String channel;
 
         /**
-         * <p>The delivery mode. Valid values: none, announce, webhook.</p>
+         * <p>The delivery mode. Valid values: none, announce, and webhook.</p>
          * 
          * <strong>example:</strong>
          * <p>announce</p>
@@ -365,7 +365,7 @@ public class CreatePolarClawCronJobRequest extends TeaModel {
 
     public static class CreatePolarClawCronJobRequestFailureAlert extends TeaModel {
         /**
-         * <p>The channel account ID.</p>
+         * <p>The ID of the channel account.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -374,7 +374,7 @@ public class CreatePolarClawCronJobRequest extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The number of consecutive failures before an alert is triggered.</p>
+         * <p>The number of consecutive failures after which an alert is triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -508,7 +508,7 @@ public class CreatePolarClawCronJobRequest extends TeaModel {
         public java.util.List<String> fallbacks;
 
         /**
-         * <p>The payload type. Valid values: agentTurn, systemEvent.</p>
+         * <p>The payload type. Valid values: agentTurn and systemEvent.</p>
          * 
          * <strong>example:</strong>
          * <p>systemEvent</p>
@@ -553,7 +553,7 @@ public class CreatePolarClawCronJobRequest extends TeaModel {
         public String text;
 
         /**
-         * <p>The thinking level. Valid values: off, minimal, low, medium, high, xhigh.</p>
+         * <p>The thinking level. Valid values: off, minimal, low, medium, high, and xhigh.</p>
          * 
          * <strong>example:</strong>
          * <p>xhigh</p>
@@ -720,7 +720,7 @@ public class CreatePolarClawCronJobRequest extends TeaModel {
         public String expr;
 
         /**
-         * <p>The schedule type. Valid values: cron, every, at.</p>
+         * <p>The schedule type. Valid values: cron, every, and at.</p>
          * 
          * <strong>example:</strong>
          * <p>cron</p>
@@ -738,7 +738,7 @@ public class CreatePolarClawCronJobRequest extends TeaModel {
         public Integer staggerMs;
 
         /**
-         * <p>The IANA time zone.</p>
+         * <p>The time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>

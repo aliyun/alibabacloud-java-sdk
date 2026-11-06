@@ -8,7 +8,7 @@ public class DescribeZonesRequest extends TeaModel {
      * <p>The database engine.</p>
      * 
      * <strong>example:</strong>
-     * <p>POLARDB</p>
+     * <p>mysql</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -25,7 +25,7 @@ public class DescribeZonesRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view information about all available regions for your account, including region IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions for the current account, including region IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

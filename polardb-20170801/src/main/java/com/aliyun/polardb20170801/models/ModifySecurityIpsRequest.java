@@ -45,7 +45,7 @@ public class ModifySecurityIpsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IP addresses or CIDR blocks in the whitelist. Separate multiple values with commas (,).</p>
+     * <p>The IP addresses or CIDR blocks in the whitelist. Separate multiple values with commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

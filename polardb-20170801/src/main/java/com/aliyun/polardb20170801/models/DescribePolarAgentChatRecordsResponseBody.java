@@ -42,10 +42,10 @@ public class DescribePolarAgentChatRecordsResponseBody extends TeaModel {
 
     public static class DescribePolarAgentChatRecordsResponseBodyData extends TeaModel {
         /**
-         * <p>The answer.</p>
+         * <p>The reply.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Call DescribeDBClusters and check DBClusterStatus</p>
          */
         @NameInMap("Answer")
         public String answer;
@@ -60,10 +60,10 @@ public class DescribePolarAgentChatRecordsResponseBody extends TeaModel {
         public String feedbackType;
 
         /**
-         * <p>The session query. Obtain this value from the response of the API call to start a digital human.</p>
+         * <p>The session query. You can obtain this value from the response of the API operation that starts a digital human.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>How do I query the cluster status?</p>
          */
         @NameInMap("Query")
         public String query;

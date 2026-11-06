@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesForRegionResponseBody extends TeaModel {
     /**
-     * <p>If the response does not return all results, this parameter is returned. You can use this token in the next request to continue the query.</p>
+     * <p>The token used to retrieve more results. This parameter is returned if a single query does not return all results. You can pass the token returned in the previous response to retrieve the remaining results.</p>
      * 
      * <strong>example:</strong>
      * <p>212db86sca4384811e0b5e8707e******</p>

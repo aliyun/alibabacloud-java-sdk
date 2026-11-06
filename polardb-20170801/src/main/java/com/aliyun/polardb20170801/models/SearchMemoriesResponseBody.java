@@ -14,7 +14,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
     public String page;
 
     /**
-     * <p>The number of records per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
     public java.util.List<SearchMemoriesResponseBodyResults> results;
 
     /**
-     * <p>The total number of matching records.</p>
+     * <p>The total number of entries that meet the conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -111,7 +111,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
     public static class SearchMemoriesResponseBodyResults extends TeaModel {
         /**
          * <p>The creation time.</p>
-         * <p>The time follows the ISO 8601 standard in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The time follows the ISO 8601 standard and is displayed in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-09-26T08:25:44Z</p>
@@ -132,7 +132,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
          * <p>The memory content.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>The user prefers PostgreSQL</p>
          */
         @NameInMap("Memory")
         public String memory;
@@ -159,7 +159,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
          * <p>The metadata.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;tags&quot;:&quot;Issue_date_2023-11-30,VD_Valid&quot;}</p>
+         * <p>{\&quot;tags\&quot;:\&quot;Issue_date_2023-11-30,VD_Active\&quot;}</p>
          */
         @NameInMap("Metadata")
         public String metadata;
@@ -175,7 +175,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
 
         /**
          * <p>The update time.</p>
-         * <p>The time follows the ISO 8601 standard in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The time follows the ISO 8601 standard and is displayed in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-16T02:27:33Z</p>

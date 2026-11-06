@@ -14,7 +14,7 @@ public class DescribeZonesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of zones.</p>
+     * <p>The list of zones.</p>
      */
     @NameInMap("Zones")
     public java.util.List<DescribeZonesResponseBodyZones> zones;
@@ -42,14 +42,11 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     public static class DescribeZonesResponseBodyZones extends TeaModel {
         /**
-         * <p>The enumeration of statuses. Valid values:</p>
+         * <p>The enumeration values for various availability states. Valid values:</p>
          * <ul>
-         * <li><p><strong>UnSet</strong>: The zone is not open for use.</p>
-         * </li>
-         * <li><p><strong>SoldOut</strong>: The resources in the zone are sold out.</p>
-         * </li>
-         * <li><p><strong>WithStock</strong>: The zone has available resources.</p>
-         * </li>
+         * <li><strong>UnSet</strong>: not available</li>
+         * <li><strong>SoldOut</strong>: sold out</li>
+         * <li><strong>WithStock</strong>: in stock</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -68,12 +65,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         public String priority;
 
         /**
-         * <p>The status of the zone. Valid values:</p>
+         * <p>The zone status. Valid values:</p>
          * <ul>
-         * <li><p><strong>ON</strong>: The zone is available.</p>
-         * </li>
-         * <li><p><strong>OFF</strong>: The zone is unavailable.</p>
-         * </li>
+         * <li><strong>ON</strong>: available</li>
+         * <li><strong>OFF</strong>: unavailable</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -83,7 +78,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-h</p>

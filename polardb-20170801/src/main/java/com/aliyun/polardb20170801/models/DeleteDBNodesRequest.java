@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDBNodesRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. The client generates this value, which must be unique for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f54a343f1a42***********</p>
@@ -23,7 +23,7 @@ public class DeleteDBNodesRequest extends TeaModel {
     public String cloudProvider;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,27 +33,24 @@ public class DeleteDBNodesRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The IDs of the nodes to be deleted.</p>
+     * <p>The ID of the node in the cluster.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/185342.html">DescribeDBClusters</a> operation to query the details of all clusters in your account, including node IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/185342.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, including the node IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>pi-************</p>
+     * <p>[&quot;pi-************&quot;]</p>
      */
     @NameInMap("DBNodeId")
     public java.util.List<String> DBNodeId;
 
     /**
-     * <p>The node type. Valid values:</p>
+     * <p>The type of the node. Valid values:</p>
      * <ul>
-     * <li><p>RO</p>
-     * </li>
-     * <li><p>STANDBY</p>
-     * </li>
-     * <li><p>DLNode</p>
-     * </li>
+     * <li>RO</li>
+     * <li>STANDBY</li>
+     * <li>DLNode</li>
      * </ul>
      * 
      * <strong>example:</strong>

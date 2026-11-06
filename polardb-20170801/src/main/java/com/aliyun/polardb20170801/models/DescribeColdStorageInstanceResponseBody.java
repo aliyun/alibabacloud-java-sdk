@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeColdStorageInstanceResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of data entries to read in this request. Default value: 10.</p>
+     * <p>The maximum number of data entries to read in the current request. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -34,8 +34,8 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
     /**
      * <p>Specifies whether OSS storage space is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enabled</li>
-     * <li><strong>false</strong>: disabled</li>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Specifies whether the current cluster supports enabling cold storage. For clusters that do not support this feature, the switch is not displayed on the page.</p>
+     * <p>Indicates whether the current cluster supports enabling cold storage. For clusters that do not support this feature, the switch is not displayed on the page.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -213,7 +213,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
 
     public static class DescribeColdStorageInstanceResponseBodyOssClusterInfoList extends TeaModel {
         /**
-         * <p>The creation time of the cluster. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the cluster was created. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-10T17:01:16Z</p>
@@ -240,7 +240,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The size of the cold storage table. Unit: GB.</p>
+         * <p>The size of the cold storage table, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -289,7 +289,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
 
     public static class DescribeColdStorageInstanceResponseBodyTablesChildObjects extends TeaModel {
         /**
-         * <p>The object name.</p>
+         * <p>The name of the object.</p>
          * 
          * <strong>example:</strong>
          * <p>img/1728554006462.png</p>
@@ -307,7 +307,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         public String objectType;
 
         /**
-         * <p>The disk size. Unit: GiB.</p>
+         * <p>The disk size, in GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -318,14 +318,14 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><strong>Scheduled</strong>: waiting for execution</li>
-         * <li><strong>Running</strong>: running</li>
-         * <li><strong>Succeed</strong>: succeeded</li>
-         * <li><strong>Cancelling</strong>: cancelling</li>
-         * <li><strong>Canceled</strong>: canceled</li>
-         * <li><strong>Waiting</strong>: waiting for the preset time</li>
+         * <li><strong>Scheduled</strong>: Pending execution.</li>
+         * <li><strong>Running</strong>: Executing.</li>
+         * <li><strong>Succeed</strong>: Executed successfully.</li>
+         * <li><strong>Cancelling</strong>: Terminating.</li>
+         * <li><strong>Canceled</strong>: Terminated.</li>
+         * <li><strong>Waiting</strong>: Waiting for the scheduled time.</li>
          * </ul>
-         * <p>To query multiple statuses, separate them with commas (,). The default value is empty, which indicates that all statuses are selected.</p>
+         * <p>To query multiple statuses, separate them with commas (,). By default, this parameter is left empty, which indicates all statuses.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -425,7 +425,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         public String partion;
 
         /**
-         * <p>The disk size of the cold storage instance. Unit: GiB.</p>
+         * <p>The disk size of the cold storage instance, in GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

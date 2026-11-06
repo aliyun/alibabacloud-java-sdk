@@ -44,7 +44,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>24A1990B-4F6E-482B-B8CB-75C612******</p>
@@ -119,13 +119,13 @@ public class DescribeModelServicesResponseBody extends TeaModel {
          * <p>The API key of the model service.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>6c4b1f0317cd4fd7a5b446d3503d**</p>
          */
         @NameInMap("ApiKey")
         public String apiKey;
 
         /**
-         * <p>The upstream service endpoint.</p>
+         * <p>The upstream service URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxxxx">https://xxxxxx</a></p>
@@ -134,7 +134,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         public String baseUrl;
 
         /**
-         * <p>The creation date of the model.</p>
+         * <p>The creation time of the model.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-31T14:40:48Z</p>
@@ -143,7 +143,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The input points.</p>
+         * <p>The input cost in points per million.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -161,7 +161,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         public String modelCategory;
 
         /**
-         * <p>The model service IDs.</p>
+         * <p>The IDs of the model services.</p>
          * 
          * <strong>example:</strong>
          * <p>ms-xxxxxx</p>
@@ -179,7 +179,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The output points.</p>
+         * <p>The output cost in points per million.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -203,7 +203,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The number of requests.</p>
+         * <p>The request cost in points.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

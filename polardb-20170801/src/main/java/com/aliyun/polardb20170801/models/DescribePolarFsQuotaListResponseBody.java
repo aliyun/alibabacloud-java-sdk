@@ -14,7 +14,7 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of records on the current page.</p>
+     * <p>The number of entries on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -23,8 +23,7 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
     public String pageRecordCount;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
-     * <p>Default value: <strong>30</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -33,7 +32,7 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The PolarFs instance ID.</p>
+     * <p>The PolarFS instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pfs-test****</p>
@@ -48,7 +47,7 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
     public java.util.List<DescribePolarFsQuotaListResponseBodyQuotaItems> quotaItems;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EBEAA83D-1734-42E3-85E3-E25F6E******</p>
@@ -57,7 +56,7 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -137,7 +136,7 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
         public Long capacity;
 
         /**
-         * <p>Inodes</p>
+         * <p>The number of inodes.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

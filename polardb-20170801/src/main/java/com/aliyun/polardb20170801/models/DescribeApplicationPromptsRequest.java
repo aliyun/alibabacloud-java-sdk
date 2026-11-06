@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationPromptsRequest extends TeaModel {
     /**
-     * <p>The Application ID.</p>
+     * <p>The application ID. This operation applies only to applications of the mem0 type. If you specify the ID of an application of another type, an error is returned. You can call the DescribeApplications operation to query the application list and filter applications by ApplicationType.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,12 +26,9 @@ public class DescribeApplicationPromptsRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong></p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * <p>Default value: <strong>30</strong>.</p>
      * 

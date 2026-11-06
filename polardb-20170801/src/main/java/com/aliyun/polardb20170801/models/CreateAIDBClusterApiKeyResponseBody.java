@@ -11,7 +11,7 @@ public class CreateAIDBClusterApiKeyResponseBody extends TeaModel {
     public CreateAIDBClusterApiKeyResponseBodyApiKey apiKey;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</p>
@@ -42,17 +42,17 @@ public class CreateAIDBClusterApiKeyResponseBody extends TeaModel {
 
     public static class CreateAIDBClusterApiKeyResponseBodyApiKey extends TeaModel {
         /**
-         * <p>The API key for model serving.</p>
+         * <p>The API key for the model service.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>6c4b1f0317cd4fd7a5b446d3503d**</p>
          */
         @NameInMap("ApiKey")
         public String apiKey;
 
         /**
-         * <p>The time when the API key was created.</p>
-         * <p>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</p>
+         * <p>The creation time.</p>
+         * <p>The time is displayed in ISO 8601 format in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-12T03:41:53Z</p>
@@ -70,7 +70,7 @@ public class CreateAIDBClusterApiKeyResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>id</p>
+         * <p>The API key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>393</p>
@@ -79,7 +79,7 @@ public class CreateAIDBClusterApiKeyResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The API key status.</p>
+         * <p>The status of the API key.</p>
          * 
          * <strong>example:</strong>
          * <p>active</p>

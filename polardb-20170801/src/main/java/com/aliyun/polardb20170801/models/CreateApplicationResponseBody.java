@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationResponseBody extends TeaModel {
     /**
-     * <p>The application ID.</p>
+     * <p>The ID of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>pa-********************</p>
@@ -20,7 +20,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public java.util.List<CreateApplicationResponseBodyComponents> components;
 
     /**
-     * <p>The application description.</p>
+     * <p>The description of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>myapp</p>
@@ -29,7 +29,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The generated order ID.</p>
+     * <p>The ID of the generated order.</p>
      * 
      * <strong>example:</strong>
      * <p>2148126708*****</p>
@@ -38,7 +38,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
@@ -127,7 +127,7 @@ public class CreateApplicationResponseBody extends TeaModel {
 
     public static class CreateApplicationResponseBodyComponents extends TeaModel {
         /**
-         * <p>The subcomponent ID.</p>
+         * <p>The ID of the subcomponent.</p>
          * 
          * <strong>example:</strong>
          * <p>pac-********************</p>

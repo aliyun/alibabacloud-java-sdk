@@ -15,15 +15,13 @@ public class ModifyDBClusterTDERequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to automatically rotate the TDE key of the instance during the next O\&amp;M window after a new version of the KMS key is available. This parameter is valid only for custom keys.</p>
+     * <p>Specifies whether to allow the TDE key of the instance to automatically rotate at the nearest maintenance window after the rotation period when a KMS key version change is detected. This parameter is supported only for custom keys. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: Allows automatic rotation.</li>
+     * <li><strong>false</strong>: Does not allow automatic rotation.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is supported only when the database engine is compatible with PostgreSQL or Oracle.</p>
+     * <p>This parameter is supported only when the database engine is PostgreSQL-compatible or Oracle-compatible.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,15 +31,15 @@ public class ModifyDBClusterTDERequest extends TeaModel {
     public String enableAutomaticRotation;
 
     /**
-     * <p>Specifies whether to automatically encrypt all new tables. Valid values:</p>
+     * <p>Specifies whether to automatically encrypt all newly created tables. Valid values:</p>
      * <ul>
-     * <li><p><strong>ON</strong></p>
+     * <li><p><strong>ON</strong>: Enables automatic encryption.</p>
      * </li>
-     * <li><p><strong>OFF</strong></p>
+     * <li><p><strong>OFF</strong>: Disables automatic encryption.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is valid only when the database engine is compatible with MySQL.</p>
+     * <p>This parameter takes effect only when the database engine is MySQL-compatible.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,7 +70,7 @@ public class ModifyDBClusterTDERequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Global Resource Descriptor of the role. You can use this parameter to specify a role. For more information, see <a href="https://help.aliyun.com/document_detail/93689.html">Overview of RAM roles</a>.</p>
+     * <p>The global resource descriptor of the role, used to specify a specific role. For details, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::1406926*****:role/aliyunrdsinstanceencryptiondefaultrole</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableDBClusterCTableRequest extends TeaModel {
     /**
-     * <p>The ID of the database cluster.</p>
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

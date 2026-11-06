@@ -23,7 +23,7 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>An array of diagnostic objects.</p>
+     * <p>The list of diagnostic information.</p>
      */
     @NameInMap("Diagnostics")
     public java.util.List<DescribePolarClawPluginsResponseBodyDiagnostics> diagnostics;
@@ -38,7 +38,7 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>An array of plugin objects.</p>
+     * <p>The list of plugins.</p>
      */
     @NameInMap("Plugins")
     public java.util.List<DescribePolarClawPluginsResponseBodyPlugins> plugins;
@@ -107,7 +107,7 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
 
     public static class DescribePolarClawPluginsResponseBodyDiagnostics extends TeaModel {
         /**
-         * <p>The severity level. Valid values: <code>error</code> and <code>warn</code>.</p>
+         * <p>The diagnostic level. Valid values: <code>error</code> and <code>warn</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>warn</p>
@@ -116,7 +116,7 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>The detailed diagnostic message.</p>
+         * <p>The details of the diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>loaded without install/load-path provenance; treat as untracked local code</p>
@@ -134,7 +134,7 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
         public String pluginId;
 
         /**
-         * <p>The source file path associated with the diagnostic.</p>
+         * <p>The path to the source file of the associated plugin.</p>
          * 
          * <strong>example:</strong>
          * <p>/home/node/.openclaw/extensions/openclaw-lark/index.js</p>
@@ -183,7 +183,7 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
 
     public static class DescribePolarClawPluginsResponseBodyPlugins extends TeaModel {
         /**
-         * <p>A list of channel IDs, which can be empty.</p>
+         * <p>The list of provided channel IDs. An empty array indicates that no channel IDs are available.</p>
          */
         @NameInMap("ChannelIds")
         public java.util.List<String> channelIds;
@@ -198,7 +198,7 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The error message, or <code>null</code> if no error occurred.</p>
+         * <p>The error message. If this field is missing, no error occurred.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -207,7 +207,7 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
         public String error;
 
         /**
-         * <p>The format of the plugin, which can be an empty string.</p>
+         * <p>The format of the plugin. This field can be an empty string.</p>
          * 
          * <strong>example:</strong>
          * <p>openclaw</p>
@@ -234,7 +234,7 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The origin of the plugin. Valid values: <code>bundled</code>, <code>global</code>, and <code>user-install</code>.</p>
+         * <p>The origin of the plugin. Valid values: <code>bundled</code> (built-in), <code>global</code> (global), and <code>user-install</code> (user-installed).</p>
          * 
          * <strong>example:</strong>
          * <p>global</p>
@@ -243,13 +243,13 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
         public String origin;
 
         /**
-         * <p>A list of provider IDs, which can be empty.</p>
+         * <p>The list of provided provider IDs. An empty array indicates that no provider IDs are available.</p>
          */
         @NameInMap("ProviderIds")
         public java.util.List<String> providerIds;
 
         /**
-         * <p>The file path to the plugin\&quot;s entry point.</p>
+         * <p>The path to the plugin entry file.</p>
          * 
          * <strong>example:</strong>
          * <p>/home/node/.openclaw/extensions/openclaw-lark/index.js</p>
@@ -258,7 +258,7 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The status of the plugin. Valid values: <code>loaded</code>, <code>disabled</code>, and <code>error</code>.</p>
+         * <p>The status of the plugin. Valid values: <code>loaded</code> (loaded), <code>disabled</code> (disabled), and <code>error</code> (failed to load).</p>
          * 
          * <strong>example:</strong>
          * <p>loaded</p>
@@ -267,7 +267,7 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The version number of the plugin.</p>
+         * <p>The version number.</p>
          * 
          * <strong>example:</strong>
          * <p>2026.4.7</p>

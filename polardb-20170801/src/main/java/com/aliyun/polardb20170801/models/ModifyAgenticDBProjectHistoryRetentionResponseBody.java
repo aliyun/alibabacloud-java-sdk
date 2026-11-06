@@ -14,7 +14,7 @@ public class ModifyAgenticDBProjectHistoryRetentionResponseBody extends TeaModel
     public String DBClusterId;
 
     /**
-     * <p>The current effective history retention period of the project. To check the actual recoverable range, query the branch recovery window.</p>
+     * <p>The current effective history retention period for the project. For the actual recoverable range, query the branch recovery window.</p>
      * 
      * <strong>example:</strong>
      * <p>604800</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAgenticDBProjectHistoryRetentionRequest extends TeaModel {
     /**
-     * <p>The AgenticDB cluster ID.</p>
+     * <p>The ID of the AgenticDB cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyAgenticDBProjectHistoryRetentionRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The default valid range is 3,600 to 2,592,000 seconds (1 hour to 30 days), inclusive, subject to service configurations. Shortening the duration may clear historical data. Extending the duration does not restore cleared data.</p>
+     * <p>The default valid range is 3,600 to 2,592,000 seconds (1 hour to 30 days), inclusive, subject to the service configuration. Reducing the retention period may clear historical data. Extending the retention period does not restore cleared data.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

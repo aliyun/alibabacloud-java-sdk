@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableModelsRequest extends TeaModel {
     /**
-     * <p>aideploy</p>
+     * <p>The Kubernetes cluster type, such as aideploy.</p>
      * 
      * <strong>example:</strong>
      * <p>aideploy</p>

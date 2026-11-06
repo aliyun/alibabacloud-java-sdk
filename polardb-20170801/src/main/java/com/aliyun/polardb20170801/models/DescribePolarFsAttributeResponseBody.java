@@ -75,7 +75,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
      * <p>The bucket ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>bucket-example-001</p>
      */
     @NameInMap("BucketId")
     public String bucketId;
@@ -83,12 +83,9 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     /**
      * <p>The Polarlakebase edition. Valid values:</p>
      * <ul>
-     * <li><p><strong>high_performance</strong>: High-performance Edition.</p>
-     * </li>
-     * <li><p><strong>basic</strong>: Basic Edition.</p>
-     * </li>
-     * <li><p><strong>cold</strong>: Cold Storage Edition.</p>
-     * </li>
+     * <li><strong>high_performance</strong>: High-performance Edition.</li>
+     * <li><strong>basic</strong>: Basic Edition.</li>
+     * <li><strong>cold</strong>: Cold Storage Edition.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,8 +104,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String clientDownloadPath;
 
     /**
-     * <p>The creation time.</p>
-     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The creation time.
+     * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-08-02T05:57:10Z</p>
@@ -154,7 +151,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String DBType;
 
     /**
-     * <p>The list of endpoints, including endpoint information for types such as NAS and S3 Gateway.</p>
+     * <p>The list of endpoints, including endpoint information such as NAS and S3 Gateway.</p>
      */
     @NameInMap("EndpointItems")
     public java.util.List<DescribePolarFsAttributeResponseBodyEndpointItems> endpointItems;
@@ -162,9 +159,9 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     /**
      * <p>The expiration time of the cluster.</p>
      * <blockquote>
-     * <p>This parameter is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription). For clusters whose billing method is <strong>Postpaid</strong> (pay-as-you-go), an empty value is returned.</p>
+     * <p>This parameter is returned only for subscription clusters whose billing method is <strong>Prepaid</strong>. For pay-as-you-go clusters whose billing method is <strong>Postpaid</strong>, an empty value is returned.
+     * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      * </blockquote>
-     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-10-10T16:00:00Z</p>
@@ -175,7 +172,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the cluster has expired.</p>
      * <blockquote>
-     * <p>This parameter is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription).</p>
+     * <p>This parameter is returned only for subscription clusters whose billing method is <strong>Prepaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -188,17 +185,17 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
      * <p>The file system ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>fs-example-001</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
-     * <p>The lock mode. Valid values: </p>
+     * <p>The lock mode. Valid values:</p>
      * <ul>
      * <li><strong>Unlock</strong>: Unlocked.</li>
-     * <li><strong>ManualLock</strong>: Manually locked. </li>
-     * <li><strong>LockByExpiration</strong>: Automatically locked due to cluster expiration.</li>
+     * <li><strong>ManualLock</strong>: Manually locked.</li>
+     * <li><strong>LockByExpiration</strong>: Automatically locked due to expiration.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -253,7 +250,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String metaUrl;
 
     /**
-     * <p>The minor version number of the instance.</p>
+     * <p>The minor version of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>v1.3.0-v1.1.1</p>
@@ -281,7 +278,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String payType;
 
     /**
-     * <p>The Polarlakebase instance description.</p>
+     * <p>The description of the Polarlakebase instance.</p>
      * 
      * <strong>example:</strong>
      * <p>pfs-xxx</p>
@@ -299,7 +296,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String polarFsInstanceId;
 
     /**
-     * <p>The Polarlakebase instance status.</p>
+     * <p>The status of the Polarlakebase instance.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -348,7 +345,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String relativeDbClusterId;
 
     /**
-     * <p>The associated Polarlakebase instance ID.</p>
+     * <p>The ID of the associated Polarlakebase instance.</p>
      * 
      * <strong>example:</strong>
      * <p>pfs-**********</p>
@@ -357,7 +354,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String relativePfsClusterId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3F9E6A3B-C13E-4064-A010-18582A******</p>
@@ -393,14 +390,11 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public Double storageSpace;
 
     /**
-     * <p>The storage type. 
-     * For High-performance Edition, valid values are:</p>
+     * <p>The storage type. Valid values for High-performance Edition:</p>
      * <ul>
      * <li><strong>ESSDPL1</strong></li>
-     * <li><strong>ESSDPL0</strong></li>
-     * </ul>
-     * <p>For Basic Edition, valid values are:</p>
-     * <ul>
+     * <li><strong>ESSDPL0</strong>
+     * Valid values for Basic Edition:</li>
      * <li><strong>city_redundancy</strong>: Zone-redundant storage.</li>
      * </ul>
      * 
@@ -889,7 +883,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
 
     public static class DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems extends TeaModel {
         /**
-         * <p>The protocol endpoint.</p>
+         * <p>The protocol connection address.</p>
          * 
          * <strong>example:</strong>
          * <p>aclsh-prd-pdb12-rw.rwlb.rds.aliyuncs.com</p>

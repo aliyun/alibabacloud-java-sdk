@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateKBSyncLinkRequest extends TeaModel {
     /**
-     * <p>The client identifier.</p>
+     * <p>The client ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class CreateKBSyncLinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>example-client-secret</p>
      */
     @NameInMap("ClientSecret")
     public String clientSecret;
@@ -34,7 +34,7 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The validity period of the successful snapshot of Lark group members for fallback reuse, in seconds. This parameter can be explicitly set only for FEISHU synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 disables snapshot fallback reuse. A positive integer indicates the maximum age of the snapshot allowed for reuse. Default value: -1. If this parameter is omitted, the default value -1 takes effect.</p>
+     * <p>The time-to-live (TTL) of the successful snapshot of Lark chat members for fallback reuse, in seconds. This parameter can be explicitly set only for FEISHU synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 disables snapshot fallback reuse. A positive integer indicates the maximum age of the snapshot allowed for reuse. Default value: -1. If this parameter is not specified, the default value -1 is used.</p>
      * 
      * <strong>example:</strong>
      * <p>-1</p>
@@ -101,7 +101,7 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     public String sourceDir;
 
     /**
-     * <p>The data source type. Valid values: FEISHU and SHAREPOINT.</p>
+     * <p>The data source type. Valid values: FEISHU, SHAREPOINT.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -129,10 +129,10 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The Lark user access token. This token is used only when the application identity cannot expand group members because the bot is not in the group chat.</p>
+     * <p>The Lark user access token. This token is used only when the application identity cannot expand chat members because the bot is not in the chat.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>example-user-access-token</p>
      */
     @NameInMap("UserAccessToken")
     public String userAccessToken;
@@ -147,10 +147,10 @@ public class CreateKBSyncLinkRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>The Lark user refresh token. This token must be provided together with UserAccessToken to automatically rotate the fallback identity for expanding group members.</p>
+     * <p>The Lark user refresh token. This token must be provided together with UserAccessToken to automatically rotate the fallback identity for expanding chat members.</p>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>example-user-refresh-token</p>
      */
     @NameInMap("UserRefreshToken")
     public String userRefreshToken;

@@ -11,7 +11,7 @@ public class AddPolarFsPathMappingRequest extends TeaModel {
     public java.util.List<AddPolarFsPathMappingRequestCustomBucketPathList> customBucketPathList;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class AddPolarFsPathMappingRequest extends TeaModel {
 
     public static class AddPolarFsPathMappingRequestCustomBucketPathList extends TeaModel {
         /**
-         * <p>The bucket name.</p>
+         * <p>The name of the bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>Bucket1</p>
@@ -70,19 +70,19 @@ public class AddPolarFsPathMappingRequest extends TeaModel {
         public String bucket;
 
         /**
-         * <p>The AccessKey ID of the storage bucket.</p>
+         * <p>The AccessKey ID for the bucket.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>LTAIExampleBucketAccessKeyId</p>
          */
         @NameInMap("BucketAccessKeyId")
         public String bucketAccessKeyId;
 
         /**
-         * <p>The AccessKey secret of the storage bucket.</p>
+         * <p>The AccessKey secret for the bucket.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>ExampleBucketAccessKeySecret123</p>
          */
         @NameInMap("BucketAccessKeySecret")
         public String bucketAccessKeySecret;
