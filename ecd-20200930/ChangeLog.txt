@@ -1,3 +1,7 @@
+2026-11-06 Version: 5.6.0
+- Support API GenerateSceneKey.
+
+
 2026-11-03 Version: 5.5.2
 - Update API CreateCenterPolicy: add request parameters AppScreenshotBuckets.
 - Update API CreateCenterPolicy: add request parameters AutoSaveAppScreenshot.
