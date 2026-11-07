@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateZooKeeperSaslUserRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values: zh (default): Chinese. en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,7 @@ public class UpdateZooKeeperSaslUserRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class UpdateZooKeeperSaslUserRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Specifies whether the changes take effect immediately.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -28,6 +33,7 @@ public class UpdateZooKeeperSaslUserRequest extends TeaModel {
     public Boolean reload;
 
     /**
+     * <p>The list of SASL users to update.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SaslUser")
@@ -72,6 +78,8 @@ public class UpdateZooKeeperSaslUserRequest extends TeaModel {
 
     public static class UpdateZooKeeperSaslUserRequestSaslUser extends TeaModel {
         /**
+         * <p>The description of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -79,6 +87,8 @@ public class UpdateZooKeeperSaslUserRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The original password. This parameter is required if you want to change the password.</p>
+         * 
          * <strong>example:</strong>
          * <p>origin-password</p>
          */
@@ -86,6 +96,8 @@ public class UpdateZooKeeperSaslUserRequest extends TeaModel {
         public String originPassword;
 
         /**
+         * <p>The password.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxxx</p>
          */
@@ -93,6 +105,8 @@ public class UpdateZooKeeperSaslUserRequest extends TeaModel {
         public String password;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

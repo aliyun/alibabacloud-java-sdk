@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
     /**
-     * <p>The details of the data.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>{id:102,name:&quot;test&quot;}</p>
@@ -14,7 +14,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
     public QuerySwimmingLaneByIdResponseBodyData data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-100-000</p>
@@ -23,16 +23,16 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request was successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>69AD2AA7-DB47-449B-941B-B14409DF****</p>
@@ -41,10 +41,12 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +102,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
 
     public static class QuerySwimmingLaneByIdResponseBodyDataEntryRulesRestItems extends TeaModel {
         /**
-         * <p>匹配符</p>
+         * <p>The matching character.</p>
          * 
          * <strong>example:</strong>
          * <p>==</p>
@@ -109,7 +111,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public String cond;
 
         /**
-         * <p>数值</p>
+         * <p>The number.</p>
          * 
          * <strong>example:</strong>
          * <p>x</p>
@@ -118,7 +120,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public String datum;
 
         /**
-         * <p>除数</p>
+         * <p>The divisor.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -127,7 +129,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public Integer divisor;
 
         /**
-         * <p>名称</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>11111</p>
@@ -136,13 +138,13 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>名称列表</p>
+         * <p>The names.</p>
          */
         @NameInMap("nameList")
         public java.util.List<String> nameList;
 
         /**
-         * <p>操作符</p>
+         * <p>The filter operator.</p>
          * 
          * <strong>example:</strong>
          * <p>rawvalue</p>
@@ -151,7 +153,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public String operator;
 
         /**
-         * <p>百分比</p>
+         * <p>The percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -160,7 +162,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public Integer rate;
 
         /**
-         * <p>余数</p>
+         * <p>The remainder.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -169,7 +171,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public Integer remainder;
 
         /**
-         * <p>匹配类型</p>
+         * <p>The matching type.</p>
          * 
          * <strong>example:</strong>
          * <p>cookie</p>
@@ -178,7 +180,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>值</p>
+         * <p>The value.</p>
          * 
          * <strong>example:</strong>
          * <p>hello</p>
@@ -275,7 +277,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
 
     public static class QuerySwimmingLaneByIdResponseBodyDataEntryRules extends TeaModel {
         /**
-         * <p>条件</p>
+         * <p>The condition.</p>
          * 
          * <strong>example:</strong>
          * <p>AND</p>
@@ -284,7 +286,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public String condition;
 
         /**
-         * <p>路径</p>
+         * <p>The path.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -293,13 +295,13 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>路径列表</p>
+         * <p>The list of paths.</p>
          */
         @NameInMap("paths")
         public java.util.List<String> paths;
 
         /**
-         * <p>Rest匹配规则列表</p>
+         * <p>The Restful matching rules.</p>
          */
         @NameInMap("restItems")
         public java.util.List<QuerySwimmingLaneByIdResponseBodyDataEntryRulesRestItems> restItems;
@@ -345,6 +347,8 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
 
     public static class QuerySwimmingLaneByIdResponseBodyData extends TeaModel {
         /**
+         * <p>This parameter is discontinued. This parameter is used to specify whether to enable grayscale by path when Java gateway is used as the entry for the swimming lane group.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -352,7 +356,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public Boolean pathIndependentPercentageEnable;
 
         /**
-         * <p>泳道开关</p>
+         * <p>The swimming lane switch.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -361,7 +365,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>是否开启规则。</p>
+         * <p>Specifies whether to enable the rule. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -370,7 +374,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public Boolean enableRules;
 
         /**
-         * <p>入口应用规则</p>
+         * <p>The entry application rule.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -379,13 +383,13 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public String entryRule;
 
         /**
-         * <p>入口应用规则详情</p>
+         * <p>The details of the entry application rules.</p>
          */
         @NameInMap("entryRules")
         public java.util.List<QuerySwimmingLaneByIdResponseBodyDataEntryRules> entryRules;
 
         /**
-         * <p>MSE网关路由规则</p>
+         * <p>The MSE gateway routing rule.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -394,7 +398,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public String gatewaySwimmingLaneRouteJson;
 
         /**
-         * <p>规则创建时间</p>
+         * <p>Rule Created At</p>
          * 
          * <strong>example:</strong>
          * <p>1683598484000</p>
@@ -403,7 +407,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>规则修改时间</p>
+         * <p>Rule Modified At</p>
          * 
          * <strong>example:</strong>
          * <p>1683598484000</p>
@@ -412,7 +416,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>泳道组Id。</p>
+         * <p>The swimming lane group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -421,7 +425,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public Long groupId;
 
         /**
-         * <p>泳道ID</p>
+         * <p>The swimming lane ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -430,7 +434,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>泳道名称</p>
+         * <p>The swimming lane name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -439,7 +443,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>区域ID。</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -448,7 +452,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>泳道状态</p>
+         * <p>The swimming lane status.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -457,7 +461,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>泳道对应的标签。</p>
+         * <p>The tag corresponding to the swimming lane.</p>
          * 
          * <strong>example:</strong>
          * <p>gray</p>

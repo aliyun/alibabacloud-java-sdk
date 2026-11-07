@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListServiceSourceRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned information. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,13 +27,13 @@ public class ListServiceSourceRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
-     * <p>Specifies the type of the returned service source. If this parameter is not specified, service sources of all types are returned. Valid values:</p>
+     * <p>Specifies the service source type. If this parameter is left empty, all types are returned. Valid values:</p>
      * <ul>
-     * <li>K8s</li>
-     * <li>MSE</li>
-     * <li>MSE_ZK</li>
-     * <li>SAE</li>
-     * <li>EDAS</li>
+     * <li>K8s: Container Service.</li>
+     * <li>MSE: MSE Nacos.</li>
+     * <li>MSE_ZK: MSE ZooKeeper.</li>
+     * <li>SAE: SAE registry.</li>
+     * <li>EDAS: EDAS registry.</li>
      * </ul>
      * 
      * <strong>example:</strong>

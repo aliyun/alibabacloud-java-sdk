@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetLocalityRuleRequest extends TeaModel {
     /**
+     * <p>The language in which you want the results to be displayed. Valid values: zh and en. zh is the default value, which indicates Chinese. en indicates English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class GetLocalityRuleRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>hgxznfcvbe@be2c0228f******</p>
      */
@@ -19,6 +23,8 @@ public class GetLocalityRuleRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example-app</p>
      */
@@ -26,6 +32,8 @@ public class GetLocalityRuleRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The name of the Microservices Engine (MSE) namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -33,6 +41,7 @@ public class GetLocalityRuleRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The region of the gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +51,8 @@ public class GetLocalityRuleRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The source of the rule. This field is optional.</p>
+     * 
      * <strong>example:</strong>
      * <p>edasmsc</p>
      */

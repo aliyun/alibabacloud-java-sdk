@@ -62,7 +62,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
      * <p>The error message returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request is successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;

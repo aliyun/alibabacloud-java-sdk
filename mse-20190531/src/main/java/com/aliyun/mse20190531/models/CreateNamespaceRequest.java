@@ -5,22 +5,35 @@ import com.aliyun.tea.*;
 
 public class CreateNamespaceRequest extends TeaModel {
     /**
+     * <p>The language in which you want the results to be displayed. Valid values: zh (default): Chinese. en: English</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The description of the namespace that you want to create for Microservices Governance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test namespace 1.</p>
+     */
     @NameInMap("Describe")
     public String describe;
 
     /**
+     * <p>The name of the namespace that you want to create for Microservices Governance.</p>
+     * 
      * <strong>example:</strong>
      * <p>myNamespace</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The tag.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateNamespaceRequestTag> tag;
 
@@ -62,9 +75,21 @@ public class CreateNamespaceRequest extends TeaModel {
     }
 
     public static class CreateNamespaceRequestTag extends TeaModel {
+        /**
+         * <p>The tag key of the resource. You cannot specify an empty string as a tag key. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http\:// or https\://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespaceTagKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespaceTagValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

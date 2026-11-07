@@ -7,8 +7,8 @@ public class AddSecurityGroupRuleRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class AddSecurityGroupRuleRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
-     * <p>The range of port numbers.</p>
+     * <p>The port range.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

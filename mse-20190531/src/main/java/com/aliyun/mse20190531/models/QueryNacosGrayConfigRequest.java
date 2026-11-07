@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryNacosGrayConfigRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values: zh (default): Chinese. en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,7 @@ public class QueryNacosGrayConfigRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The DataId of the configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class QueryNacosGrayConfigRequest extends TeaModel {
     public String dataId;
 
     /**
+     * <p>The name of the canary release rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -28,6 +33,8 @@ public class QueryNacosGrayConfigRequest extends TeaModel {
     public String grayName;
 
     /**
+     * <p>The configuration group.</p>
+     * 
      * <strong>example:</strong>
      * <p>DEFAULT_GROUP</p>
      */
@@ -35,6 +42,7 @@ public class QueryNacosGrayConfigRequest extends TeaModel {
     public String group;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +52,8 @@ public class QueryNacosGrayConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The namespace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6bafdde3-4fa7-4d67-b3da-a607ab87f7e4</p>
      */
@@ -51,6 +61,8 @@ public class QueryNacosGrayConfigRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The region where the cluster resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -58,6 +70,8 @@ public class QueryNacosGrayConfigRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>This field is deprecated.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */

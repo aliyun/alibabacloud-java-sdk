@@ -7,8 +7,10 @@ public class GetApplicationListShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class GetApplicationListShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of an application.</p>
+     * <p>The application ID.</p>
      * 
      * <strong>example:</strong>
      * <p>hkhon1po62@c3df23522b*****</p>
@@ -27,7 +29,7 @@ public class GetApplicationListShrinkRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The name of an application.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>rest-container</p>
@@ -36,7 +38,7 @@ public class GetApplicationListShrinkRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The programming language of the application, such as Java and Go.</p>
+     * <p>The programming language, such as Java or Go.</p>
      * 
      * <strong>example:</strong>
      * <p>Java</p>
@@ -54,7 +56,7 @@ public class GetApplicationListShrinkRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +66,7 @@ public class GetApplicationListShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,7 +76,7 @@ public class GetApplicationListShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,7 +86,7 @@ public class GetApplicationListShrinkRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>Specifies whether to enable the Sentinel-compatible mode.</p>
+     * <p>Specifies whether to enable the Sentinel component.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -102,7 +104,7 @@ public class GetApplicationListShrinkRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>Specifies whether to enable switching.</p>
+     * <p>Specifies whether to enable the switch.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,6 +112,9 @@ public class GetApplicationListShrinkRequest extends TeaModel {
     @NameInMap("SwitchEnable")
     public Boolean switchEnable;
 
+    /**
+     * <p>Alibaba Cloud tags. You can perform filtering by Alibaba Cloud tag.</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 

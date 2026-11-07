@@ -7,8 +7,10 @@ public class UpdateConfigRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,11 +19,14 @@ public class UpdateConfigRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>Specifies whether to enable forced Simple Authentication and Security Layer (SASL) authentication. After this feature is enabled, clients that do not perform SASL authentication cannot access the cluster</p>
+     */
     @NameInMap("AuthEnabled")
     public Boolean authEnabled;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The reserved field.</p>
      * 
      * <strong>example:</strong>
      * <p>none</p>
@@ -30,7 +35,7 @@ public class UpdateConfigRequest extends TeaModel {
     public String autopurgePurgeInterval;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The reserved field.</p>
      * 
      * <strong>example:</strong>
      * <p>none</p>
@@ -39,7 +44,7 @@ public class UpdateConfigRequest extends TeaModel {
     public String autopurgeSnapRetainCount;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-09k1q11****</p>
@@ -48,13 +53,15 @@ public class UpdateConfigRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Specifies whether to enable Resource Access Management (RAM) authentication for a configuration center. This parameter is valid for Nacos instances. Valid values:</p>
+     * <p>Specifies whether to enable RAM authentication for the configuration center in Nacos:</p>
      * <ul>
-     * <li><code>true</code>: enabled.</li>
-     * <li><code>false</code>: disabled.</li>
+     * <li><p><code>true</code>: enabled</p>
+     * </li>
+     * <li><p><code>false</code>: disabled</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>Before you configure this parameter, you must call the QueryConfig operation to obtain the ConfigAuthSupported parameter value to check whether the instance supports the RAM authentication feature.</p>
+     * <p>Before you set this parameter, call the QueryConfig operation to obtain the ConfigAuthSupported parameter to check whether the current cluster supports this feature.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -64,13 +71,15 @@ public class UpdateConfigRequest extends TeaModel {
     public Boolean configAuthEnabled;
 
     /**
-     * <p>Specifies whether to enable configuration encryption for a configuration center. This parameter is valid for Nacos instances. Valid values:</p>
+     * <p>Specifies whether to enable the configuration encryption feature for the configuration center in Nacos. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: enabled.</li>
-     * <li><code>false</code>: disabled.</li>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>Before you configure this parameter, you must call the QueryConfig operation to obtain the ConfigSecretSupported parameter value to check whether the instance supports configuration encryption.</p>
+     * <p>Before you set this parameter, call the QueryConfig operation to obtain the ConfigSecretSupported parameter to check whether the current cluster supports this feature.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -80,7 +89,7 @@ public class UpdateConfigRequest extends TeaModel {
     public Boolean configSecretEnabled;
 
     /**
-     * <p>The format of the configuration. Supported formats include TEXT, JSON, XML, and HTML.</p>
+     * <p>The format of the configurations. Supported formats include TEXT, JSON, XML, and HTML.</p>
      * 
      * <strong>example:</strong>
      * <p>TEXT</p>
@@ -88,13 +97,24 @@ public class UpdateConfigRequest extends TeaModel {
     @NameInMap("ConfigType")
     public String configType;
 
+    /**
+     * <p>Specifies whether to enable the Nacos open-source console</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ConsoleUIEnabled")
     public Boolean consoleUIEnabled;
 
+    /**
+     * <p>Specifies whether to enable the four-character command access feature</p>
+     */
     @NameInMap("Enable4lw")
     public Boolean enable4lw;
 
     /**
+     * <p>Specifies whether to enable Eureka protocol support in Nacos</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -102,7 +122,7 @@ public class UpdateConfigRequest extends TeaModel {
     public Boolean eurekaSupported;
 
     /**
-     * <p>Specifies whether to enable the time to live (TTL) configuration. This parameter is valid for ZooKeeper instances.</p>
+     * <p>Specifies whether to enable TTL configuration in ZooKeeper parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -120,7 +140,7 @@ public class UpdateConfigRequest extends TeaModel {
     public String initLimit;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>mse_prepaid_public_cn-st2212****</p>
@@ -129,7 +149,7 @@ public class UpdateConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum amount of data on each node. This parameter is valid for ZooKeeper instances. The default maximum data amount on each node is 1 megabyte. Unit: bytes.</p>
+     * <p>The maximum amount of data on each node. This parameter is valid for ZooKeeper instances. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>1048575</p>
@@ -138,13 +158,15 @@ public class UpdateConfigRequest extends TeaModel {
     public String juteMaxbuffer;
 
     /**
-     * <p>Specifies whether to enable Mesh Configuration Protocol (MCP). This parameter is valid for Nacos instances. Valid values:</p>
+     * <p>Specifies whether MCP is enabled in Nacos configuration. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: enabled.</li>
-     * <li><code>false</code>: disabled.</li>
+     * <li><p><code>true</code>: enabled</p>
+     * </li>
+     * <li><p><code>false</code>: disabled</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>Before you configure this parameter, you must call the QueryConfig operation to obtain the MCPSupported parameter value to check whether the instance supports MCP.</p>
+     * <p>Before you set this parameter, call the QueryConfig operation to obtain the MCPSupported parameter to check whether the current cluster supports this feature.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -154,8 +176,8 @@ public class UpdateConfigRequest extends TeaModel {
     public Boolean MCPEnabled;
 
     /**
-     * <p>The number of connections between a client and a server. This parameter is valid for ZooKeeper instances.\
-     * If this parameter is set to 0, no limits are imposed on the number of connections.</p>
+     * <p>The number of connections between a single client and a single server in ZooKeeper configuration.<br>
+     * If this parameter is set to 0, no limits are imposed on the number of connections.<br></p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -164,7 +186,7 @@ public class UpdateConfigRequest extends TeaModel {
     public String maxClientCnxns;
 
     /**
-     * <p>The maximum timeout period. This parameter is valid for ZooKeeper instances. Unit: seconds.</p>
+     * <p>The maximum timeout period in ZooKeeper configuration. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -173,7 +195,7 @@ public class UpdateConfigRequest extends TeaModel {
     public String maxSessionTimeout;
 
     /**
-     * <p>The minimum timeout period. This parameter is valid for ZooKeeper instances. Unit: seconds.</p>
+     * <p>The minimum timeout period in ZooKeeper configuration. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -182,13 +204,15 @@ public class UpdateConfigRequest extends TeaModel {
     public String minSessionTimeout;
 
     /**
-     * <p>Specifies whether to enable RAM authentication for a registry. This parameter is valid for Nacos instances. Valid values:</p>
+     * <p>Specifies whether to enable RAM authentication for the Accreditation Centre in Nacos:</p>
      * <ul>
-     * <li><code>true</code>: enabled.</li>
-     * <li><code>false</code>: disabled.</li>
+     * <li><p><code>true</code>: enabled</p>
+     * </li>
+     * <li><p><code>false</code>: disabled</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>Before you configure this parameter, you must call the QueryConfig operation to obtain the NamingAuthSupporte parameter value to check whether the instance supports the RAM authentication feature.</p>
+     * <p>Before you set this parameter, call the QueryConfig operation to obtain the NamingAuthSupporte parameter to check whether the current cluster supports this feature.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -198,10 +222,12 @@ public class UpdateConfigRequest extends TeaModel {
     public Boolean namingAuthEnabled;
 
     /**
-     * <p>Specifies whether to enable super permissions. This parameter is valid for ZooKeeper instances. Valid values:</p>
+     * <p>Specifies whether super permissions are enabled. This parameter is valid for ZooKeeper instances. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: enabled</li>
-     * <li><code>false</code>: disabled</li>
+     * <li><p><code>true</code>: enabled</p>
+     * </li>
+     * <li><p><code>false</code>: disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -211,9 +237,9 @@ public class UpdateConfigRequest extends TeaModel {
     public String openSuperAcl;
 
     /**
-     * <p>The password that corresponds to the username.</p>
+     * <p>The password of the account.</p>
      * <blockquote>
-     * <p>You must specify this parameter if OpenSuperAcl is set to true.</p>
+     * <p>This parameter is required when OpenSuperAcl is set to true.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -223,7 +249,7 @@ public class UpdateConfigRequest extends TeaModel {
     public String passWord;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>The extended request parameter in the JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -232,7 +258,7 @@ public class UpdateConfigRequest extends TeaModel {
     public String requestPars;
 
     /**
-     * <p>The frequency for generating snapshots. This parameter is valid for ZooKeeper instances.</p>
+     * <p>The frequency at which snapshots are generated in ZooKeeper configuration</p>
      * 
      * <strong>example:</strong>
      * <p>100000</p>
@@ -250,6 +276,8 @@ public class UpdateConfigRequest extends TeaModel {
     public String syncLimit;
 
     /**
+     * <p>Specifies whether to enable TLS transmission link encryption in Nacos</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -266,9 +294,9 @@ public class UpdateConfigRequest extends TeaModel {
     public String tickTime;
 
     /**
-     * <p>The name of the user.</p>
+     * <p>The username of the account.</p>
      * <blockquote>
-     * <p>You must specify this parameter if OpenSuperAcl is set to true.</p>
+     * <p>This parameter is required when OpenSuperAcl is set to true.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

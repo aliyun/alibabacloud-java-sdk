@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddBlackWhiteListResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class AddBlackWhiteListResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The ID of the record.</p>
+     * <p>The record ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -23,7 +23,7 @@ public class AddBlackWhiteListResponseBody extends TeaModel {
     public Long data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,7 +41,7 @@ public class AddBlackWhiteListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>966F6CA7-16D0-50AB-AB02-E140934F90C1</p>
@@ -50,10 +50,10 @@ public class AddBlackWhiteListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>The request result. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><code>true</code>: The request is successful.                                 </li>
+     * <li><code>false</code>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -39,7 +39,7 @@ public class UpdateGatewayNameResponseBody extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>The request is successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;

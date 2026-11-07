@@ -212,7 +212,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
          * <p>Configuration description.</p>
          * 
          * <strong>example:</strong>
-         * <p>For testing</p>
+         * <p>Testdedicateduse</p>
          */
         @NameInMap("Desc")
         public String desc;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayConfigResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AF21683A-29C7-4853-AC0F-B5ADEE4D****</p>
      */

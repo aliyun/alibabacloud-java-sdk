@@ -18,7 +18,7 @@ public class AddSSLCertRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the certificate.</p>
+     * <p>The certificate ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5213641-cn-hangzhou</p>
@@ -27,7 +27,7 @@ public class AddSSLCertRequest extends TeaModel {
     public String certIdentifier;
 
     /**
-     * <p>The domain ID.</p>
+     * <p>The domain name ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreatePluginConfigRequest extends TeaModel {
     /**
-     * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+     * <p>The language in which the response is displayed. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese. This is the default value.</li>
+     * <li>en: English.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -14,14 +18,15 @@ public class CreatePluginConfigRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The plug-in configuration. The configuration content of the WebAssembly (Wasm) plug-in is in the YAML format. The configuration content of the Lua plug-in is Lua code.</p>
+     * <p>The plug-in configuration. The configuration content of a Wasm plug-in is in YAML format, and the configuration content of a Lua plug-in is Lua code.</p>
      * 
      * <strong>example:</strong>
-     * <p>status_code: 200
-     * headers:</p>
+     * <p>name: John
+     * age: 18
+     * friends:</p>
      * <ul>
-     * <li>Content-Type=application/json
-     * body: &quot;{\&quot;rule\&quot;: \&quot;global\&quot;}&quot;</li>
+     * <li>David</li>
+     * <li>Anne</li>
      * </ul>
      */
     @NameInMap("Config")
@@ -30,9 +35,9 @@ public class CreatePluginConfigRequest extends TeaModel {
     /**
      * <p>The application scope of the plug-in. Valid values:</p>
      * <ul>
-     * <li>0: global</li>
-     * <li>1: route</li>
-     * <li>2: domain name</li>
+     * <li>0: Global.</li>
+     * <li>1: Route.</li>
+     * <li>2: Domain name.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -43,7 +48,7 @@ public class CreatePluginConfigRequest extends TeaModel {
     public Integer configLevel;
 
     /**
-     * <p>Indicates whether the plug-in is enabled.</p>
+     * <p>Specifies whether to enable the plug-in.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +68,7 @@ public class CreatePluginConfigRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
-     * <p>The gateway plug-in ID.</p>
+     * <p>The ID of the gateway plug-in.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +78,7 @@ public class CreatePluginConfigRequest extends TeaModel {
     public Long pluginId;
 
     /**
-     * <p>The domain IDs or route IDs. They are distinguished based on ConfigLevel.</p>
+     * <p>The list of domain name IDs or route IDs. The specific type depends on the value of ConfigLevel.</p>
      */
     @NameInMap("ResourceIdList")
     public java.util.List<Long> resourceIdList;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteWebFlowRulesRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values: zh (default): Chinese, en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,7 @@ public class DeleteWebFlowRulesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The name of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class DeleteWebFlowRulesRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The IDs of the rules to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class DeleteWebFlowRulesRequest extends TeaModel {
     public String ids;
 
     /**
+     * <p>The name of the MSE namespace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteGatewayAuthRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese. This is the default value.</li>
+     * <li>en: English.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +18,8 @@ public class DeleteGatewayAuthRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The unique ID of the gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
      */
@@ -19,6 +27,8 @@ public class DeleteGatewayAuthRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
+     * <p>The authentication ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>120</p>
      */

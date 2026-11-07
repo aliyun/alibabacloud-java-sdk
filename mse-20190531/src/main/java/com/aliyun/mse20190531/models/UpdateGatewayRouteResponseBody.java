@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayRouteResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class UpdateGatewayRouteResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The data.</p>
      * 
      * <strong>example:</strong>
      * <p>337</p>
@@ -23,7 +23,7 @@ public class UpdateGatewayRouteResponseBody extends TeaModel {
     public Long data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>NoPermission</p>
@@ -32,7 +32,7 @@ public class UpdateGatewayRouteResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,16 +41,16 @@ public class UpdateGatewayRouteResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The response description.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request is successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>73785414-2C5B-5E28-BD91-B2C742269C48</p>
@@ -59,9 +59,9 @@ public class UpdateGatewayRouteResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>true</code>: The request is successful.</li>
      * <li><code>false</code>: The request failed.</li>
      * </ul>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
     /**
-     * <p>The status code. A value of 200 is returned if the request is successful.</p>
+     * <p>The code is used only to synchronize with success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The details of the data.</p>
+     * <p>The data returned.</p>
      * 
      * <strong>example:</strong>
      * <p>[{id:100,name:&quot;test&quot;}]</p>
@@ -32,7 +32,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-100-000</p>
@@ -41,7 +41,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -50,20 +50,22 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message that is returned for the request.</p>
      * <ul>
-     * <li>If the request is successful, a success message is returned.</li>
-     * <li>If the request fails, an error message is returned.</li>
+     * <li><p>If the request is successful, a success message is returned.</p>
+     * </li>
+     * <li><p>If the request fails, an error message is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>The request was successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>54973C90-F379-4372-9AA5-053A3F7****</p>
@@ -74,8 +76,10 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -163,11 +167,23 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("AppIds")
         public String appIds;
 
+        /**
+         * <p>The routing mode for end-to-end canary release:</p>
+         * <ul>
+         * <li><p>0: routing based on request content</p>
+         * </li>
+         * <li><p>1: routing based on percentages</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CanaryModel")
         public Integer canaryModel;
 
         /**
-         * <p>The type and ID of the ingress application.</p>
+         * <p>The type of the ingress application and the ID of the ingress application.</p>
          * 
          * <strong>example:</strong>
          * <p>mse:abcde@abcde</p>
@@ -185,7 +201,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The side at which canary release for messaging was enabled.</p>
+         * <p>The side at which canary release for messaging is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>Client</p>
@@ -203,7 +219,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         public Boolean messageQueueGrayEnable;
 
         /**
-         * <p>The name of the lane group.</p>
+         * <p>The name of a lane group.</p>
          * 
          * <strong>example:</strong>
          * <p>swimmingGroup</p>
@@ -220,11 +236,17 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>This parameter is deprecated</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;/a&quot;]</p>
+         */
         @NameInMap("Paths")
         public String paths;
 
         /**
-         * <p>Indicates whether the request details (metrics of end-to-end canary release) were recorded.</p>
+         * <p>Indicates whether to record the request details (metrics of end-to-end canary release).</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -241,6 +263,12 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The canary version. Valid values: 0 and 2. Recommended value: 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("SwimVersion")
         public Integer swimVersion;
 

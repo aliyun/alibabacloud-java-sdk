@@ -4,10 +4,15 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayIsolationRuleResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListGatewayIsolationRuleResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6F025D43-8632-5716-AE9B-7EDDF16C****</p>
      */
@@ -37,6 +42,12 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
 
     public static class ListGatewayIsolationRuleResponseBodyDataResult extends TeaModel {
         /**
+         * <p>The web fallback behavior type. Valid values:</p>
+         * <ul>
+         * <li>0: return specified content.</li>
+         * <li>1: redirect to a specified page.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -44,6 +55,12 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public Integer behaviorType;
 
         /**
+         * <p>The encoding type. Valid values:</p>
+         * <ul>
+         * <li>0: plain text.</li>
+         * <li>1: JSON.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -51,6 +68,12 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public Integer bodyEncoding;
 
         /**
+         * <p>Specifies whether the rule is enabled. Valid values:</p>
+         * <ul>
+         * <li>0: disabled.</li>
+         * <li>1: enabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -58,6 +81,8 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public Integer enable;
 
         /**
+         * <p>The ID of the gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>14407</p>
          */
@@ -65,6 +90,8 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public Long gatewayId;
 
         /**
+         * <p>The unique ID of the gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
          */
@@ -72,16 +99,28 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public String gatewayUniqueId;
 
         /**
+         * <p>The ID of the concurrency rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>358</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The IDs of the filter rules.</p>
+         */
         @NameInMap("IdList")
         public java.util.List<Long> idList;
 
         /**
+         * <p>The threshold conversion mode. Valid values:</p>
+         * <ul>
+         * <li>0: standalone.</li>
+         * <li>1: cluster.</li>
+         * <li>2: cluster to standalone.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -89,6 +128,8 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public Integer limitMode;
 
         /**
+         * <p>The overall concurrency threshold.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -96,6 +137,8 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public Integer maxConcurrency;
 
         /**
+         * <p>The custom headers, specified as key-value pairs.</p>
+         * 
          * <strong>example:</strong>
          * <p>key:value</p>
          */
@@ -103,6 +146,8 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public String responseAdditionalHeaders;
 
         /**
+         * <p>The HTTP response body.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -110,6 +155,8 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public String responseContentBody;
 
         /**
+         * <p>The redirect URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>www.******.com</p>
          */
@@ -117,6 +164,8 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public String responseRedirectUrl;
 
         /**
+         * <p>The HTTP status code.</p>
+         * 
          * <strong>example:</strong>
          * <p>429</p>
          */
@@ -124,6 +173,8 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public Integer responseStatusCode;
 
         /**
+         * <p>The ID of the route.</p>
+         * 
          * <strong>example:</strong>
          * <p>52853</p>
          */
@@ -131,6 +182,8 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public Long routeId;
 
         /**
+         * <p>The name of the route.</p>
+         * 
          * <strong>example:</strong>
          * <p>routeName</p>
          */
@@ -266,6 +319,12 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
 
     public static class ListGatewayIsolationRuleResponseBodyDataResults extends TeaModel {
         /**
+         * <p>The web fallback behavior type. Valid values:</p>
+         * <ul>
+         * <li>0: return specified content.</li>
+         * <li>1: redirect to a specified page.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -273,6 +332,12 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public Integer behaviorType;
 
         /**
+         * <p>The encoding type. Valid values:</p>
+         * <ul>
+         * <li>0: plain text.</li>
+         * <li>1: JSON.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -280,6 +345,12 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public Integer bodyEncoding;
 
         /**
+         * <p>Specifies whether the rule is enabled. Valid values:</p>
+         * <ul>
+         * <li>0: disabled.</li>
+         * <li>1: enabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -287,6 +358,8 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public Integer enable;
 
         /**
+         * <p>The ID of the gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>14407</p>
          */
@@ -294,6 +367,8 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public Long gatewayId;
 
         /**
+         * <p>The unique ID of the gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
          */
@@ -301,16 +376,28 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public String gatewayUniqueId;
 
         /**
+         * <p>The ID of the concurrency rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>358</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The IDs of the filter rules.</p>
+         */
         @NameInMap("IdList")
         public java.util.List<Long> idList;
 
         /**
+         * <p>The threshold conversion type. Valid values:</p>
+         * <ul>
+         * <li>0: standalone.</li>
+         * <li>1: cluster.</li>
+         * <li>2: standalone to cluster.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -318,6 +405,8 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public Integer limitMode;
 
         /**
+         * <p>The overall concurrency threshold.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -325,6 +414,8 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public Integer maxConcurrency;
 
         /**
+         * <p>The custom headers, specified as key-value pairs.</p>
+         * 
          * <strong>example:</strong>
          * <p>key=value</p>
          */
@@ -332,6 +423,8 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public String responseAdditionalHeaders;
 
         /**
+         * <p>The HTTP response body.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -339,6 +432,8 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public String responseContentBody;
 
         /**
+         * <p>The redirect URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>www.******.com</p>
          */
@@ -346,6 +441,8 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public String responseRedirectUrl;
 
         /**
+         * <p>The HTTP status code.</p>
+         * 
          * <strong>example:</strong>
          * <p>429</p>
          */
@@ -353,6 +450,8 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public Integer responseStatusCode;
 
         /**
+         * <p>The ID of the route.</p>
+         * 
          * <strong>example:</strong>
          * <p>52853</p>
          */
@@ -360,6 +459,8 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public Long routeId;
 
         /**
+         * <p>The name of the route.</p>
+         * 
          * <strong>example:</strong>
          * <p>routeName</p>
          */
@@ -495,6 +596,8 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
 
     public static class ListGatewayIsolationRuleResponseBodyData extends TeaModel {
         /**
+         * <p>The page number of the instance list.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -502,19 +605,29 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The returned results.</p>
+         */
         @NameInMap("Result")
         public java.util.List<ListGatewayIsolationRuleResponseBodyDataResult> result;
 
+        /**
+         * <p>The returned result collection.</p>
+         */
         @NameInMap("Results")
         public java.util.List<ListGatewayIsolationRuleResponseBodyDataResults> results;
 
         /**
+         * <p>The total number of queried instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

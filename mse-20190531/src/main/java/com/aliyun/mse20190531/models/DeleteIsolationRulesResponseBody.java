@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DeleteIsolationRulesResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The list of rule IDs that have been deleted.</p>
+     */
     @NameInMap("Data")
     public java.util.List<Long> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class DeleteIsolationRulesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -29,6 +38,8 @@ public class DeleteIsolationRulesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4E9FDCFE-0738-493B-B801-82BDFBCB****</p>
      */
@@ -36,6 +47,8 @@ public class DeleteIsolationRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The request result.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class RemoveApplicationRequest extends TeaModel {
     /**
+     * <p>The language of the returned results. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese. This is the default value.</li>
+     * <li>en: English.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +18,8 @@ public class RemoveApplicationRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The ID of the application to delete.</p>
+     * 
      * <strong>example:</strong>
      * <p>abcde@12345</p>
      */
@@ -19,6 +27,8 @@ public class RemoveApplicationRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The name of the application to delete.</p>
+     * 
      * <strong>example:</strong>
      * <p>example-app</p>
      */
@@ -26,6 +36,8 @@ public class RemoveApplicationRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The microservice namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>prod</p>
      */
@@ -33,6 +45,8 @@ public class RemoveApplicationRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

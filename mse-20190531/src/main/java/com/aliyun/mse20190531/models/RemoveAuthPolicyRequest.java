@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveAuthPolicyRequest extends TeaModel {
     /**
+     * <p>The language in which the returned results are displayed. Values: zh-CN (default): Chinese, en-US: English</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,7 @@ public class RemoveAuthPolicyRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>Policy ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

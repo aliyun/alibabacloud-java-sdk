@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class InitializeServiceLinkRoleResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public InitializeServiceLinkRoleResponseBodyData data;
 
     /**
+     * <p>The message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class InitializeServiceLinkRoleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A5E7D4E3-D30C-56C1-817F-F2B8CE6BXXXX</p>
      */
@@ -29,6 +38,14 @@ public class InitializeServiceLinkRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +99,8 @@ public class InitializeServiceLinkRoleResponseBody extends TeaModel {
 
     public static class InitializeServiceLinkRoleResponseBodyData extends TeaModel {
         /**
+         * <p>The permission that is granted to the RAM user to call the API operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>ram:CreateServiceLinkedRole</p>
          */
@@ -89,6 +108,8 @@ public class InitializeServiceLinkRoleResponseBody extends TeaModel {
         public String requiredPermission;
 
         /**
+         * <p>The name of the created service-linked role.</p>
+         * 
          * <strong>example:</strong>
          * <p>AliyunServiceRoleForMSE</p>
          */
@@ -96,6 +117,8 @@ public class InitializeServiceLinkRoleResponseBody extends TeaModel {
         public String roleName;
 
         /**
+         * <p>The service to which the service-linked role belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>mse.aliyuncs.com</p>
          */

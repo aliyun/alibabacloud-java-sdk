@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned in the response.</p>
      */
     @NameInMap("Data")
     public java.util.Map<String, java.util.List<DataValue>> data;
@@ -20,7 +20,7 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The additional request information.</p>
+     * <p>The additional information about the request.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6832e76b-bb5f-4dea-<strong><strong>-</strong></strong>********</p>
@@ -38,7 +38,7 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

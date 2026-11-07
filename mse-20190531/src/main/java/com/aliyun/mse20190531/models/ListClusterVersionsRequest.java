@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListClusterVersionsRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned information. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ListClusterVersionsRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</p>
+     * <p>The cluster type. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</p>
      * 
      * <strong>example:</strong>
      * <p>Nacos-Ans</p>
@@ -27,10 +27,10 @@ public class ListClusterVersionsRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The instance edition. Valid values:</p>
+     * <p>Valid values:</p>
      * <ul>
      * <li><code>mse_dev</code>: Developer Edition.</li>
-     * <li><code>mse_pro</code>: Professional Edition. This is the default value.</li>
+     * <li><code>mse_pro</code>: Professional Edition (default).</li>
      * </ul>
      * 
      * <strong>example:</strong>

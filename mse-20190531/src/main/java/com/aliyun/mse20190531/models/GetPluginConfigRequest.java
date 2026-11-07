@@ -5,8 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetPluginConfigRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <p>zh: Chinese en: English</p>
+     * <p>The language of the returned information. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>

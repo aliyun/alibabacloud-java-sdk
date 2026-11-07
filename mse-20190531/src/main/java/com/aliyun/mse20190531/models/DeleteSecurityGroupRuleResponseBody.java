@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
     public DeleteSecurityGroupRuleResponseBodyData data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,10 +29,10 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request is successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -49,8 +49,10 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +116,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
 
     public static class DeleteSecurityGroupRuleResponseBodyData extends TeaModel {
         /**
-         * <p>The description.</p>
+         * <p>The description of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>auto-description1</p>
@@ -123,7 +125,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the gateway.</p>
+         * <p>The gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>103</p>
@@ -141,7 +143,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
         public String gatewayUniqueId;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the rule was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-07 18:07:57</p>
@@ -150,7 +152,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The time when the rule was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-11T14:12:55.000+0000</p>
@@ -159,7 +161,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The ID.</p>
+         * <p>The rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -168,13 +170,18 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The transport layer protocol. The value of this parameter is case-insensitive. Valid values:</p>
+         * <p>The transport-layer protocol. The value is not case-sensitive. Valid values:</p>
          * <ul>
-         * <li>icmp</li>
-         * <li>gre</li>
-         * <li>tcp</li>
-         * <li>udp</li>
-         * <li>all: All protocols are supported.</li>
+         * <li><p>icmp</p>
+         * </li>
+         * <li><p>gre</p>
+         * </li>
+         * <li><p>tcp</p>
+         * </li>
+         * <li><p>udp</p>
+         * </li>
+         * <li><p>all: The rule applies to all protocols.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,12 +191,16 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
         public String ipProtocol;
 
         /**
-         * <p>The range of ports for the transport layer protocol in the destination security group. Valid values:</p>
+         * <p>The transport-layer port range. Valid values:</p>
          * <ul>
-         * <li>When the IpProtocol parameter is set to tcp or udp, the port number range is 1 to 65535. The start port number and the end port number are separated by a forward slash (/). Example: 1/200.</li>
-         * <li>If the IpProtocol parameter is set to icmp, the port number range is -1/-1, which indicates all ports.</li>
-         * <li>If the IpProtocol parameter is set to gre, the port number range is -1/-1, which indicates all ports.</li>
-         * <li>If the IpProtocol parameter is set to all, the port number range is -1/-1, which indicates all ports.</li>
+         * <li><p>For TCP or UDP, the port range is 1 to 65535. Use a forward slash (/) to separate the start port from the end port. For example: <code>1/200</code>.</p>
+         * </li>
+         * <li><p>For ICMP, the value is <code>-1/-1</code>.</p>
+         * </li>
+         * <li><p>For GRE, the value is <code>-1/-1</code>.</p>
+         * </li>
+         * <li><p>For all protocols, the value is <code>-1/-1</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,7 +210,7 @@ public class DeleteSecurityGroupRuleResponseBody extends TeaModel {
         public String portRange;
 
         /**
-         * <p>The ID of the security group.</p>
+         * <p>The security group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-uf6hgwe067prhg68agfa</p>

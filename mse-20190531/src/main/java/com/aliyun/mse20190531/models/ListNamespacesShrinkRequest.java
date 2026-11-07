@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListNamespacesShrinkRequest extends TeaModel {
     /**
+     * <p>Language for displaying results. Values: zh (default): Chinese, en: English</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class ListNamespacesShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>Namespace name for fuzzy query. If not specified, all namespaces are queried by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>myNamespace</p>
      */
@@ -19,6 +23,8 @@ public class ListNamespacesShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Page number for paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListNamespacesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of entries per page for paged queries. The default is 5. To return more data, increase this value.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +41,7 @@ public class ListNamespacesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +50,9 @@ public class ListNamespacesShrinkRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>Alibaba Cloud tags.</p>
+     */
     @NameInMap("Tag")
     public String tagShrink;
 

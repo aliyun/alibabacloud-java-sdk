@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddAuthResourceResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class AddAuthResourceResponseBody extends TeaModel {
     public Long data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>403</p>
@@ -41,7 +41,7 @@ public class AddAuthResourceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4BBCF560-4DD7-5DBD-B849-CCB135BBBAB7</p>
@@ -50,9 +50,9 @@ public class AddAuthResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>The request result. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>true</code>: The request succeeded.</li>
      * <li><code>false</code>: The request failed.</li>
      * </ul>
      * 

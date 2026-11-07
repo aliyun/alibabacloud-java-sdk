@@ -35,7 +35,7 @@ public class UpdateNacosInstanceResponseBody extends TeaModel {
      * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request is successfully processed.</p>
+     * <p>Request succeeded.</p>
      */
     @NameInMap("Message")
     public String message;

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class AddMigrationTaskRequest extends TeaModel {
     /**
-     * <p>Language type of the returned information:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class AddMigrationTaskRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>Cluster type.</p>
+     * <p>The cluster type. Valid values:</p>
      * <ul>
      * <li>Nacos-Ans</li>
      * <li>ZooKeeper</li>
@@ -32,7 +32,7 @@ public class AddMigrationTaskRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>Source instance node address.</p>
+     * <p>The address of the source instance node.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.1.1:8848</p>
@@ -41,16 +41,16 @@ public class AddMigrationTaskRequest extends TeaModel {
     public String originInstanceAddress;
 
     /**
-     * <p>Source instance name.</p>
+     * <p>The name of the source instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>Source instance</p>
+     * <p>Source cluster</p>
      */
     @NameInMap("OriginInstanceName")
     public String originInstanceName;
 
     /**
-     * <p>Namespace list, required when the source cluster is Nacos.</p>
+     * <p>The list of namespaces. This parameter is optional when the source cluster is Nacos.</p>
      * 
      * <strong>example:</strong>
      * <p>namesapceId1,namesapceId2</p>
@@ -59,7 +59,7 @@ public class AddMigrationTaskRequest extends TeaModel {
     public String originInstanceNamespace;
 
     /**
-     * <p>Description.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a description.</p>
@@ -68,7 +68,7 @@ public class AddMigrationTaskRequest extends TeaModel {
     public String projectDesc;
 
     /**
-     * <p>Extended request parameters, in JSON format.</p>
+     * <p>The extended request parameters in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -77,7 +77,7 @@ public class AddMigrationTaskRequest extends TeaModel {
     public String requestPars;
 
     /**
-     * <p>SyncType</p>
+     * <p>The synchronization type. Valid values: configuration synchronization, service synchronization, or full synchronization.</p>
      * 
      * <strong>example:</strong>
      * <p>Service</p>
@@ -86,16 +86,16 @@ public class AddMigrationTaskRequest extends TeaModel {
     public String syncType;
 
     /**
-     * <p>Target instance name.</p>
+     * <p>The name of the target instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>Destination instance</p>
+     * <p>Target cluster</p>
      */
     @NameInMap("TargetClusterName")
     public String targetClusterName;
 
     /**
-     * <p>Target instance URL.</p>
+     * <p>The URL of the target instance.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-66*****-nacos-ans.mse.aliyuncs.com:8848</p>
@@ -104,7 +104,7 @@ public class AddMigrationTaskRequest extends TeaModel {
     public String targetClusterUrl;
 
     /**
-     * <p>Target instance ID.</p>
+     * <p>The instance ID of the target instance.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-cn-ud82*****</p>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayServiceShrinkRequest extends TeaModel {
     /**
+     * <p>The language in which you want the results to be displayed. Valid values: zh (default): Chinese. en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The list of Domain Name System (DNS) servers (for DNS domain name services only).</p>
+     */
     @NameInMap("DnsServerList")
     public String dnsServerListShrink;
 
     /**
+     * <p>The gateway ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>501</p>
      */
@@ -22,6 +29,8 @@ public class UpdateGatewayServiceShrinkRequest extends TeaModel {
     public Long gatewayId;
 
     /**
+     * <p>The unique ID of the gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-c9bc5afd61014165bd58f621b491*****</p>
      */
@@ -29,16 +38,23 @@ public class UpdateGatewayServiceShrinkRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
+     * <p>The service ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>322</p>
      */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The address list of fixed address services or domain name list of Domain Name System (DNS) services.</p>
+     */
     @NameInMap("IpList")
     public String ipListShrink;
 
     /**
+     * <p>The service name. This parameter is deprecated and cannot be modified. The value of this parameter must be the same as the current service name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -46,6 +62,8 @@ public class UpdateGatewayServiceShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The service port. Specify this parameter for DNS services.</p>
+     * 
      * <strong>example:</strong>
      * <p>80</p>
      */
@@ -53,6 +71,20 @@ public class UpdateGatewayServiceShrinkRequest extends TeaModel {
     public String servicePort;
 
     /**
+     * <p>The service protocol.</p>
+     * <ul>
+     * <li><p>HTTP</p>
+     * </li>
+     * <li><p>HTTPS</p>
+     * </li>
+     * <li><p>HTTP2</p>
+     * </li>
+     * <li><p>GRPC</p>
+     * </li>
+     * <li><p>DUBBO</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>HTTP</p>
      */
@@ -60,6 +92,20 @@ public class UpdateGatewayServiceShrinkRequest extends TeaModel {
     public String serviceProtocol;
 
     /**
+     * <p>The Transport Layer Security (TLS) settings. Valid values:</p>
+     * <ul>
+     * <li><p>mode: TLS mode</p>
+     * </li>
+     * <li><p>certId: certificate ID</p>
+     * </li>
+     * <li><p>caCertId: CA certificate ID</p>
+     * </li>
+     * <li><p>caCertContent: CA certificate public key</p>
+     * </li>
+     * <li><p>sni: service name identification</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{
      *       &quot;mode&quot;: &quot;MUTUAL&quot;,

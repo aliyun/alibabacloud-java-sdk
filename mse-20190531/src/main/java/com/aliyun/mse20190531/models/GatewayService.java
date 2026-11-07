@@ -12,42 +12,63 @@ public class GatewayService extends TeaModel {
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-913a49bab6c5461187a3305fb8da****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The name of the group to which the service belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEFAULT_GROUP</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The ID of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The metadata of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[\&quot;192.168.0.xxx:80\&quot;]</p>
      */
     @NameInMap("MetaInfo")
     public String metaInfo;
 
     /**
      * <p>The name of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The namespace to which the service belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>public</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The source type of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MSE</p>
      */
     @NameInMap("SourceType")
     public String sourceType;

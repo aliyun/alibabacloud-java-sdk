@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddGatewayDomainResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class AddGatewayDomainResponseBody extends TeaModel {
     public Long data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -35,13 +35,13 @@ public class AddGatewayDomainResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request is successfully processed.</p>
+     * <p>Request processed successfully</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16BA802F-B848-55DF-9F57-CD71B7272D1F</p>
@@ -50,10 +50,10 @@ public class AddGatewayDomainResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>The request result. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>

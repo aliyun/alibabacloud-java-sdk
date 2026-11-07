@@ -7,8 +7,10 @@ public class ListSSLCertRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,6 +20,8 @@ public class ListSSLCertRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The certificate name that is used for fuzzy search.</p>
+     * 
      * <strong>example:</strong>
      * <p>certabc</p>
      */

@@ -62,7 +62,7 @@ public class ListInstanceCountResponseBody extends TeaModel {
      * <p>The returned message. If the request is successful, a success message is returned. If the request fails, an error message is returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request was successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;

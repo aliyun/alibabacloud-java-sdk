@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddZooKeeperSaslUserShrinkRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values: zh (default): Chinese, en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,7 @@ public class AddZooKeeperSaslUserShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class AddZooKeeperSaslUserShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Specifies whether to restart the cluster to immediately load the SASL users.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -28,6 +33,7 @@ public class AddZooKeeperSaslUserShrinkRequest extends TeaModel {
     public Boolean reload;
 
     /**
+     * <p>The list of SASL users to add.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SaslUser")

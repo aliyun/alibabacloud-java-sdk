@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class OfflineGatewayRouteRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned information. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class OfflineGatewayRouteRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
-     * <p>The ID of the route.</p>
+     * <p>The route entry ID.</p>
      * 
      * <strong>example:</strong>
      * <p>645</p>

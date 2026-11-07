@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveAuthPolicyResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      */
@@ -12,6 +14,8 @@ public class RemoveAuthPolicyResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Data overview.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,16 +23,26 @@ public class RemoveAuthPolicyResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Return message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is processed successfully.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9515ACA4-E94D-440D-989E-C379FCED****</p>
      */
@@ -36,6 +50,14 @@ public class RemoveAuthPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Request result, with the following values:</p>
+     * <ul>
+     * <li><p><code>true</code>: The request is successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

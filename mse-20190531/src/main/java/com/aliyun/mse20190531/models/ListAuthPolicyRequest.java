@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAuthPolicyRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values: zh-CN and en-US. Default value: zh-CN. The value zh-CN indicates Chinese and the value en-US indicates English.</p>
+     * <p>The language in which the response is displayed. Valid values: zh-CN (default): Chinese, en-US: English</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -23,7 +23,7 @@ public class ListAuthPolicyRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The name of the authentication rule.</p>
+     * <p>The authentication rule name.</p>
      * 
      * <strong>example:</strong>
      * <p>auto-rule-**</p>
@@ -32,7 +32,7 @@ public class ListAuthPolicyRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The name of the Microservices Engine (MSE) namespace.</p>
+     * <p>The MSE namespace name.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -61,11 +61,14 @@ public class ListAuthPolicyRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The protocol type. Valid values:</p>
+     * <p>The Protocol Type. Valid values:</p>
      * <ul>
-     * <li><strong>SPRING_CLOUD</strong></li>
-     * <li><strong>DUBBO</strong></li>
-     * <li><strong>istio</strong></li>
+     * <li><p><strong>SPRING_CLOUD</strong>.</p>
+     * </li>
+     * <li><p><strong>DUBBO</strong>.</p>
+     * </li>
+     * <li><p><strong>istio</strong>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +78,7 @@ public class ListAuthPolicyRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The region ID.</p>
+     * <p>Region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,7 +88,7 @@ public class ListAuthPolicyRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The service source.</p>
+     * <p>The source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListGatewayIsolationRuleRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values: zh (default): Chinese. en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */

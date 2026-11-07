@@ -20,7 +20,10 @@ public class CreateFlowRuleResponseBody extends TeaModel {
     public CreateFlowRuleResponseBodyData data;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -35,23 +38,7 @@ public class CreateFlowRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>The result of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -115,7 +102,7 @@ public class CreateFlowRuleResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The application name.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>spring-cloud-a</p>
@@ -125,26 +112,6 @@ public class CreateFlowRuleResponseBody extends TeaModel {
 
         /**
          * <p>The throttling effect.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>0</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>fast failure</p>
-         * <!-- -->
-         * </li>
-         * <li><p>2</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>in queue</p>
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -154,22 +121,6 @@ public class CreateFlowRuleResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the rule is enabled.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -186,11 +137,17 @@ public class CreateFlowRuleResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The source application of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
+         */
         @NameInMap("LimitApp")
         public String limitApp;
 
         /**
-         * <p>The timeout period for queuing when the value of ControlBehavior is set to 2. Unit: milliseconds.</p>
+         * <p>The timeout period for queuing when the ControlBehavior parameter is set to 2. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -208,7 +165,7 @@ public class CreateFlowRuleResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region of the gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -217,7 +174,7 @@ public class CreateFlowRuleResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the API resource.</p>
+         * <p>The interface resource name.</p>
          * 
          * <strong>example:</strong>
          * <p>app</p>

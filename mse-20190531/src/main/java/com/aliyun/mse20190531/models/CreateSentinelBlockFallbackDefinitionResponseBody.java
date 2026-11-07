@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public CreateSentinelBlockFallbackDefinitionResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
     public Integer httpStatusCode;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ADDD8AB7-8D1C-4697-A83E-410D2607****</p>
      */
@@ -36,6 +47,14 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +116,8 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
 
     public static class CreateSentinelBlockFallbackDefinitionResponseBodyData extends TeaModel {
         /**
+         * <p>The name of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>spring-cloud-a</p>
          */
@@ -104,6 +125,8 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
         public String appName;
 
         /**
+         * <p>The behavior details.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;webRespStatusCode&quot;:429,&quot;webRespMessage&quot;:&quot;test&quot;,&quot;webFallbackMode&quot;:0,&quot;webRespContentType&quot;:0}</p>
          */
@@ -111,6 +134,8 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
         public String fallbackBehavior;
 
         /**
+         * <p>The behavior ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>34726</p>
          */
@@ -118,6 +143,8 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
         public Long id;
 
         /**
+         * <p>The behavior name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -125,6 +152,8 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
         public String name;
 
         /**
+         * <p>The microservice namespace to which the application belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -132,6 +161,8 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
         public String namespace;
 
         /**
+         * <p>The target resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -139,6 +170,8 @@ public class CreateSentinelBlockFallbackDefinitionResponseBody extends TeaModel 
         public Integer resourceClassification;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */

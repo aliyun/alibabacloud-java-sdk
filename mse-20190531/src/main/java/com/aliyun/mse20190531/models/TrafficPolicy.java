@@ -190,6 +190,9 @@ public class TrafficPolicy extends TeaModel {
 
         /**
          * <p>The prefetch duration. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("WarmupDuration")
         public Long warmupDuration;

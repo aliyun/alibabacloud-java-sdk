@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetServiceListPageResponseBody extends TeaModel {
     /**
-     * <p>The response to the request.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public GetServiceListPageResponseBodyData data;
@@ -29,7 +29,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -94,7 +94,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The time when the service was last updated.</p>
+         * <p>The last update time of the service.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -103,7 +103,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
         public String gmtModifyTime;
 
         /**
-         * <p>The group to which the service belongs.</p>
+         * <p>The service group.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT_GROUP</p>
@@ -112,7 +112,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
         public String group;
 
         /**
-         * <p>The number of service nodes.</p>
+         * <p>The number of instances for the service.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -129,6 +129,12 @@ public class GetServiceListPageResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The service type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>springCloud</p>
+         */
         @NameInMap("ServiceType")
         public String serviceType;
 
@@ -214,7 +220,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
 
     public static class GetServiceListPageResponseBodyData extends TeaModel {
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -238,7 +244,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
         public java.util.List<GetServiceListPageResponseBodyDataResult> result;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

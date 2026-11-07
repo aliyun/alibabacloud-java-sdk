@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GatewayBlackWhiteListRequest extends TeaModel {
     /**
-     * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+     * <p>The language of the response. Valid values: zh (Chinese, default) and en (English).</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -14,7 +14,7 @@ public class GatewayBlackWhiteListRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>This parameter is unavailable for public use.</p>
+     * <p>This parameter is not available.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -23,13 +23,13 @@ public class GatewayBlackWhiteListRequest extends TeaModel {
     public Boolean descSort;
 
     /**
-     * <p>The filter parameters.</p>
+     * <p>parse from filterParams</p>
      */
     @NameInMap("FilterParams")
     public GatewayBlackWhiteListRequestFilterParams filterParams;
 
     /**
-     * <p>This parameter is unavailable for public use.</p>
+     * <p>This parameter is not available.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -38,7 +38,7 @@ public class GatewayBlackWhiteListRequest extends TeaModel {
     public String orderItem;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Valid values: integers greater than 0. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -119,7 +119,7 @@ public class GatewayBlackWhiteListRequest extends TeaModel {
         public Long gatewayId;
 
         /**
-         * <p>The unique ID of the gateway. If this parameter is used together with the GatewayId parameter, the value of the GatewayId parameter is used.</p>
+         * <p>The unique identifier of the gateway. If both GatewayUniqueId and GatewayId are specified, GatewayId takes precedence.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-5017305290e14centbrveca****</p>
@@ -128,7 +128,7 @@ public class GatewayBlackWhiteListRequest extends TeaModel {
         public String gatewayUniqueId;
 
         /**
-         * <p>This parameter is unavailable for public use.</p>
+         * <p>This parameter is not available.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -137,7 +137,7 @@ public class GatewayBlackWhiteListRequest extends TeaModel {
         public Boolean isWhite;
 
         /**
-         * <p>This parameter is unavailable for public use.</p>
+         * <p>This parameter is not available.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -146,7 +146,7 @@ public class GatewayBlackWhiteListRequest extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The content that you want to query.</p>
+         * <p>The search content.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
@@ -157,9 +157,12 @@ public class GatewayBlackWhiteListRequest extends TeaModel {
         /**
          * <p>The query type. Valid values:</p>
          * <ul>
-         * <li>ROUTE: The list is queried by route. If the value of this parameter is ROUTE, set the SearchContent parameter to the route name.</li>
-         * <li>DOMAIN: The list is queried by domain name. If the value of this parameter is DOMAIN, set the SearchContent parameter to the domain name.</li>
-         * <li>IP: The list is queried by specified IP address. If the value of this parameter is IP, set the SearchContent parameter to the IP address.</li>
+         * <li><p>ROUTE: searches by route. Set SearchContent to the route name.</p>
+         * </li>
+         * <li><p>DOMAIN: searches by domain name. Set SearchContent to the domain name.</p>
+         * </li>
+         * <li><p>IP: searches by specified IP address. Set SearchContent to the IP address.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -169,7 +172,7 @@ public class GatewayBlackWhiteListRequest extends TeaModel {
         public String searchType;
 
         /**
-         * <p>This parameter is unavailable for public use.</p>
+         * <p>This parameter is not available.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>

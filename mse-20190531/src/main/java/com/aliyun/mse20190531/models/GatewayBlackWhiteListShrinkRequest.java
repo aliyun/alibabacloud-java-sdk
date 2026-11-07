@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GatewayBlackWhiteListShrinkRequest extends TeaModel {
     /**
-     * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+     * <p>The language of the response. Valid values: zh (Chinese, default) and en (English).</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -14,7 +14,7 @@ public class GatewayBlackWhiteListShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>This parameter is unavailable for public use.</p>
+     * <p>This parameter is not available.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -23,13 +23,13 @@ public class GatewayBlackWhiteListShrinkRequest extends TeaModel {
     public Boolean descSort;
 
     /**
-     * <p>The filter parameters.</p>
+     * <p>parse from filterParams</p>
      */
     @NameInMap("FilterParams")
     public String filterParamsShrink;
 
     /**
-     * <p>This parameter is unavailable for public use.</p>
+     * <p>This parameter is not available.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -38,7 +38,7 @@ public class GatewayBlackWhiteListShrinkRequest extends TeaModel {
     public String orderItem;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Valid values: integers greater than 0. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class GetApplicationListResponseBody extends TeaModel {
     /**
-     * <p>The details of the data.</p>
+     * <p>The data structure.</p>
      */
     @NameInMap("Data")
     public GetApplicationListResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request is successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F55E608F-7C15-****-9CFD-DF832EBC4A0F</p>
@@ -31,8 +31,10 @@ public class GetApplicationListResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,7 +82,7 @@ public class GetApplicationListResponseBody extends TeaModel {
 
     public static class GetApplicationListResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>hkhon1po62@5f1b08becb*****</p>
@@ -89,7 +91,7 @@ public class GetApplicationListResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>finance</p>
@@ -107,7 +109,7 @@ public class GetApplicationListResponseBody extends TeaModel {
         public String extraInfo;
 
         /**
-         * <p>The number of instances.</p>
+         * <p>The total number of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -160,6 +162,12 @@ public class GetApplicationListResponseBody extends TeaModel {
         @NameInMap("Status")
         public Long status;
 
+        /**
+         * <p>The Alibaba Cloud tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;tagKey1&quot;:&quot;tagValue1&quot;,&quot;tagKey2&quot;:&quot;tagValue2&quot;}</p>
+         */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
@@ -269,7 +277,7 @@ public class GetApplicationListResponseBody extends TeaModel {
 
     public static class GetApplicationListResponseBodyData extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -278,7 +286,7 @@ public class GetApplicationListResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -287,13 +295,13 @@ public class GetApplicationListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The data returned.</p>
+         * <p>The information about the applications.</p>
          */
         @NameInMap("Result")
         public java.util.List<GetApplicationListResponseBodyDataResult> result;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>

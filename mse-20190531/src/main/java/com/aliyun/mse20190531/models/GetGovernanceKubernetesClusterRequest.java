@@ -7,8 +7,10 @@ public class GetGovernanceKubernetesClusterRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class GetGovernanceKubernetesClusterRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +30,7 @@ public class GetGovernanceKubernetesClusterRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
+     * <p>The region where the cluster is located. MSE supports specific regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

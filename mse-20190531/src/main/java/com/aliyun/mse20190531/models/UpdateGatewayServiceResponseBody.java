@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayServiceResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateGatewayServiceResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The service ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>322</p>
      */
@@ -19,6 +23,8 @@ public class UpdateGatewayServiceResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class UpdateGatewayServiceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -33,6 +41,8 @@ public class UpdateGatewayServiceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AF21683A-29C7-4853-AC0F-B5ADEE4****</p>
      */
@@ -40,6 +50,14 @@ public class UpdateGatewayServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

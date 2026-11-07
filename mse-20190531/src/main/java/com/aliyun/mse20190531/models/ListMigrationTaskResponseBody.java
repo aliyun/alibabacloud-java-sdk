@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListMigrationTaskResponseBody extends TeaModel {
     /**
-     * <p>The array structure.</p>
+     * <p>The data array.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListMigrationTaskResponseBodyData> data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-100-000</p>
@@ -20,7 +20,7 @@ public class ListMigrationTaskResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,16 +29,16 @@ public class ListMigrationTaskResponseBody extends TeaModel {
     public String httpCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request was successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +47,7 @@ public class ListMigrationTaskResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -67,8 +67,10 @@ public class ListMigrationTaskResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -165,11 +167,14 @@ public class ListMigrationTaskResponseBody extends TeaModel {
 
     public static class ListMigrationTaskResponseBodyData extends TeaModel {
         /**
-         * <p>The type of the instance.</p>
+         * <p>The type of the cluster. Valid values:</p>
          * <ul>
-         * <li>Nacos-Ans</li>
-         * <li>ZooKeeper</li>
-         * <li>Eureka</li>
+         * <li><p>Nacos-Ans</p>
+         * </li>
+         * <li><p>ZooKeeper</p>
+         * </li>
+         * <li><p>Eureka</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -179,7 +184,7 @@ public class ListMigrationTaskResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the task was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-07T10:07:57.000+0000</p>
@@ -188,7 +193,7 @@ public class ListMigrationTaskResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The update time.</p>
+         * <p>The time when the task was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-30T06:41:52.000+0000</p>
@@ -197,7 +202,7 @@ public class ListMigrationTaskResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The ID of the job.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -206,7 +211,7 @@ public class ListMigrationTaskResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The address of the source instance node.</p>
+         * <p>The endpoint of the source instance.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.1:8848</p>
@@ -224,7 +229,7 @@ public class ListMigrationTaskResponseBody extends TeaModel {
         public String originInstanceName;
 
         /**
-         * <p>The list of namespaces. This parameter is optional if applications are migrated from a Nacos instance.</p>
+         * <p>The list of namespaces. This parameter is optional when the source instance is a Nacos instance.</p>
          * 
          * <strong>example:</strong>
          * <p>fsdfsdfdsf</p>
@@ -241,6 +246,12 @@ public class ListMigrationTaskResponseBody extends TeaModel {
         @NameInMap("ProjectDesc")
         public String projectDesc;
 
+        /**
+         * <p>The synchronization type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Service</p>
+         */
         @NameInMap("SyncType")
         public String syncType;
 

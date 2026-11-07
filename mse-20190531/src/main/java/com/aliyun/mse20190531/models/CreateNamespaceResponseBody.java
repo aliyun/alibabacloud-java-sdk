@@ -4,20 +4,33 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateNamespaceResponseBody extends TeaModel {
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public CreateNamespaceResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is processed successfully.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>D1F1A6F3-7E03-5EAD-B3F1-123456789ABC</p>
      */
@@ -25,6 +38,8 @@ public class CreateNamespaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -78,6 +93,8 @@ public class CreateNamespaceResponseBody extends TeaModel {
 
     public static class CreateNamespaceResponseBodyData extends TeaModel {
         /**
+         * <p>The name of the namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>myNamespace</p>
          */
@@ -85,6 +102,8 @@ public class CreateNamespaceResponseBody extends TeaModel {
         public String namespace;
 
         /**
+         * <p>The region to which the namespace belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */

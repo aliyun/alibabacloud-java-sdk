@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateMessageQueueRouteRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned information. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateMessageQueueRouteRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +28,8 @@ public class UpdateMessageQueueRouteRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example-app</p>
      */
@@ -35,10 +37,10 @@ public class UpdateMessageQueueRouteRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>Specifies whether the canary release for messaging feature is enabled for the application. Valid values:</p>
+     * <p>Specifies whether message canary release is enabled. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: enabled</li>
-     * <li><code>false</code>: disabled</li>
+     * <li><code>true</code>: Enabled.</li>
+     * <li><code>false</code>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +50,7 @@ public class UpdateMessageQueueRouteRequest extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>The side for message filtering when the canary release for messaging feature is enabled.</p>
+     * <p>The filtering side for message canary release.</p>
      * 
      * <strong>example:</strong>
      * <p>Server</p>
@@ -56,10 +58,15 @@ public class UpdateMessageQueueRouteRequest extends TeaModel {
     @NameInMap("FilterSide")
     public String filterSide;
 
+    /**
+     * <p>The list of baseline environment labels for MSMQ grayscale rules.</p>
+     */
     @NameInMap("GrayBaseTags")
     public java.util.List<String> grayBaseTags;
 
     /**
+     * <p>The MSE namespace name.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -67,7 +74,7 @@ public class UpdateMessageQueueRouteRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,7 +84,7 @@ public class UpdateMessageQueueRouteRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The tag that is negligible for the untagged environment of the application.</p>
+     * <p>The ignored tags for the untagged environments of the application.</p>
      */
     @NameInMap("Tags")
     public java.util.List<String> tags;

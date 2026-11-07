@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMseFeatureSwitchResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>NoPermission</p>
@@ -14,16 +14,16 @@ public class GetMseFeatureSwitchResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request is successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6B4653A3-8D9C-5FDC-BB0C-936D40E9794B</p>
@@ -32,7 +32,7 @@ public class GetMseFeatureSwitchResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The response result.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;nacos_config_encrypt\&quot;: False}</p>
@@ -41,9 +41,9 @@ public class GetMseFeatureSwitchResponseBody extends TeaModel {
     public java.util.Map<String, ?> result;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>true</code>: The request is successful.</li>
      * <li><code>false</code>: The request failed.</li>
      * </ul>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddGatewayAuthResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The code synchronized with the Success parameter. If Success is true, Code is 200.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,16 +14,16 @@ public class AddGatewayAuthResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The ID of the created authentication.</p>
      * 
      * <strong>example:</strong>
-     * <p>3</p>
+     * <p>333</p>
      */
     @NameInMap("Data")
     public Long data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,16 +32,16 @@ public class AddGatewayAuthResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>You are not authorized to perform this operation.</p>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4279C00F-A5E1-53C6-A43B-751C1C524D0B</p>
@@ -50,10 +50,10 @@ public class AddGatewayAuthResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>The request result. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>

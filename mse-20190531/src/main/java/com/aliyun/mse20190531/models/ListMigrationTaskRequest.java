@@ -7,8 +7,10 @@ public class ListMigrationTaskRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class ListMigrationTaskRequest extends TeaModel {
     public String originInstanceName;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +38,7 @@ public class ListMigrationTaskRequest extends TeaModel {
     public Long pageNum;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,7 +47,7 @@ public class ListMigrationTaskRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>The extended request parameters. This parameter is a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

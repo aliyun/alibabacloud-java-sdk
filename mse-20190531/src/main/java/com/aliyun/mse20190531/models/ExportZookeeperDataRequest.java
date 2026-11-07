@@ -18,10 +18,10 @@ public class ExportZookeeperDataRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The type of the object that is exported. Valid values:</p>
+     * <p>The export type. Valid values:</p>
      * <ul>
-     * <li>transactionLog: transaction logs</li>
-     * <li>snapshot: snapshots</li>
+     * <li>transactionLog: transaction log</li>
+     * <li>snapshot: snapshot file</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class ExportZookeeperDataRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).</p>
+     * <p>The region where the cluster is deployed. Specify a region supported by Microservices Engine (MSE).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -49,7 +49,7 @@ public class ExportZookeeperDataRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>The extended request parameters in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

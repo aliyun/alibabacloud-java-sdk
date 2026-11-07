@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddMigrationTaskResponseBody extends TeaModel {
     /**
-     * <p>Data structure.</p>
+     * <p>The data structure.</p>
      */
     @NameInMap("Data")
     public AddMigrationTaskResponseBodyData data;
 
     /**
-     * <p>Error code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-100-000</p>
@@ -20,7 +20,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>Message.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>The request is processed successfully.</p>
@@ -29,7 +29,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>7466566F-F30F-4A29-965D-3E0AF21D****</p>
@@ -38,10 +38,10 @@ public class AddMigrationTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>请求结果，取值如下：</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>：请求成功。</li>
-     * <li><code>false</code>：请求失败。</li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
 
     public static class AddMigrationTaskResponseBodyData extends TeaModel {
         /**
-         * <p>Cluster type.</p>
+         * <p>The cluster type. Valid values:</p>
          * <ul>
          * <li>Nacos-Ans</li>
          * <li>ZooKeeper</li>
@@ -111,7 +111,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>Task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -120,7 +120,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Source instance node address.</p>
+         * <p>The address of the source instance node.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.1:8848</p>
@@ -129,16 +129,16 @@ public class AddMigrationTaskResponseBody extends TeaModel {
         public String originInstanceAddress;
 
         /**
-         * <p>Source instance name.</p>
+         * <p>The name of the source instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>Source instance</p>
+         * <p>Source cluster</p>
          */
         @NameInMap("OriginInstanceName")
         public String originInstanceName;
 
         /**
-         * <p>Namespace list, required when the source cluster is Nacos.</p>
+         * <p>The list of namespaces. This parameter is optional when the source cluster is Nacos.</p>
          * 
          * <strong>example:</strong>
          * <p>namesapceId1,namesapceId2</p>
@@ -147,7 +147,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
         public String originInstanceNamespace;
 
         /**
-         * <p>Description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>testsdfsdfsd</p>
@@ -156,7 +156,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
         public String projectDesc;
 
         /**
-         * <p>SyncType</p>
+         * <p>The synchronization type.</p>
          * 
          * <strong>example:</strong>
          * <p>Service</p>
@@ -165,16 +165,16 @@ public class AddMigrationTaskResponseBody extends TeaModel {
         public String syncType;
 
         /**
-         * <p>Target instance name.</p>
+         * <p>The name of the target instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>Destination instance</p>
+         * <p>Target cluster</p>
          */
         @NameInMap("TargetClusterName")
         public String targetClusterName;
 
         /**
-         * <p>Target instance URL.</p>
+         * <p>The URL of the target instance.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-94d****-nacos-ans.mse.aliyuncs.com:8848</p>
@@ -183,7 +183,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
         public String targetClusterUrl;
 
         /**
-         * <p>Target instance ID.</p>
+         * <p>The instance ID of the target instance.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-cn-7pp2w*****</p>
@@ -192,7 +192,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
         public String targetInstanceId;
 
         /**
-         * <p>User ID.</p>
+         * <p>The ID of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>183876217*****</p>

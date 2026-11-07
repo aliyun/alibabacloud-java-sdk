@@ -4,10 +4,15 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListZooKeeperSaslUserResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListZooKeeperSaslUserResponseBodyData> data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6C075654-E42F-5F58-914F-E11DA70881B7</p>
      */
@@ -37,16 +42,26 @@ public class ListZooKeeperSaslUserResponseBody extends TeaModel {
 
     public static class ListZooKeeperSaslUserResponseBodyData extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1631001140913</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the SASL user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The current status of the SASL user.</p>
+         * 
          * <strong>example:</strong>
          * <p>UserAddNeedReload</p>
          */
@@ -54,6 +69,8 @@ public class ListZooKeeperSaslUserResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The SASL username.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

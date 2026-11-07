@@ -7,8 +7,10 @@ public class QuerySwimmingLaneByIdRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese.</p>
+     * </li>
+     * <li><p>en: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class QuerySwimmingLaneByIdRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the lane.</p>
+     * <p>The swimming lane ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +30,7 @@ public class QuerySwimmingLaneByIdRequest extends TeaModel {
     public Long laneId;
 
     /**
-     * <p>The name of the Microservices Engine (MSE) namespace.</p>
+     * <p>The name of the MSE namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>

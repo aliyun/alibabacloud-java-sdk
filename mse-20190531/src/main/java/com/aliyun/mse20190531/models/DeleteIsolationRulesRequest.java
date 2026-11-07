@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteIsolationRulesRequest extends TeaModel {
     /**
+     * <p>The language in which the response is displayed. Valid values: zh (default): Chinese; en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,7 @@ public class DeleteIsolationRulesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +23,14 @@ public class DeleteIsolationRulesRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The list of rule IDs to be deleted.</p>
+     */
     @NameInMap("Ids")
     public java.util.List<Long> ids;
 
     /**
+     * <p>The microservice namespace to which the application belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

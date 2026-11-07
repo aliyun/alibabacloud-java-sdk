@@ -7,8 +7,8 @@ public class AddBlackWhiteListRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class AddBlackWhiteListRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
-     * <p>The whitelist. Default value: No.</p>
+     * <p>Specifies whether the list is a whitelist. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -54,7 +54,7 @@ public class AddBlackWhiteListRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The description.</p>
+     * <p>The note.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a note</p>
@@ -63,7 +63,7 @@ public class AddBlackWhiteListRequest extends TeaModel {
     public String note;
 
     /**
-     * <p>The resource IDs in the JSON format.</p>
+     * <p>The JSON string of the resource ID list.</p>
      * 
      * <strong>example:</strong>
      * <p>[123]</p>
@@ -72,11 +72,11 @@ public class AddBlackWhiteListRequest extends TeaModel {
     public String resourceIdJsonList;
 
     /**
-     * <p>The effective scope of the blacklist or whitelist. Valid values:</p>
+     * <p>The effective granularity. Valid values:</p>
      * <ul>
-     * <li>GATEWAY</li>
-     * <li>DOMAIN</li>
-     * <li>ROUTE</li>
+     * <li>GATEWAY: the entire gateway.</li>
+     * <li>DOMAIN: the domain name.</li>
+     * <li>ROUTE: the route.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,10 +86,10 @@ public class AddBlackWhiteListRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The status of the blacklist.</p>
+     * <p>The status of the blacklist. Valid values:</p>
      * <ul>
-     * <li>on: enabled</li>
-     * <li>off: disabled</li>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,7 +99,7 @@ public class AddBlackWhiteListRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The type of object in the blacklist or whitelist.</p>
+     * <p>The type of blacklists and whitelists.</p>
      * 
      * <strong>example:</strong>
      * <p>IP</p>

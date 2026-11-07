@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewayDomainRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned information. Valid values:</p>
      * <ul>
      * <li>zh: Chinese</li>
      * <li>en: English</li>
@@ -18,6 +18,8 @@ public class ListGatewayDomainRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The domain name used for fuzzy search.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -34,7 +36,7 @@ public class ListGatewayDomainRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
-     * <p>The type of the domain name.</p>
+     * <p>The domain name type.</p>
      * 
      * <strong>example:</strong>
      * <p>All</p>

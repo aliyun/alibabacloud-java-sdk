@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveZooKeeperSaslUserResponseBody extends TeaModel {
     /**
+     * <p>The data overview.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -12,6 +14,8 @@ public class RemoveZooKeeperSaslUserResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>56D9E600-6348-4260-B35F-583413F****</p>
      */

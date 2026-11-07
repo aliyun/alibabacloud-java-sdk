@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteNacosMcpServerResponseBody extends TeaModel {
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class DeleteNacosMcpServerResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D0DB055C-51F2-5BB2-82A6-CD8A3C6EE6BA</p>
      */

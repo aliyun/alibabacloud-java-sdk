@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class AddServiceSourceShrinkRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The supported languages. Valid values:</p>
      * <ul>
-     * <li>zh-CN (default): Chinese</li>
-     * <li>en-US: English</li>
-     * <li>ja: Japanese</li>
+     * <li>zh-CN: Chinese. This is the default value.</li>
+     * <li>en-US: English.</li>
+     * <li>ja: Japanese.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,16 +19,23 @@ public class AddServiceSourceShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>Specifies whether to monitor Ingress classes.</p>
+     * <p>The access address. This parameter is required.</p>
+     * <ul>
+     * <li>Container Service: the ID of the Container Service cluster.</li>
+     * <li>MSE Nacos: the internal endpoint of the instance.</li>
+     * <li>MSE ZooKeeper: the internal endpoint of the instance.</li>
+     * <li>SAE registry: the namespace TID.</li>
+     * <li>EDAS registry: the microservice namespace.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>c9ad2a0717032427e920754e25b49e3b5</p>
+     * <p>mse-********-nacos-ans.mse.aliyuncs.com:8848</p>
      */
     @NameInMap("Address")
     public String address;
 
     /**
-     * <p>Specifies whether to update the Ingress status.</p>
+     * <p>The unique ID of the gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-c70622ff52fe49beb29bea9a6f52****</p>
@@ -37,60 +44,73 @@ public class AddServiceSourceShrinkRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
-     * <p>The data structure.</p>
+     * <p>The list of service groups.</p>
      */
     @NameInMap("GroupList")
     public String groupListShrink;
 
     /**
-     * <p>The list of service groups.</p>
+     * <p>The Ingress configurations. This parameter is used when the service source type is K8s.</p>
      */
     @NameInMap("IngressOptionsRequest")
     public String ingressOptionsRequestShrink;
 
     /**
-     * <p>The namespace whose resources you want to monitor.</p>
+     * <p>The name.</p>
+     * <blockquote>
+     * <p>Descriptions for different source types.</p>
+     * </blockquote>
+     * <ul>
+     * <li>When the type is K8s, the input parameter is the name.</li>
+     * <li>When the type is NACOS, the input parameter is the instance ID.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>istio</p>
+     * <p>nacos</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The array of service root paths.</p>
      */
     @NameInMap("PathList")
     public String pathListShrink;
 
     /**
-     * <p>The service source.</p>
+     * <p>The service source type:</p>
      * <ul>
-     * <li>K8s: ACK cluster</li>
-     * <li>NACOS: MSE Nacos instance</li>
+     * <li>Container Service: K8S</li>
+     * <li>MSE Nacos: MSE</li>
+     * <li>MSE ZooKeeper: MSE_ZK</li>
+     * <li>SAE registry: SAE</li>
+     * <li>EDAS registry: EDAS</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>K8s,MSE</p>
+     * <p>MSE</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
-     * <p>The list of security groups to be authorized. You can specify security groups to allow backend services to access data sources that you create.</p>
+     * <p>The list of security groups to be authorized. This parameter is used to remove security group restrictions for backend services when creating a source.</p>
      */
     @NameInMap("ToAuthorizeSecurityGroups")
     public String toAuthorizeSecurityGroupsShrink;
 
     /**
-     * <p>The type of the service source.</p>
+     * <p>The service registration type. Specify the corresponding value based on the source type:</p>
      * <ul>
-     * <li>K8s: Container Service for Kubernetes (ACK) cluster</li>
-     * <li>NACOS: Nacos instance</li>
+     * <li>Container Service: K8S</li>
+     * <li>MSE Nacos: NACOS</li>
+     * <li>MSE ZooKeeper: ZOOKEEPER</li>
+     * <li>SAE registry: NACOS</li>
+     * <li>EDAS registry: NACOS</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>The Ingress configuration.</p>
+     * <p>NACOS</p>
      */
     @NameInMap("Type")
     public String type;

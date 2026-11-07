@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListClustersResponseBody extends TeaModel {
     /**
-     * <p>The details of the data.</p>
+     * <p>The data overview.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListClustersResponseBodyData> data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-100-000</p>
@@ -20,7 +20,7 @@ public class ListClustersResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>202</p>
@@ -29,16 +29,16 @@ public class ListClustersResponseBody extends TeaModel {
     public String httpCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request was successfully processed.</p>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +47,7 @@ public class ListClustersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of instances returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -56,7 +56,7 @@ public class ListClustersResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>69AD2AA7-DB47-449B-941B-B14409DF****</p>
@@ -65,10 +65,10 @@ public class ListClustersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class ListClustersResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of returned instances.</p>
+     * <p>The total number of instances.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -164,9 +164,21 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static class ListClustersResponseBodyDataMaintenancePeriod extends TeaModel {
+        /**
+         * <p>The end time of the O&amp;M time window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06:00</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The start time of the O&amp;M time window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02:00</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -204,7 +216,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String appVersion;
 
         /**
-         * <p>Indicates whether the instance can be upgraded.</p>
+         * <p>Indicates whether the cluster can be upgraded.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -213,10 +225,10 @@ public class ListClustersResponseBody extends TeaModel {
         public Boolean canUpdate;
 
         /**
-         * <p>The billing method, such as subscription or pay-as-you-go.</p>
+         * <p>The billing method, including subscription and pay-as-you-go.</p>
          * 
          * <strong>example:</strong>
-         * <p>Pay-as-you-go</p>
+         * <p>subscription</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
@@ -240,7 +252,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>The type of the cluster. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</p>
+         * <p>The cluster type, including ZooKeeper, Nacos-Ans, and Eureka.</p>
          * 
          * <strong>example:</strong>
          * <p>Eureka</p>
@@ -258,7 +270,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the cluster expires.</p>
+         * <p>The expiration time of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-01 00:00:00</p>
@@ -267,7 +279,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String endDate;
 
         /**
-         * <p>The initialization status of the instance.</p>
+         * <p>The initialization status.</p>
          * 
          * <strong>example:</strong>
          * <p>RESTART_SUCCESS</p>
@@ -294,7 +306,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The public IP address.</p>
+         * <p>The public address.</p>
          * 
          * <strong>example:</strong>
          * <p>47.98.XX.XX</p>
@@ -303,7 +315,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String internetAddress;
 
         /**
-         * <p>The public endpoint.</p>
+         * <p>The public domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-7413****-p.eureka.mse.aliyuncs.com</p>
@@ -312,7 +324,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String internetDomain;
 
         /**
-         * <p>The internal IP address.</p>
+         * <p>The private network address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -321,7 +333,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String intranetAddress;
 
         /**
-         * <p>The internal endpoint.</p>
+         * <p>The internal domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-7413****-eureka.mse.aliyuncs.com</p>
@@ -329,6 +341,9 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("IntranetDomain")
         public String intranetDomain;
 
+        /**
+         * <p>The O&amp;M time window.</p>
+         */
         @NameInMap("MaintenancePeriod")
         public ListClustersResponseBodyDataMaintenancePeriod maintenancePeriod;
 
@@ -351,7 +366,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The tags that are attached to the instance.</p>
+         * <p>The tags bound to the instance.</p>
          */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
@@ -365,10 +380,18 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("VersionCode")
         public String versionCode;
 
+        /**
+         * <p>The version lifecycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STABLE</p>
+         */
         @NameInMap("VersionLifecycle")
         public String versionLifecycle;
 
         /**
+         * <p>The ID of the VPC where the cluster is deployed.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-bp1hcg467ekqsv0zr****</p>
          */

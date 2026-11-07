@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetGatewayConfigRequest extends TeaModel {
     /**
+     * <p>The language of the returned results. Valid values: zh (default): Chinese. en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,7 @@ public class GetGatewayConfigRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The unique ID of the gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

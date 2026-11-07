@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListIsolationRulesResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The details of the rule.</p>
+     */
     @NameInMap("Data")
     public ListIsolationRulesResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListIsolationRulesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -29,6 +38,8 @@ public class ListIsolationRulesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4E9FDCFE-0738-493B-B801-82BDFBCB****</p>
      */
@@ -36,6 +47,8 @@ public class ListIsolationRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The result of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class ListIsolationRulesResponseBody extends TeaModel {
 
     public static class ListIsolationRulesResponseBodyDataResult extends TeaModel {
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>hkhon1po62@c3df23522bXXXXX</p>
          */
@@ -104,6 +119,8 @@ public class ListIsolationRulesResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>spring-cloud-a</p>
          */
@@ -111,6 +128,8 @@ public class ListIsolationRulesResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>Indicates whether the rule is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -118,16 +137,26 @@ public class ListIsolationRulesResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The behavior that was bound to the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;{\&quot;appName\&quot;:\&quot;spring-cloud-a\&quot;,\&quot;fallbackBehavior\&quot;:{\&quot;webFallbackMode\&quot;:0,\&quot;webRespContentType\&quot;:0,\&quot;webRespMessage\&quot;:\&quot;Blocked\&quot;,\&quot;webRespStatusCode\&quot;:429},\&quot;id\&quot;:977,\&quot;name\&quot;:\&quot;Fallback\&quot;,\&quot;namespace\&quot;:\&quot;default\&quot;,\&quot;resourceClassification\&quot;:1}&quot;</p>
          */
         @NameInMap("FallbackObject")
         public String fallbackObject;
 
+        /**
+         * <p>The source application of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
+         */
         @NameInMap("LimitApp")
         public String limitApp;
 
         /**
+         * <p>The microservice namespace to which the application belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -135,6 +164,8 @@ public class ListIsolationRulesResponseBody extends TeaModel {
         public String namespace;
 
         /**
+         * <p>The region in which the cluster resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -142,6 +173,8 @@ public class ListIsolationRulesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The name of the interface to which the rule applies. The interface name must be the same as the name on the interface details page in the console.</p>
+         * 
          * <strong>example:</strong>
          * <p>/a</p>
          */
@@ -149,6 +182,8 @@ public class ListIsolationRulesResponseBody extends TeaModel {
         public String resource;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -156,6 +191,8 @@ public class ListIsolationRulesResponseBody extends TeaModel {
         public Long ruleId;
 
         /**
+         * <p>The concurrency threshold for isolation rules.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -251,6 +288,8 @@ public class ListIsolationRulesResponseBody extends TeaModel {
 
     public static class ListIsolationRulesResponseBodyData extends TeaModel {
         /**
+         * <p>The first page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -258,16 +297,23 @@ public class ListIsolationRulesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The returned results.</p>
+         */
         @NameInMap("Result")
         public java.util.List<ListIsolationRulesResponseBodyDataResult> result;
 
         /**
+         * <p>The total number of rules.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */

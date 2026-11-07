@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-100-000</p>
@@ -14,16 +14,16 @@ public class UntagResourcesResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request was successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>58E06A0A-BD2C-47A0-99C2-B100F353****</p>
@@ -32,9 +32,9 @@ public class UntagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>The request result. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>true</code>: The request succeeded.</li>
      * <li><code>false</code>: The request failed.</li>
      * </ul>
      * 

@@ -7,8 +7,10 @@ public class UpdateMigrationTaskRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,11 +20,14 @@ public class UpdateMigrationTaskRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The type of the instance. Valid values:</p>
+     * <p>The type of a cluster.</p>
      * <ul>
-     * <li>Nacos-Ans</li>
-     * <li>ZooKeeper</li>
-     * <li>Eureka</li>
+     * <li><p>Nacos-Ans</p>
+     * </li>
+     * <li><p>ZooKeeper</p>
+     * </li>
+     * <li><p>Eureka</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +37,7 @@ public class UpdateMigrationTaskRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +46,7 @@ public class UpdateMigrationTaskRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The address of the source instance node.</p>
+     * <p>The source instance node address.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.1.1:8848</p>
@@ -53,13 +58,13 @@ public class UpdateMigrationTaskRequest extends TeaModel {
      * <p>The name of the source instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>Source instance</p>
+     * <p>Source cluster</p>
      */
     @NameInMap("OriginInstanceName")
     public String originInstanceName;
 
     /**
-     * <p>The list of namespaces. This parameter is optional if you want to migrate applications from a Nacos instance.</p>
+     * <p>The list of namespaces. This parameter is optional if applications are migrated from a Nacos instance.</p>
      * 
      * <strong>example:</strong>
      * <p>namesapceId1,namesapceId2</p>
@@ -68,7 +73,7 @@ public class UpdateMigrationTaskRequest extends TeaModel {
     public String originInstanceNamespace;
 
     /**
-     * <p>The description.</p>
+     * <p>The description of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a description.</p>
@@ -77,7 +82,7 @@ public class UpdateMigrationTaskRequest extends TeaModel {
     public String projectDesc;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>The extended request parameter in the JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -85,6 +90,12 @@ public class UpdateMigrationTaskRequest extends TeaModel {
     @NameInMap("RequestPars")
     public String requestPars;
 
+    /**
+     * <p>The synchronization type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>All</p>
+     */
     @NameInMap("SyncType")
     public String syncType;
 
@@ -92,7 +103,7 @@ public class UpdateMigrationTaskRequest extends TeaModel {
      * <p>The name of the destination instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>Destination instance</p>
+     * <p>Target cluster</p>
      */
     @NameInMap("TargetClusterName")
     public String targetClusterName;

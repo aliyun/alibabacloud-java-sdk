@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayIsolationRuleRequest extends TeaModel {
     /**
+     * <p>The language in which you want to display the results. Valid values: zh (default): Chinese. en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,9 @@ public class UpdateGatewayIsolationRuleRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The type of the web fallback behavior.</p>
+     * <p>0: The specified content is returned.</p>
+     * <p>1: Redirect to the specified page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +26,10 @@ public class UpdateGatewayIsolationRuleRequest extends TeaModel {
     public Integer behaviorType;
 
     /**
+     * <p>The encoding type.</p>
+     * <p>0: plain text</p>
+     * <p>1: JSON text</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -28,6 +37,9 @@ public class UpdateGatewayIsolationRuleRequest extends TeaModel {
     public Integer bodyEncoding;
 
     /**
+     * <p>Specifies whether to enable the rule.</p>
+     * <p>0: disable</p>
+     * <p>1: enable</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +49,8 @@ public class UpdateGatewayIsolationRuleRequest extends TeaModel {
     public Integer enable;
 
     /**
+     * <p>The gateway ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>14407</p>
      */
@@ -44,6 +58,7 @@ public class UpdateGatewayIsolationRuleRequest extends TeaModel {
     public Long gatewayId;
 
     /**
+     * <p>The unique ID of the gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +68,7 @@ public class UpdateGatewayIsolationRuleRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
+     * <p>The ID of the concurrency rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +78,7 @@ public class UpdateGatewayIsolationRuleRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The maximum number of concurrent requests.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,6 +88,8 @@ public class UpdateGatewayIsolationRuleRequest extends TeaModel {
     public Integer maxConcurrency;
 
     /**
+     * <p>The HTTP text to be returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */
@@ -78,6 +97,8 @@ public class UpdateGatewayIsolationRuleRequest extends TeaModel {
     public String responseContentBody;
 
     /**
+     * <p>The URL to be redirected to.</p>
+     * 
      * <strong>example:</strong>
      * <p>www.******.com</p>
      */
@@ -85,6 +106,8 @@ public class UpdateGatewayIsolationRuleRequest extends TeaModel {
     public String responseRedirectUrl;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>429</p>
      */
@@ -92,6 +115,7 @@ public class UpdateGatewayIsolationRuleRequest extends TeaModel {
     public Integer responseStatusCode;
 
     /**
+     * <p>The route ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,6 +125,7 @@ public class UpdateGatewayIsolationRuleRequest extends TeaModel {
     public Long routeId;
 
     /**
+     * <p>The route name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

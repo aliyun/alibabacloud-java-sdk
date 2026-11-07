@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateGatewayIsolationRuleResponseBody extends TeaModel {
     /**
+     * <p>The ID of the circuit breaking rule that you create.</p>
+     * 
      * <strong>example:</strong>
      * <p>608</p>
      */
@@ -12,6 +14,8 @@ public class CreateGatewayIsolationRuleResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>94B12406-E44D-57C9-BF93-A8B35BFF****</p>
      */

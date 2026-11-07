@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppMessageQueueRouteResponseBody extends TeaModel {
     /**
-     * <p>The response code returned.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The data.</p>
      */
     @NameInMap("Data")
     public GetAppMessageQueueRouteResponseBodyData data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,10 +29,10 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * <ul>
      * <li>If the request is successful, a success message is returned.</li>
-     * <li>If the request fails, an error message is returned.</li>
+     * <li>If the request fails, the cause of the failure is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4B00BCB0-105F-5A2A-B75B-641C8E9B18FC</p>
@@ -51,7 +51,11 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true and false. The value true indicates that the request was successful. The value false indicates that the request failed.</p>
+     * <p>The request result. Valid values:</p>
+     * <ul>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -114,7 +118,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
 
     public static class GetAppMessageQueueRouteResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>hkhon1po62@54e1f42f37cd65a</p>
@@ -123,10 +127,10 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>Indicates whether the canary release for messaging feature is enabled.</p>
+         * <p>Indicates whether the feature is enabled. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: enabled</li>
-         * <li><code>false</code>: disabled</li>
+         * <li><code>true</code>: Enabled.</li>
+         * <li><code>false</code>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,7 +140,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The side for message filtering when the canary release for messaging feature is enabled.</p>
+         * <p>The filtering side for message canary release.</p>
          * 
          * <strong>example:</strong>
          * <p>Server</p>
@@ -144,11 +148,14 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         @NameInMap("FilterSide")
         public String filterSide;
 
+        /**
+         * <p>The list of baseline environment labels for MSMQ grayscale rules.</p>
+         */
         @NameInMap("GrayBaseTags")
         public java.util.List<String> grayBaseTags;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -157,7 +164,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The tags used to ignore message consumption for nodes in untagged environments.</p>
+         * <p>The tags that are not consumed by the untagged environments of the application.</p>
          */
         @NameInMap("Tags")
         public java.util.List<String> tags;

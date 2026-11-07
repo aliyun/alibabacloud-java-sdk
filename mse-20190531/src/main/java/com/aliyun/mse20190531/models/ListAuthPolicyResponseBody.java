@@ -14,7 +14,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The details of the data.</p>
+     * <p>The data overview.</p>
      */
     @NameInMap("Data")
     public ListAuthPolicyResponseBodyData data;
@@ -30,6 +30,9 @@ public class ListAuthPolicyResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -44,10 +47,12 @@ public class ListAuthPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>The request result, with the following values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,13 +134,13 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The types of request parameters.</p>
+         * <p>The list of request parameter types.</p>
          */
         @NameInMap("ParameterTypes")
         public java.util.List<String> parameterTypes;
 
         /**
-         * <p>The type of the return value.</p>
+         * <p>The return value type.</p>
          * 
          * <strong>example:</strong>
          * <p>Boolean</p>
@@ -153,7 +158,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>The method version.</p>
+         * <p>The method version number.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.1</p>
@@ -218,16 +223,18 @@ public class ListAuthPolicyResponseBody extends TeaModel {
 
     public static class ListAuthPolicyResponseBodyDataResultAuthRule extends TeaModel {
         /**
-         * <p>The IDs of applications.</p>
+         * <p>The application collection.</p>
          */
         @NameInMap("AppIds")
         public java.util.List<String> appIds;
 
         /**
-         * <p>The rule type. Valid values:</p>
+         * <p>The rule type.</p>
          * <ul>
-         * <li>0: by application</li>
-         * <li>1: by namespace</li>
+         * <li><p>0, by application dimension.</p>
+         * </li>
+         * <li><p>1, by namespace dimension.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,7 +244,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         public Integer authType;
 
         /**
-         * <p>Indicates whether the rule is a blacklist rule.</p>
+         * <p>Indicates whether it is a blacklist.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -246,7 +253,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         public Boolean black;
 
         /**
-         * <p>The queried namespaces.</p>
+         * <p>The namespace list.</p>
          */
         @NameInMap("K8sNamespaces")
         public java.util.List<String> k8sNamespaces;
@@ -258,7 +265,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         public ListAuthPolicyResponseBodyDataResultAuthRuleMethod method;
 
         /**
-         * <p>The service path.</p>
+         * <p>The path.</p>
          * 
          * <strong>example:</strong>
          * <p>/a</p>
@@ -323,7 +330,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
 
     public static class ListAuthPolicyResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * <p>The Alibaba Cloud account ID of the resource owner.</p>
          * 
          * <strong>example:</strong>
          * <p>19039813784***</p>
@@ -350,16 +357,18 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The content of the service authentication rule.</p>
+         * <p>The list of service authentication rules.</p>
          */
         @NameInMap("AuthRule")
         public java.util.List<ListAuthPolicyResponseBodyDataResultAuthRule> authRule;
 
         /**
-         * <p>The rule type. Valid values:</p>
+         * <p>The rule type.</p>
          * <ul>
-         * <li>0: by application</li>
-         * <li>1: by namespace</li>
+         * <li><p>0: by application dimension.</p>
+         * </li>
+         * <li><p>1: by namespace dimension.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -369,10 +378,12 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         public Integer authType;
 
         /**
-         * <p>Indicates whether the rule was enabled or disabled. Valid values:</p>
+         * <p>Enable or disable.</p>
          * <ul>
-         * <li><code>true</code>: enabled</li>
-         * <li><code>false</code>: disabled</li>
+         * <li><p><code>true</code>: Enable.</p>
+         * </li>
+         * <li><p><code>false</code>: disable.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -382,7 +393,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The rule ID.</p>
+         * <p>The ID.</p>
          * 
          * <strong>example:</strong>
          * <p>204</p>
@@ -400,7 +411,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         public String k8sNamespace;
 
         /**
-         * <p>The name of the authentication rule.</p>
+         * <p>The authentication rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -418,11 +429,14 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         public String namespaceId;
 
         /**
-         * <p>The protocol type. Valid values:</p>
+         * <p>The Protocol Type. Valid values:</p>
          * <ul>
-         * <li><strong>SPRING_CLOUD</strong></li>
-         * <li><strong>DUBBO</strong></li>
-         * <li><strong>istio</strong></li>
+         * <li><p><strong>SPRING_CLOUD</strong>.</p>
+         * </li>
+         * <li><p><strong>DUBBO</strong>.</p>
+         * </li>
+         * <li><p><strong>istio</strong>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -441,7 +455,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The source of the application.</p>
+         * <p>The application source.</p>
          * 
          * <strong>example:</strong>
          * <p>edasmsc</p>
@@ -588,7 +602,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -597,7 +611,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         @NameInMap("Result")
         public java.util.List<ListAuthPolicyResponseBodyDataResult> result;

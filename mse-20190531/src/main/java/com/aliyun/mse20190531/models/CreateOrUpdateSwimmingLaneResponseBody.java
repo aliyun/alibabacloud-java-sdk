@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
     /**
-     * <p>The status code. The value 200 is returned if the request is successful.</p>
+     * <p>The code used only to synchronize with the Success parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The details of the data.</p>
+     * <p>The data overview.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
     public CreateOrUpdateSwimmingLaneResponseBodyData data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-100-000</p>
@@ -32,7 +32,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,16 +41,16 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request was successfully processed.</p>
+     * <p>Succ</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EE5C32A1-BC0E-4B79-817C-103E4EDF****</p>
@@ -59,10 +59,10 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
 
     public static class CreateOrUpdateSwimmingLaneResponseBodyDataEntryRulesRestItems extends TeaModel {
         /**
-         * <p>The matching character.</p>
+         * <p>The match operator.</p>
          * 
          * <strong>example:</strong>
          * <p>==</p>
@@ -170,7 +170,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The names.</p>
+         * <p>The list of names.</p>
          */
         @NameInMap("nameList")
         public java.util.List<String> nameList;
@@ -203,7 +203,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         public Integer remainder;
 
         /**
-         * <p>The matching type.</p>
+         * <p>The match type.</p>
          * 
          * <strong>example:</strong>
          * <p>cookie</p>
@@ -318,7 +318,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         public String condition;
 
         /**
-         * <p>The path of the code group.</p>
+         * <p>The code group path.</p>
          * 
          * <strong>example:</strong>
          * <p>/adump/wxb/prod</p>
@@ -327,13 +327,13 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The paths.</p>
+         * <p>The list of paths.</p>
          */
         @NameInMap("paths")
         public java.util.List<String> paths;
 
         /**
-         * <p>The conditions to be met.</p>
+         * <p>The list of REST matching rules.</p>
          */
         @NameInMap("restItems")
         public java.util.List<CreateOrUpdateSwimmingLaneResponseBodyDataEntryRulesRestItems> restItems;
@@ -379,7 +379,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
 
     public static class CreateOrUpdateSwimmingLaneResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the lane was enabled.</p>
+         * <p>The swimlane switch.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -388,7 +388,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>Indicates whether the rule is enabled.</p>
+         * <p>Specifies whether the rules are enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -397,7 +397,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         public Boolean enableRules;
 
         /**
-         * <p>The rule for the ingress application.</p>
+         * <p>The entry application rule.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -412,7 +412,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         public java.util.List<CreateOrUpdateSwimmingLaneResponseBodyDataEntryRules> entryRules;
 
         /**
-         * <p>The routing rule for the MSE gateway.</p>
+         * <p>The MSE gateway routing rules.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -421,7 +421,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         public String gatewaySwimmingLaneRouteJson;
 
         /**
-         * <p>The time when the lane was created.</p>
+         * <p>The time when the swimlane was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1545726028000</p>
@@ -430,7 +430,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The time when the lane was updated.</p>
+         * <p>The time when the swimlane was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1565701886000</p>
@@ -439,7 +439,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The ID of the lane group.</p>
+         * <p>The swimlane group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>72586</p>
@@ -448,7 +448,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         public Long groupId;
 
         /**
-         * <p>The ID of the lane.</p>
+         * <p>The swimlane ID.</p>
          * 
          * <strong>example:</strong>
          * <p>94765</p>
@@ -457,7 +457,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the lane.</p>
+         * <p>The swimlane name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -465,11 +465,17 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p><strong>[Deprecated]</strong> Specifies whether to enable percentage-based canary releases by path when a Java gateway is used as the entry point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("pathIndependentPercentageEnable")
         public Boolean pathIndependentPercentageEnable;
 
         /**
-         * <p>The ID of the region where the application is deployed.</p>
+         * <p>The region where the application is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -478,7 +484,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The status of the lane.</p>
+         * <p>The swimlane status.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -487,7 +493,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The tag of the lane.</p>
+         * <p>The tag corresponding to the swimlane.</p>
          * 
          * <strong>example:</strong>
          * <p>release</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.</p>
+     * <p>The language in which the results are returned. Valid values: zh (Chinese, default) and en (English).</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -14,7 +14,7 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>Specifies whether to enable the lane.</p>
+     * <p>Specifies whether the lane is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>Specifies whether to configure a routing rule for the lane. If an Ingress gateway is used, this parameter is not required.</p>
+     * <p>Specifies whether to configure routing rules for the lane. Configuration is not required if the ingress is a gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -35,33 +35,26 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
      * <p>The JSON string.</p>
      * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>[{&quot;Priority&quot;:1,&quot;Paths&quot;:[],&quot;Condition&quot;:&quot;AND&quot;,&quot;RestItems&quot;:[{&quot;Type&quot;:&quot;param&quot;,&quot;Name&quot;:&quot;name&quot;,&quot;Value&quot;:&quot;xiaoming&quot;,&quot;Cond&quot;:&quot;==&quot;,&quot;Operator&quot;:&quot;rawvalue&quot;}]}]</p>
      */
     @NameInMap("EntryRule")
     @Deprecated
     public String entryRule;
 
     /**
-     * <p>The lane.</p>
+     * <p>The collection of lane rules.</p>
      */
     @NameInMap("EntryRules")
     public java.util.List<CreateOrUpdateSwimmingLaneShrinkRequestEntryRules> entryRules;
 
     /**
-     * <p>The information about the routing rule for the gateway. This parameter is required when a cloud-native gateway is used as the ingress.</p>
+     * <p>The gateway routing information. This parameter is used when a cloud-native gateway is used as the ingress.</p>
      */
     @NameInMap("GatewaySwimmingLaneRouteJson")
     public String gatewaySwimmingLaneRouteJsonShrink;
 
     /**
-     * <p>The language of the response. Valid values:****</p>
-     * <ul>
-     * <li><strong>zh-CN</strong>: Chinese</li>
-     * <li><strong>en-US</strong>: English</li>
-     * </ul>
-     * <blockquote>
-     * <p>Default value: <strong>zh-CN</strong>.</p>
-     * </blockquote>
+     * <p>The ID of the lane group to which the lane belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>115</p>
@@ -70,7 +63,7 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     public Long groupId;
 
     /**
-     * <p>The ID of the primary key. The value -1 indicates a request that is used to create a lane. A value greater than 0 indicates a request that is used to modify a lane.</p>
+     * <p>The primary key ID. A value of -1 indicates that a lane is created. A value greater than 0 indicates that a specified lane is updated.</p>
      * 
      * <strong>example:</strong>
      * <p>-1</p>
@@ -83,23 +76,31 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test lane</p>
+     * <p>gray</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The name of the MSE namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p><strong>[Deprecated]</strong> The Java gateway-related configuration for percentage-based routing by path.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("PathIndependentPercentageEnable")
     public Boolean pathIndependentPercentageEnable;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -108,7 +109,7 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The tag.</p>
+     * <p>The identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>gray</p>
@@ -228,10 +229,10 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
 
     public static class CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems extends TeaModel {
         /**
-         * <p>The matching character.</p>
+         * <p>The match operator.</p>
          * 
          * <strong>example:</strong>
-         * <p>=</p>
+         * <p>==</p>
          */
         @NameInMap("Cond")
         public String cond;
@@ -240,7 +241,7 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
          * <p>The value.</p>
          * 
          * <strong>example:</strong>
-         * <p>.params[0]</p>
+         * <p>x</p>
          */
         @NameInMap("Datum")
         public String datum;
@@ -258,13 +259,13 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
+         * <p>x-mse-tag</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The matching list.</p>
+         * <p>The list of matching items.</p>
          */
         @NameInMap("NameList")
         public java.util.List<String> nameList;
@@ -273,7 +274,7 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
          * <p>The operator.</p>
          * 
          * <strong>example:</strong>
-         * <p>mod</p>
+         * <p>rawvalue</p>
          */
         @NameInMap("Operator")
         public String operator;
@@ -282,7 +283,7 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
          * <p>The percentage.</p>
          * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>30</p>
          */
         @NameInMap("Rate")
         public Integer rate;
@@ -291,13 +292,13 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
          * <p>The remainder.</p>
          * 
          * <strong>example:</strong>
-         * <p>3</p>
+         * <p>10</p>
          */
         @NameInMap("Remainder")
         public Integer remainder;
 
         /**
-         * <p>The matching type.</p>
+         * <p>The match type.</p>
          * 
          * <strong>example:</strong>
          * <p>header</p>
@@ -309,7 +310,7 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
          * <p>The value.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
+         * <p>gray</p>
          */
         @NameInMap("Value")
         public String value;
@@ -403,16 +404,16 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
 
     public static class CreateOrUpdateSwimmingLaneShrinkRequestEntryRules extends TeaModel {
         /**
-         * <p>Specifies how RESTful items are combined into the final condition.</p>
+         * <p>Specifies how RestItems are combined to form the final condition.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;&quot;</p>
+         * <p>AND</p>
          */
         @NameInMap("Condition")
         public String condition;
 
         /**
-         * <p>The paths.</p>
+         * <p>The list of paths.</p>
          */
         @NameInMap("Paths")
         public java.util.List<String> paths;
@@ -427,7 +428,7 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The matching list.</p>
+         * <p>The list of matching items.</p>
          */
         @NameInMap("RestItems")
         public java.util.List<CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems> restItems;

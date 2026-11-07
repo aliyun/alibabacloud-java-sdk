@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListEurekaServicesRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned information. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ListEurekaServicesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class ListEurekaServicesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class ListEurekaServicesRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of instances to return per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class ListEurekaServicesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>The extended request parameters in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

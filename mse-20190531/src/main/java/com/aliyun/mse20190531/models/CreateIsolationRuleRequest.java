@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateIsolationRuleRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese. This is the default value.</li>
+     * <li>en: English.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +18,8 @@ public class CreateIsolationRuleRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The ID of the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>hkhon1po62@c3df23522bXXXXX</p>
      */
@@ -19,6 +27,7 @@ public class CreateIsolationRuleRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The name of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +37,7 @@ public class CreateIsolationRuleRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The enabling status of the rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,10 +46,17 @@ public class CreateIsolationRuleRequest extends TeaModel {
     @NameInMap("Enable")
     public Boolean enable;
 
+    /**
+     * <p>The source application of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spring-cloud-a</p>
+     */
     @NameInMap("LimitApp")
     public String limitApp;
 
     /**
+     * <p>The microservice namespace to which the application belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +66,8 @@ public class CreateIsolationRuleRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The region where the cluster is deployed.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -56,6 +75,7 @@ public class CreateIsolationRuleRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the interface to which the rule applies. The name must be the same as the interface name displayed in the interface details on the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,6 +85,7 @@ public class CreateIsolationRuleRequest extends TeaModel {
     public String resource;
 
     /**
+     * <p>The concurrency threshold of the isolation rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

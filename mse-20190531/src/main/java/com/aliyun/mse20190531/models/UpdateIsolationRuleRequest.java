@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateIsolationRuleRequest extends TeaModel {
     /**
+     * <p>The language in which the response is displayed. Valid values: zh (default): Chinese. en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class UpdateIsolationRuleRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The ID of the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>hkhon1po62@c3df23522******</p>
      */
@@ -19,6 +23,7 @@ public class UpdateIsolationRuleRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The name of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,16 +33,25 @@ public class UpdateIsolationRuleRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>Specifies whether the rule is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
+    /**
+     * <p>The source application of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spring-cloud-a</p>
+     */
     @NameInMap("LimitApp")
     public String limitApp;
 
     /**
+     * <p>The microservice namespace to which the application belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +61,7 @@ public class UpdateIsolationRuleRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The ID of the rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +71,8 @@ public class UpdateIsolationRuleRequest extends TeaModel {
     public Long ruleId;
 
     /**
+     * <p>The concurrency threshold of the isolation rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */

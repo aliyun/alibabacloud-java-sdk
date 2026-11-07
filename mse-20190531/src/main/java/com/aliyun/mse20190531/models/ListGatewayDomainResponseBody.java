@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewayDomainResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class ListGatewayDomainResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The details of the data.</p>
+     * <p>The node data.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListGatewayDomainResponseBodyData> data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>You are not authorized to perform this operation.</p>
@@ -38,7 +38,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3F5D8E93-CA66-57F1-8BCF-A223E11B6B91</p>
@@ -47,10 +47,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
 
     public static class ListGatewayDomainResponseBodyDataComment extends TeaModel {
         /**
-         * <p>The route status.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>Error</p>
@@ -138,9 +138,18 @@ public class ListGatewayDomainResponseBody extends TeaModel {
     }
 
     public static class ListGatewayDomainResponseBodyDataTlsCipherSuitesConfig extends TeaModel {
+        /**
+         * <p>The TLS encrypt cipher suite configuration type. DEFAULT indicates the default configurations, and CUSTOM indicates a custom configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
+         */
         @NameInMap("ConfigType")
         public String configType;
 
+        /**
+         * <p>The list of TLS cipher suite names.</p>
+         */
         @NameInMap("TlsCipherSuites")
         public java.util.List<String> tlsCipherSuites;
 
@@ -169,7 +178,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
 
     public static class ListGatewayDomainResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the certificate expires.</p>
+         * <p><strong>[Deprecated]</strong> The expiration time of the certificate. Go to the domain name details page to view the information.</p>
          * 
          * <strong>example:</strong>
          * <p>2031-03-30 02:35:12</p>
@@ -187,10 +196,16 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         public String certIdentifier;
 
         /**
-         * <p>The route comment. This parameter is returned only in ingress scenarios.</p>
+         * <p>The route remark (Ingress).</p>
          */
         @NameInMap("Comment")
         public ListGatewayDomainResponseBodyDataComment comment;
+
+        /**
+         * <p>Indicates whether WAF protection is enabled for the domain name.</p>
+         */
+        @NameInMap("EnableWaf")
+        public Boolean enableWaf;
 
         /**
          * <p>The gateway ID.</p>
@@ -202,7 +217,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         public Long gatewayId;
 
         /**
-         * <p>The time when the domain name was created.</p>
+         * <p>The time when the domain name record was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2031-03-30 02:35:12</p>
@@ -211,7 +226,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The time when the domain name was updated.</p>
+         * <p>The time when the domain name record was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2031-03-30 02:35:12</p>
@@ -220,11 +235,11 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>Indicates whether <code>HTTP/2</code> is enabled.</p>
+         * <p>Indicates whether HTTP/2 is enabled. Valid values:</p>
          * <ul>
-         * <li><code>open</code>: <code>HTTP/2</code> is enabled.</li>
-         * <li><code>close</code>: <code>HTTP/2</code> is disabled.</li>
-         * <li><code>globalConfig</code>: Global configurations are used.</li>
+         * <li><code>open</code>: HTTP/2 is enabled.</li>
+         * <li><code>close</code>: HTTP/2 is disabled.</li>
+         * <li><code>globalConfig</code>: The global configuration is used.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,7 +249,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         public String http2;
 
         /**
-         * <p>The ID of the domain name.</p>
+         * <p>The domain name ID.</p>
          * 
          * <strong>example:</strong>
          * <p>243</p>
@@ -242,11 +257,14 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Indicates whether the domain name is managed.</p>
+         */
         @NameInMap("IsManaged")
         public Boolean isManaged;
 
         /**
-         * <p>Indicates whether HTTPS is forcefully used.</p>
+         * <p>Indicates whether HTTPS is forced.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -273,13 +291,13 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The state of the domain name. Valid values:</p>
+         * <p>The domain name status. Valid values:</p>
          * <ul>
          * <li>0: unpublished</li>
          * <li>2: publishing</li>
          * <li>3: published</li>
          * <li>4: editing</li>
-         * <li>5: unpublishing</li>
+         * <li>5: taking offline</li>
          * <li>6: unavailable</li>
          * </ul>
          * 
@@ -289,11 +307,20 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>Indicates whether the gateway supports WAF protection.</p>
+         */
+        @NameInMap("SupportWaf")
+        public Boolean supportWaf;
+
+        /**
+         * <p>The TLS cipher suite configuration, including the configuration type and the list of cipher suite names.</p>
+         */
         @NameInMap("TlsCipherSuitesConfig")
         public ListGatewayDomainResponseBodyDataTlsCipherSuitesConfig tlsCipherSuitesConfig;
 
         /**
-         * <p>The maximum version of Transport Layer Security (TLS).</p>
+         * <p>The maximum TLS version.</p>
          * 
          * <strong>example:</strong>
          * <p>TLS 1.3</p>
@@ -302,7 +329,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         public String tlsMax;
 
         /**
-         * <p>The minimum version of TLS.</p>
+         * <p>The minimum TLS version.</p>
          * 
          * <strong>example:</strong>
          * <p>TLS 1.0</p>
@@ -311,10 +338,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         public String tlsMin;
 
         /**
-         * <p>The type of the domain name source. Valid values:</p>
+         * <p>The source type of the domain name. Valid values:</p>
          * <ul>
-         * <li>Op: console</li>
-         * <li>Ingress: MSE Ingress</li>
+         * <li>Op: created in the console</li>
+         * <li>Ingress: created by MSE Ingress</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -350,6 +377,14 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
         public ListGatewayDomainResponseBodyDataComment getComment() {
             return this.comment;
+        }
+
+        public ListGatewayDomainResponseBodyData setEnableWaf(Boolean enableWaf) {
+            this.enableWaf = enableWaf;
+            return this;
+        }
+        public Boolean getEnableWaf() {
+            return this.enableWaf;
         }
 
         public ListGatewayDomainResponseBodyData setGatewayId(Long gatewayId) {
@@ -430,6 +465,14 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public ListGatewayDomainResponseBodyData setSupportWaf(Boolean supportWaf) {
+            this.supportWaf = supportWaf;
+            return this;
+        }
+        public Boolean getSupportWaf() {
+            return this.supportWaf;
         }
 
         public ListGatewayDomainResponseBodyData setTlsCipherSuitesConfig(ListGatewayDomainResponseBodyDataTlsCipherSuitesConfig tlsCipherSuitesConfig) {

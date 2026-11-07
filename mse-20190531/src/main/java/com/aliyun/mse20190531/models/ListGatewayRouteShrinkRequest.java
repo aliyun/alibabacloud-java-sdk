@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListGatewayRouteShrinkRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>Language type for returned information:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class ListGatewayRouteShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>Specifies whether to enable sorting. This parameter is unavailable.</p>
+     * <p>Sorting. This field is currently unavailable and being deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -27,13 +29,13 @@ public class ListGatewayRouteShrinkRequest extends TeaModel {
     public Boolean descSort;
 
     /**
-     * <p>The parameters that specify filter conditions. The parameters are in the format of {&quot;key1&quot;:&quot;value1&quot;}.</p>
+     * <p>Filter conditions in the format {&quot;key1&quot;:&quot;value1&quot;}</p>
      */
     @NameInMap("FilterParams")
     public String filterParamsShrink;
 
     /**
-     * <p>The item based on which entries are sorted.</p>
+     * <p>Sorting property.</p>
      * 
      * <strong>example:</strong>
      * <p>GmtCreate</p>
@@ -42,7 +44,7 @@ public class ListGatewayRouteShrinkRequest extends TeaModel {
     public String orderItem;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>Page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +53,7 @@ public class ListGatewayRouteShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>Number of instances displayed per page (currently not in effect, queries all instances by default).</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

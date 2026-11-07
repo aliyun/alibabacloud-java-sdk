@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteBlackWhiteListRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values: zh (default): Chinese, en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class DeleteBlackWhiteListRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The ID of the gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>430</p>
      */
@@ -19,6 +23,8 @@ public class DeleteBlackWhiteListRequest extends TeaModel {
     public Long gatewayId;
 
     /**
+     * <p>The unique ID of the gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-9cdcf8e4f58144059e73ff4c5ef9****</p>
      */
@@ -26,6 +32,8 @@ public class DeleteBlackWhiteListRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
+     * <p>The ID of the blacklists and whitelists entry.</p>
+     * 
      * <strong>example:</strong>
      * <p>120</p>
      */

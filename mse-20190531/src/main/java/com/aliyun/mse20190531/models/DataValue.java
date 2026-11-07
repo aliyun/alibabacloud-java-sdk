@@ -14,7 +14,7 @@ public class DataValue extends TeaModel {
     public String userId;
 
     /**
-     * <p>The region where the application resides.</p>
+     * <p>The region where the application is deployed.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -32,7 +32,7 @@ public class DataValue extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The application name.</p>
+     * <p>The name of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>example-app-name</p>
@@ -41,7 +41,7 @@ public class DataValue extends TeaModel {
     public String appName;
 
     /**
-     * <p>The application ID.</p>
+     * <p>The ID of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>123456abcde@12345abcde</p>

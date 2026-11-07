@@ -4,10 +4,15 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryNacosGrayConfigResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public QueryNacosGrayConfigResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE5C32A1-BC0E-4B79-817C-103E4EDF****</p>
      */
@@ -37,6 +42,8 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
 
     public static class QueryNacosGrayConfigResponseBodyData extends TeaModel {
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>spring-cloud-a</p>
          */
@@ -44,6 +51,8 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The configuration content.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -51,6 +60,8 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The DataId of the configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>test.yaml</p>
          */
@@ -58,6 +69,8 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
         public String dataId;
 
         /**
+         * <p>The canary release rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>nacos.config.gray.label=test</p>
          */
@@ -65,6 +78,8 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
         public String grayRule;
 
         /**
+         * <p>The name of the canary release version.</p>
+         * 
          * <strong>example:</strong>
          * <p>Beta(IP)</p>
          */
@@ -72,6 +87,8 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
         public String grayRuleName;
 
         /**
+         * <p>The priority of the canary release version.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -79,6 +96,8 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
         public String grayRulePriority;
 
         /**
+         * <p>The canary release type. Valid values: Beta or Tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>Tags</p>
          */
@@ -86,6 +105,8 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
         public String grayType;
 
         /**
+         * <p>The configuration group.</p>
+         * 
          * <strong>example:</strong>
          * <p>dubbo</p>
          */
@@ -93,6 +114,8 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
         public String group;
 
         /**
+         * <p>The last modification time of the configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>1742277568000</p>
          */
@@ -100,6 +123,8 @@ public class QueryNacosGrayConfigResponseBody extends TeaModel {
         public String lastModified;
 
         /**
+         * <p>The MD5 hash of the configuration content.</p>
+         * 
          * <strong>example:</strong>
          * <p>87d14faf58a103ac8840b9c5f1c2a0fe</p>
          */

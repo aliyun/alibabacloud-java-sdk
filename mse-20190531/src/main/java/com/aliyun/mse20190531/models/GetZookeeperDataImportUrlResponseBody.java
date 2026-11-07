@@ -62,7 +62,7 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
      * <p>The request was successfully processed.</p>
      * 
      * <strong>example:</strong>
-     * <p>The dynamic part in the error message.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;

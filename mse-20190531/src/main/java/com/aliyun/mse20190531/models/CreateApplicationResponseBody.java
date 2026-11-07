@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationResponseBody extends TeaModel {
     /**
-     * <p>The response code returned.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data of the node.</p>
+     * <p>The data.</p>
      * 
      * <strong>example:</strong>
      * <p>data</p>
@@ -23,7 +23,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public CreateApplicationResponseBodyData data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -41,7 +41,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>68D91223-CCE9-5F9C-B538-20F617DA48B1</p>
@@ -50,10 +50,10 @@ public class CreateApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>The request result. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class CreateApplicationResponseBody extends TeaModel {
 
     public static class CreateApplicationResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxxxx@xxxxxxxxxx</p>
@@ -126,7 +126,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>spring-cloud-a</p>
@@ -135,7 +135,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1631001140913</p>
@@ -144,7 +144,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The additional information.</p>
+         * <p>The extra information.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;rpcTypes\&quot;:[\&quot;dubbo\&quot;,\&quot;springCloud\&quot;]}</p>
@@ -162,7 +162,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>The license key in use.</p>
+         * <p>The license key corresponding to the user.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxxxx@xxxxxxxxxx</p>
@@ -171,7 +171,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public String licenseKey;
 
         /**
-         * <p>MSE命名空间名字。</p>
+         * <p>The name of the MSE namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>prod</p>
@@ -189,10 +189,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The service where the application is deployed. Valid values:</p>
+         * <p>The deployment method of the application. Valid values:</p>
          * <ul>
-         * <li>\- ACK: Container Service for Kubernetes</li>
-         * <li>\- Normal: another service</li>
+         * <li>ACK: Container Service for Kubernetes (ACK).</li>
+         * <li>Normal: Other access methods.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The status of the application. A value of 1 indicates that the application is in a normal state.</p>
+         * <p>The application status. A value of 1 indicates normal.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -211,7 +211,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The update time.</p>
+         * <p>The last update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1632979237663</p>
@@ -220,7 +220,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The Alibaba Cloud user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1888888888</p>
@@ -229,7 +229,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>版本号。</p>
+         * <p>The version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>

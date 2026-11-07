@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewaySlbResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class ListGatewaySlbResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data entries returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListGatewaySlbResponseBodyData> data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,16 +29,16 @@ public class ListGatewaySlbResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request is successfully processed.</p>
+     * <p>Succ</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EAB345F4-3AC3-560C-B653-65717703****</p>
@@ -47,10 +47,10 @@ public class ListGatewaySlbResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -113,15 +113,40 @@ public class ListGatewaySlbResponseBody extends TeaModel {
     }
 
     public static class ListGatewaySlbResponseBodyDataVServiceList extends TeaModel {
+        /**
+         * <p>The port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The protocol type. Valid values:</p>
+         * <ul>
+         * <li>HTTPS</li>
+         * <li>HTTP</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPS</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The ID of the virtual server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rsp-bp183l2x70***</p>
+         */
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
 
+        /**
+         * <p>The name of the virtual server group.</p>
+         */
         @NameInMap("VServerGroupName")
         public String VServerGroupName;
 
@@ -166,7 +191,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
 
     public static class ListGatewaySlbResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the edit operation is supported.</p>
+         * <p>Indicates whether the resource is editable.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -175,7 +200,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         public Boolean editEnable;
 
         /**
-         * <p>The ID of the gateway.</p>
+         * <p>The gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -184,7 +209,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
-         * <p>The mode of the SLB instance.</p>
+         * <p>The source.</p>
          * 
          * <strong>example:</strong>
          * <p>UserSelect</p>
@@ -211,7 +236,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The port number of the HTTP virtual service group.</p>
+         * <p>The HTTP port (virtual server group).</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -220,7 +245,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         public Integer httpPort;
 
         /**
-         * <p>The port number of the HTTPS virtual service group.</p>
+         * <p>The HTTPS port (virtual server group).</p>
          * 
          * <strong>example:</strong>
          * <p>443</p>
@@ -229,7 +254,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         public Integer httpsPort;
 
         /**
-         * <p>The ID of the HTTPS virtual service group.</p>
+         * <p>The ID of the HTTPS virtual server group.</p>
          * 
          * <strong>example:</strong>
          * <p>353</p>
@@ -238,7 +263,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         public String httpsVServerGroupId;
 
         /**
-         * <p>The ID.</p>
+         * <p>ID</p>
          * 
          * <strong>example:</strong>
          * <p>ID</p>
@@ -256,7 +281,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         public Integer serviceWeight;
 
         /**
-         * <p>The ID of the SLB instance.</p>
+         * <p>SLB ID</p>
          * 
          * <strong>example:</strong>
          * <p>lb-bp1kmnli3hdpreptw2ah3</p>
@@ -265,7 +290,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         public String slbId;
 
         /**
-         * <p>The IP address of the SLB instance.</p>
+         * <p>SLB IP</p>
          * 
          * <strong>example:</strong>
          * <p>121.199.XX.XX</p>
@@ -274,7 +299,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         public String slbIp;
 
         /**
-         * <p>The port number of the SLB instance.</p>
+         * <p>The SLB port.</p>
          * 
          * <strong>example:</strong>
          * <p>80,443</p>
@@ -282,11 +307,17 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         @NameInMap("SlbPort")
         public String slbPort;
 
+        /**
+         * <p>The SLB type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLB</p>
+         */
         @NameInMap("SlbType")
         public String slbType;
 
         /**
-         * <p>The description of the status.</p>
+         * <p>The status description.</p>
          * 
          * <strong>example:</strong>
          * <p>Associating</p>
@@ -295,7 +326,11 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         public String statusDesc;
 
         /**
-         * <p>The type.</p>
+         * <p>The network type. Valid values:</p>
+         * <ul>
+         * <li>PUB_NET: Internet.</li>
+         * <li>PRIVATE_NET: Private network.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PUB_NET</p>
@@ -304,7 +339,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The ID of the HTTP virtual service group.</p>
+         * <p>The ID of the HTTP virtual server group.</p>
          * 
          * <strong>example:</strong>
          * <p>353</p>
@@ -312,9 +347,18 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
 
+        /**
+         * <p>The SLB listener information.</p>
+         */
         @NameInMap("VServiceList")
         public java.util.List<ListGatewaySlbResponseBodyDataVServiceList> VServiceList;
 
+        /**
+         * <p>The metadata of the virtual server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;protocol&quot;:&quot;HTTP&quot;,&quot;vServerGroupName&quot;:&quot;k8s/80/<em><em><strong>&quot;,&quot;port&quot;:80,&quot;vServerGroupId&quot;:&quot;rsp-bp</strong></em>&quot;},{&quot;protocol&quot;:&quot;HTTPS&quot;,&quot;vServerGroupName&quot;:&quot;k8s/443/</em><strong>&quot;,&quot;port&quot;:443,&quot;vServerGroupId&quot;:&quot;rsp-bp</strong>***&quot;}]</p>
+         */
         @NameInMap("VsMetaInfo")
         public String vsMetaInfo;
 

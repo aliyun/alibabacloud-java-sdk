@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DataToolSpecToolsMetaValue extends TeaModel {
     /**
+     * <p>Indicates whether the tool is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    /**
+     * <p>The protocol conversion template configuration.</p>
+     */
     @NameInMap("Templates")
     public java.util.Map<String, ?> templates;
 

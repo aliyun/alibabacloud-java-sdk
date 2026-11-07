@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryClusterInfoResponseBody extends TeaModel {
     /**
-     * <p>The details of the data.</p>
+     * <p>The data overview.</p>
      */
     @NameInMap("Data")
     public QueryClusterInfoResponseBodyData data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-100-000</p>
@@ -20,20 +20,20 @@ public class QueryClusterInfoResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * <ul>
      * <li>If the request is successful, a success message is returned.</li>
-     * <li>If the request fails, an error message is returned.</li>
+     * <li>If the request fails, the cause of the failure is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>The request is successfully processed.</p>
+     * <p>Request processed successfully</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>415088B3-A7BE-56F6-9CD9-C42DE895CD41</p>
@@ -42,10 +42,10 @@ public class QueryClusterInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>The request result. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
 
     public static class QueryClusterInfoResponseBodyDataInstanceModels extends TeaModel {
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -110,7 +110,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String creationTimestamp;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -119,7 +119,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String healthStatus;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -128,7 +128,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String internetIp;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -137,7 +137,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -146,7 +146,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String podName;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -155,7 +155,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String role;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -164,7 +164,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String singleTunnelVip;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -245,7 +245,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
 
     public static class QueryClusterInfoResponseBodyDataMaintenancePeriod extends TeaModel {
         /**
-         * <p>The start time of the O\&amp;M time window.</p>
+         * <p>The start time of the O&amp;M time window.</p>
          * 
          * <strong>example:</strong>
          * <p>02:00</p>
@@ -254,7 +254,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The end time of the O\&amp;M time window.</p>
+         * <p>The end time of the O&amp;M time window.</p>
          * 
          * <strong>example:</strong>
          * <p>06:00</p>
@@ -287,7 +287,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
 
     public static class QueryClusterInfoResponseBodyData extends TeaModel {
         /**
-         * <p>The public IP address whitelist.</p>
+         * <p>The public network whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;127.0.0.0/32&quot;]</p>
@@ -296,7 +296,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String aclEntryList;
 
         /**
-         * <p>The ID of the instance in the public IP address whitelist.</p>
+         * <p>The instance ID of the Internet whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>acl-bp144q24cgqvzckmxxxx</p>
@@ -305,7 +305,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String aclId;
 
         /**
-         * <p>The version of the instance.</p>
+         * <p>The cluster version number.</p>
          * 
          * <strong>example:</strong>
          * <p>2.1.0</p>
@@ -313,11 +313,17 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         @NameInMap("AppVersion")
         public String appVersion;
 
+        /**
+         * <p>Indicates whether the cluster has a minor version available for upgrade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CanUpdate")
         public Boolean canUpdate;
 
         /**
-         * <p>The billing method, such as subscription or pay-as-you-go.</p>
+         * <p>The billing method. Valid values: subscription and pay-as-you-go.</p>
          * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
@@ -326,7 +332,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The alias of the instance.</p>
+         * <p>The alias of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>Development environment</p>
@@ -335,7 +341,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String clusterAliasName;
 
         /**
-         * <p>The full name of the instance.</p>
+         * <p>The full name of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-74355150-xxxxxxx</p>
@@ -353,7 +359,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String clusterSpecification;
 
         /**
-         * <p>The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</p>
+         * <p>The cluster type. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</p>
          * 
          * <strong>example:</strong>
          * <p>Nacos-Ans</p>
@@ -362,7 +368,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>The version of the order.</p>
+         * <p>The order version.</p>
          * 
          * <strong>example:</strong>
          * <p>NACOS_2_0_0</p>
@@ -371,7 +377,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String clusterVersion;
 
         /**
-         * <p>A deprecated parameter.</p>
+         * <p>The deprecated field.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -380,7 +386,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String connectionType;
 
         /**
-         * <p>A deprecated parameter.</p>
+         * <p>The deprecated field.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -389,7 +395,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The time when the cluster was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-12-15 10:02:07</p>
@@ -398,7 +404,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>A deprecated parameter.</p>
+         * <p>The deprecated field.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -407,7 +413,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public Long diskCapacity;
 
         /**
-         * <p>A deprecated parameter.</p>
+         * <p>The deprecated field.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -416,7 +422,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The ID of the instance that is associated with the Elastic IP Address (EIP).</p>
+         * <p>The instance ID of the elastic IP address (EIP).</p>
          * 
          * <strong>example:</strong>
          * <p>eip-bp1uujshd5funmyy8rcl9</p>
@@ -425,7 +431,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String eipInstanceId;
 
         /**
-         * <p>The time when the subscription instance expires.</p>
+         * <p>The expiration time for subscription instances.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-01 00:00:00</p>
@@ -434,13 +440,13 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String endDate;
 
         /**
-         * <p>The zones to which the current cluster can be distributed.</p>
+         * <p>The list of zones to which the current cluster can be distributed.</p>
          */
         @NameInMap("ExpectZones")
         public java.util.List<String> expectZones;
 
         /**
-         * <p>The status of the instance.</p>
+         * <p>The cluster status.</p>
          * 
          * <strong>example:</strong>
          * <p>INIT_SUCCESS</p>
@@ -449,7 +455,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String healthStatus;
 
         /**
-         * <p>The time that is required to initialize the instance. Unit: milliseconds.</p>
+         * <p>The time taken to initialize the cluster, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>53353</p>
@@ -458,7 +464,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public Long initCostTime;
 
         /**
-         * <p>The initial status of the instance.</p>
+         * <p>The initialization status.</p>
          * 
          * <strong>example:</strong>
          * <p>INIT_SUCCESS</p>
@@ -467,7 +473,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String initStatus;
 
         /**
-         * <p>The number of instance nodes.</p>
+         * <p>The number of instances in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -476,7 +482,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public Integer instanceCount;
 
         /**
-         * <p>The ID of the instance</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-cn-st21ri2****</p>
@@ -491,7 +497,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public java.util.List<QueryClusterInfoResponseBodyDataInstanceModels> instanceModels;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -500,7 +506,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String internetAddress;
 
         /**
-         * <p>The public endpoint.</p>
+         * <p>The public domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-xxxxxx-p.nacos-ans.mse.aliyuncs.com</p>
@@ -509,7 +515,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String internetDomain;
 
         /**
-         * <p>The instance ports that are accessible over the Internet.</p>
+         * <p>The open ports for the Internet cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>8848,6443,9848,8761</p>
@@ -518,7 +524,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String internetPort;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -527,7 +533,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String intranetAddress;
 
         /**
-         * <p>The internal endpoint.</p>
+         * <p>The internal domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-xxxxx-nacos-ans.mse.aliyuncs.com</p>
@@ -536,7 +542,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String intranetDomain;
 
         /**
-         * <p>The instance ports that are accessible over an internal network.</p>
+         * <p>The internal network port opened for the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>8848,6443,9848,8761</p>
@@ -545,13 +551,13 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String intranetPort;
 
         /**
-         * <p>The O\&amp;M time window.</p>
+         * <p>The O&amp;M time window.</p>
          */
         @NameInMap("MaintenancePeriod")
         public QueryClusterInfoResponseBodyDataMaintenancePeriod maintenancePeriod;
 
         /**
-         * <p>A deprecated parameter.</p>
+         * <p>The deprecated field.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -560,7 +566,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public Long memoryCapacity;
 
         /**
-         * <p>The version of the instance.</p>
+         * <p>The cluster version.</p>
          * 
          * <strong>example:</strong>
          * <p>mse_pro</p>
@@ -569,7 +575,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String mseVersion;
 
         /**
-         * <p>The network connection type of the instance.</p>
+         * <p>The network connectivity type of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>privatenet</p>
@@ -587,8 +593,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String payInfo;
 
         /**
-         * <p>The public bandwidth. Unit: Mbit/s.\
-         * Valid values: 0 to 5000. The value 0 indicates no access to the Internet.</p>
+         * <p>The Internet bandwidth. Unit: Mbit/s. Valid values: 0 to 5000. A value of 0 indicates that the cluster is not connected to the Internet.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -597,7 +602,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String pubNetworkFlow;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -606,7 +611,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the security group to which the elastic network interface (ENI) is connected.</p>
+         * <p>The ID of the security group for ENI network access.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-uf6hgwe067prhg68agfa</p>
@@ -615,7 +620,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The type of the security group to which the ENI is connected.</p>
+         * <p>The type of the security group for ENI network access.</p>
          * 
          * <strong>example:</strong>
          * <p>enterprise</p>
@@ -624,13 +629,13 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String securityGroupType;
 
         /**
-         * <p>The tag.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1egfakxxxxx</p>
@@ -638,14 +643,26 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The current version code of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NACOS_2_1_0_1</p>
+         */
         @NameInMap("VersionCode")
         public String versionCode;
 
+        /**
+         * <p>The version lifecycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STABLE</p>
+         */
         @NameInMap("VersionLifecycle")
         public String versionLifecycle;
 
         /**
-         * <p>The ID of the VPC where the instance resides.</p>
+         * <p>The ID of the VPC where the cluster is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1v5nbauzh8xxxxxxx</p>

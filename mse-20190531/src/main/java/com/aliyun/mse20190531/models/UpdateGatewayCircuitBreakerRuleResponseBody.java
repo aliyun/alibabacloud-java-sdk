@@ -4,10 +4,15 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public UpdateGatewayCircuitBreakerRuleResponseBodyData data;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>DC34E4A3-5F1C-4E40-86EA-02EDF967****</p>
      */
@@ -37,6 +42,12 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
 
     public static class UpdateGatewayCircuitBreakerRuleResponseBodyData extends TeaModel {
         /**
+         * <p>The web fallback behavior type. Valid values:</p>
+         * <ul>
+         * <li>0: Return specified text.</li>
+         * <li>1: Redirect to a specified page.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -44,6 +55,12 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer behaviorType;
 
         /**
+         * <p>The encoding type. Valid values:</p>
+         * <ul>
+         * <li>0: Plain text.</li>
+         * <li>1: JSON.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -51,6 +68,12 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer bodyEncoding;
 
         /**
+         * <p>Specifies whether to enable the rule. Valid values:</p>
+         * <ul>
+         * <li>0: Disabled.</li>
+         * <li>1: Enabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -58,6 +81,8 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer enable;
 
         /**
+         * <p>The ID of the gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>14407</p>
          */
@@ -65,6 +90,8 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Long gatewayId;
 
         /**
+         * <p>The unique ID of the gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-c9bc5afd61014165bd58f621b491****</p>
          */
@@ -72,16 +99,28 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public String gatewayUniqueId;
 
         /**
+         * <p>The ID of the circuit breaker rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>369</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The IDs of the filter rules.</p>
+         */
         @NameInMap("IdList")
         public java.util.List<Long> idList;
 
         /**
+         * <p>The threshold conversion mode. Valid values:</p>
+         * <ul>
+         * <li>0: Standalone.</li>
+         * <li>1: Cluster.</li>
+         * <li>2: Cluster to standalone.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -89,6 +128,8 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer limitMode;
 
         /**
+         * <p>The slow call threshold in slow call mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -96,6 +137,8 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer maxAllowedMs;
 
         /**
+         * <p>The minimum number of requests that triggers circuit breaking.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -103,6 +146,8 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer minRequestAmount;
 
         /**
+         * <p>The recovery duration for circuit breaking.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -110,6 +155,8 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer recoveryTimeoutSec;
 
         /**
+         * <p>The custom headers, which are entered as key-value pairs.</p>
+         * 
          * <strong>example:</strong>
          * <p>key=value</p>
          */
@@ -117,6 +164,8 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public String responseAdditionalHeaders;
 
         /**
+         * <p>The HTTP response text.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -124,6 +173,8 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public String responseContentBody;
 
         /**
+         * <p>The redirect URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>www.******.com</p>
          */
@@ -131,6 +182,8 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public String responseRedirectUrl;
 
         /**
+         * <p>The HTTP status code.</p>
+         * 
          * <strong>example:</strong>
          * <p>201</p>
          */
@@ -138,6 +191,8 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer responseStatusCode;
 
         /**
+         * <p>The ID of the route.</p>
+         * 
          * <strong>example:</strong>
          * <p>645</p>
          */
@@ -145,6 +200,8 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Long routeId;
 
         /**
+         * <p>The name of the route.</p>
+         * 
          * <strong>example:</strong>
          * <p>routeName</p>
          */
@@ -152,6 +209,8 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public String routeName;
 
         /**
+         * <p>The statistical duration for circuit breaking.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -159,6 +218,12 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer statDurationSec;
 
         /**
+         * <p>The threshold type. Valid values:</p>
+         * <ul>
+         * <li>0: Slow call.</li>
+         * <li>1: Exception.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -166,6 +231,8 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer strategy;
 
         /**
+         * <p>The percentage that triggers circuit breaking.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

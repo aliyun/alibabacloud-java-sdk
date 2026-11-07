@@ -7,8 +7,10 @@ public class CreateFlowRuleRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,11 +40,6 @@ public class CreateFlowRuleRequest extends TeaModel {
 
     /**
      * <p>The throttling effect.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>0: fast failure</li>
-     * <li>2: in queue</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -52,22 +49,6 @@ public class CreateFlowRuleRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable the rule.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,11 +57,17 @@ public class CreateFlowRuleRequest extends TeaModel {
     @NameInMap("Enable")
     public Boolean enable;
 
+    /**
+     * <p>The source application of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spring-cloud-a</p>
+     */
     @NameInMap("LimitApp")
     public String limitApp;
 
     /**
-     * <p>The timeout period. Unit: milliseconds. This value is required if the ControlBehavior parameter is set to 2.</p>
+     * <p>The timeout period. Unit: milliseconds. This parameter is required if the ControlBehavior parameter is set to 2.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -99,7 +86,7 @@ public class CreateFlowRuleRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The region in which the instance resides.</p>
+     * <p>The region in which the cluster resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -108,7 +95,7 @@ public class CreateFlowRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the API resource.</p>
+     * <p>The interface resource name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -117,6 +104,12 @@ public class CreateFlowRuleRequest extends TeaModel {
     @NameInMap("Resource")
     public String resource;
 
+    /**
+     * <p>The interface resource type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ResourceType")
     public Integer resourceType;
 

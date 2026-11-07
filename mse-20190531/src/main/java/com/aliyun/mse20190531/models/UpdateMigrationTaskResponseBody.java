@@ -11,7 +11,7 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
     public UpdateMigrationTaskResponseBodyData data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-100-000</p>
@@ -20,7 +20,7 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,16 +29,16 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
     public String httpCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request was successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AF21683A-29C7-4853-AC0F-B5ADEE4****</p>
@@ -49,8 +49,10 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,11 +116,14 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
 
     public static class UpdateMigrationTaskResponseBodyData extends TeaModel {
         /**
-         * <p>The type of the instance.</p>
+         * <p>The type of the cluster.</p>
          * <ul>
-         * <li>Nacos-Ans</li>
-         * <li>ZooKeeper</li>
-         * <li>Eureka</li>
+         * <li><p>Nacos-Ans</p>
+         * </li>
+         * <li><p>ZooKeeper</p>
+         * </li>
+         * <li><p>Eureka</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -128,7 +133,7 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the migration task was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-07T10:07:57.000+0000</p>
@@ -137,7 +142,7 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The time when the migration task was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-07T10:07:57.000+0000</p>
@@ -146,7 +151,7 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -155,7 +160,7 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The address of the source instance node.</p>
+         * <p>The source instance node address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.100.2:2181</p>
@@ -182,7 +187,7 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
         public String originInstanceNamespace;
 
         /**
-         * <p>The description.</p>
+         * <p>The description of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>1232345</p>
@@ -190,6 +195,12 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
         @NameInMap("ProjectDesc")
         public String projectDesc;
 
+        /**
+         * <p>The synchronization type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
+         */
         @NameInMap("SyncType")
         public String syncType;
 
@@ -221,7 +232,7 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
         public String targetInstanceId;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>183876217*****</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayAuthConsumerResourceShrinkRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned information. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateGatewayAuthConsumerResourceShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The gateway authentication consumer ID.</p>
+     * <p>The ID of the gateway authentication consumer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class UpdateGatewayAuthConsumerResourceShrinkRequest extends TeaModel {
     public Long consumerId;
 
     /**
-     * <p>The unique ID of the gateway.</p>
+     * <p>UpdateGatewayAuthConsumerResource</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class UpdateGatewayAuthConsumerResourceShrinkRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
-     * <p>The gateway authentication consumer ID.</p>
+     * <p>The list of resources.</p>
      */
     @NameInMap("ResourceList")
     public String resourceListShrink;

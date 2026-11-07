@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportZookeeperDataResponseBody extends TeaModel {
     /**
-     * <p>The details of the data.</p>
+     * <p>The data overview.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -14,7 +14,7 @@ public class ImportZookeeperDataResponseBody extends TeaModel {
     public Object data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-100-000</p>
@@ -23,7 +23,7 @@ public class ImportZookeeperDataResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>202</p>
@@ -32,16 +32,16 @@ public class ImportZookeeperDataResponseBody extends TeaModel {
     public String httpCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request was successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>52BA6DA6-A702-4362-A32F-DFF79655****</p>
@@ -50,9 +50,9 @@ public class ImportZookeeperDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>true</code>: The request succeeded.</li>
      * <li><code>false</code>: The request failed.</li>
      * </ul>
      * 

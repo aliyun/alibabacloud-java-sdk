@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateClusterRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned information. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateClusterRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The alias of the instance.</p>
+     * <p>The alias of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>cluster-1</p>
@@ -27,7 +27,7 @@ public class UpdateClusterRequest extends TeaModel {
     public String clusterAliasName;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-cn-78v1l83****</p>
@@ -36,7 +36,7 @@ public class UpdateClusterRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The end time of the O\&amp;M window.</p>
+     * <p>The end time of the O&amp;M window.</p>
      * 
      * <strong>example:</strong>
      * <p>06:00</p>
@@ -45,7 +45,7 @@ public class UpdateClusterRequest extends TeaModel {
     public String maintenanceEndTime;
 
     /**
-     * <p>The start time of the O\&amp;M window.</p>
+     * <p>The start time of the O&amp;M window.</p>
      * 
      * <strong>example:</strong>
      * <p>02:00</p>
@@ -54,7 +54,7 @@ public class UpdateClusterRequest extends TeaModel {
     public String maintenanceStartTime;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>The extended request parameters in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

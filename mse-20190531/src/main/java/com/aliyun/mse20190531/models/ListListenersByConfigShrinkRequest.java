@@ -7,8 +7,8 @@ public class ListListenersByConfigShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ListListenersByConfigShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the data.</p>
+     * <p>The data ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,11 +27,14 @@ public class ListListenersByConfigShrinkRequest extends TeaModel {
     @NameInMap("DataId")
     public String dataId;
 
+    /**
+     * <p>The list of additional canary release rules. When performing listener matching, the additional canary release rules are merged with existing rules for matching.</p>
+     */
     @NameInMap("ExtGrayRules")
     public String extGrayRulesShrink;
 
     /**
-     * <p>The name of the group.</p>
+     * <p>The group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +54,7 @@ public class ListListenersByConfigShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>The namespace ID. Default value: public.</p>
      * 
      * <strong>example:</strong>
      * <p>aaeb4d28-c9eb-4fa2-85f5-d03ce7ee8df1</p>
@@ -60,10 +63,10 @@ public class ListListenersByConfigShrinkRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>This parameter is deprecated and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\\&quot;appGroup\\&quot;:\\&quot;emas-zfive_prehost\\&quot;,\\&quot;appName\\&quot;:\\&quot;emas-zfive\\&quot;,\\&quot;appStage\\&quot;:\\&quot;PRE_PUBLISH\\&quot;,\\&quot;appUnit\\&quot;:\\&quot;\\&quot;,\\&quot;bucId\\&quot;:\\&quot;225902\\&quot;,\\&quot;bucName\\&quot;:\\&quot;Wireless\\&quot;,\\&quot;provider\\&quot;:\\&quot;aliyun\\&quot;}</p>
+     * <p>...</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;

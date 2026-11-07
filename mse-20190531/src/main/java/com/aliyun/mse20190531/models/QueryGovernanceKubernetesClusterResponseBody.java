@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public QueryGovernanceKubernetesClusterResponseBodyData data;
@@ -20,7 +20,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DE34D413-2B79-5E77-9696-36D875E822AD</p>
@@ -29,7 +29,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -103,7 +103,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         public String k8sVersion;
 
         /**
-         * <p>The information about the namespace.</p>
+         * <p>The namespace information.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;Name&quot;:&quot;ack-onepilot&quot;,&quot;Tags&quot;:{&quot;name&quot;:&quot;ack-onepilot&quot;}}]</p>
@@ -112,7 +112,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         public String namespaceInfos;
 
         /**
-         * <p>The time when the pilot component was started.</p>
+         * <p>The start time of Pilot.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-17T05:39:43.000+0000</p>
@@ -120,11 +120,17 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         @NameInMap("PilotStartTime")
         public String pilotStartTime;
 
+        /**
+         * <p>The Pilot version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.1.1</p>
+         */
         @NameInMap("PilotVersion")
         public String pilotVersion;
 
         /**
-         * <p>The region where the cluster resides.</p>
+         * <p>The region where the cluster is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -132,6 +138,12 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The version lifecycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STABLE</p>
+         */
         @NameInMap("VersionLifeCycle")
         public String versionLifeCycle;
 
@@ -208,7 +220,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
 
     public static class QueryGovernanceKubernetesClusterResponseBodyData extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -217,7 +229,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The size of the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -226,7 +238,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The details of the data.</p>
+         * <p>The data structure.</p>
          */
         @NameInMap("Result")
         public java.util.List<QueryGovernanceKubernetesClusterResponseBodyDataResult> result;

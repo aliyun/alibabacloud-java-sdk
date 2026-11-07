@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewayShrinkRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned information. Valid values:</p>
      * <ul>
      * <li>zh: Chinese</li>
      * <li>en: English</li>
@@ -18,7 +18,7 @@ public class ListGatewayShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>Specifies whether to enable the sorting feature. This feature is not available.</p>
+     * <p>The sorting order. This parameter is currently not used.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -27,7 +27,7 @@ public class ListGatewayShrinkRequest extends TeaModel {
     public Boolean descSort;
 
     /**
-     * <p>The details of parameters.</p>
+     * <p>The filter parameters.</p>
      */
     @NameInMap("FilterParams")
     public String filterParamsShrink;
@@ -42,7 +42,7 @@ public class ListGatewayShrinkRequest extends TeaModel {
     public String orderItem;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +51,7 @@ public class ListGatewayShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of instances per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

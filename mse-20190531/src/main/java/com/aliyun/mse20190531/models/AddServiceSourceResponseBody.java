@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddServiceSourceResponseBody extends TeaModel {
     /**
-     * <p>duplicatedClusterAliasName</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class AddServiceSourceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>mse-100-007</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>63</p>
@@ -23,7 +23,7 @@ public class AddServiceSourceResponseBody extends TeaModel {
     public Long data;
 
     /**
-     * <p>code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class AddServiceSourceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>mse-200-105</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>You are not authorized to perform this operation. Action: mse:AddServiceSource, Resource: acs:mse:cn-hangzhou:1105471854403716:instance/gw-082c943a8c304e48a37a7a29a5ddeda7</p>
@@ -41,7 +41,7 @@ public class AddServiceSourceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The response data.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D0DB055C-51F2-5BB2-82A6-CD8A3C6EE6BA</p>
@@ -50,7 +50,11 @@ public class AddServiceSourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>duplicated cluster alias name</p>
+     * <p>The request result. Valid values:</p>
+     * <ul>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

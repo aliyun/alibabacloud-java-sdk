@@ -4,10 +4,15 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetNacosMcpServerResponseBody extends TeaModel {
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public GetNacosMcpServerResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>72FC625E-9629-591B-9C01-3F0BFDAB****</p>
      */
@@ -37,6 +42,8 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
 
     public static class GetNacosMcpServerResponseBodyDataAllVersions extends TeaModel {
         /**
+         * <p>Indicates whether it is the latest version.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -44,6 +51,8 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         public Boolean isLatest;
 
         /**
+         * <p>The release date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-16</p>
          */
@@ -51,6 +60,8 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         public String releaseDate;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0.9</p>
          */
@@ -90,6 +101,8 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
 
     public static class GetNacosMcpServerResponseBodyDataBackendEndpoints extends TeaModel {
         /**
+         * <p>The address.</p>
+         * 
          * <strong>example:</strong>
          * <p>127.0.0.1</p>
          */
@@ -97,6 +110,8 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         public String address;
 
         /**
+         * <p>The path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/sse</p>
          */
@@ -104,6 +119,8 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The port number.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -143,6 +160,8 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
 
     public static class GetNacosMcpServerResponseBodyDataRemoteServerConfigServiceRef extends TeaModel {
         /**
+         * <p>The group to which the service belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEFAULT</p>
          */
@@ -150,6 +169,8 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The namespace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>public</p>
          */
@@ -157,6 +178,8 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         public String namespaceId;
 
         /**
+         * <p>The service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>mcp-service</p>
          */
@@ -196,12 +219,17 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
 
     public static class GetNacosMcpServerResponseBodyDataRemoteServerConfig extends TeaModel {
         /**
+         * <p>The exposed path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/sse</p>
          */
         @NameInMap("ExportPath")
         public String exportPath;
 
+        /**
+         * <p>The service reference.</p>
+         */
         @NameInMap("ServiceRef")
         public GetNacosMcpServerResponseBodyDataRemoteServerConfigServiceRef serviceRef;
 
@@ -230,16 +258,23 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
 
     public static class GetNacosMcpServerResponseBodyDataToolSpecTools extends TeaModel {
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>a weather query tool</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The input schema of the tool.</p>
+         */
         @NameInMap("InputSchema")
         public java.util.Map<String, ?> inputSchema;
 
         /**
+         * <p>The tool name.</p>
+         * 
          * <strong>example:</strong>
          * <p>get_weather</p>
          */
@@ -278,18 +313,39 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
     }
 
     public static class GetNacosMcpServerResponseBodyDataToolSpec extends TeaModel {
+        /**
+         * <p>The list of security authentication schemes in the MCP tool definition.</p>
+         */
         @NameInMap("SecuritySchemes")
         public Object securitySchemes;
 
+        /**
+         * <p>The storage format type of the MCP tool definition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cipher-kms-256</p>
+         */
         @NameInMap("SpecificationType")
         public String specificationType;
 
+        /**
+         * <p>The decryption result status of the MCP tool definition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("ToolDecryptStatus")
         public String toolDecryptStatus;
 
+        /**
+         * <p>The list of tools.</p>
+         */
         @NameInMap("Tools")
         public java.util.List<GetNacosMcpServerResponseBodyDataToolSpecTools> tools;
 
+        /**
+         * <p>The tool metadata map.</p>
+         */
         @NameInMap("ToolsMeta")
         public java.util.Map<String, DataToolSpecToolsMetaValue> toolsMeta;
 
@@ -342,6 +398,8 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
 
     public static class GetNacosMcpServerResponseBodyDataVersionDetail extends TeaModel {
         /**
+         * <p>Indicates whether it is the latest version.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -349,6 +407,8 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         public Boolean isLatest;
 
         /**
+         * <p>The release date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-16</p>
          */
@@ -356,6 +416,8 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         public String releaseDate;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.11.0</p>
          */
@@ -394,19 +456,42 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
     }
 
     public static class GetNacosMcpServerResponseBodyData extends TeaModel {
+        /**
+         * <p>All version information of the current MCP server.</p>
+         */
         @NameInMap("AllVersions")
         public java.util.List<GetNacosMcpServerResponseBodyDataAllVersions> allVersions;
 
+        /**
+         * <p>The backend service endpoints.</p>
+         */
         @NameInMap("BackendEndpoints")
         public java.util.List<GetNacosMcpServerResponseBodyDataBackendEndpoints> backendEndpoints;
 
+        /**
+         * <p>The capabilities of the current MCP server.</p>
+         */
         @NameInMap("Capabilities")
         public java.util.List<String> capabilities;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Indicates whether the gateway is enabled.</p>
+         * <ul>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -414,6 +499,8 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>The exposed protocol type.</p>
+         * 
          * <strong>example:</strong>
          * <p>mcp-sse</p>
          */
@@ -421,7 +508,7 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         public String frontProtocol;
 
         /**
-         * <p>ID。</p>
+         * <p>The ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5e3c5211-d365-4013-8540-c4106ec2a5dc</p>
@@ -429,10 +516,15 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The local MCP server configuration.</p>
+         */
         @NameInMap("LocalServerConfig")
         public java.util.Map<String, ?> localServerConfig;
 
         /**
+         * <p>The name.</p>
+         * 
          * <strong>example:</strong>
          * <p>mcp-demo</p>
          */
@@ -440,22 +532,35 @@ public class GetNacosMcpServerResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The protocol.</p>
+         * 
          * <strong>example:</strong>
          * <p>mcp-sse</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The remote server configuration.</p>
+         */
         @NameInMap("RemoteServerConfig")
         public GetNacosMcpServerResponseBodyDataRemoteServerConfig remoteServerConfig;
 
+        /**
+         * <p>The tool specification.</p>
+         */
         @NameInMap("ToolSpec")
         public GetNacosMcpServerResponseBodyDataToolSpec toolSpec;
 
+        /**
+         * <p>The version details.</p>
+         */
         @NameInMap("VersionDetail")
         public GetNacosMcpServerResponseBodyDataVersionDetail versionDetail;
 
         /**
+         * <p>The YAML configuration of the AI gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>allowTools:</p>
          * <ul>

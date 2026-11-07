@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServiceSourceResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class ListServiceSourceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListServiceSourceResponseBodyData> data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>You are not authorized to perform this operation.</p>
@@ -38,7 +38,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B8C4B0D8-EBB9-5F20-8295-04224FBE5529</p>
@@ -47,10 +47,10 @@ public class ListServiceSourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
 
     public static class ListServiceSourceResponseBodyDataIngressOptions extends TeaModel {
         /**
-         * <p>Indicates whether Ingresses are enabled.</p>
+         * <p>Specifies whether to enable or disable Ingress.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -123,7 +123,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         public Boolean enableIngress;
 
         /**
-         * <p>Indicates whether the Ingress status is updated.</p>
+         * <p>Specifies whether to update IngressStatus.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -141,7 +141,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         public String ingressClass;
 
         /**
-         * <p>The namespace that you want to monitor.</p>
+         * <p>The monitored namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -190,7 +190,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
 
     public static class ListServiceSourceResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the Container Service for Kubernetes (ACK) cluster or the endpoint of the Microservices Engine (MSE) instance.</p>
+         * <p>The ACK ID or the MSE registry address.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -199,7 +199,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         public String address;
 
         /**
-         * <p>Indicates whether the service source is associated with the gateway. The value 1 indicates that the service source is associated with the gateway.</p>
+         * <p>Indicates whether the binding is completed. A value of 1 indicates that the binding is completed.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -208,7 +208,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         public Integer bindingWithGateway;
 
         /**
-         * <p>The ID of the gateway.</p>
+         * <p>The gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -259,11 +259,14 @@ public class ListServiceSourceResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The information about the support for Ingresses by applications.</p>
+         * <p>The Ingress support for application routing.</p>
          */
         @NameInMap("IngressOptions")
         public ListServiceSourceResponseBodyDataIngressOptions ingressOptions;
 
+        /**
+         * <p>Indicates whether the source is valid.</p>
+         */
         @NameInMap("Invalid")
         public Boolean invalid;
 
@@ -277,13 +280,13 @@ public class ListServiceSourceResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The array of root paths of service lists.</p>
+         * <p>The array of root paths for the service list.</p>
          */
         @NameInMap("PathList")
         public java.util.List<String> pathList;
 
         /**
-         * <p>The type of the service source.</p>
+         * <p>The source type.</p>
          * 
          * <strong>example:</strong>
          * <p>MSE</p>
@@ -292,7 +295,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The unique ID of the service source.</p>
+         * <p>The unique identifier of the source.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-cn-***</p>

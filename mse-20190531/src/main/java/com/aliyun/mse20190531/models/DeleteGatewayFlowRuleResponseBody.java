@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteGatewayFlowRuleResponseBody extends TeaModel {
     /**
+     * <p>The response data.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -12,6 +14,8 @@ public class DeleteGatewayFlowRuleResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2B74E7F7-DF54-5AB1-B8F2-67391B83****</p>
      */

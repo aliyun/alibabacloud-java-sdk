@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetNacosMcpServerRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values: zh (default): Chinese. en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class GetNacosMcpServerRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>mse_prepaid_public_cn-tl327w****</p>
      */
@@ -19,6 +23,8 @@ public class GetNacosMcpServerRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the MCP server.</p>
+     * 
      * <strong>example:</strong>
      * <p>5e3c5211-d365-4013-8540-c4106ec2a5dc</p>
      */
@@ -26,6 +32,8 @@ public class GetNacosMcpServerRequest extends TeaModel {
     public String mcpServerId;
 
     /**
+     * <p>The version of the MCP server.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0.0</p>
      */
@@ -33,6 +41,8 @@ public class GetNacosMcpServerRequest extends TeaModel {
     public String mcpServerVersion;
 
     /**
+     * <p>The namespace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5e3ee449-b5c0-4aee-b857-32c0acbebf26</p>
      */

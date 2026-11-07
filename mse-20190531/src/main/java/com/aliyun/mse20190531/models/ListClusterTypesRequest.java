@@ -7,8 +7,8 @@ public class ListClusterTypesRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,10 +31,10 @@ public class ListClusterTypesRequest extends TeaModel {
     public String connectType;
 
     /**
-     * <p>The edition of the MSE instance that you want to purchase.</p>
+     * <p>The Microservices Engine (MSE) cluster edition to be activated. Valid values:</p>
      * <ul>
-     * <li>mse_pro: Professional Edition</li>
-     * <li>mse_dev: Developer Edition</li>
+     * <li>mse_pro: Professional Edition.</li>
+     * <li>mse_dev: Developer Edition.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class ListClusterTypesRequest extends TeaModel {
     public String mseVersion;
 
     /**
-     * <p>The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).</p>
+     * <p>The region ID of the cluster. The region must be supported by Microservices Engine (MSE).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

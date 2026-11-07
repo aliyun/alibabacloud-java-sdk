@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateAclRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned information. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateAclRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The IP addresses or CIDR blocks in the IP address whitelist.</p>
+     * <p>The whitelist.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.0/XX,192.168.0.0/XX</p>
@@ -27,7 +27,7 @@ public class UpdateAclRequest extends TeaModel {
     public String aclEntryList;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-cn-78v1l83****</p>
@@ -35,6 +35,12 @@ public class UpdateAclRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The network type to which the access control rule applies. Valid values: Public and Private.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Public</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 

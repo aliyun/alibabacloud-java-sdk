@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateLocalityRuleRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values: zh (default): Chinese. en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class UpdateLocalityRuleRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The ID of the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>hkhon1po62@c3df23522******</p>
      */
@@ -19,6 +23,8 @@ public class UpdateLocalityRuleRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The name of the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>example-app</p>
      */
@@ -26,6 +32,7 @@ public class UpdateLocalityRuleRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>Specifies whether to enable zone affinity.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,8 @@ public class UpdateLocalityRuleRequest extends TeaModel {
     public Boolean enable;
 
     /**
+     * <p>The name of the MSE namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>myNamespace</p>
      */
@@ -42,6 +51,7 @@ public class UpdateLocalityRuleRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,10 +60,18 @@ public class UpdateLocalityRuleRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The reserved parameter. This parameter is not used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>No input required</p>
+     */
     @NameInMap("Rules")
     public String rules;
 
     /**
+     * <p>The source of the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>edasmsc</p>
      */
@@ -61,6 +79,8 @@ public class UpdateLocalityRuleRequest extends TeaModel {
     public String source;
 
     /**
+     * <p>The threshold for zone affinity to take effect. The zone affinity routing feature is enabled for a zone only when the proportion of instances of the current application deployed in the zone exceeds this threshold. That is, when a consumer sends a request to the application, the request is preferentially routed to an instance in the same zone as the consumer.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.2</p>
      */

@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class CreateNacosMcpServerRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values: zh (Chinese, default) and en (English).</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>Specifies whether to encrypt the MCP tool specification. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: Encrypts the specification.</li>
+     * <li><code>false</code>: Does not encrypt the specification. This is the default value.</li>
+     * </ul>
+     */
     @NameInMap("EncryptToolSpec")
     public Boolean encryptToolSpec;
 
     /**
+     * <p>The JSON string of the endpoint specification.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;type&quot;:&quot;REF&quot;,&quot;data&quot;:{&quot;namespaceId&quot;:&quot;public&quot;,&quot;groupName&quot;:&quot;mcp-endpoints&quot;,&quot;serviceName&quot;:&quot;mcp-demo&quot;}}</p>
      */
@@ -22,6 +33,8 @@ public class CreateNacosMcpServerRequest extends TeaModel {
     public String endpointSpecification;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>mse-cn-st21ri2****</p>
      */
@@ -29,6 +42,8 @@ public class CreateNacosMcpServerRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The namespace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>public</p>
      */
@@ -36,6 +51,8 @@ public class CreateNacosMcpServerRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The service name.</p>
+     * 
      * <strong>example:</strong>
      * <p>mcp-demo</p>
      */
@@ -43,6 +60,8 @@ public class CreateNacosMcpServerRequest extends TeaModel {
     public String serverName;
 
     /**
+     * <p>The JSON string of the server specification.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;description&quot;:&quot;a mcp demo service&quot;,&quot;capabilities&quot;:[],&quot;allVersions&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;,&quot;release_date&quot;:&quot;2025-08-13T01:58:42Z&quot;,&quot;is_latest&quot;:true}],&quot;remoteServerConfig&quot;:{&quot;exportPath&quot;:&quot;/sse&quot;},&quot;enabled&quot;:true,&quot;versionDetail&quot;:{&quot;version&quot;:&quot;1.0.1&quot;},&quot;backendEndpoints&quot;:[{&quot;path&quot;:&quot;/sse&quot;,&quot;address&quot;:&quot;127.0.0.1&quot;,&quot;port&quot;:8080}],&quot;protocol&quot;:&quot;mcp-sse&quot;,&quot;name&quot;:&quot;mcp-demo&quot;,&quot;frontProtocol&quot;:&quot;mcp-sse&quot;}</p>
      */
@@ -50,6 +69,8 @@ public class CreateNacosMcpServerRequest extends TeaModel {
     public String serverSpecification;
 
     /**
+     * <p>The JSON string of the tool specification.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;tools&quot;:[{&quot;name&quot;:&quot;demo-tool&quot;,&quot;description&quot;:&quot;a demo tool&quot;,&quot;inputSchema&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;name&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;name&quot;}}}}],&quot;toolsMeta&quot;:{&quot;demo-tool&quot;:{&quot;enabled&quot;:true}}}</p>
      */
@@ -57,6 +78,8 @@ public class CreateNacosMcpServerRequest extends TeaModel {
     public String toolSpecification;
 
     /**
+     * <p>The YAML configuration of the AI gateway. This parameter is optional.</p>
+     * 
      * <strong>example:</strong>
      * <p>allowTools:</p>
      * <ul>

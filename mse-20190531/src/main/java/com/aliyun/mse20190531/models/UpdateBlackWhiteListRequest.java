@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateBlackWhiteListRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned information. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class UpdateBlackWhiteListRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Specifies whether to enable the whitelist.</p>
+     * <p>Specifies whether the list is a whitelist. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -72,7 +72,7 @@ public class UpdateBlackWhiteListRequest extends TeaModel {
     public String note;
 
     /**
-     * <p>The resource IDs in the JSON format.</p>
+     * <p>The JSON string of the resource ID list.</p>
      * 
      * <strong>example:</strong>
      * <p>[123]</p>
@@ -81,7 +81,7 @@ public class UpdateBlackWhiteListRequest extends TeaModel {
     public String resourceIdJsonList;
 
     /**
-     * <p>The type of the resource.</p>
+     * <p>The scope of the bound resources.</p>
      * 
      * <strong>example:</strong>
      * <p>GATEWAY</p>
@@ -90,7 +90,7 @@ public class UpdateBlackWhiteListRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>Specifies whether to enable the blacklist or whitelist.</p>
+     * <p>Specifies whether it is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>on</p>
@@ -99,7 +99,7 @@ public class UpdateBlackWhiteListRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The type of the blacklist or whitelist.</p>
+     * <p>The resource type of blacklists and whitelists.</p>
      * 
      * <strong>example:</strong>
      * <p>IP</p>

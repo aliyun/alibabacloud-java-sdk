@@ -4,10 +4,15 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetServiceMethodPageResponseBody extends TeaModel {
+    /**
+     * <p>The response to the request.</p>
+     */
     @NameInMap("Data")
     public GetServiceMethodPageResponseBodyData data;
 
     /**
+     * <p>The request information.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -15,6 +20,8 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2DD5A212-C77B-3XXF-9XXE-XXX9XXXE5XX1</p>
      */
@@ -22,6 +29,8 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -67,13 +76,17 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
 
     public static class GetServiceMethodPageResponseBodyDataResultParameterDefinitions extends TeaModel {
         /**
+         * <p>The description of the parameter.</p>
+         * 
          * <strong>example:</strong>
-         * <p>参数描述示例</p>
+         * <p>sample description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The name of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>aParam</p>
          */
@@ -81,6 +94,8 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The parameter type.</p>
+         * 
          * <strong>example:</strong>
          * <p>java.lang.String</p>
          */
@@ -120,6 +135,8 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
 
     public static class GetServiceMethodPageResponseBodyDataResult extends TeaModel {
         /**
+         * <p>The full name of the Controller class to which the interface belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>com.alibabacloud.mse.demo.a.AController</p>
          */
@@ -127,6 +144,8 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         public String methodController;
 
         /**
+         * <p>The name of the method.</p>
+         * 
          * <strong>example:</strong>
          * <p>aMethod</p>
          */
@@ -134,28 +153,47 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The interface description information.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例接口描述信息。</p>
+         * <p>sample description</p>
          */
         @NameInMap("NameDetail")
         public String nameDetail;
 
+        /**
+         * <p>The detailed definition of the parameter.</p>
+         */
         @NameInMap("ParameterDefinitions")
         public java.util.List<GetServiceMethodPageResponseBodyDataResultParameterDefinitions> parameterDefinitions;
 
+        /**
+         * <p>The type of the interface parameter.</p>
+         */
         @NameInMap("ParameterDetails")
         public java.util.List<String> parameterDetails;
 
+        /**
+         * <p>The parameter types.</p>
+         */
         @NameInMap("ParameterTypes")
         public java.util.List<String> parameterTypes;
 
+        /**
+         * <p>The list of request paths that correspond to the interface.</p>
+         */
         @NameInMap("Paths")
         public java.util.List<String> paths;
 
+        /**
+         * <p>The HTTP request method.</p>
+         */
         @NameInMap("RequestMethods")
         public java.util.List<String> requestMethods;
 
         /**
+         * <p>The type of the return value.</p>
+         * 
          * <strong>example:</strong>
          * <p>java.lang.String</p>
          */
@@ -163,6 +201,8 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         public String returnDetails;
 
         /**
+         * <p>The type of the return value.</p>
+         * 
          * <strong>example:</strong>
          * <p>java.lang.String</p>
          */
@@ -258,6 +298,8 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
 
     public static class GetServiceMethodPageResponseBodyData extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -265,16 +307,23 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The method description list.</p>
+         */
         @NameInMap("Result")
         public java.util.List<GetServiceMethodPageResponseBodyDataResult> result;
 
         /**
+         * <p>The total number of methods.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

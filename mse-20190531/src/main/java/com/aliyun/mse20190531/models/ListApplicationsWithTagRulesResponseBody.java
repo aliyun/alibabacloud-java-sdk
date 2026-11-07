@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     /**
-     * <p>The response parameters.</p>
+     * <p>The data overview.</p>
      */
     @NameInMap("Data")
     public ListApplicationsWithTagRulesResponseBodyData data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
      * <p>The returned message.</p>
      * <ul>
      * <li>If the request is successful, a success message is returned.</li>
-     * <li>If the request fails, an error message is returned.</li>
+     * <li>If the request fails, the cause of the failure is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7466566F-F30F-4A29-965D-3E0AF21D****</p>
@@ -42,10 +42,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,33 +100,87 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     }
 
     public static class ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubboArgumentItems extends TeaModel {
+        /**
+         * <p>The comparison operator. Valid values: &gt;=, &lt;=, &gt;, &lt;, and ==.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>==</p>
+         */
         @NameInMap("cond")
         public String cond;
 
+        /**
+         * <p>The value to be compared for operators such as rawvalue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("datum")
         public String datum;
 
+        /**
+         * <p>The field required for the mod operator, which is the divisor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("divisor")
         public Integer divisor;
 
+        /**
+         * <p>The expression. For more information, see the descriptions of other fields.</p>
+         */
         @NameInMap("expr")
         public String expr;
 
+        /**
+         * <p>The parameter position, starting from 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("index")
         public Integer index;
 
+        /**
+         * <p>The list of names.</p>
+         */
         @NameInMap("nameList")
         public java.util.List<String> nameList;
 
+        /**
+         * <p>The operator. A value of rawvalue indicates direct comparison, mode indicates modulo operation, and list indicates a whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rawvalue</p>
+         */
         @NameInMap("operator")
         public String operator;
 
+        /**
+         * <p>The proportion rule, where 20% of traffic is routed to the node corresponding to this tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("rate")
         public Integer rate;
 
+        /**
+         * <p>The field required for the percentage operation, which is the percentage value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("remainder")
         public Integer remainder;
 
+        /**
+         * <p>The value used for comparison. The value obtained from the expression is compared with this value. If the operator is a list whitelist, separate multiple values with commas (,), such as 1,2,3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -218,33 +272,84 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     }
 
     public static class ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubbo extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><em><strong>@</strong></em></p>
+         */
         @NameInMap("appId")
         public String appId;
 
+        /**
+         * <p>The list of parameter arguments.</p>
+         */
         @NameInMap("argumentItems")
         public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubboArgumentItems> argumentItems;
 
+        /**
+         * <p>The logical relationship among the following items. Valid values: AND and OR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AND</p>
+         */
         @NameInMap("condition")
         public String condition;
 
+        /**
+         * <p>The Dubbo service group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("group")
         public String group;
 
+        /**
+         * <p>The Dubbo service method name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello</p>
+         */
         @NameInMap("methodName")
         public String methodName;
 
+        /**
+         * <p>The list of parameter types.</p>
+         */
         @NameInMap("paramTypes")
         public java.util.List<String> paramTypes;
 
+        /**
+         * <p>The service name (interface).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HelloService</p>
+         */
         @NameInMap("serviceName")
         public String serviceName;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("tags")
         public java.util.List<String> tags;
 
+        /**
+         * <p>The policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONTENT</p>
+         */
         @NameInMap("triggerPolicy")
         public String triggerPolicy;
 
+        /**
+         * <p>The Dubbo service version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
         @NameInMap("version")
         public String version;
 
@@ -336,33 +441,90 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     }
 
     public static class ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloudRestItems extends TeaModel {
+        /**
+         * <p>The comparison operator. Valid values: &gt;=, &lt;=, &gt;, &lt;, and ==.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>==</p>
+         */
         @NameInMap("cond")
         public String cond;
 
+        /**
+         * <p>The value to be compared for operators such as rawvalue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("datum")
         public String datum;
 
+        /**
+         * <p>The field required for the mod operator, which is the divisor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("divisor")
         public Integer divisor;
 
+        /**
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The field required for the list operator.</p>
+         */
         @NameInMap("nameList")
         public java.util.List<String> nameList;
 
+        /**
+         * <p>The operator. A value of rawvalue indicates direct comparison, mode indicates modulo operation, and list indicates a whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rawvalue</p>
+         */
         @NameInMap("operator")
         public String operator;
 
+        /**
+         * <p>The proportion rule, where 20% of traffic is routed to the node corresponding to this tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("rate")
         public Integer rate;
 
+        /**
+         * <p>The field required for the percentage operation, which is the percentage value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("remainder")
         public Integer remainder;
 
+        /**
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -454,30 +616,72 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     }
 
     public static class ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloud extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><em><strong>@</strong></em></p>
+         */
         @NameInMap("appId")
         public String appId;
 
+        /**
+         * <p>The logical relationship among the following items. Valid values: AND and OR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AND</p>
+         */
         @NameInMap("condition")
         public String condition;
 
+        /**
+         * <p>Specifies whether the feature is enabled.</p>
+         */
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <p>The path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/hello</p>
+         */
         @NameInMap("path")
         public String path;
 
+        /**
+         * <p>The list of paths.</p>
+         */
         @NameInMap("paths")
         public java.util.List<String> paths;
 
+        /**
+         * <p>The priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("priority")
         public Integer priority;
 
+        /**
+         * <p>The list of matching conditions for REST requests.</p>
+         */
         @NameInMap("restItems")
         public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloudRestItems> restItems;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("tags")
         public java.util.List<String> tags;
 
+        /**
+         * <p>The policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONTENT</p>
+         */
         @NameInMap("triggerPolicy")
         public String triggerPolicy;
 
@@ -561,9 +765,15 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     }
 
     public static class ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRules extends TeaModel {
+        /**
+         * <p>The Dubbo rule.</p>
+         */
         @NameInMap("dubbo")
         public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubbo> dubbo;
 
+        /**
+         * <p>The Spring Cloud rule.</p>
+         */
         @NameInMap("springcloud")
         public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloud> springcloud;
 
@@ -592,10 +802,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
 
     public static class ListApplicationsWithTagRulesResponseBodyDataResultRouteRules extends TeaModel {
         /**
-         * <p>Indicates whether the alert rule is enabled. Valid values:</p>
+         * <p>The enabling status of the alert rule. Valid values:</p>
          * <ul>
-         * <li><code>true</code></li>
-         * <li><code>false</code></li>
+         * <li><code>true</code>: Enabled.</li>
+         * <li><code>false</code>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -632,7 +842,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The rate.</p>
+         * <p>The proportion.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -641,7 +851,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         public Integer rate;
 
         /**
-         * <p>The details of the routing rule.</p>
+         * <p>The applicable routes of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -755,7 +965,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
 
     public static class ListApplicationsWithTagRulesResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The application ID.</p>
+         * <p>The ID of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>daqijp6c31@xxx</p>
@@ -782,16 +992,18 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The queried rules.</p>
+         * <p>The list of rules.</p>
          */
         @NameInMap("RouteRules")
         public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRules> routeRules;
 
         /**
-         * <p>The route state. Valid values:</p>
+         * <p>The routing status. Valid values:</p>
          * <ul>
-         * <li>0: disabled</li>
-         * <li>1: enabled</li>
+         * <li><p>0: Disabled.</p>
+         * </li>
+         * <li><p>1: Enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -849,7 +1061,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
 
     public static class ListApplicationsWithTagRulesResponseBodyData extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -858,7 +1070,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -867,13 +1079,13 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The returned data.</p>
+         * <p>The data structure.</p>
          */
         @NameInMap("Result")
         public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResult> result;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

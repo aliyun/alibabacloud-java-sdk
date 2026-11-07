@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteNamespaceResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>Error code.</p>
      * 
      * <strong>example:</strong>
      * <p>NO_PERMISSION</p>
@@ -14,16 +14,26 @@ public class DeleteNamespaceResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Request information for troubleshooting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is processed successfully.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>abcde-efg</p>
      */
@@ -31,6 +41,8 @@ public class DeleteNamespaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

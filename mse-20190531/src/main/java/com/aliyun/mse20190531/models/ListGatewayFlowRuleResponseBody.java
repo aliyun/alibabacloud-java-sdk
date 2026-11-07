@@ -4,10 +4,15 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayFlowRuleResponseBody extends TeaModel {
+    /**
+     * <p>The Meta return information.</p>
+     */
     @NameInMap("Data")
     public ListGatewayFlowRuleResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0951EBF0-798E-5E0B-8D38-460A14AD****</p>
      */
@@ -37,6 +42,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
 
     public static class ListGatewayFlowRuleResponseBodyDataResult extends TeaModel {
         /**
+         * <p>The Web fallback behavior type.</p>
+         * <p>0: Return specified content</p>
+         * <p>1: Redirect to specified page</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -44,6 +53,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public Integer behaviorType;
 
         /**
+         * <p>The encoding type.</p>
+         * <p>0: Plain text</p>
+         * <p>1: JSON</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -51,6 +64,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public Integer bodyEncoding;
 
         /**
+         * <p>Indicates whether the rule is enabled.</p>
+         * <p>0: Disabled.</p>
+         * <p>1: Enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -58,6 +75,8 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public Integer enable;
 
         /**
+         * <p>The gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>14407</p>
          */
@@ -65,6 +84,8 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public Long gatewayId;
 
         /**
+         * <p>The unique gateway identity ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
          */
@@ -72,6 +93,8 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public String gatewayUniqueId;
 
         /**
+         * <p>The routing throttle rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>549</p>
          */
@@ -79,6 +102,8 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The HTTP response text.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -86,6 +111,8 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public String responseContentBody;
 
         /**
+         * <p>The redirect URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>www.******.com</p>
          */
@@ -93,6 +120,8 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public String responseRedirectUrl;
 
         /**
+         * <p>The HTTP status code.</p>
+         * 
          * <strong>example:</strong>
          * <p>429</p>
          */
@@ -100,6 +129,8 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public Integer responseStatusCode;
 
         /**
+         * <p>The routing ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>48811</p>
          */
@@ -107,6 +138,8 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public Long routeId;
 
         /**
+         * <p>The routing name.</p>
+         * 
          * <strong>example:</strong>
          * <p>routeA</p>
          */
@@ -114,6 +147,8 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public String routeName;
 
         /**
+         * <p>The overall QPS threshold.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -225,6 +260,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
 
     public static class ListGatewayFlowRuleResponseBodyDataResults extends TeaModel {
         /**
+         * <p>The Web fallback behavior type.</p>
+         * <p>0: Return specified content</p>
+         * <p>1: Redirect to specified page</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -232,6 +271,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public Integer behaviorType;
 
         /**
+         * <p>The encoding type.</p>
+         * <p>0: Plain text</p>
+         * <p>1: JSON</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -239,6 +282,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public Integer bodyEncoding;
 
         /**
+         * <p>Indicates whether the rule is enabled.</p>
+         * <p>0: Disabled.</p>
+         * <p>1: Enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -246,6 +293,8 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public Integer enable;
 
         /**
+         * <p>The gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>14407</p>
          */
@@ -253,6 +302,8 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public Long gatewayId;
 
         /**
+         * <p>The unique gateway identity ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
          */
@@ -260,16 +311,26 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public String gatewayUniqueId;
 
         /**
+         * <p>The routing throttle rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>549</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The filtered rule IDs.</p>
+         */
         @NameInMap("IdList")
         public java.util.List<Long> idList;
 
         /**
+         * <p>The threshold conversion mode.</p>
+         * <p>0: Single machine.</p>
+         * <p>1: Cluster.</p>
+         * <p>2: Cluster to single machine.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -277,6 +338,8 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public Integer limitMode;
 
         /**
+         * <p>The custom headers, entered as key-value pairs.</p>
+         * 
          * <strong>example:</strong>
          * <p>key=value</p>
          */
@@ -284,6 +347,8 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public String responseAdditionalHeaders;
 
         /**
+         * <p>The HTTP response text.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -291,6 +356,8 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public String responseContentBody;
 
         /**
+         * <p>The redirect URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>www.******.com</p>
          */
@@ -298,6 +365,8 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public String responseRedirectUrl;
 
         /**
+         * <p>The HTTP status code.</p>
+         * 
          * <strong>example:</strong>
          * <p>429</p>
          */
@@ -305,6 +374,8 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public Integer responseStatusCode;
 
         /**
+         * <p>The routing ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>48811</p>
          */
@@ -312,6 +383,8 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public Long routeId;
 
         /**
+         * <p>The routing name.</p>
+         * 
          * <strong>example:</strong>
          * <p>routeA</p>
          */
@@ -319,6 +392,8 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public String routeName;
 
         /**
+         * <p>The statistics duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -326,6 +401,8 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public Integer statDurationMs;
 
         /**
+         * <p>The overall QPS threshold.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -469,6 +546,8 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
 
     public static class ListGatewayFlowRuleResponseBodyData extends TeaModel {
         /**
+         * <p>The page number of the instance list.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -476,19 +555,29 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of rows per page set during input.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The returned data.</p>
+         */
         @NameInMap("Result")
         public java.util.List<ListGatewayFlowRuleResponseBodyDataResult> result;
 
+        /**
+         * <p>The paged data collection.</p>
+         */
         @NameInMap("Results")
         public java.util.List<ListGatewayFlowRuleResponseBodyDataResults> results;
 
         /**
+         * <p>The total number of instances queried.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -7,8 +7,8 @@ public class AddGatewayDomainRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese. This is the default value.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,11 +17,14 @@ public class AddGatewayDomainRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The content of the CA certificate.</p>
+     */
     @NameInMap("CaCertIdentifier")
     public String caCertIdentifier;
 
     /**
-     * <p>The ID of the certificate.</p>
+     * <p>The certificate ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6828169-cn-hangzhou</p>
@@ -39,11 +42,11 @@ public class AddGatewayDomainRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
-     * <p>Specifies whether to enable <code>HTTP/2</code>.</p>
+     * <p>Specifies whether to enable HTTP/2. Valid values:</p>
      * <ul>
-     * <li><code>open</code>: enables <code>HTTP/2</code></li>
-     * <li><code>close</code>: disables <code>HTTP/2</code></li>
-     * <li><code>globalConfig</code>: uses global configurations</li>
+     * <li><code>open</code>: Enables HTTP/2.</li>
+     * <li><code>close</code>: Disables HTTP/2.</li>
+     * <li><code>globalConfig</code>: Uses the global configuration.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,6 +55,9 @@ public class AddGatewayDomainRequest extends TeaModel {
     @NameInMap("Http2")
     public String http2;
 
+    /**
+     * <p>Specifies whether to enable mTLS.</p>
+     */
     @NameInMap("MtlsEnabled")
     public Boolean mtlsEnabled;
 
@@ -74,7 +80,7 @@ public class AddGatewayDomainRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The type of the protocol. Valid values:</p>
+     * <p>The protocol type. Valid values:</p>
      * <ul>
      * <li><code>HTTP</code></li>
      * <li><code>HTTPS</code></li>
@@ -86,11 +92,14 @@ public class AddGatewayDomainRequest extends TeaModel {
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <p>The TLS cipher suite configuration.</p>
+     */
     @NameInMap("TlsCipherSuitesConfigJSON")
     public AddGatewayDomainRequestTlsCipherSuitesConfigJSON tlsCipherSuitesConfigJSON;
 
     /**
-     * <p>The maximum version of Transport Layer Security (TLS).</p>
+     * <p>The maximum TLS version.</p>
      * 
      * <strong>example:</strong>
      * <p>TLS 1.3</p>
@@ -99,7 +108,7 @@ public class AddGatewayDomainRequest extends TeaModel {
     public String tlsMax;
 
     /**
-     * <p>The minimum version of TLS.</p>
+     * <p>The minimum TLS version.</p>
      * 
      * <strong>example:</strong>
      * <p>TLS 1.0</p>
@@ -209,9 +218,18 @@ public class AddGatewayDomainRequest extends TeaModel {
     }
 
     public static class AddGatewayDomainRequestTlsCipherSuitesConfigJSON extends TeaModel {
+        /**
+         * <p>The cipher suite configuration type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
+         */
         @NameInMap("ConfigType")
         public String configType;
 
+        /**
+         * <p>The list of cipher suite names.</p>
+         */
         @NameInMap("TlsCipherSuites")
         public java.util.List<String> tlsCipherSuites;
 

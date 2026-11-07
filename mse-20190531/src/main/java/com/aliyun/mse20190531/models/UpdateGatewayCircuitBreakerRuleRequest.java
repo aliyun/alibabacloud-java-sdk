@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayCircuitBreakerRuleRequest extends TeaModel {
     /**
+     * <p>The language of the returned results. Valid values: zh (default): Chinese, en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,11 @@ public class UpdateGatewayCircuitBreakerRuleRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The web fallback behavior type. Valid values:</p>
+     * <ul>
+     * <li>0: Return specified text.</li>
+     * <li>1: Redirect to a specified page.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +28,12 @@ public class UpdateGatewayCircuitBreakerRuleRequest extends TeaModel {
     public Integer behaviorType;
 
     /**
+     * <p>The encoding type. Valid values:</p>
+     * <ul>
+     * <li>0: Plain text.</li>
+     * <li>1: JSON.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -28,6 +41,11 @@ public class UpdateGatewayCircuitBreakerRuleRequest extends TeaModel {
     public Integer bodyEncoding;
 
     /**
+     * <p>Specifies whether to enable the rule. Valid values:</p>
+     * <ul>
+     * <li>0: Disabled.</li>
+     * <li>1: Enabled.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +55,8 @@ public class UpdateGatewayCircuitBreakerRuleRequest extends TeaModel {
     public Integer enable;
 
     /**
+     * <p>The ID of the gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>14407</p>
      */
@@ -44,6 +64,7 @@ public class UpdateGatewayCircuitBreakerRuleRequest extends TeaModel {
     public Long gatewayId;
 
     /**
+     * <p>The unique ID of the gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +74,7 @@ public class UpdateGatewayCircuitBreakerRuleRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
+     * <p>The ID of the circuit breaker rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +84,8 @@ public class UpdateGatewayCircuitBreakerRuleRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The slow call threshold in slow call mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -69,6 +93,7 @@ public class UpdateGatewayCircuitBreakerRuleRequest extends TeaModel {
     public Integer maxAllowedMs;
 
     /**
+     * <p>The minimum number of requests that triggers circuit breaking.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,6 +103,7 @@ public class UpdateGatewayCircuitBreakerRuleRequest extends TeaModel {
     public Integer minRequestAmount;
 
     /**
+     * <p>The recovery duration for circuit breaking.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,6 +113,8 @@ public class UpdateGatewayCircuitBreakerRuleRequest extends TeaModel {
     public Integer recoveryTimeoutSec;
 
     /**
+     * <p>The HTTP response text.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */
@@ -94,6 +122,8 @@ public class UpdateGatewayCircuitBreakerRuleRequest extends TeaModel {
     public String responseContentBody;
 
     /**
+     * <p>The redirect URL.</p>
+     * 
      * <strong>example:</strong>
      * <p>www.******.com</p>
      */
@@ -101,6 +131,8 @@ public class UpdateGatewayCircuitBreakerRuleRequest extends TeaModel {
     public String responseRedirectUrl;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>429</p>
      */
@@ -108,6 +140,7 @@ public class UpdateGatewayCircuitBreakerRuleRequest extends TeaModel {
     public Integer responseStatusCode;
 
     /**
+     * <p>The ID of the route.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -117,6 +150,7 @@ public class UpdateGatewayCircuitBreakerRuleRequest extends TeaModel {
     public Long routeId;
 
     /**
+     * <p>The name of the route.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -126,6 +160,7 @@ public class UpdateGatewayCircuitBreakerRuleRequest extends TeaModel {
     public String routeName;
 
     /**
+     * <p>The statistical duration for circuit breaking.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -135,6 +170,11 @@ public class UpdateGatewayCircuitBreakerRuleRequest extends TeaModel {
     public Integer statDurationSec;
 
     /**
+     * <p>The threshold type. Valid values:</p>
+     * <ul>
+     * <li>0: Slow call.</li>
+     * <li>1: Exception.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -144,6 +184,7 @@ public class UpdateGatewayCircuitBreakerRuleRequest extends TeaModel {
     public Integer strategy;
 
     /**
+     * <p>The percentage that triggers circuit breaking.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

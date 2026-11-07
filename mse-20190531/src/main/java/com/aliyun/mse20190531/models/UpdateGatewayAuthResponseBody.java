@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayAuthResponseBody extends TeaModel {
     /**
+     * <p>The response code. The value is synchronized with the success parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateGatewayAuthResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The authentication rule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>719</p>
      */
@@ -19,6 +23,8 @@ public class UpdateGatewayAuthResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class UpdateGatewayAuthResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -33,6 +41,8 @@ public class UpdateGatewayAuthResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
      */
@@ -40,6 +50,12 @@ public class UpdateGatewayAuthResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.                                </li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

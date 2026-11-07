@@ -4,10 +4,15 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListNacosMcpServersResponseBody extends TeaModel {
+    /**
+     * <p>The returned data structure.</p>
+     */
     @NameInMap("Data")
     public ListNacosMcpServersResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ADDD8AB7-8D1C-4697-A83E-410D2607****</p>
      */
@@ -37,6 +42,8 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
 
     public static class ListNacosMcpServersResponseBodyDataPageItemsVersionDetail extends TeaModel {
         /**
+         * <p>Indicates whether this is the latest version.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -44,6 +51,8 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
         public Boolean isLatest;
 
         /**
+         * <p>The release date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-16</p>
          */
@@ -51,6 +60,8 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
         public String releaseDate;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
          */
@@ -89,10 +100,15 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
     }
 
     public static class ListNacosMcpServersResponseBodyDataPageItems extends TeaModel {
+        /**
+         * <p>The capabilities of the MCP server.</p>
+         */
         @NameInMap("Capabilities")
         public java.util.List<String> capabilities;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -100,6 +116,8 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The frontend protocol type.</p>
+         * 
          * <strong>example:</strong>
          * <p>mcp-sse</p>
          */
@@ -116,6 +134,8 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -123,6 +143,8 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The type of the MCP server.</p>
+         * 
          * <strong>example:</strong>
          * <p>stdio</p>
          */
@@ -130,12 +152,17 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The current latest version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.1.0</p>
          */
         @NameInMap("Version")
         public String version;
 
+        /**
+         * <p>The version details.</p>
+         */
         @NameInMap("VersionDetail")
         public ListNacosMcpServersResponseBodyDataPageItemsVersionDetail versionDetail;
 
@@ -211,6 +238,9 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
     }
 
     public static class ListNacosMcpServersResponseBodyData extends TeaModel {
+        /**
+         * <p>The paginated list of MCP servers.</p>
+         */
         @NameInMap("PageItems")
         public java.util.List<ListNacosMcpServersResponseBodyDataPageItems> pageItems;
 
@@ -233,6 +263,8 @@ public class ListNacosMcpServersResponseBody extends TeaModel {
         public Integer pagesAvailable;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */

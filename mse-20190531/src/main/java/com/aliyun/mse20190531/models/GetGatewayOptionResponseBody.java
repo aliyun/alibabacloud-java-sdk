@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGatewayOptionResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The value 200 indicates that the request is successfully processed.</p>
+     * <p>The status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,18 @@ public class GetGatewayOptionResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The detailed configurations of the gateway.</p>
+     * <p>The gateway operation details.</p>
      * <ul>
-     * <li><strong>TraceDetails</strong>: the sampling description of Managed Service for OpenTelemetry. Content: TraceEnabled indicates whether Managed Service for OpenTelemetry is activated. Sample indicates the sampling rate of Managed Service for OpenTelemetry.</li>
-     * <li><strong>LogConfigDetails</strong>: the description of Simple Log Service. Content: LogEnabled indicates whether Simple Log Service is activated. ProjectName indicates the Simple Log Service project to which logs are delivered. LogStoreName indicates the name of the Logstore.</li>
-     * <li><strong>EnableHardwareAcceleration</strong>: indicates whether hardware acceleration is enabled.</li>
-     * <li><strong>DisableHttp2Alpn</strong>: indicates whether the HTTP/2 protocol is disabled.</li>
-     * <li><strong>EnableWaf</strong>: indicates whether Web Application Firewall (WAF) is enabled.</li>
+     * <li><p><strong>TraceDetails</strong>: The XTrace sampling description. It includes TraceEnabled, which indicates whether XTrace is enabled, and Sample, which indicates the XTrace sampling rate.</p>
+     * </li>
+     * <li><p><strong>LogConfigDetails</strong>: The log delivery service description. It includes LogEnabled, which indicates whether log delivery to Simple Log Service (SLS) is enabled, ProjectName, which indicates the destination project for log delivery, and LogStoreName, which indicates the Logstore name.</p>
+     * </li>
+     * <li><p><strong>EnableHardwareAcceleration</strong>: Indicates whether hardware acceleration is enabled.</p>
+     * </li>
+     * <li><p><strong>DisableHttp2Alpn</strong>: Indicates whether HTTP/2 is disabled.</p>
+     * </li>
+     * <li><p><strong>EnableWaf</strong>: Indicates whether Web Application Firewall (WAF) is enabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,7 +35,7 @@ public class GetGatewayOptionResponseBody extends TeaModel {
     public GatewayOption data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -39,20 +44,20 @@ public class GetGatewayOptionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * <ul>
      * <li>If the request is successful, a success message is returned.</li>
-     * <li>If the request fails, an error message is returned, such as the &quot;TaskId not found&quot; message.</li>
+     * <li>If the request fails, the cause of the failure is returned, such as TaskId not found.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>The request is successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C92F4A4D-A2FD-593E-839E-F3D4DFD2****</p>
@@ -61,10 +66,10 @@ public class GetGatewayOptionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>The request result. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>

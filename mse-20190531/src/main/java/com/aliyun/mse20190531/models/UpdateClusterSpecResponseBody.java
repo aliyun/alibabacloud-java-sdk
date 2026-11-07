@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateClusterSpecResponseBody extends TeaModel {
     /**
-     * <p>The response code returned.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>This is a reserved field.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -23,10 +23,12 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The error code returned if the request failed. Take note of the following rules:</p>
+     * <p>The error code. Take note of the following items:</p>
      * <ul>
-     * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
-     * <li>The <strong>ErrorCode</strong> parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+     * <li><p>If the request is successful: The <strong>ErrorCode</strong> field is not returned.</p>
+     * </li>
+     * <li><p>If the request fails: The <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -45,16 +47,16 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request is successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5B170A0D-2C5D-4CF8-B808-03966B86****</p>
@@ -65,8 +67,10 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

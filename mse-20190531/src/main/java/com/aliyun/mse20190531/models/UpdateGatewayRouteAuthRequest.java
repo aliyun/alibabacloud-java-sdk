@@ -18,7 +18,7 @@ public class UpdateGatewayRouteAuthRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The authentication configurations.</p>
+     * <p>The authentication configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AuthJSON")
@@ -100,7 +100,7 @@ public class UpdateGatewayRouteAuthRequest extends TeaModel {
 
     public static class UpdateGatewayRouteAuthRequestAuthJSON extends TeaModel {
         /**
-         * <p>The authentication type. If an empty string is passed, no authentication type is available. Valid values:</p>
+         * <p>The authentication type. An empty string indicates that authentication is disabled. Valid values:</p>
          * <ul>
          * <li>JWT</li>
          * </ul>

@@ -7,8 +7,8 @@ public class PullServicesRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,6 +36,8 @@ public class PullServicesRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The service source ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -43,10 +45,10 @@ public class PullServicesRequest extends TeaModel {
     public Long sourceId;
 
     /**
-     * <p>The type of the service source.</p>
+     * <p>The service source type.</p>
      * 
      * <strong>example:</strong>
-     * <p>K8s</p>
+     * <p>K8S</p>
      */
     @NameInMap("SourceType")
     public String sourceType;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddAuthPolicyRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values: zh-CN (Chinese, default) and en-US (English).</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class AddAuthPolicyRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The ID of the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>e9clba2xlc@***</p>
      */
@@ -19,6 +23,7 @@ public class AddAuthPolicyRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The content of the service authentication rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,12 @@ public class AddAuthPolicyRequest extends TeaModel {
     public String authRule;
 
     /**
+     * <p>The type of the rule. Valid values:</p>
+     * <ul>
+     * <li>0: application dimension.</li>
+     * <li>1: namespace dimension.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -35,6 +46,11 @@ public class AddAuthPolicyRequest extends TeaModel {
     public Integer authType;
 
     /**
+     * <p>Specifies whether the authentication rule is enabled. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: Enabled.</li>
+     * <li><code>false</code>: Disabled.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +60,8 @@ public class AddAuthPolicyRequest extends TeaModel {
     public String enable;
 
     /**
+     * <p>The ID of the namespace in the Kubernetes cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>c19c6c500e1ff4d7abc7***</p>
      */
@@ -51,6 +69,7 @@ public class AddAuthPolicyRequest extends TeaModel {
     public String k8sNamespace;
 
     /**
+     * <p>The name of the rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +79,8 @@ public class AddAuthPolicyRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The MSE namespace to which the application belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -67,6 +88,12 @@ public class AddAuthPolicyRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The protocol type. Valid values:</p>
+     * <ul>
+     * <li><strong>SPRING_CLOUD</strong></li>
+     * <li><strong>DUBBO</strong></li>
+     * <li><strong>istio</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,6 +103,7 @@ public class AddAuthPolicyRequest extends TeaModel {
     public String protocol;
 
     /**
+     * <p>The region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,6 +113,7 @@ public class AddAuthPolicyRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The source. Valid values: edasmsc.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

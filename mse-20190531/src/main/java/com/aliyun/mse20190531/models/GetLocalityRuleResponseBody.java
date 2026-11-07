@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetLocalityRuleResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetLocalityRuleResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The data returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;pageNumber&quot;:0,
@@ -32,16 +36,26 @@ public class GetLocalityRuleResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is processed successfully.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D3971C60-3F07-58B0-8EA0-A194********</p>
      */
@@ -49,6 +63,14 @@ public class GetLocalityRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

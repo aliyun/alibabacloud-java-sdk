@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableProxyProtocolRequest extends TeaModel {
     /**
-     * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+     * <p>The language of the returned results. Valid values: zh (default): Chinese. en: English.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -14,10 +14,12 @@ public class EnableProxyProtocolRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:</p>
+     * <p>Specifies whether to enable the feature of preserving the client source IP address by using the PROXY protocol. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><p><strong>true</strong>: enables the feature of preserving the client source IP address.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): disables the feature of preserving the client source IP address.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

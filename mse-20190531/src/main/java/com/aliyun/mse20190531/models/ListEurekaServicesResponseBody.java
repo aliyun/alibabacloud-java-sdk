@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListEurekaServicesResponseBody extends TeaModel {
     /**
-     * <p>The details of the data.</p>
+     * <p>The data overview.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListEurekaServicesResponseBodyData> data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-100-000</p>
@@ -20,7 +20,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>202</p>
@@ -29,16 +29,16 @@ public class ListEurekaServicesResponseBody extends TeaModel {
     public String httpCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request is successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +47,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of instances to return per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -56,7 +56,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
@@ -65,9 +65,9 @@ public class ListEurekaServicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>true</code>: The request succeeded.</li>
      * <li><code>false</code>: The request failed.</li>
      * </ul>
      * 
@@ -78,7 +78,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of returned instances.</p>
+     * <p>The total number of instances.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -165,13 +165,13 @@ public class ListEurekaServicesResponseBody extends TeaModel {
 
     public static class ListEurekaServicesResponseBodyData extends TeaModel {
         /**
-         * <p>The details of the instance.</p>
+         * <p>The instance information.</p>
          */
         @NameInMap("InstancesId")
         public java.util.List<String> instancesId;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>CONTACTINFO</p>
@@ -180,7 +180,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The number of service providers. The value is in the following format: Number of healthy instances/Total number of instances.</p>
+         * <p>The number of service providers, in the format of healthy instances/total instances.</p>
          * 
          * <strong>example:</strong>
          * <p>1/1</p>

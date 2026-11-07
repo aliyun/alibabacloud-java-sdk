@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWebFlowRulesRequest extends TeaModel {
     /**
+     * <p>The language in which the returned results are displayed. Valid values: zh (default): Chinese. en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class ListWebFlowRulesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>b22qb1****@2f0586be4b1****</p>
      */
@@ -19,6 +23,7 @@ public class ListWebFlowRulesRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class ListWebFlowRulesRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -35,6 +42,8 @@ public class ListWebFlowRulesRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The first page to export. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,6 +51,8 @@ public class ListWebFlowRulesRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -49,6 +60,8 @@ public class ListWebFlowRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The interface to which the protection rule applies. This parameter is mutually exclusive with the ResourceSearchKey parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>/flow</p>
      */
@@ -56,6 +69,8 @@ public class ListWebFlowRulesRequest extends TeaModel {
     public String resource;
 
     /**
+     * <p>The interface keyword that you can search from protection rules. This parameter is mutually exclusive with the Resource parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>flow</p>
      */

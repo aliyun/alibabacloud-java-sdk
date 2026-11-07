@@ -18,7 +18,7 @@ public class GetAppMessageQueueRouteRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class GetAppMessageQueueRouteRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The name of the application.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>example-app</p>
@@ -37,7 +37,7 @@ public class GetAppMessageQueueRouteRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The name of the Microservices Engine (MSE) namespace.</p>
+     * <p>The MSE namespace name.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -46,13 +46,13 @@ public class GetAppMessageQueueRouteRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The region where the instance resides. Examples:</p>
+     * <p>The region where the cluster is deployed, including but not limited to:</p>
      * <ul>
-     * <li><code>cn-hangzhou</code>: China (Hangzhou)</li>
-     * <li><code>cn-beijing</code>: China (Beijing)</li>
-     * <li><code>cn-shanghai</code>: China (Shanghai)</li>
-     * <li><code>cn-zhangjiakou</code>: China (Zhangjiakou)</li>
-     * <li><code>cn-shenzhen</code>: China (Shenzhen)</li>
+     * <li><code>cn-hangzhou</code>: Hangzhou</li>
+     * <li><code>cn-beijing</code>: Beijing</li>
+     * <li><code>cn-shanghai</code>: Shanghai</li>
+     * <li><code>cn-zhangjiakou</code>: Zhangjiakou</li>
+     * <li><code>cn-shenzhen</code>: Shenzhen</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

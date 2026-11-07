@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryNamespaceRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values: zh and en. Default value: zh. The value zh which indicates Chinese, and the value en indicates English.</p>
+     * <p>The language in which you want the results to be displayed. Valid values: zh (default): Chinese. en: English.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -14,6 +14,8 @@ public class QueryNamespaceRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The name of the namespace that you want to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -21,6 +23,7 @@ public class QueryNamespaceRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The region to which the namespace belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

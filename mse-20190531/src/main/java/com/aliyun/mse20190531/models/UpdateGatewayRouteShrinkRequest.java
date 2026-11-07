@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayRouteShrinkRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned information. Valid values:</p>
      * <ul>
      * <li>zh: Chinese</li>
      * <li>en: English</li>
@@ -18,6 +18,8 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The description of the route.</p>
+     * 
      * <strong>example:</strong>
      * <p>a route for xxx</p>
      */
@@ -25,7 +27,7 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The destination service type.</p>
+     * <p>The type of the destination service.</p>
      * 
      * <strong>example:</strong>
      * <p>Mock</p>
@@ -34,13 +36,13 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
     public String destinationType;
 
     /**
-     * <p>The information about service mocking.</p>
+     * <p>The mock content.</p>
      */
     @NameInMap("DirectResponseJSON")
     public String directResponseJSONShrink;
 
     /**
-     * <p>The associated domain name.</p>
+     * <p>The associated domain names.</p>
      * 
      * <strong>example:</strong>
      * <p>[90]</p>
@@ -49,7 +51,7 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
     public String domainIdListJSON;
 
     /**
-     * <p>Specifies whether to activate Web Application Firewall (WAF).</p>
+     * <p><strong>[Deprecated]</strong> Use UpdateGatewayRouteWafStatus to update the WAF status of the route.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -59,7 +61,7 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
     public Boolean enableWaf;
 
     /**
-     * <p>Specifies whether to enable the Fallback service.</p>
+     * <p>Specifies whether to enable the fallback service.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,7 +70,7 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
     public Boolean fallback;
 
     /**
-     * <p>The information about the Fallback service.</p>
+     * <p>The fallback services.</p>
      */
     @NameInMap("FallbackServices")
     public String fallbackServicesShrink;
@@ -111,19 +113,19 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The route matching conditions.</p>
+     * <p>The matching conditions of the route.</p>
      */
     @NameInMap("Predicates")
     public String predicatesShrink;
 
     /**
-     * <p>The information about redirection.</p>
+     * <p>The redirect configuration.</p>
      */
     @NameInMap("RedirectJSON")
     public String redirectJSONShrink;
 
     /**
-     * <p>The sequence number of the route.</p>
+     * <p>The order of the route.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -132,7 +134,7 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
     public Integer routeOrder;
 
     /**
-     * <p>The information about destination services.</p>
+     * <p>The destination services. Specify this parameter when the route points to a single service, multiple services, or tag-based routing.</p>
      */
     @NameInMap("Services")
     public String servicesShrink;

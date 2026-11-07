@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
     /**
-     * <p>The status code. A value of 200 is returned if the request was successful.</p>
+     * <p>Code is only used to synchronize with success</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The details of the data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public ListClusterHealthCheckTaskResponseBodyData data;
@@ -29,9 +29,9 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic error message used to replace \<em>\</em>%s\<em>\</em> in the <strong>ErrMessage</strong> parameter.</p>
      * <blockquote>
-     * <p>If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong>, and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,10 +41,12 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the request failed. Take note of the following rules:</p>
+     * <p>The error code. Take note of the following items:</p>
      * <ul>
-     * <li>The <strong>ErrorCode</strong> parameter is not returned if the request is successful.</li>
-     * <li>The <strong>ErrorCode</strong> parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+     * <li><p>Successful request: The <strong>ErrorCode</strong> field is not returned.</p>
+     * </li>
+     * <li><p>Failed request: The <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section in this topic.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +56,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -63,16 +65,16 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request was successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4E9FDCFE-0738-493B-B801-82BDFBCB****</p>
@@ -81,10 +83,12 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -175,11 +179,17 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\\&quot;desc\\&quot;:\\&quot;The engine version is outdated and a large number of features are not supported. Upgrade the engine to the latest version at the earliest opportunity. \\&quot;}</p>
+         * <p>{&quot;desc&quot;:&quot;The engine version is outdated and many features are missing. Upgrade to the latest version at the earliest opportunity.&quot;}</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The English description of the risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Upgrade to the latest version to ensure that all features are available!</p>
+         */
         @NameInMap("DescriptionEn")
         public String descriptionEn;
 
@@ -193,7 +203,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public Integer id;
 
         /**
-         * <p>A redundant parameter.</p>
+         * <p>Redundant field.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -202,10 +212,12 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public String module;
 
         /**
-         * <p>Indicates whether the risk item notification feature is disabled.</p>
+         * <p>Specifies whether to disable the notification feature if the risk item occurs.</p>
          * <ul>
-         * <li>true: disabled</li>
-         * <li>false: enabled</li>
+         * <li><p>true: Disables risk item notifications</p>
+         * </li>
+         * <li><p>false: Enables risk item notifications</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,7 +227,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public Boolean mute;
 
         /**
-         * <p>A redundant parameter.</p>
+         * <p>Redundant field.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -242,11 +254,14 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public String riskCode;
 
         /**
-         * <p>The severity of the risk. Valid values:</p>
+         * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li>HIGH: high risk</li>
-         * <li>MID: medium risk</li>
-         * <li>LOW: low risk</li>
+         * <li><p>HIGH: High risk</p>
+         * </li>
+         * <li><p>MID: Medium risk</p>
+         * </li>
+         * <li><p>LOW: Low risk</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,14 +271,20 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>The name of the risk.</p>
+         * <p>The risk name.</p>
          * 
          * <strong>example:</strong>
-         * <p>The engine version is outdated.</p>
+         * <p>Engine version too low</p>
          */
         @NameInMap("RiskName")
         public String riskName;
 
+        /**
+         * <p>The English name of the risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Low engine version</p>
+         */
         @NameInMap("RiskNameEn")
         public String riskNameEn;
 
@@ -277,14 +298,20 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public String riskType;
 
         /**
-         * <p>The situation.</p>
+         * <p>The current situation.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\\&quot;desc\\&quot;:\\&quot;The engine version is outdated and a large number of features are not supported.\\&quot;,\\&quot;links\\&quot;:[{\\&quot;type\\&quot;:\\&quot;url\\&quot;,\\&quot;value\\&quot;:\\&quot;<a href="https://xxxx%22%5C%5C%5C%5C%22,%5C%5C%5C%5C%22desc%5C%5C%5C%5C%22:%5C%5C%5C%5C%22Release">https://xxxx&quot;\\\\&quot;,\\\\&quot;desc\\\\&quot;:\\\\&quot;Release</a> notes\\&quot;}]}</p>
+         * <p>{&quot;desc&quot;:&quot;The current engine version is too low with many missing features&quot;,&quot;links&quot;:[{&quot;type&quot;:&quot;url&quot;,&quot;value&quot;:&quot;<a href="https://xxxx%22%22,%22desc%22:%22Version">https://xxxx&quot;&quot;,&quot;desc&quot;:&quot;Version</a> notes&quot;}]}</p>
          */
         @NameInMap("Situation")
         public String situation;
 
+        /**
+         * <p>The English description of the current situation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The current engine version is low, and there are many missing features</p>
+         */
         @NameInMap("SituationEn")
         public String situationEn;
 
@@ -292,11 +319,17 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
          * <p>The suggestion.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;desc&quot;: &quot;Upgrade to the latest version at the earliest opportunity.&quot;, &quot;links&quot;:[{&quot;type&quot;: &quot;upgrade&quot;, &quot;desc&quot;: &quot;Click to upgrade&quot;}]}</p>
+         * <p>{&quot;desc&quot;: &quot;Upgrade to the latest version at the earliest opportunity.&quot;, &quot;links&quot;:[{&quot;type&quot;:&quot;upgrade&quot;,&quot;desc&quot;:&quot;Click to upgrade&quot;}]}</p>
          */
         @NameInMap("Suggestion")
         public String suggestion;
 
+        /**
+         * <p>The English description of the suggestion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Upgrade to the latest version</p>
+         */
         @NameInMap("SuggestionEn")
         public String suggestionEn;
 
@@ -310,7 +343,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public Long taskId;
 
         /**
-         * <p>A redundant parameter.</p>
+         * <p>Redundant field.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -319,7 +352,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public Integer type;
 
         /**
-         * <p>A redundant parameter.</p>
+         * <p>Redundant field.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -506,7 +539,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The type of the cluster.</p>
+         * <p>The type of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Nacos-Ans</p>
@@ -533,7 +566,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public Integer id;
 
         /**
-         * <p>A redundant parameter.</p>
+         * <p>Redundant field.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -542,7 +575,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public String imageVersion;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mse_ingresspost-cn-0jbvrcex****</p>
@@ -551,7 +584,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the user to which the instance belongs.</p>
+         * <p>The ID of the user to which the cluster belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -560,7 +593,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public String primaryUser;
 
         /**
-         * <p>The number of nodes in the instance.</p>
+         * <p>The number of nodes in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -593,7 +626,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public String spec;
 
         /**
-         * <p>The status of the task.</p>
+         * <p>The job states.</p>
          * 
          * <strong>example:</strong>
          * <p>FINISH</p>
@@ -602,7 +635,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The total number of check items.</p>
+         * <p>The total number of inspection items.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -620,7 +653,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public Integer totalRisk;
 
         /**
-         * <p>A redundant parameter.</p>
+         * <p>Redundant field.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -629,7 +662,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The last update time.</p>
+         * <p>The time when the instance was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-12 15:07:55</p>
@@ -799,16 +832,16 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
 
     public static class ListClusterHealthCheckTaskResponseBodyData extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the list.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -823,7 +856,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public java.util.List<ListClusterHealthCheckTaskResponseBodyDataResult> result;
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of queried rules.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>

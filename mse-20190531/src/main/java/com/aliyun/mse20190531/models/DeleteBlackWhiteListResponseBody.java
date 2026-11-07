@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DeleteBlackWhiteListResponseBody extends TeaModel {
     /**
+     * <p>The response code, which is used only to indicate whether the request is successful, similar to the Success parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data structure.</p>
+     */
     @NameInMap("Data")
     public DeleteBlackWhiteListResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class DeleteBlackWhiteListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -38,6 +47,12 @@ public class DeleteBlackWhiteListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +114,8 @@ public class DeleteBlackWhiteListResponseBody extends TeaModel {
 
     public static class DeleteBlackWhiteListResponseBodyData extends TeaModel {
         /**
+         * <p>The configuration content.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
          */
@@ -106,6 +123,8 @@ public class DeleteBlackWhiteListResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The ID of the gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>430</p>
          */
@@ -113,6 +132,8 @@ public class DeleteBlackWhiteListResponseBody extends TeaModel {
         public Long gatewayId;
 
         /**
+         * <p>The unique ID of the gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-9cdcf8e4f58144059e73ff4c5ef9****</p>
          */
@@ -120,6 +141,8 @@ public class DeleteBlackWhiteListResponseBody extends TeaModel {
         public String gatewayUniqueId;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-08-10 20:22:34</p>
          */
@@ -127,6 +150,8 @@ public class DeleteBlackWhiteListResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-08-10 20:22:34</p>
          */
@@ -134,6 +159,8 @@ public class DeleteBlackWhiteListResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The ID of the blacklists and whitelists entry.</p>
+         * 
          * <strong>example:</strong>
          * <p>120</p>
          */
@@ -141,6 +168,8 @@ public class DeleteBlackWhiteListResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Indicates whether the entry is a whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -148,6 +177,8 @@ public class DeleteBlackWhiteListResponseBody extends TeaModel {
         public Boolean isWhite;
 
         /**
+         * <p>Deprecated.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -155,6 +186,16 @@ public class DeleteBlackWhiteListResponseBody extends TeaModel {
         public Long resourceId;
 
         /**
+         * <p>The granularity at which the blacklist or whitelist takes effect. Valid values:</p>
+         * <ul>
+         * <li><p>GATEWAY: gateway-wide</p>
+         * </li>
+         * <li><p>DOMAIN: domain name</p>
+         * </li>
+         * <li><p>ROUTE: route</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>GATEWAY</p>
          */
@@ -162,6 +203,14 @@ public class DeleteBlackWhiteListResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The enabling status. Valid values:</p>
+         * <ul>
+         * <li><p>0: disabled</p>
+         * </li>
+         * <li><p>1: enabled</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -169,6 +218,8 @@ public class DeleteBlackWhiteListResponseBody extends TeaModel {
         public Boolean status;
 
         /**
+         * <p>Deprecated. A fixed value.</p>
+         * 
          * <strong>example:</strong>
          * <p>IP</p>
          */

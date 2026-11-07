@@ -4,10 +4,15 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListGatewayCircuitBreakerRuleResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DC34E4A3-5F1C-4E40-86EA-02EDF967****</p>
      */
@@ -37,6 +42,10 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
 
     public static class ListGatewayCircuitBreakerRuleResponseBodyDataResult extends TeaModel {
         /**
+         * <p>The Web fallback behavior type.</p>
+         * <p>0: Return specified content.</p>
+         * <p>1: Redirect to a specified page.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -44,6 +53,10 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer behaviorType;
 
         /**
+         * <p>The encoding type.</p>
+         * <p>0: Plain text</p>
+         * <p>1: JSON</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -51,6 +64,10 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer bodyEncoding;
 
         /**
+         * <p>Whether to enable.</p>
+         * <p>0: Not enabled.</p>
+         * <p>1: Enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -58,6 +75,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer enable;
 
         /**
+         * <p>The gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>11919</p>
          */
@@ -65,6 +84,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Long gatewayId;
 
         /**
+         * <p>The unique ID of the gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-5017305290e14centbrveca****</p>
          */
@@ -72,16 +93,26 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public String gatewayUniqueId;
 
         /**
+         * <p>The circuit breaker rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>467</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The filter rule id</p>
+         */
         @NameInMap("IdList")
         public java.util.List<Long> idList;
 
         /**
+         * <p>The threshold conversion mode.</p>
+         * <p>0: Single machine.</p>
+         * <p>1: Cluster.</p>
+         * <p>2: Cluster to single machine.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -89,6 +120,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer limitMode;
 
         /**
+         * <p>The slow call threshold in slow call pattern.</p>
+         * 
          * <strong>example:</strong>
          * <p>14</p>
          */
@@ -96,6 +129,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer maxAllowedMs;
 
         /**
+         * <p>The minimum number of requests to trigger circuit breaking.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -103,6 +138,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer minRequestAmount;
 
         /**
+         * <p>The circuit breaking recovery duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -110,6 +147,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer recoveryTimeoutSec;
 
         /**
+         * <p>The custom header, input as key-value pairs.</p>
+         * 
          * <strong>example:</strong>
          * <p>key=value</p>
          */
@@ -117,6 +156,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public String responseAdditionalHeaders;
 
         /**
+         * <p>The HTTP response text.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -124,6 +165,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public String responseContentBody;
 
         /**
+         * <p>The redirect URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>www.******.com</p>
          */
@@ -131,6 +174,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public String responseRedirectUrl;
 
         /**
+         * <p>The HTTP status code.</p>
+         * 
          * <strong>example:</strong>
          * <p>204</p>
          */
@@ -138,6 +183,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer responseStatusCode;
 
         /**
+         * <p>The route ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3091</p>
          */
@@ -145,6 +192,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Long routeId;
 
         /**
+         * <p>The route name.</p>
+         * 
          * <strong>example:</strong>
          * <p>routeName</p>
          */
@@ -152,6 +201,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public String routeName;
 
         /**
+         * <p>The circuit breaking statistics duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -159,6 +210,10 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer statDurationSec;
 
         /**
+         * <p>The threshold pattern.</p>
+         * <p>0: Slow call pattern.</p>
+         * <p>1: Exception pattern.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -166,6 +221,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer strategy;
 
         /**
+         * <p>The percentage to trigger circuit breaking.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -341,6 +398,10 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
 
     public static class ListGatewayCircuitBreakerRuleResponseBodyDataResults extends TeaModel {
         /**
+         * <p>The Web fallback behavior type.</p>
+         * <p>0: Return specified content</p>
+         * <p>1: Redirect to a specified page</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -348,6 +409,10 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer behaviorType;
 
         /**
+         * <p>The encoding type.</p>
+         * <p>0: Plain text</p>
+         * <p>1: JSON</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -355,6 +420,10 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer bodyEncoding;
 
         /**
+         * <p>Whether to enable.</p>
+         * <p>0: Not enabled.</p>
+         * <p>1: Enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -362,6 +431,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer enable;
 
         /**
+         * <p>The gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>11919</p>
          */
@@ -369,6 +440,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Long gatewayId;
 
         /**
+         * <p>The unique ID of the gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-1ee34548c68f4778a25c05abd657****</p>
          */
@@ -376,16 +449,26 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public String gatewayUniqueId;
 
         /**
+         * <p>The circuit breaker rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>467</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The filter rule id</p>
+         */
         @NameInMap("IdList")
         public java.util.List<Long> idList;
 
         /**
+         * <p>The threshold conversion mode.</p>
+         * <p>0: Single machine.</p>
+         * <p>1: Cluster.</p>
+         * <p>2: Cluster to single machine.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -393,6 +476,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer limitMode;
 
         /**
+         * <p>The slow call threshold in slow call pattern.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -400,6 +485,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer maxAllowedMs;
 
         /**
+         * <p>The minimum number of requests to trigger circuit breaking.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -407,6 +494,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer minRequestAmount;
 
         /**
+         * <p>The circuit breaking recovery duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -414,6 +503,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer recoveryTimeoutSec;
 
         /**
+         * <p>The custom header, input as key-value pairs.</p>
+         * 
          * <strong>example:</strong>
          * <p>key=value</p>
          */
@@ -421,6 +512,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public String responseAdditionalHeaders;
 
         /**
+         * <p>The HTTP response text.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -428,6 +521,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public String responseContentBody;
 
         /**
+         * <p>The redirect URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>www.******.com</p>
          */
@@ -435,6 +530,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public String responseRedirectUrl;
 
         /**
+         * <p>The HTTP status code.</p>
+         * 
          * <strong>example:</strong>
          * <p>204</p>
          */
@@ -442,6 +539,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer responseStatusCode;
 
         /**
+         * <p>The route ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3450</p>
          */
@@ -449,6 +548,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Long routeId;
 
         /**
+         * <p>The route name.</p>
+         * 
          * <strong>example:</strong>
          * <p>routeName</p>
          */
@@ -456,6 +557,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public String routeName;
 
         /**
+         * <p>The circuit breaking statistics duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -463,6 +566,10 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer statDurationSec;
 
         /**
+         * <p>The threshold pattern.</p>
+         * <p>0: Slow call pattern.</p>
+         * <p>1: Exception pattern.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -470,6 +577,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer strategy;
 
         /**
+         * <p>The percentage to trigger circuit breaking.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -645,6 +754,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
 
     public static class ListGatewayCircuitBreakerRuleResponseBodyData extends TeaModel {
         /**
+         * <p>The page number of the instance list</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -652,19 +763,29 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of rows per page set during input</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The returned result.</p>
+         */
         @NameInMap("Result")
         public java.util.List<ListGatewayCircuitBreakerRuleResponseBodyDataResult> result;
 
+        /**
+         * <p>The returned result collection.</p>
+         */
         @NameInMap("Results")
         public java.util.List<ListGatewayCircuitBreakerRuleResponseBodyDataResults> results;
 
         /**
+         * <p>The total number of instances queried</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */

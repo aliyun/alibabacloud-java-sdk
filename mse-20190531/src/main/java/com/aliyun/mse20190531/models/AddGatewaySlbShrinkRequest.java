@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class AddGatewaySlbShrinkRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned information. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class AddGatewaySlbShrinkRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
-     * <p>The HTTP port number (virtual service group).</p>
+     * <p>The HTTP port (virtual service group).</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -37,7 +37,7 @@ public class AddGatewaySlbShrinkRequest extends TeaModel {
     public Integer httpPort;
 
     /**
-     * <p>The HTTPS port number (virtual service group).</p>
+     * <p>The HTTPS port (virtual service group).</p>
      * 
      * <strong>example:</strong>
      * <p>443</p>
@@ -55,7 +55,7 @@ public class AddGatewaySlbShrinkRequest extends TeaModel {
     public String httpsVServerGroupId;
 
     /**
-     * <p>The service weight.</p>
+     * <p>The weight of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -64,7 +64,7 @@ public class AddGatewaySlbShrinkRequest extends TeaModel {
     public Integer serviceWeight;
 
     /**
-     * <p>The ID of the SLB instance.</p>
+     * <p>The SLB ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,10 +74,10 @@ public class AddGatewaySlbShrinkRequest extends TeaModel {
     public String slbId;
 
     /**
-     * <p>The type of the service source. Valid values:</p>
+     * <p>The type. Valid values:</p>
      * <ul>
-     * <li>PUB_NET: Internet</li>
-     * <li>PRIVATE_NET: VPC</li>
+     * <li>PUB_NET: Internet.</li>
+     * <li>PRIVATE_NET: Private network.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,7 +96,7 @@ public class AddGatewaySlbShrinkRequest extends TeaModel {
     public String VServerGroupId;
 
     /**
-     * <p>The SLB monitoring information.</p>
+     * <p>The SLB listener information.</p>
      */
     @NameInMap("VServiceList")
     public String VServiceListShrink;

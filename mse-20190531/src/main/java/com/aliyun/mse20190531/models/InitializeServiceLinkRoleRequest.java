@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class InitializeServiceLinkRoleRequest extends TeaModel {
     /**
+     * <p>The language in which the returned results are displayed. Valid values: zh (default): Chinese. en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class InitializeServiceLinkRoleRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The name of the server-linked role. Set this parameter to AliyunServiceRoleForMSE</p>
+     * 
      * <strong>example:</strong>
      * <p>AliyunServiceRoleForMSE</p>
      */
@@ -19,6 +23,8 @@ public class InitializeServiceLinkRoleRequest extends TeaModel {
     public String roleName;
 
     /**
+     * <p>This parameter is reserved and not in use.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */

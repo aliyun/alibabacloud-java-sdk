@@ -7,8 +7,10 @@ public class UpdateGatewayRouteRetryShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class UpdateGatewayRouteRetryShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the gateway.</p>
+     * <p>The gateway ID.</p>
      * 
      * <strong>example:</strong>
      * <p>501</p>
@@ -45,7 +47,7 @@ public class UpdateGatewayRouteRetryShrinkRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The information about the retry policy.</p>
+     * <p>The retry policy.</p>
      */
     @NameInMap("RetryJSON")
     public String retryJSONShrink;

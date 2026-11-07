@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListZooKeeperSaslUserRequest extends TeaModel {
     /**
+     * <p>The language of the returned results. Valid values: zh (default): Chinese, en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,7 @@ public class ListZooKeeperSaslUserRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

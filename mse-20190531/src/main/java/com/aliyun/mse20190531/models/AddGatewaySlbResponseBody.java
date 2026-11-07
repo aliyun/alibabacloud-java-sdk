@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddGatewaySlbResponseBody extends TeaModel {
     /**
-     * <p>The response code returned.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class AddGatewaySlbResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>lb-uf6dqr4ondqi5w3df7hdf</p>
@@ -23,7 +23,7 @@ public class AddGatewaySlbResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,20 +32,20 @@ public class AddGatewaySlbResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * <ul>
      * <li>If the request is successful, a success message is returned.</li>
-     * <li>If the request fails, an error message is returned.</li>
+     * <li>If the request fails, the cause of the failure is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>The request is successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
@@ -54,10 +54,10 @@ public class AddGatewaySlbResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>

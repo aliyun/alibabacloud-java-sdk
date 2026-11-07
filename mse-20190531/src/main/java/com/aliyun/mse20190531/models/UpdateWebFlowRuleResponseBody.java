@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateWebFlowRuleResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public UpdateWebFlowRuleResponseBodyData data;
 
     /**
+     * <p>The message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>54973C90-F379-4372-9AA5-053A3F7****</p>
      */
@@ -29,6 +38,14 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +99,8 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
 
     public static class UpdateWebFlowRuleResponseBodyData extends TeaModel {
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>hkhon1XXXX@54e1f42f37cXXXX</p>
          */
@@ -89,6 +108,8 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>spring-cloud-a</p>
          */
@@ -96,6 +117,8 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The number of additional requests allowed for burst requests. The effect is equivalent to the maximum number of tokens for the token bucket algorithm.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -103,6 +126,14 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
         public Integer burst;
 
         /**
+         * <p>The flow control method. Valid values:</p>
+         * <ul>
+         * <li><p>0: fast failure</p>
+         * </li>
+         * <li><p>2: wait in queue</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -110,6 +141,14 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
         public Integer controlBehavior;
 
         /**
+         * <p>The rule status. Valid values:</p>
+         * <ul>
+         * <li><p>true (enabled)</p>
+         * </li>
+         * <li><p>false (disabled)</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -117,6 +156,8 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -124,6 +165,8 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The timeout period for queuing when the ControlBehavior parameter is set to 2. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -131,6 +174,11 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
         public Integer maxQueueingTimeMs;
 
         /**
+         * <p>The threshold type. Valid values:</p>
+         * <ul>
+         * <li>1: number of requests</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -138,6 +186,8 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
         public Integer metricType;
 
         /**
+         * <p>The namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -145,6 +195,18 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
         public String namespace;
 
         /**
+         * <p>The parameter description item, which is a JSON string containing the following key-value pairs:</p>
+         * <ul>
+         * <li><p>parseStrategy: the parameter property (0: client IP address. 1: remote host. 2: header. 3: URL parameter)</p>
+         * </li>
+         * <li><p>fieldName: the header name or URL parameter name. You must specify this key only if parseStrategy is set to 2 or 3</p>
+         * </li>
+         * <li><p>matchStrategy: the method to match the property value. You must specify this key only if parseStrategy is set to 2 or 3 and the property value is matched. Valid values: 0 (exact match), 2 (regular expression match), and 3 (substring match)</p>
+         * </li>
+         * <li><p>pattern: the match string. You must specify this key only if parseStrategy is set to 2 or 3 and the property value is matched</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;fieldName&quot;:&quot;testKey&quot;,&quot;matchStrategy&quot;:2,&quot;parseStrategy&quot;:2,&quot;pattern&quot;:&quot;testValue&quot;}</p>
          */
@@ -152,6 +214,8 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
         public String paramItem;
 
         /**
+         * <p>The region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -159,6 +223,11 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The resource mode. Valid values:</p>
+         * <ul>
+         * <li>0: resource name mode</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -166,6 +235,8 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
         public Integer reourceMode;
 
         /**
+         * <p>The interface resource name.</p>
+         * 
          * <strong>example:</strong>
          * <p>/flow</p>
          */
@@ -173,6 +244,8 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
         public String resource;
 
         /**
+         * <p>The length of the time window. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -180,6 +253,8 @@ public class UpdateWebFlowRuleResponseBody extends TeaModel {
         public Integer statIntervalMs;
 
         /**
+         * <p>The threshold.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */

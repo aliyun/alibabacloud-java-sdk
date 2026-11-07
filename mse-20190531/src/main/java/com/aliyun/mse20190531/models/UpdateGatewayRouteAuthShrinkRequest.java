@@ -18,7 +18,7 @@ public class UpdateGatewayRouteAuthShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The authentication configurations.</p>
+     * <p>The authentication configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AuthJSON")

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteGatewayRouteResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DeleteGatewayRouteResponseBodyData data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,10 +29,10 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request is successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -47,9 +47,9 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>true</code>: The request is successful.</li>
      * <li><code>false</code>: The request failed.</li>
      * </ul>
      * 
@@ -114,7 +114,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
 
     public static class DeleteGatewayRouteResponseBodyData extends TeaModel {
         /**
-         * <p>The default service ID.</p>
+         * <p>The ID of the default service.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -132,7 +132,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
         public Long gatewayId;
 
         /**
-         * <p>The unique ID of the gateway.</p>
+         * <p>The unique identifier of the gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-5017305290e14cebbrvec4a5****</p>
@@ -186,7 +186,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
         public String predicates;
 
         /**
-         * <p>The sequence number of the route.</p>
+         * <p>The route order.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -195,14 +195,14 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
         public Integer routeOrder;
 
         /**
-         * <p>The status of the route. Valid values:</p>
+         * <p>The route status. Valid values:</p>
          * <ul>
-         * <li>0: unpublished</li>
-         * <li>2: publishing</li>
-         * <li>3: published</li>
-         * <li>4: editing (updated but not published)</li>
-         * <li>5: unpublishing</li>
-         * <li>6: unavailable</li>
+         * <li>0: Unpublished.</li>
+         * <li>2: Publishing.</li>
+         * <li>3: Published.</li>
+         * <li>4: Editing (unpublished updates).</li>
+         * <li>5: Going offline.</li>
+         * <li>6: Unavailable.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddZooKeeperSaslUserRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values: zh (default): Chinese, en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,7 @@ public class AddZooKeeperSaslUserRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class AddZooKeeperSaslUserRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Specifies whether to restart the cluster to immediately load the SASL users.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -28,6 +33,7 @@ public class AddZooKeeperSaslUserRequest extends TeaModel {
     public Boolean reload;
 
     /**
+     * <p>The list of SASL users to add.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SaslUser")
@@ -72,6 +78,8 @@ public class AddZooKeeperSaslUserRequest extends TeaModel {
 
     public static class AddZooKeeperSaslUserRequestSaslUser extends TeaModel {
         /**
+         * <p>The description of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>description</p>
          */
@@ -79,6 +87,8 @@ public class AddZooKeeperSaslUserRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>The password.</p>
+         * 
          * <strong>example:</strong>
          * <p>traaqwrasdf</p>
          */
@@ -86,6 +96,8 @@ public class AddZooKeeperSaslUserRequest extends TeaModel {
         public String password;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>user</p>
          */

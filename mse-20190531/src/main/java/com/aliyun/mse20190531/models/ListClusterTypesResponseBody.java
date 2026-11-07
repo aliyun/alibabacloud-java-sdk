@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClusterTypesResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,15 +14,15 @@ public class ListClusterTypesResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data entries returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListClusterTypesResponseBodyData> data;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic error message, which is used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> error message.</p>
      * <blockquote>
-     * <p>If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the specified <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class ListClusterTypesResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-100-000</p>
@@ -41,7 +41,7 @@ public class ListClusterTypesResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -50,16 +50,16 @@ public class ListClusterTypesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request was successfully processed.</p>
+     * <p>The request was processed successfully</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>821B5B05-8919-5FBB-BA75-417BFC093EB8</p>
@@ -150,11 +150,17 @@ public class ListClusterTypesResponseBody extends TeaModel {
     }
 
     public static class ListClusterTypesResponseBodyData extends TeaModel {
+        /**
+         * <p>The code of the engine type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZooKeeper</p>
+         */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The type of the MSE engine that can be activated.</p>
+         * <p>The Microservices Engine (MSE) engine type that can be activated.</p>
          * 
          * <strong>example:</strong>
          * <p>Zookeeper</p>

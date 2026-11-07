@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveApplicationResponseBody extends TeaModel {
     /**
+     * <p>The deletion result.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class RemoveApplicationResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>NoPermission</p>
      */
@@ -19,6 +23,8 @@ public class RemoveApplicationResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,6 +32,8 @@ public class RemoveApplicationResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>abcde-12345</p>
      */
@@ -33,6 +41,8 @@ public class RemoveApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

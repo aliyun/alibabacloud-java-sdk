@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateIsolationRuleResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The rule information.</p>
+     */
     @NameInMap("Data")
     public UpdateIsolationRuleResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class UpdateIsolationRuleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>4E9FDCFE-0738-493B-B801-82BDFBCB****</p>
      */
@@ -29,6 +38,8 @@ public class UpdateIsolationRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class UpdateIsolationRuleResponseBody extends TeaModel {
 
     public static class UpdateIsolationRuleResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>hkhon1po62@c3df23522bXXXXX</p>
          */
@@ -89,6 +102,8 @@ public class UpdateIsolationRuleResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>The name of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>spring-cloud-a</p>
          */
@@ -96,6 +111,8 @@ public class UpdateIsolationRuleResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>Specifies whether the rule is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -103,16 +120,26 @@ public class UpdateIsolationRuleResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The ID of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The source application of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
+         */
         @NameInMap("LimitApp")
         public String limitApp;
 
         /**
+         * <p>The microservice namespace to which the application belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -120,6 +147,8 @@ public class UpdateIsolationRuleResponseBody extends TeaModel {
         public String namespace;
 
         /**
+         * <p>The application resource to which the rule applies. This value must be the same as the API operation name displayed in the API details on the console.</p>
+         * 
          * <strong>example:</strong>
          * <p>/a</p>
          */
@@ -127,6 +156,8 @@ public class UpdateIsolationRuleResponseBody extends TeaModel {
         public String resource;
 
         /**
+         * <p>The concurrency threshold of the isolation rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */

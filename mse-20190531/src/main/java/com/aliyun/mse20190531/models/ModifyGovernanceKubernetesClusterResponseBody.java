@@ -35,7 +35,7 @@ public class ModifyGovernanceKubernetesClusterResponseBody extends TeaModel {
      * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;

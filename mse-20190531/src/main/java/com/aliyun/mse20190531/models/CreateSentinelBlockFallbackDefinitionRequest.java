@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSentinelBlockFallbackDefinitionRequest extends TeaModel {
     /**
+     * <p>The language in which you want to display the results. Valid values: zh and en. zh is the default value, which indicates Chinese. en indicates English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class CreateSentinelBlockFallbackDefinitionRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The application ID, which can be omitted.</p>
+     * 
      * <strong>example:</strong>
      * <p>abcde@12345</p>
      */
@@ -19,6 +23,8 @@ public class CreateSentinelBlockFallbackDefinitionRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example-app</p>
      */
@@ -26,6 +32,8 @@ public class CreateSentinelBlockFallbackDefinitionRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The behavior details.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;webFallbackMode&quot;:0,&quot;webRespMessage&quot;:&quot;{}&quot;,&quot;webRespStatusCode&quot;:429,&quot;webRespContentType&quot;:0}</p>
      */
@@ -33,6 +41,8 @@ public class CreateSentinelBlockFallbackDefinitionRequest extends TeaModel {
     public String fallbackBehavior;
 
     /**
+     * <p>The programming language, such as Java or Go.</p>
+     * 
      * <strong>example:</strong>
      * <p>JAVA</p>
      */
@@ -40,6 +50,8 @@ public class CreateSentinelBlockFallbackDefinitionRequest extends TeaModel {
     public String language;
 
     /**
+     * <p>The behavior name.</p>
+     * 
      * <strong>example:</strong>
      * <p>MyFallback</p>
      */
@@ -47,6 +59,8 @@ public class CreateSentinelBlockFallbackDefinitionRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The name of the Microservices Engine (MSE) namespace.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -54,6 +68,8 @@ public class CreateSentinelBlockFallbackDefinitionRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -61,6 +77,8 @@ public class CreateSentinelBlockFallbackDefinitionRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The target resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>1 Web
      * 2 Rpc</p>
@@ -69,6 +87,8 @@ public class CreateSentinelBlockFallbackDefinitionRequest extends TeaModel {
     public Integer resourceClassification;
 
     /**
+     * <p>The scenario, uniformly fill in default.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -76,6 +96,8 @@ public class CreateSentinelBlockFallbackDefinitionRequest extends TeaModel {
     public String scenario;
 
     /**
+     * <p>Redundant parameter, currently ignored.</p>
+     * 
      * <strong>example:</strong>
      * <p>edasmsc</p>
      */

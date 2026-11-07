@@ -7,8 +7,8 @@ public class ListClustersRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ListClustersRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The alias of the instance. Fuzzy match is supported.</p>
+     * <p>The name of the cluster. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>cluster</p>
@@ -26,11 +26,17 @@ public class ListClustersRequest extends TeaModel {
     @NameInMap("ClusterAliasName")
     public String clusterAliasName;
 
+    /**
+     * <p>The key ID. If the cluster is a Nacos cluster, this parameter is used to query instances bound to the specified key ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key-hzz67774641bsp21vhj4h</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +46,7 @@ public class ListClustersRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of clusters to return on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +56,7 @@ public class ListClustersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
+     * <p>The region ID of the cluster. The region must be supported by Microservices Engine (MSE).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +66,7 @@ public class ListClustersRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>The extended request parameters in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -69,7 +75,7 @@ public class ListClustersRequest extends TeaModel {
     public String requestPars;
 
     /**
-     * <p>The ID of the resource group. For more information about resource groups, see the topic &quot;View basic information of a resource group.&quot;</p>
+     * <p>The ID of the resource group. For more information, see View basic information of a resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxbzafebvvfa</p>
@@ -78,11 +84,17 @@ public class ListClustersRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The list of tags. A maximum number of 20 tags are supported.</p>
+     * <p>The list of tags. A maximum of 20 tags can be specified.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListClustersRequestTag> tag;
 
+    /**
+     * <p>The VPC ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1t50e045b5g7i3p****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -173,7 +185,7 @@ public class ListClustersRequest extends TeaModel {
 
     public static class ListClustersRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -182,7 +194,7 @@ public class ListClustersRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>prd</p>

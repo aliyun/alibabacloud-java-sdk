@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteGatewayCircuitBreakerRuleResponseBody extends TeaModel {
     /**
+     * <p>The response data.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -12,6 +14,8 @@ public class DeleteGatewayCircuitBreakerRuleResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>52BA6DA6-A702-4362-A32F-DFF79655****</p>
      */

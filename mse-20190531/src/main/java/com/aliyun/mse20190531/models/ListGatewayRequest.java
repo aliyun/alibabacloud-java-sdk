@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewayRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned information. Valid values:</p>
      * <ul>
      * <li>zh: Chinese</li>
      * <li>en: English</li>
@@ -18,7 +18,7 @@ public class ListGatewayRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>Specifies whether to enable the sorting feature. This feature is not available.</p>
+     * <p>The sorting order. This parameter is currently not used.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -27,7 +27,7 @@ public class ListGatewayRequest extends TeaModel {
     public Boolean descSort;
 
     /**
-     * <p>The details of parameters.</p>
+     * <p>The filter parameters.</p>
      */
     @NameInMap("FilterParams")
     public ListGatewayRequestFilterParams filterParams;
@@ -42,7 +42,7 @@ public class ListGatewayRequest extends TeaModel {
     public String orderItem;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +51,7 @@ public class ListGatewayRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of instances per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -114,7 +114,7 @@ public class ListGatewayRequest extends TeaModel {
 
     public static class ListGatewayRequestFilterParams extends TeaModel {
         /**
-         * <p>The type of the gateway.</p>
+         * <p>The gateway type.</p>
          * 
          * <strong>example:</strong>
          * <p>Ingress</p>
@@ -132,7 +132,7 @@ public class ListGatewayRequest extends TeaModel {
         public String gatewayUniqueId;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mse_ingresspre-cn-****</p>
@@ -141,7 +141,7 @@ public class ListGatewayRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The tag of the instance.</p>
+         * <p>The resource tag.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;key&quot;:&quot;tagkey&quot;,&quot;value&quot;:&quot;tagvalue&quot;}]</p>
@@ -150,7 +150,7 @@ public class ListGatewayRequest extends TeaModel {
         public String mseTag;
 
         /**
-         * <p>The name of the gateway.</p>
+         * <p>The gateway name.</p>
          * 
          * <strong>example:</strong>
          * <p>rutain-test</p>
@@ -159,7 +159,7 @@ public class ListGatewayRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-7y2uye*****</p>
@@ -168,7 +168,7 @@ public class ListGatewayRequest extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp13hhyjntbab7w****</p>

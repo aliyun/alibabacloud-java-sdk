@@ -7,8 +7,10 @@ public class ListClusterHealthCheckTaskRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class ListClusterHealthCheckTaskRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>mse_prepaid_public_cn-7pp2o4wfx01</p>
@@ -30,13 +32,13 @@ public class ListClusterHealthCheckTaskRequest extends TeaModel {
      * <p>The number of the page to return.</p>
      * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>1</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,7 +47,7 @@ public class ListClusterHealthCheckTaskRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region in which the instance resides.</p>
+     * <p>The region in which the cluster resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -54,7 +56,7 @@ public class ListClusterHealthCheckTaskRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>The extended request parameter in the JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

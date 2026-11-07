@@ -7,8 +7,10 @@ public class UpdateGatewayRouteRetryRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class UpdateGatewayRouteRetryRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the gateway.</p>
+     * <p>The gateway ID.</p>
      * 
      * <strong>example:</strong>
      * <p>501</p>
@@ -45,7 +47,7 @@ public class UpdateGatewayRouteRetryRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The information about the retry policy.</p>
+     * <p>The retry policy.</p>
      */
     @NameInMap("RetryJSON")
     public UpdateGatewayRouteRetryRequestRetryJSON retryJSON;
@@ -112,13 +114,13 @@ public class UpdateGatewayRouteRetryRequest extends TeaModel {
         public java.util.List<String> httpCodes;
 
         /**
-         * <p>The retry conditions.</p>
+         * <p>The conditions that trigger a retry.</p>
          */
         @NameInMap("RetryOn")
         public java.util.List<String> retryOn;
 
         /**
-         * <p>The status of the policy.</p>
+         * <p>The status of the retry policy.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>

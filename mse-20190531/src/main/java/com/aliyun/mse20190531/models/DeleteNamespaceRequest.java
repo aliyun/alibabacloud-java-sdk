@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteNamespaceRequest extends TeaModel {
     /**
-     * <p>The language in which you want to display the results. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.</p>
+     * <p>The language in which the response is displayed. Valid values: zh (default): Chinese, en: English</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -14,6 +14,8 @@ public class DeleteNamespaceRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The name of the MSE namespace to be deleted.</p>
+     * 
      * <strong>example:</strong>
      * <p>prod</p>
      */
@@ -21,6 +23,8 @@ public class DeleteNamespaceRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The region of the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteZnodeResponseBody extends TeaModel {
     /**
-     * <p>The details of the data.</p>
+     * <p>The data overview.</p>
      */
     @NameInMap("Data")
     public DeleteZnodeResponseBodyData data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-100-000</p>
@@ -20,7 +20,7 @@ public class DeleteZnodeResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,16 +29,16 @@ public class DeleteZnodeResponseBody extends TeaModel {
     public String httpCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request is successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DC34E4A3-5F1C-4E40-86EA-02EDF967****</p>
@@ -47,9 +47,9 @@ public class DeleteZnodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>The request result. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>true</code>: The request succeeded.</li>
      * <li><code>false</code>: The request failed.</li>
      * </ul>
      * 
@@ -114,7 +114,7 @@ public class DeleteZnodeResponseBody extends TeaModel {
 
     public static class DeleteZnodeResponseBodyData extends TeaModel {
         /**
-         * <p>The data of the node.</p>
+         * <p>The list of node data.</p>
          * 
          * <strong>example:</strong>
          * <p>cluster</p>
@@ -123,10 +123,10 @@ public class DeleteZnodeResponseBody extends TeaModel {
         public String data;
 
         /**
-         * <p>Indicates whether the node information was returned. Valid values:</p>
+         * <p>The node list information. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: The node information was returned.</li>
-         * <li><code>false</code>: The node information failed to be returned.</li>
+         * <li><code>true</code>: The information is returned successfully.</li>
+         * <li><code>false</code>: The information fails to be returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,7 +136,7 @@ public class DeleteZnodeResponseBody extends TeaModel {
         public Boolean dir;
 
         /**
-         * <p>The name of the node.</p>
+         * <p>The node name.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-bc1a29b0-160230875****-reg-center-0-1</p>
@@ -145,7 +145,7 @@ public class DeleteZnodeResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The path of the node.</p>
+         * <p>The node path.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListIsolationRulesRequest extends TeaModel {
     /**
+     * <p>The language in which you want the results to be displayed. Valid values: zh (default): Chinese. en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class ListIsolationRulesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>hkhon1po62@c3df23522bXXXXX</p>
      */
@@ -19,6 +23,7 @@ public class ListIsolationRulesRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class ListIsolationRulesRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The microservice namespace to which the application belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,8 @@ public class ListIsolationRulesRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The first page. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -44,6 +52,8 @@ public class ListIsolationRulesRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The page size. Default value: 6.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -51,6 +61,8 @@ public class ListIsolationRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Find protection rules for specified interface.</p>
+     * 
      * <strong>example:</strong>
      * <p>/a</p>
      */
@@ -58,6 +70,8 @@ public class ListIsolationRulesRequest extends TeaModel {
     public String resource;
 
     /**
+     * <p>Find protection rules that contain the interface keyword.</p>
+     * 
      * <strong>example:</strong>
      * <p>a</p>
      */

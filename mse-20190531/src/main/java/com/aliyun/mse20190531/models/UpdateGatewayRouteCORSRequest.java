@@ -7,9 +7,12 @@ public class UpdateGatewayRouteCORSRequest extends TeaModel {
     /**
      * <p>The language of the response. In compliance with <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>, the backend service must return a response based on the language used by the user.</p>
      * <ul>
-     * <li>No default value.</li>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US: English</li>
+     * <li><p>No default value.</p>
+     * </li>
+     * <li><p>zh-CN: Chinese</p>
+     * </li>
+     * <li><p>en-US: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

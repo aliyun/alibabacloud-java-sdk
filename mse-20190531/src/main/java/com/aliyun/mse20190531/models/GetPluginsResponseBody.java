@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPluginsResponseBody extends TeaModel {
     /**
-     * <p>The returned code.</p>
+     * <p>The code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class GetPluginsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data entries returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetPluginsResponseBodyData> data;
 
     /**
-     * <p>The dynamic part in the error message.</p>
+     * <p>The placeholder in the dynamic error message.</p>
      * 
      * <strong>example:</strong>
      * <p>code</p>
@@ -38,7 +38,7 @@ public class GetPluginsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -47,7 +47,7 @@ public class GetPluginsResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -56,7 +56,7 @@ public class GetPluginsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -65,7 +65,7 @@ public class GetPluginsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>03A3E2F4-6804-5663-9D5D-2EC47A1*****</p>
@@ -74,7 +74,7 @@ public class GetPluginsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -161,13 +161,15 @@ public class GetPluginsResponseBody extends TeaModel {
 
     public static class GetPluginsResponseBodyData extends TeaModel {
         /**
-         * <p>The type of the plug-in. Valid values:</p>
-         * <p>0: custom</p>
-         * <p>1: permission authorization</p>
-         * <p>2: security protection</p>
-         * <p>3: transmission protocol</p>
-         * <p>4: traffic control</p>
-         * <p>5: traffic observation</p>
+         * <p>The plug-in type. Valid values:</p>
+         * <ul>
+         * <li>0: Custom.</li>
+         * <li>1: Authentication and authorization.</li>
+         * <li>2: Security protection.</li>
+         * <li>3: Transport protocol.</li>
+         * <li>4: Traffic control.</li>
+         * <li>5: Traffic observability.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -176,16 +178,23 @@ public class GetPluginsResponseBody extends TeaModel {
         public Integer category;
 
         /**
-         * <p>The information about the plug-in configuration used for checking.</p>
+         * <p>The configuration validation.</p>
          * 
          * <strong>example:</strong>
-         * <p>\# The configuration includes the fields required for checking, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne</p>
+         * <h1>Validate required fields in the configuration. As shown in the following example, the plug-in configuration must contain the &quot;name&quot;, &quot;age&quot;, and &quot;friends&quot; fields.</h1>
+         * <p>name: John
+         * age: 18
+         * friends:</p>
+         * <ul>
+         * <li>David</li>
+         * <li>Anne</li>
+         * </ul>
          */
         @NameInMap("ConfigCheck")
         public String configCheck;
 
         /**
-         * <p>The ID of the plug-in.</p>
+         * <p>The plug-in ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -194,6 +203,8 @@ public class GetPluginsResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The latest version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
          */
@@ -201,6 +212,12 @@ public class GetPluginsResponseBody extends TeaModel {
         public String maxVersion;
 
         /**
+         * <p>The plug-in language. Valid values:</p>
+         * <ul>
+         * <li>0: Wasm plug-in.</li>
+         * <li>2: Lua plug-in.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -217,6 +234,8 @@ public class GetPluginsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Indicates whether the latest version is being published.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -224,12 +243,12 @@ public class GetPluginsResponseBody extends TeaModel {
         public Boolean newVersionPublishingFlag;
 
         /**
-         * <p>The execution stage of the plug-in.</p>
+         * <p>The plug-in execution phase. Valid values:</p>
          * <ul>
-         * <li>0: default stage</li>
-         * <li>1: authorization stage</li>
-         * <li>2: authentication stage</li>
-         * <li>3: statistics stage</li>
+         * <li>0: Default phase.</li>
+         * <li>1: Authentication phase.</li>
+         * <li>2: Authorization phase.</li>
+         * <li>3: Statistics phase.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -257,7 +276,12 @@ public class GetPluginsResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The publish status.</p>
+         * <p>The publish status. Valid values:</p>
+         * <ul>
+         * <li>0: Successful.</li>
+         * <li>1: Publishing.</li>
+         * <li>2: Failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -266,10 +290,10 @@ public class GetPluginsResponseBody extends TeaModel {
         public Integer publishState;
 
         /**
-         * <p>Indicates whether the plug-in is enabled.</p>
+         * <p>The enabling status. Valid values:</p>
          * <ul>
-         * <li>0: disabled</li>
-         * <li>1: enabled</li>
+         * <li>0: Disabled.</li>
+         * <li>1: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -279,19 +303,25 @@ public class GetPluginsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The summary of the plug-in.</p>
+         * <p>The plug-in summary.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a plug-in.</p>
+         * <p>This is a plug-in</p>
          */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>The English plug-in summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Authentication based on API Key.</p>
+         */
         @NameInMap("SummaryEn")
         public String summaryEn;
 
         /**
-         * <p>The version of the plug-in.</p>
+         * <p>The plug-in version.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -300,19 +330,19 @@ public class GetPluginsResponseBody extends TeaModel {
         public String version;
 
         /**
-         * <p>The URL of the Object Storage Service (OSS) bucket that stores the WebAssembly plug-in.</p>
+         * <p>The OSS object of the Wasm plug-in.</p>
          */
         @NameInMap("WasmFile")
         public String wasmFile;
 
         /**
-         * <p>The WebAssembly language. Valid values:</p>
+         * <p>The WebAssembly (Wasm) implementation language. Valid values:</p>
          * <ul>
-         * <li>0: C++</li>
-         * <li>1: TinyGo</li>
-         * <li>2: Rust</li>
-         * <li>3: AssemblyScript</li>
-         * <li>4: Zig</li>
+         * <li>0: C++.</li>
+         * <li>1: TinyGo.</li>
+         * <li>2: Rust.</li>
+         * <li>3: AssemblyScript.</li>
+         * <li>4: Zig.</li>
          * </ul>
          * 
          * <strong>example:</strong>

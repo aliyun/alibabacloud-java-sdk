@@ -1,3 +1,12 @@
+2026-11-07 Version: 7.24.1
+- Update API GetGatewayConfig: add response parameters Body.Data.LogRequestResponseConfig.
+- Update API GetGatewayDomainDetail: add response parameters Body.Data.EnableWaf.
+- Update API GetGatewayDomainDetail: add response parameters Body.Data.SupportWaf.
+- Update API ListGatewayDomain: add response parameters Body.Data.$.EnableWaf.
+- Update API ListGatewayDomain: add response parameters Body.Data.$.SupportWaf.
+- Update API UpdateGatewayDomain: add request parameters EnableWaf.
+
+
 2026-04-07 Version: 7.24.0
 - Support API AddZooKeeperSaslUser.
 - Support API ListZooKeeperSaslUser.

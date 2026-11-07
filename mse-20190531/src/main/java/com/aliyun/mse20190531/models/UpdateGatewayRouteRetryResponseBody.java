@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayRouteRetryResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class UpdateGatewayRouteRetryResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      * 
      * <strong>example:</strong>
      * <p>640</p>
@@ -23,7 +23,7 @@ public class UpdateGatewayRouteRetryResponseBody extends TeaModel {
     public Long data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class UpdateGatewayRouteRetryResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>You are not authorized to perform this operation.</p>
@@ -52,8 +52,10 @@ public class UpdateGatewayRouteRetryResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

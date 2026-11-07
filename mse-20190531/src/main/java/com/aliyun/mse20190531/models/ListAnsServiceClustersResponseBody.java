@@ -32,7 +32,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
      * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request was successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -49,8 +49,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -161,13 +163,16 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         /**
          * <p>The type of the health check. Valid values:</p>
          * <ul>
-         * <li>connection: connection status check</li>
-         * <li>tcp: TCP connection check</li>
-         * <li>http: HTTP connection check</li>
+         * <li><p>connection: connection status check</p>
+         * </li>
+         * <li><p>tcp: TCP connection check</p>
+         * </li>
+         * <li><p>http: HTTP connection check</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>connection</p>
+         * <p>tcp</p>
          */
         @NameInMap("CheckType")
         public String checkType;
@@ -301,7 +306,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
          * <p>The type of the health check.</p>
          * 
          * <strong>example:</strong>
-         * <p>Heartbeat Reporting</p>
+         * <p>tcp</p>
          */
         @NameInMap("HealthCheckerType")
         public String healthCheckerType;
@@ -421,8 +426,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the service is a temporary service. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: yes</li>
-         * <li><code>false</code>: no</li>
+         * <li><p><code>true</code>: yes</p>
+         * </li>
+         * <li><p><code>false</code>: no</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -479,9 +486,12 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         /**
          * <p>The source type of the service. Valid values:</p>
          * <ul>
-         * <li>console: The service was registered in the console.</li>
-         * <li>sdk: The service was registered by using the SDK.</li>
-         * <li>governance: The service was registered on Microservices Governance.</li>
+         * <li><p>console: The service was registered in the console.</p>
+         * </li>
+         * <li><p>sdk: The service was registered by using the SDK.</p>
+         * </li>
+         * <li><p>governance: The service was registered on Microservices Governance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -7,8 +7,8 @@ public class ListGatewayServiceRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ListGatewayServiceRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>Specifies whether to enable sorting.</p>
+     * <p>The sort order.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -27,13 +27,13 @@ public class ListGatewayServiceRequest extends TeaModel {
     public Boolean descSort;
 
     /**
-     * <p>The parameters that are used to specify filter conditions. The values of the parameters are in the format of {&quot;key1&quot;:&quot;value1&quot;}.</p>
+     * <p>The filter conditions in the format of {&quot;key1&quot;:&quot;value1&quot;}.</p>
      */
     @NameInMap("FilterParams")
     public ListGatewayServiceRequestFilterParams filterParams;
 
     /**
-     * <p>The item based on which entries are sorted.</p>
+     * <p>The sort attribute.</p>
      * 
      * <strong>example:</strong>
      * <p>GmtCreate</p>
@@ -42,7 +42,7 @@ public class ListGatewayServiceRequest extends TeaModel {
     public String orderItem;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +51,7 @@ public class ListGatewayServiceRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -123,7 +123,7 @@ public class ListGatewayServiceRequest extends TeaModel {
         public String gatewayUniqueId;
 
         /**
-         * <p>The group.</p>
+         * <p>The group name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -132,7 +132,7 @@ public class ListGatewayServiceRequest extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -141,7 +141,7 @@ public class ListGatewayServiceRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The namespace to which the service belongs.</p>
+         * <p>The namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>public</p>
@@ -150,7 +150,7 @@ public class ListGatewayServiceRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The protocol of the service.</p>
+         * <p>The Terms of Service. Valid values:</p>
          * <ul>
          * <li>HTTP</li>
          * <li>HTTPS</li>
@@ -166,7 +166,7 @@ public class ListGatewayServiceRequest extends TeaModel {
         public String serviceProtocol;
 
         /**
-         * <p>The type of the source.</p>
+         * <p>The source type.</p>
          * 
          * <strong>example:</strong>
          * <p>MSE</p>

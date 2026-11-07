@@ -18,7 +18,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The token used to start the next query.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kywps2Ezza3n8HAAzCCqsi</p>
@@ -27,7 +27,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,15 +37,15 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource IDs. You can specify a maximum of 50 resource IDs.</p>
+     * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li>CLUSTER: MSE instance</li>
+     * <li>CLUSTER: registration configuration center</li>
      * <li>GATEWAY: cloud-native gateway</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -57,7 +57,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of tags. A maximum number of 20 tags are supported.</p>
+     * <p>The tags. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -117,7 +117,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -126,7 +126,7 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>prd</p>

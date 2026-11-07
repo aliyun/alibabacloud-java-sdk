@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListGatewayFlowRuleRequest extends TeaModel {
     /**
+     * <p>The language in which the returned results are displayed. Valid values: zh (default): Chinese, en: English</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */

@@ -5,22 +5,35 @@ import com.aliyun.tea.*;
 
 public class CreateNamespaceShrinkRequest extends TeaModel {
     /**
+     * <p>The language in which you want the results to be displayed. Valid values: zh (default): Chinese. en: English</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The description of the namespace that you want to create for Microservices Governance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test namespace 1.</p>
+     */
     @NameInMap("Describe")
     public String describe;
 
     /**
+     * <p>The name of the namespace that you want to create for Microservices Governance.</p>
+     * 
      * <strong>example:</strong>
      * <p>myNamespace</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The tag.</p>
+     */
     @NameInMap("Tag")
     public String tagShrink;
 

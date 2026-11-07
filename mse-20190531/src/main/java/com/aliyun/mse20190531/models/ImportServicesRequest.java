@@ -7,8 +7,8 @@ public class ImportServicesRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,12 +17,30 @@ public class ImportServicesRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The Function Compute service alias. This parameter is required when the service source is Function Compute.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-alias</p>
+     */
     @NameInMap("FcAlias")
     public String fcAlias;
 
+    /**
+     * <p>The Function Compute service name. This parameter is required when the service source is Function Compute.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>guide</p>
+     */
     @NameInMap("FcServiceName")
     public String fcServiceName;
 
+    /**
+     * <p>The Function Compute service version. This parameter is required when the service source is Function Compute.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LATEST</p>
+     */
     @NameInMap("FcVersion")
     public String fcVersion;
 
@@ -36,7 +54,7 @@ public class ImportServicesRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
-     * <p>The information about services.</p>
+     * <p>The service list.</p>
      * 
      * <strong>example:</strong>
      * <p>DNS</p>
@@ -45,6 +63,8 @@ public class ImportServicesRequest extends TeaModel {
     public java.util.List<ImportServicesRequestServiceList> serviceList;
 
     /**
+     * <p>The service source ID. This parameter is used when you add a service from a specified source.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -54,10 +74,10 @@ public class ImportServicesRequest extends TeaModel {
     /**
      * <p>The service source. Valid values:</p>
      * <ul>
-     * <li>MSE: MSE Nacos instance</li>
-     * <li>K8s: ACK cluster</li>
-     * <li>VIP: fixed address</li>
-     * <li>DNS: DNS domain</li>
+     * <li>MSE: Microservices Engine (MSE Nacos).</li>
+     * <li>K8s: Container Service for Kubernetes (ACK).</li>
+     * <li>VIP: Fixed address.</li>
+     * <li>DNS: DNS domain name.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,13 +87,18 @@ public class ImportServicesRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The Transport Layer Security (TLS) settings. Valid values:</p>
+     * <p>The TLS settings.</p>
      * <ul>
-     * <li>mode: TLS mode</li>
-     * <li>certId: certificate ID</li>
-     * <li>caCertId: CA certificate ID</li>
-     * <li>caCertContent: CA certificate public key</li>
-     * <li>sni: service name identification</li>
+     * <li><p>TLS pattern: mode</p>
+     * </li>
+     * <li><p>Certificate ID: certId</p>
+     * </li>
+     * <li><p>CA certificate ID: caCertId</p>
+     * </li>
+     * <li><p>CA certificate public key: caCertContent</p>
+     * </li>
+     * <li><p>Service name identity: sni</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -165,11 +190,14 @@ public class ImportServicesRequest extends TeaModel {
     }
 
     public static class ImportServicesRequestServiceList extends TeaModel {
+        /**
+         * <p>The list of DNS servers (for DNS domain name services only).</p>
+         */
         @NameInMap("DnsServerList")
         public java.util.List<String> dnsServerList;
 
         /**
-         * <p>The group.</p>
+         * <p>The group name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -178,13 +206,13 @@ public class ImportServicesRequest extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The IP addresses of the service.</p>
+         * <p>The list of IP addresses.</p>
          */
         @NameInMap("Ips")
         public java.util.List<String> ips;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -201,11 +229,17 @@ public class ImportServicesRequest extends TeaModel {
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The SAE application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
+         */
         @NameInMap("SaeAppId")
         public String saeAppId;
 
         /**
-         * <p>The port of the service.</p>
+         * <p>The service port.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -214,7 +248,7 @@ public class ImportServicesRequest extends TeaModel {
         public Long servicePort;
 
         /**
-         * <p>The protocol of the service.</p>
+         * <p>The service protocol version.</p>
          * 
          * <strong>example:</strong>
          * <p>GRPC, HTTP</p>

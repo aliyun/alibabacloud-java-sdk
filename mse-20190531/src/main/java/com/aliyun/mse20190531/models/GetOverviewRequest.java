@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOverviewRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned information. Valid values:</p>
      * <ul>
      * <li>zh: Chinese</li>
      * <li>en: English</li>
@@ -18,7 +18,7 @@ public class GetOverviewRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The query time. Unit: days. For example, if you set this parameter to 30, the governance rules within the last 30 days are queried.</p>
+     * <p>The query period. Unit: days. For example, if you set this parameter to 30, the governance rules within the last 30 days are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,7 @@ public class GetOverviewRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

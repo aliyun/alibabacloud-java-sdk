@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
     /**
-     * <p>The response parameters.</p>
+     * <p>The data overview.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -17,22 +17,22 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
      * <p>The error code.</p>
      * 
      * <strong>example:</strong>
-     * <p>mse-100-000</p>
+     * <p>Success</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request was successfully processed.</p>
+     * <p>Succ</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EE5C32A1-BC0E-4B79-817C-103E4EDF****</p>
@@ -41,8 +41,11 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <p>true: The request was successful. false: The request failed.</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -97,7 +100,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
 
     public static class CreateOrUpdateSwimmingLaneGroupResponseBodyData extends TeaModel {
         /**
-         * <p>The list of application IDs that are separated by commas (,).</p>
+         * <p>The IDs of the applications, separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>abcd1@abcde123,abcd1@abcde124</p>
@@ -105,10 +108,22 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("AppIds")
         public String appIds;
 
+        /**
+         * <p>The end-to-end canary release mode. Valid values:</p>
+         * <ul>
+         * <li>0: Route by request content.</li>
+         * <li>1: Route by proportion.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CanaryModel")
         public Integer canaryModel;
 
         /**
+         * <p>Indicates whether canary release is enabled for databases.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -116,7 +131,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         public String dbGrayEnable;
 
         /**
-         * <p>The ingress application.</p>
+         * <p>The entry application.</p>
          * 
          * <strong>example:</strong>
          * <p>mse:abcd1@a2345</p>
@@ -125,7 +140,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         public String entryApp;
 
         /**
-         * <p>The ID of the lane group.</p>
+         * <p>The ID of the swimlane group.</p>
          * 
          * <strong>example:</strong>
          * <p>2047</p>
@@ -134,7 +149,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The side for message filtering when the canary release for messaging feature is enabled.</p>
+         * <p>The side where message queue canary release filtering is performed.</p>
          * 
          * <strong>example:</strong>
          * <p>Client</p>
@@ -143,7 +158,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         public String messageQueueFilterSide;
 
         /**
-         * <p>Specifies whether to enable canary release for messaging.</p>
+         * <p>Specifies whether to enable canary release for message queues.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -152,6 +167,8 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         public Boolean messageQueueGrayEnable;
 
         /**
+         * <p>The name of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>example-app</p>
          */
@@ -167,6 +184,12 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p><strong>[Deprecated]</strong> The paths. This parameter is a list of paths when a Java gateway is used as the entry point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;/a&quot;]</p>
+         */
         @NameInMap("Paths")
         public String paths;
 
@@ -180,7 +203,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         public Boolean recordCanaryDetail;
 
         /**
-         * <p>The region where the application resides.</p>
+         * <p>The region to which the application belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

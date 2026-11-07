@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListGatewayAuthRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values: zh (default): Chinese, en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,16 +14,23 @@ public class ListGatewayAuthRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The sort order.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("DescSort")
     public Boolean descSort;
 
+    /**
+     * <p>The filter conditions. Refer to the examples.</p>
+     */
     @NameInMap("FilterParams")
     public ListGatewayAuthRequestFilterParams filterParams;
 
     /**
+     * <p>This parameter is not available.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -29,6 +38,8 @@ public class ListGatewayAuthRequest extends TeaModel {
     public String orderItem;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +47,8 @@ public class ListGatewayAuthRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of items per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -97,6 +110,8 @@ public class ListGatewayAuthRequest extends TeaModel {
 
     public static class ListGatewayAuthRequestFilterParams extends TeaModel {
         /**
+         * <p>The unique ID of the gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-5017305290e14centbrveca****</p>
          */
@@ -104,6 +119,8 @@ public class ListGatewayAuthRequest extends TeaModel {
         public String gatewayUniqueId;
 
         /**
+         * <p>The whitelist mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -111,6 +128,8 @@ public class ListGatewayAuthRequest extends TeaModel {
         public Boolean isWhite;
 
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>rutain-test</p>
          */
@@ -118,6 +137,8 @@ public class ListGatewayAuthRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The enabling status.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -125,6 +146,8 @@ public class ListGatewayAuthRequest extends TeaModel {
         public Boolean status;
 
         /**
+         * <p>The type.</p>
+         * 
          * <strong>example:</strong>
          * <p>JWT</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddGatewayRouteShrinkRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned information. Valid values:</p>
      * <ul>
      * <li>zh: Chinese</li>
      * <li>en: English</li>
@@ -18,6 +18,8 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The route description.</p>
+     * 
      * <strong>example:</strong>
      * <p>a route for xxx</p>
      */
@@ -25,13 +27,13 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The type of the destination service. Valid values:</p>
+     * <p>The destination service type. Valid values:</p>
      * <ul>
-     * <li>Single</li>
-     * <li>Multiple</li>
-     * <li>VersionOriented</li>
-     * <li>Mock</li>
-     * <li>Redirect</li>
+     * <li>Single: single service</li>
+     * <li>Multiple: multiple services</li>
+     * <li>VersionOriented: tag-based routing</li>
+     * <li>Mock: mock</li>
+     * <li>Redirect: redirect</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +49,7 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     public String directResponseJSONShrink;
 
     /**
-     * <p>The domain ID.</p>
+     * <p>The domain name ID.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -56,7 +58,7 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     public Long domainId;
 
     /**
-     * <p>The domain IDs.</p>
+     * <p>The domain name list.</p>
      * 
      * <strong>example:</strong>
      * <p>[0,94]</p>
@@ -65,7 +67,7 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     public String domainIdListJSON;
 
     /**
-     * <p>Specifies whether to activate Web Application Firewall (WAF).</p>
+     * <p><strong>[Deprecated]</strong> Use UpdateGatewayRouteWafStatus to update the WAF status of the route.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -75,7 +77,7 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     public Boolean enableWaf;
 
     /**
-     * <p>Specifies whether to enable the Fallback service.</p>
+     * <p>Specifies whether to enable the fallback service.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -84,13 +86,13 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     public Boolean fallback;
 
     /**
-     * <p>The information about the Fallback service.</p>
+     * <p>The fallback service.</p>
      */
     @NameInMap("FallbackServices")
     public String fallbackServicesShrink;
 
     /**
-     * <p>The ID of the gateway.</p>
+     * <p>The gateway ID.</p>
      * 
      * <strong>example:</strong>
      * <p>526</p>
@@ -108,7 +110,7 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
-     * <p>The name of the route.</p>
+     * <p>The route name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -117,7 +119,7 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The routing policy in a JSON string.</p>
+     * <p>The JSON string of the route policy.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;CORS&quot;:&quot;{\&quot;allowMethods\&quot;:\&quot;GET,POST,PUT,DELETE,HEAD,OPTIONS,PATCH\&quot;,\&quot;allowHeaders\&quot;:\&quot;<em>\&quot;,\&quot;exposeHeaders\&quot;:\&quot;</em>\&quot;,\&quot;unitNum\&quot;:12,\&quot;allowCredentials\&quot;:true,\&quot;status\&quot;:\&quot;off\&quot;,\&quot;allowOrigins\&quot;:\&quot;*\&quot;,\&quot;timeUnit\&quot;:\&quot;h\&quot;}&quot;,&quot;Timeout&quot;:&quot;{\&quot;unitNum\&quot;:10,\&quot;timeUnit\&quot;:\&quot;s\&quot;,\&quot;status\&quot;:\&quot;off\&quot;}&quot;,&quot;Retry&quot;:&quot;{\&quot;attempts\&quot;:2,\&quot;retryOn\&quot;:[\&quot;5xx\&quot;],\&quot;status\&quot;:\&quot;off\&quot;}&quot;,&quot;HTTPRewrite&quot;:&quot;{\&quot;pathType\&quot;:\&quot;EQUAL\&quot;,\&quot;path\&quot;:\&quot;/o\&quot;,\&quot;status\&quot;:\&quot;off\&quot;}&quot;,&quot;Waf&quot;:&quot;{\&quot;enabled\&quot;:false}&quot;,&quot;HeaderOp&quot;:&quot;{\&quot;status\&quot;:\&quot;off\&quot;,\&quot;headerOpItems\&quot;:[{\&quot;directionType\&quot;:\&quot;Request\&quot;,\&quot;opType\&quot;:\&quot;Add\&quot;,\&quot;key\&quot;:\&quot;kkk\&quot;,\&quot;value\&quot;:\&quot;ll\&quot;}]}&quot;}</p>
@@ -126,19 +128,19 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     public String policies;
 
     /**
-     * <p>The matching rule.</p>
+     * <p>The matching rules.</p>
      */
     @NameInMap("Predicates")
     public String predicatesShrink;
 
     /**
-     * <p>The configuration of the redirection.</p>
+     * <p>The redirect configuration.</p>
      */
     @NameInMap("RedirectJSON")
     public String redirectJSONShrink;
 
     /**
-     * <p>The sequence number of the route. (A small value indicates a high priority.)</p>
+     * <p>The route order. A smaller value indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -148,7 +150,9 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
 
     /**
      * <p>The route type. Valid values:</p>
-     * <p>Op: Manage routes.</p>
+     * <ul>
+     * <li>Op: management and control route</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Op</p>
@@ -157,7 +161,7 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     public String routeType;
 
     /**
-     * <p>The list of services.</p>
+     * <p>The service list. This parameter is required when the route points to a single service, multiple services, or tag-based routing.</p>
      */
     @NameInMap("Services")
     public String servicesShrink;

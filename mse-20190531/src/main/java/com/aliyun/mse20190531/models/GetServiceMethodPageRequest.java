@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetServiceMethodPageRequest extends TeaModel {
     /**
+     * <p>The language in which you want the results to be displayed. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class GetServiceMethodPageRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>hkhonxxxxx@f3f75ed8ffxxxxx</p>
      */
@@ -19,6 +23,8 @@ public class GetServiceMethodPageRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example-app</p>
      */
@@ -26,6 +32,8 @@ public class GetServiceMethodPageRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The IP address of the service provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>223.5.5.5</p>
      */
@@ -33,6 +41,8 @@ public class GetServiceMethodPageRequest extends TeaModel {
     public String ip;
 
     /**
+     * <p>The full name of the Controller class to which the interface belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>com.alibabacloud.mse.demo.a.AController</p>
      */
@@ -40,6 +50,8 @@ public class GetServiceMethodPageRequest extends TeaModel {
     public String methodController;
 
     /**
+     * <p>The method name.</p>
+     * 
      * <strong>example:</strong>
      * <p>aMethod</p>
      */
@@ -47,6 +59,8 @@ public class GetServiceMethodPageRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The Microservices Engine (MSE) namespace to which the application belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -54,6 +68,8 @@ public class GetServiceMethodPageRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -61,6 +77,8 @@ public class GetServiceMethodPageRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -68,6 +86,8 @@ public class GetServiceMethodPageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request path that corresponds to the interface.</p>
+     * 
      * <strong>example:</strong>
      * <p>/a</p>
      */
@@ -75,16 +95,26 @@ public class GetServiceMethodPageRequest extends TeaModel {
     public String path;
 
     /**
+     * <p>The region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The group to which the service belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIYUN</p>
+     */
     @NameInMap("ServiceGroup")
     public String serviceGroup;
 
     /**
+     * <p>The name of the service.</p>
+     * 
      * <strong>example:</strong>
      * <p>sc-A</p>
      */
@@ -92,6 +122,8 @@ public class GetServiceMethodPageRequest extends TeaModel {
     public String serviceName;
 
     /**
+     * <p>The engine type.</p>
+     * 
      * <strong>example:</strong>
      * <p>springCloud</p>
      */
@@ -99,6 +131,8 @@ public class GetServiceMethodPageRequest extends TeaModel {
     public String serviceType;
 
     /**
+     * <p>The service version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0.0</p>
      */

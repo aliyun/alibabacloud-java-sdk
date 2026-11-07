@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAnsInstancesRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned information. Valid values:</p>
      * <ul>
      * <li>zh: Chinese</li>
      * <li>en: English</li>
@@ -18,10 +18,7 @@ public class ListAnsInstancesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the Nacos instance.</p>
-     * <blockquote>
-     * <p>This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
-     * </blockquote>
+     * <p>The cluster ID.&gt;Notice: If this operation includes both InstanceId and ClusterId, you must specify at least one of them.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-09k1q11****</p>
@@ -31,16 +28,16 @@ public class ListAnsInstancesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The alias of the Nacos instance.</p>
+     * <p>The cluster alias.</p>
      * 
      * <strong>example:</strong>
-     * <p>mse-7413****</p>
+     * <p>DEFAULT</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
-     * <p>The name of the contact group.</p>
+     * <p>The contact group name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -49,10 +46,7 @@ public class ListAnsInstancesRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The ID of the instance.</p>
-     * <blockquote>
-     * <p>This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
-     * </blockquote>
+     * <p>The instance ID.&gt;Notice: If this operation includes both InstanceId and ClusterId, you must specify at least one of them.</p>
      * 
      * <strong>example:</strong>
      * <p>mse_prepaid_public_cn-tl327w****</p>
@@ -61,7 +55,7 @@ public class ListAnsInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>The namespace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>12233****</p>
@@ -70,7 +64,7 @@ public class ListAnsInstancesRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,7 +74,7 @@ public class ListAnsInstancesRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of instances to return on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,7 +84,7 @@ public class ListAnsInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>The extended request parameters in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -99,7 +93,7 @@ public class ListAnsInstancesRequest extends TeaModel {
     public String requestPars;
 
     /**
-     * <p>The name of the service.</p>
+     * <p>The service name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

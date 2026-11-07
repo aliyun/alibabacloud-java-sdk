@@ -6,42 +6,6 @@ import com.aliyun.tea.*;
 public class RulesValue extends TeaModel {
     /**
      * <p>The status.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>0</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>The routing rule does not take effect</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
-     * <li><p>1</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>The routing rule takes effect</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
-     * <li><p>2</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>The routing rule is invalid</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -59,7 +23,7 @@ public class RulesValue extends TeaModel {
     public Integer rate;
 
     /**
-     * <p>Specifies whether to enable the routing rule.</p>
+     * <p>Specifies whether the rule is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,7 +32,7 @@ public class RulesValue extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>The environment of the routing rule.</p>
+     * <p>The environment of this routing rule.</p>
      * 
      * <strong>example:</strong>
      * <p>gray</p>
@@ -86,7 +50,7 @@ public class RulesValue extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the routing rule.</p>
+     * <p>The ID of the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -104,7 +68,7 @@ public class RulesValue extends TeaModel {
     public Integer instanceNum;
 
     /**
-     * <p>The details of the routing rule.</p>
+     * <p>The rule information.</p>
      */
     @NameInMap("Rules")
     public RulesValueRules rules;
@@ -180,7 +144,7 @@ public class RulesValue extends TeaModel {
 
     public static class RulesValueRulesSpringcloudRestItems extends TeaModel {
         /**
-         * <p>The value on which operators such as rawvalue are performed.</p>
+         * <p>The value to be compared for operators such as rawvalue.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -189,7 +153,7 @@ public class RulesValue extends TeaModel {
         public String datum;
 
         /**
-         * <p>The operator. A value of rawvalue indicates direct comparison. A value of mode indicates the modulo operation. A value of list indicates using a whitelist.</p>
+         * <p>The operator. A value of rawvalue indicates direct comparison. A value of mode indicates a modulo operation. A value of list indicates a whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>rawvalue</p>
@@ -198,7 +162,7 @@ public class RulesValue extends TeaModel {
         public String operator;
 
         /**
-         * <p>Information about the fields that are required by the list operator.</p>
+         * <p>The field required for the list operator.</p>
          */
         @NameInMap("nameList")
         public java.util.List<String> nameList;
@@ -213,7 +177,7 @@ public class RulesValue extends TeaModel {
         public String cond;
 
         /**
-         * <p>The divisor that is required by the mod operator.</p>
+         * <p>The divisor field required for the mod operator.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -222,7 +186,7 @@ public class RulesValue extends TeaModel {
         public Integer divisor;
 
         /**
-         * <p>The remainder.</p>
+         * <p>The percentage value field required for the percentage operation.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -231,7 +195,7 @@ public class RulesValue extends TeaModel {
         public Integer remainder;
 
         /**
-         * <p>The rate. A value of 20 indicates that 20% of the traffic is routed to the tagged node.</p>
+         * <p>The proportion rule. For example, 20% indicates that 20% of the traffic is routed to the node corresponding to the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -355,7 +319,7 @@ public class RulesValue extends TeaModel {
 
     public static class RulesValueRulesSpringcloud extends TeaModel {
         /**
-         * <p>The logical operation relationships. Valid values: AND and OR.</p>
+         * <p>The logical operator used between the following items. Valid values: AND and OR.</p>
          * 
          * <strong>example:</strong>
          * <p>AND</p>
@@ -363,27 +327,14 @@ public class RulesValue extends TeaModel {
         @NameInMap("condition")
         public String condition;
 
+        /**
+         * <p>The list of matching conditions for REST requests.</p>
+         */
         @NameInMap("restItems")
         public java.util.List<RulesValueRulesSpringcloudRestItems> restItems;
 
         /**
          * <p>The policy type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>PERCENT</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>CONTENT</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CONTENT</p>
@@ -392,7 +343,7 @@ public class RulesValue extends TeaModel {
         public String triggerPolicy;
 
         /**
-         * <p>Specifies whether to enable the routing rule.</p>
+         * <p>Specifies whether the rule is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -419,7 +370,7 @@ public class RulesValue extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("tags")
         public java.util.List<String> tags;
@@ -520,7 +471,7 @@ public class RulesValue extends TeaModel {
 
     public static class RulesValueRulesDubboArgumentItems extends TeaModel {
         /**
-         * <p>The operator. A value of rawvalue indicates direct comparison. A value of mode indicates the modulo operation. A value of list indicates using a whitelist.</p>
+         * <p>The operator. A value of rawvalue indicates direct comparison. A value of mode indicates a modulo operation. A value of list indicates a whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>rawvalue</p>
@@ -535,7 +486,7 @@ public class RulesValue extends TeaModel {
         public java.util.List<String> nameList;
 
         /**
-         * <p>The value on which operators such as rawvalue are performed.</p>
+         * <p>The value to be compared for operators such as rawvalue.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -553,7 +504,7 @@ public class RulesValue extends TeaModel {
         public String cond;
 
         /**
-         * <p>The divisor that is required by the mod operator.</p>
+         * <p>The divisor field required for the mod operator.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -562,7 +513,7 @@ public class RulesValue extends TeaModel {
         public Integer divisor;
 
         /**
-         * <p>The remainder.</p>
+         * <p>The percentage value field required for the percentage operation.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -571,7 +522,7 @@ public class RulesValue extends TeaModel {
         public Integer remainder;
 
         /**
-         * <p>The rate. A value of 20 indicates that 20% of the traffic is routed to the tagged node.</p>
+         * <p>The proportion rule. For example, 20% indicates that 20% of the traffic is routed to the node corresponding to the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -580,7 +531,7 @@ public class RulesValue extends TeaModel {
         public Integer rate;
 
         /**
-         * <p>The position of the parameter, which starts from 0.</p>
+         * <p>The position of the parameter, starting from 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -589,13 +540,13 @@ public class RulesValue extends TeaModel {
         public Integer index;
 
         /**
-         * <p>The expression.</p>
+         * <p>The expression. See other field descriptions for details.</p>
          */
         @NameInMap("expr")
         public String expr;
 
         /**
-         * <p>The value that is used for comparison. The value obtained by the expression is compared with this value. If the list operator is used, data of the value parameter is separated by commas (,). For example, 1,2,3.</p>
+         * <p>The value to compare. The value obtained from the expression is compared with this value. If the operator is a list whitelist, separate values with commas (,), such as 1,2,3.</p>
          * 
          * <strong>example:</strong>
          * <p>1,2,3</p>
@@ -701,7 +652,7 @@ public class RulesValue extends TeaModel {
         public String appId;
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("tags")
         public java.util.List<String> tags;
@@ -725,7 +676,7 @@ public class RulesValue extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>The group of the Dubbo application.</p>
+         * <p>The Dubbo service group.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -734,7 +685,7 @@ public class RulesValue extends TeaModel {
         public String group;
 
         /**
-         * <p>The version of the Dubbo application.</p>
+         * <p>The Dubbo service version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -743,7 +694,7 @@ public class RulesValue extends TeaModel {
         public String version;
 
         /**
-         * <p>The method name of the Dubbo application.</p>
+         * <p>The method name of the Dubbo service.</p>
          * 
          * <strong>example:</strong>
          * <p>hello</p>
@@ -752,13 +703,13 @@ public class RulesValue extends TeaModel {
         public String methodName;
 
         /**
-         * <p>The list of parameter data types.</p>
+         * <p>The list of parameter types.</p>
          */
         @NameInMap("paramTypes")
         public java.util.List<String> paramTypes;
 
         /**
-         * <p>The logical operation relationships. Valid values: AND and OR.</p>
+         * <p>The logical operator used between the following items. Valid values: AND and OR.</p>
          * 
          * <strong>example:</strong>
          * <p>AND</p>
@@ -767,7 +718,7 @@ public class RulesValue extends TeaModel {
         public String condition;
 
         /**
-         * <p>The list of parameter contents.</p>
+         * <p>The list of parameter content.</p>
          */
         @NameInMap("argumentItems")
         public java.util.List<RulesValueRulesDubboArgumentItems> argumentItems;
@@ -861,13 +812,13 @@ public class RulesValue extends TeaModel {
 
     public static class RulesValueRules extends TeaModel {
         /**
-         * <p>The rule of the Spring Cloud application.</p>
+         * <p>The Spring Cloud rules.</p>
          */
         @NameInMap("springcloud")
         public java.util.List<RulesValueRulesSpringcloud> springcloud;
 
         /**
-         * <p>The rules of the Dubbo application.</p>
+         * <p>The Dubbo rules.</p>
          */
         @NameInMap("dubbo")
         public java.util.List<RulesValueRulesDubbo> dubbo;

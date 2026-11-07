@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteGatewayCircuitBreakerRuleRequest extends TeaModel {
     /**
+     * <p>The language in which you want the results to be displayed. Valid values: zh (default): Chinese. en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,7 @@ public class DeleteGatewayCircuitBreakerRuleRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The unique ID of the gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class DeleteGatewayCircuitBreakerRuleRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
+     * <p>The route ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class DeleteGatewayCircuitBreakerRuleRequest extends TeaModel {
     public Long routeId;
 
     /**
+     * <p>The ID of the circuit breaking rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

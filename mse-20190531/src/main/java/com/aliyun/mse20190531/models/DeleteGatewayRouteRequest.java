@@ -7,8 +7,8 @@ public class DeleteGatewayRouteRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DeleteGatewayRouteRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The unique ID of the gateway.</p>
+     * <p>The unique identifier of the gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-492af9b04bb4474cae9d645be850e3d7</p>
@@ -27,7 +27,7 @@ public class DeleteGatewayRouteRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
-     * <p>The ID of the route.</p>
+     * <p>The ID of the route entry.</p>
      * 
      * <strong>example:</strong>
      * <p>252</p>

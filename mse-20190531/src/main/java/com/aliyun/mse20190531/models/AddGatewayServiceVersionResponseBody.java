@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddGatewayServiceVersionResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The value 200 indicates that the request is successfully processed.</p>
+     * <p>The status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class AddGatewayServiceVersionResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The ID of the gateway service.</p>
+     * <p>The gateway service ID.</p>
      * 
      * <strong>example:</strong>
      * <p>330</p>
@@ -23,7 +23,7 @@ public class AddGatewayServiceVersionResponseBody extends TeaModel {
     public Long data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>403</p>
@@ -32,16 +32,16 @@ public class AddGatewayServiceVersionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request is successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BA4046B6-CFC6-583C-B608-DD75011A590F</p>
@@ -50,9 +50,9 @@ public class AddGatewayServiceVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>The request result. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>true</code>: The request succeeded.</li>
      * <li><code>false</code>: The request failed.</li>
      * </ul>
      * 

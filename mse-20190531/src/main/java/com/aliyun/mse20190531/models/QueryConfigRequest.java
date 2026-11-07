@@ -7,8 +7,10 @@ public class QueryConfigRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class QueryConfigRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>A reserved field.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -45,7 +47,7 @@ public class QueryConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies whether runtime configurations are required.</p>
+     * <p>Specifies whether to query the runtime configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

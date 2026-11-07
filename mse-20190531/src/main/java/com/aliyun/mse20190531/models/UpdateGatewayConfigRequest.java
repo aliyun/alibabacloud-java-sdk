@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayConfigRequest extends TeaModel {
     /**
+     * <p>The language in which you want to display the results. Valid values: zh (default): Chinese. en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,21 @@ public class UpdateGatewayConfigRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The configuration name of the parameter. Valid values:</p>
+     * <ul>
+     * <li><p>EnableHttp2</p>
+     * </li>
+     * <li><p>DownstreamIdleTime</p>
+     * </li>
+     * <li><p>PreserveHeaderFormat</p>
+     * </li>
+     * <li><p>UpstreamIdleTimeout</p>
+     * </li>
+     * <li><p>EnableXffTrustedCidrs</p>
+     * </li>
+     * <li><p>EnableK8sSourceWorkloadFilter</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +38,39 @@ public class UpdateGatewayConfigRequest extends TeaModel {
     public String configName;
 
     /**
+     * <p>The configuration value of the parameter. Examples:</p>
+     * <ul>
+     * <li>EnableHttp2</li>
+     * </ul>
+     * <pre><code>true / false
+     * </code></pre>
+     * <ul>
+     * <li>DownstreamIdleTime</li>
+     * </ul>
+     * <pre><code>15
+     * </code></pre>
+     * <ul>
+     * <li>PreserveHeaderFormat</li>
+     * </ul>
+     * <pre><code>true / false
+     * </code></pre>
+     * <ul>
+     * <li>UpstreamIdleTimeout</li>
+     * </ul>
+     * <pre><code>60
+     * </code></pre>
+     * <ul>
+     * <li>EnableXffTrustedCidrs</li>
+     * </ul>
+     * <pre><code class="language-json">{&quot;enable&quot;:true,&quot;ipListContent&quot;:&quot;192.168.1.0/24
+     * 2.2.2.2&quot;}
+     * </code></pre>
+     * <ul>
+     * <li>EnableK8sSourceWorkloadFilter</li>
+     * </ul>
+     * <pre><code class="language-json">    
+     * {&quot;enable&quot;:true,&quot;filterOpt&quot;:&quot;EQUAL&quot;,&quot;labelKey&quot;:&quot;key&quot;,&quot;labelValue&quot;:&quot;value&quot;}
+     * </code></pre>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +80,7 @@ public class UpdateGatewayConfigRequest extends TeaModel {
     public String configValue;
 
     /**
+     * <p>The unique ID of the gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

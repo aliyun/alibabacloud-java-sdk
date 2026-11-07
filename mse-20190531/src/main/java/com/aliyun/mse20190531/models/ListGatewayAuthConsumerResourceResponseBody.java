@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
     /**
-     * <p>The status code. A value of 200 is returned if the request is successful.</p>
+     * <p>The code used only to synchronize with the success field.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ListGatewayAuthConsumerResourceResponseBodyData data;
 
     /**
-     * <p>The dynamic part in the error message.</p>
+     * <p>The placeholder in the dynamic error message.</p>
      * 
      * <strong>example:</strong>
      * <p>code</p>
@@ -29,9 +29,9 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic error message, which is used to replace the <strong>%s</strong> placeholder in the error message of the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p> If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code that is returned.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-100-000</p>
@@ -50,7 +50,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -59,16 +59,16 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request is successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A73AC37C-C617-4E3A-8049-372CF49C****</p>
@@ -77,10 +77,10 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
 
     public static class ListGatewayAuthConsumerResourceResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The ID of the consumer.</p>
+         * <p>The ID of the gateway authentication consumer.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -195,7 +195,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-07 18:07:57</p>
@@ -204,7 +204,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The ID of the authorized resource for the consumer.</p>
+         * <p>The authorization ID of the gateway authentication consumer.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -215,8 +215,10 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
         /**
          * <p>The resource authorization status. Valid values:</p>
          * <ul>
-         * <li>true: enabled</li>
-         * <li>false: disabled</li>
+         * <li><p>true: Enabled.</p>
+         * </li>
+         * <li><p>false: Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -226,7 +228,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
         public Boolean resourceStatus;
 
         /**
-         * <p>The ID of the route.</p>
+         * <p>The route ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3091</p>
@@ -316,7 +318,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
 
     public static class ListGatewayAuthConsumerResourceResponseBodyData extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -325,7 +327,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -340,7 +342,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
         public java.util.List<ListGatewayAuthConsumerResourceResponseBodyDataResult> result;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>

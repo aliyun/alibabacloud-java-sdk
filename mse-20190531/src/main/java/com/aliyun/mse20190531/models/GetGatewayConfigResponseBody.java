@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetGatewayConfigResponseBody extends TeaModel {
     /**
+     * <p>The code used to synchronize with the success field.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data overview.</p>
+     */
     @NameInMap("Data")
     public GetGatewayConfigResponseBodyData data;
 
     /**
+     * <p>This field is not used. Ignore this field.</p>
+     * 
      * <strong>example:</strong>
      * <p>code</p>
      */
@@ -22,6 +29,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>This field is not used. Ignore this field.</p>
+     * 
      * <strong>example:</strong>
      * <p>The specified parameter is invalid.</p>
      */
@@ -29,6 +38,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -36,6 +47,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -43,6 +56,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -50,6 +65,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F6092602-C357-4750-89D9-E572FBEA****</p>
      */
@@ -57,6 +74,12 @@ public class GetGatewayConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The request result. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -141,15 +164,36 @@ public class GetGatewayConfigResponseBody extends TeaModel {
     }
 
     public static class GetGatewayConfigResponseBodyDataEnableK8sSourceWorkloadFilter extends TeaModel {
+        /**
+         * <p>Specifies whether to enable tag filtering for Kubernetes service source workloads.</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The tag filtering method. Valid values: EQUAL (matches the specified tag) and NOT_EQUAL (excludes the specified tag).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EQUAL</p>
+         */
         @NameInMap("FilterOpt")
         public String filterOpt;
 
+        /**
+         * <p>The tag key used to filter Kubernetes workloads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
         @NameInMap("LabelKey")
         public String labelKey;
 
+        /**
+         * <p>The tag value used to filter Kubernetes workloads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
         @NameInMap("LabelValue")
         public String labelValue;
 
@@ -193,9 +237,18 @@ public class GetGatewayConfigResponseBody extends TeaModel {
     }
 
     public static class GetGatewayConfigResponseBodyDataEnableXffTrustedCidrs extends TeaModel {
+        /**
+         * <p>Specifies whether to enable the configuration for trusted X-Forwarded-For source CIDR blocks.</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The list of trusted source IP addresses or CIDR blocks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/8</p>
+         */
         @NameInMap("IpListContent")
         public String ipListContent;
 
@@ -224,6 +277,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
 
     public static class GetGatewayConfigResponseBodyDataSlsConfigDetails extends TeaModel {
         /**
+         * <p>The gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -231,6 +286,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Long gatewayId;
 
         /**
+         * <p>The unique ID of the gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-61f465fa2dd044069e2208c4912*****</p>
          */
@@ -238,6 +295,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public String gatewayUniqueId;
 
         /**
+         * <p>Not available for use.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -245,6 +304,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>Not available for use.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -252,6 +313,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Not available for use.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -259,6 +322,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Specifies whether log delivery is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -266,6 +331,14 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Boolean logOn;
 
         /**
+         * <p>The destination Logstore for log delivery. Valid values:</p>
+         * <ul>
+         * <li><p>mse_gw_access_log: Nginx Ingress compatibility is disabled.</p>
+         * </li>
+         * <li><p>nginx-ingress: Nginx Ingress compatibility is enabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>mse_gw_access_log</p>
          */
@@ -273,6 +346,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public String logStoreName;
 
         /**
+         * <p>Specifies whether Nginx Ingress compatibility is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -280,6 +355,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Boolean nginxCompatible;
 
         /**
+         * <p>The destination Simple Log Service project for log delivery.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -367,6 +444,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
 
     public static class GetGatewayConfigResponseBodyDataXtraceDetails extends TeaModel {
         /**
+         * <p>The gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -374,6 +453,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Long gatewayId;
 
         /**
+         * <p>The unique ID of the gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-61f465fa2dd044069e2208c4912*****</p>
          */
@@ -381,6 +462,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public String gatewayUniqueId;
 
         /**
+         * <p>The time when the Tracing Analysis information was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-08-12T09:39:07.000+0000</p>
          */
@@ -388,6 +471,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The time when the Tracing Analysis information was modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-08-12T09:39:07.000+0000</p>
          */
@@ -395,6 +480,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The ID of the Tracing Analysis information.</p>
+         * 
          * <strong>example:</strong>
          * <p>255</p>
          */
@@ -402,6 +489,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The sampling rate (%).</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -409,6 +498,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Integer sample;
 
         /**
+         * <p>The SkyWalking service ID for self-managed SkyWalking.</p>
+         * 
          * <strong>example:</strong>
          * <p>333</p>
          */
@@ -416,6 +507,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Long serviceId;
 
         /**
+         * <p>The SkyWalking service port for self-managed SkyWalking.</p>
+         * 
          * <strong>example:</strong>
          * <p>8888</p>
          */
@@ -423,6 +516,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public String servicePort;
 
         /**
+         * <p>Specifies whether Tracing Analysis is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -430,6 +525,18 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Boolean traceOn;
 
         /**
+         * <p>The Tracing Analysis type. Valid values:</p>
+         * <ul>
+         * <li><p>XTRACE: Managed Service for OpenTelemetry with the Zipkin Tracing Analysis protocol.</p>
+         * </li>
+         * <li><p>SKYWALKING: Self-managed SkyWalking.</p>
+         * </li>
+         * <li><p>OPENTELEMETRY: Managed Service for OpenTelemetry with the OpenTelemetry Tracing Analysis protocol.</p>
+         * </li>
+         * <li><p>OTSKYWALKING: Managed Service for OpenTelemetry with the SkyWalking Tracing Analysis protocol.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>OPENTELEMETRY</p>
          */
@@ -525,6 +632,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
 
     public static class GetGatewayConfigResponseBodyData extends TeaModel {
         /**
+         * <p>The custom log format.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;requestMetadata&quot;:[],&quot;responseHeaders&quot;:[],&quot;requestHeaders&quot;:[&quot;x-test&quot;],&quot;responseMetadata&quot;:[]}</p>
          */
@@ -532,6 +641,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public String accessLogHeader;
 
         /**
+         * <p>The buffer size for a single gateway connection. Configuring this parameter affects throughput and gateway memory usage. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>32768</p>
          */
@@ -539,6 +650,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Integer downstreamConnectionBufferLimits;
 
         /**
+         * <p>The maximum number of concurrent streams on a single connection when the client uses HTTP/2. This parameter takes effect at the request level.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -546,6 +659,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Integer downstreamHttp2MaxConcurrentStream;
 
         /**
+         * <p>The idle timeout period for connections from the client to the gateway. Unit: seconds. If no request is received within the specified period, the gateway disconnects the connection. Valid values: 0 to 600.</p>
+         * 
          * <strong>example:</strong>
          * <p>180</p>
          */
@@ -553,6 +668,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Integer downstreamIdleTime;
 
         /**
+         * <p>Specifies whether to enable custom authentication configuration push for self-managed authentication services. When enabled, changes to authentication rules do not cause connection interruptions. This feature is applicable to WebSocket and online business scenarios.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -560,6 +677,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public String enableCustomAuthConfigPush;
 
         /**
+         * <p>Specifies whether to generate a request ID in the request header for request tracking. This parameter takes effect at the request level.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -567,16 +686,23 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Boolean enableGenerateRequestId;
 
         /**
+         * <p>Specifies whether to enable Gzip compression for requests and responses. Enabling this feature reduces gateway traffic but increases gateway CPU consumption.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("EnableGzip")
         public Boolean enableGzip;
 
+        /**
+         * <p>Specifies whether to enable Gzip hardware acceleration.</p>
+         */
         @NameInMap("EnableGzipHardwareAccelerate")
         public Boolean enableGzipHardwareAccelerate;
 
         /**
+         * <p>Specifies whether to enable hardware acceleration. This configuration fails if the region does not support hardware acceleration at the underlying layer or if hardware acceleration was not specified during purchase.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -584,6 +710,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Boolean enableHardwareAccelerate;
 
         /**
+         * <p>Specifies whether to use HTTP/2 during negotiation between the server and the client. This parameter takes effect at the request level. Changes take effect after 1 to 2 minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -591,16 +719,23 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Boolean enableHttp2;
 
         /**
+         * <p>Specifies whether the HTTP/3 protocol is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("EnableHttp3")
         public Boolean enableHttp3;
 
+        /**
+         * <p>The tag filtering configuration for Kubernetes service source workloads.</p>
+         */
         @NameInMap("EnableK8sSourceWorkloadFilter")
         public GetGatewayConfigResponseBodyDataEnableK8sSourceWorkloadFilter enableK8sSourceWorkloadFilter;
 
         /**
+         * <p>Specifies whether to enable the PROXY protocol. If the gateway ingress traffic is routed through a Network Load Balancer (NLB) and this feature is disabled, the real IP address of the client cannot be obtained. Enabling this feature does not affect non-PROXY protocol requests.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -608,6 +743,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Boolean enableProxyProtocol;
 
         /**
+         * <p>Specifies whether to merge consecutive slashes in a request URL. For example, if this feature is enabled, the extra slash in <code>www.a.com//b</code> is merged, making it equivalent to <code>www.a.com/b</code>. This parameter takes effect at the request level.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -615,16 +752,23 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Boolean enableSlashMerge;
 
         /**
+         * <p>Specifies whether WAF is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("EnableWaf")
         public Boolean enableWaf;
 
+        /**
+         * <p>The configuration for trusted X-Forwarded-For source CIDR blocks.</p>
+         */
         @NameInMap("EnableXffTrustedCidrs")
         public GetGatewayConfigResponseBodyDataEnableXffTrustedCidrs enableXffTrustedCidrs;
 
         /**
+         * <p>The unique ID of the gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-61f465fa2dd044069e2208c4912*****</p>
          */
@@ -632,6 +776,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public String gatewayUniqueId;
 
         /**
+         * <p>The initial connection-level window size negotiated between the gateway and the client when HTTP/2 is used. Unit: bytes. This parameter takes effect at the request level.</p>
+         * 
          * <strong>example:</strong>
          * <p>1048576</p>
          */
@@ -639,6 +785,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Integer initialConnectionWindowSize;
 
         /**
+         * <p>The initial stream window size negotiated between the gateway and the client when HTTP/2 is used. Unit: bytes. This parameter takes effect at the request level.</p>
+         * 
          * <strong>example:</strong>
          * <p>65535</p>
          */
@@ -646,16 +794,23 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Integer initialStreamWindowSize;
 
         /**
+         * <p>The keep-alive time in the Keep-Alive response header. Unit: seconds. If this parameter is set to 0, the response header is not returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("KeepaliveHeaderTimeout")
         public Integer keepaliveHeaderTimeout;
 
+        /**
+         * <p>Indicates whether lightweight metric collection is enabled.</p>
+         */
         @NameInMap("LiteMetrics")
         public Boolean liteMetrics;
 
         /**
+         * <p>Not available for use.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -663,6 +818,17 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public String logFilterConfig;
 
         /**
+         * <p>The log collection configuration for request and response headers and bodies. The content is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;request&quot;:{&quot;headers&quot;:{&quot;enabled&quot;:true}}}</p>
+         */
+        @NameInMap("LogRequestResponseConfig")
+        public String logRequestResponseConfig;
+
+        /**
+         * <p>The list of unsupported configurations.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;EnableProxyProtocol,EnableCustomAuthConfigPush&quot;</p>
          */
@@ -670,26 +836,48 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public String noSupportedConfigList;
 
         /**
+         * <p>The action to take when a URI path contains escaped slashes such as %2F, %2f, %5C, or %5c. Default value: KEEP_UNCHANGED. Valid values:</p>
+         * <ul>
+         * <li><p>KEEP_UNCHANGED</p>
+         * </li>
+         * <li><p>REJECT_REQUEST</p>
+         * </li>
+         * <li><p>UNESCAPE_AND_REDIRECT</p>
+         * </li>
+         * <li><p>UNESCAPE_AND_FORWARD</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>KEEP_UNCHANGED</p>
          */
         @NameInMap("PathWithEscapedSlashes")
         public String pathWithEscapedSlashes;
 
+        /**
+         * <p>Specifies whether to preserve the request ID passed by the client.</p>
+         */
         @NameInMap("PreserveExternalRequestID")
         public Boolean preserveExternalRequestID;
 
         /**
+         * <p>Specifies whether to preserve the original case of request and response headers. In HTTP/1.1, headers are case-insensitive. To ensure compatibility with HTTP/2, headers are converted to lowercase by default.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("PreserveHeaderFormat")
         public Boolean preserveHeaderFormat;
 
+        /**
+         * <p>The log delivery information.</p>
+         */
         @NameInMap("SlsConfigDetails")
         public GetGatewayConfigResponseBodyDataSlsConfigDetails slsConfigDetails;
 
         /**
+         * <p>Indicates whether the gateway supports Web Application Firewall (WAF).</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -697,6 +885,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Boolean supportWaf;
 
         /**
+         * <p>The default idle timeout period for upstream connections.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -704,6 +894,8 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Integer upstreamIdleTimeout;
 
         /**
+         * <p>The keep-alive time maintained for WebSocket connections when connections must be closed during gateway instance upgrades or restarts. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -711,16 +903,23 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         public Integer websocketTermGracePeriod;
 
         /**
+         * <p>The number of trusted proxies in front of the gateway. This parameter affects whether the gateway uses request headers such as X-Forwarded-For and X-Request-ID generated by the client. This parameter takes effect at the request level.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("XffTrustedNum")
         public Integer xffTrustedNum;
 
+        /**
+         * <p>The Tracing Analysis information.</p>
+         */
         @NameInMap("XtraceDetails")
         public GetGatewayConfigResponseBodyDataXtraceDetails xtraceDetails;
 
         /**
+         * <p>The compression algorithm used when compression is enabled. Valid values: brotli and gzip. If this parameter is set and EnableGzip is disabled, EnableGzip is automatically enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;gzip&quot;]</p>
          */
@@ -906,6 +1105,14 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         }
         public String getLogFilterConfig() {
             return this.logFilterConfig;
+        }
+
+        public GetGatewayConfigResponseBodyData setLogRequestResponseConfig(String logRequestResponseConfig) {
+            this.logRequestResponseConfig = logRequestResponseConfig;
+            return this;
+        }
+        public String getLogRequestResponseConfig() {
+            return this.logRequestResponseConfig;
         }
 
         public GetGatewayConfigResponseBodyData setNoSupportedConfigList(String noSupportedConfigList) {

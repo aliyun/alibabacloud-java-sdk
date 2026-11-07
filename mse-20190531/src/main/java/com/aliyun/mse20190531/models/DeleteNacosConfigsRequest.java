@@ -7,8 +7,8 @@ public class DeleteNacosConfigsRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DeleteNacosConfigsRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The IDs of configurations.</p>
+     * <p>The configuration IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DeleteNacosConfigsRequest extends TeaModel {
     public String ids;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class DeleteNacosConfigsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>The namespace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

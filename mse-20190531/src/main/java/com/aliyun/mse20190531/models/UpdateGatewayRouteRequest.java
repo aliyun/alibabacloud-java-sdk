@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayRouteRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned information. Valid values:</p>
      * <ul>
      * <li>zh: Chinese</li>
      * <li>en: English</li>
@@ -18,6 +18,8 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The description of the route.</p>
+     * 
      * <strong>example:</strong>
      * <p>a route for xxx</p>
      */
@@ -25,7 +27,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The destination service type.</p>
+     * <p>The type of the destination service.</p>
      * 
      * <strong>example:</strong>
      * <p>Mock</p>
@@ -34,13 +36,13 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     public String destinationType;
 
     /**
-     * <p>The information about service mocking.</p>
+     * <p>The mock content.</p>
      */
     @NameInMap("DirectResponseJSON")
     public UpdateGatewayRouteRequestDirectResponseJSON directResponseJSON;
 
     /**
-     * <p>The associated domain name.</p>
+     * <p>The associated domain names.</p>
      * 
      * <strong>example:</strong>
      * <p>[90]</p>
@@ -49,7 +51,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     public String domainIdListJSON;
 
     /**
-     * <p>Specifies whether to activate Web Application Firewall (WAF).</p>
+     * <p><strong>[Deprecated]</strong> Use UpdateGatewayRouteWafStatus to update the WAF status of the route.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -59,7 +61,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     public Boolean enableWaf;
 
     /**
-     * <p>Specifies whether to enable the Fallback service.</p>
+     * <p>Specifies whether to enable the fallback service.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,7 +70,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     public Boolean fallback;
 
     /**
-     * <p>The information about the Fallback service.</p>
+     * <p>The fallback services.</p>
      */
     @NameInMap("FallbackServices")
     public java.util.List<UpdateGatewayRouteRequestFallbackServices> fallbackServices;
@@ -111,19 +113,19 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The route matching conditions.</p>
+     * <p>The matching conditions of the route.</p>
      */
     @NameInMap("Predicates")
     public UpdateGatewayRouteRequestPredicates predicates;
 
     /**
-     * <p>The information about redirection.</p>
+     * <p>The redirect configuration.</p>
      */
     @NameInMap("RedirectJSON")
     public UpdateGatewayRouteRequestRedirectJSON redirectJSON;
 
     /**
-     * <p>The sequence number of the route.</p>
+     * <p>The order of the route.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -132,7 +134,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     public Integer routeOrder;
 
     /**
-     * <p>The information about destination services.</p>
+     * <p>The destination services. Specify this parameter when the route points to a single service, multiple services, or tag-based routing.</p>
      */
     @NameInMap("Services")
     public java.util.List<UpdateGatewayRouteRequestServices> services;
@@ -274,7 +276,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
 
     public static class UpdateGatewayRouteRequestDirectResponseJSON extends TeaModel {
         /**
-         * <p>The mock return value.</p>
+         * <p>The mock response body.</p>
          * 
          * <strong>example:</strong>
          * <p>hello</p>
@@ -283,7 +285,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public String body;
 
         /**
-         * <p>The mock return code.</p>
+         * <p>The mock response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -316,7 +318,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
 
     public static class UpdateGatewayRouteRequestFallbackServices extends TeaModel {
         /**
-         * <p>The type of the protocol. Valid values:</p>
+         * <p>The protocol type.</p>
          * 
          * <strong>example:</strong>
          * <p>DUBBO</p>
@@ -325,7 +327,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public String agreementType;
 
         /**
-         * <p>The name of the group to which the service belongs.</p>
+         * <p>The name of the service group.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -343,7 +345,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The namespace in which the service resides.</p>
+         * <p>The namespace where the service resides.</p>
          * 
          * <strong>example:</strong>
          * <p>Namespace</p>
@@ -352,7 +354,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The weight in the form of a percentage value.</p>
+         * <p>The weight percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -370,7 +372,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public Long serviceId;
 
         /**
-         * <p>The service port number.</p>
+         * <p>The service port.</p>
          * 
          * <strong>example:</strong>
          * <p>8848</p>
@@ -388,7 +390,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The version of the service.</p>
+         * <p>The service version.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -536,7 +538,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
 
     public static class UpdateGatewayRouteRequestPredicatesPathPredicates extends TeaModel {
         /**
-         * <p>Specifies whether to perform case-insensitive matching.</p>
+         * <p>Specifies whether to ignore case.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -545,7 +547,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public Boolean ignoreCase;
 
         /**
-         * <p>The path used for route matching.</p>
+         * <p>The path of the route.</p>
          * 
          * <strong>example:</strong>
          * <p>/test</p>
@@ -613,7 +615,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The value of the parameter.</p>
+         * <p>The matching value.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -654,25 +656,25 @@ public class UpdateGatewayRouteRequest extends TeaModel {
 
     public static class UpdateGatewayRouteRequestPredicates extends TeaModel {
         /**
-         * <p>The information about header matching.</p>
+         * <p>The request header matching conditions.</p>
          */
         @NameInMap("HeaderPredicates")
         public java.util.List<UpdateGatewayRouteRequestPredicatesHeaderPredicates> headerPredicates;
 
         /**
-         * <p>The information about method matching.</p>
+         * <p>The method matching conditions.</p>
          */
         @NameInMap("MethodPredicates")
         public java.util.List<String> methodPredicates;
 
         /**
-         * <p>The information about path matching.</p>
+         * <p>The path matching conditions.</p>
          */
         @NameInMap("PathPredicates")
         public UpdateGatewayRouteRequestPredicatesPathPredicates pathPredicates;
 
         /**
-         * <p>The information about parameter matching.</p>
+         * <p>The query parameter matching conditions.</p>
          */
         @NameInMap("QueryPredicates")
         public java.util.List<UpdateGatewayRouteRequestPredicatesQueryPredicates> queryPredicates;
@@ -718,7 +720,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
 
     public static class UpdateGatewayRouteRequestRedirectJSON extends TeaModel {
         /**
-         * <p>The status code returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>302</p>
@@ -727,7 +729,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public Integer code;
 
         /**
-         * <p>The hostname to be redirected to.</p>
+         * <p>The redirect hostname.</p>
          * 
          * <strong>example:</strong>
          * <p>test.com</p>
@@ -736,7 +738,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public String host;
 
         /**
-         * <p>The path to be redirected to.</p>
+         * <p>The redirect path.</p>
          * 
          * <strong>example:</strong>
          * <p>/test</p>
@@ -777,7 +779,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
 
     public static class UpdateGatewayRouteRequestServicesHttpDubboTranscoderMothedMapListParamMapsList extends TeaModel {
         /**
-         * <p>The key extracted from the input parameter.</p>
+         * <p>The key extracted from the input parameter position.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -788,18 +790,14 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         /**
          * <p>The position of the input parameter.</p>
          * <blockquote>
-         * <p>Valid values:</p>
-         * </blockquote>
+         * <p>Valid values for the position of the input parameter:</p>
          * <ul>
-         * <li><p><code>ALL_QUERY_PARAMETER</code>: request parameter</p>
-         * </li>
-         * <li><p><code>ALL_HEADER</code>: request header</p>
-         * </li>
-         * <li><p><code>ALL_PATH</code>: request path</p>
-         * </li>
-         * <li><p><code>ALL_BODY</code>: request body</p>
-         * </li>
+         * <li>Request parameter: <code>ALL_QUERY_PARAMETER</code></li>
+         * <li>Request header: <code>ALL_HEADER</code></li>
+         * <li>Request path: <code>ALL_PATH</code></li>
+         * <li>Request body: <code>ALL_BODY</code></li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>ALL_QUERY_PARAMETER</p>
@@ -808,7 +806,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public String extractKeySpec;
 
         /**
-         * <p>The type of the backend service parameter.</p>
+         * <p>The backend parameter type.</p>
          * 
          * <strong>example:</strong>
          * <p>java.lang.String</p>
@@ -849,7 +847,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
 
     public static class UpdateGatewayRouteRequestServicesHttpDubboTranscoderMothedMapList extends TeaModel {
         /**
-         * <p>The method name of the Dubbo service.</p>
+         * <p>The name of the Dubbo method.</p>
          * 
          * <strong>example:</strong>
          * <p>sayHello</p>
@@ -860,20 +858,15 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         /**
          * <p>The HTTP method.</p>
          * <blockquote>
-         * <p>Valid values:</p>
-         * </blockquote>
+         * <p>Supported HTTP method parameter values:</p>
          * <ul>
-         * <li><p>ALL_GET</p>
-         * </li>
-         * <li><p>ALL_POST</p>
-         * </li>
-         * <li><p>ALL_PUT</p>
-         * </li>
-         * <li><p>ALL_DELETE</p>
-         * </li>
-         * <li><p>ALL_PATCH</p>
-         * </li>
+         * <li>ALL_GET</li>
+         * <li>ALL_POST</li>
+         * <li>ALL_PUT</li>
+         * <li>ALL_DELETE</li>
+         * <li>ALL_PATCH</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>ALL_GET</p>
@@ -882,7 +875,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public String httpMothed;
 
         /**
-         * <p>The path that is used to match a method.</p>
+         * <p>The matching path of the method.</p>
          * 
          * <strong>example:</strong>
          * <p>/mytestzbk/sayhello</p>
@@ -891,24 +884,21 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public String mothedpath;
 
         /**
-         * <p>The information of parameter mappings.</p>
+         * <p>The list of parameter mappings.</p>
          */
         @NameInMap("ParamMapsList")
         public java.util.List<UpdateGatewayRouteRequestServicesHttpDubboTranscoderMothedMapListParamMapsList> paramMapsList;
 
         /**
-         * <p>The pass-through type of the header.</p>
+         * <p>The header pass-through type.</p>
          * <blockquote>
-         * <p>Valid values:</p>
-         * </blockquote>
+         * <p>Valid values for the pass-through type:</p>
          * <ul>
-         * <li><p>PASS_ALL: All headers are passed through.</p>
-         * </li>
-         * <li><p>PASS_NOT: All headers are not passed through.</p>
-         * </li>
-         * <li><p>PASS_ASSIGN: Specified headers are passed through.</p>
-         * </li>
+         * <li>PASS_ALL: Passes through all headers.</li>
+         * <li>PASS_NOT: Does not pass through any headers.</li>
+         * <li>PASS_ASSIGN: Passes through specified headers.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>PASS_NOT</p>
@@ -917,7 +907,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public String passThroughAllHeaders;
 
         /**
-         * <p>The list of headers to be passed through.</p>
+         * <p>The list of specified headers to pass through.</p>
          */
         @NameInMap("PassThroughList")
         public java.util.List<String> passThroughList;
@@ -988,7 +978,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public String dubboServiceGroup;
 
         /**
-         * <p>The name of the Dubbo service.</p>
+         * <p>The Dubbo service name.</p>
          * 
          * <strong>example:</strong>
          * <p>org.apache.dubbo.samples.basic.api.DemoService</p>
@@ -1006,7 +996,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public String dubboServiceVersion;
 
         /**
-         * <p>The forwarding rules of the Dubbo service.</p>
+         * <p>The list of Dubbo forwarding rules.</p>
          */
         @NameInMap("MothedMapList")
         public java.util.List<UpdateGatewayRouteRequestServicesHttpDubboTranscoderMothedMapList> mothedMapList;
@@ -1052,7 +1042,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
 
     public static class UpdateGatewayRouteRequestServices extends TeaModel {
         /**
-         * <p>The type of the protocol. Valid values:</p>
+         * <p>The protocol type.</p>
          * 
          * <strong>example:</strong>
          * <p>DUBBO</p>
@@ -1061,7 +1051,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public String agreementType;
 
         /**
-         * <p>The name of the group to which the service belongs.</p>
+         * <p>The name of the service group.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -1070,7 +1060,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The transcoder of the Dubbo protocol.</p>
+         * <p>The Dubbo protocol transcoding configuration.</p>
          */
         @NameInMap("HttpDubboTranscoder")
         public UpdateGatewayRouteRequestServicesHttpDubboTranscoder httpDubboTranscoder;
@@ -1085,7 +1075,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The namespace in which the service resides.</p>
+         * <p>The namespace where the service resides.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -1094,7 +1084,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The percentage.</p>
+         * <p>The traffic distribution percentage of the current service or service version. Specify this parameter only when multiple services or tag-based routing is used.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -1112,7 +1102,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public Long serviceId;
 
         /**
-         * <p>The Dubbo port number.</p>
+         * <p>The Dubbo port.</p>
          * 
          * <strong>example:</strong>
          * <p>20880</p>
@@ -1130,7 +1120,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The version of the service.</p>
+         * <p>The service version. Specify this parameter only when tag-based routing is used.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>

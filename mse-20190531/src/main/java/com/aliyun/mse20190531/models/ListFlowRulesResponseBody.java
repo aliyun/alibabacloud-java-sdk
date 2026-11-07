@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFlowRulesResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The details of the data.</p>
+     * <p>The node data.</p>
      */
     @NameInMap("Data")
     public ListFlowRulesResponseBodyData data;
@@ -29,10 +29,10 @@ public class ListFlowRulesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -47,27 +47,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>The request was successful.</p>
-     * <!-- -->
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>The request failed.</p>
-     * <!-- --></li>
-     * </ul>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -130,7 +110,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
 
     public static class ListFlowRulesResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>hkhon1po62@5f1b08becb*****</p>
@@ -148,27 +128,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The throttling effect.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>0</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>fast failure</p>
-         * <!-- -->
-         * </li>
-         * <li><p>2</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>in queue</p>
-         * <!-- --></li>
-         * </ul>
+         * <p>The flow control behavior.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -177,23 +137,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         public Integer controlBehavior;
 
         /**
-         * <p>Indicates whether the throttling rule was enabled.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>Indicates whether the rule is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -202,7 +146,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The throttling behavior.</p>
+         * <p>The fallback behavior.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;{\&quot;appName\&quot;:\&quot;spring-cloud-a\&quot;,\&quot;fallbackBehavior\&quot;:{\&quot;webFallbackMode\&quot;:0,\&quot;webRespContentType\&quot;:0,\&quot;webRespMessage\&quot;:\&quot;Blocked\&quot;,\&quot;webRespStatusCode\&quot;:429},\&quot;id\&quot;:977,\&quot;name\&quot;:\&quot;Fallback\&quot;,\&quot;namespace\&quot;:\&quot;default\&quot;,\&quot;resourceClassification\&quot;:1}&quot;</p>
@@ -211,7 +155,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         public String fallbackObject;
 
         /**
-         * <p>Requests source application.</p>
+         * <p>The source application of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>spring-cloud-a</p>
@@ -220,7 +164,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         public String limitApp;
 
         /**
-         * <p>The timeout period for queuing when the value of ControlBehavior is set to 2. Unit: milliseconds.</p>
+         * <p>The timeout period in milliseconds when the flow control behavior is set to queuing.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -229,7 +173,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         public Integer maxQueueingTimeMs;
 
         /**
-         * <p>The statistical dimension. The value 1 indicates that the number of accepted requests is used for statistics.</p>
+         * <p>The statistical dimension. A value of 1 indicates the number of passed requests.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -247,7 +191,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The ID of the region in which the instance resides.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -256,7 +200,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the interface resource.</p>
+         * <p>The API resource name.</p>
          * 
          * <strong>example:</strong>
          * <p>/a</p>
@@ -265,7 +209,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         public String resource;
 
         /**
-         * <p>Interface resource type.</p>
+         * <p>The API resource category.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -283,7 +227,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         public Long ruleId;
 
         /**
-         * <p>The throttling threshold.</p>
+         * <p>The threshold of the flow control rule.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -292,7 +236,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         public Float threshold;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;origin\&quot;:\&quot;default\&quot;}</p>
@@ -447,7 +391,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned collection.</p>
          */
         @NameInMap("Result")
         public java.util.List<ListFlowRulesResponseBodyDataResult> result;

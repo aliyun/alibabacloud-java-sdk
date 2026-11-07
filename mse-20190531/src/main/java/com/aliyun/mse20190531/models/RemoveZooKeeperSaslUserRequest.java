@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveZooKeeperSaslUserRequest extends TeaModel {
     /**
+     * <p>The language of the returned results. Valid values: zh (default): Chinese, en: English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,7 @@ public class RemoveZooKeeperSaslUserRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class RemoveZooKeeperSaslUserRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Specifies whether the changes take effect immediately.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -28,6 +33,7 @@ public class RemoveZooKeeperSaslUserRequest extends TeaModel {
     public Boolean reload;
 
     /**
+     * <p>The list of usernames to remove.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserNames")

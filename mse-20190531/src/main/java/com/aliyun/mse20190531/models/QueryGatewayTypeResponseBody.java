@@ -32,7 +32,7 @@ public class QueryGatewayTypeResponseBody extends TeaModel {
      * <p>The message returned. If the request is successful, a success message is returned. If the request fails, an error message is returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request is successfully processed.</p>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;

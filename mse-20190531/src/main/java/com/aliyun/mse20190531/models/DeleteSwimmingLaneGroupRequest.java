@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteSwimmingLaneGroupRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned information. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DeleteSwimmingLaneGroupRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the lane group.</p>
+     * <p>The ID of the end-to-end traffic lane group.</p>
      * 
      * <strong>example:</strong>
      * <p>145</p>
@@ -36,7 +36,7 @@ public class DeleteSwimmingLaneGroupRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The name of the Microservices Engine (MSE) namespace.</p>
+     * <p>The name of the MSE namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>

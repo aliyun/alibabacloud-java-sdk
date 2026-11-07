@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGatewayServiceDetailResponseBody extends TeaModel {
     /**
-     * <p>The response code returned.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,13 +14,13 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The data overview.</p>
      */
     @NameInMap("Data")
     public GetGatewayServiceDetailResponseBodyData data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,16 +29,16 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request is successfully processed.</p>
+     * <p>Succ</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9802C54E-5CC5-5706-927B-993DBB6DCF2F</p>
@@ -47,10 +47,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
 
     public static class GetGatewayServiceDetailResponseBodyDataLabelDetails extends TeaModel {
         /**
-         * <p>The tag.</p>
+         * <p>The label.</p>
          * 
          * <strong>example:</strong>
          * <p>label</p>
@@ -123,7 +123,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The label value.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -180,7 +180,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The port ID.</p>
+         * <p>The port configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -198,7 +198,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public Long serviceId;
 
         /**
-         * <p>The service port number.</p>
+         * <p>The service port.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -277,7 +277,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
 
     public static class GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersionLabels extends TeaModel {
         /**
-         * <p>The tag.</p>
+         * <p>The label.</p>
          * 
          * <strong>example:</strong>
          * <p>version</p>
@@ -286,7 +286,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The label value.</p>
          * 
          * <strong>example:</strong>
          * <p>v2</p>
@@ -319,13 +319,13 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
 
     public static class GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersion extends TeaModel {
         /**
-         * <p>The tag.</p>
+         * <p>The label.</p>
          */
         @NameInMap("Labels")
         public java.util.List<GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersionLabels> labels;
 
         /**
-         * <p>The version number.</p>
+         * <p>The version name.</p>
          * 
          * <strong>example:</strong>
          * <p>v2</p>
@@ -414,7 +414,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
 
     public static class GetGatewayServiceDetailResponseBodyDataVersions extends TeaModel {
         /**
-         * <p>The tag.</p>
+         * <p>The label.</p>
          * 
          * <strong>example:</strong>
          * <p>version</p>
@@ -432,7 +432,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The label value.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -472,11 +472,14 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
     }
 
     public static class GetGatewayServiceDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of DNS servers. This parameter is only used for DNS domain name services.</p>
+         */
         @NameInMap("DnsServerList")
         public java.util.List<String> dnsServerList;
 
         /**
-         * <p>The ID of the gateway.</p>
+         * <p>The gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -485,7 +488,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public Long gatewayId;
 
         /**
-         * <p>The traffic policy of the service.</p>
+         * <p>The service traffic policy.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -521,7 +524,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The name of the group.</p>
+         * <p>The group name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -530,7 +533,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>Indicates whether the health check is enabled.</p>
+         * <p>Indicates whether health checks are enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -539,7 +542,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public String healthCheck;
 
         /**
-         * <p>The status of the health check. Valid values:</p>
+         * <p>The health check status.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -548,7 +551,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public String healthStatus;
 
         /**
-         * <p>The ID of the service.</p>
+         * <p>The service ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -557,19 +560,19 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The IP address of the service.</p>
+         * <p>The IP addresses of the service.</p>
          */
         @NameInMap("Ips")
         public java.util.List<String> ips;
 
         /**
-         * <p>The details of the tag.</p>
+         * <p>The label details.</p>
          */
         @NameInMap("LabelDetails")
         public java.util.List<GetGatewayServiceDetailResponseBodyDataLabelDetails> labelDetails;
 
         /**
-         * <p>The basic information about the service.</p>
+         * <p>The basic information of the service.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -578,7 +581,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public String metaInfo;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -596,7 +599,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The traffic policy of service ports.</p>
+         * <p>The traffic policies for service ports.</p>
          */
         @NameInMap("PortTrafficPolicyList")
         public java.util.List<GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList> portTrafficPolicyList;
@@ -607,11 +610,17 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         @NameInMap("Ports")
         public java.util.List<Integer> ports;
 
+        /**
+         * <p>The fully qualified domain name (FQDN) of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo.default.svc.cluster.local</p>
+         */
         @NameInMap("ServiceFQDN")
         public String serviceFQDN;
 
         /**
-         * <p>The name of the service registered with the service registry.</p>
+         * <p>The name of the service registered in the registry.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -619,11 +628,17 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         @NameInMap("ServiceNameInRegistry")
         public String serviceNameInRegistry;
 
+        /**
+         * <p>The service port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
+         */
         @NameInMap("ServicePort")
         public Integer servicePort;
 
         /**
-         * <p>The protocol of the service.</p>
+         * <p>The service protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -632,7 +647,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public String serviceProtocol;
 
         /**
-         * <p>The ID of the service source.</p>
+         * <p>The source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -641,7 +656,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public Long sourceId;
 
         /**
-         * <p>The source type of the service.</p>
+         * <p>The service source.</p>
          * 
          * <strong>example:</strong>
          * <p>MSE</p>
@@ -650,13 +665,13 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The details of versions.</p>
+         * <p>The version details.</p>
          */
         @NameInMap("VersionDetails")
         public java.util.List<GetGatewayServiceDetailResponseBodyDataVersionDetails> versionDetails;
 
         /**
-         * <p>The service version. This parameter is deprecated.</p>
+         * <p>The service version numbers. <strong>[Deprecated]</strong></p>
          */
         @NameInMap("Versions")
         public java.util.List<GetGatewayServiceDetailResponseBodyDataVersions> versions;

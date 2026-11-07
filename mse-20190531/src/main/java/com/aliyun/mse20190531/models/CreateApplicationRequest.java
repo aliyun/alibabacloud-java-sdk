@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned information. Valid values:</p>
      * <ul>
      * <li>zh: Chinese</li>
      * <li>en: English</li>
@@ -37,7 +37,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>MSE命名空间名字。</p>
+     * <p>The name of the MSE namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>prod</p>
@@ -56,7 +56,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>Specifies whether to start the switch.</p>
+     * <p>Specifies whether to enable Sentinel.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -65,7 +65,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String sentinelEnable;
 
     /**
-     * <p>The service where the application is deployed. A value of ACK indicates Container Service for Kubernetes.</p>
+     * <p>The deployment method of the application. ACK indicates Container Service for Kubernetes (ACK).</p>
      * 
      * <strong>example:</strong>
      * <p>ACK</p>
@@ -74,7 +74,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The name of the Microservices Engine (MSE) namespace.</p>
+     * <p>Specifies whether to enable Switch.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -82,6 +82,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("SwitchEnable")
     public String switchEnable;
 
+    /**
+     * <p>The Alibaba Cloud tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateApplicationRequestTags> tags;
 
@@ -163,9 +166,21 @@ public class CreateApplicationRequest extends TeaModel {
     }
 
     public static class CreateApplicationRequestTags extends TeaModel {
+        /**
+         * <p>The custom tag key entered by the user. It can be up to 128 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. It can be up to 128 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagKey</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryNamespaceResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The data that is returned.</p>
      */
     @NameInMap("Data")
     public java.util.List<QueryNamespaceResponseBodyData> data;
@@ -19,10 +19,18 @@ public class QueryNamespaceResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is processed successfully.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>abcde-fg</p>
      */
@@ -30,6 +38,8 @@ public class QueryNamespaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

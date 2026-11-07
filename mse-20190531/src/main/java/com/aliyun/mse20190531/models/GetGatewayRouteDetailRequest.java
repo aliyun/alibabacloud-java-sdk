@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetGatewayRouteDetailRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>Language type of the returned information:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class GetGatewayRouteDetailRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The unique ID of the gateway.</p>
+     * <p>Gateway unique identifier ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-5d3a78a53ec947aa928212d671d400ac</p>
@@ -27,7 +29,7 @@ public class GetGatewayRouteDetailRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
-     * <p>The ID of the route.</p>
+     * <p>Route ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1050</p>

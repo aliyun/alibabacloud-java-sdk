@@ -4,10 +4,15 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayIsolationRuleResponseBody extends TeaModel {
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public UpdateGatewayIsolationRuleResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>94B12406-E44D-57C9-BF93-A8B35BFF****</p>
      */
@@ -37,6 +42,10 @@ public class UpdateGatewayIsolationRuleResponseBody extends TeaModel {
 
     public static class UpdateGatewayIsolationRuleResponseBodyData extends TeaModel {
         /**
+         * <p>The type of the web fallback behavior.</p>
+         * <p>0: The specified content is returned.</p>
+         * <p>1: Redirect the specified page.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -44,6 +53,10 @@ public class UpdateGatewayIsolationRuleResponseBody extends TeaModel {
         public Integer behaviorType;
 
         /**
+         * <p>The encoding type.</p>
+         * <p>0: plain text</p>
+         * <p>1: JSON text</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -51,6 +64,10 @@ public class UpdateGatewayIsolationRuleResponseBody extends TeaModel {
         public Integer bodyEncoding;
 
         /**
+         * <p>Specifies whether to enable the rule.</p>
+         * <p>0: disable</p>
+         * <p>1: enable</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -58,6 +75,8 @@ public class UpdateGatewayIsolationRuleResponseBody extends TeaModel {
         public Integer enable;
 
         /**
+         * <p>The gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>14407</p>
          */
@@ -65,6 +84,8 @@ public class UpdateGatewayIsolationRuleResponseBody extends TeaModel {
         public Long gatewayId;
 
         /**
+         * <p>The unique ID of the gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
          */
@@ -72,16 +93,26 @@ public class UpdateGatewayIsolationRuleResponseBody extends TeaModel {
         public String gatewayUniqueId;
 
         /**
+         * <p>The ID of the concurrency rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>358</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The IDs of the circuit breaking rules that are used to filter data.</p>
+         */
         @NameInMap("IdList")
         public java.util.List<Long> idList;
 
         /**
+         * <p>The threshold conversion mode.</p>
+         * <p>0: standalone</p>
+         * <p>1: cluster</p>
+         * <p>2: cluster-to-standalone</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -89,6 +120,8 @@ public class UpdateGatewayIsolationRuleResponseBody extends TeaModel {
         public Integer limitMode;
 
         /**
+         * <p>The maximum number of concurrent requests.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -96,6 +129,8 @@ public class UpdateGatewayIsolationRuleResponseBody extends TeaModel {
         public Integer maxConcurrency;
 
         /**
+         * <p>The custom header. The input is a key-value pair.</p>
+         * 
          * <strong>example:</strong>
          * <p>key=value</p>
          */
@@ -103,6 +138,8 @@ public class UpdateGatewayIsolationRuleResponseBody extends TeaModel {
         public String responseAdditionalHeaders;
 
         /**
+         * <p>The HTTP text to be returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -110,6 +147,8 @@ public class UpdateGatewayIsolationRuleResponseBody extends TeaModel {
         public String responseContentBody;
 
         /**
+         * <p>The URL that is redirected to.</p>
+         * 
          * <strong>example:</strong>
          * <p>www.******.com</p>
          */
@@ -117,6 +156,8 @@ public class UpdateGatewayIsolationRuleResponseBody extends TeaModel {
         public String responseRedirectUrl;
 
         /**
+         * <p>The HTTP status code.</p>
+         * 
          * <strong>example:</strong>
          * <p>429</p>
          */
@@ -124,6 +165,8 @@ public class UpdateGatewayIsolationRuleResponseBody extends TeaModel {
         public Integer responseStatusCode;
 
         /**
+         * <p>The route ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>52853</p>
          */
@@ -131,6 +174,8 @@ public class UpdateGatewayIsolationRuleResponseBody extends TeaModel {
         public Long routeId;
 
         /**
+         * <p>The route name.</p>
+         * 
          * <strong>example:</strong>
          * <p>routeName</p>
          */

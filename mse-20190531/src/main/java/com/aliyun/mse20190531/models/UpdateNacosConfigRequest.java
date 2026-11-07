@@ -39,7 +39,7 @@ public class UpdateNacosConfigRequest extends TeaModel {
      * <p>The content of the configuration.</p>
      * 
      * <strong>example:</strong>
-     * <p>attribute1=1221111\r\nattribute2=Chinese\r\nattribute3=abc11\r\nattribute4=1.00111</p>
+     * <p>test</p>
      */
     @NameInMap("Content")
     public String content;
@@ -58,7 +58,7 @@ public class UpdateNacosConfigRequest extends TeaModel {
      * <p>The description of the configuration.</p>
      * 
      * <strong>example:</strong>
-     * <p>Basic configurations</p>
+     * <p>Base configuration</p>
      */
     @NameInMap("Desc")
     public String desc;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FetchLosslessRuleListResponseBody extends TeaModel {
     /**
-     * <p>The response code returned.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,6 +20,8 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
     public FetchLosslessRuleListResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -27,6 +29,8 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -34,7 +38,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -43,7 +47,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>56D9E600-6348-4260-B35F-583413F****</p>
@@ -52,14 +56,14 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>The request result. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>True</p>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -127,7 +131,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
 
     public static class FetchLosslessRuleListResponseBodyDataResults extends TeaModel {
         /**
-         * <p>Indicates whether service registration is complete before readiness probe.</p>
+         * <p>Specifies whether to enable completing service registration before passing the readiness check.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -136,16 +140,16 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         public Boolean aligned;
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>hkhon1po62@24810bf4364aea1</p>
+         * <p>hkhon1po62@24810bf4364a***</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>echo-demo</p>
@@ -163,7 +167,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The registration latency. Unit: seconds.</p>
+         * <p>The delayed registration time in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -172,10 +176,10 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         public Integer delayTime;
 
         /**
-         * <p>Indicates whether graceful start is enabled. Valid values:</p>
+         * <p>The enabling status of graceful start. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: enabled</li>
-         * <li><code>false</code>: disabled</li>
+         * <li><code>true</code>: Enabled.</li>
+         * <li><code>false</code>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -185,7 +189,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The slope of the prefetching curve.</p>
+         * <p>The slope of the warm-up curve.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -194,7 +198,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         public Integer funcType;
 
         /**
-         * <p>Indicates whether online and offline processing details are displayed.</p>
+         * <p>Specifies whether to enable the processing details for graceful start and shutdown.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -203,7 +207,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         public Boolean lossLessDetail;
 
         /**
-         * <p>Indicates whether notification is enabled.</p>
+         * <p>Specifies whether to enable proactive notifications.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -212,7 +216,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         public Boolean notice;
 
         /**
-         * <p>Indicates whether service prefetching is complete before readiness probe.</p>
+         * <p>Specifies whether to enable completing service warm-up before passing the readiness check.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -221,7 +225,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         public Boolean related;
 
         /**
-         * <p>The prefetching duration. Unit: seconds.</p>
+         * <p>The warm-up duration in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -326,7 +330,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
 
     public static class FetchLosslessRuleListResponseBodyData extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -335,7 +339,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -350,7 +354,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         public java.util.List<FetchLosslessRuleListResponseBodyDataResults> results;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>36</p>

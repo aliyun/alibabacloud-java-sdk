@@ -18,7 +18,7 @@ public class DeleteGatewayAuthConsumerResourceRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The consumer ID.</p>
+     * <p>The ID of the gateway authentication consumer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class DeleteGatewayAuthConsumerResourceRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
-     * <p>The IDs of the authorized resources that you want to delete.</p>
+     * <p>The list of authorization IDs to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

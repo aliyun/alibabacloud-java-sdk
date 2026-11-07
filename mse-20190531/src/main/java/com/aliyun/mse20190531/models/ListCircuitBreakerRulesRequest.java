@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCircuitBreakerRulesRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values: zh-CN and en-US. Default value: zh-CN. The value zh-CN indicates Chinese, and the value en-US indicates English.</p>
+     * <p>The language in which you want the results to be displayed. Valid values: zh-CN (default value): Chinese. en-US: English</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -43,7 +43,7 @@ public class ListCircuitBreakerRulesRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The start page of the returned pages. Default value: 1.</p>
+     * <p>The first page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -61,7 +61,7 @@ public class ListCircuitBreakerRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>This parameter is used for exact match of circuit breaking rules.</p>
+     * <p>The interface for which the protection rule is configured.</p>
      * 
      * <strong>example:</strong>
      * <p>/a</p>
@@ -70,7 +70,7 @@ public class ListCircuitBreakerRulesRequest extends TeaModel {
     public String resource;
 
     /**
-     * <p>This parameter is used for fuzzy match of circuit breaking rules.</p>
+     * <p>The interface keyword in the protection rule.</p>
      * 
      * <strong>example:</strong>
      * <p>a</p>

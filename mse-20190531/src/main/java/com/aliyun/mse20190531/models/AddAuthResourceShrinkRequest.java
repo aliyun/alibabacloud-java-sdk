@@ -7,8 +7,8 @@ public class AddAuthResourceShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class AddAuthResourceShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the authorization record.</p>
+     * <p>The authorization ID.</p>
      * 
      * <strong>example:</strong>
      * <p>13</p>
@@ -27,13 +27,13 @@ public class AddAuthResourceShrinkRequest extends TeaModel {
     public Long authId;
 
     /**
-     * <p>The authentication resource headers.</p>
+     * <p>The list of authentication resource headers.</p>
      */
     @NameInMap("AuthResourceHeaderList")
     public String authResourceHeaderListShrink;
 
     /**
-     * <p>The domain ID.</p>
+     * <p>The domain name ID.</p>
      * 
      * <strong>example:</strong>
      * <p>128</p>
@@ -42,7 +42,7 @@ public class AddAuthResourceShrinkRequest extends TeaModel {
     public Long domainId;
 
     /**
-     * <p>The unique ID of the gateway.</p>
+     * <p>The unique gateway ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-86575c0bc9f04ecfbacb92b8e392****</p>
@@ -51,7 +51,7 @@ public class AddAuthResourceShrinkRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
-     * <p>Specifies whether the matching is not case-sensitive. Default value: true.</p>
+     * <p>Specifies whether to ignore case. Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -60,15 +60,15 @@ public class AddAuthResourceShrinkRequest extends TeaModel {
     public Boolean ignoreCase;
 
     /**
-     * <p>The matching type. Valid values:</p>
+     * <p>The match type. Valid values:</p>
      * <ul>
-     * <li>EQUAL</li>
-     * <li>PRE</li>
-     * <li>ERGULAR</li>
+     * <li>EQUAL: Exact match.</li>
+     * <li>PRE: Prefix match.</li>
+     * <li>ERGULAR: Regular expression match.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>exact</p>
+     * <p>PRE</p>
      */
     @NameInMap("MatchType")
     public String matchType;
