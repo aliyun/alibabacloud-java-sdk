@@ -3849,6 +3849,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询Agent实例版本列表</p>
+     * 
+     * @param request ListAgentInstanceVersionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAgentInstanceVersionsResponse
+     */
+    public ListAgentInstanceVersionsResponse listAgentInstanceVersionsWithOptions(ListAgentInstanceVersionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentPlatform)) {
+            query.put("AgentPlatform", request.agentPlatform);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentProvider)) {
+            query.put("AgentProvider", request.agentProvider);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAgentInstanceVersions"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAgentInstanceVersionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Agent实例版本列表</p>
+     * 
+     * @param request ListAgentInstanceVersionsRequest
+     * @return ListAgentInstanceVersionsResponse
+     */
+    public ListAgentInstanceVersionsResponse listAgentInstanceVersions(ListAgentInstanceVersionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAgentInstanceVersionsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>When multiple filter conditions are specified at the same time, they take effect together. AppName supports contains matching. When a single-value filter and the corresponding list filter are specified at the same time, the intersection is used. To avoid empty results, specify only one of the forms.
      * If PageSize is omitted, the value is 10. Start from 1 for PageNumber and query page by page until the number of retrieved records reaches Count. Before deleting an application, check Deletable.</p>
@@ -4911,6 +4959,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>分页查询浏览器书签列表</p>
+     * 
+     * @param request ListBrowserBookmarksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListBrowserBookmarksResponse
+     */
+    public ListBrowserBookmarksResponse listBrowserBookmarksWithOptions(ListBrowserBookmarksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.browserInstanceGroupId)) {
+            query.put("BrowserInstanceGroupId", request.browserInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.browserInstanceGroupSetId)) {
+            query.put("BrowserInstanceGroupSetId", request.browserInstanceGroupSetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListBrowserBookmarks"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListBrowserBookmarksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询浏览器书签列表</p>
+     * 
+     * @param request ListBrowserBookmarksRequest
+     * @return ListBrowserBookmarksResponse
+     */
+    public ListBrowserBookmarksResponse listBrowserBookmarks(ListBrowserBookmarksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listBrowserBookmarksWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>This topic describes how paged query cloud browser groups in the monthly active user (MAU) billing scenario.</p>
      * <h2>Query conditions</h2>
@@ -5029,6 +5137,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListBrowserInstanceGroupResponse listBrowserInstanceGroup(ListBrowserInstanceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listBrowserInstanceGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>调用本接口分页查询云浏览器交付组或交付组集合下配置的访问限制 URL（Restricted URL）列表，用于查看当前访问控制策略中已配置的 URL 明细。
+     * BrowserInstanceGroupId 与 BrowserInstanceGroupSetId 必须且只能指定一个：指定 BrowserInstanceGroupId 时查询该交付组的访问限制 URL；指定 BrowserInstanceGroupSetId 时查询该交付组集合的访问限制 URL。两者同时指定或同时不指定都会返回参数错误。
+     * 可通过 Keyword 对访问限制 URL 做包含匹配筛选（英文不区分大小写），不传时返回全部。分页由 PageNumber 和 PageSize 控制：PageSize 取值范围 1~200，默认 200；PageNumber 默认 0，传入值小于 1 时按第 1 页处理。响应中的 TotalCount 为满足筛选条件的总记录数，Data 为当前页记录，没有数据时返回空数组。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>分页查询浏览器白名单列表</p>
+     * 
+     * @param request ListBrowserRestrictedURLsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListBrowserRestrictedURLsResponse
+     */
+    public ListBrowserRestrictedURLsResponse listBrowserRestrictedURLsWithOptions(ListBrowserRestrictedURLsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.browserInstanceGroupId)) {
+            query.put("BrowserInstanceGroupId", request.browserInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.browserInstanceGroupSetId)) {
+            query.put("BrowserInstanceGroupSetId", request.browserInstanceGroupSetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListBrowserRestrictedURLs"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListBrowserRestrictedURLsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>调用本接口分页查询云浏览器交付组或交付组集合下配置的访问限制 URL（Restricted URL）列表，用于查看当前访问控制策略中已配置的 URL 明细。
+     * BrowserInstanceGroupId 与 BrowserInstanceGroupSetId 必须且只能指定一个：指定 BrowserInstanceGroupId 时查询该交付组的访问限制 URL；指定 BrowserInstanceGroupSetId 时查询该交付组集合的访问限制 URL。两者同时指定或同时不指定都会返回参数错误。
+     * 可通过 Keyword 对访问限制 URL 做包含匹配筛选（英文不区分大小写），不传时返回全部。分页由 PageNumber 和 PageSize 控制：PageSize 取值范围 1~200，默认 200；PageNumber 默认 0，传入值小于 1 时按第 1 页处理。响应中的 TotalCount 为满足筛选条件的总记录数，Data 为当前页记录，没有数据时返回空数组。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>分页查询浏览器白名单列表</p>
+     * 
+     * @param request ListBrowserRestrictedURLsRequest
+     * @return ListBrowserRestrictedURLsResponse
+     */
+    public ListBrowserRestrictedURLsResponse listBrowserRestrictedURLs(ListBrowserRestrictedURLsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listBrowserRestrictedURLsWithOptions(request, runtime);
     }
 
     /**
@@ -8230,6 +8408,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>调用本接口查询当前阿里云账号在指定日期的会话数量趋势数据。数据为离线统计结果，按天组织，返回该日期内各时间点的会话数量。
+     * 返回结果按 10 分钟粒度聚合：每条数据由小时（Hh，取值 00-23）和分钟（Mi，取值 00、10、20、30、40、50）标识一个时间点，SessionCntMi 为该时间点所在 10 分钟区间内的会话数量汇总值。结果按小时、分钟升序排列。
+     * 可通过 BizRegionId 指定业务地域、通过 AppInstanceGroupId 指定交付组进行过滤；两者均不传时，返回当前账号下所有地域、所有交付组的会话数据汇总。实际用于过滤会话数据的地域以 BizRegionId 为准。
+     * StatDate 为统计日期，格式 yyyyMMdd，不传时默认查询昨天，仅支持查询最近 90 天内的日期。当指定日期没有会话数据时返回空列表，且返回码为 NO_DATA。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>离线每天会话趋势图</p>
+     * 
+     * @param request QuerySessionDataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QuerySessionDataResponse
+     */
+    public QuerySessionDataResponse querySessionDataWithOptions(QuerySessionDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
+            body.put("AppInstanceGroupId", request.appInstanceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            body.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statDate)) {
+            body.put("StatDate", request.statDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QuerySessionData"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QuerySessionDataResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>调用本接口查询当前阿里云账号在指定日期的会话数量趋势数据。数据为离线统计结果，按天组织，返回该日期内各时间点的会话数量。
+     * 返回结果按 10 分钟粒度聚合：每条数据由小时（Hh，取值 00-23）和分钟（Mi，取值 00、10、20、30、40、50）标识一个时间点，SessionCntMi 为该时间点所在 10 分钟区间内的会话数量汇总值。结果按小时、分钟升序排列。
+     * 可通过 BizRegionId 指定业务地域、通过 AppInstanceGroupId 指定交付组进行过滤；两者均不传时，返回当前账号下所有地域、所有交付组的会话数据汇总。实际用于过滤会话数据的地域以 BizRegionId 为准。
+     * StatDate 为统计日期，格式 yyyyMMdd，不传时默认查询昨天，仅支持查询最近 90 天内的日期。当指定日期没有会话数据时返回空列表，且返回码为 NO_DATA。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>离线每天会话趋势图</p>
+     * 
+     * @param request QuerySessionDataRequest
+     * @return QuerySessionDataResponse
+     */
+    public QuerySessionDataResponse querySessionData(QuerySessionDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.querySessionDataWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Queries session quantity reports. <code>StartDate</code>, <code>EndDate</code>, and <code>StatDateType</code> are required. The query span limit is determined by the statistical granularity: up to 1 day for <code>1m</code> and <code>30m</code>, up to 15 days for <code>6h</code>, and up to 180 days for <code>1d</code>. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 records per page.</p>
      * 
      * <b>summary</b> : 
@@ -10104,5 +10350,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateWuyingServerImageResponse updateWuyingServerImage(UpdateWuyingServerImageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateWuyingServerImageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>校验LLM模板配置有效性</p>
+     * 
+     * @param request ValidateLlmTemplateConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ValidateLlmTemplateConfigResponse
+     */
+    public ValidateLlmTemplateConfigResponse validateLlmTemplateConfigWithOptions(ValidateLlmTemplateConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            query.put("Config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.providerTemplateId)) {
+            query.put("ProviderTemplateId", request.providerTemplateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ValidateLlmTemplateConfig"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ValidateLlmTemplateConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>校验LLM模板配置有效性</p>
+     * 
+     * @param request ValidateLlmTemplateConfigRequest
+     * @return ValidateLlmTemplateConfigResponse
+     */
+    public ValidateLlmTemplateConfigResponse validateLlmTemplateConfig(ValidateLlmTemplateConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.validateLlmTemplateConfigWithOptions(request, runtime);
     }
 }
