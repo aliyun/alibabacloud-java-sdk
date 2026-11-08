@@ -14,14 +14,14 @@ public class PutExporterRuleRequest extends TeaModel {
     public String describe;
 
     /**
-     * <p>The destination for data export.</p>
+     * <p>The destinations for data export.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DstNames")
     public java.util.List<String> dstNames;
 
     /**
-     * <p>The metric name. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</p>
+     * <p>The name of the metric. &gt;For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service metrics</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>CPUUtilization</p>
@@ -30,7 +30,7 @@ public class PutExporterRuleRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The namespace of the Alibaba Cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</p>
+     * <p>The data namespace of the Alibaba Cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service metrics</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>acs_ecs_dashboard</p>
@@ -44,7 +44,7 @@ public class PutExporterRuleRequest extends TeaModel {
     /**
      * <p>The name of the rule.</p>
      * <blockquote>
-     * <p>If the rule name already exists, the existing rule is modified. Otherwise, a new rule is created.</p>
+     * <p>If the specified rule name is the same as an existing rule name, the existing rule is modified. Otherwise, a new rule is created.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -54,14 +54,14 @@ public class PutExporterRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The time windows for data export. Unit: seconds.</p>
+     * <p>The time window for exporting data. Unit: seconds.</p>
      * <blockquote>
      * <ul>
-     * <li>To export data for multiple windows, separate the windows with commas (,).</li>
+     * <li>To export data for multiple time windows, separate the values with commas (,).</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>Exporting data at intervals of less than 60 seconds is not supported.</li>
+     * <li>Exporting data for a time window of less than 60 seconds is not supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>

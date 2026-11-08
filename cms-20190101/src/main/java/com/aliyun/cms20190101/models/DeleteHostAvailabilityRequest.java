@@ -5,11 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteHostAvailabilityRequest extends TeaModel {
     /**
-     * <p>The IDs of the tasks.</p>
+     * <p>The ID of the task.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>12456</p>
      */
     @NameInMap("Id")
     public java.util.List<Long> id;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMetricRuleBlackListRequest extends TeaModel {
     /**
-     * <p>The category of the cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include <code>kvstore_standard</code>, <code>kvstore_sharding</code>, and <code>kvstore_splitrw</code>.</p>
+     * <p>The category of the Alibaba Cloud service. For example, Redis includes <code>kvstore_standard</code> (Standard Edition), <code>kvstore_sharding</code> (Cluster Edition), and <code>kvstore_splitrw</code> (Read/Write Splitting Edition).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,16 +15,14 @@ public class CreateMetricRuleBlackListRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The time range within which the blacklist policy is effective.</p>
+     * <p>The effective period of the alert blacklist policy.</p>
      * <ul>
-     * <li><p>If you do not configure this parameter, the blacklist policy is permanently effective.</p>
+     * <li><p>If you do not specify this parameter, the alert blacklist policy is permanently valid.</p>
      * </li>
-     * <li><p>If you configure this parameter, the blacklist policy is effective only within the specified time range. Examples:</p>
+     * <li><p>If you specify this parameter, the blacklist policy is valid only within the specified time range. This parameter supports the following two formats:</p>
      * <ul>
-     * <li><p><code>03:00-04:59</code>: The blacklist policy is effective from 03:00 to 05:00 local time. 05:00 local time is excluded.</p>
-     * </li>
-     * <li><p><code>03:00-04:59 UTC+0700</code>: The blacklist policy is effective from 03:00 to 05:00 (UTC+7). 05:00 (UTC+7) is excluded.</p>
-     * </li>
+     * <li><code>03:00-04:59</code>: The alert blacklist policy is valid from 03:00 to 04:59 (excluding 05:00) local time.</li>
+     * <li><code>03:00-04:59 UTC+0700</code>: The alert blacklist policy is valid from 03:00 to 04:59 (excluding 05:00) UTC+07:00.</li>
      * </ul>
      * </li>
      * </ul>
@@ -36,7 +34,7 @@ public class CreateMetricRuleBlackListRequest extends TeaModel {
     public String effectiveTime;
 
     /**
-     * <p>The timestamp when the blacklist policy expires.</p>
+     * <p>The end timestamp when the alert blacklist policy takes effect.</p>
      * <p>Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +44,7 @@ public class CreateMetricRuleBlackListRequest extends TeaModel {
     public String enableEndTime;
 
     /**
-     * <p>The timestamp when the blacklist policy starts to take effect.</p>
+     * <p>The start timestamp when the alert blacklist policy takes effect.</p>
      * <p>Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
@@ -56,18 +54,18 @@ public class CreateMetricRuleBlackListRequest extends TeaModel {
     public String enableStartTime;
 
     /**
-     * <p>The IDs of the instances that belong to the specified cloud service.</p>
+     * <p>The list of instances of the specified Alibaba Cloud service in the alert blacklist policy.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Instances")
     public java.util.List<String> instances;
 
     /**
-     * <p>The metrics of the instance.</p>
+     * <p>The metrics of the instances.</p>
      * <ul>
-     * <li><p>If you do not configure this parameter, the blacklist policy applies to all metrics of the specified cloud service.</p>
+     * <li><p>If you do not specify this parameter, the alert blacklist policy applies to all metrics of the specified Alibaba Cloud service.</p>
      * </li>
-     * <li><p>If you configure this parameter, the blacklist policy applies only to the current metric.</p>
+     * <li><p>If you specify this parameter, the blacklist policy applies only to the specified metrics.</p>
      * </li>
      * </ul>
      */
@@ -75,7 +73,7 @@ public class CreateMetricRuleBlackListRequest extends TeaModel {
     public java.util.List<CreateMetricRuleBlackListRequestMetrics> metrics;
 
     /**
-     * <p>The name of the blacklist policy.</p>
+     * <p>The name of the alert blacklist policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,8 +83,8 @@ public class CreateMetricRuleBlackListRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The namespace of the cloud service.</p>
-     * <p>For more information about the namespaces of different cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>The data namespace of the Alibaba Cloud service.</p>
+     * <p>For more information about the namespaces of Alibaba Cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -99,11 +97,11 @@ public class CreateMetricRuleBlackListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The effective scope of the blacklist policy. Valid values:</p>
+     * <p>The effective scope of the alert blacklist policy. Valid values:</p>
      * <ul>
-     * <li><p>USER (default): The blacklist policy takes effect only for the current Alibaba Cloud account.</p>
+     * <li><p>USER: The alert blacklist policy takes effect only within the current Alibaba Cloud account. This is the default value.</p>
      * </li>
-     * <li><p>GROUP: The blacklist policy takes effect only for the specified application group. For information about how to query the IDs of application groups, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+     * <li><p>GROUP: The alert blacklist policy takes effect within the specified application group. You must specify an application group. For more information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
      * </li>
      * </ul>
      * 
@@ -114,9 +112,9 @@ public class CreateMetricRuleBlackListRequest extends TeaModel {
     public String scopeType;
 
     /**
-     * <p>The ID of the application group. The value of this parameter is a JSON array.</p>
+     * <p>The list of application group IDs. The value is a JSON array.</p>
      * <blockquote>
-     * <p>This parameter must be specified when <code>ScopeType</code> is set to <code>GROUP</code>.</p>
+     * <p>This parameter is required only when <code>ScopeType</code> is set to <code>GROUP</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -220,7 +218,7 @@ public class CreateMetricRuleBlackListRequest extends TeaModel {
 
     public static class CreateMetricRuleBlackListRequestMetrics extends TeaModel {
         /**
-         * <p>The metric name.</p>
+         * <p>The name of the metric.</p>
          * <p>Valid values of N: 1 to 10.</p>
          * <p>This parameter is required.</p>
          * 
@@ -231,7 +229,7 @@ public class CreateMetricRuleBlackListRequest extends TeaModel {
         public String metricName;
 
         /**
-         * <p>The extended dimension of the instance. For example, <code>{&quot;device&quot;:&quot;C:&quot;}</code> specifies that the blacklist policy is applied to all C disks of the specified Elastic Compute Service (ECS) instance.</p>
+         * <p>The extended dimension information of the instance. For example, <code>{&quot;device&quot;:&quot;C:&quot;}</code> indicates that the blacklist policy applies to all C drives of the ECS instance.</p>
          * <p>Valid values of N: 1 to 10.</p>
          * 
          * <strong>example:</strong>

@@ -37,8 +37,8 @@ public class DeleteExporterOutputResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:  </p>
      * <ul>
-     * <li><code>true</code>: success</li>
-     * <li><code>false</code>: failure</li>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

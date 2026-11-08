@@ -4,11 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class InstallMonitoringAgentRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
-     * <p>Specifies whether to perform a dry run on the request. The dry run includes checks on permissions and instance status. Valid values:</p>
+     * <p>Specifies whether to perform a dry run on the request. A dry run checks permissions and instance status. Valid values:</p>
      * <ul>
      * <li><strong>false</strong> (default): Sends a normal request. After the request passes the check, the name and description of the route table are directly modified.</li>
-     * <li><strong>true</strong>: Sends a dry run request. Only checks are performed, and the name and description of the route table are not modified. Check items include whether required parameters are specified and the request format. If the check fails, an error is returned. If the check succeeds, the DryRunOperation error code is returned.</li>
+     * <li><strong>true</strong>: Sends a check request. Only the check is performed, and the name and description of the route table are not modified. The check items include whether required parameters are specified and the request format. If the check fails, a corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,15 +36,15 @@ public class InstallMonitoringAgentRequest extends TeaModel {
     /**
      * <p>Installs the CloudMonitor agent on all Alibaba Cloud hosts within the current Alibaba Cloud account. Valid values:</p>
      * <ul>
-     * <li><p>onlyInstallNotHasAgent: Installs the latest version of the agent only on Alibaba Cloud hosts on which the CloudMonitor agent is not installed.</p>
+     * <li><p><code>onlyInstallNotHasAgent</code>: Installs the latest version of the agent only on Alibaba Cloud hosts on which the CloudMonitor agent is not installed.</p>
      * </li>
-     * <li><p>onlyUpgradeAgent: Upgrades the agent only on Alibaba Cloud hosts on which a non-latest version of the CloudMonitor agent is installed.</p>
+     * <li><p><code>onlyUpgradeAgent</code>: Upgrades the agent only on Alibaba Cloud hosts on which a non-latest version of the CloudMonitor agent is installed.</p>
      * </li>
-     * <li><p>installAndUpgrade: Installs the latest version of the agent on Alibaba Cloud hosts on which the CloudMonitor agent is not installed, and upgrades the agent on Alibaba Cloud hosts on which a non-latest version of the CloudMonitor agent is installed.</p>
+     * <li><p><code>installAndUpgrade</code>: Installs the latest version of the agent on Alibaba Cloud hosts on which the CloudMonitor agent is not installed, and upgrades the agent on Alibaba Cloud hosts on which a non-latest version of the CloudMonitor agent is installed.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If you specify this parameter, the InstanceIds parameter becomes invalid.</p>
+     * <p>If you specify this parameter, the <code>InstanceIds</code> parameter is ignored.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -54,7 +57,7 @@ public class InstallMonitoringAgentRequest extends TeaModel {
      * <p>The ID of the Alibaba Cloud host.</p>
      * <p>Valid values of N: 1 to 10.</p>
      * <blockquote>
-     * <p>You must specify either InstallCommand or InstanceIds.</p>
+     * <p>You must specify either <code>InstallCommand</code> or <code>InstanceIds</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -69,6 +72,14 @@ public class InstallMonitoringAgentRequest extends TeaModel {
     public static InstallMonitoringAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         InstallMonitoringAgentRequest self = new InstallMonitoringAgentRequest();
         return TeaModel.build(map, self);
+    }
+
+    public InstallMonitoringAgentRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public InstallMonitoringAgentRequest setDryRun(Boolean dryRun) {

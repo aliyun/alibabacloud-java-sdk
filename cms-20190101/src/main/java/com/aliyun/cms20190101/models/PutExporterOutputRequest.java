@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class PutExporterOutputRequest extends TeaModel {
     /**
-     * <p>The configuration of the data export. The value is a JSONObject string that must contain the following fields:</p>
+     * <p>The data export configuration. It is a JSON object string that must contain the following fields:</p>
      * <ul>
-     * <li>endpoint: the domain name that corresponds to the data of Log Service (SLS).</li>
+     * <li>endpoint: the domain name for Simple Log Service (SLS) data.</li>
      * <li>project: the project.</li>
      * <li>logstore: the Logstore.</li>
      * <li>ak: the AccessKey ID.</li>
-     * <li>as: the AccessKey secret.</li>
+     * <li>as: the AccessKey Secret.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -41,7 +41,7 @@ public class PutExporterOutputRequest extends TeaModel {
     public String destName;
 
     /**
-     * <p>The product to which the data is exported.</p>
+     * <p>The destination service for the export.</p>
      * 
      * <strong>example:</strong>
      * <p>sls</p>

@@ -7,7 +7,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p>A value of 200 indicates success. Any other value indicates failure.</p>
+     * <p>A status code of 200 indicates success. Other values indicate failure.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,10 +47,10 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:  </p>
+     * <p>Indicates whether the request is successful. Valid values:  </p>
      * <ul>
-     * <li><code>true</code>: Successful.</li>
-     * <li><code>false</code>: Failed.</li>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>

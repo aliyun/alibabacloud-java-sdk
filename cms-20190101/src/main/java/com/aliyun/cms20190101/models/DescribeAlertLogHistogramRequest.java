@@ -18,8 +18,8 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
      * <p>Unit: milliseconds.</p>
      * <blockquote>
      * <ul>
-     * <li>You can query only the alert history within the last year.</li>
-     * <li>The interval between the start time (StartTime) and end time (EndTime) must be less than or equal to 15 days.</li>
+     * <li>You can only query the alert history of the last year.</li>
+     * <li>The time interval between the start time (<code>StartTime</code>) and the end time (<code>EndTime</code>) must be less than or equal to 15 days.</li>
      * </ul>
      * </blockquote>
      * 
@@ -43,13 +43,13 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>Aggregates data by spatial dimension, equivalent to Group By in SQL. Valid values:</p>
+     * <p>The dimension for data aggregation, which is equivalent to the GROUP BY clause in SQL. Valid values:</p>
      * <ul>
-     * <li><code>product</code>: aggregates by Alibaba Cloud service.</li>
-     * <li><code>level</code>: aggregates by alert level.</li>
-     * <li><code>groupId</code>: aggregates by application group.</li>
-     * <li><code>contactGroup</code>: aggregates by alert contact group.</li>
-     * <li><code>product,metricName</code>: aggregates by Alibaba Cloud service and metric.</li>
+     * <li><code>product</code>: Aggregates data by cloud service.</li>
+     * <li><code>level</code>: Aggregates data by alert level.</li>
+     * <li><code>groupId</code>: Aggregates data by application group.</li>
+     * <li><code>contactGroup</code>: Aggregates data by alert contact group.</li>
+     * <li><code>product,metricName</code>: Aggregates data by cloud service and metric.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     public String groupBy;
 
     /**
-     * <p>The application group ID.</p>
+     * <p>The ID of the application group.</p>
      * 
      * <strong>example:</strong>
      * <p>7301****</p>
@@ -68,7 +68,7 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The period for obtaining logs. Unit: minutes.</p>
+     * <p>The period for retrieving logs. Unit: minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>360</p>
@@ -78,14 +78,14 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
 
     /**
      * <p>The alert level and notification method. Valid values:</p>
-     * <p>&lt;props=&quot;china&quot;&gt;- P2: phone call + text message + email + DingTalk chatbot.</p>
-     * <p>&lt;props=&quot;china&quot;&gt;- P3: text message + email + DingTalk chatbot.</p>
-     * <p>&lt;props=&quot;china&quot;&gt;- P4: email + DingTalk chatbot.</p>
-     * <p>&lt;props=&quot;china&quot;&gt;- OK: no alert.</p>
-     * <p>&lt;props=&quot;intl&quot;&gt;- P4: email + DingTalk chatbot.</p>
-     * <p>&lt;props=&quot;intl&quot;&gt;- OK: no alert.</p>
-     * <p>&lt;props=&quot;partner&quot;&gt;- P4: email + DingTalk chatbot.</p>
-     * <p>&lt;props=&quot;partner&quot;&gt;- OK: no alert.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;- P2: Phone call + text message + email + DingTalk chatbot.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;- P3: Text message + email + DingTalk chatbot.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;- P4: Email + DingTalk chatbot.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;- OK: No alert.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;- P4: Email + DingTalk chatbot.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;- OK: No alert.</p>
+     * <p>&lt;props=&quot;partner&quot;&gt;- P4: Email + DingTalk chatbot.</p>
+     * <p>&lt;props=&quot;partner&quot;&gt;- OK: No alert.</p>
      * 
      * <strong>example:</strong>
      * <p>P4</p>
@@ -94,9 +94,9 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     public String level;
 
     /**
-     * <p>The metric name.</p>
+     * <p>The name of the metric.</p>
      * <blockquote>
-     * <p>For information about the metrics of Alibaba Cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Metrics</a>.</p>
+     * <p>For more information about the metrics of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -106,9 +106,9 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The namespace of the Alibaba Cloud service.</p>
+     * <p>The namespace of the cloud service.</p>
      * <blockquote>
-     * <p>For information about the namespaces of Alibaba Cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Metrics</a>.</p>
+     * <p>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * <p>The abbreviation of the cloud service name.</p>
      * 
      * <strong>example:</strong>
      * <p>ECS</p>
@@ -150,8 +150,8 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The alert rule ID.</p>
-     * <p>For information about how to obtain the alert rule ID, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+     * <p>The ID of the alert rule.</p>
+     * <p>For more information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ae06917_75a8c43178ab66****</p>
@@ -160,7 +160,7 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     public String ruleId;
 
     /**
-     * <p>The alert rule name.</p>
+     * <p>The name of the alert rule.</p>
      * 
      * <strong>example:</strong>
      * <p>test123</p>
@@ -169,7 +169,7 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The keyword for searching alert history.</p>
+     * <p>The search keyword for querying alert history.</p>
      * 
      * <strong>example:</strong>
      * <p>alert</p>
@@ -181,14 +181,14 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
      * <p>The alert status. Valid values:</p>
      * <ul>
      * <li>0: An alert is triggered or the alert recovers to Normal.</li>
-     * <li>1: The alert is not in the effective period.</li>
-     * <li>2: The mute for epoch.</li>
+     * <li>1: Outside the effective period.</li>
+     * <li>2: Mute epoch.</li>
      * <li>3: The host is restarting.</li>
-     * <li>4: Alerts are not send.</li>
+     * <li>4: Does not send alert notifications.</li>
      * </ul>
-     * <p>&lt;props=&quot;china&quot;&gt;When the alert status is 0, if the value of Level is P2, P3, or P4, an alert is triggered. If the value of Level is OK, the alert recovers to Normal.
-     * &lt;props=&quot;intl&quot;&gt;When the alert status is 0, if the value of Level is P4, an alert is triggered. If the value of Level is OK, the alert recovers to Normal.
-     * &lt;props=&quot;partner&quot;&gt;When the alert status is 0, if the value of Level is P4, an alert is triggered. If the value of Level is OK, the alert recovers to Normal.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;If the alert status is 0 and the value of Level is P2, P3, or P4, an alert is triggered. If the value of Level is OK, the alert recovers to Normal.
+     * &lt;props=&quot;intl&quot;&gt;If the alert status is 0 and the value of Level is P4, an alert is triggered. If the value of Level is OK, the alert recovers to Normal.
+     * &lt;props=&quot;partner&quot;&gt;If the alert status is 0 and the value of Level is P4, an alert is triggered. If the value of Level is OK, the alert recovers to Normal.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -197,7 +197,7 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     public String sendStatus;
 
     /**
-     * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be specified.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -211,8 +211,8 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
      * <p>Unit: milliseconds.</p>
      * <blockquote>
      * <ul>
-     * <li>You can query only the alert history within the last year.</li>
-     * <li>The interval between the start time (StartTime) and end time (EndTime) must be less than or equal to 15 days.</li>
+     * <li>You can only query the alert history of the last year.</li>
+     * <li>The time interval between the start time (<code>StartTime</code>) and the end time (<code>EndTime</code>) must be less than or equal to 15 days.</li>
      * </ul>
      * </blockquote>
      * 

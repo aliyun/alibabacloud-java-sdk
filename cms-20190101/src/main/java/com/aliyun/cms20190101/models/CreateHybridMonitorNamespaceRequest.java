@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHybridMonitorNamespaceRequest extends TeaModel {
     /**
-     * <p>The description of the metric repository.</p>
+     * <p>The description of the metric namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>Alibaba Cloud product metric repository.</p>
@@ -14,8 +14,8 @@ public class CreateHybridMonitorNamespaceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the metric repository.</p>
-     * <p>Format: consists of lowercase letters, digits, and hyphens (-).</p>
+     * <p>The name of the metric namespace.</p>
+     * <p>Format: The name can contain only lowercase letters, digits, and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateHybridMonitorNamespaceRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The region in which monitoring data is stored.</p>
+     * <p>The region where the monitoring data is stored.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -36,10 +36,10 @@ public class CreateHybridMonitorNamespaceRequest extends TeaModel {
     /**
      * <p>The storage solution for monitoring data. Valid values:</p>
      * <ul>
-     * <li>aliyun_prometheus: monitoring data is stored in Managed Service for Prometheus.</li>
+     * <li>aliyun_prometheus: Stores monitoring data in Prometheus.</li>
      * </ul>
      * <blockquote>
-     * <p>For more information about storage solutions for monitoring data, see <a href="https://help.aliyun.com/document_detail/2594921.html">Storage solutions for Hybrid Cloud Monitoring data</a>.</p>
+     * <p>For more information about storage solutions for monitoring data, see <a href="https://help.aliyun.com/document_detail/2594921.html">Storage solutions for monitoring data in Hybrid Cloud Monitoring</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -54,14 +54,14 @@ public class CreateHybridMonitorNamespaceRequest extends TeaModel {
     /**
      * <p>The data storage duration. Valid values:</p>
      * <ul>
-     * <li>cms.s1.large: storage duration of 15 days.</li>
-     * <li>cms.s1.xlarge: storage duration of 32 days.</li>
-     * <li>cms.s1.2xlarge: storage duration of 63 days.</li>
-     * <li>cms.s1.3xlarge (default): storage duration of 93 days.</li>
-     * <li>cms.s1.6xlarge: storage duration of 185 days.</li>
-     * <li>cms.s1.12xlarge: storage duration of 376 days.</li>
+     * <li>cms.s1.large: Stores data for 15 days.</li>
+     * <li>cms.s1.xlarge: Stores data for 32 days.</li>
+     * <li>cms.s1.2xlarge: Stores data for 63 days.</li>
+     * <li>cms.s1.3xlarge (default): Stores data for 93 days.</li>
+     * <li>cms.s1.6xlarge: Stores data for 185 days.</li>
+     * <li>cms.s1.12xlarge: Stores data for 376 days.</li>
      * </ul>
-     * <p>For the pricing of different storage duration specifications, see the <strong>Pricing</strong> section in <a href="https://help.aliyun.com/document_detail/223532.html">monitoring dashboard</a>.</p>
+     * <p>For more information about the pricing of different storage durations, see the <strong>Pricing</strong> table in <a href="https://help.aliyun.com/document_detail/223532.html">Dashboard</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cms.s1.3xlarge</p>

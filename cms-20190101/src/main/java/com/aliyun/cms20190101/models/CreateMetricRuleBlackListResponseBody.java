@@ -7,7 +7,7 @@ public class CreateMetricRuleBlackListResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p>The status code 200 indicates that the request was successful.</p>
+     * <p>A status code of 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class CreateMetricRuleBlackListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the blacklist policy.</p>
+     * <p>The ID of the alert blacklist policy.</p>
      * 
      * <strong>example:</strong>
      * <p>93514c96-ceb8-47d8-8ee3-93b6d98b****</p>
@@ -44,11 +44,11 @@ public class CreateMetricRuleBlackListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
+     * <li><p>true: The operation was successful.</p>
      * </li>
-     * <li><p>false</p>
+     * <li><p>false: The operation failed.</p>
      * </li>
      * </ul>
      * 

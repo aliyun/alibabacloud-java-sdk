@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAlertLogCountResponseBody extends TeaModel {
     /**
-     * <p>The alert history statistics.</p>
+     * <p>The statistics of the alert history count.</p>
      */
     @NameInMap("AlertLogCount")
     public java.util.List<DescribeAlertLogCountResponseBodyAlertLogCount> alertLogCount;
@@ -13,7 +13,7 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p>The value 200 indicates success.</p>
+     * <p>200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
      * <li><p>true: Successful.</p>
      * </li>
@@ -144,7 +144,7 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
 
     public static class DescribeAlertLogCountResponseBodyAlertLogCount extends TeaModel {
         /**
-         * <p>The number of alert history statistics.</p>
+         * <p>The number of alert history records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

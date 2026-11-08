@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateMonitorGroupRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The alert contact group. Alert notifications for the application group are sent to the alert contacts in this alert contact group.</p>
      * <blockquote>
@@ -17,10 +20,10 @@ public class CreateMonitorGroupRequest extends TeaModel {
     public String contactGroups;
 
     /**
-     * <p>Specifies whether to perform a dry run on the request. A dry run checks items such as permissions and instance status. Valid values:</p>
+     * <p>Specifies whether to perform a dry run on the request, including checks on permissions and instance status. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): Sends a normal request. If the request passes the check, the name and description of the route table are modified.</li>
-     * <li><strong>true</strong>: Sends a dry run request. Only the check is performed, and the name and description of the route table are not modified. The check items include whether required parameters are specified and whether the request format is valid. If the request fails the check, an error is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): Sends a regular request. If the request passes the check, the name and description of the route table are modified.</li>
+     * <li><strong>true</strong>: Sends a dry run request. Only the check is performed, and the name and description of the route table are not modified. The check items include whether required parameters are specified and whether the request format is valid. If the check fails, the corresponding error is returned. If the check passes, the <code>DryRunOperation</code> error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,6 +48,14 @@ public class CreateMonitorGroupRequest extends TeaModel {
     public static CreateMonitorGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMonitorGroupRequest self = new CreateMonitorGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateMonitorGroupRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateMonitorGroupRequest setContactGroups(String contactGroups) {

@@ -4,11 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMonitorGroupRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
-     * <p>Specifies whether to perform a dry run on the request. A dry run includes checks on permissions and instance status. Valid values:</p>
+     * <p>Specifies whether to perform a dry run on the request. The dry run checks permissions and instance status. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): Sends a normal request. If the request passes the check, the name and description of the route table are modified.</li>
-     * <li><strong>true</strong>: Sends a dry run request. Only the check is performed, and the name and description of the route table are not modified. Check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check passes, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends a normal request. If the request passes the check, the name and description of the route table are modified.</li>
+     * <li><strong>true</strong>: sends a dry run request. Only the check is performed, and the name and description of the route table are not modified. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,6 +36,14 @@ public class DeleteMonitorGroupRequest extends TeaModel {
     public static DeleteMonitorGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMonitorGroupRequest self = new DeleteMonitorGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMonitorGroupRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DeleteMonitorGroupRequest setDryRun(Boolean dryRun) {

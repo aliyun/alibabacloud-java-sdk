@@ -4,11 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMetricRulesRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
-     * <p>Specifies whether to perform a dry run of the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. No actual operation is performed. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, an error is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): sends a normal request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: A check request is sent, and no security group is bound to the instance. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): A normal request is sent. If the check succeeds, an HTTP 2xx status code is returned and the operation is directly performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,6 +33,14 @@ public class DeleteMetricRulesRequest extends TeaModel {
     public static DeleteMetricRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMetricRulesRequest self = new DeleteMetricRulesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMetricRulesRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DeleteMetricRulesRequest setDryRun(Boolean dryRun) {

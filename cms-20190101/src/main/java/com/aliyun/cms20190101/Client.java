@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "Cms";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-beijing", "metrics.cn-beijing.aliyuncs.com"),
@@ -124,7 +127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of applying the alert template <code>700****</code> to the application group <code>123456</code>. The generated alert rule has the ID <code>applyTemplate8ab74c6b-9f27-47ab-8841-de01dc08****</code> and the name <code>test123</code>.</p>
+     * <p>This topic provides an example to show how to apply the alert template <code>700****</code> to the application group <code>123456</code>. The ID of the generated alert rule is <code>applyTemplate8ab74c6b-9f27-47ab-8841-de01dc08****</code>, and the name is <code>test123</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Applies an alert template to an application group to generate alert rules.</p>
@@ -142,6 +145,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.applyMode)) {
             query.put("ApplyMode", request.applyMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
@@ -195,7 +202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of applying the alert template <code>700****</code> to the application group <code>123456</code>. The generated alert rule has the ID <code>applyTemplate8ab74c6b-9f27-47ab-8841-de01dc08****</code> and the name <code>test123</code>.</p>
+     * <p>This topic provides an example to show how to apply the alert template <code>700****</code> to the application group <code>123456</code>. The ID of the generated alert rule is <code>applyTemplate8ab74c6b-9f27-47ab-8841-de01dc08****</code>, and the name is <code>test123</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Applies an alert template to an application group to generate alert rules.</p>
@@ -338,11 +345,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The Alibaba Cloud services supported by this operation include cloud servers (ECS), ApsaraDB RDS, and Server Load Balancer (SLB).
-     * This topic provides an example on how to automatically create an application group for resources that are attached with the tag key <code>ecs_instance</code>. The alert contact group of the application group is <code>ECS_Group</code>.</p>
+     * <p>The Alibaba Cloud services supported by this operation include Elastic Compute Service (ECS) servers, ApsaraDB RDS, and Server Load Balancer (SLB).
+     * This topic provides an example to show how to automatically create an application group for resources that are attached to the tag key <code>ecs_instance</code>. The alert contact group for the application group is <code>ECS_Group</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Automatically creates an application group based on tags.</p>
+     * <p>Creates an application group based on tags.</p>
      * 
      * @param request CreateDynamicTagGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -351,6 +358,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateDynamicTagGroupResponse createDynamicTagGroupWithOptions(CreateDynamicTagGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.contactGroupList)) {
             query.put("ContactGroupList", request.contactGroupList);
         }
@@ -406,11 +417,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The Alibaba Cloud services supported by this operation include cloud servers (ECS), ApsaraDB RDS, and Server Load Balancer (SLB).
-     * This topic provides an example on how to automatically create an application group for resources that are attached with the tag key <code>ecs_instance</code>. The alert contact group of the application group is <code>ECS_Group</code>.</p>
+     * <p>The Alibaba Cloud services supported by this operation include Elastic Compute Service (ECS) servers, ApsaraDB RDS, and Server Load Balancer (SLB).
+     * This topic provides an example to show how to automatically create an application group for resources that are attached to the tag key <code>ecs_instance</code>. The alert contact group for the application group is <code>ECS_Group</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Automatically creates an application group based on tags.</p>
+     * <p>Creates an application group based on tags.</p>
      * 
      * @param request CreateDynamicTagGroupRequest
      * @return CreateDynamicTagGroupResponse
@@ -422,10 +433,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create an alert rule for the monitoring metric <code>cpu_total</code> of Elastic Computing Service (ECS) in the application group <code>123456</code>. The alert rule ID is <code>456789</code>, the alert rule name is <code>ECS_Rule1</code>, the alert severity is <code>Critical</code>, the statistical method is <code>Average</code>, the comparison operator is <code>GreaterThanOrEqualToThreshold</code>, the threshold is <code>90</code>, and the retry count is <code>3</code>. The response shows that the alert rule <code>ECS_Rule1</code> is created.</p>
+     * <p>This topic provides an example of creating an alert rule for the <code>cpu_total</code> metric of an Elastic Compute Service (ECS) instance in the application group <code>123456</code>. The alert rule ID is <code>456789</code>, the alert rule name is <code>ECS_Rule1</code>, the alert level is <code>Critical</code>, the statistical method is <code>Average</code>, the threshold comparison operator is <code>GreaterThanOrEqualToThreshold</code>, the alert threshold is <code>90</code>, and the alert retry count is <code>3</code>. The response indicates that the alert rule <code>ECS_Rule1</code> was created successfully.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates alert rules in batches for a specified application group by calling the CreateGroupMetricRules operation.</p>
+     * <p>Creates alert rules in batches for a specified application group.</p>
      * 
      * @param request CreateGroupMetricRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -461,10 +472,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create an alert rule for the monitoring metric <code>cpu_total</code> of Elastic Computing Service (ECS) in the application group <code>123456</code>. The alert rule ID is <code>456789</code>, the alert rule name is <code>ECS_Rule1</code>, the alert severity is <code>Critical</code>, the statistical method is <code>Average</code>, the comparison operator is <code>GreaterThanOrEqualToThreshold</code>, the threshold is <code>90</code>, and the retry count is <code>3</code>. The response shows that the alert rule <code>ECS_Rule1</code> is created.</p>
+     * <p>This topic provides an example of creating an alert rule for the <code>cpu_total</code> metric of an Elastic Compute Service (ECS) instance in the application group <code>123456</code>. The alert rule ID is <code>456789</code>, the alert rule name is <code>ECS_Rule1</code>, the alert level is <code>Critical</code>, the statistical method is <code>Average</code>, the threshold comparison operator is <code>GreaterThanOrEqualToThreshold</code>, the alert threshold is <code>90</code>, and the alert retry count is <code>3</code>. The response indicates that the alert rule <code>ECS_Rule1</code> was created successfully.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates alert rules in batches for a specified application group by calling the CreateGroupMetricRules operation.</p>
+     * <p>Creates alert rules in batches for a specified application group.</p>
      * 
      * @param request CreateGroupMetricRulesRequest
      * @return CreateGroupMetricRulesResponse
@@ -476,7 +487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a process monitoring task for an application group.</p>
+     * <p>Creates a group process monitoring task.</p>
      * 
      * @param request CreateGroupMonitoringAgentProcessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -524,7 +535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a process monitoring task for an application group.</p>
+     * <p>Creates a group process monitoring task.</p>
      * 
      * @param request CreateGroupMonitoringAgentProcessRequest
      * @return CreateGroupMonitoringAgentProcessResponse
@@ -536,7 +547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create an availability monitoring task named <code>task1</code> with the detection type set to <code>HTTP</code> in application group <code>123456</code>. Alert notifications are sent by email and DingTalk chatbot.</p>
+     * <p>This topic provides an example of creating an availability monitoring task named <code>task1</code> with the <code>HTTP</code> probe type in the application group <code>123456</code>. Alert notifications are sent to you by email and DingTalk chatbot.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an availability monitoring task.</p>
@@ -603,7 +614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create an availability monitoring task named <code>task1</code> with the detection type set to <code>HTTP</code> in application group <code>123456</code>. Alert notifications are sent by email and DingTalk chatbot.</p>
+     * <p>This topic provides an example of creating an availability monitoring task named <code>task1</code> with the <code>HTTP</code> probe type in the application group <code>123456</code>. Alert notifications are sent to you by email and DingTalk chatbot.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an availability monitoring task.</p>
@@ -619,12 +630,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Before you begin</h2>
-     * <p>Make sure that you have activated Hybrid Cloud Monitoring. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</p>
-     * <h2>Operation description</h2>
-     * <p>This topic provides an example on how to create a metric repository named <code>aliyun</code> with a data storage duration of <code>cms.s1.3xlarge</code>. The response indicates that the metric repository is created.</p>
+     * <p>Make sure that Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</p>
+     * <h2>Usage notes</h2>
+     * <p>This topic provides an example of creating a metric namespace named <code>aliyun</code> with a data storage duration of <code>cms.s1.3xlarge</code>. The response indicates that the metric namespace is created.</p>
      * 
      * <b>summary</b> : 
-     * <p>Calls the CreateHybridMonitorNamespace operation to create a metric repository.</p>
+     * <p>Creates a metric namespace.</p>
      * 
      * @param request CreateHybridMonitorNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -673,12 +684,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Before you begin</h2>
-     * <p>Make sure that you have activated Hybrid Cloud Monitoring. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</p>
-     * <h2>Operation description</h2>
-     * <p>This topic provides an example on how to create a metric repository named <code>aliyun</code> with a data storage duration of <code>cms.s1.3xlarge</code>. The response indicates that the metric repository is created.</p>
+     * <p>Make sure that Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</p>
+     * <h2>Usage notes</h2>
+     * <p>This topic provides an example of creating a metric namespace named <code>aliyun</code> with a data storage duration of <code>cms.s1.3xlarge</code>. The response indicates that the metric namespace is created.</p>
      * 
      * <b>summary</b> : 
-     * <p>Calls the CreateHybridMonitorNamespace operation to create a metric repository.</p>
+     * <p>Creates a metric namespace.</p>
      * 
      * @param request CreateHybridMonitorNamespaceRequest
      * @return CreateHybridMonitorNamespaceResponse
@@ -754,16 +765,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Before calling this operation, make sure that Hybrid Cloud Monitoring is activated.</li>
-     * <li>To create a metric for SLS logs, make sure that SLS is activated and that you have created a project and a Logstore.</li>
-     * <li>Depending on the value of <code>TaskType</code>, some parameters are required. For example, when <code>TaskType</code> is set to <code>aliyun_fc</code>, you must set <code>YARMConfig</code>. When <code>TaskType</code> is set to <code>aliyun_sls</code>, you must configure parameters such as <code>CollectInterval</code>.</li>
-     * <li>For cross-account operations, specify <code>TargetUserId</code> or <code>TargetUserIdList</code> to import resources of other members into Hybrid Cloud Monitoring.</li>
+     * <li>Before you call this operation, make sure that Hybrid Cloud Monitoring is activated.</li>
+     * <li>To create a metric for SLS logs, make sure that Simple Log Service is activated, and a project and a Logstore are created.</li>
+     * <li>Some parameters are required based on the TaskType. For example, if TaskType is set to aliyun_fc, you must configure YARMConfig. If TaskType is set to aliyun_sls, you must configure parameters such as CollectInterval.</li>
+     * <li>For cross-account operations, you can specify TargetUserId or TargetUserIdList to import resources of other members to Hybrid Cloud Monitoring.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a monitoring task for Alibaba Cloud services or Simple Log Service (SLS) logs in Hybrid Cloud Monitoring.</p>
+     * <p>Creates a monitoring task for Alibaba Cloud services or Simple Log Service (SLS) logs.</p>
      * 
      * @param request CreateHybridMonitorTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -843,16 +854,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Before calling this operation, make sure that Hybrid Cloud Monitoring is activated.</li>
-     * <li>To create a metric for SLS logs, make sure that SLS is activated and that you have created a project and a Logstore.</li>
-     * <li>Depending on the value of <code>TaskType</code>, some parameters are required. For example, when <code>TaskType</code> is set to <code>aliyun_fc</code>, you must set <code>YARMConfig</code>. When <code>TaskType</code> is set to <code>aliyun_sls</code>, you must configure parameters such as <code>CollectInterval</code>.</li>
-     * <li>For cross-account operations, specify <code>TargetUserId</code> or <code>TargetUserIdList</code> to import resources of other members into Hybrid Cloud Monitoring.</li>
+     * <li>Before you call this operation, make sure that Hybrid Cloud Monitoring is activated.</li>
+     * <li>To create a metric for SLS logs, make sure that Simple Log Service is activated, and a project and a Logstore are created.</li>
+     * <li>Some parameters are required based on the TaskType. For example, if TaskType is set to aliyun_fc, you must configure YARMConfig. If TaskType is set to aliyun_sls, you must configure parameters such as CollectInterval.</li>
+     * <li>For cross-account operations, you can specify TargetUserId or TargetUserIdList to import resources of other members to Hybrid Cloud Monitoring.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a monitoring task for Alibaba Cloud services or Simple Log Service (SLS) logs in Hybrid Cloud Monitoring.</p>
+     * <p>Creates a monitoring task for Alibaba Cloud services or Simple Log Service (SLS) logs.</p>
      * 
      * @param request CreateHybridMonitorTaskRequest
      * @return CreateHybridMonitorTaskResponse
@@ -942,12 +953,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Background information</h3>
      * <ul>
-     * <li>CloudMonitor blocks alert notifications based on the blacklist policies that take effect. To block alert notifications when the value of a metric that belongs to a cloud service reaches the threshold that you specified, add the metric to a blacklist policy.</li>
-     * <li>CloudMonitor allows you to create blacklist policies only based on threshold metrics. You cannot create blacklist policies based on system events. For more information about the cloud services and the thresholds of the metrics that are supported by CloudMonitor, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</li>
+     * <li>An alert blacklist allows CloudMonitor to block alert notifications based on an alert blacklist policy. If you do not need to receive alert notifications for a specific metric of an instance of an Alibaba Cloud service in a threshold alert rule, you can configure an alert blacklist policy to block the alert notifications.</li>
+     * <li>Currently, CloudMonitor supports alert blacklist policies only for threshold metrics, not for system events. For more information about the Alibaba Cloud services and threshold metrics supported by CloudMonitor, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a blacklist policy.</p>
+     * <p>Creates an alert blacklist policy.</p>
      * 
      * @param request CreateMetricRuleBlackListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1017,12 +1028,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Background information</h3>
      * <ul>
-     * <li>CloudMonitor blocks alert notifications based on the blacklist policies that take effect. To block alert notifications when the value of a metric that belongs to a cloud service reaches the threshold that you specified, add the metric to a blacklist policy.</li>
-     * <li>CloudMonitor allows you to create blacklist policies only based on threshold metrics. You cannot create blacklist policies based on system events. For more information about the cloud services and the thresholds of the metrics that are supported by CloudMonitor, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</li>
+     * <li>An alert blacklist allows CloudMonitor to block alert notifications based on an alert blacklist policy. If you do not need to receive alert notifications for a specific metric of an instance of an Alibaba Cloud service in a threshold alert rule, you can configure an alert blacklist policy to block the alert notifications.</li>
+     * <li>Currently, CloudMonitor supports alert blacklist policies only for threshold metrics, not for system events. For more information about the Alibaba Cloud services and threshold metrics supported by CloudMonitor, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a blacklist policy.</p>
+     * <p>Creates an alert blacklist policy.</p>
      * 
      * @param request CreateMetricRuleBlackListRequest
      * @return CreateMetricRuleBlackListResponse
@@ -1202,6 +1213,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateMonitorGroupResponse createMonitorGroupWithOptions(CreateMonitorGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.contactGroups)) {
             query.put("ContactGroups", request.contactGroups);
         }
@@ -1248,7 +1263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create an application group by using the resource group <code>CloudMonitor</code> and the alert contact group <code>ECS_Group</code>. The region ID of the resource group is <code>cn-hangzhou</code>.</p>
+     * <p>This topic provides an example of creating an application group for the <code>CloudMonitor</code> resource group in the <code>cn-hangzhou</code> region. The alert contact group of the application group is <code>ECS_Group</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an application group by using a resource group.</p>
@@ -1303,7 +1318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create an application group by using the resource group <code>CloudMonitor</code> and the alert contact group <code>ECS_Group</code>. The region ID of the resource group is <code>cn-hangzhou</code>.</p>
+     * <p>This topic provides an example of creating an application group for the <code>CloudMonitor</code> resource group in the <code>cn-hangzhou</code> region. The alert contact group of the application group is <code>ECS_Group</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an application group by using a resource group.</p>
@@ -1318,11 +1333,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can add a maximum of 1,000 instances to an application group at a time. You can add a maximum of 3,000 instances of an Alibaba Cloud service to an application group. The total number of instances that you can add to an application group is unlimited.
-     * In this example, an Elastic Compute Service (ECS) instance in the <code>China (Hangzhou)</code> region is added to the <code>3607****</code> application group. The instance ID is <code>i-2ze26xj5wwy12****</code> and the instance name is <code>test-instance-ecs</code>.</p>
+     * <p>In an application group, you can add up to 3,000 resources for a single Alibaba Cloud service, and up to 1,000 resources per request. There is no limit on the total number of resources in an application group.
+     * This topic provides an example of adding a cloud server (ECS) instance in the <code>cn-hangzhou</code> region (instance ID: <code>i-2ze26xj5wwy12****</code>, instance name: <code>test-instance-ecs</code>) to the application group <code>3607****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds resources to an application group.</p>
+     * <p>Adds the specified resources to the specified application group.</p>
      * 
      * @param request CreateMonitorGroupInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1331,6 +1346,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateMonitorGroupInstancesResponse createMonitorGroupInstancesWithOptions(CreateMonitorGroupInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
         }
@@ -1362,11 +1381,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can add a maximum of 1,000 instances to an application group at a time. You can add a maximum of 3,000 instances of an Alibaba Cloud service to an application group. The total number of instances that you can add to an application group is unlimited.
-     * In this example, an Elastic Compute Service (ECS) instance in the <code>China (Hangzhou)</code> region is added to the <code>3607****</code> application group. The instance ID is <code>i-2ze26xj5wwy12****</code> and the instance name is <code>test-instance-ecs</code>.</p>
+     * <p>In an application group, you can add up to 3,000 resources for a single Alibaba Cloud service, and up to 1,000 resources per request. There is no limit on the total number of resources in an application group.
+     * This topic provides an example of adding a cloud server (ECS) instance in the <code>cn-hangzhou</code> region (instance ID: <code>i-2ze26xj5wwy12****</code>, instance name: <code>test-instance-ecs</code>) to the application group <code>3607****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds resources to an application group.</p>
+     * <p>Adds the specified resources to the specified application group.</p>
      * 
      * @param request CreateMonitorGroupInstancesRequest
      * @return CreateMonitorGroupInstancesResponse
@@ -1492,7 +1511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic describes how to create a site monitoring task. The example creates a task named <code>HanZhou_ECS1</code> to monitor the URL <code>https://www.aliyun.com</code> over <code>HTTPS</code>.</p>
+     * <p>This topic provides an example of creating a site monitoring task named <code>HanZhou_ECS1</code>. The monitored address of the task is <code>https://www.aliyun.com</code> and the monitoring type is <code>HTTPS</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a site monitoring task.</p>
@@ -1563,7 +1582,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic describes how to create a site monitoring task. The example creates a task named <code>HanZhou_ECS1</code> to monitor the URL <code>https://www.aliyun.com</code> over <code>HTTPS</code>.</p>
+     * <p>This topic provides an example of creating a site monitoring task named <code>HanZhou_ECS1</code>. The monitored address of the task is <code>https://www.aliyun.com</code> and the monitoring type is <code>HTTPS</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a site monitoring task.</p>
@@ -1944,12 +1963,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DeleteExporterOutput operation to delete a monitoring data export configuration.</p>
+     * <p>Deletes the monitoring data export configuration.</p>
+     * 
+     * @deprecated OpenAPI DeleteExporterOutput is deprecated
      * 
      * @param request DeleteExporterOutputRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteExporterOutputResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteExporterOutputResponse deleteExporterOutputWithOptions(DeleteExporterOutputRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1976,11 +1999,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DeleteExporterOutput operation to delete a monitoring data export configuration.</p>
+     * <p>Deletes the monitoring data export configuration.</p>
+     * 
+     * @deprecated OpenAPI DeleteExporterOutput is deprecated
      * 
      * @param request DeleteExporterOutputRequest
      * @return DeleteExporterOutputResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteExporterOutputResponse deleteExporterOutput(DeleteExporterOutputRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteExporterOutputWithOptions(request, runtime);
@@ -1988,12 +2015,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invokes the DeleteExporterRule operation to delete export rules.</p>
+     * <p>Invokes the DeleteExporterRule API operation to delete export rules.</p>
+     * 
+     * @deprecated OpenAPI DeleteExporterRule is deprecated
      * 
      * @param request DeleteExporterRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteExporterRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteExporterRuleResponse deleteExporterRuleWithOptions(DeleteExporterRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2020,11 +2051,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invokes the DeleteExporterRule operation to delete export rules.</p>
+     * <p>Invokes the DeleteExporterRule API operation to delete export rules.</p>
+     * 
+     * @deprecated OpenAPI DeleteExporterRule is deprecated
      * 
      * @param request DeleteExporterRuleRequest
      * @return DeleteExporterRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteExporterRuleResponse deleteExporterRule(DeleteExporterRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteExporterRuleWithOptions(request, runtime);
@@ -2080,7 +2115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes one or more availability monitoring jobs.</p>
+     * <p>Deletes a host availability monitoring task.</p>
      * 
      * @param request DeleteHostAvailabilityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2112,7 +2147,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes one or more availability monitoring jobs.</p>
+     * <p>Deletes a host availability monitoring task.</p>
      * 
      * @param request DeleteHostAvailabilityRequest
      * @return DeleteHostAvailabilityResponse
@@ -2525,6 +2560,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteMetricRulesResponse deleteMetricRulesWithOptions(DeleteMetricRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
         }
@@ -2573,6 +2612,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteMonitorGroupResponse deleteMonitorGroupWithOptions(DeleteMonitorGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
         }
@@ -2671,6 +2714,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.category)) {
             query.put("Category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
@@ -3010,11 +3057,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation can query only the alert history within the last year.
-     * This topic provides an example on how to query the alert history statistics of Elastic Compute Service (ECS) from the <code>product</code> dimension of Alibaba Cloud services.</p>
+     * <p>This operation can only query the statistics of alert history within the last year.
+     * This topic provides an example to query the alert history statistics of Elastic Compute Service (ECS) by the <code>product</code> dimension of Alibaba Cloud services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Calls the DescribeAlertLogCount operation to query alert history statistics.</p>
+     * <p>Queries the statistics of alert history.</p>
      * 
      * @param request DescribeAlertLogCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3114,11 +3161,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation can query only the alert history within the last year.
-     * This topic provides an example on how to query the alert history statistics of Elastic Compute Service (ECS) from the <code>product</code> dimension of Alibaba Cloud services.</p>
+     * <p>This operation can only query the statistics of alert history within the last year.
+     * This topic provides an example to query the alert history statistics of Elastic Compute Service (ECS) by the <code>product</code> dimension of Alibaba Cloud services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Calls the DescribeAlertLogCount operation to query alert history statistics.</p>
+     * <p>Queries the statistics of alert history.</p>
      * 
      * @param request DescribeAlertLogCountRequest
      * @return DescribeAlertLogCountResponse
@@ -3130,10 +3177,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to query the histogram list of ECS alert history from the Alibaba Cloud service <code>product</code> dimension.</p>
+     * <p>This topic provides an example of querying the histogram list of Elastic Compute Service (ECS) alert history by the <code>product</code> dimension of cloud services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the histogram list of alert history by calling the DescribeAlertLogHistogram operation.</p>
+     * <p>Queries the histogram list of alert history.</p>
      * 
      * @param request DescribeAlertLogHistogramRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3233,10 +3280,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to query the histogram list of ECS alert history from the Alibaba Cloud service <code>product</code> dimension.</p>
+     * <p>This topic provides an example of querying the histogram list of Elastic Compute Service (ECS) alert history by the <code>product</code> dimension of cloud services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the histogram list of alert history by calling the DescribeAlertLogHistogram operation.</p>
+     * <p>Queries the histogram list of alert history.</p>
      * 
      * @param request DescribeAlertLogHistogramRequest
      * @return DescribeAlertLogHistogramResponse
@@ -3572,7 +3619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a custom event.</p>
+     * <p>Queries the details of custom events.</p>
      * 
      * @param request DescribeCustomEventAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3632,7 +3679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a custom event.</p>
+     * <p>Queries the details of custom events.</p>
      * 
      * @param request DescribeCustomEventAttributeRequest
      * @return DescribeCustomEventAttributeResponse
@@ -4094,12 +4141,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of monitoring data exports by calling the DescribeExporterOutputList operation.</p>
+     * <p>Queries the list of monitoring data exports.</p>
+     * 
+     * @deprecated OpenAPI DescribeExporterOutputList is deprecated
      * 
      * @param request DescribeExporterOutputListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeExporterOutputListResponse
      */
+    @Deprecated
+    // Deprecated
     public DescribeExporterOutputListResponse describeExporterOutputListWithOptions(DescribeExporterOutputListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4130,11 +4181,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of monitoring data exports by calling the DescribeExporterOutputList operation.</p>
+     * <p>Queries the list of monitoring data exports.</p>
+     * 
+     * @deprecated OpenAPI DescribeExporterOutputList is deprecated
      * 
      * @param request DescribeExporterOutputListRequest
      * @return DescribeExporterOutputListResponse
      */
+    @Deprecated
+    // Deprecated
     public DescribeExporterOutputListResponse describeExporterOutputList(DescribeExporterOutputListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeExporterOutputListWithOptions(request, runtime);
@@ -4142,15 +4197,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query all alert rules in the alert rule list of the current Alibaba Cloud account. The response shows that the alert rule list contains only one alert rule. The alert rule is named <code>Rule_01</code> and has an ID of <code>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</code>.</p>
+     * <p>This topic provides an example to query all alert rules in the alert rule list of the current Alibaba Cloud account. The response shows that there is only one alert rule in the list. The name of the alert rule is <code>Rule_01</code> and the ID is <code>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of data export rules.</p>
+     * 
+     * @deprecated OpenAPI DescribeExporterRuleList is deprecated
      * 
      * @param request DescribeExporterRuleListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeExporterRuleListResponse
      */
+    @Deprecated
+    // Deprecated
     public DescribeExporterRuleListResponse describeExporterRuleListWithOptions(DescribeExporterRuleListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4181,14 +4240,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query all alert rules in the alert rule list of the current Alibaba Cloud account. The response shows that the alert rule list contains only one alert rule. The alert rule is named <code>Rule_01</code> and has an ID of <code>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</code>.</p>
+     * <p>This topic provides an example to query all alert rules in the alert rule list of the current Alibaba Cloud account. The response shows that there is only one alert rule in the list. The name of the alert rule is <code>Rule_01</code> and the ID is <code>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of data export rules.</p>
      * 
+     * @deprecated OpenAPI DescribeExporterRuleList is deprecated
+     * 
      * @param request DescribeExporterRuleListRequest
      * @return DescribeExporterRuleListResponse
      */
+    @Deprecated
+    // Deprecated
     public DescribeExporterRuleListResponse describeExporterRuleList(DescribeExporterRuleListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeExporterRuleListWithOptions(request, runtime);
@@ -6464,7 +6527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of querying the details of the site monitoring task <code>cc641dff-c19d-45f3-ad0a-818a0c4f****</code>. The response shows that the task name is <code>test123</code>, the monitored address is <code>https://aliyun.com</code>, and the carrier is <code>Alibaba</code>.</p>
+     * <p>This topic provides an example of querying the details of the site monitoring task <code>cc641dff-c19d-45f3-ad0a-818a0c4f****</code>. The response shows that the name of the site monitoring task is <code>test123</code>, the probe address is <code>https://aliyun.com</code>, and the carrier is <code>Alibaba</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a site monitoring task.</p>
@@ -6503,7 +6566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of querying the details of the site monitoring task <code>cc641dff-c19d-45f3-ad0a-818a0c4f****</code>. The response shows that the task name is <code>test123</code>, the monitored address is <code>https://aliyun.com</code>, and the carrier is <code>Alibaba</code>.</p>
+     * <p>This topic provides an example of querying the details of the site monitoring task <code>cc641dff-c19d-45f3-ad0a-818a0c4f****</code>. The response shows that the name of the site monitoring task is <code>test123</code>, the probe address is <code>https://aliyun.com</code>, and the carrier is <code>Alibaba</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a site monitoring task.</p>
@@ -7573,6 +7636,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DisableMetricRulesResponse disableMetricRulesWithOptions(DisableMetricRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
         }
@@ -7865,6 +7932,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public EnableMetricRulesResponse enableMetricRulesWithOptions(EnableMetricRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
         }
@@ -7949,12 +8020,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Before you begin</h2>
-     * <p>Make sure that the Cloud Assistant agent is installed on the Alibaba Cloud host. For more information about how to install the Cloud Assistant agent, see <a href="https://help.aliyun.com/document_detail/64601.html">Cloud Assistant overview</a>.</p>
+     * <p>Make sure that Cloud Assistant is installed on the Alibaba Cloud host. For more information about how to install Cloud Assistant, see <a href="https://help.aliyun.com/document_detail/64601.html">Cloud Assistant overview</a>.</p>
      * <h2>Background information</h2>
-     * <p>This operation applies only to Alibaba Cloud hosts, namely ECS instances.
-     * The success rate of installing the CloudMonitor agent by calling this API operation is approximately 95%. If the installation fails, install the agent manually. For more information about how to install the CloudMonitor agent, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the CloudMonitor agent for C++</a>.</p>
+     * <p>This operation applies only to Alibaba Cloud hosts, which are ECS instances.
+     * The success rate of installing the CloudMonitor agent by calling this API operation is approximately 95%. If the installation fails, install the agent manually. For more information about how to install the CloudMonitor agent, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the C++ agent</a>.</p>
      * <h2>Usage notes</h2>
-     * <p>This topic provides an example on how to forcibly install the latest version of the CloudMonitor agent on the Alibaba Cloud host i-m5e0k0bexac8tykr****.</p>
+     * <p>This topic provides an example to show how to forcibly install the latest version of the CloudMonitor agent on the Alibaba Cloud host <code>i-m5e0k0bexac8tykr****</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Installs the CloudMonitor agent on a specified Alibaba Cloud host.</p>
@@ -7966,6 +8037,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InstallMonitoringAgentResponse installMonitoringAgentWithOptions(InstallMonitoringAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
         }
@@ -8002,12 +8077,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Before you begin</h2>
-     * <p>Make sure that the Cloud Assistant agent is installed on the Alibaba Cloud host. For more information about how to install the Cloud Assistant agent, see <a href="https://help.aliyun.com/document_detail/64601.html">Cloud Assistant overview</a>.</p>
+     * <p>Make sure that Cloud Assistant is installed on the Alibaba Cloud host. For more information about how to install Cloud Assistant, see <a href="https://help.aliyun.com/document_detail/64601.html">Cloud Assistant overview</a>.</p>
      * <h2>Background information</h2>
-     * <p>This operation applies only to Alibaba Cloud hosts, namely ECS instances.
-     * The success rate of installing the CloudMonitor agent by calling this API operation is approximately 95%. If the installation fails, install the agent manually. For more information about how to install the CloudMonitor agent, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the CloudMonitor agent for C++</a>.</p>
+     * <p>This operation applies only to Alibaba Cloud hosts, which are ECS instances.
+     * The success rate of installing the CloudMonitor agent by calling this API operation is approximately 95%. If the installation fails, install the agent manually. For more information about how to install the CloudMonitor agent, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the C++ agent</a>.</p>
      * <h2>Usage notes</h2>
-     * <p>This topic provides an example on how to forcibly install the latest version of the CloudMonitor agent on the Alibaba Cloud host i-m5e0k0bexac8tykr****.</p>
+     * <p>This topic provides an example to show how to forcibly install the latest version of the CloudMonitor agent on the Alibaba Cloud host <code>i-m5e0k0bexac8tykr****</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Installs the CloudMonitor agent on a specified Alibaba Cloud host.</p>
@@ -9281,16 +9356,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Only Log Service (SLS) is supported. More products will be supported in the future.</p>
+     * <p>Currently, only Simple Log Service (SLS) is supported. Export to more Alibaba Cloud services will be supported in the future.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates or modifies a monitoring data export configuration by calling the PutExporterOutput operation.</p>
+     * <p>Creates or modifies a monitoring data export configuration.</p>
+     * 
+     * @deprecated OpenAPI PutExporterOutput is deprecated
      * 
      * @param request PutExporterOutputRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PutExporterOutputResponse
      */
+    @Deprecated
+    // Deprecated
     public PutExporterOutputResponse putExporterOutputWithOptions(PutExporterOutputRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9330,15 +9409,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Only Log Service (SLS) is supported. More products will be supported in the future.</p>
+     * <p>Currently, only Simple Log Service (SLS) is supported. Export to more Alibaba Cloud services will be supported in the future.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates or modifies a monitoring data export configuration by calling the PutExporterOutput operation.</p>
+     * <p>Creates or modifies a monitoring data export configuration.</p>
+     * 
+     * @deprecated OpenAPI PutExporterOutput is deprecated
      * 
      * @param request PutExporterOutputRequest
      * @return PutExporterOutputResponse
      */
+    @Deprecated
+    // Deprecated
     public PutExporterOutputResponse putExporterOutput(PutExporterOutputRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.putExporterOutputWithOptions(request, runtime);
@@ -9346,12 +9429,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invokes the PutExporterRule operation to create or modify export rules.</p>
+     * <p>Invokes the PutExporterRule operation to create or modify data export rules.</p>
+     * 
+     * @deprecated OpenAPI PutExporterRule is deprecated
      * 
      * @param request PutExporterRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PutExporterRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public PutExporterRuleResponse putExporterRuleWithOptions(PutExporterRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9398,11 +9485,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invokes the PutExporterRule operation to create or modify export rules.</p>
+     * <p>Invokes the PutExporterRule operation to create or modify data export rules.</p>
+     * 
+     * @deprecated OpenAPI PutExporterRule is deprecated
      * 
      * @param request PutExporterRuleRequest
      * @return PutExporterRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public PutExporterRuleResponse putExporterRule(PutExporterRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.putExporterRuleWithOptions(request, runtime);
@@ -9410,7 +9501,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of creating an alert rule for the <code>cpu_total</code> monitoring metric of the Elastic Computing Service server (an Alibaba Cloud service) in the application group <code>17285****</code>. The alert rule ID is <code>123456</code>, the alert rule name is <code>Rule_test</code>, the alert level is <code>Critical</code>, the statistical method is <code>Average</code>, the threshold comparison operator is <code>GreaterThanOrEqualToThreshold</code>, the threshold is <code>90</code>, and the retry count is <code>3</code>. The response shows that the alert rule is created and the alert rule ID is <code>123456</code>.</p>
+     * <p>This topic provides an example on how to create an alert rule for the cpu_total metric of the ECS instance in the application group 17285****. The ID of the alert rule is 123456, the alert rule name is Rule_test, the alert level is Critical, the statistical method is Average, the threshold comparison operator is GreaterThanOrEqualToThreshold, the threshold is 90, and the number of retries is 3. The response indicates that the alert rule is created and the alert rule ID is 123456.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates or modifies an alert rule in a specified application group.</p>
@@ -9424,6 +9515,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.category)) {
             query.put("Category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.contactGroups)) {
@@ -9525,7 +9620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of creating an alert rule for the <code>cpu_total</code> monitoring metric of the Elastic Computing Service server (an Alibaba Cloud service) in the application group <code>17285****</code>. The alert rule ID is <code>123456</code>, the alert rule name is <code>Rule_test</code>, the alert level is <code>Critical</code>, the statistical method is <code>Average</code>, the threshold comparison operator is <code>GreaterThanOrEqualToThreshold</code>, the threshold is <code>90</code>, and the retry count is <code>3</code>. The response shows that the alert rule is created and the alert rule ID is <code>123456</code>.</p>
+     * <p>This topic provides an example on how to create an alert rule for the cpu_total metric of the ECS instance in the application group 17285****. The ID of the alert rule is 123456, the alert rule name is Rule_test, the alert level is Critical, the statistical method is Average, the threshold comparison operator is GreaterThanOrEqualToThreshold, the threshold is 90, and the number of retries is 3. The response indicates that the alert rule is created and the alert rule ID is 123456.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates or modifies an alert rule in a specified application group.</p>
@@ -9758,7 +9853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or modifies an alert rule to dynamically add instances that meet the rule to an application group.</p>
+     * <p>Creates or modifies an application group that dynamically matches instances by name. All instances that meet the matching rules are automatically added to the application group.</p>
      * 
      * @param request PutMonitorGroupDynamicRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9767,6 +9862,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PutMonitorGroupDynamicRuleResponse putMonitorGroupDynamicRuleWithOptions(PutMonitorGroupDynamicRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
         }
@@ -9802,7 +9901,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or modifies an alert rule to dynamically add instances that meet the rule to an application group.</p>
+     * <p>Creates or modifies an application group that dynamically matches instances by name. All instances that meet the matching rules are automatically added to the application group.</p>
      * 
      * @param request PutMonitorGroupDynamicRuleRequest
      * @return PutMonitorGroupDynamicRuleResponse
@@ -9814,7 +9913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the PutMonitoringConfig operation to set the global configuration of the CloudMonitor agent.</p>
+     * <p>Sets the global configuration of the CloudMonitor agent.</p>
      * 
      * @param request PutMonitoringConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9825,6 +9924,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoInstall)) {
             query.put("AutoInstall", request.autoInstall);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
@@ -9854,7 +9957,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the PutMonitoringConfig operation to set the global configuration of the CloudMonitor agent.</p>
+     * <p>Sets the global configuration of the CloudMonitor agent.</p>
      * 
      * @param request PutMonitoringConfigRequest
      * @return PutMonitoringConfigResponse
@@ -9866,9 +9969,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to configure a threshold-based alert rule for the <code>cpu_total</code> metric of a cloud server (ECS) instance <code>i-uf6j91r34rnwawoo****</code> in the <code>acs_ecs_dashboard</code> namespace. The alert contact group for the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the alert retry count for the Critical level is <code>3</code>.</p>
+     * <p>This topic provides an example to show the Settings of a threshold alert rule for the <code>cpu_total</code> metric of the cloud server ECS instance <code>i-uf6j91r34rnwawoo****</code> in the <code>acs_ecs_dashboard</code> namespace. The alert contact group for the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the alert retry count for the Critical level is <code>3</code>.</p>
      * <blockquote>
-     * <p>On August 15, 2024, Statistics validation is increased. The statistical value must match the Statistics of the corresponding metric. For more information about how to obtain the valid values for this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service metrics</a>.</p>
+     * <p>On August 15, 2024, Statistics validation is added. The statistical value must match the Statistics of the corresponding metric. For more information about how to obtain the valid values for this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -9891,6 +9994,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.compositeExpressionShrink)) {
             query.put("CompositeExpression", request.compositeExpressionShrink);
         }
@@ -9990,9 +10097,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to configure a threshold-based alert rule for the <code>cpu_total</code> metric of a cloud server (ECS) instance <code>i-uf6j91r34rnwawoo****</code> in the <code>acs_ecs_dashboard</code> namespace. The alert contact group for the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the alert retry count for the Critical level is <code>3</code>.</p>
+     * <p>This topic provides an example to show the Settings of a threshold alert rule for the <code>cpu_total</code> metric of the cloud server ECS instance <code>i-uf6j91r34rnwawoo****</code> in the <code>acs_ecs_dashboard</code> namespace. The alert contact group for the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the alert retry count for the Critical level is <code>3</code>.</p>
      * <blockquote>
-     * <p>On August 15, 2024, Statistics validation is increased. The statistical value must match the Statistics of the corresponding metric. For more information about how to obtain the valid values for this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service metrics</a>.</p>
+     * <p>On August 15, 2024, Statistics validation is added. The statistical value must match the Statistics of the corresponding metric. For more information about how to obtain the valid values for this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -10008,9 +10115,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of the Settings for a threshold alert rule for the <code>cpu_total</code> monitoring metric of the ECS server <code>i-uf6j91r34rnwawoo****</code> in the <code>acs_ecs_dashboard</code> namespace. The alert contact group for the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the alert retry count for the Critical level is <code>3</code>.</p>
+     * <p>This topic provides an example on how to configure the Settings for a threshold alert rule for the <code>cpu_total</code> metric of the ECS server <code>i-uf6j91r34rnwawoo****</code> in the <code>acs_ecs_dashboard</code> namespace. The alert contact group for the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the alert retry count for the Critical level is <code>3</code>.</p>
      * <blockquote>
-     * <p>On August 15, 2024, Statistics validation was increased. The statistical value must match the Statistics value of the corresponding metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</p>
+     * <p>On August 15, 2024, Statistics validation was added. The statistical value must be the Statistics value corresponding to the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -10023,6 +10130,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PutResourceMetricRulesResponse putResourceMetricRulesWithOptions(PutResourceMetricRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
         }
@@ -10050,9 +10161,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of the Settings for a threshold alert rule for the <code>cpu_total</code> monitoring metric of the ECS server <code>i-uf6j91r34rnwawoo****</code> in the <code>acs_ecs_dashboard</code> namespace. The alert contact group for the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the alert retry count for the Critical level is <code>3</code>.</p>
+     * <p>This topic provides an example on how to configure the Settings for a threshold alert rule for the <code>cpu_total</code> metric of the ECS server <code>i-uf6j91r34rnwawoo****</code> in the <code>acs_ecs_dashboard</code> namespace. The alert contact group for the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the alert retry count for the Critical level is <code>3</code>.</p>
      * <blockquote>
-     * <p>On August 15, 2024, Statistics validation was increased. The statistical value must match the Statistics value of the corresponding metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</p>
+     * <p>On August 15, 2024, Statistics validation was added. The statistical value must be the Statistics value corresponding to the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 

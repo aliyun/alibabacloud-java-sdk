@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The HTTP status code.</p>
      * <blockquote>
-     * <p>The status code 200 indicates that the call is successful.</p>
+     * <p>A status code of 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,11 +41,11 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
     public CreateGroupMonitoringAgentProcessResponseBodyResource resource;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The call is successful.</p>
+     * <li><p>true: The operation was successful.</p>
      * </li>
-     * <li><p>false: The call fails.</p>
+     * <li><p>false: The operation failed.</p>
      * </li>
      * </ul>
      * 
@@ -102,7 +102,7 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
     public static class CreateGroupMonitoringAgentProcessResponseBodyResource extends TeaModel {
         /**
-         * <p>The ID of the group process.</p>
+         * <p>The group process ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7F2B0024-4F21-48B9-A764-211CEC48****</p>

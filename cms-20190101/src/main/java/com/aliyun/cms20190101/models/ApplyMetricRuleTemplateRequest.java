@@ -7,9 +7,9 @@ public class ApplyMetricRuleTemplateRequest extends TeaModel {
     /**
      * <p>The application policy of the template. Valid values:</p>
      * <ul>
-     * <li><p>all: deletes all rules created by using alert templates on the selected group and then creates new alert rules based on the template. This is the default value.</p>
+     * <li><p>all: deletes all rules created by using alert templates for the selected application group, and then creates alert rules based on the current template. This is the default value.</p>
      * </li>
-     * <li><p>append: deletes the rules created by using the current alert template on the selected group and then creates new alert rules based on the current template.</p>
+     * <li><p>append: deletes the rules created by using the current alert template for the selected application group, and then creates alert rules based on the current template.</p>
      * </li>
      * </ul>
      * 
@@ -22,9 +22,9 @@ public class ApplyMetricRuleTemplateRequest extends TeaModel {
     /**
      * <p>The application mode of the template. Valid values:</p>
      * <ul>
-     * <li><p>GROUP_INSTANCE_FIRST: application group instances take precedence. When the alert template is applied, the instances in the application group take precedence. If an instance specified in the template does not exist in the application group, the rule for the instance in the template is ignored.</p>
+     * <li><p>GROUP_INSTANCE_FIRST: The instances in the application group take precedence. When the alert template is applied, the instances in the application group take precedence. If an instance specified in the template does not exist in the application group, the rule for the instance in the template is ignored.</p>
      * </li>
-     * <li><p>ALARM_TEMPLATE_FIRST: alert template instances take precedence. When the alert template is applied, alert rules are created regardless of whether the instances exist in the application group.</p>
+     * <li><p>ALARM_TEMPLATE_FIRST: The instances in the alert template take precedence. When the alert template is applied, alert rules are created regardless of whether the instances exist in the application group.</p>
      * </li>
      * </ul>
      * 
@@ -34,11 +34,14 @@ public class ApplyMetricRuleTemplateRequest extends TeaModel {
     @NameInMap("ApplyMode")
     public String applyMode;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: performs a dry run and does not bind a security group to the instance. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the dry run, an error is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong>: performs a normal request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed. This is the default value.</li>
+     * <li><strong>false</strong> (default): sends a normal request. If the request passes the dry run, the HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +51,7 @@ public class ApplyMetricRuleTemplateRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The end time of the effective period for the alert, in hours. The value is a two-digit string, such as &quot;00&quot;, &quot;18&quot;, or &quot;23&quot;. Valid values: 00 to 23. The value specifies the hour of the end time, and the actual effective period ends at the 59th minute of the hour. For example, &quot;23&quot; indicates that the effective period ends at 23:59. The default time zone is UTC+8.</p>
+     * <p>The end time of the effective period for the alert rule. The value is a two-digit string, such as &quot;00&quot;, &quot;18&quot;, or &quot;23&quot;. Valid values: 00 to 23. The value specifies the hour of the end time, and the effective period ends at the 59th minute of the hour. For example, &quot;23&quot; indicates that the effective period ends at 23:59. The default time zone is UTC+8.</p>
      * 
      * <strong>example:</strong>
      * <p>23</p>
@@ -57,7 +60,7 @@ public class ApplyMetricRuleTemplateRequest extends TeaModel {
     public Long enableEndTime;
 
     /**
-     * <p>The start time of the effective period for the alert, in hours. The value is a two-digit string, such as &quot;00&quot;, &quot;09&quot;, or &quot;23&quot;. Valid values: 00 to 23, which represent 00:00 to 23:00. The default time zone is UTC+8.</p>
+     * <p>The start time of the effective period for the alert rule. The value is a two-digit string, such as &quot;00&quot;, &quot;09&quot;, or &quot;23&quot;. Valid values: 00 to 23, which represent 00:00 to 23:00. The default time zone is UTC+8.</p>
      * 
      * <strong>example:</strong>
      * <p>00</p>
@@ -93,7 +96,7 @@ public class ApplyMetricRuleTemplateRequest extends TeaModel {
     /**
      * <p>The mute for. Unit: seconds. Default value: 86400.</p>
      * <blockquote>
-     * <p>If the monitoring data continuously exceeds the threshold of the alert rule, the system sends only one alert notification within each epoch.</p>
+     * <p>If the monitoring data continuously exceeds the threshold of the alert rule, the system will send only one alert notification within each epoch.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -114,7 +117,7 @@ public class ApplyMetricRuleTemplateRequest extends TeaModel {
     public String templateIds;
 
     /**
-     * <p>The webhook URL to which a POST request is sent when an alert is triggered.</p>
+     * <p>The webhook URL. When an alert is triggered, a POST request is sent to the specified URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
@@ -141,6 +144,14 @@ public class ApplyMetricRuleTemplateRequest extends TeaModel {
     }
     public String getApplyMode() {
         return this.applyMode;
+    }
+
+    public ApplyMetricRuleTemplateRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public ApplyMetricRuleTemplateRequest setDryRun(Boolean dryRun) {

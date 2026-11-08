@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAlertLogHistogramResponseBody extends TeaModel {
     /**
-     * <p>The histogram list of alert history.</p>
+     * <p>The histogram list of the queried alert history.</p>
      */
     @NameInMap("AlertLogHistogramList")
     public java.util.List<DescribeAlertLogHistogramResponseBodyAlertLogHistogramList> alertLogHistogramList;
@@ -13,7 +13,7 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p>The value 200 indicates success.</p>
+     * <p>200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,11 +41,11 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: Successful.</p>
+     * <li><p>true: The operation is successful.</p>
      * </li>
-     * <li><p>false: Failed.</p>
+     * <li><p>false: The operation fails.</p>
      * </li>
      * </ul>
      * 
@@ -102,7 +102,7 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
 
     public static class DescribeAlertLogHistogramResponseBodyAlertLogHistogramList extends TeaModel {
         /**
-         * <p>The number of alert history entries.</p>
+         * <p>The number of alert history records.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -111,7 +111,7 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The start timestamp for querying alert history.</p>
+         * <p>The start timestamp of the queried alert history.</p>
          * <p>Unit: seconds.</p>
          * 
          * <strong>example:</strong>
@@ -121,7 +121,7 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
         public Long from;
 
         /**
-         * <p>The end timestamp for querying alert history.</p>
+         * <p>The end timestamp of the queried alert history.</p>
          * <p>Unit: seconds.</p>
          * 
          * <strong>example:</strong>

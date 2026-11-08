@@ -4,6 +4,19 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateMonitorGroupInstancesRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>Specifies whether to only perform a dry run on the request. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: performs a dry run. A check request is sent, and no security group is bound to the instance. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the check, the corresponding error is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends a normal request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public String dryRun;
 
@@ -18,7 +31,7 @@ public class CreateMonitorGroupInstancesRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The instances that you want to add to the application group.</p>
+     * <p>The list of instances.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Instances")
@@ -30,6 +43,14 @@ public class CreateMonitorGroupInstancesRequest extends TeaModel {
     public static CreateMonitorGroupInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMonitorGroupInstancesRequest self = new CreateMonitorGroupInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateMonitorGroupInstancesRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateMonitorGroupInstancesRequest setDryRun(String dryRun) {
@@ -67,7 +88,7 @@ public class CreateMonitorGroupInstancesRequest extends TeaModel {
     public static class CreateMonitorGroupInstancesRequestInstances extends TeaModel {
         /**
          * <p>The abbreviation of the Alibaba Cloud service name.</p>
-         * <p>To obtain the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation. The <code>metricCategory</code> tag in the <code>Labels</code> response parameter indicates the abbreviation of the Alibaba Cloud service name.</p>
+         * <p>For more information about how to obtain the abbreviation of the Alibaba Cloud service name, see the <code>metricCategory</code> field in the <code>Labels</code> response parameter of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +108,7 @@ public class CreateMonitorGroupInstancesRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -97,7 +118,7 @@ public class CreateMonitorGroupInstancesRequest extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

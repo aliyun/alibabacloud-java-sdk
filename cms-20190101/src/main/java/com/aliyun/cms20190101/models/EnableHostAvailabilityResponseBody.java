@@ -7,7 +7,7 @@ public class EnableHostAvailabilityResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p>A value of 200 indicates success.</p>
+     * <p>200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class EnableHostAvailabilityResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. A value of true indicates success. A value of false indicates failure.</p>
+     * <p>Indicates whether the operation is successful. true indicates success, and false indicates failure.</p>
      */
     @NameInMap("Success")
     public Boolean success;

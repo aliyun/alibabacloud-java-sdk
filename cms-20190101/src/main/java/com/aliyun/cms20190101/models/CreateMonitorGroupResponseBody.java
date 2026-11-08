@@ -7,7 +7,7 @@ public class CreateMonitorGroupResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p>A value of 200 indicates success.</p>
+     * <p>200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class CreateMonitorGroupResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The ID of the application group.</p>
+     * <p>The application group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567</p>
@@ -44,11 +44,11 @@ public class CreateMonitorGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The operation was successful.</p>
+     * <li><p>true: The operation is successful.</p>
      * </li>
-     * <li><p>false: The operation failed.</p>
+     * <li><p>false: The operation fails.</p>
      * </li>
      * </ul>
      * 

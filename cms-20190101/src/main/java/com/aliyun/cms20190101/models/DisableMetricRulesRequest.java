@@ -4,11 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DisableMetricRulesRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
-     * <p>Specifies whether to perform a dry run of the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run only. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: sends a dry run request and does not bind a security group to the instance. Check items include whether required parameters are specified, the request format, and service limits. If the request fails the check, the corresponding error is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): sends a normal request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: sends a check request and does not bind a security group to the instance. Check items include whether required parameters are specified, the request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends a normal request. If the check passes, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,6 +33,14 @@ public class DisableMetricRulesRequest extends TeaModel {
     public static DisableMetricRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         DisableMetricRulesRequest self = new DisableMetricRulesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DisableMetricRulesRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DisableMetricRulesRequest setDryRun(Boolean dryRun) {

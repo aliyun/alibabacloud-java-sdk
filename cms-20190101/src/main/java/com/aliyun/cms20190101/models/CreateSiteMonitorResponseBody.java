@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateSiteMonitorResponseBody extends TeaModel {
     /**
-     * <p>The status code of the operation.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p>A value of \<code>200\\</code> indicates success.</p>
+     * <p>200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,13 +20,13 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
     public CreateSiteMonitorResponseBodyCreateResultList createResultList;
 
     /**
-     * <p>The results of the monitoring task.</p>
+     * <p>The details of the monitoring task result.</p>
      */
     @NameInMap("Data")
     public CreateSiteMonitorResponseBodyData data;
 
     /**
-     * <p>The message returned for the request.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful</p>
@@ -35,7 +35,7 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>68192f5d-0d45-4b98-9724-892813f86c71</p>
@@ -44,11 +44,11 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
+     * <li><p>true: The operation is successful.</p>
      * </li>
-     * <li><p>false: The request failed.</p>
+     * <li><p>false: The operation fails.</p>
      * </li>
      * </ul>
      * 

@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateGroupMetricRulesRequest extends TeaModel {
     /**
      * <p>The ID of the application group.</p>
-     * <p>For information about how to obtain the application group ID, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+     * <p>For more information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
     public Long groupId;
 
     /**
-     * <p>The list of metric-based alert rules for the application group.</p>
+     * <p>The list of metric rules for the application group.</p>
      */
     @NameInMap("GroupMetricRules")
     public java.util.List<CreateGroupMetricRulesRequestGroupMetricRules> groupMetricRules;
@@ -55,23 +55,23 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
 
     public static class CreateGroupMetricRulesRequestGroupMetricRulesEscalationsCritical extends TeaModel {
         /**
-         * <p>The comparison operator for Critical-level alerts. Valid values:</p>
+         * <p>The comparison operator for the critical-level threshold. Valid values:</p>
          * <ul>
          * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold. </li>
          * <li>GreaterThanThreshold: greater than the threshold. </li>
          * <li>LessThanOrEqualToThreshold: less than or equal to the threshold. </li>
          * <li>LessThanThreshold: less than the threshold. </li>
          * <li>NotEqualToThreshold: not equal to the threshold. </li>
-         * <li>GreaterThanYesterday: greater than the value at the same time yesterday. </li>
-         * <li>LessThanYesterday: less than the value at the same time yesterday. </li>
-         * <li>GreaterThanLastWeek: greater than the value at the same time last week. </li>
-         * <li>LessThanLastWeek: less than the value at the same time last week. </li>
-         * <li>GreaterThanLastPeriod: greater than the value in the last period. </li>
-         * <li>LessThanLastPeriod: less than the value in the last period.</li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday. </li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday. </li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week. </li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week. </li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the previous period. </li>
+         * <li>LessThanLastPeriod: less than the metric value in the previous period.</li>
          * </ul>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p>Set at least one of the alert severity levels Critical, Warn, or Info. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -87,11 +87,11 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         public String preCondition;
 
         /**
-         * <p>The statistical method for Critical-level alerts.</p>
+         * <p>The statistical method for critical-level alerts.</p>
          * <p>Valid values of N: 1 to 200.</p>
-         * <p>The valid values of this parameter are determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For information about how to obtain the valid values, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring</a>.</p>
+         * <p>The valid values of this parameter are determined by the <code>Statistics</code> column that corresponds to the <code>MetricName</code> parameter of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
          * <blockquote>
-         * <p>Set at least one of the alert severity levels Critical, Warn, or Info. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -101,10 +101,10 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         public String statistics;
 
         /**
-         * <p>The threshold that triggers Critical-level alert notifications.</p>
+         * <p>The threshold for triggering critical-level alert notifications.</p>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p>Set at least one of the alert severity levels Critical, Warn, or Info. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -114,10 +114,10 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         public String threshold;
 
         /**
-         * <p>The number of times that the monitoring metric must reach the alert threshold before a Critical-level alert notification is sent.</p>
+         * <p>The number of times that the metric must reach the alert threshold to send a critical-level alert notification.</p>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p>Settings for at least one of the alert severity levels Critical, Warn (warning), or Info must be specified. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -183,23 +183,23 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
 
     public static class CreateGroupMetricRulesRequestGroupMetricRulesEscalationsInfo extends TeaModel {
         /**
-         * <p>The comparison operator for Info-level alerts. Valid values:</p>
+         * <p>The comparison operator for the info-level threshold. Valid values:</p>
          * <ul>
          * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold. </li>
          * <li>GreaterThanThreshold: greater than the threshold. </li>
          * <li>LessThanOrEqualToThreshold: less than or equal to the threshold. </li>
          * <li>LessThanThreshold: less than the threshold. </li>
          * <li>NotEqualToThreshold: not equal to the threshold. </li>
-         * <li>GreaterThanYesterday: greater than the value at the same time yesterday. </li>
-         * <li>LessThanYesterday: less than the value at the same time yesterday. </li>
-         * <li>GreaterThanLastWeek: greater than the value at the same time last week. </li>
-         * <li>LessThanLastWeek: less than the value at the same time last week. </li>
-         * <li>GreaterThanLastPeriod: greater than the value in the last period. </li>
-         * <li>LessThanLastPeriod: less than the value in the last period.</li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday. </li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday. </li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week. </li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week. </li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the previous period. </li>
+         * <li>LessThanLastPeriod: less than the metric value in the previous period.</li>
          * </ul>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p>Set at least one of the alert severity levels Critical, Warn, or Info. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -215,11 +215,11 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         public String preCondition;
 
         /**
-         * <p>The statistical method for Info-level alerts.</p>
+         * <p>The statistical method for info-level alerts.</p>
          * <p>Valid values of N: 1 to 200.</p>
-         * <p>The valid values of this parameter are determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For information about how to obtain the valid values, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring</a>.</p>
+         * <p>The valid values of this parameter are determined by the <code>Statistics</code> column that corresponds to the <code>MetricName</code> parameter of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
          * <blockquote>
-         * <p>Set at least one of the alert severity levels Critical, Warn, or Info. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -229,10 +229,10 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         public String statistics;
 
         /**
-         * <p>The threshold for Info-level alerts.</p>
+         * <p>The threshold for info-level alerts.</p>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p>Set at least one of the alert severity levels Critical, Warn, or Info. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -242,10 +242,10 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         public String threshold;
 
         /**
-         * <p>The number of times that the monitoring metric must reach the alert threshold before an Info-level alert notification is sent.</p>
+         * <p>The number of times that the metric must reach the alert threshold to send an info-level alert notification.</p>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p>Settings for at least one of the alert severity levels Critical, Warn (warning), or Info must be specified. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -311,23 +311,23 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
 
     public static class CreateGroupMetricRulesRequestGroupMetricRulesEscalationsWarn extends TeaModel {
         /**
-         * <p>The comparison operator for Warn-level alerts. Valid values:</p>
+         * <p>The comparison operator for the warning-level threshold. Valid values:</p>
          * <ul>
          * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold. </li>
          * <li>GreaterThanThreshold: greater than the threshold. </li>
          * <li>LessThanOrEqualToThreshold: less than or equal to the threshold. </li>
          * <li>LessThanThreshold: less than the threshold. </li>
          * <li>NotEqualToThreshold: not equal to the threshold. </li>
-         * <li>GreaterThanYesterday: greater than the value at the same time yesterday. </li>
-         * <li>LessThanYesterday: less than the value at the same time yesterday. </li>
-         * <li>GreaterThanLastWeek: greater than the value at the same time last week. </li>
-         * <li>LessThanLastWeek: less than the value at the same time last week. </li>
-         * <li>GreaterThanLastPeriod: greater than the value in the last period. </li>
-         * <li>LessThanLastPeriod: less than the value in the last period.</li>
+         * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday. </li>
+         * <li>LessThanYesterday: less than the metric value at the same time yesterday. </li>
+         * <li>GreaterThanLastWeek: greater than the metric value at the same time last week. </li>
+         * <li>LessThanLastWeek: less than the metric value at the same time last week. </li>
+         * <li>GreaterThanLastPeriod: greater than the metric value in the previous period. </li>
+         * <li>LessThanLastPeriod: less than the metric value in the previous period.</li>
          * </ul>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p>Set at least one of the alert severity levels Critical, Warn, or Info. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -343,11 +343,11 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         public String preCondition;
 
         /**
-         * <p>The statistical method for Warn-level alerts.</p>
+         * <p>The statistical method for warning-level alerts.</p>
          * <p>Valid values of N: 1 to 200.</p>
-         * <p>The valid values of this parameter are determined by the <code>Statistics</code> column corresponding to the <code>MetricName</code> of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For information about how to obtain the valid values, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring</a>.</p>
+         * <p>The valid values of this parameter are determined by the <code>Statistics</code> column that corresponds to the <code>MetricName</code> parameter of the specified Alibaba Cloud service. Examples: Maximum, Minimum, and Average. For more information about how to obtain the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
          * <blockquote>
-         * <p>Set at least one of the alert severity levels Critical, Warn, or Info. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -357,10 +357,10 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         public String statistics;
 
         /**
-         * <p>The threshold for Warn-level alerts.</p>
+         * <p>The threshold for warning-level alerts.</p>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p>Set at least one of the alert severity levels Critical, Warn, or Info. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -370,10 +370,10 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         public String threshold;
 
         /**
-         * <p>The number of times that the monitoring metric must reach the alert threshold before a Warn-level alert notification is sent.</p>
+         * <p>The number of times that the metric must reach the alert threshold to send a warning-level alert notification.</p>
          * <p>Valid values of N: 1 to 200.</p>
          * <blockquote>
-         * <p>Settings for at least one of the alert severity levels Critical, Warn (warning), or Info must be specified. For each specified alert severity level, you must set all of the following parameters: Statistics, ComparisonOperator, Threshold, and Times.</p>
+         * <p>You must specify at least one of the following alert levels: Critical, Warn, and Info. For the specified alert level, you must specify the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -480,7 +480,7 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
 
     public static class CreateGroupMetricRulesRequestGroupMetricRulesLabels extends TeaModel {
         /**
-         * <p>The tag key of the alert rule. The tag is included in alert notifications.</p>
+         * <p>The tag key of the alert rule. Alert notifications include tags.</p>
          * <p>Valid values of N: 1 to 200.</p>
          * 
          * <strong>example:</strong>
@@ -490,7 +490,7 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the alert rule. The tag is included in alert notifications.</p>
+         * <p>The tag value of the alert rule. Alert notifications include tags.</p>
          * <p>Valid values of N: 1 to 200.</p>
          * 
          * <strong>example:</strong>
@@ -527,9 +527,9 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         public CreateGroupMetricRulesRequestGroupMetricRulesEscalations escalations;
 
         /**
-         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * <p>The abbreviation of the cloud service name.</p>
          * <p>Valid values of N: 1 to 200.</p>
-         * <p>For information about how to obtain the abbreviation, see the <code>metricCategory</code> tag in the <code>Labels</code> response parameter of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
+         * <p>For more information about how to obtain the abbreviation of a cloud service name, see the <code>metricCategory</code> field in the <code>Labels</code> response parameter of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -541,7 +541,7 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         /**
          * <p>The alert contact group.</p>
          * <p>Valid values of N: 1 to 200.</p>
-         * <p>For information about how to obtain the alert contact group, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</p>
+         * <p>For more information about how to obtain alert contact groups, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS_Group</p>
@@ -551,7 +551,7 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
 
         /**
          * <p>The monitoring dimensions of the specified resource.</p>
-         * <p>The value is a collection of <code>key:value</code> pairs, such as <code>{&quot;userId&quot;:&quot;120886317861****&quot;}</code> and <code>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</code>.</p>
+         * <p>Format: a collection of <code>key:value</code> pairs. Examples: <code>{&quot;userId&quot;:&quot;120886317861****&quot;}</code> and <code>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;instanceId&quot;:&quot;i-m5e1qg6uo38rztr4****&quot;}]</p>
@@ -569,7 +569,7 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         public String effectiveInterval;
 
         /**
-         * <p>The subject of the alert notification email.</p>
+         * <p>The subject of the alert email.</p>
          * <p>Valid values of N: 1 to 200.</p>
          * 
          * <strong>example:</strong>
@@ -581,9 +581,9 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         /**
          * <p>The detection period of the alert rule.</p>
          * <p>Valid values of N: 1 to 200.</p>
-         * <p>Unit: seconds. The default value is the minimum reporting frequency of the metric.</p>
+         * <p>Unit: seconds. The default value is the minimum frequency of the metric.</p>
          * <blockquote>
-         * <p>Keep the detection period of the alert rule consistent with the data reporting period. If the detection period is shorter than the data reporting period, alerts may not be triggered due to insufficient data.</p>
+         * <p>Set the detection period of the alert rule to the same value as the data reporting period. If the detection period is shorter than the data reporting period, alerts may not be triggered due to insufficient data.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -593,7 +593,7 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         public String interval;
 
         /**
-         * <p>The tag keys of the alert rule.</p>
+         * <p>The tags of the alert rule.</p>
          */
         @NameInMap("Labels")
         public java.util.List<CreateGroupMetricRulesRequestGroupMetricRulesLabels> labels;
@@ -601,7 +601,7 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         /**
          * <p>The name of the metric.</p>
          * <p>Valid values of N: 1 to 200.</p>
-         * <p>For information about how to obtain the metric name, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring</a>.</p>
+         * <p>For more information about how to obtain the name of a metric, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -611,9 +611,9 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         public String metricName;
 
         /**
-         * <p>The namespace of the Alibaba Cloud service.</p>
+         * <p>The data namespace of the Alibaba Cloud service.</p>
          * <p>Valid values of N: 1 to 200.</p>
-         * <p>For information about how to obtain the namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring</a>.</p>
+         * <p>For more information about how to obtain the data namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -623,11 +623,11 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The processing method when no monitoring data is found. Valid values:</p>
+         * <p>The handling method when no monitoring data is available. Valid values:</p>
          * <ul>
-         * <li>KEEP_LAST_STATE (default): No action is performed.</li>
-         * <li>INSUFFICIENT_DATA: An alert whose content is &quot;Insufficient Data&quot; is triggered.</li>
-         * <li>OK: The status is considered normal.</li>
+         * <li>KEEP_LAST_STATE: No action is taken. This is the default value.</li>
+         * <li>INSUFFICIENT_DATA: The alert content indicates that no data is available.</li>
+         * <li>OK: The status is normal.</li>
          * </ul>
          * <p>Valid values of N: 1 to 200.</p>
          * 
@@ -638,7 +638,7 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         public String noDataPolicy;
 
         /**
-         * <p>The time period during which the alert rule is ineffective. Valid values of N: 1 to 200.</p>
+         * <p>The time range during which the alert rule is inactive. Valid values of N: 1 to 200.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00-05:30</p>
@@ -648,7 +648,7 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
 
         /**
          * <p>The advanced settings.</p>
-         * <p>Format: {&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;}. For example, {&quot;NotSendOK&quot;:true} specifies whether to send an alert recovery notification. The key is NotSendOK, and the value is true (do not send) or false (send, which is the default).</p>
+         * <p>Format: <code>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;}</code>. Example: <code>{&quot;NotSendOK&quot;:true}</code>, which specifies whether to send alert recovery notifications. The key is NotSendOK, and the value is true (do not send) or false (send, which is the default value).</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -661,7 +661,7 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         /**
          * <p>The reporting period of monitoring data.</p>
          * <p>Valid values of N: 1 to 200. </p>
-         * <p>The value of <code>Period</code> must be 60 or a multiple of 60. Unit: seconds. Default value: 300.</p>
+         * <p>The value of <code>Period</code> must be 60 or an integer multiple of 60. Unit: seconds. Default value: 300.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -692,7 +692,7 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The mute period of the alert notification. Valid values of N: 1 to 200.</p>
+         * <p>The mute period for alert notifications. Valid values of N: 1 to 200.</p>
          * <p>Unit: seconds. Default value: 86400. Minimum value: 3600.</p>
          * 
          * <strong>example:</strong>
@@ -702,8 +702,8 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         public Integer silenceTime;
 
         /**
-         * <p>The callback URL to which an alert notification is sent. Valid values of N: 1 to 200.</p>
-         * <p>Specify a publicly accessible URL. CloudMonitor sends a POST request to push alert information to this URL. Only the HTTP protocol is supported.</p>
+         * <p>The webhook URL that is called when an alert is triggered. Valid values of N: 1 to 200.</p>
+         * <p>Specify a publicly accessible URL. CloudMonitor pushes alert notifications to this URL by sending POST requests. Only HTTP is supported.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>

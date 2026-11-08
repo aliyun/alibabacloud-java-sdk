@@ -4,6 +4,19 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>Specifies whether to only precheck this request. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: sends a check request. No security group is associated with the instance. The check items include whether required parameters are specified, the request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends a normal request. If the check succeeds, an HTTP 2xx status code is returned and the operation is directly performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -25,12 +38,10 @@ public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
     public java.util.List<PutMonitorGroupDynamicRuleRequestGroupRules> groupRules;
 
     /**
-     * <p>The mode for creating the alert rule. Valid values:</p>
+     * <p>The mode for creating the dynamic matching rule. Valid values:</p>
      * <ul>
-     * <li><p>true: creates asynchronously</p>
-     * </li>
-     * <li><p>false (default): creates synchronously</p>
-     * </li>
+     * <li>true: Asynchronous creation.</li>
+     * <li>false (default): Synchronous creation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,6 +56,14 @@ public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
     public static PutMonitorGroupDynamicRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         PutMonitorGroupDynamicRuleRequest self = new PutMonitorGroupDynamicRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PutMonitorGroupDynamicRuleRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public PutMonitorGroupDynamicRuleRequest setDryRun(Boolean dryRun) {
@@ -89,16 +108,12 @@ public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
 
     public static class PutMonitorGroupDynamicRuleRequestGroupRulesFilters extends TeaModel {
         /**
-         * <p>The method that is used to filter instances. Valid values of N: 1 to 3. Valid values:</p>
+         * <p>The filter condition for instances. Valid values of N: 1 to 3. Valid values:</p>
          * <ul>
-         * <li><p>contains: contains</p>
-         * </li>
-         * <li><p>notContains: does not contain</p>
-         * </li>
-         * <li><p>startWith: starts with a prefix</p>
-         * </li>
-         * <li><p>endWith: ends with a suffix</p>
-         * </li>
+         * <li>contains: Contains.</li>
+         * <li>notContains: Does not contain.</li>
+         * <li>startWith: Prefix.</li>
+         * <li>endWith: Suffix.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -109,8 +124,8 @@ public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
         public String function;
 
         /**
-         * <p>The name of the field based on which instances are filtered. Valid values of N: 1 to 3.</p>
-         * <p>Only hostnames are supported. Example: hostName.</p>
+         * <p>The field name for instance matching. Valid values of N: 1 to 3.</p>
+         * <p>Currently, only the hostname is supported, such as hostName.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -120,7 +135,7 @@ public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The value to be matched with the specified field. Valid values of N: 1 to 3.</p>
+         * <p>The value that meets the matching condition. Valid values of N: 1 to 3.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,13 +177,13 @@ public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
 
     public static class PutMonitorGroupDynamicRuleRequestGroupRules extends TeaModel {
         /**
-         * <p>The cloud service to which the alert rule is applied. Valid values of N: 1 to 3. Valid values:</p>
+         * <p>The type of Alibaba Cloud service for the dynamic alert rule. Valid values of N: 1 to 3. Valid values:</p>
          * <ul>
-         * <li><p>ecs: Elastic Compute Service (ECS)</p>
+         * <li><p>ecs: Elastic Compute Service (ECS) server.</p>
          * </li>
-         * <li><p>rds: ApsaraDB RDS</p>
+         * <li><p>rds: relational database.</p>
          * </li>
-         * <li><p>slb: Server Load Balancer (SLB)</p>
+         * <li><p>slb: load balancing.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -180,11 +195,11 @@ public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>The logical operator used between conditional expressions in the alert rule. Valid values of N: 1 to 3. Valid values:</p>
+         * <p>The combination condition for dynamic matching rules. Valid values of N: 1 to 3. Valid values:</p>
          * <ul>
-         * <li><p>and: The instances that meet all the conditional expressions are automatically added to the application group.</p>
+         * <li><p>and: Only instances that meet all matching rules are automatically added to the application group.</p>
          * </li>
-         * <li><p>or: The instances that meet one of the conditional expressions are automatically added to the application group.</p>
+         * <li><p>or: Instances that meet any matching rule are automatically added to the application group.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
