@@ -20,7 +20,7 @@ public class DescribeApisecMatchedHostsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of returned entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

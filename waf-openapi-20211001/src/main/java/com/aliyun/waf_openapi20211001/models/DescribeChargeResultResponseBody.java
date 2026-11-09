@@ -20,7 +20,7 @@ public class DescribeChargeResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of calculated Credits.</p>
+     * <p>The total number of calculated credits.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -76,7 +76,7 @@ public class DescribeChargeResultResponseBody extends TeaModel {
 
     public static class DescribeChargeResultResponseBodyModuleDetails extends TeaModel {
         /**
-         * <p>The number of Credits for the pricing module.</p>
+         * <p>The number of credits for the billing module.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -85,7 +85,7 @@ public class DescribeChargeResultResponseBody extends TeaModel {
         public Double credit;
 
         /**
-         * <p>The pricing module identifier.</p>
+         * <p>The billing module code.</p>
          * 
          * <strong>example:</strong>
          * <p>domainCount</p>
@@ -94,7 +94,7 @@ public class DescribeChargeResultResponseBody extends TeaModel {
         public String moduleCode;
 
         /**
-         * <p>The number of SeCUs for the pricing module.</p>
+         * <p>The number of SeCUs for the billing module.</p>
          * 
          * <strong>example:</strong>
          * <p>1080</p>

@@ -7,7 +7,7 @@ public class DescribeApisecRulesRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,12 +18,10 @@ public class DescribeApisecRulesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned rules. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,25 +32,18 @@ public class DescribeApisecRulesRequest extends TeaModel {
 
     /**
      * <p>The level of the rule.</p>
-     * <p>For threat detection (risk) and security events (event), valid values are:</p>
+     * <p>For risk detection (risk) and security events (event), valid values:</p>
      * <ul>
-     * <li><p><strong>high</strong>: important</p>
-     * </li>
-     * <li><p><strong>medium</strong>: medium</p>
-     * </li>
-     * <li><p><strong>low</strong>: low</p>
-     * </li>
+     * <li><strong>high</strong>: High risk.</li>
+     * <li><strong>medium</strong>: Medium risk.</li>
+     * <li><strong>low</strong>: Low risk.</li>
      * </ul>
-     * <p>For sensitive data (sensitive_word), valid values are:</p>
+     * <p>For sensitive data (sensitive_word), valid values:</p>
      * <ul>
-     * <li><p><strong>S1</strong>: S1</p>
-     * </li>
-     * <li><p><strong>S2</strong>: S2</p>
-     * </li>
-     * <li><p><strong>S3</strong>: S3</p>
-     * </li>
-     * <li><p><strong>S4</strong>: S4</p>
-     * </li>
+     * <li><strong>S1</strong>: S1 level.</li>
+     * <li><strong>S2</strong>: S2 level.</li>
+     * <li><strong>S3</strong>: S3 level.</li>
+     * <li><strong>S4</strong>: S4 level.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,10 +64,8 @@ public class DescribeApisecRulesRequest extends TeaModel {
     /**
      * <p>The source of the rule. Valid values:</p>
      * <ul>
-     * <li><p><strong>custom</strong>: custom</p>
-     * </li>
-     * <li><p><strong>default</strong>: built-in</p>
-     * </li>
+     * <li><strong>custom</strong>: Custom.</li>
+     * <li><strong>default</strong>: Built-in.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,7 +75,7 @@ public class DescribeApisecRulesRequest extends TeaModel {
     public String origin;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number to return in a paged query. Default value: <strong>1</strong>, which indicates the first page of paging.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -95,7 +84,7 @@ public class DescribeApisecRulesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries to return on each page in a paged query. Default value: <strong>10</strong>, which indicates 10 entries per paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -104,11 +93,11 @@ public class DescribeApisecRulesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland</p>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland</p>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
      * </li>
      * </ul>
      * 
@@ -119,7 +108,7 @@ public class DescribeApisecRulesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -130,9 +119,9 @@ public class DescribeApisecRulesRequest extends TeaModel {
     /**
      * <p>The enabling status of the rule. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: enabled</p>
+     * <li><p><strong>1</strong>: Enabled.</p>
      * </li>
-     * <li><p><strong>0</strong>: disabled</p>
+     * <li><p><strong>0</strong>: shutdown.</p>
      * </li>
      * </ul>
      * 
@@ -143,26 +132,17 @@ public class DescribeApisecRulesRequest extends TeaModel {
     public Long status;
 
     /**
-     * <p>The type of the rule. Valid values:</p>
+     * <p>The rule type. Valid values:</p>
      * <ul>
-     * <li><p><strong>risk</strong>: threat detection</p>
-     * </li>
-     * <li><p><strong>event</strong>: security event</p>
-     * </li>
-     * <li><p><strong>sensitive_word</strong>: sensitive data</p>
-     * </li>
-     * <li><p><strong>auth_flag</strong>: authentication credential</p>
-     * </li>
-     * <li><p><strong>api_tag</strong>: business purpose</p>
-     * </li>
-     * <li><p><strong>desensitization</strong>: data masking</p>
-     * </li>
-     * <li><p><strong>whitelist</strong>: whitelist</p>
-     * </li>
-     * <li><p><strong>recognition</strong>: API</p>
-     * </li>
-     * <li><p><strong>offline_api</strong>: lifecycle management</p>
-     * </li>
+     * <li><strong>risk</strong>: Risk detection.</li>
+     * <li><strong>event</strong>: Security events.</li>
+     * <li><strong>sensitive_word</strong>: Sensitive data.</li>
+     * <li><strong>auth_flag</strong>: Authentication credentials.</li>
+     * <li><strong>api_tag</strong>: Business purpose.</li>
+     * <li><strong>desensitization</strong>: Data masking.</li>
+     * <li><strong>whitelist</strong>: Whitelist.</li>
+     * <li><strong>recognition</strong>: API identification.</li>
+     * <li><strong>offline_api</strong>: Lifecycle management.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

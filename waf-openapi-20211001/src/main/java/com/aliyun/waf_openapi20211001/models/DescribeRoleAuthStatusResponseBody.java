@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeRoleAuthStatusResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the service-linked role for WAF is authorized.</p>
+     * <p>The authorization status. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The service-linked role is authorized.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The service-linked role is not authorized.</p>
-     * </li>
+     * <li><strong>false</strong>: Not authorized.</li>
+     * <li><strong>true</strong>: Authorized.</li>
      * </ul>
      * 
      * <strong>example:</strong>

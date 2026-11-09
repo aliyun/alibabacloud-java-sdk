@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeIpAbroadCountryInfosRequest extends TeaModel {
     /**
-     * <p>The region outside China to query. Supports fuzzy query by region ID or region name in Chinese or English.</p>
+     * <p>The overseas region to query. You can perform a fuzzy match by using the region ID or the region name in Chinese or English.</p>
      * 
      * <strong>example:</strong>
      * <p>US-CA</p>
@@ -14,7 +14,7 @@ public class DescribeIpAbroadCountryInfosRequest extends TeaModel {
     public String abroadRegion;
 
     /**
-     * <p>The country outside China to query. Supports fuzzy query by country ID or country name in Chinese or English.</p>
+     * <p>The overseas country to query. You can perform a fuzzy match by using the country ID or the country name in Chinese or English.</p>
      * 
      * <strong>example:</strong>
      * <p>US</p>
@@ -23,9 +23,9 @@ public class DescribeIpAbroadCountryInfosRequest extends TeaModel {
     public String country;
 
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the current WAF instance ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -36,7 +36,7 @@ public class DescribeIpAbroadCountryInfosRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language used for country and region names in the response. Valid values:</p>
+     * <p>The language used for the country and region names in the response. Valid values:</p>
      * <ul>
      * <li><p><strong>en</strong> (<strong>default</strong>): English.</p>
      * </li>
@@ -51,7 +51,7 @@ public class DescribeIpAbroadCountryInfosRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The number of entries per page in a paged query. Valid values: 1 to 500. Default value: 20.</p>
+     * <p>The number of entries to return on each page for a paging query. Valid values: 1 to 500. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -60,7 +60,7 @@ public class DescribeIpAbroadCountryInfosRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page. Set this parameter to the value of the <strong>NextToken</strong> parameter returned from the previous API call. You do not need to specify this parameter for the first page query.</p>
+     * <p>The paging token that is used to query the next page. Set the value to the <strong>NextToken</strong> value returned from the previous API call. You do not need to specify this parameter for the first call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0*****</p>
@@ -69,11 +69,11 @@ public class DescribeIpAbroadCountryInfosRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: The Chinese mainland.</p>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
-     * <li><p><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</p>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
      * </li>
      * </ul>
      * 

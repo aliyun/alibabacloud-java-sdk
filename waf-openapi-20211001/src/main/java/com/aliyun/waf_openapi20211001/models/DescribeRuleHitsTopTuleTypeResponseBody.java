@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>45E377CE-0B04-578E-B653-EEA63CFE****</p>
@@ -14,7 +14,7 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The top 10 protection rule types that were hit.</p>
+     * <p>The top 10 protection types with the most rule hits.</p>
      */
     @NameInMap("RuleHitsTopTuleType")
     public java.util.List<DescribeRuleHitsTopTuleTypeResponseBodyRuleHitsTopTuleType> ruleHitsTopTuleType;
@@ -51,19 +51,19 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The type of rule that was hit. This parameter is not returned by default, which indicates that data for all rule types is returned.</p>
+         * <p>The type of the rule hit by the protected object. By default, this parameter is not returned, which indicates that all rules are displayed. Valid values:</p>
          * <ul>
-         * <li><p><strong>waf</strong>: basic protection rules.</p>
+         * <li><p><strong>waf</strong>: basic protection rule.</p>
          * </li>
-         * <li><p><strong>blacklist</strong>: IP address blacklist.</p>
+         * <li><p><strong>blacklist</strong>: IP blacklist.</p>
          * </li>
-         * <li><p><strong>custom</strong>: custom rules.</p>
+         * <li><p><strong>custom</strong>: custom rule.</p>
          * </li>
-         * <li><p><strong>antiscan</strong>: scan protection rules.</p>
+         * <li><p><strong>antiscan</strong>: scan protection rule.</p>
          * </li>
-         * <li><p><strong>cc_system</strong>: HTTP flood protection rules.</p>
+         * <li><p><strong>cc_system</strong>: HTTP flood protection rule.</p>
          * </li>
-         * <li><p><strong>region_block</strong>: location blacklist.</p>
+         * <li><p><strong>region_block</strong>: area blocking.</p>
          * </li>
          * <li><p><strong>scene</strong>: bot management.</p>
          * </li>

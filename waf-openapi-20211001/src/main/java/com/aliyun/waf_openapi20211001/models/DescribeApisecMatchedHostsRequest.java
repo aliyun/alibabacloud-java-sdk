@@ -7,7 +7,7 @@ public class DescribeApisecMatchedHostsRequest extends TeaModel {
     /**
      * <p>The ID of the hybrid cloud cluster.</p>
      * <blockquote>
-     * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain hybrid cloud cluster information.</p>
+     * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain the hybrid cloud cluster information.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class DescribeApisecMatchedHostsRequest extends TeaModel {
     /**
      * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -39,7 +39,7 @@ public class DescribeApisecMatchedHostsRequest extends TeaModel {
     public String matchedHost;
 
     /**
-     * <p>The page number to return in a paging query. Default value: <strong>1</strong>, which indicates the first page.</p>
+     * <p>The number of the page to return in a paged query. Default value: <strong>1</strong>, which indicates the first page of the paging result.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -48,7 +48,7 @@ public class DescribeApisecMatchedHostsRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page in a paging query. Default value: <strong>10</strong>, which indicates 10 entries per page.</p>
+     * <p>The number of entries to return on each page in a paged query. Default value: <strong>10</strong>, which indicates that 10 entries are returned on each page during paging.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -57,11 +57,11 @@ public class DescribeApisecMatchedHostsRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland</p>
      * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland</p>
      * </li>
      * </ul>
      * 
@@ -83,9 +83,9 @@ public class DescribeApisecMatchedHostsRequest extends TeaModel {
     /**
      * <p>The detection type. Valid values:</p>
      * <ul>
-     * <li><strong>api</strong>: the domain name list of API assets.</li>
-     * <li><strong>abnormal</strong>: the domain name list of risks.</li>
-     * <li><strong>event</strong>: the domain name list of security events.</li>
+     * <li><strong>api</strong>: the list of domain names for API assets</li>
+     * <li><strong>abnormal</strong>: the list of domain names with risks</li>
+     * <li><strong>event</strong>: the list of domain names for security events</li>
      * </ul>
      * 
      * <strong>example:</strong>

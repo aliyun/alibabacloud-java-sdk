@@ -5,12 +5,11 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags from the specified resource groups or members. Valid values:</p>
+     * <p>Specifies whether to remove and delete all tags from the specified resource group or resource directory member. Valid values:</p>
      * <ul>
-     * <li><p>false (default)</p>
-     * </li>
-     * <li><p>true</p>
-     * </li>
+     * <li>false: no.</li>
+     * <li>true: yes.
+     * Default value: false.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,9 +19,9 @@ public class UntagResourcesRequest extends TeaModel {
     public Boolean all;
 
     /**
-     * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
+     * <p>The region where the Web Application Firewall (WAF) instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: Chinese mainland.</p>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
      * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
      * </li>
@@ -36,14 +35,14 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
+     * <p>The list of resource IDs. You can specify up to 50 items.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.</p>
+     * <p>The resource type. Valid value: ALIYUN::WAF::DEFENSERESOURCE.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +52,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag keys. You can specify up to 20 tag keys.</p>
+     * <p>The list of tag keys. You can specify up to 20 items.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

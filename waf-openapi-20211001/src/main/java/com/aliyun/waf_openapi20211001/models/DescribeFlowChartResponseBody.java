@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFlowChartResponseBody extends TeaModel {
     /**
-     * <p>The traffic statistics.</p>
+     * <p>The traffic statistics information.</p>
      */
     @NameInMap("FlowChart")
     public java.util.List<DescribeFlowChartResponseBodyFlowChart> flowChart;
@@ -42,7 +42,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
 
     public static class DescribeFlowChartResponseBodyFlowChart extends TeaModel {
         /**
-         * <p>The number of requests that are blocked by custom access control list (ACL) rules.</p>
+         * <p>The number of requests blocked by custom ACL rules.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -51,7 +51,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long aclCustomBlockSum;
 
         /**
-         * <p>The number of requests that are monitored by custom ACL rules.</p>
+         * <p>The number of monitored hits on custom ACL rules.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -60,7 +60,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long aclCustomReportsSum;
 
         /**
-         * <p>The number of requests that are blocked by scan protection rules.</p>
+         * <p>The number of requests blocked by scan protection rules.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -69,7 +69,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long antiScanBlockSum;
 
         /**
-         * <p>The number of requests that are blocked by bot management rules.</p>
+         * <p>The number of requests blocked by bot management rules.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -78,7 +78,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long antibotBlockSum;
 
         /**
-         * <p>The number of requests that are monitored by bot management rules.</p>
+         * <p>The number of monitored hits on bot management rules.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -87,7 +87,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public String antibotReportSum;
 
         /**
-         * <p>The number of requests that are monitored by scan protection rules.</p>
+         * <p>The number of monitored hits on scan protection rules.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -96,7 +96,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long antiscanReportsSum;
 
         /**
-         * <p>The number of requests that are blocked by the IP address blacklist.</p>
+         * <p>The number of requests blocked by the IP blacklist.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -105,7 +105,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public String blacklistBlockSum;
 
         /**
-         * <p>The number of requests that are monitored by the IP address blacklist.</p>
+         * <p>The number of monitored hits on the IP blacklist.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -114,7 +114,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long blacklistReportsSum;
 
         /**
-         * <p>The number of requests that are blocked by custom HTTP flood protection rules.</p>
+         * <p>The number of requests blocked by custom HTTP flood mitigation rules.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -123,7 +123,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long ccCustomBlockSum;
 
         /**
-         * <p>The number of requests that are monitored by custom HTTP flood protection rules.</p>
+         * <p>The number of monitored hits on custom HTTP flood mitigation rules.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -132,7 +132,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long ccCustomReportsSum;
 
         /**
-         * <p>The number of requests that are blocked by system HTTP flood protection rules.</p>
+         * <p>The number of requests blocked by built-in HTTP flood mitigation rules.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -141,7 +141,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long ccSystemBlocksSum;
 
         /**
-         * <p>The number of requests that are monitored by system HTTP flood protection rules.</p>
+         * <p>The number of monitored hits on built-in HTTP flood mitigation rules.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -159,7 +159,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The total volume of inbound traffic. Unit: bytes.</p>
+         * <p>The total inbound traffic to WAF.</p>
          * 
          * <strong>example:</strong>
          * <p>121645464</p>
@@ -168,7 +168,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long inBytes;
 
         /**
-         * <p>The time sequence number, sorted in chronological order.</p>
+         * <p>The time index, sorted in chronological order.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -186,7 +186,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long maxPv;
 
         /**
-         * <p>The total volume of outbound traffic. Unit: bytes.</p>
+         * <p>The total outbound traffic from WAF.</p>
          * 
          * <strong>example:</strong>
          * <p>1200540464</p>
@@ -195,7 +195,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long outBytes;
 
         /**
-         * <p>The number of requests that are blocked by peak traffic throttling rules.</p>
+         * <p>The number of requests blocked by peak traffic throttling rules.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -204,7 +204,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long ratelimitBlockSum;
 
         /**
-         * <p>The number of requests that are monitored by peak traffic throttling rules.</p>
+         * <p>The number of monitored hits on peak traffic throttling rules.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -213,7 +213,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long ratelimitReportSum;
 
         /**
-         * <p>The number of requests that are blocked by Location Blacklist rules.</p>
+         * <p>The number of requests blocked by area blocking rules.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -222,7 +222,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long regionBlockBlocksSum;
 
         /**
-         * <p>The number of requests that are monitored by Location Blacklist rules.</p>
+         * <p>The number of monitored hits on area blocking rules.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -231,7 +231,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long regionBlockReportsSum;
 
         /**
-         * <p>The total number of requests from bots.</p>
+         * <p>The total number of bot requests.</p>
          * 
          * <strong>example:</strong>
          * <p>1110</p>
@@ -240,7 +240,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long robotCount;
 
         /**
-         * <p>The number of requests that are blocked by basic protection rules.</p>
+         * <p>The number of requests blocked by basic protection rules.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -249,7 +249,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long wafBlockSum;
 
         /**
-         * <p>The number of requests that are monitored by basic protection rules.</p>
+         * <p>The number of monitored hits on basic protection rules.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

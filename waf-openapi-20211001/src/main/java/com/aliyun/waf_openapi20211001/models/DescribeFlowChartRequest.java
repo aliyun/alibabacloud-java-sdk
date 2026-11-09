@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFlowChartRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the current time is used as the end time.</p>
+     * <p>The end time of the query. Unit: seconds. If you do not specify this parameter, the end time is the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>1665386280</p>
@@ -14,9 +14,9 @@ public class DescribeFlowChartRequest extends TeaModel {
     public String endTimestamp;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -61,7 +61,7 @@ public class DescribeFlowChartRequest extends TeaModel {
     public String resource;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -70,7 +70,7 @@ public class DescribeFlowChartRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The start time of the query. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceRegionIdResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F5905D3F-F674-5177-9E48-466DD3B8****</p>
@@ -14,7 +14,7 @@ public class DescribeResourceRegionIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The region IDs of cloud service resources that can be added to WAF by using the SDK.</p>
+     * <p>The list of region IDs of SDK-integrated resources.</p>
      */
     @NameInMap("ResourceRegionIds")
     public java.util.List<String> resourceRegionIds;

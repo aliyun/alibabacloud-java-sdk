@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeAbnormalCloudResourcesRequest extends TeaModel {
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of your WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the WAF instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -22,7 +22,7 @@ public class DescribeAbnormalCloudResourcesRequest extends TeaModel {
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
-     * <li><p><strong>ap-southeast-1</strong>: a region outside the Chinese mainland.</p>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
      * </li>
      * </ul>
      * 

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
     /**
-     * <p>The list of country information outside China.</p>
+     * <p>The list of overseas country information.</p>
      */
     @NameInMap("AbroadInfos")
     public java.util.List<DescribeIpAbroadCountryInfosResponseBodyAbroadInfos> abroadInfos;
 
     /**
-     * <p>The number of entries per page in a paged query. Valid values: 1 to 500. Default value: 20.</p>
+     * <p>The number of entries to return on each page for a paging query. Valid values: 1 to 500. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page.</p>
+     * <p>The pagination token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0*****</p>
@@ -29,7 +29,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>66A98669-CC6E-4F3E-80A6-3014697B11AE</p>
@@ -38,7 +38,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of returned entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -93,7 +93,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
 
     public static class DescribeIpAbroadCountryInfosResponseBodyAbroadInfosRegions extends TeaModel {
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>US-CA</p>
@@ -102,7 +102,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
         public String abroadRegionId;
 
         /**
-         * <p>The name of the region.</p>
+         * <p>The region name.</p>
          * 
          * <strong>example:</strong>
          * <p>California</p>
@@ -144,7 +144,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
         public String continent;
 
         /**
-         * <p>The ID of the country.</p>
+         * <p>The country ID.</p>
          * 
          * <strong>example:</strong>
          * <p>US</p>
@@ -153,7 +153,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
         public String country;
 
         /**
-         * <p>The name of the country.</p>
+         * <p>The country name.</p>
          * 
          * <strong>example:</strong>
          * <p>United States</p>
@@ -162,7 +162,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
         public String countryName;
 
         /**
-         * <p>The list of region information outside China.</p>
+         * <p>The list of overseas region information.</p>
          */
         @NameInMap("Regions")
         public java.util.List<DescribeIpAbroadCountryInfosResponseBodyAbroadInfosRegions> regions;
