@@ -60,7 +60,7 @@ public class GetRemakeScriptJobResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>68ca759e798b40b4903b255*******</p>
@@ -69,7 +69,7 @@ public class GetRemakeScriptJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The file URL of the script imitation result. The file content is in JSON format of the creative script.</p>
+         * <p>The URL of the file that contains the script rewriting result. The file content is the creative script in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxxx.json">http://xxxx.json</a></p>
@@ -78,13 +78,13 @@ public class GetRemakeScriptJobResponseBody extends TeaModel {
         public String result;
 
         /**
-         * <p>The file status. Valid values:</p>
+         * <p>The status. Valid values:</p>
          * <ul>
-         * <li>Created: Created.</li>
-         * <li>Executing: Executing.</li>
-         * <li>Finished: Finished.</li>
-         * <li>Failed: Failed.</li>
-         * <li>Deleted: Deleted.</li>
+         * <li>Created: The task is created.</li>
+         * <li>Executing: The task is executing.</li>
+         * <li>Finished: The task is finished.</li>
+         * <li>Failed: The task failed.</li>
+         * <li>Deleted: The task is deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -94,7 +94,7 @@ public class GetRemakeScriptJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The user-defined parameter, in JSON format string.</p>
+         * <p>The user-defined parameter, which is a string in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></p>

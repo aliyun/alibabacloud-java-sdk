@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchMediaResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class SearchMediaResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The collection of media assets that meet the specified criteria.</p>
+     * <p>The collection of media assets that meet the requirements.</p>
      */
     @NameInMap("MediaInfoList")
     public java.util.List<SearchMediaResponseBodyMediaInfoList> mediaInfoList;
@@ -29,7 +29,7 @@ public class SearchMediaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The pagination token.</p>
+     * <p>The scroll token.</p>
      * 
      * <strong>example:</strong>
      * <p>F8C4F642184DBDA5D93907A70AAE****</p>
@@ -38,7 +38,7 @@ public class SearchMediaResponseBody extends TeaModel {
     public String scrollToken;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -47,7 +47,7 @@ public class SearchMediaResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The total number of media assets that meet the specified criteria.</p>
+     * <p>The total number of media assets that meet the requirements.</p>
      * 
      * <strong>example:</strong>
      * <p>163</p>
@@ -146,7 +146,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The file size, in bytes.</p>
+         * <p>The file size in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>48524</p>
@@ -218,7 +218,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The file storage region.</p>
+         * <p>The storage region of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -356,7 +356,7 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaInfoListFileInfoList extends TeaModel {
         /**
-         * <p>The basic file information, including duration and size.</p>
+         * <p>The basic file information, including the duration and size.</p>
          */
         @NameInMap("FileBasicInfo")
         public SearchMediaResponseBodyMediaInfoListFileInfoListFileBasicInfo fileBasicInfo;
@@ -796,7 +796,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public java.util.List<SearchMediaResponseBodyMediaInfoListFileInfoList> fileInfoList;
 
         /**
-         * <p>The basic information of the media asset.</p>
+         * <p>The basic media asset information.</p>
          */
         @NameInMap("MediaBasicInfo")
         public SearchMediaResponseBodyMediaInfoListMediaBasicInfo mediaBasicInfo;

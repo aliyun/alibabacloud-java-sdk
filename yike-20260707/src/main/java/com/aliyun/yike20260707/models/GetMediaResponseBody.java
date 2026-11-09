@@ -1251,9 +1251,17 @@ public class GetMediaResponseBody extends TeaModel {
         @NameInMap("BusinessType")
         public String businessType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CategoryId")
         public Long categoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>示例分类</p>
+         */
         @NameInMap("CategoryName")
         public String categoryName;
 

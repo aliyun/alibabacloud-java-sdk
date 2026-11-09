@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInfiniteCanvasesRequest extends TeaModel {
     /**
-     * <p>The keyword for querying site monitoring tasks. Supports fuzzy match based on task name or task address.</p>
+     * <p>The keyword used to query site monitoring tasks. Note: Fuzzy match is supported based on the task name or task address.</p>
      * 
      * <strong>example:</strong>
      * <p>v2_</p>
@@ -31,6 +31,12 @@ public class ListInfiniteCanvasesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pd_abc1234567</p>
+     */
     @NameInMap("ProductionId")
     public String productionId;
 
@@ -44,11 +50,10 @@ public class ListInfiniteCanvasesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The sort direction.</p>
-     * <p>Valid values:</p>
+     * <p>The sort direction. Valid values:</p>
      * <ul>
-     * <li>Asc: Ascending order.</li>
-     * <li>Desc: Descending order.</li>
+     * <li>Asc: ascending order</li>
+     * <li>Desc: descending order</li>
      * </ul>
      * <p>Default value: Desc.</p>
      * 
@@ -58,6 +63,12 @@ public class ListInfiniteCanvasesRequest extends TeaModel {
     @NameInMap("SortOrder")
     public String sortOrder;
 
+    /**
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ws_abc1234567</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "Yike";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("yike", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -90,7 +93,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消生成任务接口</p>
+     * <p>Cancels an AI generation task.</p>
      * 
      * @param request CancelGenerationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -122,7 +125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消生成任务接口</p>
+     * <p>Cancels an AI generation task.</p>
      * 
      * @param request CancelGenerationJobRequest
      * @return CancelGenerationJobResponse
@@ -740,11 +743,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>This API is used to query a media asset content understanding job.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation queries media content understanding jobs.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a media asset content understanding job.</p>
+     * <p>Queries media content understanding jobs.</p>
      * 
      * @param request GetMediaComprehensionJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -776,11 +779,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>This API is used to query a media asset content understanding job.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation queries media content understanding jobs.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a media asset content understanding job.</p>
+     * <p>Queries media content understanding jobs.</p>
      * 
      * @param request GetMediaComprehensionJobRequest
      * @return GetMediaComprehensionJobResponse
@@ -832,6 +835,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetRemakeScriptJobResponse getRemakeScriptJob(GetRemakeScriptJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getRemakeScriptJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a video creative generation job.</p>
+     * 
+     * @param request GetVideoCreativeGenerationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVideoCreativeGenerationJobResponse
+     */
+    public GetVideoCreativeGenerationJobResponse getVideoCreativeGenerationJobWithOptions(GetVideoCreativeGenerationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVideoCreativeGenerationJob"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVideoCreativeGenerationJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a video creative generation job.</p>
+     * 
+     * @param request GetVideoCreativeGenerationJobRequest
+     * @return GetVideoCreativeGenerationJobResponse
+     */
+    public GetVideoCreativeGenerationJobResponse getVideoCreativeGenerationJob(GetVideoCreativeGenerationJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getVideoCreativeGenerationJobWithOptions(request, runtime);
     }
 
     /**
@@ -934,7 +981,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a video rendering and composition task.</p>
+     * <p>Submits a video rendering and compositing task.</p>
      * 
      * @param request GetVideoRenderJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -966,7 +1013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a video rendering and composition task.</p>
+     * <p>Submits a video rendering and compositing task.</p>
      * 
      * @param request GetVideoRenderJobRequest
      * @return GetVideoRenderJobResponse
@@ -1265,8 +1312,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API is used to query media asset content understanding jobs.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation queries media asset content understanding jobs.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of infinite canvases.</p>
@@ -1325,8 +1372,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API is used to query media asset content understanding jobs.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation queries media asset content understanding jobs.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of infinite canvases.</p>
@@ -1341,7 +1388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns media asset information that matches the specified filter conditions.</p>
+     * <p>Queries media assets that match the specified parameters.</p>
      * 
      * @param request SearchMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1397,7 +1444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns media asset information that matches the specified filter conditions.</p>
+     * <p>Queries media assets that match the specified parameters.</p>
      * 
      * @param request SearchMediaRequest
      * @return SearchMediaResponse
@@ -1473,7 +1520,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits an image generation task.</p>
+     * <p>Submits an image generation request.</p>
      * 
      * @param request SubmitImageGenerationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1541,7 +1588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits an image generation task.</p>
+     * <p>Submits an image generation request.</p>
      * 
      * @param request SubmitImageGenerationJobRequest
      * @return SubmitImageGenerationJobResponse
@@ -1553,8 +1600,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation performs content understanding based on the provided media asset files (such as video URLs). You can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
+     * <h2>Request description</h2>
+     * <p>This operation performs content understanding based on the provided media asset files, such as video URLs. Additionally, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
      * <p>Submits a media asset content understanding job.</p>
@@ -1601,8 +1648,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation performs content understanding based on the provided media asset files (such as video URLs). You can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
+     * <h2>Request description</h2>
+     * <p>This operation performs content understanding based on the provided media asset files, such as video URLs. Additionally, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
      * <p>Submits a media asset content understanding job.</p>
@@ -1617,7 +1664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API generates a new voiceover script based on content comprehension results and new product/model information by imitating the style of the original script. You can pass custom parameters through the UserData field, which are returned as-is in the callback.</p>
+     * <p>This operation generates a new voiceover script based on content understanding results and new product or avatar information. It also supports passing custom parameters through the UserData field, which are returned as-is in callbacks.</p>
      * 
      * <b>summary</b> : 
      * <p>Submits a creative script generation task.</p>
@@ -1660,7 +1707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API generates a new voiceover script based on content comprehension results and new product/model information by imitating the style of the original script. You can pass custom parameters through the UserData field, which are returned as-is in the callback.</p>
+     * <p>This operation generates a new voiceover script based on content understanding results and new product or avatar information. It also supports passing custom parameters through the UserData field, which are returned as-is in callbacks.</p>
      * 
      * <b>summary</b> : 
      * <p>Submits a creative script generation task.</p>
@@ -1671,6 +1718,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitRemakeScriptJobResponse submitRemakeScriptJob(SubmitRemakeScriptJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitRemakeScriptJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Submits a video creative generation job.</p>
+     * 
+     * @param request SubmitVideoCreativeGenerationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitVideoCreativeGenerationJobResponse
+     */
+    public SubmitVideoCreativeGenerationJobResponse submitVideoCreativeGenerationJobWithOptions(SubmitVideoCreativeGenerationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aspectRatio)) {
+            query.put("AspectRatio", request.aspectRatio);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.avatarData)) {
+            query.put("AvatarData", request.avatarData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobParams)) {
+            query.put("JobParams", request.jobParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputLanguages)) {
+            query.put("OutputLanguages", request.outputLanguages);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resolution)) {
+            query.put("Resolution", request.resolution);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneType)) {
+            query.put("SceneType", request.sceneType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userMaterials)) {
+            query.put("UserMaterials", request.userMaterials);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withSubtitles)) {
+            query.put("WithSubtitles", request.withSubtitles);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitVideoCreativeGenerationJob"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitVideoCreativeGenerationJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Submits a video creative generation job.</p>
+     * 
+     * @param request SubmitVideoCreativeGenerationJobRequest
+     * @return SubmitVideoCreativeGenerationJobResponse
+     */
+    public SubmitVideoCreativeGenerationJobResponse submitVideoCreativeGenerationJob(SubmitVideoCreativeGenerationJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitVideoCreativeGenerationJobWithOptions(request, runtime);
     }
 
     /**
@@ -1881,10 +2004,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submits an asynchronous video translation task. The input supports a media URL or an Intelligent Media Management (IMM) media asset ID. Task parameters specify the source language, target language, and translation capabilities to enable.</p>
+     * <p>Submits an asynchronous video translation task. The input supports media URLs or Yike media asset IDs. The task parameters are used to select the source language, target language, and the translation capabilities to enable.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits an asynchronous video translation task that supports subtitle translation, voice translation, main subtitle erasure, and on-screen text translation.</p>
+     * <p>Submits an asynchronous video translation task that supports subtitle translation, voice translation, primary subtitle erasure, and on-screen text translation.</p>
      * 
      * @param request SubmitVideoTranslationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1944,10 +2067,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submits an asynchronous video translation task. The input supports a media URL or an Intelligent Media Management (IMM) media asset ID. Task parameters specify the source language, target language, and translation capabilities to enable.</p>
+     * <p>Submits an asynchronous video translation task. The input supports media URLs or Yike media asset IDs. The task parameters are used to select the source language, target language, and the translation capabilities to enable.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits an asynchronous video translation task that supports subtitle translation, voice translation, main subtitle erasure, and on-screen text translation.</p>
+     * <p>Submits an asynchronous video translation task that supports subtitle translation, voice translation, primary subtitle erasure, and on-screen text translation.</p>
      * 
      * @param request SubmitVideoTranslationJobRequest
      * @return SubmitVideoTranslationJobResponse

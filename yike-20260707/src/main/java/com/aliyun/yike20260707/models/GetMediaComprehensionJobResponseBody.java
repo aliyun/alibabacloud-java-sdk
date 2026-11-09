@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetMediaComprehensionJobResponseBody extends TeaModel {
     /**
-     * <p>The media asset content understanding result object.</p>
+     * <p>The media content understanding result object.</p>
      */
     @NameInMap("Job")
     public GetMediaComprehensionJobResponseBodyJob job;
 
     /**
-     * <p>The media asset content understanding object. This parameter is deprecated.</p>
+     * <p><strong>[Deprecated]</strong> The media content understanding object.</p>
      */
     @NameInMap("MediaComprehensionJob")
     public GetMediaComprehensionJobResponseBodyMediaComprehensionJob mediaComprehensionJob;
@@ -56,7 +56,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
 
     public static class GetMediaComprehensionJobResponseBodyJob extends TeaModel {
         /**
-         * <p>The error code. This parameter is returned when the job is in the Failed state.</p>
+         * <p>The error code. This parameter is returned when the job status is Failed.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -65,7 +65,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message. This parameter is returned when the job is in the Failed state.</p>
+         * <p>The error message. This parameter is of the String type and is returned when the job status is Failed.</p>
          * 
          * <strong>example:</strong>
          * <p>The specified product does not exist.</p>
@@ -74,7 +74,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The list of media asset IDs. If the input is a URL, the media asset ID registered after input is returned.</p>
+         * <p>The list of media asset IDs. If the input is a URL, the registered media asset IDs are returned.</p>
          */
         @NameInMap("MediaIds")
         public java.util.List<String> mediaIds;
@@ -89,13 +89,13 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
         public String result;
 
         /**
-         * <p>The file status. Valid values:</p>
+         * <p>The job status. Valid values:</p>
          * <ul>
-         * <li><strong>Created</strong>: Created.</li>
-         * <li><strong>Executing</strong>: Executing.</li>
-         * <li><strong>Finished</strong>: Finished.</li>
-         * <li><strong>Failed</strong>: Failed.</li>
-         * <li><strong>Deleted</strong>: Deleted.</li>
+         * <li><strong>Created</strong>: The job is created.</li>
+         * <li><strong>Executing</strong>: The job is being executed.</li>
+         * <li><strong>Finished</strong>: The job is completed.</li>
+         * <li><strong>Failed</strong>: The job failed.</li>
+         * <li><strong>Deleted</strong>: The job is deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The user-defined parameter, which is a JSON-formatted string.</p>
+         * <p>The user-defined parameter. The value is a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></p>
@@ -170,7 +170,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
 
     public static class GetMediaComprehensionJobResponseBodyMediaComprehensionJob extends TeaModel {
         /**
-         * <p>The error code. This parameter is returned when the job is in the <code>Failed</code> state.</p>
+         * <p>The error code. This parameter is returned when the status is <code>Failed</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -179,7 +179,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message. This parameter is returned when the job is in the Failed state.</p>
+         * <p>The error message. This parameter is of the String type and is returned when the job status is Failed.</p>
          * 
          * <strong>example:</strong>
          * <p>The specified product does not exist.</p>
@@ -206,7 +206,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The analysis result, which is a JSON string.</p>
+         * <p>The analysis result. The value is a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;{\&quot;source_video_url\&quot;:\&quot;<a href="http://xxx.mp4%5C%5C%22,%5C%5C%22narrative_overview%5C%5C%22:%7B******%7D%7D">http://xxx.mp4\\&quot;,\\&quot;narrative_overview\\&quot;:{******}}</a>&quot;</p>
@@ -215,13 +215,13 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
         public String result;
 
         /**
-         * <p>The file status. Valid values:</p>
+         * <p>The job status. Valid values:</p>
          * <ul>
-         * <li><strong>Created</strong>: Created.</li>
-         * <li><strong>Executing</strong>: Executing.</li>
-         * <li><strong>Finished</strong>: Finished.</li>
-         * <li><strong>Failed</strong>: Failed.</li>
-         * <li><strong>Deleted</strong>: Deleted.</li>
+         * <li><strong>Created</strong>: The job is created.</li>
+         * <li><strong>Executing</strong>: The job is being executed.</li>
+         * <li><strong>Finished</strong>: The job is completed.</li>
+         * <li><strong>Failed</strong>: The job failed.</li>
+         * <li><strong>Deleted</strong>: The job is deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -231,7 +231,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The user-defined parameter, which is a JSON-formatted string.</p>
+         * <p>The user-defined parameter. The value is a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></p>

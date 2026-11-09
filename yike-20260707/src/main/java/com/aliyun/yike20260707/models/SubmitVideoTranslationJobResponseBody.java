@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitVideoTranslationJobResponseBody extends TeaModel {
     /**
-     * <p>The video translation job ID, used to call GetVideoTranslationJob to query the job.</p>
+     * <p>The video translation job ID, which is used to call GetVideoTranslationJob to query the task.</p>
      * 
      * <strong>example:</strong>
      * <p>vtj_0123456789abcdef0123456789abcdef</p>
@@ -14,7 +14,7 @@ public class SubmitVideoTranslationJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The request ID, used for Tracing Analysis and troubleshooting.</p>
+     * <p>The request ID, which is used for Tracing Analysis and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>req-vt-20260820-001</p>

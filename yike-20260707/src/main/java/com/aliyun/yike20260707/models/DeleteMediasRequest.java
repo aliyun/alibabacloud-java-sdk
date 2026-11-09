@@ -4,11 +4,17 @@ package com.aliyun.yike20260707.models;
 import com.aliyun.tea.*;
 
 public class DeleteMediasRequest extends TeaModel {
+    /**
+     * <p>The business configuration. It is a JSON string that can contain ProductionId (the project ID).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;ProductionId&quot;:&quot;pd_abc1234567&quot;}</p>
+     */
     @NameInMap("BizConfig")
     public String bizConfig;
 
     /**
-     * <p>Specifies whether to delete the physical files at the same time.</p>
+     * <p>Specifies whether to delete physical files at the same time.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

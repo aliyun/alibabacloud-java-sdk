@@ -102,7 +102,7 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
         public String canvasId;
 
         /**
-         * <p>The cover URL.</p>
+         * <p>The URL of the cover image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example.com/cover.png">http://example.com/cover.png</a></p>
@@ -129,7 +129,7 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The thumbnail height, in px.</p>
+         * <p>The height of the thumbnail, in pixels.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example.com/thumbnail2.png">http://example.com/thumbnail2.png</a></p>

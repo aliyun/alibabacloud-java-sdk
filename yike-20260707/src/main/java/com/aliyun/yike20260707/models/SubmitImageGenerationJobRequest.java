@@ -30,7 +30,7 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
      * <ul>
      * <li>Prompt: String. Required. The prompt text.</li>
      * <li>Medias: A list of media items. Required when the task type is <code>image_to_image</code>. A maximum of 9 items are supported.<blockquote>
-     * <p>The Media structure contains the following fields: Type, the media type (String, valid value: image). URL, the media download URL (String). MediaId, the media asset ID (String).</p>
+     * <p>The Media structure contains the following fields: Type, the media type, String, valid value: image. URL, the media download URL, String. MediaId, the media asset ID, String.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -42,7 +42,11 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String input;
 
     /**
-     * <p>The task feature parameters. The value is a JSON string. You do not need to set this parameter currently.</p>
+     * <p>The task parameters. The value is a JSON string.</p>
+     * <ul>
+     * <li>PromptExtend: Specifies whether to enable prompt optimization. Boolean. Valid values: <code>true</code> and <code>false</code>.</li>
+     * <li>PromptExtendMode: The prompt extension mode. Valid values: <code>direct</code> (default) and <code>agent</code> (supported for text-to-image generation). Only qwen-image-3.0 supports this parameter.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -79,7 +83,7 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>The number of images. Valid values: 1 to 4. Default value: 1.</p>
+     * <p>The number of images to generate. Valid values: 1 to 4. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -13,6 +13,10 @@ public class UpdateMediaRequest extends TeaModel {
     @NameInMap("BizConfig")
     public String bizConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CategoryId")
     public Long categoryId;
 

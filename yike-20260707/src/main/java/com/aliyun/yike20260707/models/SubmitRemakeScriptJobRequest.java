@@ -5,35 +5,35 @@ import com.aliyun.tea.*;
 
 public class SubmitRemakeScriptJobRequest extends TeaModel {
     /**
-     * <p>The remake parameters (JSON string). The structure varies depending on <code>RemakeType</code>. For <code>faithful-remake</code>, the structure is as follows:</p>
+     * <p>The remake parameters. This parameter is a JSON string. The structure varies based on RemakeType. For faithful-remake, the structure is as follows:</p>
      * <ul>
-     * <li><p>ComprehensionResult (string, required): The content comprehension result. A URL to a JSON file.</p>
+     * <li><p>ComprehensionResult (string, required): The content understanding result. This is the URL of the JSON file.</p>
      * </li>
-     * <li><p>Product (Object, required): The product information (original product + new product).</p>
+     * <li><p>Product (object, required): The product information, including the original product and the new product.</p>
      * <ul>
-     * <li><p>OriginalProductName (String, required): The product or brand name in the original video (the object to be replaced). Used to locate and replace mentions of the original product in the script.</p>
+     * <li><p>OriginalProductName (string, required): The product or brand name in the original video to be replaced. This is used to locate and replace mentions of the original product in the script.</p>
      * </li>
-     * <li><p>NewProduct (Object, required): The new product information. </p>
+     * <li><p>NewProduct (object, required): The new product information. </p>
      * <ul>
-     * <li>ProductName (String, required): The product or brand name.</li>
-     * <li>Description (String, required): The product description.</li>
-     * <li>ProductKnowledge (String, required): The physical knowledge of the product, such as material and usage instructions.</li>
-     * <li>ProductImages (Array\&lt;String\&gt;, required): The images of the new product. Must not be empty. Each item is an http(s) URL.</li>
-     * <li>SellingPoints (Array\&lt;String\&gt;, optional): The list of product selling points.</li>
-     * <li>OriginalPrice (String, optional): The original price.</li>
-     * <li>CurrentPrice (String, optional): The current price.</li>
-     * <li>Discount (String, optional): The discount information, such as &quot;50 off 200&quot; or &quot;buy one get one free&quot;.</li>
+     * <li>ProductName (string, required): The product or brand name.</li>
+     * <li>Description (string, required): The product description.</li>
+     * <li>ProductKnowledge (string, required): The physical knowledge of the product, such as the material and usage instructions.</li>
+     * <li>ProductImages (array of strings, required): The images of the new product. This array cannot be empty. Each item must be an HTTP or HTTPS URL.</li>
+     * <li>SellingPoints (array of strings, optional): The list of product selling points.</li>
+     * <li>OriginalPrice (string, optional): The original price.</li>
+     * <li>CurrentPrice (string, optional): The current price.</li>
+     * <li>Discount (string, optional): The discount information, such as &quot;50 off for purchases over 200&quot; or &quot;buy one get one free&quot;.</li>
      * </ul>
      * </li>
      * </ul>
      * </li>
-     * <li><p>Avatar (Object, required): The model information (original model + new model).</p>
+     * <li><p>Avatar (object, required): The avatar information, including the original avatar and the new avatar.</p>
      * <ul>
-     * <li>NewAvatarImages (Array\&lt;String\&gt;, required): The list of new model images. Must not be empty. Each item is a media asset ID or an image URL (when a URL is provided, the system automatically registers it as a media asset). <strong>Currently, only 1 image is supported</strong> (only the first element of the array is used). The array format is reserved for future expansion.</li>
-     * <li>OriginalAvatarName (String, required): The name of the model in the original video (the object to be replaced). Used to locate and replace the original model in the script and visuals.</li>
+     * <li>NewAvatarImages (array of strings, required): The list of images for the new avatar. This array cannot be empty. Each item must be a media asset ID or an image URL. If a URL is provided, the system automatically registers it as a media asset. <strong>Currently, only one image is supported</strong> (only the first element of the array is used). The array format is reserved for future extensions.</li>
+     * <li>OriginalAvatarName (string, required): The avatar name in the original video to be replaced. This is used to locate and replace the original avatar in the script or video frames.</li>
      * </ul>
      * </li>
-     * <li><p>VoiceoverLanguage (String, optional): The voiceover language. Valid values: <code>zh</code> (Chinese), <code>en</code> (English), <code>es</code> (Spanish), <code>pt</code> (Portuguese), <code>fr</code> (French), <code>de</code> (German), <code>ja</code> (Japanese), <code>ko</code> (Korean), <code>ar</code> (Arabic). Default value: <code>zh</code>.</p>
+     * <li><p>VoiceoverLanguage (string, optional): The voiceover language. Valid values: <code>zh</code> (Chinese), <code>en</code> (English), <code>es</code> (Spanish), <code>pt</code> (Portuguese), <code>fr</code> (French), <code>de</code> (German), <code>ja</code> (Japanese), <code>ko</code> (Korean), and <code>ar</code> (Arabic). Default value: <code>zh</code>.</p>
      * </li>
      * </ul>
      * 
@@ -71,7 +71,7 @@ public class SubmitRemakeScriptJobRequest extends TeaModel {
     public String remakeParams;
 
     /**
-     * <p>The remake type, which determines the structure of <code>RemakeParams</code>. Currently, only <code>faithful-remake</code> is supported (faithful remake: remakes the original hit video segment by segment, replacing the product and model).</p>
+     * <p>The remake type. This parameter determines the structure of RemakeParams. Currently, only faithful-remake is supported. faithful-remake indicates a faithful remake that replicates the original viral structure paragraph by paragraph and replaces the product and avatar.</p>
      * 
      * <strong>example:</strong>
      * <p>faithful-remake</p>
@@ -80,7 +80,7 @@ public class SubmitRemakeScriptJobRequest extends TeaModel {
     public String remakeType;
 
     /**
-     * <p>The custom parameters in JSON format. These parameters are returned as-is in the callback result (for example, newsKey). The system reserved field NotifyAddress specifies the callback URL. The system sends a callback to this URL after the task is completed.</p>
+     * <p>The custom parameters. This parameter is a JSON string and is returned as-is in the callback result, such as newsKey. NotifyAddress is a system-reserved field for the callback URL. The system sends a callback to this URL after the task is completed.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></p>
