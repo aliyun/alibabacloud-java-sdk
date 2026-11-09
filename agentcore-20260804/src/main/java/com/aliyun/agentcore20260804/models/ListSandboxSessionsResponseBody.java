@@ -23,7 +23,7 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The list of active sessions in the sandbox.</p>
+     * <p>The list of active sessions for the sandbox.</p>
      */
     @NameInMap("items")
     public java.util.List<ListSandboxSessionsResponseBodyItems> items;
@@ -158,7 +158,7 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
 
     public static class ListSandboxSessionsResponseBodyItems extends TeaModel {
         /**
-         * <p>The type of the external channel, such as DINGTALK, FEISHU, or WECOM. This parameter is empty for non-external channels.</p>
+         * <p>The external channel type, such as DINGTALK, FEISHU, or WECOM. This parameter is empty for non-external channels.</p>
          * 
          * <strong>example:</strong>
          * <p>DINGTALK</p>
@@ -176,7 +176,7 @@ public class ListSandboxSessionsResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The source type of the session. A value of API indicates an API call. A value of CONSOLE_DEBUG indicates console debugging. A value of EXTERNAL_CHANNEL indicates an external channel. A value of UNKNOWN indicates an unknown source.</p>
+         * <p>The source type of the session. A value of API indicates an API call, CONSOLE_DEBUG indicates console debugging, EXTERNAL_CHANNEL indicates an external channel, and UNKNOWN indicates an unknown source.</p>
          * 
          * <strong>example:</strong>
          * <p>EXTERNAL_CHANNEL</p>

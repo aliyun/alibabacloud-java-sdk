@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAgentVersionRequest extends TeaModel {
     /**
-     * <p>客户端生成的幂等令牌，当前为预留参数，后端暂不提供持久化幂等保证。</p>
+     * <p>The client-generated idempotency token. This is a reserved parameter, and the backend does not currently provide persistent idempotency guarantees.</p>
      * 
      * <strong>example:</strong>
      * <p>c2d8a6f0-3b1e-4a7d-9f25-6e4b0c1a8d37</p>

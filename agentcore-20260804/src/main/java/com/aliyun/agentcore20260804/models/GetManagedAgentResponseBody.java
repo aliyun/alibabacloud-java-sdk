@@ -456,6 +456,15 @@ public class GetManagedAgentResponseBody extends TeaModel {
         public GetManagedAgentResponseBodyDataHarnessConfiguration configuration;
 
         /**
+         * <p>仅查询返回。服务端按完整实例分布统计，不受实例列表分页和筛选影响。镜像 tag 缺失、分页不完整或无法确认时为空，不等同于 0。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("outdatedInstanceCount")
+        public Long outdatedInstanceCount;
+
+        /**
          * <p>The type of the runtime framework.</p>
          * 
          * <strong>example:</strong>
@@ -463,6 +472,15 @@ public class GetManagedAgentResponseBody extends TeaModel {
          */
         @NameInMap("type")
         public String type;
+
+        /**
+         * <p>仅查询返回。当前返回 Pool 目标镜像 tag；无法解析时为空，不能用 Agent 配置版本代替。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202611031754</p>
+         */
+        @NameInMap("version")
+        public String version;
 
         public static GetManagedAgentResponseBodyDataHarness build(java.util.Map<String, ?> map) throws Exception {
             GetManagedAgentResponseBodyDataHarness self = new GetManagedAgentResponseBodyDataHarness();
@@ -477,12 +495,28 @@ public class GetManagedAgentResponseBody extends TeaModel {
             return this.configuration;
         }
 
+        public GetManagedAgentResponseBodyDataHarness setOutdatedInstanceCount(Long outdatedInstanceCount) {
+            this.outdatedInstanceCount = outdatedInstanceCount;
+            return this;
+        }
+        public Long getOutdatedInstanceCount() {
+            return this.outdatedInstanceCount;
+        }
+
         public GetManagedAgentResponseBodyDataHarness setType(String type) {
             this.type = type;
             return this;
         }
         public String getType() {
             return this.type;
+        }
+
+        public GetManagedAgentResponseBodyDataHarness setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }
@@ -639,6 +673,18 @@ public class GetManagedAgentResponseBody extends TeaModel {
         @NameInMap("quota")
         public GetManagedAgentResponseBodyDataModelQuota quota;
 
+        /**
+         * <p>未配置时表示 default，空字符串、null 或省略均按模型和 Harness 默认行为处理。可选值 off、low、medium、high、xhigh、max。创建未传或 null 时使用 default；更新提交模型配置时，思考强度未传或为 null 均恢复 default。除 off 转为 none 外原样传给运行框架，不校验模型支持情况、不自动降档；模型不支持时请调整强度。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("thinkingLevel")
+        public String thinkingLevel;
+
         public static GetManagedAgentResponseBodyDataModel build(java.util.Map<String, ?> map) throws Exception {
             GetManagedAgentResponseBodyDataModel self = new GetManagedAgentResponseBodyDataModel();
             return TeaModel.build(map, self);
@@ -666,6 +712,14 @@ public class GetManagedAgentResponseBody extends TeaModel {
         }
         public GetManagedAgentResponseBodyDataModelQuota getQuota() {
             return this.quota;
+        }
+
+        public GetManagedAgentResponseBodyDataModel setThinkingLevel(String thinkingLevel) {
+            this.thinkingLevel = thinkingLevel;
+            return this;
+        }
+        public String getThinkingLevel() {
+            return this.thinkingLevel;
         }
 
     }

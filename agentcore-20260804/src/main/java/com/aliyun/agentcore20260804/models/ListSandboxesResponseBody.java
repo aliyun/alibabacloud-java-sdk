@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSandboxesResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value is SUCCESS when the request is successful.</p>
+     * <p>The business status code. The value is SUCCESS if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,7 +14,7 @@ public class ListSandboxesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code. The value is 200 when the request is successful.</p>
+     * <p>The HTTP status code. The value is 200 if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,7 +38,7 @@ public class ListSandboxesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The response message. The value is success when the request is successful.</p>
+     * <p>The response message. The value is success if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -167,7 +167,7 @@ public class ListSandboxesResponseBody extends TeaModel {
         public Integer activeSessionCount;
 
         /**
-         * <p>The time when the sandbox was created. The time is in the RFC 3339 UTC format.</p>
+         * <p>The time when the sandbox was created, in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-29T00:00:00Z</p>
@@ -176,7 +176,16 @@ public class ListSandboxesResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The time of the last activity of the sandbox. The time is in the RFC 3339 UTC format.</p>
+         * <p>The tag of the actual observed image of the currently returned instance. This parameter is empty if the tag cannot be parsed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202611031754</p>
+         */
+        @NameInMap("harnessVersion")
+        public String harnessVersion;
+
+        /**
+         * <p>The time of the last activity of the sandbox, in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-29T00:02:00Z</p>
@@ -185,7 +194,7 @@ public class ListSandboxesResponseBody extends TeaModel {
         public String lastActiveAt;
 
         /**
-         * <p>The time of the last heartbeat of the sandbox. The time is in the RFC 3339 UTC format.</p>
+         * <p>The time of the last heartbeat of the sandbox, in RFC 3339 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-29T00:01:00Z</p>
@@ -194,7 +203,16 @@ public class ListSandboxesResponseBody extends TeaModel {
         public String lastHeartbeatAt;
 
         /**
-         * <p>The maximum number of concurrent sessions allowed for the sandbox. This value is obtained from the auto-scaling configuration that takes effect at runtime. If auto-scaling is disabled or the configuration is unavailable, this value is empty.</p>
+         * <p>Used to continue calling GetSandboxRebuildOperation to query the overall result after a page refresh. This parameter is empty if there is no historical rebuild. Do not use the ID of a subsequently created task instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01a19f98-906d-7e82-96aa-8b7ea1d1a29d</p>
+         */
+        @NameInMap("lastRebuildOperationId")
+        public String lastRebuildOperationId;
+
+        /**
+         * <p>The maximum number of concurrent sessions allowed for the sandbox, which is obtained from the effective auto-scaling configuration at runtime. This parameter is empty if auto-scaling is disabled or the configuration is unavailable.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -220,6 +238,24 @@ public class ListSandboxesResponseBody extends TeaModel {
         @NameInMap("sandboxId")
         public String sandboxId;
 
+        /**
+         * <p>The server compares the actual image tag of the instance with the pool target image tag. The value is true if the tags are different during the RUNNING, HIBERNATED, or FAILED phase. The value is false if the tags are the same or during other known phases. This parameter is empty if the tag or phase cannot be confirmed, and it cannot be treated as false. The version sequence is not determined by the tag size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("updateAvailable")
+        public Boolean updateAvailable;
+
+        /**
+         * <p>A value of true indicates that the most recent rebuild corresponding to the current instance generation failed as a whole. A value of false indicates that there is no historical rebuild or the rebuild succeeded as a whole. This parameter is empty if the rebuild is in progress, canceled, replaced, the generation does not match, or the result cannot be confirmed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("updateFailed")
+        public Boolean updateFailed;
+
         public static ListSandboxesResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             ListSandboxesResponseBodyItems self = new ListSandboxesResponseBodyItems();
             return TeaModel.build(map, self);
@@ -241,6 +277,14 @@ public class ListSandboxesResponseBody extends TeaModel {
             return this.createdAt;
         }
 
+        public ListSandboxesResponseBodyItems setHarnessVersion(String harnessVersion) {
+            this.harnessVersion = harnessVersion;
+            return this;
+        }
+        public String getHarnessVersion() {
+            return this.harnessVersion;
+        }
+
         public ListSandboxesResponseBodyItems setLastActiveAt(String lastActiveAt) {
             this.lastActiveAt = lastActiveAt;
             return this;
@@ -255,6 +299,14 @@ public class ListSandboxesResponseBody extends TeaModel {
         }
         public String getLastHeartbeatAt() {
             return this.lastHeartbeatAt;
+        }
+
+        public ListSandboxesResponseBodyItems setLastRebuildOperationId(String lastRebuildOperationId) {
+            this.lastRebuildOperationId = lastRebuildOperationId;
+            return this;
+        }
+        public String getLastRebuildOperationId() {
+            return this.lastRebuildOperationId;
         }
 
         public ListSandboxesResponseBodyItems setMaxConcurrentSessions(Integer maxConcurrentSessions) {
@@ -279,6 +331,22 @@ public class ListSandboxesResponseBody extends TeaModel {
         }
         public String getSandboxId() {
             return this.sandboxId;
+        }
+
+        public ListSandboxesResponseBodyItems setUpdateAvailable(Boolean updateAvailable) {
+            this.updateAvailable = updateAvailable;
+            return this;
+        }
+        public Boolean getUpdateAvailable() {
+            return this.updateAvailable;
+        }
+
+        public ListSandboxesResponseBodyItems setUpdateFailed(Boolean updateFailed) {
+            this.updateFailed = updateFailed;
+            return this;
+        }
+        public Boolean getUpdateFailed() {
+            return this.updateFailed;
         }
 
     }

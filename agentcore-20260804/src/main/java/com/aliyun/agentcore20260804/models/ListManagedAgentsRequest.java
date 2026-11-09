@@ -14,7 +14,7 @@ public class ListManagedAgentsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Leave this parameter empty for the first call. For subsequent calls, use the <code>nextToken</code> value returned in the previous response.</p>
+     * <p>The pagination token. Leave this parameter empty for the first call. For subsequent calls, use the nextToken value returned in the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>next-token-1</p>
