@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VisionFlowRequest extends TeaModel {
     /**
-     * <p>The AI capabilities to apply (1 = Intelligent Element Detection, 2 = Intelligent Matting, 3 = Intelligent Removal, 4 = Image Translation Pro, 5 = Intelligent Cropping, 6 = HD Upscaling). Multiple selections allowed.</p>
+     * <p>The AI capabilities to be processed. Multiple values are supported. Valid values: 1 (Intelligent element recognition), 2 (Intelligent cutout), 3 (Intelligent erasure), 4 (Image translation Pro), 5 (Intelligent cropping), and 6 (High-definition upscaling).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class VisionFlowRequest extends TeaModel {
     public java.util.List<Integer> ability;
 
     /**
-     * <p>The background type of the output image. Valid values: WHITE_BACKGROUND (white background) and TRANSPARENT (transparent background). This parameter is required when the Intelligent Matting capability is selected.</p>
+     * <p>The background type of the returned image. Valid values: WHITE_BACKGROUND (White background image) and TRANSPARENT (Transparent background image). Required when the intelligent cutout capability is selected.</p>
      * 
      * <strong>example:</strong>
      * <p>WHITE_BACKGROUND</p>
@@ -24,7 +24,7 @@ public class VisionFlowRequest extends TeaModel {
     public String backGroundType;
 
     /**
-     * <p>The glossary ID. Optional. Create a glossary separately in the console and provide its ID. If left empty, translation results are not modified.</p>
+     * <p>The ID of the intervention glossary. Optional. You must create the glossary in the console and provide its ID. If this parameter is left empty, the translation results are not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>glossary_1</p>
@@ -33,7 +33,7 @@ public class VisionFlowRequest extends TeaModel {
     public String glossary;
 
     /**
-     * <p>The URL of the image to process. This parameter is required. Resolution must be greater than 256 × 256, long side no greater than 1920 pixels, short side no greater than 1080 pixels. Maximum size: 5 MB. Supported formats: png, jpeg, jpg, bmp, and webp.</p>
+     * <p>The URL of the image to be processed. Required. The resolution must be greater than 256×256, the long side must not exceed 1920 pixels, and the short side must not exceed 1080 pixels. The size must not exceed 5 MB. Supported formats include PNG, JPEG, JPG, BMP, and WEBP.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class VisionFlowRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>Specifies whether to translate text on the image subject. Optional. Default value: false. Helps protect embedded information such as product names from being translated.</p>
+     * <p>Specifies whether to translate text on the image subject. Optional. Default value: false. This parameter helps protect embedded information such as product names from being translated.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -52,7 +52,7 @@ public class VisionFlowRequest extends TeaModel {
     public Boolean includingProductArea;
 
     /**
-     * <p>Specifies whether images with the detected elements proceed to subsequent processing. A value of true indicates that images containing the elements proceed to subsequent processing. A value of false indicates that they do not. This parameter is required when the Intelligent Element Detection capability is selected.</p>
+     * <p>Specifies whether to include images with the specified elements in subsequent processing. A value of true indicates that images with the elements are included in subsequent processing. A value of false indicates that images with the elements are not included. Required when the intelligent element recognition capability is selected.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -61,7 +61,7 @@ public class VisionFlowRequest extends TeaModel {
     public Boolean isFilter;
 
     /**
-     * <p>The specific removal region in RLE format. Optional. If provided, this parameter takes priority and the ObjectRemoveElements and NonobjectRemoveElements parameters are ignored.</p>
+     * <p>The specific erasure area in Run-Length Encoding (RLE) format. Optional. If this parameter is specified, it takes precedence and the ObjectRemoveElements and NonobjectRemoveElements parameters are ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>474556 160 475356 160</p>
@@ -70,7 +70,7 @@ public class VisionFlowRequest extends TeaModel {
     public String mask;
 
     /**
-     * <p>The elements to detect on the non-subject area of the image (1 = Watermark, 2 = Logo, 3 = Text, 4 = Text-bearing color block). Multiple selections allowed. When the Intelligent Element Detection capability is selected, at least one of NonobjectDetectElements or ObjectDetectElements is required.</p>
+     * <p>The elements to detect on the non-subject area of the image. Multiple values are supported. Valid values: 1 (Watermark), 2 (Logo), 3 (Text), and 4 (Text block). When the intelligent element recognition capability is selected, at least one of this parameter and ObjectDetectElements must be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>[1,2,3]</p>
@@ -79,7 +79,7 @@ public class VisionFlowRequest extends TeaModel {
     public java.util.List<Integer> nonobjectDetectElements;
 
     /**
-     * <p>The elements to remove from the non-subject area of the image (1 = Transparent text block, 2 = Specific name, 3 = Text, 4 = Overlay patch). Multiple selections allowed. When the Intelligent Removal capability is selected, at least one of NonobjectRemoveElements or ObjectRemoveElements is required.</p>
+     * <p>The elements to remove from the non-subject area of the image. Multiple values are supported. Valid values: 1 (Transparent text block), 2 (Specific name), 3 (Text), and 4 (Cluttered text). When the intelligent erasure capability is selected, at least one of this parameter and ObjectRemoveElements must be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>[1,2,4]</p>
@@ -88,7 +88,7 @@ public class VisionFlowRequest extends TeaModel {
     public java.util.List<Integer> nonobjectRemoveElements;
 
     /**
-     * <p>The elements to detect on the image subject (1 = Watermark, 2 = Logo, 3 = Text, 4 = Text-bearing color block). Multiple selections allowed. When the Intelligent Element Detection capability is selected, at least one of ObjectDetectElements or NonobjectDetectElements is required.</p>
+     * <p>The elements to detect on the image subject. Multiple values are supported. Valid values: 1 (Watermark), 2 (Logo), 3 (Text), and 4 (Text block). When the intelligent element recognition capability is selected, at least one of this parameter and NonobjectDetectElements must be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>[1,2,3,4]</p>
@@ -97,7 +97,7 @@ public class VisionFlowRequest extends TeaModel {
     public java.util.List<Integer> objectDetectElements;
 
     /**
-     * <p>The elements to remove from the image subject (1 = Transparent text block, 2 = Specific name, 3 = Text, 4 = Overlay patch). Multiple selections allowed. When the Intelligent Removal capability is selected, at least one of ObjectRemoveElements or NonobjectRemoveElements is required.</p>
+     * <p>The elements to remove from the image subject. Multiple values are supported. Valid values: 1 (Transparent text block), 2 (Specific name), 3 (Text), and 4 (Cluttered text). When the intelligent erasure capability is selected, at least one of this parameter and NonobjectRemoveElements must be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>[1,2,4]</p>
@@ -106,7 +106,7 @@ public class VisionFlowRequest extends TeaModel {
     public java.util.List<Integer> objectRemoveElements;
 
     /**
-     * <p>The source language code. Optional. For supported language pairs, refer to the supported translation language pairs list.</p>
+     * <p>The source language code. Optional. For supported language pairs, see the list of supported translation languages.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -115,7 +115,7 @@ public class VisionFlowRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
-     * <p>The desired height of the cropped image, in pixels. Valid values: 100 to 5000. This parameter is required when the Intelligent Cropping capability is selected.</p>
+     * <p>The expected height of the cropped image, in pixels. Valid values: 100 to 5000. Required when the intelligent cropping capability is selected.</p>
      * 
      * <strong>example:</strong>
      * <p>800</p>
@@ -124,7 +124,7 @@ public class VisionFlowRequest extends TeaModel {
     public Integer targetHeight;
 
     /**
-     * <p>The target language code. Optional. For supported language pairs, refer to the supported translation language pairs list.</p>
+     * <p>The target language code. Optional. For supported language pairs, see the list of supported translation languages.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -133,7 +133,7 @@ public class VisionFlowRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>The desired width of the cropped image, in pixels. Valid values: 100 to 5000. This parameter is required when the Intelligent Cropping capability is selected.</p>
+     * <p>The expected width of the cropped image, in pixels. Valid values: 100 to 5000. Required when the intelligent cropping capability is selected.</p>
      * 
      * <strong>example:</strong>
      * <p>800</p>
@@ -142,7 +142,7 @@ public class VisionFlowRequest extends TeaModel {
     public Integer targetWidth;
 
     /**
-     * <p>Specifies whether to translate brand names in the image. Optional. Default value: false. Helps protect brand name information from being translated.</p>
+     * <p>Specifies whether to translate brand names in the image. Optional. Default value: false. This parameter helps protect brand name information from being translated.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -151,7 +151,7 @@ public class VisionFlowRequest extends TeaModel {
     public Boolean translatingBrandInTheProduct;
 
     /**
-     * <p>The image upscaling factor. Optional. Default value: 2. Valid values: 2 to 4. This parameter is required when the HD Upscaling capability is selected.</p>
+     * <p>The image upscaling factor. Optional. Default value: 2. Valid values: 2 to 4. Required when the high-definition upscaling capability is selected.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

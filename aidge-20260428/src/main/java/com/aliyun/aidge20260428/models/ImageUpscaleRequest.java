@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageUpscaleRequest extends TeaModel {
     /**
-     * <p>The URL of the original image. It must be a publicly accessible image URL. Private network addresses such as localhost are not supported. The width and height of the input image must be greater than 100 pixels and less than 3000 pixels. The width and height of the upscaled image must not exceed 3000 pixels.</p>
+     * <p>The URL of the original image. It must be a publicly accessible image URL. You cannot use private network addresses such as localhost. The width and height of the input image must be greater than 100 pixels and less than 3000 pixels. The width and height of the upscaled image must not exceed 3000 pixels.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
