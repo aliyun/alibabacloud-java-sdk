@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DisasterRecoveryResponseBody extends TeaModel {
     /**
+     * <p>The details that are returned when the access is denied. This field is returned only when the RAM authentication fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class DisasterRecoveryResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The return code. A value of 200 indicates that the call is successful. Other values indicate error codes. For more information about error codes, see Error codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DisasterRecoveryResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>operation success.</p>
      */
@@ -26,7 +32,7 @@ public class DisasterRecoveryResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>135F8639-F262-4417-98D1-4DE4595C****</p>
@@ -35,6 +41,8 @@ public class DisasterRecoveryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

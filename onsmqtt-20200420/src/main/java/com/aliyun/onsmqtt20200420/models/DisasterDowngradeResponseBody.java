@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisasterDowngradeResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
+     * <p>The detailed information about the access denial. This field is returned only when RAM authentication fails.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,7 +14,7 @@ public class DisasterDowngradeResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For information about error codes, see Error codes.</p>
+     * <p>The return code of the operation. A value of 200 indicates success. Other values indicate error codes. For more information, see Error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DisasterDowngradeResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The result message of the call.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>
@@ -32,7 +32,7 @@ public class DisasterDowngradeResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>82B9E503-F4A1-4F30-976F-C6999FF9****</p>
@@ -41,7 +41,11 @@ public class DisasterDowngradeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>True</p>

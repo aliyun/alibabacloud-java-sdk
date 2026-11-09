@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGroupIdRequest extends TeaModel {
     /**
-     * <p>The ID of the ApsaraMQ for MQTT instance whose groups you want to query.</p>
+     * <p>The ID of the instance for which you want to list group IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,8 +14,11 @@ public class ListGroupIdRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("Tags")
-    public String tags;
+    /**
+     * <p>The list of tags.</p>
+     */
+    @NameInMap("Tag")
+    public java.util.List<ListGroupIdRequestTag> tag;
 
     public static ListGroupIdRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGroupIdRequest self = new ListGroupIdRequest();
@@ -30,12 +33,54 @@ public class ListGroupIdRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListGroupIdRequest setTags(String tags) {
-        this.tags = tags;
+    public ListGroupIdRequest setTag(java.util.List<ListGroupIdRequestTag> tag) {
+        this.tag = tag;
         return this;
     }
-    public String getTags() {
-        return this.tags;
+    public java.util.List<ListGroupIdRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class ListGroupIdRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static ListGroupIdRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListGroupIdRequestTag self = new ListGroupIdRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGroupIdRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListGroupIdRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

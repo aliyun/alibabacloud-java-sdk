@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ActiveDeviceCertificateRequest extends TeaModel {
     /**
-     * <p>The serial number of the CA certificate to which the device certificate belongs. The serial number is the unique identifier of a CA certificate.</p>
-     * <p>The serial number of a CA certificate cannot exceed 128 bytes in size.</p>
+     * <p>The SN of the CA certificate to which the device certificate to be activated belongs. The SN uniquely identifies a CA certificate.
+     * Valid values: up to 128 bytes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class ActiveDeviceCertificateRequest extends TeaModel {
     public String caSn;
 
     /**
-     * <p>The serial number of the device certificate that you want to reactivate. The serial number is the unique identifier of a device.</p>
+     * <p>The serial number (SN) of the device certificate to be activated. The SN uniquely identifies a device certificate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class ActiveDeviceCertificateRequest extends TeaModel {
     public String deviceSn;
 
     /**
-     * <p>The ID of the ApsaraMQ for MQTT instance to which the device certificate is bound.</p>
+     * <p>The instance ID to which the device certificate is attached, which is the instance ID of MSMQ for MQTT.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class InactivateDeviceCertificateRequest extends TeaModel {
     /**
-     * <p>The serial number of the CA certificate to which the device certificate that you want to deregister belongs. The serial number is the unique identifier of a CA certificate.</p>
-     * <p>The serial number of a CA certificate cannot exceed 128 bytes in size.</p>
+     * <p>The SN of the CA certificate to which the device certificate belongs. The SN uniquely identifies a CA certificate.</p>
+     * <p>The value can be up to 128 bytes in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class InactivateDeviceCertificateRequest extends TeaModel {
     public String caSn;
 
     /**
-     * <p>The serial number of the device certificate that you want to deregister. The serial number is the unique identifier of a device.</p>
+     * <p>The serial number (SN) of the device certificate that you want to inactivate. The SN uniquely identifies a device certificate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class InactivateDeviceCertificateRequest extends TeaModel {
     public String deviceSn;
 
     /**
-     * <p>The ID of the ApsaraMQ for MQTT instance to which the device certificate that you want to deregister is bound.</p>
+     * <p>The ID of the ApsaraMQ for MQTT instance to which the device certificate is attached.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

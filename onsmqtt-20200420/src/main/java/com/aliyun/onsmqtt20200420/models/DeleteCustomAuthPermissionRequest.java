@@ -17,8 +17,8 @@ public class DeleteCustomAuthPermissionRequest extends TeaModel {
     /**
      * <p>The identity type. Valid values:</p>
      * <ul>
-     * <li>USER</li>
-     * <li>CLIENT</li>
+     * <li>USER: username only.</li>
+     * <li>CLIENT: specific client.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -29,7 +29,7 @@ public class DeleteCustomAuthPermissionRequest extends TeaModel {
     public String identityType;
 
     /**
-     * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+     * <p>The ID of the Micro MSMQ MQTT instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class DeleteCustomAuthPermissionRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The topic on which you want to grant permissions. Multi-level topics and Wildcard characters are supported.</p>
+     * <p>The authorized topic. Multi-level MQTT topics and wildcards are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

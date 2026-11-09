@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApplyTokenResponseBody extends TeaModel {
     /**
-     * <p>The request ID. This parameter is a common parameter.</p>
+     * <p>The common parameter. The ID of each request is unique.</p>
      * 
      * <strong>example:</strong>
      * <p>31782AAF-D0CC-44C3-ABFD-1B500276****</p>
@@ -14,9 +14,9 @@ public class ApplyTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The token that is returned by the ApsaraMQ for MQTT broker.</p>
+     * <p>The token returned by the broker.</p>
      * <blockquote>
-     * <p> Do not assume the length, format, or rule of the token to return. The actual returned token shall prevail.</p>
+     * <p>Do not make any assumptions about the length, format, or rules of the returned token. The actual returned value prevails.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

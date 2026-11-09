@@ -5,16 +5,22 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
+     * <p>The token to start the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAaFXUH1VTHnBlds7StUakOQ=</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>A list of resource IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
+     * <p>The resource type. The only valid value is instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +29,9 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>A list of resource tags. ResourceId and Tag cannot both be empty.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -65,6 +74,8 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -72,6 +83,8 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetSniConfigRequest extends TeaModel {
     /**
-     * <p>The default certificate. If the domain name that you access cannot match the certificates of the broker, the default certificate is returned.</p>
+     * <p>The default certificate. This certificate is returned if no matching domain name is found in the server certificate list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class SetSniConfigRequest extends TeaModel {
     public String mqttInstanceId;
 
     /**
-     * <p>The Server Name Indication (SNI) configuration. This parameter is used to map domain names and certificates. Format: Domain name#Certificate ID#Password (if available);Domain name#Certificate ID#Password (if available).</p>
+     * <p>The Server Name Indication (SNI) configuration that maps domain names to certificates. Format: DomainName#CertificateID#Password(if any);DomainName#CertificateID#Password(if any)</p>
      * 
      * <strong>example:</strong>
      * <p>*.mqtt.aliyuncs.com#15xxxxx-cn-hangzhou;mqtt-test.mqtt.aliyuncs.com#15xxxx9-cn-hangzhou</p>

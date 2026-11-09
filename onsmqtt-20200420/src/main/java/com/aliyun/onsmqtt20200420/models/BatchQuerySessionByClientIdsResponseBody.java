@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
     /**
-     * <p>The status list of all queried ApsaraMQ for MQTT clients.</p>
+     * <p>The list of client statuses.</p>
      */
     @NameInMap("OnlineStatusList")
     public java.util.List<BatchQuerySessionByClientIdsResponseBodyOnlineStatusList> onlineStatusList;
 
     /**
-     * <p>The request ID. This parameter is a common parameter.</p>
+     * <p>The request ID. It is unique for each request.</p>
      * 
      * <strong>example:</strong>
      * <p>63309FDB-ED6C-46AE-B31C-A172FBA0****</p>
@@ -42,7 +42,7 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
 
     public static class BatchQuerySessionByClientIdsResponseBodyOnlineStatusList extends TeaModel {
         /**
-         * <p>The ID of the ApsaraMQ for MQTT client. For more information about client IDs, see <a href="https://help.aliyun.com/document_detail/42420.html">Terms</a>.</p>
+         * <p>The client ID of the client. For more information about client IDs, see <a href="https://help.aliyun.com/document_detail/42420.html">Glossary</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>GID_test@0001</p>
@@ -51,10 +51,10 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
         public String clientId;
 
         /**
-         * <p>Indicates whether the ApsaraMQ for MQTT client is online. Valid values:</p>
+         * <p>Indicates whether the device is online. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Online.</li>
+         * <li><strong>false</strong>: Offline.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomAuthIdentityResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The result code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class UpdateCustomAuthIdentityResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>3F00084A-7F07-4B15-BADA-8903A4FB****</p>
@@ -32,7 +32,11 @@ public class UpdateCustomAuthIdentityResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>True</p>

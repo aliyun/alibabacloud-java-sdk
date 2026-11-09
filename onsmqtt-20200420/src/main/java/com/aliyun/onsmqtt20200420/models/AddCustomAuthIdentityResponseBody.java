@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddCustomAuthIdentityResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the request is successful.</p>
+     * <p>The status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class AddCustomAuthIdentityResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>
@@ -23,7 +23,7 @@ public class AddCustomAuthIdentityResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>020F6A43-19E6-4B6E-B846-44EB31DF****</p>
@@ -32,7 +32,7 @@ public class AddCustomAuthIdentityResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation is successful. Valid values: true and false.</p>
+     * <p>Indicates whether the operation is successful. A value of true indicates success, and a value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CloseConnectionRequest extends TeaModel {
     /**
-     * <p>Client ID of the device</p>
+     * <p>The client ID of the device.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CloseConnectionRequest extends TeaModel {
     public String clientId;
 
     /**
-     * <p>ID of the Micro Message Queue MQTT version instance.</p>
+     * <p>The ID of the MSMQ MQTT instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

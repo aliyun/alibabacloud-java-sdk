@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddCustomAuthPermissionRequest extends TeaModel {
     /**
-     * <p>Specifies whether to allow or deny access.</p>
+     * <p>The authorization effect.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,11 @@ public class AddCustomAuthPermissionRequest extends TeaModel {
     public String identity;
 
     /**
-     * <p>The identity type. Valid values: USER and CLIENT.</p>
+     * <p>The identity type. Valid values:</p>
+     * <ul>
+     * <li>USER: username only.</li>
+     * <li>CLIENT: specific client.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +39,7 @@ public class AddCustomAuthPermissionRequest extends TeaModel {
     public String identityType;
 
     /**
-     * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+     * <p>The ID of the MSMQ for MQTT instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +49,7 @@ public class AddCustomAuthPermissionRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The permissions that you want to grant.</p>
+     * <p>The authorized action.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +59,7 @@ public class AddCustomAuthPermissionRequest extends TeaModel {
     public String permitAction;
 
     /**
-     * <p>The topics on which you want to grant permissions. Multi-level topics and wildcard characters are supported.</p>
+     * <p>The authorized topic. Multi-level MQTT topics and wildcards are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

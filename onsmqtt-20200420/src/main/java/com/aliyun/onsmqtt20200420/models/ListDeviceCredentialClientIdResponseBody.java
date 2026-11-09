@@ -48,10 +48,12 @@ public class ListDeviceCredentialClientIdResponseBody extends TeaModel {
         public java.util.List<String> clientIdList;
 
         /**
-         * <p>Indicates whether there is a token (Token) for the next query. Values: </p>
+         * <p>Indicates whether there is a token (Token) for the next query. Values:</p>
          * <ul>
-         * <li>For the first query and when there is no next query, this field does not need to be filled. </li>
-         * <li>If there is a next query, the value should be the NextToken returned from the previous API call.</li>
+         * <li><p>For the first query and when there is no next query, this field does not need to be filled.</p>
+         * </li>
+         * <li><p>If there is a next query, the value should be the NextToken returned from the previous API call.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

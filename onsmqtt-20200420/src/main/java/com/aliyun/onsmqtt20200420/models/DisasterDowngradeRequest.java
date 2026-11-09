@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisasterDowngradeRequest extends TeaModel {
     /**
-     * <p>The ID of the ApsaraMQ for MQTT instance for which you want to downgrade the VIP access.</p>
+     * <p>The instance ID to be downgraded.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DisasterDowngradeRequest extends TeaModel {
     public String downgradeInstanceId;
 
     /**
-     * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+     * <p>The ID of the ApsaraMQ for MQTT (MSMQ) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

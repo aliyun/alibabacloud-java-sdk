@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>operation success.</p>
      */
@@ -19,6 +23,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The token to start the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAaFXUH1VTHnBlds7StUakOQ=</p>
      */
@@ -35,12 +41,17 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <p>A list of resource-tag mappings.</p>
+     */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
 
@@ -99,6 +110,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mqtt-cn-5yd3xxx</p>
          */
@@ -106,6 +119,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The resource type. The only valid value is instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>instance</p>
          */
@@ -113,6 +128,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -120,6 +137,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomAuthIdentityRequest extends TeaModel {
     /**
-     * <p>The client ID if you set IdentityType to CLIENT.</p>
+     * <p>The client ID of the device. This parameter is required when the identity type is CLIENT.</p>
      * 
      * <strong>example:</strong>
      * <p>GID_test@@@test</p>
@@ -16,8 +16,8 @@ public class DeleteCustomAuthIdentityRequest extends TeaModel {
     /**
      * <p>The identity type. Valid values:</p>
      * <ul>
-     * <li>USER</li>
-     * <li>CLIENT</li>
+     * <li>USER: Username only.</li>
+     * <li>CLIENT: Specific to the client.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -28,7 +28,7 @@ public class DeleteCustomAuthIdentityRequest extends TeaModel {
     public String identityType;
 
     /**
-     * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+     * <p>The ID of the MSMQ for MQTT instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

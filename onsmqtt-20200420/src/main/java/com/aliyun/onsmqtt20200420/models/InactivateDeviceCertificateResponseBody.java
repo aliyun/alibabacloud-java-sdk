@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InactivateDeviceCertificateResponseBody extends TeaModel {
     /**
-     * <p>The serial number of the device certificate that is deregistered. The serial number is the unique identifier of a device certificate.</p>
+     * <p>The SN of the inactivated device certificate. The SN uniquely identifies a device certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>356217374433******</p>
@@ -14,7 +14,7 @@ public class InactivateDeviceCertificateResponseBody extends TeaModel {
     public String deviceSn;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. This common parameter is unique to each request. Use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>020F6A43-19E6-4B6E-B846-44EB31DF****</p>

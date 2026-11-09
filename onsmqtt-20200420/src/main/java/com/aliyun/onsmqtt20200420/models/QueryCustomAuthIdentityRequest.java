@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryCustomAuthIdentityRequest extends TeaModel {
     /**
-     * <p>The client ID if you set IdentityType to CLIENT.</p>
+     * <p>The client ID of the device. You can specify this parameter when the identity type is CLIENT.</p>
      * 
      * <strong>example:</strong>
      * <p>GID_test@@@test</p>
@@ -33,7 +33,7 @@ public class QueryCustomAuthIdentityRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.</p>
+     * <p>The token that marks the end position of the current query. You can pass this token as a parameter in the next call to continue paginating. If this is the first call or the last page is returned, the value is an empty string.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJhY2NvdW50IjoiMTM4MTcxODk3NDQzMjQ1OSIsImV2ZW50SWQiOiJGMkUxOUE3QS1FM0Q0LTVCOEYtQkU4OS1CNkMyM0RBM0UyRjIiLCJsb2dJZCI6IjY2LTEzODE3MTg5NzQ0MzI0NTkiLCJydyI6IlciLCJ0aW1lIjoxNjc4MzI2MTI1MDAwfQ</p>
@@ -42,7 +42,7 @@ public class QueryCustomAuthIdentityRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of identities to be queried. Maximum value: 100.</p>
+     * <p>The number of entries to query. Maximum value: 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

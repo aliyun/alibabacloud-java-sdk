@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
     /**
+     * <p>A list of resource tags in JSON format.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;key&quot;:&quot;test&quot;,&quot;value&quot;:&quot;test&quot;}]</p>
      */

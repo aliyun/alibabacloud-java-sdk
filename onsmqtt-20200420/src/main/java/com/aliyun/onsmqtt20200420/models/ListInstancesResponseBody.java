@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of instances.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>operation success.</p>
      */
@@ -22,7 +29,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>294F5B26-FADF-41D0-BE68-14ABE4EB****</p>
@@ -31,6 +38,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,6 +93,8 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstancesMqttTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -91,6 +102,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -122,6 +135,8 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
         /**
+         * <p>The time when the instance was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1739345768000</p>
          */
@@ -129,6 +144,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The expiration time of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>1741795200000</p>
          */
@@ -136,6 +153,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mqtt-cn-xxxxxxx</p>
          */
@@ -143,6 +162,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>mqtt-cn-xxxxxxx</p>
          */
@@ -150,6 +171,26 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The instance status.</p>
+         * <ul>
+         * <li><p>0: Preparing</p>
+         * </li>
+         * <li><p>5: In Service</p>
+         * </li>
+         * <li><p>7: Upgrading</p>
+         * </li>
+         * <li><p>15: Frozen</p>
+         * </li>
+         * <li><p>10: Released</p>
+         * </li>
+         * <li><p>1: Not Activated</p>
+         * </li>
+         * <li><p>2: Overdue</p>
+         * </li>
+         * <li><p>3: Expired</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -157,6 +198,22 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer instanceStatus;
 
         /**
+         * <p>The instance type:</p>
+         * <ul>
+         * <li><p>0: Basic Edition</p>
+         * </li>
+         * <li><p>1: Platinum Edition</p>
+         * </li>
+         * <li><p>2: Pay-as-you-go</p>
+         * </li>
+         * <li><p>3: Subscription Lightweight</p>
+         * </li>
+         * <li><p>4: Professional Edition</p>
+         * </li>
+         * <li><p>5: Serverless Edition</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -164,16 +221,23 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer instanceType;
 
         /**
+         * <p>The Milvus version.</p>
+         * 
          * <strong>example:</strong>
          * <p>V3.3.0</p>
          */
         @NameInMap("KernelVersion")
         public String kernelVersion;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("MqttTags")
         public java.util.List<ListInstancesResponseBodyInstancesMqttTags> mqttTags;
 
         /**
+         * <p>The order ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>245949616640095</p>
          */
@@ -181,6 +245,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String orderId;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
          */
@@ -188,6 +254,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The instance type of the Professional Edition instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>mqtt.p2.1xlarge</p>
          */

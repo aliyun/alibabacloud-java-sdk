@@ -86,8 +86,10 @@ public class QueryMqttTraceMessageSubscribeRequest extends TeaModel {
     /**
      * <p>Specifies whether the returned results are displayed in reverse chronological order. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The returned results are displayed in reverse order of the time when messages are delivered. This means that the latest consumed message is displayed as the first entry and the earliest consumed message is displayed as the last entry.</li>
-     * <li><strong>false</strong>: The returned results are displayed in order of the time when messages are delivered. This means that the earliest consumed message is displayed as the first entry and the latest consumed message is displayed as the last entry.</li>
+     * <li><p><strong>true</strong>: The returned results are displayed in reverse order of the time when messages are delivered. This means that the latest consumed message is displayed as the first entry and the earliest consumed message is displayed as the last entry.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The returned results are displayed in order of the time when messages are delivered. This means that the earliest consumed message is displayed as the first entry and the latest consumed message is displayed as the last entry.</p>
+     * </li>
      * </ul>
      * <p>If you do not specify this parameter, the returned results are displayed in order of time when messages are delivered.</p>
      * 

@@ -4,11 +4,14 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class SetSniConfigResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public SetSniConfigResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>E4581CCF-62AF-44D9-B5B4-D1DQDC0E****</p>
@@ -17,6 +20,8 @@ public class SetSniConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. A value of \<code>true\\</code> indicates that the call was successful. A value of \<code>false\\</code> indicates that the call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -54,6 +59,8 @@ public class SetSniConfigResponseBody extends TeaModel {
 
     public static class SetSniConfigResponseBodyAccessDeniedDetail extends TeaModel {
         /**
+         * <p>The unauthorized operation that was attempted.</p>
+         * 
          * <strong>example:</strong>
          * <p>SetSniConfig</p>
          */
@@ -61,6 +68,8 @@ public class SetSniConfigResponseBody extends TeaModel {
         public String authAction;
 
         /**
+         * <p>The display name of the authorization entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>2063xxxxxxxx533</p>
          */
@@ -68,6 +77,8 @@ public class SetSniConfigResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
+         * <p>The ID of the Alibaba Cloud account that owns the authorization entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>1245xxxxx34343</p>
          */
@@ -75,6 +86,8 @@ public class SetSniConfigResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
+         * <p>The type of the authorization entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>SubUser</p>
          */
@@ -82,6 +95,8 @@ public class SetSniConfigResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
+         * <p>The encoded diagnostic information.</p>
+         * 
          * <strong>example:</strong>
          * <p>AQFma6gWZmuoFkMxQ0M3MUVCLTRFQzQtNTI1OS1BQ0Q0LTlBMTFGQkVDOTA3Qw==</p>
          */
@@ -89,6 +104,8 @@ public class SetSniConfigResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
+         * <p>The type of permission denial.</p>
+         * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
          */
@@ -96,6 +113,8 @@ public class SetSniConfigResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
+         * <p>The policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>AccountLevelIdentityBasedPolicy</p>
          */

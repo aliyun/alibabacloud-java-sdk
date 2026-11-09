@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomAuthIdentityRequest extends TeaModel {
     /**
-     * <p>The client ID if you set IdentityType to CLIENT.</p>
+     * <p>The client ID of the device. This parameter is required when the identity type is CLIENT.</p>
      * 
      * <strong>example:</strong>
      * <p>GID_test@@@test</p>
@@ -16,8 +16,8 @@ public class UpdateCustomAuthIdentityRequest extends TeaModel {
     /**
      * <p>The identity type. Valid values:</p>
      * <ul>
-     * <li>USER</li>
-     * <li>CLIENT</li>
+     * <li>USER: Username only.</li>
+     * <li>CLIENT: Specific to the client.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -38,7 +38,7 @@ public class UpdateCustomAuthIdentityRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The AccessKey secret.</p>
+     * <p>The secret.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,11 @@ public class UpdateCustomAuthIdentityRequest extends TeaModel {
     public String secret;
 
     /**
-     * <p>The signature verification mode. ORIGIN: compares the password and the AccessKey secret. SIGNED: uses the HMAC_SHA1 algorithm to sign the client ID to obtain a password and then compares the password.</p>
+     * <p>The signature verification method. Valid values:</p>
+     * <ul>
+     * <li>ORIGIN: Original value comparison. The password is directly compared with the secret.</li>
+     * <li>SIGNED: Signature verification. The clientId is signed by using HmacSHA1 and the secret, and then the signature is compared with the password.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +62,7 @@ public class UpdateCustomAuthIdentityRequest extends TeaModel {
     public String signMode;
 
     /**
-     * <p>The username. The value cannot exceed 64 characters in length.</p>
+     * <p>The username.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

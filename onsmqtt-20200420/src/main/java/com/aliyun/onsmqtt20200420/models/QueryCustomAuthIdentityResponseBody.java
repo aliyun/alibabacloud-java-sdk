@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryCustomAuthIdentityResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the request is successful. Other status codes indicate that the request failed. For a list of error codes, see Error codes.</p>
+     * <p>The response code. 200: The request is successful. Other codes indicate errors. For more information about error codes, see Error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The query result.</p>
      */
     @NameInMap("Data")
     public QueryCustomAuthIdentityResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The additional information.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>
@@ -29,7 +29,7 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>11568B5B-13A8-4E72-9DBA-3A14F7D3****</p>
@@ -38,7 +38,7 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     * <p>Indicates whether the request is successful. true: The request is successful. false: The request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -93,7 +93,7 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
 
     public static class QueryCustomAuthIdentityResponseBodyDataResults extends TeaModel {
         /**
-         * <p>The client ID if IdentityType is set to CLIENT.</p>
+         * <p>The client ID of the device when the identity type is CLIENT.</p>
          * 
          * <strong>example:</strong>
          * <p>GID_ICP@@@4d378084</p>
@@ -102,10 +102,12 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
         public String clientId;
 
         /**
-         * <p>The identity type. Valid values:</p>
+         * <p>The identity type.</p>
          * <ul>
-         * <li>USER</li>
-         * <li>CLIENT</li>
+         * <li><p>USER: Username only.</p>
+         * </li>
+         * <li><p>CLIENT: Specific to a client.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,16 +117,16 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
         public String identityType;
 
         /**
-         * <p>The AccessKey secret.</p>
+         * <p>The secret key.</p>
          * 
          * <strong>example:</strong>
-         * <p>62a5916d71767185b48907d85c2efae2</p>
+         * <p>62a5916d71767185b48907d85c2efa****</p>
          */
         @NameInMap("Secret")
         public String secret;
 
         /**
-         * <p>The signature verification mode. ORIGIN: compares the password and the AccessKey secret. SIGNED: uses the HMAC_SHA1 algorithm to sign the client ID to obtain a password and then compares the password.</p>
+         * <p>The signature verification mode. ORIGIN: Original value comparison, which compares the password with the secret. SIGNED: The HmacSHA1 signature is calculated for the clientId using the secret for verification, and then the password is compared.</p>
          * 
          * <strong>example:</strong>
          * <p>SIGNED</p>
@@ -190,7 +192,7 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
 
     public static class QueryCustomAuthIdentityResponseBodyData extends TeaModel {
         /**
-         * <p>If excess return values exist, this parameter is returned.</p>
+         * <p>If more results are available, a NextToken is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAXA+GzVqTutYpgkFjBrchKzuvSbpuTqtt6OF9tsC9QnJ</p>
@@ -199,7 +201,7 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The returned results.</p>
+         * <p>The returned data.</p>
          */
         @NameInMap("Results")
         public java.util.List<QueryCustomAuthIdentityResponseBodyDataResults> results;

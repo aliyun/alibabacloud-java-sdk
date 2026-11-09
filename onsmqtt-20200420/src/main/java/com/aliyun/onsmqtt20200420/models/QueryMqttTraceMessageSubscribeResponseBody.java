@@ -95,8 +95,10 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
         /**
          * <p>The action on the message. Valid values:</p>
          * <ul>
-         * <li><strong>sub</strong>: The ApsaraMQ for MQTT client subscribes to the message.</li>
-         * <li><strong>push_offline</strong>: The ApsaraMQ for MQTT broker pushes the offline message to the ApsaraMQ for MQTT client.</li>
+         * <li><p><strong>sub</strong>: The ApsaraMQ for MQTT client subscribes to the message.</p>
+         * </li>
+         * <li><p><strong>push_offline</strong>: The ApsaraMQ for MQTT broker pushes the offline message to the ApsaraMQ for MQTT client.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,8 +110,10 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
         /**
          * <p>The code returned for the action on the message. Valid values:</p>
          * <ul>
-         * <li><strong>mqtt.trace.action.msg.sub</strong>: The value that is returned if the value of Action is <strong>sub</strong>.</li>
-         * <li><strong>mqtt.trace.action.msg.push.offline</strong>: The value that is returned if the value of Action is <strong>push_offline</strong>.</li>
+         * <li><p><strong>mqtt.trace.action.msg.sub</strong>: The value that is returned if the value of Action is <strong>sub</strong>.</p>
+         * </li>
+         * <li><p><strong>mqtt.trace.action.msg.push.offline</strong>: The value that is returned if the value of Action is <strong>push_offline</strong>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,8 +125,10 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
         /**
          * <p>The returned information for the action on the message. Valid values:</p>
          * <ul>
-         * <li><strong>Push To Mqtt Client</strong>: The value that is returned if the value of Action is <strong>sub</strong>.</li>
-         * <li><strong>Push Offline Msg To Mqtt Client</strong>: The value that is returned if the value of Action is <strong>push_offline</strong>.</li>
+         * <li><p><strong>Push To Mqtt Client</strong>: The value that is returned if the value of Action is <strong>sub</strong>.</p>
+         * </li>
+         * <li><p><strong>Push Offline Msg To Mqtt Client</strong>: The value that is returned if the value of Action is <strong>push_offline</strong>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

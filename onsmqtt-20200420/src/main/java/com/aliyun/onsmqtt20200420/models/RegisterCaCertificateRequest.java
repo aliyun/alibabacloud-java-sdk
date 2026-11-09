@@ -7,7 +7,8 @@ public class RegisterCaCertificateRequest extends TeaModel {
     /**
      * <p>The content of the CA certificate that you want to register with an ApsaraMQ for MQTT broker.</p>
      * <blockquote>
-     * <p>In the example, \n indicates a line feed.</p>
+     * <p>In the example, 
+     *  indicates a line feed.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -40,7 +41,8 @@ public class RegisterCaCertificateRequest extends TeaModel {
     /**
      * <p>The content of the validation certificate issued by the CA certificate that you want to register with an ApsaraMQ for MQTT broker. The validation certificate must be used together with the registration code of the CA certificate to verify the private key of the CA certificate.</p>
      * <blockquote>
-     * <p>In the example, \n indicates a line feed.</p>
+     * <p>In the example, 
+     *  indicates a line feed.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

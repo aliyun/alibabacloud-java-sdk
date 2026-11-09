@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateGroupIdRequest extends TeaModel {
     /**
-     * <p>The ID of the group that you want to create. The group ID must meet the following conventions:</p>
+     * <p>The group ID to be created. Valid values:</p>
      * <ul>
-     * <li>The ID must be 7 to 64 characters in length. It must start with GID_ or GID- and can contain only letters, digits, hyphens (-), and underscores (_).</li>
-     * <li>The ID cannot be changed after the group is created. For more information, see <a href="https://help.aliyun.com/document_detail/42420.html">Terms</a>.</li>
+     * <li>The value must start with <code>GID_</code> or <code>GID-</code> and can contain only letters, digits, hyphens (-), and underscores (_). The value must be 7 to 64 characters in length.</li>
+     * <li>A group ID cannot be modified after it is created. For more information, see <a href="https://help.aliyun.com/document_detail/42420.html">Terms</a>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +19,7 @@ public class CreateGroupIdRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The ID of the ApsaraMQ for MQTT instance to which the group belongs.</p>
+     * <p>The ID of the instance where the group ID resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,8 +28,11 @@ public class CreateGroupIdRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("Tags")
-    public String tags;
+    /**
+     * <p>The array of tag key-value pairs.</p>
+     */
+    @NameInMap("Tag")
+    public java.util.List<CreateGroupIdRequestTag> tag;
 
     public static CreateGroupIdRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateGroupIdRequest self = new CreateGroupIdRequest();
@@ -52,12 +55,54 @@ public class CreateGroupIdRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public CreateGroupIdRequest setTags(String tags) {
-        this.tags = tags;
+    public CreateGroupIdRequest setTag(java.util.List<CreateGroupIdRequestTag> tag) {
+        this.tag = tag;
         return this;
     }
-    public String getTags() {
-        return this.tags;
+    public java.util.List<CreateGroupIdRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateGroupIdRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateGroupIdRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateGroupIdRequestTag self = new CreateGroupIdRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateGroupIdRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateGroupIdRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

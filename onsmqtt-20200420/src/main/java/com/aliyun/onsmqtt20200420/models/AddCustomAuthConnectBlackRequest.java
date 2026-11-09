@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddCustomAuthConnectBlackRequest extends TeaModel {
     /**
-     * <p>The client ID of the device whose connections you want to disable.</p>
+     * <p>The client ID of the device to be blocked from connecting.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AddCustomAuthConnectBlackRequest extends TeaModel {
     public String clientId;
 
     /**
-     * <p>The ID of the ApsaraMQ for MQTT instance.</p>
+     * <p>The ID of the Message Queue for MQTT instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomAuthConnectBlackResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * <p>The status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DeleteCustomAuthConnectBlackResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The error message.</p>
+     * <p>The result message of the call.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>
@@ -23,7 +23,7 @@ public class DeleteCustomAuthConnectBlackResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>317076B7-F946-46BC-A98F-4CF9777C****</p>
@@ -32,7 +32,7 @@ public class DeleteCustomAuthConnectBlackResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values: true and false.</p>
+     * <p>Indicates whether the operation was successful. A value of true indicates success, and a value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

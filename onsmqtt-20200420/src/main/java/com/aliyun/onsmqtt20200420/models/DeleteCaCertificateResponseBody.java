@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCaCertificateResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The common parameter. The ID of each request is unique and can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>020F6A43-19E6-4B6E-B846-44EB31DF****</p>
@@ -14,7 +14,7 @@ public class DeleteCaCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The serial number of the CA certificate that you deleted. The serial number is the unique identifier of a CA certificate.</p>
+     * <p>The SN of the deleted CA certificate. The SN uniquely identifies a CA certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>007269004887******</p>
