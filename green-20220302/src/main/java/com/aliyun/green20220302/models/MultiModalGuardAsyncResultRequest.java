@@ -14,7 +14,7 @@ public class MultiModalGuardAsyncResultRequest extends TeaModel {
     public String service;
 
     /**
-     * <p>The set of parameters required by the moderation service. The value is a JSON string.</p>
+     * <p>The parameter set required by the moderation service. The value is a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{

@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "Green";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-northeast-1", "green.ap-southeast-1.aliyuncs.com"),
@@ -53,7 +56,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The document moderation result.</p>
+     * <p>Queries the document moderation results.</p>
      * 
      * @param request DescribeFileModerationResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -89,7 +92,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The document moderation result.</p>
+     * <p>Queries the document moderation results.</p>
      * 
      * @param request DescribeFileModerationResultRequest
      * @return DescribeFileModerationResultResponse
@@ -1000,10 +1003,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If the API operation incurs fees, add the bold text &quot;<strong>Make sure that you fully understand the billing methods and pricing of the XXX product before you call this API operation.</strong>&quot; as the first sentence. Make &quot;pricing&quot; a hyperlink to <a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a>.</p>
+     * <p>If the API operation involves fees, add the bold text &quot;<strong>Make sure that you fully understand the billing methods and pricing of the XXX service before you call this API operation.</strong>&quot; as the first sentence. Make &quot;pricing&quot; a hyperlink to <a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the asynchronous detection results of AI security guardrails for multimodal content, supporting audio and video modalities.</p>
+     * <p>Queries the asynchronous moderation results of the AI security guardrail for multimodal content, including audio and video modalities.</p>
      * 
      * @param request MultiModalGuardAsyncResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1039,10 +1042,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If the API operation incurs fees, add the bold text &quot;<strong>Make sure that you fully understand the billing methods and pricing of the XXX product before you call this API operation.</strong>&quot; as the first sentence. Make &quot;pricing&quot; a hyperlink to <a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a>.</p>
+     * <p>If the API operation involves fees, add the bold text &quot;<strong>Make sure that you fully understand the billing methods and pricing of the XXX service before you call this API operation.</strong>&quot; as the first sentence. Make &quot;pricing&quot; a hyperlink to <a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the asynchronous detection results of AI security guardrails for multimodal content, supporting audio and video modalities.</p>
+     * <p>Queries the asynchronous moderation results of the AI security guardrail for multimodal content, including audio and video modalities.</p>
      * 
      * @param request MultiModalGuardAsyncResultRequest
      * @return MultiModalGuardAsyncResultResponse

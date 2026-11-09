@@ -76,7 +76,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
 
     public static class MultiModalGuardAsyncResultResponseBodyDataAudioResultSliceDetailsDetailResult extends TeaModel {
         /**
-         * <p>The confidence score, which ranges from 0 to 100 and is accurate to two decimal places.</p>
+         * <p>The confidence score. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -94,7 +94,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The extended information of the detection result.</p>
+         * <p>The extended information of the moderation result.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -114,7 +114,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
         /**
          * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li>high: High risk. If a custom dictionary is hit, the risk level defaults to high.</li>
+         * <li>high: High risk. If a custom dictionary is hit, the risk level is high by default.</li>
          * <li>medium: Medium risk.</li>
          * <li>low: Low risk.</li>
          * <li>none: No risk detected.</li>
@@ -177,7 +177,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
         /**
          * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li>high: High risk. If a custom dictionary is hit, the risk level defaults to high.</li>
+         * <li>high: High risk. If a custom dictionary is hit, the risk level is high by default.</li>
          * <li>medium: Medium risk.</li>
          * <li>low: Low risk.</li>
          * <li>none: No risk detected.</li>
@@ -190,7 +190,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>The list of detection results.</p>
+         * <p>The list of moderation results.</p>
          */
         @NameInMap("Result")
         public java.util.List<MultiModalGuardAsyncResultResponseBodyDataAudioResultSliceDetailsDetailResult> result;
@@ -211,9 +211,9 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
         public String suggestion;
 
         /**
-         * <p>The detection type. Valid values:</p>
+         * <p>The moderation type. Valid values:</p>
          * <ul>
-         * <li>contentModeration: Content compliance detection.</li>
+         * <li>contentModeration: Content compliance moderation.</li>
          * <li>promptAttack: Prompt attack detection.</li>
          * <li>sensitiveData: Sensitive content detection.</li>
          * <li>modelHallucination: Model hallucination detection.</li>
@@ -267,7 +267,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
 
     public static class MultiModalGuardAsyncResultResponseBodyDataAudioResultSliceDetails extends TeaModel {
         /**
-         * <p>The detection details.</p>
+         * <p>The moderation details.</p>
          */
         @NameInMap("Detail")
         public java.util.List<MultiModalGuardAsyncResultResponseBodyDataAudioResultSliceDetailsDetail> detail;
@@ -436,7 +436,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
 
     public static class MultiModalGuardAsyncResultResponseBodyDataFrameResultFramesDetailResult extends TeaModel {
         /**
-         * <p>The confidence score, which ranges from 0 to 100 and is accurate to two decimal places.</p>
+         * <p>The confidence score. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -454,7 +454,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The extended information of the detection result.</p>
+         * <p>The extended information of the moderation result.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -474,7 +474,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
         /**
          * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li>high: High risk. If a custom dictionary is hit, the risk level defaults to high.</li>
+         * <li>high: High risk. If a custom dictionary is hit, the risk level is high by default.</li>
          * <li>medium: Medium risk.</li>
          * <li>low: Low risk.</li>
          * <li>none: No risk detected.</li>
@@ -537,7 +537,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
         /**
          * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li>high: High risk. If a custom dictionary is hit, the risk level defaults to high.</li>
+         * <li>high: High risk. If a custom dictionary is hit, the risk level is high by default.</li>
          * <li>medium: Medium risk.</li>
          * <li>low: Low risk.</li>
          * <li>none: No risk detected.</li>
@@ -550,7 +550,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>The detection result.</p>
+         * <p>The moderation result.</p>
          */
         @NameInMap("Result")
         public java.util.List<MultiModalGuardAsyncResultResponseBodyDataFrameResultFramesDetailResult> result;
@@ -571,9 +571,9 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
         public String suggestion;
 
         /**
-         * <p>The detection type. Valid values:</p>
+         * <p>The moderation type. Valid values:</p>
          * <ul>
-         * <li>contentModeration: Content compliance detection.</li>
+         * <li>contentModeration: Content compliance moderation.</li>
          * <li>promptAttack: Prompt attack detection.</li>
          * <li>sensitiveData: Sensitive content detection.</li>
          * <li>modelHallucination: Model hallucination detection.</li>
@@ -627,7 +627,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
 
     public static class MultiModalGuardAsyncResultResponseBodyDataFrameResultFrames extends TeaModel {
         /**
-         * <p>The list of detection results.</p>
+         * <p>The list of moderation results.</p>
          */
         @NameInMap("Detail")
         public java.util.List<MultiModalGuardAsyncResultResponseBodyDataFrameResultFramesDetail> detail;
@@ -651,7 +651,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
-         * <p>The offset of the captured frame.</p>
+         * <p>The position of the captured frame.</p>
          * 
          * <strong>example:</strong>
          * <p>1.5</p>
@@ -757,7 +757,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
 
     public static class MultiModalGuardAsyncResultResponseBodyDataFrameResult extends TeaModel {
         /**
-         * <p>The frame detection results.</p>
+         * <p>The frame moderation results.</p>
          */
         @NameInMap("Frames")
         public java.util.List<MultiModalGuardAsyncResultResponseBodyDataFrameResultFrames> frames;
@@ -837,7 +837,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
         public String resultOssBucketName;
 
         /**
-         * <p>The name of the masked OSS object.</p>
+         * <p>The name of the OSS object for the masked data.</p>
          * 
          * <strong>example:</strong>
          * <p>video.mp4</p>
@@ -864,7 +864,7 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
         public String resultUrl;
 
         /**
-         * <p>The original URL.</p>
+         * <p>The URL of the object before masking.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://XX">https://XX</a></p>
@@ -946,13 +946,13 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
 
     public static class MultiModalGuardAsyncResultResponseBodyData extends TeaModel {
         /**
-         * <p>The segmented results of audio moderation.</p>
+         * <p>The segmented audio moderation results.</p>
          */
         @NameInMap("AudioResult")
         public MultiModalGuardAsyncResultResponseBodyDataAudioResult audioResult;
 
         /**
-         * <p>The value of dataId passed in the API request. If dataId is not passed in the request, this field is not returned.</p>
+         * <p>The value of the dataId parameter passed in the API request. If this parameter is not passed in the request, this field is not returned.</p>
          * 
          * <strong>example:</strong>
          * <p>data1234</p>
