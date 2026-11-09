@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ListBrowserRestrictedURLsResponseBody extends TeaModel {
+    /**
+     * <p>The list of restricted URLs on the current page. Each record contains a restricted URL and its unique identifier. If no restricted URLs are configured under the specified conditions, an empty array is returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListBrowserRestrictedURLsResponseBodyData> data;
 
     /**
+     * <p>The actual page number used in this query. This is the echoed value of the PageNumber request parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListBrowserRestrictedURLsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The actual number of entries returned per page in this query. This is the echoed value of the PageSize request parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListBrowserRestrictedURLsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the request. You can use the ID to locate call records and troubleshoot issues. The example value is partially masked.</p>
+     * 
      * <strong>example:</strong>
      * <p>D4A13D91-****</p>
      */
@@ -29,6 +38,8 @@ public class ListBrowserRestrictedURLsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of restricted URL records that meet the filter conditions. This value is independent of the number of records returned on the current page and can be used with PageSize to calculate the total number of pages. If no records meet the conditions, 0 is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -82,6 +93,8 @@ public class ListBrowserRestrictedURLsResponseBody extends TeaModel {
 
     public static class ListBrowserRestrictedURLsResponseBodyData extends TeaModel {
         /**
+         * <p>The unique identifier of the restricted URL record.</p>
+         * 
          * <strong>example:</strong>
          * <p>ru-3jm9d0abc00example</p>
          */
@@ -89,6 +102,8 @@ public class ListBrowserRestrictedURLsResponseBody extends TeaModel {
         public String restrictedURLId;
 
         /**
+         * <p>The URL address that is restricted from access.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com">https://www.example.com</a></p>
          */

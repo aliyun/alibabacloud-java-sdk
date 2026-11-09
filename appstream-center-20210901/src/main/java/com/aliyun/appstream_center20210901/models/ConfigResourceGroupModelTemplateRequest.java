@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigResourceGroupModelTemplateRequest extends TeaModel {
     /**
-     * <p>The ID of the model group.</p>
+     * <p>The model group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,10 @@ public class ConfigResourceGroupModelTemplateRequest extends TeaModel {
     public String modelTemplateId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The WUYING resource group ID, which starts with rg-. This resource group is managed by the WUYING Enterprise Edition management and control service, and its automatic creation is performed by the system after the deployment of agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent. You can obtain it from the ResourceGroup[].ResourceGroupId field in the response of the DescribeResourceGroups operation of WUYING Workspace eds-user (API version 2021-03-08), or from the Data.ResourceGroupId field in the response of the GetRuntimeModelConfig operation of this service.</p>
+     * <blockquote>
+     * <p>Other IDs such as the account-level resource group ID and node pool ID in Alibaba Cloud Resource Manager cannot be passed as this parameter. Only WUYING resource group IDs are valid.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

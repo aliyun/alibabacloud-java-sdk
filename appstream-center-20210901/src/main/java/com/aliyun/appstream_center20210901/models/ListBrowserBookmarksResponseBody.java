@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ListBrowserBookmarksResponseBody extends TeaModel {
+    /**
+     * <p>The list of bookmarks on the current page.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListBrowserBookmarksResponseBodyData> data;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListBrowserBookmarksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class ListBrowserBookmarksResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID, which is used to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>01A0C2ED-95F2-1A37-9FC6-4A395179****</p>
      */
@@ -29,6 +38,8 @@ public class ListBrowserBookmarksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of bookmarks that meet the filtering conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -82,13 +93,17 @@ public class ListBrowserBookmarksResponseBody extends TeaModel {
 
     public static class ListBrowserBookmarksResponseBodyData extends TeaModel {
         /**
+         * <p>The bookmark folder.</p>
+         * 
          * <strong>example:</strong>
-         * <p>工作</p>
+         * <p>Work</p>
          */
         @NameInMap("BookmarkFolder")
         public String bookmarkFolder;
 
         /**
+         * <p>The bookmark ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>bm-0c7loey7fzjq****</p>
          */
@@ -96,13 +111,17 @@ public class ListBrowserBookmarksResponseBody extends TeaModel {
         public String bookmarkId;
 
         /**
+         * <p>The bookmark name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>阿里云</p>
+         * <p>Alibaba Cloud</p>
          */
         @NameInMap("BookmarkName")
         public String bookmarkName;
 
         /**
+         * <p>The bookmark URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
          */

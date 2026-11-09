@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ListAgentInstanceVersionsResponseBody extends TeaModel {
+    /**
+     * <p>The list of agent instance version numbers, deduplicated and sorted in ascending order by version number.</p>
+     */
     @NameInMap("Data")
     public java.util.List<String> data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4C5A2E8F-9B3D-4E7A-A1C6-2F8D0E5B7A91</p>
      */
@@ -15,6 +20,8 @@ public class ListAgentInstanceVersionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total count.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

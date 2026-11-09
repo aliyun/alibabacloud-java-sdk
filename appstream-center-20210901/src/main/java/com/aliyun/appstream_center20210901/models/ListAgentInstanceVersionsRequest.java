@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAgentInstanceVersionsRequest extends TeaModel {
     /**
+     * <p>The agent platform used to filter version numbers by business type. If not specified, the default value is ENTERPRISE.</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -12,6 +14,7 @@ public class ListAgentInstanceVersionsRequest extends TeaModel {
     public String agentPlatform;
 
     /**
+     * <p>The name of the agent provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

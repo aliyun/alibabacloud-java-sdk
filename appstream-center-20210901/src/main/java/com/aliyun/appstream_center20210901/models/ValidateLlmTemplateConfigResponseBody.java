@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ValidateLlmTemplateConfigResponseBody extends TeaModel {
+    /**
+     * <p>The validation result of the LLM template configuration, which includes whether the configuration is valid and a list of validation errors.</p>
+     */
     @NameInMap("Data")
     public ValidateLlmTemplateConfigResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -37,6 +42,8 @@ public class ValidateLlmTemplateConfigResponseBody extends TeaModel {
 
     public static class ValidateLlmTemplateConfigResponseBodyDataValidationErrors extends TeaModel {
         /**
+         * <p>The error code, such as MISSING_FIELD, UNKNOWN_FIELD, INVALID_TYPE, or INVALID_JSON.</p>
+         * 
          * <strong>example:</strong>
          * <p>UNKNOWN_FIELD</p>
          */
@@ -44,6 +51,8 @@ public class ValidateLlmTemplateConfigResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The name of the field where the error occurred, such as id, name, or contextWindow.</p>
+         * 
          * <strong>example:</strong>
          * <p>unknownField</p>
          */
@@ -51,6 +60,8 @@ public class ValidateLlmTemplateConfigResponseBody extends TeaModel {
         public String field;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>Unknown field &quot;unknownField&quot; is not recognized by Agent and will be ignored.</p>
          */
@@ -89,9 +100,15 @@ public class ValidateLlmTemplateConfigResponseBody extends TeaModel {
     }
 
     public static class ValidateLlmTemplateConfigResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the configuration is valid. The value is true if all validation items pass.</p>
+         */
         @NameInMap("Valid")
         public Boolean valid;
 
+        /**
+         * <p>The list of validation errors. This list is empty if Valid is true.</p>
+         */
         @NameInMap("ValidationErrors")
         public java.util.List<ValidateLlmTemplateConfigResponseBodyDataValidationErrors> validationErrors;
 

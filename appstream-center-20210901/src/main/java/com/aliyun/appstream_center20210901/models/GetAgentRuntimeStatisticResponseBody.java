@@ -11,7 +11,7 @@ public class GetAgentRuntimeStatisticResponseBody extends TeaModel {
     public java.util.List<GetAgentRuntimeStatisticResponseBodyData> data;
 
     /**
-     * <p>The request ID, which is used to uniquely identify the request.</p>
+     * <p>The request ID, which uniquely identifies the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -20,7 +20,7 @@ public class GetAgentRuntimeStatisticResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned statistical records, which is the length of the Data list.</p>
+     * <p>The number of returned statistics records, which is the length of the Data list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class GetAgentRuntimeStatisticResponseBody extends TeaModel {
 
     public static class GetAgentRuntimeStatisticResponseBodyData extends TeaModel {
         /**
-         * <p>The display name of the agent, which is determined by both the agent platform and the agent provider. For example, OpenClaw under the ENTERPRISE platform is displayed as OpenClaw, and OpenClaw under the JVS platform is displayed as JVS Claw.</p>
+         * <p>The agent display name, which is determined by both the agent platform and the agent provider. For example, OpenClaw under the ENTERPRISE platform is displayed as OpenClaw, and OpenClaw under the JVS platform is displayed as JVS Claw.</p>
          * 
          * <strong>example:</strong>
          * <p>Agentic Computer</p>

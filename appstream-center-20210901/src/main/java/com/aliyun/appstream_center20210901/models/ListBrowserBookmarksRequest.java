@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListBrowserBookmarksRequest extends TeaModel {
     /**
+     * <p>The ID of the cloud browser group. You must specify either this parameter or BrowserInstanceGroupSetId, but not both.</p>
+     * 
      * <strong>example:</strong>
      * <p>big-0c7loey7fzjq****</p>
      */
@@ -12,6 +14,8 @@ public class ListBrowserBookmarksRequest extends TeaModel {
     public String browserInstanceGroupId;
 
     /**
+     * <p>The ID of the browser delivery group set. You must specify either this parameter or BrowserInstanceGroupId, but not both.</p>
+     * 
      * <strong>example:</strong>
      * <p>set-3jm9d0abc00example</p>
      */
@@ -19,6 +23,8 @@ public class ListBrowserBookmarksRequest extends TeaModel {
     public String browserInstanceGroupSetId;
 
     /**
+     * <p>The keyword used for substring matching in bookmark names or URLs. The matching is case-insensitive for English characters. The keyword can be up to 1,024 characters in length after leading and trailing spaces are removed. If this parameter is not specified or contains only spaces, no filtering is applied. Special characters are matched literally.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -26,6 +32,8 @@ public class ListBrowserBookmarksRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The page number of the page to return. Pages start from page 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +41,8 @@ public class ListBrowserBookmarksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateExportTaskResponseBody extends TeaModel {
     /**
-     * <p>The information about the newly created export task. When the task is created, Status is INIT, Progress is 0, and the download URL and error message are empty.</p>
+     * <p>The information about the newly created export task. If the task is created, Status is INIT, Progress is 0, and the download URL and error message are empty.</p>
      */
     @NameInMap("ExportTaskModel")
     public CreateExportTaskResponseBodyExportTaskModel exportTaskModel;
 
     /**
-     * <p>The ID of the request. You can use the ID to locate call records and troubleshoot issues. The example value is partially desensitized.</p>
+     * <p>The ID of the request, which is used to locate call records and troubleshoot issues. The example value is partially desensitized.</p>
      * 
      * <strong>example:</strong>
      * <p>7D30C5D6-****</p>
@@ -42,7 +42,7 @@ public class CreateExportTaskResponseBody extends TeaModel {
 
     public static class CreateExportTaskResponseBodyExportTaskModel extends TeaModel {
         /**
-         * <p>The time when the task was created. The time is in the yyyy-MM-dd HH:mm:ss format, accurate to seconds. The returned string does not include the time zone offset.</p>
+         * <p>The time when the task was created. The time is in the yyyy-MM-dd HH:mm:ss format, accurate to seconds. The returned string does not contain a time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-07-27 19:00:00</p>
@@ -60,7 +60,7 @@ public class CreateExportTaskResponseBody extends TeaModel {
         public String downloadUrl;
 
         /**
-         * <p>The error message when the task execution fails. When the task is created by calling this operation, this field is empty. The null in the example represents a JSON null value, not the string &quot;null&quot;. When you query the task status and it is FAILED, you can use this field to identify the cause of the failure.</p>
+         * <p>The error message when the task execution fails. If the task is created by calling this operation, this field is empty. The null in the example represents a JSON null value, not the string &quot;null&quot;. When you query the task status and the status is FAILED, you can use this field to identify the cause of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -69,7 +69,7 @@ public class CreateExportTaskResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
-         * <p>The progress of the export task. The value is a percentage ranging from 0 to 100. When the task is created by calling this operation, 0 is returned. The value is updated based on the execution phase and reaches 100 when the task is completed.</p>
+         * <p>The progress of the export task, in percentage. Valid values: 0 to 100. If the task is created by calling this operation, 0 is returned. The value is updated based on the execution phase and reaches 100 when the task is completed.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -78,7 +78,7 @@ public class CreateExportTaskResponseBody extends TeaModel {
         public Float progress;
 
         /**
-         * <p>The status of the task. When the task is created by calling this operation, INIT (initialized and waiting for execution) is returned. You can subsequently call DescribeExportTasks to query RUNNING (executing), FINISHED (completed), or FAILED (failed). Do not treat INIT as export completion.</p>
+         * <p>The status of the task. If the task is created by calling this operation, INIT (initialized and waiting for execution) is returned. You can subsequently call DescribeExportTasks to query RUNNING (executing), FINISHED (completed), or FAILED (failed). Do not treat INIT as export completion.</p>
          * 
          * <strong>example:</strong>
          * <p>INIT</p>
@@ -87,7 +87,7 @@ public class CreateExportTaskResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the newly created export task. The value is a 32-character UUID string without hyphens. You can use this value as the TaskId parameter to query the task in DescribeExportTasks.</p>
+         * <p>The ID of the newly created export task, which is a 32-character UUID string without hyphens. You can use this value as the TaskId parameter in DescribeExportTasks to query the task.</p>
          * 
          * <strong>example:</strong>
          * <p>8119078c29e948dba2e0a9917995332a</p>
@@ -96,7 +96,7 @@ public class CreateExportTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The type of the export task. The value is the same as the TaskType in the request. For the meaning of each type, see the TaskType request parameter.</p>
+         * <p>The type of the export task, which is the same as the TaskType in the request. For the meaning of each type, see the TaskType request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>WUYING_SERVER_LIST</p>

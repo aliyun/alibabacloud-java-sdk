@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentRuntimeStatisticRequest extends TeaModel {
     /**
-     * <p>The agent platform, which is used to filter the statistical scope, such as ENTERPRISE_AGENTIC_COMPUTER. If this parameter is not specified, all agent platforms are included in the statistics. If an unsupported value is specified, a parameter error is returned.</p>
+     * <p>The agent platform used to filter the statistics scope, such as ENTERPRISE_AGENTIC_COMPUTER. If you do not specify this parameter, statistics for all agent platforms are returned. If you specify an unsupported value, a parameter error is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE_AGENTIC_COMPUTER</p>
@@ -14,7 +14,7 @@ public class GetAgentRuntimeStatisticRequest extends TeaModel {
     public String agentPlatform;
 
     /**
-     * <p>The agent provider, which is used to filter the statistical scope, such as AgenticComputer. If this parameter is not specified, all agent providers are included in the statistics. If an unsupported value is specified, a parameter error is returned.</p>
+     * <p>The agent provider used to filter the statistics scope, such as AgenticComputer. If you do not specify this parameter, statistics for all agent providers are returned. If you specify an unsupported value, a parameter error is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>AgenticComputer</p>
@@ -23,7 +23,7 @@ public class GetAgentRuntimeStatisticRequest extends TeaModel {
     public String agentProvider;
 
     /**
-     * <p>The business type, which is used to filter runtimes of a specified business type.</p>
+     * <p>The business type used to filter runtimes of a specific business type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class GetAgentRuntimeStatisticRequest extends TeaModel {
     public Integer bizType;
 
     /**
-     * <p>The runtime environment type of the runtime resource.</p>
+     * <p>The runtime environment type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
