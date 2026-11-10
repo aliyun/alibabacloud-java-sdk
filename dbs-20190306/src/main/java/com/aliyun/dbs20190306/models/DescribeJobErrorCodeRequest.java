@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeJobErrorCodeRequest extends TeaModel {
     /**
-     * <p>A client token. It is used to ensure the idempotence of the request.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>

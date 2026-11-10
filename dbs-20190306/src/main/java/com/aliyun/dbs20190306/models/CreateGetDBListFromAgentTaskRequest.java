@@ -17,7 +17,16 @@ public class CreateGetDBListFromAgentTaskRequest extends TeaModel {
     public Long backupGatewayId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The unique identifier of the backup gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4DF900B7082BC3****489D765C8D2ABE</p>
+     */
+    @NameInMap("BackupGatewayIdentifier")
+    public String backupGatewayIdentifier;
+
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
@@ -28,22 +37,14 @@ public class CreateGetDBListFromAgentTaskRequest extends TeaModel {
     /**
      * <p>The type of the database. Valid values:</p>
      * <ul>
-     * <li><p><strong>MySQL</strong></p>
-     * </li>
-     * <li><p><strong>MSSQL</strong></p>
-     * </li>
-     * <li><p><strong>Oracle</strong></p>
-     * </li>
-     * <li><p><strong>MariaDB</strong></p>
-     * </li>
-     * <li><p><strong>PostgreSQL</strong></p>
-     * </li>
-     * <li><p><strong>DRDS</strong></p>
-     * </li>
-     * <li><p><strong>MongoDB</strong></p>
-     * </li>
-     * <li><p><strong>Redis</strong></p>
-     * </li>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>MSSQL</strong></li>
+     * <li><strong>Oracle</strong></li>
+     * <li><strong>MariaDB</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>DRDS</strong></li>
+     * <li><strong>MongoDB</strong></li>
+     * <li><strong>Redis</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +57,7 @@ public class CreateGetDBListFromAgentTaskRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The URL that is used to access the database.</p>
+     * <p>The database connection address.</p>
      * 
      * <strong>example:</strong>
      * <p>123.0.XX.XX</p>
@@ -65,7 +66,7 @@ public class CreateGetDBListFromAgentTaskRequest extends TeaModel {
     public String sourceEndpointIP;
 
     /**
-     * <p>The port that is used to connect to the database.</p>
+     * <p>The database connection port.</p>
      * 
      * <strong>example:</strong>
      * <p>3306</p>
@@ -74,7 +75,7 @@ public class CreateGetDBListFromAgentTaskRequest extends TeaModel {
     public Integer sourceEndpointPort;
 
     /**
-     * <p>The region in which the backup gateway resides.</p>
+     * <p>The region ID of the backup gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -93,6 +94,14 @@ public class CreateGetDBListFromAgentTaskRequest extends TeaModel {
     }
     public Long getBackupGatewayId() {
         return this.backupGatewayId;
+    }
+
+    public CreateGetDBListFromAgentTaskRequest setBackupGatewayIdentifier(String backupGatewayIdentifier) {
+        this.backupGatewayIdentifier = backupGatewayIdentifier;
+        return this;
+    }
+    public String getBackupGatewayIdentifier() {
+        return this.backupGatewayIdentifier;
     }
 
     public CreateGetDBListFromAgentTaskRequest setClientToken(String clientToken) {

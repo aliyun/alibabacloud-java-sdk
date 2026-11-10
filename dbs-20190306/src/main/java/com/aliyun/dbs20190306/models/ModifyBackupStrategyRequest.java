@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupStrategyRequest extends TeaModel {
     /**
-     * <p>The interval at which you want to perform incremental log backups. Unit: seconds.</p>
+     * <p>The incremental backup interval in seconds.</p>
      * <blockquote>
-     * <p>This parameter takes effect only when physical backups are performed.</p>
+     * <p>Only physical backups are supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,23 +17,19 @@ public class ModifyBackupStrategyRequest extends TeaModel {
     public Integer backupLogIntervalSeconds;
 
     /**
-     * <p>The day of each week when the full backup task runs. Valid values:</p>
+     * <p>The full backup cycle. Valid values:</p>
      * <ul>
-     * <li><p>Monday</p>
-     * </li>
-     * <li><p>Tuesday</p>
-     * </li>
-     * <li><p>Wednesday</p>
-     * </li>
-     * <li><p>Thursday</p>
-     * </li>
-     * <li><p>Friday</p>
-     * </li>
-     * <li><p>Saturday</p>
-     * </li>
-     * <li><p>Sunday</p>
-     * </li>
+     * <li>Monday: Monday</li>
+     * <li>Tuesday: Tuesday</li>
+     * <li>Wednesday: Wednesday</li>
+     * <li>Thursday: Thursday</li>
+     * <li>Friday: Friday</li>
+     * <li>Saturday: Saturday</li>
+     * <li>Sunday: Sunday</li>
      * </ul>
+     * <blockquote>
+     * <p>You must specify at least two days of the week for BackupPeriod and separate the days with commas (,).</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +39,7 @@ public class ModifyBackupStrategyRequest extends TeaModel {
     public String backupPeriod;
 
     /**
-     * <p>The ID of the backup schedule.</p>
+     * <p>The ID of the backup plan.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +49,10 @@ public class ModifyBackupStrategyRequest extends TeaModel {
     public String backupPlanId;
 
     /**
-     * <p>The start time of the full backup task. Specify the time in the HH:mm format.</p>
+     * <p>The start time of the full backup. Format: HH:mm.</p>
+     * <blockquote>
+     * <p>This parameter is required.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>14:22</p>
@@ -62,12 +61,10 @@ public class ModifyBackupStrategyRequest extends TeaModel {
     public String backupStartTime;
 
     /**
-     * <p>The backup method that you want to use for full backups. Valid values:</p>
+     * <p>The full backup epoch. Valid values:</p>
      * <ul>
-     * <li><p><strong>simple</strong>: scheduled backup. If you specify this value for the BackupStrategyType parameter, you must also specify the BackupPeriod and BackupStartTime parameters.</p>
-     * </li>
-     * <li><p><strong>Manual</strong>: manual backup.</p>
-     * </li>
+     * <li><strong>simple</strong>: periodic backup. This value is used together with BackupPeriod and BackupStartTime.</li>
+     * <li><strong>manual</strong>: manual backup.</li>
      * </ul>
      * <blockquote>
      * <p>Default value: <strong>simple</strong>.</p>
@@ -80,7 +77,7 @@ public class ModifyBackupStrategyRequest extends TeaModel {
     public String backupStrategyType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>

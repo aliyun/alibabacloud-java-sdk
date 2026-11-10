@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "Dbs";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-qingdao", "dbs-api.cn-hangzhou.aliyuncs.com"),
@@ -32,7 +35,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-shenzhen-finance-1", "dbs-api.cn-hangzhou.aliyuncs.com"),
             new TeaPair("ap-south-1", "dbs-api.ap-south-1.aliyuncs.com"),
             new TeaPair("eu-west-1", "dbs-api.eu-west-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "dbs-api.me-east-1.aliyuncs.com")
+            new TeaPair("me-east-1", "dbs-api.me-east-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "dbs-api.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "dbs-api.cn-guangzhou.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dbs", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -53,7 +58,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This API is used to configure a DBS backup plan.</p>
+     * <p>Configures a Database Backup (DBS) backup plan.</p>
      * 
      * @param request ConfigureBackupPlanRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -225,7 +230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This API is used to configure a DBS backup plan.</p>
+     * <p>Configures a Database Backup (DBS) backup plan.</p>
      * 
      * @param request ConfigureBackupPlanRequest
      * @return ConfigureBackupPlanResponse
@@ -613,10 +618,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation returns a task ID. You can call the <a href="https://help.aliyun.com/document_detail/2869852.html">GetDBListFromAgent</a> operation to query the task result based on the task ID.</p>
+     * <p>This API operation returns a TaskId. You can call the <a href="https://help.aliyun.com/document_detail/2869852.html">GetDBListFromAgent</a> operation to query the result.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a task to obtain a database list by using a backup gateway.</p>
+     * <p>Creates a task to retrieve the database list through a backup gateway.</p>
      * 
      * @param request CreateGetDBListFromAgentTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -627,6 +632,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupGatewayId)) {
             query.put("BackupGatewayId", request.backupGatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backupGatewayIdentifier)) {
+            query.put("BackupGatewayIdentifier", request.backupGatewayIdentifier);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -672,10 +681,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation returns a task ID. You can call the <a href="https://help.aliyun.com/document_detail/2869852.html">GetDBListFromAgent</a> operation to query the task result based on the task ID.</p>
+     * <p>This API operation returns a TaskId. You can call the <a href="https://help.aliyun.com/document_detail/2869852.html">GetDBListFromAgent</a> operation to query the result.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a task to obtain a database list by using a backup gateway.</p>
+     * <p>Creates a task to retrieve the database list through a backup gateway.</p>
      * 
      * @param request CreateGetDBListFromAgentTaskRequest
      * @return CreateGetDBListFromAgentTaskResponse
@@ -749,12 +758,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Related operations</h3>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/85543.html">Recover databases</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/197144.html">Tutorials for various database restore configurations</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/85543.html">Restore a database</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/197144.html">Restore configuration tutorials for various databases</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This interface creates DBS restore jobs.</p>
+     * <p>Creates a Database Backup (DBS) restore task.</p>
      * 
      * @param request CreateRestoreTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -920,12 +929,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Related operations</h3>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/85543.html">Recover databases</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/197144.html">Tutorials for various database restore configurations</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/85543.html">Restore a database</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/197144.html">Restore configuration tutorials for various databases</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This interface creates DBS restore jobs.</p>
+     * <p>Creates a Database Backup (DBS) restore task.</p>
      * 
      * @param request CreateRestoreTaskRequest
      * @return CreateRestoreTaskResponse
@@ -1057,10 +1066,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, ensure that Object Storage Service (OSS) is enabled. For more information, see <a href="https://help.aliyun.com/document_detail/31817.html">Object Storage Service</a>.</p>
+     * <p>Ensure Object Storage Service (OSS) is enabled before you use this operation. For more information, see <a href="https://help.aliyun.com/document_detail/31817.html">Object Storage Service</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>This operation lets you view a DBS backup plan.</p>
+     * <p>Queries a DBS backup plan.</p>
      * 
      * @param request DescribeBackupPlanListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1140,10 +1149,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you use this operation, ensure that Object Storage Service (OSS) is enabled. For more information, see <a href="https://help.aliyun.com/document_detail/31817.html">Object Storage Service</a>.</p>
+     * <p>Ensure Object Storage Service (OSS) is enabled before you use this operation. For more information, see <a href="https://help.aliyun.com/document_detail/31817.html">Object Storage Service</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>This operation lets you view a DBS backup plan.</p>
+     * <p>Queries a DBS backup plan.</p>
      * 
      * @param request DescribeBackupPlanListRequest
      * @return DescribeBackupPlanListResponse
@@ -1155,7 +1164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of download tasks for backup sets in Database Backup Service (DBS).</p>
+     * <p>Queries the download list of DBS backup sets.</p>
      * 
      * @param request DescribeBackupSetDownloadTaskListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1207,7 +1216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of download tasks for backup sets in Database Backup Service (DBS).</p>
+     * <p>Queries the download list of DBS backup sets.</p>
      * 
      * @param request DescribeBackupSetDownloadTaskListRequest
      * @return DescribeBackupSetDownloadTaskListResponse
@@ -1219,7 +1228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of the Data Lake Analytics (DLA) service for a backup schedule.</p>
+     * <p>Queries the Data Lake Analytics (DLA) service information for a backup plan.</p>
      * 
      * @param request DescribeDLAServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1259,7 +1268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of the Data Lake Analytics (DLA) service for a backup schedule.</p>
+     * <p>Queries the Data Lake Analytics (DLA) service information for a backup plan.</p>
      * 
      * @param request DescribeDLAServiceRequest
      * @return DescribeDLAServiceResponse
@@ -1271,7 +1280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to list full backup jobs in Database Backup Service (DBS).</p>
+     * <p>Queries the list of full backup tasks in Database Backup (DBS).</p>
      * 
      * @param request DescribeFullBackupListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1343,7 +1352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to list full backup jobs in Database Backup Service (DBS).</p>
+     * <p>Queries the list of full backup tasks in Database Backup (DBS).</p>
      * 
      * @param request DescribeFullBackupListRequest
      * @return DescribeFullBackupListResponse
@@ -1427,7 +1436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the error code of a Database Backup Service (DBS) job.</p>
+     * <p>Queries error code information for a Database Backup (DBS) job.</p>
      * 
      * @param request DescribeJobErrorCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1471,7 +1480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the error code of a Database Backup Service (DBS) job.</p>
+     * <p>Queries error code information for a Database Backup (DBS) job.</p>
      * 
      * @param request DescribeJobErrorCodeRequest
      * @return DescribeJobErrorCodeResponse
@@ -1535,7 +1544,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation queries the precheck progress for a backup plan or a restore job.</p>
+     * <p>Queries the precheck progress of backup plans and restore tasks.</p>
      * 
      * @param request DescribePreCheckProgressListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1579,7 +1588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation queries the precheck progress for a backup plan or a restore job.</p>
+     * <p>Queries the precheck progress of backup plans and restore tasks.</p>
      * 
      * @param request DescribePreCheckProgressListRequest
      * @return DescribePreCheckProgressListResponse
@@ -1639,7 +1648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation returns the time ranges available for restoring data from a backup plan.</p>
+     * <p>Queries the details of the recoverable time ranges for a backup plan.</p>
      * 
      * @param request DescribeRestoreRangeInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1691,7 +1700,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation returns the time ranges available for restoring data from a backup plan.</p>
+     * <p>Queries the details of the recoverable time ranges for a backup plan.</p>
      * 
      * @param request DescribeRestoreRangeInfoRequest
      * @return DescribeRestoreRangeInfoResponse
@@ -1776,7 +1785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Impact</h2>
-     * <p>After you disable incremental backup, the backup plan no longer performs incremental backups.</p>
+     * <p>Calling this operation stops the specified backup plan from creating new incremental backups.</p>
      * 
      * <b>summary</b> : 
      * <p>Disable incremental backup for a backup plan.</p>
@@ -1824,7 +1833,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Impact</h2>
-     * <p>After you disable incremental backup, the backup plan no longer performs incremental backups.</p>
+     * <p>Calling this operation stops the specified backup plan from creating new incremental backups.</p>
      * 
      * <b>summary</b> : 
      * <p>Disable incremental backup for a backup plan.</p>
@@ -1840,10 +1849,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Impact</h2>
-     * <p>Enabling incremental backup incurs no additional charge. However, this operation generates backup traffic and consumes storage space. The fees for the traffic and storage are the same as those for a full backup. You can use the free quota from a backup plan or a storage plan to cover these costs.</p>
+     * <p>Enabling log backup does not incur direct charges. However, log backups generate backup traffic and storage usage. These resources are billed at the same rate as full backups. You can use the free quota from your backup plan or storage plan to offset these charges.</p>
      * 
      * <b>summary</b> : 
-     * <p>This operation enables incremental backup for a backup plan.</p>
+     * <p>Enable incremental backup for a backup schedule.</p>
      * 
      * @param request EnableBackupLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1888,10 +1897,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Impact</h2>
-     * <p>Enabling incremental backup incurs no additional charge. However, this operation generates backup traffic and consumes storage space. The fees for the traffic and storage are the same as those for a full backup. You can use the free quota from a backup plan or a storage plan to cover these costs.</p>
+     * <p>Enabling log backup does not incur direct charges. However, log backups generate backup traffic and storage usage. These resources are billed at the same rate as full backups. You can use the free quota from your backup plan or storage plan to offset these charges.</p>
      * 
      * <b>summary</b> : 
-     * <p>This operation enables incremental backup for a backup plan.</p>
+     * <p>Enable incremental backup for a backup schedule.</p>
      * 
      * @param request EnableBackupLogRequest
      * @return EnableBackupLogResponse
@@ -1903,10 +1912,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>您需要调用 <a href="https://help.aliyun.com/document_detail/2869847.html">CreateGetDBListFromAgentTask</a> 接口创建一个异步任务获取 TaskId（异步任务 ID）。将 TaskId 传入 GetDBListFromAgent 接口后，即可获取物理备份库表数据。</p>
+     * <p>You must call the <a href="https://help.aliyun.com/document_detail/2869847.html">CreateGetDBListFromAgentTask</a> operation to create an asynchronous task and obtain the TaskId (asynchronous task ID). Pass the TaskId to the GetDBListFromAgent operation to retrieve the database and table data of physical backups.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the result of a task that is used to query a database list by using a backup gateway based on the ID of the task.</p>
+     * <p>Retrieves the database and table data of physical backups through a backup gateway.</p>
      * 
      * @param request GetDBListFromAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1917,6 +1926,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupGatewayId)) {
             query.put("BackupGatewayId", request.backupGatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backupGatewayIdentifier)) {
+            query.put("BackupGatewayIdentifier", request.backupGatewayIdentifier);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -1954,10 +1967,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>您需要调用 <a href="https://help.aliyun.com/document_detail/2869847.html">CreateGetDBListFromAgentTask</a> 接口创建一个异步任务获取 TaskId（异步任务 ID）。将 TaskId 传入 GetDBListFromAgent 接口后，即可获取物理备份库表数据。</p>
+     * <p>You must call the <a href="https://help.aliyun.com/document_detail/2869847.html">CreateGetDBListFromAgentTask</a> operation to create an asynchronous task and obtain the TaskId (asynchronous task ID). Pass the TaskId to the GetDBListFromAgent operation to retrieve the database and table data of physical backups.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the result of a task that is used to query a database list by using a backup gateway based on the ID of the task.</p>
+     * <p>Retrieves the database and table data of physical backups through a backup gateway.</p>
      * 
      * @param request GetDBListFromAgentRequest
      * @return GetDBListFromAgentResponse
@@ -1974,7 +1987,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Grants the service-linked role (AliyunServiceRoleForDBS) to Database Backup (DBS).</p>
      * 
-     * @param request InitializeDbsServiceLinkedRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return InitializeDbsServiceLinkedRoleResponse
      */
@@ -2121,10 +2133,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>使用本接口前请先确认备份数据是否存储在 DBS 的内置 OSS 上，您可通过调用 <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> 接口查看 BackupStorageType 取值情况。</p>
+     * <p>Before calling this operation, verify whether the backup data is stored in the built-in OSS of DBS. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to check the value of BackupStorageType.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables, configures, or disables the automatic download feature.</p>
+     * <p>Enables, modifies, or disables the automatic download feature.</p>
      * 
      * @param request ModifyBackupSetDownloadRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2192,10 +2204,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>使用本接口前请先确认备份数据是否存储在 DBS 的内置 OSS 上，您可通过调用 <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> 接口查看 BackupStorageType 取值情况。</p>
+     * <p>Before calling this operation, verify whether the backup data is stored in the built-in OSS of DBS. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to check the value of BackupStorageType.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables, configures, or disables the automatic download feature.</p>
+     * <p>Enables, modifies, or disables the automatic download feature.</p>
      * 
      * @param request ModifyBackupSetDownloadRulesRequest
      * @return ModifyBackupSetDownloadRulesResponse
@@ -2207,7 +2219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation modifies a Database Backup source endpoint.</p>
+     * <p>Modify a DBS backup source endpoint.</p>
      * 
      * @param request ModifyBackupSourceEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2311,7 +2323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation modifies a Database Backup source endpoint.</p>
+     * <p>Modify a DBS backup source endpoint.</p>
      * 
      * @param request ModifyBackupSourceEndpointRequest
      * @return ModifyBackupSourceEndpointResponse
@@ -2323,7 +2335,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the backup time of a backup schedule.</p>
+     * <p>Modifies the backup time of a backup plan.</p>
      * 
      * @param request ModifyBackupStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2379,7 +2391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the backup time of a backup schedule.</p>
+     * <p>Modifies the backup time of a backup plan.</p>
      * 
      * @param request ModifyBackupStrategyRequest
      * @return ModifyBackupStrategyResponse
@@ -2391,7 +2403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the lifecycle of stored data in a backup plan.</p>
+     * <p>Modifies the lifecycle of stored data in a backup plan.</p>
      * 
      * @param request ModifyStorageStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2471,7 +2483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the lifecycle of stored data in a backup plan.</p>
+     * <p>Modifies the lifecycle of stored data in a backup plan.</p>
      * 
      * @param request ModifyStorageStrategyRequest
      * @return ModifyStorageStrategyResponse

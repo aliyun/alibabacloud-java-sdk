@@ -1,3 +1,8 @@
+2026-11-10 Version: 1.0.4
+- Update API CreateGetDBListFromAgentTask: add request parameters BackupGatewayIdentifier.
+- Update API GetDBListFromAgent: add request parameters BackupGatewayIdentifier.
+
+
 2026-03-19 Version: 1.0.3
 - Update API ConfigureBackupPlan: add request parameters BackupStorageEncryptMethod.
 - Update API ConfigureBackupPlan: add request parameters EnableMysqlPhysicalBackupBinlog.

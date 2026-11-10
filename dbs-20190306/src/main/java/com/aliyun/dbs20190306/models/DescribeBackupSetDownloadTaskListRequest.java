@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupSetDownloadTaskListRequest extends TeaModel {
     /**
-     * <p>The ID of the backup plan. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the value of this parameter.</p>
+     * <p>The ID of the backup plan. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the value of this parameter.</p>
      * <blockquote>
-     * <p>You must specify either <strong>BackupPlanId</strong> or <strong>BackupSetDownloadTaskId</strong>.</p>
+     * <p>You must specify either <strong>BackupPlanId</strong> or <strong>BackupSetDownloadTaskId</strong> as a required request parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,10 +19,8 @@ public class DescribeBackupSetDownloadTaskListRequest extends TeaModel {
     /**
      * <p>The ID of the backup set download task.</p>
      * <ul>
-     * <li><p>For a full backup, call the <a href="https://help.aliyun.com/document_detail/2869842.html">CreateFullBackupSetDownload</a> operation to obtain the value of this parameter.</p>
-     * </li>
-     * <li><p>For an incremental backup, call the <a href="https://help.aliyun.com/document_detail/2869843.html">CreateIncrementBackupSetDownload</a> operation to obtain the value of this parameter.</p>
-     * </li>
+     * <li>Full backup: You can call the <a href="https://help.aliyun.com/document_detail/2869842.html">CreateFullBackupSetDownload</a> operation to query the value of this parameter.</li>
+     * <li>Incremental backup: You can call the <a href="https://help.aliyun.com/document_detail/2869843.html">CreateIncrementBackupSetDownload</a> operation to query the value of this parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +30,7 @@ public class DescribeBackupSetDownloadTaskListRequest extends TeaModel {
     public String backupSetDownloadTaskId;
 
     /**
-     * <p>A client token that is used to ensure the idempotence of the request. This prevents duplicate requests.</p>
+     * <p>The client token used to ensure the idempotence of the request and prevent duplicate submissions. You can enter any value.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCzXXXXXX</p>
@@ -44,7 +42,7 @@ public class DescribeBackupSetDownloadTaskListRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The page number. The value must be a non-negative integer that does not exceed the maximum value of the integer type. The default value is 0.</p>
+     * <p>The page number. The value must be greater than or equal to 0 and cannot exceed the maximum value of an integer. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -53,9 +51,9 @@ public class DescribeBackupSetDownloadTaskListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 30, 50, and 100.</p>
+     * <p>The number of entries per page. Valid values: 30, 50, and 100.</p>
      * <blockquote>
-     * <p>The default value is 30.</p>
+     * <p>Default value: 30.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

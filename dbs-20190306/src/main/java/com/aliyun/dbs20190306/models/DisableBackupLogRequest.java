@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableBackupLogRequest extends TeaModel {
     /**
-     * <p>The ID of the backup plan. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to query it.</p>
+     * <p>The ID of the backup plan. To get this ID, call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DisableBackupLogRequest extends TeaModel {
     public String backupPlanId;
 
     /**
-     * <p>Ensures idempotence and prevents duplicate requests.</p>
+     * <p>A client token to ensure the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCziJZNwH****</p>
@@ -24,6 +24,8 @@ public class DisableBackupLogRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Specifies whether to disable only the log backup feature for a physical backup of a MySQL database.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

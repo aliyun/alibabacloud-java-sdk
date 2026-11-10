@@ -35,7 +35,7 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
     public DescribePreCheckProgressListResponseBodyItems items;
 
     /**
-     * <p>The precheck progress. The value ranges from 0 to 100.</p>
+     * <p>The precheck progress. Valid values: 0 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -55,12 +55,9 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
     /**
      * <p>The precheck status. Valid values:</p>
      * <ul>
-     * <li><p><strong>running</strong>: The precheck is in progress.</p>
-     * </li>
-     * <li><p><strong>failed</strong>: The precheck failed.</p>
-     * </li>
-     * <li><p><strong>finish</strong>: The precheck is complete.</p>
-     * </li>
+     * <li><strong>running</strong>: running</li>
+     * <li><strong>failed</strong>: failed</li>
+     * <li><strong>finish</strong>: completed</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,10 +69,8 @@ public class DescribePreCheckProgressListResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupStrategyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the backup schedule.</p>
+     * <p>The ID of the backup plan.</p>
      * 
      * <strong>example:</strong>
      * <p>dbstooi01XXXX</p>
@@ -41,7 +41,7 @@ public class ModifyBackupStrategyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Indicates whether a precheck is triggered. If the value of this parameter is true, you must start the backup schedule by calling the StartBackupPlan operation.</p>
+     * <p>Indicates whether this modification triggers a precheck. If the value is true, a precheck is required, and you must call the StartBackupPlan operation to start the backup plan.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

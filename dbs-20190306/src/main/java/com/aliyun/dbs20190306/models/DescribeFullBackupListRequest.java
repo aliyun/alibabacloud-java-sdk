@@ -24,6 +24,8 @@ public class DescribeFullBackupListRequest extends TeaModel {
     public String backupSetId;
 
     /**
+     * <p>The status of the backup set.</p>
+     * 
      * <strong>example:</strong>
      * <p>finish</p>
      */
@@ -31,7 +33,7 @@ public class DescribeFullBackupListRequest extends TeaModel {
     public String backupSetStatus;
 
     /**
-     * <p>A token that ensures idempotence and prevents duplicate requests.</p>
+     * <p>The client token that is used to ensure request idempotence and prevent duplicate submissions.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
@@ -40,7 +42,7 @@ public class DescribeFullBackupListRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The end time of the backup, in UNIX timestamp format.</p>
+     * <p>The end time of the backup.</p>
      * 
      * <strong>example:</strong>
      * <p>1676887128</p>
@@ -52,7 +54,7 @@ public class DescribeFullBackupListRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The page number. Valid values: integers from 0 to the maximum integer value. Default value: 0.</p>
+     * <p>The page number. The value must be greater than or equal to 0 and less than or equal to the maximum value of the Integer data type. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -63,12 +65,9 @@ public class DescribeFullBackupListRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p>30</p>
-     * </li>
-     * <li><p>50</p>
-     * </li>
-     * <li><p>100</p>
-     * </li>
+     * <li>30</li>
+     * <li>50</li>
+     * <li>100</li>
      * </ul>
      * <p>Default value: 30.</p>
      * 
@@ -79,6 +78,8 @@ public class DescribeFullBackupListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Specifies whether to display the backup progress.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -86,7 +87,7 @@ public class DescribeFullBackupListRequest extends TeaModel {
     public String showProgress;
 
     /**
-     * <p>Specifies whether to return the storage class.</p>
+     * <p>Specifies whether to display the storage type.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -38,7 +38,7 @@ public class DescribeJobErrorCodeResponseBody extends TeaModel {
     public DescribeJobErrorCodeResponseBodyItem item;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1FC2F86D-AFF4-4ED9-BB25-ADDE196CB2B5</p>

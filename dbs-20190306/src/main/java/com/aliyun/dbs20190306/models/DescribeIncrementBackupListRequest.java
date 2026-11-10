@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeIncrementBackupListRequest extends TeaModel {
     /**
-     * <p>The backup plan ID. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> interface to get this parameter\&quot;s value.</p>
+     * <p>The ID of the backup plan. Call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeIncrementBackupListRequest extends TeaModel {
     public String backupPlanId;
 
     /**
-     * <p>A unique string that ensures the idempotence of the request and prevents duplicate requests.</p>
+     * <p>A client-generated token that ensures the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
@@ -24,7 +24,7 @@ public class DescribeIncrementBackupListRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The end backup UNIX timestamp.</p>
+     * <p>The end timestamp of the backup query time range, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1570701361600</p>
@@ -36,7 +36,7 @@ public class DescribeIncrementBackupListRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The page number. The value must be greater than or equal to 0 and less than or equal to the maximum integer value. The default value is 0.</p>
+     * <p>The page number. The value starts from 0, and the default is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,9 +45,9 @@ public class DescribeIncrementBackupListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page. Valid values are 30, 50, and 100.</p>
+     * <p>The number of entries per page. Valid values: 30, 50, and 100.</p>
      * <blockquote>
-     * <p>The default number of entries per page is 30.</p>
+     * <p>Default value: 30.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class DescribeIncrementBackupListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Indicates whether to display the storage class. Valid values:</p>
+     * <p>Specifies whether to return the storage class. Valid values:</p>
      * <ul>
      * <li><p>true</p>
      * </li>
@@ -65,7 +65,7 @@ public class DescribeIncrementBackupListRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>The default value is true.</p>
+     * <p>Default value: true.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,7 +75,7 @@ public class DescribeIncrementBackupListRequest extends TeaModel {
     public Boolean showStorageType;
 
     /**
-     * <p>The start backup UNIX timestamp.</p>
+     * <p>The start timestamp of the backup query time range, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1570701361528</p>

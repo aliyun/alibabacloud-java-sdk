@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyStorageStrategyRequest extends TeaModel {
     /**
-     * <p>Backup plan ID. Obtain this parameter\&quot;s value by calling the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> API.</p>
+     * <p>The ID of the backup plan. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the value of this parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class ModifyStorageStrategyRequest extends TeaModel {
     public String backupPlanId;
 
     /**
-     * <p>Backup data retention period, in days. Valid values: 0 to 1825.</p>
+     * <p>The retention period of backup data. Unit: days. Valid values: 0 to 1825.</p>
      * <blockquote>
-     * <p>Default value: 730 days.</p>
+     * <p>Default value: 730.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,6 +28,8 @@ public class ModifyStorageStrategyRequest extends TeaModel {
     public Integer backupRetentionPeriod;
 
     /**
+     * <p>The encryption method for backup data storage.</p>
+     * 
      * <strong>example:</strong>
      * <p>encrypted</p>
      */
@@ -35,7 +37,7 @@ public class ModifyStorageStrategyRequest extends TeaModel {
     public String backupStorageEncryptMethod;
 
     /**
-     * <p>An arbitrary string used to ensure the idempotence of the request and prevent duplicate submissions.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions.</p>
      * 
      * <strong>example:</strong>
      * <p>dbstest</p>
@@ -44,9 +46,9 @@ public class ModifyStorageStrategyRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Time to convert to Archive Storage. This value must be less than the backup data retention period (BackupRetentionPeriod parameter). For more information about Archive Storage, see <a href="https://help.aliyun.com/document_detail/51374.html">Storage Type Overview</a>.</p>
+     * <p>The period after which backup data is transitioned to Archive storage. The value must be less than the retention period of backup data (specified by the BackupRetentionPeriod parameter). For more information about Archive storage, see <a href="https://help.aliyun.com/document_detail/51374.html">Storage types</a>.</p>
      * <blockquote>
-     * <p>Default value: 365 days.</p>
+     * <p>Default value: 365.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -57,9 +59,9 @@ public class ModifyStorageStrategyRequest extends TeaModel {
     public Integer duplicationArchivePeriod;
 
     /**
-     * <p>Time to convert to Infrequent Access storage. This value must be less than the Archive Storage period (DuplicationArchivePeriod parameter). For more information about Infrequent Access storage, see <a href="https://help.aliyun.com/document_detail/51374.html">Storage Type Overview</a>.</p>
+     * <p>The period after which backup data is transitioned to Infrequent Access storage. The value must be less than the period after which backup data is transitioned to Archive storage (specified by the DuplicationArchivePeriod parameter). For more information about Infrequent Access storage, see <a href="https://help.aliyun.com/document_detail/51374.html">Storage types</a>.</p>
      * <blockquote>
-     * <p>Default value: 180 days.</p>
+     * <p>Default value: 180.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -70,6 +72,8 @@ public class ModifyStorageStrategyRequest extends TeaModel {
     public Integer duplicationInfrequentAccessPeriod;
 
     /**
+     * <p>The retention period of incremental backup data.</p>
+     * 
      * <strong>example:</strong>
      * <p>365</p>
      */
@@ -77,6 +81,8 @@ public class ModifyStorageStrategyRequest extends TeaModel {
     public String incrementBackupRetentionPeriod;
 
     /**
+     * <p>The period after which incremental backup data is transitioned to Archive storage.</p>
+     * 
      * <strong>example:</strong>
      * <p>365</p>
      */
@@ -84,6 +90,8 @@ public class ModifyStorageStrategyRequest extends TeaModel {
     public String incrementDuplicationArchivePeriod;
 
     /**
+     * <p>The period after which incremental backup data is transitioned to Infrequent Access storage.</p>
+     * 
      * <strong>example:</strong>
      * <p>365</p>
      */
@@ -91,6 +99,8 @@ public class ModifyStorageStrategyRequest extends TeaModel {
     public String incrementDuplicationInfrequentAccessPeriod;
 
     /**
+     * <p>The retention period of log backup data.</p>
+     * 
      * <strong>example:</strong>
      * <p>365</p>
      */
@@ -98,6 +108,8 @@ public class ModifyStorageStrategyRequest extends TeaModel {
     public String logBackupRetentionPeriod;
 
     /**
+     * <p>The period after which log backup data is transitioned to Infrequent Access storage.</p>
+     * 
      * <strong>example:</strong>
      * <p>365</p>
      */
@@ -105,6 +117,8 @@ public class ModifyStorageStrategyRequest extends TeaModel {
     public String logDuplicationArchivePeriod;
 
     /**
+     * <p>The period after which log backup data is transitioned to Infrequent Access storage.</p>
+     * 
      * <strong>example:</strong>
      * <p>365</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupSetDownloadRulesRequest extends TeaModel {
     /**
-     * <p>The ID of the backup gateway that is used to download the backup set.</p>
+     * <p>The ID of the backup gateway used to download the backup set.</p>
      * 
      * <strong>example:</strong>
      * <p>23312323</p>
@@ -14,7 +14,7 @@ public class ModifyBackupSetDownloadRulesRequest extends TeaModel {
     public Long backupGatewayId;
 
     /**
-     * <p>The ID of the backup schedule.</p>
+     * <p>The ID of the backup plan. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,9 +33,9 @@ public class ModifyBackupSetDownloadRulesRequest extends TeaModel {
     public String backupSetDownloadDir;
 
     /**
-     * <p>The type of the destination server to which the backup set is downloaded.</p>
+     * <p>The target type for downloading the backup set.</p>
      * <blockquote>
-     * <p>Set the value to agent, which indicates a server on which a backup gateway is installed.</p>
+     * <p>Default value: agent. A backup gateway is installed. This is the only supported value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -45,16 +45,12 @@ public class ModifyBackupSetDownloadRulesRequest extends TeaModel {
     public String backupSetDownloadTargetType;
 
     /**
-     * <p>The type of the destination directory to which the backup set is downloaded. This parameter is required if the automatic download feature is enabled. Valid values:</p>
+     * <p>The target directory type for downloading the backup set. This parameter is required if automatic download is enabled. Valid values:</p>
      * <ul>
-     * <li><p>local</p>
-     * </li>
-     * <li><p>nas</p>
-     * </li>
-     * <li><p>ftp</p>
-     * </li>
-     * <li><p>minio</p>
-     * </li>
+     * <li>local</li>
+     * <li>nas</li>
+     * <li>ftp</li>
+     * <li>minio</li>
      * </ul>
      * <blockquote>
      * <p>Default value: local.</p>
@@ -67,7 +63,7 @@ public class ModifyBackupSetDownloadRulesRequest extends TeaModel {
     public String backupSetDownloadTargetTypeLocation;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>The client token used to ensure the idempotence of the request and prevent duplicate request submissions.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
@@ -76,16 +72,12 @@ public class ModifyBackupSetDownloadRulesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The format in which the full backup set is downloaded. Valid values:</p>
+     * <p>The format of the full data downloaded from the backup set. Valid values:</p>
      * <ul>
-     * <li><p>Native</p>
-     * </li>
-     * <li><p>SQL</p>
-     * </li>
-     * <li><p>CSV</p>
-     * </li>
-     * <li><p>JSON</p>
-     * </li>
+     * <li>Native</li>
+     * <li>SQL</li>
+     * <li>CSV</li>
+     * <li>JSON</li>
      * </ul>
      * <blockquote>
      * <p>Default value: CSV.</p>
@@ -98,16 +90,12 @@ public class ModifyBackupSetDownloadRulesRequest extends TeaModel {
     public String fullDataFormat;
 
     /**
-     * <p>The format in which the incremental backup set is downloaded. Valid values:</p>
+     * <p>The format of the incremental data downloaded from the backup set. Valid values:</p>
      * <ul>
-     * <li><p>Native</p>
-     * </li>
-     * <li><p>SQL</p>
-     * </li>
-     * <li><p>CSV</p>
-     * </li>
-     * <li><p>JSON</p>
-     * </li>
+     * <li>Native</li>
+     * <li>SQL</li>
+     * <li>CSV</li>
+     * <li>JSON</li>
      * </ul>
      * <blockquote>
      * <p>Default value: Native.</p>
@@ -120,7 +108,7 @@ public class ModifyBackupSetDownloadRulesRequest extends TeaModel {
     public String incrementDataFormat;
 
     /**
-     * <p>Specifies whether to enable the automatic download feature. Default value: false.</p>
+     * <p>Specifies whether to enable automatic download. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

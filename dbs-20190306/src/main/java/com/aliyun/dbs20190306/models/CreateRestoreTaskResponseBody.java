@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRestoreTaskResponseBody extends TeaModel {
     /**
-     * <p>error code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Param.NotFound</p>
@@ -14,7 +14,7 @@ public class CreateRestoreTaskResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The specified parameter %s value is not valid.</p>
@@ -23,7 +23,7 @@ public class CreateRestoreTaskResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class CreateRestoreTaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>60AF7C5D-EF4D-4D48-8FD5-C0823FDF28AC</p>
@@ -41,7 +41,7 @@ public class CreateRestoreTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>restore job ID.</p>
+     * <p>The ID of the restore task.</p>
      * 
      * <strong>example:</strong>
      * <p>s102h*****</p>
@@ -50,7 +50,7 @@ public class CreateRestoreTaskResponseBody extends TeaModel {
     public String restoreTaskId;
 
     /**
-     * <p>success.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

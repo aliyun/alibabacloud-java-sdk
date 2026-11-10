@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyStorageStrategyResponseBody extends TeaModel {
     /**
-     * <p>Backup plan ID.</p>
+     * <p>The ID of the backup plan.</p>
      * 
      * <strong>example:</strong>
      * <p>dbsqdss5tmh****</p>
@@ -14,7 +14,7 @@ public class ModifyStorageStrategyResponseBody extends TeaModel {
     public String backupPlanId;
 
     /**
-     * <p>Error code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Param.NotFound</p>
@@ -23,7 +23,7 @@ public class ModifyStorageStrategyResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>findValidDBSJob error</p>
@@ -32,7 +32,7 @@ public class ModifyStorageStrategyResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,12 +41,10 @@ public class ModifyStorageStrategyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Indicates whether this modification triggers a precheck. Return values:</p>
+     * <p>Indicates whether the modification triggers a precheck. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: A precheck is triggered. Manually call the <a href="https://help.aliyun.com/document_detail/2869818.html">StartBackupPlan</a> API to start the backup plan.</p>
-     * </li>
-     * <li><p><strong>false</strong>: No precheck is triggered.</p>
-     * </li>
+     * <li><strong>true</strong>: A precheck is triggered. You must manually call the <a href="https://help.aliyun.com/document_detail/2869818.html">StartBackupPlan</a> operation to start the backup plan.</li>
+     * <li><strong>false</strong>: No precheck is triggered.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +54,7 @@ public class ModifyStorageStrategyResponseBody extends TeaModel {
     public Boolean needPrecheck;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E995F91F-6F89-503B-9F7D-502F58FD****</p>
@@ -65,12 +63,10 @@ public class ModifyStorageStrategyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Return values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -53,7 +53,7 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>636BC118-6080-4119-A6B5-C199CEC1037D</p>
@@ -62,12 +62,10 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation succeeded. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The operation succeeded.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The operation failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,7 +75,7 @@ public class DescribeFullBackupListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of full backup jobs.</p>
+     * <p>The total number of full backup tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

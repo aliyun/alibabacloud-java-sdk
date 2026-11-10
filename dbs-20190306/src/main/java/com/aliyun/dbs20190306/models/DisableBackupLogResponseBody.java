@@ -43,7 +43,7 @@ public class DisableBackupLogResponseBody extends TeaModel {
     /**
      * <p>Indicates whether this change triggers a precheck. Valid values:</p>
      * <ul>
-     * <li><p>true: A precheck is triggered. You must manually call the <a href="https://help.aliyun.com/document_detail/2869816.html">StartBackupPlan</a> operation to start the backup plan.</p>
+     * <li><p>true: A precheck is triggered. You must then call <a href="https://help.aliyun.com/document_detail/2869816.html">StartBackupPlan</a> to start the backup plan.</p>
      * </li>
      * <li><p>false: No precheck is triggered.</p>
      * </li>
@@ -56,7 +56,7 @@ public class DisableBackupLogResponseBody extends TeaModel {
     public Boolean needPrecheck;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</p>

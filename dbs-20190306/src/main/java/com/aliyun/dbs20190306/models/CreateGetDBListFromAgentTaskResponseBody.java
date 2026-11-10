@@ -23,7 +23,7 @@ public class CreateGetDBListFromAgentTaskResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>400</p>

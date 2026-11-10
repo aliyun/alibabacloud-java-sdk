@@ -7,7 +7,7 @@ public class DescribePreCheckProgressListRequest extends TeaModel {
     /**
      * <p>The ID of the backup plan.</p>
      * <blockquote>
-     * <p>Specify either BackupPlanId or RestoreTaskId.</p>
+     * <p>Specify BackupPlanId or RestoreTaskId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribePreCheckProgressListRequest extends TeaModel {
     public String backupPlanId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCziJZNwH****</p>
@@ -29,7 +29,7 @@ public class DescribePreCheckProgressListRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The ID of the restore job.</p>
+     * <p>The ID of the restore task.</p>
      * 
      * <strong>example:</strong>
      * <p>dbasdsa****</p>

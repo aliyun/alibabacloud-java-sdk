@@ -41,7 +41,7 @@ public class ModifyBackupSourceEndpointResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Indicates whether this change triggers a precheck. If this value is true, call StartBackupPlan to restart the backup plan.</p>
+     * <p>Indicates whether the modification triggers a precheck. If this parameter is set to true, you must call the StartBackupPlan operation to start the backup plan.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -59,9 +59,9 @@ public class ModifyBackupSourceEndpointResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request succeeded.</p>
+     * <li><p><strong>true</strong>: The request was successful.</p>
      * </li>
      * <li><p><strong>false</strong>: The request failed.</p>
      * </li>

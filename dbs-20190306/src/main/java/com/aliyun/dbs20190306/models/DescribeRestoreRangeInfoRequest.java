@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRestoreRangeInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the backup plan. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</p>
+     * <p>The ID of the backup plan. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the value of this parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeRestoreRangeInfoRequest extends TeaModel {
     public String backupPlanId;
 
     /**
-     * <p>The start timestamp of the restorable time range. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</p>
+     * <p>The start time of the recoverable time range to query. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the value of this parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeRestoreRangeInfoRequest extends TeaModel {
     public Long beginTimestampForRestore;
 
     /**
-     * <p>A client token that ensures the idempotence of requests and prevents duplicate submissions.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
@@ -34,7 +34,7 @@ public class DescribeRestoreRangeInfoRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The end timestamp of the restorable time range. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</p>
+     * <p>The end time of the recoverable time range to query. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the value of this parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class DescribeRestoreRangeInfoRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>Whether to enable recent restore.</p>
+     * <p>Specifies whether to enable recent restoration.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

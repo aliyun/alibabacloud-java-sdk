@@ -44,7 +44,7 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -62,9 +62,9 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request succeeded. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
+     * <li><p><strong>true</strong>: The request succeeded.</p>
      * </li>
      * <li><p><strong>false</strong>: The request failed.</p>
      * </li>
@@ -77,7 +77,7 @@ public class DescribeIncrementBackupListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of incremental backup tasks.</p>
+     * <p>The total number of incremental backups.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

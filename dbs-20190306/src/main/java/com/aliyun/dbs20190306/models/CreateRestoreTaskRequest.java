@@ -4,16 +4,28 @@ package com.aliyun.dbs20190306.models;
 import com.aliyun.tea.*;
 
 public class CreateRestoreTaskRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to automatically start the instance after an Oracle physical backup is restored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoOpenDatabase")
     public String autoOpenDatabase;
 
+    /**
+     * <p>Specifies whether to automatically shut down the instance after an Oracle physical backup is restored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoShutdownDatabase")
     public String autoShutdownDatabase;
 
     /**
-     * <p>backup gateway ID.</p>
+     * <p>The ID of the backup gateway.</p>
      * <blockquote>
-     * <p>This parameter is required when <strong>DestinationEndpointInstanceType</strong> is agent.</p>
+     * <p>This parameter is required if <strong>DestinationEndpointInstanceType</strong> is set to Agent.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,7 +35,7 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public Long backupGatewayId;
 
     /**
-     * <p>backup plan ID.</p>
+     * <p>The ID of the backup plan.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +45,7 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public String backupPlanId;
 
     /**
-     * <p>The ID of the full backup set used for restoration. Mutually exclusive with RestoreTime.</p>
+     * <p>The ID of the full backup set used for restoration. This parameter and RestoreTime are mutually exclusive.</p>
      * 
      * <strong>example:</strong>
      * <p>dbs1hvb0w*****</p>
@@ -42,7 +54,7 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public String backupSetId;
 
     /**
-     * <p>Ensures request idempotence and prevents duplicate submissions.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOC********</p>
@@ -51,7 +63,7 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>UID for cross-Alibaba Cloud account backup.</p>
+     * <p>The UID of the Alibaba Cloud account used for cross-account backup.</p>
      * 
      * <strong>example:</strong>
      * <p>2749528728********</p>
@@ -60,7 +72,7 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public String crossAliyunId;
 
     /**
-     * <p>RAM role name for cross-Alibaba Cloud account backup.</p>
+     * <p>The name of the RAM role used for cross-account backup.</p>
      * 
      * <strong>example:</strong>
      * <p>test123</p>
@@ -69,16 +81,26 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public String crossRoleName;
 
     /**
+     * <p>The instance specifications of the new database instance to which data is restored.</p>
+     * 
      * <strong>example:</strong>
      * <p>mysql.x4.large.2</p>
      */
     @NameInMap("DestDatabaseInstanceClass")
     public String destDatabaseInstanceClass;
 
+    /**
+     * <p>The database engine version of the new database instance to which data is restored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8.0</p>
+     */
     @NameInMap("DestDatabaseInstanceDatabaseVersion")
     public String destDatabaseInstanceDatabaseVersion;
 
     /**
+     * <p>The region of the new database instance to which data is restored.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -86,6 +108,8 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public String destDatabaseInstanceRegion;
 
     /**
+     * <p>The instance storage size of the new database to recover.</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      */
@@ -93,16 +117,26 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public String destDatabaseInstanceStorageSize;
 
     /**
+     * <p>The instance type of the new database to which data is restored.</p>
+     * 
      * <strong>example:</strong>
      * <p>rds</p>
      */
     @NameInMap("DestDatabaseInstanceType")
     public String destDatabaseInstanceType;
 
+    /**
+     * <p>The vSwitch of the new database instance to which data is restored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-xx</p>
+     */
     @NameInMap("DestDatabaseInstanceVSwitch")
     public String destDatabaseInstanceVSwitch;
 
     /**
+     * <p>The VPC of the new database instance to which data is restored.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-xx</p>
      */
@@ -110,9 +144,9 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public String destDatabaseInstanceVpc;
 
     /**
-     * <p>database name.</p>
+     * <p>The name of the database.</p>
      * <blockquote>
-     * <p>This parameter is required when the database type is PostgreSQL or MongoDB.</p>
+     * <p>This parameter is required if the database engine is PostgreSQL or MongoDB.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -122,9 +156,9 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public String destinationEndpointDatabaseName;
 
     /**
-     * <p>database endpoint.</p>
+     * <p>The database connection address.</p>
      * <blockquote>
-     * <p>This parameter is required when <strong>DestinationEndpointInstanceType</strong> is express, agent, or other.</p>
+     * <p>This parameter is required if <strong>DestinationEndpointInstanceType</strong> is set to Express, Agent, or Other.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -134,9 +168,9 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public String destinationEndpointIP;
 
     /**
-     * <p>database instance ID.</p>
+     * <p>The instance ID of the database.</p>
      * <blockquote>
-     * <p>This parameter is required when <strong>DestinationEndpointInstanceType</strong> is RDS, ECS, DDS, or Express.</p>
+     * <p>This parameter is required if <strong>DestinationEndpointInstanceType</strong> is set to RDS, ECS, DDS, or Express.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -146,22 +180,15 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public String destinationEndpointInstanceID;
 
     /**
-     * <p>database location. Valid values:</p>
+     * <p>The location of the database. Valid values:</p>
      * <ul>
-     * <li><p><strong>RDS</strong></p>
-     * </li>
-     * <li><p><strong>ECS</strong></p>
-     * </li>
-     * <li><p><strong>Express</strong>: databases accessed via leased line/VPN Gateway/Smart Gateway</p>
-     * </li>
-     * <li><p><strong>Agent</strong>: databases accessed via backup gateway</p>
-     * </li>
-     * <li><p><strong>DDS</strong>: Cloud MongoDB</p>
-     * </li>
-     * <li><p><strong>Other</strong>: databases directly connected via IP:Port</p>
-     * </li>
-     * <li><p><strong>dg</strong>: self-managed databases without public IP:Port (accessed via Database Gateway DG)</p>
-     * </li>
+     * <li><strong>RDS</strong></li>
+     * <li><strong>ECS</strong></li>
+     * <li><strong>Express</strong>: databases connected over Express Connect circuits, VPN gateways, or Smart Access Gateway (SAG)</li>
+     * <li><strong>Agent</strong>: databases connected over backup gateways</li>
+     * <li><strong>DDS</strong>: ApsaraDB for MongoDB</li>
+     * <li><strong>Other</strong>: databases connected by using IP addresses and port numbers</li>
+     * <li><strong>dg</strong>: self-managed databases that have no public IP addresses or port numbers and are connected over Database Gateway</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -172,9 +199,9 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public String destinationEndpointInstanceType;
 
     /**
-     * <p>Oracle SID name.</p>
+     * <p>The Oracle SID.</p>
      * <blockquote>
-     * <p>This parameter is required when the database type is Oracle.</p>
+     * <p>This parameter is required if the database engine is Oracle.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -184,9 +211,9 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public String destinationEndpointOracleSID;
 
     /**
-     * <p>password.</p>
+     * <p>The password of the database account.</p>
      * <blockquote>
-     * <p>This parameter is optional when the database type is Redis, or when the database location is agent and the database type is MSSQL. It is required in all other scenarios.</p>
+     * <p>This parameter is not required if the database engine is Redis, or if the database is connected over a backup gateway and the database engine is SQL Server. In other scenarios, this parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -196,9 +223,9 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public String destinationEndpointPassword;
 
     /**
-     * <p>database port.</p>
+     * <p>The port number of the database.</p>
      * <blockquote>
-     * <p>This parameter is required when <strong>DestinationEndpointInstanceType</strong> is express, agent, other, or ECS.</p>
+     * <p>This parameter is required if <strong>DestinationEndpointInstanceType</strong> is set to Express, Agent, Other, or ECS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -208,9 +235,9 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public Integer destinationEndpointPort;
 
     /**
-     * <p>region of the database instance.</p>
+     * <p>The region of the database instance.</p>
      * <blockquote>
-     * <p>This parameter is required when <strong>DestinationEndpointInstanceType</strong> is RDS, ECS, DDS, Express, or Agent.</p>
+     * <p>This parameter is required if <strong>DestinationEndpointInstanceType</strong> is set to RDS, ECS, DDS, Express, or Agent.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -220,9 +247,9 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public String destinationEndpointRegion;
 
     /**
-     * <p>database account.</p>
+     * <p>The username of the database account.</p>
      * <blockquote>
-     * <p>This parameter is optional when the database type is Redis, or when the database location is agent and the database type is MSSQL. It is required in all other scenarios.</p>
+     * <p>This parameter is not required if the database engine is Redis, or if the database is connected over a backup gateway and the database engine is SQL Server. In other scenarios, this parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -232,8 +259,10 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public String destinationEndpointUserName;
 
     /**
-     * <p>Conflict handling for objects with the same name. Currently supports:</p>
-     * <p><strong>renamenew</strong>: Rename objects if names conflict.</p>
+     * <p>The method used to handle conflicts between objects with the same name. Valid values:</p>
+     * <ul>
+     * <li><strong>renamenew</strong>: renames the object if an object with the same name exists.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>renamenew</p>
@@ -241,6 +270,12 @@ public class CreateRestoreTaskRequest extends TeaModel {
     @NameInMap("DuplicateConflict")
     public String duplicateConflict;
 
+    /**
+     * <p>Specifies whether to connect to the destination by using an SSL-encrypted connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableDestinationEndpointSsl")
     public Boolean enableDestinationEndpointSsl;
 
@@ -248,14 +283,20 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public String ownerId;
 
     /**
+     * <p>The method used to restore data to the destination. Valid values:</p>
+     * <ul>
+     * <li><strong>EXIST_INSTANCE</strong>: restores data to an existing instance.</li>
+     * <li><strong>NEW_INSTANCE</strong>: restores data to a new instance.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>exist_instance</p>
+     * <p>EXIST_INSTANCE</p>
      */
     @NameInMap("RestoreDestinationMode")
     public String restoreDestinationMode;
 
     /**
-     * <p>Required when <strong>DestinationEndpointInstanceType</strong> is agent and the backup plan is MySQL.</p>
+     * <p>This parameter is required if <strong>DestinationEndpointInstanceType</strong> is set to Agent and the backup plan is for MySQL.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -264,7 +305,7 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public String restoreDir;
 
     /**
-     * <p>database program directory.</p>
+     * <p>The directory of the database program.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -273,26 +314,24 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public String restoreHome;
 
     /**
-     * <p>restore objects.</p>
+     * <p>The objects to be restored.</p>
      * <ul>
-     * <li><p>For details, see the <strong>RestoreObjects</strong> parameter definition below. This parameter is optional when the database location is agent, and required in all other scenarios.</p>
-     * </li>
-     * <li><p>Input template: <code>[{ &quot;DBName&quot;: &quot;database name to be restored&quot;, &quot;NewDBName&quot;: &quot;target database name to be restored&quot; }]</code></p>
-     * </li>
+     * <li>For more information, see the definition of the <strong>RestoreObjects</strong> parameter below. This parameter is not required if the database is connected over a backup gateway. In other scenarios, this parameter is required.</li>
+     * <li>Template: <code>[{ &quot;DBName&quot;: &quot;Name of the database to be restored&quot;, &quot;NewDBName&quot;: &quot;Name of the destination database&quot; }]</code></li>
      * </ul>
      * <blockquote>
-     * <p>This API only supports restoring objects at the database level. To configure table-level restoration, use the console. For details, see <a href="https://help.aliyun.com/document_detail/85543.html">Recover databases</a>.</p>
+     * <p>Restoring objects by calling this API operation only supports restoration at the database level. To restore specific tables, go to the console. For more information, see <a href="https://help.aliyun.com/document_detail/85543.html">Restore a database</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>MySQL表级别恢复示例如下：
+     * <p>Example of MySQL table-level restoration:
      * [{\&quot;DBName\&quot;:\&quot;dbname\&quot;, \&quot;NewDBName\&quot;:\&quot;dbname1\&quot;}]</p>
      */
     @NameInMap("RestoreObjects")
     public String restoreObjects;
 
     /**
-     * <p>restore job name.</p>
+     * <p>The name of the restore task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -302,7 +341,7 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public String restoreTaskName;
 
     /**
-     * <p>restore time. Value: 1554560477000.</p>
+     * <p>The point in time to which you want to restore the database. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1554560477000</p>
@@ -311,6 +350,8 @@ public class CreateRestoreTaskRequest extends TeaModel {
     public Long restoreTime;
 
     /**
+     * <p>The credential for the SSL-encrypted connection to the destination.</p>
+     * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE----- ... -----END CERTIFICATE-----</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPlanListRequest extends TeaModel {
     /**
+     * <p>The backup method.</p>
+     * 
      * <strong>example:</strong>
      * <p>logical</p>
      */
@@ -12,7 +14,7 @@ public class DescribeBackupPlanListRequest extends TeaModel {
     public String backupMethod;
 
     /**
-     * <p>Backup plan ID. To list multiple backup plans, separate IDs with commas.</p>
+     * <p>The ID of the backup plan. You can specify multiple backup plan IDs, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>dbstooi01exXXXX</p>
@@ -21,7 +23,7 @@ public class DescribeBackupPlanListRequest extends TeaModel {
     public String backupPlanId;
 
     /**
-     * <p>Backup plan name.</p>
+     * <p>The name of the backup plan.</p>
      * 
      * <strong>example:</strong>
      * <p>test123</p>
@@ -30,21 +32,21 @@ public class DescribeBackupPlanListRequest extends TeaModel {
     public String backupPlanName;
 
     /**
-     * <p>Backup plan status. Valid values:</p>
+     * <p>The status of the backup plan. Valid values:</p>
      * <ul>
-     * <li><p><strong>wait</strong>: Not configured.</p>
+     * <li><p><strong>wait</strong>: The backup plan is not configured.</p>
      * </li>
-     * <li><p><strong>init</strong>: Not started (precheck failed).</p>
+     * <li><p><strong>init</strong>: The backup plan is not started because a precheck failed.</p>
      * </li>
-     * <li><p><strong>running</strong>: Running.</p>
+     * <li><p><strong>running</strong>: The backup plan is running.</p>
      * </li>
-     * <li><p><strong>stop</strong>: Failed.</p>
+     * <li><p><strong>stop</strong>: The backup plan has failed.</p>
      * </li>
-     * <li><p><strong>pause</strong>: Paused.</p>
+     * <li><p><strong>pause</strong>: The backup plan is paused.</p>
      * </li>
-     * <li><p><strong>locked</strong>: Locked.</p>
+     * <li><p><strong>locked</strong>: The backup plan is locked.</p>
      * </li>
-     * <li><p><strong>check_pass</strong>: Precheck passed.</p>
+     * <li><p><strong>check_pass</strong>: The precheck is passed.</p>
      * </li>
      * </ul>
      * 
@@ -55,7 +57,7 @@ public class DescribeBackupPlanListRequest extends TeaModel {
     public String backupPlanStatus;
 
     /**
-     * <p>A client token used to ensure idempotence and prevent duplicate requests.</p>
+     * <p>A client-generated token that ensures the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>ASDASDASDSADASFCZXVZ</p>
@@ -67,7 +69,7 @@ public class DescribeBackupPlanListRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>Page number. Valid values: integers greater than or equal to 0 and less than or equal to the maximum integer value. Default value: 0.</p>
+     * <p>The page number to return. The value must be an integer that is greater than or equal to 0. The default value is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -76,9 +78,9 @@ public class DescribeBackupPlanListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>Number of records per page. Valid values: 1 to 100.</p>
+     * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
      * <blockquote>
-     * <p>Default value: <strong>30</strong>.</p>
+     * <p>The default value is <strong>30</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -88,7 +90,7 @@ public class DescribeBackupPlanListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>DBS region. Call <a href="https://help.aliyun.com/document_detail/2869853.html">DescribeRegions</a> to view supported regions.</p>
+     * <p>The ID of the region where the backup plan is located. You can call the <a href="https://help.aliyun.com/document_detail/2869853.html">DescribeRegions</a> operation to query the list of supported regions.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -97,7 +99,7 @@ public class DescribeBackupPlanListRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzecovzti****</p>
@@ -105,12 +107,30 @@ public class DescribeBackupPlanListRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>Specifies whether to return information about the backup strategy. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ShowBackupStrategyInfo")
     public Boolean showBackupStrategyInfo;
 
+    /**
+     * <p>Specifies whether to return the recovery time range. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ShowRecoverTimeRange")
     public Boolean showRecoverTimeRange;
 
+    /**
+     * <p>Specifies whether to return information about the storage strategy. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ShowStorageStrategyInfo")
     public Boolean showStorageStrategyInfo;
 

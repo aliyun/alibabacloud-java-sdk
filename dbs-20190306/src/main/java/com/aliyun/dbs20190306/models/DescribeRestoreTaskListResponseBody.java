@@ -80,7 +80,7 @@ public class DescribeRestoreTaskListResponseBody extends TeaModel {
     public Integer totalElements;
 
     /**
-     * <p>The total number of pages.</p>
+     * <p>The total number of pages returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

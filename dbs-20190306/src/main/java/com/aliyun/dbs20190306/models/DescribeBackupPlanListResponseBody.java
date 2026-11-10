@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPlanListResponseBody extends TeaModel {
     /**
-     * <p>Error code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidParameterValid</p>
@@ -14,7 +14,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The specified parameter %s value is not valid.</p>
@@ -23,7 +23,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -31,11 +31,14 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response items.</p>
+     */
     @NameInMap("Items")
     public DescribeBackupPlanListResponseBodyItems items;
 
     /**
-     * <p>Page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +47,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>Number of records per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -53,7 +56,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4F1888AC-1138-4995-B9FE-D2734F61C058</p>
@@ -62,7 +65,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -71,7 +74,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Total number of backup plans.</p>
+     * <p>The total number of backup plans.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -80,7 +83,7 @@ public class DescribeBackupPlanListResponseBody extends TeaModel {
     public Integer totalElements;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>

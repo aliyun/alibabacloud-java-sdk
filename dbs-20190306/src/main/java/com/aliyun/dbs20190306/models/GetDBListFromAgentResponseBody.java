@@ -8,7 +8,7 @@ public class GetDBListFromAgentResponseBody extends TeaModel {
     public GetDBListFromAgentResponseBodyDbList dbList;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code string.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidParameter</p>

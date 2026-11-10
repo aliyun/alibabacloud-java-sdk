@@ -44,7 +44,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -62,12 +62,10 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,7 +75,7 @@ public class DescribeBackupSetDownloadTaskListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of download records for backup sets.</p>
+     * <p>The total number of backup set download records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

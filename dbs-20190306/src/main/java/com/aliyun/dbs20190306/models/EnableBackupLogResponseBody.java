@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableBackupLogResponseBody extends TeaModel {
     /**
-     * <p>The ID of the backup plan.</p>
+     * <p>The backup plan ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dbstooi******</p>
@@ -41,11 +41,11 @@ public class EnableBackupLogResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Indicates whether the modification triggers a precheck. Valid values:</p>
+     * <p>Indicates whether this change triggers a precheck. Valid values:</p>
      * <ul>
-     * <li><p>true: A precheck is triggered. Call the <a href="https://help.aliyun.com/document_detail/2869816.html">StartBackupPlan</a> operation to start the backup plan.</p>
+     * <li><p><code>true</code>: A precheck is triggered. You must call the <a href="https://help.aliyun.com/document_detail/2869816.html">StartBackupPlan</a> operation to start the backup plan.</p>
      * </li>
-     * <li><p>false: A precheck is not triggered.</p>
+     * <li><p><code>false</code>: No precheck is triggered.</p>
      * </li>
      * </ul>
      * 
@@ -56,7 +56,7 @@ public class EnableBackupLogResponseBody extends TeaModel {
     public Boolean needPrecheck;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</p>
@@ -65,11 +65,11 @@ public class EnableBackupLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the operation succeeded. Valid values:</p>
      * <ul>
-     * <li><p>true: The operation was successful.</p>
+     * <li><p><code>true</code>: The operation succeeded.</p>
      * </li>
-     * <li><p>false: The operation failed.</p>
+     * <li><p><code>false</code>: The operation failed.</p>
      * </li>
      * </ul>
      * 
