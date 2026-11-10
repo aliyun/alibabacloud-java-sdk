@@ -1,3 +1,7 @@
+2026-11-10 Version: 2.0.8
+- Update API Unbind: add request parameters SessionToken.
+
+
 2026-05-01 Version: 2.0.7
 - Update API GetConnectionTicket: add request parameters RequireUuidValidation.
 

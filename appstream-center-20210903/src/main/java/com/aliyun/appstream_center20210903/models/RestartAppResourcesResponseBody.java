@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RestartAppResourcesResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidAppInstanceGroup.NotFound</p>
      */
@@ -12,6 +14,8 @@ public class RestartAppResourcesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The app instance group is not found.</p>
      */
@@ -19,6 +23,8 @@ public class RestartAppResourcesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -26,6 +32,12 @@ public class RestartAppResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

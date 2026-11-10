@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopAppResourcesRequest extends TeaModel {
     /**
+     * <p>The resource group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class StopAppResourcesRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
+     * <p>The business region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -21,6 +24,7 @@ public class StopAppResourcesRequest extends TeaModel {
     public String bizRegionId;
 
     /**
+     * <p>The client ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class StopAppResourcesRequest extends TeaModel {
     public String clientId;
 
     /**
+     * <p>The client IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.2.3.4</p>
      */
@@ -37,6 +43,8 @@ public class StopAppResourcesRequest extends TeaModel {
     public String clientIp;
 
     /**
+     * <p>The client operating system.</p>
+     * 
      * <strong>example:</strong>
      * <p>windows_&quot;Windows 10 Enterprise&quot; 10.0 (Build 19042)</p>
      */
@@ -44,6 +52,8 @@ public class StopAppResourcesRequest extends TeaModel {
     public String clientOS;
 
     /**
+     * <p>The client version.</p>
+     * 
      * <strong>example:</strong>
      * <p>7.2.0-R-20241008.110000</p>
      */
@@ -51,6 +61,8 @@ public class StopAppResourcesRequest extends TeaModel {
     public String clientVersion;
 
     /**
+     * <p>The username.</p>
+     * 
      * <strong>example:</strong>
      * <p>testUser</p>
      */
@@ -58,6 +70,8 @@ public class StopAppResourcesRequest extends TeaModel {
     public String endUserId;
 
     /**
+     * <p>The region ID for office network logon.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -65,6 +79,7 @@ public class StopAppResourcesRequest extends TeaModel {
     public String loginRegionId;
 
     /**
+     * <p>The logon token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,6 +89,7 @@ public class StopAppResourcesRequest extends TeaModel {
     public String loginToken;
 
     /**
+     * <p>The product type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,12 +99,14 @@ public class StopAppResourcesRequest extends TeaModel {
     public String productType;
 
     /**
+     * <p>The list of resource IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
     /**
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,6 +116,8 @@ public class StopAppResourcesRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The client UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C50973691A6D2BE23F2CDD73B85B****</p>
      */

@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListPublishedAppInfoResponseBody extends TeaModel {
     /**
-     * <p>appModels</p>
+     * <p>The list of published applications.</p>
      */
     @NameInMap("AppModels")
     public java.util.List<ListPublishedAppInfoResponseBodyAppModels> appModels;
 
     /**
+     * <p>The starting token for the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2NVfhLfgy5b3J5iJyoLQ6x4EULMg1hbhgB9NfnvdK9oj5zwxd17j4TuQkZze3RvhEvBinZYjknujF3Q1M</p>
      */
@@ -18,7 +20,7 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DB70F8FE-63A3-587B-8560-CEC258E8B944</p>
@@ -57,6 +59,8 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
 
     public static class ListPublishedAppInfoResponseBodyAppModels extends TeaModel {
         /**
+         * <p>The application image ID. You can obtain the ID from the Image Management page in the WUYING Cloud App console.</p>
+         * 
          * <strong>example:</strong>
          * <p>img-f37nddbjc1lje14st</p>
          */
@@ -64,6 +68,8 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
         public String appCenterImageId;
 
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ca-fxwp4koyr5y2sp4mz</p>
          */
@@ -71,16 +77,26 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Microsoft Word</p>
          */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The theme color of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>#FFFFFF</p>
+         */
         @NameInMap("AppThemeColor")
         public String appThemeColor;
 
         /**
+         * <p>The application version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>R2021a</p>
          */
@@ -88,16 +104,38 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
         public String appVersion;
 
         /**
+         * <p>The application version name.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1.0</p>
          */
         @NameInMap("AppVersionName")
         public String appVersionName;
 
+        /**
+         * <p>The authorization time of the application.
+         * The return value is a serialized datetime string from the server in the format of <code>EEE MMM dd HH:mm:ss zzz yyyy</code>, which represents the day of the week, month, day, hour:minute:second, time zone abbreviation, and year in sequence. For example, <code>Wed Jan 14 20:47:02 CST 2026</code>, where <code>CST</code> is the time zone abbreviation of the server\&quot;s time zone (China Standard Time, UTC+08:00).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Wed Jan 14 20:47:02 CST 2026</p>
+         */
         @NameInMap("AuthTime")
         public String authTime;
 
         /**
+         * <p>The specific category information of the application, which is the secondary category.
+         * Valid values:</p>
+         * <ul>
+         * <li>1: All applications</li>
+         * <li>2: Design software</li>
+         * <li>3: Programming and development</li>
+         * <li>4: Office essentials</li>
+         * <li>5: Input methods</li>
+         * <li>6: Image and video</li>
+         * <li>7: System tools</li>
+         * <li>8: Browsers</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -105,6 +143,12 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
         public Long categoryId;
 
         /**
+         * <p>The primary category of the application. Valid values:</p>
+         * <ul>
+         * <li>0: Cloud application</li>
+         * <li>1: Cloud game</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -112,6 +156,8 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
         public Long categoryType;
 
         /**
+         * <p>The URL of the application icon.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://app-streaming-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/1973619010349344/1634523814270_Matlab.png">https://app-streaming-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/1973619010349344/1634523814270_Matlab.png</a></p>
          */
@@ -119,6 +165,9 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
         public String iconUrl;
 
         /**
+         * <p>Indicates whether the user has permissions.
+         * The value is True.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -126,6 +175,8 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
         public Boolean isAuth;
 
         /**
+         * <p>Indicates whether the application is in use.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */

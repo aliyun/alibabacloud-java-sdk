@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRunningAppsResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2DC3521C-3820-5EA5-9A9A-00BB7AF4E8E5</p>
@@ -13,6 +13,9 @@ public class ListRunningAppsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of running cloud applications.</p>
+     */
     @NameInMap("RunningCloudApps")
     public java.util.List<ListRunningAppsResponseBodyRunningCloudApps> runningCloudApps;
 
@@ -39,6 +42,8 @@ public class ListRunningAppsResponseBody extends TeaModel {
 
     public static class ListRunningAppsResponseBodyRunningCloudApps extends TeaModel {
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ca-dln05y44ze6esfl8x</p>
          */
@@ -46,6 +51,8 @@ public class ListRunningAppsResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>The app instance group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>aig-dk8p95irk9xs5xi6a</p>
          */
@@ -53,6 +60,8 @@ public class ListRunningAppsResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
+         * <p>The application instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ai-gc1gemx6vpa6vlync</p>
          */
@@ -60,6 +69,8 @@ public class ListRunningAppsResponseBody extends TeaModel {
         public String appInstanceId;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>alihealth-keeper</p>
          */
@@ -67,6 +78,8 @@ public class ListRunningAppsResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The application version.</p>
+         * 
          * <strong>example:</strong>
          * <p>11.1</p>
          */
@@ -74,6 +87,8 @@ public class ListRunningAppsResponseBody extends TeaModel {
         public String appVersion;
 
         /**
+         * <p>The application version name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test1.0</p>
          */
@@ -81,6 +96,8 @@ public class ListRunningAppsResponseBody extends TeaModel {
         public String appVersionName;
 
         /**
+         * <p>The running duration of the cloud application instance. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>87</p>
          */
@@ -88,6 +105,8 @@ public class ListRunningAppsResponseBody extends TeaModel {
         public Long duration;
 
         /**
+         * <p>The URL of the application icon.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://app-icon-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/187465/18_bf1.jpg">https://app-icon-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/187465/18_bf1.jpg</a></p>
          */
@@ -95,6 +114,8 @@ public class ListRunningAppsResponseBody extends TeaModel {
         public String iconUrl;
 
         /**
+         * <p>The operating system type of the instance platform.</p>
+         * 
          * <strong>example:</strong>
          * <p>Windows</p>
          */
@@ -102,6 +123,8 @@ public class ListRunningAppsResponseBody extends TeaModel {
         public String osType;
 
         /**
+         * <p>The region ID of the cloud application.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -109,6 +132,8 @@ public class ListRunningAppsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The start time. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1642748400</p>
          */

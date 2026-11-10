@@ -5,33 +5,53 @@ import com.aliyun.tea.*;
 
 public class GetConnectionTicketResponseBody extends TeaModel {
     /**
+     * <p>The delivery group ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>aig-53fvrq1oanz6cxzi3</p>
+     * <p>aig-53fvrq1oa******</p>
      */
     @NameInMap("AppInstanceGroupId")
     public String appInstanceGroupId;
 
     /**
+     * <p>The application instance ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>ai-gc1gemx6vpa6vlync</p>
+     * <p>ai-gc1gemx6vp******</p>
      */
     @NameInMap("AppInstanceId")
     public String appInstanceId;
 
+    /**
+     * <p>The persistent session ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>p-0cdr5c9kl******</p>
+     */
     @NameInMap("AppInstancePersistentId")
     public String appInstancePersistentId;
 
     /**
+     * <p>The user avatar ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>abc</p>
      */
     @NameInMap("AvatarId")
     public String avatarId;
 
+    /**
+     * <p>The queue information.</p>
+     * <blockquote>
+     * <p>This parameter is not available.</p>
+     * </blockquote>
+     */
     @NameInMap("BindQueueInfo")
     public GetConnectionTicketResponseBodyBindQueueInfo bindQueueInfo;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InternalError.TicketGenInternalError</p>
      */
@@ -39,13 +59,17 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The logon token.</p>
+     * 
      * <strong>example:</strong>
-     * <p>v15418e331d8d068c29411646996786785303b8f61fd880aeaa50c5b584443cd9e65cc7eec72acdaad0a844666a3b26dab</p>
+     * <p>v2c4e2ef03d62******</p>
      */
     @NameInMap("LoginToken")
     public String loginToken;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>reenter app instance failed</p>
      */
@@ -53,6 +77,8 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The next polling interval, in milliseconds. If this parameter is empty, the value is 1000 ms.</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      * 
@@ -63,16 +89,23 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public Integer nextPollIntervalMs;
 
     /**
+     * <p>The operating system type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Windows</p>
      */
     @NameInMap("OsType")
     public String osType;
 
+    /**
+     * <p>The session policy.</p>
+     */
     @NameInMap("Policy")
     public GetConnectionTicketResponseBodyPolicy policy;
 
     /**
+     * <p>The ID of the region to which the delivery group belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -80,15 +113,17 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>AD2D0761-1FE5-549D-B169-D3F8D19C6CDD</p>
+     * <p>AD2D0761-1FE5-549D-B169******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>The number of retries.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -96,25 +131,37 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public Integer retryTimes;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>f3d1b31c-605e-4d04-a896-015fc9fc03b4</p>
+     * <p>f3d1b31c-605e-******</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
+     * <p>The task status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
     @NameInMap("TaskStatus")
     public String taskStatus;
 
+    /**
+     * <p>The tenant ID, which is the Alibaba Cloud account UID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1126819517******</p>
+     */
     @NameInMap("TenantId")
     public Long tenantId;
 
     /**
+     * <p>The connection ticket.</p>
+     * 
      * <strong>example:</strong>
-     * <p>n7n9bqZlPrvgUOPSJzfdb$89jWwlVISgrchpY0tOfVYGBBcdoPoH39PVHK63fQTEM14kzajQdWAnHTnSicc35W_eI2LbTSGKquKukwcU7opRwmInhtQH<em>mlmsZQ3ByOLYVmqI</em>1hFESs0</p>
+     * <p>n7n9bqZlPrvgUOPY0tOfVYGBBcdoPoH3******</p>
      */
     @NameInMap("Ticket")
     public String ticket;
@@ -269,24 +316,66 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     }
 
     public static class GetConnectionTicketResponseBodyBindQueueInfo extends TeaModel {
+        /**
+         * <p>The queue task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Waiting</p>
+         */
         @NameInMap("QueueStatus")
         public String queueStatus;
 
+        /**
+         * <p>The ranking information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Rank")
         public Integer rank;
 
+        /**
+         * <p>The timeout period for manual connection after the turn is reached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("ReadyTimeout")
         public Long readyTimeout;
 
+        /**
+         * <p>The remaining wait time. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("RemainingTime")
         public Long remainingTime;
 
+        /**
+         * <p>The queue request key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice******</p>
+         */
         @NameInMap("RequestKey")
         public String requestKey;
 
+        /**
+         * <p>The queue ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aig-53fvrq1oa******</p>
+         */
         @NameInMap("TargetId")
         public String targetId;
 
+        /**
+         * <p>The time already waited in the queue. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("WaitTime")
         public Long waitTime;
 
@@ -354,12 +443,36 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     }
 
     public static class GetConnectionTicketResponseBodyPolicy extends TeaModel {
+        /**
+         * <p>Specifies whether to use adaptive resolution.</p>
+         * <blockquote>
+         * <ul>
+         * <li><code>true</code>: The session resolution changes with the terminal display area. In this case, <code>SessionResolutionWidth</code> and <code>SessionResolutionHeight</code> are the maximum values of the resolution change.</li>
+         * <li><code>false</code>: The session resolution does not change with the terminal display area. In this case, the resolution is fixed to the values of <code>SessionResolutionWidth</code> and <code>SessionResolutionHeight</code>.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ResolutionAdaptive")
         public String resolutionAdaptive;
 
+        /**
+         * <p>The resolution height, in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1080</p>
+         */
         @NameInMap("ResolutionHeight")
         public Integer resolutionHeight;
 
+        /**
+         * <p>The resolution width, in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1920</p>
+         */
         @NameInMap("ResolutionWidth")
         public Integer resolutionWidth;
 
