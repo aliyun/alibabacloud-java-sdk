@@ -14,10 +14,10 @@ public class ListRouteMapsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. Valid values:</p>
+     * <p>The token that is used to retrieve the next page of results. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next query is available.</li>
-     * <li>If <strong>NextToken</strong> returns a value, the value is the token for the next query.</li>
+     * <li>If NextToken is empty, no subsequent query is to be sent.</li>
+     * <li>If NextToken is returned, the value indicates the token used to start the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -161,8 +161,8 @@ public class ListRouteMapsResponseBody extends TeaModel {
         /**
          * <p>The direction of the route map. Valid values: </p>
          * <ul>
-         * <li>Inbound: inbound.</li>
-         * <li>Outbound: outbound.</li>
+         * <li><strong>Inbound</strong>: inbound.</li>
+         * <li><strong>Outbound</strong>: outbound.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,10 +210,10 @@ public class ListRouteMapsResponseBody extends TeaModel {
         /**
          * <p>The status of the route map. Valid values:</p>
          * <ul>
-         * <li><strong>Creating</strong>: The route map is being created.</li>
-         * <li><strong>Updating</strong>: The route map is being updated.</li>
-         * <li><strong>Active</strong>: The route map is available.</li>
-         * <li><strong>Deleting</strong>: The route map is being deleted.</li>
+         * <li><strong>Creating</strong>: creating.</li>
+         * <li><strong>Updating</strong>: updating.</li>
+         * <li><strong>Active</strong>: active.</li>
+         * <li><strong>Deleting</strong>: deleting.</li>
          * </ul>
          * 
          * <strong>example:</strong>

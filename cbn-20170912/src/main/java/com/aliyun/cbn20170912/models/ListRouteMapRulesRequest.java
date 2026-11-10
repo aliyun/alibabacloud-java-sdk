@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ListRouteMapRulesRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</p>
+     * <p>You can generate a parameter value on your client to ensure that the parameter value is unique across different requests. The ClientToken parameter supports only ASCII characters.</p>
      * <blockquote>
      * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
@@ -20,22 +20,22 @@ public class ListRouteMapRulesRequest extends TeaModel {
     /**
      * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: sends a check request and does not query the route map rules. Check items include whether required parameters are specified, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code DryRunOperation is returned.</li>
-     * <li><strong>false</strong> (default): sends a normal request and directly queries the route map rules after the check succeeds.</li>
+     * <li><strong>true</strong>: sends a check request, and no route map rules are queried. Check items include whether required parameters are specified, the request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code DryRunOperation is returned.</li>
+     * <li><strong>false</strong> (default): sends a normal request, and route map rules are queried directly after the check succeeds.</li>
      * </ul>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The information about the filter conditions.</p>
+     * <p>The filter conditions.</p>
      * <p>You can specify up to 5 filter conditions at a time.</p>
      */
     @NameInMap("Filter")
     public java.util.List<ListRouteMapRulesRequestFilter> filter;
 
     /**
-     * <p>The number of entries to return on each page in a paginated query.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -44,10 +44,10 @@ public class ListRouteMapRulesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. Valid values:</p>
+     * <p>The token that is used to retrieve the next page of results. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first query or when no next query is available.</li>
-     * <li>If a next query is available, set this parameter to the <strong>NextToken</strong> value returned by the previous API call.</li>
+     * <li>If this is the first query or no next page exists, you do not need to specify this parameter.</li>
+     * <li>If a next page exists, set the value to the <strong>NextToken</strong> value returned from the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class ListRouteMapRulesRequest extends TeaModel {
     public String routeMapId;
 
     /**
-     * <p>The list of route map rule IDs to query. This parameter and filter conditions can be used together for matching, and they have an AND relationship.</p>
+     * <p>The list of route map rule IDs to query. This parameter and filter conditions can be used together for matching, and the relationship is AND.</p>
      */
     @NameInMap("RouteMapRuleIds")
     public java.util.List<String> routeMapRuleIds;
@@ -139,7 +139,7 @@ public class ListRouteMapRulesRequest extends TeaModel {
          * <li><strong>Name</strong>: the name of the route map rule.</li>
          * <li><strong>Priority</strong>: the priority of the route map rule.</li>
          * </ul>
-         * <p>By default, multiple filter conditions have an AND relationship. A match succeeds only when all filter conditions are met.</p>
+         * <p>By default, multiple filter conditions are evaluated by using the AND logical operator. A rule matches the filter conditions only if it meets all the filter conditions.</p>
          * <p>You can specify up to 5 filter conditions at a time.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +150,7 @@ public class ListRouteMapRulesRequest extends TeaModel {
 
         /**
          * <p>The value of the filter condition.</p>
-         * <p>Specify the filter value based on the Key parameter. You can specify multiple filter values for a single key. Multiple filter values have an OR relationship. A match succeeds if any of the filter values is met.</p>
+         * <p>Specify the filter value based on the Key. You can specify multiple filter values for a single Key. Multiple filter values are evaluated by using the OR logical operator. A rule matches the filter condition if it meets any of the filter values.</p>
          * <p>You can specify up to 5 filter values for a single filter condition.</p>
          */
         @NameInMap("Value")

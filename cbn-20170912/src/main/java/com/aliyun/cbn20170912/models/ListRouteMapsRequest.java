@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ListRouteMapsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can generate a value for this parameter on your client to ensure that the value is unique across different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
      * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</p>
      * </blockquote>
@@ -18,10 +18,10 @@ public class ListRouteMapsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to only precheck the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: sends a check request without performing the query. The system checks whether required parameters are specified, the request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
-     * <li><strong>false</strong> (default): sends a normal request.</li>
+     * <li><strong>true</strong>: performs a dry run. The actual query is not performed. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+     * <li><strong>false</strong>: performs a normal request. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class ListRouteMapsRequest extends TeaModel {
 
     /**
      * <p>The number of entries to return on each page. Valid values: 1 to 100.
-     * If you do not specify the MaxResults parameter, pagination is not used. After you call the operation, the value of MaxResults indicates the total number of entries. If you specify the MaxResults parameter, pagination is used. After you call the operation, the value of MaxResults indicates the number of entries on the current page. We recommend that you set MaxResults to 20.</p>
+     * If you do not specify the MaxResults parameter, pagination is not used. After you call the operation, the value of MaxResults indicates the total number of entries. If you specify the MaxResults parameter, pagination is used. After you call the operation, the value of MaxResults indicates the number of entries returned in the current query. We recommend that you set the MaxResults parameter to 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -48,10 +48,10 @@ public class ListRouteMapsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. Valid values:</p>
+     * <p>The token that is used to retrieve the next page of results. Valid values:</p>
      * <ul>
-     * <li>If this is the first query or no next query is available, you do not need to specify this parameter.</li>
-     * <li>If a next query is available, set the value to the <strong>NextToken</strong> value returned from the previous API call.</li>
+     * <li>If this is the first query or no subsequent query is to be sent, you do not need to specify this parameter.</li>
+     * <li>If a subsequent query is to be sent, set the value to the NextToken value returned from the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class ListRouteMapsRequest extends TeaModel {
          * <li><strong>Name</strong>: the name of the route map.</li>
          * <li><strong>Priority</strong>: the priority of the route map.</li>
          * </ul>
-         * <p>By default, multiple filter conditions are connected by an AND logical operator. A route map must meet all filter conditions to be considered a match.</p>
+         * <p>By default, multiple filter conditions have a logical AND relationship. A route map is returned only when it meets all filter conditions.</p>
          * <p>You can specify up to 5 filter conditions at a time.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +155,7 @@ public class ListRouteMapsRequest extends TeaModel {
 
         /**
          * <p>The value of the filter condition.</p>
-         * <p>Specify the filter value based on the <strong>Key</strong>. You can specify multiple filter values for a single <strong>Key</strong>. Multiple filter values are connected by an OR logical operator. A route map that meets any of the filter values is considered a match for the filter condition.</p>
+         * <p>Specify the filter value based on the Key. You can specify multiple filter values for a single Key. Multiple filter values have a logical OR relationship. A route map is returned when it meets any of the filter values.</p>
          * <p>You can specify up to 5 filter values for a single filter condition.</p>
          */
         @NameInMap("Value")

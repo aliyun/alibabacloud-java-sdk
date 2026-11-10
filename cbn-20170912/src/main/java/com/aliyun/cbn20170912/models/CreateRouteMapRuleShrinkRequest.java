@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateRouteMapRuleShrinkRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can generate the parameter value on your client. Make sure that the token is unique across different requests. The client token supports only ASCII characters.</p>
+     * <p>You can generate the value from your client and ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</p>
      * <blockquote>
      * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
@@ -27,10 +27,10 @@ public class CreateRouteMapRuleShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to only precheck the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run of the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Prechecks the request without creating the route map rule. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): Sends the request. After the request passes the precheck, the route map rule is created.</li>
+     * <li><strong>true</strong>: performs a dry run without creating the route map rule. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the dry run, an error is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a normal request. If the request passes the dry run, the route map rule is created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class CreateRouteMapRuleShrinkRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The match conditions of the route map rule. The system executes the actions defined in <strong>SetActions</strong> only when a route meets all the match conditions defined in this parameter.</p>
+     * <p>The match conditions of the route map rule. The system performs the actions defined in <strong>SetActions</strong> only when a route meets all the match conditions defined in this parameter.</p>
      */
     @NameInMap("MatchConditions")
     public String matchConditionsShrink;
@@ -75,7 +75,7 @@ public class CreateRouteMapRuleShrinkRequest extends TeaModel {
     public String routeMapId;
 
     /**
-     * <p>The actions to execute for the route map rule. After a route meets all the match conditions defined in <strong>MatchConditions</strong>, the system processes the route based on the actions defined in this parameter.</p>
+     * <p>The actions to be performed for the route map rule. After a route meets all the match conditions defined in <strong>MatchConditions</strong>, the system processes the route based on the actions defined in this parameter.</p>
      */
     @NameInMap("SetActions")
     public String setActionsShrink;

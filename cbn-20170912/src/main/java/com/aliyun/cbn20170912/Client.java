@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "Cbn";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "central";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("cbn", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -562,6 +565,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AssociateTransitRouterMulticastDomainResponse associateTransitRouterMulticastDomain(AssociateTransitRouterMulticastDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.associateTransitRouterMulticastDomainWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The AssociateTransitRouterPolicyTable API operation is asynchronous. The system returns an association ID before the association is fully created, and the creation task continues in the background. You can call the DescribeTransitRouterPolicyTableAssociations API operation to query the status of the policy route table association.</p>
+     * <ul>
+     * <li>When the policy route table association is in the Associating state, the association is being created. In this state, you can only perform query operations.</li>
+     * <li>When the policy route table association is in the Active state, the association is created.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Associates a policy route table.</p>
+     * 
+     * @param request AssociateTransitRouterPolicyTableRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AssociateTransitRouterPolicyTableResponse
+     */
+    public AssociateTransitRouterPolicyTableResponse associateTransitRouterPolicyTableWithOptions(AssociateTransitRouterPolicyTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attachmentId)) {
+            query.put("AttachmentId", request.attachmentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyTableId)) {
+            query.put("PolicyTableId", request.policyTableId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AssociateTransitRouterPolicyTable"),
+            new TeaPair("version", "2017-09-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateTransitRouterPolicyTableResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The AssociateTransitRouterPolicyTable API operation is asynchronous. The system returns an association ID before the association is fully created, and the creation task continues in the background. You can call the DescribeTransitRouterPolicyTableAssociations API operation to query the status of the policy route table association.</p>
+     * <ul>
+     * <li>When the policy route table association is in the Associating state, the association is being created. In this state, you can only perform query operations.</li>
+     * <li>When the policy route table association is in the Active state, the association is created.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Associates a policy route table.</p>
+     * 
+     * @param request AssociateTransitRouterPolicyTableRequest
+     * @return AssociateTransitRouterPolicyTableResponse
+     */
+    public AssociateTransitRouterPolicyTableResponse associateTransitRouterPolicyTable(AssociateTransitRouterPolicyTableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.associateTransitRouterPolicyTableWithOptions(request, runtime);
     }
 
     /**
@@ -1714,10 +1787,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The <code>CreateRouteMap</code> operation is asynchronous. The system first returns a route map ID, but the route map is not yet created. The creation task continues to run in the background. You can call the <code>ListRouteMaps</code> operation to query the status of the route map.</p>
+     * <p>The <code>CreateRouteMap</code> operation is asynchronous. The system returns a route map ID before the route map is created, and the creation task continues in the background. You can call the <code>ListRouteMaps</code> operation to query the status of the route map.</p>
      * <ul>
-     * <li>When the route map is in the <strong>Creating</strong> state, the route map is being created. In this state, you can only perform query operations and cannot perform other operations.</li>
-     * <li>When the route map is in the <strong>Active</strong> state, the route map is created.</li>
+     * <li>If the route map is in the <strong>Creating</strong> state, the route map is being created. In this state, you can only perform query operations.</li>
+     * <li>If the route map is in the <strong>Active</strong> state, the route map is created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1781,10 +1854,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The <code>CreateRouteMap</code> operation is asynchronous. The system first returns a route map ID, but the route map is not yet created. The creation task continues to run in the background. You can call the <code>ListRouteMaps</code> operation to query the status of the route map.</p>
+     * <p>The <code>CreateRouteMap</code> operation is asynchronous. The system returns a route map ID before the route map is created, and the creation task continues in the background. You can call the <code>ListRouteMaps</code> operation to query the status of the route map.</p>
      * <ul>
-     * <li>When the route map is in the <strong>Creating</strong> state, the route map is being created. In this state, you can only perform query operations and cannot perform other operations.</li>
-     * <li>When the route map is in the <strong>Active</strong> state, the route map is created.</li>
+     * <li>If the route map is in the <strong>Creating</strong> state, the route map is being created. In this state, you can only perform query operations.</li>
+     * <li>If the route map is in the <strong>Active</strong> state, the route map is created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1802,11 +1875,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><code>RouteMapId</code> is a required parameter that specifies the route map to which the new rule belongs.</li>
-     * <li><code>Priority</code> is a required parameter. A smaller value indicates a higher priority. Rules within the same route map cannot have duplicate priorities.</li>
-     * <li><code>Name</code> and <code>Description</code> are optional parameters used to identify the rule and describe its purpose.</li>
-     * <li><code>MatchConditions</code> defines the match conditions for the rule, and <code>SetActions</code> defines the actions to be executed when a route meets all match conditions. Both are passed as JSON strings.</li>
-     * <li><code>DryRun</code> is an optional parameter used to precheck the request without actually creating the route map rule.</li>
+     * <li>RouteMapId is a required parameter that specifies the route map to which the new rule belongs.</li>
+     * <li>Priority is a required parameter. A smaller value indicates a higher priority. Rules within the same route map cannot have duplicate priorities.</li>
+     * <li>Name and Description are optional parameters used to identify the rule and describe its purpose.</li>
+     * <li>MatchConditions defines the match conditions for the rule, and SetActions defines the actions to be performed when a route meets all match conditions. Both are passed as JSON strings.</li>
+     * <li>DryRun is an optional parameter used to perform a dry run of the request without actually creating the route map rule.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1882,11 +1955,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><code>RouteMapId</code> is a required parameter that specifies the route map to which the new rule belongs.</li>
-     * <li><code>Priority</code> is a required parameter. A smaller value indicates a higher priority. Rules within the same route map cannot have duplicate priorities.</li>
-     * <li><code>Name</code> and <code>Description</code> are optional parameters used to identify the rule and describe its purpose.</li>
-     * <li><code>MatchConditions</code> defines the match conditions for the rule, and <code>SetActions</code> defines the actions to be executed when a route meets all match conditions. Both are passed as JSON strings.</li>
-     * <li><code>DryRun</code> is an optional parameter used to precheck the request without actually creating the route map rule.</li>
+     * <li>RouteMapId is a required parameter that specifies the route map to which the new rule belongs.</li>
+     * <li>Priority is a required parameter. A smaller value indicates a higher priority. Rules within the same route map cannot have duplicate priorities.</li>
+     * <li>Name and Description are optional parameters used to identify the rule and describe its purpose.</li>
+     * <li>MatchConditions defines the match conditions for the rule, and SetActions defines the actions to be performed when a route meets all match conditions. Both are passed as JSON strings.</li>
+     * <li>DryRun is an optional parameter used to perform a dry run of the request without actually creating the route map rule.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2240,22 +2313,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A transit router CIDR block is a custom CIDR block that you define for a transit router, similar to a CIDR block used to assign IP addresses to a router loopback interface. Transit router CIDR blocks are used to assign addresses to network instance connections. For more information, see <a href="https://help.aliyun.com/document_detail/462635.html">Transit router CIDR blocks</a>.
-     * The <strong>CreateTransitRouterCidr</strong> operation is used only to add a CIDR block to a transit router after the transit router is created.
-     * Before you create a transit router CIDR block, take note of the following information:</p>
+     * <p>A transit router CIDR block is a custom CIDR block that you configure for a transit router. It is similar to the IP address block assigned to a router loopback interface. Transit router CIDR blocks are used to assign addresses to network instance connections. For more information, see <a href="https://help.aliyun.com/document_detail/462635.html">Transit router CIDR blocks</a>.
+     * The <strong>CreateTransitRouterCidr</strong> operation is applicable only for adding a CIDR block to a transit router after the transit router is created.
+     * Before you create a transit router CIDR block, take note of the following items:</p>
      * <ul>
      * <li>Only Enterprise Edition transit routers support transit router CIDR blocks.</li>
-     * <li>For limits on transit router CIDR blocks, see <a href="https://help.aliyun.com/document_detail/462635.html">Limits on transit router CIDR blocks</a>.</li>
-     * <li>A maximum of five CIDR blocks can be configured for a transit router. The subnet mask of each CIDR block must be 16 to 24 bits in length.</li>
-     * <li>CIDR blocks that fall within 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, or 169.254.0.0/16 and their subnets are not supported.</li>
-     * <li>Each CIDR block cannot conflict with any CIDR block that needs to communicate within the Cloud Enterprise Network (CEN) instance.</li>
+     * <li>For the limits on transit router CIDR blocks, see <a href="https://help.aliyun.com/document_detail/462635.html">Limits on transit router CIDR blocks</a>.</li>
+     * <li>A transit router supports up to five CIDR blocks. The subnet mask of each CIDR block must be 16 to 26 bits in length.</li>
+     * <li>You cannot create CIDR blocks for 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets.</li>
+     * <li>Each CIDR block cannot overlap with the CIDR blocks of the network instances that need to communicate with each other in the Cloud Enterprise Network (CEN) instance.</li>
      * <li>Each CIDR block must be unique within the same CEN instance.</li>
-     * <li>After you add a CIDR block to a transit router, the system automatically reserves three CIDR blocks from the CIDR block when you create the first VPN connection on the transit router. The reserved CIDR blocks are used by the system to create VPN connections in the background. The system assigns IP addresses to IPsec connections from the remaining CIDR blocks.
-     *   You can call the <a href="https://help.aliyun.com/document_detail/464173.html">ListTransitRouterCidrAllocation</a> operation to query the CIDR blocks that are reserved by the system or from which IP addresses are allocated.</li>
+     * <li>After you add a CIDR block to a transit router and create the first VPN connection under the transit router, the system automatically allocates three CIDR blocks from the CIDR block as system-reserved CIDR blocks for creating VPN connections in the background. The system assigns IP addresses to the IPsec connection from the remaining CIDR blocks.
+     *   You can call the <a href="https://help.aliyun.com/document_detail/464173.html">ListTransitRouterCidrAllocation</a> operation to query the system-reserved or assigned CIDR blocks.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>A transit router CIDR block is a custom CIDR block that you define for a transit router, similar to a CIDR block used to assign IP addresses to a router loopback interface. Calls the CreateTransitRouterCidr operation to create a CIDR block for a transit router.</p>
+     * <p>Creates a custom CIDR block for a transit router. The CIDR block is similar to an IP address block assigned to a router loopback interface.</p>
      * 
      * @param request CreateTransitRouterCidrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2331,22 +2404,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A transit router CIDR block is a custom CIDR block that you define for a transit router, similar to a CIDR block used to assign IP addresses to a router loopback interface. Transit router CIDR blocks are used to assign addresses to network instance connections. For more information, see <a href="https://help.aliyun.com/document_detail/462635.html">Transit router CIDR blocks</a>.
-     * The <strong>CreateTransitRouterCidr</strong> operation is used only to add a CIDR block to a transit router after the transit router is created.
-     * Before you create a transit router CIDR block, take note of the following information:</p>
+     * <p>A transit router CIDR block is a custom CIDR block that you configure for a transit router. It is similar to the IP address block assigned to a router loopback interface. Transit router CIDR blocks are used to assign addresses to network instance connections. For more information, see <a href="https://help.aliyun.com/document_detail/462635.html">Transit router CIDR blocks</a>.
+     * The <strong>CreateTransitRouterCidr</strong> operation is applicable only for adding a CIDR block to a transit router after the transit router is created.
+     * Before you create a transit router CIDR block, take note of the following items:</p>
      * <ul>
      * <li>Only Enterprise Edition transit routers support transit router CIDR blocks.</li>
-     * <li>For limits on transit router CIDR blocks, see <a href="https://help.aliyun.com/document_detail/462635.html">Limits on transit router CIDR blocks</a>.</li>
-     * <li>A maximum of five CIDR blocks can be configured for a transit router. The subnet mask of each CIDR block must be 16 to 24 bits in length.</li>
-     * <li>CIDR blocks that fall within 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, or 169.254.0.0/16 and their subnets are not supported.</li>
-     * <li>Each CIDR block cannot conflict with any CIDR block that needs to communicate within the Cloud Enterprise Network (CEN) instance.</li>
+     * <li>For the limits on transit router CIDR blocks, see <a href="https://help.aliyun.com/document_detail/462635.html">Limits on transit router CIDR blocks</a>.</li>
+     * <li>A transit router supports up to five CIDR blocks. The subnet mask of each CIDR block must be 16 to 26 bits in length.</li>
+     * <li>You cannot create CIDR blocks for 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets.</li>
+     * <li>Each CIDR block cannot overlap with the CIDR blocks of the network instances that need to communicate with each other in the Cloud Enterprise Network (CEN) instance.</li>
      * <li>Each CIDR block must be unique within the same CEN instance.</li>
-     * <li>After you add a CIDR block to a transit router, the system automatically reserves three CIDR blocks from the CIDR block when you create the first VPN connection on the transit router. The reserved CIDR blocks are used by the system to create VPN connections in the background. The system assigns IP addresses to IPsec connections from the remaining CIDR blocks.
-     *   You can call the <a href="https://help.aliyun.com/document_detail/464173.html">ListTransitRouterCidrAllocation</a> operation to query the CIDR blocks that are reserved by the system or from which IP addresses are allocated.</li>
+     * <li>After you add a CIDR block to a transit router and create the first VPN connection under the transit router, the system automatically allocates three CIDR blocks from the CIDR block as system-reserved CIDR blocks for creating VPN connections in the background. The system assigns IP addresses to the IPsec connection from the remaining CIDR blocks.
+     *   You can call the <a href="https://help.aliyun.com/document_detail/464173.html">ListTransitRouterCidrAllocation</a> operation to query the system-reserved or assigned CIDR blocks.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>A transit router CIDR block is a custom CIDR block that you define for a transit router, similar to a CIDR block used to assign IP addresses to a router loopback interface. Calls the CreateTransitRouterCidr operation to create a CIDR block for a transit router.</p>
+     * <p>Creates a custom CIDR block for a transit router. The CIDR block is similar to an IP address block assigned to a router loopback interface.</p>
      * 
      * @param request CreateTransitRouterCidrRequest
      * @return CreateTransitRouterCidrResponse
@@ -2756,6 +2829,200 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateTransitRouterPeerAttachmentResponse createTransitRouterPeerAttachment(CreateTransitRouterPeerAttachmentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createTransitRouterPeerAttachmentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The <strong>CreateTransitRouterPolicyBasedRoute</strong> API operation is asynchronous. The system returns a route entry ID before the route entry is created, and the creation task continues in the background. You can call the <strong>DescribeTransitRouterPolicyBasedRoutes</strong> API operation to query the status of the route entry. </p>
+     * <ul>
+     * <li>If the route entry is in the <strong>Creating</strong> state, the route entry is being created. In this state, you can only query the route entry and cannot perform other operations.</li>
+     * <li>If the route entry is in the <strong>Active</strong> state, the route entry is created.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a policy-based routing rule in the policy route table of an Enterprise Edition transit router.</p>
+     * 
+     * @param request CreateTransitRouterPolicyBasedRouteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateTransitRouterPolicyBasedRouteResponse
+     */
+    public CreateTransitRouterPolicyBasedRouteResponse createTransitRouterPolicyBasedRouteWithOptions(CreateTransitRouterPolicyBasedRouteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addressFamily)) {
+            query.put("AddressFamily", request.addressFamily);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destPortRange)) {
+            query.put("DestPortRange", request.destPortRange);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationCidr)) {
+            query.put("DestinationCidr", request.destinationCidr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dscp)) {
+            query.put("Dscp", request.dscp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyTableId)) {
+            query.put("PolicyTableId", request.policyTableId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            query.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            query.put("Protocol", request.protocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceCidr)) {
+            query.put("SourceCidr", request.sourceCidr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourcePortRange)) {
+            query.put("SourcePortRange", request.sourcePortRange);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetRouteTableId)) {
+            query.put("TargetRouteTableId", request.targetRouteTableId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateTransitRouterPolicyBasedRoute"),
+            new TeaPair("version", "2017-09-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTransitRouterPolicyBasedRouteResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The <strong>CreateTransitRouterPolicyBasedRoute</strong> API operation is asynchronous. The system returns a route entry ID before the route entry is created, and the creation task continues in the background. You can call the <strong>DescribeTransitRouterPolicyBasedRoutes</strong> API operation to query the status of the route entry. </p>
+     * <ul>
+     * <li>If the route entry is in the <strong>Creating</strong> state, the route entry is being created. In this state, you can only query the route entry and cannot perform other operations.</li>
+     * <li>If the route entry is in the <strong>Active</strong> state, the route entry is created.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a policy-based routing rule in the policy route table of an Enterprise Edition transit router.</p>
+     * 
+     * @param request CreateTransitRouterPolicyBasedRouteRequest
+     * @return CreateTransitRouterPolicyBasedRouteResponse
+     */
+    public CreateTransitRouterPolicyBasedRouteResponse createTransitRouterPolicyBasedRoute(CreateTransitRouterPolicyBasedRouteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createTransitRouterPolicyBasedRouteWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>当前仅企业版转发路由器支持创建策略路由表。关于企业版转发路由器支持的地域和可用区信息，请参见<a href="https://help.aliyun.com/document_detail/181681.html">什么是云企业网</a>。</li>
+     * <li><strong>CreateTransitRouterPolicyTable</strong>接口属于异步接口，即系统会先返回一个策略路由表ID，但该策略路由表并未创建完成，系统后台的创建任务仍在进行。您可以调用<strong>DescribeTransitRouterPolicyTables</strong>接口查询策略路由表的状态。<ul>
+     * <li>当策略路由表处于<strong>Creating</strong>状态时，表示策略路由表正在创建中。在该状态下，您只能执行查询操作，不能执行其他操作。</li>
+     * <li>当策略路由表处于<strong>Active</strong>状态时，表示策略路由表创建完成。</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>创建策略路由表</p>
+     * 
+     * @param request CreateTransitRouterPolicyTableRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateTransitRouterPolicyTableResponse
+     */
+    public CreateTransitRouterPolicyTableResponse createTransitRouterPolicyTableWithOptions(CreateTransitRouterPolicyTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transitRouterId)) {
+            query.put("TransitRouterId", request.transitRouterId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateTransitRouterPolicyTable"),
+            new TeaPair("version", "2017-09-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTransitRouterPolicyTableResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>当前仅企业版转发路由器支持创建策略路由表。关于企业版转发路由器支持的地域和可用区信息，请参见<a href="https://help.aliyun.com/document_detail/181681.html">什么是云企业网</a>。</li>
+     * <li><strong>CreateTransitRouterPolicyTable</strong>接口属于异步接口，即系统会先返回一个策略路由表ID，但该策略路由表并未创建完成，系统后台的创建任务仍在进行。您可以调用<strong>DescribeTransitRouterPolicyTables</strong>接口查询策略路由表的状态。<ul>
+     * <li>当策略路由表处于<strong>Creating</strong>状态时，表示策略路由表正在创建中。在该状态下，您只能执行查询操作，不能执行其他操作。</li>
+     * <li>当策略路由表处于<strong>Active</strong>状态时，表示策略路由表创建完成。</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>创建策略路由表</p>
+     * 
+     * @param request CreateTransitRouterPolicyTableRequest
+     * @return CreateTransitRouterPolicyTableResponse
+     */
+    public CreateTransitRouterPolicyTableResponse createTransitRouterPolicyTable(CreateTransitRouterPolicyTableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createTransitRouterPolicyTableWithOptions(request, runtime);
     }
 
     /**
@@ -4316,10 +4583,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>If the route map to be deleted is still associated with any resources, this operation fails.
      * If route map rules exist under the route map, this operation is not supported.
-     * The DeleteRouteMap operation is asynchronous. The system returns a <strong>RequestId</strong>, but the route map is not completely deleted. The deletion task continues in the background. You can call the ListRouteMaps operation to query the status of the route map.</p>
+     * The <code>DeleteRouteMap</code> operation is asynchronous. The system first returns a <strong>RequestId</strong>, but the route map is not completely deleted. The deletion task is still running in the background. You can call the <code>ListRouteMaps</code> operation to query the status of the route map.</p>
      * <ul>
-     * <li>If the route map is in the <strong>Deleting</strong> state, the route map is being deleted. In this state, you can only perform query operations.</li>
-     * <li>If the route map cannot be queried by using the ListRouteMaps operation, the route map is completely deleted.</li>
+     * <li>When the route map is in the <strong>Deleting</strong> state, it indicates that the route map is being deleted. In this state, you can only perform query operations and cannot perform other operations.</li>
+     * <li>When the route map cannot be queried by calling the <code>ListRouteMaps</code> operation, it indicates that the route map is completely deleted.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4365,10 +4632,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>If the route map to be deleted is still associated with any resources, this operation fails.
      * If route map rules exist under the route map, this operation is not supported.
-     * The DeleteRouteMap operation is asynchronous. The system returns a <strong>RequestId</strong>, but the route map is not completely deleted. The deletion task continues in the background. You can call the ListRouteMaps operation to query the status of the route map.</p>
+     * The <code>DeleteRouteMap</code> operation is asynchronous. The system first returns a <strong>RequestId</strong>, but the route map is not completely deleted. The deletion task is still running in the background. You can call the <code>ListRouteMaps</code> operation to query the status of the route map.</p>
      * <ul>
-     * <li>If the route map is in the <strong>Deleting</strong> state, the route map is being deleted. In this state, you can only perform query operations.</li>
-     * <li>If the route map cannot be queried by using the ListRouteMaps operation, the route map is completely deleted.</li>
+     * <li>When the route map is in the <strong>Deleting</strong> state, it indicates that the route map is being deleted. In this state, you can only perform query operations and cannot perform other operations.</li>
+     * <li>When the route map cannot be queried by calling the <code>ListRouteMaps</code> operation, it indicates that the route map is completely deleted.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5178,6 +5445,146 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteTransitRouterPeerAttachmentResponse deleteTransitRouterPeerAttachment(DeleteTransitRouterPeerAttachmentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteTransitRouterPeerAttachmentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The <strong>DeleteTransitRouterPolicyBasedRoute</strong> operation is asynchronous. After you call this operation, the system returns a <strong>RequestId</strong>, but the policy-based route is not immediately deleted. The deletion task is still running in the background. You can call the <strong>DescribeTransitRouterPolicyBasedRoutes</strong> operation to query the status of the policy-based route. <ul>
+     * <li>If the policy-based route is in the <strong>Deleting</strong> state, the policy-based route is being deleted. In this state, you can only query the policy-based route and cannot perform other operations.</li>
+     * <li>If the specified policy-based route cannot be queried, the policy-based route is deleted.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a policy-based route from the policy-based route table of an Enterprise Edition transit router.</p>
+     * 
+     * @param request DeleteTransitRouterPolicyBasedRouteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteTransitRouterPolicyBasedRouteResponse
+     */
+    public DeleteTransitRouterPolicyBasedRouteResponse deleteTransitRouterPolicyBasedRouteWithOptions(DeleteTransitRouterPolicyBasedRouteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyBasedRouteId)) {
+            query.put("PolicyBasedRouteId", request.policyBasedRouteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteTransitRouterPolicyBasedRoute"),
+            new TeaPair("version", "2017-09-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTransitRouterPolicyBasedRouteResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The <strong>DeleteTransitRouterPolicyBasedRoute</strong> operation is asynchronous. After you call this operation, the system returns a <strong>RequestId</strong>, but the policy-based route is not immediately deleted. The deletion task is still running in the background. You can call the <strong>DescribeTransitRouterPolicyBasedRoutes</strong> operation to query the status of the policy-based route. <ul>
+     * <li>If the policy-based route is in the <strong>Deleting</strong> state, the policy-based route is being deleted. In this state, you can only query the policy-based route and cannot perform other operations.</li>
+     * <li>If the specified policy-based route cannot be queried, the policy-based route is deleted.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a policy-based route from the policy-based route table of an Enterprise Edition transit router.</p>
+     * 
+     * @param request DeleteTransitRouterPolicyBasedRouteRequest
+     * @return DeleteTransitRouterPolicyBasedRouteResponse
+     */
+    public DeleteTransitRouterPolicyBasedRouteResponse deleteTransitRouterPolicyBasedRoute(DeleteTransitRouterPolicyBasedRouteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteTransitRouterPolicyBasedRouteWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><strong>DeleteTransitRouterPolicyTable</strong>接口属于异步接口，即系统会先返回一个<strong>RequestId</strong>，但策略路由表并未删除完成，系统后台的删除任务仍在进行。您可以调用<strong>DescribeTransitRouterPolicyTables</strong>接口查询策略路由表的状态。 <ul>
+     * <li>当策略路由表处于Deleting状态时，表示策略路由表正在删除中。在该状态下，您只能对策略路由表执行查询操作，不能执行其他操作。</li>
+     * <li>当查询不到指定策略路由表时，表示该策略路由表删除完成。</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>DeleteTransitRouterPolicyTable</p>
+     * 
+     * @param request DeleteTransitRouterPolicyTableRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteTransitRouterPolicyTableResponse
+     */
+    public DeleteTransitRouterPolicyTableResponse deleteTransitRouterPolicyTableWithOptions(DeleteTransitRouterPolicyTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyTableId)) {
+            query.put("PolicyTableId", request.policyTableId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteTransitRouterPolicyTable"),
+            new TeaPair("version", "2017-09-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTransitRouterPolicyTableResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><strong>DeleteTransitRouterPolicyTable</strong>接口属于异步接口，即系统会先返回一个<strong>RequestId</strong>，但策略路由表并未删除完成，系统后台的删除任务仍在进行。您可以调用<strong>DescribeTransitRouterPolicyTables</strong>接口查询策略路由表的状态。 <ul>
+     * <li>当策略路由表处于Deleting状态时，表示策略路由表正在删除中。在该状态下，您只能对策略路由表执行查询操作，不能执行其他操作。</li>
+     * <li>当查询不到指定策略路由表时，表示该策略路由表删除完成。</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>DeleteTransitRouterPolicyTable</p>
+     * 
+     * @param request DeleteTransitRouterPolicyTableRequest
+     * @return DeleteTransitRouterPolicyTableResponse
+     */
+    public DeleteTransitRouterPolicyTableResponse deleteTransitRouterPolicyTable(DeleteTransitRouterPolicyTableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteTransitRouterPolicyTableWithOptions(request, runtime);
     }
 
     /**
@@ -6092,7 +6499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about bandwidth package instances by calling the DescribeCenBandwidthPackages operation.</p>
+     * <p>Queries the details of bandwidth plan instances.</p>
      * 
      * @param request DescribeCenBandwidthPackagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6164,7 +6571,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about bandwidth package instances by calling the DescribeCenBandwidthPackages operation.</p>
+     * <p>Queries the details of bandwidth plan instances.</p>
      * 
      * @param request DescribeCenBandwidthPackagesRequest
      * @return DescribeCenBandwidthPackagesResponse
@@ -6788,7 +7195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about Cloud Enterprise Network (CEN) instances under the current Alibaba Cloud account, including the instance status, whether IPv6 is enabled, and the list of bandwidth packages associated with the instances.</p>
+     * <p>Queries the status, IPv6 status, and list of associated bandwidth plans for Cloud Enterprise Network (CEN) instances under the current Alibaba Cloud account.</p>
      * 
      * @param request DescribeCensRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6852,7 +7259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about Cloud Enterprise Network (CEN) instances under the current Alibaba Cloud account, including the instance status, whether IPv6 is enabled, and the list of bandwidth packages associated with the instances.</p>
+     * <p>Queries the status, IPv6 status, and list of associated bandwidth plans for Cloud Enterprise Network (CEN) instances under the current Alibaba Cloud account.</p>
      * 
      * @param request DescribeCensRequest
      * @return DescribeCensResponse
@@ -7690,7 +8097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource reservation configuration of a specified transit router.</p>
+     * <p>Queries the resource reservation configurations of a specified transit router.</p>
      * 
      * @param request DescribeTransitRouterCapacityReservationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7726,7 +8133,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource reservation configuration of a specified transit router.</p>
+     * <p>Queries the resource reservation configurations of a specified transit router.</p>
      * 
      * @param request DescribeTransitRouterCapacityReservationsRequest
      * @return DescribeTransitRouterCapacityReservationsResponse
@@ -7734,6 +8141,170 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeTransitRouterCapacityReservationsResponse describeTransitRouterCapacityReservations(DescribeTransitRouterCapacityReservationsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeTransitRouterCapacityReservationsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the policy-based route rules in the policy-based route table of an Enterprise Edition transit router.</p>
+     * 
+     * @param request DescribeTransitRouterPolicyBasedRoutesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeTransitRouterPolicyBasedRoutesResponse
+     */
+    public DescribeTransitRouterPolicyBasedRoutesResponse describeTransitRouterPolicyBasedRoutesWithOptions(DescribeTransitRouterPolicyBasedRoutesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyTableId)) {
+            query.put("PolicyTableId", request.policyTableId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeTransitRouterPolicyBasedRoutes"),
+            new TeaPair("version", "2017-09-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTransitRouterPolicyBasedRoutesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the policy-based route rules in the policy-based route table of an Enterprise Edition transit router.</p>
+     * 
+     * @param request DescribeTransitRouterPolicyBasedRoutesRequest
+     * @return DescribeTransitRouterPolicyBasedRoutesResponse
+     */
+    public DescribeTransitRouterPolicyBasedRoutesResponse describeTransitRouterPolicyBasedRoutes(DescribeTransitRouterPolicyBasedRoutesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeTransitRouterPolicyBasedRoutesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the associations of a policy route table.</p>
+     * 
+     * @param request DescribeTransitRouterPolicyTableAssociationsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeTransitRouterPolicyTableAssociationsResponse
+     */
+    public DescribeTransitRouterPolicyTableAssociationsResponse describeTransitRouterPolicyTableAssociationsWithOptions(DescribeTransitRouterPolicyTableAssociationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeTransitRouterPolicyTableAssociations"),
+            new TeaPair("version", "2017-09-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTransitRouterPolicyTableAssociationsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the associations of a policy route table.</p>
+     * 
+     * @param request DescribeTransitRouterPolicyTableAssociationsRequest
+     * @return DescribeTransitRouterPolicyTableAssociationsResponse
+     */
+    public DescribeTransitRouterPolicyTableAssociationsResponse describeTransitRouterPolicyTableAssociations(DescribeTransitRouterPolicyTableAssociationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeTransitRouterPolicyTableAssociationsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of the policy route tables of an Enterprise Edition transit router.</p>
+     * 
+     * @param request DescribeTransitRouterPolicyTablesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeTransitRouterPolicyTablesResponse
+     */
+    public DescribeTransitRouterPolicyTablesResponse describeTransitRouterPolicyTablesWithOptions(DescribeTransitRouterPolicyTablesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transitRouterId)) {
+            query.put("TransitRouterId", request.transitRouterId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeTransitRouterPolicyTables"),
+            new TeaPair("version", "2017-09-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTransitRouterPolicyTablesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of the policy route tables of an Enterprise Edition transit router.</p>
+     * 
+     * @param request DescribeTransitRouterPolicyTablesRequest
+     * @return DescribeTransitRouterPolicyTablesResponse
+     */
+    public DescribeTransitRouterPolicyTablesResponse describeTransitRouterPolicyTables(DescribeTransitRouterPolicyTablesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeTransitRouterPolicyTablesWithOptions(request, runtime);
     }
 
     /**
@@ -8082,6 +8653,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DisassociateTransitRouterMulticastDomainResponse disassociateTransitRouterMulticastDomain(DisassociateTransitRouterMulticastDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disassociateTransitRouterMulticastDomainWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The <strong>DisassociateTransitRouterPolicyTable</strong> operation is asynchronous. The system first returns a request ID, but the transit router policy routing table association is not immediately deleted. The deletion node continues to run in the background. You can invoke the <strong>DescribeTransitRouterPolicyTableAssociations</strong> operation to query the status of the transit router policy routing table association.</p>
+     * <ul>
+     * <li>When the transit router policy routing table association is in the <strong>Dissociating</strong> state, the association is being deleted. In this state, you can only execute query operations and cannot execute other operations.</li>
+     * <li>If the <strong>DescribeTransitRouterPolicyTableAssociations</strong> operation cannot query the association between the network instance connection and the transit router policy routing table, the association is successfully dissociated.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Disassociates a transit router policy table.</p>
+     * 
+     * @param request DisassociateTransitRouterPolicyTableRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisassociateTransitRouterPolicyTableResponse
+     */
+    public DisassociateTransitRouterPolicyTableResponse disassociateTransitRouterPolicyTableWithOptions(DisassociateTransitRouterPolicyTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.associationId)) {
+            query.put("AssociationId", request.associationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisassociateTransitRouterPolicyTable"),
+            new TeaPair("version", "2017-09-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisassociateTransitRouterPolicyTableResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The <strong>DisassociateTransitRouterPolicyTable</strong> operation is asynchronous. The system first returns a request ID, but the transit router policy routing table association is not immediately deleted. The deletion node continues to run in the background. You can invoke the <strong>DescribeTransitRouterPolicyTableAssociations</strong> operation to query the status of the transit router policy routing table association.</p>
+     * <ul>
+     * <li>When the transit router policy routing table association is in the <strong>Dissociating</strong> state, the association is being deleted. In this state, you can only execute query operations and cannot execute other operations.</li>
+     * <li>If the <strong>DescribeTransitRouterPolicyTableAssociations</strong> operation cannot query the association between the network instance connection and the transit router policy routing table, the association is successfully dissociated.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Disassociates a transit router policy table.</p>
+     * 
+     * @param request DisassociateTransitRouterPolicyTableRequest
+     * @return DisassociateTransitRouterPolicyTableResponse
+     */
+    public DisassociateTransitRouterPolicyTableResponse disassociateTransitRouterPolicyTable(DisassociateTransitRouterPolicyTableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disassociateTransitRouterPolicyTableWithOptions(request, runtime);
     }
 
     /**
@@ -8976,11 +9613,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>RouteMapId: specifies the route map whose rules you want to query.</li>
-     * <li>RouteMapRuleIds: the list of rule IDs to query. This parameter and filter conditions can be used together for matching, and they have an OR relationship.</li>
-     * <li>Filter: the filter. You can filter by attributes such as direction. Supported filter conditions include Status and Direction.</li>
+     * <li>RouteMapId: specifies the route map to which the rules to be queried belong.</li>
+     * <li>RouteMapRuleIds: the list of rule IDs to query. This parameter and filter conditions can be used together for matching, and the relationship is OR.</li>
+     * <li>Filter: the filter conditions. You can filter by attributes such as direction. Supported filter conditions include Status and Direction.</li>
      * <li>DryRun: specifies whether to enable the dry run mode. Default value: false.
-     * You must specify at least one of RouteMapId and RouteMapRuleIds. If both are provided, a joint query is performed based on these two parameters. If only RouteMapId is provided, all rules under the route map are returned. If only RouteMapRuleIds is provided, the details of the specified rules are returned.</li>
+     * You must specify at least one of RouteMapId and RouteMapRuleIds. If both are provided, a joint query is performed based on these two parameters. If only RouteMapId is provided, all rules under the route map are returned. If only RouteMapRuleIds is provided, the details of these rules are returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9042,11 +9679,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>RouteMapId: specifies the route map whose rules you want to query.</li>
-     * <li>RouteMapRuleIds: the list of rule IDs to query. This parameter and filter conditions can be used together for matching, and they have an OR relationship.</li>
-     * <li>Filter: the filter. You can filter by attributes such as direction. Supported filter conditions include Status and Direction.</li>
+     * <li>RouteMapId: specifies the route map to which the rules to be queried belong.</li>
+     * <li>RouteMapRuleIds: the list of rule IDs to query. This parameter and filter conditions can be used together for matching, and the relationship is OR.</li>
+     * <li>Filter: the filter conditions. You can filter by attributes such as direction. Supported filter conditions include Status and Direction.</li>
      * <li>DryRun: specifies whether to enable the dry run mode. Default value: false.
-     * You must specify at least one of RouteMapId and RouteMapRuleIds. If both are provided, a joint query is performed based on these two parameters. If only RouteMapId is provided, all rules under the route map are returned. If only RouteMapRuleIds is provided, the details of the specified rules are returned.</li>
+     * You must specify at least one of RouteMapId and RouteMapRuleIds. If both are provided, a joint query is performed based on these two parameters. If only RouteMapId is provided, all rules under the route map are returned. If only RouteMapRuleIds is provided, the details of these rules are returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9064,12 +9701,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><strong>RouteMapIds</strong>: optional. Specifies a list of one or more route map IDs to query. If you do not specify this parameter, all route maps are queried by default.</li>
-     * <li><strong>Filter</strong>: optional. Filters route maps based on specific conditions such as the name and direction.</li>
-     * <li><strong>ResourceGroupId</strong>: optional. Specifies the ID of the resource group to further filter the results.</li>
-     * <li><strong>DryRun</strong>: optional. Specifies whether to check the request without actually performing the operation.</li>
-     * <li><strong>MaxResults</strong> and <strong>NextToken</strong>: pagination parameters. Used to control the number of returned results and obtain the next page of data.
-     * Note: If you specify both <code>RouteMapIds</code> and <code>Filter</code>, they are connected by an OR logical operator. Route maps that meet either condition are queried.</li>
+     * <li><strong>RouteMapIds</strong>: Optional. The IDs of the route maps to query. If you do not specify this parameter, all route maps are queried.</li>
+     * <li><strong>Filter</strong>: Optional. The filter conditions used to filter route maps based on specific attributes such as name and direction.</li>
+     * <li><strong>ResourceGroupId</strong>: Optional. The ID of the resource group used to further filter the results.</li>
+     * <li><strong>DryRun</strong>: Optional. Specifies whether to perform a dry run.</li>
+     * <li><strong>MaxResults</strong> and <strong>NextToken</strong>: The pagination parameters used to control the number of returned results and retrieve the next page.
+     * Note: If you specify both RouteMapIds and Filter, the logical OR operator is used. A route map that meets either condition is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9131,12 +9768,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><strong>RouteMapIds</strong>: optional. Specifies a list of one or more route map IDs to query. If you do not specify this parameter, all route maps are queried by default.</li>
-     * <li><strong>Filter</strong>: optional. Filters route maps based on specific conditions such as the name and direction.</li>
-     * <li><strong>ResourceGroupId</strong>: optional. Specifies the ID of the resource group to further filter the results.</li>
-     * <li><strong>DryRun</strong>: optional. Specifies whether to check the request without actually performing the operation.</li>
-     * <li><strong>MaxResults</strong> and <strong>NextToken</strong>: pagination parameters. Used to control the number of returned results and obtain the next page of data.
-     * Note: If you specify both <code>RouteMapIds</code> and <code>Filter</code>, they are connected by an OR logical operator. Route maps that meet either condition are queried.</li>
+     * <li><strong>RouteMapIds</strong>: Optional. The IDs of the route maps to query. If you do not specify this parameter, all route maps are queried.</li>
+     * <li><strong>Filter</strong>: Optional. The filter conditions used to filter route maps based on specific attributes such as name and direction.</li>
+     * <li><strong>ResourceGroupId</strong>: Optional. The ID of the resource group used to further filter the results.</li>
+     * <li><strong>DryRun</strong>: Optional. Specifies whether to perform a dry run.</li>
+     * <li><strong>MaxResults</strong> and <strong>NextToken</strong>: The pagination parameters used to control the number of returned results and retrieve the next page.
+     * Note: If you specify both RouteMapIds and Filter, the logical OR operator is used. A route map that meets either condition is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9152,19 +9789,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call the ListTagResources operation, you must specify at least one of the request parameters <strong>ResourceId.N</strong> and <strong>Tag.N.Key</strong>:</p>
+     * <p>When you call the ListTagResources operation, you must specify at least one of the <strong>ResourceId.N</strong> and <strong>Tag.N.Key</strong> request parameters:</p>
      * <ul>
-     * <li>If you specify only <strong>ResourceId.N</strong>, the tags bound to the specified CEN instance are queried.</li>
-     * <li>If you specify only <strong>Tag.N.Key</strong>, all CEN instances that have the specified tag key bound are queried.</li>
-     * <li>If you specify both <strong>ResourceId.N</strong> and <strong>Tag.N.Key</strong>, the specified tags bound to the specified CEN instance are queried.<ul>
+     * <li>If you specify only <strong>ResourceId.N</strong>, the system queries the tags associated with the specified CEN instances.</li>
+     * <li>If you specify only <strong>Tag.N.Key</strong>, the system queries all CEN instances associated with the specified tag key.</li>
+     * <li>If you specify both <strong>ResourceId.N</strong> and <strong>Tag.N.Key</strong>, the system queries the specified tags associated with the specified CEN instances.<ul>
      * <li>Make sure that the values of <strong>ResourceId.N</strong> and <strong>Tag.N.Key</strong> correspond to each other. Otherwise, an empty result is returned.</li>
-     * <li>If you specify multiple tag keys, the tag keys are evaluated by using the logical AND operator.</li>
+     * <li>If you specify multiple tag keys, the logical <strong>AND</strong> relation is applied to the tag keys.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tags bound to a Cloud Enterprise Network (CEN) instance.</p>
+     * <p>Queries the tags associated with Cloud Enterprise Network (CEN) instances.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9232,19 +9869,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call the ListTagResources operation, you must specify at least one of the request parameters <strong>ResourceId.N</strong> and <strong>Tag.N.Key</strong>:</p>
+     * <p>When you call the ListTagResources operation, you must specify at least one of the <strong>ResourceId.N</strong> and <strong>Tag.N.Key</strong> request parameters:</p>
      * <ul>
-     * <li>If you specify only <strong>ResourceId.N</strong>, the tags bound to the specified CEN instance are queried.</li>
-     * <li>If you specify only <strong>Tag.N.Key</strong>, all CEN instances that have the specified tag key bound are queried.</li>
-     * <li>If you specify both <strong>ResourceId.N</strong> and <strong>Tag.N.Key</strong>, the specified tags bound to the specified CEN instance are queried.<ul>
+     * <li>If you specify only <strong>ResourceId.N</strong>, the system queries the tags associated with the specified CEN instances.</li>
+     * <li>If you specify only <strong>Tag.N.Key</strong>, the system queries all CEN instances associated with the specified tag key.</li>
+     * <li>If you specify both <strong>ResourceId.N</strong> and <strong>Tag.N.Key</strong>, the system queries the specified tags associated with the specified CEN instances.<ul>
      * <li>Make sure that the values of <strong>ResourceId.N</strong> and <strong>Tag.N.Key</strong> correspond to each other. Otherwise, an empty result is returned.</li>
-     * <li>If you specify multiple tag keys, the tag keys are evaluated by using the logical AND operator.</li>
+     * <li>If you specify multiple tag keys, the logical <strong>AND</strong> relation is applied to the tag keys.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tags bound to a Cloud Enterprise Network (CEN) instance.</p>
+     * <p>Queries the tags associated with Cloud Enterprise Network (CEN) instances.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -10338,7 +10975,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the ListTransitRouterRouteEntries operation to query the details of route entries in an Enterprise Edition transit router route table.</p>
+     * <p>Queries the details of the route entry in the routing table of an Enterprise Edition forwarding router.</p>
      * 
      * @param request ListTransitRouterRouteEntriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10446,7 +11083,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the ListTransitRouterRouteEntries operation to query the details of route entries in an Enterprise Edition transit router route table.</p>
+     * <p>Queries the details of the route entry in the routing table of an Enterprise Edition forwarding router.</p>
      * 
      * @param request ListTransitRouterRouteEntriesRequest
      * @return ListTransitRouterRouteEntriesResponse
@@ -10654,7 +11291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of route tables of an Enterprise Edition transit router by calling the ListTransitRouterRouteTables operation.</p>
+     * <p>Queries the details of the route tables of an Enterprise Edition transit router.</p>
      * 
      * @param request ListTransitRouterRouteTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10734,7 +11371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of route tables of an Enterprise Edition transit router by calling the ListTransitRouterRouteTables operation.</p>
+     * <p>Queries the details of the route tables of an Enterprise Edition transit router.</p>
      * 
      * @param request ListTransitRouterRouteTablesRequest
      * @return ListTransitRouterRouteTablesResponse
@@ -13124,26 +13761,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Cloud services refer to Alibaba Cloud services that use the 100.64.0.0/10 CIDR block, such as Object Storage Service (OSS), Simple Log Service (SLS), and Data Transmission Service (DTS). If your on-premises network needs to access cloud services, you must load the Virtual Border Router (VBR) instance or Cloud Connect Network (CCN) instance associated with your on-premises network to a Cloud Enterprise Network (CEN) instance. You must also load a VPC-connected instance in the region where the cloud service resides to the same CEN instance. After loading, your on-premises network can access the VPC-connected instance in the region of the cloud service through CEN, and then access the cloud service through the VPC by forwarding traffic. The CEN handles the routing accordingly.</p>
+     * <p>Cloud services refer to Alibaba Cloud products that provide services by using the cloud service CIDR block 100.64.0.0/10, such as Object Storage Service (OSS), Simple Log Service (SLS), and Data Transmission Service (DTS). If your on-premises network needs to access cloud services, you must load the virtual border router (VBR) instance that handles routing or the Cloud Connect Network (CCN) instance associated with the on-premises network to a Cloud Enterprise Network (CEN) instance. You must also load a VPC-connected instance in the region where the cloud services are deployed to the CEN instance. After the instances are loaded, your on-premises network can access the VPC-connected instance in the region where the cloud services are deployed through the CEN instance, and then access the cloud services through the VPC-connected instance.</p>
      * <ul>
-     * <li>Limits: This operation applies only to Basic Edition transit routers. On-premises networks associated with VBR instances can access only cloud services in the same region through CEN.
-     *   For example, if the cloud service resides in the China (Beijing) region, only on-premises networks associated with VBR instances in the China (Beijing) region can access the cloud service.</li>
-     * <li>The <strong>ResolveAndRouteServiceInCen</strong> operation is asynchronous. After you send a request, the system returns a <strong>RequestId</strong> but the cloud service configuration is not yet complete. The background node for adding the configuration continues to run. You can invoke the <strong>DescribeRouteServicesInCen</strong> operation to query the status of the cloud service. <ul>
-     * <li>If the cloud service is in the <strong>Creating</strong> state, the cloud service configuration is being added. In this state, you can only execute a query on the cloud service configuration and cannot execute other operations.</li>
-     * <li>If the cloud service is in the <strong>Active</strong> state, the cloud service configuration is added.</li>
-     * <li>If the cloud service is in the <strong>Failed</strong> state, the cloud service configuration failed to be added.</li>
+     * <li>Limits: This operation is applicable only to Basic Edition transit routers that forward traffic. An on-premises network associated with a VBR instance can access only cloud services in the same region through the CEN instance.
+     *   For example, if the cloud services are deployed in the China (Beijing) region, only the on-premises networks associated with VBR instances in the China (Beijing) region can access the cloud services.</li>
+     * <li>The <strong>ResolveAndRouteServiceInCen</strong> operation is asynchronous. After you invoke this operation, the system returns a <strong>RequestId</strong>, but the cloud service configurations are not completely added. The addition task is still running in the background. You can invoke the <strong>DescribeRouteServicesInCen</strong> operation to query the status of the cloud services. <ul>
+     * <li>If the cloud services are in the <strong>Creating</strong> state, the cloud service configurations are being added. In this state, you can only execute query operations on the cloud service configurations and cannot execute other operations.</li>
+     * <li>If the cloud services are in the <strong>Active</strong> state, the cloud service configurations are added.</li>
+     * <li>If the cloud services are in the <strong>Failed</strong> state, the cloud service configurations fail to be added.</li>
      * </ul>
      * </li>
      * </ul>
      * <h3>Before you begin</h3>
      * <p>Before you invoke the ResolveAndRouteServiceInCen operation, make sure that the following conditions are met:</p>
      * <ul>
-     * <li>The VBR or CCN instance with network connectivity to your on-premises network is loaded to the CEN instance.</li>
-     * <li>A VPC-connected instance in the region where the cloud service resides is loaded to the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/65902.html">AttachCenChildInstance</a>.</li>
+     * <li>The VBR or CCN instance that has network connectivity to your on-premises network is loaded to the CEN instance.</li>
+     * <li>A VPC-connected instance in the region where the cloud services are deployed is loaded to the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/65902.html">AttachCenChildInstance</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Configures a cloud service to add access configurations for on-premises networks by calling the ResolveAndRouteServiceInCen operation.</p>
+     * <p>Configures a cloud service and adds configurations for an on-premises network to access the cloud service by calling the ResolveAndRouteServiceInCen operation.</p>
      * 
      * @param request ResolveAndRouteServiceInCenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13215,26 +13852,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Cloud services refer to Alibaba Cloud services that use the 100.64.0.0/10 CIDR block, such as Object Storage Service (OSS), Simple Log Service (SLS), and Data Transmission Service (DTS). If your on-premises network needs to access cloud services, you must load the Virtual Border Router (VBR) instance or Cloud Connect Network (CCN) instance associated with your on-premises network to a Cloud Enterprise Network (CEN) instance. You must also load a VPC-connected instance in the region where the cloud service resides to the same CEN instance. After loading, your on-premises network can access the VPC-connected instance in the region of the cloud service through CEN, and then access the cloud service through the VPC by forwarding traffic. The CEN handles the routing accordingly.</p>
+     * <p>Cloud services refer to Alibaba Cloud products that provide services by using the cloud service CIDR block 100.64.0.0/10, such as Object Storage Service (OSS), Simple Log Service (SLS), and Data Transmission Service (DTS). If your on-premises network needs to access cloud services, you must load the virtual border router (VBR) instance that handles routing or the Cloud Connect Network (CCN) instance associated with the on-premises network to a Cloud Enterprise Network (CEN) instance. You must also load a VPC-connected instance in the region where the cloud services are deployed to the CEN instance. After the instances are loaded, your on-premises network can access the VPC-connected instance in the region where the cloud services are deployed through the CEN instance, and then access the cloud services through the VPC-connected instance.</p>
      * <ul>
-     * <li>Limits: This operation applies only to Basic Edition transit routers. On-premises networks associated with VBR instances can access only cloud services in the same region through CEN.
-     *   For example, if the cloud service resides in the China (Beijing) region, only on-premises networks associated with VBR instances in the China (Beijing) region can access the cloud service.</li>
-     * <li>The <strong>ResolveAndRouteServiceInCen</strong> operation is asynchronous. After you send a request, the system returns a <strong>RequestId</strong> but the cloud service configuration is not yet complete. The background node for adding the configuration continues to run. You can invoke the <strong>DescribeRouteServicesInCen</strong> operation to query the status of the cloud service. <ul>
-     * <li>If the cloud service is in the <strong>Creating</strong> state, the cloud service configuration is being added. In this state, you can only execute a query on the cloud service configuration and cannot execute other operations.</li>
-     * <li>If the cloud service is in the <strong>Active</strong> state, the cloud service configuration is added.</li>
-     * <li>If the cloud service is in the <strong>Failed</strong> state, the cloud service configuration failed to be added.</li>
+     * <li>Limits: This operation is applicable only to Basic Edition transit routers that forward traffic. An on-premises network associated with a VBR instance can access only cloud services in the same region through the CEN instance.
+     *   For example, if the cloud services are deployed in the China (Beijing) region, only the on-premises networks associated with VBR instances in the China (Beijing) region can access the cloud services.</li>
+     * <li>The <strong>ResolveAndRouteServiceInCen</strong> operation is asynchronous. After you invoke this operation, the system returns a <strong>RequestId</strong>, but the cloud service configurations are not completely added. The addition task is still running in the background. You can invoke the <strong>DescribeRouteServicesInCen</strong> operation to query the status of the cloud services. <ul>
+     * <li>If the cloud services are in the <strong>Creating</strong> state, the cloud service configurations are being added. In this state, you can only execute query operations on the cloud service configurations and cannot execute other operations.</li>
+     * <li>If the cloud services are in the <strong>Active</strong> state, the cloud service configurations are added.</li>
+     * <li>If the cloud services are in the <strong>Failed</strong> state, the cloud service configurations fail to be added.</li>
      * </ul>
      * </li>
      * </ul>
      * <h3>Before you begin</h3>
      * <p>Before you invoke the ResolveAndRouteServiceInCen operation, make sure that the following conditions are met:</p>
      * <ul>
-     * <li>The VBR or CCN instance with network connectivity to your on-premises network is loaded to the CEN instance.</li>
-     * <li>A VPC-connected instance in the region where the cloud service resides is loaded to the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/65902.html">AttachCenChildInstance</a>.</li>
+     * <li>The VBR or CCN instance that has network connectivity to your on-premises network is loaded to the CEN instance.</li>
+     * <li>A VPC-connected instance in the region where the cloud services are deployed is loaded to the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/65902.html">AttachCenChildInstance</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Configures a cloud service to add access configurations for on-premises networks by calling the ResolveAndRouteServiceInCen operation.</p>
+     * <p>Configures a cloud service and adds configurations for an on-premises network to access the cloud service by calling the ResolveAndRouteServiceInCen operation.</p>
      * 
      * @param request ResolveAndRouteServiceInCenRequest
      * @return ResolveAndRouteServiceInCenResponse
@@ -13573,13 +14210,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>A tag consists of a tag key and a tag value. Both the tag key and tag value are required when you add a tag.</li>
-     * <li>If you want to add multiple tags to a Cloud Enterprise Network (CEN) instance, the tag keys of the tags must be unique within the instance.</li>
+     * <li>A tag consists of a tag key and a tag value. Both the tag key and the tag value are required when you add a tag.</li>
+     * <li>If you want to add multiple tags to a Cloud Enterprise Network (CEN) instance, the tag keys of the tags attached to the instance must be unique.</li>
      * <li>You can attach up to 20 tags to a CEN instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates and attaches tags to resources.</p>
+     * <p>Creates and attaches tags to a resource.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13640,13 +14277,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>A tag consists of a tag key and a tag value. Both the tag key and tag value are required when you add a tag.</li>
-     * <li>If you want to add multiple tags to a Cloud Enterprise Network (CEN) instance, the tag keys of the tags must be unique within the instance.</li>
+     * <li>A tag consists of a tag key and a tag value. Both the tag key and the tag value are required when you add a tag.</li>
+     * <li>If you want to add multiple tags to a Cloud Enterprise Network (CEN) instance, the tag keys of the tags attached to the instance must be unique.</li>
      * <li>You can attach up to 20 tags to a CEN instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates and attaches tags to resources.</p>
+     * <p>Creates and attaches tags to a resource.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -13900,7 +14537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Remove tags from resources.</p>
+     * <p>Removes tags from one or more resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13964,7 +14601,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Remove tags from resources.</p>
+     * <p>Removes tags from one or more resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -14140,7 +14777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The UpdateRouteMap operation is asynchronous. After you call this operation, the system returns a <strong>RequestId</strong>, but the route map is not immediately updated. The update task continues to run in the background. You can call the ListRouteMaps operation to query the status of the route map.</p>
+     * <p>The <code>UpdateRouteMap</code> operation is asynchronous. After you call this operation, the system returns a <strong>RequestId</strong>, but the route map is not immediately updated. The update task continues to run in the background. You can call the <code>ListRouteMaps</code> operation to query the status of the route map.</p>
      * <ul>
      * <li>If the route map is in the <strong>Updating</strong> state, the route map is being updated. In this state, you can only perform query operations.</li>
      * <li>If the route map is in the <strong>Active</strong> state, the route map is updated.</li>
@@ -14199,7 +14836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The UpdateRouteMap operation is asynchronous. After you call this operation, the system returns a <strong>RequestId</strong>, but the route map is not immediately updated. The update task continues to run in the background. You can call the ListRouteMaps operation to query the status of the route map.</p>
+     * <p>The <code>UpdateRouteMap</code> operation is asynchronous. After you call this operation, the system returns a <strong>RequestId</strong>, but the route map is not immediately updated. The update task continues to run in the background. You can call the <code>ListRouteMaps</code> operation to query the status of the route map.</p>
      * <ul>
      * <li>If the route map is in the <strong>Updating</strong> state, the route map is being updated. In this state, you can only perform query operations.</li>
      * <li>If the route map is in the <strong>Active</strong> state, the route map is updated.</li>
@@ -14222,7 +14859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li><code>RouteMapRuleId</code> specifies the route map rule to be updated.</li>
      * <li><code>Name</code>, <code>Description</code>, and <code>Priority</code> are used to update the name, description, and priority of the rule. Rule priorities under the same route map must be unique.</li>
-     * <li><code>MatchConditions</code> is used to update the match conditions of the rule, and <code>SetActions</code> is used to update the actions to be performed when a route meets the match conditions.</li>
+     * <li><code>MatchConditions</code> is used to update the match conditions of the rule, and <code>SetActions</code> is used to update the actions to be executed after a route meets the match conditions.</li>
      * <li><code>DryRun</code> is an optional parameter used to precheck the request without actually updating the route map rule.</li>
      * </ul>
      * 
@@ -14301,7 +14938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li><code>RouteMapRuleId</code> specifies the route map rule to be updated.</li>
      * <li><code>Name</code>, <code>Description</code>, and <code>Priority</code> are used to update the name, description, and priority of the rule. Rule priorities under the same route map must be unique.</li>
-     * <li><code>MatchConditions</code> is used to update the match conditions of the rule, and <code>SetActions</code> is used to update the actions to be performed when a route meets the match conditions.</li>
+     * <li><code>MatchConditions</code> is used to update the match conditions of the rule, and <code>SetActions</code> is used to update the actions to be executed after a route meets the match conditions.</li>
      * <li><code>DryRun</code> is an optional parameter used to precheck the request without actually updating the route map rule.</li>
      * </ul>
      * 
@@ -14692,6 +15329,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateTransitRouterPeerAttachmentAttributeResponse updateTransitRouterPeerAttachmentAttribute(UpdateTransitRouterPeerAttachmentAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTransitRouterPeerAttachmentAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the name and description of a policy-based routing rule in the route table of an Enterprise Edition transit router.</p>
+     * 
+     * @param request UpdateTransitRouterPolicyBasedRouteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateTransitRouterPolicyBasedRouteResponse
+     */
+    public UpdateTransitRouterPolicyBasedRouteResponse updateTransitRouterPolicyBasedRouteWithOptions(UpdateTransitRouterPolicyBasedRouteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyBasedRouteId)) {
+            query.put("PolicyBasedRouteId", request.policyBasedRouteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateTransitRouterPolicyBasedRoute"),
+            new TeaPair("version", "2017-09-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTransitRouterPolicyBasedRouteResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the name and description of a policy-based routing rule in the route table of an Enterprise Edition transit router.</p>
+     * 
+     * @param request UpdateTransitRouterPolicyBasedRouteRequest
+     * @return UpdateTransitRouterPolicyBasedRouteResponse
+     */
+    public UpdateTransitRouterPolicyBasedRouteResponse updateTransitRouterPolicyBasedRoute(UpdateTransitRouterPolicyBasedRouteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateTransitRouterPolicyBasedRouteWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the name and description of a policy route table.</p>
+     * 
+     * @param request UpdateTransitRouterPolicyTableRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateTransitRouterPolicyTableResponse
+     */
+    public UpdateTransitRouterPolicyTableResponse updateTransitRouterPolicyTableWithOptions(UpdateTransitRouterPolicyTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyTableId)) {
+            query.put("PolicyTableId", request.policyTableId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateTransitRouterPolicyTable"),
+            new TeaPair("version", "2017-09-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTransitRouterPolicyTableResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the name and description of a policy route table.</p>
+     * 
+     * @param request UpdateTransitRouterPolicyTableRequest
+     * @return UpdateTransitRouterPolicyTableResponse
+     */
+    public UpdateTransitRouterPolicyTableResponse updateTransitRouterPolicyTable(UpdateTransitRouterPolicyTableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateTransitRouterPolicyTableWithOptions(request, runtime);
     }
 
     /**

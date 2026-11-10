@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterRouteTablesRequest extends TeaModel {
     /**
-     * <p>The number of entries per page when entries are returned by page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,10 +14,10 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request or if no subsequent query exists.</li>
-     * <li>If a next query exists, set this parameter to the value of <strong>NextToken</strong> returned in the previous API call.</li>
+     * <li>If this is your first query or no next query is to be sent, ignore this parameter.</li>
+     * <li>If a next query is to be sent, set the value to the <strong>NextToken</strong> value returned from the last API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
     public java.util.List<ListTransitRouterRouteTablesRequestTag> tag;
 
     /**
-     * <p>The instance ID of the Enterprise Edition transit router.</p>
+     * <p>The instance ID of the Enterprise Edition transit router, which is used to forward routing information.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-uf654ttymmljlvh2x****</p>
@@ -61,7 +61,7 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
     public String transitRouterId;
 
     /**
-     * <p>The ID of the route table.</p>
+     * <p>The IDs of the route tables.</p>
      * <p>You can query multiple route tables at a time. Maximum value of <strong>N</strong>: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -71,10 +71,10 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
     public java.util.List<String> transitRouterRouteTableIds;
 
     /**
-     * <p>The name of the route table.</p>
+     * <p>The names of the route tables.</p>
      * <p>You can query multiple route tables at a time. Maximum value of <strong>N</strong>: <strong>20</strong>.</p>
      * <blockquote>
-     * <p>If you specify both <strong>TransitRouterRouteTableNames.N</strong> and <strong>TransitRouterRouteTableIds.N</strong>, the route table names and route table IDs must correspond to each other.</p>
+     * <p>If you specify both <strong>TransitRouterRouteTableNames.N</strong> and <strong>TransitRouterRouteTableIds.N</strong>, the names and IDs of the route tables must match.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,9 +86,9 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
     /**
      * <p>The status of the route table. Valid values:</p>
      * <ul>
-     * <li><strong>Creating</strong>: being created.</li>
-     * <li><strong>Deleting</strong>: being deleted.</li>
-     * <li><strong>Active</strong>: active.</li>
+     * <li><strong>Creating</strong>: The route table is being created.</li>
+     * <li><strong>Deleting</strong>: The route table is being deleted.</li>
+     * <li><strong>Active</strong>: The route table is available.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -221,10 +221,10 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
 
     public static class ListTransitRouterRouteTablesRequestRouteTableOptions extends TeaModel {
         /**
-         * <p>Multi-region equal-cost multi-path (ECMP) routing. Valid values:</p>
+         * <p>The multi-region equal-cost multi-path (ECMP) routing feature. Valid values:</p>
          * <ul>
-         * <li><strong>disable</strong>: Disables multi-region ECMP routing. After multi-region ECMP routing is disabled, routes with the same prefix learned from different regions select the transit router (TR) with the smallest Region ID (sorted alphabetically) as the next hop when other route attributes are the same. This changes the traffic latency and bandwidth consumed between different regions. Make sure that you fully evaluate the impact before disabling this feature.</li>
-         * <li><strong>enable</strong>: Enables multi-region ECMP routing. After multi-region ECMP routing is enabled, routes with the same prefix learned from different regions form ECMP routes when other route attributes are the same. This changes the traffic latency and bandwidth consumed between different regions. Make sure that you fully evaluate the impact before enabling this feature.</li>
+         * <li><strong>disable</strong>: disables multi-region ECMP routing. After you disable this feature, if routes with the same prefix are learned from different regions and have the same route attributes, the transit router with the smallest region ID (in alphabetical order) is preferred as the next hop. This changes the traffic latency and the bandwidth consumed between regions. Make sure that you fully evaluate the impact before you disable this feature.</li>
+         * <li><strong>enable</strong>: enables multi-region ECMP routing. After you enable this feature, if routes with the same prefix are learned from different regions and have the same route attributes, ECMP routing is formed. This changes the traffic latency and the bandwidth consumed between regions. Make sure that you fully evaluate the impact before you enable this feature.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -251,7 +251,7 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
     public static class ListTransitRouterRouteTablesRequestTag extends TeaModel {
         /**
          * <p>The tag key of the resource.</p>
-         * <p>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key cannot be an empty string. It can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
@@ -262,8 +262,8 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource.</p>
-         * <p>The tag value can be an empty string or up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
+         * <p>The tag value can be an empty string or a string up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Each tag key corresponds to a tag value. You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

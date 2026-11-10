@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether a next query token exists. Valid values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li><p>If this is the first query or no next query exists, you do not need to specify this parameter.</p>
+     * <li><p>If this is the first query or no next query is required, leave this parameter empty.</p>
      * </li>
-     * <li><p>If a next query exists, set the value to the NextToken value returned by the previous API call.</p>
+     * <li><p>If a next query is required, set the value to the NextToken value returned from the previous API call.</p>
      * </li>
      * </ul>
      * 
@@ -26,7 +26,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -36,7 +36,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the resource instance.</p>
-     * <p>This parameter is not required when the resource type is Cen or BandwidthPackage. This parameter is required for all other resource types.</p>
+     * <p>This parameter is not required when the resource type is Cen or BandwidthPackage. It is required for other resource types.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -45,7 +45,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The CEN instance ID.</p>
+     * <p>The ID of the CEN instance.</p>
      * <p>You can specify up to 20 CEN instance IDs at a time.</p>
      * 
      * <strong>example:</strong>
@@ -62,16 +62,16 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The resource type. Valid values:</p>
-     * <p><strong>Cen</strong>: CEN instance.</p>
-     * <p><strong>BandwidthPackage</strong>: bandwidth package instance.</p>
-     * <p><strong>TransitRouter</strong>: transit router instance.</p>
-     * <p><strong>TransitRouterVpcAttachment</strong>: VPC connection instance.</p>
-     * <p><strong>TransitRouterVbrAttachment</strong>: VBR connection instance.</p>
-     * <p><strong>TransitRouterPeerAttachment</strong>: inter-region connection instance.</p>
-     * <p><strong>TransitRouterVpnAttachment</strong>: VPN connection instance.</p>
-     * <p><strong>TransitRouterRouteTable</strong>: route table instance.</p>
-     * <p><strong>Flowlog</strong>: flow log instance.</p>
-     * <p><strong>TransitRouterMulticastDomain</strong>: multicast domain instance.</p>
+     * <p><strong>Cen</strong>: CEN instance</p>
+     * <p><strong>BandwidthPackage</strong>: bandwidth plan instance</p>
+     * <p><strong>TransitRouter</strong>: transit router instance</p>
+     * <p><strong>TransitRouterVpcAttachment</strong>: VPC connection instance</p>
+     * <p><strong>TransitRouterVbrAttachment</strong>: VBR connection instance</p>
+     * <p><strong>TransitRouterPeerAttachment</strong>: inter-region connection instance</p>
+     * <p><strong>TransitRouterVpnAttachment</strong>: VPN connection instance</p>
+     * <p><strong>TransitRouterRouteTable</strong>: route table instance</p>
+     * <p><strong>Flowlog</strong>: flow log instance</p>
+     * <p><strong>TransitRouterMulticastDomain</strong>: multicast domain instance</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -175,7 +175,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <p>A tag key can contain up to 64 characters and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>A tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
         /**
          * <p>The tag value.</p>
-         * <p>A tag value can contain up to 128 characters and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>

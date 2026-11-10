@@ -11,8 +11,7 @@ public class TagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the resource instance.</p>
-     * <p>This parameter is not required when the resource type is Cen or BandwidthPackage. This parameter is required for all other resource types.</p>
+     * <p>The region ID of the resource. This parameter is not required when the resource type is Cen or BandwidthPackage, but is required for other resource types.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -21,7 +20,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resources.</p>
+     * <p>The list of resources.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,11 +38,11 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The resource type. Valid values:</p>
      * <p><strong>Cen</strong>: CEN instance.</p>
-     * <p><strong>BandwidthPackage</strong>: bandwidth package instance.</p>
+     * <p><strong>BandwidthPackage</strong>: bandwidth plan instance.</p>
      * <p><strong>TransitRouter</strong>: transit router instance.</p>
      * <p><strong>TransitRouterVpcAttachment</strong>: VPC connection instance.</p>
      * <p><strong>TransitRouterVbrAttachment</strong>: VBR connection instance.</p>
-     * <p><strong>TransitRouterPeerAttachment</strong>: inter-region connection instance.</p>
+     * <p><strong>TransitRouterPeerAttachment</strong>: cross-region connection instance.</p>
      * <p><strong>TransitRouterVpnAttachment</strong>: VPN connection instance.</p>
      * <p><strong>TransitRouterRouteTable</strong>: route table instance.</p>
      * <p><strong>Flowlog</strong>: flow log instance.</p>
@@ -57,7 +56,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag list.</p>
+     * <p>The list of tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -134,9 +133,7 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
-         * <p>You can specify multiple tag keys. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key. You can specify multiple tag keys. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>. The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TagKey</p>
@@ -145,9 +142,7 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
-         * <p>Each tag key corresponds to one tag value. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value. Each tag key corresponds to a tag value. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>. The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TagValue</p>

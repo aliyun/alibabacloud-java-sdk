@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRouteMapRulesResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned on each page in a paginated query.</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,10 +14,10 @@ public class ListRouteMapRulesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. Valid values:</p>
+     * <p>The token that is used to retrieve the next page of results. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next query is available.</li>
-     * <li>If <strong>NextToken</strong> has a return value, the value indicates the token for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If <strong>NextToken</strong> has a return value, the value indicates the token used to start the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,51 +97,51 @@ public class ListRouteMapRulesResponseBody extends TeaModel {
 
     public static class ListRouteMapRulesResponseBodyRouteMapRulesMatchConditions extends TeaModel {
         /**
-         * <p>The route prefix list for fuzzy matching.</p>
-         * <p>A match succeeds if the route prefix in the match condition contains the route prefix of the matched route.</p>
+         * <p>The list of routing prefixes for fuzzy match.</p>
+         * <p>A match is successful if the route prefix in the match condition contains the route prefix of the matched route.</p>
          * <p>For example, a policy defined with 10.0.0.0/8 can fuzzy match a route with 10.10.10.0/24.</p>
-         * <p>IP address ranges use the CIDR format. Both IPv4 and IPv6 are supported.</p>
+         * <p>The IP CIDR blocks are in CIDR format and support IPv4 and IPv6.</p>
          * <p>This parameter and <strong>AddressPrefixesMatch</strong> are mutually exclusive and cannot be specified at the same time.</p>
          */
         @NameInMap("AddressPrefixesInclude")
         public java.util.List<String> addressPrefixesInclude;
 
         /**
-         * <p>The route prefix list for exact matching.</p>
-         * <p>A match succeeds only when the route prefix in the match condition is exactly the same as the route prefix of the matched route.</p>
-         * <p>For example, a policy defined with 10.0.0.0/8 can only exactly match a route with 10.0.0.0/8.</p>
-         * <p>IP address ranges use the CIDR format. Both IPv4 and IPv6 are supported.</p>
+         * <p>The list of routing prefixes for exact match.</p>
+         * <p>A match is successful only if the route prefix in the match condition is exactly the same as the route prefix of the matched route.</p>
+         * <p>For example, a policy defined with 10.0.0.0/8 can only exact match a route with 10.0.0.0/8.</p>
+         * <p>The IP CIDR blocks are in CIDR format and support IPv4 and IPv6.</p>
          * <p>This parameter and <strong>AddressPrefixesInclude</strong> are mutually exclusive and cannot be specified at the same time.</p>
          */
         @NameInMap("AddressPrefixesMatch")
         public java.util.List<String> addressPrefixesMatch;
 
         /**
-         * <p>The list of AS paths for fuzzy matching.</p>
-         * <p>A match succeeds if the AS path in the match condition overlaps with the AS path of the matched route.</p>
+         * <p>The list of AS paths for fuzzy match.</p>
+         * <p>A match is successful if the AS path in the match condition overlaps with the AS path of the matched route.</p>
          * <p>This parameter and <strong>AsPathsMatch</strong> are mutually exclusive and cannot be specified at the same time.</p>
          * <blockquote>
-         * <p>Only AS SEQUENCE is supported. AS SET, AS CONFED SEQUENCE, and AS CONFED SET are not supported. This means only a list of AS numbers is supported, and sets and sub-lists are not supported.</p>
+         * <p>Only AS SEQUENCE is supported. AS SET, AS CONFED SEQUENCE, and AS CONFED SET are not supported. This means that only a list of AS numbers is supported, and sets and sublists are not supported.</p>
          * </blockquote>
          */
         @NameInMap("AsPathsInclude")
         public java.util.List<Long> asPathsInclude;
 
         /**
-         * <p>The list of AS paths for exact matching.</p>
-         * <p>A match succeeds only when the AS path in the match condition is exactly the same as the AS path of the matched route.</p>
+         * <p>The list of AS paths for exact match.</p>
+         * <p>A match is successful only if the AS path in the match condition is exactly the same as the AS path of the matched route.</p>
          * <p>This parameter and <strong>AsPathsInclude</strong> are mutually exclusive and cannot be specified at the same time.</p>
          * <blockquote>
-         * <p>Only AS SEQUENCE is supported. AS SET, AS CONFED SEQUENCE, and AS CONFED SET are not supported. This means only a list of AS numbers is supported, and sets and sub-lists are not supported.</p>
+         * <p>Only AS SEQUENCE is supported. AS SET, AS CONFED SEQUENCE, and AS CONFED SET are not supported. This means that only a list of AS numbers is supported, and sets and sublists are not supported.</p>
          * </blockquote>
          */
         @NameInMap("AsPathsMatch")
         public java.util.List<Long> asPathsMatch;
 
         /**
-         * <p>The community set for fuzzy matching.</p>
-         * <p>A match succeeds if the community in the match condition overlaps with the community of the matched route.</p>
-         * <p>Each community is in the format of n:m, where n and m range from <strong>1</strong> to <strong>65535</strong>. The community must comply with RFC 1997. Large communities (RFC 8092) are not supported.</p>
+         * <p>The community set for fuzzy match.</p>
+         * <p>A match is successful if the community in the match condition overlaps with the community of the matched route.</p>
+         * <p>Each community is in the n:m format, where n and m range from <strong>1</strong> to <strong>65535</strong>. The community must comply with RFC 1997. Large communities (RFC 8092) are not supported.</p>
          * <p>This parameter and <strong>CommunitySetMatch</strong> are mutually exclusive and cannot be specified at the same time.</p>
          * <blockquote>
          * <p>Incorrect community configurations may prevent routes from being advertised to the on-premises data center.</p>
@@ -151,9 +151,9 @@ public class ListRouteMapRulesResponseBody extends TeaModel {
         public java.util.List<String> communitySetInclude;
 
         /**
-         * <p>The community set for exact matching.</p>
-         * <p>A match succeeds only when the community in the match condition is exactly the same as the community of the matched route.</p>
-         * <p>Each community is in the format of n:m, where n and m range from <strong>1</strong> to <strong>65535</strong>. The community must comply with RFC 1997. Large communities (RFC 8092) are not supported.</p>
+         * <p>The community set for exact match.</p>
+         * <p>A match is successful only if the community in the match condition is exactly the same as the community of the matched route.</p>
+         * <p>Each community is in the n:m format, where n and m range from <strong>1</strong> to <strong>65535</strong>. The community must comply with RFC 1997. Large communities (RFC 8092) are not supported.</p>
          * <p>This parameter and <strong>CommunitySetInclude</strong> are mutually exclusive and cannot be specified at the same time.</p>
          * <blockquote>
          * <p>Incorrect community configurations may prevent routes from being advertised to the on-premises data center.</p>
@@ -165,8 +165,8 @@ public class ListRouteMapRulesResponseBody extends TeaModel {
         /**
          * <p>The list of destination instance IDs to match. The following instance types are supported:</p>
          * <ul>
-         * <li>Virtual private cloud (VPC) instance IDs</li>
-         * <li>Virtual border router (VBR) instance IDs</li>
+         * <li>Virtual Private Cloud (VPC) instance IDs</li>
+         * <li>Virtual Border Router (VBR) instance IDs</li>
          * </ul>
          * <blockquote>
          * <p>The list of destination instance IDs takes effect only when the direction of the route map is outbound.</p>
@@ -176,10 +176,10 @@ public class ListRouteMapRulesResponseBody extends TeaModel {
         public java.util.List<String> destinationInstanceIds;
 
         /**
-         * <p>Specifies whether to use the exclude matching mode for the list of destination instance IDs. Valid values:</p>
+         * <p>Specifies whether to use the reverse match mode for the list of destination instance IDs. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default): no. A match succeeds when the destination instance ID of the route is in <strong>DestinationInstanceIds.N</strong>.</li>
-         * <li><strong>true</strong>: yes. A match succeeds when the destination instance ID of the route is not in <strong>DestinationInstanceIds.N</strong>.</li>
+         * <li><strong>false</strong> (default): no. A match is successful if the destination instance ID of the route is in <strong>DestinationInstanceIds.N</strong>.</li>
+         * <li><strong>true</strong>: yes. A match is successful if the destination instance ID of the route is not in <strong>DestinationInstanceIds.N</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class ListRouteMapRulesResponseBody extends TeaModel {
          * <li><strong>IPv4</strong>: matches only IPv4 routes.</li>
          * <li><strong>IPv6</strong>: matches only IPv6 routes.</li>
          * </ul>
-         * <p>You can leave this parameter empty to match routes of all types.</p>
+         * <p>If this parameter is left empty, all types of routes are matched.</p>
          * 
          * <strong>example:</strong>
          * <p>IPv4</p>
@@ -231,11 +231,14 @@ public class ListRouteMapRulesResponseBody extends TeaModel {
         public String matchAddressType;
 
         /**
-         * <p>The list of route types to match. The following route types are supported:</p>
+         * <p>The list of routing types to match. The following route types are supported:</p>
          * <ul>
-         * <li><strong>System</strong>: system route, which is automatically generated by the system.</li>
-         * <li><strong>Custom</strong>: custom route, which is manually added by a user.</li>
-         * <li><strong>BGP</strong>: BGP route, which is propagated through the BGP routable protocol.</li>
+         * <li><p><strong>System</strong>: system route, which is automatically generated by the system.</p>
+         * </li>
+         * <li><p><strong>Custom</strong>: custom route, which is manually added by the user.</p>
+         * </li>
+         * <li><p><strong>BGP</strong>: BGP route, which is propagated through the BGP routable protocol.</p>
+         * </li>
          * </ul>
          * <p>You can specify multiple route types.</p>
          */
@@ -245,18 +248,18 @@ public class ListRouteMapRulesResponseBody extends TeaModel {
         /**
          * <p>The list of source instance IDs to match. The following instance types are supported:</p>
          * <ul>
-         * <li>Virtual private cloud (VPC) instance IDs</li>
-         * <li>Virtual border router (VBR) instance IDs</li>
+         * <li>Virtual Private Cloud (VPC) instance IDs</li>
+         * <li>Virtual Border Router (VBR) instance IDs</li>
          * </ul>
          */
         @NameInMap("SourceInstanceIds")
         public java.util.List<String> sourceInstanceIds;
 
         /**
-         * <p>Specifies whether to use the exclude matching mode for the list of source instance IDs. Valid values:</p>
+         * <p>Specifies whether to use the reverse match mode for the list of source instance IDs. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> (default): no. A match succeeds when the source instance ID of the route is in <strong>SourceInstanceIds.N</strong>.</li>
-         * <li><strong>true</strong>: yes. A match succeeds when the source instance ID of the route is not in <strong>SourceInstanceIds.N</strong>.</li>
+         * <li><strong>false</strong> (default): no. A match is successful if the source instance ID of the route is in <strong>SourceInstanceIds.N</strong>.</li>
+         * <li><strong>true</strong>: yes. A match is successful if the source instance ID of the route is not in <strong>SourceInstanceIds.N</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -440,7 +443,7 @@ public class ListRouteMapRulesResponseBody extends TeaModel {
 
     public static class ListRouteMapRulesResponseBodyRouteMapRulesSetActions extends TeaModel {
         /**
-         * <p>The AS path to prepend when the regional gateway receives or advertises routes.</p>
+         * <p>The AS path to prepend when the regional gateway accepts or publishes routing entries.</p>
          * <p>This parameter and <strong>AsPathReplace</strong> are mutually exclusive and cannot be specified at the same time.</p>
          * <p>This parameter specifies the action to execute after a route meets the match conditions.</p>
          */
@@ -448,7 +451,7 @@ public class ListRouteMapRulesResponseBody extends TeaModel {
         public java.util.List<Long> asPathPrepend;
 
         /**
-         * <p>The AS path to replace when the regional gateway receives or advertises routes. The original AS path of the route is replaced with the list of AS numbers specified in this parameter.</p>
+         * <p>The AS path to replace when the regional gateway accepts or publishes routing entries. The original AS path of the route is replaced with the list of AS numbers specified in this parameter.</p>
          * <p>This parameter and <strong>AsPathPrepend</strong> are mutually exclusive and cannot be specified at the same time.</p>
          * <p>This parameter specifies the action to execute after a route meets the match conditions.</p>
          */
@@ -457,9 +460,9 @@ public class ListRouteMapRulesResponseBody extends TeaModel {
 
         /**
          * <p>The community set to add to the route.</p>
-         * <p>Each community is in the format of n:m, where n and m range from <strong>1</strong> to <strong>65535</strong>. The community must comply with RFC 1997. Large communities (RFC 8092) are not supported.</p>
+         * <p>Each community is in the n:m format, where n and m range from <strong>1</strong> to <strong>65535</strong>. The community must comply with RFC 1997. Large communities (RFC 8092) are not supported.</p>
          * <p>This parameter and <strong>CommunityReplace</strong> are mutually exclusive and cannot be specified at the same time.</p>
-         * <p>This parameter specifies the action to execute after a route meets the match conditions.</p>
+         * <p>This parameter specifies the action to perform after a route meets the match conditions.</p>
          * <blockquote>
          * <p>Incorrect community configurations may prevent routes from being advertised to the on-premises data center.</p>
          * </blockquote>
@@ -469,9 +472,9 @@ public class ListRouteMapRulesResponseBody extends TeaModel {
 
         /**
          * <p>The community set to replace the original community of the route.</p>
-         * <p>Each community is in the format of n:m, where n and m range from <strong>1</strong> to <strong>65535</strong>. The community must comply with RFC 1997. Large communities (RFC 8092) are not supported.</p>
+         * <p>Each community is in the n:m format, where n and m range from <strong>1</strong> to <strong>65535</strong>. The community must comply with RFC 1997. Large communities (RFC 8092) are not supported.</p>
          * <p>This parameter and <strong>CommunityAdd</strong> are mutually exclusive and cannot be specified at the same time.</p>
-         * <p>This parameter specifies the action to execute after a route meets the match conditions.</p>
+         * <p>This parameter specifies the action to perform after a route meets the match conditions.</p>
          * <blockquote>
          * <p>Incorrect community configurations may prevent routes from being advertised to the on-premises data center.</p>
          * </blockquote>
@@ -493,7 +496,7 @@ public class ListRouteMapRulesResponseBody extends TeaModel {
         public Long nextPriority;
 
         /**
-         * <p>The policy action after all conditions are met. Valid values:</p>
+         * <p>The policy action to perform after all conditions are met. Valid values:</p>
          * <ul>
          * <li><strong>Permit</strong>: permits the matched routes.</li>
          * <li><strong>Deny</strong>: denies the matched routes.</li>
@@ -571,7 +574,7 @@ public class ListRouteMapRulesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The match conditions of the route map rule. The system executes the actions defined in <strong>SetActions</strong> only when a route meets all the match conditions defined in this parameter.</p>
+         * <p>The match conditions of the route map rule. The system performs the actions defined in <strong>SetActions</strong> only if a route meets all the match conditions defined in this parameter.</p>
          */
         @NameInMap("MatchConditions")
         public ListRouteMapRulesResponseBodyRouteMapRulesMatchConditions matchConditions;
@@ -613,7 +616,7 @@ public class ListRouteMapRulesResponseBody extends TeaModel {
         public String routeMapRuleId;
 
         /**
-         * <p>The actions to execute for the route map rule. After a route meets all the match conditions defined in <strong>MatchConditions</strong>, the system processes the route based on the actions defined in this parameter.</p>
+         * <p>The actions to perform for the route map rule. After a route meets all the match conditions defined in <strong>MatchConditions</strong>, the system processes the route based on the actions defined in this parameter.</p>
          */
         @NameInMap("SetActions")
         public ListRouteMapRulesResponseBodyRouteMapRulesSetActions setActions;

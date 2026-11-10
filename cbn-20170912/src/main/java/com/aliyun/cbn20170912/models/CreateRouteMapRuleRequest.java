@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateRouteMapRuleRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can generate the parameter value on your client. Make sure that the token is unique across different requests. The client token supports only ASCII characters.</p>
+     * <p>You can generate the value from your client and ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</p>
      * <blockquote>
      * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
@@ -27,10 +27,10 @@ public class CreateRouteMapRuleRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to only precheck the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run of the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Prechecks the request without creating the route map rule. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): Sends the request. After the request passes the precheck, the route map rule is created.</li>
+     * <li><strong>true</strong>: performs a dry run without creating the route map rule. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the dry run, an error is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a normal request. If the request passes the dry run, the route map rule is created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class CreateRouteMapRuleRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The match conditions of the route map rule. The system executes the actions defined in <strong>SetActions</strong> only when a route meets all the match conditions defined in this parameter.</p>
+     * <p>The match conditions of the route map rule. The system performs the actions defined in <strong>SetActions</strong> only when a route meets all the match conditions defined in this parameter.</p>
      */
     @NameInMap("MatchConditions")
     public CreateRouteMapRuleRequestMatchConditions matchConditions;
@@ -75,7 +75,7 @@ public class CreateRouteMapRuleRequest extends TeaModel {
     public String routeMapId;
 
     /**
-     * <p>The actions to execute for the route map rule. After a route meets all the match conditions defined in <strong>MatchConditions</strong>, the system processes the route based on the actions defined in this parameter.</p>
+     * <p>The actions to be performed for the route map rule. After a route meets all the match conditions defined in <strong>MatchConditions</strong>, the system processes the route based on the actions defined in this parameter.</p>
      */
     @NameInMap("SetActions")
     public CreateRouteMapRuleRequestSetActions setActions;
@@ -151,29 +151,29 @@ public class CreateRouteMapRuleRequest extends TeaModel {
 
     public static class CreateRouteMapRuleRequestMatchConditions extends TeaModel {
         /**
-         * <p>The route prefix list for fuzzy match. You can specify up to 64 IP address blocks.</p>
+         * <p>The route prefix list for fuzzy match. You can enter up to 64 IP address blocks.</p>
          * <p>A match is successful if the route prefix in the match condition contains the route prefix of the matched route.</p>
          * <p>For example, a policy defined with 10.0.0.0/8 can fuzzy match a route with 10.10.10.0/24.</p>
          * <p>IP address blocks use the CIDR format and support IPv4 and IPv6.</p>
-         * <p>This parameter is mutually exclusive with <strong>AddressPrefixesMatch</strong>. You cannot specify both parameters at the same time.</p>
+         * <p>This parameter is mutually exclusive with <strong>AddressPrefixesMatch</strong> and cannot be specified at the same time.</p>
          */
         @NameInMap("AddressPrefixesInclude")
         public java.util.List<String> addressPrefixesInclude;
 
         /**
-         * <p>The route prefix list for exact match. You can specify up to 64 IP address blocks.</p>
-         * <p>A match is successful only if the route prefix in the match condition is exactly the same as the route prefix of the matched route.</p>
+         * <p>The route prefix list for exact match. You can enter up to 64 IP address blocks.</p>
+         * <p>A match is successful only when the route prefix in the match condition is exactly the same as the route prefix of the matched route.</p>
          * <p>For example, a policy defined with 10.0.0.0/8 can only exactly match a route with 10.0.0.0/8.</p>
          * <p>IP address blocks use the CIDR format and support IPv4 and IPv6.</p>
-         * <p>This parameter is mutually exclusive with <strong>AddressPrefixesInclude</strong>. You cannot specify both parameters at the same time.</p>
+         * <p>This parameter is mutually exclusive with <strong>AddressPrefixesInclude</strong> and cannot be specified at the same time.</p>
          */
         @NameInMap("AddressPrefixesMatch")
         public java.util.List<String> addressPrefixesMatch;
 
         /**
-         * <p>The list of AS paths for fuzzy match. You can specify up to 64 AS numbers.</p>
-         * <p>A match is successful if the AS path in the match condition overlaps with the AS path of the matched route.</p>
-         * <p>This parameter is mutually exclusive with <strong>AsPathsMatch</strong>. You cannot specify both parameters at the same time.</p>
+         * <p>The list of AS paths for fuzzy match. You can enter up to 64 AS numbers.</p>
+         * <p>A route is considered matched if the AS path in the match condition overlaps with the AS path of the matched route.</p>
+         * <p>This parameter is mutually exclusive with <strong>AsPathsMatch</strong> and cannot be specified at the same time.</p>
          * <blockquote>
          * <p>Only AS SEQUENCE is supported. AS SET, AS CONFED SEQUENCE, and AS CONFED SET are not supported. This means only a list of AS numbers is supported, and sets and sublists are not supported.</p>
          * </blockquote>
@@ -182,9 +182,9 @@ public class CreateRouteMapRuleRequest extends TeaModel {
         public java.util.List<Long> asPathsInclude;
 
         /**
-         * <p>The list of AS paths for exact match. You can specify up to 64 AS numbers.</p>
-         * <p>A match is successful only if the AS path in the match condition is exactly the same as the AS path of the matched route.</p>
-         * <p>This parameter is mutually exclusive with <strong>AsPathsInclude</strong>. You cannot specify both parameters at the same time.</p>
+         * <p>The list of AS paths for exact match. You can enter up to 64 AS numbers.</p>
+         * <p>A route is considered matched only when the AS path in the match condition is exactly the same as the AS path of the matched route.</p>
+         * <p>This parameter is mutually exclusive with <strong>AsPathsInclude</strong> and cannot be specified at the same time.</p>
          * <blockquote>
          * <p>Only AS SEQUENCE is supported. AS SET, AS CONFED SEQUENCE, and AS CONFED SET are not supported. This means only a list of AS numbers is supported, and sets and sublists are not supported.</p>
          * </blockquote>
@@ -193,10 +193,10 @@ public class CreateRouteMapRuleRequest extends TeaModel {
         public java.util.List<Long> asPathsMatch;
 
         /**
-         * <p>The community set for fuzzy match. You can specify up to 64 communities.</p>
-         * <p>A match is successful if the community in the match condition overlaps with the community of the matched route.</p>
-         * <p>Each community is in the format of n:m, where n and m range from <strong>1</strong> to <strong>65535</strong>. The community must comply with RFC 1997. Large communities (RFC 8092) are not supported.</p>
-         * <p>This parameter is mutually exclusive with <strong>CommunitySetMatch</strong>. You cannot specify both parameters at the same time.</p>
+         * <p>The community set for fuzzy match. You can enter up to 64 communities.</p>
+         * <p>A route is considered matched if the community in the match condition overlaps with the community of the matched route.</p>
+         * <p>Each community is in the format of n:m, where n and m range from <strong>1</strong> to <strong>65535</strong>. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.</p>
+         * <p>This parameter is mutually exclusive with <strong>CommunitySetMatch</strong> and cannot be specified at the same time.</p>
          * <blockquote>
          * <p>Incorrect community configurations may prevent routes from being advertised to the on-premises data center.</p>
          * </blockquote>
@@ -205,10 +205,10 @@ public class CreateRouteMapRuleRequest extends TeaModel {
         public java.util.List<String> communitySetInclude;
 
         /**
-         * <p>The community set for exact match. You can specify up to 64 communities.</p>
-         * <p>A match is successful only if the community in the match condition is exactly the same as the community of the matched route.</p>
-         * <p>Each community is in the format of n:m, where n and m range from <strong>1</strong> to <strong>65535</strong>. The community must comply with RFC 1997. Large communities (RFC 8092) are not supported.</p>
-         * <p>This parameter is mutually exclusive with <strong>CommunitySetInclude</strong>. You cannot specify both parameters at the same time.</p>
+         * <p>The community set for exact match. You can enter up to 64 communities.</p>
+         * <p>A route is considered matched only when the community in the match condition is exactly the same as the community of the matched route.</p>
+         * <p>Each community is in the format of n:m, where n and m range from <strong>1</strong> to <strong>65535</strong>. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.</p>
+         * <p>This parameter is mutually exclusive with <strong>CommunitySetInclude</strong> and cannot be specified at the same time.</p>
          * <blockquote>
          * <p>Incorrect community configurations may prevent routes from being advertised to the on-premises data center.</p>
          * </blockquote>
@@ -217,12 +217,12 @@ public class CreateRouteMapRuleRequest extends TeaModel {
         public java.util.List<String> communitySetMatch;
 
         /**
-         * <p>The list of destination instance IDs to match. You can specify the following types of instance IDs:</p>
+         * <p>The list of destination instance IDs to be matched. You can enter the following types of instance IDs:</p>
          * <ul>
-         * <li>Virtual Private Cloud (VPC) instance IDs</li>
-         * <li>Virtual Border Router (VBR) instance IDs</li>
+         * <li>Virtual private cloud (VPC) instance IDs</li>
+         * <li>Virtual border router (VBR) instance IDs</li>
          * </ul>
-         * <p>You can specify up to 64 instance IDs.</p>
+         * <p>You can enter up to 64 instance IDs.</p>
          * <blockquote>
          * <p>The list of destination instance IDs takes effect only when the direction of the route map is outbound.</p>
          * </blockquote>
@@ -231,11 +231,11 @@ public class CreateRouteMapRuleRequest extends TeaModel {
         public java.util.List<String> destinationInstanceIds;
 
         /**
-         * <p>Specifies whether to use the exclusion match mode for the list of destination instance IDs. Valid values:</p>
+         * <p>Specifies whether to use the reverse match mode for the list of destination instance IDs. Valid values:</p>
          * <ul>
-         * <li><p><strong>false</strong> (default): No. A match is successful if the destination instance ID of the route is in <strong>DestinationInstanceIds.N</strong>.</p>
+         * <li><p><strong>false</strong> (default): no. A route is matched if its destination instance ID is included in <strong>DestinationInstanceIds.N</strong>.</p>
          * </li>
-         * <li><p><strong>true</strong>: Yes. A match is successful if the destination instance ID of the route is not in <strong>DestinationInstanceIds.N</strong>.</p>
+         * <li><p><strong>true</strong>: yes. A route is matched if its destination instance ID is not included in <strong>DestinationInstanceIds.N</strong>.</p>
          * </li>
          * </ul>
          * 
@@ -246,14 +246,14 @@ public class CreateRouteMapRuleRequest extends TeaModel {
         public Boolean destinationInstanceIdsReverseMatch;
 
         /**
-         * <p>The list of destination instance types to match. The following instance types are supported:</p>
+         * <p>The list of destination instance types to be matched. The following instance types are supported:</p>
          * <ul>
          * <li><p><strong>VPC</strong>: VPC instance.</p>
          * </li>
          * <li><p><strong>VBR</strong>: VBR instance.</p>
          * </li>
          * </ul>
-         * <p>You can specify multiple instance types.</p>
+         * <p>You can enter multiple instance types.</p>
          * <blockquote>
          * <p>The list of destination instance types takes effect only when the direction of the route map is outbound.</p>
          * </blockquote>
@@ -262,13 +262,13 @@ public class CreateRouteMapRuleRequest extends TeaModel {
         public java.util.List<String> destinationInstanceTypes;
 
         /**
-         * <p>The list of destination region IDs to match. You can specify up to 64 region IDs.</p>
+         * <p>The list of destination region IDs to be matched. You can enter up to 64 region IDs.</p>
          */
         @NameInMap("DestinationRegionIds")
         public java.util.List<String> destinationRegionIds;
 
         /**
-         * <p>The list of destination route table IDs to match. You can specify up to 64 route table IDs.</p>
+         * <p>The list of destination route table IDs to be matched. You can enter up to 64 route table IDs.</p>
          * <blockquote>
          * <p>The list of destination route table IDs takes effect only when the direction of the route map is outbound.</p>
          * </blockquote>
@@ -277,12 +277,12 @@ public class CreateRouteMapRuleRequest extends TeaModel {
         public java.util.List<String> destinationRouteTableIds;
 
         /**
-         * <p>The IP address type of the routes to match. Valid values:</p>
+         * <p>The IP address type of the routes to be matched. Valid values:</p>
          * <ul>
-         * <li><strong>IPv4</strong>: Matches only IPv4 routes.</li>
-         * <li><strong>IPv6</strong>: Matches only IPv6 routes.</li>
+         * <li><strong>IPv4</strong>: matches only IPv4 routes.</li>
+         * <li><strong>IPv6</strong>: matches only IPv6 routes.</li>
          * </ul>
-         * <p>You can leave this parameter empty to match routes of all types.</p>
+         * <p>If this parameter is left empty, all types of routes are matched.</p>
          * 
          * <strong>example:</strong>
          * <p>IPv4</p>
@@ -291,37 +291,37 @@ public class CreateRouteMapRuleRequest extends TeaModel {
         public String matchAddressType;
 
         /**
-         * <p>The list of route types to match. The following route types are supported:</p>
+         * <p>The list of route types to be matched. The following route types are supported:</p>
          * <ul>
          * <li><p><strong>System</strong>: system route, which is automatically generated by the system.</p>
          * </li>
          * <li><p><strong>Custom</strong>: custom route, which is manually added by the user.</p>
          * </li>
-         * <li><p><strong>BGP</strong>: BGP route, which is propagated through the BGP routable protocol.</p>
+         * <li><p><strong>BGP</strong>: BGP route, which is propagated through the BGP routing protocol.</p>
          * </li>
          * </ul>
-         * <p>You can specify multiple route types.</p>
+         * <p>You can enter multiple route types.</p>
          */
         @NameInMap("RouteTypes")
         public java.util.List<String> routeTypes;
 
         /**
-         * <p>The list of source instance IDs to match. You can specify the following types of instance IDs:</p>
+         * <p>The list of source instance IDs to be matched. You can enter the following types of instance IDs:</p>
          * <ul>
-         * <li>Virtual Private Cloud (VPC) instance IDs</li>
-         * <li>Virtual Border Router (VBR) instance IDs</li>
+         * <li>Virtual private cloud (VPC) instance IDs</li>
+         * <li>Virtual border router (VBR) instance IDs</li>
          * </ul>
-         * <p>You can specify up to 64 instance IDs.</p>
+         * <p>You can enter up to 64 instance IDs.</p>
          */
         @NameInMap("SourceInstanceIds")
         public java.util.List<String> sourceInstanceIds;
 
         /**
-         * <p>Specifies whether to use the exclusion match mode for the list of source instance IDs. Valid values:</p>
+         * <p>Specifies whether to use the reverse match mode for the list of source instance IDs. Valid values:</p>
          * <ul>
-         * <li><p><strong>false</strong> (default): No. A match is successful if the source instance ID of the route is in <strong>SourceInstanceIds.N</strong>.</p>
+         * <li><p><strong>false</strong> (default): no. A route is matched if its source instance ID is included in <strong>SourceInstanceIds.N</strong>.</p>
          * </li>
-         * <li><p><strong>true</strong>: Yes. A match is successful if the source instance ID of the route is not in <strong>SourceInstanceIds.N</strong>.</p>
+         * <li><p><strong>true</strong>: yes. A route is matched if its source instance ID is not included in <strong>SourceInstanceIds.N</strong>.</p>
          * </li>
          * </ul>
          * 
@@ -332,26 +332,26 @@ public class CreateRouteMapRuleRequest extends TeaModel {
         public Boolean sourceInstanceIdsReverseMatch;
 
         /**
-         * <p>The list of source instance types to match. The following instance types are supported:</p>
+         * <p>The list of source instance types to be matched. The following instance types are supported:</p>
          * <ul>
          * <li><p><strong>VPC</strong>: VPC instance.</p>
          * </li>
          * <li><p><strong>VBR</strong>: VBR instance.</p>
          * </li>
          * </ul>
-         * <p>You can specify multiple instance types.</p>
+         * <p>You can enter multiple instance types.</p>
          */
         @NameInMap("SourceInstanceTypes")
         public java.util.List<String> sourceInstanceTypes;
 
         /**
-         * <p>The list of source region IDs to match. You can specify up to 64 region IDs.</p>
+         * <p>The list of source region IDs to be matched. You can enter up to 64 region IDs.</p>
          */
         @NameInMap("SourceRegionIds")
         public java.util.List<String> sourceRegionIds;
 
         /**
-         * <p>The list of source route table IDs to match. You can specify up to 64 route table IDs.</p>
+         * <p>The list of source route table IDs to be matched. You can enter up to 64 route table IDs.</p>
          */
         @NameInMap("SourceRouteTableIds")
         public java.util.List<String> sourceRouteTableIds;
@@ -509,26 +509,26 @@ public class CreateRouteMapRuleRequest extends TeaModel {
 
     public static class CreateRouteMapRuleRequestSetActions extends TeaModel {
         /**
-         * <p>The AS path to prepend when the regional gateway receives a route or executes a publish route entry. You can specify up to 64 AS numbers.</p>
-         * <p>This parameter is mutually exclusive with <strong>AsPathReplace</strong>. You cannot specify both parameters at the same time.</p>
-         * <p>This parameter specifies the action to execute after a route meets the match conditions.</p>
+         * <p>The AS path to be prepended when the regional gateway receives a route or performs a publish route entry operation. You can enter up to 64 AS numbers.</p>
+         * <p>This parameter is mutually exclusive with <strong>AsPathReplace</strong> and cannot be specified at the same time.</p>
+         * <p>This parameter specifies the operation to execute after a route meets the match conditions.</p>
          */
         @NameInMap("AsPathPrepend")
         public java.util.List<Long> asPathPrepend;
 
         /**
-         * <p>The AS path to replace when the regional gateway receives a route or executes a publish route entry. The original AS path of the route is replaced with the list of AS numbers specified in this parameter. You can specify up to 64 AS numbers.</p>
-         * <p>This parameter is mutually exclusive with <strong>AsPathPrepend</strong>. You cannot specify both parameters at the same time.</p>
-         * <p>This parameter specifies the action to execute after a route meets the match conditions.</p>
+         * <p>The AS path to be replaced when the regional gateway receives a route or performs a publish route entry operation. The original AS path of the route is replaced with the list of AS numbers specified in this parameter. You can enter up to 64 AS numbers.</p>
+         * <p>This parameter is mutually exclusive with <strong>AsPathPrepend</strong> and cannot be specified at the same time.</p>
+         * <p>This parameter specifies the operation to execute after a route meets the match conditions.</p>
          */
         @NameInMap("AsPathReplace")
         public java.util.List<Long> asPathReplace;
 
         /**
-         * <p>The community set to add to the route. You can specify up to 64 communities.</p>
-         * <p>Each community is in the format of n:m, where n and m range from <strong>1</strong> to <strong>65535</strong>. The community must comply with RFC 1997. Large communities (RFC 8092) are not supported.</p>
-         * <p>This parameter is mutually exclusive with <strong>CommunityReplace</strong>. You cannot specify both parameters at the same time.</p>
-         * <p>This parameter specifies the action to execute after a route meets the match conditions.</p>
+         * <p>The community set to be added to the route. You can enter up to 64 communities.</p>
+         * <p>Each community is in the format of n:m, where n and m range from <strong>1</strong> to <strong>65535</strong>. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.</p>
+         * <p>This parameter is mutually exclusive with <strong>CommunityReplace</strong> and cannot be specified at the same time.</p>
+         * <p>This parameter specifies the action to be performed after a route meets the match conditions.</p>
          * <blockquote>
          * <p>Incorrect community configurations may prevent routes from being advertised to the on-premises data center.</p>
          * </blockquote>
@@ -537,10 +537,10 @@ public class CreateRouteMapRuleRequest extends TeaModel {
         public java.util.List<String> communityAdd;
 
         /**
-         * <p>The community set to replace the original community of the route. You can specify up to 64 communities.</p>
-         * <p>Each community is in the format of n:m, where n and m range from <strong>1</strong> to <strong>65535</strong>. The community must comply with RFC 1997. Large communities (RFC 8092) are not supported.</p>
-         * <p>This parameter is mutually exclusive with <strong>CommunityAdd</strong>. You cannot specify both parameters at the same time.</p>
-         * <p>This parameter specifies the action to execute after a route meets the match conditions.</p>
+         * <p>The community set used to replace the original community of the route. You can enter up to 64 communities.</p>
+         * <p>Each community is in the format of n:m, where n and m range from <strong>1</strong> to <strong>65535</strong>. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.</p>
+         * <p>This parameter is mutually exclusive with <strong>CommunityAdd</strong> and cannot be specified at the same time.</p>
+         * <p>This parameter specifies the action to be performed after a route meets the match conditions.</p>
          * <blockquote>
          * <p>Incorrect community configurations may prevent routes from being advertised to the on-premises data center.</p>
          * </blockquote>
@@ -551,7 +551,7 @@ public class CreateRouteMapRuleRequest extends TeaModel {
         /**
          * <p>Policy priority of the associated next route map rule.</p>
          * <ul>
-         * <li>You can set policy priority of the associated route map rule only when <strong>RouteAction</strong> is set to <strong>Permit</strong>. Only the routes that are permitted continue to match the associated next route map rule.</li>
+         * <li>You can set policy priority of the associated route map rule only when <strong>RouteAction</strong> is set to <strong>Permit</strong>. Only the permitted routes continue to match the associated next route map rule.</li>
          * <li>Policy priority of the associated next route map rule must be lower than policy priority of the current route map rule.</li>
          * </ul>
          * 
@@ -562,11 +562,11 @@ public class CreateRouteMapRuleRequest extends TeaModel {
         public Long nextPriority;
 
         /**
-         * <p>The policy action after all conditions are met. Valid values:</p>
+         * <p>The policy action to be performed after all conditions are matched. Valid values:</p>
          * <ul>
-         * <li><p><strong>Permit</strong>: Permits the matched routes.</p>
+         * <li><p><strong>Permit</strong>: permits the matched routes.</p>
          * </li>
-         * <li><p><strong>Deny</strong>: Denies the matched routes.</p>
+         * <li><p><strong>Deny</strong>: denies the matched routes.</p>
          * </li>
          * </ul>
          * 

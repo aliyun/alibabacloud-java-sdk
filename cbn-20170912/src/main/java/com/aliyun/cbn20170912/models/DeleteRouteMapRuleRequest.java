@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DeleteRouteMapRuleRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can generate the parameter value from your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</p>
+     * <p>You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</p>
      * <blockquote>
      * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
@@ -18,10 +18,10 @@ public class DeleteRouteMapRuleRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to only precheck the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: sends a check request and does not delete the route map rule. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the check, the corresponding error is returned. If the request passes the check, the DryRunOperation error code is returned.</li>
-     * <li><strong>false</strong> (default): sends a regular request and directly deletes the route map rule after the request passes the check.</li>
+     * <li><strong>true</strong>: performs a dry run and does not delete the route map rule. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the check fails, the system returns an error. If the check succeeds, the system returns the error code <code>DryRunOperation</code>.</li>
+     * <li><strong>false</strong> (default): sends a regular request and deletes the route map rule if the dry run succeeds.</li>
      * </ul>
      */
     @NameInMap("DryRun")

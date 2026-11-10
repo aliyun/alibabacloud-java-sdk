@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCenBandwidthPackagesRequest extends TeaModel {
     /**
-     * <p>The filter information.</p>
+     * <p>The filter conditions.</p>
      */
     @NameInMap("Filter")
     public java.util.List<DescribeCenBandwidthPackagesRequestFilter> filter;
@@ -28,9 +28,9 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
     /**
      * <p>The logical relationship between filter conditions. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): The filter conditions have an <strong>AND</strong> relationship. A bandwidth package must match all filter conditions to be returned.</p>
+     * <li><p><strong>false</strong> (default): The filter conditions have an <strong>AND</strong> relationship. A match occurs only when all filter conditions are met.</p>
      * </li>
-     * <li><p><strong>true</strong>: The filter conditions have an <strong>OR</strong> relationship. A bandwidth package that matches any filter condition is returned.</p>
+     * <li><p><strong>true</strong>: The filter conditions have an <strong>OR</strong> relationship. A match occurs when any of the filter conditions is met.</p>
      * </li>
      * </ul>
      * 
@@ -65,7 +65,7 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfnwjeo4tv****</p>
@@ -80,7 +80,7 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tag information list.</p>
+     * <p>The list of tag information.</p>
      * <p>You can specify up to 20 tags at a time.</p>
      */
     @NameInMap("Tag")
@@ -182,19 +182,19 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
     public static class DescribeCenBandwidthPackagesRequestFilter extends TeaModel {
         /**
          * <p>The filter condition.
-         * You can use filter conditions to filter the bandwidth package instances to query. The following filter conditions are supported:</p>
+         * You can use filter conditions to filter the bandwidth plan instances to be viewed. The system supports the following filter conditions:</p>
          * <ul>
          * <li><p><strong>CenId</strong>: The ID of the Cloud Enterprise Network (CEN) instance.</p>
          * </li>
-         * <li><p><strong>Status</strong>: The status of the bandwidth package instance. Valid values:</p>
+         * <li><p><strong>Status</strong>: The status of the bandwidth plan instance. Valid values:</p>
          * <ul>
-         * <li><strong>Idle</strong>: Not associated.</li>
-         * <li><strong>InUse</strong>: Associated.</li>
+         * <li><strong>Idle</strong>: Unbound.</li>
+         * <li><strong>InUse</strong>: Bound.</li>
          * </ul>
          * </li>
-         * <li><p><strong>CenBandwidthPackageId</strong>: The ID of the bandwidth package.</p>
+         * <li><p><strong>CenBandwidthPackageId</strong>: The ID of the bandwidth plan.</p>
          * </li>
-         * <li><p><strong>Name</strong>: The name of the bandwidth package.
+         * <li><p><strong>Name</strong>: The name of the bandwidth plan.
          * You can specify one or more filter conditions. The maximum value of <strong>N</strong> is <strong>5</strong>.</p>
          * </li>
          * </ul>
@@ -206,7 +206,7 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The filter values based on the specified <strong>Key</strong>. You can specify multiple filter values for a single <strong>Key</strong>. The filter values have an <strong>OR</strong> relationship, which means that a bandwidth package matching any of the filter values is considered a match for the filter condition.</p>
+         * <p>The filter value specified based on <strong>Key</strong>. You can specify multiple filter values for a single <strong>Key</strong>. The filter values have an <strong>OR</strong> relationship. A match occurs when any of the filter values is met.</p>
          * 
          * <strong>example:</strong>
          * <p>Idle</p>
@@ -240,7 +240,7 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
     public static class DescribeCenBandwidthPackagesRequestTag extends TeaModel {
         /**
          * <p>The tag key of the resource.</p>
-         * <p>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>This parameter cannot be an empty string once specified. It can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
@@ -251,8 +251,8 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource.</p>
-         * <p>The tag value can be empty or a string of up to 128 characters. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
+         * <p>The tag value can be empty or a string of up to 128 characters. It cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Each tag key corresponds to a tag value. You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>TagValue</p>

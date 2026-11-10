@@ -18,7 +18,7 @@ public class DescribeCensRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number to query. Default value: <strong>1</strong>.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,7 @@ public class DescribeCensRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries to return per page during paging in a paged query. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -138,10 +138,10 @@ public class DescribeCensRequest extends TeaModel {
         /**
          * <p>The filter condition. Valid values:</p>
          * <ul>
-         * <li><strong>CenId</strong>: the CEN instance ID.</li>
-         * <li><strong>Name</strong>: the CEN instance name.</li>
+         * <li><strong>CenId</strong>: the instance ID of the CEN.</li>
+         * <li><strong>Name</strong>: the name of the CEN instance.</li>
          * </ul>
-         * <p>The relationship between multiple filter conditions is <strong>AND</strong>, which means that a record must match all filter conditions to be returned.</p>
+         * <p>By default, multiple filter conditions have an <strong>AND</strong> relationship. A CEN instance is matched only when it meets all the filter conditions.</p>
          * <p>You can specify up to 5 filter conditions at a time.</p>
          * 
          * <strong>example:</strong>
@@ -152,8 +152,8 @@ public class DescribeCensRequest extends TeaModel {
 
         /**
          * <p>The value of the filter condition.</p>
-         * <p>Specify filter values based on the <strong>Key</strong> parameter. You can specify multiple filter values for a single <strong>Key</strong>. The relationship between multiple filter values is <strong>OR</strong>, which means that a record is returned if it matches any of the filter values.</p>
-         * <p>You can specify up to 5 filter values for each filter condition.</p>
+         * <p>Specify the filter value based on the <strong>Key</strong>. You can specify multiple filter values for a single <strong>Key</strong>. Multiple filter values have an <strong>OR</strong> relationship. A CEN instance is matched if it meets any of the filter values.</p>
+         * <p>You can specify up to 5 filter values for a single filter condition.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-0xyeagctz5sfg9****</p>
@@ -187,7 +187,7 @@ public class DescribeCensRequest extends TeaModel {
     public static class DescribeCensRequestTag extends TeaModel {
         /**
          * <p>The tag key of the resource.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key cannot be an empty string. It can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
@@ -198,8 +198,8 @@ public class DescribeCensRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource.</p>
-         * <p>The tag value can be an empty string or up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
+         * <p>The tag value can be an empty string or a string up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Each tag key corresponds to a tag value. You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>tagtest</p>

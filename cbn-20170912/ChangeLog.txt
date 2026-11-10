@@ -1,3 +1,17 @@
+2026-11-10 Version: 1.7.0
+- Support API AssociateTransitRouterPolicyTable.
+- Support API CreateTransitRouterPolicyBasedRoute.
+- Support API CreateTransitRouterPolicyTable.
+- Support API DeleteTransitRouterPolicyBasedRoute.
+- Support API DeleteTransitRouterPolicyTable.
+- Support API DescribeTransitRouterPolicyBasedRoutes.
+- Support API DescribeTransitRouterPolicyTableAssociations.
+- Support API DescribeTransitRouterPolicyTables.
+- Support API DisassociateTransitRouterPolicyTable.
+- Support API UpdateTransitRouterPolicyBasedRoute.
+- Support API UpdateTransitRouterPolicyTable.
+
+
 2026-10-30 Version: 1.6.0
 - Support API CreateRouteMap.
 - Support API CreateRouteMapRule.

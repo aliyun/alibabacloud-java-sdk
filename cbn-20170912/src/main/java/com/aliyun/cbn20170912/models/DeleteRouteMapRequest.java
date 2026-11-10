@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DeleteRouteMapRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can generate the value from your client and make sure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</p>
+     * <p>You can generate a parameter value from your client to ensure that the value is unique among different requests. The client token only supports ASCII characters.</p>
      * <blockquote>
      * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
@@ -20,8 +20,8 @@ public class DeleteRouteMapRequest extends TeaModel {
     /**
      * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The system prechecks the request without deleting the route map. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the system returns an error. If the request passes the precheck, the system returns the DryRunOperation error code.</li>
-     * <li><strong>false</strong> (default): The system sends a normal request and deletes the route map after the request passes the precheck.</li>
+     * <li><strong>true</strong>: sends a check request and does not delete the route map. The system checks whether required parameters are specified, the request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): sends a normal request and directly deletes the route map after the check succeeds.</li>
      * </ul>
      * 
      * <strong>example:</strong>
