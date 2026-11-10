@@ -14,7 +14,7 @@ public class AttachCommonBandwidthPackageToLoadBalancerResponseBody extends TeaM
     public String jobId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>

@@ -17,7 +17,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
     public java.util.List<ListListenerCertificatesResponseBodyCertificates> certificates;
 
     /**
-     * <p>The number of entries returned per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -26,10 +26,10 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token for the next query.</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request.</li>
-     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * <li>Leave this parameter empty for the first query or when no subsequent query is required.</li>
+     * <li>For subsequent queries, set this parameter to the NextToken value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -111,7 +111,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
 
     public static class ListListenerCertificatesResponseBodyCertificates extends TeaModel {
         /**
-         * <p>The ID of the certificate. Only one server certificate is supported.</p>
+         * <p>The certificate ID. Only server certificates are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>12315790343_166f8204689_1714763408_70998****</p>
@@ -120,7 +120,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         public String certificateId;
 
         /**
-         * <p>The type of the certificate.</p>
+         * <p>The certificate type.</p>
          * 
          * <strong>example:</strong>
          * <p>Server</p>
@@ -129,10 +129,12 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         public String certificateType;
 
         /**
-         * <p>Indicates whether the certificate is the default certificate of the listener. Valid values:</p>
+         * <p>Specifies whether the certificate is the default certificate for the listener. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: The certificate is the default certificate.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The certificate is an additional certificate.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,11 +144,14 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>Indicates whether the certificate is associated with the listener. Valid values:</p>
+         * <p>The association status between the certificate and the listener. Valid values:</p>
          * <ul>
-         * <li><strong>Associating</strong></li>
-         * <li><strong>Associated</strong></li>
-         * <li><strong>Diassociating</strong></li>
+         * <li><p><strong>Associating</strong>: The certificate is being associated.</p>
+         * </li>
+         * <li><p><strong>Associated</strong>: The certificate is associated.</p>
+         * </li>
+         * <li><p><strong>Diassociating</strong>: The certificate is being dissociated.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

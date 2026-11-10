@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHdMonitorRegionConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the region where the resources are deployed.</p>
+     * <p>The ID of the region where the resource resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

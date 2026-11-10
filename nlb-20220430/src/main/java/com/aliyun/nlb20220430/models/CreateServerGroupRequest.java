@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateServerGroupRequest extends TeaModel {
     /**
-     * <p>The IP version. Valid values:</p>
+     * <p>The protocol version. Valid values:</p>
      * <ul>
-     * <li><strong>ipv4</strong> (default): IPv4</li>
-     * <li><strong>DualStack</strong>: dual-stack</li>
+     * <li><p><strong>ipv4</strong> (default): IPv4.</p>
+     * </li>
+     * <li><p><strong>DualStack</strong>: dual-stack.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class CreateServerGroupRequest extends TeaModel {
     public String addressIPVersion;
 
     /**
-     * <p>Specifies whether to enable multi-port forwarding. Valid values:</p>
+     * <p>Specifies whether to enable all-port forwarding. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><p><strong>true</strong>: enables all-port forwarding.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): disables all-port forwarding.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,10 +35,10 @@ public class CreateServerGroupRequest extends TeaModel {
     public Boolean anyPortEnabled;
 
     /**
-     * <p>The client token used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, the value of <strong>RequestId</strong> is used.**** The value of <strong>RequestId</strong> is different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,8 +50,10 @@ public class CreateServerGroupRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable connection draining. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><p><strong>true</strong>: enables connection draining.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): disables connection draining.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +63,8 @@ public class CreateServerGroupRequest extends TeaModel {
     public Boolean connectionDrainEnabled;
 
     /**
-     * <p>Specifies a timeout period for connection draining. Unit: seconds. Valid values: <strong>0</strong> to <strong>900</strong>.</p>
+     * <p>The timeout period for connection draining. Unit: seconds.
+     * Valid values: <strong>0</strong> to <strong>900</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -66,10 +73,10 @@ public class CreateServerGroupRequest extends TeaModel {
     public Integer connectionDrainTimeout;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><strong>true:</strong>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): validates the request and performs the operation. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: prechecks the request without creating the server group. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,22 +86,35 @@ public class CreateServerGroupRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The configurations of health checks.</p>
+     * <p>The health check configuration.</p>
      */
     @NameInMap("HealthCheckConfig")
     public CreateServerGroupRequestHealthCheckConfig healthCheckConfig;
 
+    /**
+     * <p>The traffic scheduling policy in dual-stack mode. Valid values:</p>
+     * <ul>
+     * <li>NonAffinity (default): non-affinity mode. Traffic is forwarded to healthy backend servers based on the scheduling algorithm regardless of the IP protocol version of the source.</li>
+     * <li>Affinity: affinity mode. Traffic is forwarded based on the IP protocol version of the request source. IPv4 requests are forwarded only to IPv4 backend servers, and IPv6 requests are forwarded only to IPv6 backend servers.<blockquote>
+     * <p>This parameter takes effect only when <strong>AddressIPVersion</strong> is set to <strong>DualStack</strong>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Affinity</p>
+     */
     @NameInMap("IpVersionAffinityMode")
     public String ipVersionAffinityMode;
 
     /**
-     * <p>Specifies whether to enable client IP preservation. Valid values:</p>
+     * <p>Specifies whether to enable client IP address preservation. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> (default)</li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong> (default): enables client IP address preservation.</li>
+     * <li><strong>false</strong>: disables client IP address preservation.</li>
      * </ul>
      * <blockquote>
-     * <p> If you set this parameter to <strong>true</strong> and <strong>Protocol</strong> to <strong>TCP</strong>, the server group cannot be associated with <strong>TCPSSL</strong> listeners.</p>
+     * <p>If <strong>Protocol</strong> is set to <strong>TCP</strong> and this parameter is set to <strong>true</strong>, the server group cannot be associated with <strong>TCPSSL</strong> listeners.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -107,20 +127,20 @@ public class CreateServerGroupRequest extends TeaModel {
     public Boolean preserveClientIpEnabled;
 
     /**
-     * <p>The protocol between the NLB instance and backend servers. Valid values:</p>
+     * <p>The communication protocol used to forward traffic to backend servers. Valid values:</p>
      * <ul>
      * <li><strong>TCP</strong> (default)</li>
      * <li><strong>UDP</strong></li>
-     * <li><strong>TCP_UDP</strong></li>
-     * </ul>
-     * <blockquote>
+     * <li><strong>TCP_UDP</strong><blockquote>
      * <ul>
-     * <li>If you set this parameter to <strong>UDP</strong>, you can associate the server group only with <strong>UDP</strong> listeners.</li>
-     * <li>If you set this parameter to <strong>TCP</strong> and <strong>PreserveClientIpEnabled</strong> to <strong>true</strong>, you can associate the server group only with <strong>TCP</strong> listeners.</li>
-     * <li>If you set this parameter to <strong>TCP</strong> and <strong>PreserveClientIpEnabled</strong> to <strong>false</strong>, you can associate the server group with <strong>TCPSSL</strong> and <strong>TCP</strong> listeners.</li>
-     * <li>If you set this parameter to <strong>TCP_UDP</strong>, you can associate the server group with <strong>TCP</strong> and <strong>UDP</strong> listeners.</li>
+     * <li>If this parameter is set to <strong>UDP</strong>, the server group can be associated only with <strong>UDP</strong> listeners.</li>
+     * <li>If this parameter is set to <strong>TCP</strong> and <strong>PreserveClientIpEnabled</strong> is set to <strong>true</strong>, the server group can be associated only with <strong>TCP</strong> listeners.</li>
+     * <li>If this parameter is set to <strong>TCP</strong> and <strong>PreserveClientIpEnabled</strong> is set to <strong>false</strong>, the server group can be associated with <strong>TCPSSL</strong> and <strong>TCP</strong> listeners.</li>
+     * <li>If this parameter is set to <strong>TCP_UDP</strong>, the server group can be associated with <strong>TCP</strong> and <strong>UDP</strong> listeners.</li>
      * </ul>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>TCP</p>
@@ -129,7 +149,7 @@ public class CreateServerGroupRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The ID of the region where the NLB instance is deployed.</p>
+     * <p>The region ID of the Network Load Balancer (NLB) instance. </p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
@@ -150,15 +170,21 @@ public class CreateServerGroupRequest extends TeaModel {
     /**
      * <p>The scheduling algorithm. Valid values:</p>
      * <ul>
-     * <li><strong>Wrr</strong> (default): weighted round-robin. Backend servers with higher weights receive more requests.</li>
-     * <li><strong>Wlc</strong>: weighted least connections. Requests are distributed based on the weights and the number of connections to backend servers. If multiple backend servers have the same weight, requests are forwarded to the backend server with the least connections.</li>
-     * <li><strong>rr</strong>: Requests are forwarded to backend servers in sequence.</li>
-     * <li><strong>sch</strong>: source IP hash. Requests from the same source IP address are forwarded to the same backend server.</li>
-     * <li><strong>tch</strong>: consistent hashing based on four factors: source IP address, destination IP address, source port, and destination port. Requests that contain the same four factors are forwarded to the same backend server.</li>
-     * <li><strong>qch</strong>: QUIC ID hash. Requests that contain the same QUIC ID are forwarded to the same backend server.</li>
+     * <li><p><strong>Wrr</strong> (default): weighted round-robin. Backend servers with higher weights are more likely to be polled.</p>
+     * </li>
+     * <li><p><strong>Wlc</strong>: weighted least connections. In addition to the weight of each backend server, the actual load (number of connections) of the backend server is also considered. If the weights are the same, backend servers with fewer current connections are more likely to be polled.</p>
+     * </li>
+     * <li><p><strong>rr</strong>: round-robin. External requests are distributed to backend servers in sequence.</p>
+     * </li>
+     * <li><p><strong>sch</strong>: source IP hash. Requests from the same source IP address are scheduled to the same backend server.</p>
+     * </li>
+     * <li><p><strong>tch</strong>: 4-tuple hash. Consistent hashing based on the 4-tuple (source IP address, destination IP address, source port, and destination port). Requests from the same flow are scheduled to the same backend server.</p>
+     * </li>
+     * <li><p><strong>qch</strong>: QUIC ID hash. Requests with the same QUIC ID are scheduled to the same backend server.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> QUIC ID hash is supported only when the backend protocol is set to UDP.</p>
+     * <p>QUIC ID hash is supported only when the backend protocol is UDP.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -168,8 +194,8 @@ public class CreateServerGroupRequest extends TeaModel {
     public String scheduler;
 
     /**
-     * <p>The server group name.</p>
-     * <p>The name must be 2 to 128 characters in length, can contain digits, periods (.), underscores (_), and hyphens (-), and must start with a letter.</p>
+     * <p>The name of the server group.</p>
+     * <p>The name must be 2 to 128 characters in length, and must start with a letter or Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -179,10 +205,12 @@ public class CreateServerGroupRequest extends TeaModel {
     public String serverGroupName;
 
     /**
-     * <p>The type of the server group. Valid values:</p>
+     * <p>The server group type. Valid values:</p>
      * <ul>
-     * <li><strong>Instance</strong> (default): allows you to specify servers of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
-     * <li><strong>Ip</strong>: allows you to specify IP addresses.</li>
+     * <li><p><strong>Instance</strong> (default): server type. This type of server group supports adding <strong>Ecs</strong>, <strong>Eni</strong>, and <strong>Eci</strong> instances.</p>
+     * </li>
+     * <li><p><strong>Ip</strong>: IP address type. This type of server group supports directly adding backend servers by IP address.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -192,7 +220,7 @@ public class CreateServerGroupRequest extends TeaModel {
     public String serverGroupType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -201,9 +229,9 @@ public class CreateServerGroupRequest extends TeaModel {
     public java.util.List<CreateServerGroupRequestTag> tag;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) where the server group is deployed.</p>
+     * <p>The ID of the VPC where the server group is deployed.</p>
      * <blockquote>
-     * <p> If <strong>ServerGroupType</strong> is set to <strong>Instance</strong>, only servers in the specified VPC can be added to the server group.</p>
+     * <p>If <strong>ServerGroupType</strong> is set to <strong>Instance</strong>, only servers in this VPC can be added to the server group.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -356,9 +384,9 @@ public class CreateServerGroupRequest extends TeaModel {
 
     public static class CreateServerGroupRequestHealthCheckConfig extends TeaModel {
         /**
-         * <p>The port that you want to use for health checks on backend servers.</p>
+         * <p>The port of the backend server used for health checks.</p>
          * <p>Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
-         * <p>Default value: <strong>0</strong>. If you set this parameter to 0, the port that the backend server uses to provide services is also used for health checks.</p>
+         * <p>Default value: <strong>0</strong>. This value indicates that the port of the backend server is used for health checks.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -367,7 +395,9 @@ public class CreateServerGroupRequest extends TeaModel {
         public Integer healthCheckConnectPort;
 
         /**
-         * <p>The timeout period for a health check response. Unit: seconds. Valid values: <strong>1</strong> to <strong>300</strong>. Default value: <strong>5</strong>.</p>
+         * <p>The maximum timeout period for a health check response. Unit: seconds.
+         * Valid values: <strong>1</strong> to <strong>300</strong>.
+         * Default value: <strong>5</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -376,13 +406,15 @@ public class CreateServerGroupRequest extends TeaModel {
         public Integer healthCheckConnectTimeout;
 
         /**
-         * <p>The domain name that is used for health checks. Valid values:</p>
+         * <p>The domain name used for health checks. Valid values:</p>
          * <ul>
-         * <li><strong>$SERVER_IP</strong>: the internal IP address of a backend server.</li>
-         * <li><strong>domain</strong>: a domain name. The domain name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), and periods (.).</li>
+         * <li><p><strong>$SERVER_IP</strong>: the internal IP address of the backend server.</p>
+         * </li>
+         * <li><p><strong>domain</strong>: a specified domain name. The domain name must be 1 to 80 characters in length, and can contain only letters, digits, hyphens (-), and periods (.).</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter takes effect only if you set <strong>HealthCheckType</strong> to <strong>HTTP</strong>.</p>
+         * <p>This parameter takes effect only when <strong>HealthCheckType</strong> is set to <strong>HTTP</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -394,8 +426,10 @@ public class CreateServerGroupRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable health checks. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong> (default)</li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong> (default): enables health checks.</p>
+         * </li>
+         * <li><p><strong>false</strong>: disables health checks.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -405,7 +439,7 @@ public class CreateServerGroupRequest extends TeaModel {
         public Boolean healthCheckEnabled;
 
         /**
-         * <p>The response string that backend servers return to UDP listeners for health checks. The string must be 1 to 512 characters in length and can contain only letters and digits.</p>
+         * <p>The query string in the request for UDP listener health checks. The string can contain only letters and digits, and can be up to 512 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -414,18 +448,19 @@ public class CreateServerGroupRequest extends TeaModel {
         public String healthCheckExp;
 
         /**
-         * <p>The HTTP status codes to return for health checks. Separate multiple HTTP status codes with commas (,). Valid values: <strong>http_2xx</strong> (default), <strong>http_3xx</strong>, <strong>http_4xx</strong>, and <strong>http_5xx</strong>.</p>
+         * <p>The HTTP status codes for healthy responses. Separate multiple status codes with commas (,).
+         * Valid values: <strong>http_2xx</strong> (default), <strong>http_3xx</strong>, <strong>http_4xx</strong>, and <strong>http_5xx</strong>.</p>
          * <blockquote>
-         * <p> This parameter takes effect only if you set <strong>HealthCheckType</strong> to <strong>HTTP</strong>.</p>
+         * <p>This parameter takes effect only when <strong>HealthCheckType</strong> is set to <strong>HTTP</strong>.</p>
          * </blockquote>
          */
         @NameInMap("HealthCheckHttpCode")
         public java.util.List<String> healthCheckHttpCode;
 
         /**
-         * <p>The HTTP version used for health checks. Valid values: <strong>HTTP1.0</strong> (default) and <strong>HTTP1.1</strong>.</p>
+         * <p>The HTTP protocol version for health checks. Valid values: <strong>HTTP1.0</strong> (default) and <strong>HTTP1.1</strong>.</p>
          * <blockquote>
-         * <p> This parameter takes effect only if you set <strong>HealthCheckType</strong> to <strong>HTTP</strong>.</p>
+         * <p>This parameter takes effect only when <strong>HealthCheckType</strong> is set to <strong>HTTP</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -435,10 +470,10 @@ public class CreateServerGroupRequest extends TeaModel {
         public String healthCheckHttpVersion;
 
         /**
-         * <p>The interval at which health checks are performed. Unit: seconds. Default value: <strong>5</strong>.</p>
+         * <p>The interval between two consecutive health checks. Unit: seconds. Default value: <strong>5</strong>.</p>
          * <ul>
-         * <li>If you set <strong>HealthCheckType</strong> to <strong>TCP</strong> or <strong>HTTP</strong>, valid values are <strong>1</strong> to <strong>50</strong>.</li>
-         * <li>If you set <strong>HealthCheckType</strong> to <strong>UDP</strong>, valid values are <strong>1</strong> to <strong>300</strong>. Set the health check interval equal to or larger than the response timeout period to ensure that UDP response timeouts are not determined as no responses.</li>
+         * <li>If <strong>HealthCheckType</strong> is set to <strong>TCP</strong> or <strong>HTTP</strong>, valid values are <strong>1</strong> to <strong>50</strong>.</li>
+         * <li>If <strong>HealthCheckType</strong> is set to <strong>UDP</strong>, valid values are <strong>1</strong> to <strong>300</strong>. You must set the interval to be greater than or equal to the response timeout period to ensure that UDP probe responses are not misjudged as unresponsive due to a timeout.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -448,7 +483,7 @@ public class CreateServerGroupRequest extends TeaModel {
         public Integer healthCheckInterval;
 
         /**
-         * <p>The request string that UDP listeners send to backend servers for health checks. The string must be 1 to 512 characters in length and can contain only letters and digits.</p>
+         * <p>The query string in the request for UDP listener health checks. The string can contain only letters and digits, and can be up to 512 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>hello</p>
@@ -457,7 +492,7 @@ public class CreateServerGroupRequest extends TeaModel {
         public String healthCheckReq;
 
         /**
-         * <p>The protocol that you want to use for health checks. Valid values:</p>
+         * <p>The protocol used for health checks. Valid values:</p>
          * <ul>
          * <li><strong>TCP</strong></li>
          * <li><strong>HTTP</strong></li>
@@ -471,10 +506,10 @@ public class CreateServerGroupRequest extends TeaModel {
         public String healthCheckType;
 
         /**
-         * <p>The URL path to which health check probes are sent.</p>
-         * <p>The URL path must be 1 to 80 characters in length, and can contain letters, digits, and the following special characters: <code>- / . % ? # &amp; </code>. It must start with a forward slash (/).</p>
+         * <p>The health check path.</p>
+         * <p>The path must be 1 to 80 characters in length, and can contain only letters, digits, and the following special characters: <code>-/.%?#&amp;</code>. It must start with a forward slash (/).</p>
          * <blockquote>
-         * <p> This parameter takes effect only if you set <strong>HealthCheckType</strong> to <strong>HTTP</strong>.</p>
+         * <p>This parameter takes effect only when <strong>HealthCheckType</strong> is set to <strong>HTTP</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -484,7 +519,7 @@ public class CreateServerGroupRequest extends TeaModel {
         public String healthCheckUrl;
 
         /**
-         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from <strong>fail</strong> to <strong>success</strong>.</p>
+         * <p>The number of consecutive successful health checks that must occur before the health check status of a backend server is changed from <strong>fail</strong> to <strong>success</strong>.</p>
          * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
          * <p>Default value: <strong>2</strong>.</p>
          * 
@@ -495,9 +530,9 @@ public class CreateServerGroupRequest extends TeaModel {
         public Integer healthyThreshold;
 
         /**
-         * <p>The HTTP method that is used for health checks. Valid values: <strong>GET</strong> (default) and <strong>HEAD</strong>.</p>
+         * <p>The HTTP method used for health checks. Valid values: <strong>GET</strong> (default) and <strong>HEAD</strong>.</p>
          * <blockquote>
-         * <p> This parameter takes effect only if you set <strong>HealthCheckType</strong> to <strong>HTTP</strong>.</p>
+         * <p>This parameter takes effect only when <strong>HealthCheckType</strong> is set to <strong>HTTP</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -507,7 +542,7 @@ public class CreateServerGroupRequest extends TeaModel {
         public String httpCheckMethod;
 
         /**
-         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from <strong>success</strong> to <strong>fail</strong>.</p>
+         * <p>The number of consecutive failed health checks that must occur before the health check status of a backend server is changed from <strong>success</strong> to <strong>fail</strong>.</p>
          * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
          * <p>Default value: <strong>2</strong>.</p>
          * 
@@ -638,8 +673,8 @@ public class CreateServerGroupRequest extends TeaModel {
 
     public static class CreateServerGroupRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. The tag key can be up to 64 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>. The tag key can contain letters, digits, and the following special characters: _ . : / = + - @</p>
-         * <p>You can specify up to 20 tags in each call.</p>
+         * <p>The tag key. The tag key can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>. It can contain letters, digits, underscores (_), periods (.), colons (:), forward slashes (/), equal signs (=), plus signs (+), hyphens (-), and at signs (@).</p>
+         * <p>You can add up to 20 tags in a single call.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -648,8 +683,8 @@ public class CreateServerGroupRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. The tag value can be up to 128 characters in length, cannot start with <code>acs:</code> or <code>aliyun</code>, and cannot contain <code>http://</code> or <code>https://</code>. The tag value can contain letters, digits, and the following special characters: _ . : / = + - @</p>
-         * <p>You can specify up to 20 tags in each call.</p>
+         * <p>The tag value. The tag value can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>. It can contain letters, digits, underscores (_), periods (.), colons (:), forward slashes (/), equal signs (=), plus signs (+), hyphens (-), and at signs (@).</p>
+         * <p>You can add up to 20 tags in a single call.</p>
          * 
          * <strong>example:</strong>
          * <p>product</p>

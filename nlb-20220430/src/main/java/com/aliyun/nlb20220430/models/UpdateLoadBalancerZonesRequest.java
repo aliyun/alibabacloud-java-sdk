@@ -8,7 +8,7 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
      * <p>The client token used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, the value of <strong>RequestId</strong> is used.**** The value of <strong>RequestId</strong> is different for each request.</p>
+     * <p>If you do not set this parameter, the value of <strong>RequestId</strong> is used.\<em>\</em>\<em>\</em> The value of <strong>RequestId</strong> is different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,8 +20,10 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): validates the request and performs the request. If the request passes the validation, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): validates the request and performs the request. If the request passes the validation, an HTTP 2xx status code is returned and the operation is performed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -115,11 +117,13 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
         /**
          * <p>The type of the EIP. Valid values:</p>
          * <ul>
-         * <li><strong>Common</strong>: an EIP</li>
-         * <li><strong>Anycast</strong>: an Anycast EIP</li>
+         * <li><p><strong>Common</strong>: an EIP</p>
+         * </li>
+         * <li><p><strong>Anycast</strong>: an Anycast EIP</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> For regions that support Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/470000.html">Limits</a>.This parameter is required if <strong>AddressType</strong> is set to <strong>Internet</strong>.</p>
+         * <p>For regions that support Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/470000.html">Limits</a>.This parameter is required if <strong>AddressType</strong> is set to <strong>Internet</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

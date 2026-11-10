@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListListenerCertificatesRequest extends TeaModel {
     /**
-     * <p>The type of the certificate. Valid values:</p>
+     * <p>The certificate type. Valid values:</p>
      * <ul>
      * <li><strong>Ca</strong>: CA certificate.</li>
-     * <li><strong>Server</strong>: server certificate</li>
+     * <li><strong>Server</strong>: Server certificate.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,9 +18,9 @@ public class ListListenerCertificatesRequest extends TeaModel {
     public String certType;
 
     /**
-     * <p>The server certificate. Only one server certificate is supported.</p>
+     * <p>The server certificates. You can add only one server certificate.</p>
      * <blockquote>
-     * <p> This parameter takes effect only for TCP/SSL listeners.</p>
+     * <p>This parameter takes effect only for TCPSSL listeners.</p>
      * </blockquote>
      * 
      * <strong>if can be null:</strong>
@@ -30,7 +30,7 @@ public class ListListenerCertificatesRequest extends TeaModel {
     public java.util.List<String> certificateIds;
 
     /**
-     * <p>The ID of the listener. Specify the ID of a listener that uses SSL over TCP.</p>
+     * <p>The listener ID. This parameter is valid only for TCPSSL listeners.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class ListListenerCertificatesRequest extends TeaModel {
     public String listenerId;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -49,10 +49,10 @@ public class ListListenerCertificatesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token for the next query.</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request.</li>
-     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * <li>Leave this parameter empty for the first query or when no subsequent query is required.</li>
+     * <li>For subsequent queries, set this parameter to the NextToken value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,8 +62,8 @@ public class ListListenerCertificatesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region where the Network Load Balancer (NLB) instance is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the Network Load Balancer (NLB) instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

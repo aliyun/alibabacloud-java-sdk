@@ -14,10 +14,10 @@ public class AssociateAdditionalCertificatesWithListenerResponseBody extends Tea
     public String jobId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>365F4154-92F6-4AE4-93F8-7FF34B540710</p>
+     * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
      */
     @NameInMap("RequestId")
     public String requestId;

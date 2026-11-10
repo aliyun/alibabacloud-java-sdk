@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListListenersRequest extends TeaModel {
     /**
-     * <p>The listener IDs. You can specify up to 20 listeners.</p>
+     * <p>The instance IDs. You can specify up to 20 instance IDs.</p>
      */
     @NameInMap("ListenerIds")
     public java.util.List<String> listenerIds;
@@ -20,13 +20,13 @@ public class ListListenersRequest extends TeaModel {
     public String listenerProtocol;
 
     /**
-     * <p>The IDs of the NLB instances. You can specify up to 20 instances.</p>
+     * <p>The IDs of the Network Load Balancer (NLB) instances. You can specify up to 20 instance IDs.</p>
      */
     @NameInMap("LoadBalancerIds")
     public java.util.List<String> loadBalancerIds;
 
     /**
-     * <p>The number of entries to return in each call. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong></p>
+     * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -35,10 +35,10 @@ public class ListListenersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token used to specify a particular page of results. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>Leave this parameter empty for the first query or the only query.</li>
-     * <li>Set this parameter to the value of NextToken obtained from the previous query.</li>
+     * <li>If this is the first query or no next query is required, you do not need to specify this parameter.</li>
+     * <li>If a next query is required, the value is the NextToken value returned from the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,8 +48,8 @@ public class ListListenersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region where the NLB instance is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the Network Load Balancer (NLB) instance. </p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -58,10 +58,10 @@ public class ListListenersRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to enable fine-grained monitoring. Valid values:</p>
+     * <p>Specifies whether to enable second-level monitoring. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: enabled.</li>
+     * <li><strong>false</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class ListListenersRequest extends TeaModel {
     public String secSensorEnabled;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListListenersRequestTag> tag;
@@ -147,8 +147,8 @@ public class ListListenersRequest extends TeaModel {
 
     public static class ListListenersRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. You can specify up to 20 tags. The tag key cannot be an empty string.</p>
-         * <p>It can be up to 64 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the instance. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -157,8 +157,8 @@ public class ListListenersRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. You can specify up to 20 tags. The tag value can be an empty string.</p>
-         * <p>It can be up to 128 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the instance. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>product</p>

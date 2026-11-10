@@ -23,7 +23,7 @@ public class CreateServerGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The server group ID.</p>
+     * <p>The ID of the server group.</p>
      * 
      * <strong>example:</strong>
      * <p>sgp-atstuj3rtoptyui****</p>

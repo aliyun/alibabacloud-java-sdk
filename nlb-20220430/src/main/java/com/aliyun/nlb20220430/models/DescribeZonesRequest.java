@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
     /**
-     * <p>The supported natural language. Valid values:</p>
+     * <p>The supported language. Valid values:</p>
      * <ul>
-     * <li><strong>zh-CN</strong>: Chinese</li>
-     * <li><strong>en-US</strong> (default): English</li>
-     * <li><strong>ja</strong>: Japanese</li>
+     * <li><strong>zh-CN</strong>: Chinese.</li>
+     * <li><strong>en-US</strong>: English. This is the default value.</li>
+     * <li><strong>ja</strong>: Japanese.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,10 +19,10 @@ public class DescribeZonesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The client token used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate this value. Ensure that the value is unique among all requests. Only ASCII characters are allowed.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the value of <strong>RequestId</strong> is used.**** <strong>RequestId</strong> of each request is different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DescribeZonesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the region to which the zone belongs. You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the zone. You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -41,7 +41,7 @@ public class DescribeZonesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The service code. Set the value to <strong>nlb</strong>.</p>
+     * <p>The service code of the cloud service. Valid value: <strong>nlb</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>nlb</p>

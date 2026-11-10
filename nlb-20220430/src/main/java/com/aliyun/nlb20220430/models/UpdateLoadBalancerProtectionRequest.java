@@ -4,102 +4,30 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class UpdateLoadBalancerProtectionRequest extends TeaModel {
-    /**
-     * <p>The client token used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate this value. Ensure that the value is unique among all requests. Only ASCII characters are allowed.</p>
-     * <blockquote>
-     * <p> If you do not specify this parameter, the value of <strong>RequestId</strong> is used.**** <strong>RequestId</strong> of each request is different.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>123e4567-e89b-12d3-a456-426655440000</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>Specifies whether to enable deletion protection. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("DeletionProtectionEnabled")
     public Boolean deletionProtectionEnabled;
 
-    /**
-     * <p>The reason why deletion protection is enabled. The reason must be 2 to 128 characters in length, can contain letters, digits, periods (.), underscores (_), and hyphens (-), and must start with a letter.</p>
-     * <blockquote>
-     * <p> This parameter takes effect only when <strong>DeletionProtectionEnabled</strong> is set to <strong>true</strong>.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>Instance_Is_Bound_By_Acceleration_Instance</p>
-     */
     @NameInMap("DeletionProtectionReason")
     public String deletionProtectionReason;
 
-    /**
-     * <p>Specifies whether to perform a dry run, without sending the actual request. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): sends a request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the NLB instance.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>nlb-83ckzc8d4xlp8o****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
-    /**
-     * <p>The reason why the configuration read-only mode is enabled. The reason must be 2 to 128 characters in length, can contain letters, digits, periods (.), underscores (_), and hyphens (-), and must start with a letter.</p>
-     * <blockquote>
-     * <p> This parameter takes effect only when <strong>Status</strong> is set to <strong>ConsoleProtection</strong>.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>ConsoleProtection</p>
-     */
     @NameInMap("ModificationProtectionReason")
     public String modificationProtectionReason;
 
-    /**
-     * <p>Specifies whether to enable the configuration read-only mode. Valid values:</p>
-     * <ul>
-     * <li><strong>NonProtection</strong>: disables the configuration read-only mode. In this case, you cannot set the <strong>ModificationProtectionReason</strong> parameter. If you specify <strong>ModificationProtectionReason</strong>, the value is cleared.</li>
-     * <li><strong>ConsoleProtection</strong>: enables the configuration read-only mode. In this case, you can specify <strong>ModificationProtectionReason</strong>.</li>
-     * </ul>
-     * <blockquote>
-     * <p> If you set this parameter to <strong>ConsoleProtection</strong>, you cannot use the NLB console to modify configurations of the NLB instance. However, you can call API operations to modify the instance configurations.</p>
-     * </blockquote>
-     * 
-     * <strong>example:</strong>
-     * <p>ConsoleProtection</p>
-     */
     @NameInMap("ModificationProtectionStatus")
     public String modificationProtectionStatus;
 
-    /**
-     * <p>The region ID of the NLB instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

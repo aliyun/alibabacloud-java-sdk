@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetJobStatusResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
@@ -14,10 +14,10 @@ public class GetJobStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The state of the task. Valid values:</p>
+     * <p>The task status. Valid values:</p>
      * <ul>
-     * <li><strong>Succeeded</strong>: The task is successful.</li>
-     * <li><strong>processing</strong>: The ticket is being executed.</li>
+     * <li><strong>Succeeded</strong>: The task succeeded.</li>
+     * <li><strong>Processing</strong>: The task is in progress.</li>
      * </ul>
      * 
      * <strong>example:</strong>

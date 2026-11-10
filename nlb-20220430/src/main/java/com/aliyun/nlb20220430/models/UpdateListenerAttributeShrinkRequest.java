@@ -7,8 +7,10 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable Application-Layer Protocol Negotiation (ALPN). Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: enables ALPN.</p>
+     * </li>
+     * <li><p><strong>false</strong>: disables ALPN.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,15 +20,15 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
     public Boolean alpnEnabled;
 
     /**
-     * <p>The name of the ALPN policy. The following are the possible values:</p>
+     * <p>The ALPN policy. Valid values:</p>
      * <ul>
-     * <li><strong>HTTP1Only</strong>: Negotiate only HTTP/1.\*. The ALPN preference list is HTTP/1.1, HTTP/1.0.</li>
-     * <li><strong>HTTP2Only</strong>: Negotiate only HTTP/2. The ALPN preference list is HTTP/2.</li>
-     * <li><strong>HTTP2Optional</strong>: Prefer HTTP/1.\* over HTTP/2. The ALPN preference list is HTTP/1.1, HTTP/1.0, HTTP/2.</li>
-     * <li><strong>HTTP2Preferred</strong>: Prefer HTTP/2 over HTTP/1.\*. The ALPN preference list is HTTP/2, HTTP/1.1, HTTP/1.0.</li>
+     * <li><strong>HTTP1Only</strong>: negotiates only HTTP/1.x. The priority is HTTP/1.1 &gt; HTTP/1.0.</li>
+     * <li><strong>HTTP2Only</strong>: negotiates only HTTP/2.</li>
+     * <li><strong>HTTP2Optional</strong>: prefers HTTP/1.x but also accepts HTTP/2. The priority is HTTP/1.1 &gt; HTTP/1.0 &gt; HTTP/2.</li>
+     * <li><strong>HTTP2Preferred</strong>: prefers HTTP/2 but also accepts HTTP/1.x. The priority is HTTP/2 &gt; HTTP/1.1 &gt; HTTP/1.0.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is required if AlpnEnabled is set to true.</p>
+     * <p>You must configure this parameter after ALPN is enabled.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,9 +41,9 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
     public String alpnPolicy;
 
     /**
-     * <p>The CA certificate. You can specify only one CA certificate.</p>
+     * <p>The CA certificates. You can add only one CA certificate.</p>
      * <blockquote>
-     * <p> This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * <p>This parameter takes effect only for TCPSSL listeners.</p>
      * </blockquote>
      */
     @NameInMap("CaCertificateIds")
@@ -50,8 +52,10 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable mutual authentication. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: enables mutual authentication.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): disables mutual authentication.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,19 +65,19 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
     public Boolean caEnabled;
 
     /**
-     * <p>The server certificate. Only one server certificate is supported.</p>
+     * <p>The server certificates. You can add only one server certificate.</p>
      * <blockquote>
-     * <p> This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * <p>This parameter takes effect only for TCPSSL listeners.</p>
      * </blockquote>
      */
     @NameInMap("CertificateIds")
     public java.util.List<String> certificateIds;
 
     /**
-     * <p>The client token used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, the value of <strong>RequestId</strong> is used.**** The value of <strong>RequestId</strong> is different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -83,7 +87,7 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The maximum number of new connections per second supported by the listener in each zone (virtual IP address). Valid values: <strong>0</strong> to <strong>1000000</strong>. <strong>0</strong> indicates that the number of connections is unlimited.</p>
+     * <p>The maximum number of new connections per second that the listener can process in each zone (VIP). Valid values: <strong>0</strong> to <strong>1000000</strong>. A value of <strong>0</strong> indicates that no limit is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -92,10 +96,10 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
     public Integer cps;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): validates the request and performs the operation. If the request passes the validation, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: prechecks the request without updating the listener. The system checks whether required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,10 +109,12 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The timeout period for idle connections. Unit: seconds</p>
+     * <p>The idle connection timeout period. Unit: seconds.</p>
      * <ul>
-     * <li>If the listener uses <strong>TCP</strong> or <strong>TCPSSL</strong>, you can set this parameter to a value ranging from <strong>10</strong> to <strong>900</strong>. Default value: <strong>900</strong></li>
-     * <li>If the listener uses <strong>UDP</strong>, you can set this parameter to a value ranging from <strong>10</strong> to <strong>20</strong>. Default value: <strong>20</strong></li>
+     * <li><p>If the listener is a <strong>TCP</strong> or <strong>TCPSSL</strong> listener, valid values are <strong>10</strong> to <strong>900</strong>. Default value: <strong>900</strong>.</p>
+     * </li>
+     * <li><p>If the listener is a <strong>UDP</strong> listener, valid values are <strong>10</strong> to <strong>90</strong>. Default value: <strong>90</strong>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -118,8 +124,8 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
     public Integer idleTimeout;
 
     /**
-     * <p>The name of the listener.</p>
-     * <p>The name must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</p>
+     * <p>The custom name of the listener.</p>
+     * <p>The name must be 2 to 256 characters in length, and can contain Chinese characters, English letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>tcpssl_443</p>
@@ -128,7 +134,7 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
     public String listenerDescription;
 
     /**
-     * <p>The listener ID.</p>
+     * <p>The listener instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -138,7 +144,7 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
     public String listenerId;
 
     /**
-     * <p>The size of the largest TCP packet segment. Unit: bytes. Valid values: <strong>0</strong> to <strong>1500</strong>. <strong>0</strong> indicates that the maximum segment size (MSS) remains unchanged. This parameter is supported only by TCP listeners and listeners that use SSL over TCP.</p>
+     * <p>The maximum segment size (MSS) of a TCP packet. Unit: bytes. Valid values: <strong>0</strong> to <strong>1500</strong>. A value of <strong>0</strong> indicates that the MSS value of user TCP packets is not modified. This parameter is supported only by TCP and TCPSSL listeners.</p>
      * 
      * <strong>example:</strong>
      * <p>344</p>
@@ -147,10 +153,12 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
     public Integer mss;
 
     /**
-     * <p>Specifies whether to use the Proxy protocol to pass the client IP address to the backend server. Valid values:</p>
+     * <p>Specifies whether to use the Proxy Protocol to pass the client source IP address to backend servers. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: yes.</p>
+     * </li>
+     * <li><p><strong>false</strong>: no.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -160,14 +168,14 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
     public Boolean proxyProtocolEnabled;
 
     /**
-     * <p>Specifies that the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.</p>
+     * <p>The configuration for passing the VpcId, PrivateLinkEpId, and PrivateLinkEpsId information to backend servers by using the Proxy Protocol.</p>
      */
     @NameInMap("ProxyProtocolV2Config")
     public String proxyProtocolV2ConfigShrink;
 
     /**
-     * <p>The ID of the region where the NLB instance is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the Network Load Balancer (NLB) instance is deployed. </p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to retrieve the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -176,10 +184,12 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to enable fine-grained monitoring. Valid values:</p>
+     * <p>Specifies whether to enable second-level monitoring. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: enables second-level monitoring.</p>
+     * </li>
+     * <li><p><strong>false</strong>: disables second-level monitoring.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -191,7 +201,7 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the security policy.</p>
      * <blockquote>
-     * <p> This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * <p>This parameter takes effect only for TCPSSL listeners.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -201,17 +211,14 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
     public String securityPolicyId;
 
     /**
-     * <p>The server group ID.</p>
+     * <p>The ID of the server group.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If the listener uses <strong>TCP</strong>, you can specify server groups whose protocol is <strong>TCP</strong> or <strong>TCP_UDP</strong>. <strong>UDP</strong> server groups are not supported.</p>
-     * </li>
-     * <li><p>If the listener uses <strong>UDP</strong>, you can specify server groups whose protocol is <strong>UDP</strong> or <strong>TCP_UDP</strong>. <strong>TCP</strong> server groups are not supported.</p>
-     * </li>
-     * <li><p>If the listener uses <strong>TCPSSL</strong>, you can specify server groups whose protocol is <strong>TCP</strong> and whose <strong>client IP preservation is disabled</strong>. <strong>TCP</strong> server groups for which <strong>client IP preservation is enabled</strong> and server groups whose protocol is <strong>UDP</strong> or <strong>TCP_UDP</strong> are not supported.</p>
-     * </li>
+     * <li>If the listener is a <strong>TCP</strong> listener, you can select a server group whose backend protocol is <strong>TCP</strong> or <strong>TCP_UDP</strong>. You cannot select a server group whose backend protocol is <strong>UDP</strong>.</li>
+     * <li>If the listener is a <strong>UDP</strong> listener, you can select a server group whose backend protocol is <strong>UDP</strong> or <strong>TCP_UDP</strong>. You cannot select a server group whose backend protocol is <strong>TCP</strong>.</li>
+     * <li>If the listener is a <strong>TCPSSL</strong> listener, you can select a server group whose backend protocol is <strong>TCP</strong> and for which <strong>client address preservation is disabled</strong>. You cannot select a server group whose backend protocol is <strong>TCP</strong> and for which <strong>client address preservation is enabled</strong>, or a server group whose backend protocol is <strong>UDP</strong> or <strong>TCP_UDP</strong>.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>sgp-ppdpc14gdm3x4o****</p>

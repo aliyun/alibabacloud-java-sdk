@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "Nlb";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("nlb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -28,7 +31,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds backend servers to a specified server group.</p>
+     * <p>Adds backend servers to a Network Load Balancer (NLB) server group.</p>
      * 
      * @param request AddServersToServerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -81,7 +84,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds backend servers to a specified server group.</p>
+     * <p>Adds backend servers to a Network Load Balancer (NLB) server group.</p>
      * 
      * @param request AddServersToServerGroupRequest
      * @return AddServersToServerGroupResponse
@@ -93,14 +96,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/615175.html">ListListenerCertificates</a> operation to query the status of the task:</p>
+     * <p><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. The system returns a request ID, but the additional certificates are not immediately added. The addition task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/615175.html">ListListenerCertificates</a> to query the addition status of the additional certificates:</p>
      * <ul>
-     * <li>If the listener is in the <strong>Associating</strong> state, the additional certificates are being associated.</li>
-     * <li>If the listener is in the <strong>Associated</strong> state, the additional certificates are associated.</li>
+     * <li>When the TCPSSL listener is in the <strong>Associating</strong> state, the additional certificates are being added.</li>
+     * <li>When the TCPSSL listener is in the <strong>Associated</strong> state, the additional certificates are added.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates additional certificates with a listener that uses SSL over TCP.</p>
+     * <p>Associates additional certificates with a TCPSSL listener.</p>
      * 
      * @param request AssociateAdditionalCertificatesWithListenerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -148,14 +151,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/615175.html">ListListenerCertificates</a> operation to query the status of the task:</p>
+     * <p><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. The system returns a request ID, but the additional certificates are not immediately added. The addition task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/615175.html">ListListenerCertificates</a> to query the addition status of the additional certificates:</p>
      * <ul>
-     * <li>If the listener is in the <strong>Associating</strong> state, the additional certificates are being associated.</li>
-     * <li>If the listener is in the <strong>Associated</strong> state, the additional certificates are associated.</li>
+     * <li>When the TCPSSL listener is in the <strong>Associating</strong> state, the additional certificates are being added.</li>
+     * <li>When the TCPSSL listener is in the <strong>Associated</strong> state, the additional certificates are added.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates additional certificates with a listener that uses SSL over TCP.</p>
+     * <p>Associates additional certificates with a TCPSSL listener.</p>
      * 
      * @param request AssociateAdditionalCertificatesWithListenerRequest
      * @return AssociateAdditionalCertificatesWithListenerResponse
@@ -167,7 +170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates an Internet Shared Bandwidth instance with a Network Load Balancer (NLB) instance.</p>
+     * <p>Associates an Internet Shared Bandwidth with a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request AttachCommonBandwidthPackageToLoadBalancerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -215,7 +218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates an Internet Shared Bandwidth instance with a Network Load Balancer (NLB) instance.</p>
+     * <p>Associates an Internet Shared Bandwidth with a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request AttachCommonBandwidthPackageToLoadBalancerRequest
      * @return AttachCommonBandwidthPackageToLoadBalancerResponse
@@ -227,10 +230,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, the zone of the Network Load Balancer (NLB) instance is removed from the DNS record by using the console or calling the <a href="https://help.aliyun.com/document_detail/2411999.html">StartShiftLoadBalancerZones</a> API operation.</p>
+     * <p>When you call this operation, you must have already removed a zone from the NLB instance by calling the <a href="https://help.aliyun.com/document_detail/2411999.html">StartShiftLoadBalancerZones</a> operation or in the console.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds the elastic IP address (EIP) and virtual IP address (VIP) of a zone to the DNS record.</p>
+     * <p>Adds the EIP or VIP of a zone back to DNS resolution.</p>
      * 
      * @param request CancelShiftLoadBalancerZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -278,10 +281,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, the zone of the Network Load Balancer (NLB) instance is removed from the DNS record by using the console or calling the <a href="https://help.aliyun.com/document_detail/2411999.html">StartShiftLoadBalancerZones</a> API operation.</p>
+     * <p>When you call this operation, you must have already removed a zone from the NLB instance by calling the <a href="https://help.aliyun.com/document_detail/2411999.html">StartShiftLoadBalancerZones</a> operation or in the console.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds the elastic IP address (EIP) and virtual IP address (VIP) of a zone to the DNS record.</p>
+     * <p>Adds the EIP or VIP of a zone back to DNS resolution.</p>
      * 
      * @param request CancelShiftLoadBalancerZonesRequest
      * @return CancelShiftLoadBalancerZonesResponse
@@ -293,7 +296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a TCP or UDP listener, or a listener that uses SSL over TCP for a Network Load Balancer (NLB) instance.</p>
+     * <p>Creates a TCP, UDP, or TCPSSL listener on a Network Load Balancer (NLB) instance.</p>
      * 
      * @param tmpReq CreateListenerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -419,7 +422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a TCP or UDP listener, or a listener that uses SSL over TCP for a Network Load Balancer (NLB) instance.</p>
+     * <p>Creates a TCP, UDP, or TCPSSL listener on a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request CreateListenerRequest
      * @return CreateListenerResponse
@@ -431,17 +434,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  When you create an NLB instance, the service-linked role AliyunServiceRoleForNlb is automatically created and assigned to you.</p>
      * <ul>
-     * <li><strong>CreateLoadBalancer</strong> is an asynchronous operation. After you send a request, the system returns an instance ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> to query the status of an NLB instance.<ul>
-     * <li>If an NLB instance is in the <strong>Provisioning</strong> state, the NLB instance is being created.</li>
-     * <li>If an NLB instance is in the <strong>Active</strong> state, the NLB instance is created.</li>
+     * <li>When you create a Network Load Balancing (NLB) instance, the system automatically creates the AliyunServiceRoleForNlb service-linked role for you.</li>
+     * <li>The <strong>CreateLoadBalancer</strong> operation is asynchronous. The system returns an instance ID, but the Network Load Balancing (NLB) instance is not yet created and the creation task is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> operation to query the creation status of the Network Load Balancing (NLB) instance:<ul>
+     * <li>If the Network Load Balancing (NLB) instance is in the <strong>Provisioning</strong> state, the Network Load Balancing (NLB) instance is being created.</li>
+     * <li>If the Network Load Balancing (NLB) instance is in the <strong>Active</strong> state, the Network Load Balancing (NLB) instance is created.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Network Load Balancer (NLB) instance in a specified region.</p>
+     * <p>Creates a Network Load Balancing (NLB) instance.</p>
      * 
      * @param request CreateLoadBalancerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -534,17 +537,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  When you create an NLB instance, the service-linked role AliyunServiceRoleForNlb is automatically created and assigned to you.</p>
      * <ul>
-     * <li><strong>CreateLoadBalancer</strong> is an asynchronous operation. After you send a request, the system returns an instance ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> to query the status of an NLB instance.<ul>
-     * <li>If an NLB instance is in the <strong>Provisioning</strong> state, the NLB instance is being created.</li>
-     * <li>If an NLB instance is in the <strong>Active</strong> state, the NLB instance is created.</li>
+     * <li>When you create a Network Load Balancing (NLB) instance, the system automatically creates the AliyunServiceRoleForNlb service-linked role for you.</li>
+     * <li>The <strong>CreateLoadBalancer</strong> operation is asynchronous. The system returns an instance ID, but the Network Load Balancing (NLB) instance is not yet created and the creation task is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> operation to query the creation status of the Network Load Balancing (NLB) instance:<ul>
+     * <li>If the Network Load Balancing (NLB) instance is in the <strong>Provisioning</strong> state, the Network Load Balancing (NLB) instance is being created.</li>
+     * <li>If the Network Load Balancing (NLB) instance is in the <strong>Active</strong> state, the Network Load Balancing (NLB) instance is created.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Network Load Balancer (NLB) instance in a specified region.</p>
+     * <p>Creates a Network Load Balancing (NLB) instance.</p>
      * 
      * @param request CreateLoadBalancerRequest
      * @return CreateLoadBalancerResponse
@@ -556,7 +559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom security policy for a TCP/SSL listener.</p>
+     * <p>Creates a custom security policy for a TCPSSL listener in a specified region.</p>
      * 
      * @param request CreateSecurityPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -616,7 +619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a custom security policy for a TCP/SSL listener.</p>
+     * <p>Creates a custom security policy for a TCPSSL listener in a specified region.</p>
      * 
      * @param request CreateSecurityPolicyRequest
      * @return CreateSecurityPolicyResponse
@@ -628,14 +631,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.</p>
+     * <p>The <strong>CreateServerGroup</strong> operation is asynchronous. The system returns a request ID, but the server group of the Network Load Balancer (NLB) is not yet created, and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the server group:</p>
      * <ul>
-     * <li>If the task is in the <strong>Succeeded</strong> status, the server group is created.</li>
-     * <li>If the task is in the <strong>Processing</strong> status, the server group is being created.</li>
+     * <li>If the task status is <strong>Succeeded</strong>, the server group is created.</li>
+     * <li>If the task status is <strong>Processing</strong>, the server group is being created. In this state, you can only perform query operations and cannot perform other operations.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a server group in a region.</p>
+     * <p>Creates a server group in a specified region.</p>
      * 
      * @param request CreateServerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -736,14 +739,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.</p>
+     * <p>The <strong>CreateServerGroup</strong> operation is asynchronous. The system returns a request ID, but the server group of the Network Load Balancer (NLB) is not yet created, and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the server group:</p>
      * <ul>
-     * <li>If the task is in the <strong>Succeeded</strong> status, the server group is created.</li>
-     * <li>If the task is in the <strong>Processing</strong> status, the server group is being created.</li>
+     * <li>If the task status is <strong>Succeeded</strong>, the server group is created.</li>
+     * <li>If the task status is <strong>Processing</strong>, the server group is being created. In this state, you can only perform query operations and cannot perform other operations.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a server group in a region.</p>
+     * <p>Creates a server group in a specified region.</p>
      * 
      * @param request CreateServerGroupRequest
      * @return CreateServerGroupResponse
@@ -867,7 +870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a custom TLS security policy from a Network Load Balancer (NLB) instance.</p>
+     * <p>Deletes a custom TLS security policy for Network Load Balancer (NLB).</p>
      * 
      * @param request DeleteSecurityPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -911,7 +914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a custom TLS security policy from a Network Load Balancer (NLB) instance.</p>
+     * <p>Deletes a custom TLS security policy for Network Load Balancer (NLB).</p>
      * 
      * @param request DeleteSecurityPolicyRequest
      * @return DeleteSecurityPolicyResponse
@@ -923,10 +926,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can delete server groups that are not associated with listeners.</p>
+     * <p>You can delete a server group only when it is not used by any listener.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a Network Load Balancer (NLB) server group.</p>
+     * <p>Deletes a server group of a Network Load Balancer (NLB).</p>
      * 
      * @param request DeleteServerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -970,10 +973,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can delete server groups that are not associated with listeners.</p>
+     * <p>You can delete a server group only when it is not used by any listener.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a Network Load Balancer (NLB) server group.</p>
+     * <p>Deletes a server group of a Network Load Balancer (NLB).</p>
      * 
      * @param request DeleteServerGroupRequest
      * @return DeleteServerGroupResponse
@@ -984,8 +987,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the data warehouse configured for second-level monitoring storage in the current region.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the storage configurations of fine-grained monitoring.</p>
+     * <p>Queries the storage configuration for second-level monitoring.</p>
      * 
      * @param request DescribeHdMonitorRegionConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1016,8 +1022,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the data warehouse configured for second-level monitoring storage in the current region.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the storage configurations of fine-grained monitoring.</p>
+     * <p>Queries the storage configuration for second-level monitoring.</p>
      * 
      * @param request DescribeHdMonitorRegionConfigRequest
      * @return DescribeHdMonitorRegionConfigResponse
@@ -1029,7 +1038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries regions that support Network Load Balancer (NLB) instances.</p>
+     * <p>Queries the available regions for NLB.</p>
      * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1071,7 +1080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries regions that support Network Load Balancer (NLB) instances.</p>
+     * <p>Queries the available regions for NLB.</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -1083,7 +1092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the zones of a region in which a Network Load Balancer (NLB) instance is deployed.</p>
+     * <p>Queries the zones in a region for Network Load Balancer (NLB).</p>
      * 
      * @param request DescribeZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1127,7 +1136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the zones of a region in which a Network Load Balancer (NLB) instance is deployed.</p>
+     * <p>Queries the zones in a region for Network Load Balancer (NLB).</p>
      * 
      * @param request DescribeZonesRequest
      * @return DescribeZonesResponse
@@ -1139,7 +1148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates a Network Load Balancer (NLB) instance from an Internet Shared Bandwidth instance.</p>
+     * <p>Disassociates an Internet Shared Bandwidth plan from a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request DetachCommonBandwidthPackageFromLoadBalancerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1187,7 +1196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates a Network Load Balancer (NLB) instance from an Internet Shared Bandwidth instance.</p>
+     * <p>Disassociates an Internet Shared Bandwidth plan from a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request DetachCommonBandwidthPackageFromLoadBalancerRequest
      * @return DetachCommonBandwidthPackageFromLoadBalancerResponse
@@ -1199,7 +1208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the public IPv6 address of a dual-stack Network Load Balancer (NLB) instance to a private IPv6 address.</p>
+     * <p>Changes the IPv6 address of a dual-stack Network Load Balancer (NLB) instance from public to private.</p>
      * 
      * @param request DisableLoadBalancerIpv6InternetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1243,7 +1252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the public IPv6 address of a dual-stack Network Load Balancer (NLB) instance to a private IPv6 address.</p>
+     * <p>Changes the IPv6 address of a dual-stack Network Load Balancer (NLB) instance from public to private.</p>
      * 
      * @param request DisableLoadBalancerIpv6InternetRequest
      * @return DisableLoadBalancerIpv6InternetResponse
@@ -1385,7 +1394,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the result of an asynchronous operation performed on a Network Load Balancer (NLB) instance.</p>
+     * <p>Queries the execution result of an asynchronous task for Network Load Balancer (NLB).</p>
      * 
      * @param request GetJobStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1421,7 +1430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the result of an asynchronous operation performed on a Network Load Balancer (NLB) instance.</p>
+     * <p>Queries the execution result of an asynchronous task for Network Load Balancer (NLB).</p>
      * 
      * @param request GetJobStatusRequest
      * @return GetJobStatusResponse
@@ -1433,7 +1442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a Network Load Balancer (NLB) listener.</p>
+     * <p>Queries the details of a listener on a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request GetListenerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1477,7 +1486,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a Network Load Balancer (NLB) listener.</p>
+     * <p>Queries the details of a listener on a Network Load Balancer (NLB) instance.</p>
      * 
      * @param request GetListenerAttributeRequest
      * @return GetListenerAttributeResponse
@@ -1537,7 +1546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about a Network Load Balancer (NLB) instance.</p>
+     * <p>Queries the details of a specified Network Load Balancer (NLB) instance.</p>
      * 
      * @param request GetLoadBalancerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1581,7 +1590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about a Network Load Balancer (NLB) instance.</p>
+     * <p>Queries the details of a specified Network Load Balancer (NLB) instance.</p>
      * 
      * @param request GetLoadBalancerAttributeRequest
      * @return GetLoadBalancerAttributeResponse
@@ -1637,7 +1646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the server certificate of a TCP/SSL listener.</p>
+     * <p>Queries the server certificates of a TCPSSL listener.</p>
      * 
      * @param request ListListenerCertificatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1689,7 +1698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the server certificate of a TCP/SSL listener.</p>
+     * <p>Queries the server certificates of a TCPSSL listener.</p>
      * 
      * @param request ListListenerCertificatesRequest
      * @return ListListenerCertificatesResponse
@@ -1701,7 +1710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries listeners added to a Network Load Balancer (NLB) instance.</p>
+     * <p>Queries the list of Network Load Balancer (NLB) listeners.</p>
      * 
      * @param request ListListenersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1761,7 +1770,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries listeners added to a Network Load Balancer (NLB) instance.</p>
+     * <p>Queries the list of Network Load Balancer (NLB) listeners.</p>
      * 
      * @param request ListListenersRequest
      * @return ListListenersResponse
@@ -1773,7 +1782,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic information about Network Load Balancer (NLB) instances.</p>
+     * <p>Queries the basic information about created Network Load Balancer (NLB) instances.</p>
      * 
      * @param request ListLoadBalancersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1865,7 +1874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic information about Network Load Balancer (NLB) instances.</p>
+     * <p>Queries the basic information about created Network Load Balancer (NLB) instances.</p>
      * 
      * @param request ListLoadBalancersRequest
      * @return ListLoadBalancersResponse
@@ -2011,7 +2020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the server groups of a Network Load Balancer (NLB) instance.</p>
+     * <p>Queries the server group list of a Network Load Balancer (NLB) load balancing instance.</p>
      * 
      * @param request ListServerGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2077,7 +2086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the server groups of a Network Load Balancer (NLB) instance.</p>
+     * <p>Queries the server group list of a Network Load Balancer (NLB) load balancing instance.</p>
      * 
      * @param request ListServerGroupsRequest
      * @return ListServerGroupsResponse
@@ -2858,7 +2867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the attributes of a listener, such as the name and the idle connection timeout period.</p>
+     * <p>Updates the configuration of a Network Load Balancer (NLB) listener.</p>
      * 
      * @param tmpReq UpdateListenerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2964,7 +2973,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the attributes of a listener, such as the name and the idle connection timeout period.</p>
+     * <p>Updates the configuration of a Network Load Balancer (NLB) listener.</p>
      * 
      * @param request UpdateListenerAttributeRequest
      * @return UpdateListenerAttributeResponse
@@ -3129,13 +3138,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> operation to query the details about deletion protection and the configuration read-only mode.</p>
-     * </blockquote>
-     * 
      * <b>summary</b> : 
-     * <p>Enables or disables the deletion protection feature.</p>
+     * <p>create operation</p>
      * 
      * @param request UpdateLoadBalancerProtectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3194,13 +3198,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> operation to query the details about deletion protection and the configuration read-only mode.</p>
-     * </blockquote>
-     * 
      * <b>summary</b> : 
-     * <p>Enables or disables the deletion protection feature.</p>
+     * <p>create operation</p>
      * 
      * @param request UpdateLoadBalancerProtectionRequest
      * @return UpdateLoadBalancerProtectionResponse
@@ -3366,7 +3365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a Network Load Balancer (NLB) server group.</p>
+     * <p>Updates the configuration of a Network Load Balancer (NLB) server group.</p>
      * 
      * @param request UpdateServerGroupAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3375,6 +3374,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateServerGroupAttributeResponse updateServerGroupAttributeWithOptions(UpdateServerGroupAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addressIPVersion)) {
+            body.put("AddressIPVersion", request.addressIPVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("ClientToken", request.clientToken);
         }
@@ -3443,7 +3446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a Network Load Balancer (NLB) server group.</p>
+     * <p>Updates the configuration of a Network Load Balancer (NLB) server group.</p>
      * 
      * @param request UpdateServerGroupAttributeRequest
      * @return UpdateServerGroupAttributeResponse

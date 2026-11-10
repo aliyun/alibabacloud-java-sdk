@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel {
     /**
-     * <p>The additional certificates. You can associate up to 15 additional certificates with a listener in each call.</p>
+     * <p>The list of additional certificates. You can associate up to 15 additional certificates with a listener in a single call.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AdditionalCertificateIds")
     public java.util.List<String> additionalCertificateIds;
 
     /**
-     * <p>The client token used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can generate a value for this parameter on your client to ensure that the value is unique across different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, the value of <strong>RequestId</strong> is used.**** The value of <strong>RequestId</strong> is different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -25,10 +25,10 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to only precheck this request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): validates the request and performs the operation. If the request passes the validation, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: sends a check request and does not add the additional certificates to the TCPSSL listener. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the check, the system returns an error. If the request passes the check, the system returns the error code <code>DryRunOperation</code>.</li>
+     * <li><strong>false</strong> (default): sends a standard request. If the request passes the check, the system returns an HTTP 2xx status code and performs the operation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
     public Boolean dryRun;
 
     /**
-     * <p>The listener ID. Only TCPSSL listener IDs are supported.</p>
+     * <p>The ID of the listener. This operation only supports TCPSSL listener IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,8 +48,8 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
     public String listenerId;
 
     /**
-     * <p>The ID of the region where the NLB instance is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the Network Load Balancer (NLB) instance is deployed. </p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

@@ -4,12 +4,6 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class UpdateLoadBalancerProtectionResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
