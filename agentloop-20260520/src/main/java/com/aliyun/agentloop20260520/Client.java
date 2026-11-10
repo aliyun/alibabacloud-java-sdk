@@ -156,6 +156,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("mseNamespaceId", request.mseNamespaceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.trajectoryEmbeddingEnabled)) {
+            body.put("trajectoryEmbeddingEnabled", request.trajectoryEmbeddingEnabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.trajectoryStoreEnabled)) {
             body.put("trajectoryStoreEnabled", request.trajectoryStoreEnabled);
         }
@@ -194,7 +198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a context library.</p>
+     * <p>Creates a context store.</p>
      * 
      * @param request CreateContextStoreRequest
      * @param headers map
@@ -246,7 +250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a context library.</p>
+     * <p>Creates a context store.</p>
      * 
      * @param request CreateContextStoreRequest
      * @return CreateContextStoreResponse
@@ -632,7 +636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. This operation defines the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</p>
+     * <p>Creates an experiment plan in a specified AgentSpace. You can use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an experiment plan.</p>
@@ -705,7 +709,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. This operation defines the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</p>
+     * <p>Creates an experiment plan in a specified AgentSpace. You can use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an experiment plan.</p>
@@ -2088,10 +2092,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls GetExperimentRun to query the details of a specific experiment run record, including the status, progress, configuration snapshot, and associated evaluation task ID.</p>
+     * <p>Calls the GetExperimentRun operation to query the details of an experiment run, including the status, progress, configuration snapshot, and associated evaluation task ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an experiment run record.</p>
+     * <p>Queries the details of an experiment run.</p>
      * 
      * @param request GetExperimentRunRequest
      * @param headers map
@@ -2119,10 +2123,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls GetExperimentRun to query the details of a specific experiment run record, including the status, progress, configuration snapshot, and associated evaluation task ID.</p>
+     * <p>Calls the GetExperimentRun operation to query the details of an experiment run, including the status, progress, configuration snapshot, and associated evaluation task ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an experiment run record.</p>
+     * <p>Queries the details of an experiment run.</p>
      * 
      * @param request GetExperimentRunRequest
      * @return GetExperimentRunResponse
@@ -2927,10 +2931,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls ListExperimentRuns to query experiment run records under a specified AgentSpace for the current account. You can filter results by status, dataset, plan name, or experiment name, and use <code>page</code>/<code>pageSize</code> for pagination.</p>
+     * <p>Calls the ListExperimentRuns operation to query the experiment execution records of the current account in a specified AgentSpace. You can filter records by status, dataset, plan name, and experiment name, and paginate results by using page and pageSize.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of experiment run records.</p>
+     * <p>Queries a list of experiment runs.</p>
      * 
      * @param request ListExperimentRunsRequest
      * @param headers map
@@ -2992,10 +2996,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls ListExperimentRuns to query experiment run records under a specified AgentSpace for the current account. You can filter results by status, dataset, plan name, or experiment name, and use <code>page</code>/<code>pageSize</code> for pagination.</p>
+     * <p>Calls the ListExperimentRuns operation to query the experiment execution records of the current account in a specified AgentSpace. You can filter records by status, dataset, plan name, and experiment name, and paginate results by using page and pageSize.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of experiment run records.</p>
+     * <p>Queries a list of experiment runs.</p>
      * 
      * @param request ListExperimentRunsRequest
      * @return ListExperimentRunsResponse
@@ -4077,7 +4081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates a specified experiment plan. Fields that are not specified remain unchanged. You can only update plans created by the current account.</p>
+     * <p>Updates a specified experiment plan. Unspecified fields remain unchanged. Only plans created by the current account can be updated.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an experiment plan.</p>
@@ -4154,7 +4158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates a specified experiment plan. Fields that are not specified remain unchanged. You can only update plans created by the current account.</p>
+     * <p>Updates a specified experiment plan. Unspecified fields remain unchanged. Only plans created by the current account can be updated.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an experiment plan.</p>

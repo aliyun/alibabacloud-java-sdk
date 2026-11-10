@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentSpacesRequest extends TeaModel {
     /**
-     * <p>The AgentSpace name.</p>
+     * <p>The name of the AgentSpace.</p>
      * 
      * <strong>example:</strong>
      * <p>test-agent-space</p>
@@ -14,7 +14,7 @@ public class ListAgentSpacesRequest extends TeaModel {
     public String agentSpace;
 
     /**
-     * <p>The maximum number of results to return.</p>
+     * <p>The maximum number of results.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

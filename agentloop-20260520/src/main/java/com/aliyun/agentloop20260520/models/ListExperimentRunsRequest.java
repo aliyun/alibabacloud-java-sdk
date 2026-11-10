@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListExperimentRunsRequest extends TeaModel {
     /**
-     * <p>Filters results by exact dataset ID.</p>
+     * <p>Filters the results by exact dataset ID.</p>
      * 
      * <strong>example:</strong>
      * <p>arms_customer_agent_level1</p>
@@ -14,7 +14,7 @@ public class ListExperimentRunsRequest extends TeaModel {
     public String datasetId;
 
     /**
-     * <p>Filters results by fuzzy match on the experiment configuration name.</p>
+     * <p>Filters the results by using a fuzzy match on the name in the experiment configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>experimentA</p>
@@ -23,7 +23,7 @@ public class ListExperimentRunsRequest extends TeaModel {
     public String experimentName;
 
     /**
-     * <p>Optional. Use <code>page</code> and <code>pageSize</code> for pagination instead.</p>
+     * <p>Optional. For pagination, use page and pageSize.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,7 +32,7 @@ public class ListExperimentRunsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Optional. Use <code>page</code> and <code>pageSize</code> for pagination instead.</p>
+     * <p>Optional. For pagination, use page and pageSize.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJwYWdlIjoxfQ==</p>
@@ -59,7 +59,7 @@ public class ListExperimentRunsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Filters results by fuzzy match on the experiment plan name.</p>
+     * <p>Filters the results by using a fuzzy match on the experiment plan name.</p>
      * 
      * <strong>example:</strong>
      * <p>arms_agent_experiment</p>
@@ -68,7 +68,7 @@ public class ListExperimentRunsRequest extends TeaModel {
     public String planName;
 
     /**
-     * <p>Filters results by status.</p>
+     * <p>Filters the results by status.</p>
      * 
      * <strong>example:</strong>
      * <p>evaluating</p>

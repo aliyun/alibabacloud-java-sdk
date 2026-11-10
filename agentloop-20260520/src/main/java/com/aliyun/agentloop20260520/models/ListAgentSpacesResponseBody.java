@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAgentSpacesResponseBody extends TeaModel {
     /**
-     * <p>The AgentSpaces information.</p>
+     * <p>The information about the AgentSpaces.</p>
      */
     @NameInMap("agentSpaces")
     public java.util.List<ListAgentSpacesResponseBodyAgentSpaces> agentSpaces;
 
     /**
-     * <p>The maximum number of results returned.</p>
+     * <p>The maximum number of returned results.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -20,7 +20,7 @@ public class ListAgentSpacesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. This parameter is empty if no more pages are available.</p>
+     * <p>The pagination token. This parameter is empty if no next page is available.</p>
      * 
      * <strong>example:</strong>
      * <p>b5754ef15c784abc8696d82790d2985c</p>
@@ -38,7 +38,7 @@ public class ListAgentSpacesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total count.</p>
      * 
      * <strong>example:</strong>
      * <p>13</p>
@@ -92,11 +92,17 @@ public class ListAgentSpacesResponseBody extends TeaModel {
     }
 
     public static class ListAgentSpacesResponseBodyAgentSpacesMseNamespace extends TeaModel {
+        /**
+         * <p>The attach method of the MSE namespace. AutoCreated indicates automatic creation by AgentLoop. UserSelected indicates that an existing namespace is selected and attached when the AgentSpace is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AutoCreated</p>
+         */
         @NameInMap("bindType")
         public String bindType;
 
         /**
-         * <p>The MSE namespace ID.</p>
+         * <p>The ID of the MSE namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>phoenixcloud-raw-logs</p>
@@ -105,7 +111,7 @@ public class ListAgentSpacesResponseBody extends TeaModel {
         public String namespaceId;
 
         /**
-         * <p>The MSE namespace name.</p>
+         * <p>The name of the MSE namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>terraform-alicloud-modules</p>
@@ -146,7 +152,7 @@ public class ListAgentSpacesResponseBody extends TeaModel {
 
     public static class ListAgentSpacesResponseBodyAgentSpaces extends TeaModel {
         /**
-         * <p>The AgentSpace name.</p>
+         * <p>The name of the AgentSpace.</p>
          * 
          * <strong>example:</strong>
          * <p>test-agent-space</p>
@@ -198,7 +204,7 @@ public class ListAgentSpacesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The Simple Log Service project name.</p>
+         * <p>The name of the Simple Log Service project.</p>
          * 
          * <strong>example:</strong>
          * <p>default-cms-1152309027070167-cn-beijing</p>

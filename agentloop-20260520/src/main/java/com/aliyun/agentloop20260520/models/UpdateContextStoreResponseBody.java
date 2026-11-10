@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateContextStoreResponseBody extends TeaModel {
     /**
-     * <p>The configuration properties after the runtime recall switch is updated. This block is not returned for other library update operations.</p>
+     * <p>The configuration properties after updating the runtime recall switch. This block is not returned for other library update operations.</p>
      */
     @NameInMap("config")
     public UpdateContextStoreResponseBodyConfig config;
 
     /**
-     * <p>The request ID, which is used to locate this request during troubleshooting.</p>
+     * <p>The request ID. You can use this ID to locate the request when troubleshooting issues.</p>
      * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
