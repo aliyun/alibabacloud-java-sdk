@@ -8,7 +8,7 @@ public class ListContextDatabaseSyncConnectionsResponseBody extends TeaModel {
      * <p>The error code.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Example value</p>
      */
     @NameInMap("Code")
     public String code;
@@ -29,10 +29,10 @@ public class ListContextDatabaseSyncConnectionsResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
-     * <p>The response message.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Example value</p>
      */
     @NameInMap("Message")
     public String message;
@@ -47,7 +47,7 @@ public class ListContextDatabaseSyncConnectionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -125,7 +125,7 @@ public class ListContextDatabaseSyncConnectionsResponseBody extends TeaModel {
         public String authState;
 
         /**
-         * <p>The time when the datasource configuration was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:00:00+08:00</p>
@@ -137,7 +137,7 @@ public class ListContextDatabaseSyncConnectionsResponseBody extends TeaModel {
          * <p>The display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>R&amp;D Team DingTalk Datasource</p>
+         * <p>R&amp;D team DingTalk data source</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -152,7 +152,7 @@ public class ListContextDatabaseSyncConnectionsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The plug-in ID.</p>
+         * <p>The plugin ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dingtalk</p>
@@ -164,7 +164,7 @@ public class ListContextDatabaseSyncConnectionsResponseBody extends TeaModel {
          * <p>The remediation suggestion.</p>
          * 
          * <strong>example:</strong>
-         * <p>Re-authorize the datasource configuration</p>
+         * <p>Re-authorize the data source</p>
          */
         @NameInMap("Remediation")
         public String remediation;
@@ -188,7 +188,7 @@ public class ListContextDatabaseSyncConnectionsResponseBody extends TeaModel {
         public String secretFingerprint;
 
         /**
-         * <p>The time when the credential was last updated.</p>
+         * <p>The credential update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:00:00+08:00</p>
@@ -197,7 +197,7 @@ public class ListContextDatabaseSyncConnectionsResponseBody extends TeaModel {
         public String secretUpdatedAt;
 
         /**
-         * <p>The time when the datasource configuration was last updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:00:00+08:00</p>
@@ -206,7 +206,7 @@ public class ListContextDatabaseSyncConnectionsResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
-         * <p>The time when the datasource configuration was last verified.</p>
+         * <p>The verification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:00:00+08:00</p>
@@ -319,16 +319,16 @@ public class ListContextDatabaseSyncConnectionsResponseBody extends TeaModel {
 
     public static class ListContextDatabaseSyncConnectionsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of datasource configurations.</p>
+         * <p>The list of data sources.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;Id&quot;:&quot;conn-as1llqmkol****&quot;, &quot;PluginId&quot;:&quot;dingtalk&quot;, &quot;DisplayName&quot;:&quot;R&amp;D Team DingTalk Datasource&quot;, &quot;AuthKind&quot;:&quot;app&quot;}]</p>
+         * <p>[{&quot;Id&quot;:&quot;conn-as1llqmkol****&quot;, &quot;PluginId&quot;:&quot;dingtalk&quot;, &quot;DisplayName&quot;:&quot;R&amp;D team DingTalk data source&quot;, &quot;AuthKind&quot;:&quot;app&quot;}]</p>
          */
         @NameInMap("Connections")
         public java.util.List<ListContextDatabaseSyncConnectionsResponseBodyDataConnections> connections;
 
         /**
-         * <p>The page number. Pages start from 1.</p>
+         * <p>The page number, starting from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

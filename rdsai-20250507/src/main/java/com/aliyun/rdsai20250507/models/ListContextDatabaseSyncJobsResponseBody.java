@@ -29,7 +29,7 @@ public class ListContextDatabaseSyncJobsResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
-     * <p>The response message.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>Sample value</p>
@@ -47,7 +47,7 @@ public class ListContextDatabaseSyncJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -110,7 +110,7 @@ public class ListContextDatabaseSyncJobsResponseBody extends TeaModel {
          * <p>The list of exclusion rules.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;/Archived Documents&quot;]</p>
+         * <p>[&quot;/Archived documents&quot;]</p>
          */
         @NameInMap("Exclude")
         public java.util.List<String> exclude;
@@ -128,7 +128,7 @@ public class ListContextDatabaseSyncJobsResponseBody extends TeaModel {
          * <p>The list of inclusion rules.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;/R&amp;D Documents&quot;]</p>
+         * <p>[&quot;/R&amp;D documents&quot;]</p>
          */
         @NameInMap("Include")
         public java.util.List<String> include;
@@ -200,16 +200,16 @@ public class ListContextDatabaseSyncJobsResponseBody extends TeaModel {
 
     public static class ListContextDatabaseSyncJobsResponseBodyDataJobs extends TeaModel {
         /**
-         * <p>The reason for automatic pause.</p>
+         * <p>The auto-pause reason.</p>
          * 
          * <strong>example:</strong>
-         * <p>Failed 3 consecutive times</p>
+         * <p>Three consecutive run failures</p>
          */
         @NameInMap("AutoPauseReason")
         public String autoPauseReason;
 
         /**
-         * <p>Indicates whether the task is automatically paused.</p>
+         * <p>Indicates whether the job is automatically paused.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -227,7 +227,7 @@ public class ListContextDatabaseSyncJobsResponseBody extends TeaModel {
         public Integer configVersion;
 
         /**
-         * <p>Indicates whether the task is enabled.</p>
+         * <p>Indicates whether the job is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -239,13 +239,13 @@ public class ListContextDatabaseSyncJobsResponseBody extends TeaModel {
          * <p>The filter conditions.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;include&quot;:[&quot;/研发文档/<strong>&quot;],&quot;exclude&quot;:[&quot;/归档文档/</strong>&quot;],&quot;excludedDocumentIds&quot;:[],&quot;sizeLimit&quot;:2147483648,&quot;typeAllowlist&quot;:[&quot;docx&quot;,&quot;pdf&quot;]}</p>
+         * <p>{&quot;include&quot;:[&quot;/R&amp;D documents/<strong>&quot;],&quot;exclude&quot;:[&quot;/Archived documents/</strong>&quot;],&quot;excludedDocumentIds&quot;:[],&quot;sizeLimit&quot;:2147483648,&quot;typeAllowlist&quot;:[&quot;docx&quot;,&quot;pdf&quot;]}</p>
          */
         @NameInMap("Filters")
         public ListContextDatabaseSyncJobsResponseBodyDataJobsFilters filters;
 
         /**
-         * <p>The task ID, which is a system-generated UUID.</p>
+         * <p>The job ID, which is a system-generated UUID.</p>
          * 
          * <strong>example:</strong>
          * <p>550e8400-e29b-41d4-a716-446655440000</p>
@@ -254,7 +254,7 @@ public class ListContextDatabaseSyncJobsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The ID of the target knowledge base.</p>
+         * <p>The destination knowledge base ID.</p>
          * 
          * <strong>example:</strong>
          * <p>kb-as1llqmkol****</p>
@@ -266,13 +266,13 @@ public class ListContextDatabaseSyncJobsResponseBody extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>R&amp;D Team Document Import</p>
+         * <p>R&amp;D team document import</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The time of the next run.</p>
+         * <p>The next run time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:00:00+08:00</p>
@@ -281,7 +281,7 @@ public class ListContextDatabaseSyncJobsResponseBody extends TeaModel {
         public String nextRunAt;
 
         /**
-         * <p>The scheduling type. Valid values: interval, daily-times.</p>
+         * <p>The schedule type. Valid values: interval and daily-times.</p>
          * 
          * <strong>example:</strong>
          * <p>daily-times</p>
@@ -299,7 +299,7 @@ public class ListContextDatabaseSyncJobsResponseBody extends TeaModel {
         public String sourceId;
 
         /**
-         * <p>The target ID, which is a system-generated UUID.</p>
+         * <p>The destination ID, which is a system-generated UUID.</p>
          * 
          * <strong>example:</strong>
          * <p>550e8400-e29b-41d4-a716-446655440000</p>
@@ -412,7 +412,7 @@ public class ListContextDatabaseSyncJobsResponseBody extends TeaModel {
 
     public static class ListContextDatabaseSyncJobsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of import tasks.</p>
+         * <p>The list of import jobs.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;Id&quot;:&quot;job-as1llqmkol****&quot;, &quot;SourceId&quot;:&quot;src-as1llqmkol****&quot;, &quot;TargetId&quot;:&quot;tg-as1llqmkol****&quot;, &quot;KnowledgeBaseId&quot;:&quot;kb-as1llqmkol****&quot;}]</p>
@@ -421,7 +421,7 @@ public class ListContextDatabaseSyncJobsResponseBody extends TeaModel {
         public java.util.List<ListContextDatabaseSyncJobsResponseBodyDataJobs> jobs;
 
         /**
-         * <p>The page number. The value starts from 1.</p>
+         * <p>The page number, starting from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

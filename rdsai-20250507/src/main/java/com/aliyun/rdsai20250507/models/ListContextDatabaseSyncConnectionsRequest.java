@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListContextDatabaseSyncConnectionsRequest extends TeaModel {
     /**
-     * <p>The page number. Pages start from 1.</p>
+     * <p>The page number, starting from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListContextDatabaseSyncConnectionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The plug-in ID.</p>
+     * <p>The plugin ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dingtalk</p>

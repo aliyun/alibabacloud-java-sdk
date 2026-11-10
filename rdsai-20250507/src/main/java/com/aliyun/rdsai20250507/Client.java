@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "RdsAi";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-wulanchabu", "rdsai.aliyuncs.com"),
@@ -908,10 +911,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding flow, and returns the plaintext API key.</p>
+     * <p>Creates a ContextDB workspace and its first member.</p>
+     * <ul>
+     * <li>GenerateInitialKey defaults to <code>true</code>. An initial API key is generated during creation, and the plaintext key is returned only once. Save the returned key. If set to <code>false</code>, no initial API key is generated, and the ApiKeyName and ApiKey fields in the response are empty.</li>
+     * <li>You can use ClusterId to specify the cluster to which the workspace belongs.</li>
+     * <li>You can use PermissionMode to select the compatibility mode or the advanced permission mode. The advanced permission mode can only be selected by the Alibaba Cloud account. It takes effect immediately after the workspace is created and cannot be disabled.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding flow.</p>
+     * <p>Creates a ContextDB workspace and its first member, and optionally generates an initial API key.</p>
      * 
      * @param request CreateContextDatabaseWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -920,6 +928,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateContextDatabaseWorkspaceResponse createContextDatabaseWorkspaceWithOptions(CreateContextDatabaseWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.generateInitialKey)) {
+            query.put("GenerateInitialKey", request.generateInitialKey);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.memberName)) {
             query.put("MemberName", request.memberName);
         }
@@ -951,10 +967,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding flow, and returns the plaintext API key.</p>
+     * <p>Creates a ContextDB workspace and its first member.</p>
+     * <ul>
+     * <li>GenerateInitialKey defaults to <code>true</code>. An initial API key is generated during creation, and the plaintext key is returned only once. Save the returned key. If set to <code>false</code>, no initial API key is generated, and the ApiKeyName and ApiKey fields in the response are empty.</li>
+     * <li>You can use ClusterId to specify the cluster to which the workspace belongs.</li>
+     * <li>You can use PermissionMode to select the compatibility mode or the advanced permission mode. The advanced permission mode can only be selected by the Alibaba Cloud account. It takes effect immediately after the workspace is created and cannot be disabled.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a workspace, the first member, and the first API key in a one-time onboarding flow.</p>
+     * <p>Creates a ContextDB workspace and its first member, and optionally generates an initial API key.</p>
      * 
      * @param request CreateContextDatabaseWorkspaceRequest
      * @return CreateContextDatabaseWorkspaceResponse
@@ -1826,7 +1847,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a workspace. This is a hard delete and cannot be recovered. After the workspace is deleted, the local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</p>
+     * <p>Deletes a workspace. This is a hard deletion and cannot be undone. After the workspace is deleted, local metadata is synchronously soft deleted, and the deleted workspace is no longer counted towards the quota.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a ContextDB workspace.</p>
@@ -1861,7 +1882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a workspace. This is a hard delete and cannot be recovered. After the workspace is deleted, the local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</p>
+     * <p>Deletes a workspace. This is a hard deletion and cannot be undone. After the workspace is deleted, local metadata is synchronously soft deleted, and the deleted workspace is no longer counted towards the quota.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a ContextDB workspace.</p>
@@ -4617,11 +4638,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The list operation returns paginated results by default. Page and PageSize are optional parameters.
-     * The Data list field in the response is returned as an array. Total indicates the total number of records that match the specified conditions.</p>
+     * <p>By default, the list operation returns paginated results. The Page and PageSize parameters are optional.
+     * The Data field in the response is returned as an array, and Total indicates the total number of matching entries.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the datasource configurations in a workspace.</p>
+     * <p>Lists the data sources in a workspace.</p>
      * 
      * @param request ListContextDatabaseSyncConnectionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4665,11 +4686,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The list operation returns paginated results by default. Page and PageSize are optional parameters.
-     * The Data list field in the response is returned as an array. Total indicates the total number of records that match the specified conditions.</p>
+     * <p>By default, the list operation returns paginated results. The Page and PageSize parameters are optional.
+     * The Data field in the response is returned as an array, and Total indicates the total number of matching entries.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the datasource configurations in a workspace.</p>
+     * <p>Lists the data sources in a workspace.</p>
      * 
      * @param request ListContextDatabaseSyncConnectionsRequest
      * @return ListContextDatabaseSyncConnectionsResponse
@@ -4799,11 +4820,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The list operation returns paginated results by default. Page and PageSize are optional parameters.
-     * The Data list field in the response is returned as an array. Total indicates the total number of records that match the specified conditions.</p>
+     * <p>The list API returns paginated results by default. Page and PageSize are optional parameters.
+     * The Data list field in the response is returned as an array, and Total indicates the total number of matching entries.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists import tasks.</p>
+     * <p>Lists import jobs.</p>
      * 
      * @param request ListContextDatabaseSyncJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4847,11 +4868,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The list operation returns paginated results by default. Page and PageSize are optional parameters.
-     * The Data list field in the response is returned as an array. Total indicates the total number of records that match the specified conditions.</p>
+     * <p>The list API returns paginated results by default. Page and PageSize are optional parameters.
+     * The Data list field in the response is returned as an array, and Total indicates the total number of matching entries.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists import tasks.</p>
+     * <p>Lists import jobs.</p>
      * 
      * @param request ListContextDatabaseSyncJobsRequest
      * @return ListContextDatabaseSyncJobsResponse
