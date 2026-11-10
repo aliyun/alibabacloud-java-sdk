@@ -14,7 +14,7 @@ public class ListTerraformProviderVersionsRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The maximum number of records to retrieve in a single request.</p>
+     * <p>The maximum number of records to return per request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListTerraformProviderVersionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page. A value of null indicates that no more pages are available.</p>
+     * <p>The token for the next page. A null value indicates that there are no more pages.</p>
      * 
      * <strong>example:</strong>
      * <p>ar9lHbaidqWequN5orMba54dD+2BRJj42DLT6GrZysw=</p>
@@ -32,7 +32,7 @@ public class ListTerraformProviderVersionsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The usage. Set to Explorer to retrieve meta information.</p>
+     * <p>The purpose. Used to retrieve metadata for display in Explorer.</p>
      * 
      * <strong>example:</strong>
      * <p>Explorer</p>

@@ -12,11 +12,11 @@ public class RemoveSharedAccountsShrinkRequest extends TeaModel {
     public String accountIdsShrink;
 
     /**
-     * <p>The ID of the resource to unshare.</p>
+     * <p>The ID of the resource to be unshared.</p>
      * <ul>
-     * <li><p>If the type is Namespace, set this parameter to the workspace name. </p>
+     * <li><p>If the type is Namespace, the value is the workspace name. </p>
      * </li>
-     * <li><p>If the type is RegistryModule, set this parameter to \<namespaceName>/\<ModuleName>.</p>
+     * <li><p>If the type is RegistryModule, the value is \<namespaceName>/\<ModuleName>.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -31,7 +31,7 @@ public class RemoveSharedAccountsShrinkRequest extends TeaModel {
      * <p>The resource type. Valid values:</p>
      * <ul>
      * <li>RegistryModule: Registry template.</li>
-     * <li>Namespace: workspace.</li>
+     * <li>Namespace: Workspace.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

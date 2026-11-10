@@ -14,7 +14,7 @@ public class UpdateExplorerModuleAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The template description. Length: 0 to 255 characters.</p>
+     * <p>The description of the template. The length is 0 to 255 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -23,7 +23,7 @@ public class UpdateExplorerModuleAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The template name. Length: 1 to 128 characters. The name must be unique.</p>
+     * <p>The name of the template. The length is 1 to 128 characters. The name must be unique.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

@@ -14,7 +14,7 @@ public class ListResourceExportTasksRequest extends TeaModel {
     public String exportTaskId;
 
     /**
-     * <p>The search keyword. Fuzzy search by task name is supported.</p>
+     * <p>The search keyword. Fuzzy matching is supported for task names.</p>
      * 
      * <strong>example:</strong>
      * <p>key</p>
@@ -32,7 +32,7 @@ public class ListResourceExportTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+     * <p>The number of results to return per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

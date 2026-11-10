@@ -78,13 +78,7 @@ public class GetEncryptionConfigResponseBody extends TeaModel {
         public String keyId;
 
         /**
-         * <p>The key status. Valid values:</p>
-         * <ul>
-         * <li>Enabled</li>
-         * <li>Disabled</li>
-         * <li>PendingDeletion</li>
-         * <li>PendingImport</li>
-         * </ul>
+         * <p>The key status. Valid values: Enabled, Disabled, PendingDeletion, and PendingImport.</p>
          * 
          * <strong>example:</strong>
          * <p>Enabled</p>

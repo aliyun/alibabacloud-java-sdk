@@ -22,8 +22,8 @@ public class ListExplorerRegistryModuleExamplesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page of results.</p>
-     * <p>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</p>
+     * <p>The token used to query the next page of results.</p>
+     * <p>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>VSjwD+sJ8OZJ8fNjV89AZs7o2AdSD25ZQLeWZ8REjXA=</p>
@@ -96,7 +96,7 @@ public class ListExplorerRegistryModuleExamplesResponseBody extends TeaModel {
 
     public static class ListExplorerRegistryModuleExamplesResponseBodyExplorerRegistryModuleExamples extends TeaModel {
         /**
-         * <p>The example name.</p>
+         * <p>The name of the example.</p>
          * 
          * <strong>example:</strong>
          * <p>201-use-case-create-actiontrail-trail</p>
@@ -105,7 +105,7 @@ public class ListExplorerRegistryModuleExamplesResponseBody extends TeaModel {
         public String exampleName;
 
         /**
-         * <p>The example path.</p>
+         * <p>The path of the example.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -123,7 +123,7 @@ public class ListExplorerRegistryModuleExamplesResponseBody extends TeaModel {
         public java.util.Map<String, ?> exampleSchema;
 
         /**
-         * <p>The module name.</p>
+         * <p>The name of the module.</p>
          * 
          * <strong>example:</strong>
          * <p>iactestname1</p>
@@ -132,7 +132,7 @@ public class ListExplorerRegistryModuleExamplesResponseBody extends TeaModel {
         public String moduleName;
 
         /**
-         * <p>The module version.</p>
+         * <p>The version of the module.</p>
          * 
          * <strong>example:</strong>
          * <p>1.11.0</p>
@@ -141,7 +141,7 @@ public class ListExplorerRegistryModuleExamplesResponseBody extends TeaModel {
         public String moduleVersion;
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba</p>

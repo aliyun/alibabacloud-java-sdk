@@ -11,7 +11,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
     public java.util.List<ListStackConfigsResponseBodyConfigs> configs;
 
     /**
-     * <p>The maximum number of records returned in this request.</p>
+     * <p>The maximum number of records returned for the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>24</p>
@@ -20,7 +20,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The position from which the current call starts reading. An empty value indicates that all data has been read.</p>
+     * <p>The token that indicates the position up to which the current call has read. An empty value indicates that all data has been read.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records that match the request conditions. This parameter is optional and may not be returned by default.</p>
+     * <p>The total number of records that meet the request conditions. This parameter is optional and is not returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>43</p>
@@ -94,7 +94,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
 
     public static class ListStackConfigsResponseBodyConfigsComponentConfigComponent extends TeaModel {
         /**
-         * <p>The component name.</p>
+         * <p>The name of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>log</p>
@@ -119,7 +119,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
 
     public static class ListStackConfigsResponseBodyConfigsComponentConfigOutput extends TeaModel {
         /**
-         * <p>The output description.</p>
+         * <p>The description of the output.</p>
          * 
          * <strong>example:</strong>
          * <p>the name of sls project</p>
@@ -128,7 +128,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The output name.</p>
+         * <p>The name of the output.</p>
          * 
          * <strong>example:</strong>
          * <p>project_name</p>
@@ -137,7 +137,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The output type.</p>
+         * <p>The type of the output.</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>
@@ -146,7 +146,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The output value.</p>
+         * <p>The value of the output.</p>
          * 
          * <strong>example:</strong>
          * <p>log-test</p>
@@ -213,7 +213,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The variable name.</p>
+         * <p>The name of the variable.</p>
          * 
          * <strong>example:</strong>
          * <p>region</p>
@@ -221,15 +221,22 @@ public class ListStackConfigsResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Specifies whether the parameter is sensitive. The values of sensitive parameters are invisible in both the console and API. Valid values:</p>
+         * <ul>
+         * <li>true: The parameter is sensitive.</li>
+         * <li>false: The parameter is not sensitive.</li>
+         * </ul>
+         */
         @NameInMap("sensitive")
         public Boolean sensitive;
 
         /**
-         * <p>The variable type, such as:</p>
+         * <p>The type of the variable. Valid values:</p>
          * <ul>
          * <li>string</li>
          * <li>list(string)</li>
-         * <li>map(string).</li>
+         * <li>map(string)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -337,7 +344,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
 
     public static class ListStackConfigsResponseBodyConfigsDeploymentConfigDeployment extends TeaModel {
         /**
-         * <p>The deployment name.</p>
+         * <p>The name of the deployment.</p>
          * 
          * <strong>example:</strong>
          * <p>production</p>
@@ -362,7 +369,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
 
     public static class ListStackConfigsResponseBodyConfigsDeploymentConfigPublishOutput extends TeaModel {
         /**
-         * <p>The output description.</p>
+         * <p>The description of the output.</p>
          * 
          * <strong>example:</strong>
          * <p>the name of sls project</p>
@@ -371,7 +378,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The output name.</p>
+         * <p>The name of the output.</p>
          * 
          * <strong>example:</strong>
          * <p>project_name</p>
@@ -380,7 +387,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The actual output value after the stack deployment is complete.</p>
+         * <p>The actual output value after the stack is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>log-test</p>
@@ -389,7 +396,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
         public String result;
 
         /**
-         * <p>The output type, such as string or list(string).</p>
+         * <p>The type of the output, such as string or list(string).</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>
@@ -398,7 +405,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The original definition of the output value. Currently, string or list(string) is supported. You can reference a deployment output in the format: deployment.{deploymentName}.{deploymentOutputName}.</p>
+         * <p>The original definition of the output value. Currently, string or list(string) is supported. You can reference deployment outputs in the format of deployment.{DeploymentName}.{DeploymentOutputName}.</p>
          * 
          * <strong>example:</strong>
          * <p>deployment.production.project_name</p>
@@ -455,7 +462,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
 
     public static class ListStackConfigsResponseBodyConfigsDeploymentConfigUpstreamInput extends TeaModel {
         /**
-         * <p>The input name.</p>
+         * <p>The name of the input.</p>
          * 
          * <strong>example:</strong>
          * <p>network</p>
@@ -464,7 +471,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The input source. Currently, only an upstream stack can be specified. The format is {iacEndpoint}/{accountId}/{upstreamStackName}.</p>
+         * <p>The source of the input. Currently, only upstream stacks are supported. The format is {iacEndpoint}/{accountId}/{upstreamStackName}.</p>
          * 
          * <strong>example:</strong>
          * <p>IacEndpoint/156718871222312/stack_network</p>
@@ -585,11 +592,14 @@ public class ListStackConfigsResponseBody extends TeaModel {
         @NameInMap("deploymentContent")
         public String deploymentContent;
 
+        /**
+         * <p>The error message indicating that the configuration processing failed.</p>
+         */
         @NameInMap("failedReason")
         public String failedReason;
 
         /**
-         * <p>The status of the stack configuration.</p>
+         * <p>The status of the stack configuration. Valid values:</p>
          * <table>
          * <thead>
          * <tr>
@@ -599,43 +609,43 @@ public class ListStackConfigsResponseBody extends TeaModel {
          * </thead>
          * <tbody><tr>
          * <td>Creating</td>
-         * <td>Being created.</td>
+         * <td>Creating</td>
          * </tr>
          * <tr>
          * <td>Created</td>
-         * <td>Created.</td>
+         * <td>Created</td>
          * </tr>
          * <tr>
          * <td>Waiting</td>
-         * <td>Waiting for deployment.</td>
+         * <td>Waiting for deployment</td>
          * </tr>
          * <tr>
          * <td>Deploying</td>
-         * <td>Being deployed.</td>
+         * <td>Deploying</td>
          * </tr>
          * <tr>
          * <td>Deployed</td>
-         * <td>Deployed.</td>
+         * <td>Deployed</td>
          * </tr>
          * <tr>
          * <td>Errored</td>
-         * <td>Deployment failed.</td>
+         * <td>Deployment failed</td>
          * </tr>
          * <tr>
          * <td>Deleting</td>
-         * <td>Being deleted.</td>
+         * <td>Deleting</td>
          * </tr>
          * <tr>
          * <td>Deleted</td>
-         * <td>Deleted.</td>
+         * <td>Deleted</td>
          * </tr>
          * <tr>
          * <td>DeleteFailed</td>
-         * <td>Deletion failed.</td>
+         * <td>Deletion failed</td>
          * </tr>
          * <tr>
          * <td>DetectTriggered</td>
-         * <td>Drift detection triggered.</td>
+         * <td>Drift detection triggered successfully</td>
          * </tr>
          * </tbody></table>
          * 
@@ -646,7 +656,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The configuration version number, such as v1. The initial value is v1. The version number increments each time the stack is updated or refreshed and the configuration changes.</p>
+         * <p>The version number of the configuration, such as v1. The initial value is v1. The version number increments each time the stack is updated or refreshed and the configuration is changed.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>

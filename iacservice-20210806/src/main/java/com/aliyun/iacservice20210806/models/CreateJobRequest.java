@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateJobRequest extends TeaModel {
     /**
-     * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</p>
+     * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. A UUID is recommended.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateJobRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The job description. Length: 1 to 64 characters.</p>
+     * <p>The description of the job. The length is 1 to 64 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class CreateJobRequest extends TeaModel {
     /**
      * <p>The operation command. Valid values:</p>
      * <ul>
-     * <li>plan: performs a preview. This is the default value.</li>
+     * <li>plan: executes a preview. This is the default value.</li>
      * <li>refresh: refreshes the resource status.</li>
      * <li>destroy: destroys resources.</li>
      * </ul>

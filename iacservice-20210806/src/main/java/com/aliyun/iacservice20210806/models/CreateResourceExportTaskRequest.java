@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateResourceExportTaskRequest extends TeaModel {
     /**
-     * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</p>
+     * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. A UUID is recommended.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateResourceExportTaskRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Saves the exported template as a module. If this parameter is not specified, the template is automatically saved in the Registry.</p>
+     * <p>The configuration for saving the exported template as a module. If this parameter is not specified, the template is automatically saved in the registry.</p>
      */
     @NameInMap("exportToModule")
     public CreateResourceExportTaskRequestExportToModule exportToModule;
@@ -39,8 +39,8 @@ public class CreateResourceExportTaskRequest extends TeaModel {
      * <p>The name of the resource export task. The name must meet the following requirements:</p>
      * <ul>
      * <li>The name must be 3 to 63 characters in length.</li>
-     * <li>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). The name cannot start or end with a hyphen, underscore, or period.</li>
-     * <li>The name must be unique among resource export tasks within the current account.</li>
+     * <li>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). It cannot start or end with a hyphen, underscore, or period.</li>
+     * <li>The name must be unique among the resource export tasks within the current account.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -51,7 +51,7 @@ public class CreateResourceExportTaskRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The RAM role (1 to 128 characters). The system assumes this role to execute the template when a new job is triggered. This parameter is required when the job trigger method is not manual.</p>
+     * <p>The Resource Access Management (RAM) role. The role name must be 1 to 128 characters in length. The system assumes this role to execute the template when a new job is triggered. This parameter is required when the job is not triggered manually.</p>
      * 
      * <strong>example:</strong>
      * <p>role-name</p>
@@ -60,7 +60,7 @@ public class CreateResourceExportTaskRequest extends TeaModel {
     public String ramRole;
 
     /**
-     * <p>The Terraform provider version. Call <strong>ListTerraformProviderVersions</strong> to view the list of supported versions. Default value: the latest version.</p>
+     * <p>The Terraform provider version. You can call the <strong>ListTerraformProviderVersions</strong> operation to query the supported versions. Default value: the latest version.</p>
      * 
      * <strong>example:</strong>
      * <p>1.247.0</p>
@@ -69,7 +69,7 @@ public class CreateResourceExportTaskRequest extends TeaModel {
     public String terraformProviderVersion;
 
     /**
-     * <p>The Terraform version. Call <strong>ListAvailableTerraformVersions</strong> to view the list of supported versions. Default value: 1.5.7.</p>
+     * <p>The Terraform version. You can call the <strong>ListAvailableTerraformVersions</strong> operation to query the supported versions. Default value: 1.5.7.</p>
      * 
      * <strong>example:</strong>
      * <p>1.5.7</p>
@@ -80,8 +80,8 @@ public class CreateResourceExportTaskRequest extends TeaModel {
     /**
      * <p>The trigger strategy. Valid values:</p>
      * <ul>
-     * <li>Auto: triggered when rules are modified or the trigger strategy is changed to Auto.</li>
-     * <li>Manual: manually triggered.</li>
+     * <li>Auto: automatically triggers the task when a rule is modified or the trigger strategy is changed to Auto.</li>
+     * <li>Manual: manually triggers the task.</li>
      * </ul>
      * <p>Default value: Manual.</p>
      * 
@@ -92,7 +92,7 @@ public class CreateResourceExportTaskRequest extends TeaModel {
     public String triggerStrategy;
 
     /**
-     * <p>The list of variables. Exported resource parameters are set as variables.</p>
+     * <p>The list of variables. The parameters of the exported resources are set as variables.</p>
      */
     @NameInMap("variables")
     public java.util.List<CreateResourceExportTaskRequestVariables> variables;
@@ -184,7 +184,7 @@ public class CreateResourceExportTaskRequest extends TeaModel {
 
     public static class CreateResourceExportTaskRequestExportToModule extends TeaModel {
         /**
-         * <p>The module type in which the exported template is saved. Valid values:</p>
+         * <p>The module type for saving the exported template. Valid values:</p>
          * <ul>
          * <li>OSS: OSS.</li>
          * <li>Registry: Terraform Registry.</li>
@@ -197,7 +197,7 @@ public class CreateResourceExportTaskRequest extends TeaModel {
         public String source;
 
         /**
-         * <p>The path for saving the template content. Set this parameter when source is set to OSS.</p>
+         * <p>The path for saving the template content. This parameter is required when source is set to OSS.</p>
          * 
          * <strong>example:</strong>
          * <p>oss::<a href="https://iac-daily.oss-ap-southeast-1.aliyuncs.com/iacservice/vpc.zip">https://iac-daily.oss-ap-southeast-1.aliyuncs.com/iacservice/vpc.zip</a></p>
@@ -206,7 +206,7 @@ public class CreateResourceExportTaskRequest extends TeaModel {
         public String sourcePath;
 
         /**
-         * <p>The path for saving the template state file. Set this parameter when source is set to OSS.</p>
+         * <p>The path for saving the state file of the template. This parameter is required when source is set to OSS.</p>
          * 
          * <strong>example:</strong>
          * <p>oss::<a href="https://iac-daily.oss-ap-southeast-1.aliyuncs.com/default/terraform.tfstate">https://iac-daily.oss-ap-southeast-1.aliyuncs.com/default/terraform.tfstate</a></p>
@@ -249,13 +249,13 @@ public class CreateResourceExportTaskRequest extends TeaModel {
         /**
          * <p>The name of the inclusion rule used when exporting resources. Valid values:</p>
          * <ul>
-         * <li>ResourceType: required. The resource type. Call <strong>ListResourceTypes</strong> to view the list of supported resources. Example: ALIYUN::VPC::VPC.</li>
+         * <li>ResourceType: required. The resource type. You can call the <strong>ListResourceTypes</strong> operation to query the supported resources. Example: ALIYUN::VPC::VPC.</li>
          * <li>RegionId: required. The region to which the resource belongs. Only one region is supported. Example: cn-chengdu.</li>
          * <li>\<ResourceType>:Id: the resource ID. Example: ALIYUN::VPC::VPC:Id.</li>
          * <li>ResourceGroupId: the resource group ID. Example: rg-1234.</li>
          * <li>ZoneId: the zone to which the resource belongs. Only one zone is supported. Example: cn-hangzhou-h.</li>
          * </ul>
-         * <p>By default, multiple filter conditions are evaluated using the AND operator. A resource is considered a match only when all filter conditions are met.</p>
+         * <p>By default, multiple filter conditions are connected by the AND operator. A resource matches the filter conditions only when it meets all the conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>RegionId</p>
@@ -264,7 +264,7 @@ public class CreateResourceExportTaskRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The list of values for the inclusion rule used when exporting resources.</p>
+         * <p>The list of values for an inclusion rule used when exporting a group of resources.</p>
          */
         @NameInMap("values")
         public java.util.List<String> values;
@@ -294,13 +294,13 @@ public class CreateResourceExportTaskRequest extends TeaModel {
 
     public static class CreateResourceExportTaskRequestVariables extends TeaModel {
         /**
-         * <p>The list of properties of the Terraform resource that corresponds to the resource type.</p>
+         * <p>The list of properties for the Terraform resource that corresponds to the resource type.</p>
          */
         @NameInMap("properties")
         public java.util.List<String> properties;
 
         /**
-         * <p>The resource type. Call <strong>ListResourceTypes</strong> to view the list of supported resources.</p>
+         * <p>The resource type. You can call the <strong>ListResourceTypes</strong> operation to query the supported resources.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN::VPC::VSwitch</p>

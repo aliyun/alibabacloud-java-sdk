@@ -42,6 +42,8 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyJobAllParameters extends TeaModel {
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>regionId</p>
          */
@@ -49,6 +51,8 @@ public class GetJobResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Specifies whether the parameter is confidential. Confidential parameters are hidden in API responses and console displays, and are stored in an encrypted manner.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -56,6 +60,8 @@ public class GetJobResponseBody extends TeaModel {
         public Boolean secret;
 
         /**
+         * <p>The parameter value.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou</p>
          */
@@ -97,11 +103,11 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * <p>The comparison operator. Valid values:</p>
          * <ul>
-         * <li>eq: equal to</li>
-         * <li>n_eq: not equal to</li>
-         * <li>ctn: contains</li>
-         * <li>n_ctn: does not contain</li>
-         * <li>regex: regular expression match.</li>
+         * <li>eq: Equal to.</li>
+         * <li>n_eq: Not equal to.</li>
+         * <li>ctn: Contains.</li>
+         * <li>n_ctn: Does not contain.</li>
+         * <li>regex: Regular expression match.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -114,13 +120,13 @@ public class GetJobResponseBody extends TeaModel {
          * <p>The expected value.</p>
          * 
          * <strong>example:</strong>
-         * <p>期望值</p>
+         * <p>Expected value</p>
          */
         @NameInMap("expectedValue")
         public String expectedValue;
 
         /**
-         * <p>Indicates whether the assertion check is passed.</p>
+         * <p>Indicates whether the check is passed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -131,9 +137,9 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * <p>The assertion type. Valid values:</p>
          * <ul>
-         * <li>state: task status</li>
-         * <li>result: execution result</li>
-         * <li>resourceChange: resource change.</li>
+         * <li>state: Task status.</li>
+         * <li>result: Execution result.</li>
+         * <li>resourceChange: Resource change.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,7 +198,7 @@ public class GetJobResponseBody extends TeaModel {
         public Boolean autoApply;
 
         /**
-         * <p>Specifies whether compliance pre-check is performed for this job.</p>
+         * <p>Specifies whether this job performs a compliance pre-check.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -219,7 +225,7 @@ public class GetJobResponseBody extends TeaModel {
         public String moduleVersion;
 
         /**
-         * <p>The resource change content.</p>
+         * <p>The resource changes.</p>
          * 
          * <strong>example:</strong>
          * <p>+0 ~0 -0</p>
@@ -292,11 +298,14 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyJob extends TeaModel {
+        /**
+         * <p>The full set of job parameters, including sensitive and non-sensitive parameters.</p>
+         */
         @NameInMap("allParameters")
         public java.util.List<GetJobResponseBodyJobAllParameters> allParameters;
 
         /**
-         * <p>The list of assertion checks. This parameter applies to scenario-based testing tasks.</p>
+         * <p>The list of assertion checks, applicable to scenario-based testing tasks.</p>
          */
         @NameInMap("assertCheckDetail")
         public java.util.List<GetJobResponseBodyJobAssertCheckDetail> assertCheckDetail;
@@ -308,7 +317,7 @@ public class GetJobResponseBody extends TeaModel {
         public GetJobResponseBodyJobConfig config;
 
         /**
-         * <p>The time when the job was created.</p>
+         * <p>The job creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-31T03:38:40Z</p>
@@ -346,8 +355,8 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * <p>The execution type. Valid values:</p>
          * <ul>
-         * <li>Manual: manual execution (default)</li>
-         * <li>Auto: automatic execution.</li>
+         * <li>Manual: Manual execution (default).</li>
+         * <li>Auto: Automatic execution.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -384,18 +393,13 @@ public class GetJobResponseBody extends TeaModel {
         public String jobType;
 
         /**
-         * <p>The run logs. The following log content (key values) is currently supported:</p>
+         * <p>The runtime logs. Currently, the following log content (that is, the values of the key) can be returned:</p>
          * <ul>
-         * <li><p>tf-init.run.error.log</p>
-         * </li>
-         * <li><p>tf-init.plan.log</p>
-         * </li>
-         * <li><p>tf-plan.run.log</p>
-         * </li>
-         * <li><p>tf-apply.run.log</p>
-         * </li>
-         * <li><p>tf-init.apply.log.</p>
-         * </li>
+         * <li>tf-init.run.error.log</li>
+         * <li>tf-init.plan.log</li>
+         * <li>tf-plan.run.log</li>
+         * <li>tf-apply.run.log</li>
+         * <li>tf-init.apply.log</li>
          * </ul>
          */
         @NameInMap("logFile")
@@ -449,7 +453,7 @@ public class GetJobResponseBody extends TeaModel {
         public Object outputJsonPlan;
 
         /**
-         * <p>The collection of parameters.</p>
+         * <p>The parameter collection.</p>
          */
         @NameInMap("parameters")
         public java.util.Map<String, String> parameters;
@@ -457,21 +461,21 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * <p>The job status. Valid values:</p>
          * <ul>
-         * <li>Pending: the initial status after the job is created.</li>
-         * <li>PlanQueued: the job is queued because no available worker is ready after the job is created.</li>
-         * <li>Planning: the resource job is in the Plan phase.</li>
-         * <li>ConfigProactiveInProgress: compliance pre-check is in progress. The compliance pre-check feature must be enabled for the account.</li>
-         * <li>ConfigProactiveSuccess: compliance pre-check succeeded. The compliance pre-check feature must be enabled for the account.</li>
-         * <li>Planned: the resource job has completed the Plan phase.</li>
-         * <li>PlannedAndFinished: no diff is found after the Plan phase is completed. This is a final status.</li>
-         * <li>Confirmed: the resource job is waiting for confirmation after the Plan phase is completed.</li>
-         * <li>ApplyQueued: the job is queued because no available worker is ready during execution.</li>
-         * <li>Applying: the resource job is in the Apply phase.</li>
-         * <li>Applied: the resource job has completed the Apply phase. This is a final status.</li>
-         * <li>Errored: the job execution encountered an error. This is a final status.</li>
-         * <li>Canceled: the job execution was canceled. This is a final status.</li>
-         * <li>Discarded: the plan of the resource job was discarded. This is a final status.</li>
-         * <li>ConfigProactiveFailure: compliance pre-check failed. The compliance pre-check feature must be enabled for the account.</li>
+         * <li>Pending: The initial state after the job is created.</li>
+         * <li>PlanQueued: The state where the job is queued and waiting because no workflow is available after creation.</li>
+         * <li>Planning: The state where the job is in the Plan phase.</li>
+         * <li>ConfigProactiveInProgress: The state where the compliance pre-check is in progress. This requires the compliance pre-check feature to be enabled for the account.</li>
+         * <li>ConfigProactiveSuccess: The state where the compliance pre-check is successful. This requires the compliance pre-check feature to be enabled for the account.</li>
+         * <li>Planned: The state where the job has completed the Plan phase.</li>
+         * <li>PlannedAndFinished: The final state where no differences are found after the Plan phase is completed.</li>
+         * <li>Confirmed: The state where the job is waiting for confirmation after the Plan phase is completed.</li>
+         * <li>ApplyQueued: The state where the job is queued and waiting because no workflow is available during execution.</li>
+         * <li>Applying: The state where the job is in the Apply phase.</li>
+         * <li>Applied: The final state where the job has completed the Apply phase.</li>
+         * <li>Errored: The final state where an error occurs during job execution.</li>
+         * <li>Canceled: The final state where the job execution is canceled.</li>
+         * <li>Discarded: The final state where the plan of the job is discarded.</li>
+         * <li>ConfigProactiveFailure: The state where the compliance pre-check fails. This requires the compliance pre-check feature to be enabled for the account.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -498,8 +502,8 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * <p>The task type. Valid values:</p>
          * <ul>
-         * <li>Task: regular task (default)</li>
-         * <li>SceneTestingTask: scenario-based testing task.</li>
+         * <li>Task: Regular task (default).</li>
+         * <li>SceneTestingTask: Scenario-based testing task.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -4,18 +4,36 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class GetProviderDocumentResponseBody extends TeaModel {
+    /**
+     * <p>The Terraform provider resource document.</p>
+     */
     @NameInMap("document")
     public String document;
 
+    /**
+     * <p>The Terraform provider version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.206.0</p>
+     */
     @NameInMap("providerVersion")
     public String providerVersion;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CD478792-6952-5A1C-9F57-78932BF0FAC6</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The Terraform resource type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alicloud_route_table</p>
+     */
     @NameInMap("terraformResourceType")
     public String terraformResourceType;
 

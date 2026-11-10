@@ -14,7 +14,7 @@ public class DissociateDetectConfigRequest extends TeaModel {
     public String detectConfigId;
 
     /**
-     * <p>The ID of the association target. The value is a StackId or TaskId.</p>
+     * <p>The ID of the associated target. The value is a stack ID or a task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,10 +24,10 @@ public class DissociateDetectConfigRequest extends TeaModel {
     public String targetId;
 
     /**
-     * <p>The type of the association target. Valid values:</p>
+     * <p>The type of the associated target. Valid values:</p>
      * <ul>
-     * <li>Task: orchestration task.</li>
-     * <li>Stack: resource stack.</li>
+     * <li>Task: orchestration task</li>
+     * <li>Stack: stack</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

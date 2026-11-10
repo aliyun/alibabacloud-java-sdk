@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRegistryModuleVersionsRequest extends TeaModel {
     /**
-     * <p>The number of entries per page in a paged query. Maximum value: 100. Default value: 20.</p>
+     * <p>The number of entries to return per page for paging in a paged query. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListRegistryModuleVersionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The Registry template name.</p>
+     * <p>The name of the registry template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListRegistryModuleVersionsRequest extends TeaModel {
     public String moduleName;
 
     /**
-     * <p>The workspace name.</p>
+     * <p>The name of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ListRegistryModuleVersionsRequest extends TeaModel {
     public String namespaceName;
 
     /**
-     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+     * <p>The pagination token. Set the value to the NextToken value returned from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>TRkuCaTw/VsEHrnCZgrBA0ftQSEJU/lzo2ei7MJjplg=</p>

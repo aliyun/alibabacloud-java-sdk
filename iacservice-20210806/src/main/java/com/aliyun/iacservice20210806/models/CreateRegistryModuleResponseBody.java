@@ -14,7 +14,7 @@ public class CreateRegistryModuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The template source, which is a concatenation of \<namespaceName>/\<ModuleName>.</p>
+     * <p>The template source, which is concatenated in the \<namespaceName>/\<ModuleName> format.</p>
      * 
      * <strong>example:</strong>
      * <p>namespaceName/ModuleName</p>

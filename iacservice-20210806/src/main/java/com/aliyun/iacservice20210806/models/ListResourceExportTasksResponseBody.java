@@ -20,7 +20,7 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+     * <p>The number of results to return per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -93,10 +93,10 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
 
     public static class ListResourceExportTasksResponseBodyExportTasksExportToModule extends TeaModel {
         /**
-         * <p>The module type to which the exported template is saved. Valid values:</p>
+         * <p>The module type where the exported template is saved. Valid values:</p>
          * <ul>
          * <li>OSS: OSS</li>
-         * <li>Registry: Terraform Registry.</li>
+         * <li>Registry: Terraform Registry</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,10 +108,8 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
         /**
          * <p>The path where the template content is saved.</p>
          * <ul>
-         * <li><p>If Source is set to Registry, the format is: &quot;cloudregistry::iacservice//&quot;</p>
-         * </li>
-         * <li><p>If Source is set to OSS, the format is: &quot;oss::https://.oss-ap-southeast-1.aliyuncs.com/xxx.zip&quot;.</p>
-         * </li>
+         * <li>When Source is Registry, the format is: &quot;cloudregistry::iacservice//&quot;.</li>
+         * <li>When Source is OSS, the format is: &quot;oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip&quot;.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,7 +119,7 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
         public String sourcePath;
 
         /**
-         * <p>The path where the template state file is saved.</p>
+         * <p>The path where the state file of the template is saved.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -162,15 +160,15 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
 
     public static class ListResourceExportTasksResponseBodyExportTasksIncludeRules extends TeaModel {
         /**
-         * <p>The name of the include rule for resource export. Valid values:</p>
+         * <p>The name of the inclusion rule for resource export. Valid values:</p>
          * <ul>
-         * <li>ResourceType: required. The resource type, such as ALIYUN::VPC::VPC.</li>
-         * <li>RegionId: required. The region to which the resource belongs. Only one region is supported, such as ap-southeast-1.</li>
-         * <li>\<ResourceType>:Id: the resource ID, such as ALIYUN::VPC::VPC:Id.</li>
-         * <li>ResourceGroupId: the resource group ID, such as rg-1234.</li>
-         * <li>ZoneId: the zone to which the resource belongs. Only one zone is supported, such as ap-southeast-1h.</li>
+         * <li>ResourceType: required. The resource type. Example: ALIYUN::VPC::VPC.</li>
+         * <li>RegionId: required. The region to which the resource belongs. Only one region is supported. Example: cn-chengdu.</li>
+         * <li>\<ResourceType>:Id: the resource ID. Example: ALIYUN::VPC::VPC:Id.</li>
+         * <li>ResourceGroupId: the resource group ID. Example: rg-1234.</li>
+         * <li>ZoneId: the zone to which the resource belongs. Only one zone is supported. Example: cn-hangzhou-h.</li>
          * </ul>
-         * <p>By default, the relationship between multiple filter conditions is AND. A resource is considered matched only when all filter conditions are met.</p>
+         * <p>By default, multiple filter conditions use the AND logical operator. A resource matches the filter conditions only when it meets all the conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>RegionId</p>
@@ -179,7 +177,7 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The values of the include rules for resource export.</p>
+         * <p>The values of the inclusion rules for resource export.</p>
          */
         @NameInMap("values")
         public java.util.List<String> values;
@@ -220,10 +218,8 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
         /**
          * <p>The download URL of the module where the exported template is stored.</p>
          * <ul>
-         * <li><p>If Source is set to CloudRegistry, the format is: &quot;cloudregistry::iacservice/<exportTaskId>/<Provider Name>&quot;</p>
-         * </li>
-         * <li><p>If Source is set to OSS, the format is: &quot;oss::https://<BucketName>.oss-ap-southeast-1.aliyuncs.com/xxx.zip&quot;.</p>
-         * </li>
+         * <li>When Source is CloudRegistry, the format is: &quot;cloudregistry::iacservice/<exportTaskId>/<Provider Name>&quot;.</li>
+         * <li>When Source is OSS, the format is: &quot;oss::https://<BucketName>.oss-cn-hangzhou.aliyuncs.com/xxx.zip&quot;.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -274,7 +270,7 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
 
     public static class ListResourceExportTasksResponseBodyExportTasksVariables extends TeaModel {
         /**
-         * <p>The list of Terraform resource properties corresponding to the resource type.</p>
+         * <p>The list of properties for the Terraform resource that corresponds to the resource type.</p>
          */
         @NameInMap("properties")
         public java.util.List<String> properties;
@@ -313,7 +309,7 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
 
     public static class ListResourceExportTasksResponseBodyExportTasks extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-02-20T02:10:06Z</p>
@@ -343,10 +339,10 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
          * <p>The export status. Valid values:</p>
          * <ul>
          * <li>Queue: queued</li>
-         * <li>Pending: preparing to run</li>
+         * <li>Pending: pending</li>
          * <li>Success: succeeded</li>
          * <li>Errored: failed</li>
-         * <li>Canceled: canceled.</li>
+         * <li>Canceled: canceled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -365,7 +361,7 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
         public String exportTaskId;
 
         /**
-         * <p>The module to which the exported template is saved. If this parameter is not set, the template is automatically saved in the Registry.</p>
+         * <p>Saves the exported template as a module. If this parameter is not specified, the template is automatically saved in the registry.</p>
          */
         @NameInMap("exportToModule")
         public ListResourceExportTasksResponseBodyExportTasksExportToModule exportToModule;
@@ -380,13 +376,13 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
         public String exportVersion;
 
         /**
-         * <p>The values of the include rules for resource export.</p>
+         * <p>The values of the inclusion rules for resource export.</p>
          */
         @NameInMap("includeRules")
         public java.util.List<ListResourceExportTasksResponseBodyExportTasksIncludeRules> includeRules;
 
         /**
-         * <p>The module configuration of the exported resources.</p>
+         * <p>The module configurations for the exported resources.</p>
          */
         @NameInMap("modules")
         public java.util.List<ListResourceExportTasksResponseBodyExportTasksModules> modules;
@@ -404,7 +400,7 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
          * <p>The task status. Valid values:</p>
          * <ul>
          * <li>Available: available</li>
-         * <li>Running: running.</li>
+         * <li>Running: running</li>
          * </ul>
          * 
          * <strong>example:</strong>

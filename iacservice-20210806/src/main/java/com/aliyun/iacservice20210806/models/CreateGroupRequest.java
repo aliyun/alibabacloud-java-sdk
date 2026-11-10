@@ -14,11 +14,7 @@ public class CreateGroupRequest extends TeaModel {
     public Boolean autoDestroy;
 
     /**
-     * <p>Specifies whether to enable the automatic trigger policy. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong>: enabled.</li>
-     * <li><strong>false</strong>: disabled.</li>
-     * </ul>
+     * <p>Specifies whether to enable the automatic trigger policy. Valid values: <strong>true</strong>: Enabled. <strong>false</strong>: Disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -27,7 +23,7 @@ public class CreateGroupRequest extends TeaModel {
     public Boolean autoTrigger;
 
     /**
-     * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
+     * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. A UUID is recommended.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +42,7 @@ public class CreateGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to forcibly use the group configuration.</p>
+     * <p>Specifies whether to force the use of the group configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -87,9 +83,7 @@ public class CreateGroupRequest extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The RAM role (1-128 characters).
-     * The system assumes this role to execute the template when a new job is triggered.
-     * This parameter is required when the job trigger method is not manual.</p>
+     * <p>The RAM role. Length: 1 to 128 characters. The system assumes this role to execute the template when a new job is triggered. This parameter is required when the job trigger method is not manual.</p>
      * 
      * <strong>example:</strong>
      * <p>ramName</p>
@@ -104,8 +98,7 @@ public class CreateGroupRequest extends TeaModel {
     public java.util.List<String> reportExportField;
 
     /**
-     * <p>The export address for the execution report. OSS addresses are supported.
-     * https://<OSS bucket address>/<path>.</p>
+     * <p>The export address for the execution report. OSS addresses are supported. Format: https://<OSS bucket endpoint>/<path>.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://test.oss-cn-hangzhou.aliyuncs.com/test/test">https://test.oss-cn-hangzhou.aliyuncs.com/test/test</a></p>
@@ -114,8 +107,7 @@ public class CreateGroupRequest extends TeaModel {
     public String reportExportPath;
 
     /**
-     * <p>The Terraform Provider version.
-     * Select a Terraform Provider version. The version configured on the task takes higher priority.</p>
+     * <p>The Terraform provider version. Select a Terraform provider version. The version configured on the task takes precedence.</p>
      * 
      * <strong>example:</strong>
      * <p>1.189.0</p>
@@ -124,8 +116,7 @@ public class CreateGroupRequest extends TeaModel {
     public String terraformProviderVersion;
 
     /**
-     * <p>The trigger policy.
-     * This parameter cannot be empty when autoTrigger is set to true.</p>
+     * <p>The trigger policy. This parameter is required when autoTrigger is set to true.</p>
      */
     @NameInMap("triggerConfig")
     public java.util.List<CreateGroupRequestTriggerConfig> triggerConfig;
@@ -133,8 +124,8 @@ public class CreateGroupRequest extends TeaModel {
     /**
      * <p>The resource type for triggered execution. Valid values:</p>
      * <ul>
-     * <li>Task: regular task.</li>
-     * <li>SceneTestingTask: scenario-based testing task.</li>
+     * <li>Task: Regular task.</li>
+     * <li>SceneTestingTask: Scenario-based testing task.</li>
      * </ul>
      */
     @NameInMap("triggerResourceType")
@@ -276,8 +267,7 @@ public class CreateGroupRequest extends TeaModel {
         public String notifyPath;
 
         /**
-         * <p>The notification type:
-         * DingDing.</p>
+         * <p>The notification type. Valid values: DingDing.</p>
          * 
          * <strong>example:</strong>
          * <p>DingDing</p>
@@ -312,8 +302,8 @@ public class CreateGroupRequest extends TeaModel {
         /**
          * <p>The trigger policy. Valid values:</p>
          * <ul>
-         * <li>ProviderNewVersion: triggered when a new Provider version is released.</li>
-         * <li>Cron: triggered on a schedule.</li>
+         * <li>ProviderNewVersion: Triggered when a new provider version is released.</li>
+         * <li>Cron: Triggered on a schedule.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -323,7 +313,7 @@ public class CreateGroupRequest extends TeaModel {
         public String triggerStrategy;
 
         /**
-         * <p>The policy value to maintain for scheduled triggering. This is a cron expression.</p>
+         * <p>The policy value for scheduled triggers. Specify a cron expression.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 19 * * ？</p>

@@ -23,7 +23,7 @@ public class ListProjectResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+     * <p>The number of results returned per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -135,7 +135,7 @@ public class ListProjectResponseBody extends TeaModel {
 
     public static class ListProjectResponseBodyProjects extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-10T10:08:34Z</p>

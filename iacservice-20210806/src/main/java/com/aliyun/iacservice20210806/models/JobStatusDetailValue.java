@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class JobStatusDetailValue extends TeaModel {
     /**
-     * <p>备注</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
-     * <p>备注</p>
+     * <p>Remarks</p>
      */
     @NameInMap("comment")
     public String comment;
 
     /**
-     * <p>执行结果</p>
+     * <p>The execution result.</p>
      * 
      * <strong>example:</strong>
      * <p>Apply complete! Resources: 0 added, 0 changed, 0 destroyed.</p>
@@ -23,7 +23,7 @@ public class JobStatusDetailValue extends TeaModel {
     public String jobResult;
 
     /**
-     * <p>到达状态时间</p>
+     * <p>The time when the status is reached.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-06-13 17:11:34</p>
@@ -32,7 +32,7 @@ public class JobStatusDetailValue extends TeaModel {
     public String timeStamps;
 
     /**
-     * <p>错误详情</p>
+     * <p>The error details.</p>
      * 
      * <strong>example:</strong>
      * <p>Error：Cannot import non-existent remote object</p>

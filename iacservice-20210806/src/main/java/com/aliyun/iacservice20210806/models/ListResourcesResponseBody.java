@@ -20,7 +20,7 @@ public class ListResourcesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 200.</p>
+     * <p>The number of results to return per page. Default value: 20. Minimum value: 1. Maximum value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -135,7 +135,7 @@ public class ListResourcesResponseBody extends TeaModel {
 
     public static class ListResourcesResponseBodyResources extends TeaModel {
         /**
-         * <p>The Alibaba Cloud account ID.</p>
+         * <p>The Alibaba Cloud user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>365845</p>
@@ -144,7 +144,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-03T02:22:59Z</p>
@@ -153,7 +153,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The dependent resources.</p>
+         * <p>The list of dependent resources.</p>
          */
         @NameInMap("dependsOnResourceIds")
         public java.util.List<String> dependsOnResourceIds;
@@ -195,7 +195,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The resource ARN.</p>
+         * <p>The ARN of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:vpc:cn-hangzhou:12345:test</p>

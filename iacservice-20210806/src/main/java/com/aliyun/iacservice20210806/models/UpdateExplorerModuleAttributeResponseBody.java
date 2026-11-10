@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateExplorerModuleAttributeResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>25B274BA-E672-58C0-8602-541281B6F758</p>

@@ -22,8 +22,8 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page of results.</p>
-     * <p>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</p>
+     * <p>The token used to query the next page of results.</p>
+     * <p>If the total number of entries exceeds the value of <code>maxResults</code>, the returned data is truncated. You can use <code>nextToken</code> to query the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>DxEkv+3w0EDAQgcRFBp8Ep4dD+2BRJj42DLT6GrZysw=</p>
@@ -123,7 +123,7 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
         public String latestVersion;
 
         /**
-         * <p>The module name.</p>
+         * <p>The name of the module.</p>
          * 
          * <strong>example:</strong>
          * <p>terraform-alicloud-modules/mongodb</p>
@@ -132,7 +132,7 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
         public String moduleName;
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>test_namespace</p>

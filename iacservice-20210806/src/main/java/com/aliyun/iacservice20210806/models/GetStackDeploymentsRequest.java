@@ -14,7 +14,7 @@ public class GetStackDeploymentsRequest extends TeaModel {
     public String configVersion;
 
     /**
-     * <p>The deployment name.</p>
+     * <p>The name of the deployment.</p>
      * 
      * <strong>example:</strong>
      * <p>production</p>
@@ -23,7 +23,7 @@ public class GetStackDeploymentsRequest extends TeaModel {
     public String deploymentName;
 
     /**
-     * <p>The deployment number. The deployment number for each stack starts from 1 and increments each time a deployment is successfully triggered.</p>
+     * <p>The deployment number. The deployment number of each stack starts from 1 and increments each time a deployment is successfully triggered.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class GetStackDeploymentsRequest extends TeaModel {
     public String deploymentNo;
 
     /**
-     * <p>The page number, starting from 1.</p>
+     * <p>The page number. Pages start from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class GetStackDeploymentsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of results returned per page. Default value: 20. Minimum value: 1. Maximum value: 200.</p>
+     * <p>The number of entries to return on each page. Default value: 20. Minimum value: 1. Maximum value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -50,7 +50,7 @@ public class GetStackDeploymentsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The deployment status.</p>
+     * <p>The deployment status. Valid values:</p>
      * <table>
      * <thead>
      * <tr>
@@ -64,91 +64,91 @@ public class GetStackDeploymentsRequest extends TeaModel {
      * </tr>
      * <tr>
      * <td>PriorityQueued</td>
-     * <td>Priority queuing in progress.</td>
+     * <td>The deployment is queued with priority.</td>
      * </tr>
      * <tr>
      * <td>PlanQueued</td>
-     * <td>The deployment is queuing because no workflow is available after creation.</td>
+     * <td>The deployment is queued and waiting for an available workflow after it is created.</td>
      * </tr>
      * <tr>
      * <td>ApplyQueued</td>
-     * <td>The deployment is queuing because no workflow is available during execution.</td>
+     * <td>The deployment is queued and waiting for an available workflow during execution.</td>
      * </tr>
      * <tr>
      * <td>Planning</td>
-     * <td>The resource deployment is in the Plan phase.</td>
+     * <td>The deployment is in the plan phase.</td>
      * </tr>
      * <tr>
      * <td>Planned</td>
-     * <td>The resource deployment has completed the Plan phase.</td>
+     * <td>The deployment has completed the plan phase.</td>
      * </tr>
      * <tr>
      * <td>ConfigProactiveInProgress</td>
-     * <td>Compliance pre-check in progress.</td>
+     * <td>The compliance precheck is in progress.</td>
      * </tr>
      * <tr>
      * <td>ConfigProactiveSuccess</td>
-     * <td>Compliance pre-check succeeded.</td>
+     * <td>The compliance precheck is successful.</td>
      * </tr>
      * <tr>
      * <td>DetectInProgress</td>
-     * <td>Drift detection in progress.</td>
+     * <td>Drift detection is in progress.</td>
      * </tr>
      * <tr>
      * <td>ImportQueued</td>
-     * <td>The deployment is queuing because no workflow is available during Import execution.</td>
+     * <td>The deployment is queued and waiting for an available workflow during the import phase.</td>
      * </tr>
      * <tr>
      * <td>Importing</td>
-     * <td>The resource deployment is in the Import phase.</td>
+     * <td>The deployment is in the import phase.</td>
      * </tr>
      * <tr>
      * <td>Imported</td>
-     * <td>The resource deployment has completed the Import phase.</td>
+     * <td>The deployment has completed the import phase.</td>
      * </tr>
      * <tr>
      * <td>StateQueued</td>
-     * <td>The deployment is queuing because no workflow is available during state command execution.</td>
+     * <td>The deployment is queued and waiting for an available workflow during the state command execution.</td>
      * </tr>
      * <tr>
      * <td>Stating</td>
-     * <td>The resource deployment is executing the state command.</td>
+     * <td>The deployment is executing the state command.</td>
      * </tr>
      * <tr>
      * <td>Stated</td>
-     * <td>The resource deployment has completed the state command execution.</td>
+     * <td>The deployment has completed the execution of the state command.</td>
      * </tr>
      * <tr>
      * <td>Confirmed</td>
-     * <td>The resource deployment has been confirmed after the Plan phase.</td>
+     * <td>The deployment is confirmed after the plan phase.</td>
      * </tr>
      * <tr>
      * <td>PlannedAndFinished</td>
-     * <td>No diff was found after the Plan phase. The deployment is in a final status.</td>
+     * <td>The deployment is in the final state because no differences are found after the plan phase.</td>
      * </tr>
      * <tr>
      * <td>Applying</td>
-     * <td>The resource deployment is in the Apply phase.</td>
+     * <td>The deployment is in the apply phase.</td>
      * </tr>
      * <tr>
      * <td>Applied</td>
-     * <td>The resource deployment has completed the Apply phase.</td>
+     * <td>The deployment has completed the apply phase.</td>
      * </tr>
      * <tr>
      * <td>Discarded</td>
-     * <td>The resource deployment has been discarded and is in a final status.</td>
+     * <td>The deployment is discarded and enters the final state.</td>
      * </tr>
      * <tr>
      * <td>Errored</td>
-     * <td>The deployment execution encountered an error and is in a final status.</td>
+     * <td>An error occurred during the deployment execution, and the deployment enters the final state.</td>
      * </tr>
      * <tr>
      * <td>ConfigProactiveFailure</td>
-     * <td>Compliance pre-check failed.</td>
+     * <td>The compliance precheck failed.</td>
      * </tr>
      * <tr>
      * <td>Canceled</td>
-     * <td>The deployment execution has been canceled and is in a final status.</td>
+     * <td>The deployment execution is canceled, and the deployment enters the final state.</td>
      * </tr>
      * </tbody></table>
      * 

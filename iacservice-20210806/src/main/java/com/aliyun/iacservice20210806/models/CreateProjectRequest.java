@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateProjectRequest extends TeaModel {
     /**
-     * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
+     * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. A UUID is recommended.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,8 @@ public class CreateProjectRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The project description. Length: 0 to 1024 characters.</p>
+     * <p>The project description.
+     * Length: 0 to 1024 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -24,7 +25,8 @@ public class CreateProjectRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The project name. Length: 1 to 128 characters.</p>
+     * <p>The project name.
+     * Length: 1 to 128 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

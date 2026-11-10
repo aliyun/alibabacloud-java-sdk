@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRegistryModuleRequest extends TeaModel {
     /**
-     * <p>The access permission. Valid values:</p>
-     * <ul>
-     * <li>private: private.</li>
-     * </ul>
+     * <p>The permissions. Valid values: private: Private.</p>
      * 
      * <strong>example:</strong>
      * <p>private</p>
@@ -17,7 +14,7 @@ public class CreateRegistryModuleRequest extends TeaModel {
     public String acl;
 
     /**
-     * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
+     * <p>The client token used to ensure idempotence. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +37,7 @@ public class CreateRegistryModuleRequest extends TeaModel {
      * <ul>
      * <li>The name must be 3 to 63 characters in length.</li>
      * <li>The name can contain uppercase and lowercase letters, digits, hyphens (-), and underscores (_), and cannot start or end with a hyphen.</li>
-     * <li>The name must be unique within the workspace.</li>
+     * <li>The name must be unique among the resources in the workspace.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -51,7 +48,7 @@ public class CreateRegistryModuleRequest extends TeaModel {
     public String moduleName;
 
     /**
-     * <p>The workspace name.</p>
+     * <p>The name of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,10 +58,7 @@ public class CreateRegistryModuleRequest extends TeaModel {
     public String namespaceName;
 
     /**
-     * <p>The provider type. Valid values:</p>
-     * <ul>
-     * <li>alicloud: Alibaba Cloud.</li>
-     * </ul>
+     * <p>The provider type. Valid values: alicloud: Alibaba Cloud.</p>
      * 
      * <strong>example:</strong>
      * <p>alicloud</p>
@@ -73,10 +67,7 @@ public class CreateRegistryModuleRequest extends TeaModel {
     public String provider;
 
     /**
-     * <p>The template type. Valid values:</p>
-     * <ul>
-     * <li>self: custom template.</li>
-     * </ul>
+     * <p>The template type. Valid values: self: Custom template.</p>
      * 
      * <strong>example:</strong>
      * <p>self</p>

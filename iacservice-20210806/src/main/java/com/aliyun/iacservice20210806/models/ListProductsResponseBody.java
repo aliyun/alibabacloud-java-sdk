@@ -14,7 +14,7 @@ public class ListProductsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The maximum number of results per page. Valid values: 0 to 200. Default value: 100.</p>
+     * <p>The maximum number of entries to return on each page. Valid values: 0 to 200. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>30BaZ9ekYWXJdqshYecA++coNg7qT1Zbm3RfLyFIZeY=</p>
@@ -23,7 +23,7 @@ public class ListProductsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The product list.</p>
+     * <p>The list of products.</p>
      */
     @NameInMap("products")
     public java.util.List<ListProductsResponseBodyProducts> products;
@@ -93,16 +93,16 @@ public class ListProductsResponseBody extends TeaModel {
 
     public static class ListProductsResponseBodyProducts extends TeaModel {
         /**
-         * <p>The first-level category name.</p>
+         * <p>The name of the level-1 category.</p>
          * 
          * <strong>example:</strong>
-         * <p>企业应用</p>
+         * <p>Enterprise Applications</p>
          */
         @NameInMap("firstCategoryName")
         public String firstCategoryName;
 
         /**
-         * <p>The first-level category name in English.</p>
+         * <p>The English name of the level-1 category.</p>
          * 
          * <strong>example:</strong>
          * <p>Enterprise application</p>
@@ -123,13 +123,13 @@ public class ListProductsResponseBody extends TeaModel {
          * <p>The product name.</p>
          * 
          * <strong>example:</strong>
-         * <p>微服务引擎</p>
+         * <p>Microservices Engine</p>
          */
         @NameInMap("productName")
         public String productName;
 
         /**
-         * <p>The product name in English.</p>
+         * <p>The English name of the product.</p>
          * 
          * <strong>example:</strong>
          * <p>Microservices Engine</p>
@@ -138,16 +138,16 @@ public class ListProductsResponseBody extends TeaModel {
         public String productNameEn;
 
         /**
-         * <p>The second-level category name.</p>
+         * <p>The name of the level-2 category.</p>
          * 
          * <strong>example:</strong>
-         * <p>应用服务</p>
+         * <p>Application Services</p>
          */
         @NameInMap("secondCategoryName")
         public String secondCategoryName;
 
         /**
-         * <p>The second-level category name in English.</p>
+         * <p>The English name of the level-2 category.</p>
          * 
          * <strong>example:</strong>
          * <p>Application service</p>
@@ -183,7 +183,7 @@ public class ListProductsResponseBody extends TeaModel {
         public Boolean supportTerraformer;
 
         /**
-         * <p>The Terraform Provider version.</p>
+         * <p>The Terraform provider version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.229.0</p>

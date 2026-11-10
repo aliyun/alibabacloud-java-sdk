@@ -14,7 +14,7 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
     public Long count;
 
     /**
-     * <p>The maximum number of records returned at a time.</p>
+     * <p>The maximum number of records returned in a single call.</p>
      * 
      * <strong>example:</strong>
      * <p>24</p>
@@ -102,7 +102,7 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
         public String acl;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-15T02:16:58Z</p>
@@ -129,7 +129,7 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
         public String maintainer;
 
         /**
-         * <p>The number of Registry templates in the workspace.</p>
+         * <p>The number of registry templates in the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>21</p>

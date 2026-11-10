@@ -14,7 +14,7 @@ public class ExecuteTerraformDestroyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The state file ID.</p>
+     * <p>The ID of the state file.</p>
      * 
      * <strong>example:</strong>
      * <p>task-xxxx</p>

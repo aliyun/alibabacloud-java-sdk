@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateModuleAttributeRequest extends TeaModel {
     /**
-     * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</p>
+     * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateModuleAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The template description. The description can be up to 256 characters in length.</p>
+     * <p>The description of the template. The description can be up to 256 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>this is description</p>
@@ -30,11 +30,11 @@ public class UpdateModuleAttributeRequest extends TeaModel {
     public UpdateModuleAttributeRequestGroupInfo groupInfo;
 
     /**
-     * <p>The template name. The name must meet the following requirements:</p>
+     * <p>The name of the template. The name must meet the following requirements:</p>
      * <ul>
      * <li>The name must be 2 to 128 characters in length.</li>
      * <li>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). It cannot start or end with a hyphen, underscore, or period.</li>
-     * <li>The name must be unique among all templates within the current account.</li>
+     * <li>The name must be unique among the template resources within the current account.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,11 +44,11 @@ public class UpdateModuleAttributeRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The path of the template source.</p>
+     * <p>The path value of the template source.</p>
      * <ul>
-     * <li>If the source is Registry, set this parameter to <workspace name>/<module name>:<module version>. Example: terraform-alicloud-modules/rds:1.0.0.</li>
-     * <li>If the source is OSS, set this parameter to oss::<file URL>. The file must be a ZIP file. Example: oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</li>
-     * <li>If the source is ExportTask, set this parameter to <export task ID>:<exported version>. Example: ex-3b6cb9fa4751afff298da723c24ac:v1.</li>
+     * <li>If the source is Registry, the value is in the <Workspace name>/<Module name>:<Module version> format. Example: terraform-alicloud-modules/rds:1.0.0.</li>
+     * <li>If the source is OSS, the value is in the oss::<File URL> format. The file must be a ZIP file. Example: oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</li>
+     * <li>If the source is ExportTask, the value is in the <Export task ID>:<Exported version> format. Example: ex-3b6cb9fa4751afff298da723c24ac:v1.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class UpdateModuleAttributeRequest extends TeaModel {
     public String sourcePath;
 
     /**
-     * <p>The path of the state file that corresponds to the template. Currently, only OSS paths are supported. Set this parameter to oss::<OSS file path>/terraform.tfstate.</p>
+     * <p>The path value of the state file corresponding to the template. Currently, only OSS paths are supported. The value is in the oss::<OSS path of the file>/terraform.tfstate format.</p>
      * 
      * <strong>example:</strong>
      * <p>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate</a></p>
@@ -67,7 +67,7 @@ public class UpdateModuleAttributeRequest extends TeaModel {
     public String statePath;
 
     /**
-     * <p>The tags of the template.</p>
+     * <p>The list of tags for the template.</p>
      */
     @NameInMap("tags")
     public java.util.List<UpdateModuleAttributeRequestTags> tags;
@@ -75,7 +75,7 @@ public class UpdateModuleAttributeRequest extends TeaModel {
     /**
      * <p>The version generation strategy. Valid values:</p>
      * <ul>
-     * <li>Manual: manually generate versions. This is the default value.</li>
+     * <li>Manual: manually generated version (default).</li>
      * <li>SourcePathUpdated: a new version is generated when sourcePath is modified.</li>
      * </ul>
      * 

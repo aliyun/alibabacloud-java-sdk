@@ -15,7 +15,7 @@ public class CreateModuleVersionRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The version description. The description can be up to 256 characters in length.</p>
+     * <p>The version description. The length cannot exceed 256 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>this is description</p>
@@ -24,10 +24,10 @@ public class CreateModuleVersionRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The template version name. The name must meet the following requirements:</p>
+     * <p>The template version name. It must meet the following requirements:</p>
      * <ul>
-     * <li>The name must be 2 to 128 characters in length.</li>
-     * <li>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). The name cannot start or end with a hyphen, underscore, or period.</li>
+     * <li>The length is 2 to 128 characters.</li>
+     * <li>It can contain uppercase and lowercase letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). It cannot start or end with a hyphen, underscore, or period.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

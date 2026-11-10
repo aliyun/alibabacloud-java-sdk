@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateRegistryModuleAttributeRequest extends TeaModel {
     /**
-     * <p>The access permission. Valid values:</p>
-     * <ul>
-     * <li>private: private.</li>
-     * </ul>
+     * <p>The permissions. Valid values: private: Private.</p>
      * 
      * <strong>example:</strong>
      * <p>private</p>

@@ -20,7 +20,7 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+     * <p>The number of results to return per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -93,10 +93,10 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
 
     public static class ListResourceExportTaskVersionsResponseBodyExportTasksExportToModule extends TeaModel {
         /**
-         * <p>The module type to which the exported template is saved. Valid values:</p>
+         * <p>The module type where the exported template is saved. Valid values:</p>
          * <ul>
-         * <li>OSS: OSS</li>
-         * <li>Registry: Terraform Registry</li>
+         * <li>OSS: OSS.</li>
+         * <li>Registry: Terraform Registry.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,10 +108,8 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
         /**
          * <p>The path where the template content is saved.</p>
          * <ul>
-         * <li><p>If Source is set to Registry, the format is: &quot;cloudregistry::iacservice//&quot;</p>
-         * </li>
-         * <li><p>If Source is set to OSS, the format is: &quot;oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip&quot;</p>
-         * </li>
+         * <li>If Source is set to Registry, the format is &quot;cloudregistry::iacservice//&quot;.</li>
+         * <li>If Source is set to OSS, the format is &quot;oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip&quot;.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,7 +119,7 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
         public String sourcePath;
 
         /**
-         * <p>The path of the State file that corresponds to the module.</p>
+         * <p>The path of the state file corresponding to the module.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -162,15 +160,15 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
 
     public static class ListResourceExportTaskVersionsResponseBodyExportTasksIncludeRules extends TeaModel {
         /**
-         * <p>The name of the include rule for resource export. Valid values:</p>
+         * <p>The name of the inclusion rule for resource export. Valid values:</p>
          * <ul>
-         * <li>ResourceType: required. The resource type. Example: ALIYUN::VPC::VPC.</li>
-         * <li>RegionId: required. The region to which the resource belongs. Only one region is supported. Example: cn-chengdu.</li>
-         * <li>\<ResourceType>:Id: the resource ID. Example: ALIYUN::VPC::VPC:Id.</li>
-         * <li>ResourceGroupId: the resource group ID. Example: rg-1234.</li>
-         * <li>ZoneId: the zone to which the resource belongs. Only one zone is supported. Example: cn-hangzhou-h.</li>
+         * <li>ResourceType: Required. The resource type, such as ALIYUN::VPC::VPC.</li>
+         * <li>RegionId: Required. The region to which the resource belongs. Only one region is supported, such as cn-chengdu.</li>
+         * <li><ResourceType>:Id: The resource ID, such as ALIYUN::VPC::VPC:Id.</li>
+         * <li>ResourceGroupId: The resource group ID, such as rg-1234.</li>
+         * <li>ZoneId: The zone to which the resource belongs. Only one zone is supported, such as cn-hangzhou-h.</li>
          * </ul>
-         * <p>By default, multiple filter conditions are evaluated with an AND operator. A resource must match all filter conditions to be considered a match.</p>
+         * <p>By default, multiple filter conditions use the AND logical operator. A resource matches the filter conditions only if it meets all the conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>RegionId</p>
@@ -179,7 +177,7 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The values of the include rule for resource export.</p>
+         * <p>The values of the inclusion rule for resource export.</p>
          */
         @NameInMap("values")
         public java.util.List<String> values;
@@ -218,12 +216,10 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The download address of the exported template in the module.</p>
+         * <p>The download URL in the module where the exported template is located.</p>
          * <ul>
-         * <li><p>If Source is set to CloudRegistry, the format is: &quot;cloudregistry::iacservice//&quot;</p>
-         * </li>
-         * <li><p>If Source is set to OSS, the format is: &quot;oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip&quot;</p>
-         * </li>
+         * <li>If Source is set to CloudRegistry, the format is &quot;cloudregistry::iacservice//&quot;.</li>
+         * <li>If Source is set to OSS, the format is &quot;oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip&quot;.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -274,7 +270,7 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
 
     public static class ListResourceExportTaskVersionsResponseBodyExportTasksVariables extends TeaModel {
         /**
-         * <p>The list of Terraform resource properties that correspond to the resource type.</p>
+         * <p>The list of properties for the Terraform resource corresponding to the resource type.</p>
          */
         @NameInMap("properties")
         public java.util.List<String> properties;
@@ -313,7 +309,7 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
 
     public static class ListResourceExportTaskVersionsResponseBodyExportTasks extends TeaModel {
         /**
-         * <p>The creation time in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+         * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-11T02:18:50Z</p>
@@ -349,7 +345,7 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
         public String exportTaskId;
 
         /**
-         * <p>The module to which the exported template is saved. If this parameter is not specified, the template is automatically saved in the Registry.</p>
+         * <p>Saves the exported template as a module. If this parameter is not specified, the template is automatically saved in the registry.</p>
          */
         @NameInMap("exportToModule")
         public ListResourceExportTaskVersionsResponseBodyExportTasksExportToModule exportToModule;
@@ -373,16 +369,22 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
         public String failedReason;
 
         /**
-         * <p>The list of include rules used when exporting resources.</p>
+         * <p>The list of inclusion rules used when exporting resources.</p>
          */
         @NameInMap("includeRules")
         public java.util.List<ListResourceExportTaskVersionsResponseBodyExportTasksIncludeRules> includeRules;
 
+        /**
+         * <p>The ID of the managed task created by this resource export version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-433aead756057fffeaba4828f5195</p>
+         */
         @NameInMap("managedTaskId")
         public String managedTaskId;
 
         /**
-         * <p>The module configurations of the exported resources.</p>
+         * <p>The module configurations after the resources are exported.</p>
          */
         @NameInMap("modules")
         public java.util.List<ListResourceExportTaskVersionsResponseBodyExportTasksModules> modules;
@@ -397,13 +399,13 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The version export status. Valid values:</p>
+         * <p>The export status of the version. Valid values:</p>
          * <ul>
-         * <li>Queue: queued</li>
-         * <li>Pending: preparing to run</li>
-         * <li>Success: succeeded</li>
-         * <li>Errored: failed</li>
-         * <li>Canceled: canceled</li>
+         * <li>Queue: Queued.</li>
+         * <li>Pending: Ready to run.</li>
+         * <li>Success: Succeeded.</li>
+         * <li>Errored: Failed.</li>
+         * <li>Canceled: Canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -413,7 +415,7 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The Terraform Provider version.</p>
+         * <p>The Terraform provider version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.206.0</p>
@@ -422,7 +424,7 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
         public String terraformProviderVersion;
 
         /**
-         * <p>The list of variables. Parameters of exported resources are set as variables.</p>
+         * <p>The list of variables. The parameters after the resources are exported are set as variables.</p>
          */
         @NameInMap("variables")
         public java.util.List<ListResourceExportTaskVersionsResponseBodyExportTasksVariables> variables;

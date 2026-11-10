@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListExplorerRegistryModuleExamplesRequest extends TeaModel {
     /**
-     * <p>The example name of the module.</p>
+     * <p>The name of the module example.</p>
      * 
      * <strong>example:</strong>
      * <p>complete</p>
@@ -14,7 +14,7 @@ public class ListExplorerRegistryModuleExamplesRequest extends TeaModel {
     public String exampleName;
 
     /**
-     * <p>The search keyword. Supports fuzzy match based on the module name or module example name.</p>
+     * <p>The search keyword. Supports fuzzy matching based on the module name or module example name.</p>
      * 
      * <strong>example:</strong>
      * <p>key</p>
@@ -52,7 +52,7 @@ public class ListExplorerRegistryModuleExamplesRequest extends TeaModel {
     public String moduleVersion;
 
     /**
-     * <p>The name of the workspace to which the module belongs.</p>
+     * <p>The name of the workspace where the module is located.</p>
      * 
      * <strong>example:</strong>
      * <p>alibaba</p>
@@ -61,8 +61,8 @@ public class ListExplorerRegistryModuleExamplesRequest extends TeaModel {
     public String namespaceName;
 
     /**
-     * <p>The pagination token for the next page of results.</p>
-     * <p>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</p>
+     * <p>The token used to query the next page of results.</p>
+     * <p>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>IbuvZbAXFOiB4nKg8iOH447bhHWDavGTOMijI2Jep7c=</p>

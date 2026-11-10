@@ -1,3 +1,9 @@
+2026-11-10 Version: 2.11.2
+- Update API CreateStack: add request parameters body.skipPropertyValidation.
+- Update API GetStack: add response parameters Body.stack.skipPropertyValidation.
+- Update API UpdateStack: add request parameters body.skipPropertyValidation.
+
+
 2026-09-10 Version: 2.11.1
 - Update API GetResourceExportTask: add response parameters Body.task.modifyTime.
 - Update API ListResourceExportTaskVersions: add response parameters Body.exportTasks.$.terraformProviderVersion.

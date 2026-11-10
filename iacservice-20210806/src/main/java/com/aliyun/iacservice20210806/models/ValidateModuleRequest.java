@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ValidateModuleRequest extends TeaModel {
     /**
-     * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</p>
+     * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. A UUID is recommended.</p>
      * 
      * <strong>example:</strong>
      * <p>2daf4227f747cbf11a5501f18cc5e004</p>
@@ -14,7 +14,7 @@ public class ValidateModuleRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The template text that is directly passed in when source is set to Upload.</p>
+     * <p>The template text. This parameter is required when source is set to Upload.</p>
      * 
      * <strong>example:</strong>
      * <p>code</p>
@@ -23,7 +23,7 @@ public class ValidateModuleRequest extends TeaModel {
     public String code;
 
     /**
-     * <p>Specifies multiple configuration files to pass in.</p>
+     * <p>The configuration file map. You can pass multiple configuration files.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;main.tf&quot;:&quot;xxx&quot;}</p>
@@ -32,8 +32,10 @@ public class ValidateModuleRequest extends TeaModel {
     public java.util.Map<String, ?> codeMap;
 
     /**
-     * <p>The template source. Valid values:
-     * Upload: text upload.</p>
+     * <p>The template source. Valid values:</p>
+     * <ul>
+     * <li>Upload: text upload.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Upload</p>

@@ -23,7 +23,7 @@ public class ListProjectShrinkRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+     * <p>The number of results returned per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

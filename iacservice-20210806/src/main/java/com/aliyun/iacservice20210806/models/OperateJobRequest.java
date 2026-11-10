@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateJobRequest extends TeaModel {
     /**
-     * <p>The description. The length is 0 to 128 characters.</p>
+     * <p>The description. The length ranges from 0 to 128 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,8 +17,8 @@ public class OperateJobRequest extends TeaModel {
     /**
      * <p>The task type. Valid values:</p>
      * <ul>
-     * <li>Task: regular task (default).</li>
-     * <li>SceneTestingTask: scenario-based testing task.</li>
+     * <li>Task: Regular task. This is the default value.</li>
+     * <li>SceneTestingTask: Scenario-based testing task.</li>
      * </ul>
      * 
      * <strong>example:</strong>

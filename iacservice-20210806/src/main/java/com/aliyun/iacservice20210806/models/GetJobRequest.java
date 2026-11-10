@@ -7,9 +7,9 @@ public class GetJobRequest extends TeaModel {
     /**
      * <p>The task type. Valid values:</p>
      * <ul>
-     * <li>Task: regular task (default)</li>
-     * <li>SceneTestingTask: scenario-based testing task</li>
-     * <li>Stack: resource stack.</li>
+     * <li>Task: Regular task (default).</li>
+     * <li>SceneTestingTask: Scenario-based testing task.</li>
+     * <li>Stack: Resource stack.</li>
      * </ul>
      * 
      * <strong>example:</strong>

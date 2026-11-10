@@ -42,7 +42,7 @@ public class GetProjectResponseBody extends TeaModel {
 
     public static class GetProjectResponseBodyProject extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-09-06T06:11:27Z</p>
@@ -51,7 +51,7 @@ public class GetProjectResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The project description. Length: 0 to 1024 characters.</p>
+         * <p>The project description. The length ranges from 0 to 1,024 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>

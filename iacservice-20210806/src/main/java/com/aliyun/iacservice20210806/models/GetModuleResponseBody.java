@@ -160,7 +160,7 @@ public class GetModuleResponseBody extends TeaModel {
 
     public static class GetModuleResponseBodyModule extends TeaModel {
         /**
-         * <p>The time when the template was created.</p>
+         * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-09-06T06:11:27Z</p>
@@ -220,14 +220,14 @@ public class GetModuleResponseBody extends TeaModel {
         public String outputPath;
 
         /**
-         * <p>The template source. Valid values:</p>
+         * <p>The source of the template. Valid values:</p>
          * <ul>
-         * <li>OSS: Imported from OSS.</li>
-         * <li>Registry: Created from a template in the template center.</li>
-         * <li>ExportTask: Exported from a resource export task.</li>
-         * <li>Upload: Uploaded as a file.</li>
-         * <li>Shared: Cloned from a shared template.</li>
-         * <li>Editor: Created by using the online editor.</li>
+         * <li>OSS: imported from OSS</li>
+         * <li>Registry: created by using a template from the template center</li>
+         * <li>ExportTask: referenced from a template exported by a resource export task</li>
+         * <li>Upload: uploaded as a file</li>
+         * <li>Shared: cloned from a shared template</li>
+         * <li>Editor: edited online</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,11 +237,11 @@ public class GetModuleResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The source path of the template.</p>
+         * <p>The path value of the template source.</p>
          * <ul>
-         * <li>If the source is Registry, the value is in the format of <workspace name>/<module name>:<module version>, such as terraform-alicloud-modules/rds:1.0.0.</li>
-         * <li>If the source is OSS, the value is in the format of oss::<file link>, such as oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</li>
-         * <li>If the source is ExportTask, the value is in the format of <export task ID>:<exported version>, such as ex-3b6cb9fa4751afff298da723c24ac:v1.</li>
+         * <li>If the source is Registry, the value is in the <Workspace name>/<Module name>:<Module version> format. Example: terraform-alicloud-modules/rds:1.0.0.</li>
+         * <li>If the source is OSS, the value is in the oss::<File URL> format. Example: oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</li>
+         * <li>If the source is ExportTask, the value is in the <Export task ID>:<Exported version> format. Example: ex-3b6cb9fa4751afff298da723c24ac:v1.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -251,7 +251,7 @@ public class GetModuleResponseBody extends TeaModel {
         public String sourcePath;
 
         /**
-         * <p>The path of the state file that corresponds to the template. Currently, only OSS paths are supported. The value is in the format of oss::<file OSS path>/terraform.tfstate.</p>
+         * <p>The path of the state file corresponding to the template. This parameter is applicable only to OSS paths. The value is in the oss::<OSS path of the file>/terraform.tfstate format.</p>
          * 
          * <strong>example:</strong>
          * <p>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate</a></p>
@@ -260,12 +260,12 @@ public class GetModuleResponseBody extends TeaModel {
         public String statePath;
 
         /**
-         * <p>The template status. Valid values:</p>
+         * <p>The status of the template. Valid values:</p>
          * <ul>
          * <li>Creating: The template is being created.</li>
-         * <li>Created: The template is created.</li>
+         * <li>Created: The template is created.
+         * You can publish a version after the template is created.</li>
          * </ul>
-         * <p>After the template is created, you can publish a version.</p>
          * 
          * <strong>example:</strong>
          * <p>Created</p>
@@ -274,7 +274,7 @@ public class GetModuleResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags of the template.</p>
+         * <p>The list of tags for the template.</p>
          */
         @NameInMap("tags")
         public java.util.List<GetModuleResponseBodyModuleTags> tags;
@@ -282,8 +282,8 @@ public class GetModuleResponseBody extends TeaModel {
         /**
          * <p>The version generation strategy. Valid values:</p>
          * <ul>
-         * <li>Manual: Versions are generated manually. This is the default value.</li>
-         * <li>SourcePathUpdated: A new version is generated when the sourcePath is modified.</li>
+         * <li>Manual: manually generates versions (default)</li>
+         * <li>SourcePathUpdated: generates a new version when sourcePath is modified</li>
          * </ul>
          * 
          * <strong>example:</strong>

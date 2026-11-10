@@ -42,7 +42,7 @@ public class GetModuleVersionResponseBody extends TeaModel {
 
     public static class GetModuleVersionResponseBodyVersion extends TeaModel {
         /**
-         * <p>The time when the version was created.</p>
+         * <p>The time when the version was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-09-08T18:07:40Z</p>
@@ -87,14 +87,14 @@ public class GetModuleVersionResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The version source. Valid values:</p>
+         * <p>The source of the version. Valid values:</p>
          * <ul>
-         * <li>OSS: imported from OSS.</li>
-         * <li>Registry: created by using a template from the template center.</li>
-         * <li>ExportTask: exported from a resource export task.</li>
-         * <li>Upload: uploaded as a file.</li>
-         * <li>Shared: cloned from a shared source.</li>
-         * <li>Editor: edited online.</li>
+         * <li>OSS: imported from OSS</li>
+         * <li>Registry: created by using a template in the template center</li>
+         * <li>ExportTask: referenced from a template exported by a resource export task</li>
+         * <li>Upload: uploaded as a file</li>
+         * <li>Shared: cloned from a shared template</li>
+         * <li>Editor: edited online</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -104,11 +104,11 @@ public class GetModuleVersionResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The path of the version source.</p>
+         * <p>The path value of the version source.</p>
          * <ul>
-         * <li>If the source is Registry, the value is in the format of <workspace name>/<module name>:<module version>. Example: terraform-alicloud-modules/rds:1.0.0.</li>
-         * <li>If the source is OSS, the value is in the format of oss::<file link>. Example: oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</li>
-         * <li>If the source is ExportTask, the value is in the format of <export task ID>:<exported version>. Example: ex-3b6cb9fa4751afff298da723c24ac:v1.</li>
+         * <li>If the source is Registry, the value is in the <Workspace name>/<Module name>:<Module version> format. Example: terraform-alicloud-modules/rds:1.0.0.</li>
+         * <li>If the source is OSS, the value is in the oss::<File URL> format. Example: oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</li>
+         * <li>If the source is ExportTask, the value is in the <Export task ID>:<Exported version> format. Example: ex-3b6cb9fa4751afff298da723c24ac:v1.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class GetModuleVersionResponseBody extends TeaModel {
         public String sourcePath;
 
         /**
-         * <p>The path of the State file that corresponds to the template. Currently, only OSS paths are supported. The value is in the format of oss::<OSS file path>/terraform.tfstate.</p>
+         * <p>The path value of the state file corresponding to the template. Currently, only OSS paths are supported. The value is in the oss::<OSS path of the file>/terraform.tfstate format.</p>
          * 
          * <strong>example:</strong>
          * <p>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate</a></p>
@@ -135,8 +135,8 @@ public class GetModuleVersionResponseBody extends TeaModel {
         /**
          * <p>The version generation strategy. Valid values:</p>
          * <ul>
-         * <li>Manual: manually generate a version. This is the default value.</li>
-         * <li>SourcePathUpdated: a new version is generated when the sourcePath is modified.</li>
+         * <li>Manual: manually generated version (default)</li>
+         * <li>SourcePathUpdated: a new version is generated when sourcePath is modified</li>
          * </ul>
          * 
          * <strong>example:</strong>

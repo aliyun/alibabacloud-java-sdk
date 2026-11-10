@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateModuleRequest extends TeaModel {
     /**
-     * <p>The idempotency parameter. We recommend that you use a UUID.</p>
+     * <p>The idempotency token. Use a UUID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,8 +33,8 @@ public class CreateModuleRequest extends TeaModel {
      * <p>The name of the template. The name must meet the following requirements:</p>
      * <ul>
      * <li>The name must be 2 to 128 characters in length.</li>
-     * <li>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). The name cannot start or end with a hyphen, underscore, or period.</li>
-     * <li>The name must be unique among all templates under the current account.</li>
+     * <li>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). It cannot start or end with a hyphen, underscore, or period.</li>
+     * <li>The name must be unique among the template resources within the current account.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -45,13 +45,13 @@ public class CreateModuleRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The source from which the template is created. Valid values:</p>
+     * <p>The source of the template. Valid values:</p>
      * <ul>
-     * <li>OSS: imports from a ZIP file stored in OSS.</li>
-     * <li>Registry: creates from a module in the template registry.</li>
-     * <li>ExportTask: references a template exported by a resource export task.</li>
-     * <li>Editor: creates a blank template that supports online editing.</li>
-     * <li>Upload: uploads a local template file to generate the template.</li>
+     * <li>OSS: Imports a template from a ZIP file stored in OSS.</li>
+     * <li>Registry: Creates a template by using a module from the template center.</li>
+     * <li>ExportTask: References a template exported by a resource export task.</li>
+     * <li>Editor: Creates a blank template that supports online editing.</li>
+     * <li>Upload: Generates a template by uploading a local template file.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -62,11 +62,11 @@ public class CreateModuleRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The path of the template source. This parameter takes effect when source is set to Registry, OSS, or ExportTask.</p>
+     * <p>The path of the template source. This parameter is valid only when source is set to Registry, OSS, or ExportTask.</p>
      * <ul>
-     * <li>If source is set to Registry, the value is in the format of \<workspace name>/\<module name>:\<module version>. Example: terraform-alicloud-modules/rds:1.0.0.</li>
-     * <li>If source is set to OSS, the value is in the format of oss::<file URL>. The file must be a ZIP file. Example: oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</li>
-     * <li>If source is set to ExportTask, the value is in the format of \<export task ID>:\<exported version>. Example: ex-3b6cb9fa4751afff298da723c24ac:v1.</li>
+     * <li>If source is set to Registry, the value is in the <workspace name>/<module name>:<module version> format, such as terraform-alicloud-modules/rds:1.0.0.</li>
+     * <li>If source is set to OSS, the value is in the oss::<file URL> format. The file must be a ZIP file, such as oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</li>
+     * <li>If source is set to ExportTask, the value is in the <export task ID>:<exported version> format, such as ex-3b6cb9fa4751afff298da723c24ac:v1.</li>
      * <li>If source is set to Editor or Upload, leave this parameter empty.</li>
      * </ul>
      * 
@@ -77,8 +77,8 @@ public class CreateModuleRequest extends TeaModel {
     public String sourcePath;
 
     /**
-     * <p>The path of the State file that corresponds to the template. This parameter is valid only when source is set to OSS.
-     * The value is in the format of oss::\<OSS file path>/terraform.tfstate.</p>
+     * <p>The path of the state file corresponding to the template. This parameter is valid only when source is set to OSS.
+     * The value is in the oss::<OSS path of the file>/terraform.tfstate format.</p>
      * 
      * <strong>example:</strong>
      * <p>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate</a></p>
@@ -95,8 +95,8 @@ public class CreateModuleRequest extends TeaModel {
     /**
      * <p>The version generation strategy. Valid values:</p>
      * <ul>
-     * <li>Manual: manually generates a version. This is the default value.</li>
-     * <li>SourcePathUpdated: generates a new version when sourcePath is modified.</li>
+     * <li>Manual: Manually generates a version. This is the default value.</li>
+     * <li>SourcePathUpdated: Generates a new version when sourcePath is modified.</li>
      * </ul>
      * 
      * <strong>example:</strong>

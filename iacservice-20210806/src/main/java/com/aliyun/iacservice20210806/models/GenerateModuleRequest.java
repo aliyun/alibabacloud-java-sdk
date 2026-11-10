@@ -8,9 +8,9 @@ public class GenerateModuleRequest extends TeaModel {
      * <p>The generation source. Valid values:</p>
      * <ul>
      * <li>Resource: Generates a Terraform HCL template based on resource properties.</li>
-     * <li>VariableToCode: Generates a final Terraform HCL template by combining variables with an existing Terraform HCL template.</li>
+     * <li>VariableToCode: Generates the final combined Terraform HCL template based on variables and a Terraform HCL template.</li>
      * <li>CodeToVariable: Extracts variable information from a Terraform HCL template.</li>
-     * <li>Module: Generates Terraform Module code based on variables.</li>
+     * <li>Module: Generates Terraform module code based on variables.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class GenerateModuleRequest extends TeaModel {
     public String generateSource;
 
     /**
-     * <p>The collection of parameters, passed in key:value format, such as {&quot;vpc_name&quot;:&quot;vpc-test&quot;}.</p>
+     * <p>The parameter set. Pass parameters in the key:value format, such as {&quot;vpc_name&quot;:&quot;vpc-test&quot;}.</p>
      */
     @NameInMap("parameters")
     public java.util.Map<String, ?> parameters;
@@ -37,7 +37,7 @@ public class GenerateModuleRequest extends TeaModel {
     /**
      * <p>The syntax. Valid values:</p>
      * <ul>
-     * <li>hcl (default).</li>
+     * <li>hcl: Default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class GenerateModuleRequest extends TeaModel {
     public String syntax;
 
     /**
-     * <p>The existing Terraform HCL template content.</p>
+     * <p>The original Terraform HCL template content.</p>
      * 
      * <strong>example:</strong>
      * <p>terraform {

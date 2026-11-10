@@ -4,11 +4,21 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class GetProviderDocumentRequest extends TeaModel {
+    /**
+     * <p>The Terraform provider version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.248.0</p>
+     */
     @NameInMap("providerVersion")
     public String providerVersion;
 
     /**
+     * <p>The Terraform resource type.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alicloud_route_table</p>
      */
     @NameInMap("terraformResourceType")
     public String terraformResourceType;

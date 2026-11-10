@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListExplorerRegistryModuleVersionsRequest extends TeaModel {
     /**
-     * <p>The search keyword. Fuzzy match is supported based on the module name.</p>
+     * <p>The search keyword. Fuzzy matching is supported based on the module name.</p>
      * 
      * <strong>example:</strong>
      * <p>key</p>
@@ -14,7 +14,7 @@ public class ListExplorerRegistryModuleVersionsRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The maximum number of entries per page.</p>
+     * <p>The maximum number of entries to return per page.</p>
      * <p>Valid values: 0 to 200.</p>
      * <p>Default value: 100.</p>
      * 
@@ -43,7 +43,7 @@ public class ListExplorerRegistryModuleVersionsRequest extends TeaModel {
     public String moduleVersion;
 
     /**
-     * <p>The name of the workspace to which the module belongs.</p>
+     * <p>The name of the workspace where the module resides.</p>
      * 
      * <strong>example:</strong>
      * <p>alibaba</p>
@@ -52,8 +52,8 @@ public class ListExplorerRegistryModuleVersionsRequest extends TeaModel {
     public String namespaceName;
 
     /**
-     * <p>The pagination token for the next page of results.</p>
-     * <p>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</p>
+     * <p>The token used to return the next page of query results.</p>
+     * <p>If the total number of entries exceeds the value of maxResults, the returned results are truncated. You can use nextToken to query the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>lJTuhMWkNH89zZWyYM9GjpAbgRb+bPPPwN0Q3pclzKI=</p>

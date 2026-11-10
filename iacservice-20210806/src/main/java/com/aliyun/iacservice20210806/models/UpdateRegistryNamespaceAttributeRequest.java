@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateRegistryNamespaceAttributeRequest extends TeaModel {
     /**
-     * <p>The access permission. Valid values:</p>
-     * <ul>
-     * <li>private: private access.</li>
-     * </ul>
+     * <p>The permissions. Valid values: private: Private.</p>
      * 
      * <strong>example:</strong>
      * <p>private</p>
@@ -17,7 +14,7 @@ public class UpdateRegistryNamespaceAttributeRequest extends TeaModel {
     public String acl;
 
     /**
-     * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
+     * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. A UUID is recommended.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

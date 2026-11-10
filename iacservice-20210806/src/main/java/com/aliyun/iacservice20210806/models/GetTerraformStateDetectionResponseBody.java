@@ -60,7 +60,7 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
         public String remoteValue;
 
         /**
-         * <p>The template-declared value.</p>
+         * <p>The value declared in the template.</p>
          * 
          * <strong>example:</strong>
          * <p>test_hcl</p>
@@ -134,7 +134,7 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The identifier of the resource in the Terraform template. For a Stack task, the value is in the format of &lt;$componetName&gt;:&lt;$resourceName&gt;. For a Task task, the value is &lt;$resourceName&gt;.</p>
+         * <p>The identifier of the resource in the Terraform template. The format is &lt;$componetName&gt;:&lt;$resourceName&gt; for stack tasks and &lt;$resourceName&gt; for tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc:alicloud_vpc.default</p>
@@ -274,7 +274,7 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The identifier of the resource in the Terraform template. For a Stack task, the value is in the format of &lt;$componetName&gt;:&lt;$resourceName&gt;. For a Task task, the value is &lt;$resourceName&gt;.</p>
+         * <p>The identifier of the resource in the Terraform template. The format is &lt;$componetName&gt;:&lt;$resourceName&gt; for stack tasks and &lt;$resourceName&gt; for tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc:alicloud_vpc.default2</p>
@@ -344,7 +344,7 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The task identifier. For a Stack task, the value is in the format of &lt;$stackId&gt;:&lt;$deploymentName&gt;. For a Task task, the value is &lt;$TaskId&gt;.</p>
+         * <p>The job identifier. The format is &lt;$stackId&gt;:&lt;$deploymentName&gt; for stack tasks and &lt;$TaskId&gt; for tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>stack-as181axxxxxx:development_xxxx</p>
@@ -355,12 +355,12 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
         /**
          * <p>The job status. Valid values:</p>
          * <ul>
-         * <li>Pending: the initial status after the job is created.</li>
-         * <li>PlanQueued: the job is queued because no containers are available after the job is created.</li>
-         * <li>Planning: the resource job is in the Plan execution phase.</li>
-         * <li>Planned: the resource job has completed the Plan execution.</li>
-         * <li>PlannedAndFinished: no differences are found after the Plan execution is complete. The job is in a final status.</li>
-         * <li>Errored: the job execution encountered an error and entered a final status.</li>
+         * <li>Pending: The initial state after the job is created.</li>
+         * <li>PlanQueued: The job is queued and waiting because no containers are available after creation.</li>
+         * <li>Planning: The resource job is in the plan execution phase.</li>
+         * <li>Planned: The resource job has completed plan execution.</li>
+         * <li>PlannedAndFinished: The job is in the final state because no differences are found after plan execution.</li>
+         * <li>Errored: The job has entered the final state due to an execution error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -370,7 +370,7 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The task type.</p>
+         * <p>The job type.</p>
          * 
          * <strong>example:</strong>
          * <p>Stack</p>
