@@ -14,7 +14,7 @@ public class E2BListedSandbox extends TeaModel {
     public Integer cpuCount;
 
     /**
-     * <p>The ephemeral disk specification.</p>
+     * <p>The ephemeral disk size.</p>
      * 
      * <strong>example:</strong>
      * <p>10240</p>
@@ -41,7 +41,7 @@ public class E2BListedSandbox extends TeaModel {
     public Integer generation;
 
     /**
-     * <p>The memory specification.</p>
+     * <p>The memory size.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -78,6 +78,15 @@ public class E2BListedSandbox extends TeaModel {
      */
     @NameInMap("sandboxID")
     public String sandboxID;
+
+    /**
+     * <p>The snapshot ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0d66****b374</p>
+     */
+    @NameInMap("snapshotID")
+    public String snapshotID;
 
     /**
      * <p>The start time.</p>
@@ -237,6 +246,14 @@ public class E2BListedSandbox extends TeaModel {
     }
     public String getSandboxID() {
         return this.sandboxID;
+    }
+
+    public E2BListedSandbox setSnapshotID(String snapshotID) {
+        this.snapshotID = snapshotID;
+        return this;
+    }
+    public String getSnapshotID() {
+        return this.snapshotID;
     }
 
     public E2BListedSandbox setStartedAt(String startedAt) {

@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "Sandbox";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("sandbox", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -849,7 +852,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query on the quota configurations for the current account.</p>
+     * <p>Performs a paging query to retrieve the quota configuration list for the current account.</p>
      * 
      * @param request ListQuotaRequest
      * @param headers map
@@ -887,7 +890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query on the quota configurations for the current account.</p>
+     * <p>Performs a paging query to retrieve the quota configuration list for the current account.</p>
      * 
      * @param request ListQuotaRequest
      * @return ListQuotaResponse
@@ -963,7 +966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query of template caches.</p>
+     * <p>Performs a paged query on template caches with paging support.</p>
      * 
      * @param request ListTemplateCacheRequest
      * @param headers map
@@ -1013,7 +1016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query of template caches.</p>
+     * <p>Performs a paged query on template caches with paging support.</p>
      * 
      * @param request ListTemplateCacheRequest
      * @return ListTemplateCacheResponse
@@ -1026,7 +1029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query on the template list by using paging.</p>
+     * <p>Performs a paged query to retrieve the template list with paging.</p>
      * 
      * @param request ListTemplatesRequest
      * @param headers map
@@ -1068,7 +1071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query on the template list by using paging.</p>
+     * <p>Performs a paged query to retrieve the template list with paging.</p>
      * 
      * @param request ListTemplatesRequest
      * @return ListTemplatesResponse
@@ -1081,7 +1084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of storage volumes by using paging.</p>
+     * <p>Queries the list of storage volumes by using paging.</p>
      * 
      * @param request ListVolumesRequest
      * @param headers map
@@ -1143,7 +1146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of storage volumes by using paging.</p>
+     * <p>Queries the list of storage volumes by using paging.</p>
      * 
      * @param request ListVolumesRequest
      * @return ListVolumesResponse

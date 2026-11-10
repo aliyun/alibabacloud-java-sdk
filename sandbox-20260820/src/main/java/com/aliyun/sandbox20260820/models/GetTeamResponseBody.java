@@ -14,7 +14,7 @@ public class GetTeamResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message. A value of success indicates a successful request.</p>
+     * <p>The response message. The value is success for a successful request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

@@ -14,7 +14,7 @@ public class ListTemplatesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The maximum number of entries per page returned in the current response.</p>
+     * <p>The maximum number of entries returned per page in the current response.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

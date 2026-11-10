@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteTemplateCacheResponseBody extends TeaModel {
     /**
-     * <p>The error code. 200 indicates success.</p>
+     * <p>The error code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

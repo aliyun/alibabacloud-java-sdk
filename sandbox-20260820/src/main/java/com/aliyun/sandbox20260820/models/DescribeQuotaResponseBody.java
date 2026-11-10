@@ -14,7 +14,7 @@ public class DescribeQuotaResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message. The value is success if the request succeeds.</p>
+     * <p>The response message. The value is success for a successful request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -36,6 +36,15 @@ public class DescribeQuotaResponseBody extends TeaModel {
      */
     @NameInMap("requestId")
     public String requestId;
+
+    /**
+     * <p>Team 当前配额用量。用量不可用时省略；成功查询且无占用时返回三项零值。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;cpuCores&quot;:1,&quot;memoryGB&quot;:1.5,&quot;instanceCount&quot;:1}</p>
+     */
+    @NameInMap("usage")
+    public QuotaUsage usage;
 
     public static DescribeQuotaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeQuotaResponseBody self = new DescribeQuotaResponseBody();
@@ -72,6 +81,14 @@ public class DescribeQuotaResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeQuotaResponseBody setUsage(QuotaUsage usage) {
+        this.usage = usage;
+        return this;
+    }
+    public QuotaUsage getUsage() {
+        return this.usage;
     }
 
 }

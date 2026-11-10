@@ -14,7 +14,7 @@ public class ListVolumesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The maximum number of entries per page used in this query.</p>
+     * <p>The maximum number of entries per page for the current query.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -23,7 +23,7 @@ public class ListVolumesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The response message. A value of success indicates a successful request.</p>
+     * <p>The response message. A value of success indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

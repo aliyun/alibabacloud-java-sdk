@@ -14,7 +14,7 @@ public class ListVolumesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Leave this parameter empty for the first request. To query the next page, set this parameter to the nextToken value returned in the previous response.</p>
+     * <p>The pagination token. Leave this parameter empty for the first request. To retrieve the next page, set this parameter to the nextToken value returned in the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>qxGrXje86XMrYQ51aJMy</p>
@@ -32,7 +32,13 @@ public class ListVolumesRequest extends TeaModel {
     public String resourceGroupID;
 
     /**
-     * <p>Filters by storage volume status. Valid values: CREATING (creating), AVAILABLE (available), ERROR (error), and DELETING (deleting).</p>
+     * <p>Filters by storage volume status. Valid values:</p>
+     * <ul>
+     * <li>CREATING: The storage volume is being created.</li>
+     * <li>AVAILABLE: The storage volume is available.</li>
+     * <li>ERROR: The storage volume is in an error state.</li>
+     * <li>DELETING: The storage volume is being deleted.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>CREATING</p>
@@ -41,7 +47,7 @@ public class ListVolumesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>Filters by storage class. Valid values: OSS, AGENTIC_BUCKET, AGENTIC_FS, and JUICE_FS.</p>
+     * <p>Filters storage volumes by storage class. Valid values: OSS, AGENTIC_BUCKET, AGENTIC_FS, and JUICE_FS.</p>
      * 
      * <strong>example:</strong>
      * <p>OSS</p>
@@ -68,7 +74,7 @@ public class ListVolumesRequest extends TeaModel {
     public String userID;
 
     /**
-     * <p>The name of the storage volume, which is unique within the team.</p>
+     * <p>The name of the storage volume. The name must be unique within the team.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace</p>

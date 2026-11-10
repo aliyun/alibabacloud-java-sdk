@@ -89,7 +89,7 @@ public class E2BSandbox extends TeaModel {
     public String fcInstanceID;
 
     /**
-     * <p>The Function Compute session ID corresponding to the sandbox, in UUID format. This ID is used to locate the underlying session when pausing, resuming, or deleting the sandbox.</p>
+     * <p>The Function Compute session ID of the sandbox, in UUID format. This ID is used to locate the underlying session when pausing, resuming, or deleting the sandbox.</p>
      * 
      * <strong>example:</strong>
      * <p>3a7ecd09-****</p>
@@ -136,6 +136,9 @@ public class E2BSandbox extends TeaModel {
     @NameInMap("resourceGroupID")
     public String resourceGroupID;
 
+    /**
+     * <p>The resource tags.</p>
+     */
     @NameInMap("resourceTags")
     public java.util.List<E2BSandboxResourceTags> resourceTags;
 
@@ -155,6 +158,15 @@ public class E2BSandbox extends TeaModel {
     public String sandboxID;
 
     /**
+     * <p>The snapshot ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0d66****b374</p>
+     */
+    @NameInMap("snapshotID")
+    public String snapshotID;
+
+    /**
      * <p>The start time.</p>
      * 
      * <strong>example:</strong>
@@ -166,15 +178,15 @@ public class E2BSandbox extends TeaModel {
     /**
      * <p>The sandbox state. Valid values:</p>
      * <ul>
-     * <li>running: The sandbox is running.</li>
-     * <li>pausing: The sandbox is pausing.</li>
-     * <li>paused: The sandbox is paused.</li>
-     * <li>resuming: The sandbox is resuming.</li>
-     * <li>pause_fail: The pause operation failed.</li>
-     * <li>resume_fail: The resume operation failed.</li>
-     * <li>snapshotting: A snapshot is being created.</li>
-     * <li>snapshot_failed: Snapshot creation failed.</li>
-     * <li>terminated: The sandbox is terminated.</li>
+     * <li>running: Running.</li>
+     * <li>pausing: Pausing.</li>
+     * <li>paused: Paused.</li>
+     * <li>resuming: Resuming.</li>
+     * <li>pause_fail: Pause failed.</li>
+     * <li>resume_fail: Resume failed.</li>
+     * <li>snapshotting: Snapshotting.</li>
+     * <li>snapshot_failed: Snapshot failed.</li>
+     * <li>terminated: Terminated.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -202,7 +214,7 @@ public class E2BSandbox extends TeaModel {
     public String teamName;
 
     /**
-     * <p>The QoS version.</p>
+     * <p>The QoS edition.</p>
      * 
      * <strong>example:</strong>
      * <p>eco</p>
@@ -400,6 +412,14 @@ public class E2BSandbox extends TeaModel {
         return this.sandboxID;
     }
 
+    public E2BSandbox setSnapshotID(String snapshotID) {
+        this.snapshotID = snapshotID;
+        return this;
+    }
+    public String getSnapshotID() {
+        return this.snapshotID;
+    }
+
     public E2BSandbox setStartedAt(String startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -474,6 +494,8 @@ public class E2BSandbox extends TeaModel {
 
     public static class E2BSandboxResourceTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>project</p>
          */
@@ -481,6 +503,8 @@ public class E2BSandbox extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo</p>
          */

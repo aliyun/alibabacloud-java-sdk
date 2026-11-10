@@ -14,7 +14,7 @@ public class InnerCreateSandboxInput extends TeaModel {
     public Boolean allowInternetAccess;
 
     /**
-     * <p>Specifies whether to automatically pause after timeout.</p>
+     * <p>Specifies whether to automatically pause the sandbox after a timeout.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class InnerCreateSandboxInput extends TeaModel {
     public Boolean autoPause;
 
     /**
-     * <p>Specifies whether to automatically resume.</p>
+     * <p>Specifies whether to automatically resume the sandbox.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -65,6 +65,24 @@ public class InnerCreateSandboxInput extends TeaModel {
     public Boolean secure;
 
     /**
+     * <p>The snapshot ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0d66****b374</p>
+     */
+    @NameInMap("snapshotID")
+    public String snapshotID;
+
+    /**
+     * <p>The snapshot name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
+    @NameInMap("snapshotName")
+    public String snapshotName;
+
+    /**
      * <p>The unique identifier of the team.</p>
      * 
      * <strong>example:</strong>
@@ -83,7 +101,7 @@ public class InnerCreateSandboxInput extends TeaModel {
     public String templateID;
 
     /**
-     * <p>The timeout period. Unit: seconds.</p>
+     * <p>The timeout period, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>180</p>
@@ -164,6 +182,22 @@ public class InnerCreateSandboxInput extends TeaModel {
     }
     public Boolean getSecure() {
         return this.secure;
+    }
+
+    public InnerCreateSandboxInput setSnapshotID(String snapshotID) {
+        this.snapshotID = snapshotID;
+        return this;
+    }
+    public String getSnapshotID() {
+        return this.snapshotID;
+    }
+
+    public InnerCreateSandboxInput setSnapshotName(String snapshotName) {
+        this.snapshotName = snapshotName;
+        return this;
+    }
+    public String getSnapshotName() {
+        return this.snapshotName;
     }
 
     public InnerCreateSandboxInput setTeamID(String teamID) {

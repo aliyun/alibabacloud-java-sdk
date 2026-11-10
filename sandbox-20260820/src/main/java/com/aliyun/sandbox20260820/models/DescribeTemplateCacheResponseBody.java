@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTemplateCacheResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of 200 indicates success.</p>
+     * <p>The error code. The value is 200 if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

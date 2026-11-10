@@ -35,7 +35,7 @@ public class DescribeApiKeyResponseBody extends TeaModel {
     public java.util.List<IPConfig> ipWhitelist;
 
     /**
-     * <p>The response message. The value is success if the request is successful.</p>
+     * <p>The response message. The value is success for a successful request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

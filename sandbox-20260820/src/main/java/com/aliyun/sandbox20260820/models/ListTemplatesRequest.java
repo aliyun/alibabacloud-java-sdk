@@ -14,7 +14,7 @@ public class ListTemplatesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the nextToken value returned in the previous response.</p>
+     * <p>The pagination token. Set this parameter to the nextToken value returned in the response of the previous request.</p>
      * 
      * <strong>example:</strong>
      * <p>cae5f900-8b1d-4c0e-9c2a-1a2b3c4d5e6f</p>

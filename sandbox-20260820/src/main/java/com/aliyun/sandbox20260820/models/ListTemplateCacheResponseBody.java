@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTemplateCacheResponseBody extends TeaModel {
     /**
-     * <p>The error code. The value is 200 if the request succeeds.</p>
+     * <p>The error code. The value is 200 if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ListTemplateCacheResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The maximum number of entries returned per page in this response.</p>
+     * <p>The maximum number of entries per page returned in this response.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,7 +32,7 @@ public class ListTemplateCacheResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token for the next page. It is empty if no more results are available.</p>
+     * <p>The pagination token for the next page. This value is empty if no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>cae5f900-8b1d-4c0e-9c2a-1a2b3c4d5e6f</p>
