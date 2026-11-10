@@ -5391,6 +5391,91 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>独立的原生 AG-UI 接口，成功建流后返回 text/event-stream。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>发起智能助手会话运行（AG-UI 协议）</p>
+     * 
+     * @param request InvokeAgentRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InvokeAgentResponse
+     */
+    public InvokeAgentResponse invokeAgentWithOptions(InvokeAgentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.context)) {
+            body.put("context", request.context);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.forwardedProps)) {
+            body.put("forwardedProps", request.forwardedProps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.messages)) {
+            body.put("messages", request.messages);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentRunId)) {
+            body.put("parentRunId", request.parentRunId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resume)) {
+            body.put("resume", request.resume);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runId)) {
+            body.put("runId", request.runId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.state)) {
+            body.put("state", request.state);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.threadId)) {
+            body.put("threadId", request.threadId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tools)) {
+            body.put("tools", request.tools);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InvokeAgent"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/intelligence/invoke"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InvokeAgentResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>独立的原生 AG-UI 接口，成功建流后返回 text/event-stream。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>发起智能助手会话运行（AG-UI 协议）</p>
+     * 
+     * @param request InvokeAgentRequest
+     * @return InvokeAgentResponse
+     */
+    public InvokeAgentResponse invokeAgent(InvokeAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.invokeAgentWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries a list of available components and retrieves detailed component information based on parameters such as the region, cluster type, cluster profile, and cluster version. The detailed information includes whether the component is managed, the schema of supported custom parameters, and compatible operating system architectures.</p>
      * 
