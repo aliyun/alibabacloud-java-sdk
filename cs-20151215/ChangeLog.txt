@@ -1,3 +1,8 @@
+2026-11-10 Version: 7.4.0
+- Support API HibernateCluster.
+- Support API WakeUpCluster.
+
+
 2026-11-10 Version: 7.3.0
 - Support API InvokeAgent.
 

@@ -5295,6 +5295,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>集群休眠</p>
+     * 
+     * @param request HibernateClusterRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return HibernateClusterResponse
+     */
+    public HibernateClusterResponse hibernateClusterWithOptions(String clusterId, HibernateClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("clientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "HibernateCluster"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/hibernate"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new HibernateClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>集群休眠</p>
+     * 
+     * @param request HibernateClusterRequest
+     * @return HibernateClusterResponse
+     */
+    public HibernateClusterResponse hibernateCluster(String clusterId, HibernateClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.hibernateClusterWithOptions(clusterId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>To enhance Kubernetes capabilities, ACK clusters support various components, such as managed core components, and application, logging and monitoring, networking, storage, and security components. You can call the InstallClusterAddons operation to install components by specifying the component name and version.</p>
      * 
      * @param request InstallClusterAddonsRequest
@@ -5392,10 +5439,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>独立的原生 AG-UI 接口，成功建流后返回 text/event-stream。</p>
+     * <p>The standalone native AG-UI API that returns a text/event-stream response upon successful stream establishment.</p>
      * 
      * <b>summary</b> : 
-     * <p>发起智能助手会话运行（AG-UI 协议）</p>
+     * <p>Initiates an intelligent assistant session run over the AG-UI protocol.</p>
      * 
      * @param request InvokeAgentRequest
      * @param headers map
@@ -5461,10 +5508,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>独立的原生 AG-UI 接口，成功建流后返回 text/event-stream。</p>
+     * <p>The standalone native AG-UI API that returns a text/event-stream response upon successful stream establishment.</p>
      * 
      * <b>summary</b> : 
-     * <p>发起智能助手会话运行（AG-UI 协议）</p>
+     * <p>Initiates an intelligent assistant session run over the AG-UI protocol.</p>
      * 
      * @param request InvokeAgentRequest
      * @return InvokeAgentResponse
@@ -9004,5 +9051,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.upgradeClusterNodepoolWithOptions(ClusterId, NodepoolId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>集群唤醒</p>
+     * 
+     * @param request WakeUpClusterRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return WakeUpClusterResponse
+     */
+    public WakeUpClusterResponse wakeUpClusterWithOptions(String clusterId, WakeUpClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("clientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "WakeUpCluster"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/wakeUp"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new WakeUpClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>集群唤醒</p>
+     * 
+     * @param request WakeUpClusterRequest
+     * @return WakeUpClusterResponse
+     */
+    public WakeUpClusterResponse wakeUpCluster(String clusterId, WakeUpClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.wakeUpClusterWithOptions(clusterId, request, headers, runtime);
     }
 }
