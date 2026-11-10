@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDataMaskingEncryptionAlgorithmRequest extends TeaModel {
     /**
-     * <p>The name of the instance-level column encryption algorithm. Select an available algorithm from the ListDataMaskingEncryptionAlgorithms operation.</p>
+     * <p>The name of the instance-level column encryption algorithm. Select an available algorithm from ListDataMaskingEncryptionAlgorithms.</p>
      * 
      * <strong>example:</strong>
      * <p>AES_256_GCM</p>
@@ -14,7 +14,7 @@ public class UpdateDataMaskingEncryptionAlgorithmRequest extends TeaModel {
     public String encryptionAlgorithm;
 
     /**
-     * <p>The KMS key identifier. You can obtain this value from Items[].KeyId in the response of the ListKmsKeys operation. Specify this parameter when you use a KMS key. Do not specify this parameter for local key scenarios.</p>
+     * <p>The identifier of the Key Management Service (KMS) key. You can obtain it from Items[].KeyId in the response of ListKmsKeys. Provide this parameter when using a KMS key. Do not pass this parameter in local key scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>12345678-1234-1234-1234-12345678****</p>
@@ -23,7 +23,7 @@ public class UpdateDataMaskingEncryptionAlgorithmRequest extends TeaModel {
     public String encryptionKeyId;
 
     /**
-     * <p>The database instance identity. You can obtain this value from Items[].InstanceId in the response of the ListDataMaskingInstances operation.</p>
+     * <p>The database instance identity. You can obtain it from Items[].InstanceId in the response of ListDataMaskingInstances.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze1abcdefgh****</p>
@@ -45,7 +45,7 @@ public class UpdateDataMaskingEncryptionAlgorithmRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If you also specify ProductId, the two values must correspond to each other.</p>
+     * <p>The code of the cloud service. Column encryption supports ApsaraDB RDS, PolarDB, and PolarDB-X 2.0. If ProductId is also provided, the two parameters must match.</p>
      * 
      * <strong>example:</strong>
      * <p>RDS</p>
@@ -54,13 +54,13 @@ public class UpdateDataMaskingEncryptionAlgorithmRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The cloud product type identifier. Valid values:</p>
+     * <p>The identifier of the cloud service type. Valid values:</p>
      * <ul>
-     * <li>5: RDS.</li>
-     * <li>8: POLARDB.</li>
-     * <li>27: PolarDBX2.</li>
+     * <li>5: ApsaraDB RDS.</li>
+     * <li>8: PolarDB.</li>
+     * <li>27: PolarDB-X 2.0.
+     * If specified together with ProductCode, the values must match.</li>
      * </ul>
-     * <p>If you specify both ProductId and ProductCode, the values must correspond to each other.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

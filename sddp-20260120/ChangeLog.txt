@@ -1,3 +1,7 @@
+2026-11-10 Version: 1.0.6
+- Update API ListColumns: add request parameters OnlyColumnName.
+
+
 2026-10-26 Version: 1.0.5
 - Update API CreateDataMaskingRule: add request parameters UserList.$.AuthDb.
 - Update API ListDataAssetAccounts: add request parameters AuthDb.

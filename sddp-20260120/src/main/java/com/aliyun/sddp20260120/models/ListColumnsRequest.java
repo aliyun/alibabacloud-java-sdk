@@ -14,7 +14,7 @@ public class ListColumnsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The cloud database instance identity. Set this parameter to the InstanceId in the instance list.</p>
+     * <p>The instance identity of the cloud database. Set this parameter to the InstanceId in the instance list.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze1abcdefgh****</p>
@@ -41,7 +41,7 @@ public class ListColumnsRequest extends TeaModel {
     public String engineType;
 
     /**
-     * <p>The compatible parameter for the instance identity. DataAssetSourceId takes precedence. If both are specified, DataAssetSourceId is used.</p>
+     * <p>The compatible parameter for the instance identity. DataAssetSourceId takes precedence. If both parameters are specified, DataAssetSourceId is used.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze1abcdefgh****</p>
@@ -50,7 +50,7 @@ public class ListColumnsRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The language of the response description. Valid values: zh: Chinese; en: English.</p>
+     * <p>The language of the response description. Valid values: zh: Chinese. en: English.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -66,6 +66,15 @@ public class ListColumnsRequest extends TeaModel {
      */
     @NameInMap("Name")
     public String name;
+
+    /**
+     * <p>Specifies whether the API operation returns only column names.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("OnlyColumnName")
+    public Integer onlyColumnName;
 
     /**
      * <p>The number of entries to return on each page. Keep other filter conditions consistent when querying the next page.</p>
@@ -86,7 +95,7 @@ public class ListColumnsRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The identifier of the sensitivity level. You can obtain this value from the return list of ListRiskLevels.</p>
+     * <p>The identifier of the sensitivity level. You can obtain the value from the return list of ListRiskLevels.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -113,7 +122,7 @@ public class ListColumnsRequest extends TeaModel {
     public String tableName;
 
     /**
-     * <p>The identifier of the data classification and grading template. You can obtain this value from Items[].Id returned by ListTemplates. Keep this parameter consistent with the selected sensitivity level and detection model.</p>
+     * <p>The identifier of the data classification template. You can obtain the value from Items[].Id returned by ListTemplates. Keep this parameter consistent with the selected sensitivity level and detection model.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -180,6 +189,14 @@ public class ListColumnsRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ListColumnsRequest setOnlyColumnName(Integer onlyColumnName) {
+        this.onlyColumnName = onlyColumnName;
+        return this;
+    }
+    public Integer getOnlyColumnName() {
+        return this.onlyColumnName;
     }
 
     public ListColumnsRequest setPageSize(Integer pageSize) {
