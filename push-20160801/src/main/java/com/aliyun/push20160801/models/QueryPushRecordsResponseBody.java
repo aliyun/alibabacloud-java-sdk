@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryPushRecordsResponseBody extends TeaModel {
     /**
-     * <p>Deprecated. This parameter is no longer used.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated and no longer used.</p>
      * 
      * <strong>example:</strong>
      * <p>i91D***********kXIh/dVBEQ==</p>
@@ -14,7 +14,7 @@ public class QueryPushRecordsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The current page number.</p>
+     * <p>The current page number of the push records.</p>
      * 
      * <strong>example:</strong>
      * <p>11</p>

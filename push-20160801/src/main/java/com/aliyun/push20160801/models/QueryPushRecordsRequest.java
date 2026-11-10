@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryPushRecordsRequest extends TeaModel {
     /**
-     * <p>The AppKey of the application.</p>
+     * <p>The AppKey information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class QueryPushRecordsRequest extends TeaModel {
     public Long appKey;
 
     /**
-     * <p>The end time for the query. Specify the time in UTC, using the ISO-8601 format <code>YYYY-MM-DDThh:mm:ssZ</code>.</p>
+     * <p>The end time of the query. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,16 +25,16 @@ public class QueryPushRecordsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The keyword used for the query. The search covers the <code>MessageId</code>, <code>Title</code>, and <code>Body</code> fields. For <code>Title</code> and <code>Body</code>, the system applies Chinese word segmentation and matches whole tokens instead of substrings.</p>
+     * <p>The query keyword. The query is performed based on the MessageId, Title, and Body fields. The system performs Chinese word segmentation on the title and body of the push, and uses the segmented words for the query instead of substring matching.</p>
      * 
      * <strong>example:</strong>
-     * <p>统计数据测试通知805</p>
+     * <p>Statistics data test notification 805</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated and no longer used.</p>
      * 
      * <strong>example:</strong>
      * <p>FFPpkmhCPm*****************xjk=</p>
@@ -43,7 +43,7 @@ public class QueryPushRecordsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number to query. Default: 1. Maximum: 10,000.</p>
+     * <p>The current page number of the push records. Default value: 1. Maximum value: 10000.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -52,7 +52,7 @@ public class QueryPushRecordsRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The number of entries to return on each page. Default: 20. Maximum: 100.</p>
+     * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -63,11 +63,11 @@ public class QueryPushRecordsRequest extends TeaModel {
     /**
      * <p>The push type. Valid values:</p>
      * <ul>
-     * <li><p><strong>MESSAGE</strong>: A message.</p>
+     * <li><p><strong>MESSAGE</strong>: message</p>
      * </li>
-     * <li><p><strong>NOTICE</strong>: A notification.</p>
+     * <li><p><strong>NOTICE</strong>: notification</p>
      * </li>
-     * <li><p><strong>LIVE_ACTIVITY</strong>: A Live Activity.</p>
+     * <li><p><strong>LIVE_ACTIVITY</strong>: live activity</p>
      * </li>
      * </ul>
      * 
@@ -80,12 +80,9 @@ public class QueryPushRecordsRequest extends TeaModel {
     /**
      * <p>The push source. Valid values:</p>
      * <ul>
-     * <li><p><strong>API</strong>: Pushes initiated via an OpenAPI call.</p>
-     * </li>
-     * <li><p><strong>CONSOLE</strong>: Pushes initiated from the Mobile Push console.</p>
-     * </li>
-     * <li><p><strong>OpenAPIExplorer</strong>: Pushes initiated from Alibaba Cloud OpenAPI Explorer.</p>
-     * </li>
+     * <li><strong>API</strong>: push initiated by OpenAPI, including pushes initiated from the OpenAPI platform console</li>
+     * <li><strong>CONSOLE</strong>: push initiated from the Mobile Push console</li>
+     * <li><strong>OpenAPIExplorer</strong>: push initiated from the Alibaba Cloud OpenAPI Explorer platform</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,7 +92,7 @@ public class QueryPushRecordsRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The start time for the query. Specify the time in UTC, using the ISO-8601 format <code>YYYY-MM-DDThh:mm:ssZ</code>.</p>
+     * <p>The start time of the query. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -107,17 +104,17 @@ public class QueryPushRecordsRequest extends TeaModel {
     /**
      * <p>The push target. Valid values:</p>
      * <ul>
-     * <li><p><strong>DEVICE</strong>: Push to devices.</p>
+     * <li><p><strong>DEVICE</strong>: push by device</p>
      * </li>
-     * <li><p><strong>ACCOUNT</strong>: Push to accounts.</p>
+     * <li><p><strong>ACCOUNT</strong>: push by account</p>
      * </li>
-     * <li><p><strong>ALIAS</strong>: Push to aliases.</p>
+     * <li><p><strong>ALIAS</strong>: push by alias</p>
      * </li>
-     * <li><p><strong>TAG</strong>: Push to tags.</p>
+     * <li><p><strong>TAG</strong>: push by tag</p>
      * </li>
-     * <li><p><strong>ALL</strong>: Push to all devices.</p>
+     * <li><p><strong>ALL</strong>: push to all devices</p>
      * </li>
-     * <li><p><strong>TBD</strong>: Initializes a continuous push. The push target is specified in a subsequent call to the <code>ContinuouslyPush</code> API operation.</p>
+     * <li><p><strong>TBD</strong>: initialize continuous push, where the push target is specified by the subsequent ContinuouslyPush operation</p>
      * </li>
      * </ul>
      * 

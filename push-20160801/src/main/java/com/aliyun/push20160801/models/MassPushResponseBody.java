@@ -8,7 +8,7 @@ public class MassPushResponseBody extends TeaModel {
     public MassPushResponseBodyMessageIds messageIds;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</p>

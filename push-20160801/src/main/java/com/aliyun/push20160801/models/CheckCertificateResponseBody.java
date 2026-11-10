@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class CheckCertificateResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the AppKey belongs to an Android app:</p>
+     * <p>Indicates whether the AppKey represents an Android app:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,18 +18,16 @@ public class CheckCertificateResponseBody extends TeaModel {
     public Boolean android;
 
     /**
-     * <p>The information about the certificate for the development or sandbox environment.</p>
+     * <p>The certificate information for accessing the development or sandbox environment.</p>
      */
     @NameInMap("DevelopmentCertInfo")
     public CheckCertificateResponseBodyDevelopmentCertInfo developmentCertInfo;
 
     /**
-     * <p>Indicates whether the AppKey belongs to an iOS app:</p>
+     * <p>Indicates whether the AppKey represents an iOS app:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,13 +37,13 @@ public class CheckCertificateResponseBody extends TeaModel {
     public Boolean IOS;
 
     /**
-     * <p>The information about the certificate for the production environment.</p>
+     * <p>The certificate information for accessing the production environment.</p>
      */
     @NameInMap("ProductionCertInfo")
     public CheckCertificateResponseBodyProductionCertInfo productionCertInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</p>
@@ -111,18 +107,13 @@ public class CheckCertificateResponseBody extends TeaModel {
         public Long exipreTime;
 
         /**
-         * <p>The status of the certificate. Valid values:</p>
+         * <p>The certificate status. Valid values:</p>
          * <ul>
-         * <li><p><strong>EXPIRED</strong>: The certificate is expired.</p>
-         * </li>
-         * <li><p><strong>NOT_CONFIGURED</strong>: The certificate is not configured.</p>
-         * </li>
-         * <li><p><strong>NO_PASSWORD</strong>: The password for the certificate is not configured.</p>
-         * </li>
-         * <li><p><strong>OK</strong>: The certificate is normal.</p>
-         * </li>
-         * <li><p><strong>REVOKED</strong>: The certificate is revoked.</p>
-         * </li>
+         * <li><strong>EXPIRED</strong>: The certificate has expired.</li>
+         * <li><strong>NOT_CONFIGURED</strong>: The certificate is not configured.</li>
+         * <li><strong>NO_PASSWORD</strong>: The password is not configured.</li>
+         * <li><strong>OK</strong>: The certificate is normal.</li>
+         * <li><strong>REVOKED</strong>: The certificate is revoked.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,18 +156,13 @@ public class CheckCertificateResponseBody extends TeaModel {
         public Long exipreTime;
 
         /**
-         * <p>The status of the certificate. Valid values:</p>
+         * <p>The certificate status. Valid values:</p>
          * <ul>
-         * <li><p><strong>EXPIRED</strong>: The certificate is expired.</p>
-         * </li>
-         * <li><p><strong>NOT_CONFIGURED</strong>: The certificate is not configured.</p>
-         * </li>
-         * <li><p><strong>NO_PASSWORD</strong>: The password for the certificate is not configured.</p>
-         * </li>
-         * <li><p><strong>OK</strong>: The certificate is normal.</p>
-         * </li>
-         * <li><p><strong>REVOKED</strong>: The certificate is revoked.</p>
-         * </li>
+         * <li><strong>EXPIRED</strong>: The certificate has expired.</li>
+         * <li><strong>NOT_CONFIGURED</strong>: The certificate is not configured.</li>
+         * <li><strong>NO_PASSWORD</strong>: The password is not configured.</li>
+         * <li><strong>OK</strong>: The certificate is normal.</li>
+         * <li><strong>REVOKED</strong>: The certificate is revoked.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PushResponseBody extends TeaModel {
     /**
-     * <p>The message ID that identifies a push operation.</p>
+     * <p>The message ID that identifies a push notification.</p>
      * 
      * <strong>example:</strong>
      * <p>501029</p>

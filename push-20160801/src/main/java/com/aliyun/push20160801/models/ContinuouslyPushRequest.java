@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ContinuouslyPushRequest extends TeaModel {
     /**
-     * <p>AppKey information.</p>
+     * <p>The AppKey information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,8 @@ public class ContinuouslyPushRequest extends TeaModel {
     public Long appKey;
 
     /**
-     * <p>Message ID.</p>
-     * <p>Obtain this MessageId by calling the Push API with Target set to TBD. It represents a message already saved in the push system.</p>
+     * <p>The message ID.</p>
+     * <p>The MessageId obtained after calling the Push operation and setting Target to TBD. It represents a message that has been saved to the push system.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,14 +26,11 @@ public class ContinuouslyPushRequest extends TeaModel {
     public String messageId;
 
     /**
-     * <p>Push target:</p>
+     * <p>The push target:</p>
      * <ul>
-     * <li><p><strong>DEVICE</strong>: Push by device</p>
-     * </li>
-     * <li><p><strong>ACCOUNT</strong>: Push by account</p>
-     * </li>
-     * <li><p><strong>ALIAS</strong>: Push by alias</p>
-     * </li>
+     * <li><strong>DEVICE</strong>: Push based on devices.</li>
+     * <li><strong>ACCOUNT</strong>: Push based on accounts.</li>
+     * <li><strong>ALIAS</strong>: Push based on aliases.</li>
      * </ul>
      * <p>Continuous push supports only these three target types.</p>
      * <p>This parameter is required.</p>
@@ -45,14 +42,11 @@ public class ContinuouslyPushRequest extends TeaModel {
     public String target;
 
     /**
-     * <p>Specify values based on Target. Separate multiple values with commas. If you exceed the limit, split the push into multiple calls.</p>
+     * <p>Set this parameter based on Target. Separate multiple values with commas. If the limit is exceeded, push the message in multiple batches.</p>
      * <ul>
-     * <li><p>Target=DEVICE: values such as <code>deviceid1,deviceid2</code> (up to 1,000 supported).</p>
-     * </li>
-     * <li><p>Target=ACCOUNT: values such as <code>account1,account2</code> (up to 1,000 supported).</p>
-     * </li>
-     * <li><p>Target=ALIAS: values such as <code>alias1,alias2</code> (up to 1,000 supported).</p>
-     * </li>
+     * <li>If Target is set to DEVICE, the value is in the format of <code>deviceid1,deviceid2</code>. A maximum of 1,000 devices are supported.</li>
+     * <li>If Target is set to ACCOUNT, the value is in the format of <code>account1,account2</code>. A maximum of 1,000 accounts are supported.</li>
+     * <li>If Target is set to ALIAS, the value is in the format of <code>alias1,alias2</code>. A maximum of 1,000 aliases are supported.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
