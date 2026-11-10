@@ -18836,7 +18836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the custom images available for creating RDS Custom instances.</p>
+     * <p>Queries a list of custom images available for creating RDS Custom instances.</p>
      * 
      * @param request DescribeRCImageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18864,7 +18864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the custom images available for creating RDS Custom instances.</p>
+     * <p>Queries a list of custom images available for creating RDS Custom instances.</p>
      * 
      * @param request DescribeRCImageListRequest
      * @return DescribeRCImageListResponse
@@ -25118,7 +25118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -25127,13 +25127,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></p>
+     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/98818.html">Configure an automatic backup policy for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96772.html">Configure an automatic backup policy for an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95717.html">Configure an automatic backup policy for an ApsaraDB RDS for SQL Server instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/97147.html">Configure an automatic backup policy for an ApsaraDB RDS for MariaDB instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/98818.html">Configure the automatic backup policy for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96772.html">Configure the automatic backup policy for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95717.html">Configure the automatic backup policy for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97147.html">Configure the automatic backup policy for an ApsaraDB RDS for MariaDB instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -25297,7 +25297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -25306,13 +25306,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></p>
+     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/98818.html">Configure an automatic backup policy for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96772.html">Configure an automatic backup policy for an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95717.html">Configure an automatic backup policy for an ApsaraDB RDS for SQL Server instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/97147.html">Configure an automatic backup policy for an ApsaraDB RDS for MariaDB instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/98818.html">Configure the automatic backup policy for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96772.html">Configure the automatic backup policy for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95717.html">Configure the automatic backup policy for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97147.html">Configure the automatic backup policy for an ApsaraDB RDS for MariaDB instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -31965,17 +31965,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP address whitelist for an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP address whitelist for an ApsaraDB RDS for SQL Server instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP address whitelist for an ApsaraDB RDS for MariaDB instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP whitelist for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP whitelist for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP whitelist for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP whitelist for an ApsaraDB RDS for MariaDB instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the IP address whitelist configuration of a specified ApsaraDB RDS instance. This operation supports three modification modes: overwrite, append, and delete.</p>
+     * <p>Modifies the IP whitelist configuration of a specified ApsaraDB RDS instance. This operation supports overwrite, append, and delete modes.</p>
      * 
      * @param request ModifySecurityIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31984,6 +31984,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifySecurityIpsResponse modifySecurityIpsWithOptions(ModifySecurityIpsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.batchMode)) {
+            query.put("BatchMode", request.batchMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceIPArrayAttribute)) {
             query.put("DBInstanceIPArrayAttribute", request.DBInstanceIPArrayAttribute);
         }
@@ -31998,6 +32002,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.freshWhiteListReadins)) {
             query.put("FreshWhiteListReadins", request.freshWhiteListReadins);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupItems)) {
+            query.put("GroupItems", request.groupItems);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.modifyMode)) {
@@ -32048,17 +32056,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP address whitelist for an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP address whitelist for an ApsaraDB RDS for SQL Server instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP address whitelist for an ApsaraDB RDS for MariaDB instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP whitelist for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP whitelist for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP whitelist for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP whitelist for an ApsaraDB RDS for MariaDB instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the IP address whitelist configuration of a specified ApsaraDB RDS instance. This operation supports three modification modes: overwrite, append, and delete.</p>
+     * <p>Modifies the IP whitelist configuration of a specified ApsaraDB RDS instance. This operation supports overwrite, append, and delete modes.</p>
      * 
      * @param request ModifySecurityIpsRequest
      * @return ModifySecurityIpsResponse
