@@ -1,3 +1,11 @@
+2026-11-10 Version: 2.4.0
+- Support API DescribeUserLoginPolicies.
+- Support API ModifyUserPolicyBasicInfo.
+- Support API RemoveUserLoginPolicies.
+- Update API DescribeUsers: add response parameters Body.Users.$.UserSource.
+- Update API FilterUsers: add response parameters Body.Users.$.UserSource.
+
+
 2026-10-27 Version: 2.3.1
 - Update API CreateResourceGroup: add request parameters ResourceGroupDescription.
 - Update API DescribeResourceGroups: add response parameters Body.ResourceGroup.$.ResourceGroupDescription.

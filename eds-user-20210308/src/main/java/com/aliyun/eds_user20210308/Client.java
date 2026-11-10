@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "eds-user";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("eds-user", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -417,6 +420,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The number of resource groups in each categorization is subject to the enterprise resource group quota limit. By default, a maximum of 20 resource groups are allowed for each categorization, but the quota limit configured for your enterprise may vary. If the quota limit is reached, the ExceedNumberQuota error is returned. You can invoke the DescribeResourceGroups operation to query the number of existing resource groups in the corresponding categorization.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a resource group.</p>
      * 
@@ -477,6 +483,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The number of resource groups in each categorization is subject to the enterprise resource group quota limit. By default, a maximum of 20 resource groups are allowed for each categorization, but the quota limit configured for your enterprise may vary. If the quota limit is reached, the ExceedNumberQuota error is returned. You can invoke the DescribeResourceGroups operation to query the number of existing resource groups in the corresponding categorization.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a resource group.</p>
      * 
@@ -1156,6 +1165,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeUserResponse describeUser(DescribeUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries logon policies.</p>
+     * 
+     * @param request DescribeUserLoginPoliciesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeUserLoginPoliciesResponse
+     */
+    public DescribeUserLoginPoliciesResponse describeUserLoginPoliciesWithOptions(DescribeUserLoginPoliciesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyIds)) {
+            query.put("PolicyIds", request.policyIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeUserLoginPolicies"),
+            new TeaPair("version", "2021-03-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUserLoginPoliciesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries logon policies.</p>
+     * 
+     * @param request DescribeUserLoginPoliciesRequest
+     * @return DescribeUserLoginPoliciesResponse
+     */
+    public DescribeUserLoginPoliciesResponse describeUserLoginPolicies(DescribeUserLoginPoliciesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeUserLoginPoliciesWithOptions(request, runtime);
     }
 
     /**
@@ -2014,6 +2075,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Modifies the logon policy.</p>
+     * 
+     * @param request ModifyUserPolicyBasicInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyUserPolicyBasicInfoResponse
+     */
+    public ModifyUserPolicyBasicInfoResponse modifyUserPolicyBasicInfoWithOptions(ModifyUserPolicyBasicInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
+            query.put("PolicyId", request.policyId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyUserPolicyBasicInfo"),
+            new TeaPair("version", "2021-03-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyUserPolicyBasicInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the logon policy.</p>
+     * 
+     * @param request ModifyUserPolicyBasicInfoRequest
+     * @return ModifyUserPolicyBasicInfoResponse
+     */
+    public ModifyUserPolicyBasicInfoResponse modifyUserPolicyBasicInfo(ModifyUserPolicyBasicInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyUserPolicyBasicInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Moves an organization.</p>
      * 
      * @param request MoveOrgRequest
@@ -2366,6 +2479,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemovePropertyResponse removeProperty(RemovePropertyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removePropertyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a logon policy.</p>
+     * 
+     * @param request RemoveUserLoginPoliciesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveUserLoginPoliciesResponse
+     */
+    public RemoveUserLoginPoliciesResponse removeUserLoginPoliciesWithOptions(RemoveUserLoginPoliciesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
+            query.put("BusinessChannel", request.businessChannel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyIds)) {
+            query.put("PolicyIds", request.policyIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveUserLoginPolicies"),
+            new TeaPair("version", "2021-03-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveUserLoginPoliciesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a logon policy.</p>
+     * 
+     * @param request RemoveUserLoginPoliciesRequest
+     * @return RemoveUserLoginPoliciesResponse
+     */
+    public RemoveUserLoginPoliciesResponse removeUserLoginPolicies(RemoveUserLoginPoliciesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeUserLoginPoliciesWithOptions(request, runtime);
     }
 
     /**

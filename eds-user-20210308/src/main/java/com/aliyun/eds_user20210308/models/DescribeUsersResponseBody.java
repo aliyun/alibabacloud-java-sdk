@@ -489,6 +489,15 @@ public class DescribeUsersResponseBody extends TeaModel {
         public Long status;
 
         /**
+         * <p>用户来源的企业身份源类型，由后端根据企业身份源自定义列的显隐配置决定是否查询。取值：DINGDING（钉钉）、FEISHU（飞书）、WECHAT（企业微信）、ENTRA_ID（Microsoft Entra ID）。列隐藏、未配置或无企业身份源关联时为空。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FEISHU</p>
+         */
+        @NameInMap("UserSource")
+        public String userSource;
+
+        /**
          * <p>The globally unique ID of the convenience user.</p>
          * 
          * <strong>example:</strong>
@@ -676,6 +685,14 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
         public Long getStatus() {
             return this.status;
+        }
+
+        public DescribeUsersResponseBodyUsers setUserSource(String userSource) {
+            this.userSource = userSource;
+            return this;
+        }
+        public String getUserSource() {
+            return this.userSource;
         }
 
         public DescribeUsersResponseBodyUsers setWyId(String wyId) {

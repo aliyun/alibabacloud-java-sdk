@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveUsersResponseBody extends TeaModel {
     /**
-     * <p>The result of deleting the convenience users.</p>
+     * <p>The result of the convenience user deletion operation.</p>
      */
     @NameInMap("RemoveUsersResult")
     public RemoveUsersResponseBodyRemoveUsersResult removeUsersResult;
@@ -101,20 +101,26 @@ public class RemoveUsersResponseBody extends TeaModel {
 
     public static class RemoveUsersResponseBodyRemoveUsersResult extends TeaModel {
         /**
-         * <p>The information about the users that failed to be deleted.</p>
+         * <p>The collection of information about users that failed to be deleted.</p>
          */
         @NameInMap("FailedUsers")
         public java.util.List<RemoveUsersResponseBodyRemoveUsersResultFailedUsers> failedUsers;
 
+        /**
+         * <p>The list of usernames of convenience users for which asynchronous deletion tasks already exist and have not finished. This request does not create duplicate deletion tasks for these users. The return of this field does not indicate that the users have been deleted.</p>
+         */
         @NameInMap("ProcessingUsers")
         public java.util.List<String> processingUsers;
 
         /**
-         * <p>The convenience users that are successfully deleted.</p>
+         * <p>The convenience users that were successfully deleted.</p>
          */
         @NameInMap("RemovedUsers")
         public java.util.List<String> removedUsers;
 
+        /**
+         * <p>The list of usernames of convenience users for which asynchronous deletion tasks have been successfully accepted and created in this request. Asynchronous deletion is used when UnbindDesktops is set to true. Task acceptance does not mean that the convenience users have been deleted.</p>
+         */
         @NameInMap("SubmittedUsers")
         public java.util.List<String> submittedUsers;
 

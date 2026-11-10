@@ -602,6 +602,15 @@ public class FilterUsersResponseBody extends TeaModel {
         @NameInMap("UserSetPropertiesModels")
         public java.util.List<FilterUsersResponseBodyUsersUserSetPropertiesModels> userSetPropertiesModels;
 
+        /**
+         * <p>用户来源的企业身份源类型，由后端根据企业身份源自定义列的显隐配置决定是否查询。取值：DINGDING（钉钉）、FEISHU（飞书）、WECHAT（企业微信）、ENTRA_ID（Microsoft Entra ID）。列隐藏、未配置或无企业身份源关联时为空。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FEISHU</p>
+         */
+        @NameInMap("UserSource")
+        public String userSource;
+
         public static FilterUsersResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
             FilterUsersResponseBodyUsers self = new FilterUsersResponseBodyUsers();
             return TeaModel.build(map, self);
@@ -773,6 +782,14 @@ public class FilterUsersResponseBody extends TeaModel {
         }
         public java.util.List<FilterUsersResponseBodyUsersUserSetPropertiesModels> getUserSetPropertiesModels() {
             return this.userSetPropertiesModels;
+        }
+
+        public FilterUsersResponseBodyUsers setUserSource(String userSource) {
+            this.userSource = userSource;
+            return this;
+        }
+        public String getUserSource() {
+            return this.userSource;
         }
 
     }

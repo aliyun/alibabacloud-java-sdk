@@ -4,6 +4,12 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class CreateResourceGroupRequest extends TeaModel {
+    /**
+     * <p>The agent subtype of the DesktopAgent resource group. Valid values: JVSClaw and HermesAgent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>JVSClaw</p>
+     */
     @NameInMap("AgentType")
     public String agentType;
 
@@ -16,6 +22,9 @@ public class CreateResourceGroupRequest extends TeaModel {
     @NameInMap("BusinessChannel")
     public String businessChannel;
 
+    /**
+     * <p>Specifies whether to create an Alibaba Cloud resource group at the same time. This is supported only for resource groups in the Default category.</p>
+     */
     @NameInMap("EnableAliyunResourceGroup")
     public Boolean enableAliyunResourceGroup;
 
@@ -31,7 +40,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public Long isResourceGroupWithOfficeSite;
 
     /**
-     * <p>For Elastic Desktop Service (EDS) Enterprise Edition, set the value to <code>AliyunConsole</code>. Other platforms are not supported.</p>
+     * <p>For Elastic Desktop Service Enterprise Edition, set the value to <code>AliyunConsole</code>. Other platforms are not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>AliyunConsole</p>
@@ -40,7 +49,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The resource category.</p>
+     * <p>The category of the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>Default</p>
