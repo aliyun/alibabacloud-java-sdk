@@ -107,6 +107,108 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该接口用于分页查询当前阿里云账号下指定业务版本、地域和时间范围内的AI模型调用明细。</li>
+     * <li>支持按模型调用请求ID、请求模型和用户ID进行筛选。</li>
+     * <li>查询结果按调用时间倒序返回。</li>
+     * <li>默认查询北京时间当日零点至当前时间的数据，查询区间不超过30天且不得早于当前时间向前推算3个自然月。</li>
+     * <li>调用方仅能查询当前调用身份所属主账号的数据，不能指定其他账号。</li>
+     * <li><code>PageNumber</code>与<code>PageSize</code>的乘积不得超过1000000。</li>
+     * <li><code>BizType</code>不传时默认为企业版。</li>
+     * <li><code>GatewayRegion</code>不传时国内站默认上海，国际站默认新加坡。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>查询 AI 调用明细</p>
+     * 
+     * @param request DescribeAICallDetailsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAICallDetailsResponse
+     */
+    public DescribeAICallDetailsResponse describeAICallDetailsWithOptions(DescribeAICallDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayRegion)) {
+            query.put("GatewayRegion", request.gatewayRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            query.put("ModelId", request.modelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchRequestId)) {
+            query.put("SearchRequestId", request.searchRequestId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wyIds)) {
+            query.put("WyIds", request.wyIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAICallDetails"),
+            new TeaPair("version", "2021-12-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAICallDetailsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该接口用于分页查询当前阿里云账号下指定业务版本、地域和时间范围内的AI模型调用明细。</li>
+     * <li>支持按模型调用请求ID、请求模型和用户ID进行筛选。</li>
+     * <li>查询结果按调用时间倒序返回。</li>
+     * <li>默认查询北京时间当日零点至当前时间的数据，查询区间不超过30天且不得早于当前时间向前推算3个自然月。</li>
+     * <li>调用方仅能查询当前调用身份所属主账号的数据，不能指定其他账号。</li>
+     * <li><code>PageNumber</code>与<code>PageSize</code>的乘积不得超过1000000。</li>
+     * <li><code>BizType</code>不传时默认为企业版。</li>
+     * <li><code>GatewayRegion</code>不传时国内站默认上海，国际站默认新加坡。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>查询 AI 调用明细</p>
+     * 
+     * @param request DescribeAICallDetailsRequest
+     * @return DescribeAICallDetailsResponse
+     */
+    public DescribeAICallDetailsResponse describeAICallDetails(DescribeAICallDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAICallDetailsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
      * <li><strong>Paging</strong>: Use the <code>NextToken</code> and <code>MaxResults</code> parameters for paging. Set <code>NextToken</code> to an empty character string for the first request.</li>
