@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevealServiceCredentialResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of Ok indicates success.</p>
+     * <p>The response code. The value is Ok if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -23,7 +23,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
     public RevealServiceCredentialResponseBodyData data;
 
     /**
-     * <p>The response message. A value of success indicates success.</p>
+     * <p>The response message. The value is success if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -88,7 +88,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
         public String apiKeyGenerateMode;
 
         /**
-         * <p>The list of Key Management Service (KMS) reference names. This field is returned only in Reference mode. Reference values are not returned.</p>
+         * <p>The list of Key Management Service (KMS) reference names. This parameter is returned only in Reference mode. The reference values are not returned.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;my-kms-ref&quot;]</p>
@@ -97,7 +97,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
         public java.util.List<String> apiKeyReferences;
 
         /**
-         * <p>The list of custom API keys. This field is returned only when apiKeyGenerateMode is set to Custom. The keys are returned in their original order without deduplication.</p>
+         * <p>The list of custom API keys. This parameter is returned only when apiKeyGenerateMode is set to Custom. The keys are returned in the original order without deduplication.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;sk-xxxxxxxx&quot;,&quot;sk-yyyyyyyy&quot;]</p>
@@ -106,7 +106,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
         public java.util.List<String> apiKeys;
 
         /**
-         * <p>Bedrock AWS Access Key</p>
+         * <p>The AWS access key ID for Bedrock.</p>
          * 
          * <strong>example:</strong>
          * <p>AKIAxxxxxxxx</p>
@@ -115,7 +115,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
         public String awsAccessKey;
 
         /**
-         * <p>Bedrock AWS Region</p>
+         * <p>The AWS region for Bedrock.</p>
          * 
          * <strong>example:</strong>
          * <p>us-east-1</p>
@@ -124,16 +124,16 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
         public String awsRegion;
 
         /**
-         * <p>Bedrock AWS Secret Key</p>
+         * <p>The AWS secret access key for Bedrock.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY</p>
          */
         @NameInMap("awsSecretKey")
         public String awsSecretKey;
 
         /**
-         * <p>The source of the credential. When backfilled by the PAI-EAS system, the value is pai-eas.</p>
+         * <p>The source of the credential. The value is pai-eas when the credential is backfilled by the PAI-EAS system.</p>
          * 
          * <strong>example:</strong>
          * <p>pai-eas</p>
@@ -142,7 +142,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
         public String credentialSource;
 
         /**
-         * <p>The Bedrock endpoint mode. A value of runtime is returned for historical null values.</p>
+         * <p>The Bedrock endpoint mode. The value is runtime for historical null values.</p>
          * 
          * <strong>example:</strong>
          * <p>runtime</p>
@@ -151,7 +151,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
         public String endpointMode;
 
         /**
-         * <p>Kling Access Key</p>
+         * <p>The access key ID for Kling.</p>
          * 
          * <strong>example:</strong>
          * <p>AKxxxxxxxx</p>
@@ -160,10 +160,10 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
         public String klingAccessKey;
 
         /**
-         * <p>Kling Secret Key</p>
+         * <p>The secret access key for Kling.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>sk-kling-9f2c1d7e</p>
          */
         @NameInMap("klingSecretKey")
         public String klingSecretKey;
@@ -178,7 +178,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
         public String vertexAuthKey;
 
         /**
-         * <p>Vertex Project ID</p>
+         * <p>The Vertex project ID.</p>
          * 
          * <strong>example:</strong>
          * <p>my-gcp-project</p>
@@ -187,7 +187,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
         public String vertexProjectId;
 
         /**
-         * <p>Vertex Region</p>
+         * <p>The region for Vertex.</p>
          * 
          * <strong>example:</strong>
          * <p>us-central1</p>
@@ -308,7 +308,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
 
     public static class RevealServiceCredentialResponseBodyData extends TeaModel {
         /**
-         * <p>The current configuration revision. For legacy objects, the value is legacy.</p>
+         * <p>The current configuration revision. The value is legacy for historical objects.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -317,7 +317,7 @@ public class RevealServiceCredentialResponseBody extends TeaModel {
         public String configRevision;
 
         /**
-         * <p>The credential object for the currently active type. Only the fields corresponding to the credentialType are populated.</p>
+         * <p>The credential object of the currently active type. Only the fields corresponding to the credentialType are populated.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;apiKeyGenerateMode&quot;:&quot;Custom&quot;,&quot;apiKeys&quot;:[&quot;sk-xxxxxxxx&quot;]}</p>

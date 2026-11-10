@@ -68,7 +68,7 @@ public class DataPathConfigsFieldPathsValue extends TeaModel {
     public String category;
 
     /**
-     * <p>The message direction of the field, which indicates whether it is extracted from the request or the response.</p>
+     * <p>The message direction of the field, which indicates whether the field is extracted from the request or the response.</p>
      * 
      * <strong>example:</strong>
      * <p>response</p>
@@ -86,7 +86,7 @@ public class DataPathConfigsFieldPathsValue extends TeaModel {
     public Boolean sensitive;
 
     /**
-     * <p>Indicates whether the collection of the field is enabled.</p>
+     * <p>Indicates whether collection is enabled for the field.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

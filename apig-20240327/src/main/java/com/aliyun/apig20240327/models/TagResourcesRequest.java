@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The resource IDs. You can specify up to 50 subkeys.</p>
+     * <p>The IDs of the resources. You can specify up to 50 resource IDs.</p>
      */
     @NameInMap("resourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type used for the tagging operation. Set this parameter to Gateway.</p>
+     * <p>The resource type used for the tagging operation. Set the value to Gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>gateway</p>
@@ -20,7 +20,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of labels.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -56,7 +56,7 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The label key.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -65,7 +65,7 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The label value.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>prod</p>

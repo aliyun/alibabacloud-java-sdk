@@ -11,7 +11,7 @@ public class ImportHttpApiRequest extends TeaModel {
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
     /**
-     * <p>The description of the imported API. If you do not specify this parameter, the description is extracted from the API definition. The maximum length is 255 bytes.</p>
+     * <p>The description of the API to be imported. If you do not specify this parameter, the description is extracted from the API definition file. The maximum length is 255 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>Test API</p>
@@ -20,7 +20,7 @@ public class ImportHttpApiRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform a dry run. If this feature is enabled, the system only checks the Swagger definition and does not perform the import operation.</p>
+     * <p>Specifies whether to perform a dry run. If you set this parameter to true, the system only checks the Swagger definition without importing the API.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -41,13 +41,13 @@ public class ImportHttpApiRequest extends TeaModel {
      * <p>The MCP route ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx</p>
+     * <p>mcp-route-xxxxxxxx</p>
      */
     @NameInMap("mcpRouteId")
     public String mcpRouteId;
 
     /**
-     * <p>The name of the imported API. If you do not specify this parameter, the name is extracted from the API definition file. If an API with the same name and versioning configuration already exists, the import operation updates the existing API definition based on the strategy parameter.</p>
+     * <p>The name of the API to be imported. If you do not specify this parameter, the name is extracted from the API definition file. If an API with the same name and version configuration already exists, the import operation updates the existing API definition based on the strategy parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>import-test</p>
@@ -65,7 +65,7 @@ public class ImportHttpApiRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The Base64-encoded API definition. Supports OAS 2.0 and OAS 3.0 specifications in YAML and JSON formats. This parameter has a higher priority than the specFileUrl parameter. If the file size exceeds 10 MB, use the specFileUrl parameter instead.</p>
+     * <p>The Base64-encoded API definition. Supports OAS 2.0 and OAS 3.0 specifications in YAML or JSON format. This parameter has a higher priority than the specFileUrl parameter. If the file size exceeds 10 MB, use the specFileUrl parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>b3BlbmFwaTogMy4wLjAKaW5mbzoKICAgIHRpdGxlOiBkZW1vCiAgICBkZXNjcmlwdGlvbjogdGhpc2lzZGVtbwogICAgdmVyc2lvbjogIiIKcGF0aHM6CiAgICAvdXNlci97dXNlcklkfToKICAgICAgICBnZXQ6CiAgICAgICAgICAgIHN1bW1hcnk6IOiOt+WPlueUqOaIt+S/oeaBrwogICAgICAgICAgICBkZXNjcmlwdGlvbjog6I635Y+W55So5oi35L+h5oGvCiAgICAgICAgICAgIG9wZXJhdGlvbklkOiBHZXRVc2VySW5mbwogICAgICAgICAgICByZXNwb25zZXM6CiAgICAgICAgICAgICAgICAiMjAwIjoKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbjog5oiQ5YqfCiAgICAgICAgICAgICAgICAgICAgY29udGVudDoKICAgICAgICAgICAgICAgICAgICAgICAgYXBwbGljYXRpb24vanNvbjtjaGFyc2V0PXV0Zi04OgogICAgICAgICAgICAgICAgICAgICAgICAgICAgc2NoZW1hOiBudWxsCnNlcnZlcnM6CiAgICAtIHVybDogaHR0cDovL2FwaS5leGFtcGxlLmNvbS92MQo=</p>
@@ -86,12 +86,12 @@ public class ImportHttpApiRequest extends TeaModel {
     public ImportHttpApiRequestSpecOssConfig specOssConfig;
 
     /**
-     * <p>Specifies the update policy when the name and version management of the imported API are the same as those of an existing API. Valid values:</p>
+     * <p>The update policy to use when the name and version management configuration of the imported API are the same as those of an existing API. Valid values:</p>
      * <ul>
      * <li>SpecOnly: The imported file completely overwrites the existing API.</li>
      * <li>SpecFirst: The imported file takes precedence. New operations are added and existing operations are updated. Operations not mentioned in the file remain unchanged.</li>
      * <li>ExistFirst: The existing API takes precedence. Only new operations are added, and existing operations are not updated.
-     * Default policy: ExistFirst.</li>
+     * Default value: ExistFirst.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class ImportHttpApiRequest extends TeaModel {
     public String strategy;
 
     /**
-     * <p>If you specify this parameter, the import operation updates the specified API instead of importing a new API or searching for an existing API based on the API name and version management configuration. The target API must be of the REST type.</p>
+     * <p>The ID of the HTTP API to be overwritten by the import. If you specify this parameter, the import operation updates the specified API instead of importing a new API or searching for an existing API based on the name and version management configuration. The target API must be of the REST type.</p>
      * 
      * <strong>example:</strong>
      * <p>api-xxxx</p>

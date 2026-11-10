@@ -13,8 +13,8 @@ public class CreateConsumerAuthorizationRuleRequest extends TeaModel {
     /**
      * <p>The expiration mode. Valid values:</p>
      * <ul>
-     * <li>LongTerm: long-term</li>
-     * <li>ShortTerm: short-term</li>
+     * <li>LongTerm: Long-term.</li>
+     * <li>ShortTerm: Short-term.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateConsumerAuthorizationRuleRequest extends TeaModel {
     public String expireMode;
 
     /**
-     * <p>The expiration time.</p>
+     * <p>The expiration timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1750852089975</p>

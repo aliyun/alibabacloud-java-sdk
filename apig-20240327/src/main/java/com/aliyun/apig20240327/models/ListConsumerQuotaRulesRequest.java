@@ -14,7 +14,7 @@ public class ListConsumerQuotaRulesRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The keyword for the rule name, used for fuzzy match.</p>
+     * <p>The keyword in the rule name for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>daily</p>
@@ -32,7 +32,7 @@ public class ListConsumerQuotaRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of items per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

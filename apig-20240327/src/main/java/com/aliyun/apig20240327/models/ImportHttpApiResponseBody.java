@@ -219,7 +219,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
 
     public static class ImportHttpApiResponseBodyDataDryRunInfoSuccessComponents extends TeaModel {
         /**
-         * <p>The action to be performed after the dry run. Valid values:</p>
+         * <p>The action to be performed after the dry run.</p>
          * <ul>
          * <li>Create: Create.</li>
          * <li>Update: Update.</li>
@@ -265,7 +265,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
 
     public static class ImportHttpApiResponseBodyDataDryRunInfoSuccessOperations extends TeaModel {
         /**
-         * <p>The action to be performed after the dry run. Valid values:</p>
+         * <p>The action to be performed after the dry run.</p>
          * <ul>
          * <li>Create: Create.</li>
          * <li>Update: Update.</li>
@@ -387,7 +387,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
 
     public static class ImportHttpApiResponseBodyDataDryRunInfo extends TeaModel {
         /**
-         * <p>The error messages. If the error messages are not empty, the API cannot be imported.</p>
+         * <p>The error messages. If the error messages are not empty, the API cannot be imported successfully.</p>
          */
         @NameInMap("errorMessages")
         public java.util.List<String> errorMessages;
@@ -411,7 +411,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoFailureOperations> failureOperations;
 
         /**
-         * <p>The list of routes that failed to be imported.</p>
+         * <p>The list of failed routes.</p>
          */
         @NameInMap("failureRoutes")
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoFailureRoutes> failureRoutes;
@@ -438,7 +438,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoSuccessOperations> successOperations;
 
         /**
-         * <p>The list of routes that were successfully imported.</p>
+         * <p>The list of successfully imported routes.</p>
          */
         @NameInMap("successRoutes")
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoSuccessRoutes> successRoutes;

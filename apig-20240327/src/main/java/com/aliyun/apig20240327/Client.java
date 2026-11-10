@@ -1042,11 +1042,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a consumer authorization rule.</p>
      * 
+     * @deprecated OpenAPI CreateConsumerAuthorizationRule is deprecated
+     * 
      * @param request CreateConsumerAuthorizationRuleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateConsumerAuthorizationRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateConsumerAuthorizationRuleResponse createConsumerAuthorizationRuleWithOptions(String consumerId, CreateConsumerAuthorizationRuleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1092,9 +1096,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a consumer authorization rule.</p>
      * 
+     * @deprecated OpenAPI CreateConsumerAuthorizationRule is deprecated
+     * 
      * @param request CreateConsumerAuthorizationRuleRequest
      * @return CreateConsumerAuthorizationRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateConsumerAuthorizationRuleResponse createConsumerAuthorizationRule(String consumerId, CreateConsumerAuthorizationRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1543,6 +1551,105 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createGatewayWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>调用流程</h2>
+     * <p>本接口为指定网关配额规则下的一个消费者或消费者组创建消费明细导出任务，导出内容来自网关访问日志。</p>
+     * <ol>
+     * <li>调用本接口获取 taskId。新任务返回 Pending，表示已提交，文件尚未生成。</li>
+     * <li>使用相同的 gatewayId、ruleId、subjectId 和返回的 taskId 调用 GetGatewayQuotaRuleSubjectUsageExportTask，轮询任务状态。</li>
+     * <li>当轮询状态为 Success 且文件未过期时，通过GetGatewayQuotaRuleSubjectUsageExportTask下载 csv.gz 文件；状态为 Failed 时，根据 errorMessage 排查后重新创建任务。</li>
+     * </ol>
+     * <h2>使用条件与限制</h2>
+     * <ul>
+     * <li>创建任务时，配额规则必须存在，且目标主体已绑定到该规则。消费者规则使用消费者 ID，消费者组规则使用消费者组 ID。</li>
+     * <li>有效导出时间范围内的明细依赖网关访问日志投递，请先启用日志投递并确认所需时段的日志可查询。</li>
+     * <li>单次导出时间跨度不得超过一个规则周期。单次最多导出 100000 条明细；后台统计结果超过上限时任务失败，请缩小时间范围后重试。</li>
+     * <li>同一用户在当前地域对同一网关、规则和主体在最近 10 分钟内已有 Pending 或 Running 任务时，重复创建会被拒绝；最近 10 分钟内创建且仍为 Pending 或 Running 的导出任务总数达到 3 个时也会被拒绝。请等待已有任务结束。相同 clientToken、相同参数的幂等重试可复用已有任务。</li>
+     * <li>任务自创建起的处理超时为 10 分钟。超时后任务按 Failed 处理；这不是任务必定成功完成的时限承诺。</li>
+     * <li>创建时确定导出时间范围、计量维度和主体名称，后续查询不会重新计算这些条件。文件成功生成后可在 24 小时内获取下载链接；每次查询生成的签名链接有效期为 10 分钟，具体时间以查询结果为准。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>创建网关配额限流规则主体用量明细导出任务</p>
+     * 
+     * @param request CreateGatewayQuotaRuleSubjectUsageExportTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateGatewayQuotaRuleSubjectUsageExportTaskResponse
+     */
+    public CreateGatewayQuotaRuleSubjectUsageExportTaskResponse createGatewayQuotaRuleSubjectUsageExportTaskWithOptions(String gatewayId, String ruleId, String subjectId, CreateGatewayQuotaRuleSubjectUsageExportTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("clientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterFailedRequests)) {
+            body.put("filterFailedRequests", request.filterFailedRequests);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.format)) {
+            body.put("format", request.format);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("startTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateGatewayQuotaRuleSubjectUsageExportTask"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/gateways/" + com.aliyun.openapiutil.Client.getEncodeParam(gatewayId) + "/quota-rules/" + com.aliyun.openapiutil.Client.getEncodeParam(ruleId) + "/subjects/" + com.aliyun.openapiutil.Client.getEncodeParam(subjectId) + "/usage/export-tasks"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateGatewayQuotaRuleSubjectUsageExportTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>调用流程</h2>
+     * <p>本接口为指定网关配额规则下的一个消费者或消费者组创建消费明细导出任务，导出内容来自网关访问日志。</p>
+     * <ol>
+     * <li>调用本接口获取 taskId。新任务返回 Pending，表示已提交，文件尚未生成。</li>
+     * <li>使用相同的 gatewayId、ruleId、subjectId 和返回的 taskId 调用 GetGatewayQuotaRuleSubjectUsageExportTask，轮询任务状态。</li>
+     * <li>当轮询状态为 Success 且文件未过期时，通过GetGatewayQuotaRuleSubjectUsageExportTask下载 csv.gz 文件；状态为 Failed 时，根据 errorMessage 排查后重新创建任务。</li>
+     * </ol>
+     * <h2>使用条件与限制</h2>
+     * <ul>
+     * <li>创建任务时，配额规则必须存在，且目标主体已绑定到该规则。消费者规则使用消费者 ID，消费者组规则使用消费者组 ID。</li>
+     * <li>有效导出时间范围内的明细依赖网关访问日志投递，请先启用日志投递并确认所需时段的日志可查询。</li>
+     * <li>单次导出时间跨度不得超过一个规则周期。单次最多导出 100000 条明细；后台统计结果超过上限时任务失败，请缩小时间范围后重试。</li>
+     * <li>同一用户在当前地域对同一网关、规则和主体在最近 10 分钟内已有 Pending 或 Running 任务时，重复创建会被拒绝；最近 10 分钟内创建且仍为 Pending 或 Running 的导出任务总数达到 3 个时也会被拒绝。请等待已有任务结束。相同 clientToken、相同参数的幂等重试可复用已有任务。</li>
+     * <li>任务自创建起的处理超时为 10 分钟。超时后任务按 Failed 处理；这不是任务必定成功完成的时限承诺。</li>
+     * <li>创建时确定导出时间范围、计量维度和主体名称，后续查询不会重新计算这些条件。文件成功生成后可在 24 小时内获取下载链接；每次查询生成的签名链接有效期为 10 分钟，具体时间以查询结果为准。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>创建网关配额限流规则主体用量明细导出任务</p>
+     * 
+     * @param request CreateGatewayQuotaRuleSubjectUsageExportTaskRequest
+     * @return CreateGatewayQuotaRuleSubjectUsageExportTaskResponse
+     */
+    public CreateGatewayQuotaRuleSubjectUsageExportTaskResponse createGatewayQuotaRuleSubjectUsageExportTask(String gatewayId, String ruleId, String subjectId, CreateGatewayQuotaRuleSubjectUsageExportTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createGatewayQuotaRuleSubjectUsageExportTaskWithOptions(gatewayId, ruleId, subjectId, request, headers, runtime);
     }
 
     /**
@@ -2716,7 +2823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a service.</p>
@@ -2771,7 +2878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a service.</p>
@@ -3026,12 +3133,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an API consumer authorization rule.</p>
+     * <p>Deletes a consumer authorization rule.</p>
+     * 
+     * @deprecated OpenAPI DeleteConsumerAuthorizationRule is deprecated
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteConsumerAuthorizationRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteConsumerAuthorizationRuleResponse deleteConsumerAuthorizationRuleWithOptions(String consumerAuthorizationRuleId, String consumerId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -3052,9 +3163,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an API consumer authorization rule.</p>
+     * <p>Deletes a consumer authorization rule.</p>
+     * 
+     * @deprecated OpenAPI DeleteConsumerAuthorizationRule is deprecated
      * @return DeleteConsumerAuthorizationRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteConsumerAuthorizationRuleResponse deleteConsumerAuthorizationRule(String consumerAuthorizationRuleId, String consumerId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -4325,7 +4440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the effective field collection configurations for each request path of an HTTP API under a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and template origin.</p>
+     * <p>Queries the effective field collection configurations for each request path of an HTTP API in a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and template origin.</p>
      * 
      * @param request GetApiPathFieldConfigRequest
      * @param headers map
@@ -4363,7 +4478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the effective field collection configurations for each request path of an HTTP API under a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and template origin.</p>
+     * <p>Queries the effective field collection configurations for each request path of an HTTP API in a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and template origin.</p>
      * 
      * @param request GetApiPathFieldConfigRequest
      * @return GetApiPathFieldConfigResponse
@@ -4376,7 +4491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the field template corresponding to a URI of the request and returns the template name, applicable protocol, template description, and the set of fields defined by the template, including field keys, JSONPaths, value sources, and statistical categories.</p>
+     * <p>Queries the field template corresponding to the API request path and returns the template name, applicable protocol, template description, and the set of fields defined by the template, including field keys, JSONPaths, value sources, and statistical categories.</p>
      * 
      * @param request GetApiPathFieldTemplateRequest
      * @param headers map
@@ -4410,7 +4525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the field template corresponding to a URI of the request and returns the template name, applicable protocol, template description, and the set of fields defined by the template, including field keys, JSONPaths, value sources, and statistical categories.</p>
+     * <p>Queries the field template corresponding to the API request path and returns the template name, applicable protocol, template description, and the set of fields defined by the template, including field keys, JSONPaths, value sources, and statistical categories.</p>
      * 
      * @param request GetApiPathFieldTemplateRequest
      * @return GetApiPathFieldTemplateResponse
@@ -4542,12 +4657,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a consumer authorization rule.</p>
+     * <p>Retrieves consumer authorization rules.</p>
+     * 
+     * @deprecated OpenAPI GetConsumerAuthorizationRule is deprecated
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetConsumerAuthorizationRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public GetConsumerAuthorizationRuleResponse getConsumerAuthorizationRuleWithOptions(String consumerAuthorizationRuleId, String consumerId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -4568,9 +4687,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a consumer authorization rule.</p>
+     * <p>Retrieves consumer authorization rules.</p>
+     * 
+     * @deprecated OpenAPI GetConsumerAuthorizationRule is deprecated
      * @return GetConsumerAuthorizationRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public GetConsumerAuthorizationRuleResponse getConsumerAuthorizationRule(String consumerAuthorizationRuleId, String consumerId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -5107,6 +5230,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getGatewayQuotaRuleSubjectUsageWithOptions(gatewayId, ruleId, subjectId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Call flow</h2>
+     * <p>First, call CreateGatewayQuotaRuleSubjectUsageExportTask to create a task. Then, use the returned taskId along with the same gatewayId, ruleId, and subjectId to call this operation in the same region.</p>
+     * <ul>
+     * <li>Pending or Running: The task is not completed. You can query again after a period of time.</li>
+     * <li>Success: Check result.fileExpired and result.downloadUrl. If the file is not expired and a link is returned, you can download the file.</li>
+     * <li>Failed: Troubleshoot the issue based on errorMessage. To re-export, call the create operation and use a new clientToken.</li>
+     * </ul>
+     * <h2>Download link and file validity period</h2>
+     * <p>For each successful query where the file is not expired, a signed link with a validity period of 10 minutes is generated. Download the file promptly based on downloadUrlExpiredAt. If the link expires but the file has not reached fileExpiredAt, you can query again to obtain a new link. Querying again does not regenerate the file or extend the 24-hour validity period of the file.
+     * After the file reaches fileExpiredAt, this operation no longer issues new links, returns fileExpired=true, and omits downloadUrl and downloadUrlExpiredAt. The task status remains Success. To export again, create a new task.</p>
+     * <h2>Query scope and task progress</h2>
+     * <p>This operation returns only the export tasks of the current user in the current region that match the gateway, rule, and subject paths. If the paths do not match or the task does not exist, a not found error is returned. Existing tasks are queried based on the information recorded at creation. The export conditions are not recalculated due to subsequent rule resets or subject name changes.
+     * If a task remains in the Pending or Running state for more than 10 minutes after creation, the query treats it as a timeout failure. Determine whether the task is completed based on the status, not just totalCount or processedCount.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status, processing progress, failure cause, and file download information of an export task for quota rule subject consumption details.</p>
+     * 
+     * @param request GetGatewayQuotaRuleSubjectUsageExportTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetGatewayQuotaRuleSubjectUsageExportTaskResponse
+     */
+    public GetGatewayQuotaRuleSubjectUsageExportTaskResponse getGatewayQuotaRuleSubjectUsageExportTaskWithOptions(String gatewayId, String ruleId, String subjectId, String taskId, GetGatewayQuotaRuleSubjectUsageExportTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetGatewayQuotaRuleSubjectUsageExportTask"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/gateways/" + com.aliyun.openapiutil.Client.getEncodeParam(gatewayId) + "/quota-rules/" + com.aliyun.openapiutil.Client.getEncodeParam(ruleId) + "/subjects/" + com.aliyun.openapiutil.Client.getEncodeParam(subjectId) + "/usage/export-tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(taskId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGatewayQuotaRuleSubjectUsageExportTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Call flow</h2>
+     * <p>First, call CreateGatewayQuotaRuleSubjectUsageExportTask to create a task. Then, use the returned taskId along with the same gatewayId, ruleId, and subjectId to call this operation in the same region.</p>
+     * <ul>
+     * <li>Pending or Running: The task is not completed. You can query again after a period of time.</li>
+     * <li>Success: Check result.fileExpired and result.downloadUrl. If the file is not expired and a link is returned, you can download the file.</li>
+     * <li>Failed: Troubleshoot the issue based on errorMessage. To re-export, call the create operation and use a new clientToken.</li>
+     * </ul>
+     * <h2>Download link and file validity period</h2>
+     * <p>For each successful query where the file is not expired, a signed link with a validity period of 10 minutes is generated. Download the file promptly based on downloadUrlExpiredAt. If the link expires but the file has not reached fileExpiredAt, you can query again to obtain a new link. Querying again does not regenerate the file or extend the 24-hour validity period of the file.
+     * After the file reaches fileExpiredAt, this operation no longer issues new links, returns fileExpired=true, and omits downloadUrl and downloadUrlExpiredAt. The task status remains Success. To export again, create a new task.</p>
+     * <h2>Query scope and task progress</h2>
+     * <p>This operation returns only the export tasks of the current user in the current region that match the gateway, rule, and subject paths. If the paths do not match or the task does not exist, a not found error is returned. Existing tasks are queried based on the information recorded at creation. The export conditions are not recalculated due to subsequent rule resets or subject name changes.
+     * If a task remains in the Pending or Running state for more than 10 minutes after creation, the query treats it as a timeout failure. Determine whether the task is completed based on the status, not just totalCount or processedCount.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status, processing progress, failure cause, and file download information of an export task for quota rule subject consumption details.</p>
+     * 
+     * @param request GetGatewayQuotaRuleSubjectUsageExportTaskRequest
+     * @return GetGatewayQuotaRuleSubjectUsageExportTaskResponse
+     */
+    public GetGatewayQuotaRuleSubjectUsageExportTaskResponse getGatewayQuotaRuleSubjectUsageExportTask(String gatewayId, String ruleId, String subjectId, String taskId, GetGatewayQuotaRuleSubjectUsageExportTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getGatewayQuotaRuleSubjectUsageExportTaskWithOptions(gatewayId, ruleId, subjectId, taskId, request, headers, runtime);
     }
 
     /**
@@ -6392,7 +6586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls an AI agent.</p>
+     * <p>Invokes an AI agent.</p>
      * 
      * @param request InvokeAIAgentRequest
      * @param headers map
@@ -6442,7 +6636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls an AI agent.</p>
+     * <p>Invokes an AI agent.</p>
      * 
      * @param request InvokeAIAgentRequest
      * @return InvokeAIAgentResponse
@@ -6760,11 +6954,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Retrieves a list of consumer authorization rules.</p>
      * 
+     * @deprecated OpenAPI ListConsumerAuthorizationRules is deprecated
+     * 
      * @param request ListConsumerAuthorizationRulesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListConsumerAuthorizationRulesResponse
      */
+    @Deprecated
+    // Deprecated
     public ListConsumerAuthorizationRulesResponse listConsumerAuthorizationRulesWithOptions(String consumerId, ListConsumerAuthorizationRulesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6802,9 +7000,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Retrieves a list of consumer authorization rules.</p>
      * 
+     * @deprecated OpenAPI ListConsumerAuthorizationRules is deprecated
+     * 
      * @param request ListConsumerAuthorizationRulesRequest
      * @return ListConsumerAuthorizationRulesResponse
      */
+    @Deprecated
+    // Deprecated
     public ListConsumerAuthorizationRulesResponse listConsumerAuthorizationRules(String consumerId, ListConsumerAuthorizationRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -6992,7 +7194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of quota rules configured for a specific consumer.</p>
+     * <p>Queries the list of configured quota rules for a consumer.</p>
      * 
      * @param request ListConsumerQuotaRulesRequest
      * @param headers map
@@ -7038,7 +7240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of quota rules configured for a specific consumer.</p>
+     * <p>Queries the list of configured quota rules for a consumer.</p>
      * 
      * @param request ListConsumerQuotaRulesRequest
      * @return ListConsumerQuotaRulesResponse
@@ -7600,7 +7802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of load balancers for a gateway.</p>
+     * <p>Retrieves the list of gateway load balancers.</p>
      * 
      * @param request ListGatewayLoadBalancersRequest
      * @param headers map
@@ -7654,7 +7856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of load balancers for a gateway.</p>
+     * <p>Retrieves the list of gateway load balancers.</p>
      * 
      * @param request ListGatewayLoadBalancersRequest
      * @return ListGatewayLoadBalancersResponse
@@ -8461,7 +8663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of Model Context Protocol (MCP) tools in an API product of the MCP Server type. The response returns a list of tools. Each tool includes three text members (name, title, and description) and four map members (inputSchema, outputSchema, annotations, and meta).</p>
+     * <p>Queries the details of Model Context Protocol (MCP) tools in an MCP Server-type API product and returns a list of tools. Each tool contains three text fields: name, title, and description, and four map fields: inputSchema, outputSchema, annotations, and meta.</p>
      * 
      * @param request ListMcpProductToolsRequest
      * @param headers map
@@ -8489,7 +8691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of Model Context Protocol (MCP) tools in an API product of the MCP Server type. The response returns a list of tools. Each tool includes three text members (name, title, and description) and four map members (inputSchema, outputSchema, annotations, and meta).</p>
+     * <p>Queries the details of Model Context Protocol (MCP) tools in an MCP Server-type API product and returns a list of tools. Each tool contains three text fields: name, title, and description, and four map fields: inputSchema, outputSchema, annotations, and meta.</p>
      * 
      * @param request ListMcpProductToolsRequest
      * @return ListMcpProductToolsResponse
@@ -8630,7 +8832,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of model cards and returns the model name, provider, and source identifier for each card, along with the features, pricing, meta, availablePaths, and snapshots structures. The only request parameter is the provider identifier.</p>
+     * <p>Queries a list of model cards and returns the model name, provider, and source identifier of each card, along with its features, pricing, meta, availablePaths, and snapshots structures. The only business request parameter is the provider identifier.</p>
      * 
      * @param request ListModelCardsRequest
      * @param headers map
@@ -8664,7 +8866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of model cards and returns the model name, provider, and source identifier for each card, along with the features, pricing, meta, availablePaths, and snapshots structures. The only request parameter is the provider identifier.</p>
+     * <p>Queries a list of model cards and returns the model name, provider, and source identifier of each card, along with its features, pricing, meta, availablePaths, and snapshots structures. The only business request parameter is the provider identifier.</p>
      * 
      * @param request ListModelCardsRequest
      * @return ListModelCardsResponse
@@ -10724,10 +10926,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the currently active credentials for an AI service.</p>
+     * <p>Queries the currently active credentials for the AI service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the currently active credentials for an AI service.</p>
+     * <p>Queries the currently active credentials for the AI service.</p>
      * 
      * @param request RevealServiceCredentialRequest
      * @param headers map
@@ -10755,10 +10957,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the currently active credentials for an AI service.</p>
+     * <p>Queries the currently active credentials for the AI service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the currently active credentials for an AI service.</p>
+     * <p>Queries the currently active credentials for the AI service.</p>
      * 
      * @param request RevealServiceCredentialRequest
      * @return RevealServiceCredentialResponse
@@ -10922,7 +11124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tags resources.</p>
+     * <p>Adds tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param headers map
@@ -10964,7 +11166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Tags resources.</p>
+     * <p>Adds tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -11570,16 +11772,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</p>
+     * <p>This API operation has been replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates consumer authorization rules.</p>
+     * <p>Updates the consumer authorization rule.</p>
+     * 
+     * @deprecated OpenAPI UpdateConsumerAuthorizationRule is deprecated
      * 
      * @param request UpdateConsumerAuthorizationRuleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateConsumerAuthorizationRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public UpdateConsumerAuthorizationRuleResponse updateConsumerAuthorizationRuleWithOptions(String consumerId, String consumerAuthorizationRuleId, UpdateConsumerAuthorizationRuleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -11615,14 +11821,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</p>
+     * <p>This API operation has been replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates consumer authorization rules.</p>
+     * <p>Updates the consumer authorization rule.</p>
+     * 
+     * @deprecated OpenAPI UpdateConsumerAuthorizationRule is deprecated
      * 
      * @param request UpdateConsumerAuthorizationRuleRequest
      * @return UpdateConsumerAuthorizationRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public UpdateConsumerAuthorizationRuleResponse updateConsumerAuthorizationRule(String consumerId, String consumerAuthorizationRuleId, UpdateConsumerAuthorizationRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -11733,7 +11943,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only sources of the <strong>Container Service</strong> type can update the listener Ingress configuration.</p>
+     * <p>Only sources of the <strong>container service</strong> type are allowed to update the listener Ingress configurations.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a domain name.</p>
@@ -11810,7 +12020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only sources of the <strong>Container Service</strong> type can update the listener Ingress configuration.</p>
+     * <p>Only sources of the <strong>container service</strong> type are allowed to update the listener Ingress configurations.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a domain name.</p>

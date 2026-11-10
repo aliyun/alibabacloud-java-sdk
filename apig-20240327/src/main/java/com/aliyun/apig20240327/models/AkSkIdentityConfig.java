@@ -8,7 +8,7 @@ public class AkSkIdentityConfig extends TeaModel {
      * <p>The AK configuration.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>ak-xxxxxxxx</p>
      */
     @NameInMap("ak")
     public String ak;
@@ -26,7 +26,7 @@ public class AkSkIdentityConfig extends TeaModel {
      * <p>The SK configuration.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>sk-xxxxxxxx</p>
      */
     @NameInMap("sk")
     public String sk;

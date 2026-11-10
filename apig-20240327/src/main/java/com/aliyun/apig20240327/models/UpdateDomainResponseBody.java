@@ -29,7 +29,7 @@ public class UpdateDomainResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which is used to trace the API call chain.</p>
+     * <p>The request ID, used to trace API calls.</p>
      * 
      * <strong>example:</strong>
      * <p>4BACB05C-3FE2-588F-9148-700C5C026B74</p>
@@ -76,7 +76,7 @@ public class UpdateDomainResponseBody extends TeaModel {
 
     public static class UpdateDomainResponseBodyData extends TeaModel {
         /**
-         * <p>The deployment revision ID.</p>
+         * <p>The release version ID.</p>
          * 
          * <strong>example:</strong>
          * <p>apr-xxxxx</p>
