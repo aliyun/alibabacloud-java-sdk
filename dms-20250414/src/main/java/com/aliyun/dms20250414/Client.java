@@ -7267,10 +7267,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>The default value of message_type is primary. Set this parameter to additional or cancel when you need to append information or cancel the session.</li>
-     * <li>The reply_to field specifies the agent message to which this message responds. The default value is 0.</li>
-     * <li>When message_type is set to additional, the question field is required.</li>
-     * <li>You can use quoted_message to quote previous user messages.</li>
+     * <li>The default value of <code>message_type</code> is <code>primary</code>. Set it to <code>additional</code> or <code>cancel</code> when you need to append information or cancel the session.</li>
+     * <li>The <code>reply_to</code> field specifies the agent message to which this message responds. The default value is <code>0</code>.</li>
+     * <li>The <code>question</code> field is required when <code>message_type</code> is set to <code>additional</code>.</li>
+     * <li>You can use <code>quoted_message</code> to quote previous user messages.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7382,10 +7382,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>The default value of message_type is primary. Set this parameter to additional or cancel when you need to append information or cancel the session.</li>
-     * <li>The reply_to field specifies the agent message to which this message responds. The default value is 0.</li>
-     * <li>When message_type is set to additional, the question field is required.</li>
-     * <li>You can use quoted_message to quote previous user messages.</li>
+     * <li>The default value of <code>message_type</code> is <code>primary</code>. Set it to <code>additional</code> or <code>cancel</code> when you need to append information or cancel the session.</li>
+     * <li>The <code>reply_to</code> field specifies the agent message to which this message responds. The default value is <code>0</code>.</li>
+     * <li>The <code>question</code> field is required when <code>message_type</code> is set to <code>additional</code>.</li>
+     * <li>You can use <code>quoted_message</code> to quote previous user messages.</li>
      * </ul>
      * 
      * <b>summary</b> : 

@@ -23,7 +23,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>The data source information. This parameter can be left empty. You can specify only one data source for this parameter. We recommend that you use the DataSources parameter instead.</p>
+     * <p>The data source information. This parameter can be left empty. You can pass only one data source in this parameter. We recommend that you use the DataSources parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -38,7 +38,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String dataSourcesShrink;
 
     /**
-     * <p>The content of the message sent to the agent.</p>
+     * <p>The content of the message sent to the agent in the current request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,12 +48,16 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String message;
 
     /**
-     * <p>The message type. Default value: primary.</p>
+     * <p>The message type. Default value: <code>[primary]</code>.  </p>
      * <ul>
-     * <li>In normal interactions with the agent, the message type is primary.</li>
-     * <li>When the message is a response to a human-in-the-loop question from the agent, the type must be additional.</li>
-     * <li>When the message is intended to trigger report generation, the type must be report.</li>
-     * <li>When the message is intended to cancel the current session, the type must be cancel.</li>
+     * <li><p>For regular interactions with the agent, set the message type to <code>[primary]</code>.</p>
+     * </li>
+     * <li><p>If the message responds to a human-in-the-loop question from the agent, set the type to <code>[additional]</code>.</p>
+     * </li>
+     * <li><p>If the message triggers report generation, set the type to <code>[report]</code>.</p>
+     * </li>
+     * <li><p>If the message cancels the current session, set the type to <code>[cancel]</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,7 +76,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String parentSessionId;
 
     /**
-     * <p>Required when the message type is additional. Specifies the specific question asked by the agent to the user through human-in-the-loop.</p>
+     * <p>The specific question asked by the agent to the user through human-in-the-loop. This field is required when the message type is <code>additional</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Provide the calculation criteria for GMV</p>
@@ -81,7 +85,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String question;
 
     /**
-     * <p>The current quoted content. This is typically used during interactions with the agent.</p>
+     * <p>The quoted content passed in the current request. This is typically used during interactions with the agent.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;version&quot;:&quot;v0&quot;}</p>
@@ -91,7 +95,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
 
     /**
      * <p><strong>Important</strong></p>
-     * <p>When this message is a reply to an agent message (such as the agent asking for clarification through ASK_HUMAN), reply_to must exactly match the Checkpoint sequence number carried by that agent message. If this message is not a targeted reply, such as requesting the agent to perform further in-depth analysis after the initial analysis is complete, you can leave reply_to empty or set it to 0.  </p>
+     * <p>If this message replies to an agent message, such as an agent clarifying a question through ASK_HUMAN, you must accurately pass the checkpoint sequence number carried in that agent message to <code>reply_to</code>. If this message is not a targeted reply, such as requesting the agent to perform further in-depth analysis after the initial analysis is complete, you can leave <code>reply_to</code> empty or set it to &quot;0&quot;.  </p>
      * <p>This field affects how the agent decides to process the message. Passing an incorrect value may lead to suboptimal analysis results.</p>
      * 
      * <strong>example:</strong>
@@ -101,7 +105,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String replyTo;
 
     /**
-     * <p>The special configurations for the current session. For the same session, only the configurations passed during the first SendMessage call take effect.</p>
+     * <p>The special configurations for the current session. For the same session, only the configurations passed in the first SendMessage request take effect.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -112,9 +116,9 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     /**
      * <p>The session ID. This is an optional field used for multi-turn sessions.</p>
      * <ul>
-     * <li>You can start a session without specifying this field, and the response will include the SessionID for the current session.</li>
+     * <li>You can start a session without specifying this field. The response will include the session ID for the current session.</li>
      * <li>You can also manually create a session ID by calling the CreateDataAgentSession operation and include the ID when initiating the session.</li>
-     * <li>If you need multi-turn conversations (such as follow-up questions or confirming execution plans), include the SessionID returned by the previous SendChatMessage operation in this API call.</li>
+     * <li>If you need multi-turn conversations, such as follow-up questions or confirming execution plans, include the session ID returned by the previous SendChatMessage operation in this request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -130,7 +134,7 @@ public class SendChatMessageShrinkRequest extends TeaModel {
     public String taskConfigShrink;
 
     /**
-     * <p>The Object Storage Service (OSS) bucket of the user. If you do not specify this parameter, the analysis process is securely stored in the built-in storage.</p>
+     * <p>The Object Storage Service (OSS) bucket of the user. If this parameter is left empty, the analysis process is securely stored in the built-in storage.</p>
      * 
      * <strong>example:</strong>
      * <p>my-bucket</p>
