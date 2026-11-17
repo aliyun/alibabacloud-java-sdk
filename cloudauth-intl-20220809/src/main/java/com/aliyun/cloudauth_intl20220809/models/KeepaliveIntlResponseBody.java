@@ -14,7 +14,7 @@ public class KeepaliveIntlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The return message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

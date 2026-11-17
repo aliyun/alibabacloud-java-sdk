@@ -32,7 +32,7 @@ public class AddressCompareIntlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The return result.</p>
      */
     @NameInMap("Result")
     public AddressCompareIntlResponseBodyResult result;
@@ -76,27 +76,27 @@ public class AddressCompareIntlResponseBody extends TeaModel {
 
     public static class AddressCompareIntlResponseBodyResult extends TeaModel {
         /**
-         * <p>The sameLevel parameter has the following valid values:</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>all: completely identical</li>
-         * <li>prov: province level </li>
-         * <li>city: city level</li>
-         * <li>district: district level</li>
-         * <li>town: street level</li>
-         * <li>road: road level</li>
-         * <li>roadno: road number level</li>
-         * <li>poi: community/neighborhood level</li>
-         * <li>roomno: room number level.</li>
+         * <li>all: Exactly the same.</li>
+         * <li>prov: Province. </li>
+         * <li>city: City.</li>
+         * <li>district: District.</li>
+         * <li>town: Town.</li>
+         * <li>road: Road.</li>
+         * <li>roadno: Road number.</li>
+         * <li>poi: Residential community.</li>
+         * <li>roomno: Room number.</li>
          * </ul>
          * 
          * <strong>example:</strong>
          * <p>{
          *      sameLevel: &quot;city&quot;, 
-         *      distance:  5997.34m, -- 地址相差距离
-         *      same_info: {    -- 相同信息
-         *               prov: &quot;浙江省&quot;,
-         *               city: &quot;杭州市&quot;,
-         *               district: &quot;西湖区&quot;
+         *      distance:  5997.34m, -- Distance between addresses
+         *      same_info: {    -- Identical information
+         *               prov: &quot;Zhejiang Province&quot;,
+         *               city: &quot;Hangzhou&quot;,
+         *               district: &quot;Xihu District&quot;
          *       } 
          * }</p>
          */

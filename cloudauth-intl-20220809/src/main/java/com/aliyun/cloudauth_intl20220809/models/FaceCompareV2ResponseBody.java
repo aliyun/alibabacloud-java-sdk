@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class FaceCompareV2ResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
-     * <p>200: success. Other values: error codes. For more information, see error codes.</p>
+     * <p>The return code.</p>
+     * <p>200: Success. Other values: Error codes. For more information, see Error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -15,7 +15,7 @@ public class FaceCompareV2ResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -33,7 +33,7 @@ public class FaceCompareV2ResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The return result.</p>
      */
     @NameInMap("Result")
     public FaceCompareV2ResponseBodyResult result;
@@ -122,7 +122,7 @@ public class FaceCompareV2ResponseBody extends TeaModel {
         public Double sharpnessScore;
 
         /**
-         * <p>The overall quality score of the target reference face image.</p>
+         * <p>The overall quality score of the reference face image.</p>
          * 
          * <strong>example:</strong>
          * <p>39.04</p>
@@ -131,7 +131,7 @@ public class FaceCompareV2ResponseBody extends TeaModel {
         public Double targetFaceQualityScore;
 
         /**
-         * <p>The illumination score of the target reference face image.</p>
+         * <p>The illumination score of the reference face image.</p>
          * 
          * <strong>example:</strong>
          * <p>0.02</p>
@@ -140,7 +140,7 @@ public class FaceCompareV2ResponseBody extends TeaModel {
         public Double targetIlluminationScore;
 
         /**
-         * <p>The key area occlusion score of the target reference face image.</p>
+         * <p>The key area occlusion score of the reference face image.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -149,7 +149,7 @@ public class FaceCompareV2ResponseBody extends TeaModel {
         public Double targetKaOcclusionScore;
 
         /**
-         * <p>The occlusion score of the target reference face image.</p>
+         * <p>The occlusion score of the reference face image.</p>
          * 
          * <strong>example:</strong>
          * <p>50.26</p>
@@ -158,7 +158,7 @@ public class FaceCompareV2ResponseBody extends TeaModel {
         public Double targetOcclusionScore;
 
         /**
-         * <p>The sharpness score of the target reference face image.</p>
+         * <p>The sharpness score of the reference face image.</p>
          * 
          * <strong>example:</strong>
          * <p>86.47</p>
@@ -261,7 +261,7 @@ public class FaceCompareV2ResponseBody extends TeaModel {
         public FaceCompareV2ResponseBodyResultExtFaceInfo extFaceInfo;
 
         /**
-         * <p>The comparison score between the submitted face photo and the target reference face image during verification. Value range: 0 to 100.</p>
+         * <p>The comparison score between the submitted face photo and the reference face photo during the authentication process. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>98</p>
@@ -270,7 +270,8 @@ public class FaceCompareV2ResponseBody extends TeaModel {
         public Double faceComparisonScore;
 
         /**
-         * <p>Indicates whether the verification passed.</p>
+         * <p>Indicates whether the authentication is passed.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li>Y: Passed.</li>
          * <li>N: Not passed.</li>
@@ -283,7 +284,7 @@ public class FaceCompareV2ResponseBody extends TeaModel {
         public String passed;
 
         /**
-         * <p>The unique identifier of the verification request.</p>
+         * <p>The unique identifier of the authentication request.</p>
          * 
          * <strong>example:</strong>
          * <p>08573be80f944d95ac812e019e3655a8</p>

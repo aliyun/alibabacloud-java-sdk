@@ -14,7 +14,7 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class CredentialSubmitIntlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The return result.</p>
      */
     @NameInMap("Result")
     public CredentialSubmitIntlResponseBodyResult result;

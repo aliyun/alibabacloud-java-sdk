@@ -32,7 +32,7 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The response result.</p>
      */
     @NameInMap("Result")
     public FaceLivenessV2ResponseBodyResult result;
@@ -76,7 +76,7 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
 
     public static class FaceLivenessV2ResponseBodyResultExtFaceInfo extends TeaModel {
         /**
-         * <p>The predicted reference age of the face. The prediction may fail and return no value.</p>
+         * <p>The predicted reference age of the face. If the prediction fails, no value is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>18</p>
@@ -85,7 +85,7 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         public Long faceAge;
 
         /**
-         * <p>The liveness detection result. Valid values: Y (attack detected) and N (Normal).</p>
+         * <p>The liveness detection result. Valid values: Y (attack) and N (normal).</p>
          * 
          * <strong>example:</strong>
          * <p>Y</p>
@@ -93,14 +93,42 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         @NameInMap("FaceAttack")
         public String faceAttack;
 
+        /**
+         * <p>Detects the facial attributes of the primary face in the input image. The primary face is the one closest to the camera, with the largest facial area, and in focus. The detection result is returned as a string for downstream processing.</p>
+         * <p>The returned fields are defined as follows:</p>
+         * <p><strong>gender</strong>: the gender of the primary person. A value of 1 indicates male, and 0 indicates female.</p>
+         * <p><strong>glasses</strong>: whether the primary person is wearing glasses. A value of 1 indicates that glasses are detected, and 0 indicates that glasses are not detected.</p>
+         * <p><strong>hat</strong>: whether the primary person is wearing a hat (including headscarves and veils). A value of 1 indicates that a hat is detected, and 0 indicates that a hat is not detected.</p>
+         * <p><strong>mask</strong>: whether the primary person is wearing a mask. A value of 1 indicates that a mask is detected, and 0 indicates that a mask is not detected.</p>
+         * <p><strong>tattoo</strong>: whether the primary person has visible tattoos. A value of 1 indicates that a tattoo is detected, and 0 indicates that a tattoo is not detected.</p>
+         * <p><strong>smoking</strong>: whether the primary person is smoking. A value of 1 indicates that smoking is detected, and 0 indicates that smoking is not detected.</p>
+         * <p><strong>others</strong>: whether other people are present besides the primary person. A value of 1 indicates that other people are detected, and 0 indicates that other people are not detected.</p>
+         * <p><strong>env</strong>: the environment where the primary person is located, such as an office, factory, hospital, or vehicle. Valid values: office, hospital, factory, vehical, and other.</p>
+         * <p><strong>expression</strong>: whether the primary person has an exaggerated expression (facial expressions that significantly deviate from a natural or calm state). A value of 1 indicates that an exaggerated expression is detected, and 0 indicates that an exaggerated expression is not detected.</p>
+         * <p><strong>age</strong>: the actual age of the primary person in years.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *         gender: 1
+         *         glasses: 0
+         *         hat: 1
+         *         mask: 1
+         *         tattoo: 0
+         *         smoking: 0
+         *         others: 1
+         *         env：office
+         *         expression：1
+         *         age：16
+         * }</p>
+         */
         @NameInMap("FaceAttributeInfo")
         public String faceAttributeInfo;
 
         /**
-         * <p>The predicted gender of the face image. The prediction may fail and return no value. Valid values:</p>
+         * <p>The predicted gender of the face in the image. If the prediction fails, no value is returned. Valid values:</p>
          * <ul>
-         * <li>M: male.</li>
-         * <li>F: female.</li>
+         * <li>M: male</li>
+         * <li>F: female</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,7 +138,7 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         public String faceGender;
 
         /**
-         * <p>The quality score of the liveness face. Valid values: 0 to 100. A higher value indicates better quality.</p>
+         * <p>The liveness face quality score. Valid values: 0 to 100. A larger value indicates better quality.</p>
          * 
          * <strong>example:</strong>
          * <p>79.04</p>
@@ -119,7 +147,7 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         public Double faceQualityScore;
 
         /**
-         * <p>The algorithm score for illumination, which is a sub-dimension of quality assessment. Valid values: 0 to 100. A higher value indicates better quality.</p>
+         * <p>The algorithm score for illumination in the quality judgment sub-dimension. Valid values: 0 to 100. A larger value indicates better quality.</p>
          * 
          * <strong>example:</strong>
          * <p>97.43</p>
@@ -128,7 +156,7 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         public Double illuminationScore;
 
         /**
-         * <p>The algorithm score for key area occlusion, which is a sub-dimension of quality assessment. Valid values: 0 to 100. A higher value indicates better quality.</p>
+         * <p>The algorithm score for key area occlusion in the quality judgment sub-dimension. Valid values: 0 to 100. A larger value indicates better quality.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -137,7 +165,7 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         public Double kaOcclusionScore;
 
         /**
-         * <p>Indicates whether facial occlusion is detected. A value of Y indicates occlusion is detected. A value of N indicates no occlusion is detected.</p>
+         * <p>Indicates whether the face is occluded. A value of Y indicates that the face is occluded. A value of N indicates that the face is not occluded.</p>
          * 
          * <strong>example:</strong>
          * <p>Y</p>
@@ -146,7 +174,7 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         public String occlusionResult;
 
         /**
-         * <p>The algorithm score for occlusion, which is a sub-dimension of quality assessment. Valid values: 0 to 100. A higher value indicates better quality.</p>
+         * <p>The algorithm score for occlusion in the quality judgment sub-dimension. Valid values: 0 to 100. A larger value indicates better quality.</p>
          * 
          * <strong>example:</strong>
          * <p>50.26</p>
@@ -155,7 +183,7 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         public Double occlusionScore;
 
         /**
-         * <p>The image sharpness score, which is a sub-dimension of quality assessment. Valid values: 0 to 100. A higher value indicates better quality.</p>
+         * <p>The image sharpness score in the quality judgment sub-dimension. Valid values: 0 to 100. A larger value indicates better quality.</p>
          * 
          * <strong>example:</strong>
          * <p>60.78</p>
@@ -260,8 +288,8 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the authentication is passed. Valid values:</p>
          * <ul>
-         * <li>Y: Passed.</li>
-         * <li>N: Not passed.</li>
+         * <li>Y: passed</li>
+         * <li>N: failed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -280,7 +308,7 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         public String subCode;
 
         /**
-         * <p>The unique ID of the authentication request.</p>
+         * <p>The unique identifier of the authentication request.</p>
          * 
          * <strong>example:</strong>
          * <p>hksb7ba1b28130d24e015d694361****</p>

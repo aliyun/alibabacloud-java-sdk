@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeepfakeDetectIntlResponseBody extends TeaModel {
     /**
-     * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
+     * <p>The return code. A value of 200 indicates that the request is successful. Other values indicate that the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DeepfakeDetectIntlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class DeepfakeDetectIntlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result information.</p>
+     * <p>The returned result information.</p>
      */
     @NameInMap("ResultObject")
     public DeepfakeDetectIntlResponseBodyResultObject resultObject;
@@ -90,20 +90,20 @@ public class DeepfakeDetectIntlResponseBody extends TeaModel {
         public String result;
 
         /**
-         * <p>The risk score map.</p>
+         * <p>The map of risk scores.</p>
          */
         @NameInMap("RiskScore")
         public java.util.Map<String, String> riskScore;
 
         /**
-         * <p>The risk labels. Multiple labels are separated by commas (,). Valid values:</p>
+         * <p>The risk tags. Multiple tags are separated by commas (,). Valid values:</p>
          * <ul>
-         * <li><strong>SuspectDeepForgery</strong>: suspected depth forgery  </li>
-         * <li><strong>SuspectPSFace</strong>: suspected synthetic attack  </li>
-         * <li><strong>SuspectWarterMark</strong>: suspected watermark  </li>
-         * <li><strong>SuspectTemple</strong>: suspected template attack  </li>
-         * <li><strong>SuspectAIGCFace</strong>: suspected AIGC-generated face  </li>
-         * <li><strong>SuspectRemake</strong>: suspected recaptured face.</li>
+         * <li><strong>SuspectDeepForgery</strong>: Suspected deepfake.  </li>
+         * <li><strong>SuspectPSFace</strong>: Suspected synthetic attack.  </li>
+         * <li><strong>SuspectWarterMark</strong>: Suspected watermark.  </li>
+         * <li><strong>SuspectTemple</strong>: Suspected template attack.  </li>
+         * <li><strong>SuspectAIGCFace</strong>: Suspected AIGC-generated face.  </li>
+         * <li><strong>SuspectRemake</strong>: Suspected recaptured face.</li>
          * </ul>
          * 
          * <strong>example:</strong>

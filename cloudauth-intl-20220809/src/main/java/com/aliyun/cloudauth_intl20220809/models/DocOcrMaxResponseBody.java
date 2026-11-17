@@ -32,7 +32,7 @@ public class DocOcrMaxResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The response result.</p>
      */
     @NameInMap("Result")
     public DocOcrMaxResponseBodyResult result;
@@ -76,7 +76,7 @@ public class DocOcrMaxResponseBody extends TeaModel {
 
     public static class DocOcrMaxResponseBodyResult extends TeaModel {
         /**
-         * <p>The card and certificate recognition result. This parameter is returned only when the API response is successful.</p>
+         * <p>The identity document recognition result. This parameter is returned only when the API responds successfully.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -101,8 +101,8 @@ public class DocOcrMaxResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the authentication is passed. Valid values:</p>
          * <ul>
-         * <li>Y: passed.</li>
-         * <li>N: not passed.</li>
+         * <li>Y: Passed.</li>
+         * <li>N: Not passed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

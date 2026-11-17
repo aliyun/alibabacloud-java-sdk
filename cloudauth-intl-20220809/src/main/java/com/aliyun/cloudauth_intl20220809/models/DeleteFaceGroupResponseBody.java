@@ -14,7 +14,7 @@ public class DeleteFaceGroupResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response result.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DeleteFaceGroupResponseBody extends TeaModel {
     public Integer data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryFaceRecordResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -23,7 +23,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The list of returned records.</p>
+     * <p>The list of returned items.</p>
      */
     @NameInMap("Items")
     public java.util.List<QueryFaceRecordResponseBodyItems> items;
@@ -38,7 +38,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The response message.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class QueryFaceRecordResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The token for the next query.</p>
+     * <p>The token used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARfZmVDe9NvRXloR5+8CK9nwqHyx44CQz3pa71+mmu0e</p>

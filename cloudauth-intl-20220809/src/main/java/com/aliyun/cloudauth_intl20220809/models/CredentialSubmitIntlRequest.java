@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class CredentialSubmitIntlRequest extends TeaModel {
     /**
-     * <p>The field validation rule configuration in JSON string format.</p>
+     * <p>The field validation rule configuration, which is a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{
-     *     &quot;address_rule&quot;: &quot;Includes Address Hangzhou***&quot;,
-     *     &quot;name_rule&quot;: &quot;Includes Name Zhang*&quot;,
+     *     &quot;address_rule&quot;: &quot;Includes Adrress Hangzhou***&quot;,
+     *     &quot;name_rule&quot;: &quot;Includes Name  Zhang*&quot;,
      *     &quot;date_of_issue_rule&quot;: &quot;Whthin 2026.05.20&quot;
      * }</p>
      */
@@ -18,7 +18,7 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String checkRuleConfig;
 
     /**
-     * <p>The Base64-encoded image. If you use this method to submit a photo, check the photo size and do not submit an excessively large photo.</p>
+     * <p>The Base64-encoded image. If you choose this method to upload the image, check the image size and do not upload an excessively large image.</p>
      * 
      * <strong>example:</strong>
      * <p>base64</p>
@@ -27,7 +27,7 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String credentialOcrPictureBase64;
 
     /**
-     * <p>The URL of the image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
+     * <p>The image URL, which must be a publicly accessible HTTP or HTTPS link.</p>
      * 
      * <strong>example:</strong>
      * <p>https://***</p>
@@ -38,7 +38,7 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     /**
      * <p>The credential type. Valid values:</p>
      * <ul>
-     * <li>02: vehicle registration certificate.</li>
+     * <li>02: Vehicle registration certificate.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -49,9 +49,9 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String docType;
 
     /**
-     * <p>The input file type. Valid values:</p>
+     * <p>The material input type. Valid values:</p>
      * <ul>
-     * <li><p>IMAGE (default): image.</p>
+     * <li><p>IMAGE: Image. This is the default value.</p>
      * </li>
      * <li><p>PDF: PDF format.</p>
      * </li>
@@ -78,11 +78,7 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String fraudCheck;
 
     /**
-     * <p>Specifies whether to enable quality detection. Valid values:</p>
-     * <ul>
-     * <li>Y: Enabled.</li>
-     * <li>N: Disabled.</li>
-     * </ul>
+     * <p>Specifies whether to enable quality detection. Valid values: Y: Enabled. N: Disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -91,7 +87,7 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String idQuality;
 
     /**
-     * <p>The custom business unique identifier on the merchant side, used for subsequent troubleshooting. The value can be a combination of letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</p>
+     * <p>The custom unique business identifier on the merchant side, which is used for subsequent troubleshooting. The identifier can be up to 32 characters in length and can contain letters and digits. Make sure that the identifier is unique.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -114,11 +110,7 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String ocrArea;
 
     /**
-     * <p>Specifies whether to enable translation. Valid values:</p>
-     * <ul>
-     * <li>0: Disabled.</li>
-     * <li>1: Enabled.</li>
-     * </ul>
+     * <p>Specifies whether to enable translation. Valid values: 0: Disabled. 1: Enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -127,11 +119,7 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String ocrTranslation;
 
     /**
-     * <p>Specifies whether to enable OCR result standardization. Valid values:</p>
-     * <ul>
-     * <li>0: Disabled.</li>
-     * <li>1: Enabled.</li>
-     * </ul>
+     * <p>Specifies whether to enable OCR result standardization. Valid values: 0: Disabled. 1: Enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -140,7 +128,7 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String ocrValueStandard;
 
     /**
-     * <p>The product solution to use. Set this parameter to CREDENTIAL_RECOGNITION.</p>
+     * <p>The product solution to be integrated. Valid value: CREDENTIAL_RECOGNITION.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -150,7 +138,7 @@ public class CredentialSubmitIntlRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The custom authentication scenario ID. You can use this scenario ID to query related records in the console. The value can be a combination of letters, digits, or underscores with a maximum length of 10 characters.</p>
+     * <p>The custom authentication scene ID, which is used to query related records in the console. The ID can be up to 10 characters in length and can contain letters, digits, and underscores (_).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

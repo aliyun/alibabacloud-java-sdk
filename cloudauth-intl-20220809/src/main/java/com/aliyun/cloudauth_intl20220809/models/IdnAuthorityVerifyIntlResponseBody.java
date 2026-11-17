@@ -32,7 +32,7 @@ public class IdnAuthorityVerifyIntlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The response result.</p>
      */
     @NameInMap("Result")
     public IdnAuthorityVerifyIntlResponseBodyResult result;
@@ -76,10 +76,10 @@ public class IdnAuthorityVerifyIntlResponseBody extends TeaModel {
 
     public static class IdnAuthorityVerifyIntlResponseBodyResult extends TeaModel {
         /**
-         * <p>The detailed verification results from the data source are described as follows (using the Indonesian data source as an example):</p>
+         * <p>The detailed verification results of the data source. The following descriptions use the Indonesian data source as an example:</p>
          * <ul>
-         * <li><strong>govId, fullName, dob</strong>: A comparison score equal to 1.0 indicates a complete match with the official data source. A score lower than 1.0 indicates a mismatch. </li>
-         * <li><strong>selfiePhoto</strong>: A comparison score greater than 0.8 indicates a match with the official data source. A score equal to or lower than 0.8 indicates a mismatch. </li>
+         * <li><strong>govId, fullName, dob</strong>: A comparison score of 1.0 indicates that the information is completely consistent with the official data source. A score lower than 1.0 indicates inconsistency. </li>
+         * <li><strong>selfiePhoto</strong>: A comparison score greater than 0.8 indicates that the information is consistent with the official data source. A score lower than or equal to 0.8 indicates inconsistency. </li>
          * <li><strong>liveness</strong>: A score higher than 0.95 indicates a liveness detection risk. </li>
          * <li><strong>imgManipulationScore</strong>: A score higher than 0.95 indicates an image tampering risk.</li>
          * </ul>
@@ -100,8 +100,8 @@ public class IdnAuthorityVerifyIntlResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the verification is passed. Valid values:</p>
          * <ul>
-         * <li>Y: passed.</li>
-         * <li>N: not passed.</li>
+         * <li>Y: Passed.</li>
+         * <li>N: Not passed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

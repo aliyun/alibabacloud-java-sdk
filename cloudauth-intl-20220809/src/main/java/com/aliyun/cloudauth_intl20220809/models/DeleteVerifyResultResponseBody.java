@@ -14,7 +14,7 @@ public class DeleteVerifyResultResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The return message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class DeleteVerifyResultResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>4EB35****87EBA1</p>
@@ -76,11 +76,7 @@ public class DeleteVerifyResultResponseBody extends TeaModel {
 
     public static class DeleteVerifyResultResponseBodyResult extends TeaModel {
         /**
-         * <p>The deletion result. Valid values:</p>
-         * <ul>
-         * <li>Y: The deletion was successful.</li>
-         * <li>N: The deletion failed.</li>
-         * </ul>
+         * <p>The deletion result. Valid values: Y: The deletion succeeded. N: The deletion failed.</p>
          * 
          * <strong>example:</strong>
          * <p>Y/N</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CredentialRecognitionIntlV2AdvanceRequest extends TeaModel {
     /**
-     * <p>The field validation rule configuration, in JSON string format.</p>
+     * <p>The field validation rule configuration. The value is a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -18,7 +18,7 @@ public class CredentialRecognitionIntlV2AdvanceRequest extends TeaModel {
     public String checkRuleConfig;
 
     /**
-     * <p>The Base64-encoded image. If you choose to pass in the image by using IdOcrPictureBase64 (Base64-encoded photo), check the photo size and do not pass in an excessively large photo.</p>
+     * <p>The Base64-encoded image. If you choose to pass the photo by using IdOcrPictureBase64, check the photo size and do not pass excessively large photos.</p>
      * 
      * <strong>example:</strong>
      * <p>base64</p>
@@ -36,7 +36,7 @@ public class CredentialRecognitionIntlV2AdvanceRequest extends TeaModel {
     public java.io.InputStream credentialOcrPictureFileObject;
 
     /**
-     * <p>The URL of the image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
+     * <p>The image URL. The URL must be a publicly accessible HTTP or HTTPS link.</p>
      * 
      * <strong>example:</strong>
      * <p>https://***</p>
@@ -47,10 +47,10 @@ public class CredentialRecognitionIntlV2AdvanceRequest extends TeaModel {
     /**
      * <p>The credential type. Valid values:</p>
      * <ul>
-     * <li>01: transaction credential (including electronic bill images for water, electricity, gas, credit cards, and other types)</li>
+     * <li>01: transaction receipt, including electronic bills for utilities and credit cards</li>
      * <li>02: vehicle registration certificate</li>
      * <li>03: transfer transaction record</li>
-     * <li>04: POA address proof</li>
+     * <li>04: proof of address (POA)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -61,10 +61,11 @@ public class CredentialRecognitionIntlV2AdvanceRequest extends TeaModel {
     public String docType;
 
     /**
-     * <p>The input material type. Valid values:</p>
+     * <p>The material input type. Valid values:</p>
      * <ul>
-     * <li>IMAGE (default): image</li>
-     * <li>PDF: PDF format</li>
+     * <li>IMAGE: image</li>
+     * <li>PDF: PDF format
+     * Default value: IMAGE.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,8 +77,8 @@ public class CredentialRecognitionIntlV2AdvanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable tampering detection. Valid values:</p>
      * <ul>
-     * <li>true: Enabled.</li>
-     * <li>false: Disabled.</li>
+     * <li>true: enables tampering detection.</li>
+     * <li>false: disables tampering detection.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -88,7 +89,11 @@ public class CredentialRecognitionIntlV2AdvanceRequest extends TeaModel {
     public String fraudCheck;
 
     /**
-     * <p>Specifies whether to enable quality detection. Valid values: Y (enabled) and N (disabled).</p>
+     * <p>Specifies whether to enable quality detection. Valid values:</p>
+     * <ul>
+     * <li>Y: enables quality detection.</li>
+     * <li>N: disables quality detection.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -99,9 +104,9 @@ public class CredentialRecognitionIntlV2AdvanceRequest extends TeaModel {
     /**
      * <p>The extraction type. Valid values:</p>
      * <ul>
-     * <li>0101: electronic bill address and name module (extracts address and name modules through intelligent analysis)</li>
+     * <li>0101: electronic bill address and name module, which extracts the address and name module through intelligent analysis</li>
      * <li>0201: Thailand vehicle registration certificate</li>
-     * <li>0301: transfer transaction amount information</li>
+     * <li>0301: transfer transaction record amount information</li>
      * <li>0401: POA credential extraction information</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -113,7 +118,11 @@ public class CredentialRecognitionIntlV2AdvanceRequest extends TeaModel {
     public String ocrArea;
 
     /**
-     * <p>Specifies whether to enable translation. Valid values: 0 (disabled) and 1 (enabled).</p>
+     * <p>Specifies whether to enable translation. Valid values:</p>
+     * <ul>
+     * <li>0: disables translation.</li>
+     * <li>1: enables translation.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -122,7 +131,11 @@ public class CredentialRecognitionIntlV2AdvanceRequest extends TeaModel {
     public String ocrTranslation;
 
     /**
-     * <p>Specifies whether to enable OCR result normalization. Valid values: 0 (disabled) and 1 (enabled).</p>
+     * <p>Specifies whether to enable OCR result standardization. Valid values:</p>
+     * <ul>
+     * <li>0: disables OCR result standardization.</li>
+     * <li>1: enables OCR result standardization.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -131,7 +144,7 @@ public class CredentialRecognitionIntlV2AdvanceRequest extends TeaModel {
     public String ocrValueStandard;
 
     /**
-     * <p>The product solution to use. Set the value to CREDENTIAL_RECOGNITION.</p>
+     * <p>The product solution to be integrated. Valid value: CREDENTIAL_RECOGNITION.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteVerifyResultRequest extends TeaModel {
     /**
-     * <p>Specifies whether the deletion depends on the query operation.</p>
+     * <p>Specifies whether to rely on the query API when deleting data.</p>
      * 
      * <strong>example:</strong>
      * <p>Y / N</p>

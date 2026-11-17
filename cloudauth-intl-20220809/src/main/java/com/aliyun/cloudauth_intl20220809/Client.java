@@ -14,6 +14,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "Cloudauth-intl";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("cloudauth-intl", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -133,7 +136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a face image to a specified face library.</p>
+     * <p>Adds a face image to a specified face group.</p>
      * 
      * @param request AddFaceRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -189,7 +192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a face image to a specified face library.</p>
+     * <p>Adds a face image to a specified face group.</p>
      * 
      * @param request AddFaceRecordRequest
      * @return AddFaceRecordResponse
@@ -289,10 +292,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Compares two addresses for consistency by using address standardization.</p>
+     * <p>Standardizes and compares two addresses to check for consistency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Compares the similarity of two addresses.</p>
+     * <p>Compares the similarity of addresses.</p>
      * 
      * @param request AddressCompareIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -336,10 +339,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Compares two addresses for consistency by using address standardization.</p>
+     * <p>Standardizes and compares two addresses to check for consistency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Compares the similarity of two addresses.</p>
+     * <p>Compares the similarity of addresses.</p>
      * 
      * @param request AddressCompareIntlRequest
      * @return AddressCompareIntlResponse
@@ -351,10 +354,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Verifies whether a specified address belongs to a user\&quot;s residential address based on telecommunications service provider capabilities, using a phone number and an address (or coordinates).</p>
+     * <p>Verifies whether a provided address belongs to the regular residence of a user based on carrier capabilities by using a mobile phone number and an address or coordinates.</p>
      * 
      * <b>summary</b> : 
-     * <p>Verifies whether a specified address belongs to a user\&quot;s residential address based on telecommunications service provider capabilities, using a phone number and an address (or coordinates).</p>
+     * <p>Verifies whether a provided address belongs to the regular residence of a user based on carrier capabilities by using a mobile phone number and an address or coordinates.</p>
      * 
      * @deprecated OpenAPI AddressVerifyIntl is deprecated, please use Cloudauth-intl::2022-08-09::AddressVerifyV2Intl instead.
      * 
@@ -430,10 +433,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Verifies whether a specified address belongs to a user\&quot;s residential address based on telecommunications service provider capabilities, using a phone number and an address (or coordinates).</p>
+     * <p>Verifies whether a provided address belongs to the regular residence of a user based on carrier capabilities by using a mobile phone number and an address or coordinates.</p>
      * 
      * <b>summary</b> : 
-     * <p>Verifies whether a specified address belongs to a user\&quot;s residential address based on telecommunications service provider capabilities, using a phone number and an address (or coordinates).</p>
+     * <p>Verifies whether a provided address belongs to the regular residence of a user based on carrier capabilities by using a mobile phone number and an address or coordinates.</p>
      * 
      * @deprecated OpenAPI AddressVerifyIntl is deprecated, please use Cloudauth-intl::2022-08-09::AddressVerifyV2Intl instead.
      * 
@@ -513,10 +516,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Verifies bank card elements, including two-element verification (name + bank card number), three-element verification (name + ID card number + bank card number), and four-element verification (name + ID card number + phone number + bank card number) for consistency.</p>
+     * <p>Verifies bank card information, including two-element verification (name and bank card number), three-element verification (name, ID card number, and bank card number), and four-element verification (name, ID card number, mobile phone number, and bank card number).</p>
      * 
      * <b>summary</b> : 
-     * <p>Provides bank card element verification (two-element, three-element, and four-element) API operations.</p>
+     * <p>Provides the API operation for bank card elements, including two-element, three-element, and four-element bank card information.</p>
      * 
      * @param request BankMetaVerifyIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -580,10 +583,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Verifies bank card elements, including two-element verification (name + bank card number), three-element verification (name + ID card number + bank card number), and four-element verification (name + ID card number + phone number + bank card number) for consistency.</p>
+     * <p>Verifies bank card information, including two-element verification (name and bank card number), three-element verification (name, ID card number, and bank card number), and four-element verification (name, ID card number, mobile phone number, and bank card number).</p>
      * 
      * <b>summary</b> : 
-     * <p>Provides bank card element verification (two-element, three-element, and four-element) API operations.</p>
+     * <p>Provides the API operation for bank card elements, including two-element, three-element, and four-element bank card information.</p>
      * 
      * @param request BankMetaVerifyIntlRequest
      * @return BankMetaVerifyIntlResponse
@@ -595,7 +598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides server-side ID card and certificate OCR capabilities.</p>
+     * <p>Performs OCR on ID cards and certificates through a server-side API.</p>
      * 
      * @deprecated OpenAPI CardOcr is deprecated, please use Cloudauth-intl::2022-08-09::DocOcr instead.
      * 
@@ -665,7 +668,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides server-side ID card and certificate OCR capabilities.</p>
+     * <p>Performs OCR on ID cards and certificates through a server-side API.</p>
      * 
      * @deprecated OpenAPI CardOcr is deprecated, please use Cloudauth-intl::2022-08-09::DocOcr instead.
      * 
@@ -681,7 +684,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the verification result.</p>
+     * <p>Queries the detailed results of an authentication transaction. This API operation is part of the SDK integration solution and must be used in conjunction with the client SDK. Calling this operation alone cannot complete identity verification. (Product solutions: eKYC_PRO, eKYC, eKYC_NDI, FACE_IDU, FACE_VERIFY, FACE_LIVENESS_PRO, and ID_OCR_PRO). After the client completes authentication, your server calls this operation by using the TransactionId to query Alibaba Cloud for the detailed results of the authentication. This operation only queries the results and does not trigger or perform verification.</p>
      * 
      * @param request CheckResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -729,7 +732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the verification result.</p>
+     * <p>Queries the detailed results of an authentication transaction. This API operation is part of the SDK integration solution and must be used in conjunction with the client SDK. Calling this operation alone cannot complete identity verification. (Product solutions: eKYC_PRO, eKYC, eKYC_NDI, FACE_IDU, FACE_VERIFY, FACE_LIVENESS_PRO, and ID_OCR_PRO). After the client completes authentication, your server calls this operation by using the TransactionId to query Alibaba Cloud for the detailed results of the authentication. This operation only queries the results and does not trigger or perform verification.</p>
      * 
      * @param request CheckResultRequest
      * @return CheckResultResponse
@@ -741,7 +744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Authentication log query.</p>
+     * <p>Queries the authentication log query.</p>
      * 
      * @param request CheckVerifyLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -777,7 +780,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Authentication log query.</p>
+     * <p>Queries the authentication log query.</p>
      * 
      * @param request CheckVerifyLogRequest
      * @return CheckVerifyLogResponse
@@ -789,10 +792,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you obtain the TransactionId, you can call this operation on the server side to retrieve the corresponding authentication result.</p>
+     * <p>After you obtain the TransactionId, you can call this operation on the server to retrieve the corresponding authentication results.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the credential recognition result.</p>
+     * <p>Queries the credential recognition results.</p>
      * 
      * @param request CredentialGetResultIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -824,10 +827,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you obtain the TransactionId, you can call this operation on the server side to retrieve the corresponding authentication result.</p>
+     * <p>After you obtain the TransactionId, you can call this operation on the server to retrieve the corresponding authentication results.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the credential recognition result.</p>
+     * <p>Queries the credential recognition results.</p>
      * 
      * @param request CredentialGetResultIntlRequest
      * @return CredentialGetResultIntlResponse
@@ -839,10 +842,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) has been forged, and extracts key information from the credential.</p>
+     * <p>Uses AI technology to detect whether credential documents, such as electronic utility bills and credit card statements, are forged, and extracts key information from the documents.</p>
      * 
      * <b>summary</b> : 
-     * <p>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</p>
+     * <p>Uploads credential images, including utility bills and credit card statements, and uses Qwen-VL to intelligently fetch billing addresses and names through this API operation.</p>
      * 
      * @param request CredentialRecognitionIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -916,10 +919,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) has been forged, and extracts key information from the credential.</p>
+     * <p>Uses AI technology to detect whether credential documents, such as electronic utility bills and credit card statements, are forged, and extracts key information from the documents.</p>
      * 
      * <b>summary</b> : 
-     * <p>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</p>
+     * <p>Uploads credential images, including utility bills and credit card statements, and uses Qwen-VL to intelligently fetch billing addresses and names through this API operation.</p>
      * 
      * @param request CredentialRecognitionIntlRequest
      * @return CredentialRecognitionIntlResponse
@@ -931,10 +934,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) is forged, and extracts key information from the credential.</p>
+     * <p>Uses AI technology to detect whether credentials, such as electronic utility bills and credit card statements, are forged, and extracts key information from the credentials.</p>
      * 
      * <b>summary</b> : 
-     * <p>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</p>
+     * <p>Provides an API operation to upload credential images, such as utility bills and credit card statements, and uses Qwen-VL to intelligently fetch the billing address and name.</p>
      * 
      * @param request CredentialRecognitionIntlV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -1012,10 +1015,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) is forged, and extracts key information from the credential.</p>
+     * <p>Uses AI technology to detect whether credentials, such as electronic utility bills and credit card statements, are forged, and extracts key information from the credentials.</p>
      * 
      * <b>summary</b> : 
-     * <p>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</p>
+     * <p>Provides an API operation to upload credential images, such as utility bills and credit card statements, and uses Qwen-VL to intelligently fetch the billing address and name.</p>
      * 
      * @param request CredentialRecognitionIntlV2Request
      * @return CredentialRecognitionIntlV2Response
@@ -1115,7 +1118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Initializes the credential recognition OCR operation and retrieves a transactionId through this operation.</p>
+     * <p>Initializes the credential recognition OCR process and retrieves a transaction ID.</p>
      * 
      * <b>summary</b> : 
      * <p>Submits credential recognition information.</p>
@@ -1200,7 +1203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Initializes the credential recognition OCR operation and retrieves a transactionId through this operation.</p>
+     * <p>Initializes the credential recognition OCR process and retrieves a transaction ID.</p>
      * 
      * <b>summary</b> : 
      * <p>Submits credential recognition information.</p>
@@ -1215,10 +1218,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Initializes the credential recognition OCR operation. Call this operation to obtain a transactionId.</p>
+     * <p>Initializes the credential recognition OCR operation to obtain a transactionId.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a credential recognition request.</p>
+     * <p>Submits credential recognition information.</p>
      * 
      * @param request CredentialSubmitIntlV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -1304,10 +1307,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Initializes the credential recognition OCR operation. Call this operation to obtain a transactionId.</p>
+     * <p>Initializes the credential recognition OCR operation to obtain a transactionId.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a credential recognition request.</p>
+     * <p>Submits credential recognition information.</p>
      * 
      * @param request CredentialSubmitIntlV2Request
      * @return CredentialSubmitIntlV2Response
@@ -1407,10 +1410,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submits credential image information, performs image quality, tampering, and forgery detection, and returns the detection results.</p>
+     * <p>Submits credential image information to detect image quality, tampering, and forgery, and returns the detection results.</p>
      * 
      * <b>summary</b> : 
-     * <p>Provides the API operation for the credential verification service. This operation uses a large language model to detect image tampering, forgery, and image quality issues in submitted credential images.</p>
+     * <p>Detects image tampering, forgery, and quality issues in credential images by using large models for the credential verification API operation.</p>
      * 
      * @param request CredentialVerifyIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1460,10 +1463,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submits credential image information, performs image quality, tampering, and forgery detection, and returns the detection results.</p>
+     * <p>Submits credential image information to detect image quality, tampering, and forgery, and returns the detection results.</p>
      * 
      * <b>summary</b> : 
-     * <p>Provides the API operation for the credential verification service. This operation uses a large language model to detect image tampering, forgery, and image quality issues in submitted credential images.</p>
+     * <p>Detects image tampering, forgery, and quality issues in credential images by using large models for the credential verification API operation.</p>
      * 
      * @param request CredentialVerifyIntlRequest
      * @return CredentialVerifyIntlResponse
@@ -1563,10 +1566,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submits a facial image and uses algorithms to detect potential deepfake risks. This operation covers risk scenarios such as AIGC-generated faces, deep forgery face swaps, template faces, and recaptured faces. It returns risk labels and confidence scores.</p>
+     * <p>Accepts face images and uses algorithms to detect deepfake risks. Covers risk scenarios such as AIGC-generated faces, deepfake face swaps, template faces, and recaptured faces, and outputs risk tags and confidence scores.</p>
      * 
      * <b>summary</b> : 
-     * <p>Detects deepfake risks in facial images.</p>
+     * <p>Provides the API for the face deepfake detection service.</p>
      * 
      * @param request DeepfakeDetectIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1620,10 +1623,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submits a facial image and uses algorithms to detect potential deepfake risks. This operation covers risk scenarios such as AIGC-generated faces, deep forgery face swaps, template faces, and recaptured faces. It returns risk labels and confidence scores.</p>
+     * <p>Accepts face images and uses algorithms to detect deepfake risks. Covers risk scenarios such as AIGC-generated faces, deepfake face swaps, template faces, and recaptured faces, and outputs risk tags and confidence scores.</p>
      * 
      * <b>summary</b> : 
-     * <p>Detects deepfake risks in facial images.</p>
+     * <p>Provides the API for the face deepfake detection service.</p>
      * 
      * @param request DeepfakeDetectIntlRequest
      * @return DeepfakeDetectIntlResponse
@@ -1635,10 +1638,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submit a face image to detect deepfake risks through algorithms. This covers risk scenarios such as AIGC-generated faces, deep forgery face swaps, template faces, and re-captured faces, and outputs risk labels and confidence scores.</p>
+     * <p>Detects deepfake risks in face images by using algorithms. Covers risk scenarios such as AI-generated content (AIGC) faces, deepfake face swaps, template faces, and recaptured faces, and outputs risk tags and confidence levels.</p>
      * 
      * <b>summary</b> : 
-     * <p>ID Verification provides face deepfake detection capabilities, which can be integrated independently through API calls.</p>
+     * <p>Provides face deepfake detection capabilities for ID Verification, which can be integrated independently through API operations.</p>
      * 
      * @param request DeepfakeDetectIntlStreamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1694,10 +1697,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Submit a face image to detect deepfake risks through algorithms. This covers risk scenarios such as AIGC-generated faces, deep forgery face swaps, template faces, and re-captured faces, and outputs risk labels and confidence scores.</p>
+     * <p>Detects deepfake risks in face images by using algorithms. Covers risk scenarios such as AI-generated content (AIGC) faces, deepfake face swaps, template faces, and recaptured faces, and outputs risk tags and confidence levels.</p>
      * 
      * <b>summary</b> : 
-     * <p>ID Verification provides face deepfake detection capabilities, which can be integrated independently through API calls.</p>
+     * <p>Provides face deepfake detection capabilities for ID Verification, which can be integrated independently through API operations.</p>
      * 
      * @param request DeepfakeDetectIntlStreamRequest
      * @return DeepfakeDetectIntlStreamResponse
@@ -1841,7 +1844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a face record.</p>
+     * <p>Deletes face records.</p>
      * 
      * @param request DeleteFaceRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1873,7 +1876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a face record.</p>
+     * <p>Deletes face records.</p>
      * 
      * @param request DeleteFaceRecordRequest
      * @return DeleteFaceRecordResponse
@@ -1933,7 +1936,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes data related to a user authentication record.</p>
+     * <p>Deletes data related to user authentication records.</p>
      * 
      * @param request DeleteVerifyResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1973,7 +1976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes data related to a user authentication record.</p>
+     * <p>Deletes data related to user authentication records.</p>
      * 
      * @param request DeleteVerifyResultRequest
      * @return DeleteVerifyResultResponse
@@ -1985,7 +1988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides server-side card and certificate OCR capabilities.</p>
+     * <p>Performs server-side OCR for ID cards and certificates.</p>
      * 
      * @param request DocOcrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2059,7 +2062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides server-side card and certificate OCR capabilities.</p>
+     * <p>Performs server-side OCR for ID cards and certificates.</p>
      * 
      * @param request DocOcrRequest
      * @return DocOcrResponse
@@ -2071,7 +2074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Recognizes global identity documents through OCR.</p>
+     * <p>Recognizes global identity documents by using OCR.</p>
      * 
      * @param request DocOcrMaxRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2161,7 +2164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Recognizes global identity documents through OCR.</p>
+     * <p>Recognizes global identity documents by using OCR.</p>
      * 
      * @param request DocOcrMaxRequest
      * @return DocOcrMaxResponse
@@ -2173,7 +2176,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Recognizes identity documents worldwide through OCR.</p>
+     * <p>Recognizes global ID documents by using OCR.</p>
      * 
      * @param request DocOcrMaxV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -2259,7 +2262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Recognizes identity documents worldwide through OCR.</p>
+     * <p>Recognizes global ID documents by using OCR.</p>
      * 
      * @param request DocOcrMaxV2Request
      * @return DocOcrMaxV2Response
@@ -2359,7 +2362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides server-side card and certificate OCR capabilities.</p>
+     * <p>Performs server-side optical character recognition (OCR) on ID cards.</p>
      * 
      * @param request DocOcrV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -2437,7 +2440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides server-side card and certificate OCR capabilities.</p>
+     * <p>Performs server-side optical character recognition (OCR) on ID cards.</p>
      * 
      * @param request DocOcrV2Request
      * @return DocOcrV2Response
@@ -2537,7 +2540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Downloads verification task records.</p>
+     * <p>Downloads a verification task.</p>
      * 
      * @param request DownloadVerifyRecordIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2585,7 +2588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Downloads verification task records.</p>
+     * <p>Downloads a verification task.</p>
      * 
      * @param request DownloadVerifyRecordIntlRequest
      * @return DownloadVerifyRecordIntlResponse
@@ -2699,7 +2702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides a server-side-only API for the eKYC solution.</p>
+     * <p>Provides a server-side API for the eKYC solution.</p>
      * 
      * @param request EkycVerifyV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -2797,7 +2800,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides a server-side-only API for the eKYC solution.</p>
+     * <p>Provides a server-side API for the eKYC solution.</p>
      * 
      * @param request EkycVerifyV2Request
      * @return EkycVerifyV2Response
@@ -2921,7 +2924,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uses facial recognition technology to compare and verify two input face images, returning the face comparison result and similarity score.</p>
+     * <p>Compares and verifies two input face images by using face recognition technology, and returns the face comparison result and similarity score.</p>
      * 
      * @param request FaceCompareRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2979,7 +2982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Uses facial recognition technology to compare and verify two input face images, returning the face comparison result and similarity score.</p>
+     * <p>Compares and verifies two input face images by using face recognition technology, and returns the face comparison result and similarity score.</p>
      * 
      * @param request FaceCompareRequest
      * @return FaceCompareResponse
@@ -2991,7 +2994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Compares two face images using face recognition technology and returns the comparison result and similarity score.</p>
+     * <p>Compares and verifies two input face images by using face recognition technology, and returns the face comparison result and similarity score.</p>
      * 
      * @param request FaceCompareV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -3057,7 +3060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Compares two face images using face recognition technology and returns the comparison result and similarity score.</p>
+     * <p>Compares and verifies two input face images by using face recognition technology, and returns the face comparison result and similarity score.</p>
      * 
      * @param request FaceCompareV2Request
      * @return FaceCompareV2Response
@@ -3267,7 +3270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs server-side liveness detection and face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether the user is a real person, compare the face against a retained face image for identity verification, search face libraries to determine whether the face already exists, and automatically register the face to a specified face library after successful verification.</p>
+     * <p>Detects duplicate faces in scenarios where SDK integration is unavailable. This operation uses the API to pass face images and provides the following capabilities: verifying whether the user is a real person, comparing the face with a retained face for identity verification, searching a face library to check for existence, and automatically registering the face to a specified face library after successful verification.</p>
      * 
      * @param request FaceDuplicationCheckIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3373,7 +3376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs server-side liveness detection and face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether the user is a real person, compare the face against a retained face image for identity verification, search face libraries to determine whether the face already exists, and automatically register the face to a specified face library after successful verification.</p>
+     * <p>Detects duplicate faces in scenarios where SDK integration is unavailable. This operation uses the API to pass face images and provides the following capabilities: verifying whether the user is a real person, comparing the face with a retained face for identity verification, searching a face library to check for existence, and automatically registering the face to a specified face library after successful verification.</p>
      * 
      * @param request FaceDuplicationCheckIntlRequest
      * @return FaceDuplicationCheckIntlResponse
@@ -3385,7 +3388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides the server-side API for international Face Guard.</p>
+     * <p>Calls the server-side API of Face Guard International.</p>
      * 
      * @param request FaceGuardRiskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3433,7 +3436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides the server-side API for international Face Guard.</p>
+     * <p>Calls the server-side API of Face Guard International.</p>
      * 
      * @param request FaceGuardRiskRequest
      * @return FaceGuardRiskResponse
@@ -3445,7 +3448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides the server-side API for passive liveness detection.</p>
+     * <p>Performs server-side passive liveness detection.</p>
      * 
      * @param request FaceLivenessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3515,7 +3518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides the server-side API for passive liveness detection.</p>
+     * <p>Performs server-side passive liveness detection.</p>
      * 
      * @param request FaceLivenessRequest
      * @return FaceLivenessResponse
@@ -3530,7 +3533,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Calls the FaceLivenessV2 operation to perform liveness detection on a face image.</p>
      * 
      * <b>summary</b> : 
-     * <p>Detects whether a face in an image is from a real person by using the API operation. This service combines the Qwen-VL large model for in-depth forgery risk detection to determine face liveness.</p>
+     * <p>Performs liveness detection on a pre-captured face image passed through an API operation, and uses the Qwen-VL large model to detect forgery risks and determine whether the face belongs to a real person.</p>
      * 
      * @param request FaceLivenessV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -3595,7 +3598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Calls the FaceLivenessV2 operation to perform liveness detection on a face image.</p>
      * 
      * <b>summary</b> : 
-     * <p>Detects whether a face in an image is from a real person by using the API operation. This service combines the Qwen-VL large model for in-depth forgery risk detection to determine face liveness.</p>
+     * <p>Performs liveness detection on a pre-captured face image passed through an API operation, and uses the Qwen-VL large model to detect forgery risks and determine whether the face belongs to a real person.</p>
      * 
      * @param request FaceLivenessV2Request
      * @return FaceLivenessV2Response
@@ -3695,10 +3698,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls the FaceVerifyIntl operation to perform liveness detection on face images.</p>
+     * <p>Calls the FaceVerifyIntl API operation to perform liveness detection on face images.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs real face detection by receiving pre-captured face images through the API operation. The algorithm primarily identifies whether a face is a screen replay or printed photo type of basic render liveness attack, and supports comparison with another face image to authenticate whether they belong to the same person.</p>
+     * <p>Detects real faces by using pre-obtained face images passed through the API operation. The algorithm primarily identifies basic render liveness attacks such as screen recaptures and printed photos, and supports face comparison to authenticate whether two images belong to the same person.</p>
      * 
      * @param request FaceVerifyIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3796,10 +3799,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls the FaceVerifyIntl operation to perform liveness detection on face images.</p>
+     * <p>Calls the FaceVerifyIntl API operation to perform liveness detection on face images.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs real face detection by receiving pre-captured face images through the API operation. The algorithm primarily identifies whether a face is a screen replay or printed photo type of basic render liveness attack, and supports comparison with another face image to authenticate whether they belong to the same person.</p>
+     * <p>Detects real faces by using pre-obtained face images passed through the API operation. The algorithm primarily identifies basic render liveness attacks such as screen recaptures and printed photos, and supports face comparison to authenticate whether two images belong to the same person.</p>
      * 
      * @param request FaceVerifyIntlRequest
      * @return FaceVerifyIntlResponse
@@ -3987,7 +3990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Verifies the validity period of an identity document as a two-factor authentication element.</p>
+     * <p>Verifies the validity period of the two identity elements.</p>
      * 
      * @param request Id2MetaPeriodVerifyIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4051,7 +4054,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Verifies the validity period of an identity document as a two-factor authentication element.</p>
+     * <p>Verifies the validity period of the two identity elements.</p>
      * 
      * @param request Id2MetaPeriodVerifyIntlRequest
      * @return Id2MetaPeriodVerifyIntlResponse
@@ -4063,7 +4066,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Verifies the authenticity and consistency of a name and ID card number against an authoritative data source.</p>
+     * <p>Verifies the authenticity and consistency of a name and an ID card number through an authoritative data source.</p>
      * 
      * @param request Id2MetaVerifyIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4107,7 +4110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Verifies the authenticity and consistency of a name and ID card number against an authoritative data source.</p>
+     * <p>Verifies the authenticity and consistency of a name and an ID card number through an authoritative data source.</p>
      * 
      * @param request Id2MetaVerifyIntlRequest
      * @return Id2MetaVerifyIntlResponse
@@ -4119,7 +4122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Verifies the identity of an Indonesian user by calling the authoritative source API in a standalone business scenario.</p>
+     * <p>Verifies the identity of Indonesian users by directly calling the authoritative source API in independent business scenarios.</p>
      * 
      * @param request IdnAuthorityVerifyIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4201,7 +4204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Verifies the identity of an Indonesian user by calling the authoritative source API in a standalone business scenario.</p>
+     * <p>Verifies the identity of Indonesian users by directly calling the authoritative source API in independent business scenarios.</p>
      * 
      * @param request IdnAuthorityVerifyIntlRequest
      * @return IdnAuthorityVerifyIntlResponse
@@ -4301,7 +4304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initializes an authentication process.</p>
+     * <p>Initializes the authentication process.</p>
      * 
      * @param tmpReq InitializeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4426,6 +4429,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.idThreshold)) {
             query.put("IdThreshold", request.idThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isForceFaceCentered)) {
+            query.put("IsForceFaceCentered", request.isForceFaceCentered);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.languageConfig)) {
@@ -4577,7 +4584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initializes an authentication process.</p>
+     * <p>Initializes the authentication process.</p>
      * 
      * @param request InitializeRequest
      * @return InitializeResponse
@@ -4589,7 +4596,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initializes an authentication session.</p>
+     * <p>Creates an authentication session for SDK integration. This operation must be used in conjunction with a client SDK and cannot complete identity verification if called independently. Supported product editions include eKYC_PRO, eKYC, eKYC_NDI, FACE_IDU, FACE_VERIFY, FACE_LIVENESS_PRO, and ID_OCR_PRO. Before the client initiates authentication, your server calls this operation to create an authentication session and returns a TransactionId. You must deliver this TransactionId to the client to launch the SDK and complete the authentication. This operation only creates the session and does not perform verification.</p>
      * 
      * @param tmpReq InitializeV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -4718,6 +4725,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.idThreshold)) {
             query.put("IdThreshold", request.idThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isForceFaceCentered)) {
+            query.put("IsForceFaceCentered", request.isForceFaceCentered);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.languageConfig)) {
@@ -4873,7 +4884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initializes an authentication session.</p>
+     * <p>Creates an authentication session for SDK integration. This operation must be used in conjunction with a client SDK and cannot complete identity verification if called independently. Supported product editions include eKYC_PRO, eKYC, eKYC_NDI, FACE_IDU, FACE_VERIFY, FACE_LIVENESS_PRO, and ID_OCR_PRO. Before the client initiates authentication, your server calls this operation to create an authentication session and returns a TransactionId. You must deliver this TransactionId to the client to launch the SDK and complete the authentication. This operation only creates the session and does not perform verification.</p>
      * 
      * @param request InitializeV2Request
      * @return InitializeV2Response
@@ -4997,10 +5008,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Configures client connection keep-alive settings.</p>
+     * <p>Maintains client connections.</p>
      * 
      * <b>summary</b> : 
-     * <p>Configures client connection keep-alive settings.</p>
+     * <p>Maintains client connections.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return KeepaliveIntlResponse
@@ -5023,10 +5034,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Configures client connection keep-alive settings.</p>
+     * <p>Maintains client connections.</p>
      * 
      * <b>summary</b> : 
-     * <p>Configures client connection keep-alive settings.</p>
+     * <p>Maintains client connections.</p>
      * @return KeepaliveIntlResponse
      */
     public KeepaliveIntlResponse keepaliveIntl() throws Exception {
@@ -5036,10 +5047,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Pass in a phone number and name to verify their authenticity and consistency through an authoritative data source. Before using this operation, make sure that you fully understand the billing method and pricing of the two-factor phone number verification service.</p>
+     * <p>Verifies the authenticity and consistency of a mobile phone number and name against authoritative data sources. Before using this API operation, make sure that you fully understand the billing method and pricing of the mobile phone number and name verification service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Verifies the identity of a phone number owner by using two-factor authentication.</p>
+     * <p>Verifies the mobile phone number and name.</p>
      * 
      * @param request Mobile2MetaVerifyIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5083,10 +5094,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Pass in a phone number and name to verify their authenticity and consistency through an authoritative data source. Before using this operation, make sure that you fully understand the billing method and pricing of the two-factor phone number verification service.</p>
+     * <p>Verifies the authenticity and consistency of a mobile phone number and name against authoritative data sources. Before using this API operation, make sure that you fully understand the billing method and pricing of the mobile phone number and name verification service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Verifies the identity of a phone number owner by using two-factor authentication.</p>
+     * <p>Verifies the mobile phone number and name.</p>
      * 
      * @param request Mobile2MetaVerifyIntlRequest
      * @return Mobile2MetaVerifyIntlResponse
@@ -5098,7 +5109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Verifies the authenticity and consistency of a phone number, name, and ID card number against an authoritative data source. If the information is inconsistent, returns the reason for the inconsistency.</p>
+     * <p>Verifies the authenticity and consistency of a mobile phone number, name, and ID card number through authoritative data sources, and returns the cause of inconsistency if they do not match.</p>
      * 
      * @param request Mobile3MetaVerifyIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5146,7 +5157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Verifies the authenticity and consistency of a phone number, name, and ID card number against an authoritative data source. If the information is inconsistent, returns the reason for the inconsistency.</p>
+     * <p>Verifies the authenticity and consistency of a mobile phone number, name, and ID card number through authoritative data sources, and returns the cause of inconsistency if they do not match.</p>
      * 
      * @param request Mobile3MetaVerifyIntlRequest
      * @return Mobile3MetaVerifyIntlResponse
@@ -5158,7 +5169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a face library.</p>
+     * <p>Updates a face library.</p>
      * 
      * @param request ModifyFaceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5198,7 +5209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a face library.</p>
+     * <p>Updates a face library.</p>
      * 
      * @param request ModifyFaceGroupRequest
      * @return ModifyFaceGroupResponse
@@ -5210,7 +5221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edits a face record.</p>
+     * <p>Modifies a face record.</p>
      * 
      * @param request ModifyFaceRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5246,7 +5257,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edits a face record.</p>
+     * <p>Modifies a face record.</p>
      * 
      * @param request ModifyFaceRecordRequest
      * @return ModifyFaceRecordResponse
@@ -5438,7 +5449,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a temporary URL for a file.</p>
+     * <p>Retrieves the temporary URL of a file.</p>
      * 
      * @param request TempOssUrlIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5470,7 +5481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a temporary URL for a file.</p>
+     * <p>Retrieves the temporary URL of a file.</p>
      * 
      * @param request TempOssUrlIntlRequest
      * @return TempOssUrlIntlResponse

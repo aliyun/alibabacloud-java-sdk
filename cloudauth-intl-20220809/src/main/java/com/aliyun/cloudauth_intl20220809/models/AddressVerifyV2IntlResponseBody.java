@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddressVerifyV2IntlResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class AddressVerifyV2IntlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class AddressVerifyV2IntlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The verification result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public AddressVerifyV2IntlResponseBodyResult result;
@@ -79,8 +79,8 @@ public class AddressVerifyV2IntlResponseBody extends TeaModel {
          * <p>The verification result. Valid values:</p>
          * <ul>
          * <li>1: Passed.</li>
-         * <li>2: Failed (the device is in a prohibited region). </li>
-         * <li>3: Unable to determine.</li>
+         * <li>2: Failed. The device is located in a prohibited area.</li>
+         * <li>3: Undetermined.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -90,11 +90,11 @@ public class AddressVerifyV2IntlResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>The verification details, which include:</p>
+         * <p>The verification details, including:</p>
          * <ul>
          * <li>distanceRange: the location range.   </li>
          * <li>ispName: the ISP name.     </li>
-         * <li>phoneStatus: the phone status. A value of 0 indicates abnormal. A value of 1 indicates Normal. Otherwise, the status is unknown.</li>
+         * <li>phoneStatus: the mobile phone status. 0 indicates abnormal, 1 indicates normal, and other values indicate unknown.</li>
          * </ul>
          * 
          * <strong>example:</strong>

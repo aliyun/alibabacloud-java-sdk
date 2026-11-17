@@ -9,7 +9,7 @@ public class CredentialSubmitIntlV2Request extends TeaModel {
      * 
      * <strong>example:</strong>
      * <p>{
-     *     &quot;address_rule&quot;: &quot;Includes Adrress Hangzhou ***&quot;,
+     *     &quot;address_rule&quot;: &quot;Includes Adrress Hangzhou***&quot;,
      *     &quot;name_rule&quot;: &quot;Includes Name  Zhang*&quot;,
      *     &quot;date_of_issue_rule&quot;: &quot;Whthin 2026.05.20&quot;
      * }</p>
@@ -18,7 +18,7 @@ public class CredentialSubmitIntlV2Request extends TeaModel {
     public String checkRuleConfig;
 
     /**
-     * <p>The Base64-encoded image. If you choose this method to submit a photo, check the photo size and do not submit an excessively large photo.</p>
+     * <p>The Base64-encoded image. If you choose this method to upload the photo, check the photo size and do not upload excessively large photos.</p>
      * 
      * <strong>example:</strong>
      * <p>base64</p>
@@ -36,7 +36,7 @@ public class CredentialSubmitIntlV2Request extends TeaModel {
     public String credentialOcrPictureFile;
 
     /**
-     * <p>The URL of the image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
+     * <p>The image URL. The URL must be an HTTP or HTTPS link accessible over the Internet.</p>
      * 
      * <strong>example:</strong>
      * <p>https://***</p>
@@ -47,10 +47,10 @@ public class CredentialSubmitIntlV2Request extends TeaModel {
     /**
      * <p>The credential type. Valid values:</p>
      * <ul>
-     * <li>01: Transaction voucher, which includes electronic bill images for utilities such as water, electricity, gas, and credit cards.</li>
-     * <li>02: Vehicle registration certificate.</li>
-     * <li>03: Transfer transaction record.</li>
-     * <li>04: Proof of address (POA).</li>
+     * <li>01: transaction credential, including electronic bill images for water, electricity, gas, and credit cards</li>
+     * <li>02: vehicle registration certificate</li>
+     * <li>03: transfer transaction record</li>
+     * <li>04: proof of address (POA)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -61,10 +61,10 @@ public class CredentialSubmitIntlV2Request extends TeaModel {
     public String docType;
 
     /**
-     * <p>The type of the input material. Valid values:</p>
+     * <p>The material input type. Valid values:</p>
      * <ul>
-     * <li>IMAGE (default): image.</li>
-     * <li>PDF: PDF format.</li>
+     * <li>IMAGE: image (default)</li>
+     * <li>PDF: PDF format</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,8 +76,8 @@ public class CredentialSubmitIntlV2Request extends TeaModel {
     /**
      * <p>Specifies whether to enable tampering detection. Valid values:</p>
      * <ul>
-     * <li>true: Enabled.</li>
-     * <li>false: Disabled.</li>
+     * <li>true: enabled</li>
+     * <li>false: disabled</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -88,7 +88,7 @@ public class CredentialSubmitIntlV2Request extends TeaModel {
     public String fraudCheck;
 
     /**
-     * <p>Specifies whether to enable quality detection. Valid values: Y (enabled) and N (disabled).</p>
+     * <p>Specifies whether to enable quality detection. Valid values: Y: enabled, N: disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -97,8 +97,7 @@ public class CredentialSubmitIntlV2Request extends TeaModel {
     public String idQuality;
 
     /**
-     * <p>The unique identifier of the merchant request. The value is a 32-character alphanumeric string.</p>
-     * <p>The first few characters consist of a custom abbreviation defined by the merchant, the middle part can contain a time segment, and the last part can use a random or incremental sequence.</p>
+     * <p>The unique identifier of the merchant request. The value is a 32-character alphanumeric string. The first few characters consist of a custom merchant abbreviation, the middle part can include a time period, and the latter part can be a random or incremental sequence.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -108,11 +107,13 @@ public class CredentialSubmitIntlV2Request extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>The extraction type. Valid values:
-     * 0101: electronic bill address and name module (extracts address and name modules through intelligent analysis).
-     * 0201: 
-     * 0301: transfer transaction amount information.
-     * 0401: POA credential extraction information.</p>
+     * <p>The extraction type. Valid values:</p>
+     * <ul>
+     * <li>0101: electronic bill address and name module, which extracts the address and name module through intelligent analysis</li>
+     * <li>0201: </li>
+     * <li>0301: transfer transaction record amount information</li>
+     * <li>0401: POA credential extraction information</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -122,7 +123,7 @@ public class CredentialSubmitIntlV2Request extends TeaModel {
     public String ocrArea;
 
     /**
-     * <p>Specifies whether to enable translation. Valid values: 0 (disabled) and 1 (enabled).</p>
+     * <p>Specifies whether to enable translation. Valid values: 0: disabled, 1: enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -131,10 +132,10 @@ public class CredentialSubmitIntlV2Request extends TeaModel {
     public String ocrTranslation;
 
     /**
-     * <p>Specifies whether to enable standardization of key fields recognized by OCR. Valid values:</p>
+     * <p>Specifies whether to enable standardization of key fields in OCR recognition. Valid values:</p>
      * <ul>
-     * <li>0: Disabled (default). </li>
-     * <li>1: Enabled.</li>
+     * <li>0: no (default) </li>
+     * <li>1: yes</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -144,7 +145,7 @@ public class CredentialSubmitIntlV2Request extends TeaModel {
     public String ocrValueStandard;
 
     /**
-     * <p>The product solution to use. Set the value to CREDENTIAL_RECOGNITION.</p>
+     * <p>The product solution to be integrated. Valid values: CREDENTIAL_RECOGNITION.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -154,7 +155,7 @@ public class CredentialSubmitIntlV2Request extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The custom verification scenario ID. You can use this scenario ID to query related records in the console. The value is a combination of up to 10 letters, digits, or underscores.</p>
+     * <p>The custom authentication scenario ID. This ID is used to query related records in the console. The value can be up to 10 characters in length and can contain letters, digits, and underscores.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -32,7 +32,7 @@ public class CardOcrResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The response result.</p>
      */
     @NameInMap("Result")
     public CardOcrResponseBodyResult result;
@@ -76,18 +76,18 @@ public class CardOcrResponseBody extends TeaModel {
 
     public static class CardOcrResponseBodyResult extends TeaModel {
         /**
-         * <p>The ID card and certificate recognition result.</p>
+         * <p>The recognition result of the ID card or certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;idFaceQualityScore&quot;: 98.90,
          *   &quot;ocrIdInfo&quot;: {
          *     &quot;expiryDate&quot;: &quot;2024-04-20&quot;,
-         *     &quot;placeOfIssue&quot;: &quot;广东&quot;,
+         *     &quot;placeOfIssue&quot;: &quot;Guangdong&quot;,
          *     &quot;englishName&quot;: &quot;ZHENGJIAN,YANGBEN&quot;,
-         *     &quot;originOfIssue&quot;: &quot;公安部出入境管理局&quot;,
-         *     &quot;sex&quot;: &quot;女&quot;,
-         *     &quot;name&quot;: &quot;证件样本&quot;,
+         *     &quot;originOfIssue&quot;: &quot;Exit-Entry Administration of the Ministry of Public Security&quot;,
+         *     &quot;sex&quot;: &quot;Female&quot;,
+         *     &quot;name&quot;: &quot;ID Sample&quot;,
          *     &quot;idNumber&quot;: &quot;C00000000&quot;,
          *     &quot;issueDate&quot;: &quot;2014-04-21&quot;,
          *     &quot;birthDate&quot;: &quot;1981-08-03&quot;
@@ -135,7 +135,7 @@ public class CardOcrResponseBody extends TeaModel {
         public String subCode;
 
         /**
-         * <p>The unique ID of the authentication request.</p>
+         * <p>The unique identifier of the authentication request.</p>
          * 
          * <strong>example:</strong>
          * <p>08573be80f944d95ac812e019e3655a8</p>

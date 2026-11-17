@@ -14,7 +14,7 @@ public class FaceGuardRiskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The return message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class FaceGuardRiskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The return result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public FaceGuardRiskResponseBodyResult result;
@@ -76,8 +76,7 @@ public class FaceGuardRiskResponseBody extends TeaModel {
 
     public static class FaceGuardRiskResponseBodyResult extends TeaModel {
         /**
-         * <p>The device risk probability predicted by the Face Guard algorithm. A higher score indicates a higher device risk.</p>
-         * <p>Valid values: 0 to 100.</p>
+         * <p>The device risk probability predicted by the Face Guard algorithm. A higher score indicates a higher device risk. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -89,19 +88,13 @@ public class FaceGuardRiskResponseBody extends TeaModel {
          * <p>The extended information in JSON format. The returned content is customized based on tenant requirements.</p>
          * 
          * <strong>example:</strong>
-         * <p>Empty</p>
+         * <p>Empty by default</p>
          */
         @NameInMap("RiskExtends")
         public String riskExtends;
 
         /**
-         * <p>The device risk tags.</p>
-         * <ul>
-         * <li><p>Multiple device risk tags are separated by commas (,), such as ROOT,VPN,HOOK.</p>
-         * </li>
-         * <li><p>For more information about device risk tags and their meanings, refer to the Face Guard tag description in the official documentation.</p>
-         * </li>
-         * </ul>
+         * <p>The device risk tags. Multiple tags are separated by commas (,), such as ROOT,VPN,HOOK. For more information about device risk tags and their meanings, refer to the Face Guard tag description in the official documentation.</p>
          * 
          * <strong>example:</strong>
          * <p>ROOT,VPN,HOOK</p>

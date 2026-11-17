@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class CredentialVerifyIntlRequest extends TeaModel {
     /**
-     * <p>The credential name (specified as a numeric code). Valid values:</p>
+     * <p>The credential name. Use the numeric code. Valid values:</p>
      * <ul>
-     * <li>Codes starting with 03: enterprise qualification<ul>
-     * <li>0301: business license issued in the Chinese mainland</li>
+     * <li>Values starting with 03: enterprise qualification<ul>
+     * <li>0301: business license in the Chinese mainland</li>
      * </ul>
      * </li>
-     * <li>Codes starting with 04: transaction voucher<ul>
+     * <li>Values starting with 04: transaction credential<ul>
      * <li>0401: bank statement</li>
      * <li>0402: payslip</li>
      * <li>0403: utility bill</li>
      * <li>0405: credit card statement</li>
-     * <li>0499: other.</li>
+     * <li>0499: other</li>
      * </ul>
      * </li>
      * </ul>
@@ -32,7 +32,7 @@ public class CredentialVerifyIntlRequest extends TeaModel {
      * <p>The credential type. Valid values:</p>
      * <ul>
      * <li>03: enterprise qualification</li>
-     * <li>04: transaction voucher.</li>
+     * <li>04: transaction credential</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -43,13 +43,13 @@ public class CredentialVerifyIntlRequest extends TeaModel {
     public String credType;
 
     /**
-     * <p>The image input stream.</p>
+     * <p>The input stream of the image.</p>
      * <blockquote>
      * <p>Specify either ImageUrl or ImageFile.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("ImageFile")
     public String imageFile;
@@ -69,12 +69,12 @@ public class CredentialVerifyIntlRequest extends TeaModel {
     /**
      * <p>The call mode. Valid values:</p>
      * <ul>
-     * <li>ANTI_FAKE_CHECK: image quality and tampering detection.</li>
+     * <li>ANTI_FAKE_CHECK: image quality and tampering detection</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>取值：ANTI_FAKE_CHECK</p>
+     * <p>Value: ANTI_FAKE_CHECK</p>
      */
     @NameInMap("ProductCode")
     public String productCode;

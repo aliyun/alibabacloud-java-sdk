@@ -23,7 +23,7 @@ public class ModifyFaceRecordResponseBody extends TeaModel {
     public Integer data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

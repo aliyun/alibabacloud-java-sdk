@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CredentialRecognitionIntlV2ResponseBody extends TeaModel {
     /**
-     * <p>The return code. A value of 200 indicates a successful request. Other values indicate failures.</p>
+     * <p>The return code. A value of 200 indicates that the request is successful. Other values indicate that the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class CredentialRecognitionIntlV2ResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class CredentialRecognitionIntlV2ResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The response result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public CredentialRecognitionIntlV2ResponseBodyResult result;
@@ -76,7 +76,7 @@ public class CredentialRecognitionIntlV2ResponseBody extends TeaModel {
 
     public static class CredentialRecognitionIntlV2ResponseBodyResult extends TeaModel {
         /**
-         * <p>The recognized key information, in JSON format.</p>
+         * <p>The recognized key information in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -90,11 +90,11 @@ public class CredentialRecognitionIntlV2ResponseBody extends TeaModel {
         /**
          * <p>The result code. Valid values:</p>
          * <ul>
-         * <li>200: OCR extraction succeeded and all rule checks passed.</li>
-         * <li>204: Validation result is inconsistent. OCR extraction succeeded, but some fields in CheckRuleConfig did not pass (N).</li>
-         * <li>211: Quality does not meet requirements. Quality detection did not pass when idQuality is set to Y (not yet supported in the current version).</li>
-         * <li>212: Anti-forgery check did not pass. fraudCheck was triggered and anti-forgery verification failed.</li>
-         * <li>213: No text was extracted, or the credential type check did not pass.</li>
+         * <li>200: OCR extraction is successful and all rule checks are passed</li>
+         * <li>204: verification results are inconsistent. OCR extraction is successful, but some fields in CheckRuleConfig fail the check (N)</li>
+         * <li>211: quality does not meet the requirements. Quality detection fails when idQuality is set to Y. This feature is not available in the current version</li>
+         * <li>212: anti-counterfeiting check fails. fraudCheck is triggered and anti-counterfeiting verification fails</li>
+         * <li>213: no text is extracted or the credential type check fails</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,8 +106,8 @@ public class CredentialRecognitionIntlV2ResponseBody extends TeaModel {
         /**
          * <p>The extraction result. Valid values:</p>
          * <ul>
-         * <li>S: Succeeded.</li>
-         * <li>F: Failed.</li>
+         * <li>S: success.</li>
+         * <li>F: failure.</li>
          * </ul>
          * 
          * <strong>example:</strong>

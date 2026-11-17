@@ -76,7 +76,7 @@ public class EkycVerifyV2ResponseBody extends TeaModel {
 
     public static class EkycVerifyV2ResponseBodyResult extends TeaModel {
         /**
-         * <p>The face result information.</p>
+         * <p>The facial result information.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -90,7 +90,7 @@ public class EkycVerifyV2ResponseBody extends TeaModel {
         public String extFaceInfo;
 
         /**
-         * <p>The identity document recognition result. Returned only when the API response is successful.</p>
+         * <p>The document recognition result. This parameter is returned only when the API response is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -104,7 +104,7 @@ public class EkycVerifyV2ResponseBody extends TeaModel {
          *  },
          *  &quot;ocrIdPassed&quot;: &quot;N&quot;,
          *  &quot;spoofInfo&quot;: {
-         *  &quot;spoofResult&quot;: &quot;Y&quot;,
+         *  &quot;spoofResult&quot;: &quot;Y&quot;
          *  }
          * }</p>
          */
@@ -112,7 +112,11 @@ public class EkycVerifyV2ResponseBody extends TeaModel {
         public String extIdInfo;
 
         /**
-         * <p>Indicates whether the verification passed. A value of Y indicates passed, and a value of N indicates not passed.</p>
+         * <p>Indicates whether the verification is passed. Valid values:</p>
+         * <ul>
+         * <li>Y: Passed.</li>
+         * <li>N: Not passed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Y</p>
@@ -130,7 +134,7 @@ public class EkycVerifyV2ResponseBody extends TeaModel {
         public String subCode;
 
         /**
-         * <p>The unique identifier of the verification request.</p>
+         * <p>The unique identifier of the authentication request.</p>
          * 
          * <strong>example:</strong>
          * <p>4ab0b***cbde97</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Id2MetaVerifyIntlRequest extends TeaModel {
     /**
-     * <p>The ID card number (in plaintext).</p>
+     * <p>The ID card number in plaintext.</p>
      * 
      * <strong>example:</strong>
      * <p>429001********8211</p>
@@ -16,8 +16,8 @@ public class Id2MetaVerifyIntlRequest extends TeaModel {
     /**
      * <p>The parameter type. Valid values:</p>
      * <ul>
-     * <li>normal: original value (plaintext).</li>
-     * <li>Note: Due to authoritative data source restrictions, two-factor identity verification does not support MD5 encryption.</li>
+     * <li>normal: The original value in plaintext.</li>
+     * <li>Note: Due to the limitations of the authoritative data source, two-element identity verification does not support the MD5 encryption method.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class Id2MetaVerifyIntlRequest extends TeaModel {
     public String paramType;
 
     /**
-     * <p>The product solution code. Set this parameter to ID_2META.</p>
+     * <p>The product solution. Fixed value: ID_2META.</p>
      * 
      * <strong>example:</strong>
      * <p>ID_2META</p>
@@ -36,10 +36,10 @@ public class Id2MetaVerifyIntlRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The name (in plaintext).</p>
+     * <p>The name in plaintext.</p>
      * 
      * <strong>example:</strong>
-     * <p>张*</p>
+     * <p>Zhang*</p>
      */
     @NameInMap("UserName")
     public String userName;

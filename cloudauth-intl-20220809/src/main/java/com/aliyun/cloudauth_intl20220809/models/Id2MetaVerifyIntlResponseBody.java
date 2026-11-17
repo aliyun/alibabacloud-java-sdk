@@ -32,7 +32,7 @@ public class Id2MetaVerifyIntlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The verification result.</p>
+     * <p>The return result.</p>
      */
     @NameInMap("Result")
     public Id2MetaVerifyIntlResponseBodyResult result;
@@ -80,7 +80,7 @@ public class Id2MetaVerifyIntlResponseBody extends TeaModel {
          * <ul>
          * <li>1: Consistent.</li>
          * <li>2: Inconsistent.</li>
-         * <li>3: No record found.</li>
+         * <li>3: Not found.</li>
          * </ul>
          * 
          * <strong>example:</strong>

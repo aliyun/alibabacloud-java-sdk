@@ -5,44 +5,44 @@ import com.aliyun.tea.*;
 
 public class AddressCompareIntlRequest extends TeaModel {
     /**
-     * <p>The country name. Valid values:</p>
+     * <p>The country name.</p>
      * <ul>
-     * <li>China.</li>
+     * <li>China</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>固定值：中国</p>
+     * <p>Fixed value: China</p>
      */
     @NameInMap("DefaultCountry")
     public String defaultCountry;
 
     /**
-     * <p>ADD_VERIFY.</p>
+     * <p>ADD_VERIFY</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>固定值：ADD_VERIFY</p>
+     * <p>Fixed value: ADD_VERIFY</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
-     * <p>Address 1.</p>
+     * <p>The first address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>杭州市阿里巴巴西溪园区</p>
+     * <p>Alibaba Xixi Campus, Hangzhou</p>
      */
     @NameInMap("Text1")
     public String text1;
 
     /**
-     * <p>Address 2.</p>
+     * <p>The second address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>杭州市文一西路969号1号楼</p>
+     * <p>Building 1, No. 969 West Wenyi Road, Hangzhou</p>
      */
     @NameInMap("Text2")
     public String text2;

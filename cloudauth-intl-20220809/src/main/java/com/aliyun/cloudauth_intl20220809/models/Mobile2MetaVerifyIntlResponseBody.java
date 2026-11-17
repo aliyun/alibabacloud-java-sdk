@@ -14,7 +14,7 @@ public class Mobile2MetaVerifyIntlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The return message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -78,9 +78,9 @@ public class Mobile2MetaVerifyIntlResponseBody extends TeaModel {
         /**
          * <p>The verification result code. Valid values:</p>
          * <ul>
-         * <li>1: Consistent.</li>
-         * <li>2: Inconsistent.</li>
-         * <li>3: No record found.</li>
+         * <li>1: consistent</li>
+         * <li>2: inconsistent</li>
+         * <li>3: not found</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -94,7 +94,7 @@ public class Mobile2MetaVerifyIntlResponseBody extends TeaModel {
          * <ul>
          * <li>CMCC: China Mobile</li>
          * <li>CUCC: China Unicom</li>
-         * <li>CTCC: China Telecom.</li>
+         * <li>CTCC: China Telecom</li>
          * </ul>
          * 
          * <strong>example:</strong>

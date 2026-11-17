@@ -32,7 +32,7 @@ public class Mobile3MetaVerifyIntlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The verification result.</p>
+     * <p>The return result.</p>
      */
     @NameInMap("Result")
     public Mobile3MetaVerifyIntlResponseBodyResult result;
@@ -90,10 +90,10 @@ public class Mobile3MetaVerifyIntlResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>The carrier name. Valid values:</p>
+         * <p>The name of the Internet service provider (ISP). Valid values:</p>
          * <ul>
-         * <li>CMCC: China Mobile</li>
-         * <li>CUCC: China Unicom</li>
+         * <li>CMCC: China Mobile.</li>
+         * <li>CUCC: China Unicom.</li>
          * <li>CTCC: China Telecom.</li>
          * </ul>
          * 
@@ -107,10 +107,10 @@ public class Mobile3MetaVerifyIntlResponseBody extends TeaModel {
          * <p>The detailed verification result. Valid values:</p>
          * <ul>
          * <li>101: Verification passed. </li>
-         * <li>201: The phone number is inconsistent with the name, and the phone number is inconsistent with the ID card number. </li>
-         * <li>202: The phone number is consistent with the name, but the phone number is inconsistent with the ID card number. </li>
-         * <li>203: The phone number is consistent with the ID card number, but the phone number is inconsistent with the name. </li>
-         * <li>204: Other inconsistency.</li>
+         * <li>201: The mobile phone number does not match the name or the ID card number. </li>
+         * <li>202: The mobile phone number matches the name but does not match the ID card number. </li>
+         * <li>203: The mobile phone number matches the ID card number but does not match the name. </li>
+         * <li>204: Other inconsistencies.</li>
          * <li>301: No record found.</li>
          * </ul>
          * 

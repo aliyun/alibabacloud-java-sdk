@@ -14,7 +14,7 @@ public class InitializeV2ResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The return message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class InitializeV2ResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The result.</p>
      */
     @NameInMap("Result")
     public InitializeV2ResponseBodyResult result;
@@ -86,6 +86,9 @@ public class InitializeV2ResponseBody extends TeaModel {
 
         /**
          * <p>The standard encryption protocol for authentication.</p>
+         * <blockquote>
+         * <p>This field is required when integrating H5 web pages by using an embedded iframe.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>hksb7ba1b28130d24e015d*********</p>

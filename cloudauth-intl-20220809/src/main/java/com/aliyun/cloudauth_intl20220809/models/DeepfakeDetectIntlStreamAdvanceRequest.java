@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeepfakeDetectIntlStreamAdvanceRequest extends TeaModel {
     /**
-     * <p>The Base64-encoded face image. For videos, we recommend that you use the stream method for transmission.</p>
+     * <p>The Base64-encoded string of the face image. For videos, pass the data as a stream.</p>
      * 
      * <strong>example:</strong>
      * <p>/9j/4AAQSkZJRgABAQAASxxxxxxx</p>
@@ -14,7 +14,7 @@ public class DeepfakeDetectIntlStreamAdvanceRequest extends TeaModel {
     public String faceBase64;
 
     /**
-     * <p>The image input stream.</p>
+     * <p>The input stream of the image.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -25,13 +25,12 @@ public class DeepfakeDetectIntlStreamAdvanceRequest extends TeaModel {
     public java.io.InputStream faceFileObject;
 
     /**
-     * <p>The type of facial material input:</p>
+     * <p>The input type of the face material. Valid values:</p>
      * <ul>
-     * <li>IMAGE (default): Face image</li>
-     * <li>VIDEO: Face video</li>
+     * <li>IMAGE: face image. This is the default value.</li>
+     * <li>VIDEO: face video.</li>
      * </ul>
-     * <p>Note
-     * Video processing takes a long time. We recommend that you set the timeout period to more than 3 seconds.</p>
+     * <p>Note: Video processing takes a long time. Set the timeout period to a value greater than 3 seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>IMAGE</p>
@@ -49,8 +48,7 @@ public class DeepfakeDetectIntlStreamAdvanceRequest extends TeaModel {
     public String faceUrl;
 
     /**
-     * <p>The unique identifier of the merchant request. The value is an alphanumeric string with a length of 32 characters.</p>
-     * <p>The first few characters consist of a custom abbreviation defined by the merchant, the middle part can contain a timestamp, and the last part can use a random or incremental sequence.</p>
+     * <p>The unique identifier of the merchant request. The value is a 32-character alphanumeric string. The first few characters consist of a custom merchant abbreviation, the middle part can contain a time period, and the latter part can be a random or incremental sequence.</p>
      * 
      * <strong>example:</strong>
      * <p>e0c34a***353888</p>
@@ -59,8 +57,7 @@ public class DeepfakeDetectIntlStreamAdvanceRequest extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>The product solution to integrate.
-     * Valid value: FACE_DEEPFAKE</p>
+     * <p>The product solution to be integrated. Valid values: FACE_DEEPFAKE.</p>
      * 
      * <strong>example:</strong>
      * <p>FACE_DEEPFAKE</p>
@@ -69,8 +66,7 @@ public class DeepfakeDetectIntlStreamAdvanceRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>A custom verification scenario ID that you define. This ID is used to query related records in the console.</p>
-     * <p>The value is a combination of letters, digits, or underscores (_) with a maximum length of 10 characters.</p>
+     * <p>The custom authentication scenario ID, which is used to query related records by entering this scenario ID in the console. The value must be 10 characters in length and can contain letters, digits, and underscores.</p>
      * 
      * <strong>example:</strong>
      * <p>123****123</p>

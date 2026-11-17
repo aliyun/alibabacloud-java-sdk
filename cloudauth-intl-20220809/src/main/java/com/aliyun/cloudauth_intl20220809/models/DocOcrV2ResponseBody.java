@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DocOcrV2ResponseBody extends TeaModel {
     /**
-     * <p>The return code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class DocOcrV2ResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The return message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class DocOcrV2ResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The response result.</p>
      */
     @NameInMap("Result")
     public DocOcrV2ResponseBodyResult result;
@@ -76,17 +76,17 @@ public class DocOcrV2ResponseBody extends TeaModel {
 
     public static class DocOcrV2ResponseBodyResult extends TeaModel {
         /**
-         * <p>The card and certificate recognition result. This parameter is returned only when the API response is successful.</p>
+         * <p>The ID card recognition result. This parameter is returned only when the API response is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>{
-         *   &quot;idFaceQualityScore&quot;: 98.0
+         *   &quot;idFaceQualityScore&quot;: 98.0,
          *   &quot;ocrIdInfo&quot;: {
          *     &quot;expiryDate&quot;: &quot;&quot;,
-         *     &quot;originOfIssue&quot;: &quot;公安部出入境管理局&quot;,
+         *     &quot;originOfIssue&quot;: &quot;Exit-Entry Administration of the Ministry of Public Security&quot;,
          *     &quot;englishName&quot;: &quot;LI SI&quot;,
-         *     &quot;sex&quot;: &quot;男&quot;,
-         *     &quot;name&quot;: &quot;李四&quot;,
+         *     &quot;sex&quot;: &quot;Male&quot;,
+         *     &quot;name&quot;: &quot;Li Si&quot;,
          *     &quot;idNumber&quot;: &quot;H11111112&quot;,
          *     &quot;issueDate&quot;: &quot;2013-01-02&quot;,
          *     &quot;birthDate&quot;: &quot;1990-02-21&quot;
@@ -105,8 +105,8 @@ public class DocOcrV2ResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the authentication is passed. Valid values:</p>
          * <ul>
-         * <li>Y: Passed.</li>
-         * <li>N: Not passed.</li>
+         * <li>Y: passed.</li>
+         * <li>N: not passed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,7 @@ public class DocOcrV2ResponseBody extends TeaModel {
         public String subCode;
 
         /**
-         * <p>The unique ID of the authentication request.</p>
+         * <p>The unique identifier of the authentication request.</p>
          * 
          * <strong>example:</strong>
          * <p>08573be80f944d95ac812e019e3655a8</p>

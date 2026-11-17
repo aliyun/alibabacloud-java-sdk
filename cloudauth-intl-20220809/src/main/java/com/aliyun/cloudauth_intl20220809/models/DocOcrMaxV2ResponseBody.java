@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DocOcrMaxV2ResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class DocOcrMaxV2ResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class DocOcrMaxV2ResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The return result.</p>
      */
     @NameInMap("Result")
     public DocOcrMaxV2ResponseBodyResult result;
@@ -76,17 +76,17 @@ public class DocOcrMaxV2ResponseBody extends TeaModel {
 
     public static class DocOcrMaxV2ResponseBodyResult extends TeaModel {
         /**
-         * <p>The card and certificate recognition result. This parameter is returned only when the API response is successful.</p>
+         * <p>The ID document recognition result. This parameter is returned only when the API response is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;ocrIdInfo&quot;: {
          *     &quot;id_number&quot;: &quot;<em><strong><strong>719</strong></strong></em><em>&quot;,
-         *     &quot;address&quot;: &quot;xxxxxx,
-         *     &quot;ethnicity&quot;: &quot;汉&quot;,
-         *     &quot;date_of_birth&quot;: &quot;1990年06月02日&quot;,
-         *     &quot;sex&quot;: &quot;女&quot;,
-         *     &quot;name&quot;: &quot;何</em>*&quot;
+         *     &quot;address&quot;: &quot;xxxxxx&quot;,
+         *     &quot;ethnicity&quot;: &quot;Han&quot;,
+         *     &quot;date_of_birth&quot;: &quot;June 02, 1990&quot;,
+         *     &quot;sex&quot;: &quot;Female&quot;,
+         *     &quot;name&quot;: &quot;He</em>*&quot;
          *   },
          *   &quot;ocrStandardData&quot;: {
          *     &quot;given_name_s&quot;: &quot;**&quot;,
@@ -100,7 +100,7 @@ public class DocOcrMaxV2ResponseBody extends TeaModel {
         public String extIdInfo;
 
         /**
-         * <p>Indicates whether the verification passed. Valid values:</p>
+         * <p>Indicates whether the authentication is passed. Valid values:</p>
          * <ul>
          * <li>Y: passed.</li>
          * <li>N: not passed.</li>
@@ -122,7 +122,7 @@ public class DocOcrMaxV2ResponseBody extends TeaModel {
         public String subCode;
 
         /**
-         * <p>The unique identifier of the verification request.</p>
+         * <p>The unique identifier of the authentication request.</p>
          * 
          * <strong>example:</strong>
          * <p>08573be80f944d95ac812e019e3655a8</p>

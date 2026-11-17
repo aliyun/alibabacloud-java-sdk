@@ -14,7 +14,7 @@ public class DeleteFaceRecordV2ResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class DeleteFaceRecordV2ResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The response result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public DeleteFaceRecordV2ResponseBodyResult result;
@@ -76,11 +76,7 @@ public class DeleteFaceRecordV2ResponseBody extends TeaModel {
 
     public static class DeleteFaceRecordV2ResponseBodyResult extends TeaModel {
         /**
-         * <p>The deletion result. Valid values:</p>
-         * <ul>
-         * <li>Y: Succeeded.</li>
-         * <li>N: Failed.</li>
-         * </ul>
+         * <p>The deletion result. Valid values: Y: The deletion succeeded. N: The deletion failed.</p>
          * 
          * <strong>example:</strong>
          * <p>Y</p>
@@ -89,7 +85,7 @@ public class DeleteFaceRecordV2ResponseBody extends TeaModel {
         public String deleted;
 
         /**
-         * <p>The list of face group codes from which the face data was actually deleted (comma-separated). This parameter is returned with all deleted group codes when FaceGroupCode is not specified.</p>
+         * <p>The list of codes of the face groups from which the face data was actually deleted, separated by commas. If FaceGroupCode is not specified, the codes of all face groups from which the data was deleted are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>wqe***,dsa***</p>

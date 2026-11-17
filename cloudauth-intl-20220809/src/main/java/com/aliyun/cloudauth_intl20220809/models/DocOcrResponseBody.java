@@ -32,7 +32,7 @@ public class DocOcrResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The return result.</p>
      */
     @NameInMap("Result")
     public DocOcrResponseBodyResult result;
@@ -76,17 +76,17 @@ public class DocOcrResponseBody extends TeaModel {
 
     public static class DocOcrResponseBodyResult extends TeaModel {
         /**
-         * <p>The card and certificate recognition result. This parameter is returned only when the API response is successful.</p>
+         * <p>The recognition result of the ID card or certificate. This parameter is returned only when the API response is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>{
-         *   &quot;idFaceQualityScore&quot;: 98.0
+         *   &quot;idFaceQualityScore&quot;: 98.0,
          *   &quot;ocrIdInfo&quot;: {
          *     &quot;expiryDate&quot;: &quot;&quot;,
-         *     &quot;originOfIssue&quot;: &quot;公安部出入境管理局&quot;,
+         *     &quot;originOfIssue&quot;: &quot;Exit-Entry Administration of the Ministry of Public Security&quot;,
          *     &quot;englishName&quot;: &quot;LI SI&quot;,
-         *     &quot;sex&quot;: &quot;男&quot;,
-         *     &quot;name&quot;: &quot;李四&quot;,
+         *     &quot;sex&quot;: &quot;Male&quot;,
+         *     &quot;name&quot;: &quot;Li Si&quot;,
          *     &quot;idNumber&quot;: &quot;H11111112&quot;,
          *     &quot;issueDate&quot;: &quot;2013-01-02&quot;,
          *     &quot;birthDate&quot;: &quot;1990-02-21&quot;

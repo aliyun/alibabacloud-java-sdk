@@ -32,7 +32,7 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The return result.</p>
      */
     @NameInMap("Result")
     public CredentialGetResultIntlResponseBodyResult result;
@@ -76,7 +76,7 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
 
     public static class CredentialGetResultIntlResponseBodyResult extends TeaModel {
         /**
-         * <p>The key information identified, in JSON format.</p>
+         * <p>The recognized key information in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -90,9 +90,9 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li>PROCESSING: Processing. Continue polling.</li>
-         * <li>SUCCESS: Succeeded.</li>
-         * <li>FAILED: Failed.</li>
+         * <li>PROCESSING: The task is in progress. Continue polling.</li>
+         * <li>SUCCESS: The task succeeded.</li>
+         * <li>FAILED: The task failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class CredentialGetResultIntlResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The description of the authentication result. For more information, refer to the ResultObject.SubCode error code description.</p>
+         * <p>The description of the authentication result. For more information, see the error code description for ResultObject.SubCode.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddFaceRecordRequest extends TeaModel {
     /**
-     * <p>The face library code.</p>
+     * <p>The code of the face group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,8 +44,8 @@ public class AddFaceRecordRequest extends TeaModel {
     /**
      * <p>Specifies whether to check the quality of the face image. Valid values:</p>
      * <ul>
-     * <li>Y: enabled.</li>
-     * <li>N: disabled (default).</li>
+     * <li>Y: Enabled.</li>
+     * <li>N: Disabled (default).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,10 +55,10 @@ public class AddFaceRecordRequest extends TeaModel {
     public String faceQualityCheck;
 
     /**
-     * <p>The custom unique user ID. The value cannot exceed 32 characters.</p>
+     * <p>The custom unique user ID, which cannot exceed 32 characters.</p>
      * <ul>
-     * <li>If this parameter is specified, the system registers the user with the specified MerchantUserId.</li>
-     * <li>If this parameter is not specified, the image name is used by default.</li>
+     * <li>If specified, the system preferentially uses this MerchantUserId for registration.</li>
+     * <li>If not specified, the image name is used by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>

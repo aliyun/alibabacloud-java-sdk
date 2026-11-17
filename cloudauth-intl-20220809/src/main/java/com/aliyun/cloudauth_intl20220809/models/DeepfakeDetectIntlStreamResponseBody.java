@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeepfakeDetectIntlStreamResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class DeepfakeDetectIntlStreamResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class DeepfakeDetectIntlStreamResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result information.</p>
+     * <p>The result information.</p>
      */
     @NameInMap("ResultObject")
     public DeepfakeDetectIntlStreamResponseBodyResultObject resultObject;
@@ -76,11 +76,11 @@ public class DeepfakeDetectIntlStreamResponseBody extends TeaModel {
 
     public static class DeepfakeDetectIntlStreamResponseBodyResultObject extends TeaModel {
         /**
-         * <p>The risk result:</p>
+         * <p>The risk result. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Low risk</li>
-         * <li><strong>1</strong>: High risk</li>
-         * <li><strong>2</strong>: Suspicious</li>
+         * <li><strong>0</strong>: low risk.</li>
+         * <li><strong>1</strong>: high risk.</li>
+         * <li><strong>2</strong>: suspicious.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -96,12 +96,12 @@ public class DeepfakeDetectIntlStreamResponseBody extends TeaModel {
         public java.util.Map<String, String> riskScore;
 
         /**
-         * <p>The risk labels. Multiple labels are separated by commas (,), including:</p>
+         * <p>The risk tags. Multiple tags are separated by commas (,). Valid values:</p>
          * <ul>
-         * <li>SuspectDeepForgery: Suspected deep forgery</li>
-         * <li>SuspectPSFace: Suspected face synthesis attack</li>
-         * <li>SuspectTemple: Suspected template attack</li>
-         * <li>SuspectRemake: Suspected presentation attack</li>
+         * <li>SuspectDeepForgery: suspected deepfake.</li>
+         * <li>SuspectPSFace: suspected synthetic attack.</li>
+         * <li>SuspectTemple: suspected template attack.</li>
+         * <li>SuspectRemake: suspected presentation attack.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,6 +110,12 @@ public class DeepfakeDetectIntlStreamResponseBody extends TeaModel {
         @NameInMap("RiskTag")
         public String riskTag;
 
+        /**
+         * <p>The unique identifier of the authentication request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hksb7ba1b28130d24e015d69********</p>
+         */
         @NameInMap("TransactionId")
         public String transactionId;
 

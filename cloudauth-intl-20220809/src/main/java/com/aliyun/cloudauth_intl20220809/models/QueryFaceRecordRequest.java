@@ -15,7 +15,7 @@ public class QueryFaceRecordRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The face library code.</p>
+     * <p>The face group code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class QueryFaceRecordRequest extends TeaModel {
     public String faceId;
 
     /**
-     * <p>The maximum number of entries per page for a paginated query.</p>
+     * <p>The maximum number of entries per page for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

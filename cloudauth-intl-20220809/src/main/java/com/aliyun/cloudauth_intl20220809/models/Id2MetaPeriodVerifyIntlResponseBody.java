@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Id2MetaPeriodVerifyIntlResponseBody extends TeaModel {
     /**
-     * <p>The response code. For more information about response codes, see the description of response codes and messages.</p>
+     * <p>The return code. For more information about return codes, see Return codes and messages.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -80,7 +80,7 @@ public class Id2MetaPeriodVerifyIntlResponseBody extends TeaModel {
          * <ul>
          * <li><p>Y: Passed.</p>
          * </li>
-         * <li><p>N: Not passed.</p>
+         * <li><p>N: Failed.</p>
          * </li>
          * </ul>
          * 
@@ -91,7 +91,7 @@ public class Id2MetaPeriodVerifyIntlResponseBody extends TeaModel {
         public String passed;
 
         /**
-         * <p>The description of the authentication result. For more information, see the ResultObject.SubCode error code description.</p>
+         * <p>The description of the authentication result. For more information, see ResultObject.SubCode error codes.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>

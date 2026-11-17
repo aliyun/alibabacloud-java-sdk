@@ -32,7 +32,7 @@ public class AddFaceRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The return result.</p>
      */
     @NameInMap("Result")
     public AddFaceRecordResponseBodyResult result;
@@ -87,7 +87,7 @@ public class AddFaceRecordResponseBody extends TeaModel {
         public String extFaceInfo;
 
         /**
-         * <p>Indicates whether the verification is passed. Valid values:</p>
+         * <p>Indicates whether the authentication passed. Valid values:</p>
          * <ul>
          * <li>Y: Passed.</li>
          * <li>N: Not passed.</li>

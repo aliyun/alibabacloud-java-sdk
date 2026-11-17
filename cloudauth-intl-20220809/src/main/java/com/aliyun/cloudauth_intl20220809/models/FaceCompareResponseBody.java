@@ -5,9 +5,12 @@ import com.aliyun.tea.*;
 
 public class FaceCompareResponseBody extends TeaModel {
     /**
-     * <p>Response code.</p>
-     * <p>200: Success.
-     * Other: Error code. For error code details, see Error Codes.</p>
+     * <p>The return code.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>200: Success.</li>
+     * <li>Other values: Error codes. For more information, see Error codes.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -16,7 +19,7 @@ public class FaceCompareResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -34,7 +37,7 @@ public class FaceCompareResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Response result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public FaceCompareResponseBodyResult result;
@@ -78,7 +81,7 @@ public class FaceCompareResponseBody extends TeaModel {
 
     public static class FaceCompareResponseBodyResultExtFaceInfo extends TeaModel {
         /**
-         * <p>Overall quality score</p>
+         * <p>The overall quality score.</p>
          * 
          * <strong>example:</strong>
          * <p>39.04</p>
@@ -87,7 +90,7 @@ public class FaceCompareResponseBody extends TeaModel {
         public Double faceQualityScore;
 
         /**
-         * <p>Illumination score</p>
+         * <p>The illumination score.</p>
          * 
          * <strong>example:</strong>
          * <p>0.02</p>
@@ -96,7 +99,7 @@ public class FaceCompareResponseBody extends TeaModel {
         public Double illuminationScore;
 
         /**
-         * <p>Key area occlusion score</p>
+         * <p>The key area occlusion score.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -105,7 +108,7 @@ public class FaceCompareResponseBody extends TeaModel {
         public Double kaOcclusionScore;
 
         /**
-         * <p>Occlusion score</p>
+         * <p>The occlusion score.</p>
          * 
          * <strong>example:</strong>
          * <p>50.26</p>
@@ -114,7 +117,7 @@ public class FaceCompareResponseBody extends TeaModel {
         public Double occlusionScore;
 
         /**
-         * <p>Sharpness score</p>
+         * <p>The sharpness score.</p>
          * 
          * <strong>example:</strong>
          * <p>86.47</p>
@@ -122,18 +125,48 @@ public class FaceCompareResponseBody extends TeaModel {
         @NameInMap("SharpnessScore")
         public Double sharpnessScore;
 
+        /**
+         * <p>The overall quality score of the reference face photo.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39.04</p>
+         */
         @NameInMap("TargetFaceQualityScore")
         public Double targetFaceQualityScore;
 
+        /**
+         * <p>The illumination score of the reference face photo.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.02</p>
+         */
         @NameInMap("TargetIlluminationScore")
         public Double targetIlluminationScore;
 
+        /**
+         * <p>The key area occlusion score of the reference face photo.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("TargetKaOcclusionScore")
         public Double targetKaOcclusionScore;
 
+        /**
+         * <p>The occlusion score of the reference face photo.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50.26</p>
+         */
         @NameInMap("TargetOcclusionScore")
         public Double targetOcclusionScore;
 
+        /**
+         * <p>The sharpness score of the reference face photo.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86.47</p>
+         */
         @NameInMap("TargetSharpnessScore")
         public Double targetSharpnessScore;
 
@@ -226,13 +259,13 @@ public class FaceCompareResponseBody extends TeaModel {
 
     public static class FaceCompareResponseBodyResult extends TeaModel {
         /**
-         * <p>Related result information</p>
+         * <p>The related result information.</p>
          */
         @NameInMap("ExtFaceInfo")
         public FaceCompareResponseBodyResultExtFaceInfo extFaceInfo;
 
         /**
-         * <p>The comparison score between the submitted face photo and the reference face image during the authentication process. Value range: <strong>0</strong> to <strong>100</strong>.</p>
+         * <p>The comparison score between the submitted face photo and the reference face photo during the authentication process. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>98</p>
@@ -241,7 +274,8 @@ public class FaceCompareResponseBody extends TeaModel {
         public Double faceComparisonScore;
 
         /**
-         * <p>Whether the authentication passed.</p>
+         * <p>Specifies whether the authentication is passed.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li>Y: Passed.</li>
          * <li>N: Not passed.</li>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FaceVerifyIntlResponseBody extends TeaModel {
     /**
-     * <p>The return code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The return message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The response result.</p>
      */
     @NameInMap("Result")
     public FaceVerifyIntlResponseBodyResult result;
@@ -75,11 +75,17 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
     }
 
     public static class FaceVerifyIntlResponseBodyResultExtFaceInfo extends TeaModel {
+        /**
+         * <p>The attribute detection result of the main face, returned as a string. The result includes information such as gender, glasses, hat, mask, tattoo, smoking, other people, environment, expression, and age.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;gender&quot;:1,&quot;glasses&quot;:0,&quot;hat&quot;:1,&quot;mask&quot;:1,&quot;tattoo&quot;:0,&quot;smoking&quot;:0,&quot;others&quot;:1,&quot;env&quot;:&quot;office&quot;,&quot;expression&quot;:1,&quot;age&quot;:16}</p>
+         */
         @NameInMap("FaceAttributeInfo")
         public String faceAttributeInfo;
 
         /**
-         * <p>The liveness face quality score. Value range: 0 to 100. A higher value indicates better quality.</p>
+         * <p>The quality score of the live face. Valid values: 0 to 100. A higher value indicates better quality.</p>
          * 
          * <strong>example:</strong>
          * <p>39.04</p>
@@ -88,7 +94,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Double faceQualityScore;
 
         /**
-         * <p>The algorithm score for illumination as a sub-dimension of quality assessment. Value range: 0 to 100. A higher value indicates better quality.</p>
+         * <p>The algorithm score for illumination, which is a sub-dimension of quality judgment. Valid values: 0 to 100. A higher value indicates better quality.</p>
          * 
          * <strong>example:</strong>
          * <p>97.43</p>
@@ -97,7 +103,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Double illuminationScore;
 
         /**
-         * <p>The algorithm score for key area occlusion as a sub-dimension of quality assessment. Value range: 0 to 100. A higher value indicates better quality.</p>
+         * <p>The algorithm score for key area occlusion, which is a sub-dimension of quality judgment. Valid values: 0 to 100. A higher value indicates better quality.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -106,7 +112,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Double kaOcclusionScore;
 
         /**
-         * <p>The algorithm score for occlusion as a sub-dimension of quality assessment. Value range: 0 to 100. A higher value indicates better quality.</p>
+         * <p>The algorithm score for occlusion, which is a sub-dimension of quality judgment. Valid values: 0 to 100. A higher value indicates better quality.</p>
          * 
          * <strong>example:</strong>
          * <p>50.26</p>
@@ -115,7 +121,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Double occlusionScore;
 
         /**
-         * <p>The image sharpness score as a sub-dimension of quality assessment. Value range: 0 to 100. A higher value indicates better quality.</p>
+         * <p>The image sharpness score, which is a sub-dimension of quality judgment. Valid values: 0 to 100. A higher value indicates better quality.</p>
          * 
          * <strong>example:</strong>
          * <p>86.47</p>
@@ -123,18 +129,48 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         @NameInMap("SharpnessScore")
         public Double sharpnessScore;
 
+        /**
+         * <p>The comprehensive quality score of the reference face image. Valid values: 0 to 100. A higher value indicates better quality.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39.04</p>
+         */
         @NameInMap("TargetFaceQualityScore")
         public Double targetFaceQualityScore;
 
+        /**
+         * <p>The illumination score of the reference face image. Valid values: 0 to 100. A higher value indicates better quality.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.02</p>
+         */
         @NameInMap("TargetIlluminationScore")
         public Double targetIlluminationScore;
 
+        /**
+         * <p>The key area occlusion score of the reference face image. Valid values: 0 to 100. A higher value indicates better quality.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("TargetKaOcclusionScore")
         public Double targetKaOcclusionScore;
 
+        /**
+         * <p>The occlusion score of the reference face image. Valid values: 0 to 100. A higher value indicates better quality.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50.26</p>
+         */
         @NameInMap("TargetOcclusionScore")
         public Double targetOcclusionScore;
 
+        /**
+         * <p>The sharpness score of the reference face image. Valid values: 0 to 100. A higher value indicates better quality.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86.47</p>
+         */
         @NameInMap("TargetSharpnessScore")
         public Double targetSharpnessScore;
 
@@ -235,7 +271,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
 
     public static class FaceVerifyIntlResponseBodyResult extends TeaModel {
         /**
-         * <p>The face ID, user ID, and comparison score of the corresponding face in the face library when a duplicate face is found during retrieval.</p>
+         * <p>The face ID, user ID, and comparison score of the duplicate face in the face library when a duplicate face is retrieved.</p>
          * 
          * <strong>example:</strong>
          * <p>[
@@ -256,7 +292,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public FaceVerifyIntlResponseBodyResultExtFaceInfo extFaceInfo;
 
         /**
-         * <p>The predicted reference age of the face. Prediction may fail and the value may not be returned in some cases.</p>
+         * <p>The predicted reference age of the face. This parameter may not be returned if the prediction fails.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -265,12 +301,12 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Long faceAge;
 
         /**
-         * <p>Indicates whether the captured face involves a liveness attack. Valid values:</p>
+         * <p>Indicates whether the collected face involves a liveness attack. Valid values:</p>
          * <ul>
          * <li>Y: attack detected.</li>
-         * <li>N: no attack detected.</li>
+         * <li>N: no attack detected.
+         * This parameter is returned only when passive liveness detection is enabled.</li>
          * </ul>
-         * <p>Returned when passive liveness detection is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>N</p>
@@ -279,7 +315,8 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public String faceAttack;
 
         /**
-         * <p>The probability of a passive liveness detection attack on the face. Value range: 0 to 100. Returned when passive liveness detection is enabled.</p>
+         * <p>The probability of a liveness attack detected by passive liveness detection. Valid values: 0 to 100.
+         * This parameter is returned only when passive liveness detection is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>99</p>
@@ -288,7 +325,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Double faceAttackScore;
 
         /**
-         * <p>The comparison score between the submitted face image and the reference face image during verification. Value range: 0 to 100.</p>
+         * <p>The comparison score between the submitted face photo and the reference face image during authentication. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>95.0</p>
@@ -297,7 +334,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Double faceComparisonScore;
 
         /**
-         * <p>The predicted gender of the face image. Prediction may fail and the value may not be returned in some cases. Valid values:</p>
+         * <p>The predicted gender of the face image. This parameter may not be returned if the prediction fails. Valid values:</p>
          * <ul>
          * <li>M: male.</li>
          * <li>F: female.</li>
@@ -310,10 +347,10 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public String faceGender;
 
         /**
-         * <p>The final verification result. Valid values:</p>
+         * <p>The final authentication result. Valid values:</p>
          * <ul>
          * <li>Y: passed.</li>
-         * <li>N: not passed.</li>
+         * <li>N: failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -323,7 +360,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public String facePassed;
 
         /**
-         * <p>The corresponding FACEID returned only when the customer has enabled automatic registration and the face is registered successfully.</p>
+         * <p>The FACEID returned when face registration succeeds. This parameter is returned only when automatic registration is enabled by the customer.</p>
          * 
          * <strong>example:</strong>
          * <p>9e792ec84c8f0ca592a</p>
@@ -354,7 +391,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public String subCode;
 
         /**
-         * <p>The unique identifier of the verification request.</p>
+         * <p>The unique identifier of the authentication request.</p>
          * 
          * <strong>example:</strong>
          * <p>4ab0b***cbde97</p>

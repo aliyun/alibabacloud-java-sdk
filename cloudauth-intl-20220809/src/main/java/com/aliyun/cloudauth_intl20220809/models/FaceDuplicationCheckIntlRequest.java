@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class FaceDuplicationCheckIntlRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically register the face to the specified face library when no duplicate face is found during the search. Valid values:</p>
+     * <p>Specifies whether to automatically register the face to the specified face library if no duplicate face is found during the search. Valid values:</p>
      * <ul>
-     * <li>0: automatic registration</li>
-     * <li>1: no registration (default)</li>
+     * <li>0: Register.</li>
+     * <li>1: Do not register. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,11 +17,21 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     @NameInMap("AutoRegistration")
     public String autoRegistration;
 
+    /**
+     * <p>Specifies whether to return additional face attribute information. Valid values:</p>
+     * <ul>
+     * <li>N: Do not return. This is the default value.</li>
+     * <li>Y: Return. The result is located in Result.ExtFaceInfo.FaceAttributeInfo.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>N</p>
+     */
     @NameInMap("FaceAttributeCheck")
     public String faceAttributeCheck;
 
     /**
-     * <p>The face library codes created by the customer through the console. A maximum of 10 face libraries can be queried simultaneously. Separate multiple face library codes with commas.</p>
+     * <p>The codes of the face libraries created by the customer in the console. A maximum of 10 face libraries can be queried at the same time. Separate multiple face library codes with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>1232344，23444</p>
@@ -39,7 +49,7 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     public String faceQualityCheck;
 
     /**
-     * <p>The face library for registration.</p>
+     * <p>The code of the face library for face registration.</p>
      * 
      * <strong>example:</strong>
      * <p>0e0c34a77f</p>
@@ -48,7 +58,7 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     public String faceRegisterGroupCode;
 
     /**
-     * <p>The face matching threshold.&gt;Warning: This is a reserved field and is not currently enabled.</warning></p>
+     * <p>The face matching threshold. <warning>Reserved field. Not enabled yet.</warning></p>
      * 
      * <strong>example:</strong>
      * <p>0.5</p>
@@ -59,8 +69,8 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable passive liveness detection. Valid values:</p>
      * <ul>
-     * <li>0: disabled</li>
-     * <li>1: enabled</li>
+     * <li>0: Disable.</li>
+     * <li>1: Enable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,7 +80,7 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     public String liveness;
 
     /**
-     * <p>The custom unique business identifier used for subsequent troubleshooting. The value supports a combination of letters and numbers with a length of 32 characters. Ensure that the value is unique.</p>
+     * <p>The custom unique business identifier used for subsequent troubleshooting. The value supports a combination of up to 32 letters and digits. Make sure that the value is unique.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,7 +90,7 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>The custom user ID or other identifier that can identify a specific user, such as a phone number or email address. We strongly recommend that you desensitize the value of this field in advance, such as by hashing the value.</p>
+     * <p>The custom user ID or other identifier that can identify a specific user, such as a mobile phone number or email address. Desensitize the value of this field in advance, such as by hashing the value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -100,11 +110,7 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>Specifies the number of faces to return when multiple faces above the matching threshold exist. You can customize the return quantity through this parameter.</p>
-     * <ul>
-     * <li>Default value: 1</li>
-     * <li>Maximum value: 5</li>
-     * </ul>
+     * <p>Specifies the number of faces to return when multiple faces exceed the matching threshold. Default value: 1. Maximum value: 5.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -115,11 +121,9 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     /**
      * <p>Specifies the type of face data to save. Valid values:</p>
      * <ul>
-     * <li>0: face image (default)</li>
-     * <li>1: feature<blockquote>
-     * <p>Warning: This is a reserved field and is not currently enabled.</warning></p>
-     * </blockquote>
-     * </li>
+     * <li>0: Face image. This is the default value.</li>
+     * <li>1: Face feature.
+     * <warning>Reserved field. Not enabled yet.</warning></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,7 +133,7 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     public String saveFacePicture;
 
     /**
-     * <p>The custom verification scenario ID.</p>
+     * <p>The custom authentication scene ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -138,7 +142,7 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     public String sceneCode;
 
     /**
-     * <p>The Base64-encoded face photo.</p>
+     * <p>The Base64-encoded portrait photo.</p>
      * 
      * <strong>example:</strong>
      * <p>base64</p>
@@ -147,7 +151,7 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     public String sourceFacePicture;
 
     /**
-     * <p>The URL of the face image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
+     * <p>The URL of the portrait image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
      * 
      * <strong>example:</strong>
      * <p>https://***face1.jpeg</p>
@@ -156,7 +160,7 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     public String sourceFacePictureUrl;
 
     /**
-     * <p>The Base64-encoded face photo.</p>
+     * <p>The Base64-encoded portrait photo.</p>
      * 
      * <strong>example:</strong>
      * <p>base64</p>
@@ -165,7 +169,7 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     public String targetFacePicture;
 
     /**
-     * <p>The URL of the face image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
+     * <p>The URL of the portrait image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
      * 
      * <strong>example:</strong>
      * <p>https://***face2.jpeg</p>
@@ -174,37 +178,35 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     public String targetFacePictureUrl;
 
     /**
-     * <p>Specifies whether to overwrite the existing face with the current face when MerchantUserId already exists during automatic registration. Valid values: Y: overwrite. N: do not overwrite and return that the UserId already exists.</p>
+     * <p>Specifies whether to overwrite the original face with the current face if the MerchantUserId already exists during automatic registration. Valid values:</p>
+     * <ul>
+     * <li>Y: Overwrite.</li>
+     * <li>N: Do not overwrite and return that the UserId already exists.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>N</p>
      */
     @NameInMap("UpdateFaceIfUserExists")
     public String updateFaceIfUserExists;
 
     /**
-     * <p>The verification type. Valid values:</p>
+     * <p>The authentication type. Valid values:</p>
      * <ul>
-     * <li><p>0: retrieve pattern</p>
-     * <blockquote>
-     * <ul>
-     * <li>Feature: Submits a face library and a user face image (sourceFacePicture). The system automatically retrieves the face library to determine whether the specified face image (sourceFacePicture) already exists. Passive liveness detection can be enabled for the face image (sourceFacePicture).</li>
-     * <li>Recommended scenario: Real-person create an account where duplicate registration is not allowed.</li>
+     * <li>0: Retrieve pattern<ul>
+     * <li>Feature: The system receives a face library and a user face image (sourceFacePicture), and automatically retrieves from the face library to check whether the specified face image (sourceFacePicture) already exists. Passive liveness detection can be enabled for the face image (sourceFacePicture).</li>
+     * <li>Recommended scenario: Scenarios where a real person needs to create an account and duplicate registration is not allowed.</li>
      * </ul>
-     * </blockquote>
      * </li>
-     * <li><p>1 (default): authenticate pattern</p>
-     * <blockquote>
-     * <ul>
-     * <li>Feature: Submits a specified face image (sourceFacePicture) and a retained face image (TargetFacePicture). The system automatically authenticates whether the faces match. Passive liveness detection can be enabled for the specified face image (sourceFacePicture).</li>
-     * <li>Recommended scenario: Authenticating whether the operation is performed by the account owner when modifying logon credentials or account information.</li>
+     * <li>1 (default): Authenticate pattern<ul>
+     * <li>Feature: The system receives a specified face image (sourceFacePicture) and a retained face image (TargetFacePicture), and automatically authenticates whether the faces match. Passive liveness detection can be enabled for the specified face image (sourceFacePicture).</li>
+     * <li>Recommended scenario: Scenarios where it is required to authenticate whether the operation is performed by the user when modifying logon or account information.</li>
      * </ul>
-     * </blockquote>
      * </li>
-     * <li><p>2: comprehensive pattern</p>
-     * <blockquote>
-     * <ul>
-     * <li>Feature: Submits a face library, a specified face image (sourceFacePicture), and a retained face image (TargetFacePicture). The system automatically retrieves the face library to determine whether the specified face image (sourceFacePicture) exists, authenticates whether it matches the retained face, and supports enabling passive liveness detection for the specified face image (sourceFacePicture).</li>
-     * <li>Recommended scenario: Authenticating that the user is new and the operation is performed by the user.</li>
+     * <li>2: Comprehensive pattern<ul>
+     * <li>Feature: The system receives a face library, a specified face image (sourceFacePicture), and a retained face image (TargetFacePicture) at the same time, and automatically retrieves from the face library to check whether the specified face image (sourceFacePicture) exists and authenticates whether it matches the retained face. Passive liveness detection can be enabled for the specified face image (sourceFacePicture).</li>
+     * <li>Recommended scenario: Scenarios where it is required to authenticate that the user is a new user and the operation is performed by the user.</li>
      * </ul>
-     * </blockquote>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

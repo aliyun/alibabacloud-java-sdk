@@ -23,13 +23,13 @@ public class QueryFaceGroupResponseBody extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The list of returned entries.</p>
+     * <p>The list of returned items.</p>
      */
     @NameInMap("Items")
     public java.util.List<QueryFaceGroupResponseBodyItems> items;
 
     /**
-     * <p>The number of entries per page in a paged query.</p>
+     * <p>The number of entries per page during paging.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -38,7 +38,7 @@ public class QueryFaceGroupResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The return message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

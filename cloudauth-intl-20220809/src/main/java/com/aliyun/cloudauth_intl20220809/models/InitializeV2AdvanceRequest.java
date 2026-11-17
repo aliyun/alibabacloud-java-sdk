@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class InitializeV2AdvanceRequest extends TeaModel {
     /**
-     * <p><warning>This feature is not supported by the <strong>Web SDK</strong>. To use this feature, refer to the App SDK integration.</warning></p>
+     * <p><warning>This feature is not supported by the <strong>Web SDK</strong>. To use this feature, refer to the App SDK integration guide.</warning></p>
      * <p>Specifies whether to enable strict face quality detection. Valid values:</p>
      * <ul>
-     * <li>Y: Enabled. This is the default value.</li>
-     * <li>N: Not enabled.</li>
+     * <li>Y: Enable. This is the default value.</li>
+     * <li>N: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String appQualityCheck;
 
     /**
-     * <p>Specifies whether to enable authoritative identity verification. Currently, this applies only to second-generation ID cards in the Chinese mainland. This is an input parameter for the IDV product.</p>
+     * <p>Specifies whether to enable authoritative identity verification. This feature currently applies only to second-generation ID cards in the Chinese mainland. This parameter is applicable to IDV products.</p>
      * 
      * <strong>example:</strong>
      * <p>T</p>
@@ -28,6 +28,8 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String authorize;
 
     /**
+     * <p>The automatic document page classification configuration. This parameter takes effect only when DocType is set to a country or region code. You can specify the pages to collect based on the specific document type code. For documents that are not configured, only the front side is collected.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;BRA01001&quot;:&quot;01&quot;,&quot;BRA01002&quot;:&quot;01,02&quot;}</p>
      */
@@ -44,7 +46,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String autoRegistration;
 
     /**
-     * <p>The security token used for anti-replay and anti-tampering verification. If this parameter is passed in, the CallbackToken field is displayed in the callback URL.</p>
+     * <p>The security token used for anti-replay and anti-tampering verification. If you specify this parameter, the CallbackToken field is displayed in the callback URL.</p>
      * 
      * <strong>example:</strong>
      * <p>7ca5c68d869344ea8eeb30cdfd544544-6358700</p>
@@ -53,7 +55,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String callbackToken;
 
     /**
-     * <p>The callback URL for the authentication result notification. The callback request method is GET by default, and the callback URL must start with https. After the authentication is complete, the platform calls back this URL and automatically appends the transactionId, passed, and subcode fields.</p>
+     * <p>The callback URL for authentication result notifications. The default callback request method is GET, and the callback URL must start with https. After the authentication is completed, the platform calls this URL and automatically appends the transactionId, passed, and subcode fields.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://www.aliyun.com?callbackToken=1000004826&transactionId=shaxxxx&passed=Y&subCode=200">https://www.aliyun.com?callbackToken=1000004826&amp;transactionId=shaxxxx&amp;passed=Y&amp;subCode=200</a></p>
@@ -62,7 +64,11 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String callbackUrl;
 
     /**
-     * <p>Specifies whether to enable the adaptive color-changing window frame.</p>
+     * <p>Specifies whether to enable the adaptive color-changing window border. Valid values:</p>
+     * <ul>
+     * <li><strong>Y</strong>: Enable.</li>
+     * <li><strong>N</strong>: Disable.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>N</p>
@@ -71,7 +77,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String chameleonFrameEnable;
 
     /**
-     * <p>Specifies whether to enable cropping. This is an input parameter for the IDV product.</p>
+     * <p>Specifies whether to crop the image. This parameter is applicable to IDV products.</p>
      * 
      * <strong>example:</strong>
      * <p>N</p>
@@ -80,23 +86,19 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String crop;
 
     /**
-     * <p>The date of birth on the document.</p>
+     * <p>The date of birth on the document, in the YYMMDD format (6 digits). This parameter is required when <strong>MRTDInput</strong> is set to <strong>2</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>900101</p>
      */
     @NameInMap("DateOfBirth")
     public String dateOfBirth;
 
     /**
-     * <p>The expiration date on the document.</p>
+     * <p>The expiration date on the document, in the YYMMDD format (6 digits). This parameter is required when <strong>MRTDInput</strong> is set to <strong>2</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>301231</p>
      */
     @NameInMap("DateOfExpiry")
     public String dateOfExpiry;
@@ -120,16 +122,17 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String docNo;
 
     /**
-     * <p>The custom configuration for whether to collect additional pages.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>OCR_ID_BACK</p>
+     * <p>The custom configuration passed by the customer to specify whether to collect more pages.</p>
      */
     @NameInMap("DocPageConfig")
     public java.util.List<String> docPageConfig;
 
     /**
-     * <p>The document capture photo mode.</p>
+     * <p>The photo capture mode for document collection. Valid values:</p>
+     * <ul>
+     * <li>manual: Manual capture.</li>
+     * <li>auto: Automatic capture. This is the default value.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>manual</p>
@@ -138,12 +141,12 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String docScanMode;
 
     /**
-     * <p>The document type.</p>
+     * <p>The document type. </p>
      * <blockquote>
-     * <p>For the eKYC_PRO and ID_OCR_MAX solutions, see the official documentation at <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/certificate-code-table?spm=a2c63.p38356.help-menu-445633.d_2_8_2_0.279147abwKAWbr">https://www.alibabacloud.com/help/zh/ekyc/latest/certificate-code-table?spm=a2c63.p38356.help-menu-445633.d_2_8_2_0.279147abwKAWbr</a></p>
+     * <p>For the eKYC_PRO and ID_OCR_MAX editions, see the official documentation: <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/certificate-code-table?spm=a2c63.p38356.help-menu-445633.d_2_8_2_0.279147abwKAWbr">https://www.alibabacloud.com/help/zh/ekyc/latest/certificate-code-table?spm=a2c63.p38356.help-menu-445633.d_2_8_2_0.279147abwKAWbr</a></p>
      * </blockquote>
      * <blockquote>
-     * <p>For the ID_OCR, eKYC, and eKYC_MIN solutions, see the document type list in the official documentation at <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/gnhekqy05ni51m4c?spm=a2c63.p38356.help-menu-445633.d_2_3_1_0_0_0.6243244777KoZ7">https://www.alibabacloud.com/help/zh/ekyc/latest/gnhekqy05ni51m4c?spm=a2c63.p38356.help-menu-445633.d_2_3_1_0_0_0.6243244777KoZ7</a></p>
+     * <p>For the ID_OCR, eKYC, and eYKC_MIN editions, see the document type list in the official documentation: <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/gnhekqy05ni51m4c?spm=a2c63.p38356.help-menu-445633.d_2_3_1_0_0_0.6243244777KoZ7">https://www.alibabacloud.com/help/zh/ekyc/latest/gnhekqy05ni51m4c?spm=a2c63.p38356.help-menu-445633.d_2_3_1_0_0_0.6243244777KoZ7</a></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -153,15 +156,15 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String docType;
 
     /**
-     * <p>Specifies whether to collect a verification video.</p>
+     * <p>Specifies whether to store a video as evidence. Valid values:</p>
      * <ul>
-     * <li><p>N: No verification video is collected. This is the default value.</p>
+     * <li><p>N: No. This is the default value.</p>
      * </li>
-     * <li><p>Y: A short video (1 to 2 seconds) of the user\&quot;s face verification process is collected during authentication and returned through the query operation.</p>
+     * <li><p>Y: Yes. During the authentication process, a video of the user\&quot;s face scanning process (a 1- to 2-second video file) is collected and returned through the query operation.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>Because video files are large, the system discards video files when the network is unstable to prioritize the transmission of images required for authentication.</p>
+     * <p>Because video files are large, the system discards the video file when the network is unstable to prioritize the transmission of images required for authentication.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -171,7 +174,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String docVideo;
 
     /**
-     * <p>The document number.</p>
+     * <p>The document number. This parameter is required when <strong>MRTDInput</strong> is set to <strong>2</strong>.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -182,7 +185,13 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String documentNumber;
 
     /**
-     * <p>Specifies whether the recognition result page is editable during the document OCR recognition step:</p>
+     * <p>Specifies whether the recognition result page is editable during the document OCR stage. Valid values:</p>
+     * <ul>
+     * <li><p><strong>0</strong>: Not editable.</p>
+     * </li>
+     * <li><p><strong>1</strong>: Editable. This is the default value.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -192,6 +201,10 @@ public class InitializeV2AdvanceRequest extends TeaModel {
 
     /**
      * <p>The Indonesian email address. This field takes effect only when Authorize is set to T.</p>
+     * <blockquote>
+     * <p>Note
+     * This field is required only when the Indonesian data source is enabled.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:evxxx@imigxxxxx.go.id">evxxx@imigxxxxx.go.id</a></p>
@@ -209,6 +222,8 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String experienceCode;
 
     /**
+     * <p>Specifies whether to return additional face attribute information. Valid values: N: Do not return. This is the default value. Y: Return. The result is located in Result.ExtFaceInfo.FaceAttributeInfo.</p>
+     * 
      * <strong>example:</strong>
      * <p>N</p>
      */
@@ -216,7 +231,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String faceAttributeCheck;
 
     /**
-     * <p>The face libraries to compare against.</p>
+     * <p>The face databases for comparison.</p>
      * 
      * <strong>example:</strong>
      * <p>0e0c34a77f</p>
@@ -225,7 +240,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String faceGroupCodes;
 
     /**
-     * <p>The Base64-encoded face photo. If you use FacePictureBase64 to pass in the face photo, check the photo size and do not pass in an excessively large photo.</p>
+     * <p>The Base64-encoded string of the photo. If you choose to pass the face photo by using FacePictureBase64, check the photo size and do not pass an excessively large photo.</p>
      * 
      * <strong>example:</strong>
      * <p>Base64</p>
@@ -252,7 +267,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String facePictureUrl;
 
     /**
-     * <p>The face registration library.</p>
+     * <p>The face database for registration.</p>
      * 
      * <strong>example:</strong>
      * <p>0e0c34a77f</p>
@@ -261,7 +276,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String faceRegisterGroupCode;
 
     /**
-     * <p>The face verification threshold.</p>
+     * <p>The threshold for face verification.</p>
      * 
      * <strong>example:</strong>
      * <p>0.5</p>
@@ -270,7 +285,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String faceVerifyThreshold;
 
     /**
-     * <p>The face image quality. This is an input parameter for the IDV product.</p>
+     * <p>The quality of the face image. This parameter is applicable to IDV products.</p>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -279,7 +294,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String idFaceQuality;
 
     /**
-     * <p>Specifies whether to enable document anti-spoofing detection. This is an input parameter for the IDV product.</p>
+     * <p>Specifies whether to enable document anti-spoofing detection. This parameter is applicable to IDV products.</p>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -288,7 +303,13 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String idSpoof;
 
     /**
-     * <p>The custom OCR quality detection threshold mode:</p>
+     * <p>The custom threshold mode for OCR quality detection. Valid values:</p>
+     * <ul>
+     * <li>0: System default.</li>
+     * <li>1: Strict mode.</li>
+     * <li>2: Loose mode.</li>
+     * <li>3: Disable quality detection. This is the default value.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -297,7 +318,20 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String idThreshold;
 
     /**
-     * <p>The language configuration. This is an input parameter for the IDV product.</p>
+     * <p>The forced centering configuration. Specifies whether to intercept the request when an off-center face is detected on the terminal. Valid values:</p>
+     * <ul>
+     * <li>Y: Intercept. The client prompts the user to scan their face again.</li>
+     * <li>N: Do not intercept. This is the default value. The system extracts the largest face from the face scanning screen and sends it to the server for security detection.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
+    @NameInMap("IsForceFaceCentered")
+    public String isForceFaceCentered;
+
+    /**
+     * <p>The language configuration. This parameter is applicable to IDV products.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -306,13 +340,13 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String languageConfig;
 
     /**
-     * <p>The source of the MRTD verification parameter input. This parameter is required to decrypt information when reading document chip data via NFC.</p>
+     * <p>The input source of the MRTD verification parameter. This parameter is required to decrypt information when NFC reads the document chip information. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: user input</p>
+     * <li><p><strong>0</strong>: User input.</p>
      * </li>
-     * <li><p><strong>1</strong>: OCR reading</p>
+     * <li><p><strong>1</strong>: OCR reading.</p>
      * </li>
-     * <li><p><strong>2</strong>: API input</p>
+     * <li><p><strong>2</strong>: API input.</p>
      * </li>
      * </ul>
      * 
@@ -323,7 +357,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String MRTDInput;
 
     /**
-     * <p>The merchant-defined unique business ID used for subsequent troubleshooting. The value supports a combination of letters and numbers with a maximum length of 32 characters. Ensure that the value is unique.</p>
+     * <p>The custom unique business identifier on the merchant side, which is used for subsequent troubleshooting. It supports a combination of letters and digits, with a maximum length of 32 characters. Make sure that the value is unique.</p>
      * 
      * <strong>example:</strong>
      * <p>e0c34a***353888</p>
@@ -332,7 +366,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>The custom user ID, or another identifier that can identify a specific user, such as a phone number or email address. We strongly recommend that you hash or otherwise de-identify this value before passing it in.</p>
+     * <p>Your custom user ID or another identifier that can identify a specific user, such as a mobile phone number or an email address. We strongly recommend that you desensitize the value of this field in advance, for example, by hashing the value.</p>
      * 
      * <strong>example:</strong>
      * <p>1221****6543</p>
@@ -341,7 +375,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String merchantUserId;
 
     /**
-     * <p>The Metainfo environment parameter, which must be obtained through the client SDK.</p>
+     * <p>The Metainfo environment parameter, which must be obtained by using the client SDK.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;bioMetaInfo\&quot;:\&quot;4.1.0:2916352,0\&quot;,\&quot;deviceType\&quot;:\&quot;web\&quot;,\&quot;ua\&quot;:\&quot;Mozilla/5.0\&quot;}</p>
@@ -350,7 +384,12 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String metaInfo;
 
     /**
-     * <p>The Indonesian phone number. The format must start with +62 followed by 9 to 11 digits. This field takes effect only when Authorize is set to T.</p>
+     * <p>The Indonesian phone number. The format must be verified. It must start with +62 followed by 9 to 11 digits. This field takes effect only when Authorize is set to T.</p>
+     * <blockquote>
+     * <ul>
+     * <li>This field is required only when the Indonesian data source is enabled.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>+6281293671234</p>
@@ -359,17 +398,17 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String mobile;
 
     /**
-     * <p>The type of liveness detection to perform.</p>
+     * <p>The type of liveness detection to perform. Valid values:</p>
      * <ul>
-     * <li><p><strong>LIVENESS</strong> (default): Blink-based liveness detection.</p>
+     * <li><p><strong>LIVENESS</strong>: Liveness detection based on blinking. This is the default value.</p>
      * </li>
-     * <li><p><strong>PHOTINUS_LIVENESS</strong>: Dual detection that combines blink-based liveness detection and colorful light liveness detection.</p>
+     * <li><p><strong>PHOTINUS_LIVENESS</strong>: Dual liveness detection based on blinking and photinus.</p>
      * </li>
      * </ul>
      * <blockquote>
      * <ul>
      * <li>For supported SDK versions, see <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/sdk-publishing-record?spm=a2c63.p38356.0.i99">SDK release notes</a>.</li>
-     * <li>Colorful light dual detection is not supported on PCs.</li>
+     * <li>Dual liveness detection based on photinus is not supported on PCs.</li>
      * </ul>
      * </blockquote>
      * 
@@ -379,11 +418,21 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     @NameInMap("Model")
     public String model;
 
+    /**
+     * <p>Specifies whether to intercept the request when multiple faces are detected on the terminal. Valid values:</p>
+     * <ul>
+     * <li>Y: Intercept. The client prompts the user to scan their face again.</li>
+     * <li>N: Do not intercept. This is the default value. The system extracts the largest face from the face scanning screen and sends it to the server for security detection.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
     @NameInMap("NeedMultiFaceCheck")
     public String needMultiFaceCheck;
 
     /**
-     * <p>Specifies whether to enable OCR. This is an input parameter for the IDV product.</p>
+     * <p>Specifies whether to enable OCR. This parameter is applicable to IDV products.</p>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -392,7 +441,11 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String ocr;
 
     /**
-     * <p>Specifies whether to additionally return OCR recognition results in a standardized format:</p>
+     * <p>Specifies whether to return additional standardized OCR recognition fields. Valid values:</p>
+     * <ul>
+     * <li>0: No. This is the default value.</li>
+     * <li>1: Yes.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -401,15 +454,15 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String ocrValueStandard;
 
     /**
-     * <p>The configuration for capture pages. Separate multiple pages with commas (,). Valid values:</p>
+     * <p>The configuration of the pages to collect. Separate multiple pages with commas (,). Valid values:</p>
      * <ul>
-     * <li><p><strong>01</strong>: the portrait side of the identity document.</p>
+     * <li><p><strong>01</strong>: The portrait side of the document.</p>
      * </li>
-     * <li><p><strong>01,02</strong>: the portrait side and back side of the identity document.</p>
+     * <li><p><strong>01,02</strong>: The portrait and back sides of the document.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>When this parameter is set to 01,02, only China identity cards and Vietnam identity cards are supported.</p>
+     * <p>If you set this parameter to 01,02, only Chinese ID cards and Vietnamese ID cards are supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -419,17 +472,17 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String pages;
 
     /**
-     * <p>Specifies whether to allow a degraded processing method when compatibility issues occur during mobile H5 authentication.</p>
+     * <p>Specifies whether to allow degraded processing when compatibility issues occur during mobile H5 authentication. Valid values:</p>
      * <ul>
-     * <li><p><strong>url (default)</strong>: Degradation is supported. The page displays the authentication URL, and the user can copy the URL to open it or switch browsers to continue authentication.</p>
+     * <li><p><strong>url</strong>: Allow degradation. This is the default value. The page displays the authentication URL, and the user can copy the URL to open it or switch browsers to continue the authentication.</p>
      * </li>
-     * <li><p><strong>keep</strong>: Degradation is not supported. The error reason is directly returned, and the authentication process ends.</p>
+     * <li><p><strong>keep</strong>: Do not allow degradation. The system directly returns the error cause and ends the authentication process.</p>
      * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>This parameter is not supported on PC.</li>
-     * <li>If the business scenario involves completing authentication within a webpage embedded in an app, set this parameter to keep to disallow URL degradation.</li>
+     * <li>This switch is not supported on PCs.</li>
+     * <li>If the business scenario involves completing authentication in an embedded web page within an app, we recommend that you set this parameter to keep to disable URL degradation.</li>
      * </ul>
      * </blockquote>
      * 
@@ -440,9 +493,9 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String procedurePriority;
 
     /**
-     * <p>The product plan to use.</p>
+     * <p>The product edition to integrate. </p>
      * <blockquote>
-     * <p><strong>Note</strong> For more information, see the official documentation: <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/product-introduction?spm=a2c63.p38356.0.i1">https://www.alibabacloud.com/help/zh/ekyc/latest/product-introduction?spm=a2c63.p38356.0.i1</a></p>
+     * <p>Note: For more information, see the official documentation: <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/product-introduction?spm=a2c63.p38356.0.i1">https://www.alibabacloud.com/help/zh/ekyc/latest/product-introduction?spm=a2c63.p38356.0.i1</a></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -452,13 +505,13 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>Specifies the order of document and face verification steps. Valid values:</p>
+     * <p>The sequence of document and face verification. Valid values:</p>
      * <ul>
-     * <li>DOC_FACE: Document first, then face. This is the default value.</li>
-     * <li>FACE_DOC: Face first, then document.</li>
+     * <li>DOC_FACE: Document verification followed by face verification. This is the default value.</li>
+     * <li>FACE_DOC: Face verification followed by document verification.</li>
      * </ul>
      * <blockquote>
-     * <p><strong>Note</strong>: This parameter is required only when ProductCode is set to KYC_GLOBAL.</p>
+     * <p>Note: This parameter is required only when ProductCode is set to KYC_GLOBAL.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -468,7 +521,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String productFlow;
 
     /**
-     * <p>The number of duplicate faces to return.</p>
+     * <p>The number of duplicate faces returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -495,7 +548,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String saveFacePicture;
 
     /**
-     * <p>The scene code. This is an input parameter for the IDV product.</p>
+     * <p>The scene code. This parameter is applicable to IDV products.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -504,10 +557,10 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String sceneCode;
 
     /**
-     * <p>The mode that represents different security levels of the authentication process. Valid values:</p>
+     * <p>The pattern that represents different security levels of the authentication flow. Valid values:</p>
      * <ul>
-     * <li>01: Normal mode (default).</li>
-     * <li>02: Safe mode. A relatively strict mode that can be used for high-risk scenarios (input parameter for IDV products).</li>
+     * <li>01: Normal pattern. This is the default value.</li>
+     * <li>02: safe mode. This is a relatively strict pattern that is active in high-risk scenarios. This parameter is applicable to IDV products.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -517,7 +570,13 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String securityLevel;
 
     /**
-     * <p>Specifies whether to display the album upload entry during the document OCR recognition step:</p>
+     * <p>Specifies whether to display the album upload entry during the document OCR stage. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: Display. This is the default value.</p>
+     * </li>
+     * <li><p><strong>0</strong>: Do not display.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -526,7 +585,13 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String showAlbumIcon;
 
     /**
-     * <p>Specifies whether to display the guide page:</p>
+     * <p>Specifies whether to display the guide page. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: Display. This is the default value.</p>
+     * </li>
+     * <li><p><strong>0</strong>: Do not display.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -535,7 +600,13 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String showGuidePage;
 
     /**
-     * <p>Specifies whether to display the recognition result page during the document OCR recognition step:</p>
+     * <p>Specifies whether to display the recognition result page during the document OCR stage. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: Display. This is the default value.</p>
+     * </li>
+     * <li><p><strong>0</strong>: Do not display.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -544,7 +615,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String showOcrResult;
 
     /**
-     * <p>The custom UI configuration. Convert your custom UI configuration to a JSON string based on the configuration template, and pass it in through this parameter. For more information, see <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/idv-kyc-custom-skin?spm=a2c63.p38356.0.i60">IDV UI style customization</a>.</p>
+     * <p>The custom UI configuration. Convert your custom UI configuration into a JSON string based on the configuration template, and pass it through this operation. For more information, see <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/idv-kyc-custom-skin?spm=a2c63.p38356.0.i60">Customize IDV UI styles</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -558,7 +629,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String styleConfig;
 
     /**
-     * <p>The Base64-encoded face photo.</p>
+     * <p>The Base64-encoded string of the portrait photo.</p>
      * 
      * <strong>example:</strong>
      * <p>base64</p>
@@ -567,7 +638,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String targetFacePicture;
 
     /**
-     * <p>The file stream of the reference face photo.</p>
+     * <p>The file stream of the base face image.</p>
      * 
      * <strong>example:</strong>
      * <p>InputStream</p>
@@ -576,7 +647,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public java.io.InputStream targetFacePictureFileObject;
 
     /**
-     * <p>The URL of the face photo. The URL must be a publicly accessible HTTP or HTTPS link.</p>
+     * <p>The URL of the portrait photo. The URL must be a publicly accessible HTTP or HTTPS link.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://www.xxxxx.com/1.jpg">https://www.xxxxx.com/1.jpg</a></p>
@@ -585,7 +656,18 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String targetFacePictureUrl;
 
     /**
-     * <p>The custom action pool configuration for liveness detection.</p>
+     * <p>The custom action pool configuration for liveness detection. This parameter is required when Model is set to TEMPLATE.
+     * Configuration rules: Separate multiple action codes with commas (,). Best Practices: We recommend that you include at least one frontal face action (such as blinking) and keep the total number of actions to a maximum of 3.
+     * Action code lookup table:</p>
+     * <ul>
+     * <li>Blink: 01</li>
+     * <li>Open Mouth: 02</li>
+     * <li>Shake Head Left: 03</li>
+     * <li>Shake Head Right: 04</li>
+     * <li>Move Farther: 05</li>
+     * <li>Move Closer: 06</li>
+     * <li>Photinus: 07</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>01,02,07</p>
@@ -594,7 +676,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String templateConfig;
 
     /**
-     * <p>The number of actions to randomly select from TemplateConfig.</p>
+     * <p><strong>[Deprecated]</strong> The random mode is no longer recommended. This field is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -603,7 +685,10 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String templateRanCount;
 
     /**
-     * <p>The execution order of liveness detection actions in TemplateConfig.</p>
+     * <p>The execution sequence of liveness detection actions in TemplateConfig. This parameter is required when Model is set to TEMPLATE. Valid values:</p>
+     * <ul>
+     * <li>Seq: Execute from left to right in the sequence configured in TemplateConfig.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Seq</p>
@@ -612,7 +697,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String templateType;
 
     /**
-     * <p>Specifies whether to overwrite the existing face with the current face when the MerchantUserId already exists during automatic registration. Valid values: Y (overwrite) and N (do not overwrite and return a message indicating that the UserId already exists).</p>
+     * <p>Specifies whether to overwrite the existing face with the current face if MerchantUserId already exists during automatic registration. Valid values: Y: Overwrite. N: Do not overwrite and return a message indicating that the UserId already exists.</p>
      * 
      * <strong>example:</strong>
      * <p>N</p>
@@ -621,10 +706,10 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String updateFaceIfUserExists;
 
     /**
-     * <p>When <strong>DocType</strong> is set to 01000000 (global passport), specifies whether to enable NFC verification.</p>
+     * <p>Specifies whether to enable NFC verification when <strong>DocType</strong> is set to 01000000 (global passport). Valid values:</p>
      * <ul>
-     * <li><strong>Y</strong>: Enable NFC verification.</li>
-     * <li><strong>N</strong>: Disable NFC verification.</li>
+     * <li><strong>Y</strong>: Enable.</li>
+     * <li><strong>N</strong>: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -634,7 +719,7 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     public String useNFC;
 
     /**
-     * <p>The verification type.</p>
+     * <p>The type of verification.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -885,6 +970,14 @@ public class InitializeV2AdvanceRequest extends TeaModel {
     }
     public String getIdThreshold() {
         return this.idThreshold;
+    }
+
+    public InitializeV2AdvanceRequest setIsForceFaceCentered(String isForceFaceCentered) {
+        this.isForceFaceCentered = isForceFaceCentered;
+        return this;
+    }
+    public String getIsForceFaceCentered() {
+        return this.isForceFaceCentered;
     }
 
     public InitializeV2AdvanceRequest setLanguageConfig(String languageConfig) {

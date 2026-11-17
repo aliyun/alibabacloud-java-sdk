@@ -76,7 +76,7 @@ public class DownloadVerifyRecordIntlResponseBody extends TeaModel {
 
     public static class DownloadVerifyRecordIntlResponseBodyData extends TeaModel {
         /**
-         * <p>The task ID. This parameter is returned in asynchronous mode. Use QueryDownloadTaskIntl to download the exported file.</p>
+         * <p>The task ID. This parameter is returned in asynchronous mode. You can subsequently call QueryDownloadTaskIntl to download the exported file.</p>
          * 
          * <strong>example:</strong>
          * <p>202511284106866</p>

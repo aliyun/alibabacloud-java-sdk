@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class DocOcrV2AdvanceRequest extends TeaModel {
     /**
-     * <p>Specifies the side of the certificate. If this parameter is not specified, the portrait side is used by default.</p>
+     * <p>Specifies the side of the ID card, which can be the national emblem side or the portrait side. If you do not specify this parameter, the portrait side is used by default. Valid values:</p>
      * <ul>
-     * <li><p>OCR_ID_FACE (default): the portrait side</p>
-     * </li>
-     * <li><p>OCR_ID_NATIONAL_EMBLEM: the national emblem side.</p>
-     * </li>
+     * <li>OCR_ID_FACE: the portrait side. Default value.</li>
+     * <li>OCR_ID_NATIONAL_EMBLEM: the national emblem side.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class DocOcrV2AdvanceRequest extends TeaModel {
     public String cardSide;
 
     /**
-     * <p>The certificate type.</p>
+     * <p>The type of the ID card.</p>
      * 
      * <strong>example:</strong>
      * <p>00000006</p>
@@ -29,10 +27,10 @@ public class DocOcrV2AdvanceRequest extends TeaModel {
     public String docType;
 
     /**
-     * <p>Specifies whether to perform face quality detection on the certificate.</p>
+     * <p>Specifies whether to perform face quality check for the ID card. Valid values:</p>
      * <ul>
-     * <li>T: Detection is required.</li>
-     * <li>F: Detection is not required. (Default: F).</li>
+     * <li>T: Face quality check is performed.</li>
+     * <li>F: Face quality check is not performed. Default value: F.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,8 +40,8 @@ public class DocOcrV2AdvanceRequest extends TeaModel {
     public String idFaceQuality;
 
     /**
-     * <p>The Base64-encoded card or certificate image.</p>
-     * <p>If you use IdOcrPictureBase64 to pass in the certificate image, check the image size and do not pass in an excessively large image.</p>
+     * <p>The Base64-encoded image of the ID card.</p>
+     * <p>If you choose to pass the ID card photo by using the Base64-encoded image (IdOcrPictureBase64), check the photo size and do not pass oversized photos.</p>
      * 
      * <strong>example:</strong>
      * <p>base64</p>
@@ -52,7 +50,7 @@ public class DocOcrV2AdvanceRequest extends TeaModel {
     public String idOcrPictureBase64;
 
     /**
-     * <p>The file stream of the front side of the certificate image.</p>
+     * <p>The file stream of the front image of the ID card.</p>
      * 
      * <strong>example:</strong>
      * <p>InputStream</p>
@@ -61,7 +59,7 @@ public class DocOcrV2AdvanceRequest extends TeaModel {
     public java.io.InputStream idOcrPictureFileObject;
 
     /**
-     * <p>The URL of the front side of the certificate image.</p>
+     * <p>The URL of the front image of the ID card.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg">https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</a></p>
@@ -70,12 +68,12 @@ public class DocOcrV2AdvanceRequest extends TeaModel {
     public String idOcrPictureUrl;
 
     /**
-     * <p>The custom OCR quality detection threshold mode. Valid values:</p>
+     * <p>The custom threshold mode for OCR quality check. Valid values:</p>
      * <ul>
-     * <li>0: system default</li>
-     * <li>1: strict mode</li>
-     * <li>2: loose mode</li>
-     * <li>3 (default): quality detection is disabled.</li>
+     * <li>0: system default.</li>
+     * <li>1: strict mode.</li>
+     * <li>2: loose mode.</li>
+     * <li>3: disables quality check. Default value: 3.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,7 +83,7 @@ public class DocOcrV2AdvanceRequest extends TeaModel {
     public String idThreshold;
 
     /**
-     * <p>The merchant-defined unique business ID used for subsequent troubleshooting. The value can contain letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</p>
+     * <p>The custom unique business identifier on the merchant side, which is used for subsequent troubleshooting. It supports a combination of letters and digits, with a maximum length of 32 characters. Make sure that the identifier is unique.</p>
      * 
      * <strong>example:</strong>
      * <p>dso9322***dsjsd22</p>
@@ -94,7 +92,7 @@ public class DocOcrV2AdvanceRequest extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>The custom user ID defined in your business. Ensure that the value is unique.</p>
+     * <p>The custom user ID in the business. Make sure that the ID is unique.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789</p>
@@ -103,10 +101,10 @@ public class DocOcrV2AdvanceRequest extends TeaModel {
     public String merchantUserId;
 
     /**
-     * <p>Specifies whether to perform certificate OCR.</p>
+     * <p>Specifies whether to perform OCR on the ID card. Valid values:</p>
      * <ul>
-     * <li>T: OCR is required.</li>
-     * <li>F: OCR is not required.</li>
+     * <li>T: OCR is performed on the ID card.</li>
+     * <li>F: OCR is not performed on the ID card.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -119,16 +117,16 @@ public class DocOcrV2AdvanceRequest extends TeaModel {
      * <p>The product code.</p>
      * 
      * <strong>example:</strong>
-     * <p>产品方案类型ID_OCR_MIN</p>
+     * <p>Product solution type ID_OCR_MIN</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
-     * <p>Specifies whether to enable anti-spoofing detection.</p>
+     * <p>Specifies whether to enable anti-spoofing check. Valid values:</p>
      * <ul>
-     * <li>T: Anti-spoofing is enabled.</li>
-     * <li>F: Anti-spoofing is disabled.</li>
+     * <li>T: Anti-spoofing check is enabled.</li>
+     * <li>F: Anti-spoofing check is disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

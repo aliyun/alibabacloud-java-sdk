@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class CredentialRecognitionIntlRequest extends TeaModel {
     /**
-     * <p>The field check rule configuration, in JSON string format.</p>
+     * <p>The field validation rule configuration. The value is a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{
-     *     &quot;address_rule&quot;: &quot;Includes Address Hangzhou ***&quot;,
+     *     &quot;address_rule&quot;: &quot;Includes Adrress Hangzhou***&quot;,
      *     &quot;name_rule&quot;: &quot;Includes Name Zhang*&quot;,
-     *     &quot;date_of_issue_rule&quot;: &quot;Within 2026.05.20&quot;
+     *     &quot;date_of_issue_rule&quot;: &quot;Whthin 2026.05.20&quot;
      * }</p>
      */
     @NameInMap("CheckRuleConfig")
     public String checkRuleConfig;
 
     /**
-     * <p>The Base64-encoded image. If you choose to pass in the image by using IdOcrPictureBase64 (Base64-encoded photo), check the photo size and do not pass in an excessively large photo.</p>
+     * <p>The Base64-encoded image. If you use the IdOcrPictureBase64 parameter to pass the Base64-encoded photo, check the photo size and do not pass oversized photos.</p>
      * 
      * <strong>example:</strong>
      * <p>base64</p>
@@ -38,7 +38,7 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     /**
      * <p>The credential type. Valid values:</p>
      * <ul>
-     * <li>01: transaction credential (including electronic bill images for water, electricity, gas, credit card, and other types)</li>
+     * <li>01: transaction credentials, including electronic bills for utilities such as water, electricity, and gas, as well as credit card statements.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -49,12 +49,10 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     public String docType;
 
     /**
-     * <p>The input file type. Valid values:</p>
+     * <p>The material input type. Valid values:</p>
      * <ul>
-     * <li><p>IMAGE (default): image.</p>
-     * </li>
-     * <li><p>PDF: PDF format.</p>
-     * </li>
+     * <li>IMAGE: image. This is the default value.</li>
+     * <li>PDF: PDF format.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,8 +64,8 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable tampering detection. Valid values:</p>
      * <ul>
-     * <li>true: Enabled.</li>
-     * <li>false: Disabled.</li>
+     * <li>true: enabled.</li>
+     * <li>false: disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -78,10 +76,10 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     public String fraudCheck;
 
     /**
-     * <p>Specifies whether to enable quality detection. Valid values:</p>
+     * <p>Specifies whether to enable the quality check. Valid values:</p>
      * <ul>
-     * <li>Y: Enabled.</li>
-     * <li>N: Disabled.</li>
+     * <li>Y: enabled.</li>
+     * <li>N: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,7 +91,7 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     /**
      * <p>The extraction type. Valid values:</p>
      * <ul>
-     * <li>0101: electronic bill address and name module (extracts the address and name module through intelligent analysis)</li>
+     * <li>0101: electronic bill address and name module. The address and name are extracted through intelligent analysis.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -106,8 +104,8 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable translation. Valid values:</p>
      * <ul>
-     * <li>0: Disabled.</li>
-     * <li>1: Enabled.</li>
+     * <li>0: disabled.</li>
+     * <li>1: enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -117,10 +115,10 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     public String ocrTranslation;
 
     /**
-     * <p>Specifies whether to enable OCR result normalization. Valid values:</p>
+     * <p>Specifies whether to enable OCR result standardization. Valid values:</p>
      * <ul>
-     * <li>0: Disabled.</li>
-     * <li>1: Enabled.</li>
+     * <li>0: disabled.</li>
+     * <li>1: enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -130,7 +128,7 @@ public class CredentialRecognitionIntlRequest extends TeaModel {
     public String ocrValueStandard;
 
     /**
-     * <p>The product solution to use. Set the value to CREDENTIAL_RECOGNITION.</p>
+     * <p>The product solution to be integrated. Valid value: CREDENTIAL_RECOGNITION.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
