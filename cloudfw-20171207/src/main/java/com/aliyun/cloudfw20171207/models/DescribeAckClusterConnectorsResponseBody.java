@@ -38,7 +38,7 @@ public class DescribeAckClusterConnectorsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -93,9 +93,9 @@ public class DescribeAckClusterConnectorsResponseBody extends TeaModel {
 
     public static class DescribeAckClusterConnectorsResponseBodyAckClusterConnectors extends TeaModel {
         /**
-         * <p>The ACK cluster ID. You can call the following operation to obtain the value:</p>
+         * <p>The ID of the ACK cluster. You can obtain the value from the following API operation:</p>
          * <ul>
-         * <li><a href="~~DescribeAckClusters~~">DescribeAckClusters</a>: Queries a list of ACK clusters in batches.</li>
+         * <li><a href="~~DescribeAckClusters~~">DescribeAckClusters</a>: Lists the ACK clusters.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class DescribeAckClusterConnectorsResponseBody extends TeaModel {
         public String connectorId;
 
         /**
-         * <p>The name of the ACK cluster connector. The name must be 1 to 64 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * <p>The name of the ACK cluster connector. The name must be 1 to 64 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>ack-cluster-connector-name</p>
@@ -159,13 +159,13 @@ public class DescribeAckClusterConnectorsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The list of address book UUIDs created on the ACK cluster connector.</p>
+         * <p>The list of UUIDs of the address books created for the ACK cluster connector.</p>
          */
         @NameInMap("GroupUuids")
         public java.util.List<String> groupUuids;
 
         /**
-         * <p>The Alibaba Cloud UID of the account to which the ACK cluster resource belongs.</p>
+         * <p>The Alibaba Cloud UID to which the ACK cluster resources belong.</p>
          * 
          * <strong>example:</strong>
          * <p>159663371500****</p>
@@ -174,9 +174,9 @@ public class DescribeAckClusterConnectorsResponseBody extends TeaModel {
         public String memberUid;
 
         /**
-         * <p>The primary vSwitch of the ACK cluster connector. You can call the following operation to obtain the value:</p>
+         * <p>The primary vSwitch of the ACK cluster connector. You can obtain the value from the following API operation:</p>
          * <ul>
-         * <li><a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a>: Queries the list of synchronization node vSwitches in batches.</li>
+         * <li><a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a>: Lists the vSwitches for synchronization nodes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,9 +195,9 @@ public class DescribeAckClusterConnectorsResponseBody extends TeaModel {
         public String primaryVswitchIp;
 
         /**
-         * <p>The zone of the primary vSwitch of the ACK cluster connector. You can call the following operation to obtain the value:</p>
+         * <p>The zone of the primary vSwitch of the ACK cluster connector. You can obtain the value from the following API operation:</p>
          * <ul>
-         * <li><a href="~~DescribeAccessInstanceZoneList~~">DescribeAccessInstanceZoneList</a>: Queries the list of synchronization node vSwitch zones in batches.</li>
+         * <li><a href="~~DescribeAccessInstanceZoneList~~">DescribeAccessInstanceZoneList</a>: Lists the zones of the vSwitches for synchronization nodes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,12 +207,12 @@ public class DescribeAckClusterConnectorsResponseBody extends TeaModel {
         public String primaryVswitchZoneId;
 
         /**
-         * <p>The region ID of the ACK cluster connector. You can call the following operation to obtain the value:</p>
+         * <p>The region ID of the ACK cluster connector. You can obtain the value from the following API operation:</p>
          * <ul>
-         * <li><a href="~~DescribeAccessInstanceRegionList~~">DescribeAccessInstanceRegionList</a>: Queries the list of synchronization node regions.</li>
+         * <li><a href="~~DescribeAccessInstanceRegionList~~">DescribeAccessInstanceRegionList</a>: Queries the list of regions for synchronization nodes.</li>
          * </ul>
          * <blockquote>
-         * <p>For more information about the regions supported by ACK cluster connectors in Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/2865120.html">ACK cluster synchronization nodes</a>.</p>
+         * <p>For more information about the regions supported by Cloud Firewall for ACK cluster connectors, see <a href="https://help.aliyun.com/document_detail/2865120.html">ACK cluster synchronization nodes</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -222,9 +222,9 @@ public class DescribeAckClusterConnectorsResponseBody extends TeaModel {
         public String regionNo;
 
         /**
-         * <p>The standby vSwitch of the ACK cluster connector. You can call the following operation to obtain the value:</p>
+         * <p>The secondary vSwitch of the ACK cluster connector. You can obtain the value from the following API operation:</p>
          * <ul>
-         * <li><a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a>: Queries the list of synchronization node vSwitches in batches.</li>
+         * <li><a href="~~DescribeAccessInstanceVSwitchList~~">DescribeAccessInstanceVSwitchList</a>: Lists the vSwitches for synchronization nodes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,7 +234,7 @@ public class DescribeAckClusterConnectorsResponseBody extends TeaModel {
         public String standbyVswitchId;
 
         /**
-         * <p>The IP address of the standby vSwitch of the ACK cluster connector.</p>
+         * <p>The IP address of the secondary vSwitch of the ACK cluster connector.</p>
          * 
          * <strong>example:</strong>
          * <p>10.100.1.XXX</p>
@@ -243,9 +243,9 @@ public class DescribeAckClusterConnectorsResponseBody extends TeaModel {
         public String standbyVswitchIp;
 
         /**
-         * <p>The zone of the standby vSwitch of the ACK cluster connector. You can call the following operation to obtain the value:</p>
+         * <p>The zone of the secondary vSwitch of the ACK cluster connector. You can obtain the value from the following API operation:</p>
          * <ul>
-         * <li><a href="~~DescribeAccessInstanceZoneList~~">DescribeAccessInstanceZoneList</a>: Queries the list of synchronization node vSwitch zones in batches.</li>
+         * <li><a href="~~DescribeAccessInstanceZoneList~~">DescribeAccessInstanceZoneList</a>: Lists the zones of the vSwitches for synchronization nodes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -255,7 +255,7 @@ public class DescribeAckClusterConnectorsResponseBody extends TeaModel {
         public String standbyVswitchZoneId;
 
         /**
-         * <p>The container synchronization cycle of the ACK cluster connector.</p>
+         * <p>The synchronization cycle of the container for the ACK cluster connector.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -273,7 +273,7 @@ public class DescribeAckClusterConnectorsResponseBody extends TeaModel {
         public String unhealthyReason;
 
         /**
-         * <p>The instance ID of the VPC-connected instance to which the ACK cluster belongs.</p>
+         * <p>The VPC-connected instance ID of the ACK cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-j6cvhdscntzuvr0x****</p>

@@ -20,7 +20,7 @@ public class DescribeRegionInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total count.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>

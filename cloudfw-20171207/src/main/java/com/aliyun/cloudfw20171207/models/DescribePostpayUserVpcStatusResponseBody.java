@@ -28,7 +28,7 @@ public class DescribePostpayUserVpcStatusResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The number of days that protection is disabled. This parameter is valid only when the module is enabled.</p>
+     * <p>The number of days when protection was not enabled. This parameter is valid only when the module is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

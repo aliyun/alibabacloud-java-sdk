@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyFirewallV2RoutePolicySwitchRequest extends TeaModel {
     /**
-     * <p>The instance ID of the VPC boundary firewall.</p>
+     * <p>The instance ID of the virtual private cloud (VPC) firewalls.</p>
+     * <p><strong>Note</strong>: This parameter is actually required. If it is not provided, the operation returns ErrorParameters (-360103).</p>
      * 
      * <strong>example:</strong>
      * <p>vfw-tr-5b202e7f0be64611****</p>
@@ -14,12 +15,10 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends TeaModel {
     public String firewallId;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +43,8 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends TeaModel {
     public String shouldRecover;
 
     /**
-     * <p>The ID of the routing policy for the firewall.</p>
+     * <p>The ID of the firewall route policy.</p>
+     * <p><strong>Note</strong>: This parameter is actually required. If it is not provided or the policy does not exist, the operation returns ErrorTrFirewallPolicyNotFound (-361043). You can call DescribeTrFirewallV2RoutePolicyList to query valid route policy IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>policy-93684cc5caa44b2e****</p>
@@ -53,13 +53,14 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends TeaModel {
     public String trFirewallRoutePolicyId;
 
     /**
-     * <p>The status of the policy. Valid values:</p>
+     * <p>The status of the policy switch. Valid values:</p>
      * <ul>
-     * <li><p>open: Enables the policy.</p>
+     * <li><p>open: Enabled.</p>
      * </li>
-     * <li><p>close: Disables the policy.</p>
+     * <li><p>close: Disabled.</p>
      * </li>
      * </ul>
+     * <p><strong>Note</strong>: This parameter is actually required. If it is not provided or the value is not within the preceding range, the operation returns ErrorParameters (-360103).</p>
      * 
      * <strong>example:</strong>
      * <p>open</p>

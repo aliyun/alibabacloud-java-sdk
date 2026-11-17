@@ -17,7 +17,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
     public DescribeTrafficLogResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The query ID. If the query is too large, the query ID is returned first. You can use the query ID to query the results later.</p>
+     * <p>The query ID. If the query scope is too large, the query ID is returned first. You can use the query ID to query the results later.</p>
      * 
      * <strong>example:</strong>
      * <p>398542bf-e001-47a3-aee2-b132b588e3c8</p>
@@ -82,7 +82,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String regionNo;
 
         /**
-         * <p>The VPC-connected instance ID.</p>
+         * <p>The instance ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-8vba1c1em97h0ji71b****</p>
@@ -150,7 +150,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The rule source.</p>
+         * <p>The source of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -250,7 +250,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
 
     public static class DescribeTrafficLogResponseBodyDataList extends TeaModel {
         /**
-         * <p>The ID of the ACL pre-matched policy. An empty value indicates all policies.</p>
+         * <p>The ID of the ACL pre-matched policy. If you do not specify this parameter, all policies are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -269,11 +269,9 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
 
         /**
          * <p>The ACL pre-matching status. Valid values:</p>
-         * <ul>
-         * <li><strong>app_unknown</strong>: The application is not identified.</li>
-         * <li><strong>domain_unknown</strong>: The domain name is not identified.</li>
-         * <li><strong>normal</strong>: Normal.</li>
-         * </ul>
+         * <p><strong>app_unknown</strong>: The application is not identified.</p>
+         * <p><strong>domain_unknown</strong>: The domain name is not identified.</p>
+         * <p><strong>normal</strong>: Normal.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -283,16 +281,14 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
 
         /**
          * <p>The DPI status. Valid values:</p>
-         * <ul>
-         * <li><strong>none</strong>: Initial status.</li>
-         * <li><strong>policy_discard</strong>: The connection fails to be established and is blocked by user ACLs or threat intelligence.</li>
-         * <li><strong>tcp_not_establish</strong>: The TCP connection fails to be established.</li>
-         * <li><strong>no_payload</strong>: The connection is established, but DPI has analyzed zero payloads.</li>
-         * <li><strong>analysing</strong>: Identifying.</li>
-         * <li><strong>unknown_loose</strong>: In loose mode, identification fails and the system continues to identify.</li>
-         * <li><strong>unknown_strict</strong>: In strict mode, identification fails.</li>
-         * <li><strong>success</strong>: Identification succeeds.</li>
-         * </ul>
+         * <p><strong>none</strong>: Initial status.</p>
+         * <p><strong>policy_discard</strong>: The connection fails to be established and is blocked by user ACLs or threat intelligence.</p>
+         * <p><strong>tcp_not_establish</strong>: The TCP connection fails to be established.</p>
+         * <p><strong>no_payload</strong>: The connection is established, but DPI has analyzed zero payloads.</p>
+         * <p><strong>analysing</strong>: Identifying.</p>
+         * <p><strong>unknown_loose</strong>: In loose mode, identification fails and the system continues to identify.</p>
+         * <p><strong>unknown_strict</strong>: In strict mode, identification fails.</p>
+         * <p><strong>success</strong>: Identified.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -346,7 +342,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String cityId;
 
         /**
-         * <p>The closure reason.</p>
+         * <p>The close reason.</p>
          * 
          * <strong>example:</strong>
          * <p>tcp_fin</p>
@@ -375,8 +371,8 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         /**
          * <p>The traffic direction. Valid values:</p>
          * <ul>
-         * <li><strong>in</strong>: Inbound.</li>
-         * <li><strong>out</strong>: Outbound.</li>
+         * <li><strong>in</strong>: inbound.</li>
+         * <li><strong>out</strong>: outbound.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -422,13 +418,13 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public Integer dstPort;
 
         /**
-         * <p>The destination VPC information.</p>
+         * <p>The list of destination VPC information.</p>
          */
         @NameInMap("DstVpc")
         public DescribeTrafficLogResponseBodyDataListDstVpc dstVpc;
 
         /**
-         * <p>The end time of the data. The time is in the UNIX timestamp format. Unit: seconds.</p>
+         * <p>The end time of the data. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1751423363</p>
@@ -437,7 +433,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The other extended data.</p>
+         * <p>The additional extended data.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -500,7 +496,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>The UID of the Cloud Firewall member account.</p>
+         * <p>The UID of the Cloud Firewall member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>14151892****7022</p>
@@ -590,11 +586,11 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The final result of the traffic. Valid values:</p>
+         * <p>The final action on the traffic. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Allowed.</li>
-         * <li><strong>1</strong>: Alerted.</li>
-         * <li><strong>2</strong>: Dropped.</li>
+         * <li><strong>0</strong>: allow.</li>
+         * <li><strong>1</strong>: alert.</li>
+         * <li><strong>2</strong>: drop.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -606,11 +602,11 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         /**
          * <p>The source of the matched detection rule. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: None.</li>
-         * <li><strong>1</strong>: Basic protection.</li>
-         * <li><strong>2</strong>: Virtual patches.</li>
-         * <li><strong>3</strong>: Access control.</li>
-         * <li><strong>4</strong>: Threat intelligence.</li>
+         * <li><strong>0</strong>: none.</li>
+         * <li><strong>1</strong>: basic protection.</li>
+         * <li><strong>2</strong>: virtual patches.</li>
+         * <li><strong>3</strong>: access control.</li>
+         * <li><strong>4</strong>: threat intelligence.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -644,7 +640,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public Integer srcPort;
 
         /**
-         * <p>The source private IP address.</p>
+         * <p>The private IP address of the source.</p>
          * 
          * <strong>example:</strong>
          * <p>172.16.101.7</p>
@@ -659,7 +655,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public DescribeTrafficLogResponseBodyDataListSrcVpc srcVpc;
 
         /**
-         * <p>The start time of the data. The time is in the UNIX timestamp format. Unit: seconds.</p>
+         * <p>The start time of the data. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1751423362</p>
@@ -686,7 +682,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String tlsRuleName;
 
         /**
-         * <p>The ID of the TLS inspection scope.</p>
+         * <p>The TLS inspection scope ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tls-xxx</p>

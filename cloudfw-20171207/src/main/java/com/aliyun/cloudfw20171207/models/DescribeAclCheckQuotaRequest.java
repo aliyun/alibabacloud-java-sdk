@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAclCheckQuotaRequest extends TeaModel {
     /**
-     * <p>The language of the response.</p>
+     * <p>The language.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>

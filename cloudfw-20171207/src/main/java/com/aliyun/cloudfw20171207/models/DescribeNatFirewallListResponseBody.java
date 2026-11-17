@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeNatFirewallListResponseBody extends TeaModel {
     /**
-     * <p>The list of Cloud Firewalls.</p>
+     * <p>The list of NAT firewalls.</p>
      */
     @NameInMap("NatFirewallList")
     public java.util.List<DescribeNatFirewallListResponseBodyNatFirewallList> natFirewallList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>15FCCC52-1E23-57AE-B5EF-3E00A3******</p>
@@ -68,7 +68,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         public String destinationCidr;
 
         /**
-         * <p>The original next hop address of the NAT gateway.</p>
+         * <p>The next hop ID of the original NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-2ze0s284r9atg5******</p>
@@ -86,7 +86,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         public String nextHopType;
 
         /**
-         * <p>The route table that contains the default route of the NAT gateway.</p>
+         * <p>The ID of the route table to which the default route of the NAT gateway belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-bp18o0gb******</p>
@@ -137,7 +137,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         /**
          * <p>The UID of the Alibaba Cloud account.</p>
          * <blockquote>
-         * <p>The management account of the Cloud Firewall member accounts.</p>
+         * <p>The Alibaba Cloud account to which the Cloud Firewall member account belongs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
-         * <p>The error details.</p>
+         * <p>The cause of the error.</p>
          * 
          * <strong>example:</strong>
          * <p>Firewall creation failed</p>
@@ -156,7 +156,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         public String errorDetail;
 
         /**
-         * <p>The deployment mode of the NAT firewall service. Valid values: <strong>PrimaryStandby</strong> (active/standby mode) and <strong>MultiPrimary</strong> (active-active mode).</p>
+         * <p>The deployment mode of the NAT firewall service. Valid values: <strong>PrimaryStandby</strong> (primary/secondary mode) and <strong>MultiPrimary</strong> (active-active mode).</p>
          * 
          * <strong>example:</strong>
          * <p>PrimaryStandby</p>
@@ -171,7 +171,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         public java.util.List<String> firewallServiceZones;
 
         /**
-         * <p>The UID of the Cloud Firewall member accounts.</p>
+         * <p>The UID of the member account of Cloud Firewall.</p>
          * 
          * <strong>example:</strong>
          * <p>19106481******</p>
@@ -180,7 +180,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         public Long memberUid;
 
         /**
-         * <p>The ID of the NAT gateway to query.</p>
+         * <p>The ID of the NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-uf6tnblxip4qcxg******</p>
@@ -198,13 +198,13 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         public String natGatewayName;
 
         /**
-         * <p>The list of default route entries for the NAT gateway.</p>
+         * <p>The default route entry list for routing of the NAT gateway.</p>
          */
         @NameInMap("NatRouteEntryList")
         public java.util.List<DescribeNatFirewallListResponseBodyNatFirewallListNatRouteEntryList> natRouteEntryList;
 
         /**
-         * <p>The NAT firewall ID.</p>
+         * <p>The ID of the NAT firewall.</p>
          * 
          * <strong>example:</strong>
          * <p>proxy-nat30******</p>
@@ -213,7 +213,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         public String proxyId;
 
         /**
-         * <p>The NAT firewall name.</p>
+         * <p>The name of the NAT firewall.</p>
          * 
          * <strong>example:</strong>
          * <p>nat-firewall-test</p>
@@ -222,7 +222,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         public String proxyName;
 
         /**
-         * <p>The elastic network interface (ENI) ID used by the firewall.</p>
+         * <p>The ID of the elastic network interface (ENI) used by the firewall.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-bp127llmo4v5qju******</p>
@@ -231,7 +231,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         public String proxyNetworkInterfaceId;
 
         /**
-         * <p>The route table ID used by the firewall.</p>
+         * <p>The ID of the route table used by the firewall.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-bp1pmyga7p4j10a******</p>
@@ -240,15 +240,15 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         public String proxyRouteTableId;
 
         /**
-         * <p>The Cloud Firewall status. Valid values:</p>
+         * <p>The status of the NAT firewall. Valid values:</p>
          * <ul>
-         * <li>configuring: being created</li>
-         * <li>deleting: being deleted</li>
-         * <li>normal: normal </li>
-         * <li>abnormal: abnormal</li>
-         * <li>opening: being enabled</li>
-         * <li>closing: being disabled</li>
-         * <li>closed: disabled</li>
+         * <li>configuring: Creating.</li>
+         * <li>deleting: Deleting.</li>
+         * <li>normal: Normal. </li>
+         * <li>abnormal: Abnormal.</li>
+         * <li>opening: Enabling.</li>
+         * <li>closing: Disabling.</li>
+         * <li>closed: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -258,7 +258,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         public String proxyStatus;
 
         /**
-         * <p>The vSwitch ID used by the firewall.</p>
+         * <p>The ID of the vSwitch used by the firewall.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1amn3t1ktjjy8******</p>
@@ -267,7 +267,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         public String proxyVSwitchId;
 
         /**
-         * <p>The region ID of the Cloud Firewall.</p>
+         * <p>The region ID of the NAT firewall.</p>
          * <blockquote>
          * <p>For more information about the regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
          * </blockquote>
@@ -279,7 +279,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Indicates whether strict mode is enabled.</p>
+         * <p>Specifies whether strict mode is enabled. Valid values:</p>
          * <ul>
          * <li>1: Strict mode is enabled. </li>
          * <li>0: Strict mode is disabled.</li>
@@ -301,7 +301,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The name of the VPC instance.</p>
+         * <p>The name of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-test-instance</p>

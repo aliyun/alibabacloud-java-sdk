@@ -18,7 +18,7 @@ public class DescribeAclRuleCountRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address of the requester.</p>
      * 
      * <strong>example:</strong>
      * <p>27.151.85.XX</p>

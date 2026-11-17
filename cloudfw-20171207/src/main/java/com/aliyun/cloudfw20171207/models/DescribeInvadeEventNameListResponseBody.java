@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInvadeEventNameListResponseBody extends TeaModel {
     /**
-     * <p>A list of anomalous activity names.</p>
+     * <p>The list of abnormal event names.</p>
      */
     @NameInMap("EventNameList")
     public java.util.List<DescribeInvadeEventNameListResponseBodyEventNameList> eventNameList;
 
     /**
-     * <p>A list of vulnerability names.</p>
+     * <p>The list of vulnerability names.</p>
      */
     @NameInMap("NameList")
     public java.util.List<String> nameList;

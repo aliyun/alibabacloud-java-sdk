@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyDnsFirewallPolicyRequest extends TeaModel {
     /**
-     * <p>The action that the access control policy performs on traffic in Cloud Firewall. Valid values:</p>
+     * <p>The action that Cloud Firewall performs on traffic that matches the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>accept</strong>: allows the traffic.</li>
-     * <li><strong>drop</strong>: deny the traffic.</li>
-     * <li><strong>log</strong>: monitors the traffic.</li>
+     * <li><strong>accept</strong>: Allows the traffic.</li>
+     * <li><strong>drop</strong>: Denies the traffic.</li>
+     * <li><strong>log</strong>: Monitors the traffic.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,10 +40,10 @@ public class ModifyDnsFirewallPolicyRequest extends TeaModel {
     /**
      * <p>The destination address in the access control policy.</p>
      * <ul>
-     * <li>If <strong>DestinationType</strong> is set to net, <strong>Destination</strong> is a destination CIDR block. Example: 1.2.3.4/24.</li>
-     * <li>If <strong>DestinationType</strong> is set to group, <strong>Destination</strong> is the name of a destination address book. Example: db_group.</li>
-     * <li>If <strong>DestinationType</strong> is set to domain, <strong>Destination</strong> is a destination domain name. Example: *.aliyuncs.com.</li>
-     * <li>If <strong>DestinationType</strong> is set to location, <strong>Destination</strong> is a destination area. For more information about area positional encoding, see the following sections. Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</li>
+     * <li>If <strong>DestinationType</strong> is set to net, <strong>Destination</strong> specifies the destination CIDR block. Example: 1.2.3.4/24.</li>
+     * <li>If <strong>DestinationType</strong> is set to group, <strong>Destination</strong> specifies the name of the destination address book. Example: db_group.</li>
+     * <li>If <strong>DestinationType</strong> is set to domain, <strong>Destination</strong> specifies the destination domain name. Example: *.aliyuncs.com.</li>
+     * <li>If <strong>DestinationType</strong> is set to location, <strong>Destination</strong> specifies the destination area. For the positional encoding of specific areas, see the following section. Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,12 +53,11 @@ public class ModifyDnsFirewallPolicyRequest extends TeaModel {
     public String destination;
 
     /**
-     * <p>The type of the destination address in the access control policy.</p>
-     * <p>Valid values:</p>
+     * <p>The type of the destination address in the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>net</strong>: destination CIDR block</li>
-     * <li><strong>group</strong>: destination address book</li>
-     * <li><strong>domain</strong>: destination domain name</li>
+     * <li><strong>net</strong>: Destination CIDR block.</li>
+     * <li><strong>group</strong>: Destination address book.</li>
+     * <li><strong>domain</strong>: Destination domain name.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,8 +69,8 @@ public class ModifyDnsFirewallPolicyRequest extends TeaModel {
     /**
      * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +80,7 @@ public class ModifyDnsFirewallPolicyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The policy priority of the access control policy before the modification.</p>
+     * <p>Policy priority of the access control policy before policy priority is modified.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -90,10 +89,10 @@ public class ModifyDnsFirewallPolicyRequest extends TeaModel {
     public String priority;
 
     /**
-     * <p>Specifies whether to enable the access control policy. The policy is enabled by default after it is created. Valid values:</p>
+     * <p>The status of the access control policy. By default, the policy is enabled after it is created. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables the access control policy.</li>
-     * <li><strong>false</strong>: disables the access control policy.</li>
+     * <li><strong>true</strong>: Enables the access control policy.</li>
+     * <li><strong>false</strong>: Disables the access control policy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -106,7 +105,7 @@ public class ModifyDnsFirewallPolicyRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address of the requester.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
@@ -117,10 +116,8 @@ public class ModifyDnsFirewallPolicyRequest extends TeaModel {
     /**
      * <p>The type of the source address in the access control policy. Valid values:</p>
      * <ul>
-     * <li><p><strong>net</strong>: source CIDR block</p>
-     * </li>
-     * <li><p><strong>group</strong>: source address book</p>
-     * </li>
+     * <li><strong>net</strong>: Source CIDR block.</li>
+     * <li><strong>group</strong>: Source address book.</li>
      * </ul>
      * 
      * <strong>example:</strong>

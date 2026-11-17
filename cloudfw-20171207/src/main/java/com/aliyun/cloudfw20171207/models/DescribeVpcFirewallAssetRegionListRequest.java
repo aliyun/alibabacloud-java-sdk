@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallAssetRegionListRequest extends TeaModel {
     /**
-     * <p>The UID of the member accounts.</p>
+     * <p>The UID of the member account.</p>
      * 
      * <strong>example:</strong>
      * <p>258039427902****</p>
@@ -14,7 +14,8 @@ public class DescribeVpcFirewallAssetRegionListRequest extends TeaModel {
     public String memberUid;
 
     /**
-     * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+     * <p>The instance ID of the VPC border firewall.</p>
+     * <p><strong>Note</strong>: This parameter is required. If it is not provided, the API returns ErrorFirewallId (-360133). You can call DescribeVpcFirewallList to obtain a valid instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vfw-m5e7dbc4y****</p>

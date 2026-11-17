@@ -14,7 +14,7 @@ public class DescribeInternetServiceNameListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of application names.</p>
+     * <p>The list of application names.</p>
      */
     @NameInMap("ServiceNameList")
     public java.util.List<String> serviceNameList;

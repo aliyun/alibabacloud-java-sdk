@@ -15,7 +15,7 @@ public class DescribeAclBackupListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The language of the response.</p>
+     * <p>The language type for receiving messages.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -34,7 +34,7 @@ public class DescribeAclBackupListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>110.191.179.XXX</p>

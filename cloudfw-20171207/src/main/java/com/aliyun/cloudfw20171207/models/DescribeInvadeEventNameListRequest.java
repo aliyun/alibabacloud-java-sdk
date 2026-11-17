@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInvadeEventNameListRequest extends TeaModel {
     /**
-     * <p>The end time. This is a UNIX timestamp in seconds.</p>
+     * <p>The end time. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1738780437</p>
@@ -23,7 +23,7 @@ public class DescribeInvadeEventNameListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the visitor.</p>
+     * <p>The source IP address of the requester.</p>
      * 
      * <strong>example:</strong>
      * <p>36.112.73.XXX</p>
@@ -32,7 +32,7 @@ public class DescribeInvadeEventNameListRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The start time. This is a UNIX timestamp in seconds.</p>
+     * <p>The start time. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1757620800</p>

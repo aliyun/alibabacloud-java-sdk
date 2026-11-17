@@ -23,11 +23,7 @@ public class ClearLogStoreStorageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <ul>
-     * <li>true: The request is successful.</li>
-     * <li>false: The request failed.</li>
-     * </ul>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

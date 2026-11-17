@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAclAppsResponseBody extends TeaModel {
     /**
-     * <p>The list of ACL applications.</p>
+     * <p>The list of access control applications.</p>
      */
     @NameInMap("AclApps")
     public java.util.List<DescribeAclAppsResponseBodyAclApps> aclApps;
@@ -20,7 +20,7 @@ public class DescribeAclAppsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total count.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -71,19 +71,20 @@ public class DescribeAclAppsResponseBody extends TeaModel {
          * <p>The application name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>HTTP</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
-         * <p>Indicates whether the application is common. Valid values:</p>
+         * <p>Specifies whether the application is common. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: common</p>
+         * <li><p>1: Common.</p>
          * </li>
-         * <li><p><strong>0</strong>: not common</p>
+         * <li><p>0: Uncommon.</p>
          * </li>
-         * <li></li>
+         * <li><p>Empty (default): All.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -93,20 +94,17 @@ public class DescribeAclAppsResponseBody extends TeaModel {
         public Integer popular;
 
         /**
-         * <p>The protocols supported by the application.</p>
+         * <p>The list of protocol types.</p>
          */
         @NameInMap("Protocols")
         public java.util.List<String> protocols;
 
         /**
-         * <p>The risk level. Valid values:</p>
+         * <p>The risk assessment level. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: Low</p>
-         * </li>
-         * <li><p><strong>2</strong>: Medium</p>
-         * </li>
-         * <li><p><strong>3</strong>: High</p>
-         * </li>
+         * <li><strong>1</strong>: Low-risk.</li>
+         * <li><strong>2</strong>: Medium-risk.</li>
+         * <li><strong>3</strong>: High-risk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,11 +114,11 @@ public class DescribeAclAppsResponseBody extends TeaModel {
         public Integer riskLevel;
 
         /**
-         * <p>Indicates whether the application supports <code>FQDN</code>. Valid values:</p>
+         * <p>Specifies whether <strong>FQDN</strong> is supported. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: No</p>
+         * <li><p><strong>0</strong>: Not supported.</p>
          * </li>
-         * <li><p><strong>1</strong>: Yes</p>
+         * <li><p><strong>1</strong>: Supported.</p>
          * </li>
          * </ul>
          * 

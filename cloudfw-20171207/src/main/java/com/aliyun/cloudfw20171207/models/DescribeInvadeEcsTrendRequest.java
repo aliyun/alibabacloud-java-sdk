@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInvadeEcsTrendRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. This is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end time. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1733796528</p>
@@ -14,7 +14,7 @@ public class DescribeInvadeEcsTrendRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The language of the response.</p>
+     * <p>The language for receiving messages.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -23,7 +23,7 @@ public class DescribeInvadeEcsTrendRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the visitor.</p>
+     * <p>The source IP address of the requester.</p>
      * 
      * <strong>example:</strong>
      * <p>120.230.45.XXX</p>
@@ -32,7 +32,7 @@ public class DescribeInvadeEcsTrendRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The start of the time range to query. This is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1736561456</p>

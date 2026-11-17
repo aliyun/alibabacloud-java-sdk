@@ -26,7 +26,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
     public java.util.List<DescribeLocationInfoResponseBodyCnProvinceList> cnProvinceList;
 
     /**
-     * <p>The number of regions outside the Chinese mainland.</p>
+     * <p>The number of regions outside China.</p>
      * 
      * <strong>example:</strong>
      * <p>238</p>
@@ -35,7 +35,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
     public Integer overseasCount;
 
     /**
-     * <p>The list of regions outside the Chinese mainland.</p>
+     * <p>The list of regions outside China.</p>
      */
     @NameInMap("OverseasList")
     public java.util.List<DescribeLocationInfoResponseBodyOverseasList> overseasList;

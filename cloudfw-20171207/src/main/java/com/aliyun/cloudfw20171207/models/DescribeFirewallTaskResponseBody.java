@@ -182,7 +182,7 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
         public String stepInfo;
 
         /**
-         * <p>Creating Cloud Firewall security.</p>
+         * <p>Creates Cloud Firewall security.</p>
          * 
          * <strong>example:</strong>
          * <p>Create Firewall</p>

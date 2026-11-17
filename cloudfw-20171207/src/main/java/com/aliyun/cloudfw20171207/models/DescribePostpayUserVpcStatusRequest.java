@@ -14,7 +14,7 @@ public class DescribePostpayUserVpcStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language in which messages are received. Valid values:</p>
+     * <p>The language in which you want to receive messages. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>

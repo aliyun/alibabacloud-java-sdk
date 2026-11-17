@@ -36,6 +36,15 @@ public class DescribeFirewallTaskRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The action of the task, which is used to filter tasks by action. Valid values: init, open, close, delete, and change_route. This parameter takes effect only when TaskType is set to NAT. If TaskId is specified, this parameter is ignored. If this parameter is not specified, the most recently started task of the instance is retrieved, regardless of the action.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>open</p>
+     */
+    @NameInMap("TaskName")
+    public String taskName;
+
+    /**
      * <p>The type of the task. Valid values:</p>
      * <ul>
      * <li><p><strong>NAT</strong>: NAT firewall task</p>
@@ -77,6 +86,14 @@ public class DescribeFirewallTaskRequest extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public DescribeFirewallTaskRequest setTaskName(String taskName) {
+        this.taskName = taskName;
+        return this;
+    }
+    public String getTaskName() {
+        return this.taskName;
     }
 
     public DescribeFirewallTaskRequest setTaskType(String taskType) {

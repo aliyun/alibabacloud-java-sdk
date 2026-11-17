@@ -14,14 +14,7 @@ public class DescribeTaskDispatchStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the task. Valid values:</p>
-     * <ul>
-     * <li>PENDING: Pending.</li>
-     * <li>RUNNING: Running.</li>
-     * <li>SUCCESS: Successful.</li>
-     * <li>FAILED: Failed.</li>
-     * <li>CANCELLED: Cancelled.</li>
-     * </ul>
+     * <p>The task status. Valid values: PENDING (pending execution), RUNNING (running), SUCCESS (successful), FAILED (failed), and CANCELLED (canceled).</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>

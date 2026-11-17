@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNatFirewallPrecheckDetailRequest extends TeaModel {
     /**
-     * <p>The language of the request and response messages.</p>
+     * <p>The language type of the request and response messages.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -14,7 +14,7 @@ public class DescribeNatFirewallPrecheckDetailRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the NAT Gateway.</p>
+     * <p>The ID of the NAT gateway. Although this parameter is marked as optional in the API definition, it is required when you call this operation. If this parameter is not specified or its value does not start with <code>ngw-</code>, the API returns a 400 error (<code>ErrorParameters</code>, error code <code>-360103</code>).</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-bp1okz6k7dge****</p>

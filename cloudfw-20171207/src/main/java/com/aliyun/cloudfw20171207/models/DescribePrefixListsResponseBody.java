@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePrefixListsResponseBody extends TeaModel {
     /**
-     * <p>An array of prefix lists.</p>
+     * <p>The array of prefix list information.</p>
      */
     @NameInMap("PrefixList")
     public java.util.List<DescribePrefixListsResponseBodyPrefixList> prefixList;
@@ -44,8 +44,8 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         /**
          * <p>The address family of the prefix list. Valid values:</p>
          * <ul>
-         * <li>IPv4.</li>
-         * <li>IPv6.</li>
+         * <li>IPv4</li>
+         * <li>IPv6</li>
          * </ul>
          * 
          * <strong>example:</strong>

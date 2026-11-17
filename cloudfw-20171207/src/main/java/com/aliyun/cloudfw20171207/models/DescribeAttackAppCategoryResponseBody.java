@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAttackAppCategoryResponseBody extends TeaModel {
     /**
-     * <p>The list of attack application categories.</p>
+     * <p>The attack application categories.</p>
      */
     @NameInMap("AppCategories")
     public java.util.List<DescribeAttackAppCategoryResponseBodyAppCategories> appCategories;
@@ -42,7 +42,7 @@ public class DescribeAttackAppCategoryResponseBody extends TeaModel {
 
     public static class DescribeAttackAppCategoryResponseBodyAppCategories extends TeaModel {
         /**
-         * <p>The list of attack applications.</p>
+         * <p>The attack applications.</p>
          */
         @NameInMap("AttackApps")
         public java.util.List<String> attackApps;

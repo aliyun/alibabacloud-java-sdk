@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAssetRiskListRequest extends TeaModel {
     /**
-     * <p>The list of IP addresses to query. Separate multiple IP addresses with commas (,). You can query up to 20 IP addresses at a time. This parameter is required in practice. If this parameter is not specified, the API returns a 400 error.</p>
+     * <p>The list of IP addresses to query. Separate multiple IP addresses with commas (,). You can query up to 20 IP addresses at a time. This parameter is actually required. If you do not specify this parameter, the API returns a 400 error.</p>
      * <blockquote>
      * <ul>
      * <li>IPv4 example: 47.97.XX.XX.</li>
@@ -17,13 +17,10 @@ public class DescribeAssetRiskListRequest extends TeaModel {
     public java.util.List<String> ipAddrList;
 
     /**
-     * <p>The IP version of the assets protected by Cloud Firewall.</p>
-     * <p>Valid values:</p>
+     * <p>The IP version of the asset protected by Cloud Firewall. Valid values:</p>
      * <ul>
-     * <li><p><strong>4</strong> (default): IPv4</p>
-     * </li>
-     * <li><p><strong>6</strong>: IPv6</p>
-     * </li>
+     * <li><strong>4</strong> (default): IPv4</li>
+     * <li><strong>6</strong>: IPv6</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -34,7 +31,7 @@ public class DescribeAssetRiskListRequest extends TeaModel {
     public Integer ipVersion;
 
     /**
-     * <p>The language type of the response message. Valid values:</p>
+     * <p>The language of the notification. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -47,7 +44,7 @@ public class DescribeAssetRiskListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address of the requester.</p>
      * 
      * <strong>example:</strong>
      * <p>47.100.XX.XX</p>

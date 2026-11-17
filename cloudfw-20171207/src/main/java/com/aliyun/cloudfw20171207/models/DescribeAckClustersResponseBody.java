@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAckClustersResponseBody extends TeaModel {
     /**
-     * <p>A list of ACK clusters.</p>
+     * <p>The list of ACK clusters.</p>
      */
     @NameInMap("Clusters")
     public java.util.List<DescribeAckClustersResponseBodyClusters> clusters;
@@ -20,7 +20,7 @@ public class DescribeAckClustersResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -111,7 +111,7 @@ public class DescribeAckClustersResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>The specification of the ACK cluster.</p>
+         * <p>The specifications of the ACK cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>ack.pro.small</p>
@@ -120,9 +120,11 @@ public class DescribeAckClustersResponseBody extends TeaModel {
         public String clusterSpec;
 
         /**
-         * <p>The type of the ACK cluster. For more information about the valid values, see <a href="~~DescribeClustersV1~~">DescribeClustersV1</a>.</p>
+         * <p>The type of the ACK cluster. Valid values:</p>
          * <ul>
-         * <li><a href="~~DescribeClustersV1~~">DescribeClustersV1</a>: Returns a list of ACK clusters in your account that meet specific criteria, such as the cluster type and specifications.</li>
+         * <li><strong>ManagedKubernetes</strong>: managed ACK clusters, including ACK managed clusters (Pro Edition and Basic Edition), ACK Serverless clusters (Pro Edition and Basic Edition), ACK Edge clusters (Pro Edition and Basic Edition), and ACK Lingjun clusters (Pro Edition)</li>
+         * <li><strong>ExternalKubernetes</strong>: registered clusters</li>
+         * <li><strong>Kubernetes</strong>: dedicated ACK clusters</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,7 +134,7 @@ public class DescribeAckClustersResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>The Alibaba Cloud UID of the account to which the ACK cluster resources belong.</p>
+         * <p>The Alibaba Cloud account ID to which the ACK cluster resources belong.</p>
          * 
          * <strong>example:</strong>
          * <p>135809047715****</p>
@@ -141,9 +143,10 @@ public class DescribeAckClustersResponseBody extends TeaModel {
         public String memberUid;
 
         /**
-         * <p>The network plugin of the ACK cluster. For more information about the valid values, see <a href="~~DescribeClustersV1~~">DescribeClustersV1</a>.</p>
+         * <p>The network plug-in of the ACK cluster. Valid values:</p>
          * <ul>
-         * <li><a href="~~DescribeClustersV1~~">DescribeClustersV1</a>: Lists the ACK clusters in your account that meet specified conditions, such as cluster type and specifications.</li>
+         * <li><strong>terway-eniip</strong>: the Terway-eniip network plug-in</li>
+         * <li><strong>Flannel</strong>: the Flannel network plug-in</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,9 +156,12 @@ public class DescribeAckClustersResponseBody extends TeaModel {
         public String network;
 
         /**
-         * <p>The subtype of the cluster. This parameter is available only when <code>ClusterType</code> is set to <code>ManagedKubernetes</code>. For more information about the valid values, see <a href="~~DescribeClustersV1~~">DescribeClustersV1</a>.</p>
+         * <p>When <code>ClusterType</code> is set to <code>ManagedKubernetes</code> (managed ACK clusters), this parameter indicates the subtype of the cluster. Valid values:</p>
          * <ul>
-         * <li><a href="~~DescribeClustersV1~~">DescribeClustersV1</a>: Lists ACK clusters in your account that meet specified conditions, such as cluster type and specifications.</li>
+         * <li><strong>Default</strong>: ACK managed clusters, including ACK managed clusters Pro Edition and Basic Edition</li>
+         * <li><strong>Serverless</strong>: ACK Serverless clusters, including ACK Serverless clusters Pro Edition and Basic Edition</li>
+         * <li><strong>Edge</strong>: ACK Edge clusters, including ACK Edge clusters Pro Edition and Basic Edition</li>
+         * <li><strong>Lingjun</strong>: ACK Lingjun clusters, available only in Pro Edition</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,9 +180,20 @@ public class DescribeAckClustersResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The running status of the ACK cluster. For more information about the valid values, see <a href="~~DescribeClustersV1~~">DescribeClustersV1</a>.</p>
+         * <p>The running status of the ACK cluster. Valid values:</p>
          * <ul>
-         * <li><a href="~~DescribeClustersV1~~">DescribeClustersV1</a>: Retrieves a list of ACK clusters in your account that meet specified conditions, such as cluster type and specifications.</li>
+         * <li><strong>initial</strong>: The cluster is being created.</li>
+         * <li><strong>running</strong>: The cluster is running.</li>
+         * <li><strong>scaling</strong>: The cluster is being scaled.</li>
+         * <li><strong>stopped</strong>: The cluster is stopped.</li>
+         * <li><strong>upgrading</strong>: The cluster is being upgraded.</li>
+         * <li><strong>updating</strong>: The cluster configurations are being updated.</li>
+         * <li><strong>deleting</strong>: The cluster is being deleted.</li>
+         * <li><strong>deleted</strong>: The cluster is deleted.</li>
+         * <li><strong>draining</strong>: Nodes are being drained.</li>
+         * <li><strong>removing</strong>: Nodes are being removed.</li>
+         * <li><strong>failed</strong>: The cluster failed to be created.</li>
+         * <li><strong>delete_failed</strong>: The cluster failed to be deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -186,7 +203,7 @@ public class DescribeAckClustersResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The ID of the VPC where the ACK cluster is deployed.</p>
+         * <p>The ID of the VPC to which the ACK cluster belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2vcg932hsxsxuqbgl****</p>

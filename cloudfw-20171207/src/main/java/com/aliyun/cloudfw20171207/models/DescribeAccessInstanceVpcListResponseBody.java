@@ -93,7 +93,7 @@ public class DescribeAccessInstanceVpcListResponseBody extends TeaModel {
 
     public static class DescribeAccessInstanceVpcListResponseBodyVpcList extends TeaModel {
         /**
-         * <p>Indicates whether the VPC is managed by Cloud Firewall.</p>
+         * <p>Indicates whether the VPC is a firewall-managed VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -102,7 +102,7 @@ public class DescribeAccessInstanceVpcListResponseBody extends TeaModel {
         public Boolean firewallVpc;
 
         /**
-         * <p>The ID of the VPC instance.</p>
+         * <p>The ID of the VPC-connected instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2ze1t4irqj0fljlbb****</p>
@@ -111,7 +111,7 @@ public class DescribeAccessInstanceVpcListResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The name of the VPC instance.</p>
+         * <p>The name of the VPC-connected instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Cloud_Firewall_VPC</p>

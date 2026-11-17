@@ -7,10 +7,8 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends TeaModel {
     /**
      * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,10 +20,8 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends TeaModel {
     /**
      * <p>The type of the list. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: user-defined</p>
-     * </li>
-     * <li><p><strong>2</strong>: address book</p>
-     * </li>
+     * <li><strong>1</strong>: custom type</li>
+     * <li><strong>2</strong>: address book type</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -45,7 +41,7 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends TeaModel {
     public String listValue;
 
     /**
-     * <p>The UID of the member account.</p>
+     * <p>The UID of the member accounts of the current Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>1415189284827022</p>
@@ -54,7 +50,7 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends TeaModel {
     public Long memberUid;
 
     /**
-     * <p>The instance ID of the VPC firewall.</p>
+     * <p>The instance ID of the virtual private cloud (VPC) firewalls at the border.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,10 +62,8 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends TeaModel {
     /**
      * <p>The type of the whitelist. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: destination</p>
-     * </li>
-     * <li><p><strong>2</strong>: source</p>
-     * </li>
+     * <li><strong>1</strong>: destination type</li>
+     * <li><strong>2</strong>: source type</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

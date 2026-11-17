@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInternetOpenDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the asset. Fuzzy search is supported.</p>
+     * <p>The asset ID. Supports fuzzy search.</p>
      * 
      * <strong>example:</strong>
      * <p>i-uf6faknmuby7ezht****</p>
@@ -14,7 +14,7 @@ public class DescribeInternetOpenDetailRequest extends TeaModel {
     public String assetsInstanceId;
 
     /**
-     * <p>The name of the asset. Fuzzy search is supported.</p>
+     * <p>The asset name. Supports fuzzy search.</p>
      * 
      * <strong>example:</strong>
      * <p>instance_test</p>
@@ -23,7 +23,7 @@ public class DescribeInternetOpenDetailRequest extends TeaModel {
     public String assetsInstanceName;
 
     /**
-     * <p>The type of the asset for an exact match. If you leave this parameter empty, all asset types are queried.</p>
+     * <p>The asset type. Supports exact match. If not specified, all asset types are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>EcsPublicIP</p>
@@ -32,7 +32,7 @@ public class DescribeInternetOpenDetailRequest extends TeaModel {
     public String assetsType;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class DescribeInternetOpenDetailRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1745251200</p>
@@ -50,7 +50,7 @@ public class DescribeInternetOpenDetailRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The language of the content.</p>
+     * <p>The language type.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -59,7 +59,7 @@ public class DescribeInternetOpenDetailRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -68,7 +68,7 @@ public class DescribeInternetOpenDetailRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The port for an exact match. The value must be an integer from 1 to 65535. If you leave this parameter empty, all ports are queried.</p>
+     * <p>The port number. Supports exact match for ports from 1 to 65535. If not specified, all ports are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>9100</p>
@@ -77,7 +77,7 @@ public class DescribeInternetOpenDetailRequest extends TeaModel {
     public String port;
 
     /**
-     * <p>The public IP address for an exact match. If you leave this parameter empty, all public IP addresses are queried.</p>
+     * <p>The public IP address. Supports exact match. If not specified, all public IP addresses are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>203.0.13.XX</p>
@@ -95,7 +95,7 @@ public class DescribeInternetOpenDetailRequest extends TeaModel {
     public String regionNo;
 
     /**
-     * <p>The risk level. If you leave this parameter empty, all risk levels are queried.</p>
+     * <p>The risk level. If not specified, all risk levels are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -104,7 +104,7 @@ public class DescribeInternetOpenDetailRequest extends TeaModel {
     public String riskLevel;
 
     /**
-     * <p>The name of the application for an exact match. If you leave this parameter empty, all applications are queried.</p>
+     * <p>The application name. Supports exact match. If not specified, all applications are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>SMB</p>
@@ -113,7 +113,7 @@ public class DescribeInternetOpenDetailRequest extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>The name of the application for a fuzzy match. If you leave this parameter empty, all applications are queried.</p>
+     * <p>The application name. Supports fuzzy match. If not specified, all applications are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>SMB</p>
@@ -122,13 +122,13 @@ public class DescribeInternetOpenDetailRequest extends TeaModel {
     public String serviceNameFuzzy;
 
     /**
-     * <p>The sorting conditions.</p>
+     * <p>The sort list.</p>
      */
     @NameInMap("SortList")
     public java.util.List<DescribeInternetOpenDetailRequestSortList> sortList;
 
     /**
-     * <p>The source IP address of the access request.</p>
+     * <p>The source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>222.212.86.7XXX</p>
@@ -137,7 +137,7 @@ public class DescribeInternetOpenDetailRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The start of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1656837360</p>
@@ -306,7 +306,7 @@ public class DescribeInternetOpenDetailRequest extends TeaModel {
         public String dir;
 
         /**
-         * <p>The sorting key.</p>
+         * <p>The sort field.</p>
          * 
          * <strong>example:</strong>
          * <p>ServiceName</p>

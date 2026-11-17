@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFirewallDropStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The number of packets blocked by access control list (ACL) policies.</p>
+     * <p>The number of ACL policy blocks.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class DescribeFirewallDropStatisticsResponseBody extends TeaModel {
     public Long aclDropCnt;
 
     /**
-     * <p>The number of packets blocked by the intrusion prevention system (IPS).</p>
+     * <p>The number of IPS blocks.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,7 +32,7 @@ public class DescribeFirewallDropStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of blocked packets.</p>
+     * <p>The total number of blocks.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -41,7 +41,7 @@ public class DescribeFirewallDropStatisticsResponseBody extends TeaModel {
     public Long totalDropCnt;
 
     /**
-     * <p>The number of packets blocked by the vulnerability prevention feature.</p>
+     * <p>The number of Vulnerability Prevention blocks.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeACLProtectTrendRequest extends TeaModel {
     /**
-     * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
+     * <p>The end time of the query. Specify the time as a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1670397599</p>
@@ -16,9 +16,9 @@ public class DescribeACLProtectTrendRequest extends TeaModel {
     /**
      * <p>The type of the firewall border. Valid values:</p>
      * <ul>
-     * <li><strong>internet</strong> (default): Internet Border firewall, which monitors traffic between the Internet and your assets.</li>
-     * <li><strong>vpc</strong>: virtual private cloud (VPC) firewalls, which monitor traffic between VPCs.</li>
-     * <li><strong>nat</strong>: NAT firewalls, which monitor traffic from internal-facing assets to the Internet.</li>
+     * <li><strong>internet</strong> (default): the Internet Border firewall.</li>
+     * <li><strong>vpc</strong>: virtual private cloud (VPC) firewalls.</li>
+     * <li><strong>nat</strong>: NAT firewalls.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeACLProtectTrendRequest extends TeaModel {
     public String firewallType;
 
     /**
-     * <p>The time aggregation granularity for trend data, in seconds. Valid values:</p>
+     * <p>The time aggregation granularity of the trend data, in seconds. Valid values:</p>
      * <ul>
      * <li><strong>60</strong>: 1-minute granularity (uses the minute-level detail table).</li>
      * <li><strong>1800</strong>: 30-minute granularity.</li>
@@ -58,7 +58,7 @@ public class DescribeACLProtectTrendRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>223.95.87.130</p>
@@ -68,7 +68,7 @@ public class DescribeACLProtectTrendRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
+     * <p>The start time of the query. Specify the time as a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1677050306</p>

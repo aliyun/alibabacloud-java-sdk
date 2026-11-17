@@ -16,10 +16,8 @@ public class DescribeAITrafficAnalysisStatusResponseBody extends TeaModel {
     /**
      * <p>The enabling status. Valid values:</p>
      * <ul>
-     * <li><p><strong>open</strong></p>
-     * </li>
-     * <li><p><strong>close</strong></p>
-     * </li>
+     * <li><strong>open</strong>: Enabled.</li>
+     * <li><strong>close</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

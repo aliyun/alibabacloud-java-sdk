@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAckClusterPodLabelsResponseBody extends TeaModel {
     /**
-     * <p>A list of ACK labels.</p>
+     * <p>The list of ACK tags.</p>
      */
     @NameInMap("AckLabels")
     public java.util.List<DescribeAckClusterPodLabelsResponseBodyAckLabels> ackLabels;

@@ -69,7 +69,7 @@ public class DescribeAclCheckQuotaResponseBody extends TeaModel {
         public Long totalQuota;
 
         /**
-         * <p>The time when the quota was last updated. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The last update time of the quota. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1724982259</p>

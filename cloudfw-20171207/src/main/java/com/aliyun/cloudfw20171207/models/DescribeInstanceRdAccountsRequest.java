@@ -14,7 +14,7 @@ public class DescribeInstanceRdAccountsRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The language type for the request and response messages.</p>
+     * <p>The language of the request and response messages.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -23,7 +23,7 @@ public class DescribeInstanceRdAccountsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The remarks of the Cloud Firewall member accounts.</p>
+     * <p>The description of the Cloud Firewall member accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>renewal</p>
@@ -59,7 +59,7 @@ public class DescribeInstanceRdAccountsRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The IP address of the requester.</p>
+     * <p>The source IP address of the requester.</p>
      * 
      * <strong>example:</strong>
      * <p>47.100.170.XXX</p>

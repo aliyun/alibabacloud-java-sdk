@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeAckClusterConnectorRequest extends TeaModel {
     /**
-     * <p>The ID of the ACK cluster connector. You can obtain the value from:</p>
+     * <p>The ID of the ACK cluster connector. You can call the following API operation to obtain the value:</p>
      * <ul>
-     * <li><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: Lists ACK cluster connectors.</li>
+     * <li><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: Queries a list of ACK cluster connectors.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeAckClusterConnectorRequest extends TeaModel {
     public String connectorId;
 
     /**
-     * <p>The language in which the health status error reason of the ACK cluster connector is displayed.</p>
+     * <p>The language in which the error cause for the health status of the ACK cluster connector is displayed.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SwitchSecurityProxyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F1E55690-3ABA-58FA-90E3-593EF******</p>

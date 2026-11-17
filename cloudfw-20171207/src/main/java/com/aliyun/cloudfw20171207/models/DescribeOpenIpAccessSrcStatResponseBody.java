@@ -14,7 +14,7 @@ public class DescribeOpenIpAccessSrcStatResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of statistics.</p>
+     * <p>The statistics list.</p>
      */
     @NameInMap("StatList")
     public java.util.List<DescribeOpenIpAccessSrcStatResponseBodyStatList> statList;
@@ -59,7 +59,7 @@ public class DescribeOpenIpAccessSrcStatResponseBody extends TeaModel {
 
     public static class DescribeOpenIpAccessSrcStatResponseBodyStatList extends TeaModel {
         /**
-         * <p>The number of abnormal source IP addresses.</p>
+         * <p>The number of abnormal IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -77,7 +77,7 @@ public class DescribeOpenIpAccessSrcStatResponseBody extends TeaModel {
         public String app;
 
         /**
-         * <p>The number of normal source IP addresses.</p>
+         * <p>The number of normal IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>21</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeControlPolicyDomainResolveRequest extends TeaModel {
     /**
-     * <p>The domain name. This parameter is required and must be provided when you call the operation.</p>
+     * <p>The domain name. This parameter is required when you call this operation.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -23,10 +23,7 @@ public class DescribeControlPolicyDomainResolveRequest extends TeaModel {
     public String firewallType;
 
     /**
-     * <p>The IP address version. Valid values: <strong>4</strong> (IPv4) or <strong>6</strong> (IPv6).</p>
-     * <blockquote>
-     * <p>This parameter is unconditionally required and has no dependency on RegionNo. If this parameter is missing, the MissingParameter.IpVersion (-200157) error is returned. If the value is invalid, the ErrorParameterIpVersion (-200135) error is returned.</p>
-     * </blockquote>
+     * <p>The IP address version. Valid values: <strong>4</strong> (IPv4) and <strong>6</strong> (IPv6). This parameter is unconditionally required and does not depend on RegionNo. If this parameter is not specified, the MissingParameter.IpVersion (-200157) error is returned. If the value is invalid, the ErrorParameterIpVersion (-200135) error is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -44,7 +41,7 @@ public class DescribeControlPolicyDomainResolveRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The region ID. This parameter is required. If this parameter is missing, the MissingParameter.RegionNo (-200155, The required parameter \&quot;RegionNo\&quot; is not provided.) error is returned.</p>
+     * <p>The region ID. This parameter is required. If this parameter is not specified, the MissingParameter.RegionNo (-200155, The required parameter \&quot;RegionNo\&quot; is not provided.) error is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>

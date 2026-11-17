@@ -7,9 +7,9 @@ public class AddDnsFirewallPolicyRequest extends TeaModel {
     /**
      * <p>The action that Cloud Firewall performs on traffic in the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>accept</strong>: Allows the traffic.</li>
-     * <li><strong>drop</strong>: Denies the traffic.</li>
-     * <li><strong>log</strong>: Monitors the traffic.</li>
+     * <li><strong>accept</strong>: allows the traffic.</li>
+     * <li><strong>drop</strong>: denies the traffic.</li>
+     * <li><strong>log</strong>: monitors the traffic.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -35,7 +35,7 @@ public class AddDnsFirewallPolicyRequest extends TeaModel {
      * <li>If <strong>DestinationType</strong> is set to net, <strong>Destination</strong> is the destination CIDR block. Example: 1.2.3.4/24.</li>
      * <li>If <strong>DestinationType</strong> is set to group, <strong>Destination</strong> is the name of the destination address book. Example: db_group.</li>
      * <li>If <strong>DestinationType</strong> is set to domain, <strong>Destination</strong> is the destination domain name. Example: *.aliyuncs.com.</li>
-     * <li>If <strong>DestinationType</strong> is set to location, <strong>Destination</strong> is the destination area (for specific area positional encoding, see the following sections). Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
+     * <li>If <strong>DestinationType</strong> is set to location, <strong>Destination</strong> is the destination area (for specific area positional encoding, see the following section). Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -58,7 +58,7 @@ public class AddDnsFirewallPolicyRequest extends TeaModel {
     /**
      * <p>The traffic direction of the DNS firewall access control policy.</p>
      * <blockquote>
-     * <p>This parameter is not verified by the backend. When you create or modify a DNS firewall policy, the direction is always stored as <strong>out</strong> (outbound). Passing <strong>in</strong> neither returns an error nor takes effect. DNS firewalls only support outbound policies.</p>
+     * <p>This parameter is not verified by the backend. When you create or modify a DNS firewall policy, the direction is always stored as <strong>out</strong> (outbound). If you pass <strong>in</strong>, no error is reported, but it does not take effect. DNS firewalls only support outbound policies.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -109,8 +109,8 @@ public class AddDnsFirewallPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the access control policy. By default, the policy is enabled after it is created. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Enables the access control policy.</li>
-     * <li><strong>false</strong>: Disables the access control policy.</li>
+     * <li><strong>true</strong>: enables the access control policy.</li>
+     * <li><strong>false</strong>: disables the access control policy.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -148,9 +148,9 @@ public class AddDnsFirewallPolicyRequest extends TeaModel {
     /**
      * <p>The type of the source address in the access control policy. Valid values:</p>
      * <ul>
-     * <li><p><strong>net</strong>: Source CIDR block</p>
+     * <li><p><strong>net</strong>: source CIDR block</p>
      * </li>
-     * <li><p><strong>group</strong>: Source address book</p>
+     * <li><p><strong>group</strong>: source address book</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

@@ -41,7 +41,7 @@ public class DescribeNatFirewallQuotaResponseBody extends TeaModel {
     public Long unprotectedCount;
 
     /**
-     * <p>The number of used quotas.</p>
+     * <p>The used count.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

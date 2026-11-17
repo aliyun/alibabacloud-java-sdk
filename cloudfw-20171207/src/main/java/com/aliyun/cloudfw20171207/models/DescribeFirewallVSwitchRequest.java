@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFirewallVSwitchRequest extends TeaModel {
     /**
-     * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+     * <p>The virtual private cloud (VPC) border firewalls instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vfw-tr-5b202e7f0be64611****</p>
@@ -23,7 +23,7 @@ public class DescribeFirewallVSwitchRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The UID of the member account.</p>
+     * <p>The UID of the member accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>102910763545****</p>

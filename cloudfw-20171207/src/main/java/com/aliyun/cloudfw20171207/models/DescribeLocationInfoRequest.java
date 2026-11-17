@@ -14,7 +14,7 @@ public class DescribeLocationInfoRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The tracing code.</p>
+     * <p>The source code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAssetRiskListResponseBody extends TeaModel {
     /**
-     * <p>The asset details returned.</p>
+     * <p>The details of the returned assets.</p>
      */
     @NameInMap("AssetList")
     public java.util.List<DescribeAssetRiskListResponseBodyAssetList> assetList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>443C5781-1C03-5FCD-8EC5-FB9C0B9AC396</p>
@@ -20,7 +20,7 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of returned entries.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -59,7 +59,7 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
 
     public static class DescribeAssetRiskListResponseBodyAssetList extends TeaModel {
         /**
-         * <p>The server IP address.</p>
+         * <p>The IP address of the server.</p>
          * 
          * <strong>example:</strong>
          * <p>39.108.XX.XX</p>
@@ -68,13 +68,10 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The IP address version of the assets protected by Cloud Firewall.</p>
-         * <p>Valid values:</p>
+         * <p>The IP version of the asset protected by Cloud Firewall. Valid values:</p>
          * <ul>
-         * <li><p><strong>4</strong>: IPv4 address.</p>
-         * </li>
-         * <li><p><strong>6</strong>: IPv6 address.</p>
-         * </li>
+         * <li><strong>4</strong>: IPv4 address</li>
+         * <li><strong>6</strong>: IPv6 address</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -84,7 +81,7 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
         public Long ipVersion;
 
         /**
-         * <p>The risk reason.</p>
+         * <p>The cause of the risk.</p>
          * 
          * <strong>example:</strong>
          * <p>other</p>
@@ -95,9 +92,9 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
         /**
          * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li><strong>low</strong>: low risk</li>
-         * <li><strong>middle</strong>: medium risk</li>
-         * <li><strong>high</strong>: high risk</li>
+         * <li><strong>low</strong>: Low risk</li>
+         * <li><strong>middle</strong>: Medium risk</li>
+         * <li><strong>high</strong>: High risk</li>
          * </ul>
          * 
          * <strong>example:</strong>

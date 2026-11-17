@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
     /**
-     * <p>The list of instance threats.</p>
+     * <p>The list of instance risks.</p>
      */
     @NameInMap("InstanceRisks")
     public java.util.List<DescribeInstanceRiskLevelsResponseBodyInstanceRisks> instanceRisks;
@@ -51,9 +51,9 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The threat level. Valid value:</p>
+         * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li><strong>medium</strong>: medium</li>
+         * <li><strong>medium</strong>: Medium</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -104,7 +104,7 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
 
     public static class DescribeInstanceRiskLevelsResponseBodyInstanceRisks extends TeaModel {
         /**
-         * <p>The list of threats for the ECS instances.</p>
+         * <p>The list of ECS instance risks.</p>
          */
         @NameInMap("Details")
         public java.util.List<DescribeInstanceRiskLevelsResponseBodyInstanceRisksDetails> details;
@@ -119,9 +119,9 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The threat level. Valid value:</p>
+         * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li><strong>medium</strong>: medium</li>
+         * <li><strong>medium</strong>: Medium</li>
          * </ul>
          * 
          * <strong>example:</strong>

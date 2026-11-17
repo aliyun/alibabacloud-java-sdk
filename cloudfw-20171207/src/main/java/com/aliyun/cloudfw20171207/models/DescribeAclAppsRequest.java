@@ -7,14 +7,10 @@ public class DescribeAclAppsRequest extends TeaModel {
     /**
      * <p>The ACL type. Valid values:</p>
      * <ul>
-     * <li><p><strong>Internet</strong></p>
-     * </li>
-     * <li><p><strong>NAT</strong></p>
-     * </li>
-     * <li><p><strong>VPC</strong></p>
-     * </li>
-     * <li><p><strong>All</strong></p>
-     * </li>
+     * <li><strong>Internet</strong>                       </li>
+     * <li><strong>NAT</strong></li>
+     * <li><strong>VPC</strong></li>
+     * <li><strong>All</strong></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -25,12 +21,10 @@ public class DescribeAclAppsRequest extends TeaModel {
     public String aclType;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +44,7 @@ public class DescribeAclAppsRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,11 +56,11 @@ public class DescribeAclAppsRequest extends TeaModel {
     /**
      * <p>Specifies whether the application is common. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: common</p>
+     * <li><p>1: Common.</p>
      * </li>
-     * <li><p><strong>0</strong>: not common</p>
+     * <li><p>0: Uncommon.</p>
      * </li>
-     * <li><p>If you omit this parameter (the default), all applications are returned.</p>
+     * <li><p>Empty (default): All.</p>
      * </li>
      * </ul>
      * 

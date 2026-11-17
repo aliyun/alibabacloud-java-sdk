@@ -28,7 +28,7 @@ public class DescribeRegionInfoRequest extends TeaModel {
     public String sourceCode;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address of the requester.</p>
      * 
      * <strong>example:</strong>
      * <p>59.82.59.XX</p>

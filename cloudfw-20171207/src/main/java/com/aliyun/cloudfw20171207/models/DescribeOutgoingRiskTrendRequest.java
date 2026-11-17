@@ -14,7 +14,7 @@ public class DescribeOutgoingRiskTrendRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The language type for receiving messages.</p>
+     * <p>The language of the response message.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -23,7 +23,7 @@ public class DescribeOutgoingRiskTrendRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the visitor.</p>
+     * <p>The source IP address of the requester.</p>
      * 
      * <strong>example:</strong>
      * <p>219.145.94.XXX</p>

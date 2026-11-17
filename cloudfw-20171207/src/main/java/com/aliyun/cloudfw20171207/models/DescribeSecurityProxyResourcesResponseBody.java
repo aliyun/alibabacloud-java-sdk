@@ -51,6 +51,22 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
         public String destinationCidr;
 
         /**
+         * <p>The current traffic redirection status of the route entry. Valid values:</p>
+         * <ul>
+         * <li>diverted: Traffic is redirected to the firewall.</li>
+         * <li>undiverted: Traffic is not redirected and still points to the NAT gateway.</li>
+         * <li>diverting: Traffic redirection is in progress.</li>
+         * <li>undiverting: Traffic redirection cancellation is in progress.</li>
+         * <li>abnormal: Traffic redirection is abnormal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>diverted</p>
+         */
+        @NameInMap("DivertStatus")
+        public String divertStatus;
+
+        /**
          * <p>The next hop instance ID.</p>
          * 
          * <strong>example:</strong>
@@ -60,7 +76,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
         public String nextHopId;
 
         /**
-         * <p>The network type of the next hop.</p>
+         * <p>The next hop network type.</p>
          * 
          * <strong>example:</strong>
          * <p>NatGateway</p>
@@ -69,7 +85,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
         public String nextHopType;
 
         /**
-         * <p>The ID of the route table.</p>
+         * <p>The route table ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-2ze409pp09d994a****</p>
@@ -88,6 +104,14 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
         }
         public String getDestinationCidr() {
             return this.destinationCidr;
+        }
+
+        public DescribeSecurityProxyResourcesResponseBodyResourceListVpcListNatGatewaysNatRouteEntryList setDivertStatus(String divertStatus) {
+            this.divertStatus = divertStatus;
+            return this;
+        }
+        public String getDivertStatus() {
+            return this.divertStatus;
         }
 
         public DescribeSecurityProxyResourcesResponseBodyResourceListVpcListNatGatewaysNatRouteEntryList setNextHopId(String nextHopId) {
@@ -217,7 +241,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
-         * <p>The UID of the member accounts.</p>
+         * <p>The UID of member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>157862808111****</p>
@@ -241,7 +265,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The name of the VPC-connected instance.</p>
+         * <p>The VPC-connected instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-wz94a4q37rgl7g****</p>

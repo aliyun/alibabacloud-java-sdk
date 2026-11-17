@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
     /**
-     * <p>The detailed information list of Logstores.</p>
+     * <p>The list of Logstore details.</p>
      */
     @NameInMap("InfoList")
     public java.util.List<DescribeBatchSlsDispatchStatusResponseBodyInfoList> infoList;
@@ -17,7 +17,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
     public java.util.List<DescribeBatchSlsDispatchStatusResponseBodyItemList> itemList;
 
     /**
-     * <p>The log version. A value of 1 indicates only one Logstore, and a value of 2 indicates two Logstores.</p>
+     * <p>The log version. A value of 1 indicates one Logstore, and a value of 2 indicates two Logstores.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +44,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The request ID of the returned result.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>7036EBAB-F85F-5AAE-976F-C75AEE59****</p>
@@ -116,7 +116,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         public String configStatus;
 
         /**
-         * <p>The Chinese name of the delivery type.</p>
+         * <p>The name of the delivery type.</p>
          * 
          * <strong>example:</strong>
          * <p>internet-traffic-log</p>
@@ -125,7 +125,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         public String dispatchName;
 
         /**
-         * <p>The key for classified logs. Valid values:</p>
+         * <p>The log classification key. Valid values:</p>
          * <p><strong>internet_log</strong></p>
          * <p><strong>vpc_firewall_log</strong></p>
          * <p><strong>nat_firewall_log</strong></p>
@@ -139,7 +139,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         public String dispatchValue;
 
         /**
-         * <p>The switch status of the delivery type.</p>
+         * <p>The enablement status of the delivery type.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -148,13 +148,13 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The detailed delivery configurations for the Internet and VPC.</p>
+         * <p>The detailed delivery configuration for the Internet and VPC firewalls.</p>
          */
         @NameInMap("FilterKeys")
         public java.util.List<String> filterKeys;
 
         /**
-         * <p>The value is fixed as log_type and can be ignored.</p>
+         * <p>The name of the search type. This parameter is fixed as log_type and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>log_type</p>
@@ -243,7 +243,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>The site. A value of cn represents the Chinese mainland, intl represents regions outside the Chinese mainland, and global represents global.</p>
+         * <p>The site. A value of cn indicates the Chinese mainland, intl indicates regions outside the Chinese mainland, and global indicates global.</p>
          * 
          * <strong>example:</strong>
          * <p>cn</p>
@@ -301,7 +301,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         public String configStatus;
 
         /**
-         * <p>The delivery name.</p>
+         * <p>The name of the delivery type.</p>
          * 
          * <strong>example:</strong>
          * <p>internet-traffic-log</p>
@@ -310,7 +310,7 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         public String dispatchName;
 
         /**
-         * <p>The value of the delivery log.</p>
+         * <p>The value of the log classification.</p>
          * 
          * <strong>example:</strong>
          * <p>internet_log</p>
@@ -328,13 +328,13 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The supported filter conditions.</p>
+         * <p>The supported filter conditions for the Internet and VPC firewalls.</p>
          */
         @NameInMap("FilterKeys")
         public java.util.List<String> filterKeys;
 
         /**
-         * <p>The name of the search type.</p>
+         * <p>The name of the search type. This parameter is fixed as log_type and can be ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>log_type</p>

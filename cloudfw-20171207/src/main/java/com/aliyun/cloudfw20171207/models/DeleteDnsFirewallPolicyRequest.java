@@ -15,7 +15,7 @@ public class DeleteDnsFirewallPolicyRequest extends TeaModel {
     public String aclUuid;
 
     /**
-     * <p>The language of the request and response. Valid values: <strong>zh</strong> for Chinese and <strong>en</strong> for English.</p>
+     * <p>The language of the request and response. Valid values: - <strong>zh</strong>: Chinese. - <strong>en</strong>: English.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -24,7 +24,7 @@ public class DeleteDnsFirewallPolicyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>140.210.39.***</p>

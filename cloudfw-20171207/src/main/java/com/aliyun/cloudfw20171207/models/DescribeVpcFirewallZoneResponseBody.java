@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
     /**
-     * <p>The deployment mode of the virtual private cloud (VPC) firewall service. Valid values:</p>
-     * <ul>
-     * <li><strong>PrimaryStandby</strong>: active/standby mode.</li>
-     * <li><strong>MultiPrimary</strong>: active-active mode.</li>
-     * </ul>
+     * <p>The deployment mode of the VPC firewall service. Valid values: <strong>PrimaryStandby</strong> (primary/secondary mode) and <strong>MultiPrimary</strong> (active-active mode).</p>
      * 
      * <strong>example:</strong>
      * <p>PrimaryStandby</p>
@@ -18,7 +14,7 @@ public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
     public String firewallServiceMode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>337A4DBA-8A01-5E9C-99CA-84293E13****</p>
@@ -63,15 +59,6 @@ public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallZoneResponseBodyZoneList extends TeaModel {
         /**
-         * <p>The zone ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-c</p>
-         */
-        @NameInMap("ZoneId")
-        public String zoneId;
-
-        /**
          * <p>The zone name.</p>
          * 
          * <strong>example:</strong>
@@ -80,17 +67,18 @@ public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-c</p>
+         */
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         public static DescribeVpcFirewallZoneResponseBodyZoneList build(java.util.Map<String, ?> map) throws Exception {
             DescribeVpcFirewallZoneResponseBodyZoneList self = new DescribeVpcFirewallZoneResponseBodyZoneList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVpcFirewallZoneResponseBodyZoneList setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
         }
 
         public DescribeVpcFirewallZoneResponseBodyZoneList setLocalName(String localName) {
@@ -99,6 +87,14 @@ public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
         }
         public String getLocalName() {
             return this.localName;
+        }
+
+        public DescribeVpcFirewallZoneResponseBodyZoneList setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

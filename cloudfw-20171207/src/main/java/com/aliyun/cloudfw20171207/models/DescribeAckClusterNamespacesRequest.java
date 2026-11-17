@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeAckClusterNamespacesRequest extends TeaModel {
     /**
-     * <p>The ID of the ACK cluster connector. To obtain this ID, call the <a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a> operation.</p>
+     * <p>The ID of the ACK cluster connector. You can obtain the value from the following operation:</p>
      * <ul>
-     * <li><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: Queries a list of ACK cluster connectors.</li>
+     * <li><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: Lists ACK cluster connectors.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

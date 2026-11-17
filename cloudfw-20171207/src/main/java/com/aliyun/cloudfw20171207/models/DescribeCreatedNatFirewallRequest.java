@@ -14,7 +14,7 @@ public class DescribeCreatedNatFirewallRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the requester.</p>
+     * <p>The source IP address of the visitor.</p>
      * 
      * <strong>example:</strong>
      * <p>121.225.255.XXX</p>

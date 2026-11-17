@@ -14,7 +14,7 @@ public class DescribeSecurityProxyResourcesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The UID of the member accounts.</p>
+     * <p>The UID of member accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>136481150091****</p>

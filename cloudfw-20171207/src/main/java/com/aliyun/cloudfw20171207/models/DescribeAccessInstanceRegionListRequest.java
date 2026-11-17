@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessInstanceRegionListRequest extends TeaModel {
     /**
-     * <p>The sync node status. Used to filter by status.</p>
+     * <p>The status of the synchronization node. This parameter is used to filter by status.</p>
      * <blockquote>
-     * <p>Currently, only the &quot;created&quot; status is supported for filtering. Passing other values (such as &quot;ready&quot;) causes the request to fail.</p>
+     * <p>Currently, only the &quot;created&quot; status is supported for filtering. Specifying other values (such as &quot;ready&quot;) will cause the request to fail.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class DescribeAccessInstanceRegionListRequest extends TeaModel {
     public String accessInstanceStatus;
 
     /**
-     * <p>The sync node type. Valid values:</p>
+     * <p>The type of the synchronization node. Valid values:</p>
      * <ul>
-     * <li><p><strong>PrivateDns</strong>: Private DNS (default value if not specified).</p>
+     * <li><p><strong>PrivateDns</strong>: Private DNS. If this parameter is not specified, the default value is PrivateDns.</p>
      * </li>
      * <li><p><strong>AckClusterConnector</strong>: ACK cluster connector.</p>
      * </li>

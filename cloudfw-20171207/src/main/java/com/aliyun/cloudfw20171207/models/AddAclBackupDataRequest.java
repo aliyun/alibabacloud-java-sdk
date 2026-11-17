@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddAclBackupDataRequest extends TeaModel {
     /**
-     * <p>The backup time, specified as a Unix timestamp (the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970).</p>
+     * <p>The backup time. The value is a UNIX timestamp accurate to seconds, which indicates the number of seconds that have elapsed since January 1, 1970 (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class AddAclBackupDataRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address of the requester.</p>
      * 
      * <strong>example:</strong>
      * <p>115.194.124.XXX</p>

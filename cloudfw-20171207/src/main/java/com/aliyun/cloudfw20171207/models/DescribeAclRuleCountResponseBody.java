@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAclRuleCountResponseBody extends TeaModel {
     /**
-     * <p>The number of inbound access control policies for the Internet firewall.</p>
+     * <p>The number of inbound access control policies on the Internet border.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +14,7 @@ public class DescribeAclRuleCountResponseBody extends TeaModel {
     public Integer internetInAclCount;
 
     /**
-     * <p>The number of outbound access control policies that are created for the Internet firewall.</p>
+     * <p>The number of outbound access control policies that are created for the Internet firewall at the Internet Border.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -23,7 +23,7 @@ public class DescribeAclRuleCountResponseBody extends TeaModel {
     public Integer internetOutAclCount;
 
     /**
-     * <p>The number of inbound access control policies for the NAT firewall.&gt;Notice: This field is deprecated.</p>
+     * <p><strong>[Deprecated]</strong> The number of inbound access control policies on the NAT firewall.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -33,7 +33,7 @@ public class DescribeAclRuleCountResponseBody extends TeaModel {
     public Integer natInAclCount;
 
     /**
-     * <p>The number of internal-to-external access control policies for the NAT firewall.</p>
+     * <p>The number of outbound access control policies on the NAT firewall.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -42,7 +42,7 @@ public class DescribeAclRuleCountResponseBody extends TeaModel {
     public Integer natOutAclCount;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>27936D6C-1B7A-5A5A-B9E4-FBEBBDAA****</p>
@@ -60,7 +60,7 @@ public class DescribeAclRuleCountResponseBody extends TeaModel {
     public Integer totalAclCount;
 
     /**
-     * <p>The number of access control policies for VPC firewalls.</p>
+     * <p>The number of access control policies on the VPC firewall.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>

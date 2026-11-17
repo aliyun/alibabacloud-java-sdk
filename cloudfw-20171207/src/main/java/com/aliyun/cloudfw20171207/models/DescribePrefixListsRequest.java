@@ -15,7 +15,7 @@ public class DescribePrefixListsRequest extends TeaModel {
     public String regionNo;
 
     /**
-     * <p>The source IP address of the caller.</p>
+     * <p>The source IP address of the requester.</p>
      * 
      * <strong>example:</strong>
      * <p>47.100.XX.XX</p>

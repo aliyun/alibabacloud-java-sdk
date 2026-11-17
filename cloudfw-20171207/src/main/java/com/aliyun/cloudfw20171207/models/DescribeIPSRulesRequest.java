@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeIPSRulesRequest extends TeaModel {
     /**
-     * <p>The attacked application.</p>
+     * <p>The attack application.</p>
      * 
      * <strong>example:</strong>
      * <p>SMB</p>
@@ -14,13 +14,13 @@ public class DescribeIPSRulesRequest extends TeaModel {
     public String attackApp;
 
     /**
-     * <p>The list of categories of the attacked applications. Specify the value in the [&quot;AttackAppCategory1&quot;,&quot;AttackAppCategory2&quot;] format.</p>
+     * <p>The list of categories of the attacked applications, in the format of [&quot;AttackAppCategory1&quot;,&quot;AttackAppCategory2&quot;].</p>
      */
     @NameInMap("AttackAppCategory")
     public java.util.List<String> attackAppCategory;
 
     /**
-     * <p>The list of attacked applications.</p>
+     * <p>The list of attack applications.</p>
      */
     @NameInMap("AttackApps")
     public java.util.List<String> attackApps;
@@ -100,6 +100,15 @@ public class DescribeIPSRulesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The instance ID of the NAT firewall. This parameter is required only when FirewallType is set to <strong>NatFirewall</strong> and is mutually exclusive with VpcFirewallId. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2879296.html">ListNatFirewallIpsConfigs</a> operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>proxy-nat53f4bbc233234271a1d7</p>
+     */
+    @NameInMap("ProxyId")
+    public String proxyId;
+
+    /**
      * <p>Specifies whether the rule has been modified.</p>
      * 
      * <strong>example:</strong>
@@ -173,7 +182,7 @@ public class DescribeIPSRulesRequest extends TeaModel {
     public String sort;
 
     /**
-     * <p>The source IP address of the requester.</p>
+     * <p>The source IP address of the visitor.</p>
      * 
      * <strong>example:</strong>
      * <p>8.139.222.XXX</p>
@@ -182,7 +191,7 @@ public class DescribeIPSRulesRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The instance ID of the virtual private cloud (VPC) firewalls.</p>
+     * <p>The instance ID of the virtual private cloud (VPC) border firewalls.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-rnbkqx4a8er21a****</p>
@@ -281,6 +290,14 @@ public class DescribeIPSRulesRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeIPSRulesRequest setProxyId(String proxyId) {
+        this.proxyId = proxyId;
+        return this;
+    }
+    public String getProxyId() {
+        return this.proxyId;
     }
 
     public DescribeIPSRulesRequest setQueryModify(String queryModify) {

@@ -40,7 +40,7 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public String ipProtocol;
 
     /**
-     * <p>The UID of Alibaba Cloud member accounts.</p>
+     * <p>The UID of the Alibaba Cloud member accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>258039427902****</p>
@@ -70,7 +70,7 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public String primaryDns;
 
     /**
-     * <p>The ID of the primary vSwitch. This parameter is required. If this parameter is not specified, -200103 is returned. The region and zone of the primary and secondary vSwitches specified by PrimaryVSwitchId and StandbyVSwitchId must support private DNS firewalls.</p>
+     * <p>The ID of the primary vSwitch. This parameter is required. If this parameter is not specified, the error code -200103 is returned. The region and zone of the primary and secondary vSwitches specified by PrimaryVSwitchId and StandbyVSwitchId must support private DNS firewalls.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-uf6b0dkyryer8******</p>
@@ -124,7 +124,7 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public String standbyDns;
 
     /**
-     * <p>The ID of the secondary vSwitch. The zones of the primary and secondary vSwitches specified by PrimaryVSwitchId and StandbyVSwitchId must support private DNS. Otherwise, -200534 is returned. The region must also be in the support list.</p>
+     * <p>The ID of the secondary vSwitch. The zones of the primary and secondary vSwitches specified by PrimaryVSwitchId and StandbyVSwitchId must support private DNS. Otherwise, the error code -200534 is returned. The region must also be in the supported list.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-8vb6jk75wfcwn******</p>

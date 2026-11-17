@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeIpsPrivateAssocRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,12 +14,10 @@ public class DescribeIpsPrivateAssocRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +27,7 @@ public class DescribeIpsPrivateAssocRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The Alibaba Cloud account ID of the resource owner.</p>
+     * <p>The Alibaba Cloud account ID to which the resource belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>258039427902****</p>
@@ -38,7 +36,7 @@ public class DescribeIpsPrivateAssocRequest extends TeaModel {
     public Long memberUid;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -56,7 +54,7 @@ public class DescribeIpsPrivateAssocRequest extends TeaModel {
     public String publicIp;
 
     /**
-     * <p>The ID of the resource.</p>
+     * <p>The resource ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-c5vhmjdfp5t****</p>
@@ -65,7 +63,7 @@ public class DescribeIpsPrivateAssocRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The status of the asset.</p>
+     * <p>The status.</p>
      * 
      * <strong>example:</strong>
      * <p>close</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInternetSlbResponseBody extends TeaModel {
     /**
-     * <p>The list of data.</p>
+     * <p>The data list.</p>
      */
     @NameInMap("DataList")
     public java.util.List<DescribeInternetSlbResponseBodyDataList> dataList;
@@ -65,7 +65,7 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
         public String aclId;
 
         /**
-         * <p>The status of access control.</p>
+         * <p>The access control status.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -248,7 +248,7 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
 
     public static class DescribeInternetSlbResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -257,7 +257,7 @@ public class DescribeInternetSlbResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

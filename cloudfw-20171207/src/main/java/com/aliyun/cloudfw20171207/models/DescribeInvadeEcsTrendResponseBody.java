@@ -11,7 +11,7 @@ public class DescribeInvadeEcsTrendResponseBody extends TeaModel {
     public java.util.List<DescribeInvadeEcsTrendResponseBodyDataList> dataList;
 
     /**
-     * <p>The end of the time range. This is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end time. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1736820365</p>
@@ -47,7 +47,7 @@ public class DescribeInvadeEcsTrendResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start of the time range. This is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The start time. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1742177725</p>

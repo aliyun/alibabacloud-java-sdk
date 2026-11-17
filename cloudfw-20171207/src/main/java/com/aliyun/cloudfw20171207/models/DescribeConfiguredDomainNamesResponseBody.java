@@ -79,7 +79,7 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
          * <p>The comment.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Office network domain name</p>
          */
         @NameInMap("Comment")
         public String comment;
@@ -94,10 +94,10 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>Indicates whether the domain name is one of the malicious domain names. Valid values: 0: Not malicious. 1: Malicious.</p>
+         * <p>Specifies whether the domain name is malicious. Valid values: 0 (not malicious), 1 (malicious).</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>false</p>
          */
         @NameInMap("IsMalicious")
         public Boolean isMalicious;

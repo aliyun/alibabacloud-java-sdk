@@ -65,7 +65,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>No recommended intelligent policies are available.</p>
+         * <p>当前无智能策略推荐</p>
          */
         @NameInMap("AclRecommendDetail")
         public String aclRecommendDetail;
@@ -189,7 +189,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
          * <p>The risk reason.</p>
          * 
          * <strong>example:</strong>
-         * <p>Previous traffic is all malicious traffic.</p>
+         * <p>历史流量均为黑流量</p>
          */
         @NameInMap("RiskReason")
         public String riskReason;

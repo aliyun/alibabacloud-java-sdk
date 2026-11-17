@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDownloadTaskRequest extends TeaModel {
     /**
-     * <p>The page number for a paged query.</p>
+     * <p>The Settings for the page number of the current page when paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -16,10 +16,8 @@ public class DescribeDownloadTaskRequest extends TeaModel {
     /**
      * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +27,7 @@ public class DescribeDownloadTaskRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to return on each page for a paged query. The default value is 10. The maximum value is 50.</p>
+     * <p>When paging, specifies the maximum number of entries to display on each page for a paged query. Default value: 10. Settings: The maximum value is 50.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +36,7 @@ public class DescribeDownloadTaskRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The type of the task. This is an enumeration. For a list of valid values, see the API for querying file download task types. If you do not set this parameter, tasks for all file types are queried.</p>
+     * <p>The task type. For valid values, see the API operation for querying file download task types. If you do not specify this parameter, all files are queried by default.</p>
      * 
      * <strong>example:</strong>
      * <p>InternetFirewallAsset</p>

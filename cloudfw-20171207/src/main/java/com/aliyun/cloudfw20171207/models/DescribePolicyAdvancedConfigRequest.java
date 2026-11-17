@@ -18,7 +18,7 @@ public class DescribePolicyAdvancedConfigRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the requester.</p>
+     * <p>The source IP address of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>

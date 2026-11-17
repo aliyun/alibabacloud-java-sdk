@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     /**
-     * <p>The instance ID of the asset.</p>
+     * <p>The asset instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i-8vb2nmm070m****</p>
@@ -14,7 +14,7 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public String assetsInstanceId;
 
     /**
-     * <p>The name of the asset.</p>
+     * <p>The asset name.</p>
      * 
      * <strong>example:</strong>
      * <p>ECS_test</p>
@@ -23,7 +23,7 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public String assetsInstanceName;
 
     /**
-     * <p>The description of the event.</p>
+     * <p>The event description.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -32,7 +32,7 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public String eventDesc;
 
     /**
-     * <p>The details of the event.</p>
+     * <p>The event details.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -41,7 +41,7 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public String eventDetail;
 
     /**
-     * <p>The key of the event.</p>
+     * <p>The event key.</p>
      * 
      * <strong>example:</strong>
      * <p>C&amp;CActivity</p>
@@ -50,7 +50,7 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public String eventKey;
 
     /**
-     * <p>The name of the event.</p>
+     * <p>The event name.</p>
      * 
      * <strong>example:</strong>
      * <p>event_test</p>
@@ -59,7 +59,7 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public String eventName;
 
     /**
-     * <p>The UUID of the threat detection event.</p>
+     * <p>The UUID of the compromise awareness event.</p>
      * 
      * <strong>example:</strong>
      * <p>aa6e786c-5034-457a-8e05-1c63fab****</p>
@@ -68,7 +68,7 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public String eventUuid;
 
     /**
-     * <p>The time when the event first occurred. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The time when the event first occurred. The value is a UNIX timestamp accurate to seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1735006706</p>
@@ -86,7 +86,7 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public Boolean isIgnore;
 
     /**
-     * <p>The time when the event last occurred. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The time when the event last occurred. The value is a UNIX timestamp accurate to seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1740104108</p>
@@ -110,7 +110,7 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public String privateIP;
 
     /**
-     * <p>The handling status of the event.</p>
+     * <p>The processing status.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -155,7 +155,7 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The risk level of the event.</p>
+     * <p>The risk level.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -328,7 +328,7 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
 
     public static class DescribeInvadeEventDetailResponseBodyOperationList extends TeaModel {
         /**
-         * <p>The parameters for the operation.</p>
+         * <p>The operation parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -370,7 +370,7 @@ public class DescribeInvadeEventDetailResponseBody extends TeaModel {
 
     public static class DescribeInvadeEventDetailResponseBodyUnhandleOperationList extends TeaModel {
         /**
-         * <p>The parameters for the operation.</p>
+         * <p>The operation parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

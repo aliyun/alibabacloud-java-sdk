@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessInstanceVpcListRequest extends TeaModel {
     /**
-     * <p>The UID of the Alibaba Cloud account that owns the resource.</p>
+     * <p>The Alibaba Cloud UID of the resource owner.</p>
      * 
      * <strong>example:</strong>
      * <p>135809047715****</p>
@@ -42,7 +42,7 @@ public class DescribeAccessInstanceVpcListRequest extends TeaModel {
     public String regionNo;
 
     /**
-     * <p>The ID of the VPC instance.</p>
+     * <p>The ID of the VPC-connected instance.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-j6cvhdscntzuvr0x****</p>

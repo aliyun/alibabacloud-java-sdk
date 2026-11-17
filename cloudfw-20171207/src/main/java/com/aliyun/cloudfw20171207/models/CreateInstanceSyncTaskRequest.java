@@ -14,7 +14,7 @@ public class CreateInstanceSyncTaskRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the visitor.</p>
+     * <p>The source IP address of the requester.</p>
      * 
      * <strong>example:</strong>
      * <p>60.182.79.XXX</p>

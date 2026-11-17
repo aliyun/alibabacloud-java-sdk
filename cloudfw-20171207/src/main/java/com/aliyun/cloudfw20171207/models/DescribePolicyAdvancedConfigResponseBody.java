@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolicyAdvancedConfigResponseBody extends TeaModel {
     /**
-     * <p>The status of strict mode. Valid values:</p>
+     * <p>The enabling status of strict mode for access control policies. Valid values:</p>
      * <ul>
      * <li><strong>on</strong>: Strict mode is enabled.</li>
      * <li><strong>off</strong>: Strict mode is disabled.</li>

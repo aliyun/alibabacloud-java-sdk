@@ -14,10 +14,10 @@ public class ModifyIpsRulesToDefaultRequest extends TeaModel {
     public String attackApp;
 
     /**
-     * <p>The type of the cloud firewall. Valid values:</p>
+     * <p>The Cloud Firewall type. Valid values:</p>
      * <ul>
-     * <li><strong>VpcFirewall</strong>: virtual private cloud (VPC) firewalls.</li>
-     * <li><strong>InternetFirewall</strong> (default): the Internet border firewall.</li>
+     * <li><strong>VpcFirewall</strong>: virtual private cloud (VPC) firewall</li>
+     * <li><strong>InternetFirewall</strong> (default): the Internet firewall</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ModifyIpsRulesToDefaultRequest extends TeaModel {
     public String firewallType;
 
     /**
-     * <p>The language of the content. Valid values:</p>
+     * <p>The language type. Valid values:</p>
      * <ul>
      * <li><p><strong>zh</strong> (default): Chinese.</p>
      * </li>
@@ -42,12 +42,20 @@ public class ModifyIpsRulesToDefaultRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Instance ID of the NAT firewall instance. This parameter is required only when FirewallType is set to <strong>NatFirewall</strong>. In this case, the scope is the rules under this instance. This parameter is ignored for Internet and VPC firewalls. You can call the <a href="https://help.aliyun.com/document_detail/2879296.html">ListNatFirewallIpsConfigs</a> operation to query instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>proxy-nat53f4bbc233234271a1d7</p>
+     */
+    @NameInMap("ProxyId")
+    public String proxyId;
+
+    /**
      * <p>The rule type. Valid values:</p>
      * <ul>
      * <li><strong>basicRule</strong></li>
      * <li><strong>customize</strong></li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>customize</p>
@@ -56,7 +64,7 @@ public class ModifyIpsRulesToDefaultRequest extends TeaModel {
     public String ruleType;
 
     /**
-     * <p>The rule list. Conditional requirement: when RuleType is set to customize, you must specify at least one of this parameter or AttackApp. If you specify only RuleType without Rules or AttackApp, the API returns ErrorParameters.</p>
+     * <p>The list of rules. This parameter is conditionally required: when RuleType is set to customize, you must specify at least one of this parameter or AttackApp. If you specify only RuleType without Rules or AttackApp, the API returns an ErrorParameters error.</p>
      * 
      * <strong>example:</strong>
      * <p>[
@@ -68,7 +76,7 @@ public class ModifyIpsRulesToDefaultRequest extends TeaModel {
     public String rules;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address of the requester.</p>
      * 
      * <strong>example:</strong>
      * <p>140.205.118.XXX</p>
@@ -103,6 +111,14 @@ public class ModifyIpsRulesToDefaultRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public ModifyIpsRulesToDefaultRequest setProxyId(String proxyId) {
+        this.proxyId = proxyId;
+        return this;
+    }
+    public String getProxyId() {
+        return this.proxyId;
     }
 
     public ModifyIpsRulesToDefaultRequest setRuleType(String ruleType) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ClearLogStoreStorageRequest extends TeaModel {
     /**
-     * <p>The name of the site for which to clear logs. If there is only one Logstore, you can leave this parameter empty. If there are two Logstores, specify cn or intl.</p>
+     * <p>The name of the site whose logs are to be cleared. If there is only one Logstore, you can leave this parameter empty. If there are two Logstores, you must specify cn or intl.</p>
      * 
      * <strong>example:</strong>
      * <p>cn</p>

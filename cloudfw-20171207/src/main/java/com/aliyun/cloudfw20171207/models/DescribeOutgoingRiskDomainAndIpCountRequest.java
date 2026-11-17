@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOutgoingRiskDomainAndIpCountRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp that is accurate to the second.</p>
+     * <p>The end time of the query. Specify the time as a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1751595213</p>
@@ -14,7 +14,7 @@ public class DescribeOutgoingRiskDomainAndIpCountRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The beginning of the time range to query. The value is a UNIX timestamp that is accurate to the second.</p>
+     * <p>The start time of the query. Specify the time as a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1749434787</p>
