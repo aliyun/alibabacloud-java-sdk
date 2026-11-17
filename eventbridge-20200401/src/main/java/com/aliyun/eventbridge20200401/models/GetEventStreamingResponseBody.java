@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEventStreamingResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of Success indicates that the request is successful. Other values indicate error codes. For more information, see Error codes.</p>
+     * <p>The return code. A value of Success indicates success. Any other value indicates an error code. For more information, see Error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetEventStreamingResponseBodyData data;
@@ -38,7 +38,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation is successful.</p>
+     * <p>Indicates whether the operation was successful. A value of true indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -172,7 +172,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataRunOptionsBatchWindow extends TeaModel {
         /**
-         * <p>The maximum number of events that the window can accommodate. When this threshold is reached, data in the window is pushed downstream. If multiple windows exist, the push is triggered when the threshold of any window is reached.</p>
+         * <p>The maximum number of events that the window can accommodate. When this threshold is reached, data in the window is pushed downstream. If multiple windows exist, the push is triggered when the condition of any window is met.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -181,7 +181,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public Integer countBasedWindow;
 
         /**
-         * <p>The maximum time range in seconds for events that the window can accommodate. When this threshold is reached, data in the window is pushed downstream. If multiple windows exist, the push is triggered when the threshold of any window is reached.</p>
+         * <p>The maximum time range in seconds for events that the window can accommodate. When this threshold is reached, data in the window is pushed downstream. If multiple windows exist, the push is triggered when the condition of any window is met.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -291,7 +291,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String network;
 
         /**
-         * <p>The ID of the security group to which the instance of the dead-letter queue belongs.</p>
+         * <p>The ID of the security group to which the dead-letter queue instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-2vcgdxz7o1n9zapp****</p>
@@ -300,7 +300,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The IDs of the vSwitches to which the dead-letter queue belongs.</p>
+         * <p>The ID of the vSwitch where the dead-letter queue resides.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-m5ev8asdc6h12345****</p>
@@ -309,7 +309,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String vSwitchIds;
 
         /**
-         * <p>The ID of the VPC to which the dead-letter queue belongs.</p>
+         * <p>The ID of the VPC where the dead-letter queue resides.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zehizpoendb3****</p>
@@ -366,7 +366,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataRunOptionsRetryStrategy extends TeaModel {
         /**
-         * <p>The maximum retry time in seconds.</p>
+         * <p>The maximum retry time.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -384,11 +384,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public Float maximumRetryAttempts;
 
         /**
-         * <p>The retry policy. Valid values:</p>
-         * <ul>
-         * <li>BACKOFF_RETRY: backoff retry.</li>
-         * <li>EXPONENTIALDECAY_RETRY: exponential decay retry.</li>
-         * </ul>
+         * <p>The retry strategy. Valid values: BACKOFF_RETRY (backoff retry) and EXPONENTIALDECAY_RETRY (exponential decay retry).</p>
          * 
          * <strong>example:</strong>
          * <p>BACKOFF_RETRY</p>
@@ -429,7 +425,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataRunOptions extends TeaModel {
         /**
-         * <p>The batching window.</p>
+         * <p>The batch window.</p>
          */
         @NameInMap("BatchWindow")
         public GetEventStreamingResponseBodyDataRunOptionsBatchWindow batchWindow;
@@ -441,17 +437,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataRunOptionsBusinessOption businessOption;
 
         /**
-         * <p>Specifies whether to enable the dead-letter queue. By default, the dead-letter queue is disabled, and messages that exceed the retry policy are discarded.</p>
+         * <p>Specifies whether to enable the dead-letter queue. By default, the dead-letter queue is disabled, and messages that exceed the retry strategy are discarded.</p>
          */
         @NameInMap("DeadLetterQueue")
         public GetEventStreamingResponseBodyDataRunOptionsDeadLetterQueue deadLetterQueue;
 
         /**
-         * <p>The error tolerance policy. Valid values:</p>
-         * <ul>
-         * <li>NONE: No errors are tolerated.</li>
-         * <li>ALL: All errors are tolerated.</li>
-         * </ul>
+         * <p>The error tolerance strategy. Valid values: NONE (no error tolerance) and ALL (tolerate all errors).</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>
@@ -469,7 +461,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public Integer maximumTasks;
 
         /**
-         * <p>The retry policy used when an event fails to be pushed.</p>
+         * <p>The retry strategy for failed event pushes.</p>
          */
         @NameInMap("RetryStrategy")
         public GetEventStreamingResponseBodyDataRunOptionsRetryStrategy retryStrategy;
@@ -550,8 +542,8 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * <p>The transformation type. Valid values:</p>
          * <ul>
-         * <li>CONSTANT: a fixed value.</li>
-         * <li>JSONPATH: extracted from the upstream based on the path.</li>
+         * <li>CONSTANT: Fixed value.</li>
+         * <li>JSONPATH: Extracted from the upstream based on the path.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -847,7 +839,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersSslKeystoreKey extends TeaModel {
         /**
-         * <p>Required. The ARN of the KMS resource that stores the SSL private key. This parameter is used to locate the Key Management Service (KMS) instance that stores the client private key. Example format: acs:kms:cn-hangzhou:123456789:secret/ssl-keystore-key-xxxx. To obtain the value, view the ARN of the corresponding key in the KMS console.</p>
+         * <p>[Required] The ARN of the KMS resource that stores the SSL private key, used to locate the KMS instance that stores the client private key. Format example: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-keystore-key-xxxx\&quot;. You can view the ARN information of the corresponding key in the KMS console.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;KmsArn&quot;</p>
@@ -856,7 +848,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String kmsArn;
 
         /**
-         * <p>[KMS KV mode] The key name in the KMS secret. When the secret stored in KMS uses a key-value (KV) structure, specify this parameter to indicate the key corresponding to the SSL private key. Example: If the KMS secret is \&quot;{&quot;ssl_keystore_key&quot;:&quot;-----BEGIN PRIVATE KEY-----...&quot;,&quot;ssl_truststore_key&quot;:&quot;...&quot;}\&quot;, enter \&quot;ssl_keystore_key\&quot;. If the KMS secret is in plaintext mode and directly stores the PEM content of the private key, leave this parameter empty.</p>
+         * <p>[KMS KV mode] The key name in the KMS secret. When the secret stored in KMS is a key-value pair (KV) structure, specify this parameter to indicate the key corresponding to the SSL private key. Example: If the KMS secret is \&quot;{&quot;ssl_keystore_key&quot;:&quot;-----BEGIN PRIVATE KEY-----...&quot;,&quot;ssl_truststore_key&quot;:&quot;...&quot;}\&quot;, enter \&quot;ssl_keystore_key\&quot;. If the KMS secret is in plaintext mode (directly storing the PEM content of the private key), leave this parameter empty.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;KmsSecretValueKey&quot;</p>
@@ -907,7 +899,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The list of vSwitch IDs for the Kafka source.</p>
+         * <p>The vSwitch IDs of the Kafka source.</p>
          * 
          * <strong>example:</strong>
          * <p>vbr-8vb835n3zf9shwl****mp</p>
@@ -1025,7 +1017,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>i-2ze7u5i17mbqtx1p****</p>
@@ -1066,11 +1058,11 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParameters extends TeaModel {
         /**
-         * <p>The Kafka write acknowledgment mode. Valid values:</p>
+         * <p>The Kafka acknowledgment mode for writes. Valid values:</p>
          * <ul>
-         * <li>acks=0: No response from the server is required. Performance is high, but the risk of data loss is high.</li>
-         * <li>acks=1: A response is returned after the primary node successfully writes the data. Performance is medium, and the risk of data loss is medium. Data may be lost if the primary node goes down.</li>
-         * <li>acks=all: A response is returned after the primary node successfully writes the data and the secondary nodes successfully synchronize the data. Performance is low, but data is secure. Data is lost only when both the primary and secondary nodes go down.</li>
+         * <li>acks=0: No response from the server is required. This mode provides high performance but carries a high risk of data loss.</li>
+         * <li>acks=1: A response is returned after the primary node successfully writes the data. This mode provides medium performance and carries a medium risk of data loss. Data loss may occur if the primary node goes down.</li>
+         * <li>acks=all: A response is returned only after the primary node successfully writes the data and the secondary nodes successfully synchronize the data. This mode provides lower performance but higher data security. Data loss occurs only if both the primary and secondary nodes go down.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1098,10 +1090,10 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String compressionType;
 
         /**
-         * <p>The target topic routing policy for messages. If both the topic and DynamicTopic parameters are specified, the DynamicTopic parameter takes precedence. The following configuration modes are supported:</p>
+         * <p>The target topic policy for message routing. If both the Topic and DynamicTopic parameters are specified, the value of the DynamicTopic parameter takes precedence. Two configuration modes are supported:</p>
          * <ol>
-         * <li><strong>Static constant mode</strong>: Enter a fixed topic name string, such as &quot;order_created&quot;. All messages are sent to this topic.</li>
-         * <li><strong>Dynamic extraction mode</strong>: Enter a standard JSONPath expression, such as &quot;$.user.id&quot; or &quot;$.metadata.category&quot;. The system parses the upstream message body and extracts the value of the matched field as the target topic name.</li>
+         * <li><strong>Static constant mode</strong>: Specify a fixed topic name string (example: &quot;order_created&quot;). All messages are routed to this topic.</li>
+         * <li><strong>Dynamic extraction mode</strong>: Specify a standard JSONPath expression (example: &quot;$.user.id&quot; or &quot;$.metadata.category&quot;). The system parses the upstream message body and extracts the value of the matched field as the target topic name.</li>
          * </ol>
          */
         @NameInMap("DynamicTopic")
@@ -1126,7 +1118,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersNetworkType networkType;
 
         /**
-         * <p>The Kafka SASL authentication mechanism.</p>
+         * <p>The SASL authentication mechanism of Kafka.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;SaslMechanism&quot;</p>
@@ -1135,7 +1127,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String saslMechanism;
 
         /**
-         * <p>The Kafka SASL authentication password.</p>
+         * <p>The password for Kafka SASL authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>yourPassword</p>
@@ -1144,7 +1136,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String saslPassword;
 
         /**
-         * <p>The Kafka SASL authentication username.</p>
+         * <p>The username for Kafka SASL authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;SaslUser&quot;</p>
@@ -1159,7 +1151,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersSecurityGroupId securityGroupId;
 
         /**
-         * <p>The Kafka security protocol type. Valid values:</p>
+         * <p>The security protocol type of Kafka. Valid values:</p>
          * <ul>
          * <li>SASL_SSL</li>
          * <li>PLAINTEXT</li>
@@ -1173,7 +1165,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String securityProtocol;
 
         /**
-         * <p>[Required for encrypted private keys] The password for the Kafka client private key. If the client private key is encrypted with a password (that is, the PEM file contains the \&quot;Proc-Type: 4,ENCRYPTED\&quot; or \&quot;ENCRYPTED\&quot; tag), you must provide the decryption password. Leave this parameter empty if the private key is not encrypted. Note: This password is used only to decrypt the private key and is not related to Kafka authentication.</p>
+         * <p>[Required for encrypted private keys] The Kafka client private key password required when the client private key is encrypted and protected (that is, the PEM file contains the \&quot;Proc-Type: 4,ENCRYPTED\&quot; or \&quot;ENCRYPTED\&quot; tag). Leave it empty if the private key is not encrypted. Note: This password is only used to decrypt the private key and is unrelated to Kafka authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>yourPassword</p>
@@ -1182,7 +1174,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String sslKeyPassword;
 
         /**
-         * <p>[Required for mutual authentication] The certificate chain of the Kafka client. This parameter is required when mutual SSL authentication (ssl.client.auth=required) is enabled on the Kafka server. Format requirements: Base64-encoded PEM format, including the client certificate and the complete certificate chain (the client certificate first, followed by the intermediate CA certificates, and the root CA certificate is optional). Note: Make sure that the content of each PEM file starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;. Concatenate the files and then encode them in Base64.</p>
+         * <p>[Required for mutual authentication] The Kafka client certificate chain required when the Kafka server enables mutual SSL authentication (ssl.client.auth=required). Format requirement: Base64-encoded PEM format, containing the client certificate and the complete certificate chain (client certificate first, intermediate CA certificate second, and root CA certificate optional). Note: Ensure that each PEM file content starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;, and Base64-encode the concatenated content.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;SslKeystoreCertificateChain&quot;</p>
@@ -1191,13 +1183,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String sslKeystoreCertificateChain;
 
         /**
-         * <p>[Required for bidirectional authentication] The SSL private key configuration object. The client private key is required when bidirectional SSL authentication is enabled on the Kafka server. Only the KMS pattern is supported for keys: specify the Key Management Service EPS resource that stores the private key by using KmsArn. The system retrieves the private key content from KMS only in memory, which provides higher security. Configuration example: {&quot;KmsArn&quot;: &quot;acs:kms:cn-hangzhou:123456789:secret/ssl-key-xxxx&quot;, &quot;KmsSecretValueKey&quot;: &quot;keystore_private_key&quot;}.</p>
+         * <p>[Required for mutual authentication] The SSL private key configuration object. When mutual SSL authentication is enabled on the Kafka server, the client private key must be provided. The key only supports the KMS mode: specify the Key Management Service (KMS) resource that stores the private key through KmsArn. The system retrieves the private key content from KMS only in memory, which provides higher security. Configuration example: {&quot;KmsArn&quot;: &quot;acs:kms:cn-hangzhou:123456789:secret/ssl-key-xxxx&quot;, &quot;KmsSecretValueKey&quot;: &quot;keystore_private_key&quot;}</p>
          */
         @NameInMap("SslKeystoreKey")
         public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersSslKeystoreKey sslKeystoreKey;
 
         /**
-         * <p>[Required for SSL scenarios] The trust certificate of the Kafka server. This certificate is used to authenticate the validity of the SSL certificate of the Kafka broker and prevent man-in-the-middle attacks. Format requirements: PEM format with Base64 encoding, which typically contains the CA certificate of the Kafka server or the server certificate itself. Example: Perform Base64 encoding on the content of the CA certificate PEM file, ensuring that it starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;. If Kafka uses a self-signed certificate, provide the CA certificate that issued the certificate.</p>
+         * <p>[Required for SSL scenarios] The Kafka server trust certificate. Used to authenticate the validity of the SSL certificate of the Kafka broker to prevent man-in-the-middle attacks. Format requirements: PEM format with Base64 encoding, which usually contains the CA certificate of the Kafka server or the server certificate itself. Example: Perform Base64 encoding on the content of the PEM file of the CA certificate (ensure that it starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;). If Kafka uses a self-signed certificate, you must provide the CA certificate that issued the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;SslTruststoreCertificates&quot;</p>
@@ -1215,7 +1207,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String topic;
 
         /**
-         * <p>The list of vSwitch IDs for the Kafka source.</p>
+         * <p>The vSwitch IDs of the Kafka source.</p>
          */
         @NameInMap("VSwitchIds")
         public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersVSwitchIds vSwitchIds;
@@ -1227,7 +1219,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersValue value;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC.</p>
          */
         @NameInMap("VpcId")
         public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersVpcId vpcId;
@@ -1599,7 +1591,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String instanceEndpoint;
 
         /**
-         * <p>The password.</p>
+         * <p>The password for the username.</p>
          * 
          * <strong>example:</strong>
          * <p>yourPassword</p>
@@ -1650,7 +1642,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zeccak5pb0j3ay******</p>
@@ -1802,7 +1794,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String connectorPackageUrl;
 
         /**
-         * <p>The properties file to parse from the current ZIP package.</p>
+         * <p>The properties file parsed from the current ZIP package.</p>
          */
         @NameInMap("ConnectorParameters")
         public GetEventStreamingResponseBodyDataSinkSinkCustomizedKafkaConnectorParametersConnectorParameters connectorParameters;
@@ -1856,7 +1848,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSinkSinkCustomizedKafkaParameters extends TeaModel {
         /**
-         * <p>The instance ID of the MSMQ Kafka instance.</p>
+         * <p>The instance ID of the Message Queue for Apache Kafka (MSMQ) instance for messages.</p>
          * 
          * <strong>example:</strong>
          * <p>90be1f96-4229-4535-bb76-34b4f6fb****</p>
@@ -1899,7 +1891,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The property name.</p>
+         * <p>The name of the property.</p>
          * 
          * <strong>example:</strong>
          * <p>content</p>
@@ -1958,7 +1950,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The DashVector property type.</p>
+         * <p>The type of the DashVector property.</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -2017,7 +2009,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The property value.</p>
+         * <p>The value of the property.</p>
          * 
          * <strong>example:</strong>
          * <p>$.data.content</p>
@@ -2058,19 +2050,19 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSinkSinkDashVectorParametersDashVectorSchemaParameters extends TeaModel {
         /**
-         * <p>The property name.</p>
+         * <p>The name of the property.</p>
          */
         @NameInMap("Name")
         public GetEventStreamingResponseBodyDataSinkSinkDashVectorParametersDashVectorSchemaParametersName name;
 
         /**
-         * <p>The DashVector property type.</p>
+         * <p>The type of the DashVector property.</p>
          */
         @NameInMap("Type")
         public GetEventStreamingResponseBodyDataSinkSinkDashVectorParametersDashVectorSchemaParametersType type;
 
         /**
-         * <p>The property value.</p>
+         * <p>The value of the property.</p>
          */
         @NameInMap("Value")
         public GetEventStreamingResponseBodyDataSinkSinkDashVectorParametersDashVectorSchemaParametersValue value;
@@ -2303,7 +2295,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String apiKey;
 
         /**
-         * <p>The collection name.</p>
+         * <p>The name of the collection.</p>
          * 
          * <strong>example:</strong>
          * <p>collection1</p>
@@ -2312,7 +2304,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String collection;
 
         /**
-         * <p>The schema field definitions for table entries when inserting data into DashVector. The result after event content transformation must be in JSON format.</p>
+         * <p>The schema field definitions for the table entries when inserting data into DashVector. The result of the event content transformation must be in JSON format.</p>
          */
         @NameInMap("DashVectorSchemaParameters")
         public java.util.List<GetEventStreamingResponseBodyDataSinkSinkDashVectorParametersDashVectorSchemaParameters> dashVectorSchemaParameters;
@@ -2336,7 +2328,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String network;
 
         /**
-         * <p>The DashVector database operation type.</p>
+         * <p>The operation type for the DashVector database.</p>
          * 
          * <strong>example:</strong>
          * <p>Upsert</p>
@@ -2357,7 +2349,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkDashVectorParametersPrimaryKeyId primaryKeyId;
 
         /**
-         * <p>The vector of the DashVector record to be inserted.</p>
+         * <p>The vector of the record to be inserted into DashVector.</p>
          */
         @NameInMap("Vector")
         public GetEventStreamingResponseBodyDataSinkSinkDashVectorParametersVector vector;
@@ -2461,7 +2453,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The record content template for the BLOB type.</p>
+         * <p>The content template of the record for the BLOB type.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -2699,7 +2691,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The topic content schema for the TUPLE type.</p>
+         * <p>The content schema of the topic for the TUPLE type.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;k1&quot;:&quot;value1&quot;,&quot;k2&quot;:&quot;value2&quot;}</p>
@@ -2803,7 +2795,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSinkSinkDataHubParameters extends TeaModel {
         /**
-         * <p>The record content template for the BLOB type.</p>
+         * <p>The content template of the record for the BLOB type.</p>
          */
         @NameInMap("Body")
         public GetEventStreamingResponseBodyDataSinkSinkDataHubParametersBody body;
@@ -2827,7 +2819,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkDataHubParametersTopic topic;
 
         /**
-         * <p>The topic content schema for the TUPLE type.</p>
+         * <p>The content schema of the topic for the TUPLE type.</p>
          */
         @NameInMap("TopicSchema")
         public GetEventStreamingResponseBodyDataSinkSinkDataHubParametersTopicSchema topicSchema;
@@ -2917,7 +2909,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The public HTTP endpoint of the BE.</p>
+         * <p>The BE public HTTP endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;BeHttpEndpoint&quot;</p>
@@ -3096,7 +3088,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The HTTP endpoint of the FE.</p>
+         * <p>The FE HTTP protocol endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;FeHttpEndpoint&quot;</p>
@@ -3155,7 +3147,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The network type.</p>
+         * <p>The network.</p>
          * 
          * <strong>example:</strong>
          * <p>PublicNetwork</p>
@@ -3509,7 +3501,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The vSwitch IDs.</p>
+         * <p>The vSwitches.</p>
          * 
          * <strong>example:</strong>
          * <p>vbr-8vb835n3zf9shwl****mp</p>
@@ -3568,7 +3560,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>i-2ze7u5i17mbqtx1p****</p>
@@ -3609,7 +3601,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSinkSinkDorisParameters extends TeaModel {
         /**
-         * <p>The public HTTP endpoint of the BE.</p>
+         * <p>The BE public HTTP endpoint.</p>
          */
         @NameInMap("BeHttpEndpoint")
         public GetEventStreamingResponseBodyDataSinkSinkDorisParametersBeHttpEndpoint beHttpEndpoint;
@@ -3627,13 +3619,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkDorisParametersDatabase database;
 
         /**
-         * <p>The HTTP endpoint of the FE.</p>
+         * <p>The FE HTTP protocol endpoint.</p>
          */
         @NameInMap("FeHttpEndpoint")
         public GetEventStreamingResponseBodyDataSinkSinkDorisParametersFeHttpEndpoint feHttpEndpoint;
 
         /**
-         * <p>The network type.</p>
+         * <p>The network.</p>
          */
         @NameInMap("NetworkType")
         public GetEventStreamingResponseBodyDataSinkSinkDorisParametersNetworkType networkType;
@@ -3669,13 +3661,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkDorisParametersUserName userName;
 
         /**
-         * <p>The vSwitch IDs.</p>
+         * <p>The vSwitches.</p>
          */
         @NameInMap("VSwitchIds")
         public GetEventStreamingResponseBodyDataSinkSinkDorisParametersVSwitchIds vSwitchIds;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC.</p>
          */
         @NameInMap("VpcId")
         public GetEventStreamingResponseBodyDataSinkSinkDorisParametersVpcId vpcId;
@@ -3787,12 +3779,12 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * <p>The transformation format. Valid values:</p>
          * <ul>
-         * <li>ORIGINAL: complete event</li>
-         * <li>JSONPATH: partial event</li>
-         * <li>CONSTANT: constant</li>
-         * <li>TEMPLATE: template</li>
+         * <li>ORIGINAL: Complete event.</li>
+         * <li>JSONPATH: Partial event.</li>
+         * <li>CONSTANT: Constant.</li>
+         * <li>TEMPLATE: Template.
+         * For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-transformation">https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-transformation</a>.</li>
          * </ul>
-         * <p>For more information, refer to <a href="https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-transformation">Event transformation</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>TEMPLATE</p>
@@ -3871,7 +3863,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The delivery concurrency. The minimum value is 1.</p>
+         * <p>The concurrency for event delivery. The minimum value is 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -3914,10 +3906,10 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * <p>The transformation format. Valid values:</p>
          * <ul>
-         * <li>ORIGINAL: complete event</li>
-         * <li>JSONPATH: partial event</li>
-         * <li>CONSTANT: constant</li>
-         * <li>TEMPLATE: template</li>
+         * <li>ORIGINAL: Complete event.</li>
+         * <li>JSONPATH: Partial event.</li>
+         * <li>CONSTANT: Constant.</li>
+         * <li>TEMPLATE: Template.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -3997,7 +3989,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The function name.</p>
+         * <p>The name of the function.</p>
          * 
          * <strong>example:</strong>
          * <p>mFunction</p>
@@ -4058,8 +4050,8 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * <p>The invocation type. Valid values:</p>
          * <ul>
-         * <li>Sync: Synchronous invocation.</li>
-         * <li>Async: Asynchronous invocation.</li>
+         * <li>Sync: Synchronous.</li>
+         * <li>Async: Asynchronous.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4178,7 +4170,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The service name.</p>
+         * <p>The name of the service.</p>
          * 
          * <strong>example:</strong>
          * <p>myService</p>
@@ -4219,25 +4211,25 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSinkSinkFcParameters extends TeaModel {
         /**
-         * <p>The body content sent to the function.</p>
+         * <p>The body sent to the function.</p>
          */
         @NameInMap("Body")
         public GetEventStreamingResponseBodyDataSinkSinkFcParametersBody body;
 
         /**
-         * <p>The delivery concurrency. The minimum value is 1.</p>
+         * <p>The concurrency for event delivery. The minimum value is 1.</p>
          */
         @NameInMap("Concurrency")
         public GetEventStreamingResponseBodyDataSinkSinkFcParametersConcurrency concurrency;
 
         /**
-         * <p>The format transformation rule for the event content.</p>
+         * <p>The transformation rule for the event content format.</p>
          */
         @NameInMap("DataFormat")
         public GetEventStreamingResponseBodyDataSinkSinkFcParametersDataFormat dataFormat;
 
         /**
-         * <p>The function name.</p>
+         * <p>The name of the function.</p>
          */
         @NameInMap("FunctionName")
         public GetEventStreamingResponseBodyDataSinkSinkFcParametersFunctionName functionName;
@@ -4245,8 +4237,8 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * <p>The invocation type. Valid values:</p>
          * <ul>
-         * <li>Sync: Synchronous invocation.</li>
-         * <li>Async: Asynchronous invocation.</li>
+         * <li>Sync: Synchronous.</li>
+         * <li>Async: Asynchronous.</li>
          * </ul>
          */
         @NameInMap("InvocationType")
@@ -4259,7 +4251,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkFcParametersQualifier qualifier;
 
         /**
-         * <p>The service name.</p>
+         * <p>The name of the service.</p>
          */
         @NameInMap("ServiceName")
         public GetEventStreamingResponseBodyDataSinkSinkFcParametersServiceName serviceName;
@@ -4331,11 +4323,11 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * <p>The transformation format. Default value: CONSTANT. Valid values:</p>
          * <ul>
-         * <li>JSONPATH: partial event</li>
-         * <li>CONSTANT: constant</li>
-         * <li>TEMPLATE: template</li>
+         * <li>JSONPATH: partial event.</li>
+         * <li>CONSTANT: constant.</li>
+         * <li>TEMPLATE: template.
+         * For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-transformation">https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-transformation</a>.</li>
          * </ul>
-         * <p>For more information, refer to <a href="https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-transformation">Event transformation</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>CONSTANT</p>
@@ -4353,7 +4345,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The execution name.</p>
+         * <p>The name of the execution.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -4412,7 +4404,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The flow name.</p>
+         * <p>The name of the flow.</p>
          * 
          * <strong>example:</strong>
          * <p>test-streaming-fnf</p>
@@ -4471,7 +4463,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The execution input.</p>
+         * <p>The input of the execution.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -4530,7 +4522,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The role name.</p>
+         * <p>The role configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>Al<strong><strong>FNF-x</strong></strong></p>
@@ -4571,25 +4563,25 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSinkSinkFnfParameters extends TeaModel {
         /**
-         * <p>The execution name.</p>
+         * <p>The name of the execution.</p>
          */
         @NameInMap("ExecutionName")
         public GetEventStreamingResponseBodyDataSinkSinkFnfParametersExecutionName executionName;
 
         /**
-         * <p>The flow name.</p>
+         * <p>The name of the flow.</p>
          */
         @NameInMap("FlowName")
         public GetEventStreamingResponseBodyDataSinkSinkFnfParametersFlowName flowName;
 
         /**
-         * <p>The execution input.</p>
+         * <p>The input of the execution.</p>
          */
         @NameInMap("Input")
         public GetEventStreamingResponseBodyDataSinkSinkFnfParametersInput input;
 
         /**
-         * <p>The role name.</p>
+         * <p>The role configuration.</p>
          */
         @NameInMap("RoleName")
         public GetEventStreamingResponseBodyDataSinkSinkFnfParametersRoleName roleName;
@@ -4653,11 +4645,11 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The acknowledgment mode for writing data to Kafka. Valid values:</p>
+         * <p>The Kafka write acknowledgment mode. Valid values:</p>
          * <ul>
-         * <li>acks=0: No response from the server is required. This mode provides high performance but has a high risk of data loss.</li>
-         * <li>acks=1: A response is returned after the leader node successfully writes the data. This mode provides moderate performance and has a moderate risk of data loss. Data may be lost if the leader node fails.</li>
-         * <li>acks=all: A response is returned after the leader node successfully writes the data and the follower nodes successfully replicate the data. This mode provides lower performance but higher data security. Data is lost only if both the leader and follower nodes fail.</li>
+         * <li>acks=0: No response from the server is required. Performance is high, but the risk of data loss is high.</li>
+         * <li>acks=1: A response is returned after the primary node writes the data. Performance is medium, and the risk of data loss is medium. Data may be lost if the primary node goes down.</li>
+         * <li>acks=all: A response is returned after the primary node writes the data and the secondary nodes synchronize the data. Performance is low, but data is secure. Data is lost only when both the primary and secondary nodes go down.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4701,8 +4693,8 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * <p>The transformation type. Valid values:</p>
          * <ul>
-         * <li>CONSTANT: a fixed value.</li>
-         * <li>JSONPATH: extracted from the upstream based on the path.</li>
+         * <li>CONSTANT: Fixed value.</li>
+         * <li>JSONPATH: Extracted from the upstream based on the path.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4764,10 +4756,10 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * <p>The transformation format. Valid values:</p>
          * <ul>
-         * <li>ORIGINAL: complete event</li>
-         * <li>JSONPATH: partial event</li>
-         * <li>CONSTANT: constant</li>
-         * <li>TEMPLATE: template</li>
+         * <li>ORIGINAL: Complete event.</li>
+         * <li>JSONPATH: Partial event.</li>
+         * <li>CONSTANT: Constant.</li>
+         * <li>TEMPLATE: Template.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4965,7 +4957,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The name of the topic.</p>
+         * <p>The topic name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -5067,11 +5059,11 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSinkSinkKafkaParameters extends TeaModel {
         /**
-         * <p>The acknowledgment mode for writing data to Kafka. Valid values:</p>
+         * <p>The Kafka write acknowledgment mode. Valid values:</p>
          * <ul>
-         * <li>acks=0: No response from the server is required. This mode provides high performance but has a high risk of data loss.</li>
-         * <li>acks=1: A response is returned after the leader node successfully writes the data. This mode provides moderate performance and has a moderate risk of data loss. Data may be lost if the leader node fails.</li>
-         * <li>acks=all: A response is returned after the leader node successfully writes the data and the follower nodes successfully replicate the data. This mode provides lower performance but higher data security. Data is lost only if both the leader and follower nodes fail.</li>
+         * <li>acks=0: No response from the server is required. Performance is high, but the risk of data loss is high.</li>
+         * <li>acks=1: A response is returned after the primary node writes the data. Performance is medium, and the risk of data loss is medium. Data may be lost if the primary node goes down.</li>
+         * <li>acks=all: A response is returned after the primary node writes the data and the secondary nodes synchronize the data. Performance is low, but data is secure. Data is lost only when both the primary and secondary nodes go down.</li>
          * </ul>
          */
         @NameInMap("Acks")
@@ -5087,10 +5079,10 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String compressionType;
 
         /**
-         * <p>The target topic routing policy for messages. If both the topic and DynamicTopic parameters are specified, the DynamicTopic parameter takes precedence. The following configuration modes are supported:</p>
+         * <p>The target topic policy for message routing. If both the Topic and DynamicTopic parameters are specified, the value of the DynamicTopic parameter takes precedence. Two configuration modes are supported:</p>
          * <ol>
-         * <li><strong>Static constant mode</strong>: Enter a fixed topic name string, such as &quot;order_created&quot;. All messages are sent to this topic.</li>
-         * <li><strong>Dynamic extraction mode</strong>: Enter a standard JSONPath expression, such as &quot;$.user.id&quot; or &quot;$.metadata.category&quot;. The system parses the upstream message body and extracts the value of the matched field as the target topic name.</li>
+         * <li><strong>Static constant mode</strong>: Specify a fixed topic name string (example: &quot;order_created&quot;). All messages are routed to this topic.</li>
+         * <li><strong>Dynamic extraction mode</strong>: Specify a standard JSONPath expression (example: &quot;$.user.id&quot; or &quot;$.metadata.category&quot;). The system parses the upstream message body and extracts the value of the matched field as the target topic name.</li>
          * </ol>
          */
         @NameInMap("DynamicTopic")
@@ -5103,7 +5095,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkKafkaParametersHeaders headers;
 
         /**
-         * <p>The target service type is Message Queue for Apache Kafka.</p>
+         * <p>The target service type is MSMQ Kafka Edition.</p>
          */
         @NameInMap("InstanceId")
         public GetEventStreamingResponseBodyDataSinkSinkKafkaParametersInstanceId instanceId;
@@ -5115,7 +5107,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkKafkaParametersKey key;
 
         /**
-         * <p>The name of the topic.</p>
+         * <p>The topic name.</p>
          */
         @NameInMap("Topic")
         public GetEventStreamingResponseBodyDataSinkSinkKafkaParametersTopic topic;
@@ -5260,7 +5252,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSinkSinkMNSParametersIsBase64Encode extends TeaModel {
         /**
-         * <p>The format of the event transformation. Default value: CONSTANT.</p>
+         * <p>The event transformation format. Default value: CONSTANT.</p>
          * 
          * <strong>example:</strong>
          * <p>CONSTANT</p>
@@ -5278,7 +5270,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>Enables Base64 encoding.</p>
+         * <p>Specifies whether to enable Base64 encoding.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -5384,7 +5376,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkMNSParametersBody body;
 
         /**
-         * <p>Specifies whether to enable Base64 encoding.</p>
+         * <p>Specifies whether Base64 encoding is enabled.</p>
          */
         @NameInMap("IsBase64Encode")
         public GetEventStreamingResponseBodyDataSinkSinkMNSParametersIsBase64Encode isBase64Encode;
@@ -5505,7 +5497,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The message ID value.</p>
+         * <p>The value of the message ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -5623,7 +5615,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The routing key value.</p>
+         * <p>The value of the routing key.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Form&quot;: &quot;CONSTANT&quot;, &quot;Value&quot;: &quot;my-routing-key&quot;}</p>
@@ -5778,7 +5770,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String vSwitchIds;
 
         /**
-         * <p>The name of the virtual host in RabbitMQ.</p>
+         * <p>The name of the RabbitMQ virtual host.</p>
          * 
          * <strong>example:</strong>
          * <p>vhost1</p>
@@ -5787,7 +5779,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String virtualHostName;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf6of9452b2pba82c ****</p>
@@ -6011,7 +6003,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The name of the exchange in the MSMQ message queue RabbitMQ instance.</p>
+         * <p>The name of the exchange in the ApsaraMQ for RabbitMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>a_exchange</p>
@@ -6070,7 +6062,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The instance ID of the MSMQ message queue RabbitMQ instance.</p>
+         * <p>The instance ID of ApsaraMQ for RabbitMQ.</p>
          * 
          * <strong>example:</strong>
          * <p>e5c9b727-e06c-4d7e-84d5-f8ce644e****</p>
@@ -6369,10 +6361,10 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The destination type. Valid values:</p>
+         * <p>The target type. Valid values:</p>
          * <ul>
-         * <li>Exchange: the exchange mode</li>
-         * <li>Queue: the queue mode</li>
+         * <li>Exchange: Exchange mode.</li>
+         * <li>Queue: Queue mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -6432,7 +6424,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The name of the vhost in the MSMQ message queue RabbitMQ instance.</p>
+         * <p>The name of the vhost in the ApsaraMQ for RabbitMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rabbit-host</p>
@@ -6485,7 +6477,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkRabbitMQParametersExchange exchange;
 
         /**
-         * <p>The destination service type is MSMQ message queue RabbitMQ.</p>
+         * <p>The target service type is ApsaraMQ for RabbitMQ.</p>
          */
         @NameInMap("InstanceId")
         public GetEventStreamingResponseBodyDataSinkSinkRabbitMQParametersInstanceId instanceId;
@@ -6497,7 +6489,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkRabbitMQParametersMessageId messageId;
 
         /**
-         * <p>The filtering properties.</p>
+         * <p>The filter properties.</p>
          */
         @NameInMap("Properties")
         public GetEventStreamingResponseBodyDataSinkSinkRabbitMQParametersProperties properties;
@@ -6515,13 +6507,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkRabbitMQParametersRoutingKey routingKey;
 
         /**
-         * <p>The destination type.</p>
+         * <p>The target type.</p>
          */
         @NameInMap("TargetType")
         public GetEventStreamingResponseBodyDataSinkSinkRabbitMQParametersTargetType targetType;
 
         /**
-         * <p>The name of the vhost in the MSMQ message queue RabbitMQ instance.</p>
+         * <p>The name of the vhost in the ApsaraMQ for RabbitMQ instance.</p>
          */
         @NameInMap("VirtualHostName")
         public GetEventStreamingResponseBodyDataSinkSinkRabbitMQParametersVirtualHostName virtualHostName;
@@ -6743,7 +6735,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The name of the topic in the MSMQ message queue RocketMQ instance.</p>
+         * <p>The name of the topic in the MSMQ message queue for RocketMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Mytopic</p>
@@ -6807,8 +6799,8 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance</li>
-         * <li>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance</li>
+         * <li>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance.</li>
+         * <li>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -6818,7 +6810,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The topic of the MSMQ message queue RocketMQ instance.</p>
+         * <p>The topic of the MSMQ message queue for RocketMQ instance.</p>
          */
         @NameInMap("Topic")
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQCheckpointParametersTopic topic;
@@ -6953,10 +6945,8 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * <p>The delivery order type. Valid values:</p>
          * <ul>
-         * <li><p><strong>Orderly:</strong> orderly delivery</p>
-         * </li>
-         * <li><p><strong>Concurrently:</strong> concurrent delivery</p>
-         * </li>
+         * <li><strong>Orderly</strong>: Orderly delivery.</li>
+         * <li><strong>Concurrently</strong>: Concurrent delivery.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -7075,7 +7065,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The instance ID of the MSMQ message queue RocketMQ instance.</p>
+         * <p>The instance ID of the Message Queue for Apache RocketMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>MQ_INST_164901546557****_BAAN****</p>
@@ -7134,7 +7124,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The instance password.</p>
+         * <p>The password of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>admin****</p>
@@ -7195,9 +7185,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance (default)</li>
-         * <li>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance</li>
-         * <li>SelfBuilt: self-managed Apache RocketMQ cluster</li>
+         * <li>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance (default).</li>
+         * <li>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance.</li>
+         * <li>SelfBuilt: Self-managed Apache RocketMQ cluster.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -7257,7 +7247,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The instance username.</p>
+         * <p>The username of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -7560,7 +7550,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The value of the sharding key.</p>
+         * <p>The sharding key value.</p>
          * 
          * <strong>example:</strong>
          * <p>order_id</p>
@@ -7680,7 +7670,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The name of the topic in the MSMQ RocketMQ instance.</p>
+         * <p>The topic name of the Message Queue for Apache RocketMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Mytopic</p>
@@ -7780,7 +7770,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersVpcId extends TeaModel {
         /**
-         * <p>The format of the event transformation. Default value: CONSTANT.</p>
+         * <p>The event transformation format. Default value: CONSTANT.</p>
          * 
          * <strong>example:</strong>
          * <p>CONSTANT</p>
@@ -7798,7 +7788,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vbr-8vb835n3zf9shwlvb****</p>
@@ -7845,7 +7835,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersBody body;
 
         /**
-         * <p>The delivery order type of the message. This parameter is optional. Default value: concurrent delivery.</p>
+         * <p>The message delivery order type. This parameter is optional. Default value: Concurrently.</p>
          */
         @NameInMap("DeliveryOrderType")
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersDeliveryOrderType deliveryOrderType;
@@ -7857,13 +7847,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersInstanceEndpoint instanceEndpoint;
 
         /**
-         * <p>The destination service type is MSMQ message queue RocketMQ.</p>
+         * <p>The target service type is Message Queue for Apache RocketMQ.</p>
          */
         @NameInMap("InstanceId")
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersInstanceId instanceId;
 
         /**
-         * <p>The instance password.</p>
+         * <p>The password of the instance.</p>
          */
         @NameInMap("InstancePassword")
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersInstancePassword instancePassword;
@@ -7871,22 +7861,22 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance (default)</li>
-         * <li>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance</li>
-         * <li>SelfBuilt: self-managed Apache RocketMQ cluster</li>
+         * <li>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance (default).</li>
+         * <li>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance.</li>
+         * <li>SelfBuilt: Self-managed Apache RocketMQ cluster.</li>
          * </ul>
          */
         @NameInMap("InstanceType")
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersInstanceType instanceType;
 
         /**
-         * <p>The instance username.</p>
+         * <p>The username of the instance.</p>
          */
         @NameInMap("InstanceUsername")
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersInstanceUsername instanceUsername;
 
         /**
-         * <p>The filtering properties.</p>
+         * <p>The filter properties.</p>
          */
         @NameInMap("Keys")
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersKeys keys;
@@ -7902,7 +7892,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersNetwork network;
 
         /**
-         * <p>The filtering properties.</p>
+         * <p>The filter properties.</p>
          */
         @NameInMap("Properties")
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersProperties properties;
@@ -7926,13 +7916,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersShardingKey shardingKey;
 
         /**
-         * <p>The filtering properties.</p>
+         * <p>The filter properties.</p>
          */
         @NameInMap("Tags")
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersTags tags;
 
         /**
-         * <p>The topic of the MSMQ RocketMQ instance.</p>
+         * <p>The topic of the Message Queue for Apache RocketMQ instance.</p>
          */
         @NameInMap("Topic")
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersTopic topic;
@@ -7944,7 +7934,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersVSwitchIds vSwitchIds;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC.</p>
          */
         @NameInMap("VpcId")
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersVpcId vpcId;
@@ -8283,7 +8273,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The Logstore of Simple Log Service.</p>
+         * <p>The Simple Log Service Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>test-logstore</p>
@@ -8342,7 +8332,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The project of Simple Log Service.</p>
+         * <p>The Simple Log Service project.</p>
          * 
          * <strong>example:</strong>
          * <p>test-project</p>
@@ -8401,7 +8391,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>For the authorization of the event bus EventBridge to use this role to read SLS log content, the following conditions must be met: when you create the role for the service in the Resource Access Management (RAM) console, you must select Alibaba Cloud Service and set the trusted service to Event Bus.</p>
+         * <p>The name of the role. To grant authorization to the event bus EventBridge to use this role to read SLS log content, you must meet the following conditions: when creating the role for the service in the Resource Access Management (RAM) console, select Alibaba Cloud Service and set the trusted service to event bus.</p>
          * 
          * <strong>example:</strong>
          * <p>testRole</p>
@@ -8460,7 +8450,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The topic of the log, which corresponds to the reserved Simple Log Service (SLS) field &quot;topic&quot;.</p>
+         * <p>The topic of the log, which corresponds to the reserved SLS field &quot;topic&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>testTopic</p>
@@ -8513,7 +8503,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkSLSParametersContentSchema contentSchema;
 
         /**
-         * <p>The data format of SLS. You can select the default format or configure specified key-value pairs. Valid values:</p>
+         * <p>The data format for SLS. You can use the default format or specify key-value pairs. Valid values:</p>
          * <ul>
          * <li>JSON</li>
          * <li>KeyValue</li>
@@ -8523,25 +8513,25 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkSLSParametersContentType contentType;
 
         /**
-         * <p>The Logstore of Simple Log Service.</p>
+         * <p>The Simple Log Service Logstore.</p>
          */
         @NameInMap("LogStore")
         public GetEventStreamingResponseBodyDataSinkSinkSLSParametersLogStore logStore;
 
         /**
-         * <p>The project of Simple Log Service.</p>
+         * <p>The Simple Log Service project.</p>
          */
         @NameInMap("Project")
         public GetEventStreamingResponseBodyDataSinkSinkSLSParametersProject project;
 
         /**
-         * <p>For the authorization of the event bus EventBridge to use this role to read SLS log content, the following conditions must be met: when you create the role for the service in the Resource Access Management (RAM) console, you must select Alibaba Cloud Service and set the trusted service to Event Bus.</p>
+         * <p>The name of the role. To grant authorization to the event bus EventBridge to use this role to read SLS log content, you must meet the following conditions: when creating the role for the service in the Resource Access Management (RAM) console, select Alibaba Cloud Service and set the trusted service to event bus.</p>
          */
         @NameInMap("RoleName")
         public GetEventStreamingResponseBodyDataSinkSinkSLSParametersRoleName roleName;
 
         /**
-         * <p>The topic of the log, which corresponds to the reserved Simple Log Service (SLS) field &quot;topic&quot;.</p>
+         * <p>The topic of the log, which corresponds to the reserved SLS field &quot;topic&quot;.</p>
          */
         @NameInMap("Topic")
         public GetEventStreamingResponseBodyDataSinkSinkSLSParametersTopic topic;
@@ -8611,7 +8601,16 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSink extends TeaModel {
         /**
-         * <p>The delivery parameters for the agent runtime.</p>
+         * <p>The AgentCore knowledge base parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;WorkspaceId&quot;:&quot;workspace-demo&quot;,&quot;KnowledgeBaseId&quot;:&quot;kb-demo&quot;,&quot;RoleName&quot;:&quot;eventbridge-role&quot;}</p>
+         */
+        @NameInMap("SinkAgentCoreKnowledgeBaseParameters")
+        public SinkAgentCoreKnowledgeBaseParameters sinkAgentCoreKnowledgeBaseParameters;
+
+        /**
+         * <p>The agent runtime delivery parameters.</p>
          */
         @NameInMap("SinkAgentRunParameters")
         public SinkAgentRunParameters sinkAgentRunParameters;
@@ -8629,31 +8628,31 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkApacheRocketMQCheckpointParameters sinkApacheRocketMQCheckpointParameters;
 
         /**
-         * <p>The ApiDestination target parameters.</p>
+         * <p>The API destination sink parameters.</p>
          */
         @NameInMap("SinkApiDestinationParameters")
         public SinkApiDestinationParameters sinkApiDestinationParameters;
 
         /**
-         * <p>The Model Studio delivery parameters.</p>
+         * <p>The Model Studio sink parameters.</p>
          */
         @NameInMap("SinkBaiLianParameters")
         public SinkBaiLianParameters sinkBaiLianParameters;
 
         /**
-         * <p>The Sink Kafka connector parameters.</p>
+         * <p>The custom Kafka sink connector parameters.</p>
          */
         @NameInMap("SinkCustomizedKafkaConnectorParameters")
         public GetEventStreamingResponseBodyDataSinkSinkCustomizedKafkaConnectorParameters sinkCustomizedKafkaConnectorParameters;
 
         /**
-         * <p>The Sink Kafka parameters.</p>
+         * <p>The custom Kafka sink parameters.</p>
          */
         @NameInMap("SinkCustomizedKafkaParameters")
         public GetEventStreamingResponseBodyDataSinkSinkCustomizedKafkaParameters sinkCustomizedKafkaParameters;
 
         /**
-         * <p>The Sink DashVector parameters.</p>
+         * <p>The DashVector sink parameters.</p>
          */
         @NameInMap("SinkDashVectorParameters")
         public GetEventStreamingResponseBodyDataSinkSinkDashVectorParameters sinkDashVectorParameters;
@@ -8665,7 +8664,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkDataHubParameters sinkDataHubParameters;
 
         /**
-         * <p>The DataWorks trigger delivery parameters.</p>
+         * <p>The DataWorks trigger sink parameters.</p>
          */
         @NameInMap("SinkDataWorksTriggerParameters")
         public SinkDataWorksTriggerParameters sinkDataWorksTriggerParameters;
@@ -8677,19 +8676,19 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkDorisParameters sinkDorisParameters;
 
         /**
-         * <p>The function target.</p>
+         * <p>The Function Compute sink.</p>
          */
         @NameInMap("SinkFcParameters")
         public GetEventStreamingResponseBodyDataSinkSinkFcParameters sinkFcParameters;
 
         /**
-         * <p>The FNF sink parameters.</p>
+         * <p>The FnF sink parameters.</p>
          */
         @NameInMap("SinkFnfParameters")
         public GetEventStreamingResponseBodyDataSinkSinkFnfParameters sinkFnfParameters;
 
         /**
-         * <p>The HTTPS target parameters.</p>
+         * <p>The HTTPS sink parameters.</p>
          */
         @NameInMap("SinkHttpsParameters")
         public SinkHttpsParameters sinkHttpsParameters;
@@ -8719,25 +8718,25 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public SinkMQTTParameters sinkMQTTParameters;
 
         /**
-         * <p>The OSS delivery parameters.</p>
+         * <p>The Object Storage Service (OSS) sink parameters.</p>
          */
         @NameInMap("SinkOSSParameters")
         public SinkOSSParameters sinkOSSParameters;
 
         /**
-         * <p>The self-managed RabbitMQ event target parameters.</p>
+         * <p>The self-managed RabbitMQ sink parameters.</p>
          */
         @NameInMap("SinkOpenSourceRabbitMQParameters")
         public GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParameters sinkOpenSourceRabbitMQParameters;
 
         /**
-         * <p>The metadata delivery parameters for ApsaraMQ for RabbitMQ.</p>
+         * <p>The metadata sink parameters for messages in the MSMQ RabbitMQ edition.</p>
          */
         @NameInMap("SinkRabbitMQMetaParameters")
         public SinkRabbitMQMetaParameters sinkRabbitMQMetaParameters;
 
         /**
-         * <p>The message synchronization delivery parameters for ApsaraMQ for RabbitMQ.</p>
+         * <p>The message synchronization sink parameters for the MSMQ RabbitMQ edition.</p>
          */
         @NameInMap("SinkRabbitMQMsgSyncParameters")
         public SinkRabbitMQMsgSyncParameters sinkRabbitMQMsgSyncParameters;
@@ -8749,19 +8748,19 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkRabbitMQParameters sinkRabbitMQParameters;
 
         /**
-         * <p>The Sink RocketMQ checkpoint parameters.</p>
+         * <p>The Sink RocketMQ Checkpoint parameters.</p>
          */
         @NameInMap("SinkRocketMQCheckpointParameters")
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQCheckpointParameters sinkRocketMQCheckpointParameters;
 
         /**
-         * <p>The destination parameters for the MSMQ message queue RocketMQ.</p>
+         * <p>The sink parameters for Message Queue for Apache RocketMQ.</p>
          */
         @NameInMap("SinkRocketMQParameters")
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQParameters sinkRocketMQParameters;
 
         /**
-         * <p>The Simple Log Service (SLS) sink parameters.</p>
+         * <p>The Simple Log Service sink parameters.</p>
          */
         @NameInMap("SinkSLSParameters")
         public GetEventStreamingResponseBodyDataSinkSinkSLSParameters sinkSLSParameters;
@@ -8769,6 +8768,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public static GetEventStreamingResponseBodyDataSink build(java.util.Map<String, ?> map) throws Exception {
             GetEventStreamingResponseBodyDataSink self = new GetEventStreamingResponseBodyDataSink();
             return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataSink setSinkAgentCoreKnowledgeBaseParameters(SinkAgentCoreKnowledgeBaseParameters sinkAgentCoreKnowledgeBaseParameters) {
+            this.sinkAgentCoreKnowledgeBaseParameters = sinkAgentCoreKnowledgeBaseParameters;
+            return this;
+        }
+        public SinkAgentCoreKnowledgeBaseParameters getSinkAgentCoreKnowledgeBaseParameters() {
+            return this.sinkAgentCoreKnowledgeBaseParameters;
         }
 
         public GetEventStreamingResponseBodyDataSink setSinkAgentRunParameters(SinkAgentRunParameters sinkAgentRunParameters) {
@@ -8983,7 +8990,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSourceSourceApacheKafkaParametersSslKeystoreKey extends TeaModel {
         /**
-         * <p>Required. The ARN of the KMS resource that stores the SSL private key. This parameter is used to locate the Key Management Service (KMS) instance that stores the client private key. Example format: acs:kms:cn-hangzhou:123456789:secret/ssl-keystore-key-xxxx. To obtain the value, view the ARN of the corresponding key in the KMS console.</p>
+         * <p>[Required] The ARN of the KMS resource that stores the SSL private key, used to locate the KMS instance that stores the client private key. Format example: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-keystore-key-xxxx\&quot;. You can view the ARN information of the corresponding key in the KMS console.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;KmsArn&quot;</p>
@@ -8992,7 +8999,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String kmsArn;
 
         /**
-         * <p>[KMS KV mode] The key name in the KMS secret. When the secret stored in KMS uses a key-value (KV) structure, specify this parameter to indicate the key corresponding to the SSL private key. Example: If the KMS secret is \&quot;{&quot;ssl_keystore_key&quot;:&quot;-----BEGIN PRIVATE KEY-----...&quot;,&quot;ssl_truststore_key&quot;:&quot;...&quot;}\&quot;, enter \&quot;ssl_keystore_key\&quot;. If the KMS secret is in plaintext mode and directly stores the PEM content of the private key, leave this parameter empty.</p>
+         * <p>[KMS KV mode] The key name in the KMS secret. When the secret stored in KMS is a key-value pair (KV) structure, specify this parameter to indicate the key corresponding to the SSL private key. Example: If the KMS secret is \&quot;{&quot;ssl_keystore_key&quot;:&quot;-----BEGIN PRIVATE KEY-----...&quot;,&quot;ssl_truststore_key&quot;:&quot;...&quot;}\&quot;, enter \&quot;ssl_keystore_key\&quot;. If the KMS secret is in plaintext mode (directly storing the PEM content of the private key), leave this parameter empty.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;KmsSecretValueKey&quot;</p>
@@ -9034,7 +9041,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String bootstraps;
 
         /**
-         * <p>The name of the consumer group.</p>
+         * <p>The consumer group name.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT_GROUP</p>
@@ -9043,7 +9050,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String consumerGroup;
 
         /**
-         * <p>Specifies the network type of the Kafka cluster.</p>
+         * <p>The network type of the Kafka source.</p>
          * 
          * <strong>example:</strong>
          * <p>PrivateNetwork</p>
@@ -9052,10 +9059,10 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The consumption offset. Valid values:</p>
+         * <p>The consumption checkpoint. Valid values:</p>
          * <ul>
-         * <li>latest: The system reads data from the latest offset.</li>
-         * <li>earliest: The system reads data from the earliest offset. This value is supported only when an unused consumer group is initialized for the first time.</li>
+         * <li>latest: The system reads data from the latest checkpoint.</li>
+         * <li>earliest: The system reads data from the earliest checkpoint. This value is supported only when an unused consumer group is initialized for the first time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -9065,7 +9072,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String offsetReset;
 
         /**
-         * <p>The Kafka SASL authentication mechanism.</p>
+         * <p>The SASL authentication mechanism of Kafka.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;SaslMechanism&quot;</p>
@@ -9074,7 +9081,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String saslMechanism;
 
         /**
-         * <p>The Kafka SASL authentication password.</p>
+         * <p>The password for Kafka SASL authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>yourPassword</p>
@@ -9083,7 +9090,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String saslPassword;
 
         /**
-         * <p>The Kafka SASL authentication username.</p>
+         * <p>The username for Kafka SASL authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;SaslUser&quot;</p>
@@ -9092,7 +9099,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String saslUser;
 
         /**
-         * <p>The ID of the security group for the Kafka source.</p>
+         * <p>The security group ID of the Kafka source.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp1iv19sp1msc7zot4****</p>
@@ -9101,7 +9108,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The Kafka security protocol type. Valid values:</p>
+         * <p>The security protocol type of Kafka. Valid values:</p>
          * <ul>
          * <li>SASL_SSL</li>
          * <li>PLAINTEXT</li>
@@ -9115,7 +9122,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String securityProtocol;
 
         /**
-         * <p>[Required for encrypted private keys] The password for the Kafka client private key. If the client private key is encrypted with a password (that is, the PEM file contains the \&quot;Proc-Type: 4,ENCRYPTED\&quot; or \&quot;ENCRYPTED\&quot; tag), you must provide the decryption password. Leave this parameter empty if the private key is not encrypted. Note: This password is used only to decrypt the private key and is not related to Kafka authentication.</p>
+         * <p>[Required for encrypted private keys] The Kafka client private key password required when the client private key is encrypted and protected (that is, the PEM file contains the \&quot;Proc-Type: 4,ENCRYPTED\&quot; or \&quot;ENCRYPTED\&quot; tag). Leave it empty if the private key is not encrypted. Note: This password is only used to decrypt the private key and is unrelated to Kafka authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>yourPassword</p>
@@ -9124,7 +9131,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String sslKeyPassword;
 
         /**
-         * <p>[Required for mutual authentication] The certificate chain of the Kafka client. This parameter is required when mutual SSL authentication (ssl.client.auth=required) is enabled on the Kafka server. Format requirements: Base64-encoded PEM format, including the client certificate and the complete certificate chain (the client certificate first, followed by the intermediate CA certificates, and the root CA certificate is optional). Note: Make sure that the content of each PEM file starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;. Concatenate the files and then encode them in Base64.</p>
+         * <p>[Required for mutual authentication] The Kafka client certificate chain required when the Kafka server enables mutual SSL authentication (ssl.client.auth=required). Format requirement: Base64-encoded PEM format, containing the client certificate and the complete certificate chain (client certificate first, intermediate CA certificate second, and root CA certificate optional). Note: Ensure that each PEM file content starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;, and Base64-encode the concatenated content.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;SslKeystoreCertificateChain&quot;</p>
@@ -9133,13 +9140,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String sslKeystoreCertificateChain;
 
         /**
-         * <p>[Required for bidirectional authentication] The SSL private key configuration object. When bidirectional SSL authentication is enabled on the Kafka server, the client private key must be provided. Only the KMS pattern is supported for keys: specify the Key Management Service (KMS) EPS resource that stores the private key by using KmsArn. The system retrieves the private key content from KMS only in memory for higher security. Configuration example: {&quot;KmsArn&quot;: &quot;acs:kms:cn-hangzhou:123456789:secret/ssl-key-xxxx&quot;, &quot;KmsSecretValueKey&quot;: &quot;keystore_private_key&quot;}</p>
+         * <p>[Required for bidirectional authentication] The SSL private key configuration object required when the Kafka server enables bidirectional SSL authentication. Only the KMS pattern is supported for keys: specify the Key Management Service (KMS) EPS resource that stores the private key by using KmsArn. The system obtains the private key content from KMS only in memory, which provides higher security. Configuration example: {\&quot;KmsArn\&quot;: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-key-xxxx\&quot;, \&quot;KmsSecretValueKey\&quot;: \&quot;keystore_private_key\&quot;}.</p>
          */
         @NameInMap("SslKeystoreKey")
         public GetEventStreamingResponseBodyDataSourceSourceApacheKafkaParametersSslKeystoreKey sslKeystoreKey;
 
         /**
-         * <p>[Required for SSL] The trusted certificate of the Kafka server. It is used to authenticate the validity of the SSL certificate of the Kafka broker to prevent man-in-the-middle attacks. Format requirement: PEM format with Base64 encoding, which usually contains the CA certificate of the Kafka server or the server certificate itself. Example: Apply Base64 encoding to the content of the PEM file of the CA certificate (ensure that it starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;). If Kafka uses a self-signed certificate, you must provide the CA signing certificate that issued the certificate.</p>
+         * <p>[Required for SSL scenarios] The Kafka server trust certificate used to authenticate the validity of the Kafka broker SSL certificate and prevent man-in-the-middle attacks. Format requirement: PEM format with Base64 encoding, which usually contains the CA certificate of the Kafka server or the server certificate itself. Example: Perform Base64 encoding on the PEM file content of the CA certificate, ensuring that it starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;. If Kafka uses a self-signed certificate, you must provide the CA certificate that issued the signing certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;SslTruststoreCertificates&quot;</p>
@@ -9157,7 +9164,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String topic;
 
         /**
-         * <p>The list of vSwitch IDs for the Kafka source.</p>
+         * <p>The vSwitch IDs of the Kafka source.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp179l3llg3jjxwrq72****</p>
@@ -9342,7 +9349,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String instanceEndpoint;
 
         /**
-         * <p>The instance ID of the ApsaraMQ for RocketMQ.</p>
+         * <p>The instance ID of the RocketMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>MQ_INST_164901546557****_BAAN****</p>
@@ -9351,7 +9358,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The instance password.</p>
+         * <p>The password of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -9360,7 +9367,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String instancePassword;
 
         /**
-         * <p>The instance username.</p>
+         * <p>The username of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -9396,7 +9403,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The list of topics.</p>
+         * <p>The topic list.</p>
          */
         @NameInMap("Topics")
         public java.util.List<String> topics;
@@ -9411,7 +9418,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-adw1awdw*****</p>
@@ -9554,7 +9561,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSourceSourceCustomizedKafkaConnectorParameters extends TeaModel {
         /**
-         * <p>The download URL of the ZIP package in OSS.</p>
+         * <p>The download URL of the OSS ZIP package.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;<a href="https://examplebucket.oss-cn-hangzhou.aliyuncs.com/testDoc/Old_Homebrew/2024-06-26%2022%3A34%3A08/opt/homebrew/homebrew/Library/Homebrew/test/support/fixtures/cask/AppWithBinary.zip?OSSAccessKeyId=ri&Expires=1725539627&Signature=rb8q3OpV2i3gZJ">https://examplebucket.oss-cn-hangzhou.aliyuncs.com/testDoc/Old_Homebrew/2024-06-26%2022%3A34%3A08/opt/homebrew/homebrew/Library/Homebrew/test/support/fixtures/cask/AppWithBinary.zip?OSSAccessKeyId=ri&amp;Expires=1725539627&amp;Signature=rb8q3OpV2i3gZJ</a>&quot;</p>
@@ -9617,7 +9624,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSourceSourceCustomizedKafkaParameters extends TeaModel {
         /**
-         * <p>The instance ID of the MSMQ for Apache Kafka.</p>
+         * <p>The instance ID of MSMQ for Apache Kafka.</p>
          * 
          * <strong>example:</strong>
          * <p>r-8vb64581862c****</p>
@@ -9651,7 +9658,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String brokerUrl;
 
         /**
-         * <p>The consumption offset, which is the timestamp when the SDK client consumes the first piece of data. The value is a UNIX timestamp.</p>
+         * <p>The consumption checkpoint, which is the timestamp when the SDK client consumes the first piece of data. The value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1620962769</p>
@@ -9660,7 +9667,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String initCheckPoint;
 
         /**
-         * <p>The password of the consumer group account.</p>
+         * <p>The password of the consumer group.</p>
          * 
          * <strong>example:</strong>
          * <p>admin****</p>
@@ -9669,7 +9676,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String password;
 
         /**
-         * <p>The ID of the consumer group.</p>
+         * <p>The consumer group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>HD1</p>
@@ -9696,7 +9703,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String topic;
 
         /**
-         * <p>The username of the consumer group account.</p>
+         * <p>The username of the consumer group.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -9811,7 +9818,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSourceSourceKafkaParameters extends TeaModel {
         /**
-         * <p>The ID of the consumer group that subscribes to the topic.</p>
+         * <p>The group ID of the consumer that subscribes to the topic.</p>
          * 
          * <strong>example:</strong>
          * <p>GID_TEST</p>
@@ -9847,7 +9854,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String offsetReset;
 
         /**
-         * <p>The ID of the region where the instance resides.</p>
+         * <p>The region ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -9865,7 +9872,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The name of the topic.</p>
+         * <p>The topic name.</p>
          * 
          * <strong>example:</strong>
          * <p>topic_empower_1642473600414</p>
@@ -9885,9 +9892,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * <p>The encoding and decoding parameter. Valid values:</p>
          * <ul>
-         * <li>JSON: The existing logic. Bytes are decoded into character strings by using UTF-8 and parsed as JSON.</li>
-         * <li>Text: Bytes are decoded into character strings by using UTF-8 and directly placed in the payload.</li>
-         * <li>Binary: Bytes are encoded into character strings by using Base64 encoding and placed in the payload.</li>
+         * <li>JSON: Decodes bytes into a UTF-8 character string and parses it as JSON.</li>
+         * <li>Text: Decodes bytes into a UTF-8 character string and directly places it into the payload.</li>
+         * <li>Binary: Encodes bytes into a string using Base64 encoding and places it into the payload.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -9897,7 +9904,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String valueDataType;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zehizpoendb3****</p>
@@ -9994,7 +10001,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSourceSourceMNSParameters extends TeaModel {
         /**
-         * <p>Specifies whether to enable Base64 encoding.</p>
+         * <p>Specifies whether Base64 encoding is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -10003,7 +10010,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public Boolean isBase64Decode;
 
         /**
-         * <p>The name of the queue in the MSMQ Simple Message Queue (formerly MNS).</p>
+         * <p>The name of the Simple Message Queue (formerly MNS) queue.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -10121,7 +10128,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String vSwitchIds;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-8vblalsi0vbhizr77****</p>
@@ -10211,7 +10218,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The delimiter. In chunk loading mode, this delimiter is used as the chunk identifier for text. Default value: 
+         * <p>The delimiter. In chunk loading mode, this delimiter is used as the chunk identifier for text. The default value is the line break 
          * .</p>
          * 
          * <strong>example:</strong>
@@ -10219,6 +10226,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
          */
         @NameInMap("Delimiter")
         public String delimiter;
+
+        /**
+         * <p>The whitelist of file extensions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;txt\&quot;, \&quot;md\&quot;]</p>
+         */
+        @NameInMap("FileExtensions")
+        public java.util.List<String> fileExtensions;
 
         /**
          * <p>The document loader.</p>
@@ -10253,7 +10269,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String prefix;
 
         /**
-         * <p>The name of the RAM role that grants authorization to the EventBridge event bus to read OSS files. The role must have at least read-only permissions on OSS.</p>
+         * <p>The name of the role that grants authorization to the event bus EventBridge to read OSS files. The role must have at least read-only permissions on OSS.</p>
          * 
          * <strong>example:</strong>
          * <p>eventbridge_oss_role</p>
@@ -10280,6 +10296,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public String getDelimiter() {
             return this.delimiter;
+        }
+
+        public GetEventStreamingResponseBodyDataSourceSourceOSSParameters setFileExtensions(java.util.List<String> fileExtensions) {
+            this.fileExtensions = fileExtensions;
+            return this;
+        }
+        public java.util.List<String> getFileExtensions() {
+            return this.fileExtensions;
         }
 
         public GetEventStreamingResponseBodyDataSourceSourceOSSParameters setLoadFormat(String loadFormat) {
@@ -10352,8 +10376,8 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * <p>The network type. Valid values:</p>
          * <ul>
-         * <li>PublicNetwork</li>
-         * <li>PrivateNetwork</li>
+         * <li>PublicNetwork: Internet.</li>
+         * <li>PrivateNetwork: VPC.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -10372,7 +10396,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String password;
 
         /**
-         * <p>The name of the queue in the open-source RabbitMQ instance.</p>
+         * <p>The name of the queue for the open-source RabbitMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -10408,7 +10432,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String vSwitchIds;
 
         /**
-         * <p>The name of the vhost in the open-source RabbitMQ instance.</p>
+         * <p>The name of the vhost for the open-source RabbitMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>eb-connect</p>
@@ -10417,7 +10441,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String virtualHostName;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1vllc1lnw1v657******</p>
@@ -10632,7 +10656,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSourceSourceRabbitMQParameters extends TeaModel {
         /**
-         * <p>The ID of the MSMQ RabbitMQ message instance.</p>
+         * <p>The instance ID of the ApsaraMQ for RabbitMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>i-f8z9a9mcgwri1c1i****</p>
@@ -10641,7 +10665,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the queue in the MSMQ RabbitMQ message instance.</p>
+         * <p>The name of the queue in the ApsaraMQ for RabbitMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>comp</p>
@@ -10659,7 +10683,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the vhost in the MSMQ RabbitMQ message instance.</p>
+         * <p>The name of the vhost in the ApsaraMQ for RabbitMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>eb-connect</p>
@@ -10719,9 +10743,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance (default)</li>
-         * <li>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance</li>
-         * <li>SelfBuilt: self-managed Apache RocketMQ cluster</li>
+         * <li>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance (default).</li>
+         * <li>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance.</li>
+         * <li>SelfBuilt: Self-managed Apache RocketMQ cluster.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -10827,7 +10851,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String filterType;
 
         /**
-         * <p>The group ID of the MSMQ RocketMQ message service.</p>
+         * <p>The group ID of the ApsaraMQ for RocketMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>GID_group1</p>
@@ -10845,7 +10869,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String instanceEndpoint;
 
         /**
-         * <p>The instance ID of the MSMQ RocketMQ message service.</p>
+         * <p>The instance ID of the ApsaraMQ for RocketMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>i-f8zbher64dlm58pl****</p>
@@ -10867,7 +10891,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String instanceNetwork;
 
         /**
-         * <p>The instance password.</p>
+         * <p>The password of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxa</p>
@@ -10887,9 +10911,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance (default)</li>
-         * <li>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance</li>
-         * <li>SelfBuilt: self-managed Apache RocketMQ cluster</li>
+         * <li>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance (default).</li>
+         * <li>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance.</li>
+         * <li>SelfBuilt: Self-managed Apache RocketMQ cluster.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -10899,7 +10923,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The instance username.</p>
+         * <p>The username of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxa</p>
@@ -10941,9 +10965,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         /**
          * <p>The consumption offset of the message. Valid values:</p>
          * <ul>
-         * <li>CONSUME_FROM_LAST_OFFSET: Consumes messages from the latest offset.</li>
-         * <li>CONSUME_FROM_FIRST_OFFSET: Consumes messages from the earliest offset.</li>
-         * <li>CONSUME_FROM_TIMESTAMP: Consumes messages from the offset at a specified timestamp.</li>
+         * <li>CONSUME_FROM_LAST_OFFSET: Starts consumption from the latest offset.</li>
+         * <li>CONSUME_FROM_FIRST_OFFSET: Starts consumption from the earliest offset.</li>
+         * <li>CONSUME_FROM_TIMESTAMP: Starts consumption from the offset at a specified point in time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -10953,7 +10977,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String offset;
 
         /**
-         * <p>The region ID of the MSMQ RocketMQ message service.</p>
+         * <p>The region ID of ApsaraMQ for RocketMQ.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -10980,7 +11004,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String tag;
 
         /**
-         * <p>The timestamp. This parameter is valid only when the Offset parameter is set to CONSUME_FROM_TIMESTAMP.</p>
+         * <p>The timestamp. This parameter takes effect only when the Offset parameter is set to CONSUME_FROM_TIMESTAMP.</p>
          * 
          * <strong>example:</strong>
          * <p>1636597951964</p>
@@ -11007,7 +11031,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String vSwitchIds;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-m5e3sv4b12345****</p>
@@ -11208,7 +11232,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSourceSourceSLSParameters extends TeaModel {
         /**
-         * <p>The start consumption offset. You can set this parameter to begin or end to consume from the earliest or latest offset. You can also specify a timestamp in seconds to start consumption.</p>
+         * <p>The start consumption checkpoint. You can select the earliest or latest checkpoint, which corresponds to begin or end. You can also specify a time to start consumption in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>begin</p>
@@ -11226,7 +11250,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String consumerGroup;
 
         /**
-         * <p>The Logstore of Simple Log Service.</p>
+         * <p>The Simple Log Service Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>waf-logstore</p>
@@ -11235,7 +11259,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String logStore;
 
         /**
-         * <p>The project of Simple Log Service.</p>
+         * <p>The Simple Log Service project.</p>
          * 
          * <strong>example:</strong>
          * <p>dmmzk</p>
@@ -11244,7 +11268,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String project;
 
         /**
-         * <p>When authorizing EventBridge to use this role to read SLS log content, the following conditions must be met: when you create the role used by the service in the Resource Access Management (RAM) console, you must select Alibaba Cloud Service and set the trusted service to EventBridge.</p>
+         * <p>The name of the role. When granting authorization to EventBridge to use this role to read SLS log content, the following conditions must be met: when creating the role used by the service in the Resource Access Management (RAM) console, you must select Alibaba Cloud Service, and for the trusted service, you must select event bus.</p>
          * 
          * <strong>example:</strong>
          * <p>testRole</p>
@@ -11301,37 +11325,37 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSource extends TeaModel {
         /**
-         * <p>The parameter settings for open-source Kafka.</p>
+         * <p>The open-source Kafka parameter settings.</p>
          */
         @NameInMap("SourceApacheKafkaParameters")
         public GetEventStreamingResponseBodyDataSourceSourceApacheKafkaParameters sourceApacheKafkaParameters;
 
         /**
-         * <p>The RocketMQ checkpoint source.</p>
+         * <p>The ApsaraMQ for RocketMQ checkpoint source.</p>
          */
         @NameInMap("SourceApacheRocketMQCheckpointParameters")
         public GetEventStreamingResponseBodyDataSourceSourceApacheRocketMQCheckpointParameters sourceApacheRocketMQCheckpointParameters;
 
         /**
-         * <p>The custom connector Apache Kafka event source.</p>
+         * <p>The custom Apache Kafka connector event source parameters.</p>
          */
         @NameInMap("SourceCustomizedKafkaConnectorParameters")
         public GetEventStreamingResponseBodyDataSourceSourceCustomizedKafkaConnectorParameters sourceCustomizedKafkaConnectorParameters;
 
         /**
-         * <p>The custom Kafka event source.</p>
+         * <p>The custom Kafka event source parameters.</p>
          */
         @NameInMap("SourceCustomizedKafkaParameters")
         public GetEventStreamingResponseBodyDataSourceSourceCustomizedKafkaParameters sourceCustomizedKafkaParameters;
 
         /**
-         * <p>The DTS source.</p>
+         * <p>The source DTS parameters.</p>
          */
         @NameInMap("SourceDTSParameters")
         public GetEventStreamingResponseBodyDataSourceSourceDTSParameters sourceDTSParameters;
 
         /**
-         * <p>The event bus source.</p>
+         * <p>The source event bus parameters.</p>
          */
         @NameInMap("SourceEventBusParameters")
         public GetEventStreamingResponseBodyDataSourceSourceEventBusParameters sourceEventBusParameters;
@@ -11349,37 +11373,37 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public SourceJDBCParameters sourceJDBCParameters;
 
         /**
-         * <p>The Kafka source.</p>
+         * <p>The ApsaraMQ for Kafka source.</p>
          */
         @NameInMap("SourceKafkaParameters")
         public GetEventStreamingResponseBodyDataSourceSourceKafkaParameters sourceKafkaParameters;
 
         /**
-         * <p>The MSMQ Simple Message Queue (formerly MNS) parameters.</p>
+         * <p>The Simple Message Queue (formerly MNS) parameters for the source.</p>
          */
         @NameInMap("SourceMNSParameters")
         public GetEventStreamingResponseBodyDataSourceSourceMNSParameters sourceMNSParameters;
 
         /**
-         * <p>The MQTT event source.</p>
+         * <p>The ApsaraMQ for MQTT source.</p>
          */
         @NameInMap("SourceMQTTParameters")
         public GetEventStreamingResponseBodyDataSourceSourceMQTTParameters sourceMQTTParameters;
 
         /**
-         * <p>The MySQL event source.</p>
+         * <p>The source MySQL parameters.</p>
          */
         @NameInMap("SourceMySQLParameters")
         public SourceMySQLParameters sourceMySQLParameters;
 
         /**
-         * <p>The OSS event source.</p>
+         * <p>The source OSS event source parameters.</p>
          */
         @NameInMap("SourceOSSParameters")
         public GetEventStreamingResponseBodyDataSourceSourceOSSParameters sourceOSSParameters;
 
         /**
-         * <p>The open-source RabbitMQ event source.</p>
+         * <p>The source open-source RabbitMQ parameters.</p>
          */
         @NameInMap("SourceOpenSourceRabbitMQParameters")
         public GetEventStreamingResponseBodyDataSourceSourceOpenSourceRabbitMQParameters sourceOpenSourceRabbitMQParameters;
@@ -11391,43 +11415,43 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public SourcePostgreSQLParameters sourcePostgreSQLParameters;
 
         /**
-         * <p>The Prometheus event source.</p>
+         * <p>The source Prometheus event source parameters.</p>
          */
         @NameInMap("SourcePrometheusParameters")
         public GetEventStreamingResponseBodyDataSourceSourcePrometheusParameters sourcePrometheusParameters;
 
         /**
-         * <p>The metadata source parameters for the MSMQ RabbitMQ message service.</p>
+         * <p>The ApsaraMQ for RabbitMQ metadata source parameters.</p>
          */
         @NameInMap("SourceRabbitMQMetaParameters")
         public SourceRabbitMQMetaParameters sourceRabbitMQMetaParameters;
 
         /**
-         * <p>The message synchronization source parameters for the MSMQ RabbitMQ service.</p>
+         * <p>The ApsaraMQ for RabbitMQ message synchronization source parameters.</p>
          */
         @NameInMap("SourceRabbitMQMsgSyncParameters")
         public SourceRabbitMQMsgSyncParameters sourceRabbitMQMsgSyncParameters;
 
         /**
-         * <p>The ApsaraMQ for RabbitMQ event source.</p>
+         * <p>The ApsaraMQ for RabbitMQ source.</p>
          */
         @NameInMap("SourceRabbitMQParameters")
         public GetEventStreamingResponseBodyDataSourceSourceRabbitMQParameters sourceRabbitMQParameters;
 
         /**
-         * <p>The RocketMQ checkpoint source.</p>
+         * <p>The ApsaraMQ for RocketMQ checkpoint source.</p>
          */
         @NameInMap("SourceRocketMQCheckpointParameters")
         public GetEventStreamingResponseBodyDataSourceSourceRocketMQCheckpointParameters sourceRocketMQCheckpointParameters;
 
         /**
-         * <p>The ApsaraMQ for RocketMQ event source.</p>
+         * <p>The ApsaraMQ for RocketMQ source.</p>
          */
         @NameInMap("SourceRocketMQParameters")
         public GetEventStreamingResponseBodyDataSourceSourceRocketMQParameters sourceRocketMQParameters;
 
         /**
-         * <p>The SLS event source.</p>
+         * <p>The source Simple Log Service (SLS) parameters.</p>
          */
         @NameInMap("SourceSLSParameters")
         public GetEventStreamingResponseBodyDataSourceSourceSLSParameters sourceSLSParameters;
@@ -11629,7 +11653,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public AiClassifyTransformParameters aiClassifyTransformParameters;
 
         /**
-         * <p>The AI embedding parameters.</p>
+         * <p>The AI vectorization parameters.</p>
          */
         @NameInMap("AiEmbedTransformParameters")
         public AiEmbedTransformParameters aiEmbedTransformParameters;
@@ -11834,7 +11858,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String eventStreamingName;
 
         /**
-         * <p>The event filtering rule. If this parameter is not specified, all events are matched.</p>
+         * <p>The event filtering rules. If you do not specify this parameter, all events are matched.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -11859,13 +11883,22 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String filterPattern;
 
         /**
-         * <p>The general JSON Configurations of the event provider. Specify either this parameter or Source.</p>
+         * <p>The common JSON configurations for the event provider. This parameter and Source are mutually exclusive.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;key&quot;:&quot;value&quot;}</p>
          */
         @NameInMap("Metadata")
         public String metadata;
+
+        /**
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         /**
          * <p>The runtime environment parameters.</p>
@@ -11880,13 +11913,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSink sink;
 
         /**
-         * <p>The event provider.</p>
+         * <p>The event source.</p>
          */
         @NameInMap("Source")
         public GetEventStreamingResponseBodyDataSource source;
 
         /**
-         * <p>The status of the event stream.</p>
+         * <p>The status of the retrieved event stream.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -11943,6 +11976,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public String getMetadata() {
             return this.metadata;
+        }
+
+        public GetEventStreamingResponseBodyData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public GetEventStreamingResponseBodyData setRunOptions(GetEventStreamingResponseBodyDataRunOptions runOptions) {

@@ -11,7 +11,7 @@ public class CreateConnectionRequest extends TeaModel {
     public CreateConnectionRequestAuthParameters authParameters;
 
     /**
-     * <p>The connection configuration name. Maximum length: 127 characters. Minimum length: 2 characters.</p>
+     * <p>The name of the connection configuration. The length must be 2 to 127 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,14 +30,14 @@ public class CreateConnectionRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The network configuration data structure.</p>
+     * <p>The data structure of the network configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkParameters")
     public CreateConnectionRequestNetworkParameters networkParameters;
 
     /**
-     * <p>The data source connection parameters (JSON object). This parameter is required when Type is a data source type. It is not required for the Http type. For specific field definitions, call the GetConnectionType operation and refer to ParamsSchema in the response.</p>
+     * <p>The data source connection parameters in JSON format. This parameter is required when Type is set to a data source type, and is not required when Type is set to Http. For specific field definitions, call the GetConnectionType operation and refer to ParamsSchema in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</p>
@@ -46,7 +46,7 @@ public class CreateConnectionRequest extends TeaModel {
     public Object parameters;
 
     /**
-     * <p>The connection type. Valid values: MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, Iceberg, lakehouse, and Http. This parameter is required for data source type connections. If this parameter is not specified, the default value Http is used. The Http type is used for API Destination and other HTTP protocol targets. Hive and Iceberg are used for the corresponding data lakehouse sources. lakehouse is used only for compatibility with existing connections. Other data source types are used for data connections in the integration marketplace.</p>
+     * <p>The connection type. Valid values: MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, Iceberg, lakehouse, and Http. This parameter is required for data source connections. If you do not specify this parameter, the default value Http is used. The Http type is used for HTTP protocol targets such as API Destination. Hive and Iceberg are used for their respective data lakehouse data sources. The lakehouse type is used only for compatibility with existing connections. Other data source types are used for data connections in the integration marketplace.</p>
      * 
      * <strong>example:</strong>
      * <p>Http</p>
@@ -109,7 +109,7 @@ public class CreateConnectionRequest extends TeaModel {
 
     public static class CreateConnectionRequestAuthParametersApiKeyAuthParameters extends TeaModel {
         /**
-         * <p>The key of the API key.</p>
+         * <p>The key name of the API key.</p>
          * 
          * <strong>example:</strong>
          * <p>Token</p>
@@ -193,7 +193,7 @@ public class CreateConnectionRequest extends TeaModel {
 
     public static class CreateConnectionRequestAuthParametersOAuthParametersClientParameters extends TeaModel {
         /**
-         * <p>The client ID.</p>
+         * <p>The ID of the client.</p>
          * 
          * <strong>example:</strong>
          * <p>ClientID</p>
@@ -235,7 +235,7 @@ public class CreateConnectionRequest extends TeaModel {
 
     public static class CreateConnectionRequestAuthParametersOAuthParametersOAuthHttpParametersBodyParameters extends TeaModel {
         /**
-         * <p>Specifies whether the value is used for authentication.</p>
+         * <p>Specifies whether the value is a secret.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -294,7 +294,7 @@ public class CreateConnectionRequest extends TeaModel {
 
     public static class CreateConnectionRequestAuthParametersOAuthParametersOAuthHttpParametersHeaderParameters extends TeaModel {
         /**
-         * <p>Specifies whether the value is used for authentication.</p>
+         * <p>Specifies whether the value is a secret.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -353,7 +353,7 @@ public class CreateConnectionRequest extends TeaModel {
 
     public static class CreateConnectionRequestAuthParametersOAuthParametersOAuthHttpParametersQueryStringParameters extends TeaModel {
         /**
-         * <p>Specifies whether the value is used for authentication.</p>
+         * <p>Specifies whether the value is a secret.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -412,7 +412,7 @@ public class CreateConnectionRequest extends TeaModel {
 
     public static class CreateConnectionRequestAuthParametersOAuthParametersOAuthHttpParameters extends TeaModel {
         /**
-         * <p>The list of body request parameter data structures.</p>
+         * <p>The list of structures for body request parameters.</p>
          */
         @NameInMap("BodyParameters")
         public java.util.List<CreateConnectionRequestAuthParametersOAuthParametersOAuthHttpParametersBodyParameters> bodyParameters;
@@ -424,7 +424,7 @@ public class CreateConnectionRequest extends TeaModel {
         public java.util.List<CreateConnectionRequestAuthParametersOAuthParametersOAuthHttpParametersHeaderParameters> headerParameters;
 
         /**
-         * <p>The data structure of the URI of the request path parameters.</p>
+         * <p>The structure of URI of the request path parameters.</p>
          */
         @NameInMap("QueryStringParameters")
         public java.util.List<CreateConnectionRequestAuthParametersOAuthParametersOAuthHttpParametersQueryStringParameters> queryStringParameters;
@@ -462,7 +462,7 @@ public class CreateConnectionRequest extends TeaModel {
 
     public static class CreateConnectionRequestAuthParametersOAuthParameters extends TeaModel {
         /**
-         * <p>The authorization endpoint address. Maximum length: 127 characters.</p>
+         * <p>The endpoint URL for authorization. Maximum length: 127 characters.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://localhost:8080/oauth/token">http://localhost:8080/oauth/token</a></p>
@@ -471,13 +471,13 @@ public class CreateConnectionRequest extends TeaModel {
         public String authorizationEndpoint;
 
         /**
-         * <p>The client parameters data structure.</p>
+         * <p>The data structure of the client parameters.</p>
          */
         @NameInMap("ClientParameters")
         public CreateConnectionRequestAuthParametersOAuthParametersClientParameters clientParameters;
 
         /**
-         * <p>The HTTP method for the probe. Valid values:</p>
+         * <p>The HTTP method for probing. Valid values:</p>
          * <ul>
          * <li>GET</li>
          * <li>POST</li>
@@ -540,20 +540,17 @@ public class CreateConnectionRequest extends TeaModel {
 
     public static class CreateConnectionRequestAuthParameters extends TeaModel {
         /**
-         * <p>The data structure of the API key.</p>
+         * <p>The data structure of the API key authentication parameters.</p>
          */
         @NameInMap("ApiKeyAuthParameters")
         public CreateConnectionRequestAuthParametersApiKeyAuthParameters apiKeyAuthParameters;
 
         /**
-         * <p>The authentication type:</p>
+         * <p>The authentication type. Valid values:</p>
          * <ul>
-         * <li><p>BASIC: BASIC_AUTH. This authorization method is a basic authorization method implemented by browsers in compliance with the HTTP protocol. During HTTP communication, the HTTP protocol defines a basic authentication method that allows an HTTP server to authenticate clients. Add Authorization: Basic Base64-encoded(<code>username:password</code>) in the fixed format to the request header. Username and Password are required.</p>
-         * </li>
-         * <li><p>API KEY: API_KEY_AUTH. Add Token: Token value in the fixed format to the request header. ApiKeyName and ApiKeyValue are required.</p>
-         * </li>
-         * <li><p>OAUTH: OAUTH_AUTH. OAuth 2.0 is an authorization mechanism. Normally, without an authorization mechanism such as OAuth 2.0, clients can directly access resources on the resource server. To ensure secure data access, an Access Token mechanism is added. Clients must carry an Access Token to access protected resources. OAuth 2.0 ensures that resources are not accessed by malicious clients, which improves system security. AuthorizationEndpoint, OAuthHttpParameters, and HttpMethod are required.</p>
-         * </li>
+         * <li>BASIC: Basic authentication. This is a standard authentication method defined by the HTTP protocol. Add the Authorization header in the format of Basic followed by a space and the Base64-encoded username:password. Username and Password are required.</li>
+         * <li>API KEY: API key authentication. Add the Token header with the token value. ApiKeyName and ApiKeyValue are required.</li>
+         * <li>OAUTH: OAuth 2.0 authentication. OAuth 2.0 is an authorization framework that uses access tokens to protect resources. Clients must include an access token in their requests to access protected resources. AuthorizationEndpoint, OAuthHttpParameters, and HttpMethod are required.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -563,13 +560,13 @@ public class CreateConnectionRequest extends TeaModel {
         public String authorizationType;
 
         /**
-         * <p>The data structure of basic authentication.</p>
+         * <p>The data structure of the basic authentication parameters.</p>
          */
         @NameInMap("BasicAuthParameters")
         public CreateConnectionRequestAuthParametersBasicAuthParameters basicAuthParameters;
 
         /**
-         * <p>The data structure of OAuth authentication parameters.</p>
+         * <p>The data structure of the OAuth authentication parameters.</p>
          */
         @NameInMap("OAuthParameters")
         public CreateConnectionRequestAuthParametersOAuthParameters OAuthParameters;
@@ -615,15 +612,12 @@ public class CreateConnectionRequest extends TeaModel {
 
     public static class CreateConnectionRequestNetworkParameters extends TeaModel {
         /**
+         * <p>The network type. Valid values:</p>
          * <ul>
-         * <li><p>Public network: PublicNetwork</p>
-         * </li>
-         * <li><p>Virtual private cloud (VPC): PrivateNetwork</p>
-         * </li>
+         * <li>PublicNetwork: public network</li>
+         * <li>PrivateNetwork: VPC
+         * <notice>If you select PrivateNetwork, VpcId, VswitcheId, and SecurityGroupId are required.</notice></li>
          * </ul>
-         * <blockquote>
-         * <p>Notice: If you select PrivateNetwork, VpcId, VswitcheId, and SecurityGroupId are required.</p>
-         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -633,7 +627,7 @@ public class CreateConnectionRequest extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The security group ID.</p>
+         * <p>The ID of the security group.</p>
          * 
          * <strong>example:</strong>
          * <p>eb-167adad548759-security_grop/sg-bp1addad26peuh9qh9****</p>
@@ -651,7 +645,7 @@ public class CreateConnectionRequest extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1iu4x7aeradadown1og8,vsw-bp193sqmadadlaszpeq****</p>

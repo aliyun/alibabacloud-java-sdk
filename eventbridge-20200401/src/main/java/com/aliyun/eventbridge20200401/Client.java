@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "eventbridge";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-wulanchabu", "eventbridge-console.cn-wulanchabu.aliyuncs.com"),
@@ -396,8 +399,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EventBusName", request.eventBusName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            body.put("Tags", request.tags);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateEventBus"),
@@ -599,13 +612,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.transformsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.transforms, "Transforms", "json");
         }
 
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventStreamingName)) {
+            query.put("EventStreamingName", request.eventStreamingName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.eventStreamingName)) {
-            body.put("EventStreamingName", request.eventStreamingName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.filterPattern)) {
@@ -637,6 +655,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -894,10 +913,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a service-linked role based on the service-linked role name associated with an Alibaba Cloud service.</p>
+     * <p>Creates a service-linked role based on the service-linked role name associated with a product.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a service-linked role based on the service-linked role name associated with an Alibaba Cloud service.</p>
+     * <p>Creates a service-linked role based on the service-linked role name associated with a product.</p>
      * 
      * @param request CreateServiceLinkedRoleForProductRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -929,10 +948,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a service-linked role based on the service-linked role name associated with an Alibaba Cloud service.</p>
+     * <p>Creates a service-linked role based on the service-linked role name associated with a product.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a service-linked role based on the service-linked role name associated with an Alibaba Cloud service.</p>
+     * <p>Creates a service-linked role based on the service-linked role name associated with a product.</p>
      * 
      * @param request CreateServiceLinkedRoleForProductRequest
      * @return CreateServiceLinkedRoleForProductResponse
@@ -1530,7 +1549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to delete an event rule.</p>
+     * <p>Deletes an event rule.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an event rule.</p>
@@ -1569,7 +1588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to delete an event rule.</p>
+     * <p>Deletes an event rule.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an event rule.</p>
@@ -2392,10 +2411,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query the detailed information about an event bus.</p>
+     * <p>Retrieves the details of an event bus.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the detailed information about an event bus.</p>
+     * <p>Retrieves the details of an event bus.</p>
      * 
      * @param request GetEventBusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2427,10 +2446,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query the detailed information about an event bus.</p>
+     * <p>Retrieves the details of an event bus.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the detailed information about an event bus.</p>
+     * <p>Retrieves the details of an event bus.</p>
      * 
      * @param request GetEventBusRequest
      * @return GetEventBusResponse
@@ -3647,7 +3666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query all event buses.</p>
+     * <p>Queries all event buses.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries all event buses.</p>
@@ -3671,6 +3690,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -3690,7 +3713,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query all event buses.</p>
+     * <p>Queries all event buses.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries all event buses.</p>
@@ -5965,10 +5988,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modifies an event bus.</p>
+     * <p>Updates an event bus.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies an event bus.</p>
+     * <p>Updates an event bus.</p>
      * 
      * @param request UpdateEventBusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5985,8 +6008,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EventBusName", request.eventBusName);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            body.put("Tags", request.tags);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateEventBus"),
@@ -6004,10 +6033,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modifies an event bus.</p>
+     * <p>Updates an event bus.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies an event bus.</p>
+     * <p>Updates an event bus.</p>
      * 
      * @param request UpdateEventBusRequest
      * @return UpdateEventBusResponse
@@ -6207,10 +6236,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</p>
+     * <p>Modifies the basic information, event source, event filter pattern, or event target of an event stream.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</p>
+     * <p>Modifies the basic information, event source, event filter pattern, or event target of an event stream.</p>
      * 
      * @param tmpReq UpdateEventStreamingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6288,10 +6317,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</p>
+     * <p>Modifies the basic information, event source, event filter pattern, or event target of an event stream.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</p>
+     * <p>Modifies the basic information, event source, event filter pattern, or event target of an event stream.</p>
      * 
      * @param request UpdateEventStreamingRequest
      * @return UpdateEventStreamingResponse

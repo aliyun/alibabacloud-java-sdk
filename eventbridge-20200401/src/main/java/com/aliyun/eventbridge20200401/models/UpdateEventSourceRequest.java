@@ -34,10 +34,10 @@ public class UpdateEventSourceRequest extends TeaModel {
     public String eventSourceName;
 
     /**
-     * <p>The external data source configuration.</p>
+     * <p>The external datasource config.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;ConsumePosition\&quot;:\&quot;end\&quot;,\&quot;LogStore\&quot;:\&quot;oss_log\&quot;,\&quot;Project\&quot;:\&quot;slsaudit-center-5795350335281001-cn-beijing\&quot;,\&quot;RoleName\&quot;:\&quot;sls-beijing-tf\&quot;}</p>
+     * <p>{&quot;IsBase64Decode&quot;:true,&quot;QueueName&quot;:&quot;queue-1&quot;}</p>
      */
     @NameInMap("ExternalSourceConfig")
     public java.util.Map<String, ?> externalSourceConfig;
@@ -61,49 +61,49 @@ public class UpdateEventSourceRequest extends TeaModel {
     public Boolean linkedExternalSource;
 
     /**
-     * <p>The SourceHttpEventParameters request parameter.</p>
+     * <p>The request parameter SourceHttpEventParameters.</p>
      */
     @NameInMap("SourceHttpEventParameters")
     public UpdateEventSourceRequestSourceHttpEventParameters sourceHttpEventParameters;
 
     /**
-     * <p>The SourceKafkaParameters request parameter.</p>
+     * <p>The request parameter SourceKafkaParameters.</p>
      */
     @NameInMap("SourceKafkaParameters")
     public UpdateEventSourceRequestSourceKafkaParameters sourceKafkaParameters;
 
     /**
-     * <p>The parameters for a Simple Message Queue (formerly MNS) event source.</p>
+     * <p>The parameters for the Simple Message Queue (formerly MNS) event source.</p>
      */
     @NameInMap("SourceMNSParameters")
     public UpdateEventSourceRequestSourceMNSParameters sourceMNSParameters;
 
     /**
-     * <p>The parameters for an OSS event source.</p>
+     * <p>The parameters for the OSS event source.</p>
      */
     @NameInMap("SourceOSSEventParameters")
     public UpdateEventSourceRequestSourceOSSEventParameters sourceOSSEventParameters;
 
     /**
-     * <p>The SourceRabbitMQParameters request parameter.</p>
+     * <p>The request parameter SourceRabbitMQParameters.</p>
      */
     @NameInMap("SourceRabbitMQParameters")
     public UpdateEventSourceRequestSourceRabbitMQParameters sourceRabbitMQParameters;
 
     /**
-     * <p>The SourceRocketMQParameters request parameter.</p>
+     * <p>The request parameter SourceRocketMQParameters.</p>
      */
     @NameInMap("SourceRocketMQParameters")
     public UpdateEventSourceRequestSourceRocketMQParameters sourceRocketMQParameters;
 
     /**
-     * <p>The parameters for a Simple Log Service event source.</p>
+     * <p>The parameters for the Simple Log Service event source.</p>
      */
     @NameInMap("SourceSLSParameters")
     public UpdateEventSourceRequestSourceSLSParameters sourceSLSParameters;
 
     /**
-     * <p>The SourceScheduledEventParameters request parameter.</p>
+     * <p>The request parameter SourceScheduledEventParameters.</p>
      */
     @NameInMap("SourceScheduledEventParameters")
     public UpdateEventSourceRequestSourceScheduledEventParameters sourceScheduledEventParameters;
@@ -227,7 +227,7 @@ public class UpdateEventSourceRequest extends TeaModel {
 
     public static class UpdateEventSourceRequestSourceHttpEventParameters extends TeaModel {
         /**
-         * <p>The CIDR block for security configuration. This parameter is required only when the SecurityConfig parameter is set to ip. You can enter a CIDR block or an IP address.</p>
+         * <p>The CIDR block for the security configuration. This parameter is required only when the SecurityConfig parameter is set to ip. You can enter a CIDR block or an IP address.</p>
          */
         @NameInMap("Ip")
         public java.util.List<String> ip;
@@ -235,22 +235,31 @@ public class UpdateEventSourceRequest extends TeaModel {
         /**
          * <p>The HTTP request methods supported by the generated webhook. You can select multiple values. Valid values:</p>
          * <ul>
-         * <li>GET</li>
-         * <li>POST</li>
-         * <li>PUT</li>
-         * <li>PATCH</li>
-         * <li>DELETE</li>
-         * <li>HEAD</li>
-         * <li>OPTIONS</li>
-         * <li>TRACE</li>
-         * <li>CONNECT</li>
+         * <li><p>GET</p>
+         * </li>
+         * <li><p>POST</p>
+         * </li>
+         * <li><p>PUT</p>
+         * </li>
+         * <li><p>PATCH</p>
+         * </li>
+         * <li><p>DELETE</p>
+         * </li>
+         * <li><p>HEAD</p>
+         * </li>
+         * <li><p>OPTIONS</p>
+         * </li>
+         * <li><p>TRACE</p>
+         * </li>
+         * <li><p>CONNECT</p>
+         * </li>
          * </ul>
          */
         @NameInMap("Method")
         public java.util.List<String> method;
 
         /**
-         * <p>The secure domain name for security configuration. This parameter is required only when the SecurityConfig parameter is set to referer. You can enter a domain name.</p>
+         * <p>The secure domain name for the security configuration. This parameter is required only when the SecurityConfig parameter is set to referer. You can enter a domain name.</p>
          */
         @NameInMap("Referer")
         public java.util.List<String> referer;
@@ -258,9 +267,12 @@ public class UpdateEventSourceRequest extends TeaModel {
         /**
          * <p>The type of the security configuration. Valid values:</p>
          * <ul>
-         * <li>none: No configuration is required.</li>
-         * <li>ip: CIDR block.</li>
-         * <li>referer: Secure domain name.</li>
+         * <li><p>none: No configuration is required.</p>
+         * </li>
+         * <li><p>ip: CIDR block</p>
+         * </li>
+         * <li><p>referer: Secure domain name</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -272,9 +284,12 @@ public class UpdateEventSourceRequest extends TeaModel {
         /**
          * <p>The protocol type supported by the generated webhook. Valid values:</p>
          * <ul>
-         * <li>HTTP</li>
-         * <li>HTTPS</li>
-         * <li>HTTP&amp;HTTPS</li>
+         * <li><p>HTTP</p>
+         * </li>
+         * <li><p>HTTPS</p>
+         * </li>
+         * <li><p>HTTP&amp;HTTPS</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -350,7 +365,7 @@ public class UpdateEventSourceRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The concurrency quota, which is the number of consumers.</p>
+         * <p>The concurrency quota, which indicates the number of consumers.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -510,7 +525,7 @@ public class UpdateEventSourceRequest extends TeaModel {
 
     public static class UpdateEventSourceRequestSourceMNSParameters extends TeaModel {
         /**
-         * <p>Specifies whether to enable Base64 decoding. Default value: true.</p>
+         * <p>Specifies whether to enable Base64 decoding. By default, this option is selected, which indicates that Base64 decoding is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -780,7 +795,7 @@ public class UpdateEventSourceRequest extends TeaModel {
         public String authType;
 
         /**
-         * <p>The group ID of the ApsaraMQ for RocketMQ instance.</p>
+         * <p>The group ID of ApsaraMQ for RocketMQ.</p>
          * 
          * <strong>example:</strong>
          * <p>GID-test</p>
@@ -836,8 +851,10 @@ public class UpdateEventSourceRequest extends TeaModel {
         /**
          * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li>Cloud_4: 4.0 instance.</li>
-         * <li>Cloud_5: 5.0 instance.</li>
+         * <li><p>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance.</p>
+         * </li>
+         * <li><p>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -876,11 +893,14 @@ public class UpdateEventSourceRequest extends TeaModel {
         /**
          * <p>The consumption offset of the message. Valid values:</p>
          * <ul>
-         * <li>CONSUME_FROM_LAST_OFFSET: Consumes messages from the latest offset.</li>
-         * <li>CONSUME_FROM_FIRST_OFFSET: Consumes messages from the earliest offset.</li>
-         * <li>CONSUME_FROM_TIMESTAMP: Consumes messages from the offset at a specified point in time.
-         * Default value: CONSUME_FROM_LAST_OFFSET.</li>
+         * <li><p>CONSUME_FROM_LAST_OFFSET: Consumes messages from the latest offset.</p>
+         * </li>
+         * <li><p>CONSUME_FROM_FIRST_OFFSET: Consumes messages from the earliest offset.</p>
+         * </li>
+         * <li><p>CONSUME_FROM_TIMESTAMP: Consumes messages from the offset at a specified timestamp.</p>
+         * </li>
          * </ul>
+         * <p>Default value: CONSUME_FROM_LAST_OFFSET.</p>
          * 
          * <strong>example:</strong>
          * <p>CONSUMEFROMLASTOFFSET</p>
@@ -1061,7 +1081,7 @@ public class UpdateEventSourceRequest extends TeaModel {
 
     public static class UpdateEventSourceRequestSourceSLSParameters extends TeaModel {
         /**
-         * <p>The start consumption offset. You can set this parameter to begin to consume from the earliest offset, end to consume from the latest offset, or a specific timestamp in seconds to consume from a specified point in time.</p>
+         * <p>The start consumption offset. You can set this parameter to begin to consume from the earliest offset, end to consume from the latest offset, or a specific timestamp in seconds to consume from the specified time.</p>
          * 
          * <strong>example:</strong>
          * <p>end</p>
@@ -1088,7 +1108,7 @@ public class UpdateEventSourceRequest extends TeaModel {
         public String project;
 
         /**
-         * <p>When authorizing EventBridge to use this role to read Simple Log Service log content, the following conditions must be met: when creating the role in the Resource Access Management (RAM) console, you must select Alibaba Cloud Service, and select EventBridge as the trusted service. For the permission policy of this role, refer to the custom event source Simple Log Service.</p>
+         * <p>When authorizing EventBridge to use this role to read Simple Log Service logs, the following conditions must be met: When creating the role in the Resource Access Management (RAM) console, you must select Alibaba Cloud Service and select EventBridge as the trusted service. For the permission policy of this role, refer to the custom event source Simple Log Service.</p>
          * 
          * <strong>example:</strong>
          * <p>testRole</p>

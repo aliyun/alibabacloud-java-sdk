@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteConnectionResponseBody extends TeaModel {
     /**
-     * <p>The API operation status or POP error code. Valid values: Success: The operation is successful.</p>
+     * <p>The API operation status code or POP error code. Valid values: Success: The operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class DeleteConnectionResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The additional information. If the request is successful, success is returned. If the request fails, a specific error code is returned.</p>
+     * <p>The additional information. If the request is successful, success is returned. If an exception occurs, a specific error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

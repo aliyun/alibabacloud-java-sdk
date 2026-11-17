@@ -7,8 +7,8 @@ public class UpdateEventBusResponseBody extends TeaModel {
     /**
      * <p>The return code of the API operation. Valid values:</p>
      * <ul>
-     * <li>Success: Indicates success.                                 </li>
-     * <li>Other: Indicates an error code. For more information, see Error codes.</li>
+     * <li>Success: indicates success.                                 </li>
+     * <li>Other values: indicates an error code. For more information, see Error codes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class UpdateEventBusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returns true if the operation is successful.</p>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

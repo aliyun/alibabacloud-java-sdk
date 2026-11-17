@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateAgentResponseBody extends TeaModel {
     /**
-     * <p>The response code. Valid values:</p>
+     * <p>The response code returned by the API operation:</p>
      * <ul>
-     * <li>Success: The request was successful.                                 </li>
-     * <li>Other values: An error occurred. For more information, see Error codes.</li>
+     * <li>Success: The request is successful.                                 </li>
+     * <li>Other values: An error code. For more information, see Error codes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateAgentResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Data")
     public UpdateAgentResponseBodyData data;
@@ -42,7 +42,7 @@ public class UpdateAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returns true if the operation was successful.</p>
+     * <p>Indicates whether the operation is successful. A value of true indicates that the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

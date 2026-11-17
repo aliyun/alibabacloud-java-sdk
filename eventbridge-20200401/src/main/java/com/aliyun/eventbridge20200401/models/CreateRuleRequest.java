@@ -30,12 +30,10 @@ public class CreateRuleRequest extends TeaModel {
     public java.util.List<CreateRuleRequestEventTargets> eventTargets;
 
     /**
-     * <p>The event pattern in JSON format. The following patterns are supported:</p>
-     * <ul>
-     * <li>stringEqual pattern</li>
-     * <li>stringExpression pattern
-     * Each field supports up to five expressions in a map structure.</li>
-     * </ul>
+     * <p>The event pattern in JSON format. Valid values:
+     * stringEqual mode.
+     * stringExpression mode.
+     * Up to 5 expressions are supported for each field (map structure).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,11 +70,9 @@ public class CreateRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The status of the rule. Valid values:</p>
-     * <ul>
-     * <li>ENABLE: The rule is enabled. This is the default status.</li>
-     * <li>DISABLE: The rule is disabled.</li>
-     * </ul>
+     * <p>The status of the rule. Valid values:
+     * ENABLE: The rule is enabled. This is the default status.
+     * DISABLE: The rule is disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>ENABLE</p>
@@ -164,7 +160,7 @@ public class CreateRuleRequest extends TeaModel {
 
     public static class CreateRuleRequestEventTargetsDeadLetterQueue extends TeaModel {
         /**
-         * <p>The ARN of the dead-letter queue. Unprocessed events or events that exceed the retry count are written to the dead-letter queue. Simple Message Queue (formerly MNS) and ApsaraMQ for RocketMQ are supported.</p>
+         * <p>The ARN of the dead-letter queue. Unprocessed events or events that exceed the retry limit are written to the dead-letter queue. Simple Message Queue (formerly MNS) and ApsaraMQ for RocketMQ are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:mns:cn-hangzhou:123456789098****:/queues/deadletterqueue</p>
@@ -275,7 +271,7 @@ public class CreateRuleRequest extends TeaModel {
         public String resourceKey;
 
         /**
-         * <p>The parameter template style of the event target.</p>
+         * <p>The style of the event target parameter template.</p>
          * 
          * <strong>example:</strong>
          * <p>The value of ${key} is ${value}!</p>
@@ -339,7 +335,7 @@ public class CreateRuleRequest extends TeaModel {
         public CreateRuleRequestEventTargetsConcurrentConfig concurrentConfig;
 
         /**
-         * <p>The dead-letter queue. Unprocessed events or events that exceed the retry count are written to the dead-letter queue. Supported queue types include ApsaraMQ for RocketMQ, Simple Message Queue (formerly MNS), ApsaraMQ for Kafka, and EventBridge event buses.</p>
+         * <p>The dead-letter queue. Unprocessed events or events that exceed the retry limit are written to the dead-letter queue. Supported queue types include ApsaraMQ for RocketMQ, Simple Message Queue (formerly MNS), ApsaraMQ for Kafka, and EventBridge event buses.</p>
          */
         @NameInMap("DeadLetterQueue")
         public CreateRuleRequestEventTargetsDeadLetterQueue deadLetterQueue;
@@ -354,11 +350,9 @@ public class CreateRuleRequest extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The fault tolerance strategy. Valid values:</p>
-         * <ul>
-         * <li>ALL: allows fault tolerance. Exceptions do not block execution. If the retry strategy is exhausted, messages are delivered to the dead-letter queue or discarded based on the configuration.</li>
-         * <li>NONE: disables fault tolerance. Exceptions block execution when the retry strategy is exhausted.</li>
-         * </ul>
+         * <p>The fault tolerance strategy. Valid values:
+         * ALL: Fault tolerance is allowed. Exceptions are tolerated and do not block execution. If the retry strategy is exhausted, messages are delivered to the dead-letter queue or discarded based on the configuration.
+         * NONE: Fault tolerance is disabled. Exceptions are not tolerated. If an exception occurs and the retry strategy is exhausted, execution is blocked.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>
@@ -383,11 +377,9 @@ public class CreateRuleRequest extends TeaModel {
         public java.util.List<CreateRuleRequestEventTargetsParamList> paramList;
 
         /**
-         * <p>The retry policy for pushing events. Valid values:</p>
-         * <ul>
-         * <li>BACKOFF_RETRY: backoff retry policy. The system retries 3 times, with a random interval of 10 to 20 seconds between each retry.</li>
-         * <li>EXPONENTIAL_DECAY_RETRY: exponential decay retry. The system retries 176 times, with the interval exponentially incrementing to 512 seconds. The total retry time is 1 day. The specific intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, and then 512 seconds for the remaining 167 retries.</li>
-         * </ul>
+         * <p>The push retry policy. Valid values:
+         * BACKOFF_RETRY: The backoff retry policy. The system retries 3 times. The interval between two consecutive retries is a random value between 10 and 20 seconds.
+         * EXPONENTIAL_DECAY_RETRY: The exponential decay retry. The system retries 176 times. The intervals between consecutive retries exponentially increment up to 512 seconds. The total retry time is 1 day. The specific intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512...512 seconds (167 intervals of 512 seconds in total).</p>
          * 
          * <strong>example:</strong>
          * <p>BACKOFF_RETRY</p>

@@ -42,7 +42,7 @@ public class CheckServiceLinkedRoleForProductResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation is successful. Valid values: true: The operation is successful. false: The operation fails.</p>
+     * <p>Indicates whether the operation is successful. A value of true indicates success, and a value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

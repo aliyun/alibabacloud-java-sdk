@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListEventBusesResponseBody extends TeaModel {
     /**
-     * <p>The response code. Valid values:</p>
+     * <p>The response code:</p>
      * <ul>
-     * <li>Success: The request was successful.</li>
-     * <li>Other codes: The request failed. For information about error codes, see Error codes.</li>
+     * <li>Success: indicates that the request is successful.                                 </li>
+     * <li>Other values: indicate error codes. For more information, see Error codes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListEventBusesResponseBody extends TeaModel {
     public ListEventBusesResponseBodyData data;
 
     /**
-     * <p>The returned error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidArgument</p>
@@ -36,13 +36,13 @@ public class ListEventBusesResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>D1DCF64A-3F2C-5323-ADCB-3F4DF30FAD2D</p>
+     * <p>D1DCF64A-3F2C-5323-ADCB-3F4DF30F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. If the operation was successful, the value true is returned.</p>
+     * <p>Indicates whether the operation is successful. A value of true indicates that the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -95,9 +95,51 @@ public class ListEventBusesResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ListEventBusesResponseBodyDataEventBusesTags extends TeaModel {
+        /**
+         * <p>The key of the event bus tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>department</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The value of the event bus tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>R&amp;D</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static ListEventBusesResponseBodyDataEventBusesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListEventBusesResponseBodyDataEventBusesTags self = new ListEventBusesResponseBodyDataEventBusesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventBusesResponseBodyDataEventBusesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListEventBusesResponseBodyDataEventBusesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListEventBusesResponseBodyDataEventBuses extends TeaModel {
         /**
-         * <p>The timestamp that indicates when the event bus was created.</p>
+         * <p>The creation timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1607071602000</p>
@@ -118,7 +160,7 @@ public class ListEventBusesResponseBody extends TeaModel {
          * <p>The Alibaba Cloud Resource Name (ARN) of the event bus.</p>
          * 
          * <strong>example:</strong>
-         * <p>acs:eventbridge:cn-hangzhou:123456789098***:eventbus/default</p>
+         * <p>acs:eventbridge:cn-hangzhou:12345678909****:eventbus/default</p>
          */
         @NameInMap("EventBusARN")
         public String eventBusARN;
@@ -131,6 +173,21 @@ public class ListEventBusesResponseBody extends TeaModel {
          */
         @NameInMap("EventBusName")
         public String eventBusName;
+
+        /**
+         * <p>The ID of the resource group to which the event bus belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The tag information of the event bus.</p>
+         */
+        @NameInMap("Tags")
+        public java.util.List<ListEventBusesResponseBodyDataEventBusesTags> tags;
 
         public static ListEventBusesResponseBodyDataEventBuses build(java.util.Map<String, ?> map) throws Exception {
             ListEventBusesResponseBodyDataEventBuses self = new ListEventBusesResponseBodyDataEventBuses();
@@ -169,17 +226,33 @@ public class ListEventBusesResponseBody extends TeaModel {
             return this.eventBusName;
         }
 
+        public ListEventBusesResponseBodyDataEventBuses setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public ListEventBusesResponseBodyDataEventBuses setTags(java.util.List<ListEventBusesResponseBodyDataEventBusesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListEventBusesResponseBodyDataEventBusesTags> getTags() {
+            return this.tags;
+        }
+
     }
 
     public static class ListEventBusesResponseBodyData extends TeaModel {
         /**
-         * <p>The event buses.</p>
+         * <p>The list of queried event buses.</p>
          */
         @NameInMap("EventBuses")
         public java.util.List<ListEventBusesResponseBodyDataEventBuses> eventBuses;
 
         /**
-         * <p>If excess return values exist, this parameter is returned.</p>
+         * <p>The pagination token. This token is returned if more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -30,12 +30,10 @@ public class CreateRuleShrinkRequest extends TeaModel {
     public String eventTargetsShrink;
 
     /**
-     * <p>The event pattern in JSON format. The following patterns are supported:</p>
-     * <ul>
-     * <li>stringEqual pattern</li>
-     * <li>stringExpression pattern
-     * Each field supports up to five expressions in a map structure.</li>
-     * </ul>
+     * <p>The event pattern in JSON format. Valid values:
+     * stringEqual mode.
+     * stringExpression mode.
+     * Up to 5 expressions are supported for each field (map structure).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,11 +70,9 @@ public class CreateRuleShrinkRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The status of the rule. Valid values:</p>
-     * <ul>
-     * <li>ENABLE: The rule is enabled. This is the default status.</li>
-     * <li>DISABLE: The rule is disabled.</li>
-     * </ul>
+     * <p>The status of the rule. Valid values:
+     * ENABLE: The rule is enabled. This is the default status.
+     * DISABLE: The rule is disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>ENABLE</p>

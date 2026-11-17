@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteApiDestinationResponseBody extends TeaModel {
     /**
-     * <p>The API operation status or POP error code. Valid values: Success: The operation is successful.</p>
+     * <p>The API status or POP error code. Valid values: Success: Successful.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>

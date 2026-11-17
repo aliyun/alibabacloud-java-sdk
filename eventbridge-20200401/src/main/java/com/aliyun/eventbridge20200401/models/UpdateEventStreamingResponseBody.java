@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateEventStreamingResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of Success indicates that the request was successful. Other values indicate error codes. For more information, see Error codes.</p>
+     * <p>The API return code. A value of Success indicates that the call was successful. Other values indicate error codes. For more information, see Error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -32,7 +32,7 @@ public class UpdateEventStreamingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. A value of true indicates that the operation was successful.</p>
+     * <p>Indicates whether the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

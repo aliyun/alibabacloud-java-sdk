@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteEventStreamingResponseBody extends TeaModel {
     /**
-     * <p>The response code. Valid values:</p>
-     * <p>Success: The request was successful.    </p>
-     * <p>Other values: An error occurred. For more information about error codes, see error codes.</p>
+     * <p>The return code of the API operation:</p>
+     * <p>Success: indicates success.    </p>
+     * <p>Other values: indicate error codes. For more information about error codes, see Error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -34,7 +34,7 @@ public class DeleteEventStreamingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returns true if the operation was successful.</p>
+     * <p>Indicates whether the operation is successful. A value of true indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

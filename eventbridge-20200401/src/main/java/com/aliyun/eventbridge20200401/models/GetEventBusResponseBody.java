@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEventBusResponseBody extends TeaModel {
     /**
-     * <p>The response code. The value Success indicates that the request was successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
+     * <p>The response code. A value of Success indicates that the request is successful. Other values indicate error codes. For more information, see Error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class GetEventBusResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public GetEventBusResponseBodyData data;
 
     /**
-     * <p>The error message that is returned if the request failed.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>EventBusNotExist</p>
@@ -38,7 +38,7 @@ public class GetEventBusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. If the operation was successful, the value true is returned.</p>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -91,9 +91,51 @@ public class GetEventBusResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetEventBusResponseBodyDataTags extends TeaModel {
+        /**
+         * <p>The key of the first tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>department</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The value of the first tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>R&amp;D</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static GetEventBusResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
+            GetEventBusResponseBodyDataTags self = new GetEventBusResponseBodyDataTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventBusResponseBodyDataTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetEventBusResponseBodyDataTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetEventBusResponseBodyData extends TeaModel {
         /**
-         * <p>The timestamp that indicates when the event bus was created.</p>
+         * <p>The creation timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1641781825000</p>
@@ -127,6 +169,21 @@ public class GetEventBusResponseBody extends TeaModel {
          */
         @NameInMap("EventBusName")
         public String eventBusName;
+
+        /**
+         * <p>The ID of the resource group to which the event bus belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The tag information.</p>
+         */
+        @NameInMap("Tags")
+        public java.util.List<GetEventBusResponseBodyDataTags> tags;
 
         public static GetEventBusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetEventBusResponseBodyData self = new GetEventBusResponseBodyData();
@@ -163,6 +220,22 @@ public class GetEventBusResponseBody extends TeaModel {
         }
         public String getEventBusName() {
             return this.eventBusName;
+        }
+
+        public GetEventBusResponseBodyData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public GetEventBusResponseBodyData setTags(java.util.List<GetEventBusResponseBodyDataTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetEventBusResponseBodyDataTags> getTags() {
+            return this.tags;
         }
 
     }

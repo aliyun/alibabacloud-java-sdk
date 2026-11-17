@@ -18,13 +18,13 @@ public class CreateEventStreamingShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>myeventstreaming</p>
+     * <p>my_streaming</p>
      */
     @NameInMap("EventStreamingName")
     public String eventStreamingName;
 
     /**
-     * <p>The event filtering rule. If this parameter is not specified, all events are matched.</p>
+     * <p>The event filtering rule. If you do not specify this parameter, all events are matched.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -49,13 +49,22 @@ public class CreateEventStreamingShrinkRequest extends TeaModel {
     public String filterPattern;
 
     /**
-     * <p>The common JSON configurations for the event provider. This parameter is mutually exclusive with the Source parameter.</p>
+     * <p>The common JSON Configurations for event providers. This parameter is mutually exclusive with Source.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;key&quot;:&quot;value&quot;}</p>
      */
     @NameInMap("Metadata")
     public String metadata;
+
+    /**
+     * <p>The ID of the resource group. If you do not specify this parameter, the created event stream belongs to the default resource group of the account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph6aiy****</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     /**
      * <p>The runtime environment parameters.</p>
@@ -76,7 +85,7 @@ public class CreateEventStreamingShrinkRequest extends TeaModel {
     public String sourceShrink;
 
     /**
-     * <p>The list of tags. You can specify up to 20 tags.</p>
+     * <p>The list of tags. Up to 20 tags are supported.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateEventStreamingShrinkRequestTags> tags;
@@ -122,6 +131,14 @@ public class CreateEventStreamingShrinkRequest extends TeaModel {
     }
     public String getMetadata() {
         return this.metadata;
+    }
+
+    public CreateEventStreamingShrinkRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateEventStreamingShrinkRequest setRunOptionsShrink(String runOptionsShrink) {

@@ -24,7 +24,7 @@ public class UpdateEventStreamingShrinkRequest extends TeaModel {
     public String eventStreamingName;
 
     /**
-     * <p>The event filtering rule. If you do not specify this parameter, all events are matched. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-patterns">https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-patterns</a>.</p>
+     * <p>The event filter pattern. If you do not specify this parameter, all events are matched. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-patterns">Event patterns</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -49,7 +49,7 @@ public class UpdateEventStreamingShrinkRequest extends TeaModel {
     public String filterPattern;
 
     /**
-     * <p>The common JSON Configurations for event providers. This parameter is mutually exclusive with Source.</p>
+     * <p>The common JSON configurations for the event provider. This parameter is mutually exclusive with Source.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;key&quot;:&quot;value&quot;}</p>
@@ -64,13 +64,13 @@ public class UpdateEventStreamingShrinkRequest extends TeaModel {
     public String runOptionsShrink;
 
     /**
-     * <p>The event target. You must select one sink, and you can configure only one sink.</p>
+     * <p>The event target. You must select exactly one sink.</p>
      */
     @NameInMap("Sink")
     public String sinkShrink;
 
     /**
-     * <p>The event provider. You must select exactly one source type and configure its parameters.</p>
+     * <p>The event provider. You must specify one and only one source type.</p>
      */
     @NameInMap("Source")
     public String sourceShrink;

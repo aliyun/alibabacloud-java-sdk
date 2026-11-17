@@ -15,8 +15,8 @@ public class CreateApiDestinationShrinkRequest extends TeaModel {
     public String apiDestinationName;
 
     /**
-     * <p>The name of the connection configuration. The name must be 2 to 127 characters in length.</p>
-     * <p><notice>Before calling this operation, call the Connection operation to create a connection configuration. Set ConnectionName to the name of an existing connection.</p>
+     * <p>The name of the connection configuration. The name must be 2 to 127 characters in length.
+     * <notice>You must first call the Connection operation to create a connection configuration, and specify an existing connection name for ConnectionName.</notice></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class CreateApiDestinationShrinkRequest extends TeaModel {
      * <p>The description of the API destination. The description can be up to 255 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>Description of the connection configuration</p>
+     * <p>This is the description.</p>
      */
     @NameInMap("Description")
     public String description;

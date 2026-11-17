@@ -23,6 +23,12 @@ public class UpdateEventBusRequest extends TeaModel {
     @NameInMap("EventBusName")
     public String eventBusName;
 
+    /**
+     * <p>The list of tags.</p>
+     */
+    @NameInMap("Tags")
+    public java.util.List<UpdateEventBusRequestTags> tags;
+
     public static UpdateEventBusRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEventBusRequest self = new UpdateEventBusRequest();
         return TeaModel.build(map, self);
@@ -42,6 +48,56 @@ public class UpdateEventBusRequest extends TeaModel {
     }
     public String getEventBusName() {
         return this.eventBusName;
+    }
+
+    public UpdateEventBusRequest setTags(java.util.List<UpdateEventBusRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<UpdateEventBusRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class UpdateEventBusRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>department</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>R&amp;D</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static UpdateEventBusRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEventBusRequestTags self = new UpdateEventBusRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEventBusRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public UpdateEventBusRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

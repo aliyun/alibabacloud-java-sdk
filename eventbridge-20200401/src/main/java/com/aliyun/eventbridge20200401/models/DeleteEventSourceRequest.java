@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEventSourceRequest extends TeaModel {
     /**
-     * <p>The event bus to which the event source is attached.</p>
+     * <p>The bound event bus.</p>
      * 
      * <strong>example:</strong>
      * <p>eEXaMPLEBUSNameAaAaAa</p>

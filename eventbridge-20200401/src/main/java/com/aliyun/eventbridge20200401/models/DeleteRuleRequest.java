@@ -15,7 +15,7 @@ public class DeleteRuleRequest extends TeaModel {
     public String eventBusName;
 
     /**
-     * <p>The name of the event rule that you want to delete.</p>
+     * <p>The name of the rule to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

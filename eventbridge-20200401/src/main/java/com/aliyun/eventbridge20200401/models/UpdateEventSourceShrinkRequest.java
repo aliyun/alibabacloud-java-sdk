@@ -34,10 +34,10 @@ public class UpdateEventSourceShrinkRequest extends TeaModel {
     public String eventSourceName;
 
     /**
-     * <p>The external data source configuration.</p>
+     * <p>The external datasource config.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;ConsumePosition\&quot;:\&quot;end\&quot;,\&quot;LogStore\&quot;:\&quot;oss_log\&quot;,\&quot;Project\&quot;:\&quot;slsaudit-center-5795350335281001-cn-beijing\&quot;,\&quot;RoleName\&quot;:\&quot;sls-beijing-tf\&quot;}</p>
+     * <p>{&quot;IsBase64Decode&quot;:true,&quot;QueueName&quot;:&quot;queue-1&quot;}</p>
      */
     @NameInMap("ExternalSourceConfig")
     public String externalSourceConfigShrink;
@@ -61,49 +61,49 @@ public class UpdateEventSourceShrinkRequest extends TeaModel {
     public Boolean linkedExternalSource;
 
     /**
-     * <p>The SourceHttpEventParameters request parameter.</p>
+     * <p>The request parameter SourceHttpEventParameters.</p>
      */
     @NameInMap("SourceHttpEventParameters")
     public String sourceHttpEventParametersShrink;
 
     /**
-     * <p>The SourceKafkaParameters request parameter.</p>
+     * <p>The request parameter SourceKafkaParameters.</p>
      */
     @NameInMap("SourceKafkaParameters")
     public String sourceKafkaParametersShrink;
 
     /**
-     * <p>The parameters for a Simple Message Queue (formerly MNS) event source.</p>
+     * <p>The parameters for the Simple Message Queue (formerly MNS) event source.</p>
      */
     @NameInMap("SourceMNSParameters")
     public String sourceMNSParametersShrink;
 
     /**
-     * <p>The parameters for an OSS event source.</p>
+     * <p>The parameters for the OSS event source.</p>
      */
     @NameInMap("SourceOSSEventParameters")
     public String sourceOSSEventParametersShrink;
 
     /**
-     * <p>The SourceRabbitMQParameters request parameter.</p>
+     * <p>The request parameter SourceRabbitMQParameters.</p>
      */
     @NameInMap("SourceRabbitMQParameters")
     public String sourceRabbitMQParametersShrink;
 
     /**
-     * <p>The SourceRocketMQParameters request parameter.</p>
+     * <p>The request parameter SourceRocketMQParameters.</p>
      */
     @NameInMap("SourceRocketMQParameters")
     public String sourceRocketMQParametersShrink;
 
     /**
-     * <p>The parameters for a Simple Log Service event source.</p>
+     * <p>The parameters for the Simple Log Service event source.</p>
      */
     @NameInMap("SourceSLSParameters")
     public String sourceSLSParametersShrink;
 
     /**
-     * <p>The SourceScheduledEventParameters request parameter.</p>
+     * <p>The request parameter SourceScheduledEventParameters.</p>
      */
     @NameInMap("SourceScheduledEventParameters")
     public String sourceScheduledEventParametersShrink;

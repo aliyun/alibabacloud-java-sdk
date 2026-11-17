@@ -35,6 +35,9 @@ public class CreateEventSourceShrinkRequest extends TeaModel {
 
     /**
      * <p>The external data source configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;IsBase64Decode&quot;:true,&quot;QueueName&quot;:&quot;queue-1&quot;}</p>
      */
     @NameInMap("ExternalSourceConfig")
     public String externalSourceConfigShrink;
@@ -70,7 +73,7 @@ public class CreateEventSourceShrinkRequest extends TeaModel {
     public String sourceKafkaParametersShrink;
 
     /**
-     * <p>The parameters for a Simple Message Queue (formerly MNS) event source. If you select Simple Message Queue (formerly MNS) as the event source, the RegionId, IsBase64Decode, and QueueName parameters are required.</p>
+     * <p>The Simple Message Queue (formerly MNS) event source parameters. When you select Simple Message Queue (formerly MNS) as the event source, the RegionId, IsBase64Decode, and QueueName parameters are required.</p>
      */
     @NameInMap("SourceMNSParameters")
     public String sourceMNSParametersShrink;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
     /**
-     * <p>The return code of the API operation. A value of Success indicates that the request is successful. Other values indicate error codes. For more information, see Error codes.</p>
+     * <p>The response code. A value of Success indicates success. Other values indicate error codes. For more information, see Error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -30,7 +30,7 @@ public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
-     * <p>The response message. If the request is successful, the value is success.</p>
+     * <p>The response message. The value is success if the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
