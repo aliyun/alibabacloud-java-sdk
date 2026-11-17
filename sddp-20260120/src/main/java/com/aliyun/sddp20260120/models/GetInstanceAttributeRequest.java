@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceAttributeRequest extends TeaModel {
     /**
-     * <p>The database instance ID. You can obtain this value from Items[].InstanceId in the response of the ListDataMaskingInstances operation.</p>
+     * <p>The database instance ID. You can obtain this value from Items[].InstanceId returned by ListDataMaskingInstances.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze1abcdefgh****</p>
@@ -14,11 +14,7 @@ public class GetInstanceAttributeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language of the response description. Valid values:</p>
-     * <ul>
-     * <li>zh: Chinese.</li>
-     * <li>en: English.</li>
-     * </ul>
+     * <p>The language of the response description. Valid values: zh: Chinese; en: English.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -36,13 +32,7 @@ public class GetInstanceAttributeRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The cloud service type identifier. Valid values:</p>
-     * <ul>
-     * <li>5: RDS.</li>
-     * <li>8: POLARDB.</li>
-     * <li>27: PolarDBX2.
-     * If this parameter is specified together with ProductCode, the values must match.</li>
-     * </ul>
+     * <p>The cloud service type identifier. Valid values: 5: RDS; 8: POLARDB; 27: PolarDBX2. If this parameter is specified together with ProductCode, the values must match.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

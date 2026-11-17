@@ -14,13 +14,13 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The list of records returned by the current query.</p>
+     * <p>The list of records returned in this query.</p>
      */
     @NameInMap("Items")
     public java.util.List<ListDataMaskingInstancesResponseBodyItems> items;
 
     /**
-     * <p>The number of entries returned per page in the current query.</p>
+     * <p>The number of entries returned per page in this query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID, which can be used to locate the current API call.</p>
+     * <p>The request ID. You can use the ID to locate this API call.</p>
      * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
@@ -93,6 +93,15 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
 
     public static class ListDataMaskingInstancesResponseBodyItems extends TeaModel {
         /**
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
          * <p>The current column encryption algorithm of the instance.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +156,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The ID of the cloud service type. Valid values: 5: RDS. 8: POLARDB. 27: PolarDBX2.</p>
+         * <p>The ID of the cloud service type. Valid values: 5 (RDS), 8 (PolarDB), and 27 (PolarDB-X 2.0).</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -176,6 +185,14 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         public static ListDataMaskingInstancesResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             ListDataMaskingInstancesResponseBodyItems self = new ListDataMaskingInstancesResponseBodyItems();
             return TeaModel.build(map, self);
+        }
+
+        public ListDataMaskingInstancesResponseBodyItems setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public ListDataMaskingInstancesResponseBodyItems setEncryptionAlgorithm(String encryptionAlgorithm) {

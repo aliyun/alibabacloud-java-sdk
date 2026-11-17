@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTemplatesRequest extends TeaModel {
     /**
-     * <p>The current page number, starting from 1.</p>
+     * <p>The current page number. Pages start from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListTemplatesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of records returned per page. Keep other filter conditions consistent when querying the next page.</p>
+     * <p>The number of entries to return per page. Keep other filter conditions consistent when querying the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

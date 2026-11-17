@@ -8,8 +8,8 @@ public class ListTotalSensitiveInfoRequest extends TeaModel {
      * <p>The statistics scenario. Valid values:</p>
      * <ul>
      * <li>41: Overview.</li>
-     * <li>42: Query data catalog statistics by product.</li>
-     * <li>43: Query region and template summaries by product.</li>
+     * <li>42: Data catalog statistics by product.</li>
+     * <li>43: Region and template summaries by product.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class ListTotalSensitiveInfoRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</p>
+     * <p>The cloud service code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</p>
      * 
      * <strong>example:</strong>
      * <p>RDS</p>
@@ -41,7 +41,7 @@ public class ListTotalSensitiveInfoRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The codes of multiple cloud services, separated by commas (,). This parameter is used when CountType is set to 43 and ProductCode is not specified. The results are aggregated by region and template.</p>
+     * <p>The codes of multiple cloud services, separated by commas. This parameter is used when CountType is set to 43 and ProductCode is not specified. The results are aggregated by region and template.</p>
      * 
      * <strong>example:</strong>
      * <p>RDS,POLARDB,PolarDBX2</p>
@@ -50,7 +50,7 @@ public class ListTotalSensitiveInfoRequest extends TeaModel {
     public String productCodeList;
 
     /**
-     * <p>The ID of the data classification template. You can obtain the ID from the Items[].Id parameter in the response of the ListTemplates operation. The template must be consistent with the selected sensitivity level and detection model.</p>
+     * <p>The ID of the data classification and grading template. You can obtain the ID from the Items[].Id parameter in the response of the ListTemplates operation. The template must be consistent with the selected sensitivity level and detection model.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

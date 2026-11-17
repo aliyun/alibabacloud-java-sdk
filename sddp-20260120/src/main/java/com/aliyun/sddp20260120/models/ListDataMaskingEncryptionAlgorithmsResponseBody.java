@@ -11,7 +11,7 @@ public class ListDataMaskingEncryptionAlgorithmsResponseBody extends TeaModel {
     public java.util.List<ListDataMaskingEncryptionAlgorithmsResponseBodyAlgorithms> algorithms;
 
     /**
-     * <p>The request ID, which can be used to locate this API call.</p>
+     * <p>The request ID, which can be used to trace the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
@@ -42,7 +42,7 @@ public class ListDataMaskingEncryptionAlgorithmsResponseBody extends TeaModel {
 
     public static class ListDataMaskingEncryptionAlgorithmsResponseBodyAlgorithms extends TeaModel {
         /**
-         * <p>The business error code for the record or operation. This parameter can be empty when no error occurs. Evaluate this parameter together with ErrorMessage.</p>
+         * <p>The business error code for the record or operation. This parameter can be empty if no error occurs. Evaluate this parameter together with ErrorMessage.</p>
          * 
          * <strong>example:</strong>
          * <p>data_masking_not_running</p>

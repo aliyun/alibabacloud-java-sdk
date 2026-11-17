@@ -14,7 +14,7 @@ public class CreateDataMaskingRuleRequest extends TeaModel {
     public String encAlgorithm;
 
     /**
-     * <p>The identifier of the Key Management Service (KMS) key. You can obtain it from Items[].KeyId in the response of the ListKmsKeys operation. Provide this parameter when you use a KMS key. Do not pass this parameter in local key scenarios.</p>
+     * <p>The KMS key identifier. You can obtain it from Items[].KeyId in the response of ListKmsKeys. Provide this parameter when you use a KMS key. Do not pass this parameter in local key scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>12345678-1234-1234-1234-12345678****</p>
@@ -25,9 +25,9 @@ public class CreateDataMaskingRuleRequest extends TeaModel {
     /**
      * <p>The key mode. Valid values:</p>
      * <ul>
-     * <li>client_key: local key</li>
-     * <li>kms_key: KMS key
-     * When you use kms_key, you must specify EncryptionKeyId.</li>
+     * <li>client_key: local key.</li>
+     * <li>kms_key: KMS key.
+     * If you use kms_key, you must specify EncryptionKeyId.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class CreateDataMaskingRuleRequest extends TeaModel {
     public String encryptionKeyMode;
 
     /**
-     * <p>The type of the database engine. The value must be consistent with the EngineType of the target instance, such as MySQL or PostgreSQL.</p>
+     * <p>The database engine type. The value must be consistent with the EngineType of the target instance, such as MySQL or PostgreSQL.</p>
      * 
      * <strong>example:</strong>
      * <p>MySQL</p>
@@ -46,7 +46,7 @@ public class CreateDataMaskingRuleRequest extends TeaModel {
     public String engineType;
 
     /**
-     * <p>The expiration time of the plaintext permission. The value is a UNIX timestamp in milliseconds since 00:00:00 UTC on January 1, 1970. Specify this parameter only when ExpireTimeOperation is set to SET. The value must be later than the current time and no greater than 2145953410000. The server saves the value with second precision. Do not specify this parameter when ExpireTimeOperation is set to PRESERVE or CLEAR.</p>
+     * <p>The expiration time of the plaintext access permissions. The value is a UNIX timestamp in milliseconds since 00:00:00 UTC on January 1, 1970. Specify this parameter only when ExpireTimeOperation is set to SET. The value must be later than the current time and no greater than 2145953410000. The server saves the value with second precision. Do not pass this parameter when ExpireTimeOperation is set to PRESERVE or CLEAR.</p>
      * 
      * <strong>example:</strong>
      * <p>2145953410000</p>
@@ -70,7 +70,7 @@ public class CreateDataMaskingRuleRequest extends TeaModel {
     public String expireTimeOperation;
 
     /**
-     * <p>The instance identity. You can obtain it from Items[].InstanceId in the response of the ListDataMaskingInstances operation.</p>
+     * <p>The database instance identity. You can obtain it from Items[].InstanceId in the response of ListDataMaskingInstances.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze1abcdefgh****</p>
@@ -81,8 +81,8 @@ public class CreateDataMaskingRuleRequest extends TeaModel {
     /**
      * <p>The language of the response description. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class CreateDataMaskingRuleRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also passed, the two must correspond to each other.</p>
+     * <p>The cloud service code. Column encryption supports RDS, POLARDB, and PolarDBX2. If you pass ProductId at the same time, the two values must match.</p>
      * 
      * <strong>example:</strong>
      * <p>RDS</p>
@@ -101,12 +101,12 @@ public class CreateDataMaskingRuleRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The identifier of the cloud service type. Valid values:</p>
+     * <p>The cloud service type identifier. Valid values:</p>
      * <ul>
-     * <li>5: RDS</li>
-     * <li>8: POLARDB</li>
-     * <li>27: PolarDBX2
-     * When specified together with ProductCode, the values must correspond to each other.</li>
+     * <li>5: RDS.</li>
+     * <li>8: POLARDB.</li>
+     * <li>27: PolarDBX2.
+     * If you specify this parameter together with ProductCode, the values must match.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class CreateDataMaskingRuleRequest extends TeaModel {
     public java.util.List<CreateDataMaskingRuleRequestSubRuleList> subRuleList;
 
     /**
-     * <p>The list of database accounts to which the fullAccess plaintext permission is granted. The accounts must belong to the target instance.</p>
+     * <p>The list of database accounts to which the fullAccess plaintext access permissions are granted. The accounts must belong to the target instance.</p>
      */
     @NameInMap("UserList")
     public java.util.List<CreateDataMaskingRuleRequestUserList> userList;
@@ -247,7 +247,7 @@ public class CreateDataMaskingRuleRequest extends TeaModel {
 
     public static class CreateDataMaskingRuleRequestSubRuleList extends TeaModel {
         /**
-         * <p>The list of target column names. Multiple column names are separated by commas (,).</p>
+         * <p>The list of target column names. Separate multiple column names with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>phone,email</p>
@@ -306,10 +306,10 @@ public class CreateDataMaskingRuleRequest extends TeaModel {
 
     public static class CreateDataMaskingRuleRequestUserList extends TeaModel {
         /**
-         * <p>The identifier of the database account. You can obtain it from Items[].Id in the response of the ListDataAssetAccounts operation. Pass the value as a string.</p>
+         * <p>The name of the database account. Obtain the value from Items[].AccountName in the target instance record returned by ListDataAssetAccounts and pass it as a string as is. Do not pass Items[].Id. When you create a rule, the account belongs to the instance specified by the top-level InstanceId.</p>
          * 
          * <strong>example:</strong>
-         * <p>1001</p>
+         * <p>app_reader</p>
          */
         @NameInMap("AccountId")
         public String accountId;

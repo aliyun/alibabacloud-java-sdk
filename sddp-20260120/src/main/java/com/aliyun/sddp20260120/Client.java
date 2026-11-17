@@ -34,9 +34,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Checks the permissions, DPI engine, and running conditions of an instance before you create column encryption. You must check both ErrorCode and ErrorMessage in the response. Only ErrorCode=Success indicates that the check is passed. A successful request does not mean that the instance meets all encryption conditions. This check does not create a column encryption rule.
+     * <p>Checks the permissions, DPI engine, and running conditions of an instance before creating column encryption. You must check both ErrorCode and ErrorMessage in the response. Only an ErrorCode value of Success indicates that the check is passed. A successful request itself does not indicate that the instance meets all encryption conditions. This check does not create a column encryption rule.
      * Parameter examples are for format illustration only. When you invoke the operation, replace them with the region, resource identity, and configuration values obtained from the current account.
-     * Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
+     * Use the endpoint for service registration of the region where the target asset is located and apply the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
      * 
      * <b>summary</b> : 
      * <p>Checks the prerequisites for column encryption on an instance.</p>
@@ -83,9 +83,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Checks the permissions, DPI engine, and running conditions of an instance before you create column encryption. You must check both ErrorCode and ErrorMessage in the response. Only ErrorCode=Success indicates that the check is passed. A successful request does not mean that the instance meets all encryption conditions. This check does not create a column encryption rule.
+     * <p>Checks the permissions, DPI engine, and running conditions of an instance before creating column encryption. You must check both ErrorCode and ErrorMessage in the response. Only an ErrorCode value of Success indicates that the check is passed. A successful request itself does not indicate that the instance meets all encryption conditions. This check does not create a column encryption rule.
      * Parameter examples are for format illustration only. When you invoke the operation, replace them with the region, resource identity, and configuration values obtained from the current account.
-     * Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
+     * Use the endpoint for service registration of the region where the target asset is located and apply the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
      * 
      * <b>summary</b> : 
      * <p>Checks the prerequisites for column encryption on an instance.</p>
@@ -100,10 +100,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a column encryption rule for specified databases, tables, and columns under the same instance. Before calling this operation, check the instance status, supported algorithms, keys, target columns, and accounts. SubRuleList is a list of targets grouped by table, and Columns is a string of column names separated by commas. Accounts in UserList are granted the fullAccess plaintext permission. A successful request only indicates that the request is accepted. You must call the ListDataMaskingColumns and ListDataAssetAccounts operations to confirm the column status, account permissions, and validity period.
-     * The parameter examples are for illustrative purposes only. When calling this operation, replace them with the region, resource identifiers, and configuration values obtained by querying the current account.
-     * Use the endpoint of the region where the target asset is located, and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance identity must match those of the target asset.
-     * This operation only returns RequestId. Request acceptance does not mean that the business operation is complete. Read back the status as described in the operation description.</p>
+     * <p>Creates a column encryption rule for specified databases, tables, and columns under the same instance. Before you invoke this operation, check the instance status, supported algorithms, keys, target columns, and accounts. SubRuleList is a list of targets grouped by table, and Columns is a comma-separated character string of column names. Accounts in UserList are granted the fullAccess plaintext access permissions. A successful request only indicates that the request is accepted. You must invoke ListDataMaskingColumns and ListDataAssetAccounts to confirm the column status, account access permissions, and expiration time.
+     * The parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained by querying the current account when you invoke this operation.
+     * Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.
+     * This operation returns only RequestId. Request acceptance does not mean that the business operation is complete. You should read back the status as described in the operation description.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a column encryption rule.</p>
@@ -196,10 +196,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a column encryption rule for specified databases, tables, and columns under the same instance. Before calling this operation, check the instance status, supported algorithms, keys, target columns, and accounts. SubRuleList is a list of targets grouped by table, and Columns is a string of column names separated by commas. Accounts in UserList are granted the fullAccess plaintext permission. A successful request only indicates that the request is accepted. You must call the ListDataMaskingColumns and ListDataAssetAccounts operations to confirm the column status, account permissions, and validity period.
-     * The parameter examples are for illustrative purposes only. When calling this operation, replace them with the region, resource identifiers, and configuration values obtained by querying the current account.
-     * Use the endpoint of the region where the target asset is located, and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance identity must match those of the target asset.
-     * This operation only returns RequestId. Request acceptance does not mean that the business operation is complete. Read back the status as described in the operation description.</p>
+     * <p>Creates a column encryption rule for specified databases, tables, and columns under the same instance. Before you invoke this operation, check the instance status, supported algorithms, keys, target columns, and accounts. SubRuleList is a list of targets grouped by table, and Columns is a comma-separated character string of column names. Accounts in UserList are granted the fullAccess plaintext access permissions. A successful request only indicates that the request is accepted. You must invoke ListDataMaskingColumns and ListDataAssetAccounts to confirm the column status, account access permissions, and expiration time.
+     * The parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained by querying the current account when you invoke this operation.
+     * Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.
+     * This operation returns only RequestId. Request acceptance does not mean that the business operation is complete. You should read back the status as described in the operation description.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a column encryption rule.</p>
@@ -214,10 +214,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Disables encryption rules for specified columns in the same instance. SubRuleList precisely specifies databases, tables, and columns. If no rule is matched, no new operation object is created. The disable request is processed asynchronously. Use ListDataMaskingColumns to verify that the column is restored to NotEncrypted or that the target rule has been removed. DeleteFailed indicates that the disable operation failed.
-     * The parameter examples are for format illustration only. When you invoke the API, replace them with the region, resource identifier, and configuration values obtained for the current account.
-     * Use the endpoint of the region where the target asset is located, and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance identifier must match the target asset.
-     * This operation returns only RequestId. Request acceptance does not mean that the business operation is complete. You should check the status as described in the operation description.</p>
+     * <p>Disables encryption rules for specified columns in the same instance. SubRuleList precisely specifies databases, tables, and columns. If no rule is matched, no new operation object is created. The shutdown request is processed asynchronously. Use ListDataMaskingColumns to verify that the columns recover to NotEncrypted or that the target rules are removed. DeleteFailed indicates that the shutdown operation failed.
+     * Parameter examples are for format illustration only. When you invoke the API, replace them with the region, resource identity, and configuration values queried for the current account.
+     * Use the service registration endpoint of the region where the target asset is located, and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.
+     * This API operation returns only RequestId. Request acceptance does not mean that the business operation is completed. You should read back the status as described in the API documentation.</p>
      * 
      * <b>summary</b> : 
      * <p>Disables encryption for specified columns.</p>
@@ -278,10 +278,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Disables encryption rules for specified columns in the same instance. SubRuleList precisely specifies databases, tables, and columns. If no rule is matched, no new operation object is created. The disable request is processed asynchronously. Use ListDataMaskingColumns to verify that the column is restored to NotEncrypted or that the target rule has been removed. DeleteFailed indicates that the disable operation failed.
-     * The parameter examples are for format illustration only. When you invoke the API, replace them with the region, resource identifier, and configuration values obtained for the current account.
-     * Use the endpoint of the region where the target asset is located, and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance identifier must match the target asset.
-     * This operation returns only RequestId. Request acceptance does not mean that the business operation is complete. You should check the status as described in the operation description.</p>
+     * <p>Disables encryption rules for specified columns in the same instance. SubRuleList precisely specifies databases, tables, and columns. If no rule is matched, no new operation object is created. The shutdown request is processed asynchronously. Use ListDataMaskingColumns to verify that the columns recover to NotEncrypted or that the target rules are removed. DeleteFailed indicates that the shutdown operation failed.
+     * Parameter examples are for format illustration only. When you invoke the API, replace them with the region, resource identity, and configuration values queried for the current account.
+     * Use the service registration endpoint of the region where the target asset is located, and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.
+     * This API operation returns only RequestId. Request acceptance does not mean that the business operation is completed. You should read back the status as described in the API documentation.</p>
      * 
      * <b>summary</b> : 
      * <p>Disables encryption for specified columns.</p>
@@ -296,12 +296,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the permission statistics of database accounts in the current region by product scope. Plaintext accounts correspond to FullAccessCount. Restricted access and decryption-prohibited accounts are counted in RestrictedAccessCount and NoneAccessCount, respectively. The number of accounts without configured permissions can be obtained by subtracting the number of the preceding three types of accounts from TotalCount. This operation does not accept filter conditions such as instance, database, table, or column.
+     * <p>Queries the permission statistics of database accounts in the current region by product scope. Plaintext accounts correspond to FullAccessCount. Restricted access and decryption-prohibited accounts are counted in RestrictedAccessCount and NoneAccessCount, respectively. The number of accounts without configured permissions can be obtained by subtracting the number of the preceding three types of accounts from TotalCount. This operation does not accept filter conditions such as instances, databases, tables, or columns.
      * Parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke this operation.
-     * Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must be consistent with the target asset.</p>
+     * Use the service registration endpoint of the region where the target asset resides and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must be consistent with those of the target asset.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the statistics of account permissions for column encryption.</p>
+     * <p>Queries the statistics on account permissions for column encryption.</p>
      * 
      * @param request GetDataMaskingAccountCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -337,12 +337,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the permission statistics of database accounts in the current region by product scope. Plaintext accounts correspond to FullAccessCount. Restricted access and decryption-prohibited accounts are counted in RestrictedAccessCount and NoneAccessCount, respectively. The number of accounts without configured permissions can be obtained by subtracting the number of the preceding three types of accounts from TotalCount. This operation does not accept filter conditions such as instance, database, table, or column.
+     * <p>Queries the permission statistics of database accounts in the current region by product scope. Plaintext accounts correspond to FullAccessCount. Restricted access and decryption-prohibited accounts are counted in RestrictedAccessCount and NoneAccessCount, respectively. The number of accounts without configured permissions can be obtained by subtracting the number of the preceding three types of accounts from TotalCount. This operation does not accept filter conditions such as instances, databases, tables, or columns.
      * Parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke this operation.
-     * Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must be consistent with the target asset.</p>
+     * Use the service registration endpoint of the region where the target asset resides and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must be consistent with those of the target asset.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the statistics of account permissions for column encryption.</p>
+     * <p>Queries the statistics on account permissions for column encryption.</p>
      * 
      * @param request GetDataMaskingAccountCountRequest
      * @return GetDataMaskingAccountCountResponse
@@ -354,10 +354,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the total number of columns, the number of sensitive columns, the number of encrypted columns, and the number of columns that failed to be encrypted by region, product, and categorization and classification template. This operation returns data for statistics cards and does not filter by instance, database name, table name, column name, or model in the column list.
-     * To be compatible with historical detection results, if the specified template has no first-screen results and is not filtered by sensitivity level or detection model, the results may backoff to the built-in general detection results. If strict template attribution is required, use the level or model conditions within the template for verification.
-     * The parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke the operation.
-     * Use the service registration endpoint of the region where the target asset is located and apply the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
+     * <p>Queries the total number of columns, the number of sensitive columns, the number of encrypted columns, and the number of columns that failed to be encrypted by region, product, and categorization and classification template. This operation returns data for statistics cards and does not follow the filtering by instance, database name, table name, column name, or model in the column list.
+     * To be compatible with historical detection results, if the specified template yields no initial results and is not filtered by sensitivity level or detection model, a backoff to the built-in general detection results may occur. To strictly verify template attribution, use the sensitivity level or model conditions within the template for verification.
+     * Parameter examples are for format illustration only. When you invoke this operation, replace them with the region, resource identity, and configuration values obtained from the current account.
+     * Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match those of the target asset.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the statistics on the number of encrypted columns.</p>
@@ -400,10 +400,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the total number of columns, the number of sensitive columns, the number of encrypted columns, and the number of columns that failed to be encrypted by region, product, and categorization and classification template. This operation returns data for statistics cards and does not filter by instance, database name, table name, column name, or model in the column list.
-     * To be compatible with historical detection results, if the specified template has no first-screen results and is not filtered by sensitivity level or detection model, the results may backoff to the built-in general detection results. If strict template attribution is required, use the level or model conditions within the template for verification.
-     * The parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke the operation.
-     * Use the service registration endpoint of the region where the target asset is located and apply the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
+     * <p>Queries the total number of columns, the number of sensitive columns, the number of encrypted columns, and the number of columns that failed to be encrypted by region, product, and categorization and classification template. This operation returns data for statistics cards and does not follow the filtering by instance, database name, table name, column name, or model in the column list.
+     * To be compatible with historical detection results, if the specified template yields no initial results and is not filtered by sensitivity level or detection model, a backoff to the built-in general detection results may occur. To strictly verify template attribution, use the sensitivity level or model conditions within the template for verification.
+     * Parameter examples are for format illustration only. When you invoke this operation, replace them with the region, resource identity, and configuration values obtained from the current account.
+     * Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match those of the target asset.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the statistics on the number of encrypted columns.</p>
@@ -420,7 +420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Queries the instance engine, current kernel version, maintenance window, and KMS encryption support. After a kernel upgrade, you can read back CurrentKernelVersion to verify the target version. If ErrorCode or ErrorMessage is present, handle the property query exception first.
      * Parameter examples are for format illustration only. When you call the API, replace them with the region, resource ID, and configuration values obtained from the current account.
-     * Use the endpoint of the region where the target asset is located, and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance ID must match the target asset.</p>
+     * Use the endpoint of the region where the target asset is located and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance ID must match the target asset.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the engine and kernel attributes of an instance.</p>
@@ -469,7 +469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Queries the instance engine, current kernel version, maintenance window, and KMS encryption support. After a kernel upgrade, you can read back CurrentKernelVersion to verify the target version. If ErrorCode or ErrorMessage is present, handle the property query exception first.
      * Parameter examples are for format illustration only. When you call the API, replace them with the region, resource ID, and configuration values obtained from the current account.
-     * Use the endpoint of the region where the target asset is located, and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance ID must match the target asset.</p>
+     * Use the endpoint of the region where the target asset is located and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance ID must match the target asset.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the engine and kernel attributes of an instance.</p>
@@ -484,13 +484,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the columns and detection results in a data table by using paging. If both DataAssetSourceId and InstanceName are specified, DataAssetSourceId takes precedence. In PostgreSQL and Oracle scenarios, you can specify TableName in the schema.table format and pass the corresponding EngineType. To query the execution status of column encryption, call ListDataMaskingColumns.
+     * <p>Performs a paging query for the columns in a data table and the detection results. If both DataAssetSourceId and InstanceName are specified, DataAssetSourceId takes precedence. In PostgreSQL and Oracle scenarios, you can use the schema.table format for TableName and pass the corresponding EngineType. To query the execution status of column encryption, call ListDataMaskingColumns.
      * To be compatible with historical detection results, if the specified template has no first-screen results and is not filtered by sensitivity level or detection model, the results may fall back to the built-in general detection results. If strict template attribution is required, use the level or model conditions within the template for verification.
-     * The parameter examples are for format illustration only. When you call the API, replace them with the region, resource identifier, and configuration values obtained from the current account.
-     * Use the endpoint of the region where the target asset is located, and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance identity must match the target asset.</p>
+     * The parameter examples are for format illustration only. Replace them with the region, resource ID, and configuration values obtained from the current account when you invoke the API.
+     * Use the endpoint of the region where the target asset is located, and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance ID must match the target asset.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the columns of a data table and the detection results.</p>
+     * <p>Queries data table columns and detection results.</p>
      * 
      * @param request ListColumnsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -574,13 +574,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the columns and detection results in a data table by using paging. If both DataAssetSourceId and InstanceName are specified, DataAssetSourceId takes precedence. In PostgreSQL and Oracle scenarios, you can specify TableName in the schema.table format and pass the corresponding EngineType. To query the execution status of column encryption, call ListDataMaskingColumns.
+     * <p>Performs a paging query for the columns in a data table and the detection results. If both DataAssetSourceId and InstanceName are specified, DataAssetSourceId takes precedence. In PostgreSQL and Oracle scenarios, you can use the schema.table format for TableName and pass the corresponding EngineType. To query the execution status of column encryption, call ListDataMaskingColumns.
      * To be compatible with historical detection results, if the specified template has no first-screen results and is not filtered by sensitivity level or detection model, the results may fall back to the built-in general detection results. If strict template attribution is required, use the level or model conditions within the template for verification.
-     * The parameter examples are for format illustration only. When you call the API, replace them with the region, resource identifier, and configuration values obtained from the current account.
-     * Use the endpoint of the region where the target asset is located, and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance identity must match the target asset.</p>
+     * The parameter examples are for format illustration only. Replace them with the region, resource ID, and configuration values obtained from the current account when you invoke the API.
+     * Use the endpoint of the region where the target asset is located, and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance ID must match the target asset.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the columns of a data table and the detection results.</p>
+     * <p>Queries data table columns and detection results.</p>
      * 
      * @param request ListColumnsRequest
      * @return ListColumnsResponse
@@ -592,9 +592,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Uses paging to query database accounts and their column encryption access permissions. This operation is used to select plaintext accounts when creating rules, and to verify AuthRole, EncryptionKeyMode, and ExpireTime before and after modifying account permissions. AccountName filters accounts by exact account name, and the account ID is obtained from Items[].Id.
-     * The parameter examples are for format illustration only. Replace them with the region, resource IDs, and configuration values obtained from the current account when you call the operation.
-     * Use the endpoint of the region where the target asset is located, and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance ID must match the target asset.</p>
+     * <p>Performs a paged query. This paging operation retrieves database accounts and their column encryption access permissions. This operation is used to select plaintext accounts when creating rules, and to verify AuthRole, EncryptionKeyMode, and ExpireTime before and after modifying account access permissions. AccountName filters by the exact database account name. When creating a column encryption rule or modifying account access permissions, set UserList[].AccountId to Items[].AccountName. Items[].Id is only the ID of the Data Security Center (DSC) data asset account record and is not used for account access permissions configuration.
+     * Parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke the API.
+     * Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries database accounts and column encryption permissions.</p>
@@ -665,9 +665,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Uses paging to query database accounts and their column encryption access permissions. This operation is used to select plaintext accounts when creating rules, and to verify AuthRole, EncryptionKeyMode, and ExpireTime before and after modifying account permissions. AccountName filters accounts by exact account name, and the account ID is obtained from Items[].Id.
-     * The parameter examples are for format illustration only. Replace them with the region, resource IDs, and configuration values obtained from the current account when you call the operation.
-     * Use the endpoint of the region where the target asset is located, and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance ID must match the target asset.</p>
+     * <p>Performs a paged query. This paging operation retrieves database accounts and their column encryption access permissions. This operation is used to select plaintext accounts when creating rules, and to verify AuthRole, EncryptionKeyMode, and ExpireTime before and after modifying account access permissions. AccountName filters by the exact database account name. When creating a column encryption rule or modifying account access permissions, set UserList[].AccountId to Items[].AccountName. Items[].Id is only the ID of the Data Security Center (DSC) data asset account record and is not used for account access permissions configuration.
+     * Parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke the API.
+     * Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries database accounts and column encryption permissions.</p>
@@ -682,11 +682,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query on columns and their encryption status, sensitivity levels, and detection models. Supports paging and combined filtering by template, product, instance, database, table, column name, model, and sensitivity level. Use this operation to read back data after the creation or shutdown of a rule. Processing and Deleting are intermediate states, while Failed and DeleteFailed indicate operation failures. The capitalization of the RiskLeveLId parameter name must be preserved exactly as is.
-     * When querying by product, use a single ProductId or the corresponding ProductCode. The current column query cannot rely on ProductIds to filter multiple products. Query each product separately.
+     * <p>Performs a paged query on columns and their encryption status, sensitivity levels, and detection models. Supports paging and combined filtering by template, product, instance, database, table, column name, model, and sensitivity level. Use this operation to read back data after the creation or shutdown of a rule. Processing and Deleting are intermediate states, while Failed and DeleteFailed indicate operation failures. The capitalization of the RiskLeveLId parameter name must be preserved exactly as written.
+     * When querying by product, use a single ProductId or the corresponding ProductCode. The current column query cannot rely on ProductIds for multi-product filtering. Query each product separately for multiple products.
      * To ensure compatibility with historical detection results, if the specified template yields no initial results and is not filtered by sensitivity level or detection model, the results may fall back to the built-in general detection results. To strictly verify template attribution, use the level or model conditions within the template simultaneously.
      * Parameter examples are for format illustration only. Replace them with the region, resource identifiers, and configuration values obtained from the current account when making a call.
-     * Use the service registration endpoint of the region where the target asset is located, and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
+     * Use the service registration endpoint of the region where the target asset is located and specify the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the column encryption status and detection results.</p>
@@ -781,11 +781,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query on columns and their encryption status, sensitivity levels, and detection models. Supports paging and combined filtering by template, product, instance, database, table, column name, model, and sensitivity level. Use this operation to read back data after the creation or shutdown of a rule. Processing and Deleting are intermediate states, while Failed and DeleteFailed indicate operation failures. The capitalization of the RiskLeveLId parameter name must be preserved exactly as is.
-     * When querying by product, use a single ProductId or the corresponding ProductCode. The current column query cannot rely on ProductIds to filter multiple products. Query each product separately.
+     * <p>Performs a paged query on columns and their encryption status, sensitivity levels, and detection models. Supports paging and combined filtering by template, product, instance, database, table, column name, model, and sensitivity level. Use this operation to read back data after the creation or shutdown of a rule. Processing and Deleting are intermediate states, while Failed and DeleteFailed indicate operation failures. The capitalization of the RiskLeveLId parameter name must be preserved exactly as written.
+     * When querying by product, use a single ProductId or the corresponding ProductCode. The current column query cannot rely on ProductIds for multi-product filtering. Query each product separately for multiple products.
      * To ensure compatibility with historical detection results, if the specified template yields no initial results and is not filtered by sensitivity level or detection model, the results may fall back to the built-in general detection results. To strictly verify template attribution, use the level or model conditions within the template simultaneously.
      * Parameter examples are for format illustration only. Replace them with the region, resource identifiers, and configuration values obtained from the current account when making a call.
-     * Use the service registration endpoint of the region where the target asset is located, and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
+     * Use the service registration endpoint of the region where the target asset is located and specify the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the column encryption status and detection results.</p>
@@ -801,8 +801,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Queries the available column encryption algorithms for a specified instance and the reasons for any restrictions on each algorithm. Before selecting an algorithm, check the ErrorCode and ErrorMessage of the corresponding item. Do not assume that all instances support the same set of algorithms.
-     * Parameter examples are for format illustration only. When you invoke the API, replace them with the region, resource IDs, and configuration values obtained from the current account.
-     * Use the endpoint of the region where the target asset is located and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance ID must match the target asset.</p>
+     * Parameter examples are for format illustration only. When you invoke the API, replace them with the region, resource identities, and configuration values obtained from the current account.
+     * Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the column encryption algorithms supported by an instance.</p>
@@ -850,8 +850,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Queries the available column encryption algorithms for a specified instance and the reasons for any restrictions on each algorithm. Before selecting an algorithm, check the ErrorCode and ErrorMessage of the corresponding item. Do not assume that all instances support the same set of algorithms.
-     * Parameter examples are for format illustration only. When you invoke the API, replace them with the region, resource IDs, and configuration values obtained from the current account.
-     * Use the endpoint of the region where the target asset is located and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance ID must match the target asset.</p>
+     * Parameter examples are for format illustration only. When you invoke the API, replace them with the region, resource identities, and configuration values obtained from the current account.
+     * Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the column encryption algorithms supported by an instance.</p>
@@ -866,13 +866,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query of column encryption instances, and supports filtering by conditions such as product, detect template, database, table, and column. The scope of instance-level status filtering differs from that of column-level status filtering. To find all unencrypted sensitive columns, first enumerate the instances of the target product, and then use ListDataMaskingColumns to filter by NotEncrypted to avoid missing partially encrypted instances.
-     * When you need to filter precisely by EngineType, read all candidates by paging and then filter by the returned values. This parameter is not applied in some query paths. The matching semantics of InstanceId vary with query combinations. For precise positioning, verify the complete instance identity returned.
-     * Parameter examples are for format illustration only. When you invoke the operation, replace them with the region, resource identity, and configuration values obtained from the current account.
+     * <p>Performs a paged query for instances with column encryption, and supports conditions such as product, detect template, and database, table, and column. The scope of instance-level status filtering differs from column-level status filtering. To find all unencrypted sensitive columns, first enumerate the instances of the target product, and then use ListDataMaskingColumns to filter by NotEncrypted to avoid missing instances that are partially encrypted.
+     * When exact filtering by EngineType is required, you should read all candidate pages completely through paging and then filter by the returned values. Some query paths do not apply this parameter. The matching semantics of InstanceId vary with query combinations. For precise positioning, verify the complete instance identity returned.
+     * The parameter examples are for format illustration only. When you invoke the API, replace them with the region, resource identities, and configuration values obtained from the current account.
      * Use the service registration endpoint of the region where the target asset is located, and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries column-encrypted instances.</p>
+     * <p>Queries instances with column encryption.</p>
      * 
      * @param request ListDataMaskingInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -968,13 +968,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query of column encryption instances, and supports filtering by conditions such as product, detect template, database, table, and column. The scope of instance-level status filtering differs from that of column-level status filtering. To find all unencrypted sensitive columns, first enumerate the instances of the target product, and then use ListDataMaskingColumns to filter by NotEncrypted to avoid missing partially encrypted instances.
-     * When you need to filter precisely by EngineType, read all candidates by paging and then filter by the returned values. This parameter is not applied in some query paths. The matching semantics of InstanceId vary with query combinations. For precise positioning, verify the complete instance identity returned.
-     * Parameter examples are for format illustration only. When you invoke the operation, replace them with the region, resource identity, and configuration values obtained from the current account.
+     * <p>Performs a paged query for instances with column encryption, and supports conditions such as product, detect template, and database, table, and column. The scope of instance-level status filtering differs from column-level status filtering. To find all unencrypted sensitive columns, first enumerate the instances of the target product, and then use ListDataMaskingColumns to filter by NotEncrypted to avoid missing instances that are partially encrypted.
+     * When exact filtering by EngineType is required, you should read all candidate pages completely through paging and then filter by the returned values. Some query paths do not apply this parameter. The matching semantics of InstanceId vary with query combinations. For precise positioning, verify the complete instance identity returned.
+     * The parameter examples are for format illustration only. When you invoke the API, replace them with the region, resource identities, and configuration values obtained from the current account.
      * Use the service registration endpoint of the region where the target asset is located, and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries column-encrypted instances.</p>
+     * <p>Queries instances with column encryption.</p>
      * 
      * @param request ListDataMaskingInstancesRequest
      * @return ListDataMaskingInstancesResponse
@@ -986,9 +986,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query on managed data sources by using paging. In relational database scenarios, locate the instance by using ProductCode and InstanceId, and select a database from Items[].DbName. This operation queries the database inventory and does not filter by data categorization and classification templates.
-     * Parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke this operation.
-     * Use the service registration endpoint of the region where the target asset resides and configure the settings of the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
+     * <p>Performs a paged query for paging through managed data sources. In relational database scenarios, locate the instance by using ProductCode and InstanceId, and select a database from Items[].DbName. This operation queries the database inventory and does not filter by data categorization and classification templates.
+     * The parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke the operation.
+     * Use the endpoint for service registration in the region where the target asset is located, and configure the RegionId common parameter in Settings, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the databases of an instance.</p>
@@ -1083,9 +1083,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query on managed data sources by using paging. In relational database scenarios, locate the instance by using ProductCode and InstanceId, and select a database from Items[].DbName. This operation queries the database inventory and does not filter by data categorization and classification templates.
-     * Parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke this operation.
-     * Use the service registration endpoint of the region where the target asset resides and configure the settings of the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
+     * <p>Performs a paged query for paging through managed data sources. In relational database scenarios, locate the instance by using ProductCode and InstanceId, and select a database from Items[].DbName. This operation queries the database inventory and does not filter by data categorization and classification templates.
+     * The parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke the operation.
+     * Use the endpoint for service registration in the region where the target asset is located, and configure the RegionId common parameter in Settings, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the databases of an instance.</p>
@@ -1100,11 +1100,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the valid recognition models in a specified template and returns RuleList. If TemplateId is not specified, the currently enabled template is used. The model ID is obtained from RuleList[].Id and can be used to filter TemplateRuleIds.
-     * Parameter examples are provided only to illustrate the format. When you call the API, replace them with the region, resource IDs, and configuration values queried from the current account.</p>
+     * <p>Queries valid detection models in a specified template and returns a RuleList. If TemplateId is not specified, the currently enabled template is used. The model ID is obtained from RuleList[].Id and can be used to filter TemplateRuleIds. Parameter examples are for format illustration only. When you call this operation, replace them with the region, resource IDs, and configuration values of the current account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the recognition models in a template.</p>
+     * <p>Queries the detection models in a template.</p>
      * 
      * @param request ListIdentifyModelsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1148,11 +1147,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the valid recognition models in a specified template and returns RuleList. If TemplateId is not specified, the currently enabled template is used. The model ID is obtained from RuleList[].Id and can be used to filter TemplateRuleIds.
-     * Parameter examples are provided only to illustrate the format. When you call the API, replace them with the region, resource IDs, and configuration values queried from the current account.</p>
+     * <p>Queries valid detection models in a specified template and returns a RuleList. If TemplateId is not specified, the currently enabled template is used. The model ID is obtained from RuleList[].Id and can be used to filter TemplateRuleIds. Parameter examples are for format illustration only. When you call this operation, replace them with the region, resource IDs, and configuration values of the current account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the recognition models in a template.</p>
+     * <p>Queries the detection models in a template.</p>
      * 
      * @param request ListIdentifyModelsRequest
      * @return ListIdentifyModelsResponse
@@ -1164,8 +1162,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the KMS key identities and aliases available for the column encryption configuration of a specified instance. Before using a KMS key, verify the key status and usage conditions by calling the DescribeKey operation of KMS. This operation does not return the plaintext of the key.
-     * The parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke the operation.
+     * <p>Queries the identities and aliases of available KMS keys for the column encryption configuration of a specified instance. Before using a KMS key, verify the key status and usage conditions by invoking the DescribeKey operation of KMS. This operation does not return the plaintext of the key.
+     * The parameter examples are for format illustration only. When you invoke this operation, replace them with the region, resource identities, and configuration values obtained from the current account.
      * Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
      * 
      * <b>summary</b> : 
@@ -1213,8 +1211,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the KMS key identities and aliases available for the column encryption configuration of a specified instance. Before using a KMS key, verify the key status and usage conditions by calling the DescribeKey operation of KMS. This operation does not return the plaintext of the key.
-     * The parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke the operation.
+     * <p>Queries the identities and aliases of available KMS keys for the column encryption configuration of a specified instance. Before using a KMS key, verify the key status and usage conditions by invoking the DescribeKey operation of KMS. This operation does not return the plaintext of the key.
+     * The parameter examples are for format illustration only. When you invoke this operation, replace them with the region, resource identities, and configuration values obtained from the current account.
      * Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
      * 
      * <b>summary</b> : 
@@ -1230,12 +1228,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the available kernel versions for an instance. For an upgrade, select the target version from KernelVersions[].KernelVersion. Do not manually construct the version number.
-     * Parameter examples are for format illustration only. When you call the API, replace them with the region, resource ID, and configuration values obtained from the current account.
+     * <p>Queries the available kernel versions for an instance. To upgrade, select the target version from KernelVersions[].KernelVersion. Do not manually construct the version number.
+     * The parameter examples are for format illustration only. When calling this operation, replace them with the region, resource ID, and configuration values obtained for the current account.
      * Use the endpoint of the region where the target asset is located, and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance ID must match the target asset.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the upgradable kernel versions.</p>
+     * <p>Queries the kernel versions available for upgrade.</p>
      * 
      * @param request ListMiniEngineVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1279,12 +1277,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the available kernel versions for an instance. For an upgrade, select the target version from KernelVersions[].KernelVersion. Do not manually construct the version number.
-     * Parameter examples are for format illustration only. When you call the API, replace them with the region, resource ID, and configuration values obtained from the current account.
+     * <p>Queries the available kernel versions for an instance. To upgrade, select the target version from KernelVersions[].KernelVersion. Do not manually construct the version number.
+     * The parameter examples are for format illustration only. When calling this operation, replace them with the region, resource ID, and configuration values obtained for the current account.
      * Use the endpoint of the region where the target asset is located, and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance ID must match the target asset.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the upgradable kernel versions.</p>
+     * <p>Queries the kernel versions available for upgrade.</p>
      * 
      * @param request ListMiniEngineVersionsRequest
      * @return ListMiniEngineVersionsResponse
@@ -1296,8 +1294,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of regions where the assets owned by the current account are located. You can use this list to select the RegionId for subsequent region-specific API operations. You can filter the regions based on whether auditing or detection is enabled. The returned region list is not the same as the list of all regions supported by Alibaba Cloud services.
-     * The parameter examples are for format illustration only. When you call this operation, replace them with the regions, resource identifiers, and configuration values queried from the current account.</p>
+     * <p>Queries the list of regions where the assets owned by the current account are located, which is used to select the RegionId for subsequent region-specific API operations. You can filter the regions based on whether auditing and detection are enabled. The returned region list is not equivalent to the list of all regions supported by cloud services.
+     * The parameter examples are for illustrative purposes only. When you call this operation, replace them with the regions, resource IDs, and configuration values obtained by querying the current account.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the regions where assets are located.</p>
@@ -1344,8 +1342,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of regions where the assets owned by the current account are located. You can use this list to select the RegionId for subsequent region-specific API operations. You can filter the regions based on whether auditing or detection is enabled. The returned region list is not the same as the list of all regions supported by Alibaba Cloud services.
-     * The parameter examples are for format illustration only. When you call this operation, replace them with the regions, resource identifiers, and configuration values queried from the current account.</p>
+     * <p>Queries the list of regions where the assets owned by the current account are located, which is used to select the RegionId for subsequent region-specific API operations. You can filter the regions based on whether auditing and detection are enabled. The returned region list is not equivalent to the list of all regions supported by cloud services.
+     * The parameter examples are for illustrative purposes only. When you call this operation, replace them with the regions, resource IDs, and configuration values obtained by querying the current account.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the regions where assets are located.</p>
@@ -1360,8 +1358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the sensitivity levels in a data classification template. Pass the level ID in subsequent queries. Do not use level names such as S1 or S2 directly as RiskLevelId.
-     * The parameter examples are for format illustration only. When calling the API, replace them with the region, resource identifiers, and configuration values obtained for the current account.</p>
+     * <p>Queries the sensitivity levels in a data classification template. Pass the level ID in subsequent queries. Do not use level names such as S1 or S2 directly as the RiskLevelId. Parameter examples are for format illustration only. Replace them with the region, resource identifiers, and configuration values obtained from the current account when making the call.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the sensitivity levels of a template.</p>
@@ -1404,8 +1401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the sensitivity levels in a data classification template. Pass the level ID in subsequent queries. Do not use level names such as S1 or S2 directly as RiskLevelId.
-     * The parameter examples are for format illustration only. When calling the API, replace them with the region, resource identifiers, and configuration values obtained for the current account.</p>
+     * <p>Queries the sensitivity levels in a data classification template. Pass the level ID in subsequent queries. Do not use level names such as S1 or S2 directly as the RiskLevelId. Parameter examples are for format illustration only. Replace them with the region, resource identifiers, and configuration values obtained from the current account when making the call.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the sensitivity levels of a template.</p>
@@ -1420,10 +1416,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries database tables and detection results in a database by using paging. For relational databases, set DataAssetSourceId to the instance identity and DataSourceName to the database name. Table names in PostgreSQL and Oracle may contain a schema prefix. Pass the table name as is for subsequent column queries.
-     * To be compatible with historical detection results, if the specified template yields no initial results and no filtering is applied by sensitivity level or detection model, the results may fall back to the built-in general detection results. To strictly verify template attribution, use the level or model conditions within the template at the same time.
-     * The parameter examples are provided only to illustrate the format. When you invoke the API, replace them with the region, resource identity, and configuration values obtained from the current account.
-     * Use the endpoint of the region where the target asset resides, and set the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
+     * <p>Queries database tables and detection results in a database by using paging. For relational databases, pass DataAssetSourceId=instance identity and DataSourceName=database name. Table names in PostgreSQL and Oracle may contain a schema prefix. Pass the table name as is for subsequent column queries.
+     * To be compatible with historical detection results, if the specified template has no initial results and is not filtered by sensitivity level or detection model, the results may fall back to the built-in general detection results. To strictly verify the template attribution, use the level or model conditions within the template for verification.
+     * The parameter examples are for format illustration only. Replace them with the region, resource identities, and configuration values obtained from the current account when you invoke the API.
+     * Use the endpoint of the region where the target asset is located, and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance identity must match the target asset.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries database tables.</p>
@@ -1502,10 +1498,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries database tables and detection results in a database by using paging. For relational databases, set DataAssetSourceId to the instance identity and DataSourceName to the database name. Table names in PostgreSQL and Oracle may contain a schema prefix. Pass the table name as is for subsequent column queries.
-     * To be compatible with historical detection results, if the specified template yields no initial results and no filtering is applied by sensitivity level or detection model, the results may fall back to the built-in general detection results. To strictly verify template attribution, use the level or model conditions within the template at the same time.
-     * The parameter examples are provided only to illustrate the format. When you invoke the API, replace them with the region, resource identity, and configuration values obtained from the current account.
-     * Use the endpoint of the region where the target asset resides, and set the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.</p>
+     * <p>Queries database tables and detection results in a database by using paging. For relational databases, pass DataAssetSourceId=instance identity and DataSourceName=database name. Table names in PostgreSQL and Oracle may contain a schema prefix. Pass the table name as is for subsequent column queries.
+     * To be compatible with historical detection results, if the specified template has no initial results and is not filtered by sensitivity level or detection model, the results may fall back to the built-in general detection results. To strictly verify the template attribution, use the level or model conditions within the template for verification.
+     * The parameter examples are for format illustration only. Replace them with the region, resource identities, and configuration values obtained from the current account when you invoke the API.
+     * Use the endpoint of the region where the target asset is located, and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance identity must match the target asset.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries database tables.</p>
@@ -1520,7 +1516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the classification and grading templates available for the current account. Use Items[].Id as the TemplateId for subsequent API operations. The detection model and sensitivity level must belong to the same template. Parameter examples are for format illustration only. Replace them with the region, resource identifiers, and configuration values obtained from the current account when making the call.</p>
+     * <p>Queries the classification and grading templates available for the current account. Use Items[].Id as the TemplateId for subsequent API operations. The detection model and sensitivity level must be from the same template. Parameter examples are for format illustration only. Replace them with the region, resource identifiers, and configuration values obtained from the current account when making the call.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries classification and grading templates.</p>
@@ -1571,7 +1567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the classification and grading templates available for the current account. Use Items[].Id as the TemplateId for subsequent API operations. The detection model and sensitivity level must belong to the same template. Parameter examples are for format illustration only. Replace them with the region, resource identifiers, and configuration values obtained from the current account when making the call.</p>
+     * <p>Queries the classification and grading templates available for the current account. Use Items[].Id as the TemplateId for subsequent API operations. The detection model and sensitivity level must be from the same template. Parameter examples are for format illustration only. Replace them with the region, resource identifiers, and configuration values obtained from the current account when making the call.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries classification and grading templates.</p>
@@ -1586,7 +1582,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the statistics of sensitive data in the overview, data catalog, or aggregated by region. If CountType is set to 41, overview statistics are returned. If CountType is set to 42, data catalog statistics for a specified product are returned. If CountType is set to 43, data aggregated by region and template is returned. The column encryption console uses CountType=43 and ProductCodeList to obtain region and template candidates. The statistics may be derived from generated summary results and do not indicate that a recently initiated synchronization or encryption operation has been completed.
+     * <p>Queries sensitive data statistics summarized by overview, data catalog, or region. If CountType is set to 41, overview statistics are returned. If CountType is set to 42, data catalog statistics for a specified product are returned. If CountType is set to 43, data aggregated by region and template is returned. The column encryption console uses CountType=43 and ProductCodeList to obtain region and template candidates. The statistics may be derived from generated summary results and do not indicate that a recently initiated synchronization or encryption operation has been completed.
      * Parameter examples are for format illustration only. When calling the API, replace them with the regions, resource identifiers, and configuration values obtained from the current account.</p>
      * 
      * <b>summary</b> : 
@@ -1638,7 +1634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the statistics of sensitive data in the overview, data catalog, or aggregated by region. If CountType is set to 41, overview statistics are returned. If CountType is set to 42, data catalog statistics for a specified product are returned. If CountType is set to 43, data aggregated by region and template is returned. The column encryption console uses CountType=43 and ProductCodeList to obtain region and template candidates. The statistics may be derived from generated summary results and do not indicate that a recently initiated synchronization or encryption operation has been completed.
+     * <p>Queries sensitive data statistics summarized by overview, data catalog, or region. If CountType is set to 41, overview statistics are returned. If CountType is set to 42, data catalog statistics for a specified product are returned. If CountType is set to 43, data aggregated by region and template is returned. The column encryption console uses CountType=43 and ProductCodeList to obtain region and template candidates. The statistics may be derived from generated summary results and do not indicate that a recently initiated synchronization or encryption operation has been completed.
      * Parameter examples are for format illustration only. When calling the API, replace them with the regions, resource identifiers, and configuration values obtained from the current account.</p>
      * 
      * <b>summary</b> : 
@@ -1654,10 +1650,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Triggers asset synchronization for a specified product in the current region. The scope applies to the product and region, and is not limited to a specific instance. A successful request only indicates that the request is accepted. You can then verify asset changes by checking the lists of instances, databases, tables, and columns. This operation does not return a public node identifier for polling.
-     * Parameter examples are for format illustration only. When you invoke this operation, replace them with the region, resource identifiers, and configuration values obtained from the current account.
-     * Use the endpoint of the region where the target assets reside, and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance identity must match the target assets.
-     * This operation returns only RequestId. Request acceptance does not mean that the business operation is complete. You should check the status as described in the operation description.</p>
+     * <p>Triggers asset synchronization for a specified product in the current region. The scope applies to the product and region, and is not limited to a specific instance. A successful request only indicates that the request is accepted. You can then verify asset changes by checking the lists of instances, databases, tables, and columns. This operation does not return a public node identity for polling.
+     * Parameter examples are provided for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke this operation.
+     * Use the service registration endpoint of the region where the target assets reside and the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match those of the target assets.
+     * This operation returns only the RequestId. Acceptance of the request does not mean that the operation is complete. You should query the status as described in the operation description.</p>
      * 
      * <b>summary</b> : 
      * <p>Synchronizes the assets of a specified product in a region.</p>
@@ -1696,10 +1692,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Triggers asset synchronization for a specified product in the current region. The scope applies to the product and region, and is not limited to a specific instance. A successful request only indicates that the request is accepted. You can then verify asset changes by checking the lists of instances, databases, tables, and columns. This operation does not return a public node identifier for polling.
-     * Parameter examples are for format illustration only. When you invoke this operation, replace them with the region, resource identifiers, and configuration values obtained from the current account.
-     * Use the endpoint of the region where the target assets reside, and set the common parameter RegionId, such as cn-zhangjiakou. The product code and instance identity must match the target assets.
-     * This operation returns only RequestId. Request acceptance does not mean that the business operation is complete. You should check the status as described in the operation description.</p>
+     * <p>Triggers asset synchronization for a specified product in the current region. The scope applies to the product and region, and is not limited to a specific instance. A successful request only indicates that the request is accepted. You can then verify asset changes by checking the lists of instances, databases, tables, and columns. This operation does not return a public node identity for polling.
+     * Parameter examples are provided for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke this operation.
+     * Use the service registration endpoint of the region where the target assets reside and the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match those of the target assets.
+     * This operation returns only the RequestId. Acceptance of the request does not mean that the operation is complete. You should query the status as described in the operation description.</p>
      * 
      * <b>summary</b> : 
      * <p>Synchronizes the assets of a specified product in a region.</p>
@@ -1714,8 +1710,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the instance-level column encryption algorithm and key configuration, which affects the column encryption configuration of the instance. The current implementation supports ApsaraDB RDS for MySQL and PolarDB-X 2.0. Query the algorithms and keys supported by the instance first. This operation does not have the EncryptionKeyMode parameter. Configure it according to the usage conditions of EncryptionKeyId. After the request succeeds, read back the instance encryption configuration and column status. Do not determine completion solely based on the RequestId.
-     * Parameter examples are for format illustration only. When you invoke the operation, replace them with the region, resource identity, and configuration values obtained from the current account.
+     * <p>Modifies the instance-level column encryption algorithm and key configuration, which affects the column encryption configuration of the instance. The current implementation supports ApsaraDB RDS for MySQL and PolarDB-X 2.0. Query the algorithms and keys supported by the instance first. This operation does not have the EncryptionKeyMode parameter. Configure it according to the usage conditions of EncryptionKeyId. After a successful request, read back the instance encryption configuration and column status. Do not determine completion solely based on the RequestId.
+     * The parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke the operation.
      * Use the service registration endpoint of the region where the target asset is located, and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.
      * This operation returns only the RequestId. Request acceptance does not mean the business operation is complete. Read back the status as described in the operation description.</p>
      * 
@@ -1772,8 +1768,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the instance-level column encryption algorithm and key configuration, which affects the column encryption configuration of the instance. The current implementation supports ApsaraDB RDS for MySQL and PolarDB-X 2.0. Query the algorithms and keys supported by the instance first. This operation does not have the EncryptionKeyMode parameter. Configure it according to the usage conditions of EncryptionKeyId. After the request succeeds, read back the instance encryption configuration and column status. Do not determine completion solely based on the RequestId.
-     * Parameter examples are for format illustration only. When you invoke the operation, replace them with the region, resource identity, and configuration values obtained from the current account.
+     * <p>Modifies the instance-level column encryption algorithm and key configuration, which affects the column encryption configuration of the instance. The current implementation supports ApsaraDB RDS for MySQL and PolarDB-X 2.0. Query the algorithms and keys supported by the instance first. This operation does not have the EncryptionKeyMode parameter. Configure it according to the usage conditions of EncryptionKeyId. After a successful request, read back the instance encryption configuration and column status. Do not determine completion solely based on the RequestId.
+     * The parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke the operation.
      * Use the service registration endpoint of the region where the target asset is located, and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.
      * This operation returns only the RequestId. Request acceptance does not mean the business operation is complete. Read back the status as described in the operation description.</p>
      * 
@@ -1790,13 +1786,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Sets the same column encryption access permissions Settings for a batch of database accounts. UserList can contain accounts from different instances under the same product and region. Each item must include InstanceId and AccountId. fullAccess allows plaintext access, restrictedAccess allows restricted access, and noneAccess prohibits decryption and is supported only by specific DPI engines and key patterns. Only fullAccess supports configuring an expiration time. After a successful request, invoke ListDataAssetAccounts to read back the results.
-     * The parameter examples are for format illustration only. When invoking this operation, replace them with the region, resource identity, and configuration values obtained from the current account.
-     * Use the service registration endpoint of the region where the target asset is located and set the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.
-     * This operation returns only RequestId. Request acceptance does not mean the business operation is complete. You must read back the status as described in the operation description.</p>
+     * <p>Configures the same column encryption access permissions for a batch of database accounts. UserList can include accounts from different instances of the same product in the same region. Each item must include InstanceId and AccountId. fullAccess allows plaintext access, restrictedAccess allows restricted access, and noneAccess prohibits decryption and is supported only by specific DPI engines and key patterns. Only fullAccess supports an expiration time. After a successful request, invoke ListDataAssetAccounts to verify the configuration.
+     * The parameter examples are for format illustration only. When you invoke this operation, replace them with the region, resource identities, and configuration values of the current account.
+     * Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match those of the target asset.
+     * This operation returns only RequestId. A successful request does not indicate that the operation is completed. You must verify the status as described in the operation description.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets the column encryption permissions for multiple database accounts.</p>
+     * <p>Configures column encryption permissions for multiple database accounts.</p>
      * 
      * @param tmpReq UpdateDataMaskingUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1858,13 +1854,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Sets the same column encryption access permissions Settings for a batch of database accounts. UserList can contain accounts from different instances under the same product and region. Each item must include InstanceId and AccountId. fullAccess allows plaintext access, restrictedAccess allows restricted access, and noneAccess prohibits decryption and is supported only by specific DPI engines and key patterns. Only fullAccess supports configuring an expiration time. After a successful request, invoke ListDataAssetAccounts to read back the results.
-     * The parameter examples are for format illustration only. When invoking this operation, replace them with the region, resource identity, and configuration values obtained from the current account.
-     * Use the service registration endpoint of the region where the target asset is located and set the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.
-     * This operation returns only RequestId. Request acceptance does not mean the business operation is complete. You must read back the status as described in the operation description.</p>
+     * <p>Configures the same column encryption access permissions for a batch of database accounts. UserList can include accounts from different instances of the same product in the same region. Each item must include InstanceId and AccountId. fullAccess allows plaintext access, restrictedAccess allows restricted access, and noneAccess prohibits decryption and is supported only by specific DPI engines and key patterns. Only fullAccess supports an expiration time. After a successful request, invoke ListDataAssetAccounts to verify the configuration.
+     * The parameter examples are for format illustration only. When you invoke this operation, replace them with the region, resource identities, and configuration values of the current account.
+     * Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match those of the target asset.
+     * This operation returns only RequestId. A successful request does not indicate that the operation is completed. You must verify the status as described in the operation description.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets the column encryption permissions for multiple database accounts.</p>
+     * <p>Configures column encryption permissions for multiple database accounts.</p>
      * 
      * @param request UpdateDataMaskingUsersRequest
      * @return UpdateDataMaskingUsersResponse
@@ -1876,10 +1872,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Upgrades the database kernel of a specified instance at the selected time. Invoke ListMiniEngineVersions to select a version, and check the current status and maintenance window of the instance. SpecifyTime requires a future SwitchTime, and PolarDB-X 2.0 does not support these time options. The upgrade is an asynchronous operation. Invoke GetInstanceAttribute to check the CurrentKernelVersion and verify the result.
-     * The parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke the operation.
-     * Use the service registration endpoint of the region where the target asset is located, and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.
-     * This operation returns only RequestId. Acceptance of the request does not mean the business operation is complete. Check the status as described in the operation description.</p>
+     * <p>Upgrades the database kernel of a specified instance at a selected time. Invoke ListMiniEngineVersions to select a version, and check the current status and maintenance window of the instance. If you set UpgradeTime to SpecifyTime, you must provide a future SwitchTime. PolarDB-X 2.0 does not support the SpecifyTime options. The upgrade is an asynchronous operation. Invoke GetInstanceAttribute to check the CurrentKernelVersion and verify the result.
+     * Parameter examples are provided for format illustration only. When you invoke this operation, replace them with the region, resource identity, and configuration values of your current account.
+     * Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.
+     * This operation returns only RequestId. Request acceptance does not indicate that the operation is complete. Check the status as described in the operation description.</p>
      * 
      * <b>summary</b> : 
      * <p>Upgrades the database kernel of an instance.</p>
@@ -1938,10 +1934,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Upgrades the database kernel of a specified instance at the selected time. Invoke ListMiniEngineVersions to select a version, and check the current status and maintenance window of the instance. SpecifyTime requires a future SwitchTime, and PolarDB-X 2.0 does not support these time options. The upgrade is an asynchronous operation. Invoke GetInstanceAttribute to check the CurrentKernelVersion and verify the result.
-     * The parameter examples are for format illustration only. Replace them with the region, resource identity, and configuration values obtained from the current account when you invoke the operation.
-     * Use the service registration endpoint of the region where the target asset is located, and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.
-     * This operation returns only RequestId. Acceptance of the request does not mean the business operation is complete. Check the status as described in the operation description.</p>
+     * <p>Upgrades the database kernel of a specified instance at a selected time. Invoke ListMiniEngineVersions to select a version, and check the current status and maintenance window of the instance. If you set UpgradeTime to SpecifyTime, you must provide a future SwitchTime. PolarDB-X 2.0 does not support the SpecifyTime options. The upgrade is an asynchronous operation. Invoke GetInstanceAttribute to check the CurrentKernelVersion and verify the result.
+     * Parameter examples are provided for format illustration only. When you invoke this operation, replace them with the region, resource identity, and configuration values of your current account.
+     * Use the service registration endpoint of the region where the target asset is located and configure the Settings for the common parameter RegionId, such as cn-zhangjiakou. The product encoding and instance identity must match the target asset.
+     * This operation returns only RequestId. Request acceptance does not indicate that the operation is complete. Check the status as described in the operation description.</p>
      * 
      * <b>summary</b> : 
      * <p>Upgrades the database kernel of an instance.</p>

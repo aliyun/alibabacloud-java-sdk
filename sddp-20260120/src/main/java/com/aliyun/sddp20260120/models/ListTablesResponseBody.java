@@ -14,7 +14,7 @@ public class ListTablesResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The list of records returned by the query.</p>
+     * <p>The list of records returned for the current query.</p>
      */
     @NameInMap("Items")
     public java.util.List<ListTablesResponseBodyItems> items;
@@ -47,7 +47,7 @@ public class ListTablesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request. You can use the ID to locate the API call.</p>
+     * <p>The request ID. You can use this ID to locate the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
@@ -56,7 +56,7 @@ public class ListTablesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries that meet the current statistical or query scope.</p>
+     * <p>The total number of entries that meet the current statistics or query scope.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -65,7 +65,7 @@ public class ListTablesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>Indicates whether more pages exist. A value of true indicates that more data exists. A value of false indicates that no more data exists.</p>
+     * <p>Indicates whether subsequent pages exist. The string true indicates that more data is available, and false indicates that no more data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -162,7 +162,7 @@ public class ListTablesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the sensitivity level.</p>
+         * <p>The sensitivity level ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -212,7 +212,7 @@ public class ListTablesResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The time when the data object was created. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The creation time of the data object. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1788566400000</p>
@@ -230,7 +230,7 @@ public class ListTablesResponseBody extends TeaModel {
         public String dataAssetSourceId;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>business_db</p>
@@ -257,7 +257,7 @@ public class ListTablesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that owns the database table.</p>
+         * <p>The cloud account ID of the database table owner.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789012****</p>
@@ -266,7 +266,7 @@ public class ListTablesResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The code of the cloud service.</p>
+         * <p>The cloud service code.</p>
          * 
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -275,7 +275,7 @@ public class ListTablesResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The ID of the sensitivity level.</p>
+         * <p>The sensitivity level ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -305,7 +305,7 @@ public class ListTablesResponseBody extends TeaModel {
         public Boolean sensitive;
 
         /**
-         * <p>The number of sensitive data entries within the current statistical scope.</p>
+         * <p>The number of sensitive data entries within the current statistics scope.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -332,7 +332,7 @@ public class ListTablesResponseBody extends TeaModel {
         public String tenantName;
 
         /**
-         * <p>The total number of entries that meet the current statistical or query scope.</p>
+         * <p>The total number of entries that meet the current statistics or query scope.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

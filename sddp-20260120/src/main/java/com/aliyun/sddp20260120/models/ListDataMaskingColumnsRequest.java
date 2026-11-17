@@ -41,7 +41,7 @@ public class ListDataMaskingColumnsRequest extends TeaModel {
     public String engineType;
 
     /**
-     * <p>The instance identity of the database. You can obtain it from Items[].InstanceId in the response of ListDataMaskingInstances.</p>
+     * <p>The database instance identity. You can obtain it from Items[].InstanceId in the response of ListDataMaskingInstances.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze1abcdefgh****</p>
@@ -50,7 +50,11 @@ public class ListDataMaskingColumnsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language of the response description. Valid values: zh: Chinese; en: English.</p>
+     * <p>The language of the response description. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -59,7 +63,12 @@ public class ListDataMaskingColumnsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The filter for the column encryption status. Valid values: NotEncrypted: not encrypted; Success: encrypted successfully; Failed: encryption failed.</p>
+     * <p>The filter for the column encryption status. Valid values:</p>
+     * <ul>
+     * <li>NotEncrypted: Not encrypted.</li>
+     * <li>Success: Encryption succeeded.</li>
+     * <li>Failed: Encryption failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>NotEncrypted</p>
@@ -77,7 +86,7 @@ public class ListDataMaskingColumnsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also provided, the two must correspond to each other.</p>
+     * <p>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also provided, the two must match.</p>
      * 
      * <strong>example:</strong>
      * <p>RDS</p>
@@ -86,7 +95,7 @@ public class ListDataMaskingColumnsRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The ID of the cloud service type. Valid values: 5: RDS; 8: POLARDB; 27: PolarDBX2. It must correspond to ProductCode if both are specified.</p>
+     * <p>The ID of the cloud service type. Valid values: 5 for RDS, 8 for POLARDB, and 27 for PolarDBX2. If specified together with ProductCode, they must match.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -95,7 +104,7 @@ public class ListDataMaskingColumnsRequest extends TeaModel {
     public Long productId;
 
     /**
-     * <p>The compatible parameter for the list of product IDs. For the current column query, use a single ProductId or ProductCode. Call the operation separately to query multiple products.</p>
+     * <p>The compatible parameter for a list of product IDs. For the current column query, use a single ProductId or ProductCode. Call the operation separately to query multiple products.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -122,7 +131,7 @@ public class ListDataMaskingColumnsRequest extends TeaModel {
     public String riskLevelIds;
 
     /**
-     * <p>The name of the table. In PostgreSQL or Oracle scenarios, retain the schema.table format obtained from the table list.</p>
+     * <p>The name of the table. For PostgreSQL or Oracle scenarios, preserve the schema.table format obtained from the table list.</p>
      * 
      * <strong>example:</strong>
      * <p>customer</p>

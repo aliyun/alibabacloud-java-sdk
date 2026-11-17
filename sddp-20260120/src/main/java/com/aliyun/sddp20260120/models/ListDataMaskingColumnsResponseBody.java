@@ -29,7 +29,7 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request. It can be used to locate the current API call.</p>
+     * <p>The ID of the request. You can use it to locate the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
@@ -162,7 +162,7 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         public String engineType;
 
         /**
-         * <p>The business error code of the record or operation. It can be empty if no error occurs. Evaluate it together with ErrorMessage.</p>
+         * <p>The business error code for the record or operation. It can be empty if no error occurs. Evaluate it together with ErrorMessage.</p>
          * 
          * <strong>example:</strong>
          * <p>data_masking_not_running</p>
@@ -171,7 +171,7 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The business error message of the record or operation.</p>
+         * <p>The business error message for the record or operation.</p>
          * 
          * <strong>example:</strong>
          * <p>The instance is not in the running state</p>
@@ -198,7 +198,15 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The column encryption status. Valid values: NotEncrypted: not encrypted; Processing: processing; Success: encrypted successfully; Failed: encryption failed; Deleting: disabling; DeleteFailed: disabling failed.</p>
+         * <p>The column encryption status. Valid values:</p>
+         * <ul>
+         * <li>NotEncrypted: Not encrypted.</li>
+         * <li>Processing: Processing.</li>
+         * <li>Success: Encryption succeeded.</li>
+         * <li>Failed: Encryption failed.</li>
+         * <li>Deleting: Disabling.</li>
+         * <li>DeleteFailed: Disabling failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -231,7 +239,7 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The ID of the cloud service type. Valid values: 5: RDS; 8: POLARDB; 27: PolarDBX2.</p>
+         * <p>The ID of the cloud service type. Valid values: 5 for RDS, 8 for POLARDB, and 27 for PolarDBX2.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -279,7 +287,7 @@ public class ListDataMaskingColumnsResponseBody extends TeaModel {
          * <p>The name of the matched detection rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Mobile phone number</p>
+         * <p>Phone number</p>
          */
         @NameInMap("RuleName")
         public String ruleName;

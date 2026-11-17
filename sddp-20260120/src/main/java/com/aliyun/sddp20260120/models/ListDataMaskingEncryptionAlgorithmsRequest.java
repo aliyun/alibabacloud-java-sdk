@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataMaskingEncryptionAlgorithmsRequest extends TeaModel {
     /**
-     * <p>The database instance ID. You can obtain this value from the Items[].InstanceId parameter in the response of the ListDataMaskingInstances operation.</p>
+     * <p>The database instance identity. You can obtain this value from Items[].InstanceId in the response of the ListDataMaskingInstances operation.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze1abcdefgh****</p>
@@ -14,7 +14,11 @@ public class ListDataMaskingEncryptionAlgorithmsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language of the response description. Valid values: zh: Chinese. en: English.</p>
+     * <p>The language of the response description. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -23,7 +27,7 @@ public class ListDataMaskingEncryptionAlgorithmsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also provided, the two parameters must match.</p>
+     * <p>The cloud service code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also provided, the two parameters must match.</p>
      * 
      * <strong>example:</strong>
      * <p>RDS</p>
@@ -32,7 +36,13 @@ public class ListDataMaskingEncryptionAlgorithmsRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The cloud product type identifier. Valid values: 5: RDS, 8: POLARDB, and 27: PolarDBX2. If both ProductId and ProductCode are specified, they must correspond to each other.</p>
+     * <p>The cloud service type identifier. Valid values:</p>
+     * <ul>
+     * <li>5: RDS.</li>
+     * <li>8: POLARDB.</li>
+     * <li>27: PolarDBX2.
+     * If this parameter is specified together with ProductCode, the values must match.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>5</p>

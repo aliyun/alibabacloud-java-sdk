@@ -42,7 +42,7 @@ public class ListMiniEngineVersionsResponseBody extends TeaModel {
 
     public static class ListMiniEngineVersionsResponseBodyKernelVersions extends TeaModel {
         /**
-         * <p>The release type of the kernel version, which follows the return values of the corresponding database service. For example, for RDS, LTS indicates the long-term support version and BETA indicates the preview version. For PolarDB, the value may be Stable, Old, HighRisk, or Beta.</p>
+         * <p>The release type of the kernel version, which follows the return values of the corresponding database service. For example, for RDS, LTS indicates the long-term support version and BETA indicates the preview version. PolarDB may return Stable, Old, HighRisk, or Beta.</p>
          * 
          * <strong>example:</strong>
          * <p>LTS</p>
@@ -51,7 +51,7 @@ public class ListMiniEngineVersionsResponseBody extends TeaModel {
         public String kernelReleaseType;
 
         /**
-         * <p>The available kernel version number.</p>
+         * <p>The available kernel version.</p>
          * 
          * <strong>example:</strong>
          * <p>rds_20220731</p>

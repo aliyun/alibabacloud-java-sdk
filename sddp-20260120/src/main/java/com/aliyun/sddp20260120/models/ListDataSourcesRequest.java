@@ -5,13 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataSourcesRequest extends TeaModel {
     /**
-     * <p>The connection status of the data source. Valid values:</p>
-     * <ul>
-     * <li>UnConnected: Not connected.</li>
-     * <li>Processing: Connecting.</li>
-     * <li>Success: Connected.</li>
-     * <li>Failed: Connection failed.</li>
-     * </ul>
+     * <p>The connection status of the data source. Valid values: UnConnected: not connected. Processing: connecting. Success: connected. Failed: connection failed.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -72,17 +66,7 @@ public class ListDataSourcesRequest extends TeaModel {
     public String engineType;
 
     /**
-     * <p>The status of the data source detection switch. Valid values:</p>
-     * <ul>
-     * <li>Enable: Submitted for enabling.</li>
-     * <li>Enabling: Enabling.</li>
-     * <li>Enabled: Enabled.</li>
-     * <li>EnableFailed: Enabling failed.</li>
-     * <li>Disable: Submitted for disabling.</li>
-     * <li>Disabling: Disabling.</li>
-     * <li>Disabled: Disabled.</li>
-     * <li>DisableFailed: Disabling failed.</li>
-     * </ul>
+     * <p>The status of the data source detection switch. Valid values: Enable: submitted for enabling. Enabling: enabling. Enabled: enabled. EnableFailed: enabling failed. Disable: submitted for disabling. Disabling: disabling. Disabled: disabled. DisableFailed: disabling failed.</p>
      * 
      * <strong>example:</strong>
      * <p>Enabled</p>
@@ -100,11 +84,7 @@ public class ListDataSourcesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language of the response message. Valid values:</p>
-     * <ul>
-     * <li>zh: Chinese.</li>
-     * <li>en: English.</li>
-     * </ul>
+     * <p>The language of the response description. Valid values: zh: Chinese. en: English.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -140,7 +120,7 @@ public class ListDataSourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The port for the database connection.</p>
+     * <p>The database connection port.</p>
      * 
      * <strong>example:</strong>
      * <p>3306</p>
@@ -158,7 +138,7 @@ public class ListDataSourcesRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The identifier of the cloud service type. 5: ApsaraDB RDS; 8: PolarDB; 27: PolarDB-X 2.0. If this parameter is specified together with ProductCode, the values must match.</p>
+     * <p>The identifier of the cloud service type. 5: ApsaraDB RDS. 8: PolarDB. 27: PolarDB-X 2.0. If this parameter is specified together with ProductCode, the values must match.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

@@ -14,13 +14,13 @@ public class ListColumnsResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The list of records returned in the current query.</p>
+     * <p>The list of records returned for the current query.</p>
      */
     @NameInMap("Items")
     public java.util.List<ListColumnsResponseBodyItems> items;
 
     /**
-     * <p>The number of entries returned per page in the current query.</p>
+     * <p>The number of entries returned per page for the current query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class ListColumnsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID. You can use the ID to locate this API call.</p>
+     * <p>The request ID, which can be used to locate this API invoke.</p>
      * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
@@ -93,7 +93,7 @@ public class ListColumnsResponseBody extends TeaModel {
 
     public static class ListColumnsResponseBodyItems extends TeaModel {
         /**
-         * <p>The creation time of the data object. The value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The creation time of the data object. The value is a UNIX timestamp in milliseconds that represents the time elapsed since 00:00:00 UTC on January 1, 1970.</p>
          * 
          * <strong>example:</strong>
          * <p>1788566400000</p>
@@ -102,7 +102,7 @@ public class ListColumnsResponseBody extends TeaModel {
         public Long creationTime;
 
         /**
-         * <p>The instance identity of the cloud instance.</p>
+         * <p>The cloud instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-2ze1abcdefgh****</p>
@@ -138,7 +138,7 @@ public class ListColumnsResponseBody extends TeaModel {
         public String engineType;
 
         /**
-         * <p>The instance identity of the cloud instance to which the column belongs. This is a compatible field.</p>
+         * <p>The cloud instance ID to which the column belongs. This is a compatible field.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-2ze1abcdefgh****</p>
@@ -147,7 +147,7 @@ public class ListColumnsResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The compatibility field for the column encryption status. To query the column encryption results, call ListDataMaskingColumns.</p>
+         * <p>The compatibility field for the column encryption status. To query column encryption results, call ListDataMaskingColumns.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -174,7 +174,7 @@ public class ListColumnsResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The ID of the region where the asset is located.</p>
+         * <p>The identifier of the region where the asset is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou</p>

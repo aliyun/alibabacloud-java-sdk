@@ -14,7 +14,7 @@ public class ListColumnsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The instance identity of the cloud database. Set this parameter to the InstanceId in the instance list.</p>
+     * <p>The cloud database instance ID. Set this parameter to the InstanceId in the instance list.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze1abcdefgh****</p>
@@ -41,7 +41,7 @@ public class ListColumnsRequest extends TeaModel {
     public String engineType;
 
     /**
-     * <p>The compatible parameter for the instance identity. DataAssetSourceId takes precedence. If both parameters are specified, DataAssetSourceId is used.</p>
+     * <p>The compatible parameter for the instance ID. DataAssetSourceId takes precedence. If both parameters are specified, DataAssetSourceId is used.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze1abcdefgh****</p>

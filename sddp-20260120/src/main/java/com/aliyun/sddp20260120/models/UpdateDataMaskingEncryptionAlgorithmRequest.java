@@ -34,8 +34,8 @@ public class UpdateDataMaskingEncryptionAlgorithmRequest extends TeaModel {
     /**
      * <p>The language of the response description. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese.</li>
-     * <li>en: English.</li>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class UpdateDataMaskingEncryptionAlgorithmRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The code of the cloud service. Column encryption supports ApsaraDB RDS, PolarDB, and PolarDB-X 2.0. If ProductId is also provided, the two parameters must match.</p>
+     * <p>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also provided, the two values must match.</p>
      * 
      * <strong>example:</strong>
      * <p>RDS</p>
@@ -56,9 +56,9 @@ public class UpdateDataMaskingEncryptionAlgorithmRequest extends TeaModel {
     /**
      * <p>The identifier of the cloud service type. Valid values:</p>
      * <ul>
-     * <li>5: ApsaraDB RDS.</li>
-     * <li>8: PolarDB.</li>
-     * <li>27: PolarDB-X 2.0.
+     * <li>5: RDS</li>
+     * <li>8: POLARDB</li>
+     * <li>27: PolarDBX2
      * If specified together with ProductCode, the values must match.</li>
      * </ul>
      * 

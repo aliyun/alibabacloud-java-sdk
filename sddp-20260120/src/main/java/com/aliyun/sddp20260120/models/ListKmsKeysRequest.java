@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListKmsKeysRequest extends TeaModel {
     /**
-     * <p>The instance identity of the database. You can obtain the value from Items[].InstanceId in the response of the ListDataMaskingInstances operation.</p>
+     * <p>The database instance identity. You can obtain this value from the Items[].InstanceId field in the response of the ListDataMaskingInstances operation.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze1abcdefgh****</p>
@@ -14,7 +14,7 @@ public class ListKmsKeysRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language of the response. Valid values: zh: Chinese. en: English.</p>
+     * <p>The language of the response message. Valid values: zh: Chinese, en: English.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -23,7 +23,7 @@ public class ListKmsKeysRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</p>
+     * <p>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If you specify both this parameter and ProductId, the values must match.</p>
      * 
      * <strong>example:</strong>
      * <p>RDS</p>
@@ -32,7 +32,7 @@ public class ListKmsKeysRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The ID of the cloud service type. Valid values: 5: RDS. 8: POLARDB. 27: PolarDBX2. If both this parameter and ProductCode are specified, they must match.</p>
+     * <p>The ID of the cloud service type. Valid values: 5: RDS, 8: POLARDB, and 27: PolarDBX2. If you specify both this parameter and ProductCode, the values must match.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
