@@ -118,7 +118,7 @@ public class GetPortalResponseBody extends TeaModel {
         public String portalId;
 
         /**
-         * <p>The portal settings, which specify whether username and password authentication is enabled, whether developer registrations are automatically approved, and whether subscription requests are automatically approved.</p>
+         * <p>The portal configuration information, which includes whether account and password authentication is enabled, whether developer registrations are automatically approved, and whether subscription requests are automatically approved.</p>
          */
         @NameInMap("portalSettingConfig")
         public HiMarketPortalSettingConfig portalSettingConfig;

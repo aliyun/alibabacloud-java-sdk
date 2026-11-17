@@ -29,7 +29,7 @@ public class ListPoliciesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which is used to trace the API call chain.</p>
+     * <p>The request ID. You can use the ID to trace the API call chain.</p>
      * 
      * <strong>example:</strong>
      * <p>393E2630-DBE7-5221-AB35-9E740675491A</p>

@@ -38,7 +38,7 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token for the next query. This value is empty when no more results are available.</p>
+     * <p>The starting token for the next query. This parameter is empty when no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>token-xxx</p>
@@ -110,7 +110,7 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
 
     public static class ListBatchExportTasksResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The task creation time. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
+         * <p>The creation time of the task. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-26T10:00:00Z</p>
@@ -128,7 +128,7 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The gateway instance ID associated with the task.</p>
+         * <p>The instance ID of the gateway associated with the task.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-xxx</p>
@@ -146,14 +146,7 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
         public Integer processedCount;
 
         /**
-         * <p>The task status. Valid values:</p>
-         * <ul>
-         * <li>Pending: The task is pending.</li>
-         * <li>Running: The task is running.</li>
-         * <li>Success: All items succeeded.</li>
-         * <li>PartialSuccess: Some items succeeded.</li>
-         * <li>Failed: All items failed.</li>
-         * </ul>
+         * <p>The status of the task. Valid values: Pending, Running, Success, PartialSuccess, and Failed.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -162,7 +155,7 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>task-xxx</p>
@@ -171,7 +164,7 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The task type.</p>
+         * <p>The type of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>BatchExport</p>
@@ -261,7 +254,7 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
 
     public static class ListBatchExportTasksResponseBodyData extends TeaModel {
         /**
-         * <p>The list of tasks, returned in reverse chronological order with the most recent tasks first.</p>
+         * <p>The list of tasks. Tasks are returned in descending order of creation time, with the latest tasks first.</p>
          */
         @NameInMap("items")
         public java.util.List<ListBatchExportTasksResponseBodyDataItems> items;
@@ -276,7 +269,7 @@ public class ListBatchExportTasksResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

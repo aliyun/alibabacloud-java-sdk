@@ -76,7 +76,7 @@ public class GetMigrationTaskResponseBody extends TeaModel {
 
     public static class GetMigrationTaskResponseBodyDataIngressConfig extends TeaModel {
         /**
-         * <p>The Ingress class to listen on.</p>
+         * <p>The Ingress class to monitor.</p>
          * 
          * <strong>example:</strong>
          * <p>nginx</p>
@@ -85,7 +85,7 @@ public class GetMigrationTaskResponseBody extends TeaModel {
         public String ingressClass;
 
         /**
-         * <p>The namespace in which to listen for Ingress resources.</p>
+         * <p>The namespace of the Ingress to monitor.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -136,7 +136,7 @@ public class GetMigrationTaskResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The backend server group ID.</p>
+         * <p>The ID of the backend server group.</p>
          * 
          * <strong>example:</strong>
          * <p>rsp-xxxx</p>
@@ -203,7 +203,7 @@ public class GetMigrationTaskResponseBody extends TeaModel {
         public String apiId;
 
         /**
-         * <p>The API name. This value may be empty.</p>
+         * <p>The name of the API. This value may be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>ingress-api</p>
@@ -221,7 +221,7 @@ public class GetMigrationTaskResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The name of the source cluster. The name is retrieved by looking up the service source based on gatewayId and clusterId. If the lookup fails, a hyphen (-) is returned as a fallback.</p>
+         * <p>The name of the source cluster. The service source is reverse-queried based on the gateway ID and cluster ID. If the query fails, a hyphen (-) is returned as a fallback.</p>
          * 
          * <strong>example:</strong>
          * <p>my-cluster</p>
@@ -230,7 +230,7 @@ public class GetMigrationTaskResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>The namespace of the source cluster. This value is selected during SLB traffic switching.</p>
+         * <p>The namespace of the source cluster. This is selected during SLB traffic switching.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -239,7 +239,7 @@ public class GetMigrationTaskResponseBody extends TeaModel {
         public String clusterNamespace;
 
         /**
-         * <p>The creation time. The value is a UNIX timestamp in seconds. Multiply the value by 1000 on the frontend before formatting.</p>
+         * <p>The creation time. This value is a UNIX timestamp in seconds. The frontend multiplies the value by 1,000 before formatting.</p>
          * 
          * <strong>example:</strong>
          * <p>1756262400</p>
@@ -248,7 +248,7 @@ public class GetMigrationTaskResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The task description.</p>
+         * <p>The description of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace api monitor test</p>
@@ -290,8 +290,7 @@ public class GetMigrationTaskResponseBody extends TeaModel {
         public GetMigrationTaskResponseBodyDataIngressConfig ingressConfig;
 
         /**
-         * <p>The migration type.
-         * [_single.resp.200.props.data.migrationType.enum.Nginx Ingress]Nginx Ingress migration.</p>
+         * <p>The migration type.</p>
          * 
          * <strong>example:</strong>
          * <p>Nginx Ingress</p>
@@ -318,7 +317,7 @@ public class GetMigrationTaskResponseBody extends TeaModel {
         public String slbId;
 
         /**
-         * <p>The task status.</p>
+         * <p>The status of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>FlowSwitch</p>
@@ -336,7 +335,7 @@ public class GetMigrationTaskResponseBody extends TeaModel {
         public String switchType;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>mt-xxxxxxxx</p>
@@ -345,7 +344,7 @@ public class GetMigrationTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The ID of the user to whom the task belongs.</p>
+         * <p>The ID of the user who owns the task.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>
@@ -360,7 +359,7 @@ public class GetMigrationTaskResponseBody extends TeaModel {
         public java.util.List<GetMigrationTaskResponseBodyDataVirtualServices> virtualServices;
 
         /**
-         * <p>The weight of the APIG-side service in the legacy flow (0-100).</p>
+         * <p>The weight of the service on the APIG side in the legacy process. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

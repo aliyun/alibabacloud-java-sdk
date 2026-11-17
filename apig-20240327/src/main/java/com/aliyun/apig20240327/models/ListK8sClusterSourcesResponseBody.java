@@ -76,7 +76,7 @@ public class ListK8sClusterSourcesResponseBody extends TeaModel {
 
     public static class ListK8sClusterSourcesResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The container service cluster ID.</p>
+         * <p>The ID of the Container Service cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>c4a21b3560fad4ec***</p>
@@ -85,7 +85,7 @@ public class ListK8sClusterSourcesResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The container service cluster name.</p>
+         * <p>The name of the Container Service cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>itemcenter-dev-cluster</p>

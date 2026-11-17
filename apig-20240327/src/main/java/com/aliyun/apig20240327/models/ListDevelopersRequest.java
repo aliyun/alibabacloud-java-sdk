@@ -14,7 +14,7 @@ public class ListDevelopersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Pass the nextToken value returned in the previous response to retrieve the next page. Do not specify this parameter for the first query.</p>
+     * <p>The pagination token. Pass the nextToken returned in the previous response to obtain the next page. Do not specify this parameter for the first query.</p>
      * 
      * <strong>example:</strong>
      * <p>token-xxxxxxxx</p>
@@ -41,7 +41,7 @@ public class ListDevelopersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The portal ID used to filter developers.</p>
+     * <p>The ID of the portal used to filter developers.</p>
      * 
      * <strong>example:</strong>
      * <p>portal-xxxxxxxx</p>
@@ -50,7 +50,7 @@ public class ListDevelopersRequest extends TeaModel {
     public String portalId;
 
     /**
-     * <p>The developer status used to filter developers. Valid values: PENDING, APPROVED, and REJECTED.</p>
+     * <p>The status of the developer used to filter developers. Valid values: PENDING, APPROVED, and REJECTED.</p>
      * 
      * <strong>example:</strong>
      * <p>APPROVED</p>

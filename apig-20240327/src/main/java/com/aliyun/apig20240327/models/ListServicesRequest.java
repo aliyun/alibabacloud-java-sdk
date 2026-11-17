@@ -14,7 +14,7 @@ public class ListServicesRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The exact name of the service to query.</p>
+     * <p>The name of the service for an exact match.</p>
      * 
      * <strong>example:</strong>
      * <p>user-service</p>
@@ -52,11 +52,11 @@ public class ListServicesRequest extends TeaModel {
     /**
      * <p>The source type of the service. Valid values:</p>
      * <ul>
-     * <li>MSE_NACOS: Services from MSE Nacos.</li>
-     * <li>K8S: Services from Kubernetes clusters in Container Service.</li>
-     * <li>FC3: Services from Function Compute.</li>
-     * <li>VIP: Services from fixed addresses.</li>
-     * <li>DNS: Services from domain names.</li>
+     * <li>MSE_NACOS: services from Microservices Engine (MSE) Nacos.</li>
+     * <li>K8S: services from Kubernetes clusters in Container Service for Kubernetes.</li>
+     * <li>FC3: services from Function Compute.</li>
+     * <li>VIP: services from fixed addresses.</li>
+     * <li>DNS: services from domain names.</li>
      * </ul>
      * 
      * <strong>example:</strong>

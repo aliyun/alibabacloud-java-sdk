@@ -14,7 +14,7 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public String apiNameLike;
 
     /**
-     * <p>The consumer group ID. If specified, the authorization rules of the consumer group are queried. At least one of the resourceId, parentResourceId, consumerId, and consumerGroupId parameters must be specified as a query condition.</p>
+     * <p>The consumer group ID. If you specify this parameter, the authorization rules of the consumer group are queried. At least one of the resourceId, parentResourceId, consumerId, and consumerGroupId parameters must be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>csg-8c13d2b4f8a1</p>
@@ -23,7 +23,7 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public String consumerGroupId;
 
     /**
-     * <p>The consumer group name for fuzzy match.</p>
+     * <p>The keyword for fuzzy match of the consumer group name.</p>
      * 
      * <strong>example:</strong>
      * <p>team</p>
@@ -32,7 +32,7 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public String consumerGroupNameLike;
 
     /**
-     * <p>The consumer ID. At least one of the resourceId, parentResourceId, consumerId, and consumerGroupId parameters must be specified as a query condition.</p>
+     * <p>The consumer ID. At least one of the resourceId, parentResourceId, consumerId, and consumerGroupId parameters must be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>cs-ct21c16m1hkp64hk6qmg</p>
@@ -86,7 +86,7 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The parent resource ID. At least one of the resourceId, parentResourceId, consumerId, and consumerGroupId parameters must be specified as a query condition.</p>
+     * <p>The parent resource ID. At least one of the resourceId, parentResourceId, consumerId, and consumerGroupId parameters must be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>ha-cn-li942gy8p01</p>
@@ -95,7 +95,7 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public String parentResourceId;
 
     /**
-     * <p>The principal type. Valid values: Consumer and ConsumerGroup.</p>
+     * <p>The type of the authorized principal. Valid values: Consumer and ConsumerGroup.</p>
      * 
      * <strong>example:</strong>
      * <p>ConsumerGroup</p>
@@ -104,7 +104,7 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public String principalType;
 
     /**
-     * <p>The resource ID. At least one of the resourceId, parentResourceId, consumerId, and consumerGroupId parameters must be specified as a query condition.</p>
+     * <p>The resource ID. At least one of the resourceId, parentResourceId, consumerId, and consumerGroupId parameters must be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>ha-cn-li942gy8p03</p>
@@ -122,7 +122,7 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The service source type.</p>
+     * <p>The service source types.</p>
      * 
      * <strong>example:</strong>
      * <p>K8S</p>

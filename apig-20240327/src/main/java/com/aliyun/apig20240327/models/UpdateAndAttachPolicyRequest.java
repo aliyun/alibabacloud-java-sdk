@@ -12,16 +12,15 @@ public class UpdateAndAttachPolicyRequest extends TeaModel {
     public java.util.List<String> attachResourceIds;
 
     /**
-     * <p>The type of mount point supported by the policy.</p>
-     * <p>Valid values:</p>
+     * <p>The mount point types supported by the policy. Valid values:</p>
      * <ul>
-     * <li>HttpApi: HttpApi.</li>
-     * <li>Operation: Operation of HttpApi.</li>
-     * <li>GatewayRoute: gateway rule.</li>
-     * <li>GatewayService: gateway service.</li>
-     * <li>GatewayServicePort: gateway service port.</li>
-     * <li>Domain: gateway domain name.</li>
-     * <li>Gateway: gateway.</li>
+     * <li>HttpApi: HTTP API</li>
+     * <li>Operation: operation of the HTTP API</li>
+     * <li>GatewayRoute: gateway route</li>
+     * <li>GatewayService: gateway service</li>
+     * <li>GatewayServicePort: gateway service port</li>
+     * <li>Domain: gateway domain name</li>
+     * <li>Gateway: gateway</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -32,7 +31,8 @@ public class UpdateAndAttachPolicyRequest extends TeaModel {
     public String attachResourceType;
 
     /**
-     * <p>The configuration information. The value is a JSON string.</p>
+     * <p>The configuration information.
+     * JSON string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

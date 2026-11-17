@@ -14,7 +14,7 @@ public class ListConsumerGroupQuotaRulesRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The keyword for the rule name. This parameter is optional. If specified, fuzzy matching is performed on the rule name.</p>
+     * <p>The keyword for the rule name. This parameter is optional. If specified, the results are filtered by a fuzzy match on the rule name.</p>
      * 
      * <strong>example:</strong>
      * <p>daily</p>
@@ -39,6 +39,15 @@ public class ListConsumerGroupQuotaRulesRequest extends TeaModel {
      */
     @NameInMap("pageSize")
     public Integer pageSize;
+
+    /**
+     * <p>The rule status. This parameter is optional. Valid values: enabled and disabled. If not specified, all rules are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
+     */
+    @NameInMap("ruleStatus")
+    public String ruleStatus;
 
     public static ListConsumerGroupQuotaRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListConsumerGroupQuotaRulesRequest self = new ListConsumerGroupQuotaRulesRequest();
@@ -75,6 +84,14 @@ public class ListConsumerGroupQuotaRulesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListConsumerGroupQuotaRulesRequest setRuleStatus(String ruleStatus) {
+        this.ruleStatus = ruleStatus;
+        return this;
+    }
+    public String getRuleStatus() {
+        return this.ruleStatus;
     }
 
 }

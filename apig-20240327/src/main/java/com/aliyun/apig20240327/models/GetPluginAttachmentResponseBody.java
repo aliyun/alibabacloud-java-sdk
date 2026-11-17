@@ -103,7 +103,7 @@ public class GetPluginAttachmentResponseBody extends TeaModel {
         public ParentResourceInfo parentResourceInfo;
 
         /**
-         * <p>The plugin attachment ID.</p>
+         * <p>The ID of the plugin attachment.</p>
          * 
          * <strong>example:</strong>
          * <p>pa-d05f1tmm1hku195dd8j0</p>
@@ -112,7 +112,7 @@ public class GetPluginAttachmentResponseBody extends TeaModel {
         public String pluginAttachmentId;
 
         /**
-         * <p>The plugin class information.</p>
+         * <p>The plugin type information.</p>
          */
         @NameInMap("pluginClassInfo")
         public PluginClassInfo pluginClassInfo;

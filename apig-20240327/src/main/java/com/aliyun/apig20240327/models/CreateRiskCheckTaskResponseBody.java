@@ -76,7 +76,7 @@ public class CreateRiskCheckTaskResponseBody extends TeaModel {
 
     public static class CreateRiskCheckTaskResponseBodyData extends TeaModel {
         /**
-         * <p>The risk detection task ID.</p>
+         * <p>The ID of the risk detection task.</p>
          * 
          * <strong>example:</strong>
          * <p>rct-xxxxxxxx</p>

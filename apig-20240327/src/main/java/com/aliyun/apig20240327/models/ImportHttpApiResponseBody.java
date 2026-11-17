@@ -219,7 +219,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
 
     public static class ImportHttpApiResponseBodyDataDryRunInfoSuccessComponents extends TeaModel {
         /**
-         * <p>The action to be performed after the dry run.</p>
+         * <p>The action to perform after the dry run.</p>
          * <ul>
          * <li>Create: Create.</li>
          * <li>Update: Update.</li>
@@ -265,7 +265,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
 
     public static class ImportHttpApiResponseBodyDataDryRunInfoSuccessOperations extends TeaModel {
         /**
-         * <p>The action to be performed after the dry run.</p>
+         * <p>The action to perform after the dry run.</p>
          * <ul>
          * <li>Create: Create.</li>
          * <li>Update: Update.</li>
@@ -444,7 +444,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoSuccessRoutes> successRoutes;
 
         /**
-         * <p>The warning messages. If the warning messages are not empty, some operations or data structures may fail to be imported.</p>
+         * <p>The warning messages. If the warning messages are not empty, some operations or data structures may fail to import.</p>
          */
         @NameInMap("warningMessages")
         public java.util.List<String> warningMessages;
@@ -538,7 +538,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
 
     public static class ImportHttpApiResponseBodyData extends TeaModel {
         /**
-         * <p>The dry run results.</p>
+         * <p>The dry run result.</p>
          */
         @NameInMap("dryRunInfo")
         public ImportHttpApiResponseBodyDataDryRunInfo dryRunInfo;

@@ -11,7 +11,7 @@ public class BatchUpdateHttpApiOperationRequest extends TeaModel {
     public BatchUpdateHttpApiOperationRequestAuthConfig authConfig;
 
     /**
-     * <p>Specifies whether to enable consumer authentication. If set to true, a valid authConfig must be provided. If set to false, authConfig is not validated and the existing configuration remains unchanged.</p>
+     * <p>Specifies whether to enable consumer authentication. If this parameter is set to true, a valid authConfig must be provided. If this parameter is set to false, authConfig is not verified and the original configuration remains unchanged.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -20,7 +20,7 @@ public class BatchUpdateHttpApiOperationRequest extends TeaModel {
     public Boolean enableAuth;
 
     /**
-     * <p>The list of operation IDs to update in batches. This parameter cannot be empty.</p>
+     * <p>The list of operation IDs to be updated in batches. This parameter cannot be empty.</p>
      */
     @NameInMap("operationIds")
     public java.util.List<String> operationIds;

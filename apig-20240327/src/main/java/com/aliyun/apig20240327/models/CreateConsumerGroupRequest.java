@@ -14,16 +14,16 @@ public class CreateConsumerGroupRequest extends TeaModel {
     public String consumerGroupId;
 
     /**
-     * <p>The consumer group description.</p>
+     * <p>The description of the consumer group.</p>
      * 
      * <strong>example:</strong>
-     * <p>Group for online API callers</p>
+     * <p>Used to group online API callers</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The gateway type. Valid values: API or AI.</p>
+     * <p>The gateway type. Valid values: API and AI.</p>
      * 
      * <strong>example:</strong>
      * <p>API</p>
@@ -32,7 +32,7 @@ public class CreateConsumerGroupRequest extends TeaModel {
     public String gatewayType;
 
     /**
-     * <p>The consumer group name.</p>
+     * <p>The name of the consumer group.</p>
      * 
      * <strong>example:</strong>
      * <p>api-consumer-group</p>

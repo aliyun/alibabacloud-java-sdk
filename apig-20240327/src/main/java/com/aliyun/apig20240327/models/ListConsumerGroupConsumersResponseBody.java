@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConsumerGroupConsumersResponseBody extends TeaModel {
     /**
-     * <p>The response status code. Ok is returned if the request is successful.</p>
+     * <p>The response status code. Ok is returned if the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -85,7 +85,7 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
         public String consumerId;
 
         /**
-         * <p>The consumer deployment status. Valid values: Processing, Failed, and Success.</p>
+         * <p>The deployment status of the consumer. Valid values: Processing, Failed, and Success.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -97,7 +97,7 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
          * <p>The consumer description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Online API caller</p>
+         * <p>Production API caller</p>
          */
         @NameInMap("description")
         public String description;
@@ -186,7 +186,7 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
 
     public static class ListConsumerGroupConsumersResponseBodyData extends TeaModel {
         /**
-         * <p>The consumer group member list.</p>
+         * <p>The list of consumer group members.</p>
          */
         @NameInMap("items")
         public java.util.List<ListConsumerGroupConsumersResponseBodyDataItems> items;
@@ -201,7 +201,7 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of items per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -210,7 +210,7 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of consumers that match the filter conditions.</p>
+         * <p>The total number of consumers that meet the conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

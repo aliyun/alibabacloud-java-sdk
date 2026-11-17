@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateAiModelProviderRequest extends TeaModel {
     /**
+     * <p>The optional default AI service ID. If not empty, it must be a service in the current association set. Omitting this parameter indicates that no default is set. An explicit empty string clears the default. A non-empty value sets the default. The length cannot exceed 64 characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>svc-d00000000000000000000</p>
+     */
+    @NameInMap("defaultServiceId")
+    public String defaultServiceId;
+
+    /**
      * <p>The display name of the model provider.</p>
      * <p>This parameter is required.</p>
      * 
@@ -35,13 +44,13 @@ public class CreateAiModelProviderRequest extends TeaModel {
     public String provider;
 
     /**
-     * <p>The list of service IDs to bind to the provider.</p>
+     * <p>The list of service IDs to associate with the provider.</p>
      */
     @NameInMap("serviceIds")
     public java.util.List<String> serviceIds;
 
     /**
-     * <p>The client token that ensures the idempotence of the request.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -52,6 +61,14 @@ public class CreateAiModelProviderRequest extends TeaModel {
     public static CreateAiModelProviderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAiModelProviderRequest self = new CreateAiModelProviderRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAiModelProviderRequest setDefaultServiceId(String defaultServiceId) {
+        this.defaultServiceId = defaultServiceId;
+        return this;
+    }
+    public String getDefaultServiceId() {
+        return this.defaultServiceId;
     }
 
     public CreateAiModelProviderRequest setDisplayName(String displayName) {

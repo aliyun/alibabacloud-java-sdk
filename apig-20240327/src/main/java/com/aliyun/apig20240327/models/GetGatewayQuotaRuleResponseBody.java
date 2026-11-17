@@ -180,7 +180,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class GetGatewayQuotaRuleResponseBodyData extends TeaModel {
         /**
-         * <p>The base timestamp of the period.</p>
+         * <p>The base timestamp of the period, in UNIX seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1745846400000</p>

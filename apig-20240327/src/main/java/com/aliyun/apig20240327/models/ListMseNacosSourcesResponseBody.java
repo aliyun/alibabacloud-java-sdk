@@ -85,10 +85,10 @@ public class ListMseNacosSourcesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The Nacos instance name.</p>
+         * <p>The name of the Nacos instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>Product Center Nacos Registry</p>
+         * <p>Product Center Nacos registry</p>
          */
         @NameInMap("name")
         public String name;

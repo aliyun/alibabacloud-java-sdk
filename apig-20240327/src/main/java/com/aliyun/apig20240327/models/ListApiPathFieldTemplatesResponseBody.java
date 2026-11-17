@@ -150,7 +150,7 @@ public class ListApiPathFieldTemplatesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -159,7 +159,7 @@ public class ListApiPathFieldTemplatesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of items.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

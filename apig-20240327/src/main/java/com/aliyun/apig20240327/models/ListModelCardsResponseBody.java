@@ -149,7 +149,7 @@ public class ListModelCardsResponseBody extends TeaModel {
         public java.util.List<ListModelCardsResponseBodyDataAvailablePaths> availablePaths;
 
         /**
-         * <p>The feature configuration of the model card, which is a key-value map structure. The set of keys is not declared in the API definition.</p>
+         * <p>The feature configuration of the model card as a key-value map. The set of keys is not declared in the API definition.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;functionCall&quot;:true}</p>
@@ -173,7 +173,7 @@ public class ListModelCardsResponseBody extends TeaModel {
         public String modelName;
 
         /**
-         * <p>The pricing information of the model card, which is a key-value map structure. The set of keys and the billing criteria are not declared in the API definition.</p>
+         * <p>The pricing information of the model card as a key-value map. The set of keys and the billing criteria are not declared in the API definition.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;input&quot;:0.004,&quot;output&quot;:0.012}</p>
@@ -182,7 +182,7 @@ public class ListModelCardsResponseBody extends TeaModel {
         public java.util.Map<String, ?> pricing;
 
         /**
-         * <p>The identifier of the model provider corresponding to the model card.</p>
+         * <p>The model provider identifier corresponding to the model card.</p>
          * 
          * <strong>example:</strong>
          * <p>provider-xxxxxxxx</p>
@@ -191,7 +191,7 @@ public class ListModelCardsResponseBody extends TeaModel {
         public String provider;
 
         /**
-         * <p>The list of snapshots for the model card. Each array item is a map structure with undeclared members. The snapshot content and generation rules are not specified in the API definition.</p>
+         * <p>The list of snapshots for the model card. Array items are map structures with undeclared members. The snapshot content and generation rules are not specified in the API definition.</p>
          */
         @NameInMap("snapshots")
         public java.util.List<java.util.Map<String, ?>> snapshots;

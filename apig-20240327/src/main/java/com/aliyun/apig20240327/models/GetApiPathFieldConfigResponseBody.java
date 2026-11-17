@@ -76,7 +76,7 @@ public class GetApiPathFieldConfigResponseBody extends TeaModel {
 
     public static class GetApiPathFieldConfigResponseBodyDataPathConfigs extends TeaModel {
         /**
-         * <p>The collection of field configurations under the path, grouped by mapping key, where each group represents a set of field configuration items.</p>
+         * <p>The collection of field configurations under the path, grouped by mapping key. Each group represents a set of field configuration items.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;model&quot;:[&quot;$.model&quot;],&quot;messages&quot;:[&quot;$.messages[*].content&quot;]}</p>
@@ -85,7 +85,7 @@ public class GetApiPathFieldConfigResponseBody extends TeaModel {
         public java.util.Map<String, java.util.List<DataPathConfigsFieldPathsValue>> fieldPaths;
 
         /**
-         * <p>The request path of the API.</p>
+         * <p>The URI of the request of the API.</p>
          * 
          * <strong>example:</strong>
          * <p>/v1/chat/completions</p>
@@ -136,7 +136,7 @@ public class GetApiPathFieldConfigResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
-         * <p>The list of field configurations grouped by API request path.</p>
+         * <p>The list of field configurations grouped by API URI of the request.</p>
          */
         @NameInMap("pathConfigs")
         public java.util.List<GetApiPathFieldConfigResponseBodyDataPathConfigs> pathConfigs;

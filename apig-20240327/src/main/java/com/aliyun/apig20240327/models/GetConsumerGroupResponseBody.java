@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetConsumerGroupResponseBody extends TeaModel {
     /**
-     * <p>The response status code. Ok is returned if the request is successful.</p>
+     * <p>The response status code. Ok is returned if the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -85,7 +85,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         public Long consumerCount;
 
         /**
-         * <p>The consumer group ID.</p>
+         * <p>The ID of the consumer group.</p>
          * 
          * <strong>example:</strong>
          * <p>csg-8c13d2b4f8a1</p>
@@ -94,7 +94,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         public String consumerGroupId;
 
         /**
-         * <p>The creation time of the consumer group, in Unix millisecond timestamp.</p>
+         * <p>The time when the consumer group was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1715769600000</p>
@@ -103,10 +103,10 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The consumer group description.</p>
+         * <p>The description of the consumer group.</p>
          * 
          * <strong>example:</strong>
-         * <p>Group for online API callers</p>
+         * <p>Used to group production API consumers</p>
          */
         @NameInMap("description")
         public String description;
@@ -121,7 +121,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         public String gatewayType;
 
         /**
-         * <p>The consumer group name.</p>
+         * <p>The name of the consumer group.</p>
          * 
          * <strong>example:</strong>
          * <p>api-consumer-group</p>
@@ -130,7 +130,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The update time of the consumer group, in Unix millisecond timestamp.</p>
+         * <p>The time when the consumer group was updated. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1715769600000</p>

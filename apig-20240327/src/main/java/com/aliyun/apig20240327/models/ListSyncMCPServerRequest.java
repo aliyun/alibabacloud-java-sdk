@@ -14,7 +14,7 @@ public class ListSyncMCPServerRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The Nacos namespace ID. Note: This parameter is required. If it is not provided, the API returns InvalidParameter.IsEmpty(400).</p>
+     * <p>The ID of the Nacos namespace. Note: This parameter is required. If it is not provided, the API returns InvalidParameter.IsEmpty(400).</p>
      * 
      * <strong>example:</strong>
      * <p>public</p>
@@ -23,7 +23,7 @@ public class ListSyncMCPServerRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The Nacos service source ID. This parameter can be omitted in single Nacos source scenarios because the server automatically populates the unique source. It is required in multiple Nacos source scenarios. Otherwise, a parameter error indicating that sourceId is empty is returned. If the gateway has no Nacos source, ErrServiceSourceNotFound is returned.</p>
+     * <p>The ID of the Nacos service source. This parameter can be omitted in single-Nacos-source scenarios because the server automatically populates the unique source. It is required in multi-Nacos-source scenarios. Otherwise, a parameter error indicating that sourceId is empty is reported. If the gateway has no Nacos source, ErrServiceSourceNotFound is reported.</p>
      * 
      * <strong>example:</strong>
      * <p>src-xxxx</p>

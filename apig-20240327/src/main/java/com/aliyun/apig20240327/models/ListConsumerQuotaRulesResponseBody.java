@@ -97,7 +97,7 @@ public class ListConsumerQuotaRulesResponseBody extends TeaModel {
         public String gatewayName;
 
         /**
-         * <p>The period multiplier, which indicates the number of periods after which the quota is reset. This parameter is returned when the rule uses a custom period. Minimum value: 1. Maximum value: 60.</p>
+         * <p>The period multiplier, which indicates the number of periods after which the quota is reset. This parameter is returned when the rule uses a custom period. Valid values: 1 to 60.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -160,7 +160,7 @@ public class ListConsumerQuotaRulesResponseBody extends TeaModel {
         public String ruleStatus;
 
         /**
-         * <p>The time zone corresponding to the natural period, in UTC+x format.</p>
+         * <p>The time zone for the natural period in UTC+x format.</p>
          * 
          * <strong>example:</strong>
          * <p>UTC+8</p>
@@ -169,7 +169,7 @@ public class ListConsumerQuotaRulesResponseBody extends TeaModel {
         public String timezone;
 
         /**
-         * <p>The period type. calendar indicates a natural period, and epoch indicates a custom period.</p>
+         * <p>The period type. Valid values: calendar and epoch. calendar indicates a natural period. epoch indicates a custom period.</p>
          * 
          * <strong>example:</strong>
          * <p>calendar</p>

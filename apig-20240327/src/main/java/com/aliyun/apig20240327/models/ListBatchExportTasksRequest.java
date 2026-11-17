@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBatchExportTasksRequest extends TeaModel {
     /**
-     * <p>The end of the creation time range. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
+     * <p>The end time of the creation time range. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-05-26T11:00:00Z</p>
@@ -14,7 +14,7 @@ public class ListBatchExportTasksRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The gateway instance ID. If specified, only tasks under this gateway are returned.</p>
+     * <p>The instance ID of the gateway. If specified, only tasks under this gateway are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-xxx</p>
@@ -32,7 +32,7 @@ public class ListBatchExportTasksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The paging token that indicates the start position of the next query.</p>
+     * <p>The starting token for paging queries.</p>
      * 
      * <strong>example:</strong>
      * <p>token-xxx</p>
@@ -50,7 +50,7 @@ public class ListBatchExportTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +59,7 @@ public class ListBatchExportTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The start of the creation time range. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
+     * <p>The start time of the creation time range. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-05-26T10:00:00Z</p>

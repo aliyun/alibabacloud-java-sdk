@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConsumerGroupConsumersRequest extends TeaModel {
     /**
-     * <p>Fuzzy match by consumer name.</p>
+     * <p>The fuzzy filter for consumer names.</p>
      * 
      * <strong>example:</strong>
      * <p>consumer</p>
@@ -23,7 +23,7 @@ public class ListConsumerGroupConsumersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of items per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

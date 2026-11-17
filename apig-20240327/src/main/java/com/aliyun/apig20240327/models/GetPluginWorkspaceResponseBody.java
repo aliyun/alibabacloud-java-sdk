@@ -85,7 +85,7 @@ public class GetPluginWorkspaceResponseBody extends TeaModel {
         public String organizationId;
 
         /**
-         * <p>The ID of the most recent pipeline run. This parameter is not returned if the plugin has never been built.</p>
+         * <p>The ID of the most recent pipeline run. This parameter is not returned if no build has been executed.</p>
          * 
          * <strong>example:</strong>
          * <p>987654</p>
@@ -103,7 +103,7 @@ public class GetPluginWorkspaceResponseBody extends TeaModel {
         public String repoId;
 
         /**
-         * <p>The repository name (the English ID of the plugin).</p>
+         * <p>The repository name, which is the English ID of the plug-in.</p>
          * 
          * <strong>example:</strong>
          * <p>my-custom-plugin</p>
@@ -112,7 +112,7 @@ public class GetPluginWorkspaceResponseBody extends TeaModel {
         public String repoName;
 
         /**
-         * <p>The OSS download URL of the compiled WASM build output. This parameter is returned only when the pipeline status is SUCCESS.</p>
+         * <p>The OSS download URL for the Wasm build output. This parameter is returned only when the pipeline status is SUCCESS.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://apigw-console-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/%7Buid%7D/plugin/plugin_1756262400.wasm">https://apigw-console-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/{uid}/plugin/plugin_1756262400.wasm</a></p>

@@ -14,7 +14,7 @@ public class BatchImportHttpApisResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public BatchImportHttpApisResponseBodyData data;

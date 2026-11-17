@@ -23,7 +23,7 @@ public class ListHttpApisRequest extends TeaModel {
     public String gatewayType;
 
     /**
-     * <p>The search keyword. Supports fuzzy match by API name or exact search by API ID.</p>
+     * <p>The search keyword. Supports fuzzy search by API name or exact search by API ID.</p>
      * 
      * <strong>example:</strong>
      * <p>test-</p>
@@ -68,7 +68,7 @@ public class ListHttpApisRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The types of the HTTP API. You can specify multiple types separated by commas (,). Valid values:</p>
+     * <p>The types of the HTTP APIs. You can specify multiple types separated by commas (,). Valid values:</p>
      * <ul>
      * <li>Http</li>
      * <li>Rest</li>
@@ -92,7 +92,7 @@ public class ListHttpApisRequest extends TeaModel {
     public Boolean withAPIsPublishedToEnvironment;
 
     /**
-     * <p>The ID of the environment. If specified, the response includes the consumer authentication policy information for each API in the specified environment.</p>
+     * <p>The environment ID. If specified, the response includes consumer authentication policy information for each API in the specified environment.</p>
      * 
      * <strong>example:</strong>
      * <p>env-xxx</p>
@@ -101,7 +101,7 @@ public class ListHttpApisRequest extends TeaModel {
     public String withAuthPolicyInEnvironmentId;
 
     /**
-     * <p>Specifies whether the permission authentication policy is enabled.</p>
+     * <p>Specifies whether the authentication policy is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class ListHttpApisRequest extends TeaModel {
     public Boolean withAuthPolicyList;
 
     /**
-     * <p>The ID of the consumer. If specified, the response includes the list of authorization rules for the specified consumer in each API information.</p>
+     * <p>The consumer ID. If specified, the response includes the authorization rule list for the specified consumer in the information of each API.</p>
      * 
      * <strong>example:</strong>
      * <p>cs-xxx</p>
@@ -119,7 +119,7 @@ public class ListHttpApisRequest extends TeaModel {
     public String withConsumerInfoById;
 
     /**
-     * <p>The environment context.</p>
+     * <p>Specifies whether to include the environment context.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -128,7 +128,7 @@ public class ListHttpApisRequest extends TeaModel {
     public Boolean withEnvironmentInfo;
 
     /**
-     * <p>The ID of the environment.</p>
+     * <p>The environment ID.</p>
      * 
      * <strong>example:</strong>
      * <p>env-ctovu5mm1hksb4q8ln40</p>
@@ -146,7 +146,7 @@ public class ListHttpApisRequest extends TeaModel {
     public Boolean withIngressInfo;
 
     /**
-     * <p>The ID of the plug-in. If specified, the plug-in release information is retrieved based on this plug-in ID.</p>
+     * <p>The plugin ID. If specified, the plugin release information is retrieved based on this ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pl-ct9qn3um1hktue8dqol0</p>

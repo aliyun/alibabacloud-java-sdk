@@ -32,7 +32,7 @@ public class ListSourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The resource group ID used to filter results. This parameter is also used for RAM authentication.</p>
+     * <p>The ID of the resource group used to filter resources. This parameter is also used for Resource Access Management (RAM) authentication.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-xxxx</p>
@@ -41,7 +41,7 @@ public class ListSourcesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The source type used to filter the query results.</p>
+     * <p>The source type.</p>
      * 
      * <strong>example:</strong>
      * <p>MSE_NACOS</p>

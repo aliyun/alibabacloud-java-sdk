@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHttpApiRouteRequest extends TeaModel {
     /**
-     * <p>The backend service configuration for the route.</p>
+     * <p>The backend service configuration of the route.</p>
      */
     @NameInMap("backendConfig")
     public CreateHttpApiRouteRequestBackendConfig backendConfig;
@@ -18,7 +18,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
     /**
-     * <p>The route description.</p>
+     * <p>The description of the route.</p>
      * 
      * <strong>example:</strong>
      * <p>User login route</p>
@@ -27,7 +27,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The fixed dynamic forwarding and ExtProc combination configuration. When you use this configuration, specify only serviceId, and do not specify environmentId or backendConfig.</p>
+     * <p>The combination configuration of fixed dynamic forwarding and ExtProc. When you use this parameter, specify only serviceId, and do not specify environmentId or backendConfig.</p>
      */
     @NameInMap("dfpConfig")
     public CreateHttpApiRouteRequestDfpConfig dfpConfig;
@@ -39,16 +39,26 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     public java.util.List<String> domainIds;
 
     /**
-     * <p>The environment ID.</p>
+     * <p>The ID of the environment.</p>
      * 
      * <strong>example:</strong>
      * <p>env-cpqnr6tlhtgubcv***</p>
      */
     @NameInMap("environmentId")
+    @Deprecated
     public String environmentId;
 
     /**
-     * <p>The route match rules.</p>
+     * <p>The ID of the gateway. This parameter replaces the deprecated environment ID to specify the gateway to which the route belongs. If only this parameter is passed, the server uses the unique valid default environment of the gateway. If this parameter and environmentId are passed at the same time, the environment must belong to this gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-xxx</p>
+     */
+    @NameInMap("gatewayId")
+    public String gatewayId;
+
+    /**
+     * <p>The match rules of the route.</p>
      */
     @NameInMap("match")
     public HttpRouteMatch match;
@@ -60,7 +70,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     public CreateHttpApiRouteRequestMcpRouteConfig mcpRouteConfig;
 
     /**
-     * <p>The route name.</p>
+     * <p>The name of the route.</p>
      * 
      * <strong>example:</strong>
      * <p>login</p>
@@ -120,12 +130,21 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         return this.domainIds;
     }
 
+    @Deprecated
     public CreateHttpApiRouteRequest setEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
     }
     public String getEnvironmentId() {
         return this.environmentId;
+    }
+
+    public CreateHttpApiRouteRequest setGatewayId(String gatewayId) {
+        this.gatewayId = gatewayId;
+        return this;
+    }
+    public String getGatewayId() {
+        return this.gatewayId;
     }
 
     public CreateHttpApiRouteRequest setMatch(HttpRouteMatch match) {
@@ -162,7 +181,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
 
     public static class CreateHttpApiRouteRequestBackendConfigServices extends TeaModel {
         /**
-         * <p>The service group. Used for HTTP-to-Dubbo conversion scenarios.</p>
+         * <p>The group of the service. This parameter is used in HTTP-to-Dubbo conversion scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT_GROUP</p>
@@ -171,7 +190,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The HTTP-to-Dubbo protocol conversion configuration. This configuration only supports SingleService MSE_NACOS DUBBO backends for HTTP APIs.</p>
+         * <p>The HTTP-to-Dubbo protocol conversion configuration. This parameter is supported only for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;dubboServiceName&quot;:&quot;com.alibaba.nacos.example.dubbo.service.DemoService&quot;,&quot;dubboServiceVersion&quot;:&quot;1.0.0&quot;,&quot;dubboServiceGroup&quot;:&quot;DEV&quot;,&quot;methodMapList&quot;:[{&quot;dubboMethodName&quot;:&quot;sayName&quot;,&quot;httpMethod&quot;:&quot;ALL_GET&quot;,&quot;methodPath&quot;:&quot;/dubbo/sayName&quot;,&quot;passThroughAllHeaders&quot;:&quot;PASS_ALL&quot;}]}</p>
@@ -180,7 +199,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public HttpDubboTranscoder httpDubboTranscoder;
 
         /**
-         * <p>The target model name. This field is shared by multiple existing model backend scenarios, and the specific routing or model rewriting semantics are determined by backendConfig.scene. It is required for the SemanticRouter scenario. If not configured for the AiAutoRouter scenario, the default model of the AI service is used.</p>
+         * <p>The name of the target model. This field is shared by multiple existing model backend scenarios. The specific routing or model rewriting semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If this field is not configured for the AiAutoRouter scenario, the default model of the AI service is used.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
@@ -189,7 +208,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String modelName;
 
         /**
-         * <p>The service namespace. Used for HTTP-to-Dubbo conversion scenarios.</p>
+         * <p>The namespace of the service. This parameter is used in HTTP-to-Dubbo conversion scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>public</p>
@@ -198,7 +217,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The service port. Do not specify this parameter for dynamic ports.</p>
+         * <p>The service port. Do not pass this parameter for dynamic ports.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -220,7 +239,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The service ID.</p>
+         * <p>The ID of the service.</p>
          * 
          * <strong>example:</strong>
          * <p>svc-crbgq0dlhtgr***</p>
@@ -229,7 +248,7 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         public String serviceId;
 
         /**
-         * <p>The service source type. Used for HTTP-to-Dubbo conversion scenarios.</p>
+         * <p>The source type of the service. This parameter is used in HTTP-to-Dubbo conversion scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>MSE_NACOS</p>
@@ -346,10 +365,10 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         /**
          * <p>The backend service scenario. Valid values:</p>
          * <ul>
-         * <li>SingleService: Single service.</li>
-         * <li>MultiServiceByRatio: Multiple services with ratio-based canary release.</li>
-         * <li>Mock: Mock service.</li>
-         * <li>Redirect: Redirect service.</li>
+         * <li>SingleService: single service.</li>
+         * <li>MultiServiceByRatio: canary release for multiple services by ratio.</li>
+         * <li>Mock: mock service.</li>
+         * <li>Redirect: redirect service.</li>
          * </ul>
          * 
          * <strong>example:</strong>

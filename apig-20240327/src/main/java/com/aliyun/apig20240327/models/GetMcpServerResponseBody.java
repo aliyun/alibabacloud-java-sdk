@@ -200,7 +200,7 @@ public class GetMcpServerResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The service protocol.</p>
+         * <p>The protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -329,7 +329,10 @@ public class GetMcpServerResponseBody extends TeaModel {
         public GetMcpServerResponseBodyDataGrayMcpServerConfigsBackendConfig backendConfig;
 
         /**
-         * <p>The match rules of the canary route.</p>
+         * <p>The match rule of the canary route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;change_order_revision\&quot;:\&quot;3.686.0_fc-sz-futian.1662568293908382_faas-eerouter\&quot;}</p>
          */
         @NameInMap("match")
         public HttpRouteMatch match;
@@ -385,7 +388,7 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String importInstanceId;
 
         /**
-         * <p>The ID of the synchronized MCP server.</p>
+         * <p>The ID of the synced MCP server.</p>
          * 
          * <strong>example:</strong>
          * <p>test-mcp</p>
@@ -457,11 +460,11 @@ public class GetMcpServerResponseBody extends TeaModel {
 
         /**
          * <p>The creation source type.</p>
-         * <p>ApiGatewayHttpToMCP: Gateway-hosted HTTP-to-MCP conversion
-         * ApiGatewayMcpHosting: Gateway-hosted direct MCP proxy
-         * ApiGatewayAssembly: Gateway MCP assembly
-         * NacosHttpToMCP: Gateway-hosted Nacos-synchronized HTTP-to-MCP conversion
-         * NacosMcpHosting: Gateway-hosted Nacos-synchronized direct MCP proxy</p>
+         * <p>ApiGatewayHttpToMCP: HTTP-to-MCP conversion hosted by the gateway.
+         * ApiGatewayMcpHosting: Direct MCP proxy hosted by the gateway.
+         * ApiGatewayAssembly: MCP assembly by the gateway.
+         * NacosHttpToMCP: HTTP-to-MCP conversion synced from Nacos and hosted by the gateway.
+         * NacosMcpHosting: Direct MCP proxy synced from Nacos and hosted by the gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>ApiGatewayHttpToMCP</p>
@@ -482,7 +485,7 @@ public class GetMcpServerResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>MCP server dedicated for testing</p>
+         * <p>Dedicated MCP server for testing</p>
          */
         @NameInMap("description")
         public String description;
@@ -527,13 +530,22 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
-         * <p>The canary route configurations.</p>
+         * <p>The canary route configuration.</p>
          */
         @NameInMap("grayMcpServerConfigs")
         public java.util.List<GetMcpServerResponseBodyDataGrayMcpServerConfigs> grayMcpServerConfigs;
 
         /**
-         * <p>The route match rules.</p>
+         * <p>The MCP service instructions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Used to query order status. An order number is required for the query</p>
+         */
+        @NameInMap("instructions")
+        public String instructions;
+
+        /**
+         * <p>The match rule of the route.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;product_code\&quot;:\&quot;apigw\&quot;}</p>
@@ -551,7 +563,7 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String mcpServerConfig;
 
         /**
-         * <p>The attachment ID of the MCP server plug-in configuration.</p>
+         * <p>The mount ID of the MCP server plugin configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>pa-adfaefwaef</p>
@@ -578,7 +590,7 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String mcpServerPath;
 
         /**
-         * <p>Specifies whether to enable MCP observability. Default value: false.</p>
+         * <p>Specifies whether MCP observability is enabled. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -587,7 +599,7 @@ public class GetMcpServerResponseBody extends TeaModel {
         public Boolean mcpStatisticsEnable;
 
         /**
-         * <p>The information about the Nacos-synchronized managed MCP.</p>
+         * <p>The information about the MCP server synced and hosted by Nacos.</p>
          */
         @NameInMap("nacosMcpSyncInfo")
         public GetMcpServerResponseBodyDataNacosMcpSyncInfo nacosMcpSyncInfo;
@@ -602,7 +614,7 @@ public class GetMcpServerResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The service protocol.</p>
+         * <p>The protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -727,6 +739,14 @@ public class GetMcpServerResponseBody extends TeaModel {
         }
         public java.util.List<GetMcpServerResponseBodyDataGrayMcpServerConfigs> getGrayMcpServerConfigs() {
             return this.grayMcpServerConfigs;
+        }
+
+        public GetMcpServerResponseBodyData setInstructions(String instructions) {
+            this.instructions = instructions;
+            return this;
+        }
+        public String getInstructions() {
+            return this.instructions;
         }
 
         public GetMcpServerResponseBodyData setMatch(HttpRouteMatch match) {

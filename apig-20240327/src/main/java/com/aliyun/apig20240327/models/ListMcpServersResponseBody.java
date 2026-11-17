@@ -141,10 +141,10 @@ public class ListMcpServersResponseBody extends TeaModel {
         public String importInstanceId;
 
         /**
-         * <p>The ID of the synced MCP server.</p>
+         * <p>The ID of the synchronized MCP server.</p>
          * 
          * <strong>example:</strong>
-         * <p>The ID of the synced MCP server</p>
+         * <p>The ID of the synchronized MCP server</p>
          */
         @NameInMap("importMcpServerId")
         public String importMcpServerId;
@@ -191,7 +191,7 @@ public class ListMcpServersResponseBody extends TeaModel {
 
     public static class ListMcpServersResponseBodyDataItems extends TeaModel {
         /**
-         * <p>API ID。</p>
+         * <p>The API ID.</p>
          * 
          * <strong>example:</strong>
          * <p>api-xxx</p>
@@ -200,7 +200,7 @@ public class ListMcpServersResponseBody extends TeaModel {
         public String apiId;
 
         /**
-         * <p>The list of assembly sources. This parameter is required when type is AssemblyMCP.</p>
+         * <p>The list of assembly sources. This parameter is required when type is set to AssemblyMCP.</p>
          */
         @NameInMap("assembledSources")
         public java.util.List<ListMcpServersResponseBodyDataItemsAssembledSources> assembledSources;
@@ -213,13 +213,11 @@ public class ListMcpServersResponseBody extends TeaModel {
 
         /**
          * <p>The creation source type.</p>
-         * <ul>
-         * <li>ApiGatewayHttpToMCP: Gateway-managed HTTP-to-MCP.</li>
-         * <li>ApiGatewayMcpHosting: Gateway-managed MCP direct proxy.</li>
-         * <li>ApiGatewayAssembly: Gateway MCP assembly.</li>
-         * <li>NacosHttpToMCP: Gateway-managed Nacos-synced HTTP-to-MCP.</li>
-         * <li>NacosMcpHosting: Gateway-managed Nacos-synced MCP direct proxy.</li>
-         * </ul>
+         * <p>ApiGatewayHttpToMCP: HTTP-to-MCP hosted by the gateway
+         * ApiGatewayMcpHosting: Direct MCP proxy hosted by the gateway
+         * ApiGatewayAssembly: MCP assembly by the gateway
+         * NacosHttpToMCP: HTTP-to-MCP synchronized from Nacos and hosted by the gateway
+         * NacosMcpHosting: Direct MCP proxy synchronized from Nacos and hosted by the gateway</p>
          * 
          * <strong>example:</strong>
          * <p>ApiGatewayHttpToMCP</p>
@@ -240,7 +238,7 @@ public class ListMcpServersResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is the test environment for the xx project of xxx</p>
+         * <p>This is the test environment for the XX project of XXX</p>
          */
         @NameInMap("description")
         public String description;
@@ -267,7 +265,7 @@ public class ListMcpServersResponseBody extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The exposed URI path. This parameter is required when protocol is SSE or StreamableHTTP and type is RealMCP.</p>
+         * <p>The exposed URI path. This parameter is required when protocol is set to SSE or StreamableHTTP and type is set to RealMCP.</p>
          * 
          * <strong>example:</strong>
          * <p>/sse</p>
@@ -285,6 +283,15 @@ public class ListMcpServersResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
+         * <p>The MCP service instructions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Used to query the order status. An order number is required for the query</p>
+         */
+        @NameInMap("instructions")
+        public String instructions;
+
+        /**
          * <p>The route match rule.</p>
          */
         @NameInMap("match")
@@ -294,7 +301,7 @@ public class ListMcpServersResponseBody extends TeaModel {
          * <p>The HTTP-to-MCP configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>Base64-encoded value of the HTTP-to-MCP configuration</p>
+         * <p>The Base64-encoded value of the HTTP-to-MCP configuration</p>
          */
         @NameInMap("mcpServerConfig")
         public String mcpServerConfig;
@@ -327,7 +334,7 @@ public class ListMcpServersResponseBody extends TeaModel {
         public Boolean mcpStatisticsEnable;
 
         /**
-         * <p>The Nacos-synced managed MCP information.</p>
+         * <p>The Nacos-synchronized and hosted MCP information.</p>
          */
         @NameInMap("nacosMcpSyncInfo")
         public ListMcpServersResponseBodyDataItemsNacosMcpSyncInfo nacosMcpSyncInfo;
@@ -342,7 +349,7 @@ public class ListMcpServersResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The service protocol.</p>
+         * <p>The protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -461,6 +468,14 @@ public class ListMcpServersResponseBody extends TeaModel {
             return this.gatewayId;
         }
 
+        public ListMcpServersResponseBodyDataItems setInstructions(String instructions) {
+            this.instructions = instructions;
+            return this;
+        }
+        public String getInstructions() {
+            return this.instructions;
+        }
+
         public ListMcpServersResponseBodyDataItems setMatch(HttpRouteMatch match) {
             this.match = match;
             return this;
@@ -560,7 +575,7 @@ public class ListMcpServersResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

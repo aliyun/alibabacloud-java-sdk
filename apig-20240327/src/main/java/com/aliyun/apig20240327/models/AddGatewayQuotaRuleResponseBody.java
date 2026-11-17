@@ -79,7 +79,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems extends TeaModel {
         /**
-         * <p>The period type of the existing conflicting rule on the subject. This is a legacy field. Use periodType in the actual response instead. This field is not guaranteed to be returned. A value of day, week, or month indicates that the period of the existing conflicting rule is day, week, or month.</p>
+         * <p>The period type of the existing conflicting rule on the consumption subject. This is a legacy field. Use periodType in the actual response instead. This field is not guaranteed to be returned. A value of day, week, or month indicates that the period of the existing conflicting rule is day, week, or month.</p>
          * 
          * <strong>example:</strong>
          * <p>week</p>
@@ -89,7 +89,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         public String conflictPeriodType;
 
         /**
-         * <p>The type of the existing conflicting rule on the subject. A value of calendar indicates that the existing conflicting rule uses a natural period. A value of epoch indicates that the existing conflicting rule uses a custom period.</p>
+         * <p>The type of the existing conflicting rule on the consumption subject. A value of calendar indicates that the existing conflicting rule uses a natural period. A value of epoch indicates that the existing conflicting rule uses a custom period.</p>
          * 
          * <strong>example:</strong>
          * <p>calendar</p>
@@ -143,7 +143,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         public String subjectName;
 
         /**
-         * <p>The type of the conflicting subject. Valid values: consumer and consumer_group.</p>
+         * <p>The type of the conflicting subject. Valid values: consumer, consumer_group.</p>
          * 
          * <strong>example:</strong>
          * <p>consumer</p>
@@ -225,7 +225,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class AddGatewayQuotaRuleResponseBodyDataConflictPreview extends TeaModel {
         /**
-         * <p>The hash of the conflicts.</p>
+         * <p>The hash of the conflict.</p>
          * 
          * <strong>example:</strong>
          * <p>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</p>
@@ -281,7 +281,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class AddGatewayQuotaRuleResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the semantics of the write request can be accepted by the system. A value of false typically occurs in retryable scenarios, such as when conflicts are not confirmed for overwriting.</p>
+         * <p>Indicates whether the semantics of the write request are accepted by the system. When dryRun is set to true, a value of true indicates only that the dry run is accepted, not that the data is saved. If a formal write request returns false, it indicates that the data is not saved due to conflicts. In this case, check conflictPreview. A value of false typically occurs in retryable scenarios such as unconfirmed conflict overwrites.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

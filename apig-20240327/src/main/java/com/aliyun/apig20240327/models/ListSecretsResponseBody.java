@@ -14,7 +14,7 @@ public class ListSecretsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The list of key information.</p>
+     * <p>The list of secrets.</p>
      */
     @NameInMap("data")
     public ListSecretsResponseBodyData data;
@@ -94,13 +94,13 @@ public class ListSecretsResponseBody extends TeaModel {
         public String gatewayType;
 
         /**
-         * <p>The KMS configuration information.</p>
+         * <p>The KMS configuration.</p>
          */
         @NameInMap("kmsConfig")
         public KMSConfig kmsConfig;
 
         /**
-         * <p>The key name.</p>
+         * <p>The secret name.</p>
          * 
          * <strong>example:</strong>
          * <p>my_secret</p>
@@ -109,7 +109,7 @@ public class ListSecretsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The resource count of resources that reference the current key.</p>
+         * <p>The resource count of the resources that reference the current secret.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -118,7 +118,7 @@ public class ListSecretsResponseBody extends TeaModel {
         public Integer referenceCount;
 
         /**
-         * <p>The key ID.</p>
+         * <p>The secret ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sec-d5e6shmm1hkoxxxxxxxx</p>
@@ -127,7 +127,7 @@ public class ListSecretsResponseBody extends TeaModel {
         public String secretId;
 
         /**
-         * <p>The key source.</p>
+         * <p>The secret source.</p>
          * 
          * <strong>example:</strong>
          * <p>KMS</p>
@@ -136,7 +136,7 @@ public class ListSecretsResponseBody extends TeaModel {
         public String secretSource;
 
         /**
-         * <p>The key status. Valid values:</p>
+         * <p>The secret status. Valid values:</p>
          * <ul>
          * <li>ENABLE: Enabled.</li>
          * <li>DISABLE: Disabled.</li>
@@ -239,7 +239,7 @@ public class ListSecretsResponseBody extends TeaModel {
 
     public static class ListSecretsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of key details.</p>
+         * <p>The list of secret details.</p>
          */
         @NameInMap("items")
         public java.util.List<ListSecretsResponseBodyDataItems> items;

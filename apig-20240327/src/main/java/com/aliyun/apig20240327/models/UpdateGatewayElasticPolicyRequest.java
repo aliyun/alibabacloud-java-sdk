@@ -25,7 +25,7 @@ public class UpdateGatewayElasticPolicyRequest extends TeaModel {
 
     public static class UpdateGatewayElasticPolicyRequestElasticPolicyEnableScaleTimePolicyList extends TeaModel {
         /**
-         * <p>The O&amp;M end time in the HH:mm format.</p>
+         * <p>The O&amp;M end time (HH:mm).</p>
          * 
          * <strong>example:</strong>
          * <p>18:00</p>
@@ -34,7 +34,7 @@ public class UpdateGatewayElasticPolicyRequest extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The O&amp;M start time in the HH:mm format.</p>
+         * <p>The O&amp;M start time (HH:mm).</p>
          * 
          * <strong>example:</strong>
          * <p>09:00</p>
@@ -67,7 +67,7 @@ public class UpdateGatewayElasticPolicyRequest extends TeaModel {
 
     public static class UpdateGatewayElasticPolicyRequestElasticPolicyTimePolicyList extends TeaModel {
         /**
-         * <p>The O&amp;M end time in the HH:mm format.</p>
+         * <p>The O&amp;M end time (HH:mm).</p>
          * 
          * <strong>example:</strong>
          * <p>06:00</p>
@@ -76,7 +76,7 @@ public class UpdateGatewayElasticPolicyRequest extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The O&amp;M start time in the HH:mm format.</p>
+         * <p>The O&amp;M start time (HH:mm).</p>
          * 
          * <strong>example:</strong>
          * <p>00:00</p>
@@ -126,7 +126,7 @@ public class UpdateGatewayElasticPolicyRequest extends TeaModel {
 
     public static class UpdateGatewayElasticPolicyRequestElasticPolicy extends TeaModel {
         /**
-         * <p>Specifies whether to enable the elastic policy. A value of false indicates that the elastic policy is disabled. When the elastic policy is disabled, other fields are not validated and the system directly proceeds with the disabling process.</p>
+         * <p>Specifies whether to enable elastic scaling. A value of false indicates that elastic scaling is disabled. When disabled, other fields are not validated and the disabling process is executed directly.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -144,13 +144,13 @@ public class UpdateGatewayElasticPolicyRequest extends TeaModel {
         public String elasticType;
 
         /**
-         * <p>The time periods during which AutoHPA is allowed to scale out, specified by startTime and endTime.</p>
+         * <p>The time periods during which AutoHPA is allowed to scale out (startTime/endTime).</p>
          */
         @NameInMap("enableScaleTimePolicyList")
         public java.util.List<UpdateGatewayElasticPolicyRequestElasticPolicyEnableScaleTimePolicyList> enableScaleTimePolicyList;
 
         /**
-         * <p>Specifies whether to enable the AutoHPA load alert threshold.</p>
+         * <p>Specifies whether to enable the load alert threshold for AutoHPA.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

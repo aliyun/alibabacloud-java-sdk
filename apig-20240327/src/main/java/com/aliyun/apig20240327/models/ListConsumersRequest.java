@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListConsumersRequest extends TeaModel {
     /**
-     * <p>The gateway type used to filter results. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
+     * <p>The validity status filter. Valid values: Permanent, InEffect, AboutToExpire, and Expired. You can specify multiple values separated by commas to form a union. If this parameter is not specified, all statuses are included and intersected with the name and display status filters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Expired,AboutToExpire</p>
+     */
+    @NameInMap("expireStatus")
+    public String expireStatus;
+
+    /**
+     * <p>The gateway type used for filtering. Currently, <strong>AI</strong> and <strong>API</strong> gateway types are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>AI</p>
@@ -14,7 +23,16 @@ public class ListConsumersRequest extends TeaModel {
     public String gatewayType;
 
     /**
-     * <p>Fuzzy matches APIs by API name.</p>
+     * <p>Specifies whether to return the full expiration reminder count. Default value: false. The statistical scope is limited only by the current account and gatewayType.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("includeExpirationSummary")
+    public Boolean includeExpirationSummary;
+
+    /**
+     * <p>The keyword used for fuzzy search by API name.</p>
      * 
      * <strong>example:</strong>
      * <p>UI-test</p>
@@ -40,9 +58,26 @@ public class ListConsumersRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The display status filter. Valid values: Enabled (enabled and not expired), Disabled (disabled regardless of expiration), and Expired (enabled and expired). If this parameter is not specified, all statuses are included and intersected with other filter conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
+     */
+    @NameInMap("status")
+    public String status;
+
     public static ListConsumersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListConsumersRequest self = new ListConsumersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListConsumersRequest setExpireStatus(String expireStatus) {
+        this.expireStatus = expireStatus;
+        return this;
+    }
+    public String getExpireStatus() {
+        return this.expireStatus;
     }
 
     public ListConsumersRequest setGatewayType(String gatewayType) {
@@ -51,6 +86,14 @@ public class ListConsumersRequest extends TeaModel {
     }
     public String getGatewayType() {
         return this.gatewayType;
+    }
+
+    public ListConsumersRequest setIncludeExpirationSummary(Boolean includeExpirationSummary) {
+        this.includeExpirationSummary = includeExpirationSummary;
+        return this;
+    }
+    public Boolean getIncludeExpirationSummary() {
+        return this.includeExpirationSummary;
     }
 
     public ListConsumersRequest setNameLike(String nameLike) {
@@ -75,6 +118,14 @@ public class ListConsumersRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListConsumersRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }

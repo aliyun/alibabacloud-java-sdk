@@ -76,7 +76,7 @@ public class GetProductRefResponseBody extends TeaModel {
 
     public static class GetProductRefResponseBodyData extends TeaModel {
         /**
-         * <p>The API configuration currently associated with the API product. The structure is derived from the common structure HiMarketProductRefConfig. This structure contains two members: gatewayId and apigRefConfig. The inner apigRefConfig contains the following members: mcpServerId, mcpRouteId, mcpServerName, agentApiId, agentApiName, modelApiId, and modelApiName.</p>
+         * <p>The API configuration currently associated with the API product. The structure is derived from the common HiMarketProductRefConfig structure. This structure contains the gatewayId and apigRefConfig members. The inner apigRefConfig member includes mcpServerId, mcpRouteId, mcpServerName, agentApiId, agentApiName, modelApiId, and modelApiName.</p>
          */
         @NameInMap("apigRefConfig")
         public HiMarketProductRefConfig apigRefConfig;

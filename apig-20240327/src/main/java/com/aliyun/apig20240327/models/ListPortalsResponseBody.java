@@ -38,7 +38,7 @@ public class ListPortalsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The cursor token for querying the next page.</p>
+     * <p>The pagination token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>next-token-xxxxxxxx</p>
@@ -137,7 +137,7 @@ public class ListPortalsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The portal domain configuration list. The list element is named domainConfig.</p>
+         * <p>The portal domain name configuration list. The list element is named domainConfig.</p>
          */
         @NameInMap("portalDomainConfig")
         public java.util.List<HiMarketPortalDomainConfig> portalDomainConfig;
@@ -255,7 +255,7 @@ public class ListPortalsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total count.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

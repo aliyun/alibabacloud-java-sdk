@@ -29,7 +29,7 @@ public class SyncMCPServersResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2F46B9E7-67EF-5C8A-BA52-D38D5B32AF2C</p>
@@ -76,7 +76,7 @@ public class SyncMCPServersResponseBody extends TeaModel {
 
     public static class SyncMCPServersResponseBodyDataFailedMcpServers extends TeaModel {
         /**
-         * <p>The MCP server name.</p>
+         * <p>The name of the MCP server.</p>
          * 
          * <strong>example:</strong>
          * <p>mcp-fail</p>
@@ -115,7 +115,7 @@ public class SyncMCPServersResponseBody extends TeaModel {
 
     public static class SyncMCPServersResponseBodyDataSucceedMcpServers extends TeaModel {
         /**
-         * <p>The MCP server name.</p>
+         * <p>The name of the MCP server.</p>
          * 
          * <strong>example:</strong>
          * <p>mcp-success</p>
@@ -154,13 +154,13 @@ public class SyncMCPServersResponseBody extends TeaModel {
 
     public static class SyncMCPServersResponseBodyData extends TeaModel {
         /**
-         * <p>The list of MCP servers that failed to sync.</p>
+         * <p>The list of MCP servers that fail to sync.</p>
          */
         @NameInMap("failedMcpServers")
         public java.util.List<SyncMCPServersResponseBodyDataFailedMcpServers> failedMcpServers;
 
         /**
-         * <p>The list of MCP servers that were synced successfully.</p>
+         * <p>The list of MCP servers that are successfully synced.</p>
          */
         @NameInMap("succeedMcpServers")
         public java.util.List<SyncMCPServersResponseBodyDataSucceedMcpServers> succeedMcpServers;

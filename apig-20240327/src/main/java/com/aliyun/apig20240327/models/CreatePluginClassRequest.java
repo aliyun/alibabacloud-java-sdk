@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePluginClassRequest extends TeaModel {
     /**
-     * <p>The alias of the plug-in. This parameter is required. If it is not provided, the service returns InvalidParameter.WithValue.</p>
+     * <p>The alias of the plug-in. This parameter is actually required. If it is not provided, the service returns InvalidParameter.WithValue.</p>
      * 
      * <strong>example:</strong>
      * <p>My Wasm Plugin</p>
@@ -53,7 +53,7 @@ public class CreatePluginClassRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The minimum supported gateway version.</p>
+     * <p>The minimum compatible gateway version.</p>
      * 
      * <strong>example:</strong>
      * <p>2.0.0</p>
@@ -92,7 +92,7 @@ public class CreatePluginClassRequest extends TeaModel {
     public String wasmLanguage;
 
     /**
-     * <p>The download URL of the WASM plug-in binary file.</p>
+     * <p>The download URL of the binary file for the WASM plug-in.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

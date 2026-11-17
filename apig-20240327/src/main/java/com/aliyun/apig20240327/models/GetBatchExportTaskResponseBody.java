@@ -14,7 +14,7 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public GetBatchExportTaskResponseBodyData data;
@@ -76,7 +76,7 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
 
     public static class GetBatchExportTaskResponseBodyDataResultFailureItems extends TeaModel {
         /**
-         * <p>API ID。</p>
+         * <p>The API ID.</p>
          * 
          * <strong>example:</strong>
          * <p>api-xxx</p>
@@ -135,7 +135,7 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
 
     public static class GetBatchExportTaskResponseBodyDataResultSuccessItems extends TeaModel {
         /**
-         * <p>API ID。</p>
+         * <p>The API ID.</p>
          * 
          * <strong>example:</strong>
          * <p>api-xxx</p>
@@ -203,7 +203,7 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
         public String apiType;
 
         /**
-         * <p>The list of APIs that failed to be processed.</p>
+         * <p>The list of failed APIs.</p>
          */
         @NameInMap("failureItems")
         public java.util.List<GetBatchExportTaskResponseBodyDataResultFailureItems> failureItems;
@@ -218,7 +218,7 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
-         * <p>The Base64-encoded ZIP file content. After the frontend decodes the content, it can directly trigger a browser download.</p>
+         * <p>The Base64-encoded content of the ZIP file. The frontend can decode the content to directly trigger a download in the browser.</p>
          * 
          * <strong>example:</strong>
          * <p>UEsDBBQAAAA...</p>
@@ -227,7 +227,7 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
         public String specContentBase64;
 
         /**
-         * <p>The list of APIs that were processed successfully.</p>
+         * <p>The list of successfully processed APIs.</p>
          */
         @NameInMap("successItems")
         public java.util.List<GetBatchExportTaskResponseBodyDataResultSuccessItems> successItems;
@@ -281,7 +281,7 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
 
     public static class GetBatchExportTaskResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the task was created. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
+         * <p>The task creation time. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-15T10:00:00Z</p>
@@ -299,7 +299,7 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The number of processed items.</p>
+         * <p>The processed count.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -341,7 +341,7 @@ public class GetBatchExportTaskResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The total number of items.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

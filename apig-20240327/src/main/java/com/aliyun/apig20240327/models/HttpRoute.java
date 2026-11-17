@@ -11,7 +11,7 @@ public class HttpRoute extends TeaModel {
     public Backend backend;
 
     /**
-     * <p>Indicates whether the route is a built-in system route.</p>
+     * <p>Specifies whether the route is a built-in system route.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,19 +41,19 @@ public class HttpRoute extends TeaModel {
      * <p>The route description.</p>
      * 
      * <strong>example:</strong>
-     * <p>商品中心预发路由</p>
+     * <p>Product center staging route</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The ExtProc service selected for the fixed dynamic forwarding route. This field is not returned when no matching binding exists.</p>
+     * <p>The ExtProc service selection mounted for fixed dynamic forwarding routes. This field is not returned when no matching binding exists.</p>
      */
     @NameInMap("dfpConfig")
     public HttpRouteDfpConfig dfpConfig;
 
     /**
-     * <p>The list of domain information.</p>
+     * <p>The domain name information list.</p>
      */
     @NameInMap("domainInfos")
     public java.util.List<HttpRouteDomainInfos> domainInfos;
@@ -253,7 +253,7 @@ public class HttpRoute extends TeaModel {
 
     public static class HttpRouteDomainInfos extends TeaModel {
         /**
-         * <p>The domain ID.</p>
+         * <p>The domain name ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-cr3v7dllhtgi9s***</p>
@@ -371,7 +371,7 @@ public class HttpRoute extends TeaModel {
 
     public static class HttpRouteEnvironmentInfoSubDomains extends TeaModel {
         /**
-         * <p>The domain ID.</p>
+         * <p>The domain name ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-cqu19hdlhtgjuv4***</p>
@@ -450,7 +450,7 @@ public class HttpRoute extends TeaModel {
          * <p>The alias of the environment name.</p>
          * 
          * <strong>example:</strong>
-         * <p>商品中心预发环境</p>
+         * <p>Product center staging environment</p>
          */
         @NameInMap("alias")
         public String alias;
@@ -480,7 +480,7 @@ public class HttpRoute extends TeaModel {
         public String name;
 
         /**
-         * <p>The list of default subdomains for the environment.</p>
+         * <p>The list of default second-level domain names of the environment.</p>
          */
         @NameInMap("subDomains")
         public java.util.List<HttpRouteEnvironmentInfoSubDomains> subDomains;
@@ -534,7 +534,7 @@ public class HttpRoute extends TeaModel {
 
     public static class HttpRouteMcpServerInfoMcpRouteConfig extends TeaModel {
         /**
-         * <p>mcp route path</p>
+         * <p>The URI path exposed by the MCP route.</p>
          * 
          * <strong>example:</strong>
          * <p>/mcp</p>

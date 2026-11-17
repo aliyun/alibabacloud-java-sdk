@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPublishableProductsRequest extends TeaModel {
     /**
-     * <p>The name of the API product. This corresponds to the name field in the response list items.</p>
+     * <p>The name of the API product. This is the same field as the name property in the response list items.</p>
      * 
      * <strong>example:</strong>
      * <p>weather-query-api</p>
@@ -23,7 +23,7 @@ public class ListPublishableProductsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

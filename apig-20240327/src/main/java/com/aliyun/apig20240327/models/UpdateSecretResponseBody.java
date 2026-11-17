@@ -23,7 +23,7 @@ public class UpdateSecretResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B01CABA5-9AA1-51A2-A5A7-8BD83BA062F7</p>

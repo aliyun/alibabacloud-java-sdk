@@ -74,9 +74,51 @@ public class ListConsumersResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListConsumersResponseBodyDataExpirationSummary extends TeaModel {
+        /**
+         * <p>The number of unexpired consumers with a remaining validity period of no more than seven days, including those that are manually disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("aboutToExpire")
+        public Long aboutToExpire;
+
+        /**
+         * <p>The number of expired consumers, including those that are manually disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("expired")
+        public Long expired;
+
+        public static ListConsumersResponseBodyDataExpirationSummary build(java.util.Map<String, ?> map) throws Exception {
+            ListConsumersResponseBodyDataExpirationSummary self = new ListConsumersResponseBodyDataExpirationSummary();
+            return TeaModel.build(map, self);
+        }
+
+        public ListConsumersResponseBodyDataExpirationSummary setAboutToExpire(Long aboutToExpire) {
+            this.aboutToExpire = aboutToExpire;
+            return this;
+        }
+        public Long getAboutToExpire() {
+            return this.aboutToExpire;
+        }
+
+        public ListConsumersResponseBodyDataExpirationSummary setExpired(Long expired) {
+            this.expired = expired;
+            return this;
+        }
+        public Long getExpired() {
+            return this.expired;
+        }
+
+    }
+
     public static class ListConsumersResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The API consumer ID.</p>
+         * <p>The consumer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-csheiftlhtgmp0j0hp4g</p>
@@ -112,7 +154,7 @@ public class ListConsumersResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the API consumer is enabled.</p>
+         * <p>Specifies whether the consumer is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -121,7 +163,25 @@ public class ListConsumersResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The API consumer name.</p>
+         * <p>The expiration time of the consumer, in UTC UNIX seconds. A null value indicates that the consumer is permanently valid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1893456000</p>
+         */
+        @NameInMap("expireAt")
+        public Long expireAt;
+
+        /**
+         * <p>The validity status. Valid values: Permanent, InEffect, AboutToExpire, and Expired. The status is accurate to the second. A remaining time of exactly seven days is classified as AboutToExpire, and an exact expiration time is classified as Expired.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InEffect</p>
+         */
+        @NameInMap("expireStatus")
+        public String expireStatus;
+
+        /**
+         * <p>The consumer name.</p>
          * 
          * <strong>example:</strong>
          * <p>user-service</p>
@@ -183,6 +243,22 @@ public class ListConsumersResponseBody extends TeaModel {
             return this.enable;
         }
 
+        public ListConsumersResponseBodyDataItems setExpireAt(Long expireAt) {
+            this.expireAt = expireAt;
+            return this;
+        }
+        public Long getExpireAt() {
+            return this.expireAt;
+        }
+
+        public ListConsumersResponseBodyDataItems setExpireStatus(String expireStatus) {
+            this.expireStatus = expireStatus;
+            return this;
+        }
+        public String getExpireStatus() {
+            return this.expireStatus;
+        }
+
         public ListConsumersResponseBodyDataItems setName(String name) {
             this.name = name;
             return this;
@@ -203,7 +279,13 @@ public class ListConsumersResponseBody extends TeaModel {
 
     public static class ListConsumersResponseBodyData extends TeaModel {
         /**
-         * <p>The list of API consumer information.</p>
+         * <p>The expiration reminder count for all consumers under the same account and gateway type. This count is not affected by name filters, status filters, or pagination. This field is returned only when includeExpirationSummary is set to true.</p>
+         */
+        @NameInMap("expirationSummary")
+        public ListConsumersResponseBodyDataExpirationSummary expirationSummary;
+
+        /**
+         * <p>The list of consumer information.</p>
          */
         @NameInMap("items")
         public java.util.List<ListConsumersResponseBodyDataItems> items;
@@ -218,7 +300,7 @@ public class ListConsumersResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -238,6 +320,14 @@ public class ListConsumersResponseBody extends TeaModel {
         public static ListConsumersResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListConsumersResponseBodyData self = new ListConsumersResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListConsumersResponseBodyData setExpirationSummary(ListConsumersResponseBodyDataExpirationSummary expirationSummary) {
+            this.expirationSummary = expirationSummary;
+            return this;
+        }
+        public ListConsumersResponseBodyDataExpirationSummary getExpirationSummary() {
+            return this.expirationSummary;
         }
 
         public ListConsumersResponseBodyData setItems(java.util.List<ListConsumersResponseBodyDataItems> items) {

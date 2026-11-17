@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMigrationNamespacedServicesResponseBody extends TeaModel {
     /**
-     * <p>The status code of the response.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class GetMigrationNamespacedServicesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7D513911-206E-5E93-9C9E-71D63C0D68E7</p>

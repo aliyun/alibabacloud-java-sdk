@@ -1,3 +1,77 @@
+2026-11-17 Version: 12.10.0
+- Support API AuthorizeConsumerModelCardGrants.
+- Support API CreateAiModelSource.
+- Support API CreateAiModelSourceModel.
+- Support API CreateLogicalModel.
+- Support API CreateModelApi.
+- Support API CreateModelGroup.
+- Support API DeleteAiModelSource.
+- Support API DeleteAiModelSourceModel.
+- Support API DeleteLogicalModel.
+- Support API DeleteModelApi.
+- Support API DeleteModelGroup.
+- Support API GetAiModelSource.
+- Support API GetAiModelSourceEditImpact.
+- Support API GetAiModelSourceModel.
+- Support API GetConsumerAccessOverview.
+- Support API GetDirectSupply.
+- Support API GetLogicalModel.
+- Support API GetLogicalModelDeployment.
+- Support API GetModelApi.
+- Support API GetModelGroup.
+- Support API ListAiModelSourceModels.
+- Support API ListAiModelSources.
+- Support API ListConsumerConsoleSummaries.
+- Support API ListConsumerModelCardGrants.
+- Support API ListLogicalModels.
+- Support API ListModelApis.
+- Support API ListModelGroups.
+- Support API PreviewLogicalModelUpdate.
+- Support API RetryLogicalModelDeployment.
+- Support API RevokeConsumerModelCardGrants.
+- Support API UpdateAiModelSource.
+- Support API UpdateAiModelSourceModel.
+- Support API UpdateLogicalModel.
+- Support API UpdateModelApi.
+- Support API UpdateModelGroup.
+- Update API CreateAiModelProvider: add request parameters body.defaultServiceId.
+- Update API CreateAiModelProvider: add response parameters Body.data.defaultServiceId.
+- Update API CreateConsumer: add request parameters body.expireAt.
+- Update API CreateHttpApiRoute: add request parameters body.gatewayId.
+- Update API CreateMcpServer: add request parameters body.instructions.
+- Update API GetAiModelProvider: add response parameters Body.data.defaultServiceId.
+- Update API GetConsumer: add response parameters Body.data.expireAt.
+- Update API GetConsumer: add response parameters Body.data.expireStatus.
+- Update API GetGatewayQuotaRuleSubjectUsage: add response parameters Body.data.details.items.$.modelCardId.
+- Update API GetGatewayQuotaRuleSubjectUsage: add response parameters Body.data.details.items.$.modelSourceId.
+- Update API GetGatewayQuotaRuleSubjectUsage: add response parameters Body.data.details.items.$.modelSourceName.
+- Update API GetGatewayQuotaRuleSubjectUsage: add response parameters Body.data.details.items.$.serviceId.
+- Update API GetMcpServer: add response parameters Body.data.instructions.
+- Update API ListAiModelProviders: add response parameters Body.data.items.$.defaultServiceId.
+- Update API ListConsumerGroupQuotaRules: add request parameters ruleStatus.
+- Update API ListConsumerQuotaRules: add request parameters ruleStatus.
+- Update API ListConsumers: add request parameters expireStatus.
+- Update API ListConsumers: add request parameters includeExpirationSummary.
+- Update API ListConsumers: add request parameters status.
+- Update API ListConsumers: add response parameters Body.data.expirationSummary.
+- Update API ListConsumers: add response parameters Body.data.items.$.expireAt.
+- Update API ListConsumers: add response parameters Body.data.items.$.expireStatus.
+- Update API ListGatewayQuotaRules: add request parameters ruleStatus.
+- Update API ListGatewayQuotaRules: add request parameters subjectNameLike.
+- Update API ListMcpServers: add response parameters Body.data.items.$.instructions.
+- Update API ListPolicies: add request parameters pageNumber.
+- Update API ListPolicies: add request parameters pageSize.
+- Update API UpdateAiModelProvider: add request parameters body.defaultServiceId.
+- Update API UpdateAiModelProvider: add response parameters Body.data.defaultServiceId.
+- Update API UpdateConsumer: add request parameters body.clearExpireAt.
+- Update API UpdateConsumer: add request parameters body.enableAfterRenewal.
+- Update API UpdateConsumer: add request parameters body.expireAt.
+- Update API UpdateConsumer: add request parameters body.renew.
+- Update API UpdateHttpApiRoute: add request parameters body.gatewayId.
+- Update API UpdateMcpServer: add request parameters body.instructions.
+- Update API UpdateService: add request parameters body.expectedConfigRevision.
+
+
 2026-11-10 Version: 12.9.0
 - Support API CreateGatewayQuotaRuleSubjectUsageExportTask.
 - Support API GetGatewayQuotaRuleSubjectUsageExportTask.

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewayErrorAccessLogsResponseBody extends TeaModel {
     /**
-     * <p>The list of log data. Each entry is a mapping of field names to field values.</p>
+     * <p>The log data list. Each entry is a map of field names to field values.</p>
      */
     @NameInMap("data")
     public java.util.List<java.util.Map<String, String>> data;

@@ -29,7 +29,7 @@ public class CreateSecretResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CFF809D7-045D-502F-BF6C-947Exxxxxxxx</p>
@@ -76,7 +76,7 @@ public class CreateSecretResponseBody extends TeaModel {
 
     public static class CreateSecretResponseBodyData extends TeaModel {
         /**
-         * <p>The key ID.</p>
+         * <p>The secret ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sec-d5e6shmm1hkoxxxxxxxx</p>

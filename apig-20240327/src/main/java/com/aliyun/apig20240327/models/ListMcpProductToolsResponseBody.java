@@ -76,7 +76,7 @@ public class ListMcpProductToolsResponseBody extends TeaModel {
 
     public static class ListMcpProductToolsResponseBodyDataTools extends TeaModel {
         /**
-         * <p>The annotation information of the tool. This field is a map structure. The API definition declares it only as map<any> without specifying its members and purposes.</p>
+         * <p>The annotation information of the tool, formatted as a map. The API definition declares this field only as map<any> without specifying its members or purposes.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;readOnly&quot;:true}</p>
@@ -94,7 +94,7 @@ public class ListMcpProductToolsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The structure definition of the input parameters for the tool. This field is a map structure. The API definition declares it only as map<any> without specifying its members and constraints.</p>
+         * <p>The input parameter schema of the tool, formatted as a map. The API definition declares this field only as map<any> without specifying its members or constraints.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;query&quot;:{&quot;type&quot;:&quot;string&quot;}}}</p>
@@ -103,7 +103,7 @@ public class ListMcpProductToolsResponseBody extends TeaModel {
         public java.util.Map<String, ?> inputSchema;
 
         /**
-         * <p>The metadata of the tool. This field is a map structure. The API definition declares it only as map<any> without specifying its members and purposes.</p>
+         * <p>The metadata of the tool, formatted as a map. The API definition declares this field only as map<any> without specifying its members or purposes.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;version&quot;:&quot;1.0.0&quot;}</p>
@@ -121,7 +121,7 @@ public class ListMcpProductToolsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The structure definition of the output results for the tool. This field is a map structure. The API definition declares it only as map<any> without specifying its members and constraints.</p>
+         * <p>The output result schema of the tool, formatted as a map. The API definition declares this field only as map<any> without specifying its members or constraints.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;string&quot;}}}</p>
@@ -203,7 +203,7 @@ public class ListMcpProductToolsResponseBody extends TeaModel {
 
     public static class ListMcpProductToolsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of MCP tools. Each element in the list is named tool and represents an MCP tool.</p>
+         * <p>The list of MCP tools. Each element in the list is named tool and represents a single MCP tool.</p>
          */
         @NameInMap("tools")
         public java.util.List<ListMcpProductToolsResponseBodyDataTools> tools;

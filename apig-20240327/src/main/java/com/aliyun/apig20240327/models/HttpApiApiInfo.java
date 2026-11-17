@@ -23,7 +23,7 @@ public class HttpApiApiInfo extends TeaModel {
     public AuthConfig authConfig;
 
     /**
-     * <p>The API base path.</p>
+     * <p>The base path of the API.</p>
      * 
      * <strong>example:</strong>
      * <p>/v1</p>
@@ -32,7 +32,7 @@ public class HttpApiApiInfo extends TeaModel {
     public String basePath;
 
     /**
-     * <p>The API operation deployment status.</p>
+     * <p>The publish status of the API operation.</p>
      */
     @NameInMap("deployCntMap")
     public java.util.Map<String, HttpApiApiInfoDeployCntMapValue> deployCntMap;
@@ -44,10 +44,10 @@ public class HttpApiApiInfo extends TeaModel {
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
     /**
-     * <p>The API description.</p>
+     * <p>The description of the API.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test-specific API</p>
+     * <p>Test API</p>
      */
     @NameInMap("description")
     public String description;
@@ -77,7 +77,7 @@ public class HttpApiApiInfo extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The HTTP API ID.</p>
+     * <p>The ID of the HTTP API.</p>
      * 
      * <strong>example:</strong>
      * <p>api-xxx</p>
@@ -86,7 +86,7 @@ public class HttpApiApiInfo extends TeaModel {
     public String httpApiId;
 
     /**
-     * <p>The HTTP ingress API information.</p>
+     * <p>The information of the HTTP Ingress API.</p>
      */
     @NameInMap("ingressInfo")
     public HttpApiApiInfoIngressInfo ingressInfo;
@@ -134,7 +134,7 @@ public class HttpApiApiInfo extends TeaModel {
     public String type;
 
     /**
-     * <p>The API versioning information.</p>
+     * <p>The versioning information of the API.</p>
      */
     @NameInMap("versionInfo")
     public HttpApiVersionInfo versionInfo;
@@ -358,7 +358,7 @@ public class HttpApiApiInfo extends TeaModel {
         public String gatewayServiceId;
 
         /**
-         * <p>The match conditions.</p>
+         * <p>The match condition.</p>
          */
         @NameInMap("match")
         public HttpApiBackendMatchConditions match;
@@ -599,7 +599,7 @@ public class HttpApiApiInfo extends TeaModel {
         public java.util.List<HttpApiDomainInfo> customDomains;
 
         /**
-         * <p>The API deployment status in the current environment.</p>
+         * <p>The deployment status of the API in the current environment.</p>
          * 
          * <strong>example:</strong>
          * <p>Deployed</p>
@@ -632,13 +632,13 @@ public class HttpApiApiInfo extends TeaModel {
         public String name;
 
         /**
-         * <p>The existing service configurations.</p>
+         * <p>The existing service configuration.</p>
          */
         @NameInMap("serviceConfigs")
         public java.util.List<HttpApiApiInfoEnvironmentsServiceConfigs> serviceConfigs;
 
         /**
-         * <p>The list of default domain names for the environment.</p>
+         * <p>The default domain names for the environment.</p>
          */
         @NameInMap("subDomains")
         public java.util.List<HttpApiApiInfoEnvironmentsSubDomains> subDomains;
@@ -788,7 +788,7 @@ public class HttpApiApiInfo extends TeaModel {
         public HttpApiApiInfoIngressInfoEnvironmentInfo environmentInfo;
 
         /**
-         * <p>The ingress class to listen on.</p>
+         * <p>The Ingress class to listen on.</p>
          * 
          * <strong>example:</strong>
          * <p>mse</p>
@@ -803,7 +803,7 @@ public class HttpApiApiInfo extends TeaModel {
         public HttpApiApiInfoIngressInfoK8sClusterInfo k8sClusterInfo;
 
         /**
-         * <p>Specifies whether to update the address in the ingress status.</p>
+         * <p>Specifies whether to update the IP address in the Ingress status.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -821,7 +821,7 @@ public class HttpApiApiInfo extends TeaModel {
         public String sourceId;
 
         /**
-         * <p>The watched namespace.</p>
+         * <p>The namespace to watch.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

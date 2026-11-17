@@ -32,7 +32,7 @@ public class HttpApiInfoByName extends TeaModel {
     public String type;
 
     /**
-     * <p>Indicates whether version management is enabled.</p>
+     * <p>Specifies whether version management is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class HttpApiInfoByName extends TeaModel {
     public Boolean versionEnabled;
 
     /**
-     * <p>The version information of the versioned APIs.</p>
+     * <p>The versioned API version information.</p>
      */
     @NameInMap("versionedHttpApis")
     public java.util.List<HttpApiApiInfo> versionedHttpApis;

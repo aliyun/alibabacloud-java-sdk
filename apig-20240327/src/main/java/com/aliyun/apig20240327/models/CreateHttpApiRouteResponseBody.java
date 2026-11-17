@@ -29,7 +29,7 @@ public class CreateHttpApiRouteResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>3ACFC7A7-45A9-58CF-B2D5-765B60254695</p>
@@ -76,7 +76,7 @@ public class CreateHttpApiRouteResponseBody extends TeaModel {
 
     public static class CreateHttpApiRouteResponseBodyData extends TeaModel {
         /**
-         * <p>The route ID.</p>
+         * <p>The ID of the route.</p>
          * 
          * <strong>example:</strong>
          * <p>hr-cr82undlhtgrlej***</p>

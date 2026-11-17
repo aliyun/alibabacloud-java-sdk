@@ -14,8 +14,7 @@ public class UpdateRiskNotificationRequest extends TeaModel {
     public Boolean isMute;
 
     /**
-     * <p>The risk item code. This parameter is required.</p>
-     * <p>The value is a numeric string (for example, 60010010002 or 50010010009). Call GetRiskNotification to query the code of the current risk item.</p>
+     * <p>The risk item code in the request body. This parameter is required. The value is a numeric string (such as 60010010002 or 50010010009). You can call GetRiskNotification to query the code of the current risk item.</p>
      * 
      * <strong>example:</strong>
      * <p>60010010002</p>

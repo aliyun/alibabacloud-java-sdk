@@ -38,7 +38,7 @@ public class ListHiMarketConsumersResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The cursor for the next page. An empty value indicates that the last page has been reached.</p>
+     * <p>The pagination token for the next page. An empty value indicates that the last page is reached.</p>
      * 
      * <strong>example:</strong>
      * <p>token-xxxxxxxx</p>
@@ -183,7 +183,7 @@ public class ListHiMarketConsumersResponseBody extends TeaModel {
 
     public static class ListHiMarketConsumersResponseBodyData extends TeaModel {
         /**
-         * <p>The list of consumers. Each element represents a HiMarket consumer.</p>
+         * <p>The list of consumers. Each element in the list is named consumer and represents a HiMarket consumer.</p>
          */
         @NameInMap("content")
         public java.util.List<ListHiMarketConsumersResponseBodyDataContent> content;
@@ -198,7 +198,7 @@ public class ListHiMarketConsumersResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

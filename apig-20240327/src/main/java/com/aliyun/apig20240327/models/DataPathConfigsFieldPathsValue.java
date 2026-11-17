@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DataPathConfigsFieldPathsValue extends TeaModel {
     /**
-     * <p>The identity key of the field, which is unique within the same request path, such as input_token.</p>
+     * <p>The identity key of the field, which is unique within the same URI of the request, such as input_token.</p>
      * 
      * <strong>example:</strong>
      * <p>input_token</p>
@@ -23,7 +23,7 @@ public class DataPathConfigsFieldPathsValue extends TeaModel {
     public String jsonPath;
 
     /**
-     * <p>The value rule for the field.</p>
+     * <p>The value extraction rule for the field.</p>
      * 
      * <strong>example:</strong>
      * <p>first</p>
@@ -68,7 +68,7 @@ public class DataPathConfigsFieldPathsValue extends TeaModel {
     public String category;
 
     /**
-     * <p>The message direction of the field, which indicates whether the field is extracted from the request or the response.</p>
+     * <p>The message direction of the field, which indicates whether it is extracted from the request or the response.</p>
      * 
      * <strong>example:</strong>
      * <p>response</p>
@@ -95,7 +95,7 @@ public class DataPathConfigsFieldPathsValue extends TeaModel {
     public Boolean recordEnabled;
 
     /**
-     * <p>Indicates whether the collection status of the field can be toggled.</p>
+     * <p>Indicates whether the collection switch for the field can be toggled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -113,7 +113,7 @@ public class DataPathConfigsFieldPathsValue extends TeaModel {
     public Boolean jsonPathRewriteAllowed;
 
     /**
-     * <p>Indicates whether the field configuration is from a field template.</p>
+     * <p>Indicates whether the field configuration is derived from a field template.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -22,7 +22,7 @@ public class BatchExportHttpApisRequest extends TeaModel {
     public String apiType;
 
     /**
-     * <p>The export extension configuration. When this configuration is specified for a REST API, gatewayId is required. This configuration is required for batch export of HTTP APIs.</p>
+     * <p>The export extension configuration. The gatewayId parameter is required when this configuration is specified for REST APIs. This configuration is required for batch export of HTTP APIs.</p>
      */
     @NameInMap("extensionConfig")
     public BatchExportHttpApisRequestExtensionConfig extensionConfig;
@@ -37,7 +37,7 @@ public class BatchExportHttpApisRequest extends TeaModel {
     public String format;
 
     /**
-     * <p>The gateway instance ID. This parameter is required when extensionConfig is specified for a REST API. This parameter is required for batch export of HTTP APIs.</p>
+     * <p>The gateway instance ID. This parameter is required when extensionConfig is specified for REST APIs. This parameter is also required for batch export of HTTP APIs.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-xxx</p>

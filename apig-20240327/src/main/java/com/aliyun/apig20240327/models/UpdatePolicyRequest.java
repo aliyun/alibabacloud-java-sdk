@@ -15,7 +15,7 @@ public class UpdatePolicyRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The description of the policy.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a gateway timeout policy</p>

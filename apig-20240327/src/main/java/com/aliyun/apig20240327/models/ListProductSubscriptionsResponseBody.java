@@ -94,7 +94,7 @@ public class ListProductSubscriptionsResponseBody extends TeaModel {
         public String consumerName;
 
         /**
-         * <p>The ID of the subscribed API product, which is the primary ID of the API product resource. This ID is the same as the productId path parameter of this operation.</p>
+         * <p>The ID of the subscribed API product. This is the primary ID of the API product resource and is the same as the productId path parameter of this operation.</p>
          * 
          * <strong>example:</strong>
          * <p>product-xxxxxxxx</p>
@@ -103,7 +103,7 @@ public class ListProductSubscriptionsResponseBody extends TeaModel {
         public String productId;
 
         /**
-         * <p>The name of the subscribed API product, which is the Name property of the API product resource.</p>
+         * <p>The name of the subscribed API product. This is the Name property of the API product resource.</p>
          * 
          * <strong>example:</strong>
          * <p>model-service</p>
@@ -121,7 +121,7 @@ public class ListProductSubscriptionsResponseBody extends TeaModel {
         public String productType;
 
         /**
-         * <p>The subscription status. Valid values: PENDING and APPROVED. The valid values are defined in the enum of the status request parameter, and this response parameter is not annotated with @enums.</p>
+         * <p>The subscription status. Valid values: PENDING and APPROVED. The valid values are defined in the status request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>APPROVED</p>

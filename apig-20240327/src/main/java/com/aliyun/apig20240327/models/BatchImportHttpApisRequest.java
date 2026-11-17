@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchImportHttpApisRequest extends TeaModel {
     /**
-     * <p>Specifies whether to allow overwriting existing APIs. The gatewayId parameter is required when this parameter is set to true.</p>
+     * <p>Specifies whether to allow overwriting and updating existing APIs. The gatewayId parameter is required when this parameter is set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -24,7 +24,7 @@ public class BatchImportHttpApisRequest extends TeaModel {
     public String apiType;
 
     /**
-     * <p>The dry run feature that checks definitions without importing.</p>
+     * <p>Specifies whether to perform a dry run to check definitions without importing.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -33,7 +33,7 @@ public class BatchImportHttpApisRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The gateway instance ID. This parameter is required for REST APIs when withGatewayExtension or allowUpdate is set to true. This parameter is required for batch importing HTTP APIs.</p>
+     * <p>The gateway instance ID. This parameter is required for REST APIs when withGatewayExtension or allowUpdate is set to true, and is mandatory for batch import of HTTP APIs.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-xxx</p>
@@ -51,7 +51,7 @@ public class BatchImportHttpApisRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The standard Base64 encoding of the raw bytes of the OAS ZIP package. The maximum size after decoding is 10 MiB. This parameter cannot be specified together with specFileUrl or specOssConfig. Dry runs are supported and return check results, but the Base64 dry run task result does not return a replayable importRequest.</p>
+     * <p>The standard Base64 encoding of the raw bytes of the OAS ZIP package. The maximum decoded size is 10 MiB. This parameter cannot be specified together with specFileUrl or specOssConfig. Dry run pre-checks are supported and return check results, but the Base64 pre-check task result does not return a replayable importRequest.</p>
      * 
      * <strong>example:</strong>
      * <p>b3BlbmFwaTogMy4wLjAKaW5mbzoKICAgIHRpdGxlOiBkZW1vCiAgICBkZXNjcmlwdGlvbjogdGhpc2lzZGVtbwogICAgdmVyc2lvbjogIiIKcGF0aHM6CiAgICAvdXNlci97dXNlcklkfToKICAgICAgICBnZXQ6CiAgICAgICAgICAgIHN1bW1hcnk6IOiOt+WPlueUqOaIt+S/oeaBrwogICAgICAgICAgICBkZXNjcmlwdGlvbjog6I635Y+W55So5oi35L+h5oGvCiAgICAgICAgICAgIG9wZXJhdGlvbklkOiBHZXRVc2VySW5mbwogICAgICAgICAgICByZXNwb25zZXM6CiAgICAgICAgICAgICAgICAiMjAwIjoKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbjog5oiQ5YqfCiAgICAgICAgICAgICAgICAgICAgY29udGVudDoKICAgICAgICAgICAgICAgICAgICAgICAgYXBwbGljYXRpb24vanNvbjtjaGFyc2V0PXV0Zi04OgogICAgICAgICAgICAgICAgICAgICAgICAgICAgc2NoZW1hOiBudWxsCnNlcnZlcnM6CiAgICAtIHVybDogaHR0cDovL2FwaS5leGFtcGxlLmNvbS92MQo=</p>
@@ -60,7 +60,7 @@ public class BatchImportHttpApisRequest extends TeaModel {
     public String specContentBase64;
 
     /**
-     * <p>The download URL of the OAS ZIP file. The URL must support unauthenticated downloads. OSS URLs or backend whitelisted domains are supported. At least one of specFileUrl and specOssConfig must be specified.</p>
+     * <p>The download URL of the OAS ZIP file, which must support unauthenticated downloads. OSS URLs or backend whitelisted domains are supported. At least one of specFileUrl and specOssConfig must be specified.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://oss-cn-hangzhou.aliyuncs.com/my-bucket/imports/batch.zip">https://oss-cn-hangzhou.aliyuncs.com/my-bucket/imports/batch.zip</a></p>
@@ -69,7 +69,7 @@ public class BatchImportHttpApisRequest extends TeaModel {
     public String specFileUrl;
 
     /**
-     * <p>The OSS configuration of the OAS file. The file must be in ZIP format. At least one of specFileUrl and specOssConfig must be specified.</p>
+     * <p>The OSS configuration of the OAS file in ZIP format. At least one of specFileUrl and specOssConfig must be specified.</p>
      */
     @NameInMap("specOssConfig")
     public BatchImportHttpApisRequestSpecOssConfig specOssConfig;
@@ -84,7 +84,7 @@ public class BatchImportHttpApisRequest extends TeaModel {
     public String strategy;
 
     /**
-     * <p>Specifies whether to import with gateway extension configurations. This parameter must be set to true for batch importing HTTP APIs.</p>
+     * <p>Specifies whether to import with gateway extension configurations. This parameter must be set to true for batch import of HTTP APIs.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -199,7 +199,7 @@ public class BatchImportHttpApisRequest extends TeaModel {
         public String objectKey;
 
         /**
-         * <p>The region ID of the OSS bucket.</p>
+         * <p>The region ID of OSS.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

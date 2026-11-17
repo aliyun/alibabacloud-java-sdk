@@ -14,7 +14,7 @@ public class TransportCertificateInfo extends TeaModel {
     public String algorithm;
 
     /**
-     * <p>The certificate identifier (the certificate ID under the APIG Alibaba Cloud account).</p>
+     * <p>The certificate identifier, which is the certificate ID under the APIG cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>cert-1（1716***@cn-hangzhou 形态）</p>
@@ -32,7 +32,7 @@ public class TransportCertificateInfo extends TeaModel {
     public String certName;
 
     /**
-     * <p>The match status between the certificate and the gateway instance domain names.</p>
+     * <p>The matching status between the certificate and the instance domain names.</p>
      * 
      * <strong>example:</strong>
      * <p>Matched</p>
@@ -41,7 +41,7 @@ public class TransportCertificateInfo extends TeaModel {
     public String certificateMatchStatus;
 
     /**
-     * <p>The certificate Common Name (CN).</p>
+     * <p>The common name (CN) of the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>api.example.com</p>
@@ -50,7 +50,7 @@ public class TransportCertificateInfo extends TeaModel {
     public String commonName;
 
     /**
-     * <p>The set of covered domain names parsed from CN and SAN (lowercase, deduplicated, may contain *. wildcards).</p>
+     * <p>The set of covered domain names parsed from the CN and SAN. The domain names are in lowercase, deduplicated, and may include wildcards such as *.</p>
      */
     @NameInMap("coveredDomains")
     public java.util.List<String> coveredDomains;
@@ -65,13 +65,13 @@ public class TransportCertificateInfo extends TeaModel {
     public String issuer;
 
     /**
-     * <p>The gateway instance domain names matched by the covered domain names (ordered by instance domain name, deduplicated).</p>
+     * <p>The gateway instance domain names matched by the covered domain names. The order follows the instance domain names, and the results are deduplicated.</p>
      */
     @NameInMap("matchedDomains")
     public java.util.List<String> matchedDomains;
 
     /**
-     * <p>The expiration timestamp (Unix milliseconds, from the certificate afterDate).</p>
+     * <p>The expiration timestamp in UNIX milliseconds, which is obtained from the afterDate of the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>1747958400000</p>
@@ -80,7 +80,7 @@ public class TransportCertificateInfo extends TeaModel {
     public Long notAfterTimestamp;
 
     /**
-     * <p>The effective period UNIX timestamp (milliseconds, from the certificate beforeDate).</p>
+     * <p>The UNIX timestamp for the effective period in milliseconds, which is obtained from the beforeDate of the certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>1716336000000</p>
@@ -89,7 +89,7 @@ public class TransportCertificateInfo extends TeaModel {
     public Long notBeforeTimestamp;
 
     /**
-     * <p>The raw Subject Alternative Name (SAN) string (separated by commas, semicolons, or whitespace. Elements may have a DNS: prefix).</p>
+     * <p>The raw Subject Alternative Name (SAN) string separated by commas, semicolons, or spaces. Elements may include the DNS: prefix.</p>
      * 
      * <strong>example:</strong>
      * <p>DNS:*.example.org, DNS:foo.example.net</p>

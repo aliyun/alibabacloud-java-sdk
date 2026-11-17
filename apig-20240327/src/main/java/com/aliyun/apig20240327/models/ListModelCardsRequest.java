@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListModelCardsRequest extends TeaModel {
     /**
-     * <p>The identifier of the model provider used to filter model cards by provider.</p>
+     * <p>The model provider identifier used to filter model cards by provider.</p>
      * 
      * <strong>example:</strong>
      * <p>provider-xxxxxxxx</p>

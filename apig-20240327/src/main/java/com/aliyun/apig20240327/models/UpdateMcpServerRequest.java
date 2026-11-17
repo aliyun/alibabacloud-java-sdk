@@ -19,11 +19,11 @@ public class UpdateMcpServerRequest extends TeaModel {
     /**
      * <p>The creation source type. Valid values:</p>
      * <ul>
-     * <li>ApiGatewayHttpToMCP: API gateway-hosted HTTP-to-MCP.</li>
-     * <li>ApiGatewayProxyMcpHosting: API gateway-hosted MCP direct proxy.</li>
-     * <li>ApiGatewayAssembly: API gateway MCP assembly.</li>
-     * <li>NacosHttpToMCP: API gateway-hosted Nacos-synchronized HTTP-to-MCP.</li>
-     * <li>NacosMcpHosting: API gateway-hosted Nacos-synchronized MCP direct proxy.</li>
+     * <li>ApiGatewayHttpToMCP: API Gateway-managed HTTP-to-MCP</li>
+     * <li>ApiGatewayProxyMcpHosting: API Gateway-managed direct MCP proxy</li>
+     * <li>ApiGatewayAssembly: API Gateway MCP assembly</li>
+     * <li>NacosHttpToMCP: API Gateway-managed Nacos-synchronized HTTP-to-MCP</li>
+     * <li>NacosMcpHosting: API Gateway-managed Nacos-synchronized direct MCP proxy</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,10 +57,19 @@ public class UpdateMcpServerRequest extends TeaModel {
     public String exposedUriPath;
 
     /**
-     * <p>The list of canary MCP server route configurations.</p>
+     * <p>The list of canary release MCP server route configurations.</p>
      */
     @NameInMap("grayMcpServerConfigs")
     public java.util.List<UpdateMcpServerRequestGrayMcpServerConfigs> grayMcpServerConfigs;
+
+    /**
+     * <p>The MCP service description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Used to query order status. An order number is required for the query</p>
+     */
+    @NameInMap("instructions")
+    public String instructions;
 
     /**
      * <p>The route match rules. This parameter is conditionally required. If it is not provided, the API returns InvalidParameter.IsEmpty(400).</p>
@@ -86,10 +95,10 @@ public class UpdateMcpServerRequest extends TeaModel {
     /**
      * <p>The protocol type. Valid values:</p>
      * <ul>
-     * <li>HTTP: HTTP.</li>
-     * <li>HTTPS: HTTPS.</li>
-     * <li>SSE: Server-Sent Events.</li>
-     * <li>StreamableHTTP: Streaming HTTP.</li>
+     * <li>HTTP: HTTP</li>
+     * <li>HTTPS: HTTPS</li>
+     * <li>SSE: Server-Sent Events</li>
+     * <li>StreamableHTTP: Streamable HTTP</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -168,6 +177,14 @@ public class UpdateMcpServerRequest extends TeaModel {
     }
     public java.util.List<UpdateMcpServerRequestGrayMcpServerConfigs> getGrayMcpServerConfigs() {
         return this.grayMcpServerConfigs;
+    }
+
+    public UpdateMcpServerRequest setInstructions(String instructions) {
+        this.instructions = instructions;
+        return this;
+    }
+    public String getInstructions() {
+        return this.instructions;
     }
 
     public UpdateMcpServerRequest setMatch(HttpRouteMatch match) {
@@ -277,7 +294,7 @@ public class UpdateMcpServerRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The service protocol. Valid values:</p>
+         * <p>The protocol. Valid values:</p>
          * <ul>
          * <li>TCP.</li>
          * <li>HTTP.</li>
@@ -414,7 +431,7 @@ public class UpdateMcpServerRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The service protocol.</p>
+         * <p>The protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -590,7 +607,7 @@ public class UpdateMcpServerRequest extends TeaModel {
 
     public static class UpdateMcpServerRequestMcpServerConfig extends TeaModel {
         /**
-         * <p>The MCP server configurations. This parameter is mutually exclusive with the swaggerConfig parameter.</p>
+         * <p>The MCP server configurations. This parameter is mutually exclusive with swaggerConfig.</p>
          * 
          * <strong>example:</strong>
          * <p>mcp-server-spec-yaml</p>

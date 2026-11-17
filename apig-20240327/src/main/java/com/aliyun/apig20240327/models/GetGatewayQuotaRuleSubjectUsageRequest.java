@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGatewayQuotaRuleSubjectUsageRequest extends TeaModel {
     /**
-     * <p>The end time for querying detailed consumption records. The time is a UNIX timestamp in seconds. If only this parameter is specified, the system automatically calculates the start time based on the rule period.</p>
+     * <p>The end time for querying detailed consumption records. The value is a UNIX timestamp in seconds. If only this parameter is specified, the system automatically calculates the start time based on the rule period.</p>
      * 
      * <strong>example:</strong>
      * <p>1788425220</p>
@@ -41,7 +41,7 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The start time for querying detailed consumption records. The time is a UNIX timestamp in seconds. If only this parameter is specified, the system automatically calculates the end time based on the rule period.</p>
+     * <p>The start time for querying detailed consumption records. The value is a UNIX timestamp in seconds. If only this parameter is specified, the system automatically calculates the end time based on the rule period.</p>
      * 
      * <strong>example:</strong>
      * <p>1788338820</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConsumerGroupsResponseBody extends TeaModel {
     /**
-     * <p>The response status code. Ok is returned if the request is successful.</p>
+     * <p>The response status code. Ok is returned when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -29,7 +29,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -85,7 +85,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         public Long consumerCount;
 
         /**
-         * <p>The consumer group ID.</p>
+         * <p>The ID of the consumer group.</p>
          * 
          * <strong>example:</strong>
          * <p>csg-8c13d2b4f8a1</p>
@@ -94,7 +94,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         public String consumerGroupId;
 
         /**
-         * <p>The creation time of the consumer group, in Unix millisecond timestamp.</p>
+         * <p>The time when the consumer group was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1715769600000</p>
@@ -103,7 +103,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The consumer group description.</p>
+         * <p>The description of the consumer group.</p>
          * 
          * <strong>example:</strong>
          * <p>Used for grouping online API callers</p>
@@ -112,7 +112,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The gateway type. Valid values: API or AI.</p>
+         * <p>The gateway type. Valid values: API and AI.</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>
@@ -121,7 +121,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         public String gatewayType;
 
         /**
-         * <p>The consumer group name.</p>
+         * <p>The name of the consumer group.</p>
          * 
          * <strong>example:</strong>
          * <p>api-consumer-group</p>
@@ -201,7 +201,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of items per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -210,7 +210,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of consumer groups that match the specified conditions.</p>
+         * <p>The total number of consumer groups that meet the conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

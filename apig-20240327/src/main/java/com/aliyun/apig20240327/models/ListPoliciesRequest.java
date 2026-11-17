@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPoliciesRequest extends TeaModel {
     /**
-     * <p>The attachment point ID.</p>
+     * <p>The ID of the mount point.</p>
      * 
      * <strong>example:</strong>
      * <p>api-cq7l5s5lhtgi6qasrdc0</p>
@@ -14,10 +14,10 @@ public class ListPoliciesRequest extends TeaModel {
     public String attachResourceId;
 
     /**
-     * <p>The type of attachment point supported by the policy.</p>
+     * <p>The type of mount points supported by the policy. Valid values:</p>
      * <ul>
      * <li>HttpApi: HTTP API.</li>
-     * <li>Operation: Operation of an HTTP API.</li>
+     * <li>Operation: The operation of the HTTP API.</li>
      * <li>GatewayRoute: Gateway route.</li>
      * <li>GatewayService: Gateway service.</li>
      * <li>GatewayServicePort: Gateway service port.</li>
@@ -32,7 +32,7 @@ public class ListPoliciesRequest extends TeaModel {
     public String attachResourceType;
 
     /**
-     * <p>The environment ID.</p>
+     * <p>The ID of the environment.</p>
      * 
      * <strong>example:</strong>
      * <p>env-cq7l5s5lhtgi6qasrdc0</p>
@@ -41,7 +41,7 @@ public class ListPoliciesRequest extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>The gateway ID.</p>
+     * <p>The ID of the gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-cq2fm65lhtgm9nrrl7ag</p>
@@ -50,7 +50,25 @@ public class ListPoliciesRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>Specifies whether to return attachment information.</p>
+     * <p>The page number. Pages start from 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("pageNumber")
+    public Integer pageNumber;
+
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
+    @NameInMap("pageSize")
+    public Integer pageSize;
+
+    /**
+     * <p>Specifies whether to return mount information.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -102,6 +120,22 @@ public class ListPoliciesRequest extends TeaModel {
     }
     public String getGatewayId() {
         return this.gatewayId;
+    }
+
+    public ListPoliciesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListPoliciesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListPoliciesRequest setWithAttachments(Boolean withAttachments) {

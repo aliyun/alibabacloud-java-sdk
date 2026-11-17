@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class HiMarketOidcConfig extends TeaModel {
     /**
-     * <p>The OAuth2 Authorization Code configuration.</p>
+     * <p>The OAuth2 authorization code configuration.</p>
      */
     @NameInMap("authCodeConfig")
     public HiMarketOidcConfigAuthCodeConfig authCodeConfig;
 
     /**
-     * <p>Specifies whether to enable the OIDC configuration.</p>
+     * <p>Specifies whether the OIDC configuration is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -20,7 +20,7 @@ public class HiMarketOidcConfig extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The authorization type.</p>
+     * <p>The grant type.</p>
      * 
      * <strong>example:</strong>
      * <p>authorization_code</p>
@@ -35,7 +35,7 @@ public class HiMarketOidcConfig extends TeaModel {
     public HiMarketOidcConfigIdentityMapping identityMapping;
 
     /**
-     * <p>The provider logo URL.</p>
+     * <p>The URL of the provider logo.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/logo.png">https://example.com/logo.png</a></p>
@@ -44,7 +44,7 @@ public class HiMarketOidcConfig extends TeaModel {
     public String logoUrl;
 
     /**
-     * <p>The OIDC configuration name.</p>
+     * <p>The name of the OIDC configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>my-oidc-config</p>
@@ -53,7 +53,7 @@ public class HiMarketOidcConfig extends TeaModel {
     public String name;
 
     /**
-     * <p>The OIDC provider name.</p>
+     * <p>The name of the OIDC provider.</p>
      * 
      * <strong>example:</strong>
      * <p>Alibaba Cloud IDaaS</p>
@@ -178,7 +178,7 @@ public class HiMarketOidcConfig extends TeaModel {
         public String redirectUri;
 
         /**
-         * <p>The OAuth2 authorization scopes.</p>
+         * <p>The OAuth2 scopes.</p>
          * 
          * <strong>example:</strong>
          * <p>openid profile email</p>
@@ -285,13 +285,16 @@ public class HiMarketOidcConfig extends TeaModel {
 
     public static class HiMarketOidcConfigIdentityMapping extends TeaModel {
         /**
-         * <p>The custom field mapping.</p>
+         * <p>The custom field mappings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;department&quot;:&quot;dept&quot;,&quot;role&quot;:&quot;role&quot;}</p>
          */
         @NameInMap("customFields")
         public java.util.Map<String, String> customFields;
 
         /**
-         * <p>The identity field name that corresponds to the email address.</p>
+         * <p>The name of the identity field that corresponds to the email address.</p>
          * 
          * <strong>example:</strong>
          * <p>email</p>
@@ -300,7 +303,7 @@ public class HiMarketOidcConfig extends TeaModel {
         public String emailField;
 
         /**
-         * <p>The identity field name that corresponds to the user ID.</p>
+         * <p>The name of the identity field that corresponds to the user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sub</p>
@@ -309,7 +312,7 @@ public class HiMarketOidcConfig extends TeaModel {
         public String userIdField;
 
         /**
-         * <p>The identity field name that corresponds to the username.</p>
+         * <p>The name of the identity field that corresponds to the username.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>

@@ -14,7 +14,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The response result.</p>
      */
     @NameInMap("data")
     public ListPluginClassesResponseBodyData data;
@@ -76,25 +76,25 @@ public class ListPluginClassesResponseBody extends TeaModel {
 
     public static class ListPluginClassesResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The plug-in alias.</p>
+         * <p>The plugin alias.</p>
          * 
          * <strong>example:</strong>
-         * <p>OAuth2 Authentication</p>
+         * <p>OAuth2 authentication</p>
          */
         @NameInMap("alias")
         public String alias;
 
         /**
-         * <p>The plug-in description.</p>
+         * <p>The plugin description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Implements identity authentication and authorization based on OAuth2</p>
+         * <p>Implements authentication and authorization based on OAuth2</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>Indicates whether the plug-in is installed.</p>
+         * <p>Indicates whether the plugin is installed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -103,7 +103,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
         public Boolean installed;
 
         /**
-         * <p>The plug-in name.</p>
+         * <p>The plugin name.</p>
          * 
          * <strong>example:</strong>
          * <p>oauth</p>
@@ -112,7 +112,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The plug-in type ID.</p>
+         * <p>The plugin type ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pls-d4ghv6em1hkixxxxxxxx</p>
@@ -121,7 +121,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
         public String pluginClassId;
 
         /**
-         * <p>The plug-in ID.</p>
+         * <p>The plugin ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-cvu6r4um1hkoxxxxxxxx</p>
@@ -139,7 +139,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
         public String publishStatus;
 
         /**
-         * <p>The plug-in source.</p>
+         * <p>The plugin source.</p>
          * 
          * <strong>example:</strong>
          * <p>HigressOfficial</p>
@@ -148,7 +148,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The minimum gateway version supported by the plug-in.</p>
+         * <p>The minimum gateway version supported by the plugin.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0.0</p>
@@ -157,7 +157,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
         public String supportedMinGatewayVersion;
 
         /**
-         * <p>The plug-in type.</p>
+         * <p>The plugin type.</p>
          * 
          * <strong>example:</strong>
          * <p>Auth</p>
@@ -166,7 +166,7 @@ public class ListPluginClassesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The plug-in version.</p>
+         * <p>The plugin version.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>

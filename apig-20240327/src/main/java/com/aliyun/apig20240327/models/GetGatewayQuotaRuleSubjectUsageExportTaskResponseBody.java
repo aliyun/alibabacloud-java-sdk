@@ -29,7 +29,7 @@ public class GetGatewayQuotaRuleSubjectUsageExportTaskResponseBody extends TeaMo
     public String message;
 
     /**
-     * <p>The request ID of this OpenAPI query call, which is used to troubleshoot call issues. This is different from the request_id of each consumption record in the exported file.</p>
+     * <p>The request ID of this OpenAPI query call, which is used to troubleshoot call issues. This ID is different from the request_id of each consumption record in the exported file.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -76,7 +76,7 @@ public class GetGatewayQuotaRuleSubjectUsageExportTaskResponseBody extends TeaMo
 
     public static class GetGatewayQuotaRuleSubjectUsageExportTaskResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The temporary signed download URL of the exported file. It is returned only when status=Success and the file is not expired. It is dynamically generated for each query and is valid for 10 minutes from the generation time. If the link expires but fileExpiredAt is not reached, you can call this operation again to obtain the link. You do not need to pass the internal storage path as a request parameter.</p>
+         * <p>The temporary signed download URL of the exported file. This URL is returned only when status=Success and the file is not expired. It is dynamically generated for each query and is valid for 10 minutes from the generation time. If the link expires but fileExpiredAt is not reached, you can call this operation again to obtain the link. You do not need to pass the internal storage path as a request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.oss-cn-hangzhou.aliyuncs.com/export.csv.gz">https://example.oss-cn-hangzhou.aliyuncs.com/export.csv.gz</a></p>
@@ -85,7 +85,7 @@ public class GetGatewayQuotaRuleSubjectUsageExportTaskResponseBody extends TeaMo
         public String downloadUrl;
 
         /**
-         * <p>The expiration time of the downloadUrl returned in this response. It is a UNIX timestamp in seconds. It is provided only when a download link is returned and is approximately 10 minutes after the link generation time. It can be updated by querying again and cannot be used to replace fileExpiredAt.</p>
+         * <p>The expiration time of the downloadUrl returned in this response. The value is a UNIX timestamp in seconds. This field is provided only when a download link is returned and is approximately 10 minutes after the link generation time. This value can be updated by querying the task again and cannot be used to replace fileExpiredAt.</p>
          * 
          * <strong>example:</strong>
          * <p>1783938800</p>
@@ -94,7 +94,7 @@ public class GetGatewayQuotaRuleSubjectUsageExportTaskResponseBody extends TeaMo
         public Long downloadUrlExpiredAt;
 
         /**
-         * <p>The start time of the actual export time range. It is a UNIX timestamp in seconds. The actual start time is also limited by the rule creation time, rule reset, or the effective start time of clearing history records. No details are available if the start time is not earlier than the end time.</p>
+         * <p>The start time of the actual export time range. The value is a UNIX timestamp in seconds. The actual start time is also limited by the rule creation time, rule reset, or the effective start time of clearing history records. No details are available if the start time is not earlier than the end time.</p>
          * 
          * <strong>example:</strong>
          * <p>1783931600</p>
@@ -103,7 +103,7 @@ public class GetGatewayQuotaRuleSubjectUsageExportTaskResponseBody extends TeaMo
         public Long effectiveWindowStart;
 
         /**
-         * <p>Indicates whether the exported file has exceeded the server-side period for providing download links. A value of true indicates that the file has expired, downloadUrl and downloadUrlExpiredAt are not returned, and you need to create a new export task. This field may be omitted when the value is false. To determine whether the file is downloadable, check both status and downloadUrl.</p>
+         * <p>Indicates whether the exported file has exceeded the period during which the server provides download links. A value of true indicates that the file has expired, downloadUrl and downloadUrlExpiredAt are not returned, and you need to create an export task again. This field may be omitted if the value is false. To determine whether the file can be downloaded, check both status and downloadUrl.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -112,7 +112,7 @@ public class GetGatewayQuotaRuleSubjectUsageExportTaskResponseBody extends TeaMo
         public Boolean fileExpired;
 
         /**
-         * <p>The time when the file stops providing new download links. It is a UNIX timestamp in seconds and is usually 24 hours after the file is successfully uploaded. After this time, this operation returns fileExpired=true and no longer generates downloadUrl. The task remains in the Success state. This time is different from the downloadUrlExpiredAt of a single signed link.</p>
+         * <p>The time when the file stops providing new download links. The value is a UNIX timestamp in seconds, which is usually 24 hours after the file is successfully uploaded. After this time, this operation returns fileExpired=true and no longer generates downloadUrl. The task status remains Success. This time is different from downloadUrlExpiredAt of a single signed link.</p>
          * 
          * <strong>example:</strong>
          * <p>1784021600</p>
@@ -121,7 +121,7 @@ public class GetGatewayQuotaRuleSubjectUsageExportTaskResponseBody extends TeaMo
         public Long fileExpiredAt;
 
         /**
-         * <p>The size of the successfully generated and uploaded GZIP compressed file, in bytes. This field may be omitted when the task is not successful.</p>
+         * <p>The size of the successfully generated and uploaded GZIP-compressed file, in bytes. This field may be omitted if the task is not successful.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -130,7 +130,7 @@ public class GetGatewayQuotaRuleSubjectUsageExportTaskResponseBody extends TeaMo
         public Long fileSize;
 
         /**
-         * <p>Specifies whether to filter out requests with failed or zero usage, which is specified when the task is created. A value of true filters out records with 0 usage and retains only records with usage. This field may be omitted when the value is false.</p>
+         * <p>The usage filter switch specified when the task was created. If the value is true, records with a usage of 0 are filtered out, and only records with usage are retained. This field may be omitted if the value is false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -139,7 +139,7 @@ public class GetGatewayQuotaRuleSubjectUsageExportTaskResponseBody extends TeaMo
         public Boolean filterFailedRequests;
 
         /**
-         * <p>The format of the exported file. The value is currently fixed as CSV_GZIP. The downloaded file is a .csv.gz file, which becomes a CSV file after decompression.</p>
+         * <p>The format of the exported file. The value is fixed as CSV_GZIP. The downloaded file is a .csv.gz file, which is a CSV file after decompression.</p>
          * 
          * <strong>example:</strong>
          * <p>CSV_GZIP</p>
@@ -148,7 +148,7 @@ public class GetGatewayQuotaRuleSubjectUsageExportTaskResponseBody extends TeaMo
         public String format;
 
         /**
-         * <p>The end time of the request time range determined when the task was created. It is a UNIX timestamp in seconds and does not include this moment. If no time range is specified, this value is the task creation time and is not updated when the task is queried.</p>
+         * <p>The end time of the request time range determined when the task was created. The value is a UNIX timestamp in seconds and excludes this moment. If no time range is specified, this value is the task creation time and is not updated when the task is queried.</p>
          * 
          * <strong>example:</strong>
          * <p>1783935200</p>
@@ -157,7 +157,7 @@ public class GetGatewayQuotaRuleSubjectUsageExportTaskResponseBody extends TeaMo
         public Long queryWindowEnd;
 
         /**
-         * <p>The start time of the request time range determined when the task was created. It is a UNIX timestamp in seconds and includes this moment. If only one time parameter is passed, this value may be derived from the rule period. For the actual export start time, see effectiveWindowStart.</p>
+         * <p>The start time of the request time range determined when the task was created. The value is a UNIX timestamp in seconds and includes this moment. If only one time parameter is passed, this value may be derived from the rule period. For the actual export start time, see effectiveWindowStart.</p>
          * 
          * <strong>example:</strong>
          * <p>1783931600</p>
@@ -166,7 +166,7 @@ public class GetGatewayQuotaRuleSubjectUsageExportTaskResponseBody extends TeaMo
         public Long queryWindowStart;
 
         /**
-         * <p>The quota metering dimension determined when the task was created. token indicates token usage, and credit indicates credit usage. The CSV file outputs the corresponding columns based on this dimension. Credit usage retains decimal places.</p>
+         * <p>The quota metering dimension determined when the task was created. token indicates token usage, and credit indicates credit usage. The CSV file outputs the corresponding column based on this dimension. Credit usage retains decimal places.</p>
          * 
          * <strong>example:</strong>
          * <p>token</p>
@@ -175,7 +175,7 @@ public class GetGatewayQuotaRuleSubjectUsageExportTaskResponseBody extends TeaMo
         public String quotaDimension;
 
         /**
-         * <p>The number of successfully exported consumption detail rows, excluding the CSV header. This field may be omitted when the task is not successful or the export result contains 0 rows. If the task is successful but no matching details exist, the file contains only the header.</p>
+         * <p>The number of successfully exported consumption detail rows, excluding the CSV header. This field may be omitted if the task is not successful or the export result contains 0 rows. If the task is successful but no matching details are found, the file contains only the header.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -288,7 +288,7 @@ public class GetGatewayQuotaRuleSubjectUsageExportTaskResponseBody extends TeaMo
 
     public static class GetGatewayQuotaRuleSubjectUsageExportTaskResponseBodyData extends TeaModel {
         /**
-         * <p>The error summary when the task fails, which is used to troubleshoot issues such as disabled logs, query failures, exceeded detail limits, processing timeouts, or file generation failures. This field may be omitted when no errors occur.</p>
+         * <p>The error summary when the task fails, which is used to troubleshoot issues such as disabled logs, query failures, exceeded detail limits, processing timeouts, or file generation failures. This field may be omitted if no error occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>log delivery is not enabled</p>
@@ -306,7 +306,7 @@ public class GetGatewayQuotaRuleSubjectUsageExportTaskResponseBody extends TeaMo
         public String gatewayId;
 
         /**
-         * <p>The number of detail rows written to the exported file, excluding the header. This value is used to check the processing progress. Even if this value equals totalCount, you should determine whether the file is downloadable based on status=Success.</p>
+         * <p>The number of detail rows written to the exported file, excluding the header. This value is used to check the processing progress. Even if this value is equal to totalCount, determine whether the file can be downloaded based on status=Success.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -315,7 +315,7 @@ public class GetGatewayQuotaRuleSubjectUsageExportTaskResponseBody extends TeaMo
         public Integer processedCount;
 
         /**
-         * <p>The export conditions and file results determined when the task was created. The time range, format, and metering dimension may be returned even in non-Success states. File and download information is available only after success. Fields with values of 0, false, or empty strings are omitted.</p>
+         * <p>The export conditions and file results determined when the task was created. The time range, format, and metering dimension may be returned even if the status is not Success. File and download information is available only after a successful export. Fields with values of 0, false, or empty strings are omitted.</p>
          */
         @NameInMap("result")
         public GetGatewayQuotaRuleSubjectUsageExportTaskResponseBodyDataResult result;
@@ -335,9 +335,9 @@ public class GetGatewayQuotaRuleSubjectUsageExportTaskResponseBody extends TeaMo
          * <li>Pending: The task is submitted and waiting to be processed.</li>
          * <li>Running: The task is querying details, generating files, or uploading files.</li>
          * <li>Success: The file is generated and uploaded. You still need to check whether the file is expired.</li>
-         * <li>Failed: The task failed. For the cause, see errorMessage.</li>
+         * <li>Failed: The task failed. For more information, see errorMessage.</li>
          * </ul>
-         * <p>Tasks that are not completed within 10 minutes after creation are processed as Failed. After a file expires, the task remains in the Success state.</p>
+         * <p>Tasks that are not completed within 10 minutes after creation are processed as Failed. After a file expires, the task status remains Success.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -382,7 +382,7 @@ public class GetGatewayQuotaRuleSubjectUsageExportTaskResponseBody extends TeaMo
         public String taskType;
 
         /**
-         * <p>The total number of detail rows to be exported as counted by backend queries, excluding the CSV header. This value may be 0 before the counting is completed. You cannot determine whether the result is empty or the task is completed based solely on this value.</p>
+         * <p>The total number of detail rows to be exported as counted by backend queries, excluding the CSV header. This value may be 0 before the counting is completed. Do not determine whether the result is empty or the task is completed based only on this value.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

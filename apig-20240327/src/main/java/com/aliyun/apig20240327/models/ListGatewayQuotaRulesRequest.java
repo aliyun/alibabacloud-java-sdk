@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewayQuotaRulesRequest extends TeaModel {
     /**
-     * <p>The keyword in the rule name for fuzzy match.</p>
+     * <p>The keyword in the rule name used for fuzzy matching.</p>
      * 
      * <strong>example:</strong>
      * <p>daily</p>
@@ -14,7 +14,7 @@ public class ListGatewayQuotaRulesRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The maximum number of records to return in a single request. This parameter is not supported.</p>
+     * <p>The maximum number of entries to return in a single call. This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -41,13 +41,31 @@ public class ListGatewayQuotaRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of items per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
+
+    /**
+     * <p>The status of the rule. Valid values: enabled and disabled. If you do not specify this parameter, all rules are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
+     */
+    @NameInMap("ruleStatus")
+    public String ruleStatus;
+
+    /**
+     * <p>The keyword in the name of the associated subject for fuzzy matching based on the consumer or consumer group name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alpha</p>
+     */
+    @NameInMap("subjectNameLike")
+    public String subjectNameLike;
 
     public static ListGatewayQuotaRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGatewayQuotaRulesRequest self = new ListGatewayQuotaRulesRequest();
@@ -92,6 +110,22 @@ public class ListGatewayQuotaRulesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListGatewayQuotaRulesRequest setRuleStatus(String ruleStatus) {
+        this.ruleStatus = ruleStatus;
+        return this;
+    }
+    public String getRuleStatus() {
+        return this.ruleStatus;
+    }
+
+    public ListGatewayQuotaRulesRequest setSubjectNameLike(String subjectNameLike) {
+        this.subjectNameLike = subjectNameLike;
+        return this;
+    }
+    public String getSubjectNameLike() {
+        return this.subjectNameLike;
     }
 
 }

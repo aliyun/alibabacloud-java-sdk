@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGatewayDfpExtProcServiceResponseBody extends TeaModel {
     /**
-     * <p>The result code of the request. The value is Ok if the request is successful.</p>
+     * <p>The request result code. The value is Ok if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,7 +14,7 @@ public class GetGatewayDfpExtProcServiceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The binding information of the dynamic forwarding ExtProc service for the gateway.</p>
+     * <p>The binding information of the gateway dynamic forwarding ExtProc service.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;bound&quot;:true,&quot;serviceId&quot;:&quot;svc-cr8k0udlhtgt80sh7png&quot;,&quot;servicePort&quot;:9002}</p>
@@ -23,7 +23,7 @@ public class GetGatewayDfpExtProcServiceResponseBody extends TeaModel {
     public GetGatewayDfpExtProcServiceResponseBodyData data;
 
     /**
-     * <p>The result message of the request. If the request failed, the message contains the error message of the fault.</p>
+     * <p>The request result message. If the request fails, this parameter contains the error message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

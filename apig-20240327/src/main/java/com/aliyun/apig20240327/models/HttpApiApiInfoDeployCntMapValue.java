@@ -14,7 +14,7 @@ public class HttpApiApiInfoDeployCntMapValue extends TeaModel {
     public Long deployedCnt;
 
     /**
-     * <p>The total number of operations.</p>
+     * <p>The total number of API operations.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

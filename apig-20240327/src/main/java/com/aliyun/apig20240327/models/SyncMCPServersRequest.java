@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SyncMCPServersRequest extends TeaModel {
     /**
-     * <p>The domain name IDs.</p>
+     * <p>The list of domain name IDs. You can obtain the system default domain name ID from the subDomainInfos[].domainId field in the ListGateways response. Note: This parameter is required. If you do not specify this parameter, the API returns the InvalidParameter.IsEmpty (400) error.</p>
      */
     @NameInMap("domainIds")
     public java.util.List<String> domainIds;
 
     /**
-     * <p>The gateway ID.</p>
+     * <p>The ID of the gateway. Note: This parameter is required. If you do not specify this parameter, the API returns the InvalidParameter.IsEmpty (400) error.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-cq7l5s5lhtg***</p>
@@ -20,13 +20,13 @@ public class SyncMCPServersRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The list of Nacos MCP servers to sync. If the list contains MCP servers that have already been synced, include the mcpServerId.</p>
+     * <p>The list of Nacos MCP servers to sync. If the list includes an already synced MCP server, you must specify the mcpServerId parameter.</p>
      */
     @NameInMap("nacosMcpServers")
     public java.util.List<SyncMCPServersRequestNacosMcpServers> nacosMcpServers;
 
     /**
-     * <p>The Nacos namespace.</p>
+     * <p>The Nacos namespace. Note: This parameter is required. If you do not specify this parameter, the API returns the InvalidParameter.IsEmpty (400) error.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -35,7 +35,7 @@ public class SyncMCPServersRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The source ID.</p>
+     * <p>The ID of the source.</p>
      * 
      * <strong>example:</strong>
      * <p>src-d40mff6m1hkpt84vep60</p>
@@ -90,7 +90,7 @@ public class SyncMCPServersRequest extends TeaModel {
 
     public static class SyncMCPServersRequestNacosMcpServers extends TeaModel {
         /**
-         * <p>The exposed URI path. This parameter is required when protocol is set to SSE or StreamableHTTP and type is set to RealMCP.</p>
+         * <p>The exposed URI path. This parameter is required when the protocol is SSE or StreamableHTTP and the type is RealMCP.</p>
          * 
          * <strong>example:</strong>
          * <p>/sse</p>
@@ -108,7 +108,7 @@ public class SyncMCPServersRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>MCP Server ID</p>
+         * <p>The unique ID of the MCP server.</p>
          * 
          * <strong>example:</strong>
          * <p>mcp-d3s8qo6m1hknegofa3bg</p>
@@ -117,7 +117,7 @@ public class SyncMCPServersRequest extends TeaModel {
         public String mcpServerId;
 
         /**
-         * <p>The MCP server name.</p>
+         * <p>The name of the MCP server.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

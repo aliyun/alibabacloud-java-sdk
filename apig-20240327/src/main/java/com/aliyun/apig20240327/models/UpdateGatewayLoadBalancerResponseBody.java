@@ -76,7 +76,7 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
 
     public static class UpdateGatewayLoadBalancerResponseBodyDataVirtualServiceList extends TeaModel {
         /**
-         * <p>The port. When an NLB instance is associated, two placeholder entries with ports 80 and 443 are returned.</p>
+         * <p>The port. When an NLB is bound, ports 80 and 443 are fixed and returned as placeholders.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -85,7 +85,7 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>The protocol. When an NLB instance is associated, HTTP and HTTPS are returned as placeholders. For CLB, the value is deserialized from the stored vServerGroupMetaInfo.</p>
+         * <p>The protocol. When an NLB is bound, HTTP and HTTPS are fixed and returned as placeholders. For CLB, the value is deserialized from the persisted vServerGroupMetaInfo.</p>
          * 
          * <strong>example:</strong>
          * <p>http</p>
@@ -94,7 +94,7 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The VServerGroup or ServerGroup ID. When an NLB instance is associated, this field is an empty string placeholder.</p>
+         * <p>The VServerGroup or ServerGroup ID. When an NLB is bound, an empty string is returned as a placeholder.</p>
          * 
          * <strong>example:</strong>
          * <p>rsp-xxxx</p>
@@ -103,7 +103,7 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
         public String virtualServiceGroupId;
 
         /**
-         * <p>The group name. When an NLB instance is associated, this field is an empty string placeholder.</p>
+         * <p>The group name. When an NLB is bound, an empty string is returned as a placeholder.</p>
          * 
          * <strong>example:</strong>
          * <p>80-tcp</p>
@@ -152,7 +152,7 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
 
     public static class UpdateGatewayLoadBalancerResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the load balancer can be edited. This serves as the edit toggle for a load balancer that is being migrated.</p>
+         * <p>Specifies whether the load balancer being migrated can be edited.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -212,7 +212,7 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
         public java.util.List<Integer> ports;
 
         /**
-         * <p>The gateway service weight for traffic shifting during migration. Valid values: 0 to 100.</p>
+         * <p>The gateway service weight in traffic switching scenarios during migration. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -230,7 +230,7 @@ public class UpdateGatewayLoadBalancerResponseBody extends TeaModel {
         public String statusDescription;
 
         /**
-         * <p>The backend server group bindings.</p>
+         * <p>The list of backend server group bindings.</p>
          */
         @NameInMap("virtualServiceList")
         public java.util.List<UpdateGatewayLoadBalancerResponseBodyDataVirtualServiceList> virtualServiceList;

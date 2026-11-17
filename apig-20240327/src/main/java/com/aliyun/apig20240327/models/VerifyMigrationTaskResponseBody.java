@@ -141,7 +141,7 @@ public class VerifyMigrationTaskResponseBody extends TeaModel {
         public Boolean isSupported;
 
         /**
-         * <p>The description of the check result, such as the failure cause or incompatibility summary, which is derived from the Istio validation reason.</p>
+         * <p>The description of the check result, such as the cause of failure or incompatibility summary, which is derived from the Istio validation reason.</p>
          * 
          * <strong>example:</strong>
          * <p>all routes supported</p>
@@ -150,7 +150,7 @@ public class VerifyMigrationTaskResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Indicates whether the check is successfully executed, which reflects whether the Istiod query link is functioning properly.</p>
+         * <p>Indicates whether the check is executed successfully, which indicates whether the Istiod query path is normal.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -76,7 +76,7 @@ public class GetPluginClassResponseBody extends TeaModel {
 
     public static class GetPluginClassResponseBodyData extends TeaModel {
         /**
-         * <p>The plug-in alias.</p>
+         * <p>The alias of the plugin.</p>
          * 
          * <strong>example:</strong>
          * <p>Key Auth</p>
@@ -85,7 +85,7 @@ public class GetPluginClassResponseBody extends TeaModel {
         public String alias;
 
         /**
-         * <p>The plug-in description.</p>
+         * <p>The description of the plugin.</p>
          * 
          * <strong>example:</strong>
          * <p>Authentication based on API Key</p>
@@ -103,7 +103,7 @@ public class GetPluginClassResponseBody extends TeaModel {
         public String document;
 
         /**
-         * <p>The plug-in name.</p>
+         * <p>The name of the plugin.</p>
          * 
          * <strong>example:</strong>
          * <p>key-auth</p>
@@ -121,7 +121,7 @@ public class GetPluginClassResponseBody extends TeaModel {
         public String publishStatus;
 
         /**
-         * <p>The plug-in type.</p>
+         * <p>The type of the plugin.</p>
          * 
          * <strong>example:</strong>
          * <p>Auth</p>
@@ -130,7 +130,7 @@ public class GetPluginClassResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The programming language of the Wasm plug-in.</p>
+         * <p>The programming language of the Wasm plugin.</p>
          * 
          * <strong>example:</strong>
          * <p>TinyGo</p>

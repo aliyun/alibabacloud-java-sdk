@@ -5,26 +5,24 @@ import com.aliyun.tea.*;
 
 public class CreateMcpServerRequest extends TeaModel {
     /**
-     * <p>The list of assembly sources. This parameter is required when type is set to AssemblyMCP.</p>
+     * <p>The list of assembly sources. This parameter is required when the type is AssemblyMCP.</p>
      */
     @NameInMap("assembledSources")
     public java.util.List<CreateMcpServerRequestAssembledSources> assembledSources;
 
     /**
-     * <p>The backend service configuration for the route. This parameter is required. You must specify the backend service configuration, including scene and services. If this parameter is not specified, the API returns InvalidParameter.WithValue(400).</p>
+     * <p>The backend service configuration for the route. This parameter is required. You must provide the backend service configuration, including scene and services. If this parameter is omitted, the API returns InvalidParameter.WithValue(400).</p>
      */
     @NameInMap("backendConfig")
     public CreateMcpServerRequestBackendConfig backendConfig;
 
     /**
-     * <p>The creation source type. Valid values:</p>
-     * <ul>
-     * <li>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP conversion.</li>
-     * <li>ApiGatewayProxyMcpHosting: gateway-managed direct MCP proxy.</li>
-     * <li>ApiGatewayAssembly: gateway MCP assembly.</li>
-     * <li>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP conversion.</li>
-     * <li>NacosMcpHosting: gateway-managed Nacos-synced direct MCP proxy.</li>
-     * </ul>
+     * <p>The creation source type.</p>
+     * <p>ApiGatewayHttpToMCP: Gateway-managed HTTP-to-MCP conversion.
+     * ApiGatewayProxyMcpHosting: Gateway-managed MCP direct proxy.
+     * ApiGatewayAssembly: Gateway MCP assembly.
+     * NacosHttpToMCP: Gateway-managed Nacos-synchronized HTTP-to-MCP conversion.
+     * NacosMcpHosting: Gateway-managed Nacos-synchronized MCP direct proxy.</p>
      * 
      * <strong>example:</strong>
      * <p>ApiGatewayMcpHosting</p>
@@ -48,7 +46,7 @@ public class CreateMcpServerRequest extends TeaModel {
     public java.util.List<String> domainIds;
 
     /**
-     * <p>The exposed URI path. This parameter is required when protocol is set to SSE or StreamableHTTP and type is set to RealMCP.</p>
+     * <p>The exposed URI path. This parameter is required when the protocol is SSE or StreamableHTTP and the type is RealMCP.</p>
      * 
      * <strong>example:</strong>
      * <p>/sse</p>
@@ -73,7 +71,16 @@ public class CreateMcpServerRequest extends TeaModel {
     public java.util.List<CreateMcpServerRequestGrayMcpServerConfigs> grayMcpServerConfigs;
 
     /**
-     * <p>The route match rule. When type is set to RealMCP, the match parameter is required and you must specify a route match rule.</p>
+     * <p>The instructions for the MCP service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Used to query the order status. The order number is required for queries</p>
+     */
+    @NameInMap("instructions")
+    public String instructions;
+
+    /**
+     * <p>The route match rule. When the type is RealMCP, the match parameter is required and you must provide a route matching rule.</p>
      */
     @NameInMap("match")
     public HttpRouteMatch match;
@@ -94,7 +101,7 @@ public class CreateMcpServerRequest extends TeaModel {
     public Boolean mcpStatisticsEnable;
 
     /**
-     * <p>The MCP server name. The name must match the regular expression ^<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z0-9</a>?(\.<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z0-9</a>?)*$ and cannot exceed 64 characters in length.</p>
+     * <p>The name of the MCP server. The name must match the regular expression ^<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z0-9</a>?(\.<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z0-9</a>?)*$ and cannot exceed 64 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -104,7 +111,7 @@ public class CreateMcpServerRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The protocol type. This parameter is required. You must explicitly specify the protocol type (HTTP/HTTPS/SSE/StreamableHTTP). If this parameter is not specified, the API returns InvalidParameter.WithValue(400).</p>
+     * <p>The protocol type. This parameter is required. You must explicitly specify the protocol type, such as HTTP, HTTPS, SSE, or StreamableHTTP. If this parameter is omitted, the API returns InvalidParameter.WithValue(400).</p>
      * 
      * <strong>example:</strong>
      * <p>HTTP</p>
@@ -113,10 +120,8 @@ public class CreateMcpServerRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The type. Valid values:</p>
-     * <ul>
-     * <li>RealMCP: a standard MCP service.</li>
-     * </ul>
+     * <p>The type.
+     * RealMCP: Standard MCP service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -194,6 +199,14 @@ public class CreateMcpServerRequest extends TeaModel {
         return this.grayMcpServerConfigs;
     }
 
+    public CreateMcpServerRequest setInstructions(String instructions) {
+        this.instructions = instructions;
+        return this;
+    }
+    public String getInstructions() {
+        return this.instructions;
+    }
+
     public CreateMcpServerRequest setMatch(HttpRouteMatch match) {
         this.match = match;
         return this;
@@ -253,7 +266,7 @@ public class CreateMcpServerRequest extends TeaModel {
         public String mcpServerId;
 
         /**
-         * <p>The MCP server name.</p>
+         * <p>The name of the MCP server.</p>
          * 
          * <strong>example:</strong>
          * <p>test-mcp</p>
@@ -309,10 +322,10 @@ public class CreateMcpServerRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The service protocol. Valid values:</p>
+         * <p>The service protocol:</p>
          * <ul>
-         * <li>HTTP</li>
-         * <li>HTTPS</li>
+         * <li>HTTP.</li>
+         * <li>HTTPS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -322,7 +335,7 @@ public class CreateMcpServerRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The service ID. The serviceId must be a backend service ID that is registered under the gateway. You can call the ListServices operation (with the gatewayId parameter) to query available service IDs.</p>
+         * <p>The service ID. The serviceId is the ID of a registered backend service under the gateway. You can query it by calling the ListServices API and passing the gatewayId.</p>
          * 
          * <strong>example:</strong>
          * <p>svc-crbgq0dlhtgr***</p>
@@ -397,7 +410,7 @@ public class CreateMcpServerRequest extends TeaModel {
 
     public static class CreateMcpServerRequestBackendConfig extends TeaModel {
         /**
-         * <p>The backend service scenario.</p>
+         * <p>The backend service scene.</p>
          * 
          * <strong>example:</strong>
          * <p>SingleService</p>
@@ -529,7 +542,7 @@ public class CreateMcpServerRequest extends TeaModel {
 
     public static class CreateMcpServerRequestGrayMcpServerConfigsBackendConfig extends TeaModel {
         /**
-         * <p>The backend scenario.</p>
+         * <p>The backend scene.</p>
          * 
          * <strong>example:</strong>
          * <p>SingleService</p>
@@ -574,7 +587,7 @@ public class CreateMcpServerRequest extends TeaModel {
         public CreateMcpServerRequestGrayMcpServerConfigsBackendConfig backendConfig;
 
         /**
-         * <p>The route match rule.</p>
+         * <p>The route matching rule.</p>
          */
         @NameInMap("match")
         public HttpRouteMatch match;
@@ -621,7 +634,7 @@ public class CreateMcpServerRequest extends TeaModel {
 
     public static class CreateMcpServerRequestMcpServerConfig extends TeaModel {
         /**
-         * <p>The MCP server spec configuration. This parameter is mutually exclusive with swaggerConfig.</p>
+         * <p>The MCP server configuration. This parameter is mutually exclusive with the swaggerConfig parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>mcp-spec.yaml</p>

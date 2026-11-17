@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstallableGatewaysRequest extends TeaModel {
     /**
-     * <p>The gateway type used for filtering.</p>
+     * <p>The gateway type filter.</p>
      * 
      * <strong>example:</strong>
      * <p>AI</p>

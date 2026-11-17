@@ -76,7 +76,7 @@ public class ListSourcesResponseBody extends TeaModel {
 
     public static class ListSourcesResponseBodyDataItemsK8sSourceInfo extends TeaModel {
         /**
-         * <p>The container service cluster ID.</p>
+         * <p>The ID of the container service cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>c09212180612a42adbed6a940d01d***</p>
@@ -110,7 +110,7 @@ public class ListSourcesResponseBody extends TeaModel {
         public String address;
 
         /**
-         * <p>The NACOS registry cluster ID.</p>
+         * <p>The ID of the Nacos registry cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-3353***</p>
@@ -199,7 +199,7 @@ public class ListSourcesResponseBody extends TeaModel {
         public ListSourcesResponseBodyDataItemsNacosSourceInfo nacosSourceInfo;
 
         /**
-         * <p>The source name. If the source type is container service, the name is the container service cluster name. If the source type is MSE Nacos, the name is the Nacos instance name.</p>
+         * <p>The source name. If the source type is container service, the name is the name of the container service cluster. If the source is MSE Nacos, the name is the name of the Nacos instance.</p>
          * 
          * <strong>example:</strong>
          * <p>itemcenter-dev-cluster</p>
@@ -208,7 +208,7 @@ public class ListSourcesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-xxxx</p>

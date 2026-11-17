@@ -36,27 +36,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p> Recommended call logic:</p>
      * <ul>
      * <li><ol>
-     * <li>Perform a dry run to check for rule conflicts.</li>
+     * <li>First, perform a dry run to check for rule conflicts.</li>
      * </ol>
      * </li>
      * <li><ul>
-     * <li>Set dryRun to true.</li>
+     * <li>Set dryRun=true.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response returns a conflict preview that contains conflictHash.</li>
+     * <li>The response returns a conflict preview containing a conflictHash.</li>
      * </ul>
      * </li>
      * <li><ol start="2">
-     * <li>Submit the request after confirmation.</li>
+     * <li>After confirmation, formally submit the request.</li>
      * </ol>
      * </li>
      * <li><ul>
-     * <li>If no conflicts exist: Set dryRun to false and overwrite to false.</li>
+     * <li>No conflicts: Set dryRun=false and overwrite=false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>If conflicts exist and you confirm to overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
+     * <li>Conflicts exist and you confirm to overwrite: Set dryRun=false, overwrite=true, and conflictHash=<the value returned in the previous step>.</li>
      * </ul>
      * </li>
      * </ul>
@@ -150,27 +150,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p> Recommended call logic:</p>
      * <ul>
      * <li><ol>
-     * <li>Perform a dry run to check for rule conflicts.</li>
+     * <li>First, perform a dry run to check for rule conflicts.</li>
      * </ol>
      * </li>
      * <li><ul>
-     * <li>Set dryRun to true.</li>
+     * <li>Set dryRun=true.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response returns a conflict preview that contains conflictHash.</li>
+     * <li>The response returns a conflict preview containing a conflictHash.</li>
      * </ul>
      * </li>
      * <li><ol start="2">
-     * <li>Submit the request after confirmation.</li>
+     * <li>After confirmation, formally submit the request.</li>
      * </ol>
      * </li>
      * <li><ul>
-     * <li>If no conflicts exist: Set dryRun to false and overwrite to false.</li>
+     * <li>No conflicts: Set dryRun=false and overwrite=false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>If conflicts exist and you confirm to overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</li>
+     * <li>Conflicts exist and you confirm to overwrite: Set dryRun=false, overwrite=true, and conflictHash=<the value returned in the previous step>.</li>
      * </ul>
      * </li>
      * </ul>
@@ -245,7 +245,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds consumer group members in batches.</p>
+     * <p>Grants model card licenses to a consumer.</p>
+     * 
+     * @param request AuthorizeConsumerModelCardGrantsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AuthorizeConsumerModelCardGrantsResponse
+     */
+    public AuthorizeConsumerModelCardGrantsResponse authorizeConsumerModelCardGrantsWithOptions(String httpApiId, AuthorizeConsumerModelCardGrantsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.modelCardIds)) {
+            body.put("modelCardIds", request.modelCardIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelGroupIds)) {
+            body.put("modelGroupIds", request.modelGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalId)) {
+            body.put("principalId", request.principalId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalType)) {
+            body.put("principalType", request.principalType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AuthorizeConsumerModelCardGrants"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/model-apis/" + com.aliyun.openapiutil.Client.getEncodeParam(httpApiId) + "/model-card-grants"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AuthorizeConsumerModelCardGrantsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Grants model card licenses to a consumer.</p>
+     * 
+     * @param request AuthorizeConsumerModelCardGrantsRequest
+     * @return AuthorizeConsumerModelCardGrantsResponse
+     */
+    public AuthorizeConsumerModelCardGrantsResponse authorizeConsumerModelCardGrants(String httpApiId, AuthorizeConsumerModelCardGrantsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.authorizeConsumerModelCardGrantsWithOptions(httpApiId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Adds members to a consumer group in batches.</p>
      * 
      * @param request BatchAddConsumerGroupConsumersRequest
      * @param headers map
@@ -279,7 +338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds consumer group members in batches.</p>
+     * <p>Adds members to a consumer group in batches.</p>
      * 
      * @param request BatchAddConsumerGroupConsumersRequest
      * @return BatchAddConsumerGroupConsumersResponse
@@ -292,7 +351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes API consumer authorization rules in batches.</p>
+     * <p>Revokes consumer authorization rules in batches.</p>
      * 
      * @param request BatchDeleteConsumerAuthorizationRuleRequest
      * @param headers map
@@ -326,7 +385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes API consumer authorization rules in batches.</p>
+     * <p>Revokes consumer authorization rules in batches.</p>
      * 
      * @param request BatchDeleteConsumerAuthorizationRuleRequest
      * @return BatchDeleteConsumerAuthorizationRuleResponse
@@ -339,7 +398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch exports HTTP APIs.</p>
+     * <p>Performs a batch export of HTTP APIs.</p>
      * 
      * @param request BatchExportHttpApisRequest
      * @param headers map
@@ -389,7 +448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch exports HTTP APIs.</p>
+     * <p>Performs a batch export of HTTP APIs.</p>
      * 
      * @param request BatchExportHttpApisRequest
      * @return BatchExportHttpApisResponse
@@ -485,7 +544,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes multiple members from a consumer group.</p>
+     * <p>Removes members from a consumer group in batches.</p>
      * 
      * @param request BatchRemoveConsumerGroupConsumersRequest
      * @param headers map
@@ -519,7 +578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes multiple members from a consumer group.</p>
+     * <p>Removes members from a consumer group in batches.</p>
      * 
      * @param request BatchRemoveConsumerGroupConsumersRequest
      * @return BatchRemoveConsumerGroupConsumersResponse
@@ -532,7 +591,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates HTTP API operations in batches.</p>
+     * <p>Batch updates HTTP API operations.</p>
      * 
      * @param request BatchUpdateHttpApiOperationRequest
      * @param headers map
@@ -574,7 +633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates HTTP API operations in batches.</p>
+     * <p>Batch updates HTTP API operations.</p>
      * 
      * @param request BatchUpdateHttpApiOperationRequest
      * @return BatchUpdateHttpApiOperationResponse
@@ -646,7 +705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the activation status of the API Management service.</p>
+     * <p>Retrieves the activation status of the API management service.</p>
      * 
      * @param request CheckCommodityStatusRequest
      * @param headers map
@@ -674,7 +733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the activation status of the API Management service.</p>
+     * <p>Retrieves the activation status of the API management service.</p>
      * 
      * @param request CheckCommodityStatusRequest
      * @return CheckCommodityStatusResponse
@@ -687,7 +746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a model card for model creation under an existing model provider of a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider parameter must reference an existing model provider in the gateway. The modelName must be unique within the same AI gateway instance and model provider. You can create up to 1,000 model cards per gateway instance. The credit parameter currently supports only the fixed type, and the billing unit is Credits per million tokens. If this parameter is not specified, the type defaults to fixed and all costs default to 0. Each item in availablePaths must include both path and type.</p>
+     * <p>Performs model creation for a model card under an existing model provider of a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider parameter must reference an existing model provider in the gateway. The modelName must be unique within the same AI gateway instance and the same model provider. You can create up to 1,000 model cards for a single gateway instance. The credit parameter currently supports only the fixed type, and the billing unit is Credits per million tokens. If this parameter is not specified, the type defaults to fixed and all costs default to 0. Each item in availablePaths must include both path and type.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an AI model card.</p>
@@ -748,7 +807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a model card for model creation under an existing model provider of a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider parameter must reference an existing model provider in the gateway. The modelName must be unique within the same AI gateway instance and model provider. You can create up to 1,000 model cards per gateway instance. The credit parameter currently supports only the fixed type, and the billing unit is Credits per million tokens. If this parameter is not specified, the type defaults to fixed and all costs default to 0. Each item in availablePaths must include both path and type.</p>
+     * <p>Performs model creation for a model card under an existing model provider of a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider parameter must reference an existing model provider in the gateway. The modelName must be unique within the same AI gateway instance and the same model provider. You can create up to 1,000 model cards for a single gateway instance. The credit parameter currently supports only the fixed type, and the billing unit is Credits per million tokens. If this parameter is not specified, the type defaults to fixed and all costs default to 0. Each item in availablePaths must include both path and type.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an AI model card.</p>
@@ -779,6 +838,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultServiceId)) {
+            body.put("defaultServiceId", request.defaultServiceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
             body.put("displayName", request.displayName);
         }
@@ -825,6 +888,144 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createAiModelProviderWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a standalone AI model source.</p>
+     * 
+     * @param request CreateAiModelSourceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAiModelSourceResponse
+     */
+    public CreateAiModelSourceResponse createAiModelSourceWithOptions(CreateAiModelSourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("displayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            body.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.provider)) {
+            body.put("provider", request.provider);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
+            body.put("serviceId", request.serviceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAiModelSource"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/ai-model-sources"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAiModelSourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a standalone AI model source.</p>
+     * 
+     * @param request CreateAiModelSourceRequest
+     * @return CreateAiModelSourceResponse
+     */
+    public CreateAiModelSourceResponse createAiModelSource(CreateAiModelSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAiModelSourceWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an in-source AI model.</p>
+     * 
+     * @param request CreateAiModelSourceModelRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAiModelSourceModelResponse
+     */
+    public CreateAiModelSourceModelResponse createAiModelSourceModelWithOptions(CreateAiModelSourceModelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.availablePaths)) {
+            body.put("availablePaths", request.availablePaths);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credit)) {
+            body.put("credit", request.credit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.features)) {
+            body.put("features", request.features);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.meta)) {
+            body.put("meta", request.meta);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelName)) {
+            body.put("modelName", request.modelName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelSourceId)) {
+            body.put("modelSourceId", request.modelSourceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAiModelSourceModel"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/ai-model-source-models"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAiModelSourceModelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an in-source AI model.</p>
+     * 
+     * @param request CreateAiModelSourceModelRequest
+     * @return CreateAiModelSourceModelResponse
+     */
+    public CreateAiModelSourceModelResponse createAiModelSourceModel(CreateAiModelSourceModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAiModelSourceModelWithOptions(request, headers, runtime);
     }
 
     /**
@@ -994,6 +1195,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("enable", request.enable);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.expireAt)) {
+            body.put("expireAt", request.expireAt);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gatewayType)) {
             body.put("gatewayType", request.gatewayType);
         }
@@ -1111,12 +1316,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Prerequisites: Before creating a consumer authorization rule, prepare resources according to the following dependency chain (the corresponding creation APIs and ID passing relationships are in parentheses):
-     * Gateway instance (CreateGateway → gatewayId, with the gw- prefix)
-     * Environment (A default environment is automatically created after the gateway is created. You can also call CreateEnvironment → environmentId, with the env- prefix. The gatewayId from Step 1 is required.)
-     * HTTP API (CreateHttpApi → httpApiId, with the api- prefix)
-     * Route and publish (CreateHttpApiRoute → routeId, with the hr- prefix, which belongs to the API in Step 3. Then, call DeployHttpApi to publish it to the environment in Step 2. Unpublished routes cannot be authorized.)
-     * Consumer (CreateConsumer → consumerId, with the cs- prefix, or consumerGroupId, with the csg- prefix. Choose either consumerId or consumerGroupId.)</p>
+     * <p>Prerequisites: Before you create a consumer authorization rule, prepare resources based on the following dependency chain (the parentheses indicate the corresponding creation API and ID passing relationship):
+     * Gateway instance (CreateGateway → gatewayId, gw- prefix)
+     * Environment (A default environment is created with the gateway. You can also call CreateEnvironment → environmentId, env- prefix, and associate it with the gatewayId from Step 1.)
+     * HTTP API (CreateHttpApi → httpApiId, api- prefix)
+     * Route and publish (CreateHttpApiRoute → routeId, hr- prefix, belonging to the API in Step 3; then call DeployHttpApi to publish it to the environment in Step 2. Unpublished routes cannot be authorized.)
+     * Consumer (CreateConsumer → consumerId, cs- prefix; or consumer group consumerGroupId, csg- prefix. Choose one of consumerId and consumerGroupId.)</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a consumer authorization rule.</p>
@@ -1153,12 +1358,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Prerequisites: Before creating a consumer authorization rule, prepare resources according to the following dependency chain (the corresponding creation APIs and ID passing relationships are in parentheses):
-     * Gateway instance (CreateGateway → gatewayId, with the gw- prefix)
-     * Environment (A default environment is automatically created after the gateway is created. You can also call CreateEnvironment → environmentId, with the env- prefix. The gatewayId from Step 1 is required.)
-     * HTTP API (CreateHttpApi → httpApiId, with the api- prefix)
-     * Route and publish (CreateHttpApiRoute → routeId, with the hr- prefix, which belongs to the API in Step 3. Then, call DeployHttpApi to publish it to the environment in Step 2. Unpublished routes cannot be authorized.)
-     * Consumer (CreateConsumer → consumerId, with the cs- prefix, or consumerGroupId, with the csg- prefix. Choose either consumerId or consumerGroupId.)</p>
+     * <p>Prerequisites: Before you create a consumer authorization rule, prepare resources based on the following dependency chain (the parentheses indicate the corresponding creation API and ID passing relationship):
+     * Gateway instance (CreateGateway → gatewayId, gw- prefix)
+     * Environment (A default environment is created with the gateway. You can also call CreateEnvironment → environmentId, env- prefix, and associate it with the gatewayId from Step 1.)
+     * HTTP API (CreateHttpApi → httpApiId, api- prefix)
+     * Route and publish (CreateHttpApiRoute → routeId, hr- prefix, belonging to the API in Step 3; then call DeployHttpApi to publish it to the environment in Step 2. Unpublished routes cannot be authorized.)
+     * Consumer (CreateConsumer → consumerId, cs- prefix; or consumer group consumerGroupId, csg- prefix. Choose one of consumerId and consumerGroupId.)</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a consumer authorization rule.</p>
@@ -1233,7 +1438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Registers a HiMarket developer account and returns the ID of the newly created developer upon successful creation.</p>
+     * <p>Registers a HiMarket developer account and returns the ID of the new developer.</p>
      * 
      * @param request CreateDeveloperRequest
      * @param headers map
@@ -1271,7 +1476,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Registers a HiMarket developer account and returns the ID of the newly created developer upon successful creation.</p>
+     * <p>Registers a HiMarket developer account and returns the ID of the new developer.</p>
      * 
      * @param request CreateDeveloperRequest
      * @return CreateDeveloperResponse
@@ -1555,25 +1760,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>调用流程</h2>
-     * <p>本接口为指定网关配额规则下的一个消费者或消费者组创建消费明细导出任务，导出内容来自网关访问日志。</p>
+     * <h2>Call procedure</h2>
+     * <p>This operation creates an export task for the consumption details of a consumer or consumer group under a specified gateway quota rule. The exported content is derived from gateway access logs.</p>
      * <ol>
-     * <li>调用本接口获取 taskId。新任务返回 Pending，表示已提交，文件尚未生成。</li>
-     * <li>使用相同的 gatewayId、ruleId、subjectId 和返回的 taskId 调用 GetGatewayQuotaRuleSubjectUsageExportTask，轮询任务状态。</li>
-     * <li>当轮询状态为 Success 且文件未过期时，通过GetGatewayQuotaRuleSubjectUsageExportTask下载 csv.gz 文件；状态为 Failed 时，根据 errorMessage 排查后重新创建任务。</li>
+     * <li>Call this operation to obtain the taskId. A new task returns Pending, indicating that the task is submitted and the file is not yet generated.</li>
+     * <li>Use the same gatewayId, ruleId, subjectId, and the returned taskId to call GetGatewayQuotaRuleSubjectUsageExportTask and poll the task status.</li>
+     * <li>When the polled status is Success and the file has not expired, download the csv.gz file by using GetGatewayQuotaRuleSubjectUsageExportTask. If the status is Failed, troubleshoot the issue based on the errorMessage and recreate the task.</li>
      * </ol>
-     * <h2>使用条件与限制</h2>
+     * <h2>Prerequisites and limits</h2>
      * <ul>
-     * <li>创建任务时，配额规则必须存在，且目标主体已绑定到该规则。消费者规则使用消费者 ID，消费者组规则使用消费者组 ID。</li>
-     * <li>有效导出时间范围内的明细依赖网关访问日志投递，请先启用日志投递并确认所需时段的日志可查询。</li>
-     * <li>单次导出时间跨度不得超过一个规则周期。单次最多导出 100000 条明细；后台统计结果超过上限时任务失败，请缩小时间范围后重试。</li>
-     * <li>同一用户在当前地域对同一网关、规则和主体在最近 10 分钟内已有 Pending 或 Running 任务时，重复创建会被拒绝；最近 10 分钟内创建且仍为 Pending 或 Running 的导出任务总数达到 3 个时也会被拒绝。请等待已有任务结束。相同 clientToken、相同参数的幂等重试可复用已有任务。</li>
-     * <li>任务自创建起的处理超时为 10 分钟。超时后任务按 Failed 处理；这不是任务必定成功完成的时限承诺。</li>
-     * <li>创建时确定导出时间范围、计量维度和主体名称，后续查询不会重新计算这些条件。文件成功生成后可在 24 小时内获取下载链接；每次查询生成的签名链接有效期为 10 分钟，具体时间以查询结果为准。</li>
+     * <li>When you create a task, the quota rule must exist, and the target subject must be bound to the rule. Use the consumer ID for consumer rules and the consumer group ID for consumer group rules.</li>
+     * <li>The details within the valid export time range depend on the delivery of gateway access logs. Enable log delivery first and ensure that the logs for the required time period are queryable.</li>
+     * <li>The time span for a single export cannot exceed one rule period. A single export can contain up to 100,000 details. If the background statistics exceed the limit, the task fails. Narrow the time range and try again.</li>
+     * <li>If the same user already has a Pending or Running task for the same gateway, rule, and subject in the current region within the last 10 minutes, repeated creation is rejected. Creation is also rejected if the total number of export tasks created within the last 10 minutes that are still Pending or Running reaches 3. Wait for the existing tasks to complete. Idempotent retries with the same clientToken and identical parameters can reuse existing tasks.</li>
+     * <li>The processing timeout for a task is 10 minutes from the time of creation. After the timeout, the task is processed as Failed. This is not a guarantee that the task will definitely complete successfully within this time limit.</li>
+     * <li>The export time range, metering dimension, and subject name are determined at creation time, and subsequent queries do not recalculate these conditions. After the file is successfully generated, the download link can be obtained within 24 hours. The signed link generated for each query is valid for 10 minutes, subject to the actual query result.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建网关配额限流规则主体用量明细导出任务</p>
+     * <p>Creates an asynchronous export task for the consumption details of a single consumer or consumer group under a gateway quota rule.</p>
      * 
      * @param request CreateGatewayQuotaRuleSubjectUsageExportTaskRequest
      * @param headers map
@@ -1623,25 +1828,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>调用流程</h2>
-     * <p>本接口为指定网关配额规则下的一个消费者或消费者组创建消费明细导出任务，导出内容来自网关访问日志。</p>
+     * <h2>Call procedure</h2>
+     * <p>This operation creates an export task for the consumption details of a consumer or consumer group under a specified gateway quota rule. The exported content is derived from gateway access logs.</p>
      * <ol>
-     * <li>调用本接口获取 taskId。新任务返回 Pending，表示已提交，文件尚未生成。</li>
-     * <li>使用相同的 gatewayId、ruleId、subjectId 和返回的 taskId 调用 GetGatewayQuotaRuleSubjectUsageExportTask，轮询任务状态。</li>
-     * <li>当轮询状态为 Success 且文件未过期时，通过GetGatewayQuotaRuleSubjectUsageExportTask下载 csv.gz 文件；状态为 Failed 时，根据 errorMessage 排查后重新创建任务。</li>
+     * <li>Call this operation to obtain the taskId. A new task returns Pending, indicating that the task is submitted and the file is not yet generated.</li>
+     * <li>Use the same gatewayId, ruleId, subjectId, and the returned taskId to call GetGatewayQuotaRuleSubjectUsageExportTask and poll the task status.</li>
+     * <li>When the polled status is Success and the file has not expired, download the csv.gz file by using GetGatewayQuotaRuleSubjectUsageExportTask. If the status is Failed, troubleshoot the issue based on the errorMessage and recreate the task.</li>
      * </ol>
-     * <h2>使用条件与限制</h2>
+     * <h2>Prerequisites and limits</h2>
      * <ul>
-     * <li>创建任务时，配额规则必须存在，且目标主体已绑定到该规则。消费者规则使用消费者 ID，消费者组规则使用消费者组 ID。</li>
-     * <li>有效导出时间范围内的明细依赖网关访问日志投递，请先启用日志投递并确认所需时段的日志可查询。</li>
-     * <li>单次导出时间跨度不得超过一个规则周期。单次最多导出 100000 条明细；后台统计结果超过上限时任务失败，请缩小时间范围后重试。</li>
-     * <li>同一用户在当前地域对同一网关、规则和主体在最近 10 分钟内已有 Pending 或 Running 任务时，重复创建会被拒绝；最近 10 分钟内创建且仍为 Pending 或 Running 的导出任务总数达到 3 个时也会被拒绝。请等待已有任务结束。相同 clientToken、相同参数的幂等重试可复用已有任务。</li>
-     * <li>任务自创建起的处理超时为 10 分钟。超时后任务按 Failed 处理；这不是任务必定成功完成的时限承诺。</li>
-     * <li>创建时确定导出时间范围、计量维度和主体名称，后续查询不会重新计算这些条件。文件成功生成后可在 24 小时内获取下载链接；每次查询生成的签名链接有效期为 10 分钟，具体时间以查询结果为准。</li>
+     * <li>When you create a task, the quota rule must exist, and the target subject must be bound to the rule. Use the consumer ID for consumer rules and the consumer group ID for consumer group rules.</li>
+     * <li>The details within the valid export time range depend on the delivery of gateway access logs. Enable log delivery first and ensure that the logs for the required time period are queryable.</li>
+     * <li>The time span for a single export cannot exceed one rule period. A single export can contain up to 100,000 details. If the background statistics exceed the limit, the task fails. Narrow the time range and try again.</li>
+     * <li>If the same user already has a Pending or Running task for the same gateway, rule, and subject in the current region within the last 10 minutes, repeated creation is rejected. Creation is also rejected if the total number of export tasks created within the last 10 minutes that are still Pending or Running reaches 3. Wait for the existing tasks to complete. Idempotent retries with the same clientToken and identical parameters can reuse existing tasks.</li>
+     * <li>The processing timeout for a task is 10 minutes from the time of creation. After the timeout, the task is processed as Failed. This is not a guarantee that the task will definitely complete successfully within this time limit.</li>
+     * <li>The export time range, metering dimension, and subject name are determined at creation time, and subsequent queries do not recalculate these conditions. After the file is successfully generated, the download link can be obtained within 24 hours. The signed link generated for each query is valid for 10 minutes, subject to the actual query result.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建网关配额限流规则主体用量明细导出任务</p>
+     * <p>Creates an asynchronous export task for the consumption details of a single consumer or consumer group under a gateway quota rule.</p>
      * 
      * @param request CreateGatewayQuotaRuleSubjectUsageExportTaskRequest
      * @return CreateGatewayQuotaRuleSubjectUsageExportTaskResponse
@@ -1860,6 +2065,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("environmentId", request.environmentId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            body.put("gatewayId", request.gatewayId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.match)) {
             body.put("match", request.match);
         }
@@ -1909,7 +2118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an API version.</p>
@@ -1946,7 +2155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an API version.</p>
@@ -1961,6 +2170,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a logical model.</p>
+     * 
+     * @param request CreateLogicalModelRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateLogicalModelResponse
+     */
+    public CreateLogicalModelResponse createLogicalModelWithOptions(CreateLogicalModelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callStrategy)) {
+            body.put("callStrategy", request.callStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fallbackTargets)) {
+            body.put("fallbackTargets", request.fallbackTargets);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            body.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseModel)) {
+            body.put("responseModel", request.responseModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routingPolicy)) {
+            body.put("routingPolicy", request.routingPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.slots)) {
+            body.put("slots", request.slots);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targets)) {
+            body.put("targets", request.targets);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateLogicalModel"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/logical-models"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLogicalModelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a logical model.</p>
+     * 
+     * @param request CreateLogicalModelRequest
+     * @return CreateLogicalModelResponse
+     */
+    public CreateLogicalModelResponse createLogicalModel(CreateLogicalModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createLogicalModelWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Only sources of the <strong>Container Service</strong> type are allowed to update Ingress listener configurations.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a Model Context Protocol (MCP) server.</p>
      * 
@@ -2002,6 +2295,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.grayMcpServerConfigs)) {
             body.put("grayMcpServerConfigs", request.grayMcpServerConfigs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instructions)) {
+            body.put("instructions", request.instructions);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.match)) {
@@ -2047,6 +2344,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only sources of the <strong>Container Service</strong> type are allowed to update Ingress listener configurations.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a Model Context Protocol (MCP) server.</p>
      * 
@@ -2132,6 +2432,162 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createMigrationTaskWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a model creation API.</p>
+     * 
+     * @param request CreateModelApiRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateModelApiResponse
+     */
+    public CreateModelApiResponse createModelApiWithOptions(CreateModelApiRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.basePath)) {
+            body.put("basePath", request.basePath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directSupplyFallbackEnabled)) {
+            body.put("directSupplyFallbackEnabled", request.directSupplyFallbackEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainIds)) {
+            body.put("domainIds", request.domainIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAuth)) {
+            body.put("enableAuth", request.enableAuth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firstByteTimeout)) {
+            body.put("firstByteTimeout", request.firstByteTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            body.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.initialConfiguration)) {
+            body.put("initialConfiguration", request.initialConfiguration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelSelection)) {
+            body.put("modelSelection", request.modelSelection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyConfigs)) {
+            body.put("policyConfigs", request.policyConfigs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("resourceGroupId", request.resourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateModelApi"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/model-apis"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateModelApiResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a model creation API.</p>
+     * 
+     * @param request CreateModelApiRequest
+     * @return CreateModelApiResponse
+     */
+    public CreateModelApiResponse createModelApi(CreateModelApiRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createModelApiWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a model group.</p>
+     * 
+     * @param request CreateModelGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateModelGroupResponse
+     */
+    public CreateModelGroupResponse createModelGroupWithOptions(CreateModelGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            body.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelCardIds)) {
+            body.put("modelCardIds", request.modelCardIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateModelGroup"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/model-groups"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateModelGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a model group.</p>
+     * 
+     * @param request CreateModelGroupRequest
+     * @return CreateModelGroupResponse
+     */
+    public CreateModelGroupResponse createModelGroup(CreateModelGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createModelGroupWithOptions(request, headers, runtime);
     }
 
     /**
@@ -2471,7 +2927,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a HiMarket developer portal and returns the ID of the newly created portal.</p>
+     * <p>Creates a HiMarket developer portal and returns the ID of the newly created portal upon success.</p>
      * 
      * @param request CreatePortalRequest
      * @param headers map
@@ -2515,7 +2971,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a HiMarket developer portal and returns the ID of the newly created portal.</p>
+     * <p>Creates a HiMarket developer portal and returns the ID of the newly created portal upon success.</p>
      * 
      * @param request CreatePortalRequest
      * @return CreatePortalResponse
@@ -2527,6 +2983,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an API product with a specified name and type.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates an API product in the product catalog of the HiMarket portal and returns the ID of the new product upon successful creation.</p>
      * 
@@ -2595,6 +3054,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an API product with a specified name and type.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates an API product in the product catalog of the HiMarket portal and returns the ID of the new product upon successful creation.</p>
      * 
@@ -2609,7 +3071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a product category for an API product and returns the ID and name of the new category upon success.</p>
+     * <p>Creates a product category for an API product and returns the ID and name of the new category.</p>
      * 
      * @param request CreateProductCategoryRequest
      * @param headers map
@@ -2651,7 +3113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a product category for an API product and returns the ID and name of the new category upon success.</p>
+     * <p>Creates a product category for an API product and returns the ID and name of the new category.</p>
      * 
      * @param request CreateProductCategoryRequest
      * @return CreateProductCategoryResponse
@@ -2664,7 +3126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates an API configuration with a specified API product by submitting the gatewayId and apigRefConfig parameters to the /himarket/v1/products/{productId}/ref endpoint. You can query the association result by calling GetProductRef on the same path or remove the association by calling DeleteProductRef.</p>
+     * <p>Associates an API configuration with a specified API product by submitting the gateway ID and API gateway reference configuration to the /himarket/v1/products/{productId}/ref endpoint. The association can be queried by GetProductRef and removed by DeleteProductRef on the same path.</p>
      * 
      * @param request CreateProductRefRequest
      * @param headers map
@@ -2702,7 +3164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates an API configuration with a specified API product by submitting the gatewayId and apigRefConfig parameters to the /himarket/v1/products/{productId}/ref endpoint. You can query the association result by calling GetProductRef on the same path or remove the association by calling DeleteProductRef.</p>
+     * <p>Associates an API configuration with a specified API product by submitting the gateway ID and API gateway reference configuration to the /himarket/v1/products/{productId}/ref endpoint. The association can be queried by GetProductRef and removed by DeleteProductRef on the same path.</p>
      * 
      * @param request CreateProductRefRequest
      * @return CreateProductRefResponse
@@ -2755,8 +3217,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>Before calling this operation, you must prepare the following resources in Key Management Service (KMS):</p>
+     * <ul>
+     * <li>KMS instance: Create an instance in KMS and obtain the instance ID. Pass the instance ID as the kmsConfig.kmsInstanceId parameter.</li>
+     * <li>KMS key: Create a key in the instance and obtain the key ID. Pass the key ID as the kmsConfig.kmsKeyId parameter.
+     * When calling this operation, you must set secretSource to KMS and pass the preceding two identifiers in kmsConfig. After the secret is created, you can call ListSecrets to query the list of secrets under your account.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Generates a key.</p>
+     * <p>Generates a secret.</p>
      * 
      * @param request CreateSecretRequest
      * @param headers map
@@ -2809,8 +3280,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>Before calling this operation, you must prepare the following resources in Key Management Service (KMS):</p>
+     * <ul>
+     * <li>KMS instance: Create an instance in KMS and obtain the instance ID. Pass the instance ID as the kmsConfig.kmsInstanceId parameter.</li>
+     * <li>KMS key: Create a key in the instance and obtain the key ID. Pass the key ID as the kmsConfig.kmsKeyId parameter.
+     * When calling this operation, you must set secretSource to KMS and pass the preceding two identifiers in kmsConfig. After the secret is created, you can call ListSecrets to query the list of secrets under your account.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Generates a key.</p>
+     * <p>Generates a secret.</p>
      * 
      * @param request CreateSecretRequest
      * @return CreateSecretResponse
@@ -3096,6 +3576,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Deletes a standalone AI model source.</p>
+     * 
+     * @param request DeleteAiModelSourceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAiModelSourceResponse
+     */
+    public DeleteAiModelSourceResponse deleteAiModelSourceWithOptions(String modelSourceId, DeleteAiModelSourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedVersion)) {
+            query.put("expectedVersion", request.expectedVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAiModelSource"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/ai-model-sources/" + com.aliyun.openapiutil.Client.getEncodeParam(modelSourceId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAiModelSourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a standalone AI model source.</p>
+     * 
+     * @param request DeleteAiModelSourceRequest
+     * @return DeleteAiModelSourceResponse
+     */
+    public DeleteAiModelSourceResponse deleteAiModelSource(String modelSourceId, DeleteAiModelSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteAiModelSourceWithOptions(modelSourceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an AI model in the source.</p>
+     * 
+     * @param request DeleteAiModelSourceModelRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAiModelSourceModelResponse
+     */
+    public DeleteAiModelSourceModelResponse deleteAiModelSourceModelWithOptions(String modelCardId, DeleteAiModelSourceModelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedVersion)) {
+            query.put("expectedVersion", request.expectedVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAiModelSourceModel"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/ai-model-source-models/" + com.aliyun.openapiutil.Client.getEncodeParam(modelCardId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAiModelSourceModelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an AI model in the source.</p>
+     * 
+     * @param request DeleteAiModelSourceModelRequest
+     * @return DeleteAiModelSourceModelResponse
+     */
+    public DeleteAiModelSourceModelResponse deleteAiModelSourceModel(String modelCardId, DeleteAiModelSourceModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteAiModelSourceModelWithOptions(modelCardId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a consumer.</p>
      * 
      * @param headers map
@@ -3338,7 +3912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a quota rule based on a consumer or consumer group for an AI gateway. Note that this operation takes effect only for AI gateways whose version is later than 2.1.19.</p>
+     * <p>Deletes a quota rule based on an API consumer or API consumer group for an AI gateway. Note that this operation applies only to AI gateways of a version later than 2.1.19.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a quota throttling rule for a gateway.</p>
@@ -3369,7 +3943,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a quota rule based on a consumer or consumer group for an AI gateway. Note that this operation takes effect only for AI gateways whose version is later than 2.1.19.</p>
+     * <p>Deletes a quota rule based on an API consumer or API consumer group for an AI gateway. Note that this operation applies only to AI gateways of a version later than 2.1.19.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a quota throttling rule for a gateway.</p>
@@ -3557,6 +4131,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Deletes the specified logical model.</p>
+     * 
+     * @param request DeleteLogicalModelRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteLogicalModelResponse
+     */
+    public DeleteLogicalModelResponse deleteLogicalModelWithOptions(String logicalModelId, DeleteLogicalModelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedRevision)) {
+            query.put("expectedRevision", request.expectedRevision);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteLogicalModel"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/logical-models/" + com.aliyun.openapiutil.Client.getEncodeParam(logicalModelId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteLogicalModelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes the specified logical model.</p>
+     * 
+     * @param request DeleteLogicalModelRequest
+     * @return DeleteLogicalModelResponse
+     */
+    public DeleteLogicalModelResponse deleteLogicalModel(String logicalModelId, DeleteLogicalModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteLogicalModelWithOptions(logicalModelId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes an MCP server.</p>
      * 
      * @param headers map
@@ -3594,7 +4215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a data migration task.</p>
+     * <p>Deletes a migration task.</p>
      * 
      * @param request DeleteMigrationTaskRequest
      * @param headers map
@@ -3622,7 +4243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a data migration task.</p>
+     * <p>Deletes a migration task.</p>
      * 
      * @param request DeleteMigrationTaskRequest
      * @return DeleteMigrationTaskResponse
@@ -3631,6 +4252,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteMigrationTaskWithOptions(taskId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Automatically stops the service and cleans up the resources owned by the API when a published new-version model API is deleted. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained during deletion or upon failure. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a model API.</p>
+     * 
+     * @param request DeleteModelApiRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteModelApiResponse
+     */
+    public DeleteModelApiResponse deleteModelApiWithOptions(String httpApiId, DeleteModelApiRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("dryRun", request.dryRun);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteModelApi"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/model-apis/" + com.aliyun.openapiutil.Client.getEncodeParam(httpApiId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteModelApiResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Automatically stops the service and cleans up the resources owned by the API when a published new-version model API is deleted. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained during deletion or upon failure. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a model API.</p>
+     * 
+     * @param request DeleteModelApiRequest
+     * @return DeleteModelApiResponse
+     */
+    public DeleteModelApiResponse deleteModelApi(String httpApiId, DeleteModelApiRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteModelApiWithOptions(httpApiId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a model group.</p>
+     * 
+     * @param request DeleteModelGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteModelGroupResponse
+     */
+    public DeleteModelGroupResponse deleteModelGroupWithOptions(String modelGroupId, DeleteModelGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedVersion)) {
+            query.put("expectedVersion", request.expectedVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteModelGroup"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/model-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(modelGroupId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteModelGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a model group.</p>
+     * 
+     * @param request DeleteModelGroupRequest
+     * @return DeleteModelGroupResponse
+     */
+    public DeleteModelGroupResponse deleteModelGroup(String modelGroupId, DeleteModelGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteModelGroupWithOptions(modelGroupId, request, headers, runtime);
     }
 
     /**
@@ -3827,6 +4552,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes an API product by product ID.</p>
+     * 
      * <b>summary</b> : 
      * <p>Deletes a specified API product by API product ID.</p>
      * 
@@ -3855,6 +4583,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes an API product by product ID.</p>
+     * 
      * <b>summary</b> : 
      * <p>Deletes a specified API product by API product ID.</p>
      * 
@@ -3869,7 +4600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specified product category by product category ID.</p>
+     * <p>Deletes a specified product category by its ID.</p>
      * 
      * @param request DeleteProductCategoryRequest
      * @param headers map
@@ -3897,7 +4628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specified product category by product category ID.</p>
+     * <p>Deletes a specified product category by its ID.</p>
      * 
      * @param request DeleteProductCategoryRequest
      * @return DeleteProductCategoryResponse
@@ -3910,7 +4641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Dissociates an API from an API product by API product ID. The association is established by CreateProductRef on the same resource path and can be queried by using GetProductRef.</p>
+     * <p>Dissociates an API product from an API by API product ID. The association is created by CreateProductRef on the same resource path and can be queried by GetProductRef.</p>
      * 
      * @param request DeleteProductRefRequest
      * @param headers map
@@ -3938,7 +4669,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Dissociates an API from an API product by API product ID. The association is established by CreateProductRef on the same resource path and can be queried by using GetProductRef.</p>
+     * <p>Dissociates an API product from an API by API product ID. The association is created by CreateProductRef on the same resource path and can be queried by GetProductRef.</p>
      * 
      * @param request DeleteProductRefRequest
      * @return DeleteProductRefResponse
@@ -3951,10 +4682,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a key value.</p>
+     * <p>Deletes a secret value.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3980,10 +4711,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a key value.</p>
+     * <p>Deletes a secret value.</p>
      * @return DeleteSecretResponse
      */
     public DeleteSecretResponse deleteSecret(String secretId) throws Exception {
@@ -4166,7 +4897,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before deployment, ensure that domainIds have been configured for the MCP server by calling CreateMcpServer or UpdateMcpServer. Call GetMcpServer to confirm the domain name bindng status.</p>
+     * <p>Before deployment, the MCP server must have domainIds configured through CreateMcpServer or UpdateMcpServer. Call GetMcpServer to verify the domain binding status.</p>
      * 
      * <b>summary</b> : 
      * <p>Publishes an MCP server.</p>
@@ -4195,7 +4926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before deployment, ensure that domainIds have been configured for the MCP server by calling CreateMcpServer or UpdateMcpServer. Call GetMcpServer to confirm the domain name bindng status.</p>
+     * <p>Before deployment, the MCP server must have domainIds configured through CreateMcpServer or UpdateMcpServer. Call GetMcpServer to verify the domain binding status.</p>
      * 
      * <b>summary</b> : 
      * <p>Publishes an MCP server.</p>
@@ -4209,7 +4940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the regions where the cloud-native API gateway is available for the current account.</p>
+     * <p>Queries the regions where Cloud-native API Gateway is available for the current account.</p>
      * 
      * @param request DescribeRegionsRequest
      * @param headers map
@@ -4243,7 +4974,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the regions where the cloud-native API gateway is available for the current account.</p>
+     * <p>Queries the regions where Cloud-native API Gateway is available for the current account.</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -4256,7 +4987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detaches and deletes a policy.</p>
+     * <p>Unmounts and deletes a policy.</p>
      * 
      * @param request DetachAndDeletePolicyRequest
      * @param headers map
@@ -4290,7 +5021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detaches and deletes a policy.</p>
+     * <p>Unmounts and deletes a policy.</p>
      * 
      * @param request DetachAndDeletePolicyRequest
      * @return DetachAndDeletePolicyResponse
@@ -4440,7 +5171,130 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the effective field collection configurations for each request path of an HTTP API in a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and template origin.</p>
+     * <p>Queries a standalone AI model source.</p>
+     * 
+     * @param request GetAiModelSourceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAiModelSourceResponse
+     */
+    public GetAiModelSourceResponse getAiModelSourceWithOptions(String modelSourceId, GetAiModelSourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAiModelSource"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/ai-model-sources/" + com.aliyun.openapiutil.Client.getEncodeParam(modelSourceId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAiModelSourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a standalone AI model source.</p>
+     * 
+     * @param request GetAiModelSourceRequest
+     * @return GetAiModelSourceResponse
+     */
+    public GetAiModelSourceResponse getAiModelSource(String modelSourceId, GetAiModelSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAiModelSourceWithOptions(modelSourceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the impact of editing an AI model source.</p>
+     * 
+     * @param request GetAiModelSourceEditImpactRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAiModelSourceEditImpactResponse
+     */
+    public GetAiModelSourceEditImpactResponse getAiModelSourceEditImpactWithOptions(String modelSourceId, GetAiModelSourceEditImpactRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAiModelSourceEditImpact"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/ai-model-sources/" + com.aliyun.openapiutil.Client.getEncodeParam(modelSourceId) + "/edit-impact"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAiModelSourceEditImpactResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the impact of editing an AI model source.</p>
+     * 
+     * @param request GetAiModelSourceEditImpactRequest
+     * @return GetAiModelSourceEditImpactResponse
+     */
+    public GetAiModelSourceEditImpactResponse getAiModelSourceEditImpact(String modelSourceId, GetAiModelSourceEditImpactRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAiModelSourceEditImpactWithOptions(modelSourceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries AI models in a model source.</p>
+     * 
+     * @param request GetAiModelSourceModelRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAiModelSourceModelResponse
+     */
+    public GetAiModelSourceModelResponse getAiModelSourceModelWithOptions(String modelCardId, GetAiModelSourceModelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAiModelSourceModel"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/ai-model-source-models/" + com.aliyun.openapiutil.Client.getEncodeParam(modelCardId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAiModelSourceModelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries AI models in a model source.</p>
+     * 
+     * @param request GetAiModelSourceModelRequest
+     * @return GetAiModelSourceModelResponse
+     */
+    public GetAiModelSourceModelResponse getAiModelSourceModel(String modelCardId, GetAiModelSourceModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAiModelSourceModelWithOptions(modelCardId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the effective field collection configurations for each URI of the request of an HTTP API under a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and template origin.</p>
      * 
      * @param request GetApiPathFieldConfigRequest
      * @param headers map
@@ -4478,7 +5332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the effective field collection configurations for each request path of an HTTP API in a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and template origin.</p>
+     * <p>Queries the effective field collection configurations for each URI of the request of an HTTP API under a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and template origin.</p>
      * 
      * @param request GetApiPathFieldConfigRequest
      * @return GetApiPathFieldConfigResponse
@@ -4538,7 +5392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a batch export task.</p>
+     * <p>Queries batch export tasks.</p>
      * 
      * @param request GetBatchExportTaskRequest
      * @param headers map
@@ -4566,7 +5420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a batch export task.</p>
+     * <p>Queries batch export tasks.</p>
      * 
      * @param request GetBatchExportTaskRequest
      * @return GetBatchExportTaskResponse
@@ -4579,7 +5433,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a batch import task. The task ID is returned after a batch import task is created by calling BatchImportHttpApis. Pass an empty string to list all existing batch import tasks.</p>
+     * <p>Queries batch import tasks. The task ID is returned after a batch import task is created by calling BatchImportHttpApis. Pass an empty string to list all existing batch import tasks.</p>
      * 
      * @param request GetBatchImportTaskRequest
      * @param headers map
@@ -4607,7 +5461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a batch import task. The task ID is returned after a batch import task is created by calling BatchImportHttpApis. Pass an empty string to list all existing batch import tasks.</p>
+     * <p>Queries batch import tasks. The task ID is returned after a batch import task is created by calling BatchImportHttpApis. Pass an empty string to list all existing batch import tasks.</p>
      * 
      * @param request GetBatchImportTaskRequest
      * @return GetBatchImportTaskResponse
@@ -4620,7 +5474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves an API consumer.</p>
+     * <p>Retrieves a consumer.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4646,13 +5500,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves an API consumer.</p>
+     * <p>Retrieves a consumer.</p>
      * @return GetConsumerResponse
      */
     public GetConsumerResponse getConsumer(String consumerId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getConsumerWithOptions(consumerId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the access overview of a consumer.</p>
+     * 
+     * @param request GetConsumerAccessOverviewRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetConsumerAccessOverviewResponse
+     */
+    public GetConsumerAccessOverviewResponse getConsumerAccessOverviewWithOptions(String consumerId, GetConsumerAccessOverviewRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            query.put("gatewayId", request.gatewayId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetConsumerAccessOverview"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/consumer-access/consumers/" + com.aliyun.openapiutil.Client.getEncodeParam(consumerId) + "/overview"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetConsumerAccessOverviewResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the access overview of a consumer.</p>
+     * 
+     * @param request GetConsumerAccessOverviewRequest
+     * @return GetConsumerAccessOverviewResponse
+     */
+    public GetConsumerAccessOverviewResponse getConsumerAccessOverview(String consumerId, GetConsumerAccessOverviewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getConsumerAccessOverviewWithOptions(consumerId, request, headers, runtime);
     }
 
     /**
@@ -4827,6 +5728,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin and call sequence</h2>
+     * <p>This operation queries the account information of the currently logged-on developer. You must complete the following steps in order:</p>
+     * <ol>
+     * <li>Call CreatePortal to create a developer portal and obtain the portalId.</li>
+     * <li>Call CreateDeveloper to register a developer account under the portal.</li>
+     * <li>Call LoginDeveloper to log on to the developer account and obtain the accessToken.</li>
+     * <li>Call this operation with the accessToken obtained in the previous step.
+     * Related operations: CreatePortal, CreateDeveloper, and LoginDeveloper.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries the account information of the currently logged-on developer and returns the developer ID, portal ID, username, and status.</p>
      * 
@@ -4855,6 +5767,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin and call sequence</h2>
+     * <p>This operation queries the account information of the currently logged-on developer. You must complete the following steps in order:</p>
+     * <ol>
+     * <li>Call CreatePortal to create a developer portal and obtain the portalId.</li>
+     * <li>Call CreateDeveloper to register a developer account under the portal.</li>
+     * <li>Call LoginDeveloper to log on to the developer account and obtain the accessToken.</li>
+     * <li>Call this operation with the accessToken obtained in the previous step.
+     * Related operations: CreatePortal, CreateDeveloper, and LoginDeveloper.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
      * <p>Queries the account information of the currently logged-on developer and returns the developer ID, portal ID, username, and status.</p>
      * 
@@ -4865,6 +5788,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getDeveloperWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the direct-supply models and candidate models for a specified gateway, including billing, capabilities, and available invocation paths.</p>
+     * 
+     * @param request GetDirectSupplyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDirectSupplyResponse
+     */
+    public GetDirectSupplyResponse getDirectSupplyWithOptions(GetDirectSupplyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            query.put("gatewayId", request.gatewayId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDirectSupply"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/direct-supply"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDirectSupplyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the direct-supply models and candidate models for a specified gateway, including billing, capabilities, and available invocation paths.</p>
+     * 
+     * @param request GetDirectSupplyRequest
+     * @return GetDirectSupplyResponse
+     */
+    public GetDirectSupplyResponse getDirectSupply(GetDirectSupplyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getDirectSupplyWithOptions(request, headers, runtime);
     }
 
     /**
@@ -5012,7 +5982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the dynamic forwarding ExtProc gRPC service and port currently bound to the specified gateway. If no service is bound, bound=false is returned.</p>
+     * <p>Queries the dynamic forwarding ExtProc gRPC service and port currently bound to a specified gateway. If no service is bound, bound=false is returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the dynamic forwarding ExtProc service bound to a gateway.</p>
@@ -5043,7 +6013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the dynamic forwarding ExtProc gRPC service and port currently bound to the specified gateway. If no service is bound, bound=false is returned.</p>
+     * <p>Queries the dynamic forwarding ExtProc gRPC service and port currently bound to a specified gateway. If no service is bound, bound=false is returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the dynamic forwarding ExtProc service bound to a gateway.</p>
@@ -5059,7 +6029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the elastic scaling rule of a gateway.</p>
+     * <p>Retrieves the elastic rules of a gateway.</p>
      * 
      * @param request GetGatewayElasticPolicyRequest
      * @param headers map
@@ -5087,7 +6057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the elastic scaling rule of a gateway.</p>
+     * <p>Retrieves the elastic rules of a gateway.</p>
      * 
      * @param request GetGatewayElasticPolicyRequest
      * @return GetGatewayElasticPolicyResponse
@@ -5100,7 +6070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries a specific consumer quota rule on an AI gateway.</p>
+     * <p>Queries a specific consumer quota rule on an AI gateway.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a gateway quota throttling rule.</p>
@@ -5149,7 +6119,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries a specific consumer quota rule on an AI gateway.</p>
+     * <p>Queries a specific consumer quota rule on an AI gateway.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of a gateway quota throttling rule.</p>
@@ -5165,7 +6135,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves the usage details of a specific consumption subject under a quota rule. Note that this operation takes effect only for AI gateways of a version later than 2.1.19. Prerequisites: Before calling this operation, make sure that Simple Log Service (SLS) log delivery is enabled for the target gateway by calling UpdateGatewayFeature(name=log-config, value={&quot;enable&quot;:true}). Otherwise, the CloudProductInactive.LogDeliveryNotEnabled error is returned.</p>
+     * <p>This operation retrieves the usage details of a specific consumption subject under a quota rule. Note that this operation takes effect only for AI gateways of a version later than 2.1.19.
+     * Before you begin: Make sure that the target gateway has enabled the Simple Log Service (SLS) log delivery feature by calling UpdateGatewayFeature(name=log-config, value={&quot;enable&quot;:true}). Otherwise, the CloudProductInactive.LogDeliveryNotEnabled error is returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the usage details of a subject under a gateway quota throttling rule, including the used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</p>
@@ -5218,7 +6189,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves the usage details of a specific consumption subject under a quota rule. Note that this operation takes effect only for AI gateways of a version later than 2.1.19. Prerequisites: Before calling this operation, make sure that Simple Log Service (SLS) log delivery is enabled for the target gateway by calling UpdateGatewayFeature(name=log-config, value={&quot;enable&quot;:true}). Otherwise, the CloudProductInactive.LogDeliveryNotEnabled error is returned.</p>
+     * <p>This operation retrieves the usage details of a specific consumption subject under a quota rule. Note that this operation takes effect only for AI gateways of a version later than 2.1.19.
+     * Before you begin: Make sure that the target gateway has enabled the Simple Log Service (SLS) log delivery feature by calling UpdateGatewayFeature(name=log-config, value={&quot;enable&quot;:true}). Otherwise, the CloudProductInactive.LogDeliveryNotEnabled error is returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the usage details of a subject under a gateway quota throttling rule, including the used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</p>
@@ -5237,16 +6209,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Call flow</h2>
      * <p>First, call CreateGatewayQuotaRuleSubjectUsageExportTask to create a task. Then, use the returned taskId along with the same gatewayId, ruleId, and subjectId to call this operation in the same region.</p>
      * <ul>
-     * <li>Pending or Running: The task is not completed. You can query again after a period of time.</li>
+     * <li>Pending or Running: The task is not completed. You can query the task again after a period of time.</li>
      * <li>Success: Check result.fileExpired and result.downloadUrl. If the file is not expired and a link is returned, you can download the file.</li>
-     * <li>Failed: Troubleshoot the issue based on errorMessage. To re-export, call the create operation and use a new clientToken.</li>
+     * <li>Failed: Troubleshoot the issue based on errorMessage. To export the data again, call the create operation with a new clientToken.</li>
      * </ul>
      * <h2>Download link and file validity period</h2>
-     * <p>For each successful query where the file is not expired, a signed link with a validity period of 10 minutes is generated. Download the file promptly based on downloadUrlExpiredAt. If the link expires but the file has not reached fileExpiredAt, you can query again to obtain a new link. Querying again does not regenerate the file or extend the 24-hour validity period of the file.
-     * After the file reaches fileExpiredAt, this operation no longer issues new links, returns fileExpired=true, and omits downloadUrl and downloadUrlExpiredAt. The task status remains Success. To export again, create a new task.</p>
+     * <p>For each successful query where the file is not expired, a signed link with a validity period of 10 minutes is generated. Download the file promptly based on downloadUrlExpiredAt. If the link expires but the file has not reached fileExpiredAt, you can query the task again to obtain a new link. Querying the task again does not regenerate the file or extend the 24-hour validity period of the file.
+     * After the file reaches fileExpiredAt, this operation no longer issues new links. It returns fileExpired=true and omits downloadUrl and downloadUrlExpiredAt. The task status remains Success. To export the data again, create a new task.</p>
      * <h2>Query scope and task progress</h2>
      * <p>This operation returns only the export tasks of the current user in the current region that match the gateway, rule, and subject paths. If the paths do not match or the task does not exist, a not found error is returned. Existing tasks are queried based on the information recorded at creation. The export conditions are not recalculated due to subsequent rule resets or subject name changes.
-     * If a task remains in the Pending or Running state for more than 10 minutes after creation, the query treats it as a timeout failure. Determine whether the task is completed based on the status, not just totalCount or processedCount.</p>
+     * If a task remains in the Pending or Running state for more than 10 minutes after creation, the query treats it as a timeout failure. Determine whether the task is completed based on the status, not only on totalCount or processedCount.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the status, processing progress, failure cause, and file download information of an export task for quota rule subject consumption details.</p>
@@ -5280,16 +6252,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Call flow</h2>
      * <p>First, call CreateGatewayQuotaRuleSubjectUsageExportTask to create a task. Then, use the returned taskId along with the same gatewayId, ruleId, and subjectId to call this operation in the same region.</p>
      * <ul>
-     * <li>Pending or Running: The task is not completed. You can query again after a period of time.</li>
+     * <li>Pending or Running: The task is not completed. You can query the task again after a period of time.</li>
      * <li>Success: Check result.fileExpired and result.downloadUrl. If the file is not expired and a link is returned, you can download the file.</li>
-     * <li>Failed: Troubleshoot the issue based on errorMessage. To re-export, call the create operation and use a new clientToken.</li>
+     * <li>Failed: Troubleshoot the issue based on errorMessage. To export the data again, call the create operation with a new clientToken.</li>
      * </ul>
      * <h2>Download link and file validity period</h2>
-     * <p>For each successful query where the file is not expired, a signed link with a validity period of 10 minutes is generated. Download the file promptly based on downloadUrlExpiredAt. If the link expires but the file has not reached fileExpiredAt, you can query again to obtain a new link. Querying again does not regenerate the file or extend the 24-hour validity period of the file.
-     * After the file reaches fileExpiredAt, this operation no longer issues new links, returns fileExpired=true, and omits downloadUrl and downloadUrlExpiredAt. The task status remains Success. To export again, create a new task.</p>
+     * <p>For each successful query where the file is not expired, a signed link with a validity period of 10 minutes is generated. Download the file promptly based on downloadUrlExpiredAt. If the link expires but the file has not reached fileExpiredAt, you can query the task again to obtain a new link. Querying the task again does not regenerate the file or extend the 24-hour validity period of the file.
+     * After the file reaches fileExpiredAt, this operation no longer issues new links. It returns fileExpired=true and omits downloadUrl and downloadUrlExpiredAt. The task status remains Success. To export the data again, create a new task.</p>
      * <h2>Query scope and task progress</h2>
      * <p>This operation returns only the export tasks of the current user in the current region that match the gateway, rule, and subject paths. If the paths do not match or the task does not exist, a not found error is returned. Existing tasks are queried based on the information recorded at creation. The export conditions are not recalculated due to subsequent rule resets or subject name changes.
-     * If a task remains in the Pending or Running state for more than 10 minutes after creation, the query treats it as a timeout failure. Determine whether the task is completed based on the status, not just totalCount or processedCount.</p>
+     * If a task remains in the Pending or Running state for more than 10 minutes after creation, the query treats it as a timeout failure. Determine whether the task is completed based on the status, not only on totalCount or processedCount.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the status, processing progress, failure cause, and file download information of an export task for quota rule subject consumption details.</p>
@@ -5305,7 +6277,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the usage, effective limits, and statistical scopes of nine resource quotas for a specified API gateway or AI gateway. This operation is read-only. A successful response includes all nine items. Quota values for custom plug-ins are not displayed. The result is a current observation read independently from various sources and does not guarantee the success of subsequent resource creation.</p>
+     * <p>Queries the usage, effective limits, and statistical scopes of nine resource quotas for a specified API gateway or AI gateway. This operation is read-only, and a successful response includes all nine items. Quota values for custom plug-ins are not displayed. The result is a current observation read independently from various sources and does not guarantee the success of adding new resources.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the resource quotas and usage of a gateway.</p>
@@ -5336,7 +6308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the usage, effective limits, and statistical scopes of nine resource quotas for a specified API gateway or AI gateway. This operation is read-only. A successful response includes all nine items. Quota values for custom plug-ins are not displayed. The result is a current observation read independently from various sources and does not guarantee the success of subsequent resource creation.</p>
+     * <p>Queries the usage, effective limits, and statistical scopes of nine resource quotas for a specified API gateway or AI gateway. This operation is read-only, and a successful response includes all nine items. Quota values for custom plug-ins are not displayed. The result is a current observation read independently from various sources and does not guarantee the success of adding new resources.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the resource quotas and usage of a gateway.</p>
@@ -5352,7 +6324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a single HiMarket consumer by consumer ID, including the consumer ID, name, description, and whether the consumer is a primary consumer.</p>
+     * <p>Queries the details of a single HiMarket consumer by consumer ID and returns the consumer ID, name, description, and whether the consumer is a primary consumer.</p>
      * 
      * @param request GetHiMarketConsumerRequest
      * @param headers map
@@ -5380,7 +6352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a single HiMarket consumer by consumer ID, including the consumer ID, name, description, and whether the consumer is a primary consumer.</p>
+     * <p>Queries the details of a single HiMarket consumer by consumer ID and returns the consumer ID, name, description, and whether the consumer is a primary consumer.</p>
      * 
      * @param request GetHiMarketConsumerRequest
      * @return GetHiMarketConsumerResponse
@@ -5554,6 +6526,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a logical model.</p>
+     * 
+     * @param request GetLogicalModelRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLogicalModelResponse
+     */
+    public GetLogicalModelResponse getLogicalModelWithOptions(String logicalModelId, GetLogicalModelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLogicalModel"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/logical-models/" + com.aliyun.openapiutil.Client.getEncodeParam(logicalModelId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLogicalModelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a logical model.</p>
+     * 
+     * @param request GetLogicalModelRequest
+     * @return GetLogicalModelResponse
+     */
+    public GetLogicalModelResponse getLogicalModel(String logicalModelId, GetLogicalModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getLogicalModelWithOptions(logicalModelId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the configuration delivery of a logical model.</p>
+     * 
+     * @param request GetLogicalModelDeploymentRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLogicalModelDeploymentResponse
+     */
+    public GetLogicalModelDeploymentResponse getLogicalModelDeploymentWithOptions(String operationId, GetLogicalModelDeploymentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLogicalModelDeployment"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/logical-model-deployments/" + com.aliyun.openapiutil.Client.getEncodeParam(operationId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLogicalModelDeploymentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the configuration delivery of a logical model.</p>
+     * 
+     * @param request GetLogicalModelDeploymentRequest
+     * @return GetLogicalModelDeploymentResponse
+     */
+    public GetLogicalModelDeploymentResponse getLogicalModelDeployment(String operationId, GetLogicalModelDeploymentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getLogicalModelDeploymentWithOptions(operationId, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>This operation supports creating multiple services.</p>
      * 
@@ -5679,6 +6733,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>During deletion, check deleteStatus for Deleting or DeleteFailed, and review deployErrorMessage. The NotFound.ModelApi error is returned only after the target model API is completely deleted. Missing dependencies, permission issues, or storage errors do not indicate that the deletion is complete.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a model API.</p>
+     * 
+     * @param request GetModelApiRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetModelApiResponse
+     */
+    public GetModelApiResponse getModelApiWithOptions(String httpApiId, GetModelApiRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetModelApi"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/model-apis/" + com.aliyun.openapiutil.Client.getEncodeParam(httpApiId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetModelApiResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>During deletion, check deleteStatus for Deleting or DeleteFailed, and review deployErrorMessage. The NotFound.ModelApi error is returned only after the target model API is completely deleted. Missing dependencies, permission issues, or storage errors do not indicate that the deletion is complete.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a model API.</p>
+     * 
+     * @param request GetModelApiRequest
+     * @return GetModelApiResponse
+     */
+    public GetModelApiResponse getModelApi(String httpApiId, GetModelApiRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getModelApiWithOptions(httpApiId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the configuration, entitlement status, and the summary of the latest configuration deployment for a specified model group.</p>
+     * 
+     * @param request GetModelGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetModelGroupResponse
+     */
+    public GetModelGroupResponse getModelGroupWithOptions(String modelGroupId, GetModelGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetModelGroup"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/model-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(modelGroupId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetModelGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the configuration, entitlement status, and the summary of the latest configuration deployment for a specified model group.</p>
+     * 
+     * @param request GetModelGroupRequest
+     * @return GetModelGroupResponse
+     */
+    public GetModelGroupResponse getModelGroup(String modelGroupId, GetModelGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getModelGroupWithOptions(modelGroupId, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries a plugin attachment.</p>
      * 
@@ -5717,7 +6859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a custom plug-in class.</p>
+     * <p>Retrieves a custom plugin class.</p>
      * 
      * @param request GetPluginClassRequest
      * @param headers map
@@ -5745,7 +6887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a custom plug-in class.</p>
+     * <p>Retrieves a custom plugin class.</p>
      * 
      * @param request GetPluginClassRequest
      * @return GetPluginClassResponse
@@ -5758,7 +6900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the WebIDE workspace of a plugin.</p>
+     * <p>Queries the plug-in WebIDE workspace.</p>
      * 
      * @param request GetPluginWorkspaceRequest
      * @param headers map
@@ -5786,7 +6928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the WebIDE workspace of a plugin.</p>
+     * <p>Queries the plug-in WebIDE workspace.</p>
      * 
      * @param request GetPluginWorkspaceRequest
      * @return GetPluginWorkspaceResponse
@@ -5836,7 +6978,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource attachment of a policy.</p>
+     * <p>Queries policy resource attachments.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5862,7 +7004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource attachment of a policy.</p>
+     * <p>Queries policy resource attachments.</p>
      * @return GetPolicyAttachmentResponse
      */
     public GetPolicyAttachmentResponse getPolicyAttachment(String policyAttachmentId) throws Exception {
@@ -5873,7 +7015,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a single HiMarket developer portal by portal ID, including the portal name, description, region ID, portal settings, and portal domain name configurations.</p>
+     * <p>Queries the details of a single HiMarket developer portal by portal ID and returns the portal name, description, region ID, portal configurations, and portal domain name configurations.</p>
      * 
      * @param request GetPortalRequest
      * @param headers map
@@ -5901,7 +7043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a single HiMarket developer portal by portal ID, including the portal name, description, region ID, portal settings, and portal domain name configurations.</p>
+     * <p>Queries the details of a single HiMarket developer portal by portal ID and returns the portal name, description, region ID, portal configurations, and portal domain name configurations.</p>
      * 
      * @param request GetPortalRequest
      * @return GetPortalResponse
@@ -5914,7 +7056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a single API product by API product ID, and returns information such as the name, description, status, type, documentation, icon, whether subscription requests are automatically approved, MCP, agent, and model configurations, product capability configurations, and the region to which the product belongs.</p>
+     * <p>Queries the details of a single API product by API product ID and returns information such as the name, description, status, type, documentation, icon, automatic subscription approval setting, MCP, agent, and model configurations, product capability configurations, and region.</p>
      * 
      * @param request GetProductRequest
      * @param headers map
@@ -5942,7 +7084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a single API product by API product ID, and returns information such as the name, description, status, type, documentation, icon, whether subscription requests are automatically approved, MCP, agent, and model configurations, product capability configurations, and the region to which the product belongs.</p>
+     * <p>Queries the details of a single API product by API product ID and returns information such as the name, description, status, type, documentation, icon, automatic subscription approval setting, MCP, agent, and model configurations, product capability configurations, and region.</p>
      * 
      * @param request GetProductRequest
      * @return GetProductResponse
@@ -5955,7 +7097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a product category by category ID and returns the ID, name, description, and icon of the category.</p>
+     * <p>Queries the details of a single product category by category ID and returns the ID, name, description, and icon of the category.</p>
      * 
      * @param request GetProductCategoryRequest
      * @param headers map
@@ -5983,7 +7125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a product category by category ID and returns the ID, name, description, and icon of the category.</p>
+     * <p>Queries the details of a single product category by category ID and returns the ID, name, description, and icon of the category.</p>
      * 
      * @param request GetProductCategoryRequest
      * @return GetProductCategoryResponse
@@ -5996,7 +7138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the API configurations associated with an API product by API product ID, and returns the ID of the gateway where the association resides and the APIG association configuration.</p>
+     * <p>Queries the API configurations associated with an API product by product ID, and returns the gateway ID and APIG association configurations.</p>
      * 
      * @param request GetProductRefRequest
      * @param headers map
@@ -6024,7 +7166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the API configurations associated with an API product by API product ID, and returns the ID of the gateway where the association resides and the APIG association configuration.</p>
+     * <p>Queries the API configurations associated with an API product by product ID, and returns the gateway ID and APIG association configurations.</p>
      * 
      * @param request GetProductRefRequest
      * @return GetProductRefResponse
@@ -6084,7 +7226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the notification configuration for a risk item.</p>
+     * <p>Retrieves the risk item notification configuration.</p>
      * 
      * @param request GetRiskNotificationRequest
      * @param headers map
@@ -6118,7 +7260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the notification configuration for a risk item.</p>
+     * <p>Retrieves the risk item notification configuration.</p>
      * 
      * @param request GetRiskNotificationRequest
      * @return GetRiskNotificationResponse
@@ -6131,10 +7273,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a key.</p>
+     * <p>Retrieves a secret.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6160,10 +7302,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a key.</p>
+     * <p>Retrieves a secret.</p>
      * @return GetSecretResponse
      */
     public GetSecretResponse getSecret(String secretId) throws Exception {
@@ -6174,10 +7316,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>The API supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the value of a secret.</p>
+     * <p>Retrieves the secret value.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6203,10 +7345,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>The API supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the value of a secret.</p>
+     * <p>Retrieves the secret value.</p>
      * @return GetSecretValueResponse
      */
     public GetSecretValueResponse getSecretValue(String name) throws Exception {
@@ -6338,7 +7480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits the code and state query parameters via a GET request during the callback step of the OIDC logon process. The response data includes the accessToken, tokenType, and expiresIn fields.</p>
+     * <p>Executes the callback step in the OIDC logon flow by submitting the code and state query parameters via the GET method. The response data includes the accessToken, tokenType, and expiresIn fields.</p>
      * 
      * @param request HandleOidcCallbackRequest
      * @param headers map
@@ -6376,7 +7518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits the code and state query parameters via a GET request during the callback step of the OIDC logon process. The response data includes the accessToken, tokenType, and expiresIn fields.</p>
+     * <p>Executes the callback step in the OIDC logon flow by submitting the code and state query parameters via the GET method. The response data includes the accessToken, tokenType, and expiresIn fields.</p>
      * 
      * @param request HandleOidcCallbackRequest
      * @return HandleOidcCallbackResponse
@@ -6488,7 +7630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initiates the Authorize step in the OIDC logon process based on the OIDC provider identifier. The response body defined by the API operation contains only the requestId, code, and message fields, and does not declare the data business output parameter.</p>
+     * <p>Initiates the Authorize step in the OIDC logon process based on the OIDC provider identifier. The response body contains only the requestId, code, and message fields, and does not include the business output parameter data.</p>
      * 
      * @param request InitiateOidcAuthRequest
      * @param headers map
@@ -6522,7 +7664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initiates the Authorize step in the OIDC logon process based on the OIDC provider identifier. The response body defined by the API operation contains only the requestId, code, and message fields, and does not declare the data business output parameter.</p>
+     * <p>Initiates the Authorize step in the OIDC logon process based on the OIDC provider identifier. The response body contains only the requestId, code, and message fields, and does not include the business output parameter data.</p>
      * 
      * @param request InitiateOidcAuthRequest
      * @return InitiateOidcAuthResponse
@@ -6649,7 +7791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of AI model cards.</p>
+     * <p>Queries the list of AI model cards.</p>
      * 
      * @param request ListAiModelCardsRequest
      * @param headers map
@@ -6695,7 +7837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of AI model cards.</p>
+     * <p>Queries the list of AI model cards.</p>
      * 
      * @param request ListAiModelCardsRequest
      * @return ListAiModelCardsResponse
@@ -6767,7 +7909,133 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query on the list of field templates and returns the template ID, API request path, and applicable protocol for each template record.</p>
+     * <p>Queries the AI models in a model source.</p>
+     * 
+     * @param request ListAiModelSourceModelsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAiModelSourceModelsResponse
+     */
+    public ListAiModelSourceModelsResponse listAiModelSourceModelsWithOptions(ListAiModelSourceModelsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            query.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelSourceId)) {
+            query.put("modelSourceId", request.modelSourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAiModelSourceModels"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/ai-model-source-models"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAiModelSourceModelsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the AI models in a model source.</p>
+     * 
+     * @param request ListAiModelSourceModelsRequest
+     * @return ListAiModelSourceModelsResponse
+     */
+    public ListAiModelSourceModelsResponse listAiModelSourceModels(ListAiModelSourceModelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAiModelSourceModelsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of standalone AI model sources.</p>
+     * 
+     * @param request ListAiModelSourcesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAiModelSourcesResponse
+     */
+    public ListAiModelSourcesResponse listAiModelSourcesWithOptions(ListAiModelSourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            query.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.provider)) {
+            query.put("provider", request.provider);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAiModelSources"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/ai-model-sources"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAiModelSourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of standalone AI model sources.</p>
+     * 
+     * @param request ListAiModelSourcesRequest
+     * @return ListAiModelSourcesResponse
+     */
+    public ListAiModelSourcesResponse listAiModelSources(ListAiModelSourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAiModelSourcesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paging query on the field template list and returns the template ID, API request path, and applicable protocol for each template record.</p>
      * 
      * @param request ListApiPathFieldTemplatesRequest
      * @param headers map
@@ -6805,7 +8073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query on the list of field templates and returns the template ID, API request path, and applicable protocol for each template record.</p>
+     * <p>Performs a paging query on the field template list and returns the template ID, API request path, and applicable protocol for each template record.</p>
      * 
      * @param request ListApiPathFieldTemplatesRequest
      * @return ListApiPathFieldTemplatesResponse
@@ -6818,7 +8086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of batch export tasks.</p>
+     * <p>Queries the list of batch export tasks.</p>
      * 
      * @param request ListBatchExportTasksRequest
      * @param headers map
@@ -6880,7 +8148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of batch export tasks.</p>
+     * <p>Queries the list of batch export tasks.</p>
      * 
      * @param request ListBatchExportTasksRequest
      * @return ListBatchExportTasksResponse
@@ -6893,7 +8161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query on the list of HiMarket chat sessions. For each session, the response returns the session ID, name, conversation type, and associated API products. The response also returns the paging page number, paging size, and total count.</p>
+     * <p>Performs a paged query on the HiMarket chat session list, returning the session ID, name, conversation type, and associated API products for each session. The response also returns the paging page number, paging size, and total count.</p>
      * 
      * @param request ListChatSessionsRequest
      * @param headers map
@@ -6939,7 +8207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query on the list of HiMarket chat sessions. For each session, the response returns the session ID, name, conversation type, and associated API products. The response also returns the paging page number, paging size, and total count.</p>
+     * <p>Performs a paged query on the HiMarket chat session list, returning the session ID, name, conversation type, and associated API products for each session. The response also returns the paging page number, paging size, and total count.</p>
      * 
      * @param request ListChatSessionsRequest
      * @return ListChatSessionsResponse
@@ -7015,7 +8283,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the member list of a consumer group.</p>
+     * <p>Queries the summary list of consumers in the console.</p>
+     * 
+     * @param request ListConsumerConsoleSummariesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListConsumerConsoleSummariesResponse
+     */
+    public ListConsumerConsoleSummariesResponse listConsumerConsoleSummariesWithOptions(ListConsumerConsoleSummariesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            query.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nameLike)) {
+            query.put("nameLike", request.nameLike);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListConsumerConsoleSummaries"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/consumer-access/console-summaries"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListConsumerConsoleSummariesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the summary list of consumers in the console.</p>
+     * 
+     * @param request ListConsumerConsoleSummariesRequest
+     * @return ListConsumerConsoleSummariesResponse
+     */
+    public ListConsumerConsoleSummariesResponse listConsumerConsoleSummaries(ListConsumerConsoleSummariesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listConsumerConsoleSummariesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the members of a consumer group.</p>
      * 
      * @param request ListConsumerGroupConsumersRequest
      * @param headers map
@@ -7057,7 +8388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the member list of a consumer group.</p>
+     * <p>Queries the members of a consumer group.</p>
      * 
      * @param request ListConsumerGroupConsumersRequest
      * @return ListConsumerGroupConsumersResponse
@@ -7070,7 +8401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the quota rules directly bound to the specified consumer group without expanding the rules bound to individual consumers within the group. Returns an empty list if no direct binding exists.</p>
+     * <p>Queries the quota rules directly bound to a specified consumer group without expanding the rules bound to individual consumers within the group. Returns an empty list if no direct binding exists.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the quota throttling rules for a consumer group.</p>
@@ -7099,6 +8430,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("pageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleStatus)) {
+            query.put("ruleStatus", request.ruleStatus);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -7119,7 +8454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the quota rules directly bound to the specified consumer group without expanding the rules bound to individual consumers within the group. Returns an empty list if no direct binding exists.</p>
+     * <p>Queries the quota rules directly bound to a specified consumer group without expanding the rules bound to individual consumers within the group. Returns an empty list if no direct binding exists.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the quota throttling rules for a consumer group.</p>
@@ -7135,7 +8470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of consumer groups.</p>
+     * <p>Queries consumer groups.</p>
      * 
      * @param request ListConsumerGroupsRequest
      * @param headers map
@@ -7181,7 +8516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of consumer groups.</p>
+     * <p>Queries consumer groups.</p>
      * 
      * @param request ListConsumerGroupsRequest
      * @return ListConsumerGroupsResponse
@@ -7194,7 +8529,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of configured quota rules for a consumer.</p>
+     * <p>Queries the list of model card entitlements for consumers.</p>
+     * 
+     * @param request ListConsumerModelCardGrantsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListConsumerModelCardGrantsResponse
+     */
+    public ListConsumerModelCardGrantsResponse listConsumerModelCardGrantsWithOptions(String httpApiId, ListConsumerModelCardGrantsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.modelCardId)) {
+            query.put("modelCardId", request.modelCardId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalId)) {
+            query.put("principalId", request.principalId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalType)) {
+            query.put("principalType", request.principalType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListConsumerModelCardGrants"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/model-apis/" + com.aliyun.openapiutil.Client.getEncodeParam(httpApiId) + "/model-card-grants"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListConsumerModelCardGrantsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of model card entitlements for consumers.</p>
+     * 
+     * @param request ListConsumerModelCardGrantsRequest
+     * @return ListConsumerModelCardGrantsResponse
+     */
+    public ListConsumerModelCardGrantsResponse listConsumerModelCardGrants(String httpApiId, ListConsumerModelCardGrantsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listConsumerModelCardGrantsWithOptions(httpApiId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the configured quota rules for a consumer.</p>
      * 
      * @param request ListConsumerQuotaRulesRequest
      * @param headers map
@@ -7220,6 +8618,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("pageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleStatus)) {
+            query.put("ruleStatus", request.ruleStatus);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -7240,7 +8642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of configured quota rules for a consumer.</p>
+     * <p>Queries the configured quota rules for a consumer.</p>
      * 
      * @param request ListConsumerQuotaRulesRequest
      * @return ListConsumerQuotaRulesResponse
@@ -7253,7 +8655,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of API consumers.</p>
+     * <p>Retrieves a list of consumers.</p>
      * 
      * @param request ListConsumersRequest
      * @param headers map
@@ -7263,8 +8665,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListConsumersResponse listConsumersWithOptions(ListConsumersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.expireStatus)) {
+            query.put("expireStatus", request.expireStatus);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gatewayType)) {
             query.put("gatewayType", request.gatewayType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeExpirationSummary)) {
+            query.put("includeExpirationSummary", request.includeExpirationSummary);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nameLike)) {
@@ -7277,6 +8687,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -7299,7 +8713,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of API consumers.</p>
+     * <p>Retrieves a list of consumers.</p>
      * 
      * @param request ListConsumersRequest
      * @return ListConsumersResponse
@@ -7312,7 +8726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the HiMarket developer list by using paging. You can filter developers by portal ID, username, and developer status. The response includes the developer ID, portal ID, username, and status.</p>
+     * <p>Queries the HiMarket developer list with paging. You can filter developers by portal ID, username, and developer status. The response includes the developer ID, portal ID, username, and status.</p>
      * 
      * @param request ListDevelopersRequest
      * @param headers map
@@ -7370,7 +8784,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the HiMarket developer list by using paging. You can filter developers by portal ID, username, and developer status. The response includes the developer ID, portal ID, username, and status.</p>
+     * <p>Queries the HiMarket developer list with paging. You can filter developers by portal ID, username, and developer status. The response includes the developer ID, portal ID, username, and status.</p>
      * 
      * @param request ListDevelopersRequest
      * @return ListDevelopersResponse
@@ -7540,7 +8954,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves external service information for a gateway.</p>
+     * <p>Retrieves the external service information of a gateway.</p>
      * 
      * @param request ListExternalServicesRequest
      * @param headers map
@@ -7593,7 +9007,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves external service information for a gateway.</p>
+     * <p>Retrieves the external service information of a gateway.</p>
      * 
      * @param request ListExternalServicesRequest
      * @return ListExternalServicesResponse
@@ -7653,7 +9067,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of security group rules authorized for a gateway.</p>
+     * <p>Queries the authorized security group rules for a gateway.</p>
      * 
      * @param request ListGatewayAuthorizedSecurityGroupRulesRequest
      * @param headers map
@@ -7681,7 +9095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of security group rules authorized for a gateway.</p>
+     * <p>Queries the authorized security group rules for a gateway.</p>
      * 
      * @param request ListGatewayAuthorizedSecurityGroupRulesRequest
      * @return ListGatewayAuthorizedSecurityGroupRulesResponse
@@ -7802,7 +9216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of gateway load balancers.</p>
+     * <p>Queries the list of gateway load balancers.</p>
      * 
      * @param request ListGatewayLoadBalancersRequest
      * @param headers map
@@ -7856,7 +9270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of gateway load balancers.</p>
+     * <p>Queries the list of gateway load balancers.</p>
      * 
      * @param request ListGatewayLoadBalancersRequest
      * @return ListGatewayLoadBalancersResponse
@@ -7869,7 +9283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the FinOps quota rules associated with a gateway.</p>
+     * <p>Queries the FinOps quota rules associated with a gateway.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the FinOps quota rules associated with a gateway.</p>
@@ -7902,6 +9316,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("pageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleStatus)) {
+            query.put("ruleStatus", request.ruleStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subjectNameLike)) {
+            query.put("subjectNameLike", request.subjectNameLike);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -7922,7 +9344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the FinOps quota rules associated with a gateway.</p>
+     * <p>Queries the FinOps quota rules associated with a gateway.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the FinOps quota rules associated with a gateway.</p>
@@ -8118,7 +9540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query for the API product subscriptions of a specified HiMarket consumer. You can filter the subscriptions by status. Each subscription record includes the subscription ID, the ID, name, and type of the subscribed API product, the consumer ID and name, and the subscription status.</p>
+     * <p>Performs a paged query to retrieve the API product subscriptions of a specified HiMarket consumer. You can filter the subscriptions by status and use paging to navigate through the results. Each subscription record includes the subscription ID, the ID, name, and type of the subscribed API product, the consumer ID and name, and the subscription status.</p>
      * 
      * @param request ListHiMarketConsumerSubscriptionsRequest
      * @param headers map
@@ -8168,7 +9590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query for the API product subscriptions of a specified HiMarket consumer. You can filter the subscriptions by status. Each subscription record includes the subscription ID, the ID, name, and type of the subscribed API product, the consumer ID and name, and the subscription status.</p>
+     * <p>Performs a paged query to retrieve the API product subscriptions of a specified HiMarket consumer. You can filter the subscriptions by status and use paging to navigate through the results. Each subscription record includes the subscription ID, the ID, name, and type of the subscribed API product, the consumer ID and name, and the subscription status.</p>
      * 
      * @param request ListHiMarketConsumerSubscriptionsRequest
      * @return ListHiMarketConsumerSubscriptionsResponse
@@ -8181,7 +9603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query on the HiMarket consumer list. You can filter the results by consumer name keyword, portal ID, or developer ID. The response includes the consumer ID, name, description, and primary consumer status for each consumer.</p>
+     * <p>Performs a paging query on the HiMarket consumer list. You can filter the results by consumer name keyword, portal ID, or developer ID. For each consumer, the response returns the consumer ID, name, description, and whether the consumer is a primary consumer.</p>
      * 
      * @param request ListHiMarketConsumersRequest
      * @param headers map
@@ -8239,7 +9661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query on the HiMarket consumer list. You can filter the results by consumer name keyword, portal ID, or developer ID. The response includes the consumer ID, name, description, and primary consumer status for each consumer.</p>
+     * <p>Performs a paging query on the HiMarket consumer list. You can filter the results by consumer name keyword, portal ID, or developer ID. For each consumer, the response returns the consumer ID, name, description, and whether the consumer is a primary consumer.</p>
      * 
      * @param request ListHiMarketConsumersRequest
      * @return ListHiMarketConsumersResponse
@@ -8347,7 +9769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the route list of an HTTP API.</p>
+     * <p>Queries the routes of an HTTP API.</p>
      * 
      * @param request ListHttpApiRoutesRequest
      * @param headers map
@@ -8437,7 +9859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the route list of an HTTP API.</p>
+     * <p>Queries the routes of an HTTP API.</p>
      * 
      * @param request ListHttpApiRoutesRequest
      * @return ListHttpApiRoutesResponse
@@ -8450,7 +9872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of HTTP APIs.</p>
+     * <p>Retrieves the list of HTTP APIs.</p>
      * 
      * @param request ListHttpApisRequest
      * @param headers map
@@ -8548,7 +9970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of HTTP APIs.</p>
+     * <p>Retrieves the list of HTTP APIs.</p>
      * 
      * @param request ListHttpApisRequest
      * @return ListHttpApisResponse
@@ -8561,7 +9983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves gateways on which a plugin can be installed.</p>
+     * <p>Retrieves installable gateways.</p>
      * 
      * @param request ListInstallableGatewaysRequest
      * @param headers map
@@ -8603,7 +10025,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves gateways on which a plugin can be installed.</p>
+     * <p>Retrieves installable gateways.</p>
      * 
      * @param request ListInstallableGatewaysRequest
      * @return ListInstallableGatewaysResponse
@@ -8663,7 +10085,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of Model Context Protocol (MCP) tools in an MCP Server-type API product and returns a list of tools. Each tool contains three text fields: name, title, and description, and four map fields: inputSchema, outputSchema, annotations, and meta.</p>
+     * <p>Queries the logical models under a specified gateway. Supports keyword filtering and token-based pagination with maxResults and nextToken.</p>
+     * 
+     * @param request ListLogicalModelsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListLogicalModelsResponse
+     */
+    public ListLogicalModelsResponse listLogicalModelsWithOptions(ListLogicalModelsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            query.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListLogicalModels"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/logical-models"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLogicalModelsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the logical models under a specified gateway. Supports keyword filtering and token-based pagination with maxResults and nextToken.</p>
+     * 
+     * @param request ListLogicalModelsRequest
+     * @return ListLogicalModelsResponse
+     */
+    public ListLogicalModelsResponse listLogicalModels(ListLogicalModelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listLogicalModelsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of Model Context Protocol (MCP) tools in an MCP Server-type API product and returns a list of tools. Each tool contains three text fields (name, title, and description) and four map fields (inputSchema, outputSchema, annotations, and meta).</p>
      * 
      * @param request ListMcpProductToolsRequest
      * @param headers map
@@ -8691,7 +10172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of Model Context Protocol (MCP) tools in an MCP Server-type API product and returns a list of tools. Each tool contains three text fields: name, title, and description, and four map fields: inputSchema, outputSchema, annotations, and meta.</p>
+     * <p>Queries the details of Model Context Protocol (MCP) tools in an MCP Server-type API product and returns a list of tools. Each tool contains three text fields (name, title, and description) and four map fields (inputSchema, outputSchema, annotations, and meta).</p>
      * 
      * @param request ListMcpProductToolsRequest
      * @return ListMcpProductToolsResponse
@@ -8704,7 +10185,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a list of MCP servers.</p>
@@ -8765,7 +10246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a list of MCP servers.</p>
@@ -8832,7 +10313,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of model cards and returns the model name, provider, and source identifier of each card, along with its features, pricing, meta, availablePaths, and snapshots structures. The only business request parameter is the provider identifier.</p>
+     * <p>Queries the list of model APIs.</p>
+     * 
+     * @param request ListModelApisRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListModelApisResponse
+     */
+    public ListModelApisResponse listModelApisWithOptions(ListModelApisRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            query.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeLegacy)) {
+            query.put("includeLegacy", request.includeLegacy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("resourceGroupId", request.resourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListModelApis"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/model-apis"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListModelApisResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of model APIs.</p>
+     * 
+     * @param request ListModelApisRequest
+     * @return ListModelApisResponse
+     */
+    public ListModelApisResponse listModelApis(ListModelApisRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listModelApisWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of model cards and returns the model name, provider, and source identifier for each card, along with its features, pricing, metadata, available paths, and snapshots. The only request parameter is the provider identifier.</p>
      * 
      * @param request ListModelCardsRequest
      * @param headers map
@@ -8866,7 +10418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of model cards and returns the model name, provider, and source identifier of each card, along with its features, pricing, meta, availablePaths, and snapshots structures. The only business request parameter is the provider identifier.</p>
+     * <p>Queries a list of model cards and returns the model name, provider, and source identifier for each card, along with its features, pricing, metadata, available paths, and snapshots. The only request parameter is the provider identifier.</p>
      * 
      * @param request ListModelCardsRequest
      * @return ListModelCardsResponse
@@ -8875,6 +10427,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listModelCardsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of model groups.</p>
+     * 
+     * @param request ListModelGroupsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListModelGroupsResponse
+     */
+    public ListModelGroupsResponse listModelGroupsWithOptions(ListModelGroupsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            query.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListModelGroups"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/model-groups"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListModelGroupsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of model groups.</p>
+     * 
+     * @param request ListModelGroupsRequest
+     * @return ListModelGroupsResponse
+     */
+    public ListModelGroupsResponse listModelGroups(ListModelGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listModelGroupsWithOptions(request, headers, runtime);
     }
 
     /**
@@ -8999,10 +10610,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves plug-ins.</p>
+     * <p>Retrieves plugins.</p>
      * 
      * @param request ListPluginClassesRequest
      * @param headers map
@@ -9076,10 +10687,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>This operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves plug-ins.</p>
+     * <p>Retrieves plugins.</p>
      * 
      * @param request ListPluginClassesRequest
      * @return ListPluginClassesResponse
@@ -9092,7 +10703,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the repositories and organization information for custom plug-ins hosted on Codeup. Before calling this operation, enable code hosting on Codeup, create an organization and repositories, and authorize APIG to access your Codeup account.</p>
+     * <p>Queries the list of repositories and organization information for custom plug-ins hosted on Codeup. Before calling this operation, enable code hosting, create an organization and a repository in Codeup, and authorize APIG to access your Codeup account.</p>
      * 
      * @param request ListPluginRepositoriesRequest
      * @param headers map
@@ -9120,7 +10731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the repositories and organization information for custom plug-ins hosted on Codeup. Before calling this operation, enable code hosting on Codeup, create an organization and repositories, and authorize APIG to access your Codeup account.</p>
+     * <p>Queries the list of repositories and organization information for custom plug-ins hosted on Codeup. Before calling this operation, enable code hosting, create an organization and a repository in Codeup, and authorize APIG to access your Codeup account.</p>
      * 
      * @param request ListPluginRepositoriesRequest
      * @return ListPluginRepositoriesResponse
@@ -9133,7 +10744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of plugin WebIDE workspaces for the current user.</p>
+     * <p>Retrieves the list of WebIDE workspaces for user plugins.</p>
      * 
      * @param request ListPluginWorkspaceRequest
      * @param headers map
@@ -9167,7 +10778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of plugin WebIDE workspaces for the current user.</p>
+     * <p>Retrieves the list of WebIDE workspaces for user plugins.</p>
      * 
      * @param request ListPluginWorkspaceRequest
      * @return ListPluginWorkspaceResponse
@@ -9263,7 +10874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of policies.</p>
+     * <p>Queries the list of policies.</p>
      * 
      * @param request ListPoliciesRequest
      * @param headers map
@@ -9287,6 +10898,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
             query.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.withAttachments)) {
@@ -9317,7 +10936,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of policies.</p>
+     * <p>Queries the list of policies.</p>
      * 
      * @param request ListPoliciesRequest
      * @return ListPoliciesResponse
@@ -9401,7 +11020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of published API products on a specified HiMarket developer portal with paging. Each list item returns the publication record ID, API product ID, API product name, and API product type.</p>
+     * <p>Performs a paging query for the list of published API products on a specified HiMarket developer portal. Each list item returns the publication record ID, API product ID, API product name, and API product type.</p>
      * 
      * @param request ListPortalPublicationsRequest
      * @param headers map
@@ -9443,7 +11062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of published API products on a specified HiMarket developer portal with paging. Each list item returns the publication record ID, API product ID, API product name, and API product type.</p>
+     * <p>Performs a paging query for the list of published API products on a specified HiMarket developer portal. Each list item returns the publication record ID, API product ID, API product name, and API product type.</p>
      * 
      * @param request ListPortalPublicationsRequest
      * @return ListPortalPublicationsResponse
@@ -9456,7 +11075,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the list of HiMarket developer portals under the current tenant. Each list item in the paging result returns the portal ID, portal name, portal description, region ID, portal settings, and portal domain configurations.</p>
+     * <p>Performs a paging query on the list of HiMarket developer portals under the current tenant. Each list item returns the portal ID, portal name, portal description, region ID, portal settings, and portal domain name configurations.</p>
      * 
      * @param request ListPortalsRequest
      * @param headers map
@@ -9506,7 +11125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the list of HiMarket developer portals under the current tenant. Each list item in the paging result returns the portal ID, portal name, portal description, region ID, portal settings, and portal domain configurations.</p>
+     * <p>Performs a paging query on the list of HiMarket developer portals under the current tenant. Each list item returns the portal ID, portal name, portal description, region ID, portal settings, and portal domain name configurations.</p>
      * 
      * @param request ListPortalsRequest
      * @return ListPortalsResponse
@@ -9519,10 +11138,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports creating multiple services.</p>
+     * <p>The API supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of unmanaged security groups available for a private endpoint.</p>
+     * <p>Queries the unmanaged security groups available for private endpoints.</p>
      * 
      * @param request ListPrivateLinkSecurityGroupsRequest
      * @param headers map
@@ -9564,10 +11183,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports creating multiple services.</p>
+     * <p>The API supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of unmanaged security groups available for a private endpoint.</p>
+     * <p>Queries the unmanaged security groups available for private endpoints.</p>
      * 
      * @param request ListPrivateLinkSecurityGroupsRequest
      * @return ListPrivateLinkSecurityGroupsResponse
@@ -9580,7 +11199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of product categories under the current tenant by using paging. You can search by category name keywords. Each item in the list returns the category ID, category name, category description, and category icon.</p>
+     * <p>Performs a paged query on the list of product categories under the current tenant. The paging request supports searching by category name keywords. Each list item returns the category ID, name, description, and icon.</p>
      * 
      * @param request ListProductCategoriesRequest
      * @param headers map
@@ -9622,7 +11241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of product categories under the current tenant by using paging. You can search by category name keywords. Each item in the list returns the category ID, category name, category description, and category icon.</p>
+     * <p>Performs a paged query on the list of product categories under the current tenant. The paging request supports searching by category name keywords. Each list item returns the category ID, name, description, and icon.</p>
      * 
      * @param request ListProductCategoriesRequest
      * @return ListProductCategoriesResponse
@@ -9635,7 +11254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the publication information of a specified API product, which is a list of portal records to which the product is published. Each list item includes the publication record ID, portal ID, portal name, API product ID, API product name, and API product type. You can perform a parameter query by portal name and paging parameters.</p>
+     * <p>Performs a paged query on the publication information of a specified API product, which is the list of portal records to which the product has been published. The list items include the publication record ID, portal ID, portal name, API product ID, API product name, and API product type. You can also perform a parameter query by portal name and paging parameters.</p>
      * 
      * @param request ListProductPublicationsRequest
      * @param headers map
@@ -9677,7 +11296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the publication information of a specified API product, which is a list of portal records to which the product is published. Each list item includes the publication record ID, portal ID, portal name, API product ID, API product name, and API product type. You can perform a parameter query by portal name and paging parameters.</p>
+     * <p>Performs a paged query on the publication information of a specified API product, which is the list of portal records to which the product has been published. The list items include the publication record ID, portal ID, portal name, API product ID, API product name, and API product type. You can also perform a parameter query by portal name and paging parameters.</p>
      * 
      * @param request ListProductPublicationsRequest
      * @return ListProductPublicationsResponse
@@ -9690,7 +11309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the subscribe records for a specified API product. You can use paging to filter the records by subscribe status or search for them by using consumer name keywords. Each record returns the subscribe ID, API product ID and name, API product type, consumer ID and name, and subscribe status.</p>
+     * <p>Queries the list of subscription records for a specified API product with paging. You can filter the records by subscription status or search by consumer name keywords. Each record includes the subscription ID, API product ID and name, API product type, consumer ID and name, and subscription status.</p>
      * 
      * @param request ListProductSubscriptionsRequest
      * @param headers map
@@ -9736,7 +11355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve the subscribe records for a specified API product. You can use paging to filter the records by subscribe status or search for them by using consumer name keywords. Each record returns the subscribe ID, API product ID and name, API product type, consumer ID and name, and subscribe status.</p>
+     * <p>Queries the list of subscription records for a specified API product with paging. You can filter the records by subscription status or search by consumer name keywords. Each record includes the subscription ID, API product ID and name, API product type, consumer ID and name, and subscription status.</p>
      * 
      * @param request ListProductSubscriptionsRequest
      * @return ListProductSubscriptionsResponse
@@ -9749,7 +11368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the API product list under the current tenant by using paging. Request parameters can specify the product name, product type, product status, product category, and the portal where the product is published. List items return the product ID, name, product description, status, type, documentation, icon, product categorization, whether automatic approval is enabled for subscription requests, and MCP, agent, model, and product capability configurations.</p>
+     * <p>Queries the API products under the current tenant by using paging. You can specify the product name, type, status, category, and the portal where the product is published. The response includes the product ID, name, description, status, type, documentation, icon, product category, whether automatic approval of subscriptions is enabled, and the MCP, agent, model, and product capability configurations.</p>
      * 
      * @param request ListProductsRequest
      * @param headers map
@@ -9815,7 +11434,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the API product list under the current tenant by using paging. Request parameters can specify the product name, product type, product status, product category, and the portal where the product is published. List items return the product ID, name, product description, status, type, documentation, icon, product categorization, whether automatic approval is enabled for subscription requests, and MCP, agent, model, and product capability configurations.</p>
+     * <p>Queries the API products under the current tenant by using paging. You can specify the product name, type, status, category, and the portal where the product is published. The response includes the product ID, name, description, status, type, documentation, icon, product category, whether automatic approval of subscriptions is enabled, and the MCP, agent, model, and product capability configurations.</p>
      * 
      * @param request ListProductsRequest
      * @return ListProductsResponse
@@ -9828,7 +11447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of API products that can be published to a specified HiMarket developer portal. This paged query accepts the portal ID, API product name, and paging parameters. Each item in the response includes the API product ID, name, and description.</p>
+     * <p>Performs a paged query on the list of API products that can be published to a specified HiMarket developer portal. You can specify the portal ID, API product name, and paging parameters in the request. The list items return the API product ID, API product name, and API product description.</p>
      * 
      * @param request ListPublishableProductsRequest
      * @param headers map
@@ -9870,7 +11489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of API products that can be published to a specified HiMarket developer portal. This paged query accepts the portal ID, API product name, and paging parameters. Each item in the response includes the API product ID, name, and description.</p>
+     * <p>Performs a paged query on the list of API products that can be published to a specified HiMarket developer portal. You can specify the portal ID, API product name, and paging parameters in the request. The list items return the API product ID, API product name, and API product description.</p>
      * 
      * @param request ListPublishableProductsRequest
      * @return ListPublishableProductsResponse
@@ -9883,7 +11502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries risk detection results.</p>
+     * <p>Queries the risk detection results.</p>
      * 
      * @param request ListRiskCheckResultsRequest
      * @param headers map
@@ -9929,7 +11548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries risk detection results.</p>
+     * <p>Queries the risk detection results.</p>
      * 
      * @param request ListRiskCheckResultsRequest
      * @return ListRiskCheckResultsResponse
@@ -9999,10 +11618,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>The API operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists keys.</p>
+     * <p>Lists secrets.</p>
      * 
      * @param request ListSecretsRequest
      * @param headers map
@@ -10048,10 +11667,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The operation supports creating multiple services.</p>
+     * <p>The API operation supports creating multiple services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists keys.</p>
+     * <p>Lists secrets.</p>
      * 
      * @param request ListSecretsRequest
      * @return ListSecretsResponse
@@ -10428,7 +12047,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Logs in to a HiMarket developer account with a developer username and password, and returns the accessToken and expiresIn fields in the data object of a successful response.</p>
+     * <p>Logs in to a HiMarket developer account by using a developer username and password, and returns the accessToken and expiresIn fields in the data object of a successful response.</p>
      * 
      * @param request LoginDeveloperRequest
      * @param headers map
@@ -10466,7 +12085,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Logs in to a HiMarket developer account with a developer username and password, and returns the accessToken and expiresIn fields in the data object of a successful response.</p>
+     * <p>Logs in to a HiMarket developer account by using a developer username and password, and returns the accessToken and expiresIn fields in the data object of a successful response.</p>
      * 
      * @param request LoginDeveloperRequest
      * @return LoginDeveloperResponse
@@ -10479,7 +12098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Logs a developer out of a HiMarket developer account. This operation has no business request parameters, and a successful response returns only the requestId, code, and message fields.</p>
+     * <p>Logs out a developer from a HiMarket developer account. This operation does not require business request parameters. A successful response returns only the requestId, code, and message fields.</p>
      * 
      * @param request LogoutDeveloperRequest
      * @param headers map
@@ -10507,7 +12126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Logs a developer out of a HiMarket developer account. This operation has no business request parameters, and a successful response returns only the requestId, code, and message fields.</p>
+     * <p>Logs out a developer from a HiMarket developer account. This operation does not require business request parameters. A successful response returns only the requestId, code, and message fields.</p>
      * 
      * @param request LogoutDeveloperRequest
      * @return LogoutDeveloperResponse
@@ -10520,7 +12139,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Publishes a specified API product to a specified HiMarket portal. The path parameter specifies the API product ID, and the request body specifies the target portal ID. This operation returns the publication record ID for the current publication. You can query the publication record by calling ListProductPublications and unpublish the API product by calling UnpublishProduct at /himarket/v1/products/{productId}/publications/{publicationId}.</p>
+     * <p>Simulates the impact of logical model modifications.</p>
+     * 
+     * @param request PreviewLogicalModelUpdateRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PreviewLogicalModelUpdateResponse
+     */
+    public PreviewLogicalModelUpdateResponse previewLogicalModelUpdateWithOptions(String logicalModelId, PreviewLogicalModelUpdateRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callStrategy)) {
+            body.put("callStrategy", request.callStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fallbackTargets)) {
+            body.put("fallbackTargets", request.fallbackTargets);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseModel)) {
+            body.put("responseModel", request.responseModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routingPolicy)) {
+            body.put("routingPolicy", request.routingPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.slots)) {
+            body.put("slots", request.slots);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targets)) {
+            body.put("targets", request.targets);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PreviewLogicalModelUpdate"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/logical-models/" + com.aliyun.openapiutil.Client.getEncodeParam(logicalModelId) + "/preview"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PreviewLogicalModelUpdateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Simulates the impact of logical model modifications.</p>
+     * 
+     * @param request PreviewLogicalModelUpdateRequest
+     * @return PreviewLogicalModelUpdateResponse
+     */
+    public PreviewLogicalModelUpdateResponse previewLogicalModelUpdate(String logicalModelId, PreviewLogicalModelUpdateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.previewLogicalModelUpdateWithOptions(logicalModelId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Publishes a specified API product to a specified HiMarket portal. The path parameter specifies the API product ID, and the request body specifies the target portal ID. This operation returns the publication record ID for the publication. You can query the publication record by calling ListProductPublications and unpublish the product by calling UnpublishProduct at /himarket/v1/products/{productId}/publications/{publicationId}.</p>
      * 
      * @param request PublishProductRequest
      * @param headers map
@@ -10554,7 +12244,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Publishes a specified API product to a specified HiMarket portal. The path parameter specifies the API product ID, and the request body specifies the target portal ID. This operation returns the publication record ID for the current publication. You can query the publication record by calling ListProductPublications and unpublish the API product by calling UnpublishProduct at /himarket/v1/products/{productId}/publications/{publicationId}.</p>
+     * <p>Publishes a specified API product to a specified HiMarket portal. The path parameter specifies the API product ID, and the request body specifies the target portal ID. This operation returns the publication record ID for the publication. You can query the publication record by calling ListProductPublications and unpublish the product by calling UnpublishProduct at /himarket/v1/products/{productId}/publications/{publicationId}.</p>
      * 
      * @param request PublishProductRequest
      * @return PublishProductResponse
@@ -10567,7 +12257,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of consumer authorization rules.</p>
+     * <p>Queries consumer authorization rules.</p>
      * 
      * @param request QueryConsumerAuthorizationRulesRequest
      * @param headers map
@@ -10653,7 +12343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of consumer authorization rules.</p>
+     * <p>Queries consumer authorization rules.</p>
      * 
      * @param request QueryConsumerAuthorizationRulesRequest
      * @return QueryConsumerAuthorizationRulesResponse
@@ -10666,7 +12356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Refreshes the OAuth code for the plugin-managed repository.</p>
+     * <p>Refreshes the OAuth code for the plugin hosted repository.</p>
      * 
      * @param request RefreshPluginOAuthCodeRequest
      * @param headers map
@@ -10700,7 +12390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Refreshes the OAuth code for the plugin-managed repository.</p>
+     * <p>Refreshes the OAuth code for the plugin hosted repository.</p>
      * 
      * @param request RefreshPluginOAuthCodeRequest
      * @return RefreshPluginOAuthCodeResponse
@@ -10713,7 +12403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an API consumer authorization rule.</p>
+     * <p>Deletes a consumer authorization rule.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -10739,7 +12429,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an API consumer authorization rule.</p>
+     * <p>Deletes a consumer authorization rule.</p>
      * @return RemoveConsumerAuthorizationRuleResponse
      */
     public RemoveConsumerAuthorizationRuleResponse removeConsumerAuthorizationRule(String consumerAuthorizationRuleId) throws Exception {
@@ -10750,7 +12440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation resets a quota throttling rule on a gateway. Note that this operation takes effect only on AI gateways of a version later than 2.1.21. The reset clears the historical usage of the consumption subjects on the rule.</p>
+     * <p>This operation resets a quota throttling rule on a gateway. Note that this operation takes effect only on AI gateways of a version later than 2.1.21. The reset clears the historical usage of the consumption subjects associated with the rule.</p>
      * <blockquote>
      * <p>Recommended call logic:</p>
      * <ul>
@@ -10763,7 +12453,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response returns a conflict preview containing a conflictHash.</li>
+     * <li>The response returns a conflict preview that contains a conflictHash.</li>
      * </ul>
      * </li>
      * <li><ol start="2">
@@ -10771,11 +12461,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * </li>
      * <li><ul>
-     * <li>No conflicts: Set dryRun=false and overwrite=false.</li>
+     * <li>If no conflicts exist: Set dryRun=false and overwrite=false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>Conflicts exist and overwrite is confirmed: Set dryRun=false, overwrite=true, and conflictHash=<value returned in the previous step>.</li>
+     * <li>If conflicts exist and you confirm to overwrite: Set dryRun=false, overwrite=true, and conflictHash=<the value returned in the previous step>.</li>
      * </ul>
      * </li>
      * </ul>
@@ -10844,7 +12534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation resets a quota throttling rule on a gateway. Note that this operation takes effect only on AI gateways of a version later than 2.1.21. The reset clears the historical usage of the consumption subjects on the rule.</p>
+     * <p>This operation resets a quota throttling rule on a gateway. Note that this operation takes effect only on AI gateways of a version later than 2.1.21. The reset clears the historical usage of the consumption subjects associated with the rule.</p>
      * <blockquote>
      * <p>Recommended call logic:</p>
      * <ul>
@@ -10857,7 +12547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response returns a conflict preview containing a conflictHash.</li>
+     * <li>The response returns a conflict preview that contains a conflictHash.</li>
      * </ul>
      * </li>
      * <li><ol start="2">
@@ -10865,11 +12555,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * </li>
      * <li><ul>
-     * <li>No conflicts: Set dryRun=false and overwrite=false.</li>
+     * <li>If no conflicts exist: Set dryRun=false and overwrite=false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>Conflicts exist and overwrite is confirmed: Set dryRun=false, overwrite=true, and conflictHash=<value returned in the previous step>.</li>
+     * <li>If conflicts exist and you confirm to overwrite: Set dryRun=false, overwrite=true, and conflictHash=<the value returned in the previous step>.</li>
      * </ul>
      * </li>
      * </ul>
@@ -10925,11 +12615,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retries the delivery of logical model configurations.</p>
+     * 
+     * @param request RetryLogicalModelDeploymentRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RetryLogicalModelDeploymentResponse
+     */
+    public RetryLogicalModelDeploymentResponse retryLogicalModelDeploymentWithOptions(String operationId, RetryLogicalModelDeploymentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedRevision)) {
+            query.put("expectedRevision", request.expectedRevision);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RetryLogicalModelDeployment"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/logical-model-deployments/" + com.aliyun.openapiutil.Client.getEncodeParam(operationId) + "/retry"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RetryLogicalModelDeploymentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retries the delivery of logical model configurations.</p>
+     * 
+     * @param request RetryLogicalModelDeploymentRequest
+     * @return RetryLogicalModelDeploymentResponse
+     */
+    public RetryLogicalModelDeploymentResponse retryLogicalModelDeployment(String operationId, RetryLogicalModelDeploymentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.retryLogicalModelDeploymentWithOptions(operationId, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>Queries the currently active credentials for the AI service.</p>
+     * <p>Queries the currently active credentials for an AI service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the currently active credentials for the AI service.</p>
+     * <p>Queries the currently active credentials for an AI service.</p>
      * 
      * @param request RevealServiceCredentialRequest
      * @param headers map
@@ -10957,10 +12698,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the currently active credentials for the AI service.</p>
+     * <p>Queries the currently active credentials for an AI service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the currently active credentials for the AI service.</p>
+     * <p>Queries the currently active credentials for an AI service.</p>
      * 
      * @param request RevealServiceCredentialRequest
      * @return RevealServiceCredentialResponse
@@ -10969,6 +12710,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.revealServiceCredentialWithOptions(serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Revokes the model card entitlements for a consumer.</p>
+     * 
+     * @param request RevokeConsumerModelCardGrantsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevokeConsumerModelCardGrantsResponse
+     */
+    public RevokeConsumerModelCardGrantsResponse revokeConsumerModelCardGrantsWithOptions(String httpApiId, RevokeConsumerModelCardGrantsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.modelCardIds)) {
+            body.put("modelCardIds", request.modelCardIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelGroupIds)) {
+            body.put("modelGroupIds", request.modelGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalId)) {
+            body.put("principalId", request.principalId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalType)) {
+            body.put("principalType", request.principalType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevokeConsumerModelCardGrants"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/model-apis/" + com.aliyun.openapiutil.Client.getEncodeParam(httpApiId) + "/model-card-grants/revoke"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeConsumerModelCardGrantsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Revokes the model card entitlements for a consumer.</p>
+     * 
+     * @param request RevokeConsumerModelCardGrantsRequest
+     * @return RevokeConsumerModelCardGrantsResponse
+     */
+    public RevokeConsumerModelCardGrantsResponse revokeConsumerModelCardGrants(String httpApiId, RevokeConsumerModelCardGrantsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.revokeConsumerModelCardGrantsWithOptions(httpApiId, request, headers, runtime);
     }
 
     /**
@@ -11014,7 +12814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Subscribes to an API product for a specified HiMarket Consumer. The path parameter specifies the consumer ID, the request body specifies the ID of the API product to subscribe to, and the response returns the subscription ID, API product ID and name, API product type, consumer ID and name, and subscription status.</p>
+     * <p>Subscribes to an API product for a specified HiMarket consumer. The path parameter specifies the consumer ID, and the request body specifies the ID of the API product to subscribe to. The response includes the subscription ID, API product ID and name, API product type, consumer ID and name, and subscription status of the subscription record.</p>
      * 
      * @param request SubscribeProductRequest
      * @param headers map
@@ -11048,7 +12848,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Subscribes to an API product for a specified HiMarket Consumer. The path parameter specifies the consumer ID, the request body specifies the ID of the API product to subscribe to, and the response returns the subscription ID, API product ID and name, API product type, consumer ID and name, and subscription status.</p>
+     * <p>Subscribes to an API product for a specified HiMarket consumer. The path parameter specifies the consumer ID, and the request body specifies the ID of the API product to subscribe to. The response includes the subscription ID, API product ID and name, API product type, consumer ID and name, and subscription status of the subscription record.</p>
      * 
      * @param request SubscribeProductRequest
      * @return SubscribeProductResponse
@@ -11060,8 +12860,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>Before you call this operation, complete the following preparations:</p>
+     * <ol>
+     * <li>Create a Nacos instance in Microservices Engine (MSE) and register an MCP server in the instance.</li>
+     * <li>Call CreateSource to register a service source for the target gateway. Set the type parameter to MSE_NACOS and point it to the Nacos instance.</li>
+     * <li>Call ListGateways to obtain the system default domain name ID (subDomainInfos[].domainId) of the gateway for the domainIds parameter.
+     * After you complete the preceding steps, pass the gatewayId, domainIds, and namespace parameters to call this operation. This syncs the MCP servers in the specified namespace to the gateway.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Syncs an external MCP server.</p>
+     * <p>Syncs MCP servers from an external Nacos registry to a gateway.</p>
      * 
      * @param request SyncMCPServersRequest
      * @param headers map
@@ -11110,8 +12920,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Before you begin</h2>
+     * <p>Before you call this operation, complete the following preparations:</p>
+     * <ol>
+     * <li>Create a Nacos instance in Microservices Engine (MSE) and register an MCP server in the instance.</li>
+     * <li>Call CreateSource to register a service source for the target gateway. Set the type parameter to MSE_NACOS and point it to the Nacos instance.</li>
+     * <li>Call ListGateways to obtain the system default domain name ID (subDomainInfos[].domainId) of the gateway for the domainIds parameter.
+     * After you complete the preceding steps, pass the gatewayId, domainIds, and namespace parameters to call this operation. This syncs the MCP servers in the specified namespace to the gateway.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>Syncs an external MCP server.</p>
+     * <p>Syncs MCP servers from an external Nacos registry to a gateway.</p>
      * 
      * @param request SyncMCPServersRequest
      * @return SyncMCPServersResponse
@@ -11179,7 +12999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels the publishing of an MCP server.</p>
+     * <p>Cancels the publication of an MCP server.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -11205,7 +13025,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels the publishing of an MCP server.</p>
+     * <p>Cancels the publication of an MCP server.</p>
      * @return UnDeployMcpServerResponse
      */
     public UnDeployMcpServerResponse unDeployMcpServer(String mcpServerId) throws Exception {
@@ -11312,7 +13132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Takes a publication record of an API product offline based on the API product ID and publication record ID. Both identifiers are parameters in the /himarket/v1/products/{productId}/publications/{publicationId} path. The publication record is created by the PublishProduct operation and can be queried by using the ListProductPublications operation. This operation only affects the publication record and does not delete the API product itself. To delete a product, use the DeleteProduct operation. The response returns only the requestId, code, and message.</p>
+     * <p>Unpublishes a publication record of an API product based on the API product ID and publication record ID. Both identifiers are parameters in the /himarket/v1/products/{productId}/publications/{publicationId} path. The publication record is generated by PublishProduct and can be queried by ListProductPublications. This operation only affects the publication record and does not delete the API product itself. To delete a product, use DeleteProduct. The response returns only the requestId, code, and message.</p>
      * 
      * @param request UnpublishProductRequest
      * @param headers map
@@ -11340,7 +13160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Takes a publication record of an API product offline based on the API product ID and publication record ID. Both identifiers are parameters in the /himarket/v1/products/{productId}/publications/{publicationId} path. The publication record is created by the PublishProduct operation and can be queried by using the ListProductPublications operation. This operation only affects the publication record and does not delete the API product itself. To delete a product, use the DeleteProduct operation. The response returns only the requestId, code, and message.</p>
+     * <p>Unpublishes a publication record of an API product based on the API product ID and publication record ID. Both identifiers are parameters in the /himarket/v1/products/{productId}/publications/{publicationId} path. The publication record is generated by PublishProduct and can be queried by ListProductPublications. This operation only affects the publication record and does not delete the API product itself. To delete a product, use DeleteProduct. The response returns only the requestId, code, and message.</p>
      * 
      * @param request UnpublishProductRequest
      * @return UnpublishProductResponse
@@ -11353,7 +13173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from resources.</p>
+     * <p>Removes resource tags.</p>
      * 
      * @param tmpReq UntagResourcesRequest
      * @param headers map
@@ -11409,7 +13229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from resources.</p>
+     * <p>Removes resource tags.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -11499,6 +13319,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAiModelProviderResponse updateAiModelProviderWithOptions(String modelProviderId, UpdateAiModelProviderRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultServiceId)) {
+            body.put("defaultServiceId", request.defaultServiceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
             body.put("displayName", request.displayName);
         }
@@ -11536,6 +13360,128 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateAiModelProviderWithOptions(modelProviderId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a standalone AI model source.</p>
+     * 
+     * @param request UpdateAiModelSourceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAiModelSourceResponse
+     */
+    public UpdateAiModelSourceResponse updateAiModelSourceWithOptions(String modelSourceId, UpdateAiModelSourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("displayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedVersion)) {
+            body.put("expectedVersion", request.expectedVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
+            body.put("serviceId", request.serviceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAiModelSource"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/ai-model-sources/" + com.aliyun.openapiutil.Client.getEncodeParam(modelSourceId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAiModelSourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a standalone AI model source.</p>
+     * 
+     * @param request UpdateAiModelSourceRequest
+     * @return UpdateAiModelSourceResponse
+     */
+    public UpdateAiModelSourceResponse updateAiModelSource(String modelSourceId, UpdateAiModelSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAiModelSourceWithOptions(modelSourceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates an AI model in a source.</p>
+     * 
+     * @param request UpdateAiModelSourceModelRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAiModelSourceModelResponse
+     */
+    public UpdateAiModelSourceModelResponse updateAiModelSourceModelWithOptions(String modelCardId, UpdateAiModelSourceModelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.availablePaths)) {
+            body.put("availablePaths", request.availablePaths);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credit)) {
+            body.put("credit", request.credit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedVersion)) {
+            body.put("expectedVersion", request.expectedVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.features)) {
+            body.put("features", request.features);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.meta)) {
+            body.put("meta", request.meta);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelName)) {
+            body.put("modelName", request.modelName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAiModelSourceModel"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/ai-model-source-models/" + com.aliyun.openapiutil.Client.getEncodeParam(modelCardId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAiModelSourceModelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates an AI model in a source.</p>
+     * 
+     * @param request UpdateAiModelSourceModelRequest
+     * @return UpdateAiModelSourceModelResponse
+     */
+    public UpdateAiModelSourceModelResponse updateAiModelSourceModel(String modelCardId, UpdateAiModelSourceModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAiModelSourceModelWithOptions(modelCardId, request, headers, runtime);
     }
 
     /**
@@ -11658,7 +13604,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds or removes API products from a specified product category in bulk. The path parameter specifies the category ID. The action field in the request body specifies the operation type, and the productIds field specifies the list of API product IDs to be processed. The response returns only the request ID, status code, and message, and does not return the processing result for each item.</p>
+     * <p>Adds or removes API products in batches under a specified product category. The path parameter specifies the category ID, the action in the request body specifies the operation direction, and productIds specifies the list of API product IDs to process. The response returns only the requestId, code, and message, without item-level processing results.</p>
      * 
      * @param request UpdateCategoryProductsRequest
      * @param headers map
@@ -11696,7 +13642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds or removes API products from a specified product category in bulk. The path parameter specifies the category ID. The action field in the request body specifies the operation type, and the productIds field specifies the list of API product IDs to be processed. The response returns only the request ID, status code, and message, and does not return the processing result for each item.</p>
+     * <p>Adds or removes API products in batches under a specified product category. The path parameter specifies the category ID, the action in the request body specifies the operation direction, and productIds specifies the list of API product IDs to process. The response returns only the requestId, code, and message, without item-level processing results.</p>
      * 
      * @param request UpdateCategoryProductsRequest
      * @return UpdateCategoryProductsResponse
@@ -11727,6 +13673,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("apikeyIdentityConfig", request.apikeyIdentityConfig);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clearExpireAt)) {
+            body.put("clearExpireAt", request.clearExpireAt);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
         }
@@ -11735,8 +13685,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("enable", request.enable);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAfterRenewal)) {
+            body.put("enableAfterRenewal", request.enableAfterRenewal);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expireAt)) {
+            body.put("expireAt", request.expireAt);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jwtIdentityConfig)) {
             body.put("jwtIdentityConfig", request.jwtIdentityConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.renew)) {
+            body.put("renew", request.renew);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -11775,7 +13737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This API operation has been replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the consumer authorization rule.</p>
+     * <p>Updates a consumer authorization rule.</p>
      * 
      * @deprecated OpenAPI UpdateConsumerAuthorizationRule is deprecated
      * 
@@ -11824,7 +13786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This API operation has been replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the consumer authorization rule.</p>
+     * <p>Updates a consumer authorization rule.</p>
      * 
      * @deprecated OpenAPI UpdateConsumerAuthorizationRule is deprecated
      * 
@@ -12189,7 +14151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a Gateway Load Balancer (GWLB).</p>
+     * <p>Updates a gateway load balancer.</p>
      * 
      * @param request UpdateGatewayLoadBalancerRequest
      * @param headers map
@@ -12231,7 +14193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a Gateway Load Balancer (GWLB).</p>
+     * <p>Updates a gateway load balancer.</p>
      * 
      * @param request UpdateGatewayLoadBalancerRequest
      * @return UpdateGatewayLoadBalancerResponse
@@ -12244,10 +14206,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the O&amp;M time window of a gateway. This feature is supported only by specific gateway types. If the current gateway does not support modifying the O&amp;M time window, the API returns 409 Conflict.GatewayNotSupportAutoMaintenance.</p>
+     * <p>Updates the O&amp;M time window of a gateway. This feature is supported only by specific gateway types. If the current gateway does not support modifying the O&amp;M time window, the API returns 409 Conflict.GatewayNotSupportAutoMaintenance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the O&amp;M window of a gateway.</p>
+     * <p>Updates the O&amp;M window of a gateway.</p>
      * 
      * @param request UpdateGatewayMaintenancePeriodRequest
      * @param headers map
@@ -12281,10 +14243,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the O&amp;M time window of a gateway. This feature is supported only by specific gateway types. If the current gateway does not support modifying the O&amp;M time window, the API returns 409 Conflict.GatewayNotSupportAutoMaintenance.</p>
+     * <p>Updates the O&amp;M time window of a gateway. This feature is supported only by specific gateway types. If the current gateway does not support modifying the O&amp;M time window, the API returns 409 Conflict.GatewayNotSupportAutoMaintenance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the O&amp;M window of a gateway.</p>
+     * <p>Updates the O&amp;M window of a gateway.</p>
      * 
      * @param request UpdateGatewayMaintenancePeriodRequest
      * @return UpdateGatewayMaintenancePeriodResponse
@@ -12352,7 +14314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation modifies a quota rule on a gateway. Note that this operation takes effect only on AI gateways of a version later than 2.1.21. The modification retains the historical usage of the consumers associated with the rule.</p>
+     * <p>This operation updates a quota rule on a gateway. Note that this operation takes effect only on AI gateways of versions later than 2.1.21. The update retains the historical usage of the consumers associated with the rule.</p>
      * <blockquote>
      * <p>Recommended call logic:</p>
      * <ul>
@@ -12365,26 +14327,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response returns a conflict preview that contains a conflictHash.</li>
+     * <li>The response returns a conflict preview containing a conflictHash.</li>
      * </ul>
      * </li>
      * <li><ol start="2">
-     * <li>Submit the request after confirmation.</li>
+     * <li>Formally submit the request after confirmation.</li>
      * </ol>
      * </li>
      * <li><ul>
-     * <li>If no conflicts exist: Set dryRun=false and overwrite=false.</li>
+     * <li>No conflicts: Set dryRun=false and overwrite=false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>If conflicts exist and you confirm to overwrite: Set dryRun=false, overwrite=true, and conflictHash=<the value returned in the previous step>.</li>
+     * <li>Conflicts exist and you confirm to overwrite: Set dryRun=false, overwrite=true, and conflictHash=<the value returned in the previous step>.</li>
      * </ul>
      * </li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a quota throttling rule on a gateway.</p>
+     * <p>Updates a quota throttling rule on a gateway.</p>
      * 
      * @param request UpdateGatewayQuotaRuleRequest
      * @param headers map
@@ -12446,7 +14408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation modifies a quota rule on a gateway. Note that this operation takes effect only on AI gateways of a version later than 2.1.21. The modification retains the historical usage of the consumers associated with the rule.</p>
+     * <p>This operation updates a quota rule on a gateway. Note that this operation takes effect only on AI gateways of versions later than 2.1.21. The update retains the historical usage of the consumers associated with the rule.</p>
      * <blockquote>
      * <p>Recommended call logic:</p>
      * <ul>
@@ -12459,26 +14421,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * </li>
      * <li><ul>
-     * <li>The response returns a conflict preview that contains a conflictHash.</li>
+     * <li>The response returns a conflict preview containing a conflictHash.</li>
      * </ul>
      * </li>
      * <li><ol start="2">
-     * <li>Submit the request after confirmation.</li>
+     * <li>Formally submit the request after confirmation.</li>
      * </ol>
      * </li>
      * <li><ul>
-     * <li>If no conflicts exist: Set dryRun=false and overwrite=false.</li>
+     * <li>No conflicts: Set dryRun=false and overwrite=false.</li>
      * </ul>
      * </li>
      * <li><ul>
-     * <li>If conflicts exist and you confirm to overwrite: Set dryRun=false, overwrite=true, and conflictHash=<the value returned in the previous step>.</li>
+     * <li>Conflicts exist and you confirm to overwrite: Set dryRun=false, overwrite=true, and conflictHash=<the value returned in the previous step>.</li>
      * </ul>
      * </li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a quota throttling rule on a gateway.</p>
+     * <p>Updates a quota throttling rule on a gateway.</p>
      * 
      * @param request UpdateGatewayQuotaRuleRequest
      * @return UpdateGatewayQuotaRuleResponse
@@ -12491,7 +14453,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation enables or disables a quota rule on a gateway. Note that this operation applies only to AI gateways of a version later than 2.1.21.</p>
+     * <p>This operation enables or disables a quota rule on a gateway. Note that this operation takes effect only for AI gateways of a version later than 2.1.21.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables or disables a quota throttling rule for a gateway.</p>
@@ -12532,7 +14494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation enables or disables a quota rule on a gateway. Note that this operation applies only to AI gateways of a version later than 2.1.21.</p>
+     * <p>This operation enables or disables a quota rule on a gateway. Note that this operation takes effect only for AI gateways of a version later than 2.1.21.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables or disables a quota throttling rule for a gateway.</p>
@@ -12700,7 +14662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the route of an HTTP API.</p>
+     * <p>Updates a route of an HTTP API.</p>
      * 
      * @param request UpdateHttpApiRouteRequest
      * @param headers map
@@ -12728,6 +14690,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.environmentId)) {
             body.put("environmentId", request.environmentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            body.put("gatewayId", request.gatewayId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.match)) {
@@ -12762,7 +14728,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the route of an HTTP API.</p>
+     * <p>Updates a route of an HTTP API.</p>
      * 
      * @param request UpdateHttpApiRouteRequest
      * @return UpdateHttpApiRouteResponse
@@ -12774,8 +14740,89 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies a logical model.</p>
+     * 
+     * @param request UpdateLogicalModelRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateLogicalModelResponse
+     */
+    public UpdateLogicalModelResponse updateLogicalModelWithOptions(String logicalModelId, UpdateLogicalModelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.confirmationToken)) {
+            query.put("confirmationToken", request.confirmationToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedRevision)) {
+            query.put("expectedRevision", request.expectedRevision);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callStrategy)) {
+            body.put("callStrategy", request.callStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fallbackTargets)) {
+            body.put("fallbackTargets", request.fallbackTargets);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseModel)) {
+            body.put("responseModel", request.responseModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routingPolicy)) {
+            body.put("routingPolicy", request.routingPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.slots)) {
+            body.put("slots", request.slots);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targets)) {
+            body.put("targets", request.targets);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateLogicalModel"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/logical-models/" + com.aliyun.openapiutil.Client.getEncodeParam(logicalModelId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLogicalModelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a logical model.</p>
+     * 
+     * @param request UpdateLogicalModelRequest
+     * @return UpdateLogicalModelResponse
+     */
+    public UpdateLogicalModelResponse updateLogicalModel(String logicalModelId, UpdateLogicalModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateLogicalModelWithOptions(logicalModelId, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>Only sources of the <strong>Container Service</strong> type are allowed to update the Ingress listener configurations.</p>
+     * <p>Only sources of the <strong>Container Service</strong> type are allowed to update the configurations of listening Ingresses.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an MCP server.</p>
@@ -12814,6 +14861,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.grayMcpServerConfigs)) {
             body.put("grayMcpServerConfigs", request.grayMcpServerConfigs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instructions)) {
+            body.put("instructions", request.instructions);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.match)) {
@@ -12856,7 +14907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only sources of the <strong>Container Service</strong> type are allowed to update the Ingress listener configurations.</p>
+     * <p>Only sources of the <strong>Container Service</strong> type are allowed to update the configurations of listening Ingresses.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an MCP server.</p>
@@ -12947,7 +14998,149 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the network access type of a gateway.</p>
+     * <p>Updates a model API.</p>
+     * 
+     * @param request UpdateModelApiRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateModelApiResponse
+     */
+    public UpdateModelApiResponse updateModelApiWithOptions(String httpApiId, UpdateModelApiRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.basePath)) {
+            body.put("basePath", request.basePath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directSupplyFallbackEnabled)) {
+            body.put("directSupplyFallbackEnabled", request.directSupplyFallbackEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainIds)) {
+            body.put("domainIds", request.domainIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAuth)) {
+            body.put("enableAuth", request.enableAuth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firstByteTimeout)) {
+            body.put("firstByteTimeout", request.firstByteTimeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelSelection)) {
+            body.put("modelSelection", request.modelSelection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelSelectionDelta)) {
+            body.put("modelSelectionDelta", request.modelSelectionDelta);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyConfigs)) {
+            body.put("policyConfigs", request.policyConfigs);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateModelApi"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/model-apis/" + com.aliyun.openapiutil.Client.getEncodeParam(httpApiId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateModelApiResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a model API.</p>
+     * 
+     * @param request UpdateModelApiRequest
+     * @return UpdateModelApiResponse
+     */
+    public UpdateModelApiResponse updateModelApi(String httpApiId, UpdateModelApiRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateModelApiWithOptions(httpApiId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a model group.</p>
+     * 
+     * @param request UpdateModelGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateModelGroupResponse
+     */
+    public UpdateModelGroupResponse updateModelGroupWithOptions(String modelGroupId, UpdateModelGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedVersion)) {
+            body.put("expectedVersion", request.expectedVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelCardIds)) {
+            body.put("modelCardIds", request.modelCardIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateModelGroup"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/model-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(modelGroupId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateModelGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a model group.</p>
+     * 
+     * @param request UpdateModelGroupRequest
+     * @return UpdateModelGroupResponse
+     */
+    public UpdateModelGroupResponse updateModelGroup(String modelGroupId, UpdateModelGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateModelGroupWithOptions(modelGroupId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the network access type of a gateway.</p>
      * 
      * @param request UpdateNetworkAccessRequest
      * @param headers map
@@ -12981,7 +15174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the network access type of a gateway.</p>
+     * <p>Modifies the network access type of a gateway.</p>
      * 
      * @param request UpdateNetworkAccessRequest
      * @return UpdateNetworkAccessResponse
@@ -13104,7 +15297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the name, description, and portal configuration of a HiMarket developer portal by portal ID. The request body is in JSON format, and a successful response returns the ID of the updated portal.</p>
+     * <p>Updates the name, description, and portal configurations of a HiMarket developer portal by portal ID. The request body is in JSON format. A successful response returns the ID of the updated portal.</p>
      * 
      * @param request UpdatePortalRequest
      * @param headers map
@@ -13152,7 +15345,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the name, description, and portal configuration of a HiMarket developer portal by portal ID. The request body is in JSON format, and a successful response returns the ID of the updated portal.</p>
+     * <p>Updates the name, description, and portal configurations of a HiMarket developer portal by portal ID. The request body is in JSON format. A successful response returns the ID of the updated portal.</p>
      * 
      * @param request UpdatePortalRequest
      * @return UpdatePortalResponse
@@ -13246,7 +15439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the name, description, and icon of a product category by category ID. The request body is in JSON format, and the response returns only the request ID, response status code, and response message.</p>
+     * <p>Updates the name, description, and icon of a product category by its ID. The request body is in JSON format, and the response returns only the request ID, response status code, and response message.</p>
      * 
      * @param request UpdateProductCategoryRequest
      * @param headers map
@@ -13288,7 +15481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the name, description, and icon of a product category by category ID. The request body is in JSON format, and the response returns only the request ID, response status code, and response message.</p>
+     * <p>Updates the name, description, and icon of a product category by its ID. The request body is in JSON format, and the response returns only the request ID, response status code, and response message.</p>
      * 
      * @param request UpdateProductCategoryRequest
      * @return UpdateProductCategoryResponse
@@ -13352,7 +15545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only sources of the <strong>container service</strong> type allow you to update the listener Ingress configuration.</p>
+     * <p>Updates a secret. Only sources of the <strong>Container Service</strong> type are allowed to update Ingress listener configurations.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a secret.</p>
@@ -13389,7 +15582,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only sources of the <strong>container service</strong> type allow you to update the listener Ingress configuration.</p>
+     * <p>Updates a secret. Only sources of the <strong>Container Service</strong> type are allowed to update Ingress listener configurations.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a secret.</p>
@@ -13437,6 +15630,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dnsServers)) {
             body.put("dnsServers", request.dnsServers);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedConfigRevision)) {
+            body.put("expectedConfigRevision", request.expectedConfigRevision);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.healthCheckConfig)) {

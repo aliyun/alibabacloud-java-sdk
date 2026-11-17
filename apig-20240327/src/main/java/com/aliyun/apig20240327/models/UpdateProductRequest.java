@@ -35,7 +35,7 @@ public class UpdateProductRequest extends TeaModel {
     public String document;
 
     /**
-     * <p>The capability configuration of the API product. Currently, this parameter only includes the modelFeature member, which contains the model, maxTokens, temperature, streaming, webSearch, enableThinking, and enableMultiModal fields.</p>
+     * <p>The capability configuration of the API product. Currently, this configuration only includes the modelFeature member, which contains the model, maxTokens, temperature, streaming, webSearch, enableThinking, and enableMultiModal fields.</p>
      */
     @NameInMap("feature")
     public HiMarketProductFeature feature;

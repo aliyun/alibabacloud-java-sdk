@@ -76,7 +76,7 @@ public class GetProductResponseBody extends TeaModel {
 
     public static class GetProductResponseBodyData extends TeaModel {
         /**
-         * <p>The agent-related configurations of the API product. The agentAPIConfig member includes agentProtocols (the list of protocols supported by the agent) and routes (the list of routes).</p>
+         * <p>The agent configurations of the API product. The agentAPIConfig member includes agentProtocols (the list of protocols supported by the agent) and routes (the list of routes).</p>
          */
         @NameInMap("agentConfig")
         public HiMarketAgentConfig agentConfig;
@@ -91,7 +91,7 @@ public class GetProductResponseBody extends TeaModel {
          * <p>The description of the API product.</p>
          * 
          * <strong>example:</strong>
-         * <p>API product that provides weather query capabilities</p>
+         * <p>An API product that provides weather query capabilities</p>
          */
         @NameInMap("description")
         public String description;
@@ -100,7 +100,7 @@ public class GetProductResponseBody extends TeaModel {
          * <p>The documentation content of the API product.</p>
          * 
          * <strong>example:</strong>
-         * <p>Invocation methods, parameters, and billing instructions for this product</p>
+         * <p>The invocation methods, parameters, and billing instructions for this product</p>
          */
         @NameInMap("document")
         public String document;
@@ -118,13 +118,13 @@ public class GetProductResponseBody extends TeaModel {
         public HiMarketIcon icon;
 
         /**
-         * <p>The MCP-related configurations of the API product. The members include mcpServerName (the name of the MCP server), tools, mcpServerConfig (path and domains), and meta (protocol).</p>
+         * <p>The Model Context Protocol (MCP) configurations of the API product. The members include mcpServerName (the name of the MCP server), tools, mcpServerConfig (path and domains), and meta (protocol).</p>
          */
         @NameInMap("mcpConfig")
         public HiMarketMcpConfig mcpConfig;
 
         /**
-         * <p>The model API-related configurations of the API product. The modelAPIConfig member includes modelCategory (the AI model category), aiProtocols (the list of AI API protocols), and routes (the list of routes).</p>
+         * <p>The model API configurations of the API product. The modelAPIConfig member includes modelCategory (the AI model category), aiProtocols (the list of AI API protocols), and routes (the list of routes).</p>
          */
         @NameInMap("modelConfig")
         public HiMarketModelConfig modelConfig;

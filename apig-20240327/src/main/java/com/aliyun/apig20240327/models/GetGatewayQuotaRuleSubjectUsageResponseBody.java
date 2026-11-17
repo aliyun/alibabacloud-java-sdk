@@ -79,7 +79,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
 
     public static class GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems extends TeaModel {
         /**
-         * <p>The cached token consumption.</p>
+         * <p>The number of cached tokens consumed.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -106,7 +106,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public String consumer;
 
         /**
-         * <p>The input token consumption.</p>
+         * <p>The number of input tokens consumed.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -133,7 +133,34 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public String model;
 
         /**
-         * <p>The output token consumption.</p>
+         * <p>The ID of the executed model card.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>msc-d00000000000000000000</p>
+         */
+        @NameInMap("modelCardId")
+        public String modelCardId;
+
+        /**
+         * <p>The ID of the model source at execution. This field is empty for legacy records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ms-d00000000000000000000</p>
+         */
+        @NameInMap("modelSourceId")
+        public String modelSourceId;
+
+        /**
+         * <p>The snapshot of the model source name at execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Model Studio model source</p>
+         */
+        @NameInMap("modelSourceName")
+        public String modelSourceName;
+
+        /**
+         * <p>The number of output tokens consumed.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -158,6 +185,15 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
          */
         @NameInMap("requestId")
         public String requestId;
+
+        /**
+         * <p>The ID of the executed service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>svc-d00000000000000000000</p>
+         */
+        @NameInMap("serviceId")
+        public String serviceId;
 
         /**
          * <p>The consumption or request time in the YYYY-MM-DD format.</p>
@@ -239,6 +275,30 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             return this.model;
         }
 
+        public GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems setModelCardId(String modelCardId) {
+            this.modelCardId = modelCardId;
+            return this;
+        }
+        public String getModelCardId() {
+            return this.modelCardId;
+        }
+
+        public GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems setModelSourceId(String modelSourceId) {
+            this.modelSourceId = modelSourceId;
+            return this;
+        }
+        public String getModelSourceId() {
+            return this.modelSourceId;
+        }
+
+        public GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems setModelSourceName(String modelSourceName) {
+            this.modelSourceName = modelSourceName;
+            return this;
+        }
+        public String getModelSourceName() {
+            return this.modelSourceName;
+        }
+
         public GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems setOutputAmount(Long outputAmount) {
             this.outputAmount = outputAmount;
             return this;
@@ -261,6 +321,14 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         }
         public String getRequestId() {
             return this.requestId;
+        }
+
+        public GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
         }
 
         public GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems setStartTime(String startTime) {
@@ -367,7 +435,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
 
     public static class GetGatewayQuotaRuleSubjectUsageResponseBodyData extends TeaModel {
         /**
-         * <p>The total cached token consumption.</p>
+         * <p>The total number of cached tokens consumed.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -385,7 +453,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Double cachedAmountDecimal;
 
         /**
-         * <p>The pagination of consumption details.</p>
+         * <p>The paginated consumption details.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;totalSize&quot;:100}</p>
@@ -394,7 +462,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetails details;
 
         /**
-         * <p>The total input token consumption.</p>
+         * <p>The total number of input tokens consumed.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -412,7 +480,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Double inputAmountDecimal;
 
         /**
-         * <p>The total output token consumption.</p>
+         * <p>The total number of output tokens consumed.</p>
          * 
          * <strong>example:</strong>
          * <p>180</p>
@@ -439,7 +507,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Boolean overLimit;
 
         /**
-         * <p>The quota dimension. Valid values: token and credit.</p>
+         * <p>The quota dimension. Valid values: token or credit.</p>
          * 
          * <strong>example:</strong>
          * <p>token</p>
@@ -448,7 +516,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public String quotaDimension;
 
         /**
-         * <p>The subject type. Valid values: consumer and consumer_group.</p>
+         * <p>The subject type. Valid values: consumer or consumer_group.</p>
          * 
          * <strong>example:</strong>
          * <p>consumer_group</p>

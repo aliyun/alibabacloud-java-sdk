@@ -163,6 +163,18 @@ public class ApiKeyIdentityConfig extends TeaModel {
         public String apikey;
 
         /**
+         * <p>The creation time of this logical key saved by the server, in Unix milliseconds, for read-only purposes. When updated, the original key retains the saved time, and client input is not used as the time basis. A missing or null history indicates an unknown time, and the consumer creation time must not be used as a substitute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1792627200000</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("createTimestamp")
+        public Long createTimestamp;
+
+        /**
          * <p>The generation mode.</p>
          * 
          * <strong>example:</strong>
@@ -182,6 +194,14 @@ public class ApiKeyIdentityConfig extends TeaModel {
         }
         public String getApikey() {
             return this.apikey;
+        }
+
+        public ApiKeyIdentityConfigCredentials setCreateTimestamp(Long createTimestamp) {
+            this.createTimestamp = createTimestamp;
+            return this;
+        }
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
         }
 
         public ApiKeyIdentityConfigCredentials setGenerateMode(String generateMode) {

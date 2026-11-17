@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateProductCategoryRequest extends TeaModel {
     /**
-     * <p>The description of the product category. Maximum length: 500 characters.</p>
+     * <p>The description of the product category. The description can be up to 500 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>Product category for AI-related capabilities</p>
@@ -20,7 +20,7 @@ public class CreateProductCategoryRequest extends TeaModel {
     public HiMarketIcon icon;
 
     /**
-     * <p>The name of the product category. Maximum length: 100 characters.</p>
+     * <p>The name of the product category. The name can be up to 100 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ai-capabilities</p>

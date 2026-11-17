@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSecretsRequest extends TeaModel {
     /**
-     * <p>The gateway type used for filtering. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
+     * <p>The gateway type for filtering. Supported gateway types: <strong>AI</strong> and <strong>API</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>AI</p>
@@ -14,7 +14,7 @@ public class ListSecretsRequest extends TeaModel {
     public String gatewayType;
 
     /**
-     * <p>The key name. Fuzzy match is supported.</p>
+     * <p>The name of the secret for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>my_secret</p>

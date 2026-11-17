@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGlobalPoliciesRequest extends TeaModel {
     /**
-     * <p>The attached resource type to filter by. This parameter takes effect only when globalPolicyType is set to BlackOrWhite. If this parameter is not specified, Gateway, Domain, and Route resources are queried.</p>
+     * <p>Filters by mounted resource type. This parameter takes effect only for the BlackOrWhite policy type. By default, the Gateway, Domain, and Route types are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>Gateway</p>
@@ -14,7 +14,7 @@ public class ListGlobalPoliciesRequest extends TeaModel {
     public String attachResourceType;
 
     /**
-     * <p>The policy class name. Separate multiple values with commas (server-side strings.Split).</p>
+     * <p>The policy class name. You can specify multiple values separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>JWTAuth,OIDCAuth,ExternalZAuth</p>
@@ -23,7 +23,7 @@ public class ListGlobalPoliciesRequest extends TeaModel {
     public String className;
 
     /**
-     * <p>The enabling status to filter by.</p>
+     * <p>Filters by enabling status.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class ListGlobalPoliciesRequest extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>The environment ID to filter by.</p>
+     * <p>Filters by environment ID.</p>
      * 
      * <strong>example:</strong>
      * <p>env-xxxx</p>
@@ -41,7 +41,7 @@ public class ListGlobalPoliciesRequest extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>The gateway ID to filter by (attachment dimension).</p>
+     * <p>Filters by gateway ID at the attachment level.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-xxxx</p>
@@ -59,7 +59,7 @@ public class ListGlobalPoliciesRequest extends TeaModel {
     public String globalPolicyType;
 
     /**
-     * <p>The IP content to filter by. A LIKE match is performed on the config field.</p>
+     * <p>Filters by IP content by performing a LIKE query on the configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>1.2.3.4</p>
@@ -68,7 +68,7 @@ public class ListGlobalPoliciesRequest extends TeaModel {
     public String ipAccessControlContent;
 
     /**
-     * <p>The protocol layer to filter by. L4 queries config entries that contain L4. L7 queries config entries that do not contain L4.</p>
+     * <p>Filters by protocol layer. If you specify L4, configurations containing L4 are queried. If you specify L7, configurations that do not contain L4 are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>L7</p>
@@ -77,7 +77,7 @@ public class ListGlobalPoliciesRequest extends TeaModel {
     public String ipAccessControlProtocolLayer;
 
     /**
-     * <p>The resource name to filter by. A LIKE match is performed on the config field.</p>
+     * <p>Filters by resource name by performing a LIKE query on the configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>my-route</p>
@@ -86,7 +86,7 @@ public class ListGlobalPoliciesRequest extends TeaModel {
     public String ipAccessControlResourceName;
 
     /**
-     * <p>The IP access control type to filter by. A LIKE match is performed on the config field.</p>
+     * <p>Filters by IP access control type by performing a LIKE query on the configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>White / Black</p>
@@ -95,7 +95,7 @@ public class ListGlobalPoliciesRequest extends TeaModel {
     public String ipAccessControlType;
 
     /**
-     * <p>The exact policy name to filter by.</p>
+     * <p>Filters by exact policy name.</p>
      * 
      * <strong>example:</strong>
      * <p>my-jwt-auth</p>

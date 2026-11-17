@@ -38,7 +38,7 @@ public class ListChatSessionsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token for the next page. An empty value indicates that the last page has been reached.</p>
+     * <p>The cursor for the next page. An empty value indicates that the last page is reached.</p>
      * 
      * <strong>example:</strong>
      * <p>token-xxxxxxxx</p>
@@ -47,7 +47,7 @@ public class ListChatSessionsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>393E2630-DBE7-5221-AB35-9E740675491A</p>
@@ -119,13 +119,13 @@ public class ListChatSessionsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The list of API products associated with the session. Each element in the list is named product.</p>
+         * <p>The list of API products associated with the session. The list element is named product.</p>
          */
         @NameInMap("products")
         public java.util.List<String> products;
 
         /**
-         * <p>The ID of the chat session. You can use this ID to locate the session in API operations such as UpdateChatSession, DeleteChatSession, and ListConversations.</p>
+         * <p>The chat session ID. You can use this ID to locate the session in operations such as UpdateChatSession, DeleteChatSession, and ListConversations.</p>
          * 
          * <strong>example:</strong>
          * <p>ses-xxxxxxxx</p>
@@ -134,7 +134,7 @@ public class ListChatSessionsResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The conversation type of the session. Valid values: MODEL and AGENT. These values are defined in the talkType request parameter of the CreateChatSession operation. This response parameter does not include the @enums annotation.</p>
+         * <p>The conversation type of the session. Valid values: MODEL and AGENT. This set of valid values is declared in the talkType enum of the CreateChatSession request parameter, and no @enums annotation is attached to this response parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>MODEL</p>
@@ -183,7 +183,7 @@ public class ListChatSessionsResponseBody extends TeaModel {
 
     public static class ListChatSessionsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of chat sessions. Each element in the list is named session and represents a chat session.</p>
+         * <p>The list of chat sessions. The list element is named session, and each element represents a chat session.</p>
          */
         @NameInMap("content")
         public java.util.List<ListChatSessionsResponseBodyDataContent> content;
@@ -198,7 +198,7 @@ public class ListChatSessionsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

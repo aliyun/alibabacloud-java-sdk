@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHttpApiRoutesRequest extends TeaModel {
     /**
-     * <p>The backend service name. You can use this name to filter routes.</p>
+     * <p>The backend service name. You can use this service name to filter routing.</p>
      * 
      * <strong>example:</strong>
      * <p>test-svc</p>
@@ -14,7 +14,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String backendServiceName;
 
     /**
-     * <p>The ID of the consumer authorization rule used to filter the route list. The route list in the response contains only authorized routes.</p>
+     * <p>The ID of the consumer authorization rule used to filter the API list. The API list in the response includes only authorized APIs.</p>
      * 
      * <strong>example:</strong>
      * <p>cas-xxx</p>
@@ -23,7 +23,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String consumerAuthorizationRuleId;
 
     /**
-     * <p>The deployment status of the route.</p>
+     * <p>The deployment statuses of the routes.</p>
      * 
      * <strong>example:</strong>
      * <p>NotDeployed</p>
@@ -32,7 +32,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String deployStatuses;
 
     /**
-     * <p>The ID of the domain name used to filter route information.</p>
+     * <p>The domain name ID used to filter route information.</p>
      * 
      * <strong>example:</strong>
      * <p>d-xxx</p>
@@ -47,10 +47,11 @@ public class ListHttpApiRoutesRequest extends TeaModel {
      * <p>env-cpqnr6tlhtgubc***</p>
      */
     @NameInMap("environmentId")
+    @Deprecated
     public String environmentId;
 
     /**
-     * <p>Specifies whether the query is for a deployment scenario.</p>
+     * <p>Specifies whether the request is for a deployment scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,7 +60,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public Boolean forDeploy;
 
     /**
-     * <p>The cloud-native API gateway ID.</p>
+     * <p>The ID of the cloud-native API gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-cpv4sqdl****</p>
@@ -77,7 +78,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The route name used for fuzzy match.</p>
+     * <p>The keyword used to perform a fuzzy search by route name.</p>
      * 
      * <strong>example:</strong>
      * <p>item</p>
@@ -86,7 +87,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String nameLike;
 
     /**
-     * <p>The page number. Pages start from 1. If you do not specify this parameter, the default value is 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -95,7 +96,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -104,7 +105,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The route path used for fuzzy match.</p>
+     * <p>The keyword used to perform a fuzzy search by route path.</p>
      * 
      * <strong>example:</strong>
      * <p>/v1</p>
@@ -122,7 +123,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public Boolean withAuthPolicyInfo;
 
     /**
-     * <p>Specifies whether to include the authorization rule list of the specified consumer ID in each route in the response.</p>
+     * <p>Specifies whether to include the authorization rules of a specified consumer ID in each route entry in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>cs-xxx</p>
@@ -131,7 +132,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     public String withConsumerInfoById;
 
     /**
-     * <p>Specifies whether to include the mount information of the specified plugin ID in each route in the response.</p>
+     * <p>Specifies whether to include the mount information of a specified plug-in ID in each route entry in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>pl-xxx</p>
@@ -176,6 +177,7 @@ public class ListHttpApiRoutesRequest extends TeaModel {
         return this.domainId;
     }
 
+    @Deprecated
     public ListHttpApiRoutesRequest setEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;

@@ -85,7 +85,7 @@ public class CreateMcpServerResponseBody extends TeaModel {
         public String mcpServerId;
 
         /**
-         * <p>The MCP server name.</p>
+         * <p>The name of the MCP server.</p>
          * 
          * <strong>example:</strong>
          * <p>test-mcp</p>

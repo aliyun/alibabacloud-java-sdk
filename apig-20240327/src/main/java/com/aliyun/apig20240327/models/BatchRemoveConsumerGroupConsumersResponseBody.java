@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchRemoveConsumerGroupConsumersResponseBody extends TeaModel {
     /**
-     * <p>The response status code. Returns Ok if the request succeeds.</p>
+     * <p>The response status code. Ok is returned if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>

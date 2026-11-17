@@ -20,7 +20,7 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The current ExtProc service selection for fixed DFP routes. You can only edit mounted routes. This parameter cannot be submitted together with backendConfig, mcpRouteConfig, or policyConfigs.</p>
+     * <p>The ExtProc service selection for fixed DFP routes. You can only edit mounted routes. This parameter cannot be submitted together with backendConfig, mcpRouteConfig, or policyConfigs.</p>
      */
     @NameInMap("dfpConfig")
     public UpdateHttpApiRouteRequestDfpConfig dfpConfig;
@@ -38,7 +38,17 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
      * <p>env-cquqsollhtgid***</p>
      */
     @NameInMap("environmentId")
+    @Deprecated
     public String environmentId;
+
+    /**
+     * <p>The gateway ID. This parameter is used to replace the deprecated environment ID for verifying the gateway to which the route belongs. If the gateway ID does not match the gateway to which the route record belongs, the request is rejected. If the environment ID is omitted, the route ownership remains unchanged.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-xxx</p>
+     */
+    @NameInMap("gatewayId")
+    public String gatewayId;
 
     /**
      * <p>The route match rule.</p>
@@ -95,12 +105,21 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         return this.domainIds;
     }
 
+    @Deprecated
     public UpdateHttpApiRouteRequest setEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
     }
     public String getEnvironmentId() {
         return this.environmentId;
+    }
+
+    public UpdateHttpApiRouteRequest setGatewayId(String gatewayId) {
+        this.gatewayId = gatewayId;
+        return this;
+    }
+    public String getGatewayId() {
+        return this.gatewayId;
     }
 
     public UpdateHttpApiRouteRequest setMatch(HttpRouteMatch match) {
@@ -129,7 +148,7 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
 
     public static class UpdateHttpApiRouteRequestBackendConfigServices extends TeaModel {
         /**
-         * <p>The service group. Used in HTTP-to-Dubbo conversion scenarios.</p>
+         * <p>The service group. Used for HTTP-to-Dubbo conversion scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT_GROUP</p>
@@ -138,7 +157,7 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The HTTP-to-Dubbo protocol conversion configuration. This configuration is only supported for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</p>
+         * <p>The HTTP-to-Dubbo protocol conversion configuration. Only SingleService MSE_NACOS DUBBO backends of HTTP APIs are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;dubboServiceName&quot;:&quot;com.alibaba.nacos.example.dubbo.service.DemoService&quot;,&quot;dubboServiceVersion&quot;:&quot;1.0.0&quot;,&quot;dubboServiceGroup&quot;:&quot;DEV&quot;,&quot;methodMapList&quot;:[{&quot;dubboMethodName&quot;:&quot;sayName&quot;,&quot;httpMethod&quot;:&quot;ALL_GET&quot;,&quot;methodPath&quot;:&quot;/dubbo/sayName&quot;,&quot;passThroughAllHeaders&quot;:&quot;PASS_ALL&quot;}]}</p>
@@ -147,7 +166,7 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         public HttpDubboTranscoder httpDubboTranscoder;
 
         /**
-         * <p>The name of the target model. This field is shared by multiple existing model backend scenarios. The specific routing or model rewriting semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If it is not configured for the AiAutoRouter scenario, the default model of the AI service is used.</p>
+         * <p>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewriting semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If this field is not configured for the AiAutoRouter scenario, the default model of the AI service is used.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
@@ -156,7 +175,7 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         public String modelName;
 
         /**
-         * <p>The service namespace. Used in HTTP-to-Dubbo conversion scenarios.</p>
+         * <p>The service namespace. Used for HTTP-to-Dubbo conversion scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>public</p>
@@ -176,8 +195,8 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         /**
          * <p>The service protocol. Valid values:</p>
          * <ul>
-         * <li>HTTP.</li>
-         * <li>HTTPS.</li>
+         * <li>HTTP</li>
+         * <li>HTTPS</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -11,7 +11,7 @@ public class AiPluginStatus extends TeaModel {
     public java.util.List<java.util.Map<String, ?>> errorLogs;
 
     /**
-     * <p>The plug-in instance ID.</p>
+     * <p>The ID of the plug-in instance.</p>
      * 
      * <strong>example:</strong>
      * <p>pi-xxx</p>
@@ -20,7 +20,7 @@ public class AiPluginStatus extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>Indicates whether the backend service that the plugin depends on is healthy.</p>
+     * <p>Indicates whether the backend service on which the plug-in depends is healthy.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

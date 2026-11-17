@@ -112,7 +112,7 @@ public class ListPortalPublicationsResponseBody extends TeaModel {
         public String productName;
 
         /**
-         * <p>The API product type. The valid values are not defined in the API specification. Refer to the types displayed in the console.</p>
+         * <p>The API product type. The valid values are not declared in the API definition. Refer to the types displayed in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP_API</p>
@@ -121,7 +121,7 @@ public class ListPortalPublicationsResponseBody extends TeaModel {
         public String productType;
 
         /**
-         * <p>The publication record ID of the API product. This ID is returned when an API product is published to a portal by using the PublishProduct operation. You can use this ID in the /himarket/v1/products/{productId}/publications/{publicationId} path to locate the publication record for the UnpublishProduct operation.</p>
+         * <p>The publication record ID of the API product. This ID is returned when you use PublishProduct to publish an API product to a portal. You can use this ID in the /himarket/v1/products/{productId}/publications/{publicationId} path to locate the publication record for the UnpublishProduct operation.</p>
          * 
          * <strong>example:</strong>
          * <p>publication-xxxxxxxx</p>
@@ -186,7 +186,7 @@ public class ListPortalPublicationsResponseBody extends TeaModel {
 
     public static class ListPortalPublicationsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of published API products on the portal. The list elements are named portalConfig, and each element represents an API product publication record.</p>
+         * <p>The list of published API products on the portal. The list elements are named portalConfig, and each element represents a publication record of an API product.</p>
          */
         @NameInMap("content")
         public java.util.List<ListPortalPublicationsResponseBodyDataContent> content;

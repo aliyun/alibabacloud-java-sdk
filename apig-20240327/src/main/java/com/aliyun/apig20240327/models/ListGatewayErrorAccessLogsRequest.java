@@ -14,7 +14,7 @@ public class ListGatewayErrorAccessLogsRequest extends TeaModel {
     public String authority;
 
     /**
-     * <p>The end time of the query window, in UNIX seconds. The value cannot be later than the current time, and the time span must be less than or equal to 24 hours.</p>
+     * <p>The end time of the query window, in UNIX seconds. The value cannot be later than the current time, and the time span cannot exceed 24 hours.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListGatewayErrorAccessLogsRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The exact filter for the gateway request ID (x-acs-request-id).</p>
+     * <p>The gateway request ID filter. This parameter performs an exact match on the x-acs-request-id field.</p>
      * 
      * <strong>example:</strong>
      * <p>E5D4xxxx</p>
@@ -42,7 +42,7 @@ public class ListGatewayErrorAccessLogsRequest extends TeaModel {
     public String path;
 
     /**
-     * <p>The specific HTTP error code. Only three-digit numbers in the range of 400 to 599 are accepted. This parameter is required. If it is not provided, the API returns the InvalidParameter.WithDetail(400) error.</p>
+     * <p>The specific HTTP error code. Only three-digit numbers in the range of 400 to 599 are accepted. This parameter is required. If it is not provided, the API returns an InvalidParameter.WithDetail(400) error.</p>
      * 
      * <strong>example:</strong>
      * <p>502</p>

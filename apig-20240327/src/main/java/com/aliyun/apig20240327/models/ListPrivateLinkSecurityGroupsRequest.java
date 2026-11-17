@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrivateLinkSecurityGroupsRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return.</p>
+     * <p>The maximum number of results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListPrivateLinkSecurityGroupsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The next token.</p>
+     * <p>The token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>next-token-xxxxxxxx</p>
@@ -23,7 +23,7 @@ public class ListPrivateLinkSecurityGroupsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the VPC owned by the currently authorized user. The candidate security groups must belong to this VPC.</p>
+     * <p>The ID of the VPC owned by the authorized user. The candidate security groups must belong to this VPC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

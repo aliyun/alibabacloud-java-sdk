@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCategoryProductsRequest extends TeaModel {
     /**
-     * <p>The operation type for the bulk operation. This parameter specifies whether to add the API products specified by productIds to the category or remove them from the category. The valid values are not declared in the API definition.</p>
+     * <p>The direction of this batch operation. It specifies whether to add the API products in productIds to the category or remove these API products from the category. The set of valid values is not declared in the API definition.</p>
      * 
      * <strong>example:</strong>
      * <p>action-xxxxxxxx</p>
@@ -14,7 +14,7 @@ public class UpdateCategoryProductsRequest extends TeaModel {
     public String action;
 
     /**
-     * <p>The list of API product IDs to be processed. Each element is the primary ID of an API product resource.</p>
+     * <p>The list of API product IDs to process. Each element is a primary ID of the Product resource.</p>
      */
     @NameInMap("productIds")
     public java.util.List<String> productIds;

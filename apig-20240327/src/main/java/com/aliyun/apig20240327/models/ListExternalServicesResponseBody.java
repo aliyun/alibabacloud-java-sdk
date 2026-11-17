@@ -14,7 +14,7 @@ public class ListExternalServicesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The list of APIs.</p>
+     * <p>The list of operations.</p>
      */
     @NameInMap("data")
     public ListExternalServicesResponseBodyData data;

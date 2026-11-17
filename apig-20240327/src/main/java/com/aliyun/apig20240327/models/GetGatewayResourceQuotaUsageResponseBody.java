@@ -79,7 +79,7 @@ public class GetGatewayResourceQuotaUsageResponseBody extends TeaModel {
 
     public static class GetGatewayResourceQuotaUsageResponseBodyDataItems extends TeaModel {
         /**
-         * <p>Specifies whether the quota value is provided.</p>
+         * <p>Indicates whether the quota value is provided.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -124,7 +124,7 @@ public class GetGatewayResourceQuotaUsageResponseBody extends TeaModel {
         public Long used;
 
         /**
-         * <p>The scope of usage statistics.</p>
+         * <p>The usage statistics scope.</p>
          * 
          * <strong>example:</strong>
          * <p>GATEWAY</p>
@@ -207,7 +207,7 @@ public class GetGatewayResourceQuotaUsageResponseBody extends TeaModel {
         public java.util.List<GetGatewayResourceQuotaUsageResponseBodyDataItems> items;
 
         /**
-         * <p>The time when the statistics collection was completed.</p>
+         * <p>The statistics completion time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-17T08:00:00Z</p>

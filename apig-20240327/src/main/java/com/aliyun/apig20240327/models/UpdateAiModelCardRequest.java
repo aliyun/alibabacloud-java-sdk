@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class UpdateAiModelCardRequest extends TeaModel {
     /**
-     * <p>The list of invocation paths supported by the model. Each item must include both path and type. The entire list is overwritten during an update.</p>
+     * <p>The list of invocation paths supported by the model. Each item must contain both path and type. During an update, the entire list is overwritten.</p>
      */
     @NameInMap("availablePaths")
     public java.util.List<UpdateAiModelCardRequestAvailablePaths> availablePaths;
 
     /**
-     * <p>The credit billing information of the model. Only the fixed type is supported. The unit is Credits per million tokens. If not specified, all cost values default to 0.</p>
+     * <p>The credit billing information of the model. Currently, only the fixed type is supported, and the fee unit is Credits per million tokens. If not specified, all fees default to 0.</p>
      */
     @NameInMap("credit")
     public UpdateAiModelCardRequestCredit credit;
 
     /**
-     * <p>The model capability switches. Keys must be model capability names supported by the API gateway. Values are Boolean.</p>
+     * <p>The model capability switches. The keys must be model capability names supported by the API gateway, and the values are Boolean values.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;functionCalling&quot;:true,&quot;toolChoice&quot;:true,&quot;promptCaching&quot;:false}</p>
@@ -26,13 +26,13 @@ public class UpdateAiModelCardRequest extends TeaModel {
     public java.util.Map<String, ?> features;
 
     /**
-     * <p>The token limits and input/output modality information of the model.</p>
+     * <p>The token limits and input and output modality information of the model.</p>
      */
     @NameInMap("meta")
     public UpdateAiModelCardRequestMeta meta;
 
     /**
-     * <p>The model name. The name must be unique within the same AI gateway instance and the same model provider. Maximum length: 256 characters.</p>
+     * <p>The model name. It must be unique within the same AI gateway instance and model provider, and be up to 256 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class UpdateAiModelCardRequest extends TeaModel {
     public String modelName;
 
     /**
-     * <p>The model provider identifier. The value must reference an existing model provider in the target AI gateway instance. Maximum length: 128 characters.</p>
+     * <p>The model provider identifier. It must reference an existing model provider in the target AI gateway instance and be up to 128 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class UpdateAiModelCardRequest extends TeaModel {
 
     public static class UpdateAiModelCardRequestAvailablePaths extends TeaModel {
         /**
-         * <p>The model invocation path. Maximum length: 2048 characters.</p>
+         * <p>The model invocation path, which is up to 2,048 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>/v1/chat/completions</p>
@@ -115,7 +115,7 @@ public class UpdateAiModelCardRequest extends TeaModel {
         public String path;
 
         /**
-         * <p>The protocol type of the path. Maximum length: 64 characters.</p>
+         * <p>The protocol type corresponding to the path, which is up to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>OpenAICompatible</p>
@@ -148,7 +148,7 @@ public class UpdateAiModelCardRequest extends TeaModel {
 
     public static class UpdateAiModelCardRequestCredit extends TeaModel {
         /**
-         * <p>The cost of cache-hit tokens, in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</p>
+         * <p>The cache hit token fee, in Credits per million tokens. The value must be greater than or equal to 0. If not specified, the default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -157,7 +157,7 @@ public class UpdateAiModelCardRequest extends TeaModel {
         public Float cacheCost;
 
         /**
-         * <p>The cost of input tokens, in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</p>
+         * <p>The input token fee, in Credits per million tokens. The value must be greater than or equal to 0. If not specified, the default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1.5</p>
@@ -166,7 +166,7 @@ public class UpdateAiModelCardRequest extends TeaModel {
         public Float inputCost;
 
         /**
-         * <p>The cost of output tokens, in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</p>
+         * <p>The output token fee, in Credits per million tokens. The value must be greater than or equal to 0. If not specified, the default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -175,7 +175,7 @@ public class UpdateAiModelCardRequest extends TeaModel {
         public Float outputCost;
 
         /**
-         * <p>The billing type. Only fixed is supported. Default value: fixed.</p>
+         * <p>The billing type. Currently, only fixed is supported. If not specified, the default value is fixed.</p>
          * 
          * <strong>example:</strong>
          * <p>fixed</p>
@@ -251,13 +251,13 @@ public class UpdateAiModelCardRequest extends TeaModel {
         public Long maxTokens;
 
         /**
-         * <p>The list of input modalities supported by the model. The list contains up to 16 items, and each item must not be empty.</p>
+         * <p>The list of input modalities supported by the model. It can contain up to 16 items, and each item cannot be empty.</p>
          */
         @NameInMap("supportedInputModalities")
         public java.util.List<String> supportedInputModalities;
 
         /**
-         * <p>The list of output modalities supported by the model. The list contains up to 16 items, and each item must not be empty.</p>
+         * <p>The list of output modalities supported by the model. It can contain up to 16 items, and each item cannot be empty.</p>
          */
         @NameInMap("supportedOutputModalities")
         public java.util.List<String> supportedOutputModalities;
