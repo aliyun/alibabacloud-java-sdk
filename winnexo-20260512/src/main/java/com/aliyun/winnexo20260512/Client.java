@@ -5846,6 +5846,132 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Idempotently disables session sharing owned by the current calling user. Existing share links become invalid immediately.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables session sharing.</p>
+     * 
+     * @param request DisableConversationShareRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableConversationShareResponse
+     */
+    public DisableConversationShareResponse disableConversationShareWithOptions(DisableConversationShareRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("sessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableConversationShare"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/disableConversationShare"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableConversationShareResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Idempotently disables session sharing owned by the current calling user. Existing share links become invalid immediately.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables session sharing.</p>
+     * 
+     * @param request DisableConversationShareRequest
+     * @return DisableConversationShareResponse
+     */
+    public DisableConversationShareResponse disableConversationShare(DisableConversationShareRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.disableConversationShareWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Idempotently disables sharing for output item details owned by the current calling user, and immediately invalidates previous sharing links. You can locate the target by outputItemId, or precisely by sessionId and outputItemName.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables sharing for output item details.</p>
+     * 
+     * @param request DisableOutputItemShareRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableOutputItemShareResponse
+     */
+    public DisableOutputItemShareResponse disableOutputItemShareWithOptions(DisableOutputItemShareRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.outputItemId)) {
+            body.put("outputItemId", request.outputItemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputItemName)) {
+            body.put("outputItemName", request.outputItemName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("sessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableOutputItemShare"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/disableOutputItemShare"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableOutputItemShareResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Idempotently disables sharing for output item details owned by the current calling user, and immediately invalidates previous sharing links. You can locate the target by outputItemId, or precisely by sessionId and outputItemName.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables sharing for output item details.</p>
+     * 
+     * @param request DisableOutputItemShareRequest
+     * @return DisableOutputItemShareResponse
+     */
+    public DisableOutputItemShareResponse disableOutputItemShare(DisableOutputItemShareRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.disableOutputItemShareWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Disables the INSTANCE token of a user.
      *     Business logic:
      *     1. Retrieves user_id from identity (caller_type=user is enforced).
@@ -5913,6 +6039,176 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.disableTokenWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Enables sharing for a session owned by the current calling user and returns the sharing link. The first time sharing is enabled, a snapshot of the currently shareable messages is taken. Subsequent enabling retains the original link.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables session sharing and retrieves the sharing link.</p>
+     * 
+     * @param tmpReq EnableConversationShareRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableConversationShareResponse
+     */
+    public EnableConversationShareResponse enableConversationShareWithOptions(EnableConversationShareRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        EnableConversationShareShrinkRequest request = new EnableConversationShareShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.shareUserGroupIds)) {
+            request.shareUserGroupIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.shareUserGroupIds, "shareUserGroupIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.shareUserIds)) {
+            request.shareUserIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.shareUserIds, "shareUserIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("sessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareAccessType)) {
+            body.put("shareAccessType", request.shareAccessType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareUserGroupIdsShrink)) {
+            body.put("shareUserGroupIds", request.shareUserGroupIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareUserIdsShrink)) {
+            body.put("shareUserIds", request.shareUserIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableConversationShare"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/enableConversationShare"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableConversationShareResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Enables sharing for a session owned by the current calling user and returns the sharing link. The first time sharing is enabled, a snapshot of the currently shareable messages is taken. Subsequent enabling retains the original link.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables session sharing and retrieves the sharing link.</p>
+     * 
+     * @param request EnableConversationShareRequest
+     * @return EnableConversationShareResponse
+     */
+    public EnableConversationShareResponse enableConversationShare(EnableConversationShareRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.enableConversationShareWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Enables sharing for an output item owned by the current caller and returns the share link. You can locate the output item by outputItemId, or precisely locate it by sessionId and outputItemName. If both methods are provided, outputItemId takes precedence.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables sharing for an output item and retrieves the share link.</p>
+     * 
+     * @param tmpReq EnableOutputItemShareRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableOutputItemShareResponse
+     */
+    public EnableOutputItemShareResponse enableOutputItemShareWithOptions(EnableOutputItemShareRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        EnableOutputItemShareShrinkRequest request = new EnableOutputItemShareShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.shareUserGroupIds)) {
+            request.shareUserGroupIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.shareUserGroupIds, "shareUserGroupIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.shareUserIds)) {
+            request.shareUserIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.shareUserIds, "shareUserIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.outputItemId)) {
+            body.put("outputItemId", request.outputItemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputItemName)) {
+            body.put("outputItemName", request.outputItemName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("sessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareAccessType)) {
+            body.put("shareAccessType", request.shareAccessType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareUserGroupIdsShrink)) {
+            body.put("shareUserGroupIds", request.shareUserGroupIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareUserIdsShrink)) {
+            body.put("shareUserIds", request.shareUserIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableOutputItemShare"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/enableOutputItemShare"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableOutputItemShareResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Enables sharing for an output item owned by the current caller and returns the share link. You can locate the output item by outputItemId, or precisely locate it by sessionId and outputItemName. If both methods are provided, outputItemId takes precedence.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables sharing for an output item and retrieves the share link.</p>
+     * 
+     * @param request EnableOutputItemShareRequest
+     * @return EnableOutputItemShareResponse
+     */
+    public EnableOutputItemShareResponse enableOutputItemShare(EnableOutputItemShareRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.enableOutputItemShareWithOptions(request, headers, runtime);
     }
 
     /**
@@ -9921,6 +10217,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Reads the connected DingTalk, AliDing, or WeCom group chat sources, and paginates the results in ascending order by send time and message record ID. Each message includes the original text, as well as document content, image descriptions, or audio and video transcriptions arranged in the order they appear in the message. The caller must have read permissions for the source. Reading does not trigger attachment parsing. Pagination provides a real-time view, and historical backfilling may change pagination positions. Attachment content is retrieved from the Document Agent. For unparsed items, the API returns found=false and the local processing status. Upstream failures return errors.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Reads group chat text and multimedia content in message order.</p>
+     * 
+     * @param request ListChatMessageContentsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListChatMessageContentsResponse
+     */
+    public ListChatMessageContentsResponse listChatMessageContentsWithOptions(ListChatMessageContentsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxCharsPerAttachment)) {
+            body.put("maxCharsPerAttachment", request.maxCharsPerAttachment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            body.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            body.put("sourceId", request.sourceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListChatMessageContents"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/listChatMessageContents"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListChatMessageContentsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Reads the connected DingTalk, AliDing, or WeCom group chat sources, and paginates the results in ascending order by send time and message record ID. Each message includes the original text, as well as document content, image descriptions, or audio and video transcriptions arranged in the order they appear in the message. The caller must have read permissions for the source. Reading does not trigger attachment parsing. Pagination provides a real-time view, and historical backfilling may change pagination positions. Attachment content is retrieved from the Document Agent. For unparsed items, the API returns found=false and the local processing status. Upstream failures return errors.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Reads group chat text and multimedia content in message order.</p>
+     * 
+     * @param request ListChatMessageContentsRequest
+     * @return ListChatMessageContentsResponse
+     */
+    public ListChatMessageContentsResponse listChatMessageContents(ListChatMessageContentsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listChatMessageContentsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
      * <li>This API operation supports filtering and sorting by multiple parameters, including tenant ID, page size, pagination token, keyword search, digital employee name, and update time range.</li>
@@ -13066,6 +13433,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.previewKnowledgeBaseSourceWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Previews the output that the current calling user has permission to access based on the output item ID. This operation supports managed versions, archived history, unversioned history, and non-file outputs such as emails and slide decks. If a short-term preview or download URL is returned, you must call the operation again after the URL expires.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Previews an output file or a non-file output.</p>
+     * 
+     * @param request PreviewOutputFileRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PreviewOutputFileResponse
+     */
+    public PreviewOutputFileResponse previewOutputFileWithOptions(PreviewOutputFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.outputItemId)) {
+            body.put("outputItemId", request.outputItemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            body.put("versionId", request.versionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PreviewOutputFile"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/previewOutputFile"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PreviewOutputFileResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Previews the output that the current calling user has permission to access based on the output item ID. This operation supports managed versions, archived history, unversioned history, and non-file outputs such as emails and slide decks. If a short-term preview or download URL is returned, you must call the operation again after the URL expires.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Previews an output file or a non-file output.</p>
+     * 
+     * @param request PreviewOutputFileRequest
+     * @return PreviewOutputFileResponse
+     */
+    public PreviewOutputFileResponse previewOutputFile(PreviewOutputFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.previewOutputFileWithOptions(request, headers, runtime);
     }
 
     /**
@@ -18455,6 +18885,107 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateScheduledTaskWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the sharing status and scope of a session or output item. Only output items support refreshing the sharing link. For session targets, use sessionId. For output targets, use outputItemId or a combination of sessionId and outputItemName.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the sharing status, scope, or output link.</p>
+     * 
+     * @param tmpReq UpdateShareRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateShareResponse
+     */
+    public UpdateShareResponse updateShareWithOptions(UpdateShareRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateShareShrinkRequest request = new UpdateShareShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.shareUserGroupIds)) {
+            request.shareUserGroupIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.shareUserGroupIds, "shareUserGroupIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.shareUserIds)) {
+            request.shareUserIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.shareUserIds, "shareUserIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("tenantId", request.tenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.outputItemId)) {
+            body.put("outputItemId", request.outputItemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputItemName)) {
+            body.put("outputItemName", request.outputItemName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.refreshShareLink)) {
+            body.put("refreshShareLink", request.refreshShareLink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("sessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareAccessType)) {
+            body.put("shareAccessType", request.shareAccessType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareEnabled)) {
+            body.put("shareEnabled", request.shareEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareUserGroupIdsShrink)) {
+            body.put("shareUserGroupIds", request.shareUserGroupIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareUserIdsShrink)) {
+            body.put("shareUserIds", request.shareUserIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
+            body.put("targetType", request.targetType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateShare"),
+            new TeaPair("version", "2026-05-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/updateShare"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateShareResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the sharing status and scope of a session or output item. Only output items support refreshing the sharing link. For session targets, use sessionId. For output targets, use outputItemId or a combination of sessionId and outputItemName.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the sharing status, scope, or output link.</p>
+     * 
+     * @param request UpdateShareRequest
+     * @return UpdateShareResponse
+     */
+    public UpdateShareResponse updateShare(UpdateShareRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateShareWithOptions(request, headers, runtime);
     }
 
     /**
