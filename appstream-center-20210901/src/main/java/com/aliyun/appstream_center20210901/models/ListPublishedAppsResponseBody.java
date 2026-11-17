@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListPublishedAppsResponseBody extends TeaModel {
     /**
-     * <p>The list of application records on the current page. Each record corresponds to a deployed application in a published delivery group. The list is sorted by the creation time of the delivery group in descending order. An empty list is returned if no results match or the requested page exceeds the result range.</p>
+     * <p>The list of application records on the current page. Each record corresponds to a deployed application in a published delivery group, sorted in descending order of the creation time of the associated delivery group. If no matching results are found or the requested page exceeds the result range, an empty list is returned.</p>
      */
     @NameInMap("Apps")
     public java.util.List<ListPublishedAppsResponseBodyApps> apps;
 
     /**
-     * <p>The page number specified in this request.</p>
+     * <p>The page number specified in the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListPublishedAppsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records per page specified in this request. This value does not represent the actual number of records returned on the current page. The actual number may be less than this value.</p>
+     * <p>The number of records per page specified in the current request. This value does not represent the actual number of records returned on the current page. The actual number on the current page may be less than this value.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListPublishedAppsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID. You can use this ID to locate and troubleshoot issues.</p>
+     * <p>The unique identifier of the current request, which can be used to troubleshoot request issues.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -38,7 +38,7 @@ public class ListPublishedAppsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records that match all filter conditions. Records are counted on a per-delivery-group-plus-application basis. If the same application appears in multiple published delivery groups, each combination is counted separately. This value does not represent the number of records returned on the current page. The value is <code>0</code> if no results match.</p>
+     * <p>The total number of records that meet all filter conditions. The count is based on the &quot;delivery group + application&quot; combination. If the same application appears in multiple published delivery groups, it is counted separately. This value is not the number of records returned on the current page. If no matching results are found, the value is <code>0</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -93,7 +93,7 @@ public class ListPublishedAppsResponseBody extends TeaModel {
 
     public static class ListPublishedAppsResponseBodyApps extends TeaModel {
         /**
-         * <p>The URL of the application icon.</p>
+         * <p>The access URL of the application icon.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://app-center-icon-****.png">https://app-center-icon-****.png</a></p>
@@ -102,7 +102,7 @@ public class ListPublishedAppsResponseBody extends TeaModel {
         public String appIcon;
 
         /**
-         * <p>The application ID. Pass this value together with <code>AppInstanceGroupId</code> when you invoke the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to authorize users for this application.</p>
+         * <p>The application ID. When you invoke the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to grant authorization to a user for this application, pass this value together with <code>AppInstanceGroupId</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>ca-i87mycyn419nu****</p>
@@ -111,7 +111,7 @@ public class ListPublishedAppsResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The ID of the published delivery group to which this application belongs.</p>
+         * <p>The ID of the published delivery group to which the application belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-9ciijz60n4xsv****</p>
@@ -120,10 +120,10 @@ public class ListPublishedAppsResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
-         * <p>The name of the published delivery group to which this application belongs.</p>
+         * <p>The name of the published delivery group to which the application belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>OfficeApps</p>
+         * <p>Office applications</p>
          */
         @NameInMap("AppInstanceGroupName")
         public String appInstanceGroupName;
@@ -132,7 +132,7 @@ public class ListPublishedAppsResponseBody extends TeaModel {
          * <p>The application name.</p>
          * 
          * <strong>example:</strong>
-         * <p>OfficeApps</p>
+         * <p>Office applications</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -147,7 +147,7 @@ public class ListPublishedAppsResponseBody extends TeaModel {
         public String appVersion;
 
         /**
-         * <p>The application version name, which is the name assigned to this version when the application was published.</p>
+         * <p>The application version name, which is the name set for this version when the application is published.</p>
          * 
          * <strong>example:</strong>
          * <p>Initial version</p>
@@ -156,7 +156,7 @@ public class ListPublishedAppsResponseBody extends TeaModel {
         public String appVersionName;
 
         /**
-         * <p>The number of users authorized by application for this application within its delivery group. Only users authorized through <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> by application are counted. The value is <code>0</code> if no users have been authorized by application.</p>
+         * <p>The number of users currently authorized for this application on a per-application basis within the associated delivery group. Only users authorized on a per-application basis through <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> are counted. If no users are authorized on a per-application basis, <code>0</code> is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

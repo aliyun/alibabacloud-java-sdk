@@ -11,7 +11,7 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
     public GetBrowserInstanceGroupResponseBodyBrowserInstanceGroupModel browserInstanceGroupModel;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>01A0C2ED-95F2-1A37-9FC6-4A395179****</p>
@@ -160,13 +160,13 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
 
     public static class GetBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelBrowserConfig extends TeaModel {
         /**
-         * <p>The list of browser bookmarks. A maximum of 20 bookmarks are returned. To query the complete list of bookmarks, call the <code>ListBrowserBookmarks</code> operation.</p>
+         * <p>The list of browser bookmarks. A maximum of 20 bookmarks are returned. To query the complete list of bookmarks, call the ListBrowserBookmarks operation.</p>
          */
         @NameInMap("Bookmarks")
         public java.util.List<GetBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelBrowserConfigBookmarks> bookmarks;
 
         /**
-         * <p>The browser startup parameters. For example, <code>--incognito</code> specifies an incognito window.</p>
+         * <p>The browser startup parameters. For example, --incognito specifies an incognito window.</p>
          * 
          * <strong>example:</strong>
          * <p>--incognito</p>
@@ -175,7 +175,7 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String browserParam;
 
         /**
-         * <p>The cookie synchronization configuration. A value of <code>true</code> indicates that synchronization is enabled, and a value of <code>false</code> indicates that synchronization is disabled.</p>
+         * <p>The cookie synchronization configuration. A string value of true indicates that synchronization is enabled, and false indicates that synchronization is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -233,7 +233,7 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
 
     public static class GetBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelDuration extends TeaModel {
         /**
-         * <p>The current payment stage of the package. This parameter is not applicable to the MAU scenario.</p>
+         * <p>The current payment stage of the plan. This parameter is not applicable to the MAU scenario.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -244,7 +244,7 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String currentPayStage;
 
         /**
-         * <p>The end time of the package cycle. This parameter is not applicable to the MAU scenario and is not returned.</p>
+         * <p>The end time of the plan cycle. This parameter is not applicable to the MAU scenario and is not returned.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -255,7 +255,7 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String periodEndTime;
 
         /**
-         * <p>The start time of the package cycle. This parameter is not applicable to the MAU scenario and is not returned.</p>
+         * <p>The start time of the plan cycle. This parameter is not applicable to the MAU scenario and is not returned.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -266,7 +266,7 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String periodStartTime;
 
         /**
-         * <p>The total duration of the package, in seconds. This parameter is not applicable to the MAU scenario.</p>
+         * <p>The total duration of the plan, in seconds. This parameter is not applicable to the MAU scenario.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -277,7 +277,7 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public Integer totalDuration;
 
         /**
-         * <p>The used duration of the package, in seconds. This parameter is not applicable to the MAU scenario.</p>
+         * <p>The used duration of the plan, in seconds. This parameter is not applicable to the MAU scenario.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -378,10 +378,10 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
 
     public static class GetBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelNetwork extends TeaModel {
         /**
-         * <p>The website access restriction mode.</p>
+         * <p>The website access restriction mode. Valid values:</p>
          * <ul>
-         * <li><code>ALLOW_ALL</code>: allows all domain names.</li>
-         * <li><code>ALLOW_LIST</code>: allows only websites in the list.</li>
+         * <li>ALLOW_ALL: Allows all domain names.</li>
+         * <li>ALLOW_LIST: Allows only websites in the whitelist.</li>
          * </ul>
          * <p>The returned value reflects the current configuration of the browser instance group.</p>
          * 
@@ -401,13 +401,13 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The list of website access restrictions. A maximum of 20 restrictions are returned. To query the complete list, call the <code>ListBrowserRestrictedURLs</code> operation.</p>
+         * <p>The list of website access restrictions. A maximum of 20 entries are returned. To query the complete list, call the ListBrowserRestrictedURLs operation.</p>
          */
         @NameInMap("RestrictedURLs")
         public java.util.List<GetBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelNetworkRestrictedURLs> restrictedURLs;
 
         /**
-         * <p>The list of vSwitch IDs used by the browser instance group. This parameter is available for scenarios where custom networks are configured.</p>
+         * <p>The list of vSwitch IDs used by the browser instance group. This parameter is available for scenarios where a custom network is configured.</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
@@ -563,10 +563,10 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The action of the client access rule.</p>
+         * <p>The action of the client access rule. Valid values:</p>
          * <ul>
-         * <li><code>allow</code>: allows access.</li>
-         * <li><code>deny</code>: denies access.</li>
+         * <li>allow: Allows access.</li>
+         * <li>deny: Denies access.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -608,7 +608,8 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
 
     public static class GetBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelPolicyClientTypes extends TeaModel {
         /**
-         * <p>The client type. Valid values:</p>
+         * <p>The client type.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li><code>windows</code>: Windows client.</li>
          * <li><code>macos</code>: macOS client.</li>
@@ -617,7 +618,7 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
          * <li><code>android</code>: Android client.</li>
          * <li><code>ios</code>: iOS client.</li>
          * </ul>
-         * <p>This field reflects the existing access configurations and does not indicate that all clients are currently available for the product.</p>
+         * <p>This field reflects existing access configurations and does not indicate that all client types are currently supported by the product.</p>
          * 
          * <strong>example:</strong>
          * <p>windows</p>
@@ -626,10 +627,11 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String clientType;
 
         /**
-         * <p>The access policy switch for the client type. Valid values:</p>
+         * <p>The access policy switch for the client type.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li><code>on</code>: Allows access from this type of client.</li>
-         * <li><code>off</code>: Denies access from this type of client.</li>
+         * <li><code>on</code>: Allows access from this client type.</li>
+         * <li><code>off</code>: Denies access from this client type.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -663,12 +665,13 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
 
     public static class GetBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelPolicyClipboardPolicy extends TeaModel {
         /**
-         * <p>The clipboard transfer direction. The value is case-insensitive. Valid values:</p>
+         * <p>The clipboard transfer direction. The value is case-insensitive.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li><code>off</code>: Disabled in both directions.</li>
+         * <li><code>off</code>: Bidirectionally disabled.</li>
          * <li><code>read</code>: Allows copy and paste from the local PC to the cloud browser.</li>
          * <li><code>write</code>: Allows copy and paste from the cloud browser to the local PC.</li>
-         * <li><code>readwrite</code>: Enabled in both directions.</li>
+         * <li><code>readwrite</code>: Bidirectionally enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -687,7 +690,8 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public Integer clipboardReadLimit;
 
         /**
-         * <p>The clipboard control granularity. Valid values:</p>
+         * <p>The clipboard control granularity.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li><code>global</code>: Unified control.</li>
          * <li><code>grained</code>: Separate control for text, rich text, and files.</li>
@@ -700,7 +704,8 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String clipboardScope;
 
         /**
-         * <p>The clipboard size unit. Valid values:</p>
+         * <p>The clipboard size unit.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li><code>B</code>: Bytes.</li>
          * <li><code>KB</code>: 1024 bytes.</li>
@@ -722,12 +727,13 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public Integer clipboardWriteLimit;
 
         /**
-         * <p>The clipboard transfer direction. The value is case-insensitive. Valid values:</p>
+         * <p>The clipboard transfer direction. The value is case-insensitive.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li><code>off</code>: Disabled in both directions.</li>
+         * <li><code>off</code>: Bidirectionally disabled.</li>
          * <li><code>read</code>: Allows copy and paste from the local PC to the cloud browser.</li>
          * <li><code>write</code>: Allows copy and paste from the cloud browser to the local PC.</li>
-         * <li><code>readwrite</code>: Enabled in both directions.</li>
+         * <li><code>readwrite</code>: Bidirectionally enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -737,12 +743,13 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String fileClipboard;
 
         /**
-         * <p>The clipboard transfer direction. The value is case-insensitive. Valid values:</p>
+         * <p>The clipboard transfer direction. The value is case-insensitive.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li><code>off</code>: Disabled in both directions.</li>
+         * <li><code>off</code>: Bidirectionally disabled.</li>
          * <li><code>read</code>: Allows copy and paste from the local PC to the cloud browser.</li>
          * <li><code>write</code>: Allows copy and paste from the cloud browser to the local PC.</li>
-         * <li><code>readwrite</code>: Enabled in both directions.</li>
+         * <li><code>readwrite</code>: Bidirectionally enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -770,7 +777,8 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public Integer richTextClipboardReadLimit;
 
         /**
-         * <p>The clipboard size unit. Valid values:</p>
+         * <p>The clipboard size unit.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li><code>B</code>: Bytes.</li>
          * <li><code>KB</code>: 1024 bytes.</li>
@@ -783,7 +791,8 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String richTextClipboardReadSizeUnit;
 
         /**
-         * <p>The clipboard size unit. Valid values:</p>
+         * <p>The clipboard size unit.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li><code>B</code>: Bytes.</li>
          * <li><code>KB</code>: 1024 bytes.</li>
@@ -805,7 +814,8 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public Integer richTextClipboardWriteLimit;
 
         /**
-         * <p>The clipboard size unit. Valid values:</p>
+         * <p>The clipboard size unit.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li><code>B</code>: Bytes.</li>
          * <li><code>KB</code>: 1024 bytes.</li>
@@ -818,12 +828,13 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String richTextClipboardWriteSizeUnit;
 
         /**
-         * <p>The clipboard transfer direction. The value is case-insensitive. Valid values:</p>
+         * <p>The clipboard transfer direction. The value is case-insensitive.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li><code>off</code>: Disabled in both directions.</li>
+         * <li><code>off</code>: Bidirectionally disabled.</li>
          * <li><code>read</code>: Allows copy and paste from the local PC to the cloud browser.</li>
          * <li><code>write</code>: Allows copy and paste from the cloud browser to the local PC.</li>
-         * <li><code>readwrite</code>: Enabled in both directions.</li>
+         * <li><code>readwrite</code>: Bidirectionally enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -842,7 +853,8 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public Integer textClipboardReadLimit;
 
         /**
-         * <p>The clipboard size unit. Valid values:</p>
+         * <p>The clipboard size unit.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li><code>B</code>: Bytes.</li>
          * <li><code>KB</code>: 1024 bytes.</li>
@@ -864,7 +876,8 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public Integer textClipboardWriteLimit;
 
         /**
-         * <p>The clipboard size unit. Valid values:</p>
+         * <p>The clipboard size unit.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li><code>B</code>: Bytes.</li>
          * <li><code>KB</code>: 1024 bytes.</li>
@@ -1054,12 +1067,12 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
 
     public static class GetBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelPolicyWatermarkPolicy extends TeaModel {
         /**
-         * <p>Specifies whether to enable watermarks. The value is case-insensitive. Valid values:</p>
+         * <p>The watermark switch. The value is case-insensitive. Valid values:</p>
          * <ul>
-         * <li>ON: Enabled.</li>
-         * <li>OFF: Disabled.</li>
+         * <li>ON: Enables watermarks.</li>
+         * <li>OFF: Disables watermarks.</li>
          * </ul>
-         * <p>When disabled, the watermark content type list is not used.</p>
+         * <p>When watermarks are disabled, the list of watermark content types is not used.</p>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -1070,11 +1083,11 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         /**
          * <p>The list of watermark content types. Valid values:</p>
          * <ul>
-         * <li>EndUserId: User ID.</li>
-         * <li>InstanceGroupId: Delivery group ID.</li>
-         * <li>ClientTime: Current client time.</li>
+         * <li>EndUserId: The user ID.</li>
+         * <li>InstanceGroupId: The delivery group ID.</li>
+         * <li>ClientTime: The current time of the client.</li>
          * </ul>
-         * <p>Use watermark types that are supported by the browser and client.</p>
+         * <p>Use the watermark types supported by the browser and the client.</p>
          */
         @NameInMap("WatermarkTypes")
         public java.util.List<String> watermarkTypes;
@@ -1104,10 +1117,10 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
 
     public static class GetBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelPolicy extends TeaModel {
         /**
-         * <p>The screen capture prevention switch.</p>
+         * <p>The screen capture prevention switch. Valid values:</p>
          * <ul>
-         * <li><code>on</code>: enables screen capture prevention.</li>
-         * <li><code>off</code>: disables screen capture prevention.</li>
+         * <li>on: Enables screen capture prevention.</li>
+         * <li>off: Disables screen capture prevention.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1129,16 +1142,17 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public java.util.List<GetBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelPolicyClientTypes> clientTypes;
 
         /**
-         * <p>Sets the clipboard transfer direction, content type, and size limits. <code>read</code> indicates transfer from the local PC to the cloud browser, and <code>write</code> indicates transfer from the cloud browser to the local PC.</p>
+         * <p>Configures the clipboard transfer direction, content types, and size limits. <code>read</code> indicates transfer from the local PC to the cloud browser, and <code>write</code> indicates transfer from the cloud browser to the local PC.</p>
          */
         @NameInMap("ClipboardPolicy")
         public GetBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelPolicyClipboardPolicy clipboardPolicy;
 
         /**
-         * <p>The data retention policy after disconnection. Valid values:</p>
+         * <p>The session data retention policy after disconnection.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li><code>customTime</code>: Retains the session for the duration specified by <code>DisconnectKeepSessionTime</code>.</li>
-         * <li><code>persistent</code>: No automatic release based on disconnection duration.</li>
+         * <li><code>persistent</code>: No automatic release based on the disconnection duration.</li>
          * </ul>
          * <p><strong>Note:</strong> <code>persistent</code> is still subject to authorization and other release policies.</p>
          * 
@@ -1149,7 +1163,7 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String disconnectKeepSession;
 
         /**
-         * <p>The returned retention duration for disconnected sessions, in seconds. This parameter is for viewing configurations only and does not indicate that the create operation supports setting this parameter.</p>
+         * <p>The retention duration for disconnected sessions returned in the current response, in seconds. This parameter is for viewing configurations only and does not indicate that the create operation supports setting this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1800</p>
@@ -1158,7 +1172,8 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public Integer disconnectKeepSessionTime;
 
         /**
-         * <p>The floating ball file manager switch. Valid values:</p>
+         * <p>The floating widget file manager switch.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li><code>on</code>: Enabled.</li>
          * <li><code>off</code>: Disabled.</li>
@@ -1171,14 +1186,15 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String fileManager;
 
         /**
-         * <p>The file transfer policy for the web client. Valid values:</p>
+         * <p>The file transfer policy for the web client.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li><code>off</code>: Transfer disabled.</li>
          * <li><code>upload</code>: Upload only.</li>
          * <li><code>download</code>: Download only.</li>
          * <li><code>full</code>: Upload and download allowed.</li>
          * </ul>
-         * <p>Configure this parameter in conjunction with the clipboard policy.</p>
+         * <p>Configure this policy in conjunction with the clipboard policy.</p>
          * 
          * <strong>example:</strong>
          * <p>full</p>
@@ -1187,7 +1203,11 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String html5FileTransfer;
 
         /**
-         * <p>The dual-screen switch for cloud browsers.</p>
+         * <p>The dual-screen switch for cloud browsers. Valid values:</p>
+         * <ul>
+         * <li>on: Enables the dual-screen feature.</li>
+         * <li>off: Disables the dual-screen feature.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1196,12 +1216,12 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String multiScreen;
 
         /**
-         * <p>Specifies whether to automatically disconnect sessions after a period of inactivity. The value is case-insensitive. Valid values:</p>
+         * <p>The switch for automatic disconnection upon inactivity. The value is case-insensitive. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li>on: Enables the feature.</li>
+         * <li>off: Disables the feature.</li>
          * </ul>
-         * <p>When enabled, use NoOperationDisconnectTime to set the idle timeout period.</p>
+         * <p>When this feature is enabled, the wait time is specified by NoOperationDisconnectTime.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1210,7 +1230,7 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String noOperationDisconnect;
 
         /**
-         * <p>The idle timeout period in seconds before a session is automatically disconnected. This feature is enabled or disabled by the NoOperationDisconnect parameter.</p>
+         * <p>The wait time in seconds before a disconnection is triggered due to inactivity. Whether this feature is enabled is indicated by NoOperationDisconnect.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -1219,7 +1239,7 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public Integer noOperationDisconnectTime;
 
         /**
-         * <p>The ID of the policy associated with the browser instance group.</p>
+         * <p>The ID of the policy associated with the browser group.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-0bf5d87epuq5****</p>
@@ -1230,8 +1250,8 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         /**
          * <p>The policy version. Valid values:</p>
          * <ul>
-         * <li>DEFAULT: Legacy policy.</li>
-         * <li>CENTER: Centralized policy.</li>
+         * <li>DEFAULT: The legacy policy.</li>
+         * <li>CENTER: The centralized policy.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1381,7 +1401,7 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
 
     public static class GetBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelTimers extends TeaModel {
         /**
-         * <p>The session retention period in minutes after disconnection. A value of -1 indicates that the session is not unbound due to this timeout, but is still subject to authorization and other session release policies.</p>
+         * <p>The session retention duration in minutes after disconnection. A value of -1 indicates that the session is not unbound due to the timeout of this duration, but is still subject to authorization and other session release policies.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -1390,7 +1410,7 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public Integer interval;
 
         /**
-         * <p>The timer configuration type. A value of SESSION_TIMEOUT indicates the session retention period after disconnection.</p>
+         * <p>The timer configuration type. A value of SESSION_TIMEOUT indicates the session retention duration after disconnection.</p>
          * 
          * <strong>example:</strong>
          * <p>SESSION_TIMEOUT</p>
@@ -1448,7 +1468,7 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
 
     public static class GetBrowserInstanceGroupResponseBodyBrowserInstanceGroupModel extends TeaModel {
         /**
-         * <p>Specifies whether authorization and revocation notification emails are enabled. A value of <code>true</code> indicates that the feature is enabled, and a value of <code>false</code> indicates that the feature is disabled.</p>
+         * <p>Specifies whether authorization and revocation notification emails are enabled. A value of true indicates that the feature is enabled. A value of false indicates that the feature is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1457,13 +1477,13 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public Boolean authNotificationEnabled;
 
         /**
-         * <p>The statistics of authorized users for the browser instance group.</p>
+         * <p>The statistics of authorized users in the browser instance group.</p>
          */
         @NameInMap("AuthorizedUserInfo")
         public GetBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelAuthorizedUserInfo authorizedUserInfo;
 
         /**
-         * <p>The business region where the browser instance group is located.</p>
+         * <p>The business region of the browser instance group.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -1505,7 +1525,7 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String browserInstanceGroupSetId;
 
         /**
-         * <p>The billing method. In the monthly active user (MAU) scenario, <code>PostPaid</code> is returned, which indicates pay-as-you-go.</p>
+         * <p>The billing method. In the monthly active user (MAU) scenario, PostPaid is returned, which indicates the pay-as-you-go billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -1514,7 +1534,7 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The default access URL of the browser instance group. Use the actual URL returned by the API operation. Replace the resource ID in the example.</p>
+         * <p>The default access URL of the browser instance group. Use the actual URL returned by the API operation. Replace the resource ID in the example with the actual value.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://wuying.aliyun.com/integration?appId=browser&appInstanceGroupId=big-0c7loey7fzjq">https://wuying.aliyun.com/integration?appId=browser&amp;appInstanceGroupId=big-0c7loey7fzjq</a>****</p>
@@ -1523,7 +1543,7 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String defaultAccessUrl;
 
         /**
-         * <p>The package duration information. This parameter is not applicable to the MAU scenario and may return an empty object.</p>
+         * <p>The plan duration information. This parameter is not applicable to the MAU scenario and an empty object may be returned.</p>
          */
         @NameInMap("Duration")
         public GetBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelDuration duration;
@@ -1540,7 +1560,7 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>The creation time of the browser instance group. The time is displayed in the RFC 3339 format <code>yyyy-MM-ddTHH:mm:ss.SSSXXX</code>, which includes milliseconds and time zone offset. In the example, <code>+00:00</code> indicates the UTC time zone.</p>
+         * <p>The creation time of the browser instance group. The time is displayed in the RFC 3339 format (yyyy-MM-ddTHH:mm:ss.SSSXXX), which includes milliseconds and time zone offset. In the example, +00:00 indicates the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-21T07:00:39.000+00:00</p>
@@ -1597,7 +1617,7 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public GetBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelNodeInstanceType nodeInstanceType;
 
         /**
-         * <p>The list of node pool information. This parameter is not applicable to the MAU scenario and may return an empty list.</p>
+         * <p>The list of node pool information. This parameter is not applicable to the MAU scenario and an empty list may be returned.</p>
          */
         @NameInMap("NodePool")
         public java.util.List<GetBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelNodePool> nodePool;
@@ -1618,13 +1638,13 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public GetBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelPolicy policy;
 
         /**
-         * <p>The status of the browser instance group. Valid values:</p>
+         * <p>The status of the browser group. Valid values:</p>
          * <ul>
          * <li>DEPLOYING: Publishing.</li>
          * <li>PUBLISHED: Published.</li>
          * <li>FAILED: Publish failed.</li>
          * <li>EXPIRED: Expired.</li>
-         * <li>CEASED: Suspended due to overdue payment.</li>
+         * <li>CEASED: Suspended due to overdue payments.</li>
          * <li>MAINTAINING: Updating.</li>
          * <li>MAINTAIN_FAILED: Update failed.</li>
          * <li>DELETING: Deleting.</li>
@@ -1638,16 +1658,16 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The sub-billing type. In the MAU scenario, mau is returned, which indicates billing by monthly active users.</p>
+         * <p>The sub-billing method. In the MAU scenario, mau is returned, which indicates billing by monthly active users.</p>
          * 
          * <strong>example:</strong>
-         * <p>mau</p>
+         * <p>PostPaid</p>
          */
         @NameInMap("SubPayType")
         public String subPayType;
 
         /**
-         * <p>Specifies whether mixed authorization of users and user groups is supported. A value of true indicates that it is supported, and false indicates that it is not supported. Evaluate this parameter based on the current authorization mode.</p>
+         * <p>Indicates whether mixed authorization of users and user groups is supported. A value of true indicates that it is supported, and a value of false indicates that it is not supported. Evaluate this parameter in combination with the current authorization mode.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1670,7 +1690,7 @@ public class GetBrowserInstanceGroupResponseBody extends TeaModel {
         public String tier;
 
         /**
-         * <p>The session timer configurations returned in the current response. This parameter is used to view the effective settings and does not indicate that the create operation supports configuring this parameter.</p>
+         * <p>The session timer configuration returned in the current response. This configuration is used to view the effective settings and does not indicate that the create operation supports setting this parameter.</p>
          */
         @NameInMap("Timers")
         public java.util.List<GetBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelTimers> timers;

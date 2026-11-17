@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryUserAppUsageAggregateByHourResponseBody extends TeaModel {
     /**
-     * <p>The business status code. A value of 200 indicates that the request is successful. Other values indicate that the request failed.</p>
+     * <p>The business status code. A value of 200 indicates that the request was processed successfully. Other values indicate that the processing failed.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class QueryUserAppUsageAggregateByHourResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The list of hourly aggregated user application usage data. A maximum of five records are returned for each hour.</p>
+     * <p>The list of user application usage data aggregated by hour. A maximum of five records are returned for each hour.</p>
      */
     @NameInMap("IndexData")
     public java.util.List<QueryUserAppUsageAggregateByHourResponseBodyIndexData> indexData;
 
     /**
-     * <p>The description of the request processing result. A value of success is usually returned when the request is successful.</p>
+     * <p>The description of the request processing result. The value success is usually returned when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -103,7 +103,7 @@ public class QueryUserAppUsageAggregateByHourResponseBody extends TeaModel {
         public String appTimeCnt;
 
         /**
-         * <p>The statistical hour in a two-digit 24-hour format string. Valid values: 00 to 23. Hour boundaries are divided based on the Asia/Shanghai (UTC+8) time zone.</p>
+         * <p>The statistical hour, represented as a two-digit 24-hour format string with values ranging from 00 to 23. Hour boundaries are divided based on the Asia/Shanghai (UTC+8) time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>02</p>

@@ -11,7 +11,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
     public java.util.List<ListModelProviderTemplatesResponseBodyData> data;
 
     /**
-     * <p>The page number of the current query result.</p>
+     * <p>The page number of the current returned page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in the query result.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of query results.</p>
+     * <p>The total number of returned entries.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -93,7 +93,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
 
     public static class ListModelProviderTemplatesResponseBodyData extends TeaModel {
         /**
-         * <p>The model provider configuration JSON object.</p>
+         * <p>The JSON object for the model provider configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -109,13 +109,13 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
          * <p>The model provider template description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alibaba Cloud Bailian provider</p>
+         * <p>Alibaba Cloud Model Studio provider</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Indicates whether the WUYING secure gateway proxy is enabled.</p>
+         * <p>Specifies whether the Wuying security gateway proxy is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -127,7 +127,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
          * <p>The model provider template name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alibaba Cloud Bailian</p>
+         * <p>Alibaba Cloud Model Studio</p>
          */
         @NameInMap("Name")
         public String name;
@@ -160,7 +160,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
         public String providerType;
 
         /**
-         * <p>The ProviderKey of the WUYING secure gateway proxy.</p>
+         * <p>The ProviderKey of the Wuying security gateway proxy.</p>
          * 
          * <strong>example:</strong>
          * <p>wuying-key-12345</p>

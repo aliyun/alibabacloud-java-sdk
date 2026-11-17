@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppInstanceGroupRequest extends TeaModel {
     /**
-     * <p>The application image ID. You can obtain this value from the Image Management page in the WUYING Workspace console.</p>
+     * <p>The ID of the app image. You can obtain the ID from the Image Management page in the WUYING Cloud App console.</p>
      * 
      * <strong>example:</strong>
      * <p>img-8z4nztpaqvay4****</p>
@@ -14,7 +14,7 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public String appCenterImageId;
 
     /**
-     * <p>The delivery group ID.</p>
+     * <p>The ID of the app instance group.</p>
      * 
      * <strong>example:</strong>
      * <p>aig-9ciijz60n4xsv****</p>
@@ -23,16 +23,16 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The delivery group name. Fuzzy match is used for the query. For example, if you set the delivery group name to <code>OfficeApp</code>, all delivery groups whose names contain <code>OfficeApp</code> are returned, such as <code>MyOfficeApp</code> and <code>OfficeAppA</code>.</p>
+     * <p>The name of the app instance group. Fuzzy match is supported. For example, if you specify <code>Office App</code>, app instance groups whose names contain <code>Office App</code> are queried, such as <code>My Office App</code> and <code>Office App A</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>OfficeApp</p>
+     * <p>Office App</p>
      */
     @NameInMap("AppInstanceGroupName")
     public String appInstanceGroupName;
 
     /**
-     * <p>The region ID of the delivery group. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
+     * <p>The ID of the region to which the app instance group belongs. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -41,7 +41,7 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The list of excluded authorized user group IDs.</p>
+     * <p>The list of excluded authorization user group IDs.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public java.util.List<String> excludedUserGroupIds;
 
     /**
-     * <p>The specification type ID of the purchased resource. You can call the <a href="~~ListNodeInstanceType~~">ListNodeInstanceType</a> operation to obtain this value.</p>
+     * <p>The ID of the instance type for the purchased resources. You can obtain the ID by calling the <a href="~~ListNodeInstanceType~~">ListNodeInstanceType</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>appstreaming.vgpu.4c8g.2g</p>
@@ -59,7 +59,7 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public String nodeInstanceType;
 
     /**
-     * <p>The office network ID.</p>
+     * <p>The ID of the office network.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hongkong+dir-643067****</p>
@@ -68,7 +68,7 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The page number of the query results to display.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -77,7 +77,7 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of query results per page. Maximum value: <code>100</code>.</p>
+     * <p>The number of entries to return on each page. The value cannot exceed <code>100</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -106,7 +106,7 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of delivery group statuses.</p>
+     * <p>The statuses of the app instance groups.</p>
      */
     @NameInMap("Status")
     public java.util.List<String> status;

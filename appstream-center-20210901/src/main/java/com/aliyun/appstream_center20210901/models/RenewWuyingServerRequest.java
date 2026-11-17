@@ -23,7 +23,7 @@ public class RenewWuyingServerRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the renewal duration.</p>
+     * <p>The unit for the renewal period.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -32,7 +32,7 @@ public class RenewWuyingServerRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The discount ID.</p>
+     * <p>The promotion ID.</p>
      * 
      * <strong>example:</strong>
      * <p>17440009****</p>
@@ -44,7 +44,7 @@ public class RenewWuyingServerRequest extends TeaModel {
      * <p>The workstation ID.</p>
      * <blockquote>
      * <ul>
-     * <li>The workstation must have a completed order payment (AutoPay=true during creation or manually paid through the console payment page) before it can be renewed. Calling this API for an unpaid workstation returns WuyingServerError.NotFound.</li>
+     * <li>A workstation can be renewed only after the order payment is completed (AutoPay=true during creation or manual payment is made through the console payment page). Calling this API for an unpaid workstation returns WuyingServerError.NotFound.</li>
      * </ul>
      * </blockquote>
      * 

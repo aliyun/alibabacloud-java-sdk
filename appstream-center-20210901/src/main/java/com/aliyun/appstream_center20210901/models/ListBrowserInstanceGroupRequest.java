@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBrowserInstanceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the browser group set. This parameter is used to query the valid members of the set by exact match.</p>
+     * <p>The browser group set ID. This parameter is used to query the valid members of the set by exact match.</p>
      * 
      * <strong>example:</strong>
      * <p>set-3jm9d0abc00example</p>
@@ -14,7 +14,7 @@ public class ListBrowserInstanceGroupRequest extends TeaModel {
     public String appInstanceGroupSetId;
 
     /**
-     * <p>Filters cloud browser groups by business region.</p>
+     * <p>Filters browser groups by business region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -23,7 +23,7 @@ public class ListBrowserInstanceGroupRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The ID of the cloud browser group. This parameter is used for exact match.</p>
+     * <p>The cloud browser group ID, which is used for exact match queries.</p>
      * 
      * <strong>example:</strong>
      * <p>big-0c7loey7fzjq****</p>
@@ -32,7 +32,7 @@ public class ListBrowserInstanceGroupRequest extends TeaModel {
     public String browserInstanceGroupId;
 
     /**
-     * <p>The name of the browser group. Fuzzy match is supported.</p>
+     * <p>The browser group name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Office</p>
@@ -41,7 +41,7 @@ public class ListBrowserInstanceGroupRequest extends TeaModel {
     public String browserInstanceGroupName;
 
     /**
-     * <p>Filters cloud browser groups by name or ID based on partial match.</p>
+     * <p>Filters browser groups by name or ID by using a contains match.</p>
      * 
      * <strong>example:</strong>
      * <p>Office</p>
@@ -50,7 +50,7 @@ public class ListBrowserInstanceGroupRequest extends TeaModel {
     public String cloudBrowserName;
 
     /**
-     * <p>Excludes cloud browser groups that are authorized to the specified user groups.</p>
+     * <p>Excludes browser groups that are authorized for the specified user groups.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -59,7 +59,7 @@ public class ListBrowserInstanceGroupRequest extends TeaModel {
     public java.util.List<String> excludedUserGroupIds;
 
     /**
-     * <p>Filters cloud browser groups by the ID of the office network to which they belong.</p>
+     * <p>Filters browser groups by the ID of the office network to which they belong.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-843734****</p>
@@ -68,7 +68,7 @@ public class ListBrowserInstanceGroupRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number. Pages start from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -86,20 +86,20 @@ public class ListBrowserInstanceGroupRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Filters cloud browser groups by status.</p>
+     * <p>Filters browser groups by status.</p>
      * <p><strong>Limit:</strong> You can specify only one status at a time.</p>
      */
     @NameInMap("Status")
     public java.util.List<String> status;
 
     /**
-     * <p>The tag filtering parameter. This parameter is not supported in customer-facing scenarios. Do not specify this parameter.</p>
+     * <p>The tag filtering parameter. This parameter is not supported in current customer-facing scenarios. Do not specify this parameter.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListBrowserInstanceGroupRequestTag> tag;
 
     /**
-     * <p>Filters cloud browser groups by browser version. Valid values:</p>
+     * <p>Filters browser groups by the version of the browser. Valid values:</p>
      * <ul>
      * <li><code>Basic</code>: Basic Edition.</li>
      * <li><code>Pro</code>: Premium Edition.</li>
@@ -113,7 +113,7 @@ public class ListBrowserInstanceGroupRequest extends TeaModel {
     public String tier;
 
     /**
-     * <p>Filters cloud browser groups by the IDs of authorized user groups.</p>
+     * <p>Filters browser groups by authorized user group ID.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -232,7 +232,7 @@ public class ListBrowserInstanceGroupRequest extends TeaModel {
 
     public static class ListBrowserInstanceGroupRequestTag extends TeaModel {
         /**
-         * <p>The tag key. Do not specify this parameter in customer-facing scenarios.</p>
+         * <p>The tag key. Do not specify this parameter in current customer-facing scenarios.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -243,7 +243,7 @@ public class ListBrowserInstanceGroupRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. Do not specify this parameter in customer-facing scenarios.</p>
+         * <p>The tag value. Do not specify this parameter in current customer-facing scenarios.</p>
          * 
          * <strong>example:</strong>
          * <ul>

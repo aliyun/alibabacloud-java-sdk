@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentInstanceVersionsResponseBody extends TeaModel {
     /**
-     * <p>The list of agent instance version numbers, deduplicated and sorted in ascending order by version number.</p>
+     * <p>The list of agent instance version numbers, which are deduplicated and sorted in ascending order.</p>
      */
     @NameInMap("Data")
     public java.util.List<String> data;

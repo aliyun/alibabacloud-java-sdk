@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizedAppInstanceGroupByUserRequest extends TeaModel {
     /**
-     * <p>The application ID. Fuzzy match is supported. Delivery groups in which the IDs of deployed applications contain this string are returned. You can obtain the application ID from the Apps list returned by this operation.</p>
-     * <p>If this parameter is not specified, delivery groups are not filtered by application ID.</p>
+     * <p>The application ID. Fuzzy match is supported. App instance groups in which the IDs of deployed applications contain this string are returned. You can obtain the application ID from the Apps list returned by this operation.</p>
+     * <p>If this parameter is not specified, app instance groups are not filtered by application ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ca-i87mycyn419nu****</p>
@@ -15,8 +15,8 @@ public class ListAuthorizedAppInstanceGroupByUserRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The delivery group ID. Fuzzy match is supported. Delivery groups whose IDs contain this string are returned. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID.</p>
-     * <p>If this parameter is not specified, delivery groups are not filtered by delivery group ID.</p>
+     * <p>The app instance group ID. Fuzzy match is supported. App instance groups whose IDs contain this string are returned. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID.</p>
+     * <p>If this parameter is not specified, app instance groups are not filtered by app instance group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>aig-9ciijz60n4xsv****</p>
@@ -25,8 +25,8 @@ public class ListAuthorizedAppInstanceGroupByUserRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The delivery group name. Fuzzy match is supported. For example, if you specify Office applications, delivery groups whose names contain Office applications (such as My office applications and Office applications A) are returned.</p>
-     * <p>If this parameter is not specified, delivery groups are not filtered by delivery group name.</p>
+     * <p>The app instance group name. Fuzzy match is supported. For example, if you specify <code>Office applications</code>, app instance groups whose names contain <code>Office applications</code> (such as <code>My office applications</code> and <code>Office applications A</code>) are queried.</p>
+     * <p>If this parameter is not specified, app instance groups are not filtered by app instance group name.</p>
      * 
      * <strong>example:</strong>
      * <p>Office applications</p>
@@ -35,8 +35,8 @@ public class ListAuthorizedAppInstanceGroupByUserRequest extends TeaModel {
     public String appInstanceGroupName;
 
     /**
-     * <p>The application name. Fuzzy match is supported. Delivery groups in which the names of deployed applications contain this string are returned.</p>
-     * <p>If this parameter is not specified, delivery groups are not filtered by application name.</p>
+     * <p>The application name. Fuzzy match is supported. App instance groups in which the names of deployed applications contain this string are returned.</p>
+     * <p>If this parameter is not specified, app instance groups are not filtered by application name.</p>
      * 
      * <strong>example:</strong>
      * <p>Office applications</p>
@@ -45,9 +45,9 @@ public class ListAuthorizedAppInstanceGroupByUserRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The username. Exact match is used to query the delivery groups for which the user has been granted delivery group-level authorization.</p>
+     * <p>The username. Exact match is used based on the username to query the app instance groups to which the user has been granted app instance group-level authorization.</p>
      * <blockquote>
-     * <p>This parameter is required. If this parameter is not specified, the InvalidParameter.UserId error code is returned.</p>
+     * <p>This parameter is required. If this parameter is not specified, the error code InvalidParameter.UserId is returned.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -77,7 +77,7 @@ public class ListAuthorizedAppInstanceGroupByUserRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of delivery groups to return per page. Valid values: 1 to 100.</p>
+     * <p>The number of app instance groups to return on each page. Valid values: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,10 +87,10 @@ public class ListAuthorizedAppInstanceGroupByUserRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The product type. The value must be the same as the product type of the delivery groups to be queried. Only delivery groups of this product type are returned.</p>
+     * <p>The product type. The value must be consistent with the product type of the queried app instance groups. Only app instance groups of this product type are returned.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>CloudApp: Wuying Cloud App.</li>
+     * <li>CloudApp: Cloud App.</li>
      * <li>CloudBrowser: Cloud Browser.</li>
      * <li>WuyingServer: Enterprise Edition workstation.</li>
      * <li>WuyingWorkstation: Personal Edition Linggou container workstation.</li>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNodesResponseBody extends TeaModel {
     /**
-     * <p>The total number of data entries that can be returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -20,7 +20,7 @@ public class ListNodesResponseBody extends TeaModel {
     public java.util.List<ListNodesResponseBodyNodeModels> nodeModels;
 
     /**
-     * <p>The page size of the current page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListNodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The page number of the currently returned data.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,9 +93,9 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyNodeModels extends TeaModel {
         /**
-         * <p>The billing type of the resource node.</p>
+         * <p>The billing method of the resource node.</p>
          * <blockquote>
-         * <p>This parameter is returned only when the billing mode of the delivery group is resource-based billing (ChargeResourceMode=Node).</p>
+         * <p>This parameter is returned only when the billing mode of the associated app instance group is set to resource-based billing (ChargeResourceMode=Node).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -105,9 +105,9 @@ public class ListNodesResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The resource node ID.</p>
+         * <p>The ID of the resource node.</p>
          * <blockquote>
-         * <p>This parameter is returned only when the billing mode of the delivery group is resource-based billing (ChargeResourceMode=Node).</p>
+         * <p>This parameter is returned only when the billing mode of the associated app instance group is set to resource-based billing (ChargeResourceMode=Node).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

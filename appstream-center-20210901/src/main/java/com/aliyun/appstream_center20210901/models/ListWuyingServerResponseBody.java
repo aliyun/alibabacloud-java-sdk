@@ -14,7 +14,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total count.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -41,7 +41,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The list of workstation information.</p>
+     * <p>The workstation information list.</p>
      */
     @NameInMap("WuyingServerList")
     public java.util.List<ListWuyingServerResponseBodyWuyingServerList> wuyingServerList;
@@ -93,7 +93,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
     public static class ListWuyingServerResponseBodyWuyingServerListDataDisk extends TeaModel {
         /**
-         * <p>The type of the data cloud disk.</p>
+         * <p>The category of the data cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_auto</p>
@@ -111,7 +111,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String dataDiskId;
 
         /**
-         * <p>The sequence number of the data cloud disk.</p>
+         * <p>The serial number of the data cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -120,7 +120,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String dataDiskNo;
 
         /**
-         * <p>The performance level (PL) of the data cloud disk.</p>
+         * <p>The performance level of the data cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>PL0</p>
@@ -129,7 +129,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String dataDiskPerformanceLevel;
 
         /**
-         * <p>The size of the data cloud disk. Unit: GB.</p>
+         * <p>The size of the data cloud disk, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -195,7 +195,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the network interface controller (NIC).</p>
+         * <p>The ID of the ENI.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-uf65b****dfnt3wb</p>
@@ -228,11 +228,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
     public static class ListWuyingServerResponseBodyWuyingServerListPrivateIpSets extends TeaModel {
         /**
-         * <p>Indicates whether the IP address is the primary private IP address. Valid values:</p>
-         * <ul>
-         * <li>true: The IP address is the primary private IP address.</li>
-         * <li>false: The IP address is a secondary private IP address.</li>
-         * </ul>
+         * <p>Indicates whether the IP address is the primary private IP address. A value of true indicates that it is the primary private IP address. A value of false indicates that it is a secondary private IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -292,7 +288,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String gpu;
 
         /**
-         * <p>The GPU memory size. Unit: MB.</p>
+         * <p>The GPU memory size in MB.</p>
          * 
          * <strong>example:</strong>
          * <p>196,608</p>
@@ -301,7 +297,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public Integer gpuMemory;
 
         /**
-         * <p>The GPU specification description.</p>
+         * <p>The description of the GPU specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>NVIDIA T4</p>
@@ -310,7 +306,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String gpuSpec;
 
         /**
-         * <p>The memory size. Unit: MB.</p>
+         * <p>The memory size in MB.</p>
          * 
          * <strong>example:</strong>
          * <p>393,216</p>
@@ -319,7 +315,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public Integer memory;
 
         /**
-         * <p>The workstation instance type.</p>
+         * <p>The workstation specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>eds.proworkstation_flagship_elite_ne.96c384g.192g4x</p>
@@ -384,7 +380,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
     public static class ListWuyingServerResponseBodyWuyingServerListSessions extends TeaModel {
         /**
-         * <p>The session start time in ISO 8601 format.</p>
+         * <p>The start time of the session in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01T08:00:00Z</p>
@@ -426,7 +422,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
     public static class ListWuyingServerResponseBodyWuyingServerList extends TeaModel {
         /**
-         * <p>The status of adding the workstation to a virtual node pool.</p>
+         * <p>The status of adding to the virtual node pool.</p>
          * 
          * <strong>example:</strong>
          * <p>Added</p>
@@ -444,7 +440,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
-         * <p>The bandwidth size. Unit: Mbit/s.</p>
+         * <p>The bandwidth, in Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -453,7 +449,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public Integer bandwidth;
 
         /**
-         * <p>The region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -462,7 +458,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String bizRegionId;
 
         /**
-         * <p>The payment method.</p>
+         * <p>The billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -534,7 +530,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
          * <p>The name of the image.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alibaba Cloud Linux 3.2104 LTS 64位</p>
+         * <p>Alibaba Cloud Linux 3.2104 LTS 64-bit</p>
          */
         @NameInMap("ImageName")
         public String imageName;
@@ -582,7 +578,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String officeSiteName;
 
         /**
-         * <p>The network type of the office network.</p>
+         * <p>The network type.</p>
          * 
          * <strong>example:</strong>
          * <p>SIMPLE</p>
@@ -606,7 +602,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public java.util.List<String> policyGroupIdList;
 
         /**
-         * <p>The set of private IP addresses, including the primary IP address and secondary IP addresses.</p>
+         * <p>The set of private IP addresses, including the primary and secondary IP addresses.</p>
          */
         @NameInMap("PrivateIpSets")
         public java.util.List<ListWuyingServerResponseBodyWuyingServerListPrivateIpSets> privateIpSets;
@@ -666,7 +662,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public Boolean supportASP;
 
         /**
-         * <p>The system cloud disk type.</p>
+         * <p>The category of the system cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_auto</p>
@@ -675,7 +671,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>The system cloud disk ID.</p>
+         * <p>The ID of the system cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>d-bp1234567890abcde</p>
@@ -684,7 +680,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String systemDiskId;
 
         /**
-         * <p>The performance level (PL) of the system cloud disk.</p>
+         * <p>The performance level of the system cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>PL0</p>
@@ -693,7 +689,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String systemDiskPerformanceLevel;
 
         /**
-         * <p>The system cloud disk size. Unit: GB.</p>
+         * <p>The size of the system cloud disk in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -702,7 +698,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public Integer systemDiskSize;
 
         /**
-         * <p>The timer group ID.</p>
+         * <p>The ID of the scheduled task group.</p>
          * 
          * <strong>example:</strong>
          * <p>tg-bp1234567890abcde</p>
@@ -735,7 +731,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String virtualNodePoolId;
 
         /**
-         * <p>Indicates whether a VirtualKubelet upgrade is needed.</p>
+         * <p>Indicates whether a Virtual Kubelet upgrade is required.</p>
          */
         @NameInMap("VkUpgradeNeeded")
         public Boolean vkUpgradeNeeded;
@@ -759,7 +755,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public String wuyingServerId;
 
         /**
-         * <p>The workstation name.</p>
+         * <p>The name of the workstation.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleServerName</p>

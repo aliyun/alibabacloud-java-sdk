@@ -14,7 +14,7 @@ public class ListTaskStepResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The list of step definitions for the specified task type.</p>
+     * <p>The list of step definitions for the selected task type.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListTaskStepResponseBodyData> data;
@@ -62,7 +62,7 @@ public class ListTaskStepResponseBody extends TeaModel {
          * <p>The interaction method of the step. Valid values:</p>
          * <ul>
          * <li><strong>prompt</strong>: Displays step prompts.</li>
-         * <li><strong>connection</strong>: Provides connection operations to enter the builder or validation environment.</li>
+         * <li><strong>connection</strong>: Provides connection operations to enter the build or validation environment.</li>
          * <li><strong>prompt_connection</strong>: Provides both prompts and connection operations.</li>
          * </ul>
          * 
@@ -73,7 +73,7 @@ public class ListTaskStepResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The Chinese name of the phase to which the step belongs, such as builder environment preparation or test validation.</p>
+         * <p>The Chinese name of the phase to which the step belongs, such as build environment preparation or test validation.</p>
          * 
          * <strong>example:</strong>
          * <p>制作环境准备</p>
@@ -103,36 +103,36 @@ public class ListTaskStepResponseBody extends TeaModel {
          * <p>The name identifier of the step, which is used to match the step records returned by GetTask.</p>
          * <p>Steps when Type is set to IMAGE:</p>
          * <ul>
-         * <li><strong>INIT</strong>: Initialize the task.</li>
-         * <li><strong>CREATE_BUILDER_ENV</strong>: Create the builder environment.</li>
-         * <li><strong>DEPLOY_BUILDER_ENV</strong>: Deploy the builder environment.</li>
-         * <li><strong>INIT_BUILDER</strong>: Initialize the builder tool.</li>
-         * <li><strong>DOWNLOAD_APP</strong>: Download application resources.</li>
-         * <li><strong>START_BUILD</strong>: Start image creation.</li>
-         * <li><strong>COMPLETE_INSTALL</strong>: Complete application installation and configuration.</li>
-         * <li><strong>CREATE_VALIDATE_ENV</strong>: Create the validation environment.</li>
-         * <li><strong>DEPLOY_VALIDATE_ENV</strong>: Deploy the validation environment.</li>
-         * <li><strong>COMPLETE_VALIDATE</strong>: Complete image validation.</li>
-         * <li><strong>ARCHIVE_DATA</strong>: Archive image data.</li>
-         * <li><strong>CREATE_IMAGE</strong>: Generate the image.</li>
-         * <li><strong>FINISH_ADAPT</strong>: End the creation process.</li>
+         * <li><strong>INIT</strong>: Initializes the task.</li>
+         * <li><strong>CREATE_BUILDER_ENV</strong>: Creates the build environment.</li>
+         * <li><strong>DEPLOY_BUILDER_ENV</strong>: Deploys the build environment.</li>
+         * <li><strong>INIT_BUILDER</strong>: Initializes the build tool.</li>
+         * <li><strong>DOWNLOAD_APP</strong>: Downloads application resources.</li>
+         * <li><strong>START_BUILD</strong>: Starts image creation.</li>
+         * <li><strong>COMPLETE_INSTALL</strong>: Completes application installation and configuration.</li>
+         * <li><strong>CREATE_VALIDATE_ENV</strong>: Creates the validation environment.</li>
+         * <li><strong>DEPLOY_VALIDATE_ENV</strong>: Deploys the validation environment.</li>
+         * <li><strong>COMPLETE_VALIDATE</strong>: Completes image validation.</li>
+         * <li><strong>ARCHIVE_DATA</strong>: Archives image data.</li>
+         * <li><strong>CREATE_IMAGE</strong>: Generates the image.</li>
+         * <li><strong>FINISH_ADAPT</strong>: Ends the creation process.</li>
          * </ul>
          * <p>Steps when Type is set to ADAPTOR:</p>
          * <ul>
-         * <li><strong>INIT</strong>: Initialize the task.</li>
-         * <li><strong>CREATE_BUILDER_ENV</strong>: Create the builder environment.</li>
-         * <li><strong>DEPLOY_BUILDER_ENV</strong>: Deploy the builder environment.</li>
-         * <li><strong>INIT_BUILDER</strong>: Initialize the builder tool.</li>
-         * <li><strong>DOWNLOAD_APP</strong>: Download application resources.</li>
-         * <li><strong>START_VHD</strong>: Start application recording.</li>
-         * <li><strong>BUILD_VHD</strong>: Generate the application VHD.</li>
-         * <li><strong>UPLOAD_VHD</strong>: Upload the application VHD.</li>
-         * <li><strong>COMPLETE_BUILDER</strong>: Complete application creation.</li>
-         * <li><strong>CREATE_VALIDATE_ENV</strong>: Create the validation environment.</li>
-         * <li><strong>DEPLOY_VALIDATE_ENV</strong>: Deploy the validation environment.</li>
-         * <li><strong>COMPLETE_VALIDATE</strong>: Complete application validation.</li>
-         * <li><strong>CREATE_IMAGE</strong>: Generate the application image.</li>
-         * <li><strong>FINISH_ADAPT</strong>: End the application adaptation process.</li>
+         * <li><strong>INIT</strong>: Initializes the task.</li>
+         * <li><strong>CREATE_BUILDER_ENV</strong>: Creates the build environment.</li>
+         * <li><strong>DEPLOY_BUILDER_ENV</strong>: Deploys the build environment.</li>
+         * <li><strong>INIT_BUILDER</strong>: Initializes the build tool.</li>
+         * <li><strong>DOWNLOAD_APP</strong>: Downloads application resources.</li>
+         * <li><strong>START_VHD</strong>: Starts application recording.</li>
+         * <li><strong>BUILD_VHD</strong>: Generates the application VHD.</li>
+         * <li><strong>UPLOAD_VHD</strong>: Uploads the application VHD.</li>
+         * <li><strong>COMPLETE_BUILDER</strong>: Completes application creation.</li>
+         * <li><strong>CREATE_VALIDATE_ENV</strong>: Creates the validation environment.</li>
+         * <li><strong>DEPLOY_VALIDATE_ENV</strong>: Deploys the validation environment.</li>
+         * <li><strong>COMPLETE_VALIDATE</strong>: Completes application validation.</li>
+         * <li><strong>CREATE_IMAGE</strong>: Generates the application image.</li>
+         * <li><strong>FINISH_ADAPT</strong>: Ends the application adaptation process.</li>
          * </ul>
          * 
          * <strong>example:</strong>

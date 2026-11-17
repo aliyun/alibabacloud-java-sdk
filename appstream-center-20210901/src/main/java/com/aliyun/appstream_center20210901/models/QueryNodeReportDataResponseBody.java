@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryNodeReportDataResponseBody extends TeaModel {
     /**
-     * <p>The business status code. A value of 200 indicates that the request is successful. Other values indicate that the request failed.</p>
+     * <p>The business status code. A value of <code>200</code> indicates that the request is successful. Other values indicate that the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class QueryNodeReportDataResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The description of the request processing result. If the request is successful, success is usually returned.</p>
+     * <p>The description of the request processing result. If the request is successful, <code>success</code> is usually returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class QueryNodeReportDataResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page number corresponding to the current response.</p>
+     * <p>The page number of the current response.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class QueryNodeReportDataResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page used in the current response.</p>
+     * <p>The number of entries per page in the current response.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -136,7 +136,7 @@ public class QueryNodeReportDataResponseBody extends TeaModel {
         public Long nodeCount;
 
         /**
-         * <p>The number of pay-as-you-go nodes in the record.</p>
+         * <p>The number of pay-as-you-go nodes for the record.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -145,7 +145,7 @@ public class QueryNodeReportDataResponseBody extends TeaModel {
         public Long postpaidNodeCount;
 
         /**
-         * <p>The number of subscription nodes in the record.</p>
+         * <p>The number of subscription nodes for the record.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -154,7 +154,7 @@ public class QueryNodeReportDataResponseBody extends TeaModel {
         public Long prepaidNodeCount;
 
         /**
-         * <p>The statistical time. The 1d granularity returns the time in the yyyy-MM-dd format. The 1m, 30m, and 6h granularities return the time in the yyyy-MM-dd HH:mm format. The string itself does not carry a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</p>
+         * <p>The statistical time. The <code>1d</code> granularity returns <code>yyyy-MM-dd</code>. The <code>1m</code>, <code>30m</code>, and <code>6h</code> granularities return <code>yyyy-MM-dd HH:mm</code>. The string itself does not carry a time zone and is interpreted as Asia/Shanghai (UTC+8).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-01</p>

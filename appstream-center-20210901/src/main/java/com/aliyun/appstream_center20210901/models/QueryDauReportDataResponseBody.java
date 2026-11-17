@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryDauReportDataResponseBody extends TeaModel {
     /**
-     * <p>The business status code. A value of 200 indicates that the request is processed successfully. Other values indicate that the processing failed.</p>
+     * <p>The business status code. A value of <code>200</code> indicates that the request is successful. Other values indicate that the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class QueryDauReportDataResponseBody extends TeaModel {
     public java.util.List<QueryDauReportDataResponseBodyDauReportDataModel> dauReportDataModel;
 
     /**
-     * <p>The description of the request processing result. Typically, success is returned if the request is successful.</p>
+     * <p>The description of the request processing result. Typically, <code>success</code> is returned when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -136,7 +136,7 @@ public class QueryDauReportDataResponseBody extends TeaModel {
         public Long dau;
 
         /**
-         * <p>The statistics date. Format: yyyy-MM-dd. The string does not contain a time zone and is interpreted as a natural date in the Asia/Shanghai (UTC+8) time zone.</p>
+         * <p>The statistics date. Format: <code>yyyy-MM-dd</code>. The string does not contain a time zone and is interpreted as a calendar date in the Asia/Shanghai (UTC+8) time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-01</p>

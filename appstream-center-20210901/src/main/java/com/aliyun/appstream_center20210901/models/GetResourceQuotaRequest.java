@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourceQuotaRequest extends TeaModel {
     /**
-     * <p>The business region ID. If this parameter is omitted, the general quota that is not limited by region is queried. The quotas of different regions are not added together. This parameter must be consistent with the business region for What to do next.</p>
+     * <p>The business region ID. If this parameter is omitted, the general quota that is not limited by region is queried, and the quotas of different regions are not added together. This parameter must be consistent with the business region of What to do next.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -14,10 +14,10 @@ public class GetResourceQuotaRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The billing method query condition. If this parameter is omitted, the general quota that is not limited by billing method is queried. The quotas of different billing methods are not added together. Valid values:</p>
+     * <p>The billing method query condition. If this parameter is omitted, the general quota that is not limited by billing method is queried, and the quotas of different billing methods are not added together. Valid values:</p>
      * <ul>
-     * <li>PrePaid: subscription.</li>
-     * <li>PostPaid: pay-as-you-go.</li>
+     * <li><code>PrePaid</code>: subscription.</li>
+     * <li><code>PostPaid</code>: pay-as-you-go.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,9 +27,9 @@ public class GetResourceQuotaRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The product type. Set this parameter to the following value when you call the operation:</p>
+     * <p>The product type. Set this parameter to the following fixed value when you call the operation:</p>
      * <ul>
-     * <li>CloudApp: WUYING Cloud App.</li>
+     * <li><code>CloudApp</code>: WUYING Cloud App.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -42,9 +42,9 @@ public class GetResourceQuotaRequest extends TeaModel {
     /**
      * <p>The business resource type to query. Valid values:</p>
      * <ul>
-     * <li>AppInstanceGroup: the quantity quota for delivery groups. Unit: count.</li>
-     * <li>AppAuthUser: the quantity quota for authorized users. Unit: users.</li>
-     * <li>PoolNodeAmount: the quantity quota for purchased resource nodes. Unit: count.</li>
+     * <li><code>AppInstanceGroup</code>: the quantity quota for delivery groups. Unit: groups.</li>
+     * <li><code>AppAuthUser</code>: the quantity quota for authorized users. Unit: users.</li>
+     * <li><code>PoolNodeAmount</code>: the quantity quota for purchased resource nodes. Unit: nodes.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

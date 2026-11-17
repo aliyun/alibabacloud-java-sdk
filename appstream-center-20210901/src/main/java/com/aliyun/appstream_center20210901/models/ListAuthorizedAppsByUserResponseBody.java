@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizedAppsByUserResponseBody extends TeaModel {
     /**
-     * <p>The list of applications authorized to the user. Each record corresponds to one application within one delivery group.</p>
+     * <p>The list of applications authorized for the user. Each record corresponds to an application within an app instance group.</p>
      */
     @NameInMap("Apps")
     public java.util.List<ListAuthorizedAppsByUserResponseBodyApps> apps;
@@ -20,7 +20,7 @@ public class ListAuthorizedAppsByUserResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records per page.</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListAuthorizedAppsByUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of authorization records that match the query conditions.</p>
+     * <p>The total number of authorization records that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -93,7 +93,7 @@ public class ListAuthorizedAppsByUserResponseBody extends TeaModel {
 
     public static class ListAuthorizedAppsByUserResponseBodyApps extends TeaModel {
         /**
-         * <p>The URL of the application icon. This value is empty if the deployment details of the application cannot be obtained.</p>
+         * <p>The access URL of the application icon. This parameter is empty when the deployment details of the application cannot be obtained.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://app-center-icon-****.png">https://app-center-icon-****.png</a></p>
@@ -111,7 +111,7 @@ public class ListAuthorizedAppsByUserResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The ID of the delivery group to which the application belongs.</p>
+         * <p>The ID of the app instance group to which the application belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-9ciijz60n4xsv****</p>
@@ -120,25 +120,25 @@ public class ListAuthorizedAppsByUserResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
-         * <p>The name of the delivery group to which the application belongs. If the delivery group information cannot be obtained, the value is the same as AppInstanceGroupId.</p>
+         * <p>The name of the app instance group to which the application belongs. If the app instance group information cannot be obtained, the returned value is the same as the AppInstanceGroupId.</p>
          * 
          * <strong>example:</strong>
-         * <p>OfficeApp</p>
+         * <p>Office applications</p>
          */
         @NameInMap("AppInstanceGroupName")
         public String appInstanceGroupName;
 
         /**
-         * <p>The application name. If the deployment details of the application cannot be obtained, the value is the same as AppId.</p>
+         * <p>The application name. If the deployment details of the application cannot be obtained, the returned value is the same as the AppId.</p>
          * 
          * <strong>example:</strong>
-         * <p>OfficeApp</p>
+         * <p>Office applications</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
-         * <p>The application version. This value is empty if the deployment details of the application cannot be obtained.</p>
+         * <p>The application version. This parameter is empty when the deployment details of the application cannot be obtained.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -147,16 +147,16 @@ public class ListAuthorizedAppsByUserResponseBody extends TeaModel {
         public String appVersion;
 
         /**
-         * <p>The application version name. This value is empty if the deployment details of the application cannot be obtained.</p>
+         * <p>The application version name. This parameter is empty when the deployment details of the application cannot be obtained.</p>
          * 
          * <strong>example:</strong>
-         * <p>InitialVersion</p>
+         * <p>Initial version</p>
          */
         @NameInMap("AppVersionName")
         public String appVersionName;
 
         /**
-         * <p>The number of authorized users for the application within its delivery group. This value is empty if the deployment details of the application cannot be obtained.</p>
+         * <p>The number of users authorized to access the application in the app instance group to which the application belongs. This parameter is empty when the deployment details of the application cannot be obtained.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

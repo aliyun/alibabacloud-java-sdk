@@ -16,9 +16,9 @@ public class ConfigRuntimeChannelRequest extends TeaModel {
     /**
      * <p>The agent provider.</p>
      * <ul>
-     * <li>JVS Computer: Set to OpenClaw.</li>
-     * <li>OpenClaw: Set to OpenClaw.</li>
-     * <li>Hermes Agent: Set to HermesAgent.</li>
+     * <li>JVS Computer: Enter OpenClaw.</li>
+     * <li>OpenClaw: Enter OpenClaw.</li>
+     * <li>Hermes Agent: Enter HermesAgent.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -39,7 +39,7 @@ public class ConfigRuntimeChannelRequest extends TeaModel {
     public String code;
 
     /**
-     * <p>The JSON string for channel configuration.</p>
+     * <p>The channel configuration JSON string.</p>
      * <ul>
      * <li>Example of the simple configuration mode:</li>
      * </ul>

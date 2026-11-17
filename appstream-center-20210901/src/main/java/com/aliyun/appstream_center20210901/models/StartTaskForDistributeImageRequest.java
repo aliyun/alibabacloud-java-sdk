@@ -39,7 +39,7 @@ public class StartTaskForDistributeImageRequest extends TeaModel {
     public String retryType;
 
     /**
-     * <p>The source region from which the image is copied. If this parameter is not specified, a random region is selected.</p>
+     * <p>The source region from which the image is copied. If you do not specify this parameter, a region is randomly selected.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -48,7 +48,7 @@ public class StartTaskForDistributeImageRequest extends TeaModel {
     public String sourceRegion;
 
     /**
-     * <p>The image version ID. If this parameter is not specified, the latest image version is used.</p>
+     * <p>The image version ID. If you do not specify this parameter, the latest image version is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>iv-07jyldnd9i****</p>

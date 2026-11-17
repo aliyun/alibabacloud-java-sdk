@@ -42,11 +42,7 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
 
     public static class DescribeWuyingServerResponseBodyDataPrivateIpSets extends TeaModel {
         /**
-         * <p>Indicates whether the IP address is the primary private IP address. Valid values:</p>
-         * <ul>
-         * <li>true: The IP address is the primary private IP address.</li>
-         * <li>false: The IP address is a secondary private IP address.</li>
-         * </ul>
+         * <p>Indicates whether the IP address is the primary private IP address. Valid values: true: The IP address is the primary private IP address. false: The IP address is a secondary private IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -88,7 +84,7 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
 
     public static class DescribeWuyingServerResponseBodyData extends TeaModel {
         /**
-         * <p>The bandwidth size, in Mbit/s.</p>
+         * <p>The bandwidth. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -106,7 +102,7 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public String bizRegionId;
 
         /**
-         * <p>The billing type.</p>
+         * <p>The billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -115,7 +111,7 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The creation time, in US English date and time format with a 12-hour clock.</p>
+         * <p>The creation time. The time is displayed in the 12-hour US English date and time format.</p>
          * 
          * <strong>example:</strong>
          * <p>Sep 2, 2026 1:46:41 PM</p>
@@ -124,7 +120,7 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The maximum number of private IP addresses per NIC, including the primary IP address.</p>
+         * <p>The maximum number of private IP addresses per elastic network interface (ENI), including the primary IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -133,7 +129,7 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public Integer eniPrivateIpAddressQuantity;
 
         /**
-         * <p>The expiration time, in US English date and time format with a 12-hour clock.</p>
+         * <p>The expiration time. The time is displayed in the 12-hour US English date and time format.</p>
          * 
          * <strong>example:</strong>
          * <p>Oct 3, 2026 12:00:00 AM</p>
@@ -181,7 +177,7 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
          * <p>The workspace name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Default Workspace</p>
+         * <p>Default workspace</p>
          */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
@@ -229,7 +225,7 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public Boolean supportASP;
 
         /**
-         * <p>The type of the system cloud disk.</p>
+         * <p>The category of the system cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_essd</p>
@@ -238,7 +234,7 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>The size of the system cloud disk, in GB.</p>
+         * <p>The size of the system cloud disk. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>

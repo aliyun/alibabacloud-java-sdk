@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ValidateLlmTemplateConfigResponseBody extends TeaModel {
     /**
-     * <p>The validation result of the LLM template configuration, which includes whether the configuration is valid and a list of validation errors.</p>
+     * <p>The validation result of the LLM template configuration, including whether the configuration is valid and the list of validation errors.</p>
      */
     @NameInMap("Data")
     public ValidateLlmTemplateConfigResponseBodyData data;

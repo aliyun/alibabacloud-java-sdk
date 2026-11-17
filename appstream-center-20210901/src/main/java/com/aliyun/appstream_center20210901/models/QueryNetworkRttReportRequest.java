@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryNetworkRttReportRequest extends TeaModel {
     /**
-     * <p>The ID of the app instance group, which is used to filter data for a specified app instance group. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID. If you do not specify this parameter, data is not filtered by app instance group.</p>
+     * <p>The ID of the app instance group, which is used to filter data for a specified app instance group. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID. If this parameter is not specified, data is not filtered by app instance group.</p>
      * 
      * <strong>example:</strong>
      * <p>aig-9ciijz60n4xsv****</p>
@@ -23,7 +23,7 @@ public class QueryNetworkRttReportRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The end time of the statistics. <strong>Required</strong>. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The end time cannot be earlier than <code>StartDate</code>. The statistical interval includes the start time but excludes the end time. The time span cannot exceed 60 months. The string itself does not carry a time zone and is interpreted as Asia/Shanghai (UTC+8).</p>
+     * <p>The end time of the statistics. <strong>Required</strong>. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The value cannot be earlier than StartDate. The statistical interval includes the start time but excludes the end time. The time span cannot exceed 60 months. The string itself does not carry a time zone and is interpreted as Asia/Shanghai (UTC+8).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-09-02 00:00:00</p>
@@ -32,7 +32,7 @@ public class QueryNetworkRttReportRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The page number to query. Explicitly pass a value starting from <code>1</code>. If you do not specify this parameter, the service processes the request as the first page, but the response may return <code>0</code>.</p>
+     * <p>The page number to query. We recommend that you explicitly specify a value starting from 1. If this parameter is not specified, the service processes the request as the first page, but the response may return 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class QueryNetworkRttReportRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. If you do not specify this parameter, the default value is 200. If the value is greater than 1,500, it is processed as 1,500.</p>
+     * <p>The number of entries per page. Default value: 200. If the specified value is greater than 1,500, it is processed as 1,500.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -53,14 +53,14 @@ public class QueryNetworkRttReportRequest extends TeaModel {
      * <p>The product type. <strong>Required</strong>.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><code>CloudApp</code>: Wuying Cloud App.</li>
-     * <li><code>CloudBrowser</code>: Cloud browser.</li>
-     * <li><code>WuyingServer</code>: Enterprise Edition workstation.</li>
-     * <li><code>WuyingWorkstation</code>: Personal Edition Linggou container workstation.</li>
-     * <li><code>WuyingWorkstationTeam</code>: Linggou Team Edition container workstation.</li>
-     * <li><code>WuyingWorkstationBusiness</code>: Linggou Dedicated Edition container workstation.</li>
-     * <li><code>AndroidCloud</code>: Cloud phone.</li>
-     * <li><code>AIAgent</code>: AgentBay (AI agent).</li>
+     * <li>CloudApp: WUYING Cloud App.</li>
+     * <li>CloudBrowser: Cloud Browser.</li>
+     * <li>WuyingServer: Enterprise Edition workstation.</li>
+     * <li>WuyingWorkstation: Personal Edition Linggou container workstation.</li>
+     * <li>WuyingWorkstationTeam: Linggou Team Edition container workstation.</li>
+     * <li>WuyingWorkstationBusiness: Linggou Dedicated Edition container workstation.</li>
+     * <li>AndroidCloud: Cloud Phone.</li>
+     * <li>AIAgent: AgentBay (AI agent).</li>
      * </ul>
      * 
      * <strong>example:</strong>

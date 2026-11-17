@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppShrinkRequest extends TeaModel {
     /**
-     * <p>The application ID for exact query. If this parameter is omitted, applications are not filtered by application ID.</p>
+     * <p>The application ID used for exact match. If omitted, applications are not filtered by application ID.</p>
      * 
      * <strong>example:</strong>
      * <p>app-bp1example****</p>
@@ -14,7 +14,7 @@ public class ListAppShrinkRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The application name filter. Contains matching is supported.</p>
+     * <p>The application name used for filtering. Contains matching is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Business management</p>
@@ -25,9 +25,9 @@ public class ListAppShrinkRequest extends TeaModel {
     /**
      * <p>The source type of the application. Valid values:</p>
      * <ul>
-     * <li><strong>USER_APP</strong>: User-created applications.</li>
-     * <li><strong>SYS_APP</strong>: System-provided applications.</li>
-     * <li><strong>VIRTUAL_APP</strong>: Virtual applications.</li>
+     * <li><strong>USER_APP</strong>: user-created applications</li>
+     * <li><strong>SYS_APP</strong>: system-provided applications</li>
+     * <li><strong>VIRTUAL_APP</strong>: virtual applications</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,13 +39,13 @@ public class ListAppShrinkRequest extends TeaModel {
     /**
      * <p>Filters by a single business type. If specified together with BizTypeList, the intersection is used. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Basic products.</li>
-     * <li><strong>2</strong>: Personal cloud.</li>
-     * <li><strong>3</strong>: Cloud office.</li>
-     * <li><strong>4</strong>: Cloud Flow.</li>
-     * <li><strong>10</strong>: Personal Edition.</li>
-     * <li><strong>20</strong>: Business Edition.</li>
-     * <li><strong>60</strong>: Linggou Team Edition.</li>
+     * <li><strong>1</strong>: basic products</li>
+     * <li><strong>2</strong>: personal cloud</li>
+     * <li><strong>3</strong>: cloud office</li>
+     * <li><strong>4</strong>: Cloud Flow</li>
+     * <li><strong>10</strong>: Personal Edition</li>
+     * <li><strong>20</strong>: Business Edition</li>
+     * <li><strong>60</strong>: Linggou Team Edition</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class ListAppShrinkRequest extends TeaModel {
     public Integer bizType;
 
     /**
-     * <p>The list of business types for filtering. A match with any business type in the list is considered a match. If specified together with BizType, the single-value condition must still be met.</p>
+     * <p>The list of business types for filtering. An application is matched if it belongs to any business type in the list. If specified together with BizType, the single-value condition must still be met.</p>
      */
     @NameInMap("BizTypeList")
     public String bizTypeListShrink;
@@ -63,11 +63,11 @@ public class ListAppShrinkRequest extends TeaModel {
     /**
      * <p>The form of the application. Valid values:</p>
      * <ul>
-     * <li><strong>CLIENT_BASE</strong>: Client applications.</li>
-     * <li><strong>WEB_BASE</strong>: Browser applications.</li>
-     * <li><strong>CLOUD_NATIVE_BASE</strong>: Cloud-native applications.</li>
-     * <li><strong>PORT_SERVICE_BASE</strong>: Port service applications.</li>
-     * <li><strong>AGENT_SERVICE_BASE</strong>: Agent applications.</li>
+     * <li><strong>CLIENT_BASE</strong>: client applications</li>
+     * <li><strong>WEB_BASE</strong>: browser applications</li>
+     * <li><strong>CLOUD_NATIVE_BASE</strong>: cloud-native applications</li>
+     * <li><strong>PORT_SERVICE_BASE</strong>: port service applications</li>
+     * <li><strong>AGENT_SERVICE_BASE</strong>: agent applications</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,10 +79,10 @@ public class ListAppShrinkRequest extends TeaModel {
     /**
      * <p>The type of operating system used by the application. Valid values:</p>
      * <ul>
-     * <li><strong>Unknown</strong>: The operating system is unknown.</li>
-     * <li><strong>Windows</strong>: Windows operating system.</li>
-     * <li><strong>Linux</strong>: Linux operating system.</li>
-     * <li><strong>Android</strong>: Android operating system.</li>
+     * <li><strong>Unknown</strong>: unknown operating system</li>
+     * <li><strong>Windows</strong>: Windows operating system</li>
+     * <li><strong>Linux</strong>: Linux operating system</li>
+     * <li><strong>Android</strong>: Android operating system</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class ListAppShrinkRequest extends TeaModel {
     public String osType;
 
     /**
-     * <p>The page number for the query. Start from 1. If this parameter is omitted, set to 0, or set to 1, the first page is queried.</p>
+     * <p>The page number. We recommend that you start from 1. If this parameter is omitted, set to 0, or set to 1, the first page is queried.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -101,7 +101,7 @@ public class ListAppShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records to return on each page. If this parameter is omitted or set to a value less than 1, the value 10 is used.</p>
+     * <p>The number of entries to return on each page. If this parameter is omitted or set to a value less than 1, the value 10 is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -112,23 +112,23 @@ public class ListAppShrinkRequest extends TeaModel {
     /**
      * <p>Filters by a single associated product. If specified together with ProductTypeList, the intersection is used. Valid values:</p>
      * <ul>
-     * <li><strong>CloudGame</strong>: Cloud game.</li>
-     * <li><strong>CloudApp</strong>: Wuying cloud application.</li>
-     * <li><strong>CloudBrowser</strong>: Secure browser.</li>
-     * <li><strong>CloudDesktop</strong>: Wuying cloud desktop.</li>
-     * <li><strong>ImageBuilder</strong>: Image builder resources.</li>
-     * <li><strong>ImageValidate</strong>: Image validation resources.</li>
-     * <li><strong>AndroidCloud</strong>: Android cloud.</li>
-     * <li><strong>GpuRender</strong>: GPU rendering.</li>
-     * <li><strong>AndroidGpuRender</strong>: Android cloud GPU rendering.</li>
-     * <li><strong>WuyingServer</strong>: Enterprise Edition workstation.</li>
-     * <li><strong>GpuProxy</strong>: GPU remote rendering proxy.</li>
-     * <li><strong>GpuCache</strong>: GPU remote rendering cache.</li>
-     * <li><strong>AIAgent</strong>: AI Agent service.</li>
-     * <li><strong>HostedDesktop</strong>: Hosted desktop.</li>
-     * <li><strong>WuyingWorkstation</strong>: Personal Edition container workstation.</li>
-     * <li><strong>WuyingWorkstationBusiness</strong>: Business Edition container workstation.</li>
-     * <li><strong>WuyingWorkstationTeam</strong>: Linggou Team Edition container workstation.</li>
+     * <li><strong>CloudGame</strong>: cloud gaming</li>
+     * <li><strong>CloudApp</strong>: Wuying Cloud Application</li>
+     * <li><strong>CloudBrowser</strong>: secure browser</li>
+     * <li><strong>CloudDesktop</strong>: Wuying Cloud Computer</li>
+     * <li><strong>ImageBuilder</strong>: image builder resources</li>
+     * <li><strong>ImageValidate</strong>: image validation resources</li>
+     * <li><strong>AndroidCloud</strong>: Android cloud</li>
+     * <li><strong>GpuRender</strong>: GPU rendering</li>
+     * <li><strong>AndroidGpuRender</strong>: Android cloud GPU rendering</li>
+     * <li><strong>WuyingServer</strong>: Enterprise Edition workstation</li>
+     * <li><strong>GpuProxy</strong>: GPU remote rendering proxy</li>
+     * <li><strong>GpuCache</strong>: GPU remote rendering cache</li>
+     * <li><strong>AIAgent</strong>: AI agent service</li>
+     * <li><strong>HostedDesktop</strong>: hosted computer</li>
+     * <li><strong>WuyingWorkstation</strong>: Personal Edition container workstation</li>
+     * <li><strong>WuyingWorkstationBusiness</strong>: Business Edition container workstation</li>
+     * <li><strong>WuyingWorkstationTeam</strong>: Linggou Team Edition container workstation</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class ListAppShrinkRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The list of associated products for filtering. A match with any product in the list is considered a match. If specified together with ProductType, the single-value condition must still be met.</p>
+     * <p>The list of associated products for filtering. An application is matched if it belongs to any product in the list. If specified together with ProductType, the single-value condition must still be met.</p>
      */
     @NameInMap("ProductTypeList")
     public String productTypeListShrink;
@@ -146,10 +146,10 @@ public class ListAppShrinkRequest extends TeaModel {
     /**
      * <p>The subtype of the application. Valid values:</p>
      * <ul>
-     * <li><strong>PWA</strong>: Progressive web applications.</li>
-     * <li><strong>SAAS</strong>: Software as a Service (SaaS) applications.</li>
-     * <li><strong>SANDBOX</strong>: Sandbox applications.</li>
-     * <li><strong>CONTAINER</strong>: Container applications.</li>
+     * <li><strong>PWA</strong>: progressive web applications</li>
+     * <li><strong>SAAS</strong>: SaaS applications</li>
+     * <li><strong>SANDBOX</strong>: sandbox applications</li>
+     * <li><strong>CONTAINER</strong>: container applications</li>
      * </ul>
      * 
      * <strong>example:</strong>

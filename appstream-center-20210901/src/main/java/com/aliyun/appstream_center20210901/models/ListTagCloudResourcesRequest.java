@@ -18,7 +18,7 @@ public class ListTagCloudResourcesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>ptnJAAAAAAAxNzE5OTEwNQ==</p>
@@ -27,7 +27,7 @@ public class ListTagCloudResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The list of resource IDs. A maximum of 50 resource IDs are supported. You do not need to specify this parameter when the resource type is tenant ID.</p>
+     * <p>The resource IDs. A maximum of 50 resource IDs are supported. This parameter is not required when the resource type is tenant ID.</p>
      */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImageByInstanceResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned when an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
     public CreateImageByInstanceResponseBodyData data;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned when an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>NULL</p>
@@ -29,7 +29,7 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -38,7 +38,7 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. A value of true indicates success. A value of false indicates failure.</p>
+     * <p>Indicates whether the request is successful. A value of true indicates success, and a value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class CreateImageByInstanceResponseBody extends TeaModel {
 
     public static class CreateImageByInstanceResponseBodyData extends TeaModel {
         /**
-         * <p>The WUYING image ID.</p>
+         * <p>The ID of the WUYING image.</p>
          * 
          * <strong>example:</strong>
          * <p>imgc-07hnjj5fp****</p>

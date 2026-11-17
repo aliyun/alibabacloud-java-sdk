@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySessionReportDataResponseBody extends TeaModel {
     /**
-     * <p>The business status code. A value of <code>200</code> indicates that the request is successful. Other values indicate that the request failed.</p>
+     * <p>The business status code. A value of <code>200</code> indicates that the request is processed successfully. Other values indicate that the request fails to be processed.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class QuerySessionReportDataResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The description of the request processing result. If the request is successful, <code>success</code> is usually returned.</p>
+     * <p>The description of the request processing result. Typically, <code>success</code> is returned when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class QuerySessionReportDataResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page number of the current response.</p>
+     * <p>The page number corresponding to the current response.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class QuerySessionReportDataResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records per page in the current response.</p>
+     * <p>The number of entries per page used in the current response.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -127,7 +127,7 @@ public class QuerySessionReportDataResponseBody extends TeaModel {
 
     public static class QuerySessionReportDataResponseBodyReportDataModel extends TeaModel {
         /**
-         * <p>The number of sessions in the connected state in this record.</p>
+         * <p>The number of connected sessions in the record.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -136,7 +136,7 @@ public class QuerySessionReportDataResponseBody extends TeaModel {
         public Long connectSessionCount;
 
         /**
-         * <p>The total number of sessions corresponding to this record.</p>
+         * <p>The total number of sessions corresponding to the record.</p>
          * 
          * <strong>example:</strong>
          * <p>36</p>
@@ -145,7 +145,7 @@ public class QuerySessionReportDataResponseBody extends TeaModel {
         public Long sessionCount;
 
         /**
-         * <p>The statistical time. The <code>1d</code> granularity returns <code>yyyy-MM-dd</code>. The <code>1m</code>, <code>30m</code>, and <code>6h</code> granularities return <code>yyyy-MM-dd HH:mm</code>. The string itself does not carry a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</p>
+         * <p>The statistical time. The <code>1d</code> granularity returns <code>yyyy-MM-dd</code>. The <code>1m</code>, <code>30m</code>, and <code>6h</code> granularities return <code>yyyy-MM-dd HH:mm</code>. The string itself does not carry a time zone and is interpreted as Asia/Shanghai (UTC+8).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-01</p>
@@ -154,7 +154,7 @@ public class QuerySessionReportDataResponseBody extends TeaModel {
         public String statDate;
 
         /**
-         * <p>The number of sessions established through streaming access in this record.</p>
+         * <p>The number of sessions established through streaming access in the record.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>

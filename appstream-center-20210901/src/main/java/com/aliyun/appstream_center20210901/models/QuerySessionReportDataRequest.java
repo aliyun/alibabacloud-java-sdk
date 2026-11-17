@@ -23,7 +23,7 @@ public class QuerySessionReportDataRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The end time of the statistics. This parameter is required. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The end time cannot be earlier than <code>StartDate</code>. The query span must meet the limit corresponding to <code>StatDateType</code>. The string itself does not carry a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</p>
+     * <p>The end time of the statistics. <strong>Required</strong>. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The end time cannot be earlier than <code>StartDate</code>. The query span must meet the limits corresponding to <code>StatDateType</code>. The string itself does not carry a time zone and is interpreted as Asia/Shanghai (UTC+8).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-09-02 00:00:00</p>
@@ -32,7 +32,7 @@ public class QuerySessionReportDataRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The page number of the page to query. Specify this parameter starting from <code>1</code>. If you do not specify this parameter, the first page is queried, but the response may return <code>0</code>.</p>
+     * <p>The page number to query. We recommend that you explicitly specify a value starting from <code>1</code>. If you do not specify this parameter, the service processes the request as the first page, but the response may return <code>0</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class QuerySessionReportDataRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 200. If the specified value is greater than 1500, 1500 is used.</p>
+     * <p>The number of entries per page. Default value: 200. If the value exceeds 1,500, it is processed as 1,500.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -50,8 +50,8 @@ public class QuerySessionReportDataRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The product type. This parameter is optional. If you do not specify this parameter, data is queried based on the Wuying Cloud App caliber.</p>
-     * <p>Specify the value in the exact case shown below. Data that does not match the specified value is not returned.</p>
+     * <p>The product type. Optional. If you do not specify this parameter, data is queried based on the Wuying Cloud App scope.</p>
+     * <p>Specify the value in the exact case as follows. Data that cannot be matched is not returned.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li><code>CloudApp</code>: Wuying Cloud App.</li>
@@ -71,7 +71,7 @@ public class QuerySessionReportDataRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The start time of the statistics. This parameter is required. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The <code>1d</code> granularity aggregates data by date, while other granularities aggregate data down to the minute. The query includes both the start and end boundaries. The string itself does not carry a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</p>
+     * <p>The start time of the statistics. <strong>Required</strong>. Format: <code>yyyy-MM-dd HH:mm:ss</code>. The <code>1d</code> granularity aggregates data by date, while other granularities are accurate to the minute. The query includes both the start and end boundaries. The string itself does not carry a time zone and is interpreted as Asia/Shanghai (UTC+8).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-09-01 00:00:00</p>
@@ -80,7 +80,7 @@ public class QuerySessionReportDataRequest extends TeaModel {
     public String startDate;
 
     /**
-     * <p>The statistical granularity. This parameter is required.</p>
+     * <p>The statistical granularity. <strong>Required</strong>.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li><code>1m</code>: aggregates data by 1 minute. The maximum query span is 1 day.</li>

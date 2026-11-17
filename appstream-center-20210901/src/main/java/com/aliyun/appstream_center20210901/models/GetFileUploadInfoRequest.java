@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFileUploadInfoRequest extends TeaModel {
     /**
-     * <p>The file type. Currently supported values: BrowserBookmarks and BrowserRestrictionUrls.</p>
+     * <p>The file type. Valid values: BrowserBookmarks and BrowserRestrictionUrls.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

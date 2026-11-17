@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWuyingServerWorkloadTemplateRequest extends TeaModel {
     /**
-     * <p>A compatibility field. The current version does not read this parameter. The operation returns a fixed maximum of the first 100 templates.</p>
+     * <p>The compatibility field. The current version does not read this parameter. This operation returns a fixed maximum of the first 100 templates.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -14,7 +14,7 @@ public class ListWuyingServerWorkloadTemplateRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A compatibility field. The current version does not read this parameter and does not support token-based pagination.</p>
+     * <p>The compatibility field. The current version does not read this parameter and does not support token-based pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>unused</p>

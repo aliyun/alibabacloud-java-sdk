@@ -1,3 +1,36 @@
+2026-11-17 Version: 4.16.0
+- Support API BatchConfigRuntimeChannel.
+- Support API ClearAgentInstanceMemory.
+- Support API DescribeShareImage.
+- Support API DescribeSlsDeliveryConfig.
+- Support API DescribeUserProfilePathRules.
+- Support API FinishValidate.
+- Support API GetEffectiveImageById.
+- Support API GetImageById.
+- Support API GetImageDistributeInfo.
+- Support API GetRuntimeChannelQrCodeDetail.
+- Support API GetTenantMemoryConfig.
+- Support API GetUploadInfo.
+- Support API ImportImage.
+- Support API ListAgentInstanceMemory.
+- Support API ListCommandInvocationResults.
+- Support API ListImageBaseInfo.
+- Support API ListImageTags.
+- Support API ListRelatedResource.
+- Support API ModifyAgentInstanceMemoryConfig.
+- Support API ModifyTenantMemoryConfig.
+- Support API ModifyWuyingServerSpec.
+- Support API ResizeWuyingServerDisk.
+- Support API RunAppInstanceCommand.
+- Support API SendRuntimeQrCodeConfigChannelMessage.
+- Support API SetUserProfilePathRules.
+- Support API StartTaskForCreateImage.
+- Support API SubmitImage.
+- Update API DescribeEvents: add request parameters EndUserIds.
+- Update API GetRuntimeModelConfig: add request parameters Language.
+- Update API RestartWuyingServer: add request parameters EnableRestartRetry.
+
+
 2026-11-09 Version: 4.15.0
 - Support API GetMqttTicket.
 

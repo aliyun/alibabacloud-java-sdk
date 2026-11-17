@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListBindInfoResponseBody extends TeaModel {
     /**
-     * <p>The list of binding information returned.</p>
+     * <p>The list of returned binding information.</p>
      */
     @NameInMap("BindInfoModels")
     public java.util.List<ListBindInfoResponseBodyBindInfoModels> bindInfoModels;
 
     /**
-     * <p>The page number of the query results currently displayed.</p>
+     * <p>The current page number of the query results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListBindInfoResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of query results per page.</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -32,10 +32,10 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records that match the query conditions. Use this value to determine whether to continue paging.</p>
+     * <p>The total number of records that meet the query conditions. This parameter is used to determine whether to continue pagination.</p>
      * <ul>
-     * <li>When the authorization mode is <code>App</code> or <code>AppInstanceGroup</code>, this is the number of authorization records. If the same user has multiple authorization records, the user is counted multiple times. Therefore, this value may be greater than the actual number of users.</li>
-     * <li>When the authorization mode is <code>Session</code>, this is the deduplicated user count.</li>
+     * <li>When the authorization mode is <code>App</code> or <code>AppInstanceGroup</code>, this value is the number of authorization records. If the same user has multiple authorization records, the user is counted multiple times. Therefore, this value may be greater than the actual number of users.</li>
+     * <li>When the authorization mode is <code>Session</code>, this value is the number of deduplicated users.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The list of authorized users on the current page. Multiple authorization records for the same user are merged into a single entry. An empty list is returned if no authorized users match the conditions.</p>
+     * <p>The list of authorized users on the current page. Multiple authorization records for the same user are merged into one item in the response. If no authorized users meet the conditions, an empty list is returned.</p>
      */
     @NameInMap("Users")
     public java.util.List<ListAuthorizedUsersResponseBodyUsers> users;
@@ -99,8 +99,8 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         /**
          * <p>The account type of the user. Valid values:</p>
          * <ul>
-         * <li>simple: Convenience account.</li>
-         * <li>ad: Active Directory (AD) domain account, which originates from an enterprise AD domain.</li>
+         * <li>simple: convenience account</li>
+         * <li>ad: AD domain account from an enterprise AD domain</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public String accountType;
 
         /**
-         * <p>The application ID. Returned only when AppId is specified in the request. The value is the same as the request parameter. Not returned if AppId is not specified or when querying by delivery group set.</p>
+         * <p>The application ID. This parameter is returned only when AppId is specified in the request, and the value is the same as the request parameter. This parameter is not returned if AppId is not specified or when querying by app instance group set.</p>
          * 
          * <strong>example:</strong>
          * <p>ca-i87mycyn419nu****</p>
@@ -119,7 +119,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The delivery group ID associated with the user\&quot;s authorization relationship. When querying by delivery group, this value is the same as the request parameter. When querying by delivery group set, this value is the primary delivery group ID of the set.</p>
+         * <p>The app instance group ID of the authorization relationship to which the user belongs. When querying by app instance group, this value is the same as the request parameter. When querying by app instance group set, this value is the primary app instance group ID of the set.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-9ciijz60n4xsv****</p>
@@ -128,7 +128,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
-         * <p>The delivery group set ID. Returned only when querying by delivery group set. The value is the same as the AppInstanceGroupSetId request parameter.</p>
+         * <p>The app instance group set ID. This parameter is returned only when querying by app instance group set, and the value is the same as the AppInstanceGroupSetId request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>set-3jm9d0abc00example</p>
@@ -137,19 +137,19 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public String appInstanceGroupSetId;
 
         /**
-         * <p>The list of persistent session IDs granted to the user. Returned only when the delivery group authorization mode (AuthMode) is <code>Session</code>. This list is not affected by the AppInstancePersistentId request parameter and always includes all persistent sessions granted to the user.</p>
+         * <p>The list of persistent session IDs granted to the user. This parameter is returned only when the authorization mode (AuthMode) of the app instance group is <code>Session</code>. This parameter is not affected by the filtering of the AppInstancePersistentId request parameter and always lists all persistent sessions granted to the user.</p>
          */
         @NameInMap("AppInstancePersistentIds")
         public java.util.List<String> appInstancePersistentIds;
 
         /**
-         * <p>The authorization mode of the delivery group, which determines the scope of results returned by this operation. Valid values:</p>
+         * <p>The authorization mode of the app instance group, which determines the return scope of this operation. Valid values:</p>
          * <ul>
-         * <li>App: Application-level authorization. Applications within the delivery group are authorized to users without restricting which sessions the users can use.</li>
-         * <li>Session: Session-level authorization. Persistent sessions within the delivery group are authorized to users without restricting which applications the users can use. In this case, AppInstancePersistentIds returns the persistent sessions granted to the user.</li>
-         * <li>AppInstanceGroup: Delivery group-level authorization. The entire delivery group is authorized to users, allowing them to open any application using any session within the delivery group.</li>
+         * <li>App: Application authorization. This mode authorizes the applications under the app instance group to the user and does not restrict which sessions the user can use.</li>
+         * <li>Session: Session authorization. This mode authorizes the persistent sessions under the app instance group to the user and does not restrict which applications the user can use. In this case, AppInstancePersistentIds returns the persistent sessions granted to the user.</li>
+         * <li>AppInstanceGroup: App instance group authorization. This mode authorizes the entire app instance group to the user, allowing the user to use any session under the app instance group to open any application.</li>
          * </ul>
-         * <p>When querying by delivery group set, the authorization mode of the primary delivery group in the set is returned.</p>
+         * <p>When querying by app instance group set, the authorization mode of the primary app instance group of the set is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>AppInstanceGroup</p>
@@ -158,7 +158,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public String authMode;
 
         /**
-         * <p>The email address of the user. Returned only when the account information of the user can be retrieved.</p>
+         * <p>The email address of the user. This parameter is returned only when the account information of the user can be obtained.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
@@ -167,7 +167,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The username. To remove authorization, pass this value to the UnAuthorizeUserIds parameter of the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> or <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation.</p>
+         * <p>The username. To remove authorization, you can pass this value to the UnAuthorizeUserIds parameter of the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> or <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -176,13 +176,13 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public String endUserId;
 
         /**
-         * <p>Indicates whether the query is not restricted to a specific application. Valid values:</p>
+         * <p>Specifies whether the current query is not restricted to a specific application. Valid values:</p>
          * <ul>
-         * <li>true: AppId is not specified in the request. All authorized users under the delivery group are returned.</li>
-         * <li>false: AppId is specified in the request. Only users authorized for that specific application are returned.</li>
+         * <li>true: AppId is not specified in the request, and all authorized users under the app instance group are returned.</li>
+         * <li>false: AppId is specified in the request, and only the users specifically authorized for this application are returned.</li>
          * </ul>
          * <blockquote>
-         * <p>This field is determined by whether the AppId request parameter is specified. It does not reflect the actual scope of applications authorized to the user and cannot be used to determine whether the user is authorized for all applications.</p>
+         * <p>This field is determined by whether the AppId request parameter is specified, and is independent of the actual scope of applications the user is authorized for. You cannot use this field to determine whether the user is authorized for all applications.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -192,7 +192,7 @@ public class ListAuthorizedUsersResponseBody extends TeaModel {
         public String isAuthAllApps;
 
         /**
-         * <p>The phone number of the user. Returned only when the account information of the user can be retrieved.</p>
+         * <p>The phone number of the user. This parameter is returned only when the account information of the user can be obtained.</p>
          * 
          * <strong>example:</strong>
          * <p>138****0000</p>

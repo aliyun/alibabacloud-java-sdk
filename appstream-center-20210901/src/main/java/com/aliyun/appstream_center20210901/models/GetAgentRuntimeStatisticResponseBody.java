@@ -11,7 +11,7 @@ public class GetAgentRuntimeStatisticResponseBody extends TeaModel {
     public java.util.List<GetAgentRuntimeStatisticResponseBodyData> data;
 
     /**
-     * <p>The request ID, which uniquely identifies the request.</p>
+     * <p>The request ID, which is used to uniquely identify the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -59,7 +59,7 @@ public class GetAgentRuntimeStatisticResponseBody extends TeaModel {
 
     public static class GetAgentRuntimeStatisticResponseBodyData extends TeaModel {
         /**
-         * <p>The agent display name, which is determined by both the agent platform and the agent provider. For example, OpenClaw under the ENTERPRISE platform is displayed as OpenClaw, and OpenClaw under the JVS platform is displayed as JVS Claw.</p>
+         * <p>The display name of the agent, which is determined by both the agent platform and the agent provider. For example, OpenClaw under the ENTERPRISE platform is displayed as OpenClaw, and OpenClaw under the JVS platform is displayed as JVS Claw.</p>
          * 
          * <strong>example:</strong>
          * <p>Agentic Computer</p>
@@ -86,7 +86,7 @@ public class GetAgentRuntimeStatisticResponseBody extends TeaModel {
         public String agentProvider;
 
         /**
-         * <p>The number of expired runtime resources in the group. A runtime is counted as expired if its resource status is Expired or Ceased, case-insensitive.</p>
+         * <p>The number of expired runtime resources in this group. A runtime is counted as expired if its resource status is Expired or Ceased, case-insensitive.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -95,7 +95,7 @@ public class GetAgentRuntimeStatisticResponseBody extends TeaModel {
         public Integer expiredCount;
 
         /**
-         * <p>The number of runtime resources without channel configurations in the group, which is the total number of runtime resources minus the number of runtime resources with channel configurations.</p>
+         * <p>The number of runtime resources without a configured channel in this group, which is the total number of runtime resources minus the number of runtime resources with a configured channel.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -104,7 +104,7 @@ public class GetAgentRuntimeStatisticResponseBody extends TeaModel {
         public Integer noChannelConfiguredRuntimeCount;
 
         /**
-         * <p>The number of runtime resources without model configurations in the group. A runtime is considered to have a model configured if a model is configured for the runtime itself or its associated resource group.</p>
+         * <p>The number of runtime resources without a configured model in this group. A runtime is considered to have a configured model if either the runtime itself or its associated resource group has a model configured.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -113,7 +113,7 @@ public class GetAgentRuntimeStatisticResponseBody extends TeaModel {
         public Integer noModelConfiguredRuntimeCount;
 
         /**
-         * <p>The number of risky runtime resources in the group, deduplicated by runtime ID. A runtime is counted as risky if it has any of the following risks: model configuration modified, third-party channel configuration modified, or agent being uninstalled.</p>
+         * <p>The number of risky runtime resources in this group, deduplicated by runtime ID. A runtime is counted as risky if it has any of the following risks: the model configuration is modified, the third-party channel configuration is modified, or the agent is being uninstalled.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -122,7 +122,7 @@ public class GetAgentRuntimeStatisticResponseBody extends TeaModel {
         public Integer riskyRuntimeCount;
 
         /**
-         * <p>The total number of runtime resources in the group, deduplicated by runtime ID.</p>
+         * <p>The total number of runtime resources in this group, deduplicated by runtime ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

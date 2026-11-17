@@ -11,7 +11,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
     public java.util.List<ListLlmTemplatesResponseBodyData> data;
 
     /**
-     * <p>The page number of the returned query results.</p>
+     * <p>The current page number of the query results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
 
     public static class ListLlmTemplatesResponseBodyDataCreditMultiplier extends TeaModel {
         /**
-         * <p>The maximum multiplier. An empty value indicates no upper limit. For example, if Min is 1 and Max is empty, it is displayed as starting from 1x.</p>
+         * <p>The upper limit of the multiplier. An empty value indicates no upper limit. For example, if Min=1 and Max is empty, it is displayed as starting from 1x.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -102,7 +102,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
         public Float max;
 
         /**
-         * <p>The minimum multiplier. When it is equal to Max, it is a fixed multiplier. For example, if Min and Max are both 2, it is displayed as 2x.</p>
+         * <p>The lower limit of the multiplier. When it is equal to the maximum value, it is a fixed multiplier. For example, if Min=Max=2, it is displayed as 2x.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -180,7 +180,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
         public String price;
 
         /**
-         * <p>The price name, such as input, output, or image generation.</p>
+         * <p>The name of the price, such as input, output, or image generation.</p>
          * 
          * <strong>example:</strong>
          * <p>Input</p>
@@ -236,7 +236,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
         public java.util.List<ListLlmTemplatesResponseBodyDataPricesPrices> prices;
 
         /**
-         * <p>The range name, such as Default or 0-1M tokens.</p>
+         * <p>The name of the range, such as Default or 0-1M tokens.</p>
          * 
          * <strong>example:</strong>
          * <p>Default</p>
@@ -294,7 +294,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
         public String config;
 
         /**
-         * <p>The credit consumption multiplier. An empty value indicates that the model does not participate in credit billing.</p>
+         * <p>The credit consumption multiplier. An empty value indicates that the model is not billed by credits.</p>
          */
         @NameInMap("CreditMultiplier")
         public ListLlmTemplatesResponseBodyDataCreditMultiplier creditMultiplier;
@@ -321,7 +321,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
         public ListLlmTemplatesResponseBodyDataInferenceMetadata inferenceMetadata;
 
         /**
-         * <p>Indicates whether the model is the default model in the associated model group.</p>
+         * <p>Specifies whether the model is the default model in the associated model group.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -349,6 +349,9 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
 
         /**
          * <p>The model information, such as the context window size and the maximum number of input/output tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;contextWindow&quot;:1000000,&quot;maxInputTokens&quot;:1048576,&quot;maxOutputTokens&quot;:1048576,&quot;maxReasoningTokens&quot;:1048576,&quot;reasoningMaxInputTokens&quot;:1048576,&quot;reasoningMaxOutputTokens&quot;:1048576}</p>
          */
         @NameInMap("ModelInfo")
         public java.util.Map<String, ?> modelInfo;
@@ -378,7 +381,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
         public String providerTemplateId;
 
         /**
-         * <p>The published time in ISO 8601 format, such as 2026-03-04T06:25:17.000+00:00.</p>
+         * <p>The time when the model was published. The time follows the ISO 8601 standard, such as 2026-03-04T06:25:17.000+00:00.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-04T06:25:17.000+00:00</p>
@@ -396,7 +399,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
         public String refScope;
 
         /**
-         * <p>The number of route policies configured for the model tier. This parameter is returned only when SmartModel is true. If no policies are configured for the tier, 0 is returned.</p>
+         * <p>The number of route policies. This is the number of route policies configured for the model tier. This parameter is returned only when SmartModel is true. If no policies are configured for the tier, 0 is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

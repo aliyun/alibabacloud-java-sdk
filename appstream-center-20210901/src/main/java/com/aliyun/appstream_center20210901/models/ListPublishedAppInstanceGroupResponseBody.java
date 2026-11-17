@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
     /**
-     * <p>The list of published delivery groups on the current page, sorted in descending order of creation time. An empty list is returned if no results match or if the requested page exceeds the result range.</p>
+     * <p>The list of published delivery groups on the current page, sorted in descending order of creation time. If no results match or the requested page exceeds the result range, an empty list is returned.</p>
      */
     @NameInMap("AppInstanceGroupModels")
     public java.util.List<ListPublishedAppInstanceGroupResponseBodyAppInstanceGroupModels> appInstanceGroupModels;
@@ -20,7 +20,7 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of delivery groups per page specified in the request. This value does not represent the actual number of entries returned on the current page. The actual number on the current page may be less than this value.</p>
+     * <p>The number of delivery groups per page specified in the request. Unit: delivery groups. This value does not indicate the actual number of entries returned on the current page. The actual number on the current page may be less than this value.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The unique identifier of the request, which can be used to troubleshoot request issues.</p>
+     * <p>The unique identifier of the current request, which can be used to troubleshoot request issues.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -38,7 +38,7 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of delivery groups that meet all filter conditions. This value is not the number of entries returned on the current page. Each delivery group is counted only once. If no results match, the value is <code>0</code>.</p>
+     * <p>The total number of delivery groups that meet all filter conditions. Unit: delivery groups. This value is not the number of entries returned on the current page. Each delivery group is counted only once. If no results match, the value is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -222,13 +222,13 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
         public String appInstanceType;
 
         /**
-         * <p>The list of deployed applications in the image of the delivery group. The <code>AppId</code> and <code>AppName</code> parameters in the request only determine whether the delivery group is selected, and do not restrict this list to the matched applications.</p>
+         * <p>The list of deployed applications in the image of the delivery group. The AppId and AppName parameters in the request only determine whether the delivery group is selected, and do not trim this list to the matched applications.</p>
          */
         @NameInMap("Apps")
         public java.util.List<ListPublishedAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> apps;
 
         /**
-         * <p>The expiration time of the delivery group. For delivery groups purchased as resources, the expiration time of their resources is returned. For other delivery groups, the expiration time of the delivery group itself is returned. The time is in ISO 8601 date and time format, including milliseconds and time zone offset. The returned time zone offset is +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</p>
+         * <p>The expiration time of the delivery group. For delivery groups sold as resources, the expiration time of their resources is returned. For other delivery groups, the expiration time of the delivery groups themselves is returned. The time is in the ISO 8601 date and time format, including milliseconds and time zone offset. The returned time zone offset is +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-27T16:00:00.000+00:00</p>
@@ -237,7 +237,7 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>The creation time of the delivery group. The time is in ISO 8601 date and time format, including milliseconds and time zone offset. The returned time zone offset is +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</p>
+         * <p>The creation time of the delivery group. The time is in the ISO 8601 date and time format, including milliseconds and time zone offset. The returned time zone offset is +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-26T15:06:16.000+00:00</p>
@@ -255,9 +255,9 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The status of the delivery group. This operation only returns delivery groups in the following states:</p>
+         * <p>The status of the delivery group. This operation only returns delivery groups in the following status:</p>
          * <ul>
-         * <li><code>PUBLISHED</code>: The delivery group is published and listed, and can be included in the query results of this operation. This status does not indicate that a specified user has obtained access permissions.</li>
+         * <li>PUBLISHED: Published and listed. Delivery groups in this status can be included in the query results of this operation. This status does not indicate that a specified user has obtained access permissions.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -267,7 +267,7 @@ public class ListPublishedAppInstanceGroupResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Indicates whether mixed authorization for users and user groups is supported.</p>
+         * <p>Indicates whether mixed authorization of users and user groups is supported.</p>
          */
         @NameInMap("SupportUserGroupMixedAuth")
         public Boolean supportUserGroupMixedAuth;

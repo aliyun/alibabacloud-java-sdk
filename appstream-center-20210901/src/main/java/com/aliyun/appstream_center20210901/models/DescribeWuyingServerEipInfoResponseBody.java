@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
     /**
-     * <p>The EIP information.</p>
+     * <p>The elastic IP address (EIP) information.</p>
      */
     @NameInMap("EipInfoModel")
     public DescribeWuyingServerEipInfoResponseBodyEipInfoModel eipInfoModel;
@@ -42,7 +42,7 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
 
     public static class DescribeWuyingServerEipInfoResponseBodyEipInfoModel extends TeaModel {
         /**
-         * <p>The EIP ID.</p>
+         * <p>The ID of the EIP.</p>
          * 
          * <strong>example:</strong>
          * <p>eip-wz96s3j***mmau4pvv9</p>
@@ -60,7 +60,7 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
         public String ipAddress;
 
         /**
-         * <p>The network interface controller (NIC) ID.</p>
+         * <p>The ID of the network interface.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-bp174p2xxxxxbyh02ix</p>

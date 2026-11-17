@@ -11,7 +11,7 @@ public class ListZonesResponseBody extends TeaModel {
     public ListZonesResponseBodyListZonesModel listZonesModel;
 
     /**
-     * <p>The request ID. You can use this ID to locate and troubleshoot issues.</p>
+     * <p>The unique identifier of the request, which can be used to troubleshoot request issues.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -42,7 +42,7 @@ public class ListZonesResponseBody extends TeaModel {
 
     public static class ListZonesResponseBodyListZonesModel extends TeaModel {
         /**
-         * <p>The list of available zone IDs for the specified product type and operating system type in the current region. When creating a resource that requires a vSwitch, select a vSwitch in one of these zones.</p>
+         * <p>The list of available zone IDs for the specified product type and operating system type in the current region. When you create a resource and specify a vSwitch, select a vSwitch located in one of these zones.</p>
          */
         @NameInMap("Zones")
         public java.util.List<String> zones;

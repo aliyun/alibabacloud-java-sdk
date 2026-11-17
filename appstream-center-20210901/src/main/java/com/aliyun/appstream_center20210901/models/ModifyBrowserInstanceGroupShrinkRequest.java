@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyBrowserInstanceGroupShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to send notification emails for authorization and deauthorization.</p>
+     * <p>Specifies whether to send notification emails for authorization and revocation.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -39,7 +39,7 @@ public class ModifyBrowserInstanceGroupShrinkRequest extends TeaModel {
     public String cloudBrowserName;
 
     /**
-     * <p>The maximum resource count. This parameter takes effect only for the pay-as-you-go billing method based on monthly active users.</p>
+     * <p>The maximum resource count. This parameter takes effect for the pay-as-you-go billing method based on monthly active users.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -48,7 +48,7 @@ public class ModifyBrowserInstanceGroupShrinkRequest extends TeaModel {
     public Integer maxAmount;
 
     /**
-     * <p>The network configurations.</p>
+     * <p>The network configuration.</p>
      */
     @NameInMap("Network")
     public String networkShrink;
@@ -60,13 +60,13 @@ public class ModifyBrowserInstanceGroupShrinkRequest extends TeaModel {
     public String policyShrink;
 
     /**
-     * <p>The storage-related policy.</p>
+     * <p>The storage-related policies.</p>
      */
     @NameInMap("StoragePolicy")
     public String storagePolicyShrink;
 
     /**
-     * <p>The timer.</p>
+     * <p>The timers.</p>
      */
     @NameInMap("Timers")
     public String timersShrink;

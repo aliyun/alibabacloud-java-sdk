@@ -14,14 +14,7 @@ public class ListLlmTemplatesRequest extends TeaModel {
     public Integer bizType;
 
     /**
-     * <p>The display language of the model. Valid values:</p>
-     * <ul>
-     * <li>zh-CN: Simplified Chinese.</li>
-     * <li>en-US: English.</li>
-     * <li>ja-JP: Japanese.</li>
-     * <li>zh-TW: Traditional Chinese.
-     * Default value: zh-CN. Currently, zh-TW returns Simplified Chinese, and ja-JP returns English. If the model is not included in Alibaba Cloud Model Studio or the English text is missing, the original source text is retained without automatic translation.</li>
-     * </ul>
+     * <p>The display language of the model. Valid values: zh-CN (Simplified Chinese), en-US (English), ja-JP (Japanese), and zh-TW (Traditional Chinese). Default value: zh-CN. Currently, zh-TW returns Simplified Chinese, and ja-JP returns English. If the model is not recorded in Model Studio or the English copy is missing, the original source copy is retained without automatic translation.</p>
      * 
      * <strong>example:</strong>
      * <p>en-US</p>
@@ -54,7 +47,7 @@ public class ListLlmTemplatesRequest extends TeaModel {
     public String modelTemplateId;
 
     /**
-     * <p>The page number. Pages start from 1. A value of 0 returns the same result as 1.</p>
+     * <p>The page number. Pages start from page 1. If you set this parameter to 0, the system returns the same result as when you set it to 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -81,12 +74,7 @@ public class ListLlmTemplatesRequest extends TeaModel {
     public String providerTemplateId;
 
     /**
-     * <p>Specifies whether to query smart models. Valid values:</p>
-     * <ul>
-     * <li>true: Only LLMs under system-preset smart models are returned. In this case, BizType is required.</li>
-     * <li>false: Smart models are not specifically filtered.
-     * Default value: false.</li>
-     * </ul>
+     * <p>Specifies whether to query smart models. If you set this parameter to true, only LLMs under system-preset smart models are returned, and BizType is required. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

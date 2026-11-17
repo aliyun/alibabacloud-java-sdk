@@ -6,8 +6,8 @@ import com.aliyun.tea.*;
 public class GetResourceModifyPriceRequest extends TeaModel {
     /**
      * <p>The total number of subscription resource nodes after the scale-out. Unit: nodes.</p>
-     * <p><strong>The value must be greater than the current number of purchased nodes in the delivery group and cannot exceed the node quota of the account.</strong> This parameter is not the number of added nodes or the number of sessions.</p>
-     * <p>For example, if there is currently 1 node and you want to scale out to 2 nodes, specify 2 to indicate a final total of 2 nodes.</p>
+     * <p><strong>The value must be greater than the current number of purchased nodes in the delivery group and cannot exceed the node quota of the account.</strong> This parameter does not represent the number of added nodes or the number of sessions.</p>
+     * <p>For example, if there is currently 1 node and you want to scale out to 2 nodes, set this parameter to 2, which indicates a final total of 2 nodes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class GetResourceModifyPriceRequest extends TeaModel {
 
     /**
      * <p>The ID of the delivery group to be scaled out. You can query only one delivery group at a time.</p>
-     * <p>The delivery group must belong to the current account and match ProductType. It must be billed by node on a subscription basis, have a normal order status, and be associated with a resource node pool.</p>
+     * <p>The delivery group must belong to the current account and match ProductType. It must be purchased by node, use the subscription billing method, have a normal order status, and be associated with a resource node pool.</p>
      * <p>You can obtain the cloud app delivery group ID by calling <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListAppInstanceGroup">ListAppInstanceGroup</a>. You can call <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to further verify the current configuration.</p>
      * <p>This parameter is required.</p>
      * 
@@ -31,10 +31,10 @@ public class GetResourceModifyPriceRequest extends TeaModel {
     /**
      * <p>The product type, which must match the product to which the target delivery group belongs. Valid values:</p>
      * <ul>
-     * <li>CloudApp: WUYING Cloud App. Queries the resource scale-out price of a cloud app delivery group.</li>
-     * <li>CloudBrowser: Cloud Browser. Applies only to subscription browser delivery groups that are billed by node.</li>
+     * <li>CloudApp: WUYING Cloud App. Queries the resource scale-out price for a cloud app delivery group.</li>
+     * <li>CloudBrowser: Cloud Browser. Applies only to subscription browser delivery groups purchased by node.</li>
      * </ul>
-     * <p>This operation does not apply to pay-as-you-go or browser groups billed by monthly active user (MAU).</p>
+     * <p>This operation does not apply to browser groups that use the pay-as-you-go billing method or are billed by monthly active users (MAU).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The region ID. This parameter is required. Set this parameter to the ID of the region where the delivery group resides, such as <code>cn-hangzhou</code>.</p>
+     * <p>The region ID. This parameter is required. Specify the ID of the region where the app instance group resides, such as <code>cn-hangzhou</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,20 +15,19 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of resource IDs to which you want to bind tags. This parameter is required. Specify delivery group IDs. You can specify up to 50 IDs in a single request. Duplicate IDs are automatically deduplicated.</p>
-     * <p><strong>All IDs must be existing delivery groups under the current Alibaba Cloud account.</strong> If any ID does not exist or does not belong to the current account, the entire request fails and the error code <code>InvalidAppInstanceGroup.NotFound</code> is returned. No tags are bound to any resource.</p>
+     * <p>The list of resource IDs to which you want to bind tags. This parameter is required. Specify the app instance group IDs. You can specify up to 50 IDs in a single request. Duplicate IDs are automatically deduplicated.</p>
+     * <p><strong>All IDs must belong to existing app instance groups under the current Alibaba Cloud account.</strong> If any ID does not exist or does not belong to the current account, the entire request fails and the error code <code>InvalidAppInstanceGroup.NotFound</code> is returned. No tags are bound to any resources.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. This parameter is required. <strong>Currently, only delivery groups are supported.</strong> The value is case-insensitive. We recommend that you use uppercase letters.</p>
-     * <p>Valid values:</p>
+     * <p>The resource type. This parameter is required. <strong>Currently, only app instance groups are supported</strong>. The value is case-insensitive, but we recommend that you use uppercase letters:</p>
      * <ul>
-     * <li>APPINSTANCEGROUP: China Office (Chinese: Wuying) delivery group.</li>
+     * <li><code>APPINSTANCEGROUP</code>: app instance group.</li>
      * </ul>
-     * <p>If you specify another value, the error code <code>InvalidResourceType.Invalid</code> is returned.</p>
+     * <p>If you specify other values, the error code <code>InvalidResourceType.Invalid</code> is returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,18 +37,18 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of tags to bind. This parameter is required. You can specify up to 20 tags in a single request. Each tag must include both <code>Key</code> and <code>Value</code>.</p>
+     * <p>The list of tags to bind. This parameter is required. You can specify up to 20 tags in a single request. You must specify both Key and Value for each tag.</p>
      * <ul>
-     * <li>Tag keys in the same request must be unique. Otherwise, the error code <code>InvalidTag.Duplicated</code> is returned.</li>
-     * <li>If a tag key already exists on the resource, the tag value is updated to the value specified in the current request.</li>
-     * <li>A maximum of 20 custom tags can be bound to a single resource. If this limit is exceeded, the error code <code>ResourceTag.CustomTagCountExceed</code> is returned.</li>
+     * <li>Tag keys in the same request cannot be duplicate. Otherwise, the error code <code>InvalidTag.Duplicated</code> is returned.</li>
+     * <li>If a tag with the same key already exists on the resource, the tag value is updated to the value specified in the current request.</li>
+     * <li>A single resource can be bound to up to 20 custom tags. If this limit is exceeded, the error code <code>ResourceTag.CustomTagCountExceed</code> is returned.</li>
      * </ul>
-     * <p>Tag keys that start with <code>System/</code> are China Office (Chinese: Wuying) system tags. Only the following values are supported, and the tag value can be only <code>true</code> or <code>false</code>:</p>
+     * <p>Tag keys starting with <code>System/</code> are Wuying system tags. Only the following values are supported, and the tag value can only be <code>true</code> or <code>false</code>:</p>
      * <ul>
-     * <li><code>System/Scheduler/GRAYSCALE</code>: the canary release tag for the delivery group.</li>
-     * <li><code>System/Scheduler/STOP_NEW_USER_CONNECTION</code>: prevents newly bound users from establishing connections to the delivery group.</li>
+     * <li><code>System/Scheduler/GRAYSCALE</code>: the canary release tag for the app instance group.</li>
+     * <li><code>System/Scheduler/STOP_NEW_USER_CONNECTION</code>: prevents newly bound users from establishing connections to the app instance group.</li>
      * </ul>
-     * <p>If you specify other tag keys that start with <code>System/</code>, the error code <code>InvalidTag.SystemTagKeyInvalid</code> or <code>InvalidTag.SystemKeyNotAllow</code> is returned.</p>
+     * <p>If you specify other tag keys starting with <code>System/</code>, the error code <code>InvalidTag.SystemTagKeyInvalid</code> or <code>InvalidTag.SystemKeyNotAllow</code> is returned.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -94,7 +93,7 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key. This parameter is required. The tag key must be 1 to 128 characters in length and is case-sensitive. The tag key cannot start with <code>aliyun</code> or <code>acs:</code> (case-insensitive) and cannot contain <code>http://</code> or <code>https://</code>. Letters, digits, spaces, and common punctuation marks are supported. If the tag key does not comply with the rules, the error code <code>InvalidTagPolicy.KeyInvalid</code> is returned.</p>
+         * <p>The tag key. This parameter is required. The tag key must be 1 to 128 characters in length and is case-sensitive. It cannot start with <code>aliyun</code> or <code>acs:</code> (case-insensitive) and cannot contain <code>http://</code> or <code>https://</code>. It supports letters, digits, spaces, and common Chinese and English punctuation marks. If the tag key does not meet the rules, the error code <code>InvalidTagPolicy.KeyInvalid</code> is returned.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -104,8 +103,8 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. This parameter is required. The tag value must be 0 to 256 characters in length and is case-sensitive. An empty string is allowed. The tag value cannot contain <code>http://</code> or <code>https://</code>. If the tag value does not comply with the rules, the error code <code>InvalidTagPolicy.ValueInvalid</code> is returned.</p>
-         * <p>If the tag key is a system tag, the tag value can be only <code>true</code> or <code>false</code>.</p>
+         * <p>The tag value. This parameter is required. The tag value must be 0 to 256 characters in length and is case-sensitive. Empty strings are allowed. It cannot contain <code>http://</code> or <code>https://</code>. If the tag value does not meet the rules, the error code <code>InvalidTagPolicy.ValueInvalid</code> is returned.</p>
+         * <p>If the tag key is a system tag, the tag value can only be <code>true</code> or <code>false</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

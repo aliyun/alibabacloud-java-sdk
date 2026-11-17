@@ -20,7 +20,7 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total count.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -87,7 +87,7 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
 
         /**
          * <p>The channel configuration JSON string.</p>
-         * <p>Currently, only the simple configuration mode is supported. You must pass AppKey and AppSecret.</p>
+         * <p>Currently, only the simple configuration mode is supported. You must specify the AppKey and AppSecret.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -108,7 +108,7 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
         public String configMode;
 
         /**
-         * <p>The QR code configuration notification page URL (returned only for ENTERPRISE/ENTERPRISE_JVS platforms).</p>
+         * <p>The QR code configuration notification page URL (returned only for the ENTERPRISE or ENTERPRISE_JVS platform).</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://eds.console.aliyun.com/public/scan-pair?taskId=e7eb5d86-1b94-4d58-****-3b78b01df99e&code=dingtalk-connector&region=cn-shanghai">https://eds.console.aliyun.com/public/scan-pair?taskId=e7eb5d86-1b94-4d58-****-3b78b01df99e&amp;code=dingtalk-connector&amp;region=cn-shanghai</a></p>
@@ -117,7 +117,7 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
         public String qrCodeNotifyUrl;
 
         /**
-         * <p>The QR code configuration status (returned only when not in a desired state).</p>
+         * <p>The QR code configuration status (returned only in non-terminal states).</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://q.qq.com/qqbot/openclaw/entity-picker.html?session_id=c0882266-77c0-4094-af93-442*****2a58">https://q.qq.com/qqbot/openclaw/entity-picker.html?session_id=c0882266-77c0-4094-af93-442*****2a58</a></p>

@@ -20,7 +20,7 @@ public class DeleteAppResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The error or result message. This field describes the cause when a request fails. A successful response may not contain this field.</p>
+     * <p>The error message or result prompt. This field describes the cause when a request fails. A successful response may not contain this field.</p>
      * 
      * <strong>example:</strong>
      * <p>Internal error.</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMqttTicketRequest extends TeaModel {
     /**
-     * <p>The client operating system.</p>
+     * <p>The operating system of the client.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetMqttTicketRequest extends TeaModel {
     public Integer clientType;
 
     /**
-     * <p>The client version.</p>
+     * <p>The version number of the client.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class GetMqttTicketRequest extends TeaModel {
     public String clientVersion;
 
     /**
-     * <p>The extended properties of the client, represented as a JSON object where both keys and values are strings. Example: <code>{&quot;a&quot;:&quot;1&quot;,&quot;b&quot;:&quot;2&quot;}</code>. If this parameter is not specified, it is processed as an empty property set.</p>
+     * <p>The extended properties of the client, represented as a JSON object where both keys and values are strings. Example: <code>{&quot;a&quot;:&quot;1&quot;,&quot;b&quot;:&quot;2&quot;}</code>. If this parameter is not specified, an empty property set is used.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;a&quot;:&quot;1&quot;,&quot;b&quot;:&quot;2&quot;}</p>
@@ -44,7 +44,7 @@ public class GetMqttTicketRequest extends TeaModel {
     public java.util.Map<String, ?> properties;
 
     /**
-     * <p>The device UUID.</p>
+     * <p>The UUID of the device.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

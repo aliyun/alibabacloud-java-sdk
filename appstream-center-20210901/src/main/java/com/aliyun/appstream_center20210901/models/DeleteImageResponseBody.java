@@ -7,8 +7,8 @@ public class DeleteImageResponseBody extends TeaModel {
     /**
      * <p>The status code. Valid values:</p>
      * <ul>
-     * <li><code>200</code>: Success.</li>
-     * <li><code>400</code>: Error.</li>
+     * <li><code>200</code>: The request is successful.</li>
+     * <li><code>400</code>: An error occurred.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DeleteImageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the deletion was successful.</p>
+     * <p>Indicates whether the deletion is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -36,7 +36,7 @@ public class DeleteImageResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>

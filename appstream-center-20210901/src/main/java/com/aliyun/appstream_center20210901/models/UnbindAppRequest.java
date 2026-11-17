@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class UnbindAppRequest extends TeaModel {
     /**
-     * <p>The list of application IDs to dissociate from the specified image version. Verify that each application is associated with the selected image version beforehand.</p>
+     * <p>The list of application IDs to disassociate from the specified image version. Verify that each application is associated with the selected image version.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AppIdList")
     public java.util.List<String> appIdList;
 
     /**
-     * <p>The ID of the image from which the applications are to be dissociated. The image must be a custom image or community image manageable by the current account.</p>
+     * <p>The ID of the image from which the applications are to be disassociated. The image must be a custom image or a community image manageable by the current account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class UnbindAppRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The ID of the image version from which the applications are to be dissociated. If omitted, the current active version of the image is used. If specified, the version must belong to the image specified by ImageId.</p>
+     * <p>The ID of the image version from which the applications are to be disassociated. If this parameter is omitted, the current active version of the image is used. If specified, the version must belong to the image specified by ImageId.</p>
      * 
      * <strong>example:</strong>
      * <p>iv-bp1example****</p>

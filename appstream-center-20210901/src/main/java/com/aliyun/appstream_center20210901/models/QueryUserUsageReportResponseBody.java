@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryUserUsageReportResponseBody extends TeaModel {
     /**
-     * <p>The business status code. A value of 200 indicates that the request is successful. Other values indicate that the request failed.</p>
+     * <p>The business status code. A value of <code>200</code> indicates that the request was successful. Other values indicate that the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class QueryUserUsageReportResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The description of the request processing result. Typically, success is returned when the request is successful.</p>
+     * <p>The description of the request processing result. Typically, <code>success</code> is returned when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -50,7 +50,7 @@ public class QueryUserUsageReportResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The unique identifier of the request. You can use this ID to troubleshoot request issues.</p>
+     * <p>The unique identifier of the request, which can be used to troubleshoot the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -160,7 +160,7 @@ public class QueryUserUsageReportResponseBody extends TeaModel {
         public String connectionStatus;
 
         /**
-         * <p>The last connection time. Format: <code>yyyy-MM-dd HH:mm:ss</code>. If no current or historical connection record exists, - is returned. The string itself does not carry a time zone and is interpreted as Asia/Shanghai (UTC+8).</p>
+         * <p>The last connection time. Format: <code>yyyy-MM-dd HH:mm:ss</code>. If no current or historical connection record exists, <code>-</code> is returned. The string itself does not carry a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-01 10:00:00</p>
@@ -169,7 +169,7 @@ public class QueryUserUsageReportResponseBody extends TeaModel {
         public String lastConnectedTime;
 
         /**
-         * <p>The current version does not return a valid region ID. Callers should not rely on this field. To filter by business region, use the BizRegionId request parameter.</p>
+         * <p>The current version does not return a valid region ID. Callers should not rely on this field. To filter by business region, use the <code>BizRegionId</code> request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -178,7 +178,7 @@ public class QueryUserUsageReportResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The cumulative session persistence duration within the query range. This is the duration during which the user occupies the session from session attach to session release. Multiple sessions under the same app instance group are accumulated. Unit: hours.</p>
+         * <p>The cumulative session persistence duration within the query range, which refers to the time a user occupies a session from attach to release. If multiple sessions exist under the same app instance group, their durations are accumulated. Unit: hours.</p>
          * 
          * <strong>example:</strong>
          * <p>3.5</p>

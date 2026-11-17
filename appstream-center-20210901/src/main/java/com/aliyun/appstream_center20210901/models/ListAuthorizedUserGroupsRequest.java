@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizedUserGroupsRequest extends TeaModel {
     /**
-     * <p>The ID of the delivery group.</p>
+     * <p>The ID of the app instance group.</p>
      * 
      * <strong>example:</strong>
      * <p>aig-9ciijz60n4xsv****</p>
@@ -14,7 +14,7 @@ public class ListAuthorizedUserGroupsRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The ID of the delivery group set. You must specify either AppInstanceGroupSetId or AppInstanceGroupId, but not both.</p>
+     * <p>The ID of the app instance group set. You must specify either AppInstanceGroupSetId or AppInstanceGroupId, but not both.</p>
      * 
      * <strong>example:</strong>
      * <p>set-3jm9d0abc00example</p>
@@ -23,7 +23,7 @@ public class ListAuthorizedUserGroupsRequest extends TeaModel {
     public String appInstanceGroupSetId;
 
     /**
-     * <p>The ID of the user group. This parameter is used for exact match.</p>
+     * <p>The ID of the user group. Exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>ug-00001</p>
@@ -32,7 +32,7 @@ public class ListAuthorizedUserGroupsRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The name of the user group. This parameter is used for fuzzy match.</p>
+     * <p>The name of the user group. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>UserGroup001</p>
@@ -41,7 +41,7 @@ public class ListAuthorizedUserGroupsRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The page number, starting from 1.</p>
+     * <p>The page number. Pages start from 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

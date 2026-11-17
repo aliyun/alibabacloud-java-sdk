@@ -42,7 +42,7 @@ public class CreateModelTemplateResponseBody extends TeaModel {
 
     public static class CreateModelTemplateResponseBodyData extends TeaModel {
         /**
-         * <p>The model group ID.</p>
+         * <p>The ID of the model group.</p>
          * 
          * <strong>example:</strong>
          * <p>mt-xxxx</p>

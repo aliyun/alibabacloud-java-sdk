@@ -32,7 +32,7 @@ public class ListBindInfoRequest extends TeaModel {
     public java.util.List<String> appInstanceIdList;
 
     /**
-     * <p>The page number of the query results to display. Default value: <code>1</code>. Specify this parameter.</p>
+     * <p>The page number of the query results to return. Default value: <code>1</code>. Specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class ListBindInfoRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of query results per page. Maximum value: <code>100</code>. Default value: <code>20</code>. Specify this parameter.</p>
+     * <p>The number of entries to return on each page. Maximum value: <code>100</code>. Default value: <code>20</code>. Specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

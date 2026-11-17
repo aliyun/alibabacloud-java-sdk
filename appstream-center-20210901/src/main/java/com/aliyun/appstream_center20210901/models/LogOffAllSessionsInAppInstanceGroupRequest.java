@@ -6,6 +6,20 @@ import com.aliyun.tea.*;
 public class LogOffAllSessionsInAppInstanceGroupRequest extends TeaModel {
     /**
      * <p>The delivery group ID.</p>
+     * <p>Note:</p>
+     * <ul>
+     * <li>The delivery group must meet the following status requirements:</li>
+     * </ul>
+     * <ol>
+     * <li>ChargeType=PostPaid</li>
+     * <li>NodePool.StrategyType=NODE_SCALING_BY_SCHEDULE</li>
+     * <li>Status=PUBLISHED</li>
+     * <li>The current time is not within the NodePool.RecurrenceSchedules window.</li>
+     * </ol>
+     * <ul>
+     * <li>You can call the ListAppInstanceGroup or GetAppInstanceGroup operation to query the current status of the delivery group.</li>
+     * <li>You can call the CreateAppInstanceGroup operation to create a delivery group that meets the requirements.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

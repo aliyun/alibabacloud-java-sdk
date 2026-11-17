@@ -18,6 +18,7 @@ public class CreateBrowserInstanceGroupShrinkRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to send notification emails for authorization and deauthorization.</p>
+     * <p>Valid values:</p>
      * <ul>
      * <li><code>true</code>: Sends notification emails.</li>
      * <li><code>false</code>: Does not send notification emails.</li>
@@ -54,7 +55,7 @@ public class CreateBrowserInstanceGroupShrinkRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The identifier of the business region. This parameter is required.</p>
+     * <p>The business region identifier. This parameter is required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,8 +71,8 @@ public class CreateBrowserInstanceGroupShrinkRequest extends TeaModel {
     public String browserConfigShrink;
 
     /**
-     * <p>The resource billing method.
-     * <strong>For MAU scenarios:</strong> Set this parameter to <code>AppInstance</code>, which indicates billing by instance resources.</p>
+     * <p>The resource billing method.</p>
+     * <p><strong>For MAU scenarios:</strong> Set this parameter to <code>AppInstance</code>, which indicates billing by instance resources.</p>
      * 
      * <strong>example:</strong>
      * <p>AppInstance</p>
@@ -81,7 +82,7 @@ public class CreateBrowserInstanceGroupShrinkRequest extends TeaModel {
 
     /**
      * <p>The billing method.</p>
-     * <p><strong>For MAU scenarios:</strong> Set this parameter to PostPaid, which indicates pay-as-you-go.</p>
+     * <p><strong>For MAU scenarios:</strong> Set this parameter to <code>PostPaid</code>, which indicates pay-as-you-go.</p>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -100,9 +101,9 @@ public class CreateBrowserInstanceGroupShrinkRequest extends TeaModel {
     public String cloudBrowserName;
 
     /**
-     * <p>The image ID used by the cloud browser. The image must be compatible with the operating system.
-     * If this parameter is omitted, the default image available for the account is used. If no default image is available, the creation may fail.
-     * <strong>Usage conditions:</strong> When CookiesSync is enabled, explicitly specify an image that supports cookie synchronization.</p>
+     * <p>The image ID used by the cloud browser. The image must be compatible with the operating system.</p>
+     * <p>If this parameter is omitted, the default image available for the account is used. If no default image is available, the creation may fail.</p>
+     * <p><strong>Usage condition:</strong> When CookiesSync is enabled, explicitly specify an image that supports cookie synchronization.</p>
      * 
      * <strong>example:</strong>
      * <p>img-bp13mu****</p>
@@ -111,8 +112,8 @@ public class CreateBrowserInstanceGroupShrinkRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The instance type identifier. Select an instance type that matches the target region, operating system, and inventory conditions.
-     * If this parameter is omitted, the default instance type is used.</p>
+     * <p>The instance type identifier. Select an instance type that matches the target region, operating system, and inventory conditions.</p>
+     * <p>If this parameter is omitted, the default instance type is used.</p>
      * 
      * <strong>example:</strong>
      * <p>appstreaming.general.basic</p>
@@ -121,7 +122,7 @@ public class CreateBrowserInstanceGroupShrinkRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The capacity configuration in MAU billing scenarios.</p>
+     * <p>The capacity configuration for MAU billing scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -130,14 +131,14 @@ public class CreateBrowserInstanceGroupShrinkRequest extends TeaModel {
     public Integer maxAmount;
 
     /**
-     * <p>The configurations for the office network and website access restrictions. The selected office network must belong to the current account and reside in the region specified by BizRegionId.</p>
+     * <p>The configurations for the office network and website access restrictions. The selected office network must belong to the current account and be located in the region specified by <code>BizRegionId</code>.</p>
      */
     @NameInMap("Network")
     public String networkShrink;
 
     /**
-     * <p>The node pool configuration.
-     * You do not need to specify this parameter.</p>
+     * <p>The node pool configuration.</p>
+     * <p>You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -148,8 +149,8 @@ public class CreateBrowserInstanceGroupShrinkRequest extends TeaModel {
     public String nodePoolShrink;
 
     /**
-     * <p>The operating system type. This parameter is required.
-     * Only <code>Windows</code> is supported. Other operating systems are not supported.</p>
+     * <p>The operating system type. This parameter is required.</p>
+     * <p>Only Windows is supported. Other operating systems are not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Windows</p>
@@ -182,7 +183,7 @@ public class CreateBrowserInstanceGroupShrinkRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>Configures policies for the clipboard, video, watermark, session, and client access.</p>
+     * <p>The configurations for clipboard, video, watermark, session, and client access policies.</p>
      */
     @NameInMap("Policy")
     public String policyShrink;
@@ -198,20 +199,20 @@ public class CreateBrowserInstanceGroupShrinkRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The connection security policy of the browser group.</p>
+     * <p>The connection security policy for the browser group.</p>
      */
     @NameInMap("SecurityPolicy")
     public String securityPolicyShrink;
 
     /**
-     * <p>The user data storage configuration of the browser group.</p>
+     * <p>The user data storage configuration for the browser group.</p>
      */
     @NameInMap("StoragePolicy")
     public String storagePolicyShrink;
 
     /**
      * <p>The billing sub-type.</p>
-     * <p><strong>You must explicitly set this parameter to mau, which indicates billing by monthly active users (MAUs).</strong> Omitting this parameter does not enable MAU billing.</p>
+     * <p><strong>You must explicitly set this parameter to <code>mau</code>, which indicates billing by monthly active users.</strong> Omitting this field does not enable MAU billing.</p>
      * 
      * <strong>example:</strong>
      * <p>mau</p>
@@ -220,7 +221,7 @@ public class CreateBrowserInstanceGroupShrinkRequest extends TeaModel {
     public String subPayType;
 
     /**
-     * <p>This parameter is not supported and does not need to be specified.</p>
+     * <p>Not supported. Leave this parameter empty.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -231,7 +232,7 @@ public class CreateBrowserInstanceGroupShrinkRequest extends TeaModel {
     public String tagShrink;
 
     /**
-     * <p>This parameter is not supported and does not need to be specified.</p>
+     * <p>Not supported. Leave this parameter empty.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -242,8 +243,8 @@ public class CreateBrowserInstanceGroupShrinkRequest extends TeaModel {
     public String timersShrink;
 
     /**
-     * <p>The list of authorized user group IDs. You can specify up to 10 IDs. The user groups must belong to the current account and match the account type of the office network.
-     * <strong>Limits:</strong> This parameter cannot be specified together with a non-empty Users parameter.</p>
+     * <p>The list of authorized user group IDs. You can specify up to 10 user group IDs. The user groups must belong to the current account and match the office network account type.</p>
+     * <p><strong>Limits:</strong> This parameter cannot be specified together with a non-empty Users parameter.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -258,8 +259,8 @@ public class CreateBrowserInstanceGroupShrinkRequest extends TeaModel {
     public String userInfoShrink;
 
     /**
-     * <p>The list of authorized users. You can specify up to 200 users. The users must be created in advance and match the account type.</p>
-     * <p><strong>Limit:</strong> This parameter cannot be specified together with a non-empty UserGroupIds parameter.</p>
+     * <p>The list of authorized users. You can specify up to 200 users. Users must be created in advance and match the account type.</p>
+     * <p><strong>Limits:</strong> This parameter cannot be specified together with a non-empty <code>UserGroupIds</code> parameter.</p>
      */
     @NameInMap("Users")
     public String usersShrink;

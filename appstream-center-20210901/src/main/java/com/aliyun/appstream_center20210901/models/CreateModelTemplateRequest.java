@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateModelTemplateRequest extends TeaModel {
     /**
-     * <p>The Agent platform.</p>
+     * <p>The agent platform.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -14,7 +14,7 @@ public class CreateModelTemplateRequest extends TeaModel {
     public String agentPlatform;
 
     /**
-     * <p>The Agent provider name.</p>
+     * <p>The name of the agent provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class CreateModelTemplateRequest extends TeaModel {
     public Integer bizType;
 
     /**
-     * <p>The template group description.</p>
+     * <p>The description of the template group.</p>
      * 
      * <strong>example:</strong>
      * <p>Test model group</p>
@@ -43,7 +43,7 @@ public class CreateModelTemplateRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The template group name.</p>
+     * <p>The name of the template group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class CreateModelTemplateRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The authorization scope. This parameter is optional and effective only for Common model groups. Valid values: ALL_USER and USER_MIXED (strictly uppercase). If not specified, Common model groups default to USER_MIXED. Non-Common groups ignore this parameter and use RESOURCE_MIXED.</p>
+     * <p>The authorization scope. This parameter is optional and takes effect only for Common model groups. Valid values: ALL_USER and USER_MIXED. The value must be strictly uppercase. If this parameter is not specified, the default value for Common groups is USER_MIXED. For non-Common groups, this parameter is ignored and fixed to RESOURCE_MIXED.</p>
      * 
      * <strong>example:</strong>
      * <p>ALL_USER</p>

@@ -11,7 +11,7 @@ public class ModifyAppInstanceGroupChargeTypeResponseBody extends TeaModel {
     public ModifyAppInstanceGroupChargeTypeResponseBodyAppInstanceGroupModel appInstanceGroupModel;
 
     /**
-     * <p>The unique ID of the request, which can be used to troubleshoot request issues.</p>
+     * <p>The unique ID of the request. You can use this ID to troubleshoot request issues.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>

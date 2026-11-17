@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnassignWuyingServerPrivateAddressesRequest extends TeaModel {
     /**
-     * <p>The list of secondary private IP addresses to unbind.</p>
+     * <p>The list of secondary private IP addresses to disassociate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

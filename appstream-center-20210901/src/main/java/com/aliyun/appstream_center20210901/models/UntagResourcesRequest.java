@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all custom tags from the resources. <strong>This parameter takes effect only when <code>TagKey.N</code> is not specified</strong>. If <code>TagKey.N</code> is specified, this parameter is ignored. Valid values:</p>
+     * <p>Specifies whether to remove all custom tags from the resources. <strong>This parameter takes effect only when TagKey.N is not specified</strong>. If TagKey.N is specified, this parameter is ignored. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: removes all custom tags from the resources, including Wuying system tags that start with <code>System/</code> and were bound by calling the <a href="~~TagResources~~">TagResources</a> operation.</li>
-     * <li><code>false</code> (default): does not remove all tags. If <code>TagKey.N</code> is also not specified, the operation returns the error code <code>InvalidParameter.TagKeyListOrAll</code>.</li>
+     * <li>true: Removes all custom tags from the resources, including Wuying system tags that start with <code>System/</code> and are bound by calling the <a href="~~TagResources~~">TagResources</a> operation.</li>
+     * <li>false (default): Does not remove all tags. If TagKey.N is also not specified, the error code InvalidParameter.TagKeyListOrAll is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Boolean all;
 
     /**
-     * <p>The region ID. This parameter is required. Specify the ID of the region where the app instance group resides, such as <code>cn-hangzhou</code>.</p>
+     * <p>The region ID. This parameter is required. Set this parameter to the ID of the region where the app instance group resides, such as cn-hangzhou.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,18 +32,18 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The list of resource IDs from which you want to remove tags. This parameter is required. Specify the app instance group IDs. A maximum of 50 IDs can be specified in a single request. Duplicate IDs are automatically deduplicated.</p>
-     * <p><strong>All IDs must belong to existing app instance groups within the current Alibaba Cloud account.</strong> If any ID does not exist or does not belong to the current account, the entire request fails and the operation returns the error code <code>InvalidAppInstanceGroup.NotFound</code>. No resources are untagged.</p>
+     * <p><strong>All IDs must belong to existing app instance groups within the current Alibaba Cloud account.</strong> If any ID does not exist or does not belong to the current account, the entire request fails and the error code InvalidAppInstanceGroup.NotFound is returned. No tags are removed from any resources.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. This parameter is required. <strong>Currently, only app instance groups are supported</strong>. The value is case-insensitive. We recommend that you use uppercase letters:</p>
+     * <p>The resource type. This parameter is required. <strong>Currently, only app instance groups are supported</strong>. The value is not case-sensitive, but we recommend that you use uppercase letters:</p>
      * <ul>
-     * <li><code>APPINSTANCEGROUP</code>: Wuying app instance group.</li>
+     * <li>APPINSTANCEGROUP: Wuying app instance group.</li>
      * </ul>
-     * <p>If you specify other values, the operation returns the error code <code>InvalidResourceType.Invalid</code>.</p>
+     * <p>If you specify other values, the error code InvalidResourceType.Invalid is returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,18 +53,18 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of tag keys to be removed. A maximum of 20 tag keys can be specified in a single request. <strong>You must specify at least one of <code>TagKey.N</code> and <code>All</code></strong>. If neither is specified, the operation returns the error code <code>InvalidParameter.TagKeyListOrAll</code>.</p>
+     * <p>The list of tag keys to be removed. A maximum of 20 tag keys can be specified in a single request. <strong>You must specify at least one of TagKey.N and All</strong>. If neither is specified, the error code InvalidParameter.TagKeyListOrAll is returned.</p>
      * <ul>
-     * <li>If <code>TagKey.N</code> is specified, only the tags corresponding to these tag keys are removed, and the <code>All</code> parameter is ignored.</li>
+     * <li>If TagKey.N is specified, only the tags corresponding to these tag keys are removed, and the All parameter is ignored.</li>
      * <li>If a specified tag key does not exist on a resource, the tag key is skipped and no error is returned.</li>
-     * <li>If <code>TagKey.N</code> is not specified, you must set <code>All</code> to <code>true</code> to remove all custom tags from the resources.</li>
+     * <li>If TagKey.N is not specified, you must set All to true to remove all custom tags from the resources.</li>
      * </ul>
      * <p>Tag keys that start with <code>System/</code> are Wuying system tags. Only the following values are supported:</p>
      * <ul>
-     * <li><code>System/Scheduler/GRAYSCALE</code>: The grayscale tag for the app instance group.</li>
-     * <li><code>System/Scheduler/STOP_NEW_USER_CONNECTION</code>: Prevents newly bound users from establishing connections to the app instance group.</li>
+     * <li>System/Scheduler/GRAYSCALE: The grayscale tag for the app instance group.</li>
+     * <li>System/Scheduler/STOP_NEW_USER_CONNECTION: Prevents new connections from users newly bound to the app instance group.</li>
      * </ul>
-     * <p>If you specify other tag keys that start with <code>System/</code>, the operation returns the error code <code>InvalidTagPolicy.KeyInvalid</code> or <code>InvalidTag.SystemKeyNotAllow</code>.</p>
+     * <p>If you specify other tag keys that start with <code>System/</code>, the error code InvalidTagPolicy.KeyInvalid or InvalidTag.SystemKeyNotAllow is returned.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

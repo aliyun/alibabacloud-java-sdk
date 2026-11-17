@@ -20,7 +20,7 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total count.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -59,7 +59,7 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
 
     public static class RemoveRuntimeModelTemplateResponseBodyData extends TeaModel {
         /**
-         * <p>The error code returned when the operation fails.</p>
+         * <p>The error code returned when the execution fails.</p>
          * 
          * <strong>example:</strong>
          * <p>Runtime.NotFound</p>
@@ -68,7 +68,7 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The HTTP status code returned when the operation fails.</p>
+         * <p>The HTTP status code returned when the execution fails.</p>
          * 
          * <strong>example:</strong>
          * <p>404</p>
@@ -77,7 +77,7 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
         public Integer httpStatusCode;
 
         /**
-         * <p>The error message returned when the operation fails.</p>
+         * <p>The error message returned when the execution fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The runtime is not found.</p>
@@ -86,10 +86,10 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The Agent runtime ID. The ID mapping is as follows:</p>
+         * <p>The agent runtime ID. The ID mappings are as follows:</p>
          * <ul>
          * <li>JVS Computer: JVS Computer ID, in the format of jvs-xxxx.</li>
-         * <li>OpenClaw: cloud computer ID, in the format of ecd-xxxx.</li>
+         * <li>OpenClaw: Cloud desktop ID, in the format of ecd-xxxx.</li>
          * <li>Hermes Agent: Hermes Agent ID, in the format of jvs-xxxx.</li>
          * </ul>
          * 
@@ -100,7 +100,7 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
         public String runtimeId;
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
+         * <p>Indicates whether the execution is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

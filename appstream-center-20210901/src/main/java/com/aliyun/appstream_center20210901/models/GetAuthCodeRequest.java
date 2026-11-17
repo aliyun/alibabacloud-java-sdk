@@ -32,10 +32,10 @@ public class GetAuthCodeRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The type of resource to connect to.</p>
+     * <p>The type of the resource to connect to. Valid values:</p>
      * <ul>
-     * <li><strong>BUILDER</strong>: Connects to the creation environment.</li>
-     * <li><strong>VALIDATE</strong>: Connects to the validation environment.</li>
+     * <li><strong>BUILDER</strong>: connect to the creation environment</li>
+     * <li><strong>VALIDATE</strong>: connect to the validation environment</li>
      * </ul>
      * <p>The corresponding environment must be created and in a connectable state.</p>
      * <p>This parameter is required.</p>
@@ -57,32 +57,31 @@ public class GetAuthCodeRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The actual task type. It must match the creation or validation task corresponding to the TaskId. Use the TaskType returned by GetTask. The task must also have connectable creation or validation resources. You cannot obtain an authorization code for distribution or snapshot tasks that do not have connection resources.</p>
-     * <p>Recognized task types:</p>
+     * <p>The actual task type. It must match the creation or validation task corresponding to the TaskId. Use the TaskType returned by GetTask. The task must also have connectable creation or validation resources. You cannot obtain an authorization code for distribution or snapshot tasks that do not have connection resources. Valid values:</p>
      * <ul>
-     * <li><strong>AUTO_CREATE_IMAGE_VHD</strong>: Automatically creates a VHD image.</li>
-     * <li><strong>RETRY_CREATE_IMAGE_VHD</strong>: Retries VHD image creation.</li>
-     * <li><strong>AUTO_CREATE_VHD</strong>: Automatically creates a VHD.</li>
-     * <li><strong>RETRY_VHD</strong>: Retries VHD creation.</li>
-     * <li><strong>AUTO_VALIDATE_VHD</strong>: Automatically validates a VHD.</li>
-     * <li><strong>RETRY_VALIDATE_VHD</strong>: Retries VHD validation.</li>
-     * <li><strong>APPLY_VHD_BUILDER</strong>: Applies for a VHD application recording environment.</li>
-     * <li><strong>ADAPT_AUTO</strong>: Automatically creates application adaptation.</li>
-     * <li><strong>ADAPT_AUTO_RETRY</strong>: Retries automatic application adaptation creation.</li>
-     * <li><strong>ADAPT_MANUAL</strong>: Manually creates application adaptation.</li>
-     * <li><strong>ADAPT_MANUAL_RETRY</strong>: Retries manual application adaptation creation.</li>
-     * <li><strong>DESKTOP_CUSTOM_IMAGE</strong>: Creates a custom image for cloud desktops.</li>
-     * <li><strong>DESKTOP_CUSTOM_IMAGE_RETRY</strong>: Retries custom image creation for cloud desktops.</li>
-     * <li><strong>IMAGE_MANUAL</strong>: Manually creates an image.</li>
-     * <li><strong>IMAGE_MANUAL_RETRY</strong>: Retries manual image creation.</li>
-     * <li><strong>IMAGE_FROM_INSTANCE</strong>: Creates an image based on an instance.</li>
-     * <li><strong>IMAGE_FROM_INSTANCE_RETRY</strong>: Retries image creation based on an instance.</li>
-     * <li><strong>IMAGE_DISTRIBUTE</strong>: Distributes an image to multiple regions.</li>
-     * <li><strong>IMAGE_DISTRIBUTE_RETRY</strong>: Retries image distribution.</li>
-     * <li><strong>SNAPSHOT_DISTRIBUTE</strong>: Distributes a snapshot to multiple regions.</li>
-     * <li><strong>SNAPSHOT_DISTRIBUTE_RETRY</strong>: Retries snapshot distribution.</li>
-     * <li><strong>SNAPSHOT_FROM_DISK</strong>: Creates a snapshot based on a disk.</li>
-     * <li><strong>SNAPSHOT_FROM_DISK_RETRY</strong>: Retries snapshot creation based on a disk.</li>
+     * <li><strong>AUTO_CREATE_IMAGE_VHD</strong>: automatically create a VHD image</li>
+     * <li><strong>RETRY_CREATE_IMAGE_VHD</strong>: retry VHD image creation</li>
+     * <li><strong>AUTO_CREATE_VHD</strong>: automatically create a VHD</li>
+     * <li><strong>RETRY_VHD</strong>: retry VHD creation</li>
+     * <li><strong>AUTO_VALIDATE_VHD</strong>: automatically validate a VHD</li>
+     * <li><strong>RETRY_VALIDATE_VHD</strong>: retry VHD validation</li>
+     * <li><strong>APPLY_VHD_BUILDER</strong>: apply for a VHD application recording environment</li>
+     * <li><strong>ADAPT_AUTO</strong>: automatically create application adaptation</li>
+     * <li><strong>ADAPT_AUTO_RETRY</strong>: retry automatic application adaptation creation</li>
+     * <li><strong>ADAPT_MANUAL</strong>: manually create application adaptation</li>
+     * <li><strong>ADAPT_MANUAL_RETRY</strong>: retry manual application adaptation creation</li>
+     * <li><strong>DESKTOP_CUSTOM_IMAGE</strong>: create a custom image for cloud desktop</li>
+     * <li><strong>DESKTOP_CUSTOM_IMAGE_RETRY</strong>: retry custom image creation for cloud desktop</li>
+     * <li><strong>IMAGE_MANUAL</strong>: manually create an image</li>
+     * <li><strong>IMAGE_MANUAL_RETRY</strong>: retry manual image creation</li>
+     * <li><strong>IMAGE_FROM_INSTANCE</strong>: create an image from an instance</li>
+     * <li><strong>IMAGE_FROM_INSTANCE_RETRY</strong>: retry image creation from an instance</li>
+     * <li><strong>IMAGE_DISTRIBUTE</strong>: distribute an image to multiple regions</li>
+     * <li><strong>IMAGE_DISTRIBUTE_RETRY</strong>: retry image distribution</li>
+     * <li><strong>SNAPSHOT_DISTRIBUTE</strong>: distribute a snapshot to multiple regions</li>
+     * <li><strong>SNAPSHOT_DISTRIBUTE_RETRY</strong>: retry snapshot distribution</li>
+     * <li><strong>SNAPSHOT_FROM_DISK</strong>: create a snapshot from a disk</li>
+     * <li><strong>SNAPSHOT_FROM_DISK_RETRY</strong>: retry snapshot creation from a disk</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

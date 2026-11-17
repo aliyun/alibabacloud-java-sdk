@@ -42,7 +42,7 @@ public class GetModelProviderTemplateResponseBody extends TeaModel {
 
     public static class GetModelProviderTemplateResponseBodyData extends TeaModel {
         /**
-         * <p>The JSON configuration object of the model provider template.</p>
+         * <p>The JSON object for the model provider template configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -58,13 +58,13 @@ public class GetModelProviderTemplateResponseBody extends TeaModel {
          * <p>The description of the model provider template.</p>
          * 
          * <strong>example:</strong>
-         * <p>阿里云百炼服务商。</p>
+         * <p>Alibaba Cloud Model Studio provider</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Indicates whether the WUYING secure gateway proxy is enabled.</p>
+         * <p>Indicates whether the Wuying security gateway proxy is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -76,7 +76,7 @@ public class GetModelProviderTemplateResponseBody extends TeaModel {
          * <p>The name of the model provider template.</p>
          * 
          * <strong>example:</strong>
-         * <p>阿里云百炼。</p>
+         * <p>Alibaba Cloud Model Studio</p>
          */
         @NameInMap("Name")
         public String name;

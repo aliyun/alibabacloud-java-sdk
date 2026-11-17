@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBrowserInstanceGroupResponseBody extends TeaModel {
     /**
-     * <p>The creation result of the cloud browser group, including the resource ID and the order ID.</p>
+     * <p>The creation result of the cloud browser group, including the resource ID and order ID.</p>
      */
     @NameInMap("BrowserInstanceGroupModel")
     public CreateBrowserInstanceGroupResponseBodyBrowserInstanceGroupModel browserInstanceGroupModel;

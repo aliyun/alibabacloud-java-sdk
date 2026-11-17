@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRuntimeChannelRequest extends TeaModel {
     /**
-     * <p>The Agent platform.</p>
+     * <p>The agent platform.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -14,11 +14,11 @@ public class GetRuntimeChannelRequest extends TeaModel {
     public String agentPlatform;
 
     /**
-     * <p>The Agent provider.</p>
+     * <p>The agent provider.</p>
      * <ul>
-     * <li>JVS Computer: Set to OpenClaw.</li>
-     * <li>OpenClaw: Set to OpenClaw.</li>
-     * <li>Hermes Agent: Set to HermesAgent.</li>
+     * <li>JVS Computer: Enter OpenClaw.</li>
+     * <li>OpenClaw: Enter OpenClaw.</li>
+     * <li>Hermes Agent: Enter HermesAgent.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -38,11 +38,11 @@ public class GetRuntimeChannelRequest extends TeaModel {
     public Boolean includeRiskInfo;
 
     /**
-     * <p>The Agent runtime ID. The ID mapping is as follows:</p>
+     * <p>The agent runtime ID. The ID mappings are as follows:</p>
      * <ul>
-     * <li>JVS Computer: JVS Computer ID, in the format of jvs-xxxx.</li>
-     * <li>OpenClaw: Cloud computer ID, in the format of ecd-xxxx.</li>
-     * <li>Hermes Agent: Hermes Agent ID, in the format of jvs-xxxx.</li>
+     * <li>JVS Computer: the JVS Computer ID, in the format of jvs-xxxx.</li>
+     * <li>OpenClaw: the cloud desktop ID, in the format of ecd-xxxx.</li>
+     * <li>Hermes Agent: the Hermes Agent ID, in the format of jvs-xxxx.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -53,7 +53,7 @@ public class GetRuntimeChannelRequest extends TeaModel {
     public String runtimeId;
 
     /**
-     * <p>The Agent runtime type.</p>
+     * <p>The agent runtime type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

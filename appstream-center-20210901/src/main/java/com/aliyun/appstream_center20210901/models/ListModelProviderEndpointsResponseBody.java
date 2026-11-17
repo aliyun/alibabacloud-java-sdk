@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListModelProviderEndpointsResponseBody extends TeaModel {
     /**
-     * <p>The returned data object.</p>
+     * <p>The data object.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListModelProviderEndpointsResponseBodyData> data;
 
     /**
-     * <p>The request ID, which uniquely identifies the request.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</p>
@@ -51,7 +51,7 @@ public class ListModelProviderEndpointsResponseBody extends TeaModel {
         public String apiType;
 
         /**
-         * <p>The API base URL, such as <a href="https://coding.dashscope.aliyuncs.com/v1">https://coding.dashscope.aliyuncs.com/v1</a>.</p>
+         * <p>The base URL of the API, such as <a href="https://coding.dashscope.aliyuncs.com/v1">https://coding.dashscope.aliyuncs.com/v1</a>.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://coding.dashscope.aliyuncs.com/v1">https://coding.dashscope.aliyuncs.com/v1</a></p>
@@ -60,7 +60,7 @@ public class ListModelProviderEndpointsResponseBody extends TeaModel {
         public String baseUrl;
 
         /**
-         * <p>The endpoint description, such as Coding Plan - OpenAI compatible protocol.</p>
+         * <p>The description of the endpoint, such as Coding Plan - OpenAI-compatible protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>Coding Plan - OpenAI</p>
@@ -69,7 +69,7 @@ public class ListModelProviderEndpointsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The endpoint identifier name, such as coding-openai or cn-beijing.</p>
+         * <p>The identifier name of the endpoint, such as coding-openai or cn-beijing.</p>
          * 
          * <strong>example:</strong>
          * <p>coding-openai</p>
@@ -87,7 +87,7 @@ public class ListModelProviderEndpointsResponseBody extends TeaModel {
         public String providerUrl;
 
         /**
-         * <p>The list of tags used for categorization and filtering, such as coding-plan, on-demand, or cn-beijing.</p>
+         * <p>The list of tags used for classification and filtering, such as coding-plan, on-demand, or cn-beijing.</p>
          */
         @NameInMap("Tags")
         public java.util.List<String> tags;
@@ -149,22 +149,22 @@ public class ListModelProviderEndpointsResponseBody extends TeaModel {
 
     public static class ListModelProviderEndpointsResponseBodyData extends TeaModel {
         /**
-         * <p>The provider description, such as Alibaba Cloud Bailian.</p>
+         * <p>The description of the provider, such as Alibaba Cloud Model Studio.</p>
          * 
          * <strong>example:</strong>
-         * <p>Qwen Plus series models</p>
+         * <p>Qwen-Plus series models</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The list of all endpoints under the provider.</p>
+         * <p>The list of all endpoints under this provider.</p>
          */
         @NameInMap("Endpoints")
         public java.util.List<ListModelProviderEndpointsResponseBodyDataEndpoints> endpoints;
 
         /**
-         * <p>The provider name, such as bailian or moonshot.</p>
+         * <p>The name of the provider, such as bailian or moonshot.</p>
          * 
          * <strong>example:</strong>
          * <p>bailian</p>
@@ -173,7 +173,7 @@ public class ListModelProviderEndpointsResponseBody extends TeaModel {
         public String providerName;
 
         /**
-         * <p>The provider website URL, which is used to direct users to obtain an API key.</p>
+         * <p>The URL of the provider\&quot;s official website, which directs users to obtain an API key.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://test">https://test</a></p>

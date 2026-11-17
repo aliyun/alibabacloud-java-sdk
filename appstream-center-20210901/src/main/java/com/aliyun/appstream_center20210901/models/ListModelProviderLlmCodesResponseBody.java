@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListModelProviderLlmCodesResponseBody extends TeaModel {
     /**
-     * <p>The paginated data object that contains a list of LLM information.</p>
+     * <p>The paginated data object that contains the list of LLM information.</p>
      */
     @NameInMap("Data")
     public ListModelProviderLlmCodesResponseBodyData data;
@@ -29,7 +29,7 @@ public class ListModelProviderLlmCodesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The request ID, which is used to uniquely identify the request.</p>
      * 
      * <strong>example:</strong>
      * <p>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</p>
@@ -93,7 +93,7 @@ public class ListModelProviderLlmCodesResponseBody extends TeaModel {
 
     public static class ListModelProviderLlmCodesResponseBodyDataLlmInfoListCreditMultiplier extends TeaModel {
         /**
-         * <p>The upper limit of the multiplier. An empty value indicates no upper limit. For example, if the minimum value is 1 and the maximum value is empty, it is displayed as starting from 1x.</p>
+         * <p>The upper limit of the multiplier. An empty value indicates no upper limit. For example, if the minimum multiplier is 1 and the maximum multiplier is empty, it is displayed as starting from 1x.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -102,7 +102,7 @@ public class ListModelProviderLlmCodesResponseBody extends TeaModel {
         public Float max;
 
         /**
-         * <p>The lower limit of the multiplier. If this value is equal to the maximum value, the multiplier is fixed. For example, if both the minimum and maximum values are 2, it is displayed as 2x.</p>
+         * <p>The lower limit of the multiplier. When this value is equal to the maximum multiplier, it represents a fixed multiplier. For example, if both the minimum and maximum multipliers are 2, it is displayed as 2x.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -180,7 +180,7 @@ public class ListModelProviderLlmCodesResponseBody extends TeaModel {
         public String price;
 
         /**
-         * <p>The name of the price item, such as input, output, or image generation.</p>
+         * <p>The name of the price, such as input, output, or image generation.</p>
          * 
          * <strong>example:</strong>
          * <p>Input</p>
@@ -278,7 +278,7 @@ public class ListModelProviderLlmCodesResponseBody extends TeaModel {
          * <p>The model description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Qwen image generation model that supports text-to-image generation and image editing</p>
+         * <p>Qwen image generation model, supporting text-to-image and image editing capabilities</p>
          */
         @NameInMap("Description")
         public String description;
@@ -356,7 +356,7 @@ public class ListModelProviderLlmCodesResponseBody extends TeaModel {
         public String publishedTime;
 
         /**
-         * <p>Indicates whether the model is recommended. This is a tri-state value: true indicates that the model is recommended for display, false indicates that the model is explicitly not recommended, and null indicates that the status is not applicable, such as for non-Bailian models or unannotated models.</p>
+         * <p>Specifies whether the model is recommended. This is a tri-state parameter. A value of true indicates that the model is recommended for display. A value of false indicates that the model is explicitly not recommended. A value of null indicates that the parameter is not applicable, such as for non-Bailian models or unannotated models.</p>
          */
         @NameInMap("Recommended")
         public Boolean recommended;
@@ -483,7 +483,7 @@ public class ListModelProviderLlmCodesResponseBody extends TeaModel {
 
     public static class ListModelProviderLlmCodesResponseBodyData extends TeaModel {
         /**
-         * <p>The LLM information list.</p>
+         * <p>The list of LLM information.</p>
          */
         @NameInMap("LlmInfoList")
         public java.util.List<ListModelProviderLlmCodesResponseBodyDataLlmInfoList> llmInfoList;

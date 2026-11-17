@@ -7,13 +7,13 @@ public class BuilderImageByParentRequest extends TeaModel {
     /**
      * <p>The business type to which the image belongs. <strong>Required</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Basic product.</li>
-     * <li><strong>2</strong>: Personal cloud.</li>
-     * <li><strong>3</strong>: Cloud office.</li>
-     * <li><strong>4</strong>: Cloud Flow.</li>
-     * <li><strong>10</strong>: Personal edition.</li>
-     * <li><strong>20</strong>: Business edition.</li>
-     * <li><strong>60</strong>: Linggou team edition.</li>
+     * <li><strong>1</strong>: basic product</li>
+     * <li><strong>2</strong>: personal cloud</li>
+     * <li><strong>3</strong>: cloud office</li>
+     * <li><strong>4</strong>: cloud flow</li>
+     * <li><strong>10</strong>: personal edition</li>
+     * <li><strong>20</strong>: business edition</li>
+     * <li><strong>60</strong>: Linggou team edition</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -23,7 +23,7 @@ public class BuilderImageByParentRequest extends TeaModel {
     public Integer bizType;
 
     /**
-     * <p>The capacity of the data cloud disk in the creation environment. Unit: GiB. Specify this parameter when a data cloud disk is required, and ensure that it meets the disk requirements of the selected resource specifications.</p>
+     * <p>The capacity of the data cloud disk in the creation environment. Unit: GiB. Specify this parameter when a data cloud disk is required and make sure that the capacity meets the cloud disk requirements of the selected resource specifications.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -32,7 +32,7 @@ public class BuilderImageByParentRequest extends TeaModel {
     public Integer dataDiskSize;
 
     /**
-     * <p>The description of the new image, which facilitates subsequent queries and differentiation of images.</p>
+     * <p>The description of the new image. This helps you query and distinguish images later.</p>
      * 
      * <strong>example:</strong>
      * <p>Business image that includes office applications and standard configurations</p>
@@ -41,7 +41,7 @@ public class BuilderImageByParentRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The operating system distribution information of the image. Enter the distribution identifier that is consistent with the parent image used.</p>
+     * <p>The operating system distribution information of the image. Enter a distribution identifier that is consistent with the parent image used.</p>
      * 
      * <strong>example:</strong>
      * <p>Ubuntu 22.04 64-bit</p>
@@ -50,8 +50,8 @@ public class BuilderImageByParentRequest extends TeaModel {
     public String distro;
 
     /**
-     * <p>The list of driver IDs used when creating the image. A maximum of 200 items are supported. When you need to specify drivers, enter the IDs of existing drivers that are applicable to the target image.</p>
-     * <p><strong>If PropertyMap.DRIVER_LIST is also specified, this parameter overwrites the driver list in it.</strong></p>
+     * <p>The list of driver IDs used when creating the image. You can specify up to 200 driver IDs. When you need to specify drivers, enter the IDs of existing drivers that are applicable to the target image.</p>
+     * <p><strong>If PropertyMap.DRIVER_LIST is also specified, this parameter overwrites the driver list in PropertyMap.DRIVER_LIST.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;6d4af751-f522-40d7-ab6c-4a0ae587****&quot;,&quot;b5bdf6c0-41de-4878-8963-e8324106****&quot;]</p>
@@ -62,7 +62,7 @@ public class BuilderImageByParentRequest extends TeaModel {
     /**
      * <p>The image creation mode. Use the following mode:</p>
      * <ul>
-     * <li><strong>BUILDER_MANUAL</strong>: Manually enter the creation environment to install applications and configure the image.</li>
+     * <li><strong>BUILDER_MANUAL</strong>: manually enter the creation environment to install applications and configure the image.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -73,7 +73,7 @@ public class BuilderImageByParentRequest extends TeaModel {
     public String imageCreateMode;
 
     /**
-     * <p>The name of the new image. <strong>Required</strong>. The name must start with a letter or a Chinese character, and can contain letters, digits, Chinese characters, colons (:), underscores (_), periods (.), and hyphens (-). It cannot start with http:// or https://. The length is calculated as 3 for each Chinese character and 1 for each other character. The total length must be 2 to 64 characters.</p>
+     * <p>The name of the new image. <strong>Required</strong>. The name must start with a letter or a Chinese character and can contain letters, digits, Chinese characters, colons (:), underscores (_), periods (.), and hyphens (-). It cannot start with http:// or https://. The name must be 2 to 64 characters in length. Each Chinese character counts as 3 characters, and each other character counts as 1 character.</p>
      * 
      * <strong>example:</strong>
      * <p>OfficeImage_202611</p>
@@ -84,14 +84,14 @@ public class BuilderImageByParentRequest extends TeaModel {
     /**
      * <p>The language of the image. Valid values:</p>
      * <ul>
-     * <li><strong>zh-CN</strong>: Simplified Chinese.</li>
-     * <li><strong>zh-HK</strong>: Traditional Chinese (Hong Kong).</li>
-     * <li><strong>en-US</strong>: English.</li>
-     * <li><strong>ja-JP</strong>: Japanese.</li>
-     * <li><strong>CN</strong>: Compatible value for Simplified Chinese.</li>
-     * <li><strong>EN</strong>: Compatible value for English.</li>
-     * <li><strong>JP</strong>: Compatible value for Japanese.</li>
-     * <li><strong>CN-HK</strong>: Compatible value for Traditional Chinese (Hong Kong).</li>
+     * <li><strong>zh-CN</strong>: Simplified Chinese</li>
+     * <li><strong>zh-HK</strong>: Traditional Chinese (Hong Kong)</li>
+     * <li><strong>en-US</strong>: English</li>
+     * <li><strong>ja-JP</strong>: Japanese</li>
+     * <li><strong>CN</strong>: compatible value for Simplified Chinese</li>
+     * <li><strong>EN</strong>: compatible value for English</li>
+     * <li><strong>JP</strong>: compatible value for Japanese</li>
+     * <li><strong>CN-HK</strong>: compatible value for Traditional Chinese (Hong Kong)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class BuilderImageByParentRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The ID of the node specifications for the creation resources. You can invoke ListNodeInstanceType to query the ID. Select a specification that is active in the creation region and under the associated product, and meets the CPU or GPU computing requirements.</p>
+     * <p>The ID of the node specifications for the creation resources. You can call ListNodeInstanceType to query the ID. Select node specifications that are active in the creation region and for the associated product, and that meet the CPU or GPU computing requirements.</p>
      * 
      * <strong>example:</strong>
      * <p>appstreaming.general.4c8g</p>
@@ -110,7 +110,7 @@ public class BuilderImageByParentRequest extends TeaModel {
     public String nodeInstanceType;
 
     /**
-     * <p>The ID of the office network used by the creation resources. Specify this parameter when a specific office network is required, and ensure that it is consistent with the creation region.</p>
+     * <p>The ID of the office network used by the creation resources. Specify this parameter when a specific office network is required and make sure that the office network is in the creation region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-example****</p>
@@ -119,12 +119,12 @@ public class BuilderImageByParentRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The package type of the image. Keep it consistent with the selected parent image and creation scenario. Valid values:</p>
+     * <p>The package type of the image. Make sure that the package type is consistent with the selected parent image and creation scenario. Valid values:</p>
      * <ul>
      * <li><strong>Ecs</strong>: ECS instance image.</li>
      * <li><strong>Vhd</strong>: VHD application image.</li>
-     * <li><strong>Container</strong>: Container image.</li>
-     * <li><strong>Ecs_Container</strong>: ECS and container combined image.</li>
+     * <li><strong>Container</strong>: container image.</li>
+     * <li><strong>Ecs_Container</strong>: combined ECS and container image.</li>
      * <li><strong>K8s_Node</strong>: Kubernetes node image.</li>
      * </ul>
      * <p><strong>This operation does not provide the BaseImageId parameter. You cannot explicitly specify the Vhd or Container type that requires a base image to be configured separately.</strong></p>
@@ -136,7 +136,7 @@ public class BuilderImageByParentRequest extends TeaModel {
     public String packageType;
 
     /**
-     * <p>The ID of the parent image used to create the new image. <strong>Required</strong>. You can call ListImage to query the ID. An available distribution record of the parent image must exist in the region where the image is created.</p>
+     * <p>The ID of the parent image used to create the new image. <strong>Required</strong>. You can call ListImage to query the ID. An available distribution record of the parent image must exist in the creation region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -146,10 +146,10 @@ public class BuilderImageByParentRequest extends TeaModel {
     public String parentImageId;
 
     /**
-     * <p>The computing type of the creation resources.</p>
+     * <p>The computing type of the creation resources. Valid values:</p>
      * <ul>
-     * <li><strong>CPU</strong>: Uses CPU compute resources.</li>
-     * <li><strong>GPU</strong>: Uses GPU compute resources.</li>
+     * <li><strong>CPU</strong>: CPU compute resources.</li>
+     * <li><strong>GPU</strong>: GPU compute resources.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -160,25 +160,25 @@ public class BuilderImageByParentRequest extends TeaModel {
     public String performanceType;
 
     /**
-     * <p>The product to which the image belongs. <strong>Required</strong>. Use an activated product and keep it consistent with the selected parent image. Valid values:</p>
+     * <p>The product to which the image belongs. <strong>Required</strong>. Use an activated product and make sure that it is consistent with the selected parent image. Valid values:</p>
      * <ul>
-     * <li><strong>CloudGame</strong>: Cloud game.</li>
-     * <li><strong>CloudApp</strong>: Wuying Cloud App.</li>
-     * <li><strong>CloudBrowser</strong>: Secure browser.</li>
-     * <li><strong>CloudDesktop</strong>: Wuying Cloud Computer.</li>
-     * <li><strong>ImageBuilder</strong>: Image creation resource.</li>
-     * <li><strong>ImageValidate</strong>: Image validation resource.</li>
-     * <li><strong>AndroidCloud</strong>: Android cloud.</li>
-     * <li><strong>GpuRender</strong>: GPU rendering.</li>
-     * <li><strong>AndroidGpuRender</strong>: Android cloud GPU rendering.</li>
-     * <li><strong>WuyingServer</strong>: Enterprise edition workstation.</li>
-     * <li><strong>GpuProxy</strong>: GPU remote rendering proxy.</li>
-     * <li><strong>GpuCache</strong>: GPU remote rendering cache.</li>
-     * <li><strong>AIAgent</strong>: AI agent service.</li>
-     * <li><strong>HostedDesktop</strong>: Hosted computer.</li>
-     * <li><strong>WuyingWorkstation</strong>: Personal edition container workstation.</li>
-     * <li><strong>WuyingWorkstationBusiness</strong>: Business edition container workstation.</li>
-     * <li><strong>WuyingWorkstationTeam</strong>: Linggou container workstation team edition.</li>
+     * <li><strong>CloudGame</strong>: cloud gaming</li>
+     * <li><strong>CloudApp</strong>: Wuying cloud application</li>
+     * <li><strong>CloudBrowser</strong>: secure browser</li>
+     * <li><strong>CloudDesktop</strong>: Wuying cloud desktop</li>
+     * <li><strong>ImageBuilder</strong>: image creation resource</li>
+     * <li><strong>ImageValidate</strong>: image validation resource</li>
+     * <li><strong>AndroidCloud</strong>: Android cloud</li>
+     * <li><strong>GpuRender</strong>: GPU rendering</li>
+     * <li><strong>AndroidGpuRender</strong>: Android cloud GPU rendering</li>
+     * <li><strong>WuyingServer</strong>: enterprise edition workstation</li>
+     * <li><strong>GpuProxy</strong>: GPU remote rendering proxy</li>
+     * <li><strong>GpuCache</strong>: GPU remote rendering cache</li>
+     * <li><strong>AIAgent</strong>: AI agent service</li>
+     * <li><strong>HostedDesktop</strong>: hosted desktop</li>
+     * <li><strong>WuyingWorkstation</strong>: personal edition container workstation</li>
+     * <li><strong>WuyingWorkstationBusiness</strong>: business edition container workstation</li>
+     * <li><strong>WuyingWorkstationTeam</strong>: Linggou container workstation team edition</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -188,8 +188,8 @@ public class BuilderImageByParentRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The extended properties of the image. Both keys and values are strings. This parameter can be omitted when no extended configuration is required.</p>
-     * <p>The property key for the driver list is DRIVER_LIST, and the value is a JSON string of an array of driver IDs. We recommend that you specify drivers by using DriverIdList. <strong>If both DriverIdList and PropertyMap.DRIVER_LIST are specified, DriverIdList takes precedence.</strong> Specify other extended properties only when their purposes and values are confirmed.</p>
+     * <p>The extended properties of the image. Both keys and values are strings. You can omit this parameter if no extended configuration is required.</p>
+     * <p>The property key for the driver list is DRIVER_LIST, and the value is a JSON string of an array of driver IDs. We recommend that you specify drivers by using DriverIdList. <strong>If both DriverIdList and PropertyMap.DRIVER_LIST are specified, DriverIdList takes precedence.</strong> Specify other extended properties only when you have confirmed their purposes and values.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;DRIVER_LIST&quot;:&quot;[\&quot;6d4af751-f522-40d7-ab6c-4a0ae587****\&quot;,\&quot;b5bdf6c0-41de-4878-8963-e8324106****\&quot;]&quot;}</p>
@@ -198,7 +198,7 @@ public class BuilderImageByParentRequest extends TeaModel {
     public java.util.Map<String, String> propertyMap;
 
     /**
-     * <p>The list of resources required for image creation, such as the download URLs of applications to be installed. A maximum of 100 items are supported. The ResourceType and Resource of each item must correspond to each other.</p>
+     * <p>The list of resources required for image creation, such as the download URLs of applications to be installed. You can specify up to 100 resources. The ResourceType and Resource of each resource must correspond to each other.</p>
      */
     @NameInMap("ResourceList")
     public java.util.List<BuilderImageByParentRequestResourceList> resourceList;
@@ -206,8 +206,8 @@ public class BuilderImageByParentRequest extends TeaModel {
     /**
      * <p>The running mode of the image creation environment. Valid values:</p>
      * <ul>
-     * <li><strong>NORMAL</strong>: Normal running mode.</li>
-     * <li><strong>COMPATIBLE</strong>: Compatible running mode.</li>
+     * <li><strong>NORMAL</strong>: normal running mode.</li>
+     * <li><strong>COMPATIBLE</strong>: compatible running mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -217,7 +217,7 @@ public class BuilderImageByParentRequest extends TeaModel {
     public String runMode;
 
     /**
-     * <p>The ID of the region where the image is created. The selected parent image must have been distributed to this region. Available regions are also affected by the region configurations of the account and product.</p>
+     * <p>The ID of the creation region. The selected parent image must have been distributed to this region. Available regions are also affected by the region configurations of the account and product.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -226,7 +226,7 @@ public class BuilderImageByParentRequest extends TeaModel {
     public String sourceRegion;
 
     /**
-     * <p>The capacity of the system cloud disk in the creation environment. Unit: GiB. The capacity cannot be smaller than the system cloud disk capacity required by the parent image, and must meet the disk requirements of the selected resource specifications.</p>
+     * <p>The capacity of the system cloud disk in the creation environment. Unit: GiB. The capacity cannot be smaller than the system cloud disk capacity required by the parent image and must meet the cloud disk requirements of the selected resource specifications.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -236,13 +236,13 @@ public class BuilderImageByParentRequest extends TeaModel {
     public Integer systemDiskSize;
 
     /**
-     * <p>The list of vSwitch IDs used by the creation resources. A maximum of 100 items are supported. The vSwitches must belong to the selected office network and be located in the creation region.</p>
+     * <p>The list of vSwitch IDs used by the creation resources. You can specify up to 100 vSwitch IDs. The vSwitches must belong to the selected office network and be located in the creation region.</p>
      */
     @NameInMap("VSwitchIdList")
     public java.util.List<String> vSwitchIdList;
 
     /**
-     * <p>The display name of the new image version, which is used to differentiate different versions of the same image.</p>
+     * <p>The display name of the new image version. This helps you distinguish different versions of the same image.</p>
      * 
      * <strong>example:</strong>
      * <p>Office environment-202611</p>
@@ -425,7 +425,7 @@ public class BuilderImageByParentRequest extends TeaModel {
 
     public static class BuilderImageByParentRequestResourceList extends TeaModel {
         /**
-         * <p>The resource content corresponding to ResourceType. For the URL type, enter or return an accessible resource URL.</p>
+         * <p>The resource content that corresponds to ResourceType. For the URL type, enter or return an accessible resource URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/apps/business/setup.exe">https://example.com/apps/business/setup.exe</a></p>
@@ -436,9 +436,9 @@ public class BuilderImageByParentRequest extends TeaModel {
         /**
          * <p>The provision method of the resource content. Valid values:</p>
          * <ul>
-         * <li><strong>HOSTED</strong>: Hosted resource.</li>
-         * <li><strong>TEXT</strong>: Text resource.</li>
-         * <li><strong>URL</strong>: Resource provided through a URL.</li>
+         * <li><strong>HOSTED</strong>: hosted resource.</li>
+         * <li><strong>TEXT</strong>: text resource.</li>
+         * <li><strong>URL</strong>: resource provided by using a URL.</li>
          * </ul>
          * 
          * <strong>example:</strong>

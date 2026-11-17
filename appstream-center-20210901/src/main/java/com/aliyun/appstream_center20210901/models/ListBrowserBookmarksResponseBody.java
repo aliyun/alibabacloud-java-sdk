@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBrowserBookmarksResponseBody extends TeaModel {
     /**
-     * <p>The list of bookmarks on the current page.</p>
+     * <p>The bookmarks on the current page.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListBrowserBookmarksResponseBodyData> data;
@@ -20,7 +20,7 @@ public class ListBrowserBookmarksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class ListBrowserBookmarksResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID, which is used to troubleshoot issues.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>01A0C2ED-95F2-1A37-9FC6-4A395179****</p>

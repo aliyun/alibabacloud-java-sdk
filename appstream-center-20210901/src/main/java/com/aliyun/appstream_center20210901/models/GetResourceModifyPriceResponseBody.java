@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourceModifyPriceResponseBody extends TeaModel {
     /**
-     * <p>The quote for the resource scale-out of the delivery group, which includes the price details and pricing rules.</p>
+     * <p>The quote for the resource scale-out of the delivery group, which includes the price details and price calculation rules.</p>
      */
     @NameInMap("Data")
     public GetResourceModifyPriceResponseBodyData data;
@@ -51,10 +51,10 @@ public class GetResourceModifyPriceResponseBody extends TeaModel {
         public String optionCode;
 
         /**
-         * <p>The description of the coupon, which is used to display information about the discount.</p>
+         * <p>The description of the coupon, which is used to display the information about the discount.</p>
          * 
          * <strong>example:</strong>
-         * <p>**Discount during the promotion</p>
+         * <p>**Discount during the event</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
@@ -69,7 +69,7 @@ public class GetResourceModifyPriceResponseBody extends TeaModel {
         public String promotionId;
 
         /**
-         * <p>The name of the coupon, which is used to display the available discount in the quote.</p>
+         * <p>The name of the coupon, which is used to display the optional discount in the current quote.</p>
          * 
          * <strong>example:</strong>
          * <p>**Discount</p>
@@ -139,7 +139,7 @@ public class GetResourceModifyPriceResponseBody extends TeaModel {
 
     public static class GetResourceModifyPriceResponseBodyDataPrice extends TeaModel {
         /**
-         * <p>The currency code of the price amount. CNY indicates Chinese Yuan. Use this field to interpret the amounts in OriginalPrice, DiscountPrice, and TradePrice.</p>
+         * <p>The currency code of the price amount. CNY indicates Chinese Yuan. Refer to this field to understand the amounts of OriginalPrice, DiscountPrice, and TradePrice.</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -148,8 +148,8 @@ public class GetResourceModifyPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The discount amount for the scale-out, not the discount percentage.</p>
-         * <p>The final price TradePrice is obtained by subtracting this value from the original price OriginalPrice. For the currency, see Currency.</p>
+         * <p>The discount amount that can be deducted from the scale-out price, not the discount percentage.</p>
+         * <p>The discounted price TradePrice is obtained by subtracting this field from the original price OriginalPrice. For the currency of the amount, see Currency.</p>
          * 
          * <strong>example:</strong>
          * <p>1.00</p>
@@ -158,7 +158,7 @@ public class GetResourceModifyPriceResponseBody extends TeaModel {
         public Double discountPrice;
 
         /**
-         * <p>The original price of the scale-out, which is the amount before discounts. For the currency, see Currency.</p>
+         * <p>The original price of the scale-out, which is the amount before discounts. For the currency of the amount, see Currency.</p>
          * 
          * <strong>example:</strong>
          * <p>11.00</p>
@@ -167,14 +167,14 @@ public class GetResourceModifyPriceResponseBody extends TeaModel {
         public Double originalPrice;
 
         /**
-         * <p>The list of available coupons returned in the quote. Each item includes the coupon ID, name, description, and selection status.</p>
+         * <p>The list of optional coupons returned in the quote. Each item includes the coupon ID, name, description, and whether it is selected.</p>
          */
         @NameInMap("Promotions")
         public java.util.List<GetResourceModifyPriceResponseBodyDataPricePromotions> promotions;
 
         /**
-         * <p>The final price of the scale-out after discounts.</p>
-         * <p>Calculation formula: TradePrice = OriginalPrice - DiscountPrice. For the currency, see Currency. This operation returns only a quote and does not execute payment.</p>
+         * <p>The discounted price of the scale-out.</p>
+         * <p>Calculation relationship: TradePrice = OriginalPrice - DiscountPrice. For the currency of the amount, see Currency. This operation returns only a quote and does not execute payment.</p>
          * 
          * <strong>example:</strong>
          * <p>10.00</p>
@@ -231,7 +231,7 @@ public class GetResourceModifyPriceResponseBody extends TeaModel {
 
     public static class GetResourceModifyPriceResponseBodyDataRules extends TeaModel {
         /**
-         * <p>The description of the pricing rule, such as the user discount applicable to the quote.</p>
+         * <p>The description of the price calculation rule, such as the user discount applicable to the current quote.</p>
          * 
          * <strong>example:</strong>
          * <p>User discount</p>
@@ -240,7 +240,7 @@ public class GetResourceModifyPriceResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the pricing rule, which is used to identify the rule applied in the quote.</p>
+         * <p>The ID of the price calculation rule, which is used to identify the rule applied in the quote.</p>
          * 
          * <strong>example:</strong>
          * <p>102002100393****</p>
@@ -273,13 +273,13 @@ public class GetResourceModifyPriceResponseBody extends TeaModel {
 
     public static class GetResourceModifyPriceResponseBodyData extends TeaModel {
         /**
-         * <p>The price details of the scale-out. For the currency, see Currency. For the coupon selection status, see Promotions.</p>
+         * <p>The price details of the scale-out. For the currency of the amount, see Currency. For the selection of coupons, see Promotions.</p>
          */
         @NameInMap("Price")
         public GetResourceModifyPriceResponseBodyDataPrice price;
 
         /**
-         * <p>The list of pricing rules for the quote, which describes the applicable pricing or discount rules.</p>
+         * <p>The list of price calculation rules for the quote, which is used to describe the applicable price or discount rules.</p>
          */
         @NameInMap("Rules")
         public java.util.List<GetResourceModifyPriceResponseBodyDataRules> rules;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTaskResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is returned when the request fails. A successful response may not contain this parameter.</p>
+     * <p>The error code. Returned when the request fails. A successful response may not contain this field.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -20,7 +20,7 @@ public class GetTaskResponseBody extends TeaModel {
     public GetTaskResponseBodyData data;
 
     /**
-     * <p>The error or result message. This parameter is used to describe the cause when the request fails. A successful response may not contain this parameter.</p>
+     * <p>The error or result message. Used to explain the cause when the request fails. A successful response may not contain this field.</p>
      * 
      * <strong>example:</strong>
      * <p>Internal error.</p>
@@ -29,7 +29,7 @@ public class GetTaskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique identifier of the request. You can provide this value when you troubleshoot issues.</p>
+     * <p>The unique identifier of this request. You can provide this value for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>01A1A962-5503-107B-AC8F-EBA85DF905AC</p>
@@ -38,7 +38,7 @@ public class GetTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. To determine whether an asynchronous task is completed, you must query the task status separately.</p>
+     * <p>Indicates whether the request is processed successfully. A value of true indicates that the request is processed successfully. To determine whether an asynchronous task is completed, you must query the task status separately.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -90,7 +90,7 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyDataResourceList extends TeaModel {
         /**
-         * <p>The resource content corresponding to ResourceType. For the URL type, specify or return an accessible resource address.</p>
+         * <p>The resource content corresponding to ResourceType. For the URL type, enter or return an accessible resource address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/apps/business/setup.exe">https://example.com/apps/business/setup.exe</a></p>
@@ -99,12 +99,12 @@ public class GetTaskResponseBody extends TeaModel {
         public String resource;
 
         /**
-         * <p>The provision method of the resource content.</p>
-         * <p>Valid values:</p>
+         * <p>The provision method of the resource content.
+         * Valid values:</p>
          * <ul>
-         * <li><strong>HOSTED</strong>: hosted resource</li>
-         * <li><strong>TEXT</strong>: text resource</li>
-         * <li><strong>URL</strong>: resource provided through a URL</li>
+         * <li><strong>HOSTED</strong>: Hosted resource.</li>
+         * <li><strong>TEXT</strong>: Text resource.</li>
+         * <li><strong>URL</strong>: Resource provided through a URL.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyDataTaskStepList extends TeaModel {
         /**
-         * <p>The end time of the step. The time is a UNIX timestamp calculated from 1970-01-01T00:00:00Z. Unit: milliseconds. This parameter may not be returned if the step has not ended.</p>
+         * <p>The end time of the step. It is a UNIX timestamp calculated from 1970-01-01T00:00:00Z. Unit: milliseconds. This field may not be returned if the step has not ended.</p>
          * 
          * <strong>example:</strong>
          * <p>1790130491000</p>
@@ -147,7 +147,7 @@ public class GetTaskResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The start time of the step. The time is a UNIX timestamp calculated from 1970-01-01T00:00:00Z. Unit: milliseconds.</p>
+         * <p>The start time of the step. It is a UNIX timestamp calculated from 1970-01-01T00:00:00Z. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1790130490000</p>
@@ -171,7 +171,7 @@ public class GetTaskResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ISO 8601 string of the step end time, including the time zone offset. In the example, +08:00 indicates UTC+8. This parameter represents the same time as EndTime and is parsed according to the offset in the returned value. This parameter may not be returned if the step has not ended.</p>
+         * <p>The ISO 8601 string of the step end time, including the time zone offset. In the example, +08:00 indicates UTC+8. It represents the same time as EndTime and is parsed according to the offset in the return value. This field may not be returned if the step has not ended.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:28:11+08:00</p>
@@ -180,7 +180,7 @@ public class GetTaskResponseBody extends TeaModel {
         public String stepEndTime;
 
         /**
-         * <p>The ISO 8601 string of the step start time, including the time zone offset. In the example, +08:00 indicates UTC+8. This parameter represents the same time as StartTime and is parsed according to the offset in the returned value.</p>
+         * <p>The ISO 8601 string of the step start time, including the time zone offset. In the example, +08:00 indicates UTC+8. It represents the same time as StartTime and is parsed according to the offset in the return value.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:28:10+08:00</p>
@@ -198,7 +198,7 @@ public class GetTaskResponseBody extends TeaModel {
         public String taskMessage;
 
         /**
-         * <p>The task step identifier corresponding to this record. You can call the ListTaskStep operation to query the image creation and application adaptation steps.</p>
+         * <p>The task step identifier corresponding to this record. You can call ListTaskStep to query the image creation and application adaptation steps.</p>
          * 
          * <strong>example:</strong>
          * <p>CREATE_BUILDER_ENV</p>
@@ -280,7 +280,7 @@ public class GetTaskResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
-         * <p>The prompt or execution result description of the current step of the task.</p>
+         * <p>The prompt or execution result description of the current task step.</p>
          * 
          * <strong>example:</strong>
          * <p>[code=Builder.Failed,httpStatusCode=<null>,message=Builder environment deploy failed.]</p>
@@ -289,7 +289,7 @@ public class GetTaskResponseBody extends TeaModel {
         public String currentTaskMessage;
 
         /**
-         * <p>The identifier of the step that the task is currently executing. You can call the ListTaskStep operation to query the image creation and application adaptation steps.</p>
+         * <p>The identifier of the step currently being executed in the task. You can call ListTaskStep to query the image creation and application adaptation steps.</p>
          * 
          * <strong>example:</strong>
          * <p>CREATE_BUILDER_ENV</p>
@@ -328,8 +328,8 @@ public class GetTaskResponseBody extends TeaModel {
          * <p>The compute type of the task creation resource.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>CPU</strong>: CPU compute resource</li>
-         * <li><strong>GPU</strong>: GPU compute resource</li>
+         * <li><strong>CPU</strong>: CPU compute resource.</li>
+         * <li><strong>GPU</strong>: GPU compute resource.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -339,8 +339,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String performanceType;
 
         /**
-         * <p><strong>Not enabled. The system does not return valid task progress.</strong> Determine the task execution status based on the Status, CurrentTaskStep, and TaskStepList parameters.</p>
-         * <p>The example &quot;Not applicable (not enabled)&quot; is only a description of the field status, not an actual API response example.</p>
+         * <p><strong>Not enabled. Currently, no valid task progress is returned.</strong> Determine the task execution status based on Status, CurrentTaskStep, and TaskStepList.</p>
+         * <p>The example &quot;Not applicable (not enabled)&quot; is only a description of the field status, not an actual API return sample.</p>
          * 
          * <strong>example:</strong>
          * <p>Not applicable (not enabled)</p>
@@ -355,11 +355,11 @@ public class GetTaskResponseBody extends TeaModel {
         public java.util.List<GetTaskResponseBodyDataResourceList> resourceList;
 
         /**
-         * <p>The running mode of the task creation environment.</p>
-         * <p>Valid values:</p>
+         * <p>The running mode of the task creation environment.
+         * Valid values:</p>
          * <ul>
-         * <li><strong>NORMAL</strong>: normal running mode</li>
-         * <li><strong>COMPATIBLE</strong>: compatible running mode</li>
+         * <li><strong>NORMAL</strong>: Normal running mode.</li>
+         * <li><strong>COMPATIBLE</strong>: Compatible running mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -387,7 +387,7 @@ public class GetTaskResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The system disk capacity of the task creation environment. Unit: GiB.</p>
+         * <p>The system cloud disk capacity of the task creation environment. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -405,7 +405,7 @@ public class GetTaskResponseBody extends TeaModel {
         public String systemImageId;
 
         /**
-         * <p>The task ID. You can use this ID to call the GetTask operation to query the task status.</p>
+         * <p>The task ID. You can use it to call GetTask to query the task status.</p>
          * 
          * <strong>example:</strong>
          * <p>tid-bp1example****</p>
@@ -423,44 +423,44 @@ public class GetTaskResponseBody extends TeaModel {
          * <p>The actual type of the task.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>AUTO_ADAPT</strong>: automatic adaptation</li>
-         * <li><strong>AUTO_CREATE_IMAGE</strong>: automatic image creation</li>
-         * <li><strong>RETRY_ADAPT</strong>: retry of automatic adaptation</li>
-         * <li><strong>RETRY_CREATE_IMAGE</strong>: retry of automatic image creation</li>
-         * <li><strong>AUTO_OTA_IMAGE</strong>: automatic image OTA</li>
-         * <li><strong>AUTO_CREATE_VHD</strong>: automatic VHD creation</li>
-         * <li><strong>RETRY_VHD</strong>: retry of VHD creation</li>
-         * <li><strong>AUTO_CREATE_IMAGE_VHD</strong>: automatic VHD image creation</li>
-         * <li><strong>RETRY_CREATE_IMAGE_VHD</strong>: retry of VHD image creation</li>
-         * <li><strong>AUTO_VALIDATE_VHD</strong>: automatic VHD validation</li>
-         * <li><strong>RETRY_VALIDATE_VHD</strong>: retry of VHD validation</li>
-         * <li><strong>SYNCHRONIZE_APP_IMAGE</strong>: application image synchronization</li>
-         * <li><strong>APPLY_VHD_BUILDER</strong>: application for VHD application recording environment</li>
-         * <li><strong>RETRY_VHD_BUILDER</strong>: retry of application for VHD recording environment</li>
-         * <li><strong>ADAPT_AUTO</strong>: automatic application adaptation creation</li>
-         * <li><strong>ADAPT_AUTO_RETRY</strong>: retry of automatic application adaptation creation</li>
-         * <li><strong>ADAPT_MANUAL</strong>: manual application adaptation creation</li>
-         * <li><strong>ADAPT_MANUAL_RETRY</strong>: retry of manual application adaptation creation</li>
-         * <li><strong>IMAGE_AUTO</strong>: automatic image creation</li>
-         * <li><strong>IMAGE_AUTO_RETRY</strong>: retry of automatic image creation</li>
-         * <li><strong>IMAGE_AUTO_VALIDATE</strong>: automatic image validation</li>
-         * <li><strong>IMAGE_AUTO_VALIDATE_RETRY</strong>: retry of automatic image validation</li>
-         * <li><strong>IMAGE_MANUAL</strong>: manual image creation</li>
-         * <li><strong>IMAGE_MANUAL_RETRY</strong>: retry of manual image creation</li>
-         * <li><strong>DESKTOP_CUSTOM_IMAGE</strong>: cloud desktop custom image creation</li>
-         * <li><strong>DESKTOP_CUSTOM_IMAGE_RETRY</strong>: retry of cloud desktop custom image creation</li>
-         * <li><strong>DESKTOP_SYNC_IMAGE</strong>: cloud desktop image synchronization across regions</li>
-         * <li><strong>DESKTOP_SYNC_IMAGE_RETRY</strong>: retry of cloud desktop image synchronization across regions</li>
-         * <li><strong>IMAGE_DISTRIBUTE</strong>: image distribution to multiple regions</li>
-         * <li><strong>IMAGE_DISTRIBUTE_RETRY</strong>: retry of image distribution</li>
-         * <li><strong>IMAGE_FROM_INSTANCE</strong>: image creation based on an instance</li>
-         * <li><strong>IMAGE_FROM_INSTANCE_RETRY</strong>: retry of image creation based on an instance</li>
-         * <li><strong>SNAPSHOT_DISTRIBUTE</strong>: snapshot distribution to multiple regions</li>
-         * <li><strong>SNAPSHOT_DISTRIBUTE_RETRY</strong>: retry of snapshot distribution</li>
-         * <li><strong>SNAPSHOT_FROM_DISK</strong>: snapshot creation based on a disk</li>
-         * <li><strong>SNAPSHOT_FROM_DISK_RETRY</strong>: retry of snapshot creation based on a disk</li>
-         * <li><strong>IMAGE_CLEAN_AND_CREATE</strong>: temporary instance creation based on an image, cleanup, and final image creation</li>
-         * <li><strong>IMAGE_CLEAN_AND_CREATE_RETRY</strong>: retry of final image creation after cleanup</li>
+         * <li><strong>AUTO_ADAPT</strong>: Automatic adaptation.</li>
+         * <li><strong>AUTO_CREATE_IMAGE</strong>: Automatic image creation.</li>
+         * <li><strong>RETRY_ADAPT</strong>: Retry automatic adaptation.</li>
+         * <li><strong>RETRY_CREATE_IMAGE</strong>: Retry automatic image creation.</li>
+         * <li><strong>AUTO_OTA_IMAGE</strong>: Automatic image OTA.</li>
+         * <li><strong>AUTO_CREATE_VHD</strong>: Automatic VHD creation.</li>
+         * <li><strong>RETRY_VHD</strong>: Retry VHD creation.</li>
+         * <li><strong>AUTO_CREATE_IMAGE_VHD</strong>: Automatic VHD image creation.</li>
+         * <li><strong>RETRY_CREATE_IMAGE_VHD</strong>: Retry VHD image creation.</li>
+         * <li><strong>AUTO_VALIDATE_VHD</strong>: Automatic VHD validation.</li>
+         * <li><strong>RETRY_VALIDATE_VHD</strong>: Retry VHD validation.</li>
+         * <li><strong>SYNCHRONIZE_APP_IMAGE</strong>: Synchronize application image.</li>
+         * <li><strong>APPLY_VHD_BUILDER</strong>: Apply for VHD application recording environment.</li>
+         * <li><strong>RETRY_VHD_BUILDER</strong>: Retry applying for VHD recording environment.</li>
+         * <li><strong>ADAPT_AUTO</strong>: Automatic application adaptation creation.</li>
+         * <li><strong>ADAPT_AUTO_RETRY</strong>: Retry automatic application adaptation creation.</li>
+         * <li><strong>ADAPT_MANUAL</strong>: Manual application adaptation creation.</li>
+         * <li><strong>ADAPT_MANUAL_RETRY</strong>: Retry manual application adaptation creation.</li>
+         * <li><strong>IMAGE_AUTO</strong>: Automatic image creation.</li>
+         * <li><strong>IMAGE_AUTO_RETRY</strong>: Retry automatic image creation.</li>
+         * <li><strong>IMAGE_AUTO_VALIDATE</strong>: Automatic image validation.</li>
+         * <li><strong>IMAGE_AUTO_VALIDATE_RETRY</strong>: Retry automatic image validation.</li>
+         * <li><strong>IMAGE_MANUAL</strong>: Manual image creation.</li>
+         * <li><strong>IMAGE_MANUAL_RETRY</strong>: Retry manual image creation.</li>
+         * <li><strong>DESKTOP_CUSTOM_IMAGE</strong>: Create cloud desktop custom image.</li>
+         * <li><strong>DESKTOP_CUSTOM_IMAGE_RETRY</strong>: Retry creating cloud desktop custom image.</li>
+         * <li><strong>DESKTOP_SYNC_IMAGE</strong>: Synchronize cloud desktop image across regions.</li>
+         * <li><strong>DESKTOP_SYNC_IMAGE_RETRY</strong>: Retry synchronizing cloud desktop image across regions.</li>
+         * <li><strong>IMAGE_DISTRIBUTE</strong>: Distribute image to multiple regions.</li>
+         * <li><strong>IMAGE_DISTRIBUTE_RETRY</strong>: Retry image distribution.</li>
+         * <li><strong>IMAGE_FROM_INSTANCE</strong>: Create image based on instance.</li>
+         * <li><strong>IMAGE_FROM_INSTANCE_RETRY</strong>: Retry creating image based on instance.</li>
+         * <li><strong>SNAPSHOT_DISTRIBUTE</strong>: Distribute snapshot to multiple regions.</li>
+         * <li><strong>SNAPSHOT_DISTRIBUTE_RETRY</strong>: Retry snapshot distribution.</li>
+         * <li><strong>SNAPSHOT_FROM_DISK</strong>: Create snapshot based on disk.</li>
+         * <li><strong>SNAPSHOT_FROM_DISK_RETRY</strong>: Retry creating snapshot based on disk.</li>
+         * <li><strong>IMAGE_CLEAN_AND_CREATE</strong>: Create a temporary instance based on an image, and create the final image after cleanup.</li>
+         * <li><strong>IMAGE_CLEAN_AND_CREATE_RETRY</strong>: Retry creating the final image after cleanup.</li>
          * </ul>
          * 
          * <strong>example:</strong>

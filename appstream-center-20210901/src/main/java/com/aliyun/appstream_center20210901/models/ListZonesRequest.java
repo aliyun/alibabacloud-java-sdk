@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListZonesRequest extends TeaModel {
     /**
-     * <p>The region ID. Required. Specifies the region for which to query available zones. All returned zones are within this region.</p>
-     * <p>The value must be a region ID supported by WUYING Cloud Application. Call <a href="~~ListRegions~~">ListRegions</a> to obtain the supported region IDs. If an unsupported region is specified, the error code <code>InvalidParameter.ValueInvalid</code> is returned.</p>
+     * <p>The region ID. Required. Specifies the region for which you want to query available zones. All returned zones are located in this region.</p>
+     * <p>The value must be a region ID supported by App Streaming. You can call <a href="~~ListRegions~~">ListRegions</a> to query the supported region IDs. If you specify an unsupported region, the error code InvalidParameter.ValueInvalid is returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,12 +16,12 @@ public class ListZonesRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The operating system type. Required. Specifies the operating system used by the resource. This parameter, together with <code>ProductType</code>, determines the available zones. The value is case-insensitive. Use the following recommended values.</p>
+     * <p>The operating system type. Required. Specifies the operating system used by the resource. This parameter and ProductType together determine the available zones. The value is case-insensitive. Use one of the following values:</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><code>Windows</code>: Windows operating system.</li>
-     * <li><code>Linux</code>: Linux operating system.</li>
-     * <li><code>Android</code>: Android operating system.</li>
+     * <li>Windows: Windows operating system</li>
+     * <li>Linux: Linux operating system</li>
+     * <li>Android: Android operating system</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -32,17 +32,17 @@ public class ListZonesRequest extends TeaModel {
     public String osType;
 
     /**
-     * <p>The product type. Required. Specifies the product for which to query available zones. The zone list is returned based on the available resources of this product in the specified region. The value is case-insensitive. Use the following recommended values.</p>
+     * <p>The product type. Required. Specifies the product for which you want to query available zones. The list of available zones is returned based on the available resources of the product in the specified region. The value is case-insensitive. Use one of the following values:</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><code>CloudApp</code>: WUYING Cloud Application.</li>
-     * <li><code>CloudBrowser</code>: Cloud Browser.</li>
-     * <li><code>WuyingServer</code>: Enterprise Edition Workstation.</li>
-     * <li><code>WuyingWorkstation</code>: Personal Edition Lingou Container Workstation.</li>
-     * <li><code>WuyingWorkstationTeam</code>: Lingou Team Edition Container Workstation.</li>
-     * <li><code>WuyingWorkstationBusiness</code>: Lingou Dedicated Edition Container Workstation.</li>
-     * <li><code>AndroidCloud</code>: Cloud Phone.</li>
-     * <li><code>AIAgent</code>: AgentBay (AI agent).</li>
+     * <li>CloudApp: App Streaming</li>
+     * <li>CloudBrowser: Cloud Browser</li>
+     * <li>WuyingServer: Enterprise Edition workstation</li>
+     * <li>WuyingWorkstation: Personal Edition Linggou container workstation</li>
+     * <li>WuyingWorkstationTeam: Team Edition Linggou container workstation</li>
+     * <li>WuyingWorkstationBusiness: Dedicated Edition Linggou container workstation</li>
+     * <li>AndroidCloud: Cloud Phone</li>
+     * <li>AIAgent: AgentBay (AI agent)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

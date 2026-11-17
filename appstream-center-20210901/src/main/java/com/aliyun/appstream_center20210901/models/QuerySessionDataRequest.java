@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySessionDataRequest extends TeaModel {
     /**
-     * <p>The delivery group ID, used to filter session data for a specified delivery group. If not provided, the summary of session data for all delivery groups under the current account is returned.</p>
+     * <p>The delivery group ID, used to filter session data for a specified delivery group. If not provided, the aggregated session data for all delivery groups under the current account is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>aig-89ibriac2wudyph38</p>
@@ -14,7 +14,7 @@ public class QuerySessionDataRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The business region ID, which specifies the region for which to query session data. The server uses this value as the region filter condition for session data. If not provided, no region filtering is applied, and the summary of session data for all regions is returned.</p>
+     * <p>The business region ID, which specifies the region for which to query session data. The server uses this value as the region filter condition for session data. If not provided, no region filtering is applied and the aggregated session data for all regions is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

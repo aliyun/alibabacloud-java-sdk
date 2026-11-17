@@ -32,7 +32,7 @@ public class ListWuyingServerRequest extends TeaModel {
     public Integer bizType;
 
     /**
-     * <p>The billing type.</p>
+     * <p>The billing method.</p>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -41,7 +41,7 @@ public class ListWuyingServerRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The end time of the creation time range, in ISO 8601 format. This time point is exclusive.</p>
+     * <p>The end time of the creation time range. The time is in ISO 8601 format and exclusive.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-08-01T00:00:00Z</p>
@@ -50,7 +50,7 @@ public class ListWuyingServerRequest extends TeaModel {
     public String createTimeEnd;
 
     /**
-     * <p>The start time of the creation time range, in ISO 8601 format. This time point is inclusive.</p>
+     * <p>The start time of the creation time range. The time is in ISO 8601 format and inclusive.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-07-01T00:00:00Z</p>
@@ -59,7 +59,7 @@ public class ListWuyingServerRequest extends TeaModel {
     public String createTimeStart;
 
     /**
-     * <p>The end time of the expiration time range, in ISO 8601 format. This time point is exclusive.</p>
+     * <p>The end time of the expiration time range. The time is in ISO 8601 format and exclusive.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-08-01T00:00:00Z</p>
@@ -68,7 +68,7 @@ public class ListWuyingServerRequest extends TeaModel {
     public String expiredTimeEnd;
 
     /**
-     * <p>The start time of the expiration time range, in ISO 8601 format. This time point is inclusive.</p>
+     * <p>The start time of the expiration time range. The time is in ISO 8601 format and inclusive.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-07-01T00:00:00Z</p>
@@ -113,7 +113,7 @@ public class ListWuyingServerRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -131,7 +131,7 @@ public class ListWuyingServerRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The workstation instance type.</p>
+     * <p>The workstation specifications.</p>
      * 
      * <strong>example:</strong>
      * <p>eds.proworkstation_flagship_elite.32c64g.48g1x</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UntagCloudResourcesRequest extends TeaModel {
     /**
-     * <p>The list of resource IDs. A maximum of 50 resource IDs are supported. You do not need to specify this parameter when the resource type is tenant ID.</p>
+     * <p>The list of resource IDs. A maximum of 50 resource IDs are supported. This parameter is not required when the resource type is tenant ID.</p>
      */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
@@ -21,11 +21,11 @@ public class UntagCloudResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of tags. System tags and custom tags are supported. You can specify up to 10 tags.</p>
-     * <p>Enumerated values for system tags:</p>
+     * <p>The list of tag keys. Both system tags and custom tags are supported. A maximum of 10 tag keys can be passed.</p>
+     * <p>Valid values for system tags:</p>
      * <ul>
-     * <li><code>System/Scheduler/GRAYSCALE</code>: canary release tag.</li>
-     * <li><code>System/Scheduler/STOP_NEW_USER_CONNECTION</code>: tag that prevents newly bound users in a delivery group from establishing connections.</li>
+     * <li><code>System/Scheduler/GRAYSCALE</code>: Canary release tag.</li>
+     * <li><code>System/Scheduler/STOP_NEW_USER_CONNECTION</code>: Tag that prevents new users bound to the delivery group from establishing connections.</li>
      * </ul>
      * <p>This parameter is required.</p>
      */

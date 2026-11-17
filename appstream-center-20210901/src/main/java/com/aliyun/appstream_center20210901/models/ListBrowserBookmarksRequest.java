@@ -14,7 +14,7 @@ public class ListBrowserBookmarksRequest extends TeaModel {
     public String browserInstanceGroupId;
 
     /**
-     * <p>The ID of the browser delivery group set. You must specify either this parameter or BrowserInstanceGroupId, but not both.</p>
+     * <p>The ID of the browser delivery group set. You must specify either BrowserInstanceGroupSetId or BrowserInstanceGroupId, but not both.</p>
      * 
      * <strong>example:</strong>
      * <p>set-3jm9d0abc00example</p>
@@ -23,7 +23,7 @@ public class ListBrowserBookmarksRequest extends TeaModel {
     public String browserInstanceGroupSetId;
 
     /**
-     * <p>The keyword used for substring matching in bookmark names or URLs. The matching is case-insensitive for English characters. The keyword can be up to 1,024 characters in length after leading and trailing spaces are removed. If this parameter is not specified or contains only spaces, no filtering is applied. Special characters are matched literally.</p>
+     * <p>The keyword used for substring matching in the bookmark name or URL. Matching is case-insensitive for English letters. The value can contain up to 1,024 characters after leading and trailing whitespace is trimmed. If this parameter is not specified or contains only whitespace, no filtering is applied. Special characters are matched literally.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -32,7 +32,7 @@ public class ListBrowserBookmarksRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The page number of the page to return. Pages start from page 1.</p>
+     * <p>The number of the page to return. Pages start from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

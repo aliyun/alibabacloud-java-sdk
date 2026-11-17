@@ -29,7 +29,7 @@ public class ModifyShareImageRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The product type, such as cloud desktop, cloud application, or workstation.</p>
+     * <p>The product type, such as cloud desktop, cloud application, and workstation.</p>
      * 
      * <strong>example:</strong>
      * <p>CloudDesktop</p>
@@ -38,7 +38,7 @@ public class ModifyShareImageRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The Alibaba Cloud account IDs to remove from the share list.</p>
+     * <p>The Alibaba Cloud account IDs to remove from sharing.</p>
      */
     @NameInMap("RemoveAccount")
     public java.util.List<Long> removeAccount;

@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPublishedAppInstanceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the application used to filter delivery groups. Partial matching is supported. The delivery group must contain a deployed application that meets the condition. If this parameter is not specified or is set to an empty string, the results are not filtered by application ID. If this parameter is specified together with <code>AppName</code>, both conditions must be met by the same application.</p>
-     * <p>This condition does not restrict the returned <code>Apps</code> list to the matched applications.</p>
+     * <p>The ID of the application used to filter delivery groups. Fuzzy match is supported. The delivery group must contain a deployed application that meets the condition. If this parameter is not specified or an empty string is specified, delivery groups are not filtered by application ID. If this parameter is specified together with AppName, both conditions must be met by the same application.</p>
+     * <p>This condition does not trim the returned Apps list.</p>
      * 
      * <strong>example:</strong>
      * <p>ca-i87mycyn419nu****</p>
@@ -15,7 +15,7 @@ public class ListPublishedAppInstanceGroupRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the delivery group used for filtering. Partial matching is supported. You can pass the complete ID or a continuous segment of it. If this parameter is not specified or is set to an empty string, the results are not filtered by ID. This parameter can be used together with other filter conditions, and the results must meet all conditions.</p>
+     * <p>The ID of the delivery group used for filtering. Fuzzy match is supported. You can specify the complete ID or a contiguous segment of the ID. If this parameter is not specified or an empty string is specified, delivery groups are not filtered by ID. This parameter can be used together with other filter conditions, and all conditions must be met.</p>
      * 
      * <strong>example:</strong>
      * <p>aig-9ciijz60n4xsv****</p>
@@ -24,7 +24,7 @@ public class ListPublishedAppInstanceGroupRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The name of the delivery group used for filtering. Partial matching is supported. For example, if you pass <code>Office applications</code>, delivery groups whose names contain this text are matched. If this parameter is not specified or is set to an empty string, the results are not filtered by name. If this parameter is specified together with the delivery group ID, both the ID and the name must be matched.</p>
+     * <p>The name of the delivery group used for filtering. Fuzzy match is supported. For example, if you specify Office applications, delivery groups whose names contain this text are matched. If this parameter is not specified or an empty string is specified, delivery groups are not filtered by name. If this parameter is specified together with the delivery group ID, both the ID and the name must be matched.</p>
      * 
      * <strong>example:</strong>
      * <p>Office applications</p>
@@ -33,8 +33,8 @@ public class ListPublishedAppInstanceGroupRequest extends TeaModel {
     public String appInstanceGroupName;
 
     /**
-     * <p>The name of the application used to filter delivery groups. Partial matching is supported. The delivery group must contain a deployed application whose name contains the specified text. If this parameter is not specified or is set to an empty string, the results are not filtered by application name. If this parameter is specified together with <code>AppId</code>, both conditions must be met by the same application.</p>
-     * <p>This condition does not restrict the returned <code>Apps</code> list to the matched applications.</p>
+     * <p>The name of the application used to filter delivery groups. Fuzzy match is supported. The delivery group must contain a deployed application whose name contains the specified text. If this parameter is not specified or an empty string is specified, delivery groups are not filtered by application name. If this parameter is specified together with AppId, both conditions must be met by the same application.</p>
+     * <p>This condition does not trim the returned Apps list.</p>
      * 
      * <strong>example:</strong>
      * <p>Office applications</p>
@@ -43,8 +43,8 @@ public class ListPublishedAppInstanceGroupRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The username to be excluded based on existing authorizations. Exact match by full username is supported, such as <code>alice</code>. If this parameter is specified, delivery groups for which all applications have been directly authorized to the user are excluded. If this parameter is not specified or is set to an empty string, the results are not filtered by user authorization status.</p>
-     * <p><strong>Authorizations for a single application or access permissions obtained through user groups are not fully evaluated by this condition.</strong> Do not equate the returned results with a list of delivery groups to which the user has no access at all.</p>
+     * <p>The username to be excluded based on existing authorizations. Exact match is performed based on the complete username, such as alice. If this parameter is specified, delivery groups for which all applications have been directly authorized to the user are excluded. If this parameter is not specified or an empty string is specified, delivery groups are not excluded based on user authorization status.</p>
+     * <p><strong>This condition does not fully determine access permissions granted for a single application or obtained through a user group.</strong> You cannot equate the returned results with a list of delivery groups to which the user has absolutely no access.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -62,7 +62,7 @@ public class ListPublishedAppInstanceGroupRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The page number. This parameter is required. Start the query from page <code>1</code> and use it in conjunction with <code>PageSize</code>. Keep other filter conditions unchanged when querying subsequent pages.</p>
+     * <p>The page number. This parameter is required. Start the query from page 1 and use this parameter together with PageSize. Keep other filter conditions unchanged when you query subsequent pages.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class ListPublishedAppInstanceGroupRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of delivery groups to return per page. This parameter is required. Valid values: <code>1</code> to <code>100</code>. Explicitly specify this parameter and do not use the default values of other query operations.</p>
+     * <p>The maximum number of delivery groups to return on each page. This parameter is required. Valid values: 1 to 100. Unit: delivery groups. Explicitly specify this parameter and do not use the default values of other query operations.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,17 +82,17 @@ public class ListPublishedAppInstanceGroupRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The product type. This parameter is required. The value must be the same as the product type of the delivery groups to be queried. Only published delivery groups of this product type are returned. If an unrecognized value is passed, a parameter error is returned.</p>
+     * <p>The product type. This parameter is required. The value must be the same as the product type to which the delivery groups to be queried belong. Only published delivery groups of this product type are returned. If an unrecognized value is specified, a parameter error is returned.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><code>CloudApp</code>: Wuying Cloud App.</li>
-     * <li><code>CloudBrowser</code>: Cloud browser.</li>
-     * <li><code>WuyingServer</code>: Enterprise Edition workstation.</li>
-     * <li><code>WuyingWorkstation</code>: Personal Edition Linggou container workstation.</li>
-     * <li><code>WuyingWorkstationTeam</code>: Team Edition Linggou container workstation.</li>
-     * <li><code>WuyingWorkstationBusiness</code>: Dedicated Edition Linggou container workstation.</li>
-     * <li><code>AndroidCloud</code>: Cloud phone.</li>
-     * <li><code>AIAgent</code>: AgentBay (AI agent).</li>
+     * <li>CloudApp: Wuying Cloud App.</li>
+     * <li>CloudBrowser: Cloud Browser.</li>
+     * <li>WuyingServer: Enterprise Edition workstation.</li>
+     * <li>WuyingWorkstation: Personal Edition Linggou container workstation.</li>
+     * <li>WuyingWorkstationTeam: Team Edition Linggou container workstation.</li>
+     * <li>WuyingWorkstationBusiness: Exclusive Edition Linggou container workstation.</li>
+     * <li>AndroidCloud: Cloud Phone.</li>
+     * <li>AIAgent: AgentBay (AI agent).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

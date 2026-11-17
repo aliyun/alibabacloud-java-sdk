@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuthorizeUsersForAppShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the application. The application must be deployed in the image used by the app instance group. You can obtain the application ID from the Apps list returned by the <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation.</p>
+     * <p>The application ID. The application must be deployed in the image used by the app instance group. You can obtain the ID from the Apps list returned by the <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AuthorizeUsersForAppShrinkRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the app instance group. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to query the ID.</p>
+     * <p>The app instance group ID. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the ID.</p>
      * <p>The application specified by AppId must be deployed in the image used by the app instance group.</p>
      * <p>This parameter is required.</p>
      * 
@@ -26,8 +26,8 @@ public class AuthorizeUsersForAppShrinkRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The list of usernames of the users to be authorized for the application. You can specify up to 100 usernames in a single call.</p>
-     * <p>You must specify at least one of AuthorizeUserIds and UnAuthorizeUserIds, or specify both. Adding authorization is subject to the authorized user quota limit of the application.</p>
+     * <p>The list of usernames to be authorized for the application. You can specify up to 100 usernames at a time.</p>
+     * <p>Specify at least one of AuthorizeUserIds and UnAuthorizeUserIds, or specify both. Adding authorization is subject to the authorized user quota limit of the application.</p>
      */
     @NameInMap("AuthorizeUserIds")
     public java.util.List<String> authorizeUserIds;
@@ -47,8 +47,8 @@ public class AuthorizeUsersForAppShrinkRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The list of usernames of the users whose authorization for the application is to be removed. You can specify up to 100 usernames in a single call.</p>
-     * <p>You must specify at least one of AuthorizeUserIds and UnAuthorizeUserIds, or specify both. Removing authorization is not subject to quota limits.</p>
+     * <p>The list of usernames whose authorization for the application is to be removed. You can specify up to 100 usernames at a time.</p>
+     * <p>Specify at least one of AuthorizeUserIds and UnAuthorizeUserIds, or specify both. Removing authorization is not subject to quota limits.</p>
      */
     @NameInMap("UnAuthorizeUserIds")
     public java.util.List<String> unAuthorizeUserIds;
@@ -56,8 +56,8 @@ public class AuthorizeUsersForAppShrinkRequest extends TeaModel {
     /**
      * <p>The account information of the authorized user, which is used to specify the account type corresponding to the username.</p>
      * <ul>
-     * <li><strong>Required</strong> if the workspace to which the app instance group belongs is an AD workspace: Set Type to ad, and set AdDomain to the AD domain bound to the workspace.</li>
-     * <li>If this parameter is not specified, the default account type is WUYING convenience account (simple).</li>
+     * <li><strong>Must be specified</strong> when the workspace to which the app instance group belongs is an AD workspace: set Type to ad, and set AdDomain to the AD domain bound to the workspace.</li>
+     * <li>If this parameter is not specified, the default WUYING convenience account (simple) is used.</li>
      * </ul>
      */
     @NameInMap("UserMeta")

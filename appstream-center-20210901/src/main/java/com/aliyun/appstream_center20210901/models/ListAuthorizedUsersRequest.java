@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizedUsersRequest extends TeaModel {
     /**
-     * <p>The application ID. Specifies the application to filter users who are <strong>authorized for that specific application</strong> (authorized through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation). This parameter applies to delivery groups with the <code>App</code> authorization mode. Obtain the application ID from the Apps list returned by the <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a> operation.</p>
-     * <p>If not specified, all authorized users under the delivery group are returned. This parameter is not supported when querying by delivery group set.</p>
+     * <p>The application ID. This parameter is used to filter users who are <strong>specifically authorized for this application</strong> (authorized through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation). This parameter applies to app instance groups whose authorization mode is <code>App</code>. You can obtain the application ID from the Apps list returned by the <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a> operation.</p>
+     * <p>If this parameter is not specified, all authorized users under the app instance group are returned. This parameter is not supported when querying by app instance group set.</p>
      * 
      * <strong>example:</strong>
      * <p>ca-i87mycyn419nu****</p>
@@ -15,8 +15,8 @@ public class ListAuthorizedUsersRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The delivery group ID. Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain this value. For cloud browser groups, specify the browser group ID returned by the <a href="~~ListBrowserInstanceGroup~~">ListBrowserInstanceGroup</a> operation.</p>
-     * <p><strong>Exactly one of this parameter and AppInstanceGroupSetId must be specified.</strong></p>
+     * <p>The app instance group ID. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID. For cloud browser groups, specify the browser group ID returned by the <a href="~~ListBrowserInstanceGroup~~">ListBrowserInstanceGroup</a> operation.</p>
+     * <p><strong>You must specify either this parameter or AppInstanceGroupSetId, but not both.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>aig-9ciijz60n4xsv****</p>
@@ -25,8 +25,8 @@ public class ListAuthorizedUsersRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The delivery group set ID.</p>
-     * <p><strong>Exactly one of this parameter and AppInstanceGroupId must be specified.</strong> When querying by set, do not specify AppId or AppInstancePersistentId. Otherwise, a parameter error is returned.</p>
+     * <p>The app instance group set ID.</p>
+     * <p><strong>You must specify either this parameter or AppInstanceGroupId, but not both.</strong> When querying by set, do not specify AppId or AppInstancePersistentId. Otherwise, a parameter error is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>set-3jm9d0abc00example</p>
@@ -35,8 +35,8 @@ public class ListAuthorizedUsersRequest extends TeaModel {
     public String appInstanceGroupSetId;
 
     /**
-     * <p>The persistent session ID. Specifies the persistent session to filter users who are granted that session. This parameter applies to delivery groups with the <code>Session</code> authorization mode. Call the <a href="~~ListPersistentAppInstances~~">ListPersistentAppInstances</a> operation to obtain this value.</p>
-     * <p>If specified, only users granted that session are returned. However, the response parameter AppInstancePersistentIds still lists all persistent sessions granted to each user. This parameter is not supported when querying by delivery group set.</p>
+     * <p>The persistent session ID. This parameter is used to filter users who are granted this persistent session. This parameter applies to app instance groups whose authorization mode is <code>Session</code>. You can call the <a href="~~ListPersistentAppInstances~~">ListPersistentAppInstances</a> operation to obtain the ID.</p>
+     * <p>If this parameter is specified, only the users granted this session are returned. However, the AppInstancePersistentIds response parameter still lists all persistent sessions granted to the user. This parameter is not supported when querying by app instance group set.</p>
      * 
      * <strong>example:</strong>
      * <p>p-0cc7s3mw2fg4j****</p>
@@ -45,7 +45,7 @@ public class ListAuthorizedUsersRequest extends TeaModel {
     public String appInstancePersistentId;
 
     /**
-     * <p>The username for <strong>exact matching</strong>. If not specified, no filtering by exact username is applied. Can be specified together with UserIdFuzzy, in which case both conditions must be met.</p>
+     * <p>The username. Performs <strong>exact match</strong> by username. If this parameter is not specified, filtering by full username is not applied. This parameter can be specified together with UserIdFuzzy, and both conditions must be met.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -54,7 +54,7 @@ public class ListAuthorizedUsersRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The page number, starting from 1.</p>
+     * <p>The page number. Pages start from 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,8 +64,8 @@ public class ListAuthorizedUsersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records per page. Valid values: 1 to 100.</p>
-     * <p>When the authorization mode is <code>App</code> or <code>AppInstanceGroup</code>, pagination is based on authorization records. Multiple authorization records for the same user are merged into a single user entry. Therefore, the actual number of users returned on the current page may be less than this value.</p>
+     * <p>The number of records returned per page. Valid values: 1 to 100.</p>
+     * <p>When the authorization mode is <code>App</code> or <code>AppInstanceGroup</code>, pagination is based on authorization records. Multiple authorization records for the same user are merged into one user in the response. Therefore, the actual number of users returned on the current page may be less than this value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,17 +75,17 @@ public class ListAuthorizedUsersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The product type. The value must match the product type of the queried delivery group or delivery group set. If the value does not match, a resource-not-found error code is returned.</p>
+     * <p>The product type. The value must be consistent with the product type of the queried app instance group or app instance group set. If they are inconsistent, a resource not found error code is returned.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>CloudApp: Wuying Cloud Application.</li>
-     * <li>CloudBrowser: Cloud Browser.</li>
-     * <li>WuyingServer: Enterprise Edition Workstation.</li>
-     * <li>WuyingWorkstation: Personal Edition Linggou Container Workstation.</li>
-     * <li>WuyingWorkstationTeam: Linggou Team Edition Container Workstation.</li>
-     * <li>WuyingWorkstationBusiness: Linggou Dedicated Edition Container Workstation.</li>
-     * <li>AndroidCloud: Cloud Phone.</li>
-     * <li>AIAgent: AgentBay (AI agent).</li>
+     * <li>CloudApp: Wuying Cloud App</li>
+     * <li>CloudBrowser: Cloud Browser</li>
+     * <li>WuyingServer: Enterprise Edition workstation</li>
+     * <li>WuyingWorkstation: Personal Edition Linggou container workstation</li>
+     * <li>WuyingWorkstationTeam: Team Edition Linggou container workstation</li>
+     * <li>WuyingWorkstationBusiness: Dedicated Edition Linggou container workstation</li>
+     * <li>AndroidCloud: Cloud Phone</li>
+     * <li>AIAgent: AgentBay (AI agent)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -96,7 +96,7 @@ public class ListAuthorizedUsersRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The username keyword for <strong>fuzzy matching</strong>. A match occurs if the username contains this keyword. For example, if you specify <code>ali</code>, both <code>alice</code> and <code>ali.wang</code> are returned. If not specified, no keyword-based filtering is applied.</p>
+     * <p>The username keyword. Performs <strong>fuzzy match</strong> by username. A hit occurs if the username contains this keyword. For example, if you specify <code>ali</code>, both <code>alice</code> and <code>ali.wang</code> are matched. If this parameter is not specified, filtering by keyword is not applied.</p>
      * 
      * <strong>example:</strong>
      * <p>ali</p>

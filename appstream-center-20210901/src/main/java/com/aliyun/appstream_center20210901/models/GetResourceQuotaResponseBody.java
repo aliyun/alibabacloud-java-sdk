@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourceQuotaResponseBody extends TeaModel {
     /**
-     * <p>The error code returned when an error occurs during the call. A normal result is not guaranteed to contain this field. You should not use the return of a specific success code as a prerequisite for obtaining the quota.</p>
+     * <p>The error code returned when the call fails. A normal result is not guaranteed to contain this field. You should not use the return of a specific success code as a prerequisite for obtaining the quota.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidProductType.ValueNotSupported</p>
@@ -14,11 +14,11 @@ public class GetResourceQuotaResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The maximum resource count quota applicable to the current query conditions. This is not the usage or remaining quota.</p>
+     * <p>The maximum resource count quota applicable under the current query conditions. It is not the usage or remaining quota.</p>
      * <ul>
-     * <li><code>ResourceType=AppInstanceGroup</code>: Unit: count.</li>
+     * <li><code>ResourceType=AppInstanceGroup</code>: Unit: groups.</li>
      * <li><code>ResourceType=AppAuthUser</code>: Unit: users.</li>
-     * <li><code>ResourceType=PoolNodeAmount</code>: Unit: count.</li>
+     * <li><code>ResourceType=PoolNodeAmount</code>: Unit: nodes.</li>
      * </ul>
      * <p>If no smaller limit is obtained, <code>2147483647</code> is returned. This does not mean that the resource inventory is unlimited.</p>
      * 
@@ -29,7 +29,7 @@ public class GetResourceQuotaResponseBody extends TeaModel {
     public Long data;
 
     /**
-     * <p>The error message returned when an error occurs during the call. This message and the error code help you identify the cause of the error.</p>
+     * <p>The error message returned when the call fails. It is used together with the error code to help locate the cause.</p>
      * 
      * <strong>example:</strong>
      * <p>The ProductType is not supported.</p>
@@ -38,7 +38,7 @@ public class GetResourceQuotaResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique identifier for the request. You can use this ID to troubleshoot issues.</p>
+     * <p>The unique identifier of the request, which can be used to troubleshoot request issues.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteImageRequest extends TeaModel {
     /**
-     * <p>The WUYING image ID.</p>
+     * <p>The ID of the WUYING image.</p>
      * 
      * <strong>example:</strong>
      * <p>img-bp13mu****</p>

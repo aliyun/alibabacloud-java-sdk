@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class RestartWuyingServerRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable the restart retry feature.</p>
+     */
+    @NameInMap("EnableRestartRetry")
+    public Boolean enableRestartRetry;
+
+    /**
      * <p>The product type.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +28,14 @@ public class RestartWuyingServerRequest extends TeaModel {
     public static RestartWuyingServerRequest build(java.util.Map<String, ?> map) throws Exception {
         RestartWuyingServerRequest self = new RestartWuyingServerRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RestartWuyingServerRequest setEnableRestartRetry(Boolean enableRestartRetry) {
+        this.enableRestartRetry = enableRestartRetry;
+        return this;
+    }
+    public Boolean getEnableRestartRetry() {
+        return this.enableRestartRetry;
     }
 
     public RestartWuyingServerRequest setProductType(String productType) {

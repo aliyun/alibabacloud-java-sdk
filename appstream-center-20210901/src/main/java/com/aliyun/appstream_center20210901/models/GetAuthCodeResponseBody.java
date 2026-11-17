@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAuthCodeResponseBody extends TeaModel {
     /**
-     * <p>The error code. It is returned when the request fails. A success response may not contain this field.</p>
+     * <p>The error code. It is returned when the request fails. A successful response may not contain this field.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -14,13 +14,13 @@ public class GetAuthCodeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The business data returned by the operation.</p>
+     * <p>The business data returned by this operation.</p>
      */
     @NameInMap("Data")
     public GetAuthCodeResponseBodyData data;
 
     /**
-     * <p>The error or result message. It describes the cause when the request fails. A success response may not contain this field.</p>
+     * <p>The error or result message. It is used to describe the cause when the request fails. A successful response may not contain this field.</p>
      * 
      * <strong>example:</strong>
      * <p>Internal error.</p>
@@ -38,7 +38,7 @@ public class GetAuthCodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. To check whether an asynchronous task is completed, you must query the task status separately.</p>
+     * <p>Indicates whether the request was processed successfully. true indicates that the request was processed successfully. To check whether an asynchronous task is completed, query the task status separately.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -90,11 +90,11 @@ public class GetAuthCodeResponseBody extends TeaModel {
 
     public static class GetAuthCodeResponseBodyData extends TeaModel {
         /**
-         * <p>The network access type supported by the connection resource.</p>
+         * <p>The network access type supported by the connection resource. Valid values:</p>
          * <ul>
-         * <li><strong>INTERNET</strong>: Supports Internet access.</li>
-         * <li><strong>VPC</strong>: Supports virtual private cloud (VPC) access.</li>
-         * <li><strong>ANY</strong>: Supports both Internet and VPC access.</li>
+         * <li><strong>INTERNET</strong>: supports Internet access</li>
+         * <li><strong>VPC</strong>: supports VPC access</li>
+         * <li><strong>ANY</strong>: supports both Internet and VPC access</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -104,7 +104,7 @@ public class GetAuthCodeResponseBody extends TeaModel {
         public String accessType;
 
         /**
-         * <p>The application ID, which is used for subsequent application queries or unbinding the image.</p>
+         * <p>The application ID, used to query the application or unbind the image later.</p>
          * 
          * <strong>example:</strong>
          * <p>app-bp1example****</p>
@@ -113,7 +113,7 @@ public class GetAuthCodeResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The delivery group ID of the creation or validation resource. It is used together with the user and application information in this response during connection.</p>
+         * <p>The delivery group ID of the creation or validation resource. It is used together with the user and application information in this response when connecting.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-bp1example****</p>
@@ -122,7 +122,7 @@ public class GetAuthCodeResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
-         * <p>The application version ID, which is used to locate a specific version of the application. This field is not the image version ID.</p>
+         * <p>The application version ID, used to locate the specified version of the application. This field is not the image version ID.</p>
          * 
          * <strong>example:</strong>
          * <p>apv-bp1example****</p>
@@ -131,8 +131,8 @@ public class GetAuthCodeResponseBody extends TeaModel {
         public String appVersionId;
 
         /**
-         * <p>The authorization code used to connect to the creation or validation resource. <strong>The validity period is 180 seconds (3 minutes) from the time of issuance. Use it promptly after obtaining it.</strong> Use it together with the user, delivery group, and application information in the same response, and keep it confidential as a connection credential.</p>
-         * <p>Do not reuse the authorization code after it is redeemed. If it has been used or expired, call this operation again to obtain a new one.</p>
+         * <p>The authorization code used to connect to the creation or validation resource. <strong>It is valid for 180 seconds (3 minutes) from the time of issuance. Use it promptly after obtaining it.</strong> Use it together with the user, delivery group, and application information in the same response, and keep it confidential as a connection credential.</p>
+         * <p>Do not reuse the authorization code after it is successfully redeemed. If it has been used or has expired, call this operation again to obtain a new one.</p>
          * 
          * <strong>example:</strong>
          * <p>e4e169bea1cc48e8afac53**********</p>
@@ -141,10 +141,10 @@ public class GetAuthCodeResponseBody extends TeaModel {
         public String authCode;
 
         /**
-         * <p>The purpose type of the connection resource.</p>
+         * <p>The purpose type of the connection resource. Valid values:</p>
          * <ul>
-         * <li><strong>ImageBuilder</strong>: Image or application creation resource.</li>
-         * <li><strong>ImageValidate</strong>: Image or application validation resource.</li>
+         * <li><strong>ImageBuilder</strong>: image or application creation resource</li>
+         * <li><strong>ImageValidate</strong>: image or application validation resource</li>
          * </ul>
          * 
          * <strong>example:</strong>

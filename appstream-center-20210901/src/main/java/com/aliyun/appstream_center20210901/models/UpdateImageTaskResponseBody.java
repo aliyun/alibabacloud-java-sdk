@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateImageTaskResponseBody extends TeaModel {
     /**
-     * <p>The error code. Returned when the request fails. A successful response may not contain this field.</p>
+     * <p>The error code. This field is returned when the request fails. A successful response may not contain this field.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -20,7 +20,7 @@ public class UpdateImageTaskResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The error or result message. Used to describe the cause when the request fails. A successful response may not contain this field.</p>
+     * <p>The error or result message. This field describes the cause when the request fails. A successful response may not contain this field.</p>
      * 
      * <strong>example:</strong>
      * <p>Internal error.</p>
@@ -38,7 +38,7 @@ public class UpdateImageTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. A value of true indicates that the request is successful. To check whether an asynchronous task is completed, you must query the task status separately.</p>
+     * <p>Indicates whether the request is successful. A value of true indicates that the request is successful. To check whether an asynchronous task is completed, query the task status separately.</p>
      */
     @NameInMap("Success")
     public Boolean success;
