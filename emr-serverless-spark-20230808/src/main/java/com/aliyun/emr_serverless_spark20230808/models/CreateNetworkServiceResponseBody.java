@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkServiceResponseBody extends TeaModel {
     /**
-     * <p>The operation ID.</p>
+     * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>w-******</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLivyComputeTokenResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of 1000000 indicates that the request was successful. Other values indicate that the request failed. See the message parameter for error details.</p>
+     * <p>The response code. A value of 1000000 indicates that the request is successful. Any other value indicates that the request failed. For more information about the error cause, see the message.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000</p>

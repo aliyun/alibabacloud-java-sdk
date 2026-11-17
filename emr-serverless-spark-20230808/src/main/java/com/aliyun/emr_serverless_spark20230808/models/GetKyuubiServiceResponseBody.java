@@ -51,6 +51,15 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
         public String computeInstance;
 
         /**
+         * <p>Indicates whether the Kyuubi configuration needs to be updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("configRefreshRequired")
+        public Boolean configRefreshRequired;
+
+        /**
          * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
@@ -69,7 +78,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The internal network domain name.</p>
+         * <p>The internal domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>kyuubi-cn-beijing-internal.spark.emr.aliyuncs.com</p>
@@ -78,7 +87,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
         public String innerEndpoint;
 
         /**
-         * <p>The Kyuubi service configuration.</p>
+         * <p>The Kyuubi service configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -96,7 +105,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
         public String kyuubiReleaseVersion;
 
         /**
-         * <p>Kyuubi Service ID。</p>
+         * <p>The Kyuubi service ID.</p>
          * 
          * <strong>example:</strong>
          * <p>kb-4e209b04588***95f04ad3538ae4</p>
@@ -123,7 +132,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
         public String publicEndpoint;
 
         /**
-         * <p>Specifies whether public network access is enabled.</p>
+         * <p>Indicates whether public network access is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -141,6 +150,15 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
         public String queue;
 
         /**
+         * <p>The ready Kyuubi instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("readyReplicas")
+        public Integer readyReplicas;
+
+        /**
          * <p>The Spark DPI engine version.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +168,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
         public String releaseVersion;
 
         /**
-         * <p>The number of replicas enabled for high availability.</p>
+         * <p>The number of high availability replicas.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -159,7 +177,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
         public Integer replica;
 
         /**
-         * <p>The Spark configuration.</p>
+         * <p>The Spark configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -177,7 +195,7 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The Kyuubi service status.</p>
+         * <p>The Kyuubi service state.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -196,6 +214,14 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
         }
         public String getComputeInstance() {
             return this.computeInstance;
+        }
+
+        public GetKyuubiServiceResponseBodyData setConfigRefreshRequired(Boolean configRefreshRequired) {
+            this.configRefreshRequired = configRefreshRequired;
+            return this;
+        }
+        public Boolean getConfigRefreshRequired() {
+            return this.configRefreshRequired;
         }
 
         public GetKyuubiServiceResponseBodyData setCreateTime(String createTime) {
@@ -276,6 +302,14 @@ public class GetKyuubiServiceResponseBody extends TeaModel {
         }
         public String getQueue() {
             return this.queue;
+        }
+
+        public GetKyuubiServiceResponseBodyData setReadyReplicas(Integer readyReplicas) {
+            this.readyReplicas = readyReplicas;
+            return this;
+        }
+        public Integer getReadyReplicas() {
+            return this.readyReplicas;
         }
 
         public GetKyuubiServiceResponseBodyData setReleaseVersion(String releaseVersion) {

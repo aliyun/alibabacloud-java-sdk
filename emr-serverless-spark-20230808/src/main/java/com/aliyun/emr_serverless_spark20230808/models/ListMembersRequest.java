@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMembersRequest extends TeaModel {
     /**
-     * <p>The maximum number of records to return per request.</p>
+     * <p>The maximum number of records to return in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListMembersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that specifies the starting position for the query.</p>
+     * <p>The token that specifies the starting position for the query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

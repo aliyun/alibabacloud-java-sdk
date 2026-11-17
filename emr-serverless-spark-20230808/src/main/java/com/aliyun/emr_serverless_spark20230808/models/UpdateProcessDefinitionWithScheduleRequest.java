@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
     /**
-     * <p>The alert email address.</p>
+     * <p>The email address for alert notifications.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:foo_bar@spark.alert.invalid.com">foo_bar@spark.alert.invalid.com</a></p>
@@ -23,7 +23,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The execution policy.</p>
+     * <p>The execution strategy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +32,9 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
     @NameInMap("executionType")
     public String executionType;
 
+    /**
+     * <p>The list of global parameters for the workflow.</p>
+     */
     @NameInMap("globalParams")
     public java.util.List<UpdateProcessDefinitionWithScheduleRequestGlobalParams> globalParams;
 
@@ -110,26 +113,29 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
     public String runAs;
 
     /**
-     * <p>The scheduling structure.</p>
+     * <p>The schedule structure.</p>
      */
     @NameInMap("schedule")
     public UpdateProcessDefinitionWithScheduleRequestSchedule schedule;
 
     /**
      * <p>The tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;tagkey&quot;:&quot;tagvalue&quot;}</p>
      */
     @NameInMap("tags")
     public java.util.Map<String, String> tags;
 
     /**
-     * <p>The JSON array of node definitions, which contains the description information of all nodes in the workflow.</p>
+     * <p>The JSON array of task definitions, which contains the description of all tasks in the workflow.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("taskDefinitionJson")
     public java.util.List<UpdateProcessDefinitionWithScheduleRequestTaskDefinitionJson> taskDefinitionJson;
 
     /**
-     * <p>The concurrency of workflow node execution.</p>
+     * <p>The concurrency level for workflow node execution.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -138,14 +144,14 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
     public Integer taskParallelism;
 
     /**
-     * <p>The JSON array of node dependencies, which contains the dependencies among all nodes in the workflow. preTaskCode is the upstream node ID, and postTaskCode is the downstream node ID. Each node must have a unique ID. If a node does not have an upstream node, you must add a dependency with preTaskCode set to 0.</p>
+     * <p>The JSON array of task dependencies, which contains the dependencies among all tasks in the workflow. preTaskCode specifies the upstream task ID, and postTaskCode specifies the downstream task ID. Each task must have a unique ID. If a task node does not have an upstream task, you must add a dependency with preTaskCode set to 0.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("taskRelationJson")
     public java.util.List<UpdateProcessDefinitionWithScheduleRequestTaskRelationJson> taskRelationJson;
 
     /**
-     * <p>The default timeout for workflow execution.</p>
+     * <p>The default timeout period for workflow execution.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -303,15 +309,39 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
     }
 
     public static class UpdateProcessDefinitionWithScheduleRequestGlobalParams extends TeaModel {
+        /**
+         * <p>The parameter direction. Valid values: IN (input) and OUT (output).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IN</p>
+         */
         @NameInMap("direct")
         public String direct;
 
+        /**
+         * <p>The parameter name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testGlobalParam</p>
+         */
         @NameInMap("prop")
         public String prop;
 
+        /**
+         * <p>The data type of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VARCHAR</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The parameter value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testGlobalParam</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -356,7 +386,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
 
     public static class UpdateProcessDefinitionWithScheduleRequestSchedule extends TeaModel {
         /**
-         * <p>The cron expression for scheduling.</p>
+         * <p>The cron expression for the schedule.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 0 * * ?</p>
@@ -431,15 +461,39 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
     }
 
     public static class UpdateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParamsLocalParams extends TeaModel {
+        /**
+         * <p>The parameter direction. Valid values: IN (input) and OUT (output).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IN</p>
+         */
         @NameInMap("direct")
         public String direct;
 
+        /**
+         * <p>The parameter name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testGlobalParam</p>
+         */
         @NameInMap("prop")
         public String prop;
 
+        /**
+         * <p>The data type of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VARCHAR</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The parameter value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testGlobalParam</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -552,11 +606,14 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
         @NameInMap("fusion")
         public Boolean fusion;
 
+        /**
+         * <p>The list of local parameters for the task.</p>
+         */
         @NameInMap("localParams")
         public java.util.List<UpdateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParamsLocalParams> localParams;
 
         /**
-         * <p>The name of the queue for running the node.</p>
+         * <p>The name of the queue used to run the task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -566,7 +623,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
         public String resourceQueueId;
 
         /**
-         * <p>The Spark node configuration.</p>
+         * <p>The Spark task configurations.</p>
          */
         @NameInMap("sparkConf")
         public java.util.List<UpdateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParamsSparkConf> sparkConf;
@@ -581,7 +638,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
         public Integer sparkDriverCores;
 
         /**
-         * <p>The memory for the Spark driver.</p>
+         * <p>The memory size for the Spark driver.</p>
          * 
          * <strong>example:</strong>
          * <p>4g</p>
@@ -599,7 +656,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
         public Integer sparkExecutorCores;
 
         /**
-         * <p>The memory for the Spark executor.</p>
+         * <p>The memory size for the Spark executor.</p>
          * 
          * <strong>example:</strong>
          * <p>4g</p>
@@ -617,7 +674,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
         public String sparkLogLevel;
 
         /**
-         * <p>The log path of the Spark node.</p>
+         * <p>The log path for the Spark node.</p>
          */
         @NameInMap("sparkLogPath")
         public String sparkLogPath;
@@ -632,7 +689,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
         public String sparkVersion;
 
         /**
-         * <p>The data development node ID.</p>
+         * <p>The data development task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -797,7 +854,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
 
     public static class UpdateProcessDefinitionWithScheduleRequestTaskDefinitionJson extends TeaModel {
         /**
-         * <p>The alert email address.</p>
+         * <p>The email address for alert notifications.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:foo_bar@spark.alert.invalid.com">foo_bar@spark.alert.invalid.com</a></p>
@@ -806,7 +863,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
         public String alertEmailAddress;
 
         /**
-         * <p>The node definition ID.</p>
+         * <p>The task definition ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -816,7 +873,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
         public Long code;
 
         /**
-         * <p>The node definition description.</p>
+         * <p>The task definition description.</p>
          * 
          * <strong>example:</strong>
          * <p>ods transform task</p>
@@ -825,7 +882,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>Specifies whether to enable alerts for node failures.</p>
+         * <p>Specifies whether to enable alerts for task failures.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -834,7 +891,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
         public Boolean failAlertEnable;
 
         /**
-         * <p>The number of retries after a node fails.</p>
+         * <p>The number of retries allowed after a task failure.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -843,7 +900,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
         public Integer failRetryTimes;
 
         /**
-         * <p>The node name.</p>
+         * <p>The task name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -853,7 +910,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>Specifies whether to enable alerts for node startup.</p>
+         * <p>Specifies whether to enable alerts for task startup.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -863,12 +920,15 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
 
         /**
          * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;tagkey&quot;:&quot;tagvalue&quot;}</p>
          */
         @NameInMap("tags")
         public java.util.Map<String, String> tags;
 
         /**
-         * <p>The node definition parameters.</p>
+         * <p>The task definition parameters.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("taskParams")
@@ -885,7 +945,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The default timeout for node execution.</p>
+         * <p>The default timeout period for task execution.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -990,7 +1050,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
 
     public static class UpdateProcessDefinitionWithScheduleRequestTaskRelationJson extends TeaModel {
         /**
-         * <p>The name of the node topology relationship. Set this parameter to the workflow name.</p>
+         * <p>The name of the task topology relationship. Set this parameter to the workflow name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1000,7 +1060,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The downstream node ID.</p>
+         * <p>The downstream task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1010,7 +1070,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
         public Long postTaskCode;
 
         /**
-         * <p>The downstream node version.</p>
+         * <p>The downstream task version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1020,7 +1080,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
         public Integer postTaskVersion;
 
         /**
-         * <p>The upstream node ID.</p>
+         * <p>The upstream task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1030,7 +1090,7 @@ public class UpdateProcessDefinitionWithScheduleRequest extends TeaModel {
         public Long preTaskCode;
 
         /**
-         * <p>The upstream node version.</p>
+         * <p>The upstream task version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

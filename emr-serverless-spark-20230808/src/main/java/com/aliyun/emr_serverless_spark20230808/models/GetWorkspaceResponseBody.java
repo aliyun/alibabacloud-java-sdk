@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWorkspaceResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -40,6 +40,28 @@ public class GetWorkspaceResponseBody extends TeaModel {
         return this.workspace;
     }
 
+    public static class GetWorkspaceResponseBodyWorkspaceFeatures extends TeaModel {
+        /**
+         * <p>Specifies whether fine-grained permissions are enabled for the workspace.</p>
+         */
+        @NameInMap("fineGrainedAuthz")
+        public Boolean fineGrainedAuthz;
+
+        public static GetWorkspaceResponseBodyWorkspaceFeatures build(java.util.Map<String, ?> map) throws Exception {
+            GetWorkspaceResponseBodyWorkspaceFeatures self = new GetWorkspaceResponseBodyWorkspaceFeatures();
+            return TeaModel.build(map, self);
+        }
+
+        public GetWorkspaceResponseBodyWorkspaceFeatures setFineGrainedAuthz(Boolean fineGrainedAuthz) {
+            this.fineGrainedAuthz = fineGrainedAuthz;
+            return this;
+        }
+        public Boolean getFineGrainedAuthz() {
+            return this.fineGrainedAuthz;
+        }
+
+    }
+
     public static class GetWorkspaceResponseBodyWorkspacePrePaidQuota extends TeaModel {
         /**
          * <p>The amount of resources currently allocated.</p>
@@ -51,7 +73,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String allocatedResource;
 
         /**
-         * <p>Specifies whether auto-renewal is enabled for the resource.</p>
+         * <p>Specifies whether auto-renewal is enabled for the resource. Valid values:</p>
          * <ul>
          * <li>true: Auto-renewal is enabled. The resource is automatically renewed upon expiration.</li>
          * <li>false: Auto-renewal is disabled. The resource is stopped upon expiration.</li>
@@ -279,7 +301,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public Integer gpuNum;
 
         /**
-         * <p>The GPU instance type.</p>
+         * <p>The GPU model.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.gn7i-c8g1.2xlarge</p>
@@ -512,7 +534,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
 
     public static class GetWorkspaceResponseBodyWorkspaceTags extends TeaModel {
         /**
-         * <p>The tag keys.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>[\&quot;COST\&quot;]</p>
@@ -554,7 +576,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
 
     public static class GetWorkspaceResponseBodyWorkspace extends TeaModel {
         /**
-         * <p>Specifies whether auto-renewal is enabled. This parameter is required for subscription workspaces.</p>
+         * <p>Specifies whether to enable auto-renewal. This parameter is required for subscription resources.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -563,7 +585,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public Boolean autoRenew;
 
         /**
-         * <p>The auto-renewal period. This parameter is required for subscription workspaces.</p>
+         * <p>The auto-renewal duration. This parameter is required for subscription resources.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -572,7 +594,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public Integer autoRenewPeriod;
 
         /**
-         * <p>The auto-renewal cycle. This parameter is required for subscription workspaces.</p>
+         * <p>The auto-renewal cycle. This parameter is required for subscription resources.</p>
          * 
          * <strong>example:</strong>
          * <p>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</p>
@@ -599,7 +621,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String dlfCatalogId;
 
         /**
-         * <p>The bound DLF type.</p>
+         * <p>The type of the associated DLF.</p>
          * 
          * <strong>example:</strong>
          * <p>DLF-NEXT</p>
@@ -608,7 +630,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String dlfType;
 
         /**
-         * <p>The subscription duration. This parameter is required for subscription workspaces.</p>
+         * <p>The duration of the subscription period. This parameter is required for subscription resources.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -617,7 +639,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public Integer duration;
 
         /**
-         * <p>The time when the workspace is released.</p>
+         * <p>The time when the workspace was released.</p>
          * 
          * <strong>example:</strong>
          * <p>1786586477000</p>
@@ -635,6 +657,12 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String failReason;
 
         /**
+         * <p>The features of the workspace.</p>
+         */
+        @NameInMap("features")
+        public GetWorkspaceResponseBodyWorkspaceFeatures features;
+
+        /**
          * <p>The list of GPU instance types.</p>
          */
         @NameInMap("gpuSpec")
@@ -647,7 +675,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public java.util.List<String> ipWhiteList;
 
         /**
-         * <p>The unit of the subscription period. This parameter is required for subscription workspaces.</p>
+         * <p>The unit of the subscription period. This parameter is required for subscription resources.</p>
          * 
          * <strong>example:</strong>
          * <p>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</p>
@@ -680,7 +708,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public GetWorkspaceResponseBodyWorkspacePrePaidQuota prePaidQuota;
 
         /**
-         * <p>The list of GPU subscription quotas.</p>
+         * <p>The list of GPU subscriptions.</p>
          */
         @NameInMap("prePaidQuotaGpu")
         public java.util.List<GetWorkspaceResponseBodyWorkspacePrePaidQuotaGpu> prePaidQuotaGpu;
@@ -704,7 +732,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The reason why the workspace is released.</p>
+         * <p>The reason for the workspace release.</p>
          * 
          * <strong>example:</strong>
          * <p>stable</p>
@@ -713,7 +741,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String releaseType;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek4f7uj74wdthi</p>
@@ -722,7 +750,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The UID of the user who created the workspace.</p>
+         * <p>The UID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>13*************</p>
@@ -731,7 +759,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String resourceOwnerId;
 
         /**
-         * <p>The resource specifications.</p>
+         * <p>The resource specification.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;cu&quot;: 100}</p>
@@ -755,7 +783,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String storage;
 
         /**
-         * <p>The tag keys.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("tags")
         public java.util.List<GetWorkspaceResponseBodyWorkspaceTags> tags;
@@ -770,7 +798,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>Spark batch job workspace-1</p>
@@ -779,7 +807,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String workspaceName;
 
         /**
-         * <p>The workspace status.</p>
+         * <p>The status of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>STARTING,RUNNING,TERMINATED</p>
@@ -862,6 +890,14 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
         public String getFailReason() {
             return this.failReason;
+        }
+
+        public GetWorkspaceResponseBodyWorkspace setFeatures(GetWorkspaceResponseBodyWorkspaceFeatures features) {
+            this.features = features;
+            return this;
+        }
+        public GetWorkspaceResponseBodyWorkspaceFeatures getFeatures() {
+            return this.features;
         }
 
         public GetWorkspaceResponseBodyWorkspace setGpuSpec(java.util.List<String> gpuSpec) {

@@ -14,7 +14,7 @@ public class CreateKyuubiServiceRequest extends TeaModel {
     public String computeInstance;
 
     /**
-     * <p>The Kyuubi service configuration.</p>
+     * <p>The Kyuubi service configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;key\&quot;:\&quot;kyuubi.engine.share.level\&quot;,\&quot;value\&quot;:\&quot;USER\&quot;}]</p>
@@ -23,7 +23,7 @@ public class CreateKyuubiServiceRequest extends TeaModel {
     public String kyuubiConfigs;
 
     /**
-     * <p>The Kyuubi service database engine version.</p>
+     * <p>The Kyuubi service DPI engine version.</p>
      * 
      * <strong>example:</strong>
      * <p>1.9.2-0.0.2</p>
@@ -32,7 +32,7 @@ public class CreateKyuubiServiceRequest extends TeaModel {
     public String kyuubiReleaseVersion;
 
     /**
-     * <p>The Kyuubi service name.</p>
+     * <p>The name of the Kyuubi service.</p>
      * 
      * <strong>example:</strong>
      * <p>dev_serverless_spark</p>
@@ -50,7 +50,7 @@ public class CreateKyuubiServiceRequest extends TeaModel {
     public Boolean publicEndpointEnabled;
 
     /**
-     * <p>The queue where the Kyuubi service runs.</p>
+     * <p>The execution queue of the Kyuubi service.</p>
      * 
      * <strong>example:</strong>
      * <p>dev_queue</p>
@@ -59,7 +59,7 @@ public class CreateKyuubiServiceRequest extends TeaModel {
     public String queue;
 
     /**
-     * <p>The Spark database engine version.</p>
+     * <p>The Spark DPI engine version.</p>
      * 
      * <strong>example:</strong>
      * <p>esr-4.6.0 (Spark 3.5.2, Scala 2.12)</p>
@@ -68,7 +68,7 @@ public class CreateKyuubiServiceRequest extends TeaModel {
     public String releaseVersion;
 
     /**
-     * <p>The number of replicas for high availability (HA).</p>
+     * <p>The number of replicas for high availability.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -77,7 +77,7 @@ public class CreateKyuubiServiceRequest extends TeaModel {
     public Integer replica;
 
     /**
-     * <p>The Spark configuration.</p>
+     * <p>The Spark configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;key\&quot;:\&quot;spark.app.name\&quot;,\&quot;value\&quot;:\&quot;test\&quot;}]</p>

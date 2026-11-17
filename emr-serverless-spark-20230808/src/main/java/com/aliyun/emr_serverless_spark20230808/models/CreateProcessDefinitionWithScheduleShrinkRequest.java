@@ -33,6 +33,9 @@ public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     @NameInMap("executionType")
     public String executionType;
 
+    /**
+     * <p>The list of global parameters for the workflow.</p>
+     */
     @NameInMap("globalParams")
     public String globalParamsShrink;
 
@@ -102,13 +105,16 @@ public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     public String runAs;
 
     /**
-     * <p>The scheduling structure.</p>
+     * <p>The schedule structure.</p>
      */
     @NameInMap("schedule")
     public String scheduleShrink;
 
     /**
      * <p>The tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;tagkey&quot;:&quot;tagvalue&quot;}</p>
      */
     @NameInMap("tags")
     public String tagsShrink;

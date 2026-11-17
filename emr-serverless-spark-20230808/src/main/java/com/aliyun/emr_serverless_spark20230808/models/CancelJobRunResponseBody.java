@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelJobRunResponseBody extends TeaModel {
     /**
-     * <p>The job ID.</p>
+     * <p>The job run ID.</p>
      * 
      * <strong>example:</strong>
      * <p>jr-f09a8fda2396****</p>

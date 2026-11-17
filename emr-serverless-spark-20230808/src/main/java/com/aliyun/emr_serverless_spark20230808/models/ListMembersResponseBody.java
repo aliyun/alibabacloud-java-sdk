@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMembersResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of records to return per request.</p>
+     * <p>The maximum number of records to return in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class ListMembersResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -102,7 +102,7 @@ public class ListMembersResponseBody extends TeaModel {
         public String actionArn;
 
         /**
-         * <p>The name of the action.</p>
+         * <p>The name of the permission.</p>
          * 
          * <strong>example:</strong>
          * <p>add</p>
@@ -195,7 +195,7 @@ public class ListMembersResponseBody extends TeaModel {
         public String actionArn;
 
         /**
-         * <p>The name of the action.</p>
+         * <p>The name of the permission.</p>
          * 
          * <strong>example:</strong>
          * <p>add</p>
@@ -393,7 +393,7 @@ public class ListMembersResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The ARN of the member.</p>
+         * <p>The ARN of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:emr::w-1234*<em><strong>abcd:member/202265</strong></em>**276</p>
@@ -417,7 +417,7 @@ public class ListMembersResponseBody extends TeaModel {
         public String userName;
 
         /**
-         * <p>The type of the user. Valid values:</p>
+         * <p>The user type.</p>
          * <ul>
          * <li>ROLE</li>
          * <li>MEMBER</li>

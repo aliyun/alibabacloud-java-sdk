@@ -51,7 +51,7 @@ public class ListQueueTopJobsResponseBody extends TeaModel {
         public String cpuCores;
 
         /**
-         * <p>The number of CUs consumed by the job.</p>
+         * <p>The CUs consumed by the job.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -78,7 +78,7 @@ public class ListQueueTopJobsResponseBody extends TeaModel {
         public String jobType;
 
         /**
-         * <p>The amount of memory requested by the job.</p>
+         * <p>The memory requested by the job.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -135,7 +135,7 @@ public class ListQueueTopJobsResponseBody extends TeaModel {
 
     public static class ListQueueTopJobsResponseBodyQueueTopJobs extends TeaModel {
         /**
-         * <p>The list of jobs.</p>
+         * <p>The job list.</p>
          */
         @NameInMap("jobs")
         public java.util.List<ListQueueTopJobsResponseBodyQueueTopJobsJobs> jobs;
@@ -150,7 +150,7 @@ public class ListQueueTopJobsResponseBody extends TeaModel {
         public String maxResults;
 
         /**
-         * <p>The name of the queue.</p>
+         * <p>The queue name.</p>
          * 
          * <strong>example:</strong>
          * <p>dev_queue</p>
@@ -159,7 +159,7 @@ public class ListQueueTopJobsResponseBody extends TeaModel {
         public String queueName;
 
         /**
-         * <p>The total number of CUs consumed by the queue.</p>
+         * <p>The total CUs consumed by the queue.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>

@@ -35,7 +35,7 @@ public class ListJobRunsRequest extends TeaModel {
     public Boolean groupByState;
 
     /**
-     * <p>Specifies whether the job run is a workflow job.</p>
+     * <p>Specifies whether the job is a workflow job.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -44,7 +44,7 @@ public class ListJobRunsRequest extends TeaModel {
     public String isWorkflow;
 
     /**
-     * <p>The ID of the streaming job deployment.</p>
+     * <p>The ID of the job for the streaming job deployment.</p>
      * 
      * <strong>example:</strong>
      * <p>jd-b6d003f1930f****</p>
@@ -62,7 +62,7 @@ public class ListJobRunsRequest extends TeaModel {
     public String jobRunId;
 
     /**
-     * <p>The maximum number of entries to return in a single call. The maximum value is 100.</p>
+     * <p>The maximum number of records to retrieve per request. The maximum value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -89,7 +89,7 @@ public class ListJobRunsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token that specifies the starting position for the query.</p>
+     * <p>The token that marks the position to start reading.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -288,7 +288,7 @@ public class ListJobRunsRequest extends TeaModel {
 
     public static class ListJobRunsRequestEndTime extends TeaModel {
         /**
-         * <p>The end time of the time range. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The end of the time range. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1710432000000</p>
@@ -297,7 +297,7 @@ public class ListJobRunsRequest extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The start time of the time range. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The start of the time range. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1709740800000</p>
@@ -330,7 +330,7 @@ public class ListJobRunsRequest extends TeaModel {
 
     public static class ListJobRunsRequestStartTime extends TeaModel {
         /**
-         * <p>The end time of the time range. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The end of the time range. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1710432000000</p>
@@ -339,7 +339,7 @@ public class ListJobRunsRequest extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The start time of the time range. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The start of the time range. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1709740800000</p>

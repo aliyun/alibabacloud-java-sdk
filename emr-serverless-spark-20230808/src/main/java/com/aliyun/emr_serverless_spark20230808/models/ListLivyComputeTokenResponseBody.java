@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLivyComputeTokenResponseBody extends TeaModel {
     /**
-     * <p>The return code of the request. A value of 1000000 indicates that the request was successful. Other values indicate that the request failed. For details about the error cause, see the message.</p>
+     * <p>The response code. A value of 1000000 indicates a successful request, while other values indicate a failed request. For details about the error cause, see the message.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000</p>
@@ -103,7 +103,7 @@ public class ListLivyComputeTokenResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
-         * <p>The time when the token was last used. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The last used time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1749456098000</p>

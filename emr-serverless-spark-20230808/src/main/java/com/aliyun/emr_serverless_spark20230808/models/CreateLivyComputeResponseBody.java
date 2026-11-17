@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLivyComputeResponseBody extends TeaModel {
     /**
-     * <p>The status code of the request. A value of 1000000 indicates that the request was successful. Other values indicate that the request failed. For more information, see the message parameter.</p>
+     * <p>The response code. A value of 1000000 indicates a successful request. Any other value indicates a failed request. For detailed error causes, refer to the message.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000</p>
@@ -76,7 +76,7 @@ public class CreateLivyComputeResponseBody extends TeaModel {
 
     public static class CreateLivyComputeResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the Livy Gateway.</p>
+         * <p>The ID of the Livy gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>lc-i8xogcdfa4fk3yn1</p>

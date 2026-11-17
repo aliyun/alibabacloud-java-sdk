@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListKyuubiServicesResponseBody extends TeaModel {
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public ListKyuubiServicesResponseBodyData data;
@@ -42,7 +42,7 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
 
     public static class ListKyuubiServicesResponseBodyDataKyuubiServices extends TeaModel {
         /**
-         * <p>The instance specifications of the Kyuubi server.</p>
+         * <p>The instance type of the KyuubiServer.</p>
          * 
          * <strong>example:</strong>
          * <p>4C16G</p>
@@ -51,7 +51,16 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         public String computeInstance;
 
         /**
-         * <p>The creation time. The time is in UTC and follows the ISO 8601 standard.</p>
+         * <p>Indicates whether the Kyuubi configuration needs to be updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("configRefreshRequired")
+        public Boolean configRefreshRequired;
+
+        /**
+         * <p>The creation time. The time is in UTC and follows the ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-11T08:21:58Z</p>
@@ -78,7 +87,7 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         public String innerEndpoint;
 
         /**
-         * <p>The Kyuubi server configurations.</p>
+         * <p>The KyuubiServer configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>kyuubi.conf.key=value1
@@ -88,7 +97,7 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         public String kyuubiConfigs;
 
         /**
-         * <p>The version of the Kyuubi server.</p>
+         * <p>The version of the KyuubiServer.</p>
          * 
          * <strong>example:</strong>
          * <p>1.9.2-0.0.1</p>
@@ -106,7 +115,7 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         public String kyuubiServiceId;
 
         /**
-         * <p>The name of the Kyuubi server.</p>
+         * <p>The name of the KyuubiServer.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -133,7 +142,7 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         public String queue;
 
         /**
-         * <p>The Spark DPI engine version.</p>
+         * <p>The database engine version number of the Spark DPI engine.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-4.2.0 (Spark 3.5.2, Scala 2.12)</p>
@@ -142,7 +151,7 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         public String releaseVersion;
 
         /**
-         * <p>The number of replicas of the Kyuubi server.</p>
+         * <p>The number of replicas for the KyuubiServer.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -151,7 +160,7 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         public Integer replica;
 
         /**
-         * <p>The default configurations for the Kyuubi server to start a Spark application.</p>
+         * <p>The default configurations for KyuubiServer to start Spark applications.</p>
          * 
          * <strong>example:</strong>
          * <p>spark.conf.key=value1
@@ -161,7 +170,7 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         public String sparkConfigs;
 
         /**
-         * <p>The most recent start time of the Kyuubi server. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The most recent start time of the KyuubiServer. The time is formatted as YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-23 09:22:00</p>
@@ -170,7 +179,7 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The state of the Kyuubi server.</p>
+         * <p>The state of the KyuubiServer.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -198,6 +207,14 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         }
         public String getComputeInstance() {
             return this.computeInstance;
+        }
+
+        public ListKyuubiServicesResponseBodyDataKyuubiServices setConfigRefreshRequired(Boolean configRefreshRequired) {
+            this.configRefreshRequired = configRefreshRequired;
+            return this;
+        }
+        public Boolean getConfigRefreshRequired() {
+            return this.configRefreshRequired;
         }
 
         public ListKyuubiServicesResponseBodyDataKyuubiServices setCreateTime(String createTime) {
@@ -324,7 +341,7 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
 
     public static class ListKyuubiServicesResponseBodyData extends TeaModel {
         /**
-         * <p>The list of Kyuubi servers.</p>
+         * <p>The list of KyuubiServers.</p>
          */
         @NameInMap("kyuubiServices")
         public java.util.List<ListKyuubiServicesResponseBodyDataKyuubiServices> kyuubiServices;

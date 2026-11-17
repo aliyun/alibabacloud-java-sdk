@@ -33,6 +33,9 @@ public class CreateProcessDefinitionWithScheduleRequest extends TeaModel {
     @NameInMap("executionType")
     public String executionType;
 
+    /**
+     * <p>The list of global parameters for the workflow.</p>
+     */
     @NameInMap("globalParams")
     public java.util.List<CreateProcessDefinitionWithScheduleRequestGlobalParams> globalParams;
 
@@ -102,13 +105,16 @@ public class CreateProcessDefinitionWithScheduleRequest extends TeaModel {
     public String runAs;
 
     /**
-     * <p>The scheduling structure.</p>
+     * <p>The schedule structure.</p>
      */
     @NameInMap("schedule")
     public CreateProcessDefinitionWithScheduleRequestSchedule schedule;
 
     /**
      * <p>The tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;tagkey&quot;:&quot;tagvalue&quot;}</p>
      */
     @NameInMap("tags")
     public java.util.Map<String, String> tags;
@@ -287,15 +293,39 @@ public class CreateProcessDefinitionWithScheduleRequest extends TeaModel {
     }
 
     public static class CreateProcessDefinitionWithScheduleRequestGlobalParams extends TeaModel {
+        /**
+         * <p>The parameter direction. Valid values: IN (input) and OUT (output).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IN</p>
+         */
         @NameInMap("direct")
         public String direct;
 
+        /**
+         * <p>The parameter name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testGlobalParam</p>
+         */
         @NameInMap("prop")
         public String prop;
 
+        /**
+         * <p>The data type of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VARCHAR</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The parameter value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testGlobalParam</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -415,15 +445,39 @@ public class CreateProcessDefinitionWithScheduleRequest extends TeaModel {
     }
 
     public static class CreateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParamsLocalParams extends TeaModel {
+        /**
+         * <p>The parameter direction. Valid values: IN (input) and OUT (output).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IN</p>
+         */
         @NameInMap("direct")
         public String direct;
 
+        /**
+         * <p>The parameter name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testGlobalParam</p>
+         */
         @NameInMap("prop")
         public String prop;
 
+        /**
+         * <p>The data type of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VARCHAR</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The parameter value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testGlobalParam</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -536,6 +590,9 @@ public class CreateProcessDefinitionWithScheduleRequest extends TeaModel {
         @NameInMap("fusion")
         public Boolean fusion;
 
+        /**
+         * <p>The list of local parameters for the task.</p>
+         */
         @NameInMap("localParams")
         public java.util.List<CreateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParamsLocalParams> localParams;
 
@@ -601,13 +658,13 @@ public class CreateProcessDefinitionWithScheduleRequest extends TeaModel {
         public String sparkLogLevel;
 
         /**
-         * <p>The path to the task logs of the Spark node.</p>
+         * <p>The task logs path for the Spark node.</p>
          */
         @NameInMap("sparkLogPath")
         public String sparkLogPath;
 
         /**
-         * <p>The database engine version of the Spark DPI engine.</p>
+         * <p>The Spark DPI engine database engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-4.0.0 (Spark 3.5.2, Scala 2.12)</p>
@@ -847,6 +904,9 @@ public class CreateProcessDefinitionWithScheduleRequest extends TeaModel {
 
         /**
          * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;tagkey&quot;:&quot;tagvalue&quot;}</p>
          */
         @NameInMap("tags")
         public java.util.Map<String, String> tags;

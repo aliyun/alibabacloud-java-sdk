@@ -14,13 +14,13 @@ public class EditWorkspaceQueueRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The environment type of the queue.</p>
+     * <p>The queue environment type.</p>
      */
     @NameInMap("environments")
     public java.util.List<String> environments;
 
     /**
-     * <p>The list of GPU models.</p>
+     * <p>The list of GPU instance types.</p>
      */
     @NameInMap("gpuSpec")
     public java.util.List<String> gpuSpec;
@@ -29,7 +29,7 @@ public class EditWorkspaceQueueRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The resource quota.</p>
+     * <p>The resource specifications.</p>
      */
     @NameInMap("resourceSpec")
     public EditWorkspaceQueueRequestResourceSpec resourceSpec;
@@ -132,7 +132,7 @@ public class EditWorkspaceQueueRequest extends TeaModel {
 
     public static class EditWorkspaceQueueRequestResourceSpec extends TeaModel {
         /**
-         * <p>The resource upper limit of the workspace queue.</p>
+         * <p>The resource limit for the workspace queue.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -141,7 +141,7 @@ public class EditWorkspaceQueueRequest extends TeaModel {
         public Long cu;
 
         /**
-         * <p>The number of GPU cards.</p>
+         * <p>The number of GPUs.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

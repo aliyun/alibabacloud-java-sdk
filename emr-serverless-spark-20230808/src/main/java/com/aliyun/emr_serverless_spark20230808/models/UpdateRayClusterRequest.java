@@ -22,6 +22,9 @@ public class UpdateRayClusterRequest extends TeaModel {
     @NameInMap("displayReleaseVersion")
     public String displayReleaseVersion;
 
+    @NameInMap("enableMetricsUpload")
+    public Boolean enableMetricsUpload;
+
     /**
      * <p>The extra parameters. The value must be in JSON format.</p>
      * 
@@ -56,6 +59,20 @@ public class UpdateRayClusterRequest extends TeaModel {
     public String networkServiceName;
 
     /**
+     * <strong>example:</strong>
+     * <p>myLogStore</p>
+     */
+    @NameInMap("slsLogStore")
+    public String slsLogStore;
+
+    /**
+     * <strong>example:</strong>
+     * <p>myproject</p>
+     */
+    @NameInMap("slsProject")
+    public String slsProject;
+
+    /**
      * <p>The list of managed directory IDs to mount.</p>
      */
     @NameInMap("volumeIds")
@@ -88,6 +105,14 @@ public class UpdateRayClusterRequest extends TeaModel {
         return this.displayReleaseVersion;
     }
 
+    public UpdateRayClusterRequest setEnableMetricsUpload(Boolean enableMetricsUpload) {
+        this.enableMetricsUpload = enableMetricsUpload;
+        return this;
+    }
+    public Boolean getEnableMetricsUpload() {
+        return this.enableMetricsUpload;
+    }
+
     public UpdateRayClusterRequest setExtraParam(String extraParam) {
         this.extraParam = extraParam;
         return this;
@@ -118,6 +143,22 @@ public class UpdateRayClusterRequest extends TeaModel {
     }
     public String getNetworkServiceName() {
         return this.networkServiceName;
+    }
+
+    public UpdateRayClusterRequest setSlsLogStore(String slsLogStore) {
+        this.slsLogStore = slsLogStore;
+        return this;
+    }
+    public String getSlsLogStore() {
+        return this.slsLogStore;
+    }
+
+    public UpdateRayClusterRequest setSlsProject(String slsProject) {
+        this.slsProject = slsProject;
+        return this;
+    }
+    public String getSlsProject() {
+        return this.slsProject;
     }
 
     public UpdateRayClusterRequest setVolumeIds(java.util.List<String> volumeIds) {
@@ -248,6 +289,13 @@ public class UpdateRayClusterRequest extends TeaModel {
         public Boolean gftEnabled;
 
         /**
+         * <strong>example:</strong>
+         * <p>550</p>
+         */
+        @NameInMap("gpuDriverVersion")
+        public String gpuDriverVersion;
+
+        /**
          * <p>The GPU instance type.</p>
          * 
          * <strong>example:</strong>
@@ -345,6 +393,14 @@ public class UpdateRayClusterRequest extends TeaModel {
             return this.gftEnabled;
         }
 
+        public UpdateRayClusterRequestHeadSpec setGpuDriverVersion(String gpuDriverVersion) {
+            this.gpuDriverVersion = gpuDriverVersion;
+            return this;
+        }
+        public String getGpuDriverVersion() {
+            return this.gpuDriverVersion;
+        }
+
         public UpdateRayClusterRequestHeadSpec setGpuSpec(String gpuSpec) {
             this.gpuSpec = gpuSpec;
             return this;
@@ -414,6 +470,13 @@ public class UpdateRayClusterRequest extends TeaModel {
          */
         @NameInMap("env")
         public String env;
+
+        /**
+         * <strong>example:</strong>
+         * <p>550</p>
+         */
+        @NameInMap("gpuDriverVersion")
+        public String gpuDriverVersion;
 
         /**
          * <p>The GPU instance type.</p>
@@ -523,6 +586,14 @@ public class UpdateRayClusterRequest extends TeaModel {
         }
         public String getEnv() {
             return this.env;
+        }
+
+        public UpdateRayClusterRequestWorkerSpec setGpuDriverVersion(String gpuDriverVersion) {
+            this.gpuDriverVersion = gpuDriverVersion;
+            return this;
+        }
+        public String getGpuDriverVersion() {
+            return this.gpuDriverVersion;
         }
 
         public UpdateRayClusterRequestWorkerSpec setGpuSpec(String gpuSpec) {

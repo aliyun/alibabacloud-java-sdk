@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartJobRunRequest extends TeaModel {
     /**
-     * <p>The idempotence token.</p>
+     * <p>The client token for idempotency.</p>
      * 
      * <strong>example:</strong>
      * <p>8e6aae2810c8f67229ca70bb31cd****</p>
@@ -14,7 +14,7 @@ public class StartJobRunRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The job type. Valid values:</p>
+     * <p>The type of the job. Valid values:</p>
      * <ul>
      * <li><p>SQL</p>
      * </li>
@@ -31,13 +31,13 @@ public class StartJobRunRequest extends TeaModel {
     public String codeType;
 
     /**
-     * <p>The advanced Spark configurations.</p>
+     * <p>The advanced configurations for Spark.</p>
      */
     @NameInMap("configurationOverrides")
     public StartJobRunRequestConfigurationOverrides configurationOverrides;
 
     /**
-     * <p>The version that is displayed in the console.</p>
+     * <p>The version displayed in the console.</p>
      * 
      * <strong>example:</strong>
      * <p>esr-3.3.1</p>
@@ -55,7 +55,7 @@ public class StartJobRunRequest extends TeaModel {
     public Integer executionTimeoutSeconds;
 
     /**
-     * <p>Specifies whether to enable the Fusion engine for acceleration.</p>
+     * <p>Specifies whether to enable Fusion engine acceleration.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -70,7 +70,7 @@ public class StartJobRunRequest extends TeaModel {
     public JobDriver jobDriver;
 
     /**
-     * <p>The job ID.</p>
+     * <p>The ID of the job.</p>
      * 
      * <strong>example:</strong>
      * <p>jr-12345</p>
@@ -79,7 +79,7 @@ public class StartJobRunRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The job name.</p>
+     * <p>The name of the job.</p>
      * 
      * <strong>example:</strong>
      * <p>spark_job_name</p>
@@ -88,7 +88,7 @@ public class StartJobRunRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The version of the Spark engine.</p>
+     * <p>The version number of the Spark engine.</p>
      * 
      * <strong>example:</strong>
      * <p>esr-3.3.1</p>
@@ -97,7 +97,7 @@ public class StartJobRunRequest extends TeaModel {
     public String releaseVersion;
 
     /**
-     * <p>The resource queue on which the Spark job runs.</p>
+     * <p>The resource queue in which the Spark job runs.</p>
      * 
      * <strong>example:</strong>
      * <p>dev_queue</p>

@@ -14,7 +14,7 @@ public class ListSqlStatementContentsRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The maximum number of records to return for a single request.</p>
+     * <p>The maximum number of records to retrieve at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>2000</p>
@@ -23,7 +23,7 @@ public class ListSqlStatementContentsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that specifies the position from which to start reading the results.</p>
+     * <p>The token that indicates the starting position for reading.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

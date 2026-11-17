@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class JobDriver extends TeaModel {
     /**
-     * <p>The configurations of SparkSubmit.</p>
+     * <p>The SparkSubmit configuration information.</p>
      */
     @NameInMap("sparkSubmit")
     public JobDriverSparkSubmit sparkSubmit;
@@ -25,7 +25,7 @@ public class JobDriver extends TeaModel {
 
     public static class JobDriverSparkSubmit extends TeaModel {
         /**
-         * <p>The main program of Spark.</p>
+         * <p>The Spark main program.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://bucket/path/to/entrypoint.jar</p>
@@ -34,13 +34,13 @@ public class JobDriver extends TeaModel {
         public String entryPoint;
 
         /**
-         * <p>The parameters related to the main program of Spark.</p>
+         * <p>The list of arguments for the Spark main program.</p>
          */
         @NameInMap("entryPointArguments")
         public java.util.List<String> entryPointArguments;
 
         /**
-         * <p>The command-line parameter of SparkSubmit.</p>
+         * <p>The SparkSubmit command-line parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>--conf spark.app.name=test</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCacheClusterResponseBody extends TeaModel {
     /**
-     * <p>The list of Cache clusters.</p>
+     * <p>The list of cache clusters.</p>
      */
     @NameInMap("cacheClusters")
     public CacheCluster cacheClusters;

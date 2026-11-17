@@ -14,7 +14,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page.</p>
+     * <p>The next token.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The list of versions.</p>
+     * <p>The list of release versions.</p>
      */
     @NameInMap("releaseVersions")
     public java.util.List<ListReleaseVersionsResponseBodyReleaseVersions> releaseVersions;
@@ -117,6 +117,15 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         public String displayReleaseVersion;
 
         /**
+         * <p>Indicates whether the release version supports flame graphs. This is determined by checking if the fenix version metadata contains flame-graph.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("flameGraphEnabled")
+        public Boolean flameGraphEnabled;
+
+        /**
          * <p>Indicates whether Fusion engine acceleration is enabled.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +153,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         public String iaasType;
 
         /**
-         * <p>Indicates whether the version is a custom image.</p>
+         * <p>Indicates whether the image is a custom image.</p>
          */
         @NameInMap("isCustom")
         public Boolean isCustom;
@@ -177,7 +186,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The version type.</p>
+         * <p>The release type.</p>
          * 
          * <strong>example:</strong>
          * <p>stable</p>
@@ -212,6 +221,14 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
         public String getDisplayReleaseVersion() {
             return this.displayReleaseVersion;
+        }
+
+        public ListReleaseVersionsResponseBodyReleaseVersions setFlameGraphEnabled(Boolean flameGraphEnabled) {
+            this.flameGraphEnabled = flameGraphEnabled;
+            return this;
+        }
+        public Boolean getFlameGraphEnabled() {
+            return this.flameGraphEnabled;
         }
 
         public ListReleaseVersionsResponseBodyReleaseVersions setFusion(Boolean fusion) {

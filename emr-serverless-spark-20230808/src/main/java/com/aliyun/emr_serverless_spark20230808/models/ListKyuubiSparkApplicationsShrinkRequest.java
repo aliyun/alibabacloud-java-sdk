@@ -29,7 +29,7 @@ public class ListKyuubiSparkApplicationsShrinkRequest extends TeaModel {
     public String endTimeShrink;
 
     /**
-     * <p>The list of statuses of the latest SQL statement used for filtering.</p>
+     * <p>The list of statuses of the most recent SQL statement used for filtering.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;SUCCESS&quot;]</p>
@@ -38,7 +38,7 @@ public class ListKyuubiSparkApplicationsShrinkRequest extends TeaModel {
     public String latestSqlStatementStatuses;
 
     /**
-     * <p>The maximum number of records to retrieve at a time.</p>
+     * <p>The maximum number of records to return in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -80,7 +80,7 @@ public class ListKyuubiSparkApplicationsShrinkRequest extends TeaModel {
     public String resourceQueueId;
 
     /**
-     * <p>The sort order. A value of asc indicates ascending order, and desc indicates descending order.</p>
+     * <p>The sort order. asc indicates ascending order, and desc indicates descending order.</p>
      * 
      * <strong>example:</strong>
      * <p>asc</p>
@@ -95,13 +95,22 @@ public class ListKyuubiSparkApplicationsShrinkRequest extends TeaModel {
     public String startTimeShrink;
 
     /**
-     * <p>The list of Spark application states used for filtering.</p>
+     * <p>The list of Spark application statuses used for filtering.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;ERROR&quot;]</p>
      */
     @NameInMap("states")
     public String states;
+
+    /**
+     * <p>The username.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user-a</p>
+     */
+    @NameInMap("userName")
+    public String userName;
 
     public static ListKyuubiSparkApplicationsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListKyuubiSparkApplicationsShrinkRequest self = new ListKyuubiSparkApplicationsShrinkRequest();
@@ -202,6 +211,14 @@ public class ListKyuubiSparkApplicationsShrinkRequest extends TeaModel {
     }
     public String getStates() {
         return this.states;
+    }
+
+    public ListKyuubiSparkApplicationsShrinkRequest setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
     }
 
 }

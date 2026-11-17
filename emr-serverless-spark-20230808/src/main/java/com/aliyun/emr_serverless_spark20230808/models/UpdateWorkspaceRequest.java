@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkspaceRequest extends TeaModel {
     /**
-     * <p>The resource limit of the workspace.</p>
+     * <p>The resource limit for the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>5000</p>
@@ -35,7 +35,7 @@ public class UpdateWorkspaceRequest extends TeaModel {
     public UpdateWorkspaceRequestGpuSubscription gpuSubscription;
 
     /**
-     * <p>The workspace IP address whitelist.</p>
+     * <p>The IP address whitelist of the workspace.</p>
      */
     @NameInMap("ipWhiteList")
     public java.util.List<String> ipWhiteList;
@@ -176,6 +176,9 @@ public class UpdateWorkspaceRequest extends TeaModel {
 
         /**
          * <p>The number of subscription periods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("duration")
         public Integer duration;
@@ -191,6 +194,9 @@ public class UpdateWorkspaceRequest extends TeaModel {
 
         /**
          * <p>The ID of the GPU quota instance to be upgraded. This parameter is required when the operation parameter is set to UPGRADE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-xxxxxx-quota-gpu-xxxx</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
@@ -205,7 +211,7 @@ public class UpdateWorkspaceRequest extends TeaModel {
         public String instanceTypeId;
 
         /**
-         * <p>The operation type. Valid values: BUY and UPGRADE. BUY indicates a new purchase, and UPGRADE indicates an upgrade. If you set this parameter to UPGRADE, you must specify the orderId parameter. Default value: BUY.</p>
+         * <p>The operation type. Valid values: BUY and UPGRADE. BUY indicates a new purchase. UPGRADE indicates an upgrade. If you set this parameter to UPGRADE, you must specify the orderId parameter. Default value: BUY.</p>
          * 
          * <strong>example:</strong>
          * <p>BUY</p>
@@ -221,6 +227,15 @@ public class UpdateWorkspaceRequest extends TeaModel {
          */
         @NameInMap("paymentDurationUnit")
         public String paymentDurationUnit;
+
+        /**
+         * <p>Supported only for new GPU subscription purchases (BUY). Not supported for upgrades (UPGRADE). Use the voucher option ID returned by the price inquiry API. To not use a voucher, set this parameter to youhuiquan_promotion_option_id_for_blank. If you omit this parameter, the previous call behavior is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
+         */
+        @NameInMap("promotionOptionNo")
+        public String promotionOptionNo;
 
         public static UpdateWorkspaceRequestGpuSubscription build(java.util.Map<String, ?> map) throws Exception {
             UpdateWorkspaceRequestGpuSubscription self = new UpdateWorkspaceRequestGpuSubscription();
@@ -283,6 +298,14 @@ public class UpdateWorkspaceRequest extends TeaModel {
             return this.paymentDurationUnit;
         }
 
+        public UpdateWorkspaceRequestGpuSubscription setPromotionOptionNo(String promotionOptionNo) {
+            this.promotionOptionNo = promotionOptionNo;
+            return this;
+        }
+        public String getPromotionOptionNo() {
+            return this.promotionOptionNo;
+        }
+
     }
 
     public static class UpdateWorkspaceRequestSubscription extends TeaModel {
@@ -305,7 +328,7 @@ public class UpdateWorkspaceRequest extends TeaModel {
         public String autoRenewPeriod;
 
         /**
-         * <p>The auto-renewal cycle. This parameter is required for the subscription billing method.</p>
+         * <p>The auto-renewal epoch. This parameter is required for the subscription billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>MONTH</p>
@@ -314,7 +337,7 @@ public class UpdateWorkspaceRequest extends TeaModel {
         public String autoRenewPeriodUnit;
 
         /**
-         * <p>The client token for idempotency verification.</p>
+         * <p>The client token for idempotence verification.</p>
          * 
          * <strong>example:</strong>
          * <p>my-token-asxkxxxxxxx</p>
@@ -341,7 +364,16 @@ public class UpdateWorkspaceRequest extends TeaModel {
         public String paymentDurationUnit;
 
         /**
-         * <p>The list of running queues to be switched.</p>
+         * <p>Supported only when you switch the billing method of CUs from pay-as-you-go to subscription. Use the voucher option ID returned by the price inquiry API. To not use a voucher, set this parameter to youhuiquan_promotion_option_id_for_blank. If you omit this parameter, the previous call behavior is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
+         */
+        @NameInMap("promotionOptionNo")
+        public String promotionOptionNo;
+
+        /**
+         * <p>The list of running queues to be converted.</p>
          */
         @NameInMap("queue")
         public java.util.List<String> queue;
@@ -397,6 +429,14 @@ public class UpdateWorkspaceRequest extends TeaModel {
         }
         public String getPaymentDurationUnit() {
             return this.paymentDurationUnit;
+        }
+
+        public UpdateWorkspaceRequestSubscription setPromotionOptionNo(String promotionOptionNo) {
+            this.promotionOptionNo = promotionOptionNo;
+            return this;
+        }
+        public String getPromotionOptionNo() {
+            return this.promotionOptionNo;
         }
 
         public UpdateWorkspaceRequestSubscription setQueue(java.util.List<String> queue) {

@@ -38,7 +38,7 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The detailed description corresponding to the request code.</p>
+     * <p>The detailed description corresponding to the return code.</p>
      * 
      * <strong>example:</strong>
      * <p>No permission for resource action</p>

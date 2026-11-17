@@ -51,11 +51,11 @@ public class CancelKyuubiSparkApplicationResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><p>true: The request was successful.</p>
+         * <li><p>true: Successful.</p>
          * </li>
-         * <li><p>false: The request failed.</p>
+         * <li><p>false: Failed.</p>
          * </li>
          * </ul>
          */

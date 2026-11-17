@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNetworkServicesResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries to return on each page.</p>
+     * <p>The maximum number of records returned per request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,13 +14,13 @@ public class ListNetworkServicesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A list of network connections.</p>
+     * <p>The list of network connectivity.</p>
      */
     @NameInMap("networkServices")
     public java.util.List<ListNetworkServicesResponseBodyNetworkServices> networkServices;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If this parameter is empty, all results have been returned.</p>
+     * <p>The next page token.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p>The deprecated parameter.</p>
      */
     @NameInMap("queues")
     public java.util.List<ListNetworkServicesResponseBodyQueues> queues;
@@ -44,7 +44,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -116,7 +116,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The message that provides details about the state change.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>message</p>
@@ -149,7 +149,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
 
     public static class ListNetworkServicesResponseBodyNetworkServices extends TeaModel {
         /**
-         * <p>The name of the network connection.</p>
+         * <p>The name of the network connectivity.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc_test</p>
@@ -158,7 +158,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the network connection.</p>
+         * <p>The network connectivity ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ns-d7a1d02045fb****</p>
@@ -167,7 +167,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
         public String networkServiceId;
 
         /**
-         * <p>The state of the network connection.</p>
+         * <p>The state.</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -182,7 +182,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
         public ListNetworkServicesResponseBodyNetworkServicesStateChangeReason stateChangeReason;
 
         /**
-         * <p>The type of the network connection.</p>
+         * <p>The type.</p>
          * 
          * <strong>example:</strong>
          * <p>NetworkService</p>
@@ -206,7 +206,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
         public java.util.List<String> vswitchIds;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>w-d2d82aa09155****</p>
@@ -287,7 +287,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
 
     public static class ListNetworkServicesResponseBodyQueuesStateChangeReason extends TeaModel {
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>The deprecated parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>code</p>
@@ -296,7 +296,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>The deprecated parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>message</p>
@@ -329,7 +329,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
 
     public static class ListNetworkServicesResponseBodyQueues extends TeaModel {
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>The deprecated parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -338,7 +338,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>The deprecated parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>ns-d7a1d02045fb****</p>
@@ -347,7 +347,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
         public String networkServiceId;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>The deprecated parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -356,13 +356,13 @@ public class ListNetworkServicesResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>The deprecated parameter.</p>
          */
         @NameInMap("stateChangeReason")
         public ListNetworkServicesResponseBodyQueuesStateChangeReason stateChangeReason;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>The deprecated parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>NetworkService</p>
@@ -371,7 +371,7 @@ public class ListNetworkServicesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>The deprecated parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf6k2anfa9nzbm4cj****</p>
@@ -380,13 +380,13 @@ public class ListNetworkServicesResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>The deprecated parameter.</p>
          */
         @NameInMap("vswitchIds")
         public java.util.List<String> vswitchIds;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>The deprecated parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>w-d2d82aa09155****</p>

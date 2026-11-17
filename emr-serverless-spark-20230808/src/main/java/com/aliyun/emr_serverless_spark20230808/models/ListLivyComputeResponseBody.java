@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLivyComputeResponseBody extends TeaModel {
     /**
-     * <p>The return code of the request. A value of 1000000 indicates that the request is successful. Other values indicate that the request failed. For specific error details, see the message.</p>
+     * <p>The response code. A value of 1000000 indicates a successful request, whereas other values indicate a failed request. For detailed error causes, refer to the message.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000</p>
@@ -94,7 +94,7 @@ public class ListLivyComputeResponseBody extends TeaModel {
         public String createdBy;
 
         /**
-         * <p>The public network connection endpoint.</p>
+         * <p>The public endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>emr-spark-livy-gateway-cn-hangzhou.data.aliyun.com/api/v1/workspace/w-xxxxxxxxx/livycompute/lc-xxxxxxxxxxx</p>
@@ -103,7 +103,7 @@ public class ListLivyComputeResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The internal network connection endpoint.</p>
+         * <p>The internal network endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>emr-spark-livy-gateway-cn-hangzhou-internal.aliyun.com/api/v1/workspace/w-xxxxxxxxx/livycompute/lc-xxxxxxxxxxx</p>

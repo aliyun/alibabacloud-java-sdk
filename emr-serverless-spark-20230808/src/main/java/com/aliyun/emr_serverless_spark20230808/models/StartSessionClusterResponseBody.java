@@ -14,7 +14,7 @@ public class StartSessionClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The session cluster ID.</p>
+     * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>w-******</p>

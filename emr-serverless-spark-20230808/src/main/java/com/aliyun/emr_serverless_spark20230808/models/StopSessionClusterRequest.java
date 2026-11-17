@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopSessionClusterRequest extends TeaModel {
     /**
-     * <p>The queue name.</p>
+     * <p>The name of the queue.</p>
      * 
      * <strong>example:</strong>
      * <p>root_queue</p>

@@ -1,3 +1,47 @@
+2026-11-17 Version: 3.3.0
+- Support API ListRegions.
+- Update API CreateLivyCompute: add request parameters body.livyReleaseVersion.
+- Update API CreateRayCluster: add request parameters body.enableMetricsUpload.
+- Update API CreateRayCluster: add request parameters body.slsLogStore.
+- Update API CreateRayCluster: add request parameters body.slsProject.
+- Update API CreateRayCluster: add request parameters body.headSpec.gpuDriverVersion.
+- Update API CreateRayCluster: add request parameters body.workerSpec.$.gpuDriverVersion.
+- Update API CreateWorkspace: add request parameters body.promotionOptionNo.
+- Update API GetJobRun: add response parameters Body.jobRun.firstReportTime.
+- Update API GetJobRun: add response parameters Body.jobRun.resourceStartupDurationMs.
+- Update API GetJobRun: add response parameters Body.jobRun.runDurationMs.
+- Update API GetKyuubiService: add response parameters Body.data.configRefreshRequired.
+- Update API GetKyuubiService: add response parameters Body.data.readyReplicas.
+- Update API GetLivyCompute: add response parameters Body.data.livyReleaseVersion.
+- Update API GetLivyCompute: add response parameters Body.data.meta.
+- Update API GetRayCluster: add response parameters Body.enableMetricsUpload.
+- Update API GetRayCluster: add response parameters Body.slsLogStore.
+- Update API GetRayCluster: add response parameters Body.slsProject.
+- Update API GetRayCluster: add response parameters Body.headSpec.gpuDriverVersion.
+- Update API GetRayCluster: add response parameters Body.workerSpec.$.gpuDriverVersion.
+- Update API GetRayCluster: add response parameters Body.workerSpec.$.kubernetesGroupName.
+- Update API GetWorkspace: add response parameters Body.workspace.features.
+- Update API ListJobRuns: add response parameters Body.jobRuns.$.firstReportTime.
+- Update API ListJobRuns: add response parameters Body.jobRuns.$.resourceStartupDurationMs.
+- Update API ListJobRuns: add response parameters Body.jobRuns.$.runDurationMs.
+- Update API ListKyuubiServices: add response parameters Body.data.kyuubiServices.$.configRefreshRequired.
+- Update API ListKyuubiSparkApplications: add request parameters userName.
+- Update API ListKyuubiSparkApplications: add response parameters Body.applications.$.userName.
+- Update API ListReleaseVersions: add response parameters Body.releaseVersions.$.flameGraphEnabled.
+- Update API ListWorkspaces: add response parameters Body.workspaces.$.features.
+- Update API UpdateKyuubiService: add request parameters body.expectedReplica.
+- Update API UpdateKyuubiService: add request parameters body.refresh.
+- Update API UpdateKyuubiService: add request parameters body.scale.
+- Update API UpdateLivyCompute: add request parameters body.livyReleaseVersion.
+- Update API UpdateRayCluster: add request parameters body.enableMetricsUpload.
+- Update API UpdateRayCluster: add request parameters body.slsLogStore.
+- Update API UpdateRayCluster: add request parameters body.slsProject.
+- Update API UpdateRayCluster: add request parameters body.headSpec.gpuDriverVersion.
+- Update API UpdateRayCluster: add request parameters body.workerSpec.$.gpuDriverVersion.
+- Update API UpdateWorkspace: add request parameters body.gpuSubscription.promotionOptionNo.
+- Update API UpdateWorkspace: add request parameters body.subscription.promotionOptionNo.
+
+
 2026-10-20 Version: 3.2.0
 - Support API GetWorkspace.
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteKyuubiServiceResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

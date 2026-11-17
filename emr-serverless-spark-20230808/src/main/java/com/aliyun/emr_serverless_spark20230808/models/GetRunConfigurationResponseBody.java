@@ -42,7 +42,7 @@ public class GetRunConfigurationResponseBody extends TeaModel {
 
     public static class GetRunConfigurationResponseBodyRunConfigurationApplicationConfigs extends TeaModel {
         /**
-         * <p>The name of the application configuration file.</p>
+         * <p>The application configuration file name.</p>
          * 
          * <strong>example:</strong>
          * <p>spark-defaults.conf</p>
@@ -51,7 +51,7 @@ public class GetRunConfigurationResponseBody extends TeaModel {
         public String configFileName;
 
         /**
-         * <p>The key of the configuration item.</p>
+         * <p>The configuration item key.</p>
          * 
          * <strong>example:</strong>
          * <p>spark.driver.cores</p>
@@ -60,7 +60,7 @@ public class GetRunConfigurationResponseBody extends TeaModel {
         public String configItemKey;
 
         /**
-         * <p>The value of the configuration item.</p>
+         * <p>The configuration item value.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RefreshLivyComputeTokenResponseBody extends TeaModel {
     /**
-     * <p>The status code. A value of 1000000 indicates that the request was successful. For other values, the request failed. For more information, see the message parameter.</p>
+     * <p>The response code. A value of 1000000 indicates a successful request. Other values indicate a failed request. For details about the cause of the error, see the message.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000</p>

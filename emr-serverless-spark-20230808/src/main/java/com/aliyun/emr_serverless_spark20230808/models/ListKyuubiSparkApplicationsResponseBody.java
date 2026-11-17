@@ -11,7 +11,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
     public java.util.List<ListKyuubiSparkApplicationsResponseBodyApplications> applications;
 
     /**
-     * <p>The maximum number of records to retrieve at a time.</p>
+     * <p>The maximum number of records to return in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -111,7 +111,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public String applicationName;
 
         /**
-         * <p>The number of compute units (CUs) consumed during the task execution. This value is an estimate. The actual value is subject to the bill.</p>
+         * <p>The number of compute units (CUs) consumed during the task runtime. This value is an estimate. The final value is subject to the bill.</p>
          * 
          * <strong>example:</strong>
          * <p>0.238302</p>
@@ -120,7 +120,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public Double cuHours;
 
         /**
-         * <p>The end time of the task. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The end time of the task. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-02-12 20:02:02</p>
@@ -147,7 +147,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public String kyuubiServiceId;
 
         /**
-         * <p>The execution status of the latest SQL statement in the application.</p>
+         * <p>The execution status of the most recent SQL statement in the application.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -156,7 +156,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public String latestSqlStatementStatus;
 
         /**
-         * <p>The total memory allocated to the task multiplied by the task execution duration in seconds.</p>
+         * <p>The total memory allocated to the task multiplied by the number of seconds the task has run.</p>
          * 
          * <strong>example:</strong>
          * <p>3513900</p>
@@ -174,7 +174,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public String priority;
 
         /**
-         * <p>The name of the resource queue in which the Spark task runs.</p>
+         * <p>The name of the resource queue where the Spark task runs.</p>
          * 
          * <strong>example:</strong>
          * <p>dev_queue</p>
@@ -192,7 +192,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public RunLog runLog;
 
         /**
-         * <p>The start time of the task. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The start time of the task. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-02-12 19:59:16</p>
@@ -201,11 +201,11 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The state of the Spark application. Valid values:</p>
+         * <p>The status of the Spark application. Valid values:</p>
          * <ul>
-         * <li>STARTING: The application is starting.</li>
-         * <li>RUNNING: The application is running.</li>
-         * <li>TERMINATED: The application is terminated.</li>
+         * <li>STARTING: Starting.</li>
+         * <li>RUNNING: Running.</li>
+         * <li>TERMINATED: Terminated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -221,7 +221,16 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public java.util.List<Tag> tags;
 
         /**
-         * <p>The total number of vcores allocated to the task multiplied by the task execution duration in seconds.</p>
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-a</p>
+         */
+        @NameInMap("userName")
+        public String userName;
+
+        /**
+         * <p>The total vcores allocated to the task multiplied by the number of seconds the task has run.</p>
          * 
          * <strong>example:</strong>
          * <p>780</p>
@@ -350,6 +359,14 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         }
         public java.util.List<Tag> getTags() {
             return this.tags;
+        }
+
+        public ListKyuubiSparkApplicationsResponseBodyApplications setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
         public ListKyuubiSparkApplicationsResponseBodyApplications setVcoreSeconds(Long vcoreSeconds) {

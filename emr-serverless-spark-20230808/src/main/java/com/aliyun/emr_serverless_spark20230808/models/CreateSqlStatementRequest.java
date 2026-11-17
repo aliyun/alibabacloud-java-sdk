@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSqlStatementRequest extends TeaModel {
     /**
-     * <p>The SQL code. You can specify one or more SQL statements to execute.</p>
+     * <p>The SQL code. You can pass one or more SQL statements for execution.</p>
      * 
      * <strong>example:</strong>
      * <p>SHOW TABLES</p>
@@ -32,7 +32,7 @@ public class CreateSqlStatementRequest extends TeaModel {
     public String defaultDatabase;
 
     /**
-     * <p>The limit value. Valid values: 1 to 10000.</p>
+     * <p>The LIMIT value. Valid values: 1 to 10000.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -41,7 +41,7 @@ public class CreateSqlStatementRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The SQL session ID. Create the session in the session management module of the EMR Serverless Spark workspace.</p>
+     * <p>The SQL session ID. You must create the session in the session management module of the EMR Serverless Spark workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>sc-dfahdfjafhajd****</p>
@@ -50,7 +50,7 @@ public class CreateSqlStatementRequest extends TeaModel {
     public String sqlComputeId;
 
     /**
-     * <p>The data development node ID.</p>
+     * <p>The data development task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>TSK-d87******************</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RefreshLivyComputeTokenRequest extends TeaModel {
     /**
-     * <p>The information about token expiration.</p>
+     * <p>The token expiration information struct.</p>
      */
     @NameInMap("autoExpireConfiguration")
     public RefreshLivyComputeTokenRequestAutoExpireConfiguration autoExpireConfiguration;
@@ -20,7 +20,7 @@ public class RefreshLivyComputeTokenRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The token must be 16 or more characters in length.</p>
+     * <p>The token content. The length must be at least 16.</p>
      * 
      * <strong>example:</strong>
      * <p>fe86812667f04v343</p>
@@ -76,12 +76,10 @@ public class RefreshLivyComputeTokenRequest extends TeaModel {
 
     public static class RefreshLivyComputeTokenRequestAutoExpireConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether the token automatically expires.</p>
+         * <p>Specifies whether the token automatically expires. Valid values:</p>
          * <ul>
-         * <li><p>true: The token automatically expires.</p>
-         * </li>
-         * <li><p>false: The token does not automatically expire.</p>
-         * </li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,7 +89,7 @@ public class RefreshLivyComputeTokenRequest extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The expiration period in days.</p>
+         * <p>The expiration time in days.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>

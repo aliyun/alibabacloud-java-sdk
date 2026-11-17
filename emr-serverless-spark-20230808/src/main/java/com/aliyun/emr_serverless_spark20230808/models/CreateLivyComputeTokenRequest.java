@@ -20,7 +20,7 @@ public class CreateLivyComputeTokenRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The token content. The length must be 16 or more characters.</p>
+     * <p>The token content. The length must be greater than or equal to 16.</p>
      * 
      * <strong>example:</strong>
      * <p>gs3fy75w4o7hqe5s</p>
@@ -76,12 +76,10 @@ public class CreateLivyComputeTokenRequest extends TeaModel {
 
     public static class CreateLivyComputeTokenRequestAutoExpireConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether the token automatically expires.</p>
+         * <p>Specifies whether the token automatically expires. Valid values:</p>
          * <ul>
-         * <li><p>true: Yes.</p>
-         * </li>
-         * <li><p>false: No.</p>
-         * </li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,7 +89,7 @@ public class CreateLivyComputeTokenRequest extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The expiration period in days.</p>
+         * <p>The expiration time in days.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>

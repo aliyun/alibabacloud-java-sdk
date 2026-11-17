@@ -11,7 +11,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
     public java.util.List<ListJobExecutorsResponseBodyExexutors> exexutors;
 
     /**
-     * <p>The maximum number of records returned.</p>
+     * <p>The maximum number of records to return in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results.</p>
+     * <p>The next token.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -29,7 +29,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -93,7 +93,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
 
     public static class ListJobExecutorsResponseBodyExexutors extends TeaModel {
         /**
-         * <p>The total number of active tasks that the executor is running.</p>
+         * <p>The total number of active tasks running on the executor.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -102,7 +102,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long activeTasks;
 
         /**
-         * <p>The time when the executor was created.</p>
+         * <p>The creation time of the executor.</p>
          * 
          * <strong>example:</strong>
          * <p>1760601***</p>
@@ -111,7 +111,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long addTime;
 
         /**
-         * <p>The total number of completed tasks that the executor has run.</p>
+         * <p>The total number of tasks completed by the executor.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -147,7 +147,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public String executorType;
 
         /**
-         * <p>The total number of failed tasks that the executor has run.</p>
+         * <p>The total number of failed tasks executed by the executor.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -156,7 +156,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long failedTasks;
 
         /**
-         * <p>The address of the executor.</p>
+         * <p>The address information of the executor.</p>
          * 
          * <strong>example:</strong>
          * <p>21.10.x.x:1201x</p>
@@ -192,7 +192,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long memoryUsed;
 
         /**
-         * <p>The number of Resilient Distributed Dataset (RDD) blocks managed by the executor.</p>
+         * <p>The number of RDD blocks managed by the executor.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -210,7 +210,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The total number of cores for the executor.</p>
+         * <p>The total number of cores of the executor.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -219,7 +219,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long totalCores;
 
         /**
-         * <p>The total runtime of the executor.</p>
+         * <p>The total running duration of the executor.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -228,7 +228,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long totalDuration;
 
         /**
-         * <p>The total garbage collection (GC) time of the executor.</p>
+         * <p>The total GC time of the executor.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -237,7 +237,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long totalGCTime;
 
         /**
-         * <p>The number of bytes of input data for the executor.</p>
+         * <p>The total number of input bytes for the executor.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -246,7 +246,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long totalInputBytes;
 
         /**
-         * <p>The number of bytes read during the shuffle phase by the executor.</p>
+         * <p>The total number of shuffle read bytes for the executor.</p>
          * 
          * <strong>example:</strong>
          * <p>2048</p>
@@ -255,7 +255,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long totalShuffleRead;
 
         /**
-         * <p>The number of bytes written during the shuffle phase by the executor.</p>
+         * <p>The total number of shuffle write bytes for the executor.</p>
          * 
          * <strong>example:</strong>
          * <p>2048</p>
@@ -264,7 +264,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Long totalShuffleWrite;
 
         /**
-         * <p>The total number of tasks that the executor has run.</p>
+         * <p>The total number of tasks executed by the executor.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

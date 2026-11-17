@@ -5,42 +5,49 @@ import com.aliyun.tea.*;
 
 public class Credential extends TeaModel {
     /**
+     * <p>sts ak</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("accessId")
     public String accessId;
 
     /**
+     * <p>The OSS path.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("dir")
     public String dir;
 
     /**
+     * <p>The timeout period.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("expire")
     public String expire;
 
     /**
+     * <p>The OSS domain name.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("host")
     public String host;
 
     /**
+     * <p>The OSS access policy.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("policy")
     public String policy;
 
     /**
+     * <p>sts token</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("securityToken")
     public String securityToken;
 
     /**
+     * <p>The OSS access signature.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("signature")

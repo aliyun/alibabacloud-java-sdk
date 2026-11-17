@@ -14,7 +14,7 @@ public class StopSessionClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The session ID.</p>
+     * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>w-******</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of records to return in a single request.</p>
+     * <p>The maximum number of results to return in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The next token.</p>
+     * <p>The token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -89,6 +89,28 @@ public class ListWorkspacesResponseBody extends TeaModel {
     }
     public java.util.List<ListWorkspacesResponseBodyWorkspaces> getWorkspaces() {
         return this.workspaces;
+    }
+
+    public static class ListWorkspacesResponseBodyWorkspacesFeatures extends TeaModel {
+        /**
+         * <p>Indicates whether fine-grained access control is enabled for the workspace.</p>
+         */
+        @NameInMap("fineGrainedAuthz")
+        public Boolean fineGrainedAuthz;
+
+        public static ListWorkspacesResponseBodyWorkspacesFeatures build(java.util.Map<String, ?> map) throws Exception {
+            ListWorkspacesResponseBodyWorkspacesFeatures self = new ListWorkspacesResponseBodyWorkspacesFeatures();
+            return TeaModel.build(map, self);
+        }
+
+        public ListWorkspacesResponseBodyWorkspacesFeatures setFineGrainedAuthz(Boolean fineGrainedAuthz) {
+            this.fineGrainedAuthz = fineGrainedAuthz;
+            return this;
+        }
+        public Boolean getFineGrainedAuthz() {
+            return this.fineGrainedAuthz;
+        }
+
     }
 
     public static class ListWorkspacesResponseBodyWorkspacesPrePaidQuota extends TeaModel {
@@ -273,6 +295,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
         /**
          * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("cpuCoreCount")
         public String cpuCoreCount;
@@ -351,18 +376,27 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
         /**
          * <p>The instance family.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5</p>
          */
         @NameInMap("instanceTypeFamily")
         public String instanceTypeFamily;
 
         /**
          * <p>The instance type ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5.small</p>
          */
         @NameInMap("instanceTypeId")
         public String instanceTypeId;
 
         /**
          * <p>The memory size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4096</p>
          */
         @NameInMap("memorySize")
         public String memorySize;
@@ -557,12 +591,18 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public static class ListWorkspacesResponseBodyWorkspacesTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;COST\&quot;]</p>
          */
         @NameInMap("tagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3d775731-9ec1-4fe2-a00d-061d51fce677</p>
          */
         @NameInMap("tagValue")
         public String tagValue;
@@ -592,7 +632,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
     public static class ListWorkspacesResponseBodyWorkspaces extends TeaModel {
         /**
-         * <p>Specifies whether to enable auto-renewal. This parameter is required for subscription resources.</p>
+         * <p>Specifies whether to enable auto-renewal. This parameter is required for the subscription billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -601,7 +641,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public Boolean autoRenew;
 
         /**
-         * <p>The auto-renewal duration. This parameter is required for subscription resources.</p>
+         * <p>The auto-renewal duration. This parameter is required for the subscription billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -610,7 +650,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public Integer autoRenewPeriod;
 
         /**
-         * <p>The auto-renewal epoch. This parameter is required for subscription resources.</p>
+         * <p>The auto-renewal epoch. This parameter is required for the subscription billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</p>
@@ -646,7 +686,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String dlfType;
 
         /**
-         * <p>The duration of the subscription. This parameter is required for subscription resources.</p>
+         * <p>The duration of the subscription period. This parameter is required for the subscription billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -673,19 +713,25 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String failReason;
 
         /**
-         * <p>The list of GPU models.</p>
+         * <p>The workspace features.</p>
+         */
+        @NameInMap("features")
+        public ListWorkspacesResponseBodyWorkspacesFeatures features;
+
+        /**
+         * <p>The list of GPU instance types.</p>
          */
         @NameInMap("gpuSpec")
         public java.util.List<String> gpuSpec;
 
         /**
-         * <p>The IP whitelist of the workspace.</p>
+         * <p>The workspace IP whitelist.</p>
          */
         @NameInMap("ipWhiteList")
         public java.util.List<String> ipWhiteList;
 
         /**
-         * <p>The unit of the subscription period. This parameter is required for subscription resources.</p>
+         * <p>The unit of the subscription period. This parameter is required for the subscription billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</p>
@@ -793,7 +839,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
          * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
-         * <p>spark-batch-job-workspace-1</p>
+         * <p>Spark batch job workspace-1</p>
          */
         @NameInMap("workspaceName")
         public String workspaceName;
@@ -882,6 +928,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
         public String getFailReason() {
             return this.failReason;
+        }
+
+        public ListWorkspacesResponseBodyWorkspaces setFeatures(ListWorkspacesResponseBodyWorkspacesFeatures features) {
+            this.features = features;
+            return this;
+        }
+        public ListWorkspacesResponseBodyWorkspacesFeatures getFeatures() {
+            return this.features;
         }
 
         public ListWorkspacesResponseBodyWorkspaces setGpuSpec(java.util.List<String> gpuSpec) {

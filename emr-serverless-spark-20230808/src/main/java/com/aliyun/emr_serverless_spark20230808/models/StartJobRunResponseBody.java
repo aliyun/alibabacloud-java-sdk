@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartJobRunResponseBody extends TeaModel {
     /**
-     * <p>The job run ID.</p>
+     * <p>The ID of the job run.</p>
      * 
      * <strong>example:</strong>
      * <p>jr-f09a8fda2396****</p>

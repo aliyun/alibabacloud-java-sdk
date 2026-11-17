@@ -14,19 +14,24 @@ public class CreateLivyComputeRequest extends TeaModel {
     public String authType;
 
     /**
-     * <p>The automatic startup configuration.</p>
+     * <p>The auto-start configuration.</p>
      */
     @NameInMap("autoStartConfiguration")
     public CreateLivyComputeRequestAutoStartConfiguration autoStartConfiguration;
 
     /**
-     * <p>The automatic stop configuration.</p>
+     * <p>The auto-stop configuration.</p>
      */
     @NameInMap("autoStopConfiguration")
     public CreateLivyComputeRequestAutoStopConfiguration autoStopConfiguration;
 
     /**
-     * <p>The number of CPU cores for the Livy server.</p>
+     * <p>The number of CPU cores for the Livy server. Valid values:</p>
+     * <ul>
+     * <li>1</li>
+     * <li>2</li>
+     * <li>4</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +40,7 @@ public class CreateLivyComputeRequest extends TeaModel {
     public String cpuLimit;
 
     /**
-     * <p>The version number of the Spark engine.</p>
+     * <p>The Spark DPI engine version number.</p>
      * 
      * <strong>example:</strong>
      * <p>esr-4.3.0 (Spark 3.5.2, Scala 2.12)</p>
@@ -44,7 +49,7 @@ public class CreateLivyComputeRequest extends TeaModel {
     public String displayReleaseVersion;
 
     /**
-     * <p>Specifies whether to enable the public endpoint.</p>
+     * <p>The status of the public endpoint switch.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -53,7 +58,7 @@ public class CreateLivyComputeRequest extends TeaModel {
     public Boolean enablePublic;
 
     /**
-     * <p>The ID of the runtime environment.</p>
+     * <p>The runtime environment ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ev-ctfq0fem1hkhgv4hapng</p>
@@ -62,7 +67,7 @@ public class CreateLivyComputeRequest extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>Specifies whether to enable acceleration with the Fusion engine.</p>
+     * <p>Specifies whether to enable Fusion engine acceleration.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -71,16 +76,21 @@ public class CreateLivyComputeRequest extends TeaModel {
     public Boolean fusion;
 
     /**
-     * <p>The configuration of the Livy Gateway. This parameter is in JSON format and supports the following files:</p>
+     * <p>The Livy DPI engine version. This is a new parameter used to override the original livyVersion parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.9.0</p>
+     */
+    @NameInMap("livyReleaseVersion")
+    public String livyReleaseVersion;
+
+    /**
+     * <p>The Livy gateway configuration in JSON format. The following files are supported:</p>
      * <ul>
-     * <li><p>sparkDefaultsConf</p>
-     * </li>
-     * <li><p>sparkBlackListConf</p>
-     * </li>
-     * <li><p>livyConf</p>
-     * </li>
-     * <li><p>livyClientConf</p>
-     * </li>
+     * <li>sparkDefaultsConf</li>
+     * <li>sparkBlackListConf</li>
+     * <li>livyConf</li>
+     * <li>livyClientConf</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,7 +114,12 @@ public class CreateLivyComputeRequest extends TeaModel {
     public String livyVersion;
 
     /**
-     * <p>The memory size of the Livy server.</p>
+     * <p>The memory size of the Livy server. Valid values:</p>
+     * <ul>
+     * <li>4Gi</li>
+     * <li>8Gi</li>
+     * <li>16Gi</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>4Gi</p>
@@ -113,7 +128,7 @@ public class CreateLivyComputeRequest extends TeaModel {
     public String memoryLimit;
 
     /**
-     * <p>The name of the Livy Gateway.</p>
+     * <p>The name of the Livy gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>testGateway</p>
@@ -122,7 +137,7 @@ public class CreateLivyComputeRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The name of the network connection.</p>
+     * <p>The name of the network connectivity.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -140,7 +155,7 @@ public class CreateLivyComputeRequest extends TeaModel {
     public String queueName;
 
     /**
-     * <p>The version number of the Spark engine. This parameter is deprecated. Use displayReleaseVersion instead.</p>
+     * <p><strong>[Deprecated]</strong> The Spark DPI engine version number. Use displayReleaseVersion instead.</p>
      * 
      * <strong>example:</strong>
      * <p>esr-4.3.0 (Spark 3.5.2, Scala 2.12, Java Runtime)</p>
@@ -226,6 +241,14 @@ public class CreateLivyComputeRequest extends TeaModel {
         return this.fusion;
     }
 
+    public CreateLivyComputeRequest setLivyReleaseVersion(String livyReleaseVersion) {
+        this.livyReleaseVersion = livyReleaseVersion;
+        return this;
+    }
+    public String getLivyReleaseVersion() {
+        return this.livyReleaseVersion;
+    }
+
     public CreateLivyComputeRequest setLivyServerConf(String livyServerConf) {
         this.livyServerConf = livyServerConf;
         return this;
@@ -292,12 +315,10 @@ public class CreateLivyComputeRequest extends TeaModel {
 
     public static class CreateLivyComputeRequestAutoStartConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether to automatically start the Livy Gateway after it is created.</p>
+         * <p>Specifies whether to automatically start the gateway after creation. Valid values:</p>
          * <ul>
-         * <li><p>true: Yes.</p>
-         * </li>
-         * <li><p>false: No.</p>
-         * </li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -323,12 +344,10 @@ public class CreateLivyComputeRequest extends TeaModel {
 
     public static class CreateLivyComputeRequestAutoStopConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether to automatically stop the Livy Gateway.</p>
+         * <p>Specifies whether to automatically stop the gateway. Valid values:</p>
          * <ul>
-         * <li><p>true: Yes.</p>
-         * </li>
-         * <li><p>false: No.</p>
-         * </li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -338,7 +357,7 @@ public class CreateLivyComputeRequest extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The number of minutes after which the Livy Gateway is automatically stopped if it is idle.</p>
+         * <p>The number of idle minutes after which the Livy gateway is automatically stopped.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PrincipalAction extends TeaModel {
     /**
-     * <p>The ARN of the behavior.</p>
+     * <p>The action ARN.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:emr::workspaceId:action/create_queue</p>
@@ -14,7 +14,7 @@ public class PrincipalAction extends TeaModel {
     public String actionArn;
 
     /**
-     * <p>The ARN of the principal.</p>
+     * <p>The principal ARN.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:emr::workspaceId:user/23759369154162****</p>

@@ -4,11 +4,17 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class Template extends TeaModel {
+    /**
+     * <p>The business ID of the Spark task template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>template-example-****</p>
+     */
     @NameInMap("bizId")
     public String bizId;
 
     /**
-     * <p>Creator UID.</p>
+     * <p>The creator UID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +24,7 @@ public class Template extends TeaModel {
     public Long creator;
 
     /**
-     * <p>Spark engine display version.</p>
+     * <p>The display version of the Spark engine.</p>
      * 
      * <strong>example:</strong>
      * <p>esr-4.1.1</p>
@@ -27,7 +33,7 @@ public class Template extends TeaModel {
     public String displaySparkVersion;
 
     /**
-     * <p>Whether to enable the fusion switch.</p>
+     * <p>Specifies whether Fusion is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -36,7 +42,7 @@ public class Template extends TeaModel {
     public Boolean fusion;
 
     /**
-     * <p>Creation time.</p>
+     * <p>The creation time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +52,7 @@ public class Template extends TeaModel {
     public String gmtCreated;
 
     /**
-     * <p>Last modified time.</p>
+     * <p>The last updated time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,11 +61,14 @@ public class Template extends TeaModel {
     @NameInMap("gmtModified")
     public String gmtModified;
 
+    /**
+     * <p>Specifies whether the template is the default template.</p>
+     */
     @NameInMap("isDefault")
     public Boolean isDefault;
 
     /**
-     * <p>Last modifier UID.</p>
+     * <p>The last updater UID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +77,12 @@ public class Template extends TeaModel {
     @NameInMap("modifier")
     public Long modifier;
 
+    /**
+     * <p>The template name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spark-task-template</p>
+     */
     @NameInMap("name")
     public String name;
 
@@ -78,7 +93,7 @@ public class Template extends TeaModel {
     public java.util.List<SparkConf> sparkConf;
 
     /**
-     * <p>Spark Driver cores.</p>
+     * <p>The number of Spark driver cores.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +103,7 @@ public class Template extends TeaModel {
     public Integer sparkDriverCores;
 
     /**
-     * <p>Spark Driver memory.</p>
+     * <p>The Spark driver memory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,7 +113,7 @@ public class Template extends TeaModel {
     public Long sparkDriverMemory;
 
     /**
-     * <p>Spark Executor cores.</p>
+     * <p>The number of Spark executor cores.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -108,7 +123,7 @@ public class Template extends TeaModel {
     public Integer sparkExecutorCores;
 
     /**
-     * <p>Spark Executor memory.</p>
+     * <p>The Spark executor memory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -118,7 +133,7 @@ public class Template extends TeaModel {
     public Long sparkExecutorMemory;
 
     /**
-     * <p>Spark log level.</p>
+     * <p>The Spark log level.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -128,7 +143,7 @@ public class Template extends TeaModel {
     public String sparkLogLevel;
 
     /**
-     * <p>Spark log path.</p>
+     * <p>The Spark log path.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -138,7 +153,7 @@ public class Template extends TeaModel {
     public String sparkLogPath;
 
     /**
-     * <p>Spark internal release version.</p>
+     * <p>The Spark internal release version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -148,7 +163,7 @@ public class Template extends TeaModel {
     public String sparkVersion;
 
     /**
-     * <p>Template type.</p>
+     * <p>The templatetype.</p>
      * 
      * <strong>example:</strong>
      * <p>TASK</p>

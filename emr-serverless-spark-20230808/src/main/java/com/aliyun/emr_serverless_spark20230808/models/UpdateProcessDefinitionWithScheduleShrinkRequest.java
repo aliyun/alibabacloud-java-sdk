@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     /**
-     * <p>The alert email address.</p>
+     * <p>The email address for alert notifications.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:foo_bar@spark.alert.invalid.com">foo_bar@spark.alert.invalid.com</a></p>
@@ -23,7 +23,7 @@ public class UpdateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The execution policy.</p>
+     * <p>The execution strategy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +32,9 @@ public class UpdateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     @NameInMap("executionType")
     public String executionType;
 
+    /**
+     * <p>The list of global parameters for the workflow.</p>
+     */
     @NameInMap("globalParams")
     public String globalParamsShrink;
 
@@ -110,26 +113,29 @@ public class UpdateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     public String runAs;
 
     /**
-     * <p>The scheduling structure.</p>
+     * <p>The schedule structure.</p>
      */
     @NameInMap("schedule")
     public String scheduleShrink;
 
     /**
      * <p>The tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;tagkey&quot;:&quot;tagvalue&quot;}</p>
      */
     @NameInMap("tags")
     public String tagsShrink;
 
     /**
-     * <p>The JSON array of node definitions, which contains the description information of all nodes in the workflow.</p>
+     * <p>The JSON array of task definitions, which contains the description of all tasks in the workflow.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("taskDefinitionJson")
     public String taskDefinitionJsonShrink;
 
     /**
-     * <p>The concurrency of workflow node execution.</p>
+     * <p>The concurrency level for workflow node execution.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -138,14 +144,14 @@ public class UpdateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     public Integer taskParallelism;
 
     /**
-     * <p>The JSON array of node dependencies, which contains the dependencies among all nodes in the workflow. preTaskCode is the upstream node ID, and postTaskCode is the downstream node ID. Each node must have a unique ID. If a node does not have an upstream node, you must add a dependency with preTaskCode set to 0.</p>
+     * <p>The JSON array of task dependencies, which contains the dependencies among all tasks in the workflow. preTaskCode specifies the upstream task ID, and postTaskCode specifies the downstream task ID. Each task must have a unique ID. If a task node does not have an upstream task, you must add a dependency with preTaskCode set to 0.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("taskRelationJson")
     public String taskRelationJsonShrink;
 
     /**
-     * <p>The default timeout for workflow execution.</p>
+     * <p>The default timeout period for workflow execution.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>

@@ -14,7 +14,7 @@ public class ListReleaseVersionsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The version type.</p>
+     * <p>The release type.</p>
      * 
      * <strong>example:</strong>
      * <p>stable</p>
@@ -40,6 +40,12 @@ public class ListReleaseVersionsRequest extends TeaModel {
     @NameInMap("releaseVersionStatus")
     public String releaseVersionStatus;
 
+    /**
+     * <p>Filters available versions by service type. Valid values: kyuubi and ray.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>kyuubi</p>
+     */
     @NameInMap("serviceFilter")
     public String serviceFilter;
 

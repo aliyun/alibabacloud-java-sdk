@@ -42,7 +42,7 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
 
     public static class ListKyuubiTokenResponseBodyDataTokens extends TeaModel {
         /**
-         * <p>The list of RAM user names of authorized users.</p>
+         * <p>The list of names of Resource Access Management (RAM) users of authorized users.</p>
          */
         @NameInMap("accountNames")
         public java.util.List<String> accountNames;
@@ -75,7 +75,7 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
-         * <p>The last usage time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The last used time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1760366232121</p>
@@ -98,6 +98,9 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The list of Spark roles associated with the token.</p>
+         */
         @NameInMap("sparkRole")
         public java.util.List<String> sparkRole;
 

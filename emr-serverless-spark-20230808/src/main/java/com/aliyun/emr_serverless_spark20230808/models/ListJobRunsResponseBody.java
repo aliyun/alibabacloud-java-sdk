@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListJobRunsResponseBody extends TeaModel {
     /**
      * <p>The statistical results aggregated by job state.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Success&quot;:&quot;2&quot;}</p>
      */
     @NameInMap("aggregations")
     public java.util.Map<String, String> aggregations;
@@ -17,7 +20,7 @@ public class ListJobRunsResponseBody extends TeaModel {
     public java.util.List<ListJobRunsResponseBodyJobRuns> jobRuns;
 
     /**
-     * <p>The maximum number of records returned for the request.</p>
+     * <p>The maximum number of records returned for the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -183,7 +186,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public String codeType;
 
         /**
-         * <p>The advanced Spark configurations. This parameter is not returned by the List operation.</p>
+         * <p>The advanced Spark configurations. This parameter is not returned by the list operation.</p>
          */
         @NameInMap("configurationOverrides")
         public ListJobRunsResponseBodyJobRunsConfigurationOverrides configurationOverrides;
@@ -198,7 +201,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The number of compute units (CUs) consumed during the job run. This value is an estimate and the final value is subject to the bill.</p>
+         * <p>The number of compute units (CUs) consumed during the job run. This value is an estimate. The actual value is subject to the bill.</p>
          * 
          * <strong>example:</strong>
          * <p>2.059</p>
@@ -207,7 +210,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public Double cuHours;
 
         /**
-         * <p>The Spark DPI engine version of the running job.</p>
+         * <p>The Spark engine version used to run the node.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-3.0.0 (Spark 3.4.3, Scala 2.12)</p>
@@ -234,6 +237,15 @@ public class ListJobRunsResponseBody extends TeaModel {
         public Integer executionTimeoutSeconds;
 
         /**
+         * <p>The timestamp in milliseconds when the resources are ready, which is the first report time. If the first report time is empty, the job report time is used. If both are empty, null is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684119314000</p>
+         */
+        @NameInMap("firstReportTime")
+        public Long firstReportTime;
+
+        /**
          * <p>Specifies whether Fusion engine acceleration is enabled.</p>
          * 
          * <strong>example:</strong>
@@ -243,7 +255,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public Boolean fusion;
 
         /**
-         * <p>The information about the Spark driver. This parameter is not returned by the List operation.</p>
+         * <p>The information about the Spark driver. This parameter is not returned by the list operation.</p>
          */
         @NameInMap("jobDriver")
         public JobDriver jobDriver;
@@ -291,7 +303,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public String priority;
 
         /**
-         * <p>The Spark DPI engine version of the running job.</p>
+         * <p>The Spark engine version used to run the node.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-3.0.0 (Spark 3.4.3, Scala 2.12, Native Runtime)</p>
@@ -307,6 +319,24 @@ public class ListJobRunsResponseBody extends TeaModel {
          */
         @NameInMap("resourceQueueId")
         public String resourceQueueId;
+
+        /**
+         * <p>The resource startup duration in milliseconds. It is calculated by subtracting the first submission time from the resource ready time. If the first submission time or the resource ready time is missing, or if the calculation result is negative, null is returned instead of 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60000</p>
+         */
+        @NameInMap("resourceStartupDurationMs")
+        public Long resourceStartupDurationMs;
+
+        /**
+         * <p>The job run duration in milliseconds. It is calculated by subtracting the resource ready time from the job end time. If the job has not ended, the current time is used. If the resource ready time is missing, or if the calculation result is negative, null is returned instead of 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120000</p>
+         */
+        @NameInMap("runDurationMs")
+        public Long runDurationMs;
 
         /**
          * <p>The states of the job runs.</p>
@@ -426,6 +456,14 @@ public class ListJobRunsResponseBody extends TeaModel {
             return this.executionTimeoutSeconds;
         }
 
+        public ListJobRunsResponseBodyJobRuns setFirstReportTime(Long firstReportTime) {
+            this.firstReportTime = firstReportTime;
+            return this;
+        }
+        public Long getFirstReportTime() {
+            return this.firstReportTime;
+        }
+
         public ListJobRunsResponseBodyJobRuns setFusion(Boolean fusion) {
             this.fusion = fusion;
             return this;
@@ -496,6 +534,22 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
         public String getResourceQueueId() {
             return this.resourceQueueId;
+        }
+
+        public ListJobRunsResponseBodyJobRuns setResourceStartupDurationMs(Long resourceStartupDurationMs) {
+            this.resourceStartupDurationMs = resourceStartupDurationMs;
+            return this;
+        }
+        public Long getResourceStartupDurationMs() {
+            return this.resourceStartupDurationMs;
+        }
+
+        public ListJobRunsResponseBodyJobRuns setRunDurationMs(Long runDurationMs) {
+            this.runDurationMs = runDurationMs;
+            return this;
+        }
+        public Long getRunDurationMs() {
+            return this.runDurationMs;
         }
 
         public ListJobRunsResponseBodyJobRuns setState(String state) {

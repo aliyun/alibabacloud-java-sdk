@@ -14,7 +14,7 @@ public class ListQueueTopJobsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The maximum number of jobs to return. The maximum value is 10.</p>
+     * <p>The maximum number of jobs to return. Maximum value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

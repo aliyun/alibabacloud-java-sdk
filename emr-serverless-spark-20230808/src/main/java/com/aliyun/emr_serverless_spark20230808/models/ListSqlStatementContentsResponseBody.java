@@ -14,7 +14,7 @@ public class ListSqlStatementContentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The content of the SQL execution result.</p>
+     * <p>The content of the SQL execution results.</p>
      */
     @NameInMap("sqlStatementContents")
     public ListSqlStatementContentsResponseBodySqlStatementContents sqlStatementContents;
@@ -42,7 +42,7 @@ public class ListSqlStatementContentsResponseBody extends TeaModel {
 
     public static class ListSqlStatementContentsResponseBodySqlStatementContents extends TeaModel {
         /**
-         * <p>A list of the SQL execution results.</p>
+         * <p>The list of SQL execution result contents.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;values\&quot;:[\&quot;wj*****\&quot;,\&quot;test\&quot;,\&quot;2025-04-15\&quot;]}]</p>
@@ -51,7 +51,7 @@ public class ListSqlStatementContentsResponseBody extends TeaModel {
         public String contents;
 
         /**
-         * <p>The maximum number of records returned for a single request.</p>
+         * <p>The maximum number of records to retrieve at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -60,7 +60,7 @@ public class ListSqlStatementContentsResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token that specifies the position from which to start reading the results.</p>
+         * <p>The token that indicates the starting position for reading.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -69,7 +69,7 @@ public class ListSqlStatementContentsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The total number of rows in the result.</p>
+         * <p>The total number of rows in the results.</p>
          * 
          * <strong>example:</strong>
          * <p>40000</p>

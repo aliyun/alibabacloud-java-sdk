@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLivyComputeTokenResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of 1000000 indicates a successful request. Other values indicate a failed request. For error details, see the message parameter.</p>
+     * <p>The response code. A value of 1000000 indicates that the request was successful. Any other value indicates that the request failed. For details about the error, see the message.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000</p>

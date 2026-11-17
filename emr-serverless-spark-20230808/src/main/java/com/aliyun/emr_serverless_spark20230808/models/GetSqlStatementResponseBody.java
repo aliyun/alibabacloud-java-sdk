@@ -42,7 +42,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
 
     public static class GetSqlStatementResponseBodyDataSqlOutputs extends TeaModel {
         /**
-         * <p>The query data. The data is a JSON-serialized string.</p>
+         * <p>The query data, formatted as a string serialized in JSON.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;values\&quot;:[\&quot;test_db\&quot;,\&quot;test_table\&quot;,false]}</p>
@@ -54,7 +54,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
         public String rowsFilePath;
 
         /**
-         * <p>The details of the schema. The details are a JSON-serialized string.</p>
+         * <p>The detailed schema information, formatted as a string serialized in JSON.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;type\&quot;:\&quot;struct\&quot;,\&quot;fields\&quot;:[{\&quot;name\&quot;:\&quot;namespace\&quot;,\&quot;type\&quot;:\&quot;string\&quot;,\&quot;nullable\&quot;:false,\&quot;metadata\&quot;:{}},{\&quot;name\&quot;:\&quot;tableName\&quot;,\&quot;type\&quot;:\&quot;string\&quot;,\&quot;nullable\&quot;:false,\&quot;metadata\&quot;:{}},{\&quot;name\&quot;:\&quot;isTemporary\&quot;,\&quot;type\&quot;:\&quot;boolean\&quot;,\&quot;nullable\&quot;:false,\&quot;metadata\&quot;:{}}]}</p>
@@ -95,13 +95,13 @@ public class GetSqlStatementResponseBody extends TeaModel {
 
     public static class GetSqlStatementResponseBodyData extends TeaModel {
         /**
-         * <p>A list of execution times for the SQL query.</p>
+         * <p>The list of SQL query execution durations.</p>
          */
         @NameInMap("executionTime")
         public java.util.List<Long> executionTime;
 
         /**
-         * <p>The error code for the SQL query.</p>
+         * <p>The SQL query error code.</p>
          * 
          * <strong>example:</strong>
          * <p>ERROR-102</p>
@@ -110,7 +110,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
         public String sqlErrorCode;
 
         /**
-         * <p>The error message for the SQL query.</p>
+         * <p>The SQL query error message.</p>
          * 
          * <strong>example:</strong>
          * <p>error message</p>
@@ -119,13 +119,13 @@ public class GetSqlStatementResponseBody extends TeaModel {
         public String sqlErrorMessage;
 
         /**
-         * <p>A list of SQL query results.</p>
+         * <p>The list of SQL query results.</p>
          */
         @NameInMap("sqlOutputs")
         public java.util.List<GetSqlStatementResponseBodyDataSqlOutputs> sqlOutputs;
 
         /**
-         * <p>The state of the query.</p>
+         * <p>The query status.</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -134,7 +134,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The statement ID.</p>
+         * <p>The query ID.</p>
          * 
          * <strong>example:</strong>
          * <p>st-1231311abadfaa</p>

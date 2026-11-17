@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLogContentsResponseBody extends TeaModel {
     /**
-     * <p>Log content.</p>
+     * <p>The log content.</p>
      */
     @NameInMap("listLogContent")
     public ListLogContentsResponseBodyListLogContent listLogContent;
@@ -42,7 +42,7 @@ public class ListLogContentsResponseBody extends TeaModel {
 
     public static class ListLogContentsResponseBodyListLogContentContents extends TeaModel {
         /**
-         * <p>Log line content.</p>
+         * <p>The content of the log line.</p>
          * 
          * <strong>example:</strong>
          * <p>spark pi is 3.14\n</p>
@@ -67,13 +67,13 @@ public class ListLogContentsResponseBody extends TeaModel {
 
     public static class ListLogContentsResponseBodyListLogContent extends TeaModel {
         /**
-         * <p>List of log line contents.</p>
+         * <p>The list of log lines.</p>
          */
         @NameInMap("contents")
         public java.util.List<ListLogContentsResponseBodyListLogContentContents> contents;
 
         /**
-         * <p>Total number of log lines.</p>
+         * <p>The total number of log lines.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

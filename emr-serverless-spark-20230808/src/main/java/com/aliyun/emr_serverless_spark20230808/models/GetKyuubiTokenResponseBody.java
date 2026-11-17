@@ -42,7 +42,7 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
 
     public static class GetKyuubiTokenResponseBodyDataAutoExpireConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether auto-expiration is enabled.</p>
+         * <p>Indicates whether automatic expiration is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -126,7 +126,7 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
         public Long lastUsedTime;
 
         /**
-         * <p>The list of authorized user ARNs.</p>
+         * <p>The list of ARNs of authorized users.</p>
          */
         @NameInMap("memberArns")
         public java.util.List<String> memberArns;
@@ -140,6 +140,9 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The list of Spark roles associated with the token.</p>
+         */
         @NameInMap("sparkRole")
         public java.util.List<String> sparkRole;
 
@@ -153,7 +156,7 @@ public class GetKyuubiTokenResponseBody extends TeaModel {
         public String token;
 
         /**
-         * <p>Token ID。</p>
+         * <p>The token ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tk-zpi0*****hdv4y</p>

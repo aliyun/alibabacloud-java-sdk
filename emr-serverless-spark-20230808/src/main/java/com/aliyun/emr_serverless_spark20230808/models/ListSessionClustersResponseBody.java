@@ -280,6 +280,9 @@ public class ListSessionClustersResponseBody extends TeaModel {
 
         /**
          * <p>The token used to connect to the session cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>session-connection-****</p>
          */
         @NameInMap("connectionToken")
         public String connectionToken;

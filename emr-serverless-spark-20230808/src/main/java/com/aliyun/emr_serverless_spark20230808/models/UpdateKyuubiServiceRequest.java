@@ -14,7 +14,16 @@ public class UpdateKyuubiServiceRequest extends TeaModel {
     public String computeInstance;
 
     /**
-     * <p>The Kyuubi service configuration.</p>
+     * <p>The expected number of instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
+    @NameInMap("expectedReplica")
+    public Integer expectedReplica;
+
+    /**
+     * <p>The Kyuubi service configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -23,7 +32,7 @@ public class UpdateKyuubiServiceRequest extends TeaModel {
     public String kyuubiConfigs;
 
     /**
-     * <p>The Kyuubi service engine version.</p>
+     * <p>The Kyuubi service DPI engine version.</p>
      * 
      * <strong>example:</strong>
      * <p>1.9.2-0.0.2</p>
@@ -50,7 +59,7 @@ public class UpdateKyuubiServiceRequest extends TeaModel {
     public Boolean publicEndpointEnabled;
 
     /**
-     * <p>The queue in which the Kyuubi service runs.</p>
+     * <p>The running queue for the Kyuubi service.</p>
      * 
      * <strong>example:</strong>
      * <p>dev_queue</p>
@@ -59,7 +68,16 @@ public class UpdateKyuubiServiceRequest extends TeaModel {
     public String queue;
 
     /**
-     * <p>The version of the Spark engine.</p>
+     * <p>Specifies whether to update the configurations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("refresh")
+    public Boolean refresh;
+
+    /**
+     * <p>The Spark DPI engine version number.</p>
      * 
      * <strong>example:</strong>
      * <p>esr-4.6.0 (Spark 3.5.2, Scala 2.12)</p>
@@ -68,7 +86,7 @@ public class UpdateKyuubiServiceRequest extends TeaModel {
     public String releaseVersion;
 
     /**
-     * <p>The number of replicas for high availability (HA).</p>
+     * <p>The number of replicas enabled for high availability.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -77,7 +95,7 @@ public class UpdateKyuubiServiceRequest extends TeaModel {
     public Integer replica;
 
     /**
-     * <p>Specifies whether to restart the service.</p>
+     * <p>Specifies whether to restart.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -86,7 +104,16 @@ public class UpdateKyuubiServiceRequest extends TeaModel {
     public Boolean restart;
 
     /**
-     * <p>The Spark configuration.</p>
+     * <p>Specifies whether to update the number of replicas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("scale")
+    public Boolean scale;
+
+    /**
+     * <p>The Spark configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -105,6 +132,14 @@ public class UpdateKyuubiServiceRequest extends TeaModel {
     }
     public String getComputeInstance() {
         return this.computeInstance;
+    }
+
+    public UpdateKyuubiServiceRequest setExpectedReplica(Integer expectedReplica) {
+        this.expectedReplica = expectedReplica;
+        return this;
+    }
+    public Integer getExpectedReplica() {
+        return this.expectedReplica;
     }
 
     public UpdateKyuubiServiceRequest setKyuubiConfigs(String kyuubiConfigs) {
@@ -147,6 +182,14 @@ public class UpdateKyuubiServiceRequest extends TeaModel {
         return this.queue;
     }
 
+    public UpdateKyuubiServiceRequest setRefresh(Boolean refresh) {
+        this.refresh = refresh;
+        return this;
+    }
+    public Boolean getRefresh() {
+        return this.refresh;
+    }
+
     public UpdateKyuubiServiceRequest setReleaseVersion(String releaseVersion) {
         this.releaseVersion = releaseVersion;
         return this;
@@ -169,6 +212,14 @@ public class UpdateKyuubiServiceRequest extends TeaModel {
     }
     public Boolean getRestart() {
         return this.restart;
+    }
+
+    public UpdateKyuubiServiceRequest setScale(Boolean scale) {
+        this.scale = scale;
+        return this;
+    }
+    public Boolean getScale() {
+        return this.scale;
     }
 
     public UpdateKyuubiServiceRequest setSparkConfigs(String sparkConfigs) {

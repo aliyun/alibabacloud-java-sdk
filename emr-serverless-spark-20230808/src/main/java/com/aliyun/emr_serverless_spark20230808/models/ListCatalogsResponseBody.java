@@ -11,7 +11,7 @@ public class ListCatalogsResponseBody extends TeaModel {
     public java.util.List<ListCatalogsResponseBodyCatalogs> catalogs;
 
     /**
-     * <p>The maximum number of entries to return on each page.</p>
+     * <p>The maximum number of records to return per request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListCatalogsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results.</p>
+     * <p>The next page token.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class ListCatalogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -93,6 +93,8 @@ public class ListCatalogsResponseBody extends TeaModel {
 
     public static class ListCatalogsResponseBodyCatalogs extends TeaModel {
         /**
+         * <p>alias</p>
+         * 
          * <strong>example:</strong>
          * <p>alias</p>
          */
@@ -100,7 +102,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         public String alias;
 
         /**
-         * <p>The ID of the data catalog.</p>
+         * <p>The data catalog ID.</p>
          * 
          * <strong>example:</strong>
          * <p>15097**********</p>
@@ -109,7 +111,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         public String catalogId;
 
         /**
-         * <p>The provider of the data catalog.</p>
+         * <p>The data catalog type.</p>
          * 
          * <strong>example:</strong>
          * <p>HMS</p>
@@ -118,7 +120,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         public String catalogProvider;
 
         /**
-         * <p>Indicates whether this is the default data catalog.</p>
+         * <p>Indicates whether the data catalog is the default data catalog.</p>
          * 
          * <strong>example:</strong>
          * <p>default_catalog</p>
@@ -127,19 +129,22 @@ public class ListCatalogsResponseBody extends TeaModel {
         public String catalogType;
 
         /**
-         * <p>The environment types.</p>
+         * <p>The environment type.</p>
          */
         @NameInMap("environments")
         public java.util.List<String> environments;
 
         /**
-         * <p>Extra information.</p>
+         * <p>The extra information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;networkName&quot;:&quot;hms&quot;,&quot;metastoreUrl&quot;:&quot;thrift://metastore.example.com:9083&quot;}</p>
          */
         @NameInMap("extras")
         public java.util.Map<String, String> extras;
 
         /**
-         * <p>The time when the resource was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1760604889</p>
@@ -148,7 +153,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>The time when the resource was last updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1760604889</p>
@@ -157,7 +162,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>The ID of the resource owner.</p>
+         * <p>The resource owner ID.</p>
          * 
          * <strong>example:</strong>
          * <p>15097**********</p>
