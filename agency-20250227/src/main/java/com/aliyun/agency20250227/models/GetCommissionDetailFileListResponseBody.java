@@ -23,7 +23,7 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
      * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>成功</p>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -96,7 +96,7 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
          * <p>The push status of the OSS file. Valid values: Processing, Succeeded, or Failed.</p>
          * 
          * <strong>example:</strong>
-         * <p>处理中</p>
+         * <p>Processing</p>
          */
         @NameInMap("BucketSyncStatus")
         public String bucketSyncStatus;
@@ -105,7 +105,7 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
          * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
-         * <p>参考【APS佣金查询下载功能】的政策名称</p>
+         * <p>The policy name. For more information, see the APS commission query and download feature.</p>
          */
         @NameInMap("CommissionPolicyName")
         public String commissionPolicyName;
@@ -114,7 +114,7 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
          * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>佣金202502021112</p>
+         * <p>Commission202502021112</p>
          */
         @NameInMap("FileName")
         public String fileName;
@@ -123,7 +123,7 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
          * <p>The file type.</p>
          * 
          * <strong>example:</strong>
-         * <p>总代政策为拓渠、普通政策为拓客</p>
+         * <p>Distributor policies are used to expand channels, and standard policies are used to acquire customers.</p>
          */
         @NameInMap("FileType")
         public String fileType;

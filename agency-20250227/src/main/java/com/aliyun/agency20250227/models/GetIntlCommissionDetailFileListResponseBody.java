@@ -20,7 +20,7 @@ public class GetIntlCommissionDetailFileListResponseBody extends TeaModel {
     public GetIntlCommissionDetailFileListResponseBodyData data;
 
     /**
-     * <p>The message information.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -38,7 +38,7 @@ public class GetIntlCommissionDetailFileListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>Indicates whether the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class GetIntlCommissionDetailFileListResponseBody extends TeaModel {
 
     public static class GetIntlCommissionDetailFileListResponseBodyDataFileList extends TeaModel {
         /**
-         * <p>The OSS file push status. Valid values: init, processing, succeeded, or failed.</p>
+         * <p>The push status of the file to OSS. Valid values: Initialized, Processing, Succeeded, Failed.</p>
          * 
          * <strong>example:</strong>
          * <p>PROCESSING</p>
@@ -102,7 +102,7 @@ public class GetIntlCommissionDetailFileListResponseBody extends TeaModel {
         public String bucketSyncStatus;
 
         /**
-         * <p>The commission policy name.</p>
+         * <p>The name of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>202606_FY27_TEST</p>
@@ -111,7 +111,7 @@ public class GetIntlCommissionDetailFileListResponseBody extends TeaModel {
         public String commissionPolicyName;
 
         /**
-         * <p>The file name.</p>
+         * <p>The name of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>202606_FY27_TEST_4397912340.xlsx</p>
@@ -152,7 +152,7 @@ public class GetIntlCommissionDetailFileListResponseBody extends TeaModel {
 
     public static class GetIntlCommissionDetailFileListResponseBodyData extends TeaModel {
         /**
-         * <p>The bill month.</p>
+         * <p>The billing month.</p>
          * 
          * <strong>example:</strong>
          * <p>202502</p>

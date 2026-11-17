@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CustomerNoteListDetailRequest extends TeaModel {
     /**
-     * <p>The note ID.</p>
+     * <p>The ID of the note.</p>
      * 
      * <strong>example:</strong>
      * <p>1620737</p>

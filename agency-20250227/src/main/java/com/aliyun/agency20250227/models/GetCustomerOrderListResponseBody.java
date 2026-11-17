@@ -217,7 +217,7 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
          * <p>The customer classification.</p>
          * 
          * <strong>example:</strong>
-         * <p>C类</p>
+         * <p>Type C</p>
          */
         @NameInMap("CustomerClassification")
         public String customerClassification;
@@ -344,6 +344,13 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
          */
         @NameInMap("RamAccountForCustomerManagers")
         public java.util.List<String> ramAccountForCustomerManagers;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("RebateType")
+        public Integer rebateType;
 
         public static GetCustomerOrderListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetCustomerOrderListResponseBodyData self = new GetCustomerOrderListResponseBodyData();
@@ -492,6 +499,14 @@ public class GetCustomerOrderListResponseBody extends TeaModel {
         }
         public java.util.List<String> getRamAccountForCustomerManagers() {
             return this.ramAccountForCustomerManagers;
+        }
+
+        public GetCustomerOrderListResponseBodyData setRebateType(Integer rebateType) {
+            this.rebateType = rebateType;
+            return this;
+        }
+        public Integer getRebateType() {
+            return this.rebateType;
         }
 
     }

@@ -151,7 +151,7 @@ public class GetCustomerOrderListShrinkRequest extends TeaModel {
      * <p>The product name.</p>
      * 
      * <strong>example:</strong>
-     * <p>弹性计算</p>
+     * <p>Elastic computing</p>
      */
     @NameInMap("ProductName")
     public String productName;
@@ -173,6 +173,13 @@ public class GetCustomerOrderListShrinkRequest extends TeaModel {
      */
     @NameInMap("RamAccountForCustomerManager")
     public String ramAccountForCustomerManager;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("RebateType")
+    public Integer rebateType;
 
     public static GetCustomerOrderListShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         GetCustomerOrderListShrinkRequest self = new GetCustomerOrderListShrinkRequest();
@@ -321,6 +328,14 @@ public class GetCustomerOrderListShrinkRequest extends TeaModel {
     }
     public String getRamAccountForCustomerManager() {
         return this.ramAccountForCustomerManager;
+    }
+
+    public GetCustomerOrderListShrinkRequest setRebateType(Integer rebateType) {
+        this.rebateType = rebateType;
+        return this;
+    }
+    public Integer getRebateType() {
+        return this.rebateType;
     }
 
 }

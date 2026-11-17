@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CustomerNoteListResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denied error returned by the POP API when the caller does not have the required RAM permissions.</p>
+     * <p>The details of the access denial returned by the POP API when the RAM user lacks the required permissions.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -47,7 +47,7 @@ public class CustomerNoteListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The prompt message, same as message.</p>
+     * <p>The prompt message. This parameter is the same as Message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -130,7 +130,7 @@ public class CustomerNoteListResponseBody extends TeaModel {
          * <p>The name of the contact.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("ContactName")
         public String contactName;
@@ -148,13 +148,13 @@ public class CustomerNoteListResponseBody extends TeaModel {
          * <p>The logon name of the creator.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("CreatorName")
         public String creatorName;
 
         /**
-         * <p>The creation time in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The creation time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-07-17 12:18:23</p>
@@ -166,13 +166,13 @@ public class CustomerNoteListResponseBody extends TeaModel {
          * <p>The content of the note.</p>
          * 
          * <strong>example:</strong>
-         * <p>讨论技术方案</p>
+         * <p>Discuss technical solutions</p>
          */
         @NameInMap("NoteContent")
         public String noteContent;
 
         /**
-         * <p>The ID of the note.</p>
+         * <p>The note ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2932252</p>
@@ -181,7 +181,7 @@ public class CustomerNoteListResponseBody extends TeaModel {
         public Long noteId;
 
         /**
-         * <p>The type of the note (CUSTOMER).</p>
+         * <p>The note type. Valid value: CUSTOMER.</p>
          * 
          * <strong>example:</strong>
          * <p>CUSTOMER</p>
@@ -190,16 +190,16 @@ public class CustomerNoteListResponseBody extends TeaModel {
         public String noteType;
 
         /**
-         * <p>The label of the note type.</p>
+         * <p>The name of the note type.</p>
          * 
          * <strong>example:</strong>
-         * <p>客户</p>
+         * <p>Customer</p>
          */
         @NameInMap("NoteTypeLabel")
         public String noteTypeLabel;
 
         /**
-         * <p>The touch date (timestamp).</p>
+         * <p>The contact date. The value is a timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1784266662000</p>
@@ -347,7 +347,7 @@ public class CustomerNoteListResponseBody extends TeaModel {
 
     public static class CustomerNoteListResponseBodyData extends TeaModel {
         /**
-         * <p>The details of the access denied error returned by the POP API when the caller does not have the required RAM permissions.</p>
+         * <p>The details of the access denial returned by the POP API when the RAM user lacks the required permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -389,7 +389,7 @@ public class CustomerNoteListResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The prompt message, same as message.</p>
+         * <p>The prompt message. This parameter is the same as Message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -398,7 +398,7 @@ public class CustomerNoteListResponseBody extends TeaModel {
         public String msg;
 
         /**
-         * <p>The pagination information compatible with the legacy interface (deprecated).</p>
+         * <p><strong>[Deprecated]</strong> The pagination information compatible with the legacy fenxiao-service API.</p>
          */
         @NameInMap("PageInfo")
         public CustomerNoteListResponseBodyDataPageInfo pageInfo;

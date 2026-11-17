@@ -134,7 +134,7 @@ public class GetSubPartnerOrderListRequest extends TeaModel {
      * <p>The product name.</p>
      * 
      * <strong>example:</strong>
-     * <p>弹性计算</p>
+     * <p>Elastic computing</p>
      */
     @NameInMap("ProductName")
     public String productName;
@@ -152,7 +152,7 @@ public class GetSubPartnerOrderListRequest extends TeaModel {
      * <p>The name of the secondary partner.</p>
      * 
      * <strong>example:</strong>
-     * <p>XXX有限公司</p>
+     * <p>XXX Co., Ltd.</p>
      */
     @NameInMap("SubPartnerName")
     public String subPartnerName;

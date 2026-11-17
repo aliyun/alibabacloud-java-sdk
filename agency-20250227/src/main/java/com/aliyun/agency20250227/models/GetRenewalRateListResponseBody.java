@@ -23,7 +23,7 @@ public class GetRenewalRateListResponseBody extends TeaModel {
      * <p>The prompt message.</p>
      * 
      * <strong>example:</strong>
-     * <p>成功</p>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -222,7 +222,7 @@ public class GetRenewalRateListResponseBody extends TeaModel {
          * <p>The partner PID name.</p>
          * 
          * <strong>example:</strong>
-         * <p>XX有限公司</p>
+         * <p>XX Co., Ltd.</p>
          */
         @NameInMap("MasterPidName")
         public String masterPidName;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CustomerNoteListDetailResponseBody extends TeaModel {
     /**
-     * <p>The access denied details returned by the POP API when RAM permissions are missing.</p>
+     * <p>The detailed information about the access denial returned in the POP API response when the RAM user lacks the required permissions.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -29,7 +29,7 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
     public CustomerNoteListDetailResponseBodyData data;
 
     /**
-     * <p>The HTTP status code returned by the POP API.</p>
+     * <p>The HTTP status code used in the POP API response.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,7 +47,7 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The prompt message. This is the same as Message.</p>
+     * <p>The prompt message, which is the same as Message.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -56,7 +56,7 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
@@ -127,13 +127,16 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
 
     public static class CustomerNoteListDetailResponseBodyDataAttachment extends TeaModel {
         /**
-         * <p>The attachment signature.</p>
+         * <p>The download URL of the attachment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://geoip-sdk-user.oss-cn-zhangjiakou.aliyuncs.com/product/v1/ipv4-inner/common/v1.20251010002216.dex?Expires=1760062445&OSSAccessKeyId=x6R87i97yKeKRggz&Signature=">http://geoip-sdk-user.oss-cn-zhangjiakou.aliyuncs.com/product/v1/ipv4-inner/common/v1.20251010002216.dex?Expires=1760062445&amp;OSSAccessKeyId=x6R87i97yKeKRggz&amp;Signature=</a>****</p>
          */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
         /**
-         * <p>The attachment ID.</p>
+         * <p>The ID of the attachment.</p>
          * 
          * <strong>example:</strong>
          * <p>307</p>
@@ -142,16 +145,16 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The attachment name.</p>
+         * <p>The name of the attachment.</p>
          * 
          * <strong>example:</strong>
-         * <p>Course Training</p>
+         * <p>Course training</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The attachment signature.</p>
+         * <p>The signature of the attachment.</p>
          * 
          * <strong>example:</strong>
          * <p>hF2UrEMc4XWy990sh9LGM0+ScI8=</p>
@@ -160,7 +163,7 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
         public String signature;
 
         /**
-         * <p>The attachment size in bytes.</p>
+         * <p>The size of the attachment. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>111222121</p>
@@ -169,7 +172,7 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>The attachment type.</p>
+         * <p>The type of the attachment.</p>
          * 
          * <strong>example:</strong>
          * <p>image/png</p>
@@ -234,16 +237,16 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
 
     public static class CustomerNoteListDetailResponseBodyData extends TeaModel {
         /**
-         * <p>The AI parsing result (JSON string).</p>
+         * <p>The AI analysis result. The value is a JSON string.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;TouchDate&quot;:&quot;2026-07-17 10:00:01&quot;}</p>
+         * <p>{&quot;Contact date&quot;:&quot;2026-07-17 10:00:01&quot;}</p>
          */
         @NameInMap("AiResult")
         public String aiResult;
 
         /**
-         * <p>The attachment list.</p>
+         * <p>The list of attachments.</p>
          */
         @NameInMap("Attachment")
         public java.util.List<CustomerNoteListDetailResponseBodyDataAttachment> attachment;
@@ -258,10 +261,10 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
         public String contactInformation;
 
         /**
-         * <p>The contact name.</p>
+         * <p>The name of the contact.</p>
          * 
          * <strong>example:</strong>
-         * <p>John</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("ContactName")
         public String contactName;
@@ -279,13 +282,13 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
          * <p>The logon name of the creator.</p>
          * 
          * <strong>example:</strong>
-         * <p>John</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("CreatorName")
         public String creatorName;
 
         /**
-         * <p>The customer name.</p>
+         * <p>The name of the customer.</p>
          * 
          * <strong>example:</strong>
          * <p>XXXX Co., Ltd</p>
@@ -294,7 +297,7 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
         public String customerName;
 
         /**
-         * <p>The customer UID.</p>
+         * <p>The UID of the customer.</p>
          * 
          * <strong>example:</strong>
          * <p>1271202085096245</p>
@@ -303,7 +306,7 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
         public Long customerUid;
 
         /**
-         * <p>The creation time in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The time when the note was created. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-07 10:27:46</p>
@@ -312,7 +315,7 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The note content.</p>
+         * <p>The content of the note.</p>
          * 
          * <strong>example:</strong>
          * <p>Note content</p>
@@ -321,7 +324,7 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
         public String noteContent;
 
         /**
-         * <p>The note ID.</p>
+         * <p>The ID of the note.</p>
          * 
          * <strong>example:</strong>
          * <p>1620737</p>
@@ -330,7 +333,7 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
         public Long noteId;
 
         /**
-         * <p>The note type (CUSTOMER).</p>
+         * <p>The type of the note.</p>
          * 
          * <strong>example:</strong>
          * <p>CUSTOMER</p>
@@ -339,7 +342,7 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
         public String noteType;
 
         /**
-         * <p>The note type label.</p>
+         * <p>The name of the note type.</p>
          * 
          * <strong>example:</strong>
          * <p>Customer</p>
@@ -348,7 +351,7 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
         public String noteTypeLabel;
 
         /**
-         * <p>The touch date (timestamp).</p>
+         * <p>The contact date. The value is a timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1784266662000</p>

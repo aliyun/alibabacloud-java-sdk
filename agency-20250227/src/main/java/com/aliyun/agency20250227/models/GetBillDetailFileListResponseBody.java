@@ -23,7 +23,7 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
      * <p>The message.</p>
      * 
      * <strong>example:</strong>
-     * <p>成功</p>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -32,7 +32,7 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
      * <p>Same as Message.</p>
      * 
      * <strong>example:</strong>
-     * <p>成功</p>
+     * <p>Success</p>
      */
     @NameInMap("Msg")
     public String msg;
@@ -122,7 +122,7 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
          * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>账单202502021112</p>
+         * <p>Bill202502021112</p>
          */
         @NameInMap("FileName")
         public String fileName;
@@ -139,9 +139,9 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
         /**
          * <p>The OSS file push status. Valid values:</p>
          * <ul>
-         * <li>1: pending</li>
-         * <li>2: processing</li>
-         * <li>3: completed.</li>
+         * <li>1: Pending.</li>
+         * <li>2: Processing.</li>
+         * <li>3: Completed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -151,10 +151,10 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type. Valid values: customer acquisition or channel expansion.</p>
+         * <p>The type. Valid values: Customer Acquisition, Channel Expansion.</p>
          * 
          * <strong>example:</strong>
-         * <p>拓渠</p>
+         * <p>Channel Expansion</p>
          */
         @NameInMap("Type")
         public String type;

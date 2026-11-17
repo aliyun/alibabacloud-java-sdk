@@ -8,7 +8,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
      * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>成功</p>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -131,7 +131,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
          * <p>The detailed registered address.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx街道xxx号</p>
+         * <p>xxx Street, No. xxx</p>
          */
         @NameInMap("Address")
         public String address;
@@ -149,7 +149,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
          * <p>The description of the agreement status.</p>
          * 
          * <strong>example:</strong>
-         * <p>生效期</p>
+         * <p>Effective period</p>
          */
         @NameInMap("AgreementStatusDesc")
         public String agreementStatusDesc;
@@ -158,7 +158,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
          * <p>The city of the registered address.</p>
          * 
          * <strong>example:</strong>
-         * <p>杭州市</p>
+         * <p>Hangzhou</p>
          */
         @NameInMap("City")
         public String city;
@@ -167,7 +167,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
          * <p>The name of the secondary distributor.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx有限公司</p>
+         * <p>xxx Co., Ltd.</p>
          */
         @NameInMap("CompanyName")
         public String companyName;
@@ -176,7 +176,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
          * <p>The name of the contact.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("Contact")
         public String contact;
@@ -185,7 +185,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
          * <p>The district or county of the registered address.</p>
          * 
          * <strong>example:</strong>
-         * <p>西湖区</p>
+         * <p>Xihu District</p>
          */
         @NameInMap("District")
         public String district;
@@ -203,7 +203,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
          * <p>The name of the primary account of the secondary distributor.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxx有限公司主账号</p>
+         * <p>Primary account of xxxxxx Co., Ltd.</p>
          */
         @NameInMap("MasterAccount")
         public String masterAccount;
@@ -230,7 +230,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
          * <p>The province of the registered address.</p>
          * 
          * <strong>example:</strong>
-         * <p>浙江省</p>
+         * <p>Zhejiang Province</p>
          */
         @NameInMap("Province")
         public String province;

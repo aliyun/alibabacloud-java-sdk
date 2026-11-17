@@ -28,7 +28,7 @@ public class GetSubPartnerListRequest extends TeaModel {
      * <p>The company name of the secondary partner.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx有限公司</p>
+     * <p>xxx Co., Ltd.</p>
      */
     @NameInMap("SubPartnerCompanyName")
     public String subPartnerCompanyName;

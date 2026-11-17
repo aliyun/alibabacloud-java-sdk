@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "Agency";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-northeast-1", "agency.aliyuncs.com"),
@@ -65,8 +68,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("me-east-1", "agency.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "agency.aliyuncs.com"),
             new TeaPair("us-east-1", "agency.aliyuncs.com"),
-            new TeaPair("us-west-1", "agency.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "agency.ap-southeast-1.aliyuncs.com")
+            new TeaPair("us-west-1", "agency.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("agency", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -151,7 +153,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edits a customer note.</p>
+     * <p>Updates a customer note.</p>
      * 
      * @param request CustomerNoteEditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -199,7 +201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edits a customer note.</p>
+     * <p>Updates a customer note.</p>
      * 
      * @param request CustomerNoteEditRequest
      * @return CustomerNoteEditResponse
@@ -211,7 +213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a paged query list of customer notes with paging support.</p>
+     * <p>Queries the customer note list by using paging.</p>
      * 
      * @param request CustomerNoteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -251,7 +253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a paged query list of customer notes with paging support.</p>
+     * <p>Queries the customer note list by using paging.</p>
      * 
      * @param request CustomerNoteListRequest
      * @return CustomerNoteListResponse
@@ -307,7 +309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries exported bill files.</p>
+     * <p>Queries the bill export file of a China partner for a specific billing cycle. The system pushes the file to the OSS bucket specified by the partner.</p>
      * 
      * @param request GetBillDetailFileListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -363,7 +365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries exported bill files.</p>
+     * <p>Queries the bill export file of a China partner for a specific billing cycle. The system pushes the file to the OSS bucket specified by the partner.</p>
      * 
      * @param request GetBillDetailFileListRequest
      * @return GetBillDetailFileListResponse
@@ -530,6 +532,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RamAccountForCustomerManager", request.ramAccountForCustomerManager);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.rebateType)) {
+            query.put("RebateType", request.rebateType);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -561,11 +567,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Ensure that the current caller identity is a T1 distribution partner. 
-     * <notice>Available only for international site.</notice>.</p>
+     * <p>Ensure that the current caller account is a T1 distribution partner. 
+     * <notice>Available only on the international site.</notice></p>
      * 
      * <b>summary</b> : 
-     * <p>Downloads the commission details of an international partner.</p>
+     * <p>Downloads the commission details of international partners.</p>
      * 
      * @param request GetIntlCommissionDetailFileListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -621,11 +627,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Ensure that the current caller identity is a T1 distribution partner. 
-     * <notice>Available only for international site.</notice>.</p>
+     * <p>Ensure that the current caller account is a T1 distribution partner. 
+     * <notice>Available only on the international site.</notice></p>
      * 
      * <b>summary</b> : 
-     * <p>Downloads the commission details of an international partner.</p>
+     * <p>Downloads the commission details of international partners.</p>
      * 
      * @param request GetIntlCommissionDetailFileListRequest
      * @return GetIntlCommissionDetailFileListResponse

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CustomerNoteEditResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial returned by the POP API when RAM permissions are not granted.</p>
+     * <p>The details about the access denial. This parameter is returned by the POP API operation when the RAM user does not have the required permissions.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class CustomerNoteEditResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code returned by the POP API.</p>
+     * <p>The HTTP status code returned by the POP API operation.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,25 +32,25 @@ public class CustomerNoteEditResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned by the operation.</p>
+     * <p>The message returned by the API operation.</p>
      * 
      * <strong>example:</strong>
-     * <p>成功</p>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Same as Message.</p>
+     * <p>The message. This parameter is the same as Message.</p>
      * 
      * <strong>example:</strong>
-     * <p>成功</p>
+     * <p>Success</p>
      */
     @NameInMap("Msg")
     public String msg;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>

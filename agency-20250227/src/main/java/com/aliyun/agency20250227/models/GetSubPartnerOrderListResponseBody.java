@@ -23,7 +23,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
      * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>成功</p>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -174,7 +174,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
          * <p>The customer classification.</p>
          * 
          * <strong>example:</strong>
-         * <p>C类</p>
+         * <p>Type C</p>
          */
         @NameInMap("CustomerClassification")
         public String customerClassification;
@@ -281,7 +281,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
          * <p>The product name.</p>
          * 
          * <strong>example:</strong>
-         * <p>弹性计算</p>
+         * <p>Elastic computing</p>
          */
         @NameInMap("ProductName")
         public String productName;
@@ -299,7 +299,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
          * <p>The name of the secondary partner.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx有限公司</p>
+         * <p>xxx Co., Ltd.</p>
          */
         @NameInMap("SubPartnerName")
         public String subPartnerName;

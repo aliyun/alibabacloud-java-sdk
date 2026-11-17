@@ -14,25 +14,25 @@ public class CustomerNoteCreateRequest extends TeaModel {
     public String contactInformation;
 
     /**
-     * <p>The name of the contact.</p>
+     * <p>The contact name.</p>
      * 
      * <strong>example:</strong>
-     * <p>张三</p>
+     * <p>Zhang San</p>
      */
     @NameInMap("ContactName")
     public String contactName;
 
     /**
-     * <p>The name of the customer.</p>
+     * <p>The customer name.</p>
      * 
      * <strong>example:</strong>
-     * <p>XXXX有限公司</p>
+     * <p>XXXX Co., Ltd</p>
      */
     @NameInMap("CustomerName")
     public String customerName;
 
     /**
-     * <p>The UID of the customer.</p>
+     * <p>The customer UID.</p>
      * 
      * <strong>example:</strong>
      * <p>1647796581073291</p>
@@ -41,16 +41,16 @@ public class CustomerNoteCreateRequest extends TeaModel {
     public String customerUid;
 
     /**
-     * <p>The content of the note.</p>
+     * <p>The note content.</p>
      * 
      * <strong>example:</strong>
-     * <p>日常拜访客户，讨论客户agent建设方案</p>
+     * <p>Routine customer visit to discuss the agent implementation plan for the customer</p>
      */
     @NameInMap("NoteContent")
     public String noteContent;
 
     /**
-     * <p>The touch time. This value is a UNIX timestamp in milliseconds.</p>
+     * <p>The contact time (timestamp, in milliseconds).</p>
      * 
      * <strong>example:</strong>
      * <p>1784266662000</p>
