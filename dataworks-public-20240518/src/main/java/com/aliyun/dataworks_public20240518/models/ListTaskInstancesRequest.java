@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTaskInstancesRequest extends TeaModel {
     /**
-     * <p>The business date. Typically, this is 00:00:00 of the day before the scheduled time of the periodic instance, in the format of a millisecond-level timestamp, such as 1743350400000.</p>
+     * <p>The business date. Typically, this is 00:00:00 of the day before the scheduled time of the scheduled instance, in the format of a millisecond-level timestamp, such as 1743350400000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListTaskInstancesRequest extends TeaModel {
     public Long bizdate;
 
     /**
-     * <p>The filter conditions in JSON format. Multiple filter conditions are combined with the AND logical operator. Supported fields: <code>startedTimeStart</code>, <code>startedTimeEnd</code>, <code>finishedTimeStart</code>, <code>finishedTimeEnd</code>, <code>createTimeStart</code>, and <code>createTimeEnd</code>.</p>
+     * <p>The filter conditions. The value must be in JSON format. Multiple filter conditions are connected by the logical AND operator. Supported fields: <code>startedTimeStart</code>, <code>startedTimeEnd</code>, <code>finishedTimeStart</code>, <code>finishedTimeEnd</code>, <code>createTimeStart</code>, and <code>createTimeEnd</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -31,7 +31,7 @@ public class ListTaskInstancesRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The task instance ID. A task instance may be rerun. If you specify this parameter, the response includes historical rerun records, which are distinguished by RunNumber.</p>
+     * <p>The task instance ID. Task instances may be rerun. If you specify this parameter, the response includes historical information about reruns. Each piece of historical information is distinguished by RunNumber.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>
@@ -40,7 +40,7 @@ public class ListTaskInstancesRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The task instance IDs. You can specify multiple task instance IDs to query task instances in batches.</p>
+     * <p>The list of task instance IDs. You can use this parameter to query multiple task instances in batches based on task instance IDs.</p>
      */
     @NameInMap("Ids")
     public java.util.List<Long> ids;
@@ -73,10 +73,10 @@ public class ListTaskInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The project environment. Valid values:</p>
+     * <p>The project environment.</p>
      * <ul>
-     * <li>Prod: production</li>
-     * <li>Dev: development</li>
+     * <li>Prod: Production.</li>
+     * <li>Dev: Development.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class ListTaskInstancesRequest extends TeaModel {
     public String runtimeResource;
 
     /**
-     * <p>The sort field. Fields such as scheduled time and start time are supported. The format is \&quot;Sort field + Sort order (Desc/Asc)\&quot;, where Asc can be omitted. Valid values for the sort field:</p>
+     * <p>The sort field. Fields such as scheduled time and start time are supported. The format is &quot;Sort field + Sort order (Desc/Asc)&quot; (Asc can be omitted). The valid values for the sort field are as follows:</p>
      * <ul>
      * <li><p><code>TriggerTime (Desc/Asc)</code></p>
      * </li>
@@ -116,7 +116,7 @@ public class ListTaskInstancesRequest extends TeaModel {
      * <li><p><code>CreateTime (Desc/Asc)</code></p>
      * </li>
      * <li><p><code>Id (Desc/Asc)</code></p>
-     * <p>Default value: <code>Id Desc</code></p>
+     * <p>Default value: <code>Id Desc</code>.</p>
      * </li>
      * </ul>
      * 
@@ -129,12 +129,12 @@ public class ListTaskInstancesRequest extends TeaModel {
     /**
      * <p>The status of the task instance. Valid values:</p>
      * <ul>
-     * <li><code>NotRun</code>: not run</li>
-     * <li><code>Running</code>: running</li>
-     * <li><code>Failure</code>: failed</li>
-     * <li><code>Success</code>: successful</li>
-     * <li><code>WaitTime</code>: waiting for scheduled time</li>
-     * <li><code>WaitResource</code>: waiting for resources</li>
+     * <li><code>NotRun</code>: Not run.</li>
+     * <li><code>Running</code>: Running.</li>
+     * <li><code>Failure</code>: Failed.</li>
+     * <li><code>Success</code>: Successful.</li>
+     * <li><code>WaitTime</code>: Waiting for scheduled time.</li>
+     * <li><code>WaitResource</code>: Waiting for resources.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -153,13 +153,13 @@ public class ListTaskInstancesRequest extends TeaModel {
     public Long taskId;
 
     /**
-     * <p>The task IDs. You can specify multiple task IDs to query task instances in batches.</p>
+     * <p>The list of task IDs. You can use this parameter to query task instances in batches based on task IDs.</p>
      */
     @NameInMap("TaskIds")
     public java.util.List<Long> taskIds;
 
     /**
-     * <p>The task name. Fuzzy match is supported.</p>
+     * <p>The name of the task. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>SQL node</p>
@@ -168,7 +168,7 @@ public class ListTaskInstancesRequest extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The task type. For the valid values of TaskType for each node, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks node types</a>.</p>
+     * <p>The task type. For the valid values of TaskType for different nodes, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ODPS_SQL</p>
@@ -177,11 +177,11 @@ public class ListTaskInstancesRequest extends TeaModel {
     public String taskType;
 
     /**
-     * <p>The run mode upon triggering. This parameter takes effect only when TriggerType is set to Scheduler. Valid values:</p>
+     * <p>The running mode upon triggering. This parameter takes effect only when TriggerType is set to Scheduler.</p>
      * <ul>
-     * <li>Pause: pause</li>
-     * <li>Skip: dry run</li>
-     * <li>Normal: normal run</li>
+     * <li>Pause: Paused.</li>
+     * <li>Skip: Dry run.</li>
+     * <li>Normal: Normal execution.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -191,20 +191,20 @@ public class ListTaskInstancesRequest extends TeaModel {
     public String triggerRecurrence;
 
     /**
-     * <p>The trigger type. Valid values:</p>
+     * <p>The trigger type.</p>
      * <ul>
-     * <li>Scheduler: periodic scheduling</li>
-     * <li>Manual: manual</li>
+     * <li>Scheduler: Triggered by periodic scheduling.</li>
+     * <li>Manual: Triggered manually.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Normal</p>
+     * <p>Scheduler</p>
      */
     @NameInMap("TriggerType")
     public String triggerType;
 
     /**
-     * <p>The unified workflow instance ID. This value is the same for all task instances within a specific business date under a single trigger.</p>
+     * <p>The unified workflow instance ID. The value of this field is the same for all task instances within a specific business date under a single trigger.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>
@@ -213,7 +213,7 @@ public class ListTaskInstancesRequest extends TeaModel {
     public Long unifiedWorkflowInstanceId;
 
     /**
-     * <p>The ID of the associated workflow.</p>
+     * <p>The ID of the workflow to which the task belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>
@@ -222,7 +222,7 @@ public class ListTaskInstancesRequest extends TeaModel {
     public Long workflowId;
 
     /**
-     * <p>The ID of the associated workflow instance.</p>
+     * <p>The ID of the workflow instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>
@@ -231,14 +231,14 @@ public class ListTaskInstancesRequest extends TeaModel {
     public Long workflowInstanceId;
 
     /**
-     * <p>The type of the workflow instance. Valid values:</p>
+     * <p>The type of the workflow instance.</p>
      * <ul>
-     * <li>SmokeTest: test</li>
-     * <li>Manual: manual task</li>
-     * <li>SupplementData: data backfill</li>
-     * <li>ManualWorkflow: manual workflow</li>
-     * <li>Normal: periodic scheduling</li>
-     * <li>TriggerWorkflow: triggered workflow</li>
+     * <li>SmokeTest: Test.</li>
+     * <li>Manual: Manual task.</li>
+     * <li>SupplementData: Data backfill.</li>
+     * <li>ManualWorkflow: Manual workflow.</li>
+     * <li>Normal: Periodic scheduling.</li>
+     * <li>TriggerWorkflow: Triggered workflow.</li>
      * </ul>
      * 
      * <strong>example:</strong>

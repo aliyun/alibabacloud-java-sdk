@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetApplicationContentsResponseBody extends TeaModel {
     /**
-     * <p>The process instance and associated application content.</p>
+     * <p>The process instance and the associated request details.</p>
      */
     @NameInMap("Data")
     public GetApplicationContentsResponseBodyData data;
 
     /**
-     * <p>The request ID, which is used for locating logs and troubleshooting.</p>
+     * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>34267E2E-0335-1A60-A1F0-ADA530890CBA</p>
@@ -42,13 +42,13 @@ public class GetApplicationContentsResponseBody extends TeaModel {
 
     public static class GetApplicationContentsResponseBodyDataContentsGrantee extends TeaModel {
         /**
-         * <p>The grantee principal ID. The ID has different meanings depending on the principal type:</p>
+         * <p>The authorization principal ID. The mapped ID has different semantics for different principal types:</p>
          * <ul>
-         * <li><p>RamUser: DataWorks UserId.</p>
+         * <li><p>RamUser: the DataWorks user ID.</p>
          * </li>
-         * <li><p>RamRole: DataWorks UserId prefixed with &quot;ROLE_&quot;.</p>
+         * <li><p>RamRole: the DataWorks user ID starting with &quot;ROLE_&quot;.</p>
          * </li>
-         * <li><p>DlfRole: DlfNext role name.</p>
+         * <li><p>DlfRole: the DlfNext role name.</p>
          * </li>
          * </ul>
          * 
@@ -59,7 +59,7 @@ public class GetApplicationContentsResponseBody extends TeaModel {
         public String principalId;
 
         /**
-         * <p>The grantee principal type. Valid values:</p>
+         * <p>The authorization principal type. Valid values:</p>
          * <ul>
          * <li>RamUser</li>
          * <li>RamRole</li>
@@ -98,8 +98,8 @@ public class GetApplicationContentsResponseBody extends TeaModel {
     public static class GetApplicationContentsResponseBodyDataContentsResource extends TeaModel {
         /**
          * <p>The resource type.</p>
-         * <p>Note: The resource types supported for applications are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
-         * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
+         * <p>Note: The resource types supported by the system are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
+         * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
          * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
@@ -108,8 +108,8 @@ public class GetApplicationContentsResponseBody extends TeaModel {
         public String defSchema;
 
         /**
-         * <p>The resource parsing version, which is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.version.</p>
-         * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
+         * <p>The resource parsing version is constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.version.</p>
+         * <p><a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
          * 
          * <strong>example:</strong>
          * <p>v1.0.0</p>
@@ -119,8 +119,8 @@ public class GetApplicationContentsResponseBody extends TeaModel {
 
         /**
          * <p>The resource metadata declaration.</p>
-         * <p>Note: The metadata is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources. A valid resource declaration must include the full-path metadata declaration from level 0 to the validLeaf level.</p>
-         * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
+         * <p>Note: The metadata is constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources. A valid resource declaration must include the full-path metadata declaration from level 0 to the validLeaf level.</p>
+         * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
          * 
          * <strong>example:</strong>
          * <p>&quot;{\&quot;schema\&quot;:\&quot;default\&quot;,\&quot;threeTierModel\&quot;:false,\&quot;workspace\&quot;:\&quot;449656\&quot;,\&quot;project\&quot;:\&quot;sync_destination\&quot;,\&quot;table\&quot;:\&quot;order_table\&quot;,\&quot;tenant\&quot;:\&quot;524997424564736\&quot;}&quot;</p>
@@ -162,16 +162,16 @@ public class GetApplicationContentsResponseBody extends TeaModel {
     public static class GetApplicationContentsResponseBodyDataContents extends TeaModel {
         /**
          * <p>The list of requested permissions.</p>
-         * <p>Note: Different levels of resources support different permission application types, all constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.isValidLeaf, accessTypeRestrictions, and authMethodAccessTypes.</p>
-         * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
+         * <p>Note: Different levels of resources support different types of permission requests, which are uniformly constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.isValidLeaf, accessTypeRestrictions, and authMethodAccessTypes.</p>
+         * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
          */
         @NameInMap("AccessTypes")
         public java.util.List<String> accessTypes;
 
         /**
-         * <p>The authorization method. Currently, only SEVERLESS_STARROCKS supports specifying the authorization method: ranger or starrocksManager.</p>
-         * <p>Note: Different resources support different authorization methods, all constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authMethods.</p>
-         * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
+         * <p>The authorization method. Currently, only SEVERLESS_STARROCKS supports specifying the authorization method: ranger and starrocksManager.</p>
+         * <p>Note: Different resources support different authorization methods, which are uniformly constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authMethods.</p>
+         * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
          * 
          * <strong>example:</strong>
          * <p>ranger</p>
@@ -190,8 +190,8 @@ public class GetApplicationContentsResponseBody extends TeaModel {
 
         /**
          * <p>The resource type.</p>
-         * <p>Note: The resource types supported for applications are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
-         * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
+         * <p>Note: The resource types supported by the system are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
+         * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
          * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
@@ -200,7 +200,7 @@ public class GetApplicationContentsResponseBody extends TeaModel {
         public String defSchema;
 
         /**
-         * <p>The permission expiration date, as a millisecond timestamp.</p>
+         * <p>The expiration date of the permission. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1785835708000</p>
@@ -215,15 +215,15 @@ public class GetApplicationContentsResponseBody extends TeaModel {
         public java.util.List<String> finalAccessTypes;
 
         /**
-         * <p>The grantee description.</p>
-         * <p>Note: The grantee principal types supported by the system are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authPrincipal.</p>
-         * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
+         * <p>The description of the authorization principal. </p>
+         * <p>Note: The authorization principal types supported by the system are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authPrincipal.</p>
+         * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
          */
         @NameInMap("Grantee")
         public GetApplicationContentsResponseBodyDataContentsGrantee grantee;
 
         /**
-         * <p>The unique identifier of the application content.</p>
+         * <p>The unique identifier of the request item.</p>
          * 
          * <strong>example:</strong>
          * <p>Y9H7AKFmjhWzLYdZNDZA5</p>
@@ -232,7 +232,7 @@ public class GetApplicationContentsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The approval process instance ID of the submitted application.</p>
+         * <p>The ID of the approval process instance for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>777799223</p>
@@ -241,16 +241,16 @@ public class GetApplicationContentsResponseBody extends TeaModel {
         public String processInstanceId;
 
         /**
-         * <p>The resource declaration. The resource description is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</p>
-         * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
+         * <p>The resource declaration. The resource description is constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</p>
+         * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
          */
         @NameInMap("Resource")
         public GetApplicationContentsResponseBodyDataContentsResource resource;
 
         /**
-         * <p>The minimum-permission resource type.</p>
-         * <p>Note: The minimum-permission resource type is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources[*].isValidLeaf being true.</p>
-         * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
+         * <p>The least privilege resource type.</p>
+         * <p>Note: The least privilege resource types are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources[*].isValidLeaf being true.</p>
+         * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
          * 
          * <strong>example:</strong>
          * <p>table</p>
@@ -261,13 +261,13 @@ public class GetApplicationContentsResponseBody extends TeaModel {
         /**
          * <p>The approval status. Valid values:</p>
          * <ul>
-         * <li>WaitApproval: Pending approval.</li>
-         * <li>Confirmed: Pending authorization.</li>
-         * <li>RejectApproval: Approval rejected.</li>
-         * <li>AuthorizeSucceed: Authorization succeeded.</li>
-         * <li>AuthorizeFailed: Authorization failed.</li>
-         * <li>Deleted: Deleted.</li>
-         * <li>Canceled: Canceled.</li>
+         * <li>WaitApproval: pending approval</li>
+         * <li>Confirmed: pending authorization</li>
+         * <li>RejectApproval: approval rejected</li>
+         * <li>AuthorizeSucceed: authorization succeeded</li>
+         * <li>AuthorizeFailed: authorization failed</li>
+         * <li>Deleted: deleted</li>
+         * <li>Canceled: canceled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -415,7 +415,7 @@ public class GetApplicationContentsResponseBody extends TeaModel {
 
     public static class GetApplicationContentsResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the application was submitted, as a millisecond timestamp.</p>
+         * <p>The time when the request was submitted. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1779675618000</p>
@@ -424,15 +424,15 @@ public class GetApplicationContentsResponseBody extends TeaModel {
         public Long applicationTime;
 
         /**
-         * <p>The list of application contents.</p>
+         * <p>The list of request items.</p>
          */
         @NameInMap("Contents")
         public java.util.List<GetApplicationContentsResponseBodyDataContents> contents;
 
         /**
          * <p>The resource type.</p>
-         * <p>Note: The resource types supported for applications are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
-         * <p>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
+         * <p>Note: The resource types supported by the system are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
+         * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
          * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
@@ -450,7 +450,7 @@ public class GetApplicationContentsResponseBody extends TeaModel {
         public String processInstanceId;
 
         /**
-         * <p>The application reason.</p>
+         * <p>The reason for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>Business requirement</p>
@@ -461,13 +461,13 @@ public class GetApplicationContentsResponseBody extends TeaModel {
         /**
          * <p>The approval status. Valid values:</p>
          * <ul>
-         * <li>WaitApproval: Pending approval.</li>
-         * <li>Confirmed: Pending authorization.</li>
-         * <li>RejectApproval: Approval rejected.</li>
-         * <li>AuthorizeSucceed: Authorization succeeded.</li>
-         * <li>AuthorizeFailed: Authorization failed.</li>
-         * <li>Deleted: Deleted.</li>
-         * <li>Canceled: Canceled.</li>
+         * <li>WaitApproval: pending approval</li>
+         * <li>Confirmed: pending authorization</li>
+         * <li>RejectApproval: approval rejected</li>
+         * <li>AuthorizeSucceed: authorization succeeded</li>
+         * <li>AuthorizeFailed: authorization failed</li>
+         * <li>Deleted: deleted</li>
+         * <li>Canceled: canceled</li>
          * </ul>
          * 
          * <strong>example:</strong>

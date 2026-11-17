@@ -15,7 +15,7 @@ public class CreateDataQualityScanShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The compute engine used at runtime. If not specified, the data source defined in the Spec is used.</p>
+     * <p>The compute engine used when the data quality monitor runs. This parameter is optional. If it is not specified, the data source connection specified in the Spec is used.</p>
      */
     @NameInMap("ComputeResource")
     public String computeResourceShrink;
@@ -30,13 +30,13 @@ public class CreateDataQualityScanShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The Hook configurations after the data quality monitoring run ends.</p>
+     * <p>The configuration for hooks that run after the data quality monitor finishes.</p>
      */
     @NameInMap("Hooks")
     public String hooksShrink;
 
     /**
-     * <p>The data quality monitoring name.</p>
+     * <p>The name of the data quality monitor.</p>
      * 
      * <strong>example:</strong>
      * <p>data_quality_scan_001</p>
@@ -45,7 +45,7 @@ public class CreateDataQualityScanShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the user who owns of the data quality monitor.</p>
+     * <p>The user ID of the owner of the data quality monitor.</p>
      * 
      * <strong>example:</strong>
      * <p>95279527****</p>
@@ -54,13 +54,13 @@ public class CreateDataQualityScanShrinkRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The definition of execution parameters for the data quality monitoring.</p>
+     * <p>The execution parameter definitions of the data quality monitor.</p>
      */
     @NameInMap("Parameters")
     public String parametersShrink;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://dataworks.console.aliyun.com/overview">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID. This parameter is required to specify the target DataWorks workspace for this API operation.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/overview">DataWorks console</a> and go to the Workspace Management page to obtain the workspace ID. This parameter specifies the DataWorks workspace for the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>101</p>
@@ -69,13 +69,13 @@ public class CreateDataQualityScanShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The resource group used during execution of the data quality monitoring.</p>
+     * <p>The resource group used when the data quality monitor runs.</p>
      */
     @NameInMap("RuntimeResource")
     public String runtimeResourceShrink;
 
     /**
-     * <p>Spec code for the content of the data quality monitoring. For more information, see <a href="https://help.aliyun.com/document_detail/2963394.html">Data quality Spec configuration description</a>.</p>
+     * <p>The Spec code that defines the data quality monitor. For more information, see <a href="https://help.aliyun.com/document_detail/2963394.html">Data quality spec configuration guide</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -109,7 +109,7 @@ public class CreateDataQualityScanShrinkRequest extends TeaModel {
     public String spec;
 
     /**
-     * <p>The trigger configurations of the data quality monitoring task.</p>
+     * <p>The trigger settings of the data quality monitor.</p>
      */
     @NameInMap("Trigger")
     public String triggerShrink;

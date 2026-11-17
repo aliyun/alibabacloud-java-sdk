@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCrossProjectDeploymentCandidatesRequest extends TeaModel {
     /**
-     * <p>The change type.</p>
+     * <p>The type of the change.</p>
      * 
      * <strong>example:</strong>
      * <p>ADD</p>
@@ -14,7 +14,7 @@ public class ListCrossProjectDeploymentCandidatesRequest extends TeaModel {
     public String changeType;
 
     /**
-     * <p>The start of the commit time range. The value is a UNIX timestamp in milliseconds.</p>
+     * <p>The start time of the commit. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1788739200000</p>
@@ -23,7 +23,7 @@ public class ListCrossProjectDeploymentCandidatesRequest extends TeaModel {
     public Long commitTimeFrom;
 
     /**
-     * <p>The end of the commit time range. The value is a UNIX timestamp in milliseconds.</p>
+     * <p>The end time of the commit. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1788825599999</p>
@@ -32,7 +32,7 @@ public class ListCrossProjectDeploymentCandidatesRequest extends TeaModel {
     public Long commitTimeTo;
 
     /**
-     * <p>The submitter.</p>
+     * <p>The committer.</p>
      * 
      * <strong>example:</strong>
      * <p>operator</p>
@@ -41,7 +41,7 @@ public class ListCrossProjectDeploymentCandidatesRequest extends TeaModel {
     public String commitUser;
 
     /**
-     * <p>The cross-workspace deployment environment ID.</p>
+     * <p>The ID of the cross-workspace deployment environment.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class ListCrossProjectDeploymentCandidatesRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The candidate object ID.</p>
+     * <p>The ID of the candidate object.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -87,7 +87,7 @@ public class ListCrossProjectDeploymentCandidatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of items per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

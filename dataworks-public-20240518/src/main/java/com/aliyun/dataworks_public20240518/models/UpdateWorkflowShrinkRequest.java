@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkflowShrinkRequest extends TeaModel {
     /**
-     * <p>The client unique code of the workflow, used for asynchronous operations and idempotence. If not specified during creation, the system automatically generates one, and the code is uniquely bound to the resource ID. If this parameter is specified during update or deletion, it must be consistent with the client unique code used during creation.</p>
+     * <p>The client unique code of the workflow, which is used to implement asynchronous and idempotent operations. If you do not specify this parameter when creating a workflow, the system automatically generates one and uniquely binds it to the resource ID. If you specify this parameter when updating or deleting a resource, it must be the same as the client unique code used during creation.</p>
      * 
      * <strong>example:</strong>
      * <p>Workflow_0bc5213917368545132902xxxxxxxx</p>
@@ -29,10 +29,10 @@ public class UpdateWorkflowShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The project environment. Valid values:</p>
+     * <p>The project environment.</p>
      * <ul>
-     * <li>Prod: production</li>
-     * <li>Dev: development</li>
+     * <li>Prod: Production.</li>
+     * <li>Dev: Development.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,8 +54,8 @@ public class UpdateWorkflowShrinkRequest extends TeaModel {
     /**
      * <p>The instance generation mode. Valid values:</p>
      * <ul>
-     * <li>T+1: Instances are generated the next day.</li>
-     * <li>Immediately: Instances are generated immediately. Periodic instances are generated only if the scheduled time of the workflow is at least 10 minutes after the workflow is deployed. During the full instance generation period (22:00 to 24:00), real-time instance generation is not available. You can submit and deploy workflows during this period, but instances are not regenerated after submission.</li>
+     * <li>T+1: Generates the instance on the next day.</li>
+     * <li>Immediately: Generates the instance immediately. Note: Periodic instances are generated normally only if the scheduled time of the workflow is at least 10 minutes after the workflow publish time. Real-time instance generation is not supported during the full instance generation period (22:00 to 24:00). You can submit and publish workflows during this period, but instances are not regenerated after submission.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -106,13 +106,13 @@ public class UpdateWorkflowShrinkRequest extends TeaModel {
     public String tagsShrink;
 
     /**
-     * <p>The node list.</p>
+     * <p>The list of tasks.</p>
      */
     @NameInMap("Tasks")
     public String tasksShrink;
 
     /**
-     * <p>The trigger configuration.</p>
+     * <p>The trigger method.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Trigger")

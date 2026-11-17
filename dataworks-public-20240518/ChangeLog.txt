@@ -1,3 +1,43 @@
+2026-11-17 Version: 10.1.0
+- Support API AddKnowledgeBaseAdministrator.
+- Support API CreateKnowledgeBase.
+- Support API CreateKnowledgeBaseBuildTask.
+- Support API CreateKnowledgeBaseBuildTaskInstance.
+- Support API CreateKnowledgeObject.
+- Support API CreateKnowledgeObjectUpload.
+- Support API CreateKnowledgeSource.
+- Support API DeleteKnowledgeBase.
+- Support API DeleteKnowledgeBaseBuildTask.
+- Support API DeleteKnowledgeObject.
+- Support API DeleteKnowledgeSource.
+- Support API GetKnowledgeBase.
+- Support API GetKnowledgeBaseBuildTask.
+- Support API GetKnowledgeBaseBuildTaskInstance.
+- Support API GetKnowledgeBaseBuildTaskResult.
+- Support API GetKnowledgeObject.
+- Support API GetKnowledgePoint.
+- Support API GetKnowledgeSource.
+- Support API GrantKnowledgeBaseRetrieval.
+- Support API ListKnowledgeBaseAdministrators.
+- Support API ListKnowledgeBaseBuildTaskInstances.
+- Support API ListKnowledgeBaseBuildTasks.
+- Support API ListKnowledgeBaseRetrievalGrants.
+- Support API ListKnowledgeBases.
+- Support API ListKnowledgeObjects.
+- Support API ListKnowledgePoints.
+- Support API ListKnowledgeSources.
+- Support API RemoveKnowledgeBaseAdministrator.
+- Support API RetrieveKnowledgePoints.
+- Support API RetryKnowledgeBaseBuildTaskInstance.
+- Support API RevokeKnowledgeBaseRetrieval.
+- Support API StopKnowledgeBaseBuildTaskInstance.
+- Support API UpdateKnowledgeBase.
+- Support API UpdateKnowledgeBaseBuildTask.
+- Support API UpdateKnowledgeObject.
+- Support API UpdateKnowledgeSource.
+- Support API UploadAgentSessionFile.
+
+
 2026-11-06 Version: 10.0.0
 - Support API ArchiveAgentSession.
 - Support API CreateCodeReview.

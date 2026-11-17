@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskInstancesRequest extends TeaModel {
     /**
-     * <p>The remarks.</p>
+     * <p>The comment.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
@@ -14,7 +14,7 @@ public class UpdateTaskInstancesRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The instances.</p>
+     * <p>The list of task instances.</p>
      */
     @NameInMap("TaskInstances")
     public java.util.List<UpdateTaskInstancesRequestTaskInstances> taskInstances;
@@ -67,13 +67,13 @@ public class UpdateTaskInstancesRequest extends TeaModel {
 
     public static class UpdateTaskInstancesRequestTaskInstances extends TeaModel {
         /**
-         * <p>The information about the associated data source.</p>
+         * <p>The associated data source information.</p>
          */
         @NameInMap("DataSource")
         public UpdateTaskInstancesRequestTaskInstancesDataSource dataSource;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The node instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -83,7 +83,7 @@ public class UpdateTaskInstancesRequest extends TeaModel {
         public Long id;
 
         /**
-         * <p>The priority of the instance. Valid values: 1, 3, 5, 7, and 8.</p>
+         * <p>The runtime priority of the instance. Valid values: 1, 3, 5, 7, and 8.</p>
          * <p>A larger value indicates a higher priority. Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -93,7 +93,7 @@ public class UpdateTaskInstancesRequest extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The resource group information. Set this parameter to the ID of a resource group for scheduling.</p>
+         * <p>The resource group information. Specify the identifier of the scheduling resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>

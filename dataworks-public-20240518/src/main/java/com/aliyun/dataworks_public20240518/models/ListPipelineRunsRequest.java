@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPipelineRunsRequest extends TeaModel {
     /**
-     * <p>Filters the results by the creator of the pipeline.</p>
+     * <p>The creator of the deployment pipeline. This parameter is used as a filter condition.</p>
      * 
      * <strong>example:</strong>
      * <p>110755000425****</p>
@@ -14,7 +14,7 @@ public class ListPipelineRunsRequest extends TeaModel {
     public String creator;
 
     /**
-     * <p>The ID of the artifact.</p>
+     * <p>The ID of the deployment object.</p>
      * 
      * <strong>example:</strong>
      * <p>860438872620113XXXX</p>
@@ -23,7 +23,7 @@ public class ListPipelineRunsRequest extends TeaModel {
     public String objectId;
 
     /**
-     * <p>The page number. Pages start from 1. The default value is 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,8 +41,8 @@ public class ListPipelineRunsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can obtain this ID from the Workspace Management page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
-     * <p>This parameter specifies the DataWorks workspace to use for the API call.</p>
+     * <p>The ID of the DataWorks workspace. You can logon to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
+     * <p>This parameter specifies the DataWorks workspace for the current API invoke operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,21 +52,15 @@ public class ListPipelineRunsRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>Filters the results by the current status of the pipeline.</p>
+     * <p>The current status of the deployment pipeline. This parameter is used as a filter condition.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p><code>Init</code>: initializing</p>
-     * </li>
-     * <li><p><code>Running</code>: running</p>
-     * </li>
-     * <li><p><code>Success</code>: succeeded</p>
-     * </li>
-     * <li><p><code>Fail</code>: failed</p>
-     * </li>
-     * <li><p><code>Termination</code>: terminated</p>
-     * </li>
-     * <li><p><code>Cancel</code>: canceled</p>
-     * </li>
+     * <li>Init: Initialized.</li>
+     * <li>Running: Running.</li>
+     * <li>Success: Succeeded.</li>
+     * <li>Fail: Failed.</li>
+     * <li>Termination: Terminated.</li>
+     * <li>Cancel: Canceled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

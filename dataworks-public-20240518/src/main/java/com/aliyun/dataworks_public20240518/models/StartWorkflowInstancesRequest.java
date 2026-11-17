@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartWorkflowInstancesRequest extends TeaModel {
     /**
-     * <p>The remarks.</p>
+     * <p>The comment.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a comment</p>

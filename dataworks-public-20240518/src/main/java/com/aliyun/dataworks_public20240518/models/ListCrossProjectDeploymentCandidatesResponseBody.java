@@ -14,7 +14,7 @@ public class ListCrossProjectDeploymentCandidatesResponseBody extends TeaModel {
     public ListCrossProjectDeploymentCandidatesResponseBodyData data;
 
     /**
-     * <p>The request ID. You can use the ID to locate and troubleshoot the API call.</p>
+     * <p>The request ID, which is used to locate and troubleshoot the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>735894D1-D5E5-50B8-8A6D-041C90A98B23</p>
@@ -62,7 +62,7 @@ public class ListCrossProjectDeploymentCandidatesResponseBody extends TeaModel {
 
     public static class ListCrossProjectDeploymentCandidatesResponseBodyDataDeploymentCandidates extends TeaModel {
         /**
-         * <p>The change type.</p>
+         * <p>The type of the change.</p>
          * 
          * <strong>example:</strong>
          * <p>ADD</p>
@@ -80,7 +80,7 @@ public class ListCrossProjectDeploymentCandidatesResponseBody extends TeaModel {
         public Long commitTime;
 
         /**
-         * <p>The submitter.</p>
+         * <p>The committer.</p>
          * 
          * <strong>example:</strong>
          * <p>operator</p>
@@ -89,7 +89,7 @@ public class ListCrossProjectDeploymentCandidatesResponseBody extends TeaModel {
         public String commitUser;
 
         /**
-         * <p>The candidate object ID.</p>
+         * <p>The ID of the candidate object.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -189,7 +189,7 @@ public class ListCrossProjectDeploymentCandidatesResponseBody extends TeaModel {
 
     public static class ListCrossProjectDeploymentCandidatesResponseBodyData extends TeaModel {
         /**
-         * <p>The list of candidate objects in the source workspace that are available for cross-workspace deployment.</p>
+         * <p>The list of candidate objects in the source workspace that can be used for cross-workspace deployment.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;ObjectId&quot;:&quot;1&quot;,&quot;ObjectType&quot;:&quot;ODPS_SQL&quot;,&quot;ObjectName&quot;:&quot;object-1&quot;,&quot;ObjectVersion&quot;:&quot;7&quot;,&quot;ChangeType&quot;:&quot;ADD&quot;,&quot;CommitUser&quot;:&quot;operator&quot;,&quot;CommitTime&quot;:1788739200000}]</p>
@@ -207,7 +207,7 @@ public class ListCrossProjectDeploymentCandidatesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of items per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

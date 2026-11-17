@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CancelImageTestResponseBody extends TeaModel {
     /**
-     * <p>The API request result.</p>
+     * <p>The result of the API request.</p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>{&quot;ProcessId&quot;: &quot;582d4896-d224-413b-b883-239eeebe0bc5&quot;, &quot;Success&quot;: true}</p>
      */
     @NameInMap("Data")
     public CancelImageTestResponseBodyData data;
@@ -23,7 +23,7 @@ public class CancelImageTestResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -62,7 +62,7 @@ public class CancelImageTestResponseBody extends TeaModel {
 
     public static class CancelImageTestResponseBodyData extends TeaModel {
         /**
-         * <p>The execution ID of the canceled image test.</p>
+         * <p>The ID of the canceled image test execution.</p>
          * 
          * <strong>example:</strong>
          * <p>582d4896-d224-413b-b883-239eeebe0bc5</p>

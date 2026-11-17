@@ -42,7 +42,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
 
     public static class ListCustomAgentsResponseBodyPagingInfoAgents extends TeaModel {
         /**
-         * <p><strong>The creator ID.</strong></p>
+         * <p><strong>The ID of the creator.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -63,13 +63,13 @@ public class ListCustomAgentsResponseBody extends TeaModel {
          * <p><strong>The display name.</strong></p>
          * 
          * <strong>example:</strong>
-         * <p>My Assistant</p>
+         * <p>My assistant</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
-         * <p><strong>The creation time (UNIX timestamp in milliseconds).</strong></p>
+         * <p><strong>The creation time (millisecond timestamp).</strong></p>
          * 
          * <strong>example:</strong>
          * <p>1780555634000</p>
@@ -78,7 +78,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public Long gmtCreateTime;
 
         /**
-         * <p><strong>The last modification time (UNIX timestamp in milliseconds).</strong></p>
+         * <p><strong>The last modified time (millisecond timestamp).</strong></p>
          * 
          * <strong>example:</strong>
          * <p>1780555634000</p>
@@ -87,7 +87,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public Long gmtModifiedTime;
 
         /**
-         * <p><strong>The last modifier ID.</strong></p>
+         * <p><strong>The ID of the last modifier.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -96,7 +96,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String modifierId;
 
         /**
-         * <p><strong>The agent name.</strong></p>
+         * <p><strong>The name of the agent.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>my-agent</p>
@@ -192,7 +192,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public java.util.List<ListCustomAgentsResponseBodyPagingInfoAgents> agents;
 
         /**
-         * <p>The maximum number of entries returned in this response.</p>
+         * <p>The maximum number of entries returned for this request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -210,7 +210,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The total number of entries that meet the query conditions.</p>
+         * <p>The total number of entries that meet the conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

@@ -169,7 +169,7 @@ public class CreateAgentSessionRequest extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>chat，cli</p>
+         * <p>chat</p>
          */
         @NameInMap("ExecutionLane")
         public String executionLane;

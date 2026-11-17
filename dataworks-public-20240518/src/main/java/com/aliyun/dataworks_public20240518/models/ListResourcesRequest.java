@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourcesRequest extends TeaModel {
     /**
-     * <p>The name of the file resource. Fuzzy match is supported.</p>
+     * <p>The name of the file resource. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,7 +14,7 @@ public class ListResourcesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the owner, which is the UID of the workspace administrator account. You can log on to the Alibaba Cloud Management Console and view the account UID in the Security Management section of Account Management.</p>
+     * <p>The ID of the owner, which is the UID of the workspace administrator account. You can log on to the Alibaba Cloud Management Console and view the account UID in the Security Settings section of the Account Center.</p>
      * 
      * <strong>example:</strong>
      * <p>110755000425XXXX</p>
@@ -23,7 +23,7 @@ public class ListResourcesRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the requested data.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class ListResourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID. This parameter specifies the DataWorks workspace for the API operation.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the workspace ID. This parameter specifies the DataWorks workspace for the API operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class ListResourcesRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The filter condition for the resource type. Valid values:</p>
+     * <p>The resource type used as a filter condition. Valid values:</p>
      * <ul>
      * <li>Python</li>
      * <li>Jar</li>

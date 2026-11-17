@@ -103,7 +103,7 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The running mode upon triggering. This parameter takes effect only when Type is set to Scheduler. Valid values:</p>
+         * <p>The running mode when the workflow is triggered. This parameter takes effect only when Type is set to Scheduler. Valid values:</p>
          * <ul>
          * <li>Pause: Paused.</li>
          * <li>Skip: Dry run.</li>
@@ -117,8 +117,8 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public String recurrence;
 
         /**
-         * <p>The effective period of the epoch trigger. This parameter takes effect only when Type is set to Scheduler.</p>
-         * <p>The format is <code>yyyy-MM-dd HH:mm:ss</code>, such as <code>1970-01-01 00:00:00</code>. The example does not include a time zone identity.</p>
+         * <p>The effective time of the periodic trigger. This parameter takes effect only when Type is set to Scheduler.</p>
+         * <p>The format is <code>yyyy-MM-dd HH:mm:ss</code>, such as <code>1970-01-01 00:00:00</code>. The example does not include a time zone identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>1970-01-01 00:00:00</p>
@@ -198,7 +198,7 @@ public class ListWorkflowsResponseBody extends TeaModel {
 
         /**
          * <p>The creation time.</p>
-         * <p>The value is a 13-digit timestamp, such as <code>1710239005403</code>.</p>
+         * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
@@ -225,7 +225,11 @@ public class ListWorkflowsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The project environment.</p>
+         * <p>The project environment. Valid values:</p>
+         * <ul>
+         * <li>Prod: Production.</li>
+         * <li>Dev: Development.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Prod</p>
@@ -244,7 +248,7 @@ public class ListWorkflowsResponseBody extends TeaModel {
 
         /**
          * <p>The modification time.</p>
-         * <p>The value is a 13-digit timestamp, such as <code>1710239005403</code>.</p>
+         * <p>The value is a 13-digit number, such as <code>1710239005403</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1710239005403</p>

@@ -14,7 +14,7 @@ public class LineageRelationship extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>The destination entity.</p>
+     * <p>The target entity.</p>
      */
     @NameInMap("DstEntity")
     public LineageEntity dstEntity;
@@ -23,7 +23,7 @@ public class LineageRelationship extends TeaModel {
      * <p>ID</p>
      * 
      * <strong>example:</strong>
-     * <p>maxcompute-table.p.table:custom-table.xxx:custom-sql.123</p>
+     * <p>as78d756asd</p>
      */
     @NameInMap("Id")
     public String id;
@@ -35,7 +35,7 @@ public class LineageRelationship extends TeaModel {
     public LineageEntity srcEntity;
 
     /**
-     * <p>The node.</p>
+     * <p>The task.</p>
      */
     @NameInMap("Task")
     public LineageTask task;

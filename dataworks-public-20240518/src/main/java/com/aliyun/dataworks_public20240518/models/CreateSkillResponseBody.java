@@ -42,13 +42,13 @@ public class CreateSkillResponseBody extends TeaModel {
 
     public static class CreateSkillResponseBodySkillVisibilityScope extends TeaModel {
         /**
-         * <p>The IDs of the visible projects.</p>
+         * <p>The IDs of the projects in which the skill is visible.</p>
          */
         @NameInMap("ProjectIds")
         public java.util.List<String> projectIds;
 
         /**
-         * <p>The IDs of the visible users. This field is returned only when Visibility is set to USER.</p>
+         * <p>The IDs of the users who can see the skill. This field takes effect when Visibility is set to USER.</p>
          */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;
@@ -78,12 +78,14 @@ public class CreateSkillResponseBody extends TeaModel {
 
     public static class CreateSkillResponseBodySkill extends TeaModel {
         /**
-         * <p>The content of the SKILL.md file.</p>
+         * <p>The body of the SKILL.md file.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <hr>
+         * <h2>name: example-skill
+         * description: Sample skill.</h2>
+         * <h1>Sample skill</h1>
+         * <p>Summarize the text provided by the user</p>
          */
         @NameInMap("Body")
         public String body;
@@ -98,7 +100,7 @@ public class CreateSkillResponseBody extends TeaModel {
         public String creatorId;
 
         /**
-         * <p>The skill description.</p>
+         * <p>The description of the skill.</p>
          * 
          * <strong>example:</strong>
          * <p>Data analytics skill</p>
@@ -136,7 +138,7 @@ public class CreateSkillResponseBody extends TeaModel {
         public String modifierId;
 
         /**
-         * <p>The skill name.</p>
+         * <p>The name of the skill.</p>
          * 
          * <strong>example:</strong>
          * <p>my-skill</p>

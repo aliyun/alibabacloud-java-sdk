@@ -14,7 +14,7 @@ public class ListCustomAgentsShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Do not specify this parameter for the first query. For subsequent queries, specify the <code>NextToken</code> value returned from the previous query to retrieve the next page.</p>
+     * <p>The pagination token. Omit this parameter for the first query. For subsequent queries, specify the <code>NextToken</code> value returned from the previous query to retrieve the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>
@@ -23,7 +23,7 @@ public class ListCustomAgentsShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The search keyword used to perform a fuzzy match on agent names.</p>
+     * <p>The search keyword for fuzzy matching by agent name.</p>
      * 
      * <strong>example:</strong>
      * <p>analysis</p>

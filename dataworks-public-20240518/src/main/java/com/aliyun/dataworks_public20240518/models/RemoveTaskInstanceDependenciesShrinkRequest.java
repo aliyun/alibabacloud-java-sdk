@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveTaskInstanceDependenciesShrinkRequest extends TeaModel {
     /**
-     * <p>The remarks.</p>
+     * <p>The comment.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
@@ -14,7 +14,7 @@ public class RemoveTaskInstanceDependenciesShrinkRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The node instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class RemoveTaskInstanceDependenciesShrinkRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The IDs of ancestor instances of the instance</p>
+     * <p>The list of upstream node instance IDs.</p>
      */
     @NameInMap("UpstreamTaskInstanceIds")
     public String upstreamTaskInstanceIdsShrink;

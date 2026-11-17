@@ -326,7 +326,7 @@ public class GetProcessInstanceResponseBody extends TeaModel {
          * <p>The description of the approval policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>流程定义描述</p>
+         * <p>Process definition description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -620,7 +620,7 @@ public class GetProcessInstanceResponseBody extends TeaModel {
          * <p>The name of the approver.</p>
          * 
          * <strong>example:</strong>
-         * <p>李四</p>
+         * <p>Li Si</p>
          */
         @NameInMap("MemberName")
         public String memberName;
@@ -662,7 +662,7 @@ public class GetProcessInstanceResponseBody extends TeaModel {
          * <p>The approval comment.</p>
          * 
          * <strong>example:</strong>
-         * <p>同意</p>
+         * <p>Approved</p>
          */
         @NameInMap("ApprovalComment")
         public String approvalComment;
@@ -701,7 +701,7 @@ public class GetProcessInstanceResponseBody extends TeaModel {
          * <p>The name of the actual approver.</p>
          * 
          * <strong>example:</strong>
-         * <p>李四</p>
+         * <p>Li Si</p>
          */
         @NameInMap("AssigneeName")
         public String assigneeName;
@@ -897,7 +897,7 @@ public class GetProcessInstanceResponseBody extends TeaModel {
          * <p>The reason for the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>业务需要</p>
+         * <p>Business need</p>
          */
         @NameInMap("Reason")
         public String reason;
@@ -932,7 +932,7 @@ public class GetProcessInstanceResponseBody extends TeaModel {
          * <p>The name of the process instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>MaxCompute表权限申请</p>
+         * <p>MaxCompute table access request</p>
          */
         @NameInMap("Title")
         public String title;

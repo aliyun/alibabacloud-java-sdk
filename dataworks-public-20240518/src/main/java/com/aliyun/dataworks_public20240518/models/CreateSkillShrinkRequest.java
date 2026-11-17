@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSkillShrinkRequest extends TeaModel {
     /**
-     * <p>The <strong>download URL of the bundle.zip file</strong> (HTTP or HTTPS). This parameter and SkillMdOverride are mutually exclusive.</p>
+     * <p>The downloadable URL (HTTP or HTTPS) of the bundle.zip file. This parameter and SkillMdOverride are mutually exclusive.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/skill.zip">https://example.com/skill.zip</a></p>
@@ -14,7 +14,7 @@ public class CreateSkillShrinkRequest extends TeaModel {
     public String bundleUrl;
 
     /**
-     * <p>The <strong>skill description</strong>.</p>
+     * <p>The description of the skill.</p>
      * 
      * <strong>example:</strong>
      * <p>Data analytics skill</p>
@@ -32,7 +32,7 @@ public class CreateSkillShrinkRequest extends TeaModel {
     public String extraShrink;
 
     /**
-     * <p>The <strong>skill name</strong>. The name must be unique within the current account.</p>
+     * <p>The name of the skill. The name must be unique within the current account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,18 +42,20 @@ public class CreateSkillShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The content of the SKILL.md file. This parameter and BundleUrl are mutually exclusive. If you do not provide a bundle, use this parameter to create a lightweight skill that contains only the SKILL.md file.</p>
+     * <p>The body of the SKILL.md file. This parameter and BundleUrl are mutually exclusive. If you do not provide a bundle, use this field to create a lightweight skill that contains only the SKILL.md file.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <hr>
+     * <h2>name: example-skill
+     * description: Sample skill.</h2>
+     * <h1>Sample skill</h1>
+     * <p>Summarize the text provided by the user</p>
      */
     @NameInMap("SkillMdOverride")
     public String skillMdOverride;
 
     /**
-     * <p>The <strong>version note</strong>.</p>
+     * <p>The release notes of the version.</p>
      * 
      * <strong>example:</strong>
      * <p>Initial version</p>
@@ -62,7 +64,7 @@ public class CreateSkillShrinkRequest extends TeaModel {
     public String versionNote;
 
     /**
-     * <p>The <strong>visibility level</strong>. Valid values: TENANT (visible to the entire tenant), PROJECT (visible to specific projects), and USER (visible to specific users).</p>
+     * <p>The visibility level. Valid values: TENANT: visible within the account. PROJECT: visible to specified projects. USER: visible to specified users.</p>
      * 
      * <strong>example:</strong>
      * <p>TENANT</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetRequest extends TeaModel {
     /**
-     * <p>The description of the dataset. The value can be up to 1024 characters in length.</p>
+     * <p>The description of the dataset. It cannot exceed 1,024 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
@@ -16,13 +16,13 @@ public class CreateDatasetRequest extends TeaModel {
     /**
      * <p>The data type. Valid values:</p>
      * <ul>
-     * <li>COMMON: general-purpose (default).</li>
-     * <li>PIC: image.</li>
-     * <li>TEXT: text.</li>
-     * <li>TABLE: table.</li>
-     * <li>VIDEO: video.</li>
-     * <li>AUDIO: audio.</li>
-     * <li>INDEX: index.</li>
+     * <li>COMMON: General (default).</li>
+     * <li>PIC: Image.</li>
+     * <li>TEXT: Text.</li>
+     * <li>TABLE: Table.</li>
+     * <li>VIDEO: Video.</li>
+     * <li>AUDIO: Audio.</li>
+     * <li>INDEX: Index.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class CreateDatasetRequest extends TeaModel {
     public CreateDatasetRequestInitVersion initVersion;
 
     /**
-     * <p>The name of the dataset. The value must be a non-empty string that is up to 128 characters in length.</p>
+     * <p>The name of the dataset. It must be a non-empty string and cannot exceed 128 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class CreateDatasetRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The origin of the dataset. Only DataWorks is supported.</p>
+     * <p>The source of the dataset. Currently, only DataWorks is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>DataWorks</p>
@@ -58,7 +58,7 @@ public class CreateDatasetRequest extends TeaModel {
     public String origin;
 
     /**
-     * <p>The ID of the DataWorks workspace.</p>
+     * <p>The DataWorks workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,8 +71,8 @@ public class CreateDatasetRequest extends TeaModel {
      * <p>The storage type. Valid values:</p>
      * <ul>
      * <li>OSS: Object Storage Service.</li>
-     * <li>NAS: general-purpose NAS file storage.</li>
-     * <li>EXTREMENAS: extreme NAS file storage.</li>
+     * <li>NAS: General-purpose NAS file storage.</li>
+     * <li>EXTREMENAS: Extreme NAS file storage.</li>
      * <li>DLF_LANCE: Data Lake Formation.</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -146,7 +146,7 @@ public class CreateDatasetRequest extends TeaModel {
 
     public static class CreateDatasetRequestInitVersion extends TeaModel {
         /**
-         * <p>The description. The value can be up to 1024 characters in length.</p>
+         * <p>The description. It cannot exceed 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>Initial Version</p>
@@ -155,24 +155,27 @@ public class CreateDatasetRequest extends TeaModel {
         public String comment;
 
         /**
-         * <p>The storage import configuration of the dataset. The required configuration varies depending on the storage type.</p>
+         * <p>The storage import configuration for the dataset. The required configuration information varies based on the storage type.</p>
          * <details>
          * <summary>NAS</summary>
-         * The values can be obtained from the response of the File Storage NAS API DescribeFileSystems operation.
+         * For the values, refer to the response of the DescribeFileSystems API operation.
          * 
          * <pre><code class="language-JSON">{
-         *   &quot;fileSystemId&quot;: &quot;3b6XXX89c9&quot;, // File system ID
-         *   &quot;fileSystemStorageType&quot;: &quot;Performance&quot;, // Storage specification of the file system
-         *   &quot;vpcId&quot;: &quot;vpc-uf66oxxxrqge1t2gson7s&quot; // VPC ID of the mount target
+         *   &quot;fileSystemId&quot;: &quot;3b6XXX89c9&quot;, // The ID of the file system.
+         *   &quot;fileSystemStorageType&quot;: &quot;Performance&quot;, // The storage specification of the file system.
+         *   &quot;vpcId&quot;: &quot;vpc-uf66oxxxrqge1t2gson7s&quot; // The VPC ID of the mount target.
          * }
          * </code></pre>
          * </details>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;fileSystemId&quot;:&quot;3b6XXX89c9&quot;,&quot;fileSystemStorageType&quot;:&quot;Performance&quot;,&quot;vpcId&quot;:&quot;vpc-uf66oxxxrqge1t2gson7s&quot;}</p>
          */
         @NameInMap("ImportInfo")
         public java.util.Map<String, String> importInfo;
 
         /**
-         * <p>The mount path. The value must start with /mnt/. Default value: /mnt/data.</p>
+         * <p>The mount path. It must start with /mnt/. Default value: /mnt/data.</p>
          * 
          * <strong>example:</strong>
          * <p>/mnt/data</p>

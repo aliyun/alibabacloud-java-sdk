@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DataQualityEvaluationTaskInstance extends TeaModel {
     /**
-     * <p>The time at which the instance was generated.</p>
+     * <p>The creation time of the task instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1710239005403</p>
@@ -14,7 +14,7 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>The time at which the instance finished running.</p>
+     * <p>The end time of the task instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1710239005403</p>
@@ -23,7 +23,7 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
     public Long finishTime;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The task instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10001</p>
@@ -32,7 +32,7 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
     public Long id;
 
     /**
-     * <p>The status of the instance.</p>
+     * <p>The current running status.</p>
      * 
      * <strong>example:</strong>
      * <p>Passed</p>
@@ -41,7 +41,7 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
     public String status;
 
     /**
-     * <p>The snapshot of the configurations for the data quality monitoring task when the task starts.</p>
+     * <p>The snapshot of the data quality check task at the start of the check.</p>
      */
     @NameInMap("Task")
     public DataQualityEvaluationTaskInstanceTask task;
@@ -93,7 +93,7 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
 
     public static class DataQualityEvaluationTaskInstanceTaskHooks extends TeaModel {
         /**
-         * <p>The trigger configuration of the callback event.</p>
+         * <p>The trigger condition of the hook.</p>
          * 
          * <strong>example:</strong>
          * <p>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</p>
@@ -102,7 +102,10 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
         public String condition;
 
         /**
-         * <p>The subsequent action type. BlockTaskInstance: blocks execution of a DataWorks task instance.</p>
+         * <p>The type of the subsequent action. Valid values:</p>
+         * <ul>
+         * <li>BlockTaskInstance: Blocks the execution of the DataWorks task instance.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>BlockTaskInstance</p>
@@ -135,10 +138,10 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
 
     public static class DataQualityEvaluationTaskInstanceTaskNotificationsNotificationsNotificationChannels extends TeaModel {
         /**
-         * <p>The alert notification methods.</p>
+         * <p>The notification channel.</p>
          * 
          * <strong>example:</strong>
-         * <p>Mail</p>
+         * <p>[&quot;Mail&quot;]</p>
          */
         @NameInMap("Channels")
         public java.util.List<String> channels;
@@ -160,7 +163,7 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
 
     public static class DataQualityEvaluationTaskInstanceTaskNotificationsNotificationsNotificationReceivers extends TeaModel {
         /**
-         * <p>The extended information in the JSON format. For example, the DingTalk chatbot can remind all members in a DingTalk group by using the at sign (@).</p>
+         * <p>The extension information in JSON format. For example, DingTalk chatbots support mentioning all users.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;atAll&quot;:&quot;true&quot;}</p>
@@ -169,7 +172,7 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
         public String extension;
 
         /**
-         * <p>The alert recipient configuration.</p>
+         * <p>The notification recipient type.</p>
          * 
          * <strong>example:</strong>
          * <p>AliUid</p>
@@ -178,7 +181,7 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
         public String receiverType;
 
         /**
-         * <p>The alert recipients.</p>
+         * <p>The notification recipient values.</p>
          */
         @NameInMap("ReceiverValues")
         public java.util.List<String> receiverValues;
@@ -216,13 +219,13 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
 
     public static class DataQualityEvaluationTaskInstanceTaskNotificationsNotifications extends TeaModel {
         /**
-         * <p>The alert notification methods.</p>
+         * <p>The notification channel.</p>
          */
         @NameInMap("NotificationChannels")
         public java.util.List<DataQualityEvaluationTaskInstanceTaskNotificationsNotificationsNotificationChannels> notificationChannels;
 
         /**
-         * <p>The alert recipient configurations.</p>
+         * <p>The notification recipient configuration.</p>
          */
         @NameInMap("NotificationReceivers")
         public java.util.List<DataQualityEvaluationTaskInstanceTaskNotificationsNotificationsNotificationReceivers> notificationReceivers;
@@ -252,7 +255,7 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
 
     public static class DataQualityEvaluationTaskInstanceTaskNotifications extends TeaModel {
         /**
-         * <p>The trigger condition of the alert notification.</p>
+         * <p>The alert trigger condition.</p>
          * 
          * <strong>example:</strong>
          * <p>${blockType} == &quot;Strong&quot;</p>
@@ -261,7 +264,7 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
         public String condition;
 
         /**
-         * <p>The configurations for the alert notification.</p>
+         * <p>The specific message notification settings.</p>
          */
         @NameInMap("Notifications")
         public java.util.List<DataQualityEvaluationTaskInstanceTaskNotificationsNotifications> notifications;
@@ -291,7 +294,7 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
 
     public static class DataQualityEvaluationTaskInstanceTaskTarget extends TeaModel {
         /**
-         * <p>The type of the database to which the table belongs. Valid values:</p>
+         * <p>The database type to which the table belongs, applicable when the dataset is of the table type. Valid values:</p>
          * <ul>
          * <li>maxcompute</li>
          * <li>emr</li>
@@ -309,7 +312,7 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
         public String databaseType;
 
         /**
-         * <p>The configuration of the partitioned table.</p>
+         * <p>The partition settings of the partitioned table.</p>
          * 
          * <strong>example:</strong>
          * <p>ds=$[yyyymmdd-1]</p>
@@ -318,7 +321,7 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
         public String partitionSpec;
 
         /**
-         * <p>The ID of the table in Data Map.</p>
+         * <p>The unique ID of the table in DataWorks Data Map.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.unit_test.tb_unit_test</p>
@@ -327,7 +330,7 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
         public String tableGuid;
 
         /**
-         * <p>The type of the monitored object. Valid values:</p>
+         * <p>The monitored object type.</p>
          * <ul>
          * <li>Table</li>
          * </ul>
@@ -379,15 +382,15 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
 
     public static class DataQualityEvaluationTaskInstanceTaskTrigger extends TeaModel {
         /**
-         * <p>Specifies the scheduled nodes whose instances can trigger the quality evaluation task after running successfully. This setting takes effect when type is ByScheduledTaskInstance.</p>
+         * <p>The IDs of the scheduled nodes whose successful instance execution triggers the check. This parameter takes effect only when Type is set to ByScheduledTaskInstance.</p>
          */
         @NameInMap("TaskIds")
         public java.util.List<Long> taskIds;
 
         /**
-         * <p>The trigger condition of the task. Valid values:</p>
+         * <p>The type of event that triggers the execution of the quality check task. Valid values:</p>
          * <ul>
-         * <li>ByScheduledTaskInstance: The task is triggered when the instance of an auto triggered node is successfully run.</li>
+         * <li>ByScheduledTaskInstance: A scheduled instance completes successfully.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -421,7 +424,7 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
 
     public static class DataQualityEvaluationTaskInstanceTask extends TeaModel {
         /**
-         * <p>The ID of the data source that is used for task running.</p>
+         * <p>The ID of the data source used to execute the data quality check task.</p>
          * 
          * <strong>example:</strong>
          * <p>201</p>
@@ -430,13 +433,13 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
         public Long dataSourceId;
 
         /**
-         * <p>The callback settings during the lifecycle of the data quality evaluation task instance. Currently, only one hook that blocks a scheduled task is supported.</p>
+         * <p>The callback settings for the lifecycle of the data quality check task instance. Currently, only one hook that blocks the scheduled task is supported.</p>
          */
         @NameInMap("Hooks")
         public java.util.List<DataQualityEvaluationTaskInstanceTaskHooks> hooks;
 
         /**
-         * <p>The ID of the data quality monitoring task.</p>
+         * <p>The ID of the data quality check task.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>
@@ -445,22 +448,22 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the data quality monitoring task. The name can be up to 255 characters in length and can contain digits, English letters, Chinese characters, and half-width or full-width punctuation marks.</p>
+         * <p>The name of the data quality check task. The name can contain digits, letters, Chinese characters, and half-width or full-width punctuation marks, and can be up to 255 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>Data quality evaluation task</p>
+         * <p>Quality check task</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The subscription configurations for alert notifications.</p>
+         * <p>The alert subscription configuration of the data quality check task.</p>
          */
         @NameInMap("Notifications")
         public java.util.List<DataQualityEvaluationTaskInstanceTaskNotifications> notifications;
 
         /**
-         * <p>The DataWorks workspace ID.</p>
+         * <p>The ID of the DataWorks workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>2626</p>
@@ -469,7 +472,7 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The settings used when accessing the data source. Currently, only the EMR YARN queue and the SQL engine used to collect EMR tables can be specified. Supported SQL engines: SPARK_SQL, KYUUBI, PRESTO_SQL, and HIVE_SQL.</p>
+         * <p>The settings used when the data source is accessed. Currently, you can only specify the YARN queue for EMR and set the SQL engine to SPARK_SQL, KYUUBI, PRESTO_SQL, or HIVE_SQL when collecting EMR tables.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;queue&quot;: &quot;default&quot;, &quot;sqlEngine&quot;: &quot;SPARK_SQL&quot; }</p>
@@ -478,13 +481,13 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
         public String runtimeConf;
 
         /**
-         * <p>The monitored object of the data quality monitoring task.</p>
+         * <p>The monitored object of the data quality check task.</p>
          */
         @NameInMap("Target")
         public DataQualityEvaluationTaskInstanceTaskTarget target;
 
         /**
-         * <p>The DataWorks tenant ID.</p>
+         * <p>The ID of the DataWorks tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>195820716552192</p>
@@ -493,7 +496,7 @@ public class DataQualityEvaluationTaskInstance extends TeaModel {
         public Long tenantId;
 
         /**
-         * <p>The trigger configuration of the data quality monitoring task.</p>
+         * <p>The trigger configuration of the data quality check task.</p>
          */
         @NameInMap("Trigger")
         public DataQualityEvaluationTaskInstanceTaskTrigger trigger;

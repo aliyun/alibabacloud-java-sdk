@@ -61,7 +61,7 @@ public class ListSkillsResponseBody extends TeaModel {
 
         /**
          * <p>The creation time.</p>
-         * <p>The format is a 13-digit number, such as <code>1780555634000</code>.</p>
+         * <p>The value is a 13-digit number, such as <code>1780555634000</code>.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class ListSkillsResponseBody extends TeaModel {
 
     public static class ListSkillsResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The maximum number of entries returned in this request.</p>
+         * <p>The maximum number of entries returned in the current response.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -163,7 +163,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token for the next page. An empty value indicates that the last page has been reached.</p>
+         * <p>The token for the next page. An empty value indicates that the last page is reached.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -178,7 +178,7 @@ public class ListSkillsResponseBody extends TeaModel {
         public java.util.List<ListSkillsResponseBodyPagingInfoSkills> skills;
 
         /**
-         * <p>The total number of matching entries.</p>
+         * <p>The total number of entries that meet the specified conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

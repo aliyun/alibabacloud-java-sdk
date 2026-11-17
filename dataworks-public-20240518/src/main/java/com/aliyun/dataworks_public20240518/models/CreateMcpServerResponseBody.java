@@ -11,7 +11,7 @@ public class CreateMcpServerResponseBody extends TeaModel {
     public CreateMcpServerResponseBodyMcpServer mcpServer;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>valueA</p>
@@ -42,7 +42,8 @@ public class CreateMcpServerResponseBody extends TeaModel {
 
     public static class CreateMcpServerResponseBodyMcpServer extends TeaModel {
         /**
-         * <p>The creation time. The value is a 13-digit number, such as <code>1780555634000</code>.</p>
+         * <p>The creation time.</p>
+         * <p>The value is a 13-digit number, such as <code>1780555634000</code>.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>

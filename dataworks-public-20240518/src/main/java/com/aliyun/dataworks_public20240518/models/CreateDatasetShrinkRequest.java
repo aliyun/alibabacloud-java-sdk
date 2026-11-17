@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetShrinkRequest extends TeaModel {
     /**
-     * <p>The description of the dataset. The value can be up to 1024 characters in length.</p>
+     * <p>The description of the dataset. It cannot exceed 1,024 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
@@ -16,13 +16,13 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     /**
      * <p>The data type. Valid values:</p>
      * <ul>
-     * <li>COMMON: general-purpose (default).</li>
-     * <li>PIC: image.</li>
-     * <li>TEXT: text.</li>
-     * <li>TABLE: table.</li>
-     * <li>VIDEO: video.</li>
-     * <li>AUDIO: audio.</li>
-     * <li>INDEX: index.</li>
+     * <li>COMMON: General (default).</li>
+     * <li>PIC: Image.</li>
+     * <li>TEXT: Text.</li>
+     * <li>TABLE: Table.</li>
+     * <li>VIDEO: Video.</li>
+     * <li>AUDIO: Audio.</li>
+     * <li>INDEX: Index.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     public String initVersionShrink;
 
     /**
-     * <p>The name of the dataset. The value must be a non-empty string that is up to 128 characters in length.</p>
+     * <p>The name of the dataset. It must be a non-empty string and cannot exceed 128 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The origin of the dataset. Only DataWorks is supported.</p>
+     * <p>The source of the dataset. Currently, only DataWorks is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>DataWorks</p>
@@ -58,7 +58,7 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     public String origin;
 
     /**
-     * <p>The ID of the DataWorks workspace.</p>
+     * <p>The DataWorks workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,8 +71,8 @@ public class CreateDatasetShrinkRequest extends TeaModel {
      * <p>The storage type. Valid values:</p>
      * <ul>
      * <li>OSS: Object Storage Service.</li>
-     * <li>NAS: general-purpose NAS file storage.</li>
-     * <li>EXTREMENAS: extreme NAS file storage.</li>
+     * <li>NAS: General-purpose NAS file storage.</li>
+     * <li>EXTREMENAS: Extreme NAS file storage.</li>
      * <li>DLF_LANCE: Data Lake Formation.</li>
      * </ul>
      * <p>This parameter is required.</p>

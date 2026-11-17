@@ -14,7 +14,7 @@ public class CreateCrawlerResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
+     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>9252F32F-D855-549E-8898-61CF5A733050</p>
@@ -23,7 +23,7 @@ public class CreateCrawlerResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

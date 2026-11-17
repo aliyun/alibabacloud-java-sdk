@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListTasksShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the task.</p>
+     * <p>The list of task IDs. You can query multiple tasks at a time by specifying task IDs.</p>
      */
     @NameInMap("Ids")
     public String idsShrink;
 
     /**
-     * <p>The name of the task. Fuzzy match is supported.</p>
+     * <p>The name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>SQL node</p>
@@ -29,7 +29,7 @@ public class ListTasksShrinkRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class ListTasksShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 1000.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,14 +47,7 @@ public class ListTasksShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The workspace environment.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>Prod</p>
-     * </li>
-     * <li><p>Dev</p>
-     * </li>
-     * </ul>
+     * <p>The project environment.</p>
      * 
      * <strong>example:</strong>
      * <p>Prod</p>
@@ -63,7 +56,7 @@ public class ListTasksShrinkRequest extends TeaModel {
     public String projectEnv;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +66,7 @@ public class ListTasksShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The information about the resource group. Set this parameter to the ID of a resource group for scheduling.</p>
+     * <p>The resource group information. Specify the identifier of the scheduling resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
@@ -82,16 +75,13 @@ public class ListTasksShrinkRequest extends TeaModel {
     public String runtimeResource;
 
     /**
-     * <p>The field that is used to sort tasks. This parameter is configured in the format of &quot;Sorting field Sorting order&quot;. You can set the sorting order to Desc or Asc. If you do not specify the sorting order, Asc is used by default. Valid values:</p>
+     * <p>The sort field. You can sort by fields such as modification time and creation time. The format is &quot;Sort field + Sort order (Desc/Asc)&quot;. Asc can be omitted. Valid values for the sort field:</p>
      * <ul>
-     * <li><p><code>ModifyTime (Desc/Asc)</code></p>
-     * </li>
-     * <li><p><code>CreateTime (Desc/Asc)</code></p>
-     * </li>
-     * <li><p><code>Id (Desc/Asc)</code></p>
-     * <p>Default value: <code>Id Desc</code>.</p>
-     * </li>
+     * <li><code>ModifyTime (Desc/Asc)</code></li>
+     * <li><code>CreateTime (Desc/Asc)</code></li>
+     * <li><code>Id (Desc/Asc)</code></li>
      * </ul>
+     * <p>Default value: <code>Id Desc</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Id Desc</p>
@@ -100,48 +90,28 @@ public class ListTasksShrinkRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The type of the task. Valid values:</p>
+     * <p>The task type. Examples:</p>
      * <ul>
-     * <li><p>ODPS_SQL</p>
-     * </li>
-     * <li><p>SPARK</p>
-     * </li>
-     * <li><p>PY_ODPS</p>
-     * </li>
-     * <li><p>PY_ODPS3</p>
-     * </li>
-     * <li><p>ODPS_SCRIPT</p>
-     * </li>
-     * <li><p>ODPS_MR</p>
-     * </li>
-     * <li><p>COMPONENT_SQL</p>
-     * </li>
-     * <li><p>EMR_HIVE</p>
-     * </li>
-     * <li><p>EMR_MR</p>
-     * </li>
-     * <li><p>EMR_SPARK_SQL</p>
-     * </li>
-     * <li><p>EMR_SPARK</p>
-     * </li>
-     * <li><p>EMR_SHELL</p>
-     * </li>
-     * <li><p>EMR_PRESTO</p>
-     * </li>
-     * <li><p>EMR_IMPALA</p>
-     * </li>
-     * <li><p>SPARK_STREAMING</p>
-     * </li>
-     * <li><p>EMR_KYUUBI</p>
-     * </li>
-     * <li><p>EMR_TRINO</p>
-     * </li>
-     * <li><p>HOLOGRES_SQL</p>
-     * </li>
-     * <li><p>HOLOGRES_SYNC_DDL</p>
-     * </li>
-     * <li><p>HOLOGRES_SYNC_DATA</p>
-     * </li>
+     * <li>ODPS_SQL</li>
+     * <li>SPARK</li>
+     * <li>PY_ODPS</li>
+     * <li>PY_ODPS3</li>
+     * <li>ODPS_SCRIPT</li>
+     * <li>ODPS_MR</li>
+     * <li>COMPONENT_SQL</li>
+     * <li>EMR_HIVE</li>
+     * <li>EMR_MR</li>
+     * <li>EMR_SPARK_SQL</li>
+     * <li>EMR_SPARK</li>
+     * <li>EMR_SHELL</li>
+     * <li>EMR_PRESTO</li>
+     * <li>EMR_IMPALA</li>
+     * <li>SPARK_STREAMING</li>
+     * <li>EMR_KYUUBI</li>
+     * <li>EMR_TRINO</li>
+     * <li>HOLOGRES_SQL</li>
+     * <li>HOLOGRES_SYNC_DDL</li>
+     * <li>HOLOGRES_SYNC_DATA</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -151,16 +121,7 @@ public class ListTasksShrinkRequest extends TeaModel {
     public String taskType;
 
     /**
-     * <p>The run mode when triggered. Valid only if TriggerType is Scheduler.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>Pause</p>
-     * </li>
-     * <li><p>Skip</p>
-     * </li>
-     * <li><p>Normal</p>
-     * </li>
-     * </ul>
+     * <p>The running mode upon triggering. This parameter takes effect only when TriggerType is set to Scheduler.</p>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>
@@ -170,13 +131,6 @@ public class ListTasksShrinkRequest extends TeaModel {
 
     /**
      * <p>The trigger type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>Scheduler: Triggered by schedule.</p>
-     * </li>
-     * <li><p>Manual: Triggered manually.</p>
-     * </li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Scheduler</p>

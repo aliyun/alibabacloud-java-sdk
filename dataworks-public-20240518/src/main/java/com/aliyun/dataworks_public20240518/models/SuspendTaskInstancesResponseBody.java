@@ -14,7 +14,10 @@ public class SuspendTaskInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result information of the batch operation. The structure is a map, where the key is the task instance ID and the value is the result information.</p>
+     * <p>The result information of the batch operation. The structure is a map where the key is the task instance ID and the value is the result information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;10001&quot;: {&quot;Success&quot;: false, &quot;Message&quot;: &quot;The instance does not exist.&quot;}}</p>
      */
     @NameInMap("SuccessInfo")
     public java.util.Map<String, SuccessInfoValue> successInfo;

@@ -45,7 +45,7 @@ public class UpdateAgentResponseBody extends TeaModel {
          * <p>The suite description of the bound version.</p>
          * 
          * <strong>example:</strong>
-         * <p>Collection of data analytics expert capabilities</p>
+         * <p>Data analytics expert capability collection</p>
          */
         @NameInMap("Description")
         public String description;
@@ -195,7 +195,7 @@ public class UpdateAgentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the official skill.</p>
+         * <p>The official skill ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dataworks-semantic</p>
@@ -279,7 +279,7 @@ public class UpdateAgentResponseBody extends TeaModel {
 
     public static class UpdateAgentResponseBodyAgent extends TeaModel {
         /**
-         * <p>The version of the updated agent definition.</p>
+         * <p>The updated agent definition version.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -294,7 +294,7 @@ public class UpdateAgentResponseBody extends TeaModel {
         public java.util.List<UpdateAgentResponseBodyAgentExpertSuites> expertSuites;
 
         /**
-         * <p>The creation time of the agent. It is a UNIX timestamp in milliseconds.</p>
+         * <p>The time when the agent was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1780555634000</p>
@@ -303,7 +303,7 @@ public class UpdateAgentResponseBody extends TeaModel {
         public Long gmtCreateTime;
 
         /**
-         * <p>The last modified time of the agent. It is a UNIX timestamp in milliseconds.</p>
+         * <p>The time when the agent was last modified. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1780555634000</p>

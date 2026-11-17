@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RerunTaskInstancesShrinkRequest extends TeaModel {
     /**
-     * <p>The remarks.</p>
+     * <p>The comment.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a comment</p>
@@ -14,13 +14,13 @@ public class RerunTaskInstancesShrinkRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The list of node instance IDs.</p>
+     * <p>The list of task instance IDs.</p>
      */
     @NameInMap("Ids")
     public String idsShrink;
 
     /**
-     * <p>Specifies whether to rerun instances with the latest configuration.</p>
+     * <p>Specifies whether to rerun the task instance with the latest configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

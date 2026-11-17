@@ -32,7 +32,7 @@ public class UpdateAgentShrinkRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The agent definition version used for concurrency control. We recommend that you explicitly specify the AgentVersion just obtained from GetAgent for each call. The update is rejected if the version does not match the current version on the server. To ensure compatibility with different deployment versions, do not rely on the server-side processing when this parameter is omitted.</p>
+     * <p>The agent definition version used for concurrency control. We recommend explicitly specifying the AgentVersion you just obtained from GetAgent for each call. The update is rejected if the version does not match the current version on the server. To ensure compatibility with different deployment versions, do not rely on the server-side processing when this parameter is omitted.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -41,7 +41,7 @@ public class UpdateAgentShrinkRequest extends TeaModel {
     public Integer expectedVersion;
 
     /**
-     * <p>The list of expert suite references. If omitted, existing references are retained. An explicit empty array clears the references. For official suites, specify only Source=OFFICIAL and SuiteId. Version, VersionSelector, or client artifact fields are not accepted. For custom suites, use SuiteId, and you can explicitly specify an existing integer Version.</p>
+     * <p>The list of expert suite references. If omitted, the existing references are retained. An explicit empty array clears the references. For official suites, specify only Source=OFFICIAL and SuiteId. Version, VersionSelector, or client artifact fields are not accepted. For custom suites, use SuiteId, and you can explicitly specify an existing integer Version.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;SuiteId&quot;:&quot;suite_example&quot;,&quot;Version&quot;:3}]</p>
@@ -50,7 +50,7 @@ public class UpdateAgentShrinkRequest extends TeaModel {
     public String expertSuitesShrink;
 
     /**
-     * <p>The extended metadata. If omitted, existing metadata is retained. If passed, business metadata is updated, and the server retains protected system metadata.</p>
+     * <p>The extended metadata. If omitted, the existing metadata is retained. If provided, the business metadata is updated, and the server retains the protected system metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -70,7 +70,7 @@ public class UpdateAgentShrinkRequest extends TeaModel {
     public String modelShrink;
 
     /**
-     * <p>The name of the agent to be updated. Use the Name returned by GetAgent. This field is used to locate the target agent and cannot be used to rename the agent.</p>
+     * <p>The name of the agent to be updated. Use the Name returned by GetAgent. This field is used to locate the target agent and is not used for renaming.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,7 +80,7 @@ public class UpdateAgentShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Specifies whether to publish the agent immediately after the update. Valid values: true: saves a new draft version first and then requests publishing. false or omitted: saves only the definition. Saving and publishing are not atomic operations. If the operation fails, call GetAgent to read the current version back before retrying, to avoid blindly repeating the update.</p>
+     * <p>Specifies whether to publish the agent immediately after the update. If this parameter is set to true, the operation saves a new draft version before requesting publication. If this parameter is set to false or omitted, it saves only the definition. Saving and publishing are not atomic operations. If the operation fails, call GetAgent to read the current version before retrying to avoid blindly repeating the update.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -107,7 +107,7 @@ public class UpdateAgentShrinkRequest extends TeaModel {
     public String systemPrompt;
 
     /**
-     * <p>The list of tool references. Omit this parameter if no modification is required. The current new backend retains existing tools even if an empty array is passed. A non-empty array replaces the references. Each item must include Kind and the corresponding configuration, and cannot include only Name. Replace the MCP service and tool names in the example with actual values available to the current identity.</p>
+     * <p>The list of tool references. Omit this parameter if no modification is required. The current new backend retains existing tools even for an empty array. A non-empty array replaces the references. Each item must include Kind and the corresponding configuration, and cannot include only Name. Replace the MCP service and tool names in the example with actual values available to the current identity.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;Kind&quot;:&quot;MCP_TOOLSET&quot;,&quot;McpServerName&quot;:&quot;mcp-a&quot;,&quot;McpItems&quot;:[&quot;only-this-tool&quot;]}]</p>
@@ -116,7 +116,7 @@ public class UpdateAgentShrinkRequest extends TeaModel {
     public String toolsShrink;
 
     /**
-     * <p>The visibility level. Valid values: <br><code>TENANT</code>: visible within the account. <br><code>PROJECT</code>: visible to specified projects. <br><code>USER</code>: visible to specified users.</p>
+     * <p>The visibility level.<br>TENANT: visible within the account.<br>PROJECT: visible to specified projects.<br>USER: visible to specified users.</p>
      * 
      * <strong>example:</strong>
      * <p>TENANT</p>
@@ -125,7 +125,7 @@ public class UpdateAgentShrinkRequest extends TeaModel {
     public String visibility;
 
     /**
-     * <p>The visibility scope. The corresponding field is used based on the Visibility parameter.</p>
+     * <p>The visibility scope. The corresponding field is used based on the Visibility value.</p>
      */
     @NameInMap("VisibilityScope")
     public String visibilityScopeShrink;

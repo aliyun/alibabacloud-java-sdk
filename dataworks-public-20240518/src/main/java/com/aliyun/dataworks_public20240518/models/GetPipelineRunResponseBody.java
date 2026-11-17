@@ -61,6 +61,9 @@ public class GetPipelineRunResponseBody extends TeaModel {
 
         /**
          * <p>The detailed information about the stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;checkerList&quot;: [{&quot;code&quot;: &quot;BuildPackageChecker&quot;, &quot;name&quot;: &quot;Build_Package_Checker&quot;}, {&quot;code&quot;: &quot;NodeParentDependency&quot;, &quot;name&quot;: &quot;Downstream_Dependency_Checker&quot;}, {&quot;code&quot;: &quot;NodeInProcess&quot;, &quot;name&quot;: &quot;Decommissioning_Process_Checker&quot;}]}</p>
          */
         @NameInMap("Detail")
         public java.util.Map<String, ?> detail;

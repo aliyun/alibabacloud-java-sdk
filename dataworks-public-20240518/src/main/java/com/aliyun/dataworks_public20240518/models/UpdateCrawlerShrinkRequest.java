@@ -22,6 +22,9 @@ public class UpdateCrawlerShrinkRequest extends TeaModel {
 
     /**
      * <p>The extension configurations for the crawler type. Only the specified configuration items are updated. Unspecified configuration items remain unchanged. The supported keys and values are determined by the SupportedOptionKeys returned by GetCrawlerTypeCapabilities.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;CollectRecyclebin&quot;:&quot;false&quot;}</p>
      */
     @NameInMap("Options")
     public String optionsShrink;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateProcessDefinitionResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the API request.</p>
      * 
      * <strong>example:</strong>
      * <p>0bc5df3a17****903790e8e8a</p>

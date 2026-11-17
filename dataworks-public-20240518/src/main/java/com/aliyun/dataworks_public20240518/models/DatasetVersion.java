@@ -14,7 +14,7 @@ public class DatasetVersion extends TeaModel {
     public String comment;
 
     /**
-     * <p>Creation time, represented by a timestamp in milliseconds</p>
+     * <p>The creation timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1736756055000</p>
@@ -32,7 +32,7 @@ public class DatasetVersion extends TeaModel {
     public String creatorId;
 
     /**
-     * <p>The corresponding dataset ID.</p>
+     * <p>The associated dataset ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dataworks-datasetVersion:0gfxxxjx155usz3hrv</p>
@@ -50,31 +50,33 @@ public class DatasetVersion extends TeaModel {
     public String id;
 
     /**
-     * <p>The storage import configuration for the dataset. The required configuration varies by storage type.</p>
+     * <p>The storage import configuration of the dataset. The required configuration information varies based on the storage type.</p>
      * <details>
      * <summary>NAS</summary>
-     * For values, see the response of the File Storage NAS DescribeFileSystems API.
-     * 
+     * For valid values, refer to the response of the DescribeFileSystems API operation.
      * 
      * <pre><code class="language-JSON">{
-     *   &quot;fileSystemId&quot;: &quot;3b6XXX89c9&quot;, // The file system ID.
-     *   &quot;fileSystemStorageType&quot;: &quot;Performance&quot;, // The file system storage type.
-     *   &quot;vpcId&quot;: &quot;vpc-uf66oxxxrqge1t2gson7s&quot; // The VPC ID of the mount point.
+     *   &quot;fileSystemId&quot;: &quot;3b6XXX89c9&quot;, // File system ID
+     *   &quot;fileSystemStorageType&quot;: &quot;Performance&quot;, // Storage specification of the file system
+     *   &quot;vpcId&quot;: &quot;vpc-uf66oxxxrqge1t2gson7s&quot; // VPC ID of the mount target
      * }
      * </code></pre>
      * </details>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;fileSystemId&quot;:&quot;3b6XXX89c9&quot;,&quot;fileSystemStorageType&quot;:&quot;Performance&quot;,&quot;vpcId&quot;:&quot;vpc-uf66oxxxrqge1t2gson7s&quot;}</p>
      */
     @NameInMap("ImportInfo")
     public java.util.Map<String, String> importInfo;
 
     /**
-     * <p>The PAI dataset label.</p>
+     * <p>The PAI dataset labels.</p>
      */
     @NameInMap("Labels")
     public java.util.List<DatasetLabel> labels;
 
     /**
-     * <p>Modification time, represented by a timestamp in milliseconds</p>
+     * <p>The modification timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1736756055000</p>
@@ -83,7 +85,7 @@ public class DatasetVersion extends TeaModel {
     public Long modifyTime;
 
     /**
-     * <p>The mount path. Defaults to /mnt/data.</p>
+     * <p>The mount path. Default value: /mnt/data.</p>
      * 
      * <strong>example:</strong>
      * <p>/mnt/data</p>
@@ -92,7 +94,7 @@ public class DatasetVersion extends TeaModel {
     public String mountPath;
 
     /**
-     * <p>Storage type (read-only); consistent with the corresponding property of the parent dataset.</p>
+     * <p>The storage type. This property is read-only and remains consistent with the corresponding property of the associated dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>OSS</p>
@@ -101,7 +103,7 @@ public class DatasetVersion extends TeaModel {
     public String storageType;
 
     /**
-     * <p>URL</p>
+     * <p>The URL.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://test-oss-bucket/test_dir/</p>

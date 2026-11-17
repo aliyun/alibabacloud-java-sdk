@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSemanticJobRequest extends TeaModel {
     /**
-     * <p>The semantic job name, which also serves as the job identifier for subsequent calls to RunSemanticJob, DeleteSemanticJob, ListSemanticJobRuns, and DownloadSemanticResults. The name must be unique within the current tenant.</p>
+     * <p>The name of the semantic task, which is also the task identifier for subsequent calls to RunSemanticJob, DeleteSemanticJob, ListSemanticJobRuns, and DownloadSemanticResults. The name must be unique within the current tenant.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateSemanticJobRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The DataWorks workspace ID. This parameter is required for all Source.type values except singleTableFile. The Data.ProjectId in the creation result can be reused for GetSemanticJobDetail, GetSemanticJobLog, and KillSemanticJob.</p>
+     * <p>The ID of the DataWorks workspace. This parameter is required unless <code>Source.type</code> is set to <code>singleTableFile</code>. The <code>Data.ProjectId</code> in the creation result can be reused for GetSemanticJobDetail, GetSemanticJobLog, and KillSemanticJob.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -24,19 +24,19 @@ public class CreateSemanticJobRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The list of uploaded reference file IDs. When Source.type=singleTableFile, use either this parameter or ReferenceFileUris, and the selected array must contain exactly one non-empty element. The ID must come from Data.FileId returned by UploadSemanticFile, and only CSV or XLSX files are supported. For other Source.type values, you can pass multiple IDs. The service validates each ID during creation, and you can also pass ReferenceFileUris at the same time.</p>
+     * <p>The list of IDs of uploaded reference files. If <code>Source.type</code> is set to <code>singleTableFile</code>, this parameter and <code>ReferenceFileUris</code> are mutually exclusive, and the selected array must contain exactly one non-empty element. The ID must be obtained from <code>Data.FileId</code> returned by UploadSemanticFile, and the file only supports CSV or XLSX formats. For other <code>Source.type</code> values, you can pass multiple IDs. The service validates each ID during creation, and you can pass <code>ReferenceFileUris</code> at the same time.</p>
      */
     @NameInMap("ReferenceFileIds")
     public java.util.List<String> referenceFileIds;
 
     /**
-     * <p>The list of reference file URIs accessible by the caller. When Source.type=singleTableFile, use either this parameter or ReferenceFileIds, and the selected array must contain exactly one non-empty URI. For other Source.type values, you can pass multiple URIs and also pass ReferenceFileIds at the same time. When using the upload path from UploadSemanticFile, pass Data.FileId after the PUT upload is complete instead of the short-lived UploadUrl.</p>
+     * <p>The list of URIs of reference files accessible to the caller. If <code>Source.type</code> is set to <code>singleTableFile</code>, this parameter and <code>ReferenceFileIds</code> are mutually exclusive, and the selected array must contain exactly one non-empty URI. For other <code>Source.type</code> values, you can pass multiple URIs, and you can pass <code>ReferenceFileIds</code> at the same time. When using the upload path of UploadSemanticFile, pass <code>Data.FileId</code> after the PUT upload is completed, instead of the short-lived <code>UploadUrl</code>.</p>
      */
     @NameInMap("ReferenceFileUris")
     public java.util.List<String> referenceFileUris;
 
     /**
-     * <p>The ID of the resource group used to run the semantic job. RunSemanticJob does not accept this parameter and instead uses the resource group saved during creation.</p>
+     * <p>The identifier of the resource group used to run the semantic task. You do not need to pass this parameter when calling RunSemanticJob. The resource group saved during creation is used.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class CreateSemanticJobRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The input datasource config for the semantic node. The type field is required. This parameter specifies the data to be analyzed and is not the semantic_model YAML output. The domain field is a character string that serves as the identity of the business domain and focus of the node, such as sales. Supported types: 1) maxcompute: Use pinnedScopeInfo to specify the scope. Array elements contain type and name. When type=project, name is the MaxCompute project name. When type=schema, project is the project name and name is the schema name. For table-level scope, project is the project name, schema is optional, and name is the table name. 2) holo or starrocks: In addition to type, you must specify dataSourceName and dataSourceEnv, and pass ProjectId at the top level of the request. You can use pinnedScopeInfo to limit the scope to schemas or tables. The name element is the schema or table name, and the schema element for table-level scope is the database or schema. 3) singleTableFile: ProjectId is not required. For file reference rules, see ReferenceFileIds and ReferenceFileUris. After the node runs successfully, use DownloadSemanticResults to retrieve the semantic_model YAML and other result files. The example shows a MaxCompute project-level scope.</p>
+     * <p>The input data source configuration for the semantic task. The type field is required. The configuration specifies the data to analyze. This configuration is distinct from the semantic_model YAML generated by the task. The domain field is a string that identifies the business domain and focus area for the task, such as sales. Supported data sources include the following. 1) maxcompute: Specify the scope by using pinnedScopeInfo. Array elements include type and name. If type is project, name is the MaxCompute project name. If type is schema, project is the project name and name is the schema name. For a table-level scope, project is the project name, schema is optional, and name is the table name. 2) holo or starrocks: In addition to type, you must specify dataSourceName and dataSourceEnv, and include ProjectId at the top level of the request. You can use pinnedScopeInfo to restrict the scope to a schema or table. The name element represents the schema or table name. For a table-level scope, schema represents the database or schema to which the table belongs. 3) singleTableFile: ProjectId is not required. For file reference rules, refer to ReferenceFileIds and ReferenceFileUris. After the task runs successfully, call DownloadSemanticResults to retrieve result files such as the semantic_model YAML. The example demonstrates a MaxCompute project scope.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

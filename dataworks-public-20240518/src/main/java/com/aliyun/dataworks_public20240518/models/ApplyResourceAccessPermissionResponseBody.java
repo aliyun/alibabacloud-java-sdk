@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ApplyResourceAccessPermissionResponseBody extends TeaModel {
     /**
-     * <p>The list of request order IDs.</p>
+     * <p>The list of application IDs.</p>
      */
     @NameInMap("Data")
     public java.util.List<String> data;
 
     /**
-     * <p>The request ID. Used for log identification and troubleshooting.</p>
+     * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>0bc5df3a17***903790e8e8a</p>

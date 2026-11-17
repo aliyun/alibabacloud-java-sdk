@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskInstancesResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request, which is used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
@@ -14,7 +14,10 @@ public class UpdateTaskInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the batch operation, which is in the MAP structure. The instance ID serves as a key, and the result serves as a value.</p>
+     * <p>The result information of the batch operation. The structure is a map where the key is the task instance ID and the value is the result information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;10001&quot;: {&quot;Success&quot;: false, &quot;Message&quot;: &quot;The instance does not exist.&quot;}}</p>
      */
     @NameInMap("SuccessInfo")
     public java.util.Map<String, SuccessInfoValue> successInfo;

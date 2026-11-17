@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskAsyncShrinkRequest extends TeaModel {
     /**
-     * <p>The client unique code of the node, used to uniquely identify a node. This code is used for asynchronous processing and idempotence. If you do not specify this parameter when creating a node, the system automatically generates a value and binds it to the resource ID. If you specify this parameter when updating or deleting a resource, the value must match the client unique code used when the resource was created.</p>
+     * <p>The client unique code of the node, which is used to uniquely identify a node. This parameter is used to implement asynchronous processing and idempotence. If you do not specify this parameter when you create a node, the system automatically generates one. This code is uniquely bound to the resource ID. If you specify this parameter when you update or delete a resource, it must be the same as the client unique code used when the resource was created.</p>
      * 
      * <strong>example:</strong>
      * <p>Workflow_0bc5213917368545132902xxxxxxxx</p>
@@ -37,8 +37,8 @@ public class UpdateTaskAsyncShrinkRequest extends TeaModel {
     /**
      * <p>The project environment. Valid values:</p>
      * <ul>
-     * <li>Prod: production</li>
-     * <li>Dev: development</li>
+     * <li>Prod: production.</li>
+     * <li>Dev: development.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,8 +66,8 @@ public class UpdateTaskAsyncShrinkRequest extends TeaModel {
     /**
      * <p>The instance generation mode. Valid values:</p>
      * <ul>
-     * <li>T+1: generates instances the next day.</li>
-     * <li>Immediately: generates instances immediately. Note: only periodic instances whose scheduled time is more than 10 minutes after the node publish time are generated normally. During the full-to-instance conversion period (22:00–24:00), real-time instance conversion is not supported. You can submit and publish nodes, but new nodes are not automatically converted to instances.</li>
+     * <li>T+1: generates instances on the next day.</li>
+     * <li>Immediately: generates instances immediately. Note: Periodic instances are generated normally only if the scheduled time of the node is at least 10 minutes after the node is published. Real-time instance generation is not supported during the full instance generation period (22:00 to 24:00). You can submit and publish nodes, but new nodes are not automatically converted into instances.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class UpdateTaskAsyncShrinkRequest extends TeaModel {
     public String outputsShrink;
 
     /**
-     * <p>The account ID of the node owner. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and hover over the profile picture in the upper-right corner of the top navigation bar to view the account ID. If this parameter is left empty, the Alibaba Cloud account ID of the caller is used by default.</p>
+     * <p>The Alibaba Cloud account ID of the node owner. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and move the mouse over the profile picture in the upper-right corner of the top menu bar to view the account ID. If this parameter is left empty, the Alibaba Cloud account ID of the invoker is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000000001</p>
@@ -110,11 +110,11 @@ public class UpdateTaskAsyncShrinkRequest extends TeaModel {
     public Integer rerunInterval;
 
     /**
-     * <p>The configuration that specifies whether the node can be rerun. Valid values:</p>
+     * <p>Specifies whether the node can be rerun. Valid values:</p>
      * <ul>
-     * <li>AllDenied: the node cannot be rerun regardless of whether it succeeds or fails.</li>
-     * <li>FailureAllowed: the node can be rerun only if it fails.</li>
-     * <li>AllAllowed: the node can be rerun regardless of whether it succeeds or fails.</li>
+     * <li>AllDenied: The node cannot be rerun regardless of whether it succeeds or fails.</li>
+     * <li>FailureAllowed: The node can be rerun only if it fails.</li>
+     * <li>AllAllowed: The node can be rerun regardless of whether it succeeds or fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class UpdateTaskAsyncShrinkRequest extends TeaModel {
     public String rerunMode;
 
     /**
-     * <p>The number of retries. This parameter takes effect only when the node is configured to allow reruns.</p>
+     * <p>The number of retries. This parameter takes effect when the node is configured to be rerunnable.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -139,13 +139,13 @@ public class UpdateTaskAsyncShrinkRequest extends TeaModel {
     public String runtimeResourceShrink;
 
     /**
-     * <p>The runtime script information.</p>
+     * <p>The information about the script to be run.</p>
      */
     @NameInMap("Script")
     public String scriptShrink;
 
     /**
-     * <p>The list of data asset tags to attach.</p>
+     * <p>The list of data asset tags to be bound.</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;
@@ -160,7 +160,7 @@ public class UpdateTaskAsyncShrinkRequest extends TeaModel {
     public Integer timeout;
 
     /**
-     * <p>The trigger method of the node.</p>
+     * <p>The trigger mode of the node.</p>
      */
     @NameInMap("Trigger")
     public String triggerShrink;

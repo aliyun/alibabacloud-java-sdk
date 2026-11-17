@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskAsyncRequest extends TeaModel {
     /**
-     * <p>The client unique code of the node, used to uniquely identify a node. This code is used for asynchronous processing and idempotence. If you do not specify this parameter when creating a node, the system automatically generates a value and binds it to the resource ID. If you specify this parameter when updating or deleting a resource, the value must match the client unique code used when the resource was created.</p>
+     * <p>The client unique code of the node, which is used to uniquely identify a node. This parameter is used to implement asynchronous processing and idempotence. If you do not specify this parameter when you create a node, the system automatically generates one. This code is uniquely bound to the resource ID. If you specify this parameter when you update or delete a resource, it must be the same as the client unique code used when the resource was created.</p>
      * 
      * <strong>example:</strong>
      * <p>Workflow_0bc5213917368545132902xxxxxxxx</p>
@@ -37,8 +37,8 @@ public class UpdateTaskAsyncRequest extends TeaModel {
     /**
      * <p>The project environment. Valid values:</p>
      * <ul>
-     * <li>Prod: production</li>
-     * <li>Dev: development</li>
+     * <li>Prod: production.</li>
+     * <li>Dev: development.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,8 +66,8 @@ public class UpdateTaskAsyncRequest extends TeaModel {
     /**
      * <p>The instance generation mode. Valid values:</p>
      * <ul>
-     * <li>T+1: generates instances the next day.</li>
-     * <li>Immediately: generates instances immediately. Note: only periodic instances whose scheduled time is more than 10 minutes after the node publish time are generated normally. During the full-to-instance conversion period (22:00–24:00), real-time instance conversion is not supported. You can submit and publish nodes, but new nodes are not automatically converted to instances.</li>
+     * <li>T+1: generates instances on the next day.</li>
+     * <li>Immediately: generates instances immediately. Note: Periodic instances are generated normally only if the scheduled time of the node is at least 10 minutes after the node is published. Real-time instance generation is not supported during the full instance generation period (22:00 to 24:00). You can submit and publish nodes, but new nodes are not automatically converted into instances.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class UpdateTaskAsyncRequest extends TeaModel {
     public UpdateTaskAsyncRequestOutputs outputs;
 
     /**
-     * <p>The account ID of the node owner. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and hover over the profile picture in the upper-right corner of the top navigation bar to view the account ID. If this parameter is left empty, the Alibaba Cloud account ID of the caller is used by default.</p>
+     * <p>The Alibaba Cloud account ID of the node owner. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and move the mouse over the profile picture in the upper-right corner of the top menu bar to view the account ID. If this parameter is left empty, the Alibaba Cloud account ID of the invoker is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000000001</p>
@@ -110,11 +110,11 @@ public class UpdateTaskAsyncRequest extends TeaModel {
     public Integer rerunInterval;
 
     /**
-     * <p>The configuration that specifies whether the node can be rerun. Valid values:</p>
+     * <p>Specifies whether the node can be rerun. Valid values:</p>
      * <ul>
-     * <li>AllDenied: the node cannot be rerun regardless of whether it succeeds or fails.</li>
-     * <li>FailureAllowed: the node can be rerun only if it fails.</li>
-     * <li>AllAllowed: the node can be rerun regardless of whether it succeeds or fails.</li>
+     * <li>AllDenied: The node cannot be rerun regardless of whether it succeeds or fails.</li>
+     * <li>FailureAllowed: The node can be rerun only if it fails.</li>
+     * <li>AllAllowed: The node can be rerun regardless of whether it succeeds or fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class UpdateTaskAsyncRequest extends TeaModel {
     public String rerunMode;
 
     /**
-     * <p>The number of retries. This parameter takes effect only when the node is configured to allow reruns.</p>
+     * <p>The number of retries. This parameter takes effect when the node is configured to be rerunnable.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -139,13 +139,13 @@ public class UpdateTaskAsyncRequest extends TeaModel {
     public UpdateTaskAsyncRequestRuntimeResource runtimeResource;
 
     /**
-     * <p>The runtime script information.</p>
+     * <p>The information about the script to be run.</p>
      */
     @NameInMap("Script")
     public UpdateTaskAsyncRequestScript script;
 
     /**
-     * <p>The list of data asset tags to attach.</p>
+     * <p>The list of data asset tags to be bound.</p>
      */
     @NameInMap("Tags")
     public java.util.List<UpdateTaskAsyncRequestTags> tags;
@@ -160,7 +160,7 @@ public class UpdateTaskAsyncRequest extends TeaModel {
     public Integer timeout;
 
     /**
-     * <p>The trigger method of the node.</p>
+     * <p>The trigger mode of the node.</p>
      */
     @NameInMap("Trigger")
     public UpdateTaskAsyncRequestTrigger trigger;
@@ -324,7 +324,7 @@ public class UpdateTaskAsyncRequest extends TeaModel {
 
     public static class UpdateTaskAsyncRequestDataSource extends TeaModel {
         /**
-         * <p>The data source name.</p>
+         * <p>The name of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>odps_test</p>
@@ -365,7 +365,7 @@ public class UpdateTaskAsyncRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The output identifier of the upstream node. This field is returned for same-cycle dependencies when the input content is configured.</p>
+         * <p>The output identifier of the upstream node. This field is returned when the dependency is a same-cycle dependency and the input content is set.</p>
          * 
          * <strong>example:</strong>
          * <p>pre.odps_sql_demo_0</p>
@@ -374,7 +374,7 @@ public class UpdateTaskAsyncRequest extends TeaModel {
         public String upstreamOutput;
 
         /**
-         * <p>The ID of the upstream node. This field is returned for cross-cycle dependencies on other nodes and for same-cycle dependencies when no input content is configured. It is not returned in other cases.</p>
+         * <p>The ID of the upstream node. This field is returned when the dependency is <code>CrossCycleDependsOnOtherNode</code> or <code>Normal</code> and the input content is not set. It is not returned in other cases.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -415,7 +415,7 @@ public class UpdateTaskAsyncRequest extends TeaModel {
 
     public static class UpdateTaskAsyncRequestInputsVariables extends TeaModel {
         /**
-         * <p>The variable name.</p>
+         * <p>The name of the variable.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -424,11 +424,11 @@ public class UpdateTaskAsyncRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The variable type. Valid values:</p>
+         * <p>The type. Valid values:</p>
          * <ul>
          * <li>Constant: constant.</li>
-         * <li>PassThrough: output of a pass-through parameter node.</li>
-         * <li>System: system variable.</li>
+         * <li>PassThrough: output of a parameter node.</li>
+         * <li>System: variable.</li>
          * <li>NodeOutput: script output.</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -440,7 +440,7 @@ public class UpdateTaskAsyncRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The variable value.</p>
+         * <p>The value of the variable.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>
@@ -528,7 +528,7 @@ public class UpdateTaskAsyncRequest extends TeaModel {
 
     public static class UpdateTaskAsyncRequestOutputsVariables extends TeaModel {
         /**
-         * <p>The variable name.</p>
+         * <p>The name of the variable.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -537,11 +537,11 @@ public class UpdateTaskAsyncRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The variable type. Valid values:</p>
+         * <p>The type. Valid values:</p>
          * <ul>
          * <li>Constant: constant.</li>
-         * <li>PassThrough: output of a pass-through parameter node.</li>
-         * <li>System: system variable.</li>
+         * <li>PassThrough: output of a parameter node.</li>
+         * <li>System: variable.</li>
          * <li>NodeOutput: script output.</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -553,7 +553,7 @@ public class UpdateTaskAsyncRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The variable value.</p>
+         * <p>The value of the variable.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>
@@ -630,7 +630,7 @@ public class UpdateTaskAsyncRequest extends TeaModel {
 
     public static class UpdateTaskAsyncRequestRuntimeResource extends TeaModel {
         /**
-         * <p>The CU consumption for the node runtime configuration.</p>
+         * <p>The number of compute units (CUs) consumed by the node runtime configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -639,7 +639,7 @@ public class UpdateTaskAsyncRequest extends TeaModel {
         public String cu;
 
         /**
-         * <p>The image ID for the node runtime configuration.</p>
+         * <p>The image ID of the node runtime configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>i-xxxxxx</p>
@@ -648,7 +648,7 @@ public class UpdateTaskAsyncRequest extends TeaModel {
         public String image;
 
         /**
-         * <p>The identifier of the schedule resource group for the node runtime configuration.</p>
+         * <p>The identifier of the scheduling resource group for the node runtime configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>63900680</p>
@@ -689,7 +689,7 @@ public class UpdateTaskAsyncRequest extends TeaModel {
 
     public static class UpdateTaskAsyncRequestScript extends TeaModel {
         /**
-         * <p>The script content.</p>
+         * <p>The content of the script.</p>
          * 
          * <strong>example:</strong>
          * <p>echo &quot;helloWorld&quot;</p>
@@ -776,7 +776,7 @@ public class UpdateTaskAsyncRequest extends TeaModel {
 
     public static class UpdateTaskAsyncRequestTrigger extends TeaModel {
         /**
-         * <p>The cron expression. This parameter takes effect when Type is set to Scheduler.</p>
+         * <p>The cron expression. This parameter takes effect when the Type parameter is set to Scheduler.</p>
          * 
          * <strong>example:</strong>
          * <p>00 00 00 * * ?</p>
@@ -785,10 +785,11 @@ public class UpdateTaskAsyncRequest extends TeaModel {
         public String cron;
 
         /**
-         * <p>The scheduling cycle type. This parameter takes effect when Type is set to Scheduler and the cron expression specifies a timed scheduling at a specific hour. Default value: Daily. Valid values:</p>
+         * <p>The cycle type. This parameter takes effect when Type is set to Scheduler and the cron expression specifies scheduling at a specific hour. Valid values:</p>
          * <ul>
-         * <li>Daily: daily scheduling.</li>
-         * <li>NotDaily: hourly scheduling.</li>
+         * <li>Daily: Specifies daily scheduling.</li>
+         * <li>NotDaily: Specifies hourly scheduling.
+         * Default value: Daily.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -798,7 +799,7 @@ public class UpdateTaskAsyncRequest extends TeaModel {
         public String cycleType;
 
         /**
-         * <p>The time when the periodic trigger expires. This parameter takes effect when Type is set to Scheduler. The format is <code>yyyy-mm-dd hh:mm:ss</code>.</p>
+         * <p>The expiration time of the periodic trigger. This parameter takes effect when the type parameter is set to Scheduler. The format is <code>yyyy-mm-dd hh:mm:ss</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>9999-01-01 00:00:00</p>
@@ -807,11 +808,11 @@ public class UpdateTaskAsyncRequest extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The run mode when the trigger fires. This parameter takes effect when Type is set to Scheduler. Valid values:</p>
+         * <p>The running mode when the node is triggered. This parameter takes effect when the type parameter is set to Scheduler. Valid values:</p>
          * <ul>
          * <li>Pause: paused.</li>
          * <li>Skip: dry run.</li>
-         * <li>Normal: normal run.</li>
+         * <li>Normal: normal running.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -821,7 +822,7 @@ public class UpdateTaskAsyncRequest extends TeaModel {
         public String recurrence;
 
         /**
-         * <p>The time at which the scheduled trigger takes effect. This parameter takes effect when Type is set to Scheduler. The format is <code>yyyy-mm-dd hh:mm:ss</code>.</p>
+         * <p>The start time of the recurring trigger. This parameter takes effect when the type parameter is set to Scheduler. The format is <code>yyyy-mm-dd hh:mm:ss</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1970-01-01 00:00:00</p>
@@ -832,12 +833,12 @@ public class UpdateTaskAsyncRequest extends TeaModel {
         /**
          * <p>The trigger type. Valid values:</p>
          * <ul>
-         * <li>Scheduler: scheduled periodic trigger.</li>
-         * <li>Manual: manual trigger.</li>
+         * <li>Scheduler: triggered by a scheduling cycle.</li>
+         * <li>Manual: manually triggered.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>BySchedule</p>
+         * <p>Scheduler</p>
          */
         @NameInMap("Type")
         public String type;

@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListWorkflowsShrinkRequest extends TeaModel {
     /**
-     * <p>The project environment.</p>
+     * <p>The project environment. Valid values:</p>
+     * <ul>
+     * <li>Prod: Production.</li>
+     * <li>Dev: Development.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Prod</p>
@@ -20,7 +24,7 @@ public class ListWorkflowsShrinkRequest extends TeaModel {
     public String idsShrink;
 
     /**
-     * <p>The name. Fuzzy match is supported.</p>
+     * <p>The workflow name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Workflow1</p>
@@ -66,7 +70,7 @@ public class ListWorkflowsShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The sort field. You can sort by fields such as modification time and creation time. The format is \&quot;SortField+SortOrder(Desc/Asc)\&quot;, where Asc can be omitted. Valid values for the sort field:</p>
+     * <p>The sort field. You can sort workflows by fields such as modification time and creation time. The format is \&quot;SortField+SortOrder(Desc/Asc)\&quot;. You can omit Asc. Valid values for the sort field:</p>
      * <ul>
      * <li>ModifyTime (Desc/Asc)</li>
      * <li>CreateTime (Desc/Asc)</li>
@@ -81,7 +85,7 @@ public class ListWorkflowsShrinkRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The list of tags. If a workflow matches any of the specified tags, it is returned in the result.</p>
+     * <p>The list of tags. If you specify multiple tags, workflows that match at least one of the tags are returned.</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;

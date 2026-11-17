@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetImageTestResultResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
@@ -86,7 +86,7 @@ public class GetImageTestResultResponseBody extends TeaModel {
         public Long operateTime;
 
         /**
-         * <p>The ID of the process.</p>
+         * <p>The process ID.</p>
          * 
          * <strong>example:</strong>
          * <p>582d4896-d224-413b-b883-239eeebe0bc5</p>
@@ -95,7 +95,7 @@ public class GetImageTestResultResponseBody extends TeaModel {
         public String processId;
 
         /**
-         * <p>The publishing status of the image. Valid values:</p>
+         * <p>The image publishing status. Valid values:</p>
          * <ul>
          * <li>Untest: Not tested.</li>
          * <li>Testing: Testing.</li>
@@ -119,16 +119,16 @@ public class GetImageTestResultResponseBody extends TeaModel {
         public String publishStage;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>Serverless_res_group_****</p>
+         * <p>123456789</p>
          */
         @NameInMap("ResourceGroupId")
         public Long resourceGroupId;
 
         /**
-         * <p>The status of the test process. Valid values:</p>
+         * <p>The test process status. Valid values:</p>
          * <ul>
          * <li>running: Running.</li>
          * <li>completed: Completed.</li>

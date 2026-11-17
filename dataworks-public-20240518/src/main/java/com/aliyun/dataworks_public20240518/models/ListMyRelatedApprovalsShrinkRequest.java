@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListMyRelatedApprovalsShrinkRequest extends TeaModel {
     /**
-     * <p>Filter by requested permissions.</p>
-     * <p>Note: Different resource levels support different application permission types, all constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.isValidLeaf, accessTypeRestrictions, and authMethodAccessTypes.</p>
-     * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></p>
+     * <p>Filters by the requested permissions.</p>
+     * <p>Note: The types of permissions that can be requested vary based on the resource level and are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.isValidLeaf, accessTypeRestrictions, and authMethodAccessTypes.</p>
+     * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
      */
     @NameInMap("AccessTypes")
     public String accessTypesShrink;
 
     /**
-     * <p>Filter by resource type.</p>
-     * <p>Note: The resource types supported by the system for applications are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
-     * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></p>
+     * <p>Filters by resource type.</p>
+     * <p>Note: The resource types supported for application are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</p>
+     * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListMyRelatedApprovalsShrinkRequest extends TeaModel {
     public String defSchema;
 
     /**
-     * <p>Application time end (millisecond timestamp)</p>
+     * <p>The end time of the application. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1779724799999</p>
@@ -34,15 +34,15 @@ public class ListMyRelatedApprovalsShrinkRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>Filter by authorization principal.</p>
-     * <p>Note: The authorization principal types supported by the system are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authPrincipal.</p>
-     * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></p>
+     * <p>Filters by authorization principal. </p>
+     * <p>Note: The authorization principal types supported by the system are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authPrincipal.</p>
+     * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
      */
     @NameInMap("Grantee")
     public String granteeShrink;
 
     /**
-     * <p>Pagination cursor</p>
+     * <p>The pagination cursor.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJpZCI6MTIzfQ==</p>
@@ -51,7 +51,7 @@ public class ListMyRelatedApprovalsShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Page size (default 10, maximum 200)</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -60,16 +60,16 @@ public class ListMyRelatedApprovalsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Filter by resource with exact/generalized matching. The resource description is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</p>
-     * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></p>
+     * <p>Performs exact or generalized filtering based on resources. The resource description is constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</p>
+     * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
      */
     @NameInMap("Resource")
     public String resourceShrink;
 
     /**
-     * <p>Filter by minimum permission resource type.</p>
-     * <p>Note: The minimum permission resource type is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources[*].isValidLeaf being true.</p>
-     * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></p>
+     * <p>Filters by least privilege resource type.</p>
+     * <p>Note: The least privilege resource types are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources[*].isValidLeaf being true.</p>
+     * <p>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class ListMyRelatedApprovalsShrinkRequest extends TeaModel {
     public String resourceTypeShrink;
 
     /**
-     * <p>Application time start (millisecond timestamp)</p>
+     * <p>The start time of the application. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1771948800000</p>
@@ -88,15 +88,15 @@ public class ListMyRelatedApprovalsShrinkRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>Filter by approval status. Enum values:</p>
+     * <p>Filters by approval status. Valid values:</p>
      * <ul>
-     * <li>WaitApproval: Pending approval</li>
-     * <li>Confirmed: Pending authorization</li>
-     * <li>RejectApproval: Approval rejected</li>
-     * <li>AuthorizeSucceed: Authorization succeeded</li>
-     * <li>AuthorizeFailed: Authorization failed</li>
-     * <li>Deleted: Deleted</li>
-     * <li>Canceled: Withdrawn</li>
+     * <li>WaitApproval: Pending approval.</li>
+     * <li>Confirmed: Pending authorization.</li>
+     * <li>RejectApproval: Rejected.</li>
+     * <li>AuthorizeSucceed: Authorized.</li>
+     * <li>AuthorizeFailed: Authorization failed.</li>
+     * <li>Deleted: Deleted.</li>
+     * <li>Canceled: Withdrawn.</li>
      * </ul>
      * 
      * <strong>example:</strong>

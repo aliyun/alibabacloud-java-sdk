@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateProcessDefinitionShrinkRequest extends TeaModel {
     /**
-     * <p>A list of approval nodes. This parameter does not apply to system policies.</p>
+     * <p>The list of approval nodes. Note: System policies do not take effect.</p>
      */
     @NameInMap("ApprovalNodes")
     public String approvalNodesShrink;
 
     /**
-     * <p>An idempotent parameter. It ensures that retried requests do not result in duplicate operations.</p>
+     * <p>The idempotency token. Used to prevent duplicate operations caused by multiple calls.</p>
      * 
      * <strong>example:</strong>
      * <p>1AFAE64E-D1BE-432B-A9****</p>
@@ -20,16 +20,16 @@ public class UpdateProcessDefinitionShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the process definition.</p>
+     * <p>The description of the approval process definition.</p>
      * 
      * <strong>example:</strong>
-     * <p>MaxCompute table approval policy for the lwt_ide_simple project</p>
+     * <p>Approval policy for MaxCompute tables in the lwt_ide_simple project</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the process definition.</p>
+     * <p>The ID of the approval process definition.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class UpdateProcessDefinitionShrinkRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The name of the process definition.</p>
+     * <p>The name of the approval process definition.</p>
      * 
      * <strong>example:</strong>
      * <p>MaxCompute table approval</p>
@@ -48,13 +48,13 @@ public class UpdateProcessDefinitionShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The notification service configurations.</p>
+     * <p>The notification service declaration.</p>
      */
     @NameInMap("NotificationServices")
     public String notificationServicesShrink;
 
     /**
-     * <p>A list of rule conditions. This parameter does not apply to system policies.</p>
+     * <p>The list of conditional rules. Note: System policies do not take effect.</p>
      */
     @NameInMap("RuleConditions")
     public String ruleConditionsShrink;

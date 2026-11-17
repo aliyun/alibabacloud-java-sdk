@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCrawlerShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the data source associated with the crawler. The data source must be bound to a DataWorks workspace, and the data source type must match the Type value.</p>
+     * <p>The ID of the data source associated with the crawler. The data source must be bound to a DataWorks workspace, and the data source type must match the Type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,10 @@ public class CreateCrawlerShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The extended configuration for the crawler type. The key names, value types, required fields, default values, and valid values are determined by the SupportedOptionKeys value returned by GetCrawlerTypeCapabilities.</p>
+     * <p>The extended configuration for the crawler type. The key names, value types, required status, default values, and valid values are subject to the SupportedOptionKeys value returned by GetCrawlerTypeCapabilities.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("Options")
     public String optionsShrink;
@@ -58,7 +61,7 @@ public class CreateCrawlerShrinkRequest extends TeaModel {
     public String scopeShrink;
 
     /**
-     * <p>The crawler type. Call GetCrawlerTypeCapabilities to query the valid values supported in the current region.</p>
+     * <p>The type of the crawler. You can call GetCrawlerTypeCapabilities to query the valid values supported in the current region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class PublishImageResponseBody extends TeaModel {
     /**
-     * <p>The result of the API request.</p>
+     * <p>The API request result.</p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>{&quot;ProcessId&quot;: &quot;582d4896-d224-413b-b883-239eeebe0bc5&quot;, &quot;Success&quot;: true}</p>
      */
     @NameInMap("Data")
     public PublishImageResponseBodyData data;
 
     /**
-     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+     * <p>The ID of the request, which is used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
@@ -23,7 +23,7 @@ public class PublishImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -62,7 +62,7 @@ public class PublishImageResponseBody extends TeaModel {
 
     public static class PublishImageResponseBodyData extends TeaModel {
         /**
-         * <p>The image publish execution ID.</p>
+         * <p>The image publishing execution ID.</p>
          * 
          * <strong>example:</strong>
          * <p>582d4896-d224-413b-b883-239eeebe0bc5</p>
@@ -71,7 +71,7 @@ public class PublishImageResponseBody extends TeaModel {
         public String processId;
 
         /**
-         * <p>Indicates whether the trigger was successful.</p>
+         * <p>Indicates whether the operation was triggered successfully.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

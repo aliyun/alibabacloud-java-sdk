@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSkillsShrinkRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return in this request.</p>
+     * <p>The maximum number of entries to return in the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListSkillsShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Do not pass this parameter for the first query. For subsequent queries, pass the NextToken returned in the previous response to obtain the next page.</p>
+     * <p>The pagination token. Do not specify this parameter in the first request. In subsequent requests, specify the <code>NextToken</code> value returned in the previous response to retrieve the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -23,7 +23,7 @@ public class ListSkillsShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The search keyword for fuzzy matching by skill name.</p>
+     * <p>The search keyword used for fuzzy matching by skill name.</p>
      * 
      * <strong>example:</strong>
      * <p>analysis</p>
@@ -32,7 +32,7 @@ public class ListSkillsShrinkRequest extends TeaModel {
     public String q;
 
     /**
-     * <p>The visibility levels used to filter results. Multiple values can be specified.</p>
+     * <p>The visibility levels used to filter the results. You can specify multiple values.</p>
      */
     @NameInMap("Visibility")
     public String visibilityShrink;

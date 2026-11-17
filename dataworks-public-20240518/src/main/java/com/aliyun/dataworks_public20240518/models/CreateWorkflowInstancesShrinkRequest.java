@@ -14,7 +14,7 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public Boolean autoStartEnabled;
 
     /**
-     * <p>The reason for creation.</p>
+     * <p>The reason for the creation.</p>
      * 
      * <strong>example:</strong>
      * <p>create for test</p>
@@ -68,7 +68,7 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The tag creation policy. Valid values:</p>
+     * <p>The tag creation policy.</p>
      * <ul>
      * <li>Append: Append mode. Inherits existing tags from the manual workflow and appends new tags.</li>
      * <li>Overwrite: Overwrite mode. Does not inherit existing tags from the manual workflow and directly creates tags.</li>
@@ -81,13 +81,13 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public String tagCreationPolicy;
 
     /**
-     * <p>The list of task tags.</p>
+     * <p>The list of tags for the task.</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;
 
     /**
-     * <p>The task parameters, which are used to set parameters for specific tasks. The value is in JSON format. The key is the task ID, and the value format refers to the task script parameters (Task.Script.Parameter in the response of the GetTask operation).</p>
+     * <p>The parameters for specific tasks, in JSON format. Each key is a task ID, and each value follows the format of the task script parameters (Task.Script.Parameter in the response of the GetTask operation).</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -101,11 +101,11 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The type of the workflow instance. Valid values:</p>
      * <ul>
-     * <li>SupplementData: data backfill. The methods for specifying RootTaskIds and IncludeTaskIds vary based on the data backfill mode. For more information, see the parameter description of DefaultRunProperties.Mode.</li>
-     * <li>ManualWorkflow: manually triggered workflow. You must set WorkflowId to the ID of the manually triggered workflow. RootTaskIds is optional. If you do not specify RootTaskIds, the default root node list of the manually triggered workflow is used.</li>
-     * <li>Manual: manually triggered task. You only need to specify RootTaskIds, which is the list of manually triggered tasks to be run.</li>
-     * <li>SmokeTest: smoke test. You only need to specify RootTaskIds, which is the list of test tasks to be run.</li>
-     * <li>TriggerWorkflow: event-triggered workflow. You must set WorkflowId to the ID of the event-triggered workflow. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the entire workflow is run.</li>
+     * <li>SupplementData: Indicates data backfill. The methods for specifying RootTaskIds and IncludeTaskIds vary based on the data backfill mode. For more information, see the parameter description of DefaultRunProperties.Mode.</li>
+     * <li>ManualWorkflow: Indicates a manual business flow. Set WorkflowId to the ID of the manual business flow. RootTaskIds is optional. If you do not specify RootTaskIds, the default root node list of the manual business flow is used.</li>
+     * <li>Manual: Indicates a manual task. You only need to specify RootTaskIds, which is the list of manual tasks to be run.</li>
+     * <li>SmokeTest: Indicates a smoke test. You only need to specify RootTaskIds, which is the list of test tasks to be run.</li>
+     * <li>TriggerWorkflow: Indicates an event-triggered workflow. Set WorkflowId to the ID of the event-triggered workflow. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the entire workflow is run.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -116,7 +116,7 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The ID of the workflow. The WorkflowId of a scheduled task is always 1.</p>
+     * <p>The ID of the workflow to which the task belongs. The WorkflowId of all scheduled tasks is 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public Long workflowId;
 
     /**
-     * <p>The workflow parameters. This parameter takes effect only when a specific workflow is specified (WorkflowId != 1). For a periodic workflow or an event-triggered workflow, the format is key=value, and the priority is lower than that of task parameters. For a manually triggered workflow, the format is JSON, and the priority is higher than that of task parameters.</p>
+     * <p>The workflow parameters. This parameter takes effect only when a specific workflow is specified (WorkflowId != 1). For a periodic workflow or an event-triggered workflow, the format is <code>key=value</code>, and the priority is lower than that of task parameters. For a manual business flow, the format is JSON, and the priority is higher than that of task parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;key=value&quot; format:

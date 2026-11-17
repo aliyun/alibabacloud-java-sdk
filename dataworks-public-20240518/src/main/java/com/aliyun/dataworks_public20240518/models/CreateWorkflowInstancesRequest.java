@@ -14,7 +14,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
     public Boolean autoStartEnabled;
 
     /**
-     * <p>The reason for creation.</p>
+     * <p>The reason for the creation.</p>
      * 
      * <strong>example:</strong>
      * <p>create for test</p>
@@ -68,7 +68,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The tag creation policy. Valid values:</p>
+     * <p>The tag creation policy.</p>
      * <ul>
      * <li>Append: Append mode. Inherits existing tags from the manual workflow and appends new tags.</li>
      * <li>Overwrite: Overwrite mode. Does not inherit existing tags from the manual workflow and directly creates tags.</li>
@@ -81,13 +81,13 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
     public String tagCreationPolicy;
 
     /**
-     * <p>The list of task tags.</p>
+     * <p>The list of tags for the task.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateWorkflowInstancesRequestTags> tags;
 
     /**
-     * <p>The task parameters, which are used to set parameters for specific tasks. The value is in JSON format. The key is the task ID, and the value format refers to the task script parameters (Task.Script.Parameter in the response of the GetTask operation).</p>
+     * <p>The parameters for specific tasks, in JSON format. Each key is a task ID, and each value follows the format of the task script parameters (Task.Script.Parameter in the response of the GetTask operation).</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -101,11 +101,11 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
     /**
      * <p>The type of the workflow instance. Valid values:</p>
      * <ul>
-     * <li>SupplementData: data backfill. The methods for specifying RootTaskIds and IncludeTaskIds vary based on the data backfill mode. For more information, see the parameter description of DefaultRunProperties.Mode.</li>
-     * <li>ManualWorkflow: manually triggered workflow. You must set WorkflowId to the ID of the manually triggered workflow. RootTaskIds is optional. If you do not specify RootTaskIds, the default root node list of the manually triggered workflow is used.</li>
-     * <li>Manual: manually triggered task. You only need to specify RootTaskIds, which is the list of manually triggered tasks to be run.</li>
-     * <li>SmokeTest: smoke test. You only need to specify RootTaskIds, which is the list of test tasks to be run.</li>
-     * <li>TriggerWorkflow: event-triggered workflow. You must set WorkflowId to the ID of the event-triggered workflow. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the entire workflow is run.</li>
+     * <li>SupplementData: Indicates data backfill. The methods for specifying RootTaskIds and IncludeTaskIds vary based on the data backfill mode. For more information, see the parameter description of DefaultRunProperties.Mode.</li>
+     * <li>ManualWorkflow: Indicates a manual business flow. Set WorkflowId to the ID of the manual business flow. RootTaskIds is optional. If you do not specify RootTaskIds, the default root node list of the manual business flow is used.</li>
+     * <li>Manual: Indicates a manual task. You only need to specify RootTaskIds, which is the list of manual tasks to be run.</li>
+     * <li>SmokeTest: Indicates a smoke test. You only need to specify RootTaskIds, which is the list of test tasks to be run.</li>
+     * <li>TriggerWorkflow: Indicates an event-triggered workflow. Set WorkflowId to the ID of the event-triggered workflow. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the entire workflow is run.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -116,7 +116,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The ID of the workflow. The WorkflowId of a scheduled task is always 1.</p>
+     * <p>The ID of the workflow to which the task belongs. The WorkflowId of all scheduled tasks is 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
     public Long workflowId;
 
     /**
-     * <p>The workflow parameters. This parameter takes effect only when a specific workflow is specified (WorkflowId != 1). For a periodic workflow or an event-triggered workflow, the format is key=value, and the priority is lower than that of task parameters. For a manually triggered workflow, the format is JSON, and the priority is higher than that of task parameters.</p>
+     * <p>The workflow parameters. This parameter takes effect only when a specific workflow is specified (WorkflowId != 1). For a periodic workflow or an event-triggered workflow, the format is <code>key=value</code>, and the priority is lower than that of task parameters. For a manual business flow, the format is JSON, and the priority is higher than that of task parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;key=value&quot; format:
@@ -250,9 +250,9 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         /**
          * <p>The notification method. Valid values:</p>
          * <ul>
-         * <li>Sms: text message only</li>
-         * <li>Mail: email only</li>
-         * <li>SmsMail: text message and email</li>
+         * <li>Sms: Sends SMS messages only.</li>
+         * <li>Mail: Sends emails only.</li>
+         * <li>SmsMail: Sends both SMS messages and emails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -264,13 +264,13 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         /**
          * <p>The alert policy. Valid values:</p>
          * <ul>
-         * <li>Success: alerts on success</li>
-         * <li>Failure: alerts on failure</li>
-         * <li>SuccessFailure: alerts on both success and failure</li>
+         * <li>Success: Alerts on success.</li>
+         * <li>Failure: Alerts on failure.</li>
+         * <li>SuccessFailure: Alerts on both success and failure.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Succes</p>
+         * <p>Success</p>
          */
         @NameInMap("Type")
         public String type;
@@ -342,7 +342,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
 
     public static class CreateWorkflowInstancesRequestDefaultRunPropertiesRunPolicy extends TeaModel {
         /**
-         * <p>The end time of the run. Specify the time in the hh:mm:ss format based on the 24-hour clock. This field is required if you configure a run policy.</p>
+         * <p>The end run time. Specify the time in the <code>hh:mm:ss</code> format (24-hour clock). This field is required if a run policy is configured.</p>
          * 
          * <strong>example:</strong>
          * <p>23:59:59</p>
@@ -360,7 +360,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public Boolean immediately;
 
         /**
-         * <p>The start time of the run. Specify the time in the hh:mm:ss format based on the 24-hour clock. This field is required if you configure a run policy.</p>
+         * <p>The start run time. Specify the time in the <code>hh:mm:ss</code> format (24-hour clock). This field is required if a run policy is configured.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00:00</p>
@@ -369,10 +369,10 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The period type. This field is required if you configure a run policy. Valid values:</p>
+         * <p>The time period type. This field is required if a run policy is configured. Valid values:</p>
          * <ul>
-         * <li>Daily: every day</li>
-         * <li>Weekend: weekends only</li>
+         * <li>Daily: Runs every day.</li>
+         * <li>Weekend: Runs on weekends only.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -434,7 +434,10 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public CreateWorkflowInstancesRequestDefaultRunPropertiesAnalysis analysis;
 
         /**
-         * <p>The data source name mappings for data backfill runs. The key of the map is DataSource.Name in the task definition, and the value is DataSource.Name used during data backfill runs. This parameter takes effect only when Type is set to SupplementData. If this parameter is not configured, an empty map is passed, or the key is not matched, the task continues to use the original data source. Currently, only EMR Spark SQL, EMR Shell, and EMR Spark tasks are supported.</p>
+         * <p>The data source name mappings used during data backfill runs. The key in the map is DataSource.Name in the task definition, and the value is DataSource.Name used during the data backfill run. This parameter takes effect only when Type is set to SupplementData. If this parameter is not configured, an empty map is passed, or the key does not match, the task continues to use the original data source. Currently, only EMR Spark SQL, EMR Shell, and EMR Spark tasks are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;emr_cluster&quot;:&quot;emr_cluster&quot;}</p>
          */
         @NameInMap("DataSourceNameMappings")
         public java.util.Map<String, String> dataSourceNameMappings;
@@ -466,10 +469,10 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         /**
          * <p>The data backfill mode. Default value: ManualSelection. This parameter is required when Type is set to SupplementData. Valid values:</p>
          * <ul>
-         * <li>General: general mode. You can specify only one value for RootTaskIds. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the value of RootTaskIds is included by default.</li>
-         * <li>ManualSelection: manual selection mode. You can specify multiple values for RootTaskIds. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the values of RootTaskIds are included by default.</li>
-         * <li>Chain: chain mode. RootTaskIds must be left empty. You must specify two IDs for IncludeTaskIds, which are the start and end tasks.</li>
-         * <li>AllDownstream: all downstream mode. You can specify only one value for RootTaskIds.</li>
+         * <li>General: Indicates the general mode. You can specify only one value for RootTaskIds. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the value of RootTaskIds is included by default.</li>
+         * <li>ManualSelection: Indicates the manual selection mode. You can specify multiple values for RootTaskIds. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the values of RootTaskIds are included by default.</li>
+         * <li>Chain: Indicates the chain mode. RootTaskIds must be left empty. You must specify two IDs for IncludeTaskIds, which are the start and end tasks.</li>
+         * <li>AllDownstream: Indicates the all downstream mode. You can specify only one value for RootTaskIds.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -481,8 +484,8 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         /**
          * <p>The run order. Default value: Asc. Valid values:</p>
          * <ul>
-         * <li>Asc: ascending order by business date</li>
-         * <li>Desc: descending order by business date</li>
+         * <li>Asc: Ascending order by business date.</li>
+         * <li>Desc: Descending order by business date.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -492,7 +495,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public String order;
 
         /**
-         * <p>The number of parallel tasks. A value of 2 to 10 indicates the parallelism, and a value of 1 indicates serial execution. This parameter is required when Type is set to SupplementData.</p>
+         * <p>The number of tasks to run in parallel. Use a value from 2 to 10 for parallel execution, or 1 for sequential execution. This parameter is required when Type is set to SupplementData.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -501,7 +504,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public Integer parallelism;
 
         /**
-         * <p>The run priority. Valid values: 1 to 11. A larger value indicates a higher priority. These parameter settings are supported only for manually triggered workflows and event-triggered workflows.</p>
+         * <p>The run priority. Valid values: 1 to 11. A larger value indicates a higher priority. These parameter settings are supported only for manual business flows and event-triggered workflows.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -510,10 +513,10 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The priority weight policy. These parameter settings are supported only for manually triggered workflows and event-triggered workflows. Valid values:</p>
+         * <p>The priority weight policy. These parameter settings are supported only for manual business flows and event-triggered workflows. Valid values:</p>
          * <ul>
-         * <li>Disable: disabled. This is the default value.</li>
-         * <li>Upstream: calculates the sum of weights of upstream nodes for the current node. A deeper hierarchy indicates a higher weight.</li>
+         * <li>Disable: Disables the priority weight policy. This is the default value.</li>
+         * <li>Upstream: Calculates the sum of the weights of the upstream nodes of the current node. A deeper hierarchy indicates a higher weight.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -526,7 +529,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
          * <p>The list of root task IDs.</p>
          * <ul>
          * <li>When Type is set to SupplementData, RootTaskIds is required except when Mode is set to Chain.</li>
-         * <li>When Type is set to ManualWorkflow, RootTaskIds is optional. If you do not specify RootTaskIds, the default root node list of the manually triggered workflow is used.</li>
+         * <li>When Type is set to ManualWorkflow, RootTaskIds is optional. If you do not specify RootTaskIds, the default root node list of the manual business flow is used.</li>
          * <li>When Type is set to Manual, RootTaskIds is required and specifies the list of manual tasks to be run.</li>
          * <li>When Type is set to SmokeTest, RootTaskIds is required and specifies the list of test tasks to be run.</li>
          * </ul>
@@ -678,7 +681,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
 
     public static class CreateWorkflowInstancesRequestPeriodsBizDates extends TeaModel {
         /**
-         * <p>The end business date. Format: yyyy-mm-dd.</p>
+         * <p>The end business date. Format: <code>yyyy-mm-dd</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -688,7 +691,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public String endBizDate;
 
         /**
-         * <p>The start business date. Format: yyyy-mm-dd.</p>
+         * <p>The start business date. Format: <code>yyyy-mm-dd</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -729,7 +732,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public java.util.List<CreateWorkflowInstancesRequestPeriodsBizDates> bizDates;
 
         /**
-         * <p>The end time of the period. Specify the time in the hh:mm:ss format based on the 24-hour clock. Default value: 23:59:59.</p>
+         * <p>The end time of the period. Specify the time in the <code>hh:mm:ss</code> format (24-hour clock). Default value: 23:59:59.</p>
          * <p>If you specify this field, you must also specify StartTime.</p>
          * 
          * <strong>example:</strong>
@@ -739,7 +742,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The start time of the period. Specify the time in the hh:mm:ss format based on the 24-hour clock. Default value: 00:00:00.</p>
+         * <p>The start time of the period. Specify the time in the <code>hh:mm:ss</code> format (24-hour clock). Default value: 00:00:00.</p>
          * <p>If you specify this field, you must also specify EndTime.</p>
          * 
          * <strong>example:</strong>

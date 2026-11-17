@@ -15,7 +15,7 @@ public class CreateDataQualityScanRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The compute engine used at runtime. If not specified, the data source defined in the Spec is used.</p>
+     * <p>The compute engine used when the data quality monitor runs. This parameter is optional. If it is not specified, the data source connection specified in the Spec is used.</p>
      */
     @NameInMap("ComputeResource")
     public CreateDataQualityScanRequestComputeResource computeResource;
@@ -30,13 +30,13 @@ public class CreateDataQualityScanRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The Hook configurations after the data quality monitoring run ends.</p>
+     * <p>The configuration for hooks that run after the data quality monitor finishes.</p>
      */
     @NameInMap("Hooks")
     public java.util.List<CreateDataQualityScanRequestHooks> hooks;
 
     /**
-     * <p>The data quality monitoring name.</p>
+     * <p>The name of the data quality monitor.</p>
      * 
      * <strong>example:</strong>
      * <p>data_quality_scan_001</p>
@@ -45,7 +45,7 @@ public class CreateDataQualityScanRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the user who owns of the data quality monitor.</p>
+     * <p>The user ID of the owner of the data quality monitor.</p>
      * 
      * <strong>example:</strong>
      * <p>95279527****</p>
@@ -54,13 +54,13 @@ public class CreateDataQualityScanRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The definition of execution parameters for the data quality monitoring.</p>
+     * <p>The execution parameter definitions of the data quality monitor.</p>
      */
     @NameInMap("Parameters")
     public java.util.List<CreateDataQualityScanRequestParameters> parameters;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://dataworks.console.aliyun.com/overview">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID. This parameter is required to specify the target DataWorks workspace for this API operation.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/overview">DataWorks console</a> and go to the Workspace Management page to obtain the workspace ID. This parameter specifies the DataWorks workspace for the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>101</p>
@@ -69,13 +69,13 @@ public class CreateDataQualityScanRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The resource group used during execution of the data quality monitoring.</p>
+     * <p>The resource group used when the data quality monitor runs.</p>
      */
     @NameInMap("RuntimeResource")
     public CreateDataQualityScanRequestRuntimeResource runtimeResource;
 
     /**
-     * <p>Spec code for the content of the data quality monitoring. For more information, see <a href="https://help.aliyun.com/document_detail/2963394.html">Data quality Spec configuration description</a>.</p>
+     * <p>The Spec code that defines the data quality monitor. For more information, see <a href="https://help.aliyun.com/document_detail/2963394.html">Data quality spec configuration guide</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -109,7 +109,7 @@ public class CreateDataQualityScanRequest extends TeaModel {
     public String spec;
 
     /**
-     * <p>The trigger configurations of the data quality monitoring task.</p>
+     * <p>The trigger settings of the data quality monitor.</p>
      */
     @NameInMap("Trigger")
     public CreateDataQualityScanRequestTrigger trigger;
@@ -209,15 +209,11 @@ public class CreateDataQualityScanRequest extends TeaModel {
 
     public static class CreateDataQualityScanRequestComputeResourceRuntime extends TeaModel {
         /**
-         * <p>The type of the compute engine. Only EMR compute engines support these settings.</p>
-         * <p>Valid values:</p>
+         * <p>The type of the engine used. Only the E-MapReduce (EMR) compute engine supports this setting. Valid values:</p>
          * <ul>
-         * <li><p>Hive: Hive SQL</p>
-         * </li>
-         * <li><p>Spark: Spark SQL</p>
-         * </li>
-         * <li><p>Kyuubi</p>
-         * </li>
+         * <li>Hive: Hive SQL</li>
+         * <li>Spark: Spark SQL</li>
+         * <li>Kyuubi</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,19 +223,19 @@ public class CreateDataQualityScanRequest extends TeaModel {
         public String engine;
 
         /**
-         * <p>Additional Hive engine parameters. Currently, only the mapreduce.job.queuename parameter is supported.</p>
+         * <p>The additional parameter settings when the Hive engine is used. Currently, only the queue can be set by using mapreduce.job.queuename.</p>
          * 
          * <strong>example:</strong>
-         * <p>mapreduce.job.queuename=dq_queue</p>
+         * <p>{&quot;mapreduce.job.queuename&quot;: &quot;dq_queue&quot;}</p>
          */
         @NameInMap("HiveConf")
         public java.util.Map<String, ?> hiveConf;
 
         /**
-         * <p>Additional Spark engine parameters. Currently, only the spark.yarn.queue parameter is supported.</p>
+         * <p>The additional parameter settings when the Spark engine is used. Currently, only the queue can be set by using spark.yarn.queue.</p>
          * 
          * <strong>example:</strong>
-         * <p>spark.yarn.queue=dq_queue</p>
+         * <p>{&quot;spark.yarn.queue&quot;: &quot;dq_queue&quot;}</p>
          */
         @NameInMap("SparkConf")
         public java.util.Map<String, ?> sparkConf;
@@ -277,13 +273,10 @@ public class CreateDataQualityScanRequest extends TeaModel {
 
     public static class CreateDataQualityScanRequestComputeResource extends TeaModel {
         /**
-         * <p>The workspace environment to which the compute engine belongs.</p>
-         * <p>Valid values:</p>
+         * <p>The workspace environment to which the compute engine belongs. Valid values:</p>
          * <ul>
-         * <li><p>Prod: production environment .</p>
-         * </li>
-         * <li><p>Dev: development environment.</p>
-         * </li>
+         * <li>Prod: production environment</li>
+         * <li>Dev: development environment</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -293,7 +286,7 @@ public class CreateDataQualityScanRequest extends TeaModel {
         public String envType;
 
         /**
-         * <p>The name of the compute engine, which is a unique identifier.</p>
+         * <p>The name of the compute engine, which serves as a unique identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>emr_first</p>
@@ -302,7 +295,7 @@ public class CreateDataQualityScanRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>More settings for data quality monitoring at runtime.</p>
+         * <p>The additional settings for the data quality monitor at runtime.</p>
          */
         @NameInMap("Runtime")
         public CreateDataQualityScanRequestComputeResourceRuntime runtime;
@@ -340,8 +333,8 @@ public class CreateDataQualityScanRequest extends TeaModel {
 
     public static class CreateDataQualityScanRequestHooks extends TeaModel {
         /**
-         * <p>The Hook trigger condition. The hook will run if the condition is met. Currently, only one type of expression syntax is supported:</p>
-         * <p>You can specify multiple combinations of rule severity levels and validation statuses using an expression such as <code>results.any { r -&gt; r.status == \\&quot;Fail\\&quot; &amp;&amp; r.rule.severity == \\&quot;Normal\\&quot; || r.status == \\&quot;Error\\&quot; &amp;&amp; r.rule.severity == \\&quot;High\\&quot; || r.status == \\&quot;Warn\\&quot; &amp;&amp; r.rule.severity == \\&quot;High\\&quot; }</code>. This expression means the condition is met if any executed rule has a result of Fail with severity Normal, Error with severity High, or Warn with severity High. In the condition expression, the values of severity and status are predefined enums. The values of severity must match those defined in the Spec, and the values of status must match those in DataQualityResult.</p>
+         * <p>The condition that triggers the hook. When this condition is met, the hook is triggered. Currently, only one expression syntax is supported:</p>
+         * <p>Specify multiple groups of rule severity levels and rule check statuses. For example, <code>results.any { r -&gt; r.status == \\&quot;Fail\\&quot; &amp;&amp; r.rule.severity == \\&quot;Normal\\&quot; || r.status == \\&quot;Error\\&quot; &amp;&amp; r.rule.severity == \\&quot;High\\&quot; || r.status == \\&quot;Warn\\&quot; &amp;&amp; r.rule.severity == \\&quot;High\\&quot; }</code> indicates that among the executed rules, if the check result of a rule with the severity of Normal is Fail, the check result of a rule with the severity of High is Error, or the check result of a rule with the severity of High is Warn, the condition is met. The enumerations of severity in the conditional expression are consistent with those in the spec, and the enumerations of status are consistent with those in DataQualityResult.</p>
          * 
          * <strong>example:</strong>
          * <p>results.any { r -&gt; r.status == \&quot;Fail\&quot; &amp;&amp; r.rule.severity == \&quot;Normal\&quot; || r.status == \&quot;Error\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; || r.status == \&quot;Warn\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; }</p>
@@ -350,10 +343,9 @@ public class CreateDataQualityScanRequest extends TeaModel {
         public String condition;
 
         /**
-         * <p>The type of the Hook.</p>
-         * <p>Valid values:</p>
+         * <p>The type of the hook. Valid values:</p>
          * <ul>
-         * <li>BlockTaskInstance: Blocks the scheduling of the task instance.</li>
+         * <li>BlockTaskInstance: blocks task instance scheduling.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -387,7 +379,7 @@ public class CreateDataQualityScanRequest extends TeaModel {
 
     public static class CreateDataQualityScanRequestParameters extends TeaModel {
         /**
-         * <p>The parameter name.</p>
+         * <p>The name of the parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>triggerTime</p>
@@ -396,7 +388,7 @@ public class CreateDataQualityScanRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The parameter values.</p>
+         * <p>The value of the parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>$[yyyymmdd-1]</p>
@@ -429,7 +421,7 @@ public class CreateDataQualityScanRequest extends TeaModel {
 
     public static class CreateDataQualityScanRequestRuntimeResource extends TeaModel {
         /**
-         * <p>The number of CUs configured for task running.</p>
+         * <p>The compute unit (CU) consumption of the runtime configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -438,7 +430,7 @@ public class CreateDataQualityScanRequest extends TeaModel {
         public Float cu;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>0525242e-d0ee-4bda-bc73-765d82f6a34a</p>
@@ -447,7 +439,7 @@ public class CreateDataQualityScanRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The ID of the image configured for task running.</p>
+         * <p>The image ID of the runtime configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>i-xxxxxx</p>
@@ -488,19 +480,16 @@ public class CreateDataQualityScanRequest extends TeaModel {
 
     public static class CreateDataQualityScanRequestTrigger extends TeaModel {
         /**
-         * <p>If the trigger mode is set to BySchedule, the scheduling task ID must be specified.</p>
+         * <p>The IDs of the scheduled tasks that trigger the data quality monitor when the trigger method is set to BySchedule.</p>
          */
         @NameInMap("TaskIds")
         public java.util.List<Long> taskIds;
 
         /**
-         * <p>The trigger mode of the monitoring task.</p>
-         * <p>Valid values:</p>
+         * <p>The trigger method of the data quality monitor. Valid values:</p>
          * <ul>
-         * <li><p>ByManual: Manual trigger. This is the default setting.</p>
-         * </li>
-         * <li><p>BySchedule: Triggered by a scheduled task instance.</p>
-         * </li>
+         * <li>ByManual: manual trigger. This is the default value.</li>
+         * <li>BySchedule: scheduled task instance trigger.</li>
          * </ul>
          * 
          * <strong>example:</strong>

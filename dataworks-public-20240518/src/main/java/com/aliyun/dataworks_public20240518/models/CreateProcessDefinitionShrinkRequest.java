@@ -12,7 +12,7 @@ public class CreateProcessDefinitionShrinkRequest extends TeaModel {
     public String approvalNodesShrink;
 
     /**
-     * <p>The idempotency token. We recommend that you use a UUID.</p>
+     * <p>The client token that is used to ensure idempotence. We recommend using a UUID.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
@@ -21,7 +21,7 @@ public class CreateProcessDefinitionShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the process definition.</p>
+     * <p>The description of the flow definition.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,17 +31,17 @@ public class CreateProcessDefinitionShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable the process definition.</p>
+     * <p>Specifies whether to enable the flow definition.</p>
      */
     @NameInMap("Enabled")
     public Boolean enabled;
 
     /**
-     * <p>The name of the process definition.</p>
+     * <p>The name of the flow definition.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>My Approval Policy</p>
+     * <p>My approval policy</p>
      */
     @NameInMap("Name")
     public String name;
@@ -76,7 +76,7 @@ public class CreateProcessDefinitionShrinkRequest extends TeaModel {
     public String subType;
 
     /**
-     * <p>The type of the process definition. Valid values:</p>
+     * <p>The type of the flow definition. Valid values:</p>
      * <ol>
      * <li>MaxCompute</li>
      * <li>DataService</li>

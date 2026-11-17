@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDataQualityResultsResponseBody extends TeaModel {
     /**
-     * <p>数据质量校验结果分页查询结果。</p>
+     * <p>The paginated data quality check results.</p>
      */
     @NameInMap("PagingInfo")
     public ListDataQualityResultsResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>API请求ID。</p>
+     * <p>The API request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>691CA452-D37A-****</p>
@@ -42,7 +42,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsDetails extends TeaModel {
         /**
-         * <p>最终用来与阈值比较的值。</p>
+         * <p>The final value used for comparison with the threshold.</p>
          * 
          * <strong>example:</strong>
          * <p>100.0</p>
@@ -51,7 +51,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String checkedValue;
 
         /**
-         * <p>使用引用的样本，用来参与CheckedValue计算的基准值。</p>
+         * <p>The referenced sample value used as the baseline for calculating the checked value.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0</p>
@@ -60,7 +60,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String referencedValue;
 
         /**
-         * <p>最终的比较结果状态：</p>
+         * <p>The final comparison result status. Valid values:</p>
          * <ul>
          * <li>Error</li>
          * <li>Passed</li>
@@ -107,14 +107,14 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsCritical extends TeaModel {
         /**
-         * <p>阈值表达式。</p>
-         * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
+         * <p>The threshold expression.</p>
+         * <p>For fluctuation rules, you must use an expression to represent the fluctuation threshold. Examples:</p>
          * <ul>
-         * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
-         * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
-         * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
+         * <li>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </li>
+         * <li>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </li>
+         * <li>Absolute value of fluctuation rate: abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value。</p>
+         * <p>For fixed value rules, you can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
@@ -123,7 +123,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String expression;
 
         /**
-         * <p>比较符：</p>
+         * <p>The comparison operator. Valid values:</p>
          * <ul>
          * <li>\&gt;</li>
          * <li>\&gt;=</li>
@@ -141,7 +141,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String operator;
 
         /**
-         * <p>阈值数值。</p>
+         * <p>The threshold value.</p>
          * 
          * <strong>example:</strong>
          * <p>100.0</p>
@@ -182,14 +182,14 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsExpected extends TeaModel {
         /**
-         * <p>阈值表达式。</p>
-         * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
+         * <p>The threshold expression.</p>
+         * <p>For fluctuation rules, you must use an expression to represent the fluctuation threshold. Examples:</p>
          * <ul>
-         * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
-         * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
-         * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
+         * <li>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </li>
+         * <li>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </li>
+         * <li>Absolute value of fluctuation rate: abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value。</p>
+         * <p>For fixed value rules, you can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
@@ -198,7 +198,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String expression;
 
         /**
-         * <p>比较符：</p>
+         * <p>The comparison operator. Valid values:</p>
          * <ul>
          * <li>\&gt;</li>
          * <li>\&gt;=</li>
@@ -216,7 +216,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String operator;
 
         /**
-         * <p>阈值数值。</p>
+         * <p>The threshold value.</p>
          * 
          * <strong>example:</strong>
          * <p>100.0</p>
@@ -257,14 +257,14 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsWarned extends TeaModel {
         /**
-         * <p>阈值表达式。</p>
-         * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
+         * <p>The threshold expression.</p>
+         * <p>For fluctuation rules, you must use an expression to represent the fluctuation threshold. Examples:</p>
          * <ul>
-         * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
-         * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
-         * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
+         * <li>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </li>
+         * <li>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </li>
+         * <li>Absolute value of fluctuation rate: abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value。</p>
+         * <p>For fixed value rules, you can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
@@ -273,7 +273,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String expression;
 
         /**
-         * <p>比较符：</p>
+         * <p>The comparison operator. Valid values:</p>
          * <ul>
          * <li>\&gt;</li>
          * <li>\&gt;=</li>
@@ -291,7 +291,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String operator;
 
         /**
-         * <p>阈值数值。</p>
+         * <p>The threshold value.</p>
          * 
          * <strong>example:</strong>
          * <p>100.0</p>
@@ -332,19 +332,19 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholds extends TeaModel {
         /**
-         * <p>严重警告的阈值设置。</p>
+         * <p>The threshold settings for critical warnings.</p>
          */
         @NameInMap("Critical")
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsCritical critical;
 
         /**
-         * <p>期望的阈值设置。</p>
+         * <p>The expected threshold settings.</p>
          */
         @NameInMap("Expected")
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsExpected expected;
 
         /**
-         * <p>普通警告的阈值设置。</p>
+         * <p>The threshold settings for common warnings.</p>
          */
         @NameInMap("Warned")
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsWarned warned;
@@ -382,7 +382,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfig extends TeaModel {
         /**
-         * <p>有些类型的阈值需要查询出一些参考样本，然后对参考样本的值进行汇总得出进行比较的阈值，这里使用一个表达式来表示参考样本的查询方式。</p>
+         * <p>The expression used to query reference samples for certain types of thresholds. The values of the reference samples are aggregated to obtain the threshold for comparison.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
@@ -391,13 +391,13 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String referencedSamplesFilter;
 
         /**
-         * <p>阈值设置。</p>
+         * <p>The threshold settings.</p>
          */
         @NameInMap("Thresholds")
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholds thresholds;
 
         /**
-         * <p>阈值计算方式：</p>
+         * <p>The threshold calculation method. Valid values:</p>
          * <ul>
          * <li>Fixed</li>
          * <li>Fluctation</li>
@@ -446,7 +446,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleErrorHandlers extends TeaModel {
         /**
-         * <p>如果是自定义SQL规则，需要用户指定SQL来过滤问题数据。</p>
+         * <p>The SQL statement specified by the user to filter error data for custom SQL rules.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT * FROM tb_api_log WHERE id IS NULL</p>
@@ -455,7 +455,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String errorDataFilter;
 
         /**
-         * <p>处理器类型。</p>
+         * <p>The handler type. Valid values:</p>
          * <ul>
          * <li>SaveErrorData</li>
          * </ul>
@@ -491,23 +491,23 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleSamplingConfig extends TeaModel {
         /**
-         * <p>采样的指标名称：</p>
+         * <p>The name of the sampling metric. Valid values:</p>
          * <ul>
-         * <li>Count：表行数</li>
-         * <li>Min：字段最小值</li>
-         * <li>Max：字段最大值</li>
-         * <li>Avg：字段均值</li>
-         * <li>DistinctCount：字段唯一值个数</li>
-         * <li>DistinctPercent：字段唯一值个数与数据行数占比</li>
-         * <li>DuplicatedCount：字段重复值个数</li>
-         * <li>DuplicatedPercent：字段重复值个数与数据行数占比</li>
-         * <li>TableSize：表大小</li>
-         * <li>NullValueCount：字段为空的行数</li>
-         * <li>NullValuePercent：字段为空的比例</li>
-         * <li>GroupCount：按字段值聚合后每个值与对应的数据行数</li>
-         * <li>CountNotIn：枚举值不匹配行数</li>
-         * <li>CountDistinctNotIn：枚举值不匹配唯一值个数</li>
-         * <li>UserDefinedSql：通过自定义SQL做样本采集</li>
+         * <li>Count: The number of rows in the table.</li>
+         * <li>Min: The minimum value of the field.</li>
+         * <li>Max: The maximum value of the field.</li>
+         * <li>Avg: The average value of the field.</li>
+         * <li>DistinctCount: The number of unique values in the field.</li>
+         * <li>DistinctPercent: The ratio of unique values to the total number of rows in the field.</li>
+         * <li>DuplicatedCount: The number of duplicate values in the field.</li>
+         * <li>DuplicatedPercent: The ratio of duplicate values to the total number of rows in the field.</li>
+         * <li>TableSize: The table size.</li>
+         * <li>NullValueCount: The number of rows with null values in the field.</li>
+         * <li>NullValuePercent: The ratio of null values in the field.</li>
+         * <li>GroupCount: The number of rows corresponding to each value after aggregation by field value.</li>
+         * <li>CountNotIn: The number of rows that do not match the enumerated values.</li>
+         * <li>CountDistinctNotIn: The number of unique values that do not match the enumerated values.</li>
+         * <li>UserDefinedSql: Sample collection through custom SQL.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -517,7 +517,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String metric;
 
         /**
-         * <p>样本采集时，所需的参数。</p>
+         * <p>The parameters required for sample collection.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;columns&quot;: [ &quot;id&quot;, &quot;name&quot; ] }</p>
@@ -526,7 +526,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String metricParameters;
 
         /**
-         * <p>采样时，对不关注的数据进行二次过滤的条件，最多16777215个字符。</p>
+         * <p>The conditions used to filter out unneeded data during sampling. It can be up to 16,777,215 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>id IS NULL</p>
@@ -535,7 +535,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String samplingFilter;
 
         /**
-         * <p>具体执行采样语句前，插入执行的一些运行时参数设置语句，最长1000个字符。目前只支持MaxCompute。</p>
+         * <p>The runtime parameter setting statements inserted before the sampling statement is executed. It can be up to 1,000 characters in length. Only MaxCompute is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>SET odps.sql.udf.timeout=600s;</p>
@@ -584,7 +584,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleTarget extends TeaModel {
         /**
-         * <p>表类型的数据集，表所属的数据库类型：</p>
+         * <p>The database type of the table dataset. Valid values:</p>
          * <ul>
          * <li>maxcompute</li>
          * <li>emr</li>
@@ -602,7 +602,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String databaseType;
 
         /**
-         * <p>表在数据地图中的唯一ID。</p>
+         * <p>The unique ID of the table in DataWorks Data Map.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.unit_test.tb_unit_test</p>
@@ -611,7 +611,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String tableGuid;
 
         /**
-         * <p>监控对象类型：</p>
+         * <p>The type of the monitored object. Valid values:</p>
          * <ul>
          * <li>Table</li>
          * </ul>
@@ -655,13 +655,13 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRule extends TeaModel {
         /**
-         * <p>样本校验设置。</p>
+         * <p>The sample check settings.</p>
          */
         @NameInMap("CheckingConfig")
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfig checkingConfig;
 
         /**
-         * <p>规则描述信息，最长500个字符。</p>
+         * <p>The description of the rule. It can be up to 500 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a odps _sql task</p>
@@ -670,7 +670,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>规则是否启用。</p>
+         * <p>Specifies whether the rule is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -679,13 +679,13 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>质量规则校验问题处理器。</p>
+         * <p>The error handlers for data quality rule checks.</p>
          */
         @NameInMap("ErrorHandlers")
         public java.util.List<ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleErrorHandlers> errorHandlers;
 
         /**
-         * <p>规则ID。</p>
+         * <p>The rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100001</p>
@@ -694,7 +694,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>规则名称，数字、英文字母、汉字、半角全角标点符号组合，最长255个字符。</p>
+         * <p>The rule name. The name can contain digits, letters, Chinese characters, and half-width or full-width punctuation marks. It can be up to 255 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>The table cannot be empty.</p>
@@ -703,7 +703,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>DataWorks项目空间ID。</p>
+         * <p>The DataWorks workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -712,13 +712,13 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>样本采集所需的设置。</p>
+         * <p>The settings required for sample collection.</p>
          */
         @NameInMap("SamplingConfig")
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleSamplingConfig samplingConfig;
 
         /**
-         * <p>规则对于业务的等级（对应页面上的强弱规则）：</p>
+         * <p>The severity level of the rule for the business, which corresponds to strong and weak rules on the page. Valid values:</p>
          * <ul>
          * <li>High</li>
          * <li>Normal</li>
@@ -731,13 +731,13 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String severity;
 
         /**
-         * <p>规则所监控的对象。</p>
+         * <p>The object monitored by the rule.</p>
          */
         @NameInMap("Target")
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleTarget target;
 
         /**
-         * <p>创建规则时所引用的规则模板Code。</p>
+         * <p>The code of the rule template referenced when the rule was created.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM:user_defined_sql</p>
@@ -842,7 +842,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfoDataQualityResults extends TeaModel {
         /**
-         * <p>校验结果生成时间。</p>
+         * <p>The time when the check result was generated.</p>
          * 
          * <strong>example:</strong>
          * <p>1708284916414</p>
@@ -851,13 +851,13 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>本次校验的详情。</p>
+         * <p>The details of this check.</p>
          */
         @NameInMap("Details")
         public java.util.List<ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsDetails> details;
 
         /**
-         * <p>校验结果ID。</p>
+         * <p>The check result ID.</p>
          * 
          * <strong>example:</strong>
          * <p>16033</p>
@@ -866,13 +866,13 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>校验开始时，规则配置快照。</p>
+         * <p>The snapshot of the rule configuration at the start of the check.</p>
          */
         @NameInMap("Rule")
         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRule rule;
 
         /**
-         * <p>本次校验所使用的样本值。</p>
+         * <p>The sample value used for this check.</p>
          * 
          * <strong>example:</strong>
          * <p>[
@@ -889,7 +889,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String sample;
 
         /**
-         * <p>校验结果状态：</p>
+         * <p>The status of the check result. Valid values:</p>
          * <ul>
          * <li>Running</li>
          * <li>Error</li>
@@ -905,7 +905,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>校验任务实例ID。</p>
+         * <p>The ID of the data quality evaluation task instance.</p>
          * 
          * <strong>example:</strong>
          * <p>200001</p>
@@ -978,13 +978,13 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
     public static class ListDataQualityResultsResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>质量校验结果列表。</p>
+         * <p>The list of data quality check results.</p>
          */
         @NameInMap("DataQualityResults")
         public java.util.List<ListDataQualityResultsResponseBodyPagingInfoDataQualityResults> dataQualityResults;
 
         /**
-         * <p>页码。</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -993,7 +993,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>页大小。</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1002,7 +1002,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>总条数。</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>219</p>

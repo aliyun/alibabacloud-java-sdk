@@ -15,7 +15,7 @@ public class GetImageTestResultRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The ID of the test process.</p>
+     * <p>The test process ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

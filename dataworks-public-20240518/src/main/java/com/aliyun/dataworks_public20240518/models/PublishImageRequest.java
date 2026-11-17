@@ -15,7 +15,7 @@ public class PublishImageRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The image publish execution ID, which is used as an idempotence identifier.</p>
+     * <p>The ID of the image publishing execution, which is used as an idempotency token.</p>
      * 
      * <strong>example:</strong>
      * <p>582d4896-d224-413b-b883-239eeebe0bc5</p>

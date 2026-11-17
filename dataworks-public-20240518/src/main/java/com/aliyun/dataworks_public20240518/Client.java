@@ -199,7 +199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Terminates a cross-workspace deployment pipeline run.</p>
+     * <p>Stops the cross-workspace deployment pipeline.</p>
      * 
      * @param request AbolishCrossProjectPipelineRunRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -239,7 +239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Terminates a cross-workspace deployment pipeline run.</p>
+     * <p>Stops the cross-workspace deployment pipeline.</p>
      * 
      * @param request AbolishCrossProjectPipelineRunRequest
      * @return AbolishCrossProjectPipelineRunResponse
@@ -371,21 +371,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <p>Adds an administrator. Only the owner or an administrator of the knowledge base can perform this operation. The caller and tenant are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds an administrator to a specified knowledge base.</p>
+     * 
+     * @param request AddKnowledgeBaseAdministratorRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddKnowledgeBaseAdministratorResponse
+     */
+    public AddKnowledgeBaseAdministratorResponse addKnowledgeBaseAdministratorWithOptions(AddKnowledgeBaseAdministratorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.administratorUserId)) {
+            body.put("AdministratorUserId", request.administratorUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddKnowledgeBaseAdministrator"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddKnowledgeBaseAdministratorResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Adds an administrator. Only the owner or an administrator of the knowledge base can perform this operation. The caller and tenant are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds an administrator to a specified knowledge base.</p>
+     * 
+     * @param request AddKnowledgeBaseAdministratorRequest
+     * @return AddKnowledgeBaseAdministratorResponse
+     */
+    public AddKnowledgeBaseAdministratorResponse addKnowledgeBaseAdministrator(AddKnowledgeBaseAdministratorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addKnowledgeBaseAdministratorWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>Reason</strong>: The reason for the request. This parameter is required.</li>
-     * <li><strong>ApplyContents</strong>: Contains multiple resource permission request entries. Each entry includes a resource description (Resource), a grantee description (Grantee), access types (AccessTypes), and a permission expiration time (ExpirationTime). A maximum of 400 entries can be submitted in a single request.</li>
-     * <li><strong>Resource</strong>: The resource description. You must specify the ResourceSchema.name and version on which the resource parsing depends, as well as the resource metadata (MetaData).</li>
+     * <li><strong>Reason</strong>: The reason for the application. This parameter is required.</li>
+     * <li><strong>ApplyContents</strong>: The list of resource permission applications. Each item includes the resource description (Resource), grantee description (Grantee), access types (AccessTypes), and expiration time (ExpirationTime). The maximum number of items per request is 400.</li>
+     * <li><strong>Resource</strong>: The resource description. You must specify the ResourceSchema.name and version on which resource parsing depends, as well as the resource metadata (MetaData).</li>
      * <li><strong>Grantee</strong>: The grantee description. You must specify the principal type (PrincipalType) and principal ID (PrincipalId).</li>
-     * <li><strong>AccessTypes</strong>: The list of access types. Multiple access type combinations are supported.</li>
-     * <li><strong>ExpirationTime</strong>: The permission expiration time, provided as a millisecond-level timestamp.</li>
-     * <li><strong>AuthMethod</strong>: Optional. Specifies the authorization method. The system uses the built-in default authorization method if this parameter is not specified.</li>
+     * <li><strong>AccessTypes</strong>: The list of permission types. Multiple permission combinations are supported.</li>
+     * <li><strong>ExpirationTime</strong>: The expiration time of the permissions, provided as a millisecond timestamp.</li>
+     * <li><strong>AuthMethod</strong>: The authorization method. This parameter is optional. By default, the built-in default authorization method is used.</li>
      * <li><strong>ClientToken</strong>: The client token used to prevent duplicate requests. This parameter is optional.
-     * Make sure that all required fields are correctly specified and meet the corresponding constraints. For example, the DefVersion and MetaData in Resource must match the selected DefSchema.</li>
+     * Make sure that all required fields are correctly filled in and meet the corresponding constraints. For example, the DefVersion and MetaData in Resource must match the selected DefSchema.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Commits an access permissions request for specific resources.</p>
+     * <p>Submits an application for access permissions to specific resources.</p>
      * 
      * @param tmpReq ApplyResourceAccessPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -431,21 +485,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>Reason</strong>: The reason for the request. This parameter is required.</li>
-     * <li><strong>ApplyContents</strong>: Contains multiple resource permission request entries. Each entry includes a resource description (Resource), a grantee description (Grantee), access types (AccessTypes), and a permission expiration time (ExpirationTime). A maximum of 400 entries can be submitted in a single request.</li>
-     * <li><strong>Resource</strong>: The resource description. You must specify the ResourceSchema.name and version on which the resource parsing depends, as well as the resource metadata (MetaData).</li>
+     * <li><strong>Reason</strong>: The reason for the application. This parameter is required.</li>
+     * <li><strong>ApplyContents</strong>: The list of resource permission applications. Each item includes the resource description (Resource), grantee description (Grantee), access types (AccessTypes), and expiration time (ExpirationTime). The maximum number of items per request is 400.</li>
+     * <li><strong>Resource</strong>: The resource description. You must specify the ResourceSchema.name and version on which resource parsing depends, as well as the resource metadata (MetaData).</li>
      * <li><strong>Grantee</strong>: The grantee description. You must specify the principal type (PrincipalType) and principal ID (PrincipalId).</li>
-     * <li><strong>AccessTypes</strong>: The list of access types. Multiple access type combinations are supported.</li>
-     * <li><strong>ExpirationTime</strong>: The permission expiration time, provided as a millisecond-level timestamp.</li>
-     * <li><strong>AuthMethod</strong>: Optional. Specifies the authorization method. The system uses the built-in default authorization method if this parameter is not specified.</li>
+     * <li><strong>AccessTypes</strong>: The list of permission types. Multiple permission combinations are supported.</li>
+     * <li><strong>ExpirationTime</strong>: The expiration time of the permissions, provided as a millisecond timestamp.</li>
+     * <li><strong>AuthMethod</strong>: The authorization method. This parameter is optional. By default, the built-in default authorization method is used.</li>
      * <li><strong>ClientToken</strong>: The client token used to prevent duplicate requests. This parameter is optional.
-     * Make sure that all required fields are correctly specified and meet the corresponding constraints. For example, the DefVersion and MetaData in Resource must match the selected DefSchema.</li>
+     * Make sure that all required fields are correctly filled in and meet the corresponding constraints. For example, the DefVersion and MetaData in Resource must match the selected DefSchema.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Commits an access permissions request for specific resources.</p>
+     * <p>Submits an application for access permissions to specific resources.</p>
      * 
      * @param request ApplyResourceAccessPermissionRequest
      * @return ApplyResourceAccessPermissionResponse
@@ -911,10 +965,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>DataWorks Basic Edition or later is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates multiple nodes in batches by using incremental updates.</p>
+     * <p>Applies incremental updates to multiple tasks in a batch.</p>
      * 
      * @param tmpReq BatchUpdateTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -956,10 +1010,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>DataWorks Basic Edition or later is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates multiple nodes in batches by using incremental updates.</p>
+     * <p>Applies incremental updates to multiple tasks in a batch.</p>
      * 
      * @param request BatchUpdateTasksRequest
      * @return BatchUpdateTasksResponse
@@ -972,7 +1026,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li>DataWorks Basic Edition or higher is required.</li>
      * <li><strong>Ensure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</strong></li>
      * </ol>
      * 
@@ -1022,7 +1076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li>DataWorks Basic Edition or higher is required.</li>
      * <li><strong>Ensure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</strong></li>
      * </ol>
      * 
@@ -1112,7 +1166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a more advanced edition to use this feature.</li>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
      * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</strong></li>
      * </ol>
      * 
@@ -1154,7 +1208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a more advanced edition to use this feature.</li>
+     * <li>DataWorks Basic Edition or a higher edition is required.</li>
      * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</strong></li>
      * </ol>
      * 
@@ -1898,17 +1952,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Scenarios</h2>
-     * <p>Creates a metadata crawler for a specified data source and configures the collection scope, resource group, scheduling method, and extended configurations.</p>
-     * <h2>Recommended workflow</h2>
+     * <p>Create a metadata crawler for a specified data source, and configure the collection scope, resource group, scheduling method, and extended configurations.</p>
+     * <h2>Recommended procedure</h2>
      * <ol>
-     * <li>Call <code>GetCrawlerTypeCapabilities</code> to query the crawler types and their configuration capabilities supported in the current region.</li>
-     * <li>Create a crawler by using a data source that matches the <code>Type</code> value. Before creating a crawler, ensure that the data source and the selected resource group pass the connectivity test by calling the <code>TestDataSourceConnectivity</code> API to avoid creating an invalid crawler.</li>
-     * <li>After the crawler is created, call <code>RunCrawler</code> to manually run it, or configure periodic scheduling for automatic execution.</li>
+     * <li>Call GetCrawlerTypeCapabilities to query the crawler types supported in the current region and their configuration capabilities.</li>
+     * <li>Create a crawler by using a data source that matches the Type. Before you create the crawler, make sure that the data source and the selected resource group pass the connectivity test by calling the TestDataSourceConnectivity API. This prevents you from creating an invalid crawler.</li>
+     * <li>After the crawler is created, call RunCrawler to manually run the crawler, or configure periodic scheduling to automatically run the crawler.</li>
      * </ol>
      * <h2>Edition requirements</h2>
-     * <p>DataWorks Basic Edition or a higher edition is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or higher to use this feature.</p>
      * <h2>Precautions</h2>
-     * <p>A successful creation only indicates that the crawler configuration has been generated. Metadata collection is not immediately executed.</p>
+     * <p>A successful creation only indicates that the crawler configuration is generated. The metadata collection is not immediately executed.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a metadata crawler and configures the data source, collection scope, resource group, and scheduling method.</p>
@@ -1986,17 +2040,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Scenarios</h2>
-     * <p>Creates a metadata crawler for a specified data source and configures the collection scope, resource group, scheduling method, and extended configurations.</p>
-     * <h2>Recommended workflow</h2>
+     * <p>Create a metadata crawler for a specified data source, and configure the collection scope, resource group, scheduling method, and extended configurations.</p>
+     * <h2>Recommended procedure</h2>
      * <ol>
-     * <li>Call <code>GetCrawlerTypeCapabilities</code> to query the crawler types and their configuration capabilities supported in the current region.</li>
-     * <li>Create a crawler by using a data source that matches the <code>Type</code> value. Before creating a crawler, ensure that the data source and the selected resource group pass the connectivity test by calling the <code>TestDataSourceConnectivity</code> API to avoid creating an invalid crawler.</li>
-     * <li>After the crawler is created, call <code>RunCrawler</code> to manually run it, or configure periodic scheduling for automatic execution.</li>
+     * <li>Call GetCrawlerTypeCapabilities to query the crawler types supported in the current region and their configuration capabilities.</li>
+     * <li>Create a crawler by using a data source that matches the Type. Before you create the crawler, make sure that the data source and the selected resource group pass the connectivity test by calling the TestDataSourceConnectivity API. This prevents you from creating an invalid crawler.</li>
+     * <li>After the crawler is created, call RunCrawler to manually run the crawler, or configure periodic scheduling to automatically run the crawler.</li>
      * </ol>
      * <h2>Edition requirements</h2>
-     * <p>DataWorks Basic Edition or a higher edition is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or higher to use this feature.</p>
      * <h2>Precautions</h2>
-     * <p>A successful creation only indicates that the crawler configuration has been generated. Metadata collection is not immediately executed.</p>
+     * <p>A successful creation only indicates that the crawler configuration is generated. The metadata collection is not immediately executed.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a metadata crawler and configures the data source, collection scope, resource group, and scheduling method.</p>
@@ -2011,7 +2065,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates and solidifies a cross-project deployment pipeline. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Sub-objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call the ListCrossProjectDeploymentCandidates operation to query candidate objects. After the pipeline is created, call the ExecCrossProjectPipelineRun operation to execute the deployment, and call the GetCrossProjectPipelineRun operation to query the status.</p>
+     * <p>Creates and finalizes a cross-workspace deployment pipeline. The ObjectIds parameter must contain one and only one top-level object ID from the source workspace. Sub-objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call ListCrossProjectDeploymentCandidates to query candidate objects. After creation, call ExecCrossProjectPipelineRun to execute the deployment, and call GetCrossProjectPipelineRun to query the status.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a cross-workspace deployment pipeline.</p>
@@ -2068,7 +2122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates and solidifies a cross-project deployment pipeline. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Sub-objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call the ListCrossProjectDeploymentCandidates operation to query candidate objects. After the pipeline is created, call the ExecCrossProjectPipelineRun operation to execute the deployment, and call the GetCrossProjectPipelineRun operation to query the status.</p>
+     * <p>Creates and finalizes a cross-workspace deployment pipeline. The ObjectIds parameter must contain one and only one top-level object ID from the source workspace. Sub-objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call ListCrossProjectDeploymentCandidates to query candidate objects. After creation, call ExecCrossProjectPipelineRun to execute the deployment, and call GetCrossProjectPipelineRun to query the status.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a cross-workspace deployment pipeline.</p>
@@ -2905,7 +2959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or a higher edition is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a data quality monitor.</p>
@@ -3002,7 +3056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or a higher edition is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a data quality monitor.</p>
@@ -3303,7 +3357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a dataset. You can create a dataset only in a workspace that you have joined. Only DataWorks datasets are supported. The maximum number of datasets per tenant is 2000.</p>
+     * <p>Creates a dataset. Datasets can only be created in workspaces that you have joined. Currently, only DataWorks datasets are supported. The maximum number of datasets per tenant is 2,000.</p>
      * 
      * @param tmpReq CreateDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3365,7 +3419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a dataset. You can create a dataset only in a workspace that you have joined. Only DataWorks datasets are supported. The maximum number of datasets per tenant is 2000.</p>
+     * <p>Creates a dataset. Datasets can only be created in workspaces that you have joined. Currently, only DataWorks datasets are supported. The maximum number of datasets per tenant is 2,000.</p>
      * 
      * @param request CreateDatasetRequest
      * @return CreateDatasetResponse
@@ -3377,7 +3431,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a dataset version. Currently, only DataWorks datasets are supported. The maximum number of versions is 20.</p>
+     * <p>Creates a dataset version. Currently, only DataWorks datasets are supported, and the maximum number of versions is 20.</p>
      * 
      * @param tmpReq CreateDatasetVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3431,7 +3485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a dataset version. Currently, only DataWorks datasets are supported. The maximum number of versions is 20.</p>
+     * <p>Creates a dataset version. Currently, only DataWorks datasets are supported, and the maximum number of versions is 20.</p>
      * 
      * @param request CreateDatasetVersionRequest
      * @return CreateDatasetVersionResponse
@@ -3911,6 +3965,476 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Creates a knowledge base. The tenant and caller identity are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a knowledge base and returns the knowledge base ID, name, ownership, and the access role of the current caller. This operation does not automatically add sources, build knowledge, or generate retrieval results. You can continue to configure knowledge sources and build tasks. The tenant and owner of the knowledge base are determined by the current caller identity. You do not need to specify a workspace or resource group.</p>
+     * 
+     * @param request CreateKnowledgeBaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateKnowledgeBaseResponse
+     */
+    public CreateKnowledgeBaseResponse createKnowledgeBaseWithOptions(CreateKnowledgeBaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateKnowledgeBase"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateKnowledgeBaseResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a knowledge base. The tenant and caller identity are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a knowledge base and returns the knowledge base ID, name, ownership, and the access role of the current caller. This operation does not automatically add sources, build knowledge, or generate retrieval results. You can continue to configure knowledge sources and build tasks. The tenant and owner of the knowledge base are determined by the current caller identity. You do not need to specify a workspace or resource group.</p>
+     * 
+     * @param request CreateKnowledgeBaseRequest
+     * @return CreateKnowledgeBaseResponse
+     */
+    public CreateKnowledgeBaseResponse createKnowledgeBase(CreateKnowledgeBaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createKnowledgeBaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a knowledge base build task. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a repeatable knowledge build task and configures the input scope, trigger mode, and runtime resources.</p>
+     * 
+     * @param tmpReq CreateKnowledgeBaseBuildTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateKnowledgeBaseBuildTaskResponse
+     */
+    public CreateKnowledgeBaseBuildTaskResponse createKnowledgeBaseBuildTaskWithOptions(CreateKnowledgeBaseBuildTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateKnowledgeBaseBuildTaskShrinkRequest request = new CreateKnowledgeBaseBuildTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.input)) {
+            request.inputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.input, "Input", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.runtimeResource)) {
+            request.runtimeResourceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.runtimeResource, "RuntimeResource", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.trigger)) {
+            request.triggerShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.trigger, "Trigger", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contentLocale)) {
+            body.put("ContentLocale", request.contentLocale);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputShrink)) {
+            body.put("Input", request.inputShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.llmModel)) {
+            body.put("LlmModel", request.llmModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runtimeResourceShrink)) {
+            body.put("RuntimeResource", request.runtimeResourceShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.triggerShrink)) {
+            body.put("Trigger", request.triggerShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateKnowledgeBaseBuildTask"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateKnowledgeBaseBuildTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a knowledge base build task. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a repeatable knowledge build task and configures the input scope, trigger mode, and runtime resources.</p>
+     * 
+     * @param request CreateKnowledgeBaseBuildTaskRequest
+     * @return CreateKnowledgeBaseBuildTaskResponse
+     */
+    public CreateKnowledgeBaseBuildTaskResponse createKnowledgeBaseBuildTask(CreateKnowledgeBaseBuildTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createKnowledgeBaseBuildTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a knowledge base build task instance. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a build instance based on the current configuration of a specified task, and freezes the input and runtime configurations for this execution.</p>
+     * 
+     * @param request CreateKnowledgeBaseBuildTaskInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateKnowledgeBaseBuildTaskInstanceResponse
+     */
+    public CreateKnowledgeBaseBuildTaskInstanceResponse createKnowledgeBaseBuildTaskInstanceWithOptions(CreateKnowledgeBaseBuildTaskInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateKnowledgeBaseBuildTaskInstance"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateKnowledgeBaseBuildTaskInstanceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a knowledge base build task instance. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a build instance based on the current configuration of a specified task, and freezes the input and runtime configurations for this execution.</p>
+     * 
+     * @param request CreateKnowledgeBaseBuildTaskInstanceRequest
+     * @return CreateKnowledgeBaseBuildTaskInstanceResponse
+     */
+    public CreateKnowledgeBaseBuildTaskInstanceResponse createKnowledgeBaseBuildTaskInstance(CreateKnowledgeBaseBuildTaskInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createKnowledgeBaseBuildTaskInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a knowledge object. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a document object in a knowledge base by using the document body or an uploaded file.</p>
+     * 
+     * @param tmpReq CreateKnowledgeObjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateKnowledgeObjectResponse
+     */
+    public CreateKnowledgeObjectResponse createKnowledgeObjectWithOptions(CreateKnowledgeObjectRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateKnowledgeObjectShrinkRequest request = new CreateKnowledgeObjectShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.content)) {
+            request.contentShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.content, "Content", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contentShrink)) {
+            body.put("Content", request.contentShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadId)) {
+            body.put("UploadId", request.uploadId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateKnowledgeObject"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateKnowledgeObjectResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a knowledge object. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a document object in a knowledge base by using the document body or an uploaded file.</p>
+     * 
+     * @param request CreateKnowledgeObjectRequest
+     * @return CreateKnowledgeObjectResponse
+     */
+    public CreateKnowledgeObjectResponse createKnowledgeObject(CreateKnowledgeObjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createKnowledgeObjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an upload session for a knowledge object. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Requests a file upload session and a temporary direct upload URL without creating a knowledge object or starting a build.</p>
+     * 
+     * @param request CreateKnowledgeObjectUploadRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateKnowledgeObjectUploadResponse
+     */
+    public CreateKnowledgeObjectUploadResponse createKnowledgeObjectUploadWithOptions(CreateKnowledgeObjectUploadRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contentMd5)) {
+            body.put("ContentMd5", request.contentMd5);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contentSha256)) {
+            body.put("ContentSha256", request.contentSha256);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contentType)) {
+            body.put("ContentType", request.contentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            body.put("FileName", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sizeBytes)) {
+            body.put("SizeBytes", request.sizeBytes);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateKnowledgeObjectUpload"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateKnowledgeObjectUploadResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an upload session for a knowledge object. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Requests a file upload session and a temporary direct upload URL without creating a knowledge object or starting a build.</p>
+     * 
+     * @param request CreateKnowledgeObjectUploadRequest
+     * @return CreateKnowledgeObjectUploadResponse
+     */
+    public CreateKnowledgeObjectUploadResponse createKnowledgeObjectUpload(CreateKnowledgeObjectUploadRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createKnowledgeObjectUploadWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Manages knowledge sources for a knowledge base. The identity is determined by the POP context, and credentials are not returned in query responses.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Registers projects, data sources, or external document sources that can be referenced by a knowledge base.</p>
+     * 
+     * @param tmpReq CreateKnowledgeSourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateKnowledgeSourceResponse
+     */
+    public CreateKnowledgeSourceResponse createKnowledgeSourceWithOptions(CreateKnowledgeSourceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateKnowledgeSourceShrinkRequest request = new CreateKnowledgeSourceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dataSource)) {
+            request.dataSourceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataSource, "DataSource", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.document)) {
+            request.documentShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.document, "Document", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.project)) {
+            request.projectShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.project, "Project", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceShrink)) {
+            body.put("DataSource", request.dataSourceShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentShrink)) {
+            body.put("Document", request.documentShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectShrink)) {
+            body.put("Project", request.projectShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateKnowledgeSource"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateKnowledgeSourceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Manages knowledge sources for a knowledge base. The identity is determined by the POP context, and credentials are not returned in query responses.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Registers projects, data sources, or external document sources that can be referenced by a knowledge base.</p>
+     * 
+     * @param request CreateKnowledgeSourceRequest
+     * @return CreateKnowledgeSourceResponse
+     */
+    public CreateKnowledgeSourceResponse createKnowledgeSource(CreateKnowledgeSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createKnowledgeSourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <ol>
      * <li>DataWorks Professional Edition or a higher edition is required.</li>
      * </ol>
@@ -3989,10 +4513,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>After you submit the request, the system verifies the availability of the MCP server based on the connection information you provided.</li>
-     * <li>If the connection to the MCP server is unavailable, the API returns an error message.</li>
-     * <li>The <code>Name</code> field must start with a lowercase letter and can contain only lowercase letters, digits, underscores (_), and hyphens (-). The name must be unique within the current account.</li>
-     * <li>The <code>Visibility</code> field defines the visibility level of the MCP server. Valid values: <code>TENANT</code> (visible within the account), <code>PROJECT</code> (visible to specified projects), and <code>USER</code> (visible to specified users). Specify the <code>VisibilityScope</code> parameter to further define the visibility scope based on the selected value.</li>
+     * <li>After submission, the system verifies the availability of the MCP server based on the provided connection information.</li>
+     * <li>If the MCP server connection is unavailable, the API returns the corresponding error message.</li>
+     * <li>The Name field must start with a lowercase letter and can contain only lowercase letters, digits, underscores (_), and hyphens (-). It must be unique within the current account.</li>
+     * <li>The Visibility field defines the visibility level of the MCP server. Valid values: <code>TENANT</code> (visible within the account), <code>PROJECT</code> (visible to specified projects), and <code>USER</code> (visible to specified users). Depending on the selected value, you must provide the corresponding VisibilityScope parameter to further specify the visibility scope.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4052,10 +4576,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>After you submit the request, the system verifies the availability of the MCP server based on the connection information you provided.</li>
-     * <li>If the connection to the MCP server is unavailable, the API returns an error message.</li>
-     * <li>The <code>Name</code> field must start with a lowercase letter and can contain only lowercase letters, digits, underscores (_), and hyphens (-). The name must be unique within the current account.</li>
-     * <li>The <code>Visibility</code> field defines the visibility level of the MCP server. Valid values: <code>TENANT</code> (visible within the account), <code>PROJECT</code> (visible to specified projects), and <code>USER</code> (visible to specified users). Specify the <code>VisibilityScope</code> parameter to further define the visibility scope based on the selected value.</li>
+     * <li>After submission, the system verifies the availability of the MCP server based on the provided connection information.</li>
+     * <li>If the MCP server connection is unavailable, the API returns the corresponding error message.</li>
+     * <li>The Name field must start with a lowercase letter and can contain only lowercase letters, digits, underscores (_), and hyphens (-). It must be unique within the current account.</li>
+     * <li>The Visibility field defines the visibility level of the MCP server. Valid values: <code>TENANT</code> (visible within the account), <code>PROJECT</code> (visible to specified projects), and <code>USER</code> (visible to specified users). Depending on the selected value, you must provide the corresponding VisibilityScope parameter to further specify the visibility scope.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4499,18 +5023,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation allows you to create a new approval process definition, including setting basic information such as the approval policy name, description, type, and subtype.</li>
-     * <li>You can define a list of condition rules (RuleConditions) to specify the conditions under which the approval process is triggered.</li>
-     * <li>Multiple notification services (NotificationServices) can be configured to send notifications to relevant personnel at different stages of the approval process.</li>
-     * <li>The approval node list (ApprovalNodes) defines the nodes that must be traversed during the approval process and the approver information for each node.</li>
-     * <li>You can choose whether to immediately enable the newly created approval process definition.</li>
-     * <li>Note: Certain fields such as Type have specific value constraints. Refer to the constraint descriptions in the documentation.</li>
+     * <li>This API allows you to create an approval flow definition, including setting basic information such as the policy name, description, type, and subtype.</li>
+     * <li>You can define a list of condition rules (RuleConditions) to specify the conditions under which the approval flow is triggered.</li>
+     * <li>You can configure multiple notification services (NotificationServices) to send notifications to relevant personnel at different stages of the approval flow.</li>
+     * <li>The list of approval nodes (ApprovalNodes) defines the nodes that the approval process must pass through and the approver information.</li>
+     * <li>You can choose whether to immediately enable the newly created approval flow definition.</li>
+     * <li>Note: Some fields, such as Type, have specific value limits. Refer to the constraint description section in the documentation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a new approval process definition, supporting custom configuration of approval rules and notification services.</p>
+     * <p>Creates an approval flow definition with custom approval rules and notification services.</p>
      * 
      * @param tmpReq CreateProcessDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4588,18 +5112,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation allows you to create a new approval process definition, including setting basic information such as the approval policy name, description, type, and subtype.</li>
-     * <li>You can define a list of condition rules (RuleConditions) to specify the conditions under which the approval process is triggered.</li>
-     * <li>Multiple notification services (NotificationServices) can be configured to send notifications to relevant personnel at different stages of the approval process.</li>
-     * <li>The approval node list (ApprovalNodes) defines the nodes that must be traversed during the approval process and the approver information for each node.</li>
-     * <li>You can choose whether to immediately enable the newly created approval process definition.</li>
-     * <li>Note: Certain fields such as Type have specific value constraints. Refer to the constraint descriptions in the documentation.</li>
+     * <li>This API allows you to create an approval flow definition, including setting basic information such as the policy name, description, type, and subtype.</li>
+     * <li>You can define a list of condition rules (RuleConditions) to specify the conditions under which the approval flow is triggered.</li>
+     * <li>You can configure multiple notification services (NotificationServices) to send notifications to relevant personnel at different stages of the approval flow.</li>
+     * <li>The list of approval nodes (ApprovalNodes) defines the nodes that the approval process must pass through and the approver information.</li>
+     * <li>You can choose whether to immediately enable the newly created approval flow definition.</li>
+     * <li>Note: Some fields, such as Type, have specific value limits. Refer to the constraint description section in the documentation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a new approval process definition, supporting custom configuration of approval rules and notification services.</p>
+     * <p>Creates an approval flow definition with custom approval rules and notification services.</p>
      * 
      * @param request CreateProcessDefinitionRequest
      * @return CreateProcessDefinitionResponse
@@ -5424,18 +5948,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Scenarios</h2>
-     * <p>Creates and saves a reusable semantic job definition. This operation only saves the data source, resource group, and reference file configurations without immediately executing the job.</p>
-     * <h2>Recommended workflow</h2>
+     * <p>Creates and saves a reusable semantic task definition. This API operation only saves the configurations of the data source, resource group, and reference files, and does not execute the task immediately.</p>
+     * <h2>Recommended procedure</h2>
      * <ol>
-     * <li>When <code>Source.type=singleTableFile</code>, call <code>UploadSemanticFile</code> first, use the returned <code>Data.UploadUrl</code> to complete the PUT upload, and then specify <code>Data.FileId</code> in <code>ReferenceFileIds</code>. Alternatively, you can provide a single accessible URI.</li>
-     * <li>Configure <code>Source</code>, <code>ProjectId</code>, and <code>ResourceGroupId</code>, and then call this operation to save the job.</li>
-     * <li>Use <code>Data.Name</code> from the response to call <code>RunSemanticJob</code>. After the job is complete, use <code>DownloadSemanticResults</code> to retrieve the output.</li>
+     * <li>If <code>Source.type</code> is set to <code>singleTableFile</code>, call <code>UploadSemanticFile</code> first, use the returned <code>Data.UploadUrl</code> to complete the PUT upload, and then specify <code>Data.FileId</code> in <code>ReferenceFileIds</code>. Alternatively, you can provide a single accessible URI.</li>
+     * <li>Configure <code>Source</code>, <code>ProjectId</code>, and <code>ResourceGroupId</code>, and then call this operation to save the task.</li>
+     * <li>Call <code>RunSemanticJob</code> by using <code>Data.Name</code> in the response. After the task is completed, call <code>DownloadSemanticResults</code> to obtain the output.</li>
      * </ol>
-     * <h2>Before you begin</h2>
-     * <p><code>Name</code> must be unique within the current tenant. The reference file quantity rules differ between single-file sources and other sources. For details, refer to the descriptions of the <code>ReferenceFileIds</code> and <code>ReferenceFileUris</code> fields.</p>
+     * <h2>Precautions</h2>
+     * <p><code>Name</code> must be unique within the current tenant. The rules for the number of reference files differ between single-file sources and other sources. For details, refer to the descriptions of the <code>ReferenceFileIds</code> and <code>ReferenceFileUris</code> fields.</p>
      * 
      * <b>summary</b> : 
-     * <p>Saves a reusable semantic job definition. If you use a single-file source, apply for and complete the attachment upload first. After creation, call RunSemanticJob with the returned Name.</p>
+     * <p>Saves a reusable semantic task definition. If you use a single-file source, apply for and complete the attachment upload first. After the definition is created, call RunSemanticJob with the returned Name.</p>
      * 
      * @param tmpReq CreateSemanticJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5502,18 +6026,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Scenarios</h2>
-     * <p>Creates and saves a reusable semantic job definition. This operation only saves the data source, resource group, and reference file configurations without immediately executing the job.</p>
-     * <h2>Recommended workflow</h2>
+     * <p>Creates and saves a reusable semantic task definition. This API operation only saves the configurations of the data source, resource group, and reference files, and does not execute the task immediately.</p>
+     * <h2>Recommended procedure</h2>
      * <ol>
-     * <li>When <code>Source.type=singleTableFile</code>, call <code>UploadSemanticFile</code> first, use the returned <code>Data.UploadUrl</code> to complete the PUT upload, and then specify <code>Data.FileId</code> in <code>ReferenceFileIds</code>. Alternatively, you can provide a single accessible URI.</li>
-     * <li>Configure <code>Source</code>, <code>ProjectId</code>, and <code>ResourceGroupId</code>, and then call this operation to save the job.</li>
-     * <li>Use <code>Data.Name</code> from the response to call <code>RunSemanticJob</code>. After the job is complete, use <code>DownloadSemanticResults</code> to retrieve the output.</li>
+     * <li>If <code>Source.type</code> is set to <code>singleTableFile</code>, call <code>UploadSemanticFile</code> first, use the returned <code>Data.UploadUrl</code> to complete the PUT upload, and then specify <code>Data.FileId</code> in <code>ReferenceFileIds</code>. Alternatively, you can provide a single accessible URI.</li>
+     * <li>Configure <code>Source</code>, <code>ProjectId</code>, and <code>ResourceGroupId</code>, and then call this operation to save the task.</li>
+     * <li>Call <code>RunSemanticJob</code> by using <code>Data.Name</code> in the response. After the task is completed, call <code>DownloadSemanticResults</code> to obtain the output.</li>
      * </ol>
-     * <h2>Before you begin</h2>
-     * <p><code>Name</code> must be unique within the current tenant. The reference file quantity rules differ between single-file sources and other sources. For details, refer to the descriptions of the <code>ReferenceFileIds</code> and <code>ReferenceFileUris</code> fields.</p>
+     * <h2>Precautions</h2>
+     * <p><code>Name</code> must be unique within the current tenant. The rules for the number of reference files differ between single-file sources and other sources. For details, refer to the descriptions of the <code>ReferenceFileIds</code> and <code>ReferenceFileUris</code> fields.</p>
      * 
      * <b>summary</b> : 
-     * <p>Saves a reusable semantic job definition. If you use a single-file source, apply for and complete the attachment upload first. After creation, call RunSemanticJob with the returned Name.</p>
+     * <p>Saves a reusable semantic task definition. If you use a single-file source, apply for and complete the attachment upload first. After the definition is created, call RunSemanticJob with the returned Name.</p>
      * 
      * @param request CreateSemanticJobRequest
      * @return CreateSemanticJobResponse
@@ -5636,8 +6160,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Request description</h2>
      * <ul>
      * <li>You must specify either the SkillMdOverride or BundleUrl parameter.</li>
-     * <li>You can set Visibility to TENANT, PROJECT, or USER, which indicates that the skill is visible to the entire tenant, specific projects, or specific users.</li>
-     * <li>If you set Visibility to PROJECT, you must use VisibilityScope.ProjectIds to specify the IDs of the visible projects. If you set Visibility to USER, you must use VisibilityScope.UserIds to specify the IDs of the visible users.</li>
+     * <li>You can set Visibility to TENANT, PROJECT, or USER, which indicates that the skill is visible within the account, visible to specified projects, or visible to specified users, respectively.</li>
+     * <li>If Visibility is set to PROJECT, you must specify the IDs of the projects in which the skill is visible by using VisibilityScope.ProjectIds. If Visibility is set to USER, you must specify the IDs of the users who can see the skill by using VisibilityScope.UserIds.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5714,8 +6238,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Request description</h2>
      * <ul>
      * <li>You must specify either the SkillMdOverride or BundleUrl parameter.</li>
-     * <li>You can set Visibility to TENANT, PROJECT, or USER, which indicates that the skill is visible to the entire tenant, specific projects, or specific users.</li>
-     * <li>If you set Visibility to PROJECT, you must use VisibilityScope.ProjectIds to specify the IDs of the visible projects. If you set Visibility to USER, you must use VisibilityScope.UserIds to specify the IDs of the visible users.</li>
+     * <li>You can set Visibility to TENANT, PROJECT, or USER, which indicates that the skill is visible within the account, visible to specified projects, or visible to specified users, respectively.</li>
+     * <li>If Visibility is set to PROJECT, you must specify the IDs of the projects in which the skill is visible by using VisibilityScope.ProjectIds. If Visibility is set to USER, you must specify the IDs of the users who can see the skill by using VisibilityScope.UserIds.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5883,10 +6407,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or higher to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a workflow instance based on configurations, such as a data backfill workflow instance.</p>
+     * <p>Creates a workflow instance from the specified configuration, for example, a data backfill workflow instance.</p>
      * 
      * @param tmpReq CreateWorkflowInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5980,10 +6504,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or higher to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a workflow instance based on configurations, such as a data backfill workflow instance.</p>
+     * <p>Creates a workflow instance from the specified configuration, for example, a data backfill workflow instance.</p>
      * 
      * @param request CreateWorkflowInstancesRequest
      * @return CreateWorkflowInstancesResponse
@@ -6818,6 +7342,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>需要购买DataWorks基础版及以上版本才能使用</p>
+     * 
      * <b>summary</b> : 
      * <p>Deletes a data quality monitoring rule.</p>
      * 
@@ -6854,6 +7381,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>需要购买DataWorks基础版及以上版本才能使用</p>
+     * 
      * <b>summary</b> : 
      * <p>Deletes a data quality monitoring rule.</p>
      * 
@@ -7467,6 +7997,218 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteImageResponse deleteImage(DeleteImageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteImageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a knowledge base. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified knowledge base and returns the deleted status upon success.</p>
+     * 
+     * @param request DeleteKnowledgeBaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteKnowledgeBaseResponse
+     */
+    public DeleteKnowledgeBaseResponse deleteKnowledgeBaseWithOptions(DeleteKnowledgeBaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteKnowledgeBase"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteKnowledgeBaseResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a knowledge base. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified knowledge base and returns the deleted status upon success.</p>
+     * 
+     * @param request DeleteKnowledgeBaseRequest
+     * @return DeleteKnowledgeBaseResponse
+     */
+    public DeleteKnowledgeBaseResponse deleteKnowledgeBase(DeleteKnowledgeBaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteKnowledgeBaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a knowledge base build task. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified knowledge base build task.</p>
+     * 
+     * @param request DeleteKnowledgeBaseBuildTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteKnowledgeBaseBuildTaskResponse
+     */
+    public DeleteKnowledgeBaseBuildTaskResponse deleteKnowledgeBaseBuildTaskWithOptions(DeleteKnowledgeBaseBuildTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteKnowledgeBaseBuildTask"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteKnowledgeBaseBuildTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a knowledge base build task. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified knowledge base build task.</p>
+     * 
+     * @param request DeleteKnowledgeBaseBuildTaskRequest
+     * @return DeleteKnowledgeBaseBuildTaskResponse
+     */
+    public DeleteKnowledgeBaseBuildTaskResponse deleteKnowledgeBaseBuildTask(DeleteKnowledgeBaseBuildTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteKnowledgeBaseBuildTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a knowledge object. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes a document object from a knowledge base or archives a semantic model object.</p>
+     * 
+     * @param request DeleteKnowledgeObjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteKnowledgeObjectResponse
+     */
+    public DeleteKnowledgeObjectResponse deleteKnowledgeObjectWithOptions(DeleteKnowledgeObjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeObjectId)) {
+            body.put("KnowledgeObjectId", request.knowledgeObjectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteKnowledgeObject"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteKnowledgeObjectResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a knowledge object. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes a document object from a knowledge base or archives a semantic model object.</p>
+     * 
+     * @param request DeleteKnowledgeObjectRequest
+     * @return DeleteKnowledgeObjectResponse
+     */
+    public DeleteKnowledgeObjectResponse deleteKnowledgeObject(DeleteKnowledgeObjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteKnowledgeObjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Manages knowledge sources in a knowledge base. The identity is determined by the POP context, and credentials are not returned in the response.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a knowledge source from a specified knowledge base.</p>
+     * 
+     * @param request DeleteKnowledgeSourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteKnowledgeSourceResponse
+     */
+    public DeleteKnowledgeSourceResponse deleteKnowledgeSourceWithOptions(DeleteKnowledgeSourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            body.put("SourceId", request.sourceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteKnowledgeSource"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteKnowledgeSourceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Manages knowledge sources in a knowledge base. The identity is determined by the POP context, and credentials are not returned in the response.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a knowledge source from a specified knowledge base.</p>
+     * 
+     * @param request DeleteKnowledgeSourceRequest
+     * @return DeleteKnowledgeSourceResponse
+     */
+    public DeleteKnowledgeSourceResponse deleteKnowledgeSource(DeleteKnowledgeSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteKnowledgeSourceWithOptions(request, runtime);
     }
 
     /**
@@ -8479,7 +9221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a specified task.</p>
@@ -8518,7 +9260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a specified task.</p>
@@ -9827,16 +10569,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API is used to query the details of resource permission applications based on the provided <code>ProcessInstanceId</code>.</li>
-     * <li>A valid <code>ProcessInstanceId</code> parameter must be provided in the request.</li>
-     * <li>The response includes the basic information, status, and the list of specific application contents.</li>
-     * <li>Each application content includes detailed resource information, the grantee, the requested operation permissions, and more.</li>
+     * <li>Specify a valid <code>ProcessInstanceId</code> to retrieve the corresponding resource access request.</li>
+     * <li>The response includes the basic details and status of the request, along with its items.</li>
+     * <li>Each item includes information about the resource, the grantee, and the requested operation permissions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the content of resource permission applications under the specified process instance ID.</p>
+     * <p>Retrieves the details of a resource access request for the specified process instance ID.</p>
      * 
      * @param request GetApplicationContentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9868,16 +10609,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API is used to query the details of resource permission applications based on the provided <code>ProcessInstanceId</code>.</li>
-     * <li>A valid <code>ProcessInstanceId</code> parameter must be provided in the request.</li>
-     * <li>The response includes the basic information, status, and the list of specific application contents.</li>
-     * <li>Each application content includes detailed resource information, the grantee, the requested operation permissions, and more.</li>
+     * <li>Specify a valid <code>ProcessInstanceId</code> to retrieve the corresponding resource access request.</li>
+     * <li>The response includes the basic details and status of the request, along with its items.</li>
+     * <li>Each item includes information about the resource, the grantee, and the requested operation permissions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the content of resource permission applications under the specified process instance ID.</p>
+     * <p>Retrieves the details of a resource access request for the specified process instance ID.</p>
      * 
      * @param request GetApplicationContentsRequest
      * @return GetApplicationContentsResponse
@@ -10429,12 +11169,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Queries the configuration, availability status, and latest run information of a specified metadata crawler.</p>
      * <h2>Recommended workflow</h2>
      * <ol>
-     * <li>Call <code>ListCrawlers</code> to query crawler IDs.</li>
-     * <li>Call this operation to retrieve crawler details.</li>
-     * <li>To query the complete run history, call <code>ListCrawlerRuns</code>.</li>
+     * <li>Call ListCrawlers to query the crawler ID.</li>
+     * <li>Call this operation to obtain the crawler details.</li>
+     * <li>To query the complete run history, call ListCrawlerRuns.</li>
      * </ol>
      * <h2>Edition requirements</h2>
-     * <p>DataWorks Basic Edition or higher is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</p>
      * <h2>Precautions</h2>
      * <p>If the crawler has not been run, the latest run status and task instance ID may be empty.</p>
      * 
@@ -10475,12 +11215,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Queries the configuration, availability status, and latest run information of a specified metadata crawler.</p>
      * <h2>Recommended workflow</h2>
      * <ol>
-     * <li>Call <code>ListCrawlers</code> to query crawler IDs.</li>
-     * <li>Call this operation to retrieve crawler details.</li>
-     * <li>To query the complete run history, call <code>ListCrawlerRuns</code>.</li>
+     * <li>Call ListCrawlers to query the crawler ID.</li>
+     * <li>Call this operation to obtain the crawler details.</li>
+     * <li>To query the complete run history, call ListCrawlerRuns.</li>
      * </ol>
      * <h2>Edition requirements</h2>
-     * <p>DataWorks Basic Edition or higher is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</p>
      * <h2>Precautions</h2>
      * <p>If the crawler has not been run, the latest run status and task instance ID may be empty.</p>
      * 
@@ -11106,10 +11846,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or a higher edition is required.</p>
+     * <p>DataWorks Basic Edition or higher is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the run details of a data quality scan task by its ID.</p>
+     * <p>Creates a data quality monitoring run instance.</p>
      * 
      * @param request GetDataQualityScanRunRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11141,10 +11881,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or a higher edition is required.</p>
+     * <p>DataWorks Basic Edition or higher is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the run details of a data quality scan task by its ID.</p>
+     * <p>Creates a data quality monitoring run instance.</p>
      * 
      * @param request GetDataQualityScanRunRequest
      * @return GetDataQualityScanRunResponse
@@ -11825,12 +12565,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>DataWorks Basic Edition or later is required.</li>
-     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</strong></li>
+     * <li>DataWorks Basic Edition or higher is required.</li>
+     * <li><strong>Ensure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</strong></li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of an image test result.</p>
+     * <p>Retrieves the details of the image test result.</p>
      * 
      * @param request GetImageTestResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11867,12 +12607,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>DataWorks Basic Edition or later is required.</li>
-     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</strong></li>
+     * <li>DataWorks Basic Edition or higher is required.</li>
+     * <li><strong>Ensure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</strong></li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of an image test result.</p>
+     * <p>Retrieves the details of the image test result.</p>
      * 
      * @param request GetImageTestResultRequest
      * @return GetImageTestResultResponse
@@ -11920,6 +12660,396 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetJobStatusResponse getJobStatus(GetJobStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getJobStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves a knowledge base. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves information about a specified knowledge base and the current caller’s access role.</p>
+     * 
+     * @param request GetKnowledgeBaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetKnowledgeBaseResponse
+     */
+    public GetKnowledgeBaseResponse getKnowledgeBaseWithOptions(GetKnowledgeBaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetKnowledgeBase"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetKnowledgeBaseResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves a knowledge base. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves information about a specified knowledge base and the current caller’s access role.</p>
+     * 
+     * @param request GetKnowledgeBaseRequest
+     * @return GetKnowledgeBaseResponse
+     */
+    public GetKnowledgeBaseResponse getKnowledgeBase(GetKnowledgeBaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getKnowledgeBaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Reads a knowledge base build task or instance. The tenant and caller identity are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the current configuration of a specified knowledge base build task.</p>
+     * 
+     * @param request GetKnowledgeBaseBuildTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetKnowledgeBaseBuildTaskResponse
+     */
+    public GetKnowledgeBaseBuildTaskResponse getKnowledgeBaseBuildTaskWithOptions(GetKnowledgeBaseBuildTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetKnowledgeBaseBuildTask"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetKnowledgeBaseBuildTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Reads a knowledge base build task or instance. The tenant and caller identity are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the current configuration of a specified knowledge base build task.</p>
+     * 
+     * @param request GetKnowledgeBaseBuildTaskRequest
+     * @return GetKnowledgeBaseBuildTaskResponse
+     */
+    public GetKnowledgeBaseBuildTaskResponse getKnowledgeBaseBuildTask(GetKnowledgeBaseBuildTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getKnowledgeBaseBuildTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves a knowledge base build task or instance. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the execution status, input and configuration snapshots, and failure details for a build.</p>
+     * 
+     * @param request GetKnowledgeBaseBuildTaskInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetKnowledgeBaseBuildTaskInstanceResponse
+     */
+    public GetKnowledgeBaseBuildTaskInstanceResponse getKnowledgeBaseBuildTaskInstanceWithOptions(GetKnowledgeBaseBuildTaskInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskInstanceId)) {
+            body.put("TaskInstanceId", request.taskInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetKnowledgeBaseBuildTaskInstance"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetKnowledgeBaseBuildTaskInstanceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves a knowledge base build task or instance. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the execution status, input and configuration snapshots, and failure details for a build.</p>
+     * 
+     * @param request GetKnowledgeBaseBuildTaskInstanceRequest
+     * @return GetKnowledgeBaseBuildTaskInstanceResponse
+     */
+    public GetKnowledgeBaseBuildTaskInstanceResponse getKnowledgeBaseBuildTaskInstance(GetKnowledgeBaseBuildTaskInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getKnowledgeBaseBuildTaskInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the temporary download link for the original artifact package of a successful build instance. The model YAML is obtained through the knowledge object API and is not included in the TGZ result of this API.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the original artifact information and temporary download URL of a successful build.</p>
+     * 
+     * @param request GetKnowledgeBaseBuildTaskResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetKnowledgeBaseBuildTaskResultResponse
+     */
+    public GetKnowledgeBaseBuildTaskResultResponse getKnowledgeBaseBuildTaskResultWithOptions(GetKnowledgeBaseBuildTaskResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskInstanceId)) {
+            body.put("TaskInstanceId", request.taskInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetKnowledgeBaseBuildTaskResult"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetKnowledgeBaseBuildTaskResultResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the temporary download link for the original artifact package of a successful build instance. The model YAML is obtained through the knowledge object API and is not included in the TGZ result of this API.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the original artifact information and temporary download URL of a successful build.</p>
+     * 
+     * @param request GetKnowledgeBaseBuildTaskResultRequest
+     * @return GetKnowledgeBaseBuildTaskResultResponse
+     */
+    public GetKnowledgeBaseBuildTaskResultResponse getKnowledgeBaseBuildTaskResult(GetKnowledgeBaseBuildTaskResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getKnowledgeBaseBuildTaskResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves a knowledge object. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the current content and available download URLs of a document or semantic model.</p>
+     * 
+     * @param request GetKnowledgeObjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetKnowledgeObjectResponse
+     */
+    public GetKnowledgeObjectResponse getKnowledgeObjectWithOptions(GetKnowledgeObjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeObjectId)) {
+            body.put("KnowledgeObjectId", request.knowledgeObjectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionNo)) {
+            body.put("VersionNo", request.versionNo);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetKnowledgeObject"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetKnowledgeObjectResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves a knowledge object. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the current content and available download URLs of a document or semantic model.</p>
+     * 
+     * @param request GetKnowledgeObjectRequest
+     * @return GetKnowledgeObjectResponse
+     */
+    public GetKnowledgeObjectResponse getKnowledgeObject(GetKnowledgeObjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getKnowledgeObjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the current details of a knowledge point. GRAPH returns a one-hop local graph centered on the specified node. WIKI and KNOWLEDGE_CONTENT return readable content.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the current details of a single knowledge point, supporting local graphs, topic pages, and knowledge content.</p>
+     * 
+     * @param request GetKnowledgePointRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetKnowledgePointResponse
+     */
+    public GetKnowledgePointResponse getKnowledgePointWithOptions(GetKnowledgePointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetKnowledgePoint"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetKnowledgePointResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the current details of a knowledge point. GRAPH returns a one-hop local graph centered on the specified node. WIKI and KNOWLEDGE_CONTENT return readable content.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the current details of a single knowledge point, supporting local graphs, topic pages, and knowledge content.</p>
+     * 
+     * @param request GetKnowledgePointRequest
+     * @return GetKnowledgePointResponse
+     */
+    public GetKnowledgePointResponse getKnowledgePoint(GetKnowledgePointRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getKnowledgePointWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Manages knowledge sources for a knowledge base. The identity is determined by the POP context, and credentials are not returned in the query response.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the current configuration of a knowledge source without returning connector credentials.</p>
+     * 
+     * @param request GetKnowledgeSourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetKnowledgeSourceResponse
+     */
+    public GetKnowledgeSourceResponse getKnowledgeSourceWithOptions(GetKnowledgeSourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            body.put("SourceId", request.sourceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetKnowledgeSource"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetKnowledgeSourceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Manages knowledge sources for a knowledge base. The identity is determined by the POP context, and credentials are not returned in the query response.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the current configuration of a knowledge source without returning connector credentials.</p>
+     * 
+     * @param request GetKnowledgeSourceRequest
+     * @return GetKnowledgeSourceResponse
+     */
+    public GetKnowledgeSourceResponse getKnowledgeSource(GetKnowledgeSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getKnowledgeSourceWithOptions(request, runtime);
     }
 
     /**
@@ -12412,16 +13542,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API retrieves the details of a specific approval process definition using the <code>ID</code> parameter.</li>
-     * <li>The <code>ID</code> parameter is required and must be a valid process definition ID.</li>
-     * <li>The response includes the basic properties of the approval process definition, rule conditions, notification service configurations, and approval nodes.</li>
-     * <li>A successful request returns the complete process definition object. A failed request returns an error code and message for troubleshooting.</li>
+     * <li>This operation queries all information about a specific approval process definition by using the specified <code>Id</code> parameter.</li>
+     * <li><code>Id</code> is required and must be a valid process definition ID.</li>
+     * <li>The returned information includes but is not limited to the basic attributes, rule conditions, notification service configurations, and approval nodes of the process definition.</li>
+     * <li>If the request is successful, the data containing the complete process definition object is returned. If the request fails, the corresponding error code and message are provided to help troubleshoot the issue.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the approval policy for a given process definition ID.</p>
+     * <p>Retrieves the details of an approval policy based on the specified process definition ID.</p>
      * 
      * @param request GetProcessDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12453,16 +13583,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API retrieves the details of a specific approval process definition using the <code>ID</code> parameter.</li>
-     * <li>The <code>ID</code> parameter is required and must be a valid process definition ID.</li>
-     * <li>The response includes the basic properties of the approval process definition, rule conditions, notification service configurations, and approval nodes.</li>
-     * <li>A successful request returns the complete process definition object. A failed request returns an error code and message for troubleshooting.</li>
+     * <li>This operation queries all information about a specific approval process definition by using the specified <code>Id</code> parameter.</li>
+     * <li><code>Id</code> is required and must be a valid process definition ID.</li>
+     * <li>The returned information includes but is not limited to the basic attributes, rule conditions, notification service configurations, and approval nodes of the process definition.</li>
+     * <li>If the request is successful, the data containing the complete process definition object is returned. If the request fails, the corresponding error code and message are provided to help troubleshoot the issue.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the approval policy for a given process definition ID.</p>
+     * <p>Retrieves the details of an approval policy based on the specified process definition ID.</p>
      * 
      * @param request GetProcessDefinitionRequest
      * @return GetProcessDefinitionResponse
@@ -13506,7 +14636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This feature requires DataWorks Basic Edition or a higher edition.</p>
+     * <p>DataWorks Basic Edition or higher is required to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of a specified workflow.</p>
@@ -13537,7 +14667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This feature requires DataWorks Basic Edition or a higher edition.</p>
+     * <p>DataWorks Basic Edition or higher is required to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of a specified workflow.</p>
@@ -13634,6 +14764,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetWorkflowInstanceResponse getWorkflowInstance(GetWorkflowInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getWorkflowInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Grants retrieval permissions to a user. Only the knowledge base owner or administrator can perform this operation. The caller and tenant are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Grants a specified user retrieval access to a knowledge base.</p>
+     * 
+     * @param request GrantKnowledgeBaseRetrievalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GrantKnowledgeBaseRetrievalResponse
+     */
+    public GrantKnowledgeBaseRetrievalResponse grantKnowledgeBaseRetrievalWithOptions(GrantKnowledgeBaseRetrievalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalId)) {
+            body.put("PrincipalId", request.principalId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalType)) {
+            body.put("PrincipalType", request.principalType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GrantKnowledgeBaseRetrieval"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GrantKnowledgeBaseRetrievalResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Grants retrieval permissions to a user. Only the knowledge base owner or administrator can perform this operation. The caller and tenant are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Grants a specified user retrieval access to a knowledge base.</p>
+     * 
+     * @param request GrantKnowledgeBaseRetrievalRequest
+     * @return GrantKnowledgeBaseRetrievalResponse
+     */
+    public GrantKnowledgeBaseRetrievalResponse grantKnowledgeBaseRetrieval(GrantKnowledgeBaseRetrievalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.grantKnowledgeBaseRetrievalWithOptions(request, runtime);
     }
 
     /**
@@ -15105,7 +16293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries cross-workspace deployment candidates.</p>
+     * <p>Queries candidate objects for cross-workspace deployment.</p>
      * 
      * @param request ListCrossProjectDeploymentCandidatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15177,7 +16365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries cross-workspace deployment candidates.</p>
+     * <p>Queries candidate objects for cross-workspace deployment.</p>
      * 
      * @param request ListCrossProjectDeploymentCandidatesRequest
      * @return ListCrossProjectDeploymentCandidatesResponse
@@ -15383,13 +16571,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><strong>Search keyword</strong>: Use the <code>Q</code> parameter to perform a fuzzy match on agent names.</li>
-     * <li><strong>Visibility level filter</strong>: Use the <code>Visibility</code> parameter to filter results by visibility level, such as <code>TENANT</code>, <code>PROJECT</code>, or <code>USER</code>.</li>
-     * <li><strong>Paging information</strong>: Use the <code>MaxResults</code> and <code>NextToken</code> parameters to implement a paged query. The <code>NextToken</code> parameter is used to retrieve the next page of data.</li>
+     * <li><strong>Search keyword</strong>: You can use the <code>Q</code> parameter to perform a fuzzy match by agent name.</li>
+     * <li><strong>Visibility level filter</strong>: You can use the <code>Visibility</code> parameter to filter results by visibility level, such as <code>TENANT</code>, <code>PROJECT</code>, or <code>USER</code>.</li>
+     * <li><strong>Paging information</strong>: You can use the <code>MaxResults</code> and <code>NextToken</code> parameters to implement a paged query. The <code>NextToken</code> parameter is used to retrieve the next page of data.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists custom agents with pagination.</p>
+     * <p>Returns a paginated list of custom agents.</p>
      * 
      * @param tmpReq ListCustomAgentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15443,13 +16631,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><strong>Search keyword</strong>: Use the <code>Q</code> parameter to perform a fuzzy match on agent names.</li>
-     * <li><strong>Visibility level filter</strong>: Use the <code>Visibility</code> parameter to filter results by visibility level, such as <code>TENANT</code>, <code>PROJECT</code>, or <code>USER</code>.</li>
-     * <li><strong>Paging information</strong>: Use the <code>MaxResults</code> and <code>NextToken</code> parameters to implement a paged query. The <code>NextToken</code> parameter is used to retrieve the next page of data.</li>
+     * <li><strong>Search keyword</strong>: You can use the <code>Q</code> parameter to perform a fuzzy match by agent name.</li>
+     * <li><strong>Visibility level filter</strong>: You can use the <code>Visibility</code> parameter to filter results by visibility level, such as <code>TENANT</code>, <code>PROJECT</code>, or <code>USER</code>.</li>
+     * <li><strong>Paging information</strong>: You can use the <code>MaxResults</code> and <code>NextToken</code> parameters to implement a paged query. The <code>NextToken</code> parameter is used to retrieve the next page of data.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists custom agents with pagination.</p>
+     * <p>Returns a paginated list of custom agents.</p>
      * 
      * @param request ListCustomAgentsRequest
      * @return ListCustomAgentsResponse
@@ -16041,10 +17229,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>需要购买DataWorks基础版及以上版本才能使用</p>
+     * <p>You must purchase DataWorks Basic Edition or higher to use this API.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of data quality results by using paging.</p>
+     * <p>Lists data quality check results with pagination.</p>
      * 
      * @deprecated OpenAPI ListDataQualityResults is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
      * 
@@ -16076,10 +17264,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>需要购买DataWorks基础版及以上版本才能使用</p>
+     * <p>You must purchase DataWorks Basic Edition or higher to use this API.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of data quality results by using paging.</p>
+     * <p>Lists data quality check results with pagination.</p>
      * 
      * @deprecated OpenAPI ListDataQualityResults is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
      * 
@@ -17649,6 +18837,486 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Lists the administrators. Only the owner or administrators of the knowledge base can perform this operation. The caller and tenant are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists administrators of a specified knowledge base with pagination.</p>
+     * 
+     * @param request ListKnowledgeBaseAdministratorsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListKnowledgeBaseAdministratorsResponse
+     */
+    public ListKnowledgeBaseAdministratorsResponse listKnowledgeBaseAdministratorsWithOptions(ListKnowledgeBaseAdministratorsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListKnowledgeBaseAdministrators"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListKnowledgeBaseAdministratorsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists the administrators. Only the owner or administrators of the knowledge base can perform this operation. The caller and tenant are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists administrators of a specified knowledge base with pagination.</p>
+     * 
+     * @param request ListKnowledgeBaseAdministratorsRequest
+     * @return ListKnowledgeBaseAdministratorsResponse
+     */
+    public ListKnowledgeBaseAdministratorsResponse listKnowledgeBaseAdministrators(ListKnowledgeBaseAdministratorsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listKnowledgeBaseAdministratorsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Reads knowledge base build tasks or instances. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists knowledge base build task instances and their run statuses with pagination.</p>
+     * 
+     * @param request ListKnowledgeBaseBuildTaskInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListKnowledgeBaseBuildTaskInstancesResponse
+     */
+    public ListKnowledgeBaseBuildTaskInstancesResponse listKnowledgeBaseBuildTaskInstancesWithOptions(ListKnowledgeBaseBuildTaskInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListKnowledgeBaseBuildTaskInstances"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListKnowledgeBaseBuildTaskInstancesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Reads knowledge base build tasks or instances. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists knowledge base build task instances and their run statuses with pagination.</p>
+     * 
+     * @param request ListKnowledgeBaseBuildTaskInstancesRequest
+     * @return ListKnowledgeBaseBuildTaskInstancesResponse
+     */
+    public ListKnowledgeBaseBuildTaskInstancesResponse listKnowledgeBaseBuildTaskInstances(ListKnowledgeBaseBuildTaskInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listKnowledgeBaseBuildTaskInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Reads knowledge base build tasks or instances. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the build tasks for a specified knowledge base with pagination.</p>
+     * 
+     * @param request ListKnowledgeBaseBuildTasksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListKnowledgeBaseBuildTasksResponse
+     */
+    public ListKnowledgeBaseBuildTasksResponse listKnowledgeBaseBuildTasksWithOptions(ListKnowledgeBaseBuildTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListKnowledgeBaseBuildTasks"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListKnowledgeBaseBuildTasksResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Reads knowledge base build tasks or instances. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the build tasks for a specified knowledge base with pagination.</p>
+     * 
+     * @param request ListKnowledgeBaseBuildTasksRequest
+     * @return ListKnowledgeBaseBuildTasksResponse
+     */
+    public ListKnowledgeBaseBuildTasksResponse listKnowledgeBaseBuildTasks(ListKnowledgeBaseBuildTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listKnowledgeBaseBuildTasksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists user retrieval authorizations. Only the knowledge base owner or administrator can perform this operation. The caller and tenant are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists retrieval grants for a specified knowledge base with pagination.</p>
+     * 
+     * @param request ListKnowledgeBaseRetrievalGrantsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListKnowledgeBaseRetrievalGrantsResponse
+     */
+    public ListKnowledgeBaseRetrievalGrantsResponse listKnowledgeBaseRetrievalGrantsWithOptions(ListKnowledgeBaseRetrievalGrantsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalType)) {
+            body.put("PrincipalType", request.principalType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListKnowledgeBaseRetrievalGrants"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListKnowledgeBaseRetrievalGrantsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists user retrieval authorizations. Only the knowledge base owner or administrator can perform this operation. The caller and tenant are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists retrieval grants for a specified knowledge base with pagination.</p>
+     * 
+     * @param request ListKnowledgeBaseRetrievalGrantsRequest
+     * @return ListKnowledgeBaseRetrievalGrantsResponse
+     */
+    public ListKnowledgeBaseRetrievalGrantsResponse listKnowledgeBaseRetrievalGrants(ListKnowledgeBaseRetrievalGrantsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listKnowledgeBaseRetrievalGrantsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists knowledge bases. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the knowledge bases that the current caller can view in the specified region, with pagination.</p>
+     * 
+     * @param request ListKnowledgeBasesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListKnowledgeBasesResponse
+     */
+    public ListKnowledgeBasesResponse listKnowledgeBasesWithOptions(ListKnowledgeBasesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListKnowledgeBases"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListKnowledgeBasesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists knowledge bases. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the knowledge bases that the current caller can view in the specified region, with pagination.</p>
+     * 
+     * @param request ListKnowledgeBasesRequest
+     * @return ListKnowledgeBasesResponse
+     */
+    public ListKnowledgeBasesResponse listKnowledgeBases(ListKnowledgeBasesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listKnowledgeBasesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists knowledge objects. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists knowledge objects in a knowledge base with pagination.</p>
+     * 
+     * @param request ListKnowledgeObjectsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListKnowledgeObjectsResponse
+     */
+    public ListKnowledgeObjectsResponse listKnowledgeObjectsWithOptions(ListKnowledgeObjectsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListKnowledgeObjects"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListKnowledgeObjectsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists knowledge objects. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists knowledge objects in a knowledge base with pagination.</p>
+     * 
+     * @param request ListKnowledgeObjectsRequest
+     * @return ListKnowledgeObjectsResponse
+     */
+    public ListKnowledgeObjectsResponse listKnowledgeObjects(ListKnowledgeObjectsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listKnowledgeObjectsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists the currently visible knowledge points in a knowledge base in a paginated manner. You can filter the knowledge points by type, such as GRAPH, WIKI, and KNOWLEDGE_CONTENT.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists knowledge points in a knowledge base by type with pagination.</p>
+     * 
+     * @param request ListKnowledgePointsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListKnowledgePointsResponse
+     */
+    public ListKnowledgePointsResponse listKnowledgePointsWithOptions(ListKnowledgePointsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListKnowledgePoints"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListKnowledgePointsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists the currently visible knowledge points in a knowledge base in a paginated manner. You can filter the knowledge points by type, such as GRAPH, WIKI, and KNOWLEDGE_CONTENT.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists knowledge points in a knowledge base by type with pagination.</p>
+     * 
+     * @param request ListKnowledgePointsRequest
+     * @return ListKnowledgePointsResponse
+     */
+    public ListKnowledgePointsResponse listKnowledgePoints(ListKnowledgePointsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listKnowledgePointsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Manages knowledge sources in a knowledge base. The identity is determined by the POP context, and credentials are not returned in the query response.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the registered knowledge sources for a specified knowledge base with pagination.</p>
+     * 
+     * @param request ListKnowledgeSourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListKnowledgeSourcesResponse
+     */
+    public ListKnowledgeSourcesResponse listKnowledgeSourcesWithOptions(ListKnowledgeSourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListKnowledgeSources"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListKnowledgeSourcesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Manages knowledge sources in a knowledge base. The identity is determined by the POP context, and credentials are not returned in the query response.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the registered knowledge sources for a specified knowledge base with pagination.</p>
+     * 
+     * @param request ListKnowledgeSourcesRequest
+     * @return ListKnowledgeSourcesResponse
+     */
+    public ListKnowledgeSourcesResponse listKnowledgeSources(ListKnowledgeSourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listKnowledgeSourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <ol>
      * <li>DataWorks Standard Edition or later is required.</li>
      * </ol>
@@ -18041,16 +19709,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API supports paginated queries, controlled by the <code>NextToken</code> and <code>PageSize</code> parameters.</li>
-     * <li><code>DefSchema</code> is a required parameter that specifies the resource type.</li>
-     * <li>The <code>ResourceType</code> list can contain multiple resource types for more precise filtering of application orders.</li>
-     * <li>You can set <code>StartTime</code> and <code>EndTime</code> to limit the time range of the query.</li>
-     * <li><code>Statuses</code> allows you to filter application orders by specific statuses, such as pending approval and authorized.</li>
-     * <li>If you need to filter by specific resources or authorization targets, you can provide detailed information through the <code>Resource</code> and <code>Grantee</code> fields.</li>
+     * <li>Use <code>NextToken</code> and <code>PageSize</code> to paginate the results.</li>
+     * <li><code>DefSchema</code> is required and specifies the resource type.</li>
+     * <li>Specify multiple resource types in <code>ResourceType</code> to narrow the results.</li>
+     * <li>Use <code>StartTime</code> and <code>EndTime</code> to restrict the query to a time range.</li>
+     * <li>Use <code>Statuses</code> to filter requests by status, such as pending approval or authorization succeeded.</li>
+     * <li>To filter by specific resources or grantees, specify the details in <code>Resource</code> and <code>Grantee</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries all resource access permission application orders initiated by the current user.</p>
+     * <p>Lists all requests for resource access permissions submitted by the current user.</p>
      * 
      * @param tmpReq ListMyApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18126,16 +19794,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>This API supports paginated queries, controlled by the <code>NextToken</code> and <code>PageSize</code> parameters.</li>
-     * <li><code>DefSchema</code> is a required parameter that specifies the resource type.</li>
-     * <li>The <code>ResourceType</code> list can contain multiple resource types for more precise filtering of application orders.</li>
-     * <li>You can set <code>StartTime</code> and <code>EndTime</code> to limit the time range of the query.</li>
-     * <li><code>Statuses</code> allows you to filter application orders by specific statuses, such as pending approval and authorized.</li>
-     * <li>If you need to filter by specific resources or authorization targets, you can provide detailed information through the <code>Resource</code> and <code>Grantee</code> fields.</li>
+     * <li>Use <code>NextToken</code> and <code>PageSize</code> to paginate the results.</li>
+     * <li><code>DefSchema</code> is required and specifies the resource type.</li>
+     * <li>Specify multiple resource types in <code>ResourceType</code> to narrow the results.</li>
+     * <li>Use <code>StartTime</code> and <code>EndTime</code> to restrict the query to a time range.</li>
+     * <li>Use <code>Statuses</code> to filter requests by status, such as pending approval or authorization succeeded.</li>
+     * <li>To filter by specific resources or grantees, specify the details in <code>Resource</code> and <code>Grantee</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries all resource access permission application orders initiated by the current user.</p>
+     * <p>Lists all requests for resource access permissions submitted by the current user.</p>
      * 
      * @param request ListMyApplicationsRequest
      * @return ListMyApplicationsResponse
@@ -18147,17 +19815,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API is used to retrieve all permission application orders where the current user is an approver, including pending and processed application orders.</li>
-     * <li>You can use the <code>Statuses</code> parameter to filter application orders by specific status.</li>
-     * <li><code>NextToken</code> is used for paginated requests. It can be omitted or set to <code>null</code> for the first request. For subsequent requests, pass the <code>NextToken</code> value from the previous response.</li>
-     * <li><code>PageSize</code> defaults to 10, with a maximum of 200.</li>
-     * <li><code>DefSchema</code> and <code>ResourceType</code> are required fields. Other parameters can be filled in as needed.</li>
+     * <li>This operation lists permission requests for which the current user is an approver, including requests pending approval and requests that have already been reviewed.</li>
+     * <li>Use <code>Statuses</code> to filter requests by status.</li>
+     * <li>For the first page, omit <code>NextToken</code> or set it to <code>null</code>. For subsequent pages, pass the <code>NextToken</code> value returned in the previous response.</li>
+     * <li><code>PageSize</code> defaults to 10 and supports a maximum of 200.</li>
+     * <li><code>DefSchema</code> and <code>ResourceType</code> are required. Other parameters are optional.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query all permission application orders where the current user is an approver or stakeholder.</p>
+     * <p>Lists all permission requests for which the current user is an approver or a related party.</p>
      * 
      * @param tmpReq ListMyRelatedApprovalsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18247,17 +19915,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API is used to retrieve all permission application orders where the current user is an approver, including pending and processed application orders.</li>
-     * <li>You can use the <code>Statuses</code> parameter to filter application orders by specific status.</li>
-     * <li><code>NextToken</code> is used for paginated requests. It can be omitted or set to <code>null</code> for the first request. For subsequent requests, pass the <code>NextToken</code> value from the previous response.</li>
-     * <li><code>PageSize</code> defaults to 10, with a maximum of 200.</li>
-     * <li><code>DefSchema</code> and <code>ResourceType</code> are required fields. Other parameters can be filled in as needed.</li>
+     * <li>This operation lists permission requests for which the current user is an approver, including requests pending approval and requests that have already been reviewed.</li>
+     * <li>Use <code>Statuses</code> to filter requests by status.</li>
+     * <li>For the first page, omit <code>NextToken</code> or set it to <code>null</code>. For subsequent pages, pass the <code>NextToken</code> value returned in the previous response.</li>
+     * <li><code>PageSize</code> defaults to 10 and supports a maximum of 200.</li>
+     * <li><code>DefSchema</code> and <code>ResourceType</code> are required. Other parameters are optional.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query all permission application orders where the current user is an approver or stakeholder.</p>
+     * <p>Lists all permission requests for which the current user is an approver or a related party.</p>
      * 
      * @param request ListMyRelatedApprovalsRequest
      * @return ListMyRelatedApprovalsResponse
@@ -18603,31 +20271,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request Description</h2>
-     * <p>This API is used to query all pending permission request orders for which the current logged-in user is the approver. It supports filtering by multiple conditions, including resource type, time range, and approval status, to more precisely locate specific request orders.</p>
+     * <h2>Request description</h2>
+     * <p>This operation queries all pending permission requests for which the current logged-on user is the approver. You can filter the applications by using various conditions, such as resource type, time range, and approval status, to accurately locate specific applications.</p>
      * <ul>
-     * <li><strong>ResourceType</strong>: Specifies the resource type (such as table), which can have multiple values.</li>
-     * <li><strong>Resource</strong>: Provides specific resource search conditions, such as the project, database, or table name.</li>
-     * <li><strong>StartTime and EndTime</strong>: Define the time range during which the request was submitted.</li>
-     * <li><strong>Statuses</strong>: Allows filtering results by approval status, for example, to view only pending approval requests.</li>
-     * <li><strong>Grantee</strong>: Filters request orders based on the authorization principal information.</li>
-     * <li><strong>AccessTypes</strong>: Filters based on the specific permission types requested (such as read or update).</li>
-     * <li><strong>PageSize and NextToken</strong>: Used for pagination control, specifying the amount of data returned per request and the cursor needed to retrieve the next page of data.
-     * Notes:</li>
-     * <li>If no filtering conditions are provided, all matching records are returned by default.</li>
-     * <li>The <code>NextToken</code> parameter can be empty or omitted for the first call. Subsequent page requests must use the <code>NextToken</code> value provided in the previous response.</li>
+     * <li><strong>ResourceType</strong>: specifies the resource types, such as tables. Multiple values are supported.</li>
+     * <li><strong>Resource</strong>: specifies the exact resource search conditions, such as the project, database, or table name.</li>
+     * <li><strong>StartTime and EndTime</strong>: define the time range when the applications were initiated.</li>
+     * <li><strong>Statuses</strong>: filters the results by approval status, such as viewing only the pending approval status.</li>
+     * <li><strong>Grantee</strong>: filters the applications based on the grantee information.</li>
+     * <li><strong>AccessTypes</strong>: filters the applications based on the specific permission types requested, such as read or update.</li>
+     * <li><strong>PageSize and NextToken</strong>: are used for pagination control. PageSize specifies the number of entries to return per page, and NextToken specifies the cursor required to retrieve the next page.
+     * Precautions:</li>
+     * <li>If no filter conditions are provided, all matching records are returned by default.</li>
+     * <li>The <code>NextToken</code> parameter can be left empty or omitted in the first call. For subsequent page requests, you must use the <code>NextToken</code> value provided in the previous response.</li>
      * <li>The default value of <code>PageSize</code> is 10, and the maximum value is 200. If the specified value exceeds the maximum limit, the maximum value is used.</li>
-     * <li>When there is no more data to return, the <code>HasMore</code> field is set to <code>false</code>, and <code>NextToken</code> will be empty or absent.</li>
+     * <li>When no more data is available, the <code>HasMore</code> field is set to <code>false</code>, and <code>NextToken</code> is empty or does not exist.</li>
      * </ul>
-     * <h2>Response Description</h2>
-     * <p>After a successful call to this API, the response body contains paginated results and detailed information for each request order, such as the application time, resource description, authorization principal, requested permissions, and more. Additionally, the approval process status and other related metadata are provided.</p>
+     * <h2>Response description</h2>
+     * <p>After a successful API call, the response body contains the paginated results and the details of each application, such as the application time, resource description, grantee, and requested permissions. In addition, the status of the approval process and other related metadata are provided.</p>
      * <ul>
-     * <li><strong>Data</strong>: The paginated result set, including page size (<code>PageSize</code>), cursor (<code>NextToken</code>), and whether more data is available (<code>HasMore</code>).</li>
-     * <li><strong>ApplicationQueryResponse</strong>: The specific content of each request order, including the reason for the request, submission time, status, and a detailed list of request content.</li>
+     * <li><strong>Data</strong>: the paginated result set, which includes information such as the page size (<code>PageSize</code>), cursor (<code>NextToken</code>), and whether more data is available (<code>HasMore</code>).</li>
+     * <li><strong>ApplicationQueryResponse</strong>: the specific content of each application, including the application reason, initiation time, status, and the detailed list of application contents.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of pending permission request orders for which the current user is the approver.</p>
+     * <p>Queries the pending permission requests for which the current user is the approver.</p>
      * 
      * @param tmpReq ListPendingApprovalsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18709,31 +20377,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request Description</h2>
-     * <p>This API is used to query all pending permission request orders for which the current logged-in user is the approver. It supports filtering by multiple conditions, including resource type, time range, and approval status, to more precisely locate specific request orders.</p>
+     * <h2>Request description</h2>
+     * <p>This operation queries all pending permission requests for which the current logged-on user is the approver. You can filter the applications by using various conditions, such as resource type, time range, and approval status, to accurately locate specific applications.</p>
      * <ul>
-     * <li><strong>ResourceType</strong>: Specifies the resource type (such as table), which can have multiple values.</li>
-     * <li><strong>Resource</strong>: Provides specific resource search conditions, such as the project, database, or table name.</li>
-     * <li><strong>StartTime and EndTime</strong>: Define the time range during which the request was submitted.</li>
-     * <li><strong>Statuses</strong>: Allows filtering results by approval status, for example, to view only pending approval requests.</li>
-     * <li><strong>Grantee</strong>: Filters request orders based on the authorization principal information.</li>
-     * <li><strong>AccessTypes</strong>: Filters based on the specific permission types requested (such as read or update).</li>
-     * <li><strong>PageSize and NextToken</strong>: Used for pagination control, specifying the amount of data returned per request and the cursor needed to retrieve the next page of data.
-     * Notes:</li>
-     * <li>If no filtering conditions are provided, all matching records are returned by default.</li>
-     * <li>The <code>NextToken</code> parameter can be empty or omitted for the first call. Subsequent page requests must use the <code>NextToken</code> value provided in the previous response.</li>
+     * <li><strong>ResourceType</strong>: specifies the resource types, such as tables. Multiple values are supported.</li>
+     * <li><strong>Resource</strong>: specifies the exact resource search conditions, such as the project, database, or table name.</li>
+     * <li><strong>StartTime and EndTime</strong>: define the time range when the applications were initiated.</li>
+     * <li><strong>Statuses</strong>: filters the results by approval status, such as viewing only the pending approval status.</li>
+     * <li><strong>Grantee</strong>: filters the applications based on the grantee information.</li>
+     * <li><strong>AccessTypes</strong>: filters the applications based on the specific permission types requested, such as read or update.</li>
+     * <li><strong>PageSize and NextToken</strong>: are used for pagination control. PageSize specifies the number of entries to return per page, and NextToken specifies the cursor required to retrieve the next page.
+     * Precautions:</li>
+     * <li>If no filter conditions are provided, all matching records are returned by default.</li>
+     * <li>The <code>NextToken</code> parameter can be left empty or omitted in the first call. For subsequent page requests, you must use the <code>NextToken</code> value provided in the previous response.</li>
      * <li>The default value of <code>PageSize</code> is 10, and the maximum value is 200. If the specified value exceeds the maximum limit, the maximum value is used.</li>
-     * <li>When there is no more data to return, the <code>HasMore</code> field is set to <code>false</code>, and <code>NextToken</code> will be empty or absent.</li>
+     * <li>When no more data is available, the <code>HasMore</code> field is set to <code>false</code>, and <code>NextToken</code> is empty or does not exist.</li>
      * </ul>
-     * <h2>Response Description</h2>
-     * <p>After a successful call to this API, the response body contains paginated results and detailed information for each request order, such as the application time, resource description, authorization principal, requested permissions, and more. Additionally, the approval process status and other related metadata are provided.</p>
+     * <h2>Response description</h2>
+     * <p>After a successful API call, the response body contains the paginated results and the details of each application, such as the application time, resource description, grantee, and requested permissions. In addition, the status of the approval process and other related metadata are provided.</p>
      * <ul>
-     * <li><strong>Data</strong>: The paginated result set, including page size (<code>PageSize</code>), cursor (<code>NextToken</code>), and whether more data is available (<code>HasMore</code>).</li>
-     * <li><strong>ApplicationQueryResponse</strong>: The specific content of each request order, including the reason for the request, submission time, status, and a detailed list of request content.</li>
+     * <li><strong>Data</strong>: the paginated result set, which includes information such as the page size (<code>PageSize</code>), cursor (<code>NextToken</code>), and whether more data is available (<code>HasMore</code>).</li>
+     * <li><strong>ApplicationQueryResponse</strong>: the specific content of each application, including the application reason, initiation time, status, and the detailed list of application contents.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of pending permission request orders for which the current user is the approver.</p>
+     * <p>Queries the pending permission requests for which the current user is the approver.</p>
      * 
      * @param request ListPendingApprovalsRequest
      * @return ListPendingApprovalsResponse
@@ -18786,12 +20454,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: 
-     * Earlier SDK versions may not include this interface. If so, use the ListDeployments interface. It accepts the same parameters.</p>
+     * <p>Notice: This operation may not be available in earlier versions of the SDK. In this case, use the ListDeployments operation, which uses the same parameters as described in this document.</notice></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve a paginated list of deployment processes. You can also filter this list based on specific criteria.</p>
+     * <p>Retrieves a paginated list of deployment pipelines. You can also filter the results.</p>
      * 
      * @param request ListPipelineRunsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18820,12 +20487,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: 
-     * Earlier SDK versions may not include this interface. If so, use the ListDeployments interface. It accepts the same parameters.</p>
+     * <p>Notice: This operation may not be available in earlier versions of the SDK. In this case, use the ListDeployments operation, which uses the same parameters as described in this document.</notice></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve a paginated list of deployment processes. You can also filter this list based on specific criteria.</p>
+     * <p>Retrieves a paginated list of deployment pipelines. You can also filter the results.</p>
      * 
      * @param request ListPipelineRunsRequest
      * @return ListPipelineRunsResponse
@@ -19363,7 +21029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a paginated list of resource files and filters resources.</p>
+     * <p>Lists resource files with pagination and optional filters.</p>
      * 
      * @param request ListResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19391,7 +21057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a paginated list of resource files and filters resources.</p>
+     * <p>Lists resource files with pagination and optional filters.</p>
      * 
      * @param request ListResourcesRequest
      * @return ListResourcesResponse
@@ -19656,18 +21322,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Scenarios</h2>
-     * <p>Queries the saved semantic node definitions of the current tenant with paging. Use this operation to display the node list, select a node to run, or obtain the workspace to which a node belongs.</p>
-     * <h2>Invoke flow</h2>
+     * <p>List saved semantic job definitions for the current tenant to display available jobs, select a job to run, or find the workspace that owns a job.</p>
+     * <h2>Workflow</h2>
      * <ol>
-     * <li>Use <code>PageNumber</code> and <code>PageSize</code> to read <code>Data.SemanticJobs</code> with paging.</li>
-     * <li>Use the <code>Name</code> field of a list item to invoke <code>RunSemanticJob</code>, <code>DeleteSemanticJob</code>, or <code>ListSemanticJobRuns</code>.</li>
-     * <li>Use the <code>ProjectId</code> field of a list item together with <code>ExecutorJobId</code> to invoke the details, log, and stop operations.</li>
+     * <li>Use <code>PageNumber</code> and <code>PageSize</code> to page through <code>Data.SemanticJobs</code>.</li>
+     * <li>Use the <code>Name</code> of a list item to invoke <code>RunSemanticJob</code>, <code>DeleteSemanticJob</code>, or <code>ListSemanticJobRuns</code>.</li>
+     * <li>Use the <code>ProjectId</code> of a list item together with <code>ExecutorJobId</code> to invoke the details, log, and stop operations.</li>
      * </ol>
-     * <h2>Notes</h2>
-     * <p>This operation returns node definitions, not real-time run statuses. To query run statuses, invoke <code>ListSemanticJobRuns</code>.</p>
+     * <h2>Precautions</h2>
+     * <p>This operation returns job definitions. For current run status, call <code>ListSemanticJobRuns</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the semantic node definitions of the current tenant with paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</p>
+     * <p>Lists semantic job definitions for the current tenant with pagination. Use Name to run or delete a job, ProjectId to query run details, and Source to verify the input scope.</p>
      * 
      * @param request ListSemanticJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19704,18 +21370,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Scenarios</h2>
-     * <p>Queries the saved semantic node definitions of the current tenant with paging. Use this operation to display the node list, select a node to run, or obtain the workspace to which a node belongs.</p>
-     * <h2>Invoke flow</h2>
+     * <p>List saved semantic job definitions for the current tenant to display available jobs, select a job to run, or find the workspace that owns a job.</p>
+     * <h2>Workflow</h2>
      * <ol>
-     * <li>Use <code>PageNumber</code> and <code>PageSize</code> to read <code>Data.SemanticJobs</code> with paging.</li>
-     * <li>Use the <code>Name</code> field of a list item to invoke <code>RunSemanticJob</code>, <code>DeleteSemanticJob</code>, or <code>ListSemanticJobRuns</code>.</li>
-     * <li>Use the <code>ProjectId</code> field of a list item together with <code>ExecutorJobId</code> to invoke the details, log, and stop operations.</li>
+     * <li>Use <code>PageNumber</code> and <code>PageSize</code> to page through <code>Data.SemanticJobs</code>.</li>
+     * <li>Use the <code>Name</code> of a list item to invoke <code>RunSemanticJob</code>, <code>DeleteSemanticJob</code>, or <code>ListSemanticJobRuns</code>.</li>
+     * <li>Use the <code>ProjectId</code> of a list item together with <code>ExecutorJobId</code> to invoke the details, log, and stop operations.</li>
      * </ol>
-     * <h2>Notes</h2>
-     * <p>This operation returns node definitions, not real-time run statuses. To query run statuses, invoke <code>ListSemanticJobRuns</code>.</p>
+     * <h2>Precautions</h2>
+     * <p>This operation returns job definitions. For current run status, call <code>ListSemanticJobRuns</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the semantic node definitions of the current tenant with paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</p>
+     * <p>Lists semantic job definitions for the current tenant with pagination. Use Name to run or delete a job, ProjectId to query run details, and Source to verify the input scope.</p>
      * 
      * @param request ListSemanticJobsRequest
      * @return ListSemanticJobsResponse
@@ -19859,10 +21525,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query of personal development environment (ServerIDE) instances. You can filter the instances by workspace, resource group, keyword, owner, and instance subtype.</p>
+     * <p>Lists personal development environment (ServerIDE) instances with pagination. You can filter by workspace, resource group, keyword, owner, and instance subtype.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query of personal development environment instances. When you invoke this operation, use the DataWorks endpoint that corresponds to the region of the target workspace.</p>
+     * <p>Lists personal development environment instances with pagination. Use the DataWorks endpoint for the region of the target workspace.</p>
      * 
      * @param request ListServerIdeInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19926,10 +21592,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paging query of personal development environment (ServerIDE) instances. You can filter the instances by workspace, resource group, keyword, owner, and instance subtype.</p>
+     * <p>Lists personal development environment (ServerIDE) instances with pagination. You can filter by workspace, resource group, keyword, owner, and instance subtype.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query of personal development environment instances. When you invoke this operation, use the DataWorks endpoint that corresponds to the region of the target workspace.</p>
+     * <p>Lists personal development environment instances with pagination. Use the DataWorks endpoint for the region of the target workspace.</p>
      * 
      * @param request ListServerIdeInstancesRequest
      * @return ListServerIdeInstancesResponse
@@ -19942,16 +21608,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API performs a paging query to list the skills under the current account. It supports filtering by conditions such as search keywords and visibility levels.</p>
+     * <p>This operation returns a paginated list of skills for the current account. You can filter the results by search keywords and visibility levels.</p>
      * <ul>
-     * <li><strong>Q</strong>: Optional. Used for fuzzy match by skill name.</li>
-     * <li><strong>Visibility</strong>: Optional. Used to filter by visibility level. Multiple values can be passed.</li>
-     * <li><strong>MaxResults</strong>: Optional. Specifies the maximum number of entries to return in this request.</li>
-     * <li><strong>NextToken</strong>: Optional. Used to obtain the next page of data during paging. Do not pass this parameter for the first query. For subsequent queries, pass the NextToken returned in the previous response to obtain the next page of data.</li>
+     * <li><strong>Q</strong>: Optional. The search keyword used for fuzzy match by skill name.</li>
+     * <li><strong>Visibility</strong>: Optional. The visibility levels used to filter the results. You can specify multiple values.</li>
+     * <li><strong>MaxResults</strong>: Optional. The maximum number of entries to return in the current request.</li>
+     * <li><strong>NextToken</strong>: Optional. The paging token used to retrieve the next page of results. Do not specify this parameter in the first request. In subsequent requests, specify the NextToken value returned in the previous response to retrieve the next page.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query to list skills under the current account.</p>
+     * <p>Returns a paginated list of skills for the current account.</p>
      * 
      * @param tmpReq ListSkillsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20004,16 +21670,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API performs a paging query to list the skills under the current account. It supports filtering by conditions such as search keywords and visibility levels.</p>
+     * <p>This operation returns a paginated list of skills for the current account. You can filter the results by search keywords and visibility levels.</p>
      * <ul>
-     * <li><strong>Q</strong>: Optional. Used for fuzzy match by skill name.</li>
-     * <li><strong>Visibility</strong>: Optional. Used to filter by visibility level. Multiple values can be passed.</li>
-     * <li><strong>MaxResults</strong>: Optional. Specifies the maximum number of entries to return in this request.</li>
-     * <li><strong>NextToken</strong>: Optional. Used to obtain the next page of data during paging. Do not pass this parameter for the first query. For subsequent queries, pass the NextToken returned in the previous response to obtain the next page of data.</li>
+     * <li><strong>Q</strong>: Optional. The search keyword used for fuzzy match by skill name.</li>
+     * <li><strong>Visibility</strong>: Optional. The visibility levels used to filter the results. You can specify multiple values.</li>
+     * <li><strong>MaxResults</strong>: Optional. The maximum number of entries to return in the current request.</li>
+     * <li><strong>NextToken</strong>: Optional. The paging token used to retrieve the next page of results. Do not specify this parameter in the first request. In subsequent requests, specify the NextToken value returned in the previous response to retrieve the next page.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query to list skills under the current account.</p>
+     * <p>Returns a paginated list of skills for the current account.</p>
      * 
      * @param request ListSkillsRequest
      * @return ListSkillsResponse
@@ -20192,7 +21858,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a paged list of task instances. You can also perform a filtered query based on conditions.</p>
+     * <p>Queries a paginated list of task instances. You can also perform a filtered query based on specified conditions.</p>
      * 
      * @param tmpReq ListTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20321,7 +21987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a paged list of task instances. You can also perform a filtered query based on conditions.</p>
+     * <p>Queries a paginated list of task instances. You can also perform a filtered query based on specified conditions.</p>
      * 
      * @param request ListTaskInstancesRequest
      * @return ListTaskInstancesResponse
@@ -20381,10 +22047,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or higher is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or a later edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of tasks by page. You can also specify filter conditions to query tasks.</p>
+     * <p>Queries a paginated list of tasks. You can also filter the results by specifying conditions.</p>
      * 
      * @param tmpReq ListTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20470,10 +22136,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or higher is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or a later edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of tasks by page. You can also specify filter conditions to query tasks.</p>
+     * <p>Queries a paginated list of tasks. You can also filter the results by specifying conditions.</p>
      * 
      * @param request ListTasksRequest
      * @return ListTasksResponse
@@ -20729,10 +22395,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or a later edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of workflows with paging, and supports filtered query by conditions.</p>
+     * <p>Retrieves a paginated list of workflows with optional filters.</p>
      * 
      * @param tmpReq ListWorkflowsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20810,10 +22476,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or a later edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of workflows with paging, and supports filtered query by conditions.</p>
+     * <p>Retrieves a paginated list of workflows with optional filters.</p>
      * 
      * @param request ListWorkflowsRequest
      * @return ListWorkflowsResponse
@@ -21338,8 +23004,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
-     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks has been created before you call this operation.</strong></li>
+     * <li>You must purchase DataWorks Basic Edition or later to use this operation.</li>
+     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</strong></li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -21380,8 +23046,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</li>
-     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks has been created before you call this operation.</strong></li>
+     * <li>You must purchase DataWorks Basic Edition or later to use this operation.</li>
+     * <li><strong>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</strong></li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -21457,10 +23123,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>Removes an administrator. Only the owner or an administrator of the knowledge base can perform this operation. The caller and tenant are determined by the POP authentication context.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes multiple upstream dependencies of an instance at a time.</p>
+     * <p>Removes an administrator from a specified knowledge base.</p>
+     * 
+     * @param request RemoveKnowledgeBaseAdministratorRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveKnowledgeBaseAdministratorResponse
+     */
+    public RemoveKnowledgeBaseAdministratorResponse removeKnowledgeBaseAdministratorWithOptions(RemoveKnowledgeBaseAdministratorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.administratorUserId)) {
+            body.put("AdministratorUserId", request.administratorUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveKnowledgeBaseAdministrator"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveKnowledgeBaseAdministratorResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Removes an administrator. Only the owner or an administrator of the knowledge base can perform this operation. The caller and tenant are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes an administrator from a specified knowledge base.</p>
+     * 
+     * @param request RemoveKnowledgeBaseAdministratorRequest
+     * @return RemoveKnowledgeBaseAdministratorResponse
+     */
+    public RemoveKnowledgeBaseAdministratorResponse removeKnowledgeBaseAdministrator(RemoveKnowledgeBaseAdministratorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeKnowledgeBaseAdministratorWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You must purchase DataWorks Basic Edition or a later edition to use this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes multiple upstream dependencies from a node instance in a single call.</p>
      * 
      * @param tmpReq RemoveTaskInstanceDependenciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21508,10 +23228,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or a later edition to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes multiple upstream dependencies of an instance at a time.</p>
+     * <p>Removes multiple upstream dependencies from a node instance in a single call.</p>
      * 
      * @param request RemoveTaskInstanceDependenciesRequest
      * @return RemoveTaskInstanceDependenciesResponse
@@ -21795,10 +23515,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</p>
+     * <p>Requires DataWorks Basic Edition or higher.</p>
      * 
      * <b>summary</b> : 
-     * <p>Reruns multiple node instances in a batch.</p>
+     * <p>Reruns multiple task instances in a batch.</p>
      * 
      * @param tmpReq RerunTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21844,10 +23564,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</p>
+     * <p>Requires DataWorks Basic Edition or higher.</p>
      * 
      * <b>summary</b> : 
-     * <p>Reruns multiple node instances in a batch.</p>
+     * <p>Reruns multiple task instances in a batch.</p>
      * 
      * @param request RerunTaskInstancesRequest
      * @return RerunTaskInstancesResponse
@@ -21956,7 +23676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Resumes multiple suspended instances at a time.</p>
+     * <p>Resumes multiple paused task instances.</p>
      * 
      * @param tmpReq ResumeTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22001,7 +23721,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Resumes multiple suspended instances at a time.</p>
+     * <p>Resumes multiple paused task instances.</p>
      * 
      * @param request ResumeTaskInstancesRequest
      * @return ResumeTaskInstancesResponse
@@ -22009,6 +23729,194 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ResumeTaskInstancesResponse resumeTaskInstances(ResumeTaskInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resumeTaskInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Searches one or more knowledge bases that the caller is authorized to access and returns knowledge point summaries, relationship paths, and candidates for ambiguous references.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Searches one or more authorized knowledge bases for knowledge points and returns summaries, relationship paths, and candidates for ambiguous references.</p>
+     * 
+     * @param tmpReq RetrieveKnowledgePointsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RetrieveKnowledgePointsResponse
+     */
+    public RetrieveKnowledgePointsResponse retrieveKnowledgePointsWithOptions(RetrieveKnowledgePointsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RetrieveKnowledgePointsShrinkRequest request = new RetrieveKnowledgePointsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.focusObjects)) {
+            request.focusObjectsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.focusObjects, "FocusObjects", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.knowledgeBaseIds)) {
+            request.knowledgeBaseIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.knowledgeBaseIds, "KnowledgeBaseIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.focusObjectsShrink)) {
+            body.put("FocusObjects", request.focusObjectsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseIdsShrink)) {
+            body.put("KnowledgeBaseIds", request.knowledgeBaseIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            body.put("Query", request.query);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RetrieveKnowledgePoints"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RetrieveKnowledgePointsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Searches one or more knowledge bases that the caller is authorized to access and returns knowledge point summaries, relationship paths, and candidates for ambiguous references.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Searches one or more authorized knowledge bases for knowledge points and returns summaries, relationship paths, and candidates for ambiguous references.</p>
+     * 
+     * @param request RetrieveKnowledgePointsRequest
+     * @return RetrieveKnowledgePointsResponse
+     */
+    public RetrieveKnowledgePointsResponse retrieveKnowledgePoints(RetrieveKnowledgePointsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.retrieveKnowledgePointsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retries a knowledge base build task instance. The tenant and caller identity are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retries a specified build instance using the original frozen input and configuration.</p>
+     * 
+     * @param request RetryKnowledgeBaseBuildTaskInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RetryKnowledgeBaseBuildTaskInstanceResponse
+     */
+    public RetryKnowledgeBaseBuildTaskInstanceResponse retryKnowledgeBaseBuildTaskInstanceWithOptions(RetryKnowledgeBaseBuildTaskInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskInstanceId)) {
+            body.put("TaskInstanceId", request.taskInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RetryKnowledgeBaseBuildTaskInstance"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RetryKnowledgeBaseBuildTaskInstanceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retries a knowledge base build task instance. The tenant and caller identity are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retries a specified build instance using the original frozen input and configuration.</p>
+     * 
+     * @param request RetryKnowledgeBaseBuildTaskInstanceRequest
+     * @return RetryKnowledgeBaseBuildTaskInstanceResponse
+     */
+    public RetryKnowledgeBaseBuildTaskInstanceResponse retryKnowledgeBaseBuildTaskInstance(RetryKnowledgeBaseBuildTaskInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.retryKnowledgeBaseBuildTaskInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Revokes user retrieval permissions. Only the knowledge base owner or administrator can perform this operation. The caller and tenant are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Revokes a specified user’s retrieval access to a knowledge base.</p>
+     * 
+     * @param request RevokeKnowledgeBaseRetrievalRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevokeKnowledgeBaseRetrievalResponse
+     */
+    public RevokeKnowledgeBaseRetrievalResponse revokeKnowledgeBaseRetrievalWithOptions(RevokeKnowledgeBaseRetrievalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalId)) {
+            body.put("PrincipalId", request.principalId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalType)) {
+            body.put("PrincipalType", request.principalType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevokeKnowledgeBaseRetrieval"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeKnowledgeBaseRetrievalResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Revokes user retrieval permissions. Only the knowledge base owner or administrator can perform this operation. The caller and tenant are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Revokes a specified user’s retrieval access to a knowledge base.</p>
+     * 
+     * @param request RevokeKnowledgeBaseRetrievalRequest
+     * @return RevokeKnowledgeBaseRetrievalResponse
+     */
+    public RevokeKnowledgeBaseRetrievalResponse revokeKnowledgeBaseRetrieval(RevokeKnowledgeBaseRetrievalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.revokeKnowledgeBaseRetrievalWithOptions(request, runtime);
     }
 
     /**
@@ -22401,10 +24309,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets the statuses of multiple instances to successful at a time.</p>
+     * <p>Marks multiple node instances as successful.</p>
      * 
      * @param tmpReq SetSuccessTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22446,10 +24354,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets the statuses of multiple instances to successful at a time.</p>
+     * <p>Marks multiple node instances as successful.</p>
      * 
      * @param request SetSuccessTaskInstancesRequest
      * @return SetSuccessTaskInstancesResponse
@@ -22563,10 +24471,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Starts multiple workflow instances in a batch.</p>
+     * <p>Starts multiple workflow instances.</p>
      * 
      * @param tmpReq StartWorkflowInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22608,10 +24516,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Starts multiple workflow instances in a batch.</p>
+     * <p>Starts multiple workflow instances.</p>
      * 
      * @param request StartWorkflowInstancesRequest
      * @return StartWorkflowInstancesResponse
@@ -22741,6 +24649,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Stops a knowledge base build task instance. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Requests that a specified build task instance stop and returns its current status.</p>
+     * 
+     * @param request StopKnowledgeBaseBuildTaskInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopKnowledgeBaseBuildTaskInstanceResponse
+     */
+    public StopKnowledgeBaseBuildTaskInstanceResponse stopKnowledgeBaseBuildTaskInstanceWithOptions(StopKnowledgeBaseBuildTaskInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskInstanceId)) {
+            body.put("TaskInstanceId", request.taskInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopKnowledgeBaseBuildTaskInstance"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopKnowledgeBaseBuildTaskInstanceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Stops a knowledge base build task instance. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Requests that a specified build task instance stop and returns its current status.</p>
+     * 
+     * @param request StopKnowledgeBaseBuildTaskInstanceRequest
+     * @return StopKnowledgeBaseBuildTaskInstanceResponse
+     */
+    public StopKnowledgeBaseBuildTaskInstanceResponse stopKnowledgeBaseBuildTaskInstance(StopKnowledgeBaseBuildTaskInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopKnowledgeBaseBuildTaskInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Description</h2>
      * <ul>
      * <li>Requesters can use this operation to withdraw an approval process they initiated.</li>
@@ -22855,12 +24817,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.
+     * <p>You must purchase DataWorks Basic Edition or higher to use this operation.
      * Instance termination mechanism and precautions:</p>
      * <ol>
-     * <li>Instance termination is an asynchronous operation. A termination request does not immediately stop the instance. Continue to query the instance status after the request to confirm the termination result. If external compute resources are involved, verify the actual status of the remote job.</li>
-     * <li>The DataWorks instance status may differ from the remote job status. For tasks that depend on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a termination request to the remote end through a client. Due to network exceptions or client compatibility issues, a DataWorks instance may be marked as failed while the remote job is still running. Therefore, do not rely solely on the DataWorks instance status to determine whether the remote job has stopped. Check the corresponding compute platform and manually terminate the job if necessary to prevent it from continuing to run or consuming extra resources.</li>
-     * <li>Pay special attention to MaxCompute tasks that use shared resource groups for scheduling. DataWorks shared resource groups for scheduling will soon be retired. Due to component version and compatibility limits, termination commands for some MaxCompute tasks may not take effect on the remote end. If this occurs, check the actual status of the corresponding instance in MaxCompute. If the instance is still running, run a kill command in MaxCompute and verify that the instance has stopped.</li>
+     * <li>Instance termination is an asynchronous operation. Sending a termination request does not mean that the instance stops immediately. Continue to query the instance status after the request to confirm the termination result. If external compute resources are involved, you must also verify the actual status of the remote job.</li>
+     * <li>The DataWorks instance status may not be consistent with the remote job status. For tasks that rely on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a termination request to the remote end through a client. Due to network exceptions, client compatibility, and other factors, the DataWorks instance may be marked as failed while the remote job is still running. Therefore, you cannot determine that the remote job has terminated based only on the DataWorks instance status. Go to the corresponding computing platform to check the status and manually terminate the job if necessary to prevent the job from continuing to run or consuming additional resources.</li>
+     * <li>Pay special attention to MaxCompute tasks that run in public scheduling resource groups. DataWorks public scheduling resource groups will be taken offline soon. Due to component version and compatibility limitations, the termination commands for some MaxCompute tasks may not take effect on the remote end. In this case, go to MaxCompute to query the actual status of the corresponding instance. If it is still running, execute the kill operation in MaxCompute and confirm again that it has terminated.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -22906,12 +24868,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.
+     * <p>You must purchase DataWorks Basic Edition or higher to use this operation.
      * Instance termination mechanism and precautions:</p>
      * <ol>
-     * <li>Instance termination is an asynchronous operation. A termination request does not immediately stop the instance. Continue to query the instance status after the request to confirm the termination result. If external compute resources are involved, verify the actual status of the remote job.</li>
-     * <li>The DataWorks instance status may differ from the remote job status. For tasks that depend on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a termination request to the remote end through a client. Due to network exceptions or client compatibility issues, a DataWorks instance may be marked as failed while the remote job is still running. Therefore, do not rely solely on the DataWorks instance status to determine whether the remote job has stopped. Check the corresponding compute platform and manually terminate the job if necessary to prevent it from continuing to run or consuming extra resources.</li>
-     * <li>Pay special attention to MaxCompute tasks that use shared resource groups for scheduling. DataWorks shared resource groups for scheduling will soon be retired. Due to component version and compatibility limits, termination commands for some MaxCompute tasks may not take effect on the remote end. If this occurs, check the actual status of the corresponding instance in MaxCompute. If the instance is still running, run a kill command in MaxCompute and verify that the instance has stopped.</li>
+     * <li>Instance termination is an asynchronous operation. Sending a termination request does not mean that the instance stops immediately. Continue to query the instance status after the request to confirm the termination result. If external compute resources are involved, you must also verify the actual status of the remote job.</li>
+     * <li>The DataWorks instance status may not be consistent with the remote job status. For tasks that rely on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a termination request to the remote end through a client. Due to network exceptions, client compatibility, and other factors, the DataWorks instance may be marked as failed while the remote job is still running. Therefore, you cannot determine that the remote job has terminated based only on the DataWorks instance status. Go to the corresponding computing platform to check the status and manually terminate the job if necessary to prevent the job from continuing to run or consuming additional resources.</li>
+     * <li>Pay special attention to MaxCompute tasks that run in public scheduling resource groups. DataWorks public scheduling resource groups will be taken offline soon. Due to component version and compatibility limitations, the termination commands for some MaxCompute tasks may not take effect on the remote end. In this case, go to MaxCompute to query the actual status of the corresponding instance. If it is still running, execute the kill operation in MaxCompute and confirm again that it has terminated.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -22927,7 +24889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or higher to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Terminates multiple workflow instances.</p>
@@ -22972,7 +24934,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or higher to use this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Terminates multiple workflow instances.</p>
@@ -23105,7 +25067,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or higher to use this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Pauses multiple task instances.</p>
@@ -23150,7 +25112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</p>
+     * <p>You must purchase DataWorks Basic Edition or higher to use this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Pauses multiple task instances.</p>
@@ -23447,14 +25409,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.
-     * Updates a custom agent that the current identity has administrative permissions for. The Name parameter is used to locate the target agent and cannot be used to rename the agent. Call the GetAgent operation first to read the current AgentVersion, and then explicitly pass the ExpectedVersion parameter during the update. If a conflict occurs, read the version again and verify the differences instead of blindly overwriting the agent.
-     * Omit reference lists that do not need to be modified. The current new backend retains existing references for empty arrays of Tools, Skills, and CallableAgents, but clears references for an empty array of ExpertSuites. A unified empty array clearing rule cannot be used. The Tools parameter already includes Kind and the corresponding tool configurations, and uses the same structure as CreateAgent. Specifying only Name does not constitute a valid tool configuration.
-     * For official skills, specify only Source=OFFICIAL and SkillId. For official suites, specify only Source=OFFICIAL and SuiteId. Do not mix in name, version, or artifact fields. The integer Version and VersionSelector parameters for custom resources are mutually exclusive. The version selection capability depends on the deployment of the target server.
-     * If PublishImmediately is omitted or set to false, only the definition is saved. If it is set to true, a new draft version is saved first and then a publish request is initiated. Saving and publishing are not atomic operations. If publishing fails, the draft version may have already been incremented. In this case, call GetAgent to read the current version back before deciding whether to retry, to avoid generating duplicate versions.</p>
+     * <p>This operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.
+     * Updates a custom agent that the current identity has administrative permissions for. The Name parameter is used to locate the target agent and is not used for renaming. Call GetAgent first to read the current AgentVersion, and explicitly pass ExpectedVersion during the update. If a conflict occurs, re-read the version and verify the differences instead of blindly overwriting.
+     * Omit reference lists that do not need to be modified. The current new backend retains existing references for empty arrays of Tools, Skills, and CallableAgents, but clears references for an empty array of ExpertSuites. A unified empty array clearing rule cannot be used. Tools already includes Kind and the corresponding tool configurations, using the same structure as CreateAgent. Specifying only Name is not a valid tool configuration.
+     * For official skills, specify only Source=OFFICIAL and SkillId. For official suites, specify only Source=OFFICIAL and SuiteId, without mixing in name, version, or artifact fields. The integer Version and VersionSelector for custom resources are mutually exclusive. The version selection capability depends on the deployment of the target server.
+     * If PublishImmediately is omitted or set to false, only the definition is saved. If it is set to true, a new draft version is saved before requesting publication. Saving and publishing are not atomic operations. If publishing fails, the draft version may have already been incremented. In this case, call GetAgent to read the current version before deciding whether to retry, to avoid generating duplicate versions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the definition of a specified agent, increments the definition version, and optionally publishes the agent immediately. This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.</p>
+     * <p>Updates the definition of a specified agent and increments the definition version, with the option to publish immediately. This operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.</p>
      * 
      * @param tmpReq UpdateAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23568,14 +25530,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.
-     * Updates a custom agent that the current identity has administrative permissions for. The Name parameter is used to locate the target agent and cannot be used to rename the agent. Call the GetAgent operation first to read the current AgentVersion, and then explicitly pass the ExpectedVersion parameter during the update. If a conflict occurs, read the version again and verify the differences instead of blindly overwriting the agent.
-     * Omit reference lists that do not need to be modified. The current new backend retains existing references for empty arrays of Tools, Skills, and CallableAgents, but clears references for an empty array of ExpertSuites. A unified empty array clearing rule cannot be used. The Tools parameter already includes Kind and the corresponding tool configurations, and uses the same structure as CreateAgent. Specifying only Name does not constitute a valid tool configuration.
-     * For official skills, specify only Source=OFFICIAL and SkillId. For official suites, specify only Source=OFFICIAL and SuiteId. Do not mix in name, version, or artifact fields. The integer Version and VersionSelector parameters for custom resources are mutually exclusive. The version selection capability depends on the deployment of the target server.
-     * If PublishImmediately is omitted or set to false, only the definition is saved. If it is set to true, a new draft version is saved first and then a publish request is initiated. Saving and publishing are not atomic operations. If publishing fails, the draft version may have already been incremented. In this case, call GetAgent to read the current version back before deciding whether to retry, to avoid generating duplicate versions.</p>
+     * <p>This operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.
+     * Updates a custom agent that the current identity has administrative permissions for. The Name parameter is used to locate the target agent and is not used for renaming. Call GetAgent first to read the current AgentVersion, and explicitly pass ExpectedVersion during the update. If a conflict occurs, re-read the version and verify the differences instead of blindly overwriting.
+     * Omit reference lists that do not need to be modified. The current new backend retains existing references for empty arrays of Tools, Skills, and CallableAgents, but clears references for an empty array of ExpertSuites. A unified empty array clearing rule cannot be used. Tools already includes Kind and the corresponding tool configurations, using the same structure as CreateAgent. Specifying only Name is not a valid tool configuration.
+     * For official skills, specify only Source=OFFICIAL and SkillId. For official suites, specify only Source=OFFICIAL and SuiteId, without mixing in name, version, or artifact fields. The integer Version and VersionSelector for custom resources are mutually exclusive. The version selection capability depends on the deployment of the target server.
+     * If PublishImmediately is omitted or set to false, only the definition is saved. If it is set to true, a new draft version is saved before requesting publication. Saving and publishing are not atomic operations. If publishing fails, the draft version may have already been incremented. In this case, call GetAgent to read the current version before deciding whether to retry, to avoid generating duplicate versions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the definition of a specified agent, increments the definition version, and optionally publishes the agent immediately. This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.</p>
+     * <p>Updates the definition of a specified agent and increments the definition version, with the option to publish immediately. This operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.</p>
      * 
      * @param request UpdateAgentRequest
      * @return UpdateAgentResponse
@@ -24575,10 +26537,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Enterprise Edition or a higher edition to use this feature.</p>
+     * <p>You must purchase DataWorks Enterprise Edition or a later edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a label.</p>
+     * <p>Updates a tag.</p>
      * 
      * @param tmpReq UpdateDataAssetTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24632,10 +26594,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Enterprise Edition or a higher edition to use this feature.</p>
+     * <p>You must purchase DataWorks Enterprise Edition or a later edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a label.</p>
+     * <p>Updates a tag.</p>
      * 
      * @param request UpdateDataAssetTagRequest
      * @return UpdateDataAssetTagResponse
@@ -25849,6 +27811,340 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Updates a knowledge base. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the editable information of a knowledge base.</p>
+     * 
+     * @param request UpdateKnowledgeBaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateKnowledgeBaseResponse
+     */
+    public UpdateKnowledgeBaseResponse updateKnowledgeBaseWithOptions(UpdateKnowledgeBaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateKnowledgeBase"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateKnowledgeBaseResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates a knowledge base. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the editable information of a knowledge base.</p>
+     * 
+     * @param request UpdateKnowledgeBaseRequest
+     * @return UpdateKnowledgeBaseResponse
+     */
+    public UpdateKnowledgeBaseResponse updateKnowledgeBase(UpdateKnowledgeBaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateKnowledgeBaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates a knowledge base build task. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the configuration of a knowledge base build task without changing the input and configuration snapshots of created instances.</p>
+     * 
+     * @param tmpReq UpdateKnowledgeBaseBuildTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateKnowledgeBaseBuildTaskResponse
+     */
+    public UpdateKnowledgeBaseBuildTaskResponse updateKnowledgeBaseBuildTaskWithOptions(UpdateKnowledgeBaseBuildTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateKnowledgeBaseBuildTaskShrinkRequest request = new UpdateKnowledgeBaseBuildTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.input)) {
+            request.inputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.input, "Input", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.runtimeResource)) {
+            request.runtimeResourceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.runtimeResource, "RuntimeResource", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.trigger)) {
+            request.triggerShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.trigger, "Trigger", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contentLocale)) {
+            body.put("ContentLocale", request.contentLocale);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputShrink)) {
+            body.put("Input", request.inputShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.llmModel)) {
+            body.put("LlmModel", request.llmModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runtimeResourceShrink)) {
+            body.put("RuntimeResource", request.runtimeResourceShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.triggerShrink)) {
+            body.put("Trigger", request.triggerShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateKnowledgeBaseBuildTask"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateKnowledgeBaseBuildTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates a knowledge base build task. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the configuration of a knowledge base build task without changing the input and configuration snapshots of created instances.</p>
+     * 
+     * @param request UpdateKnowledgeBaseBuildTaskRequest
+     * @return UpdateKnowledgeBaseBuildTaskResponse
+     */
+    public UpdateKnowledgeBaseBuildTaskResponse updateKnowledgeBaseBuildTask(UpdateKnowledgeBaseBuildTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateKnowledgeBaseBuildTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates a knowledge object. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the name, description, or content of a document or semantic model.</p>
+     * 
+     * @param tmpReq UpdateKnowledgeObjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateKnowledgeObjectResponse
+     */
+    public UpdateKnowledgeObjectResponse updateKnowledgeObjectWithOptions(UpdateKnowledgeObjectRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateKnowledgeObjectShrinkRequest request = new UpdateKnowledgeObjectShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.content)) {
+            request.contentShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.content, "Content", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contentShrink)) {
+            body.put("Content", request.contentShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedModifyTime)) {
+            body.put("ExpectedModifyTime", request.expectedModifyTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeObjectId)) {
+            body.put("KnowledgeObjectId", request.knowledgeObjectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadId)) {
+            body.put("UploadId", request.uploadId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionNo)) {
+            body.put("VersionNo", request.versionNo);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateKnowledgeObject"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateKnowledgeObjectResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates a knowledge object. The tenant and caller identities are determined by the POP authentication context.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the name, description, or content of a document or semantic model.</p>
+     * 
+     * @param request UpdateKnowledgeObjectRequest
+     * @return UpdateKnowledgeObjectResponse
+     */
+    public UpdateKnowledgeObjectResponse updateKnowledgeObject(UpdateKnowledgeObjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateKnowledgeObjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Manages knowledge sources in a knowledge base. The identity is determined by the POP context, and credentials are not returned in the response.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the name, description, or supported connector configuration of a knowledge source.</p>
+     * 
+     * @param tmpReq UpdateKnowledgeSourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateKnowledgeSourceResponse
+     */
+    public UpdateKnowledgeSourceResponse updateKnowledgeSourceWithOptions(UpdateKnowledgeSourceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateKnowledgeSourceShrinkRequest request = new UpdateKnowledgeSourceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dataSource)) {
+            request.dataSourceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataSource, "DataSource", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.document)) {
+            request.documentShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.document, "Document", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.project)) {
+            request.projectShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.project, "Project", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceShrink)) {
+            body.put("DataSource", request.dataSourceShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentShrink)) {
+            body.put("Document", request.documentShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeBaseId)) {
+            body.put("KnowledgeBaseId", request.knowledgeBaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectShrink)) {
+            body.put("Project", request.projectShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            body.put("SourceId", request.sourceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateKnowledgeSource"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateKnowledgeSourceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Manages knowledge sources in a knowledge base. The identity is determined by the POP context, and credentials are not returned in the response.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the name, description, or supported connector configuration of a knowledge source.</p>
+     * 
+     * @param request UpdateKnowledgeSourceRequest
+     * @return UpdateKnowledgeSourceResponse
+     */
+    public UpdateKnowledgeSourceResponse updateKnowledgeSource(UpdateKnowledgeSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateKnowledgeSourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Request description</h2>
      * <p>Updates the configurations of a specified MCP server, including the service URL, transport protocol, custom request headers, and visibility settings. Fields that are not specified remain unchanged.
      * <strong>Note</strong>: When you modify the <code>Visibility</code> parameter, specify <code>ProjectIds</code> or <code>UserIds</code> in <code>VisibilityScope</code> based on the visibility setting to ensure that the correct access control scope is applied.</p>
@@ -26275,12 +28571,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Use this API to modify an existing approval process definition, including its name, description, rule conditions, notification service, and approval nodes.</li>
-     * <li>The required <code>Id</code> parameter identifies the approval process definition to update.</li>
+     * <li>This operation allows you to modify an existing approval process definition, including the name, description, rule conditions, notification services, and approval nodes.</li>
+     * <li><code>Id</code> is a required parameter used to specify the approval process definition to be updated.</li>
      * <li>To overwrite the existing configuration, set the <code>Overwrite</code> parameter to <code>true</code>.</li>
-     * <li>The optional <code>ClientToken</code> parameter ensures request idempotency.</li>
+     * <li><code>ClientToken</code> is optional and used to ensure the idempotency of the request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -26354,12 +28650,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Use this API to modify an existing approval process definition, including its name, description, rule conditions, notification service, and approval nodes.</li>
-     * <li>The required <code>Id</code> parameter identifies the approval process definition to update.</li>
+     * <li>This operation allows you to modify an existing approval process definition, including the name, description, rule conditions, notification services, and approval nodes.</li>
+     * <li><code>Id</code> is a required parameter used to specify the approval process definition to be updated.</li>
      * <li>To overwrite the existing configuration, set the <code>Overwrite</code> parameter to <code>true</code>.</li>
-     * <li>The optional <code>ClientToken</code> parameter ensures request idempotency.</li>
+     * <li><code>ClientToken</code> is optional and used to ensure the idempotency of the request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -27273,16 +29569,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API is asynchronous. Use the <code>GetUpdateTaskResult</code> operation to poll for the update result.</li>
-     * <li>This API updates the information of a specified node, including but not limited to the node name, description, and owner.</li>
-     * <li>Changes are synchronized to Data Studio, and Data Studio creates a new saved version.</li>
-     * <li>Supports settings for the node trigger method, runtime environment configuration, dependencies, and other detailed parameters.</li>
+     * <li>This API operation is asynchronous. You must call the <code>GetUpdateTaskResult</code> operation to poll the update result.</li>
+     * <li>This API operation is used to update the information of a specified node, including but not limited to the node name, description, and owner.</li>
+     * <li>The modifications are synced to Data Studio, and a new saved version is generated in Data Studio.</li>
+     * <li>You can set detailed parameters such as the trigger mode, runtime environment configuration, and dependencies of the node.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Asynchronously updates a specified node and syncs the changes to Data Studio as a new saved version.</p>
+     * <p>Asynchronously updates a specified node and syncs the updates to Data Studio to generate a new saved version.</p>
      * 
      * @param tmpReq UpdateTaskAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27420,16 +29716,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API is asynchronous. Use the <code>GetUpdateTaskResult</code> operation to poll for the update result.</li>
-     * <li>This API updates the information of a specified node, including but not limited to the node name, description, and owner.</li>
-     * <li>Changes are synchronized to Data Studio, and Data Studio creates a new saved version.</li>
-     * <li>Supports settings for the node trigger method, runtime environment configuration, dependencies, and other detailed parameters.</li>
+     * <li>This API operation is asynchronous. You must call the <code>GetUpdateTaskResult</code> operation to poll the update result.</li>
+     * <li>This API operation is used to update the information of a specified node, including but not limited to the node name, description, and owner.</li>
+     * <li>The modifications are synced to Data Studio, and a new saved version is generated in Data Studio.</li>
+     * <li>You can set detailed parameters such as the trigger mode, runtime environment configuration, and dependencies of the node.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Asynchronously updates a specified node and syncs the changes to Data Studio as a new saved version.</p>
+     * <p>Asynchronously updates a specified node and syncs the updates to Data Studio to generate a new saved version.</p>
      * 
      * @param request UpdateTaskAsyncRequest
      * @return UpdateTaskAsyncResponse
@@ -27441,10 +29737,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modify the properties of multiple task instances in batch, including priority, resource group, data source, and more.</p>
+     * <p>Updates the properties of multiple task instances in batches, including the priority, scheduling resource group, and data source.</p>
      * 
      * @param tmpReq UpdateTaskInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27486,10 +29782,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modify the properties of multiple task instances in batch, including priority, resource group, data source, and more.</p>
+     * <p>Updates the properties of multiple task instances in batches, including the priority, scheduling resource group, and data source.</p>
      * 
      * @param request UpdateTaskInstancesRequest
      * @return UpdateTaskInstancesResponse
@@ -27589,10 +29885,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or a more advanced edition is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a specified workflow by using the full update method. Fields that can be synchronously updated to Data Studio include: owner, data source, schedule resource group, description, and trigger run mode (Normal, Skip, or Pause).</p>
+     * <p>Performs a full update of the specified workflow. The owner, data source, scheduling resource group, description, and trigger run mode (normal, dry run, or paused) can be synchronized to Data Studio.</p>
      * 
      * @param tmpReq UpdateWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27694,10 +29990,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or a more advanced edition is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or later to use this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a specified workflow by using the full update method. Fields that can be synchronously updated to Data Studio include: owner, data source, schedule resource group, description, and trigger run mode (Normal, Skip, or Pause).</p>
+     * <p>Performs a full update of the specified workflow. The owner, data source, scheduling resource group, description, and trigger run mode (normal, dry run, or paused) can be synchronized to Data Studio.</p>
      * 
      * @param request UpdateWorkflowRequest
      * @return UpdateWorkflowResponse
@@ -27769,6 +30065,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateWorkflowDefinitionResponse updateWorkflowDefinition(UpdateWorkflowDefinitionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateWorkflowDefinitionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.
+     * Uploads a local file to an agent session that the current caller has access to, and references the file in the conversation. The size of a single file ranges from 1 byte to 10,485,760 bytes (10 MiB). The caller must have access permissions to the target session and the dataworks:UploadAgentSessionFile permission.
+     * Call sequence.</p>
+     * <ol>
+     * <li>Use the SessionId of an existing session, set UploadMode to prepare, and pass the original file name, the byte count Size, and the 32-character lowercase hexadecimal ContentMd5 of the original bytes. The prepare step returns UploadId and Signature, issuing only the upload URL without starting a cold session instance.</li>
+     * <li>Within the validity period of the signature, send an HTTP PUT request to Signature.Url with the original file bytes as the request body, using all the request headers returned in Signature.Headers. The URL and request headers must be used exactly as provided. The ContentMd5 parameter is in hexadecimal format, while the Content-MD5 signature header is Base64-encoded. The two are not interchangeable. The signature is valid for 5 minutes. For the exact expiration time, see ExpiresAt.</li>
+     * <li>After the PUT request succeeds, set UploadMode to complete, pass the UploadId returned by prepare, and keep SessionId, Name, Size, and ContentMd5 consistent. The server resumes the session, and the runtime within the instance downloads the staged object, verifies the size and MD5, writes it to the working directory, and returns Id, Name, RelativePath, and Size. Repeated complete calls use the same UploadId. The same attachment receipt is returned only when the existing file content is identical.</li>
+     * <li>Call PromptAgentSession, add a content block with Type set to resource_link, Name set to the original file name, and Uri set to dataagent-attachment: followed by RelativePath in Params.Prompt, and send it along with the text content block. The backend resolves the reference to the working directory of the session based on the current authenticated session.
+     * For the sample file sample.csv, the original bytes are hello followed by a line feed, Size is 6, and ContentMd5 is b1946ac92492d2347c6235b4d2611184. The SessionId example session and the upload identifier examples are used only to illustrate the parameter structure. Actual calls must use a created session and the values returned by prepare. The Signature.Url example is used only to illustrate the format. The actual PUT request must use the complete signed URL returned by the current prepare call.
+     * Error handling.
+     * You must check the outer POP/BFF failures, JsonRpcResponse.Error, and the expected result fields simultaneously. Missing upload stages or size limit exceedances may result in an HTTP 400 response from the gateway, such as MissingUploadMode or InvalidSize. Business rejections such as object not found or metadata mismatch return an HTTP 400 response with a general Code 400 in the public POP, and the Message retains the actual business code, such as SESSION_ATTACHMENT_OBJECT_MISMATCH. Dependency failures, HTTP 5xx errors, timeouts, and unknown execution results must not be treated as parameter rejections or successful uploads, and automatic write retries must not be performed. When the result is unknown, retain the original upload metadata and UploadId, and verify the result first.
+     * This API operation does not accept ContentBase64. Signature expiration only invalidates the upload authorization and does not indicate that the staged object has been deleted. This description does not guarantee an automatic cleanup cycle for the object.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Issues a file upload URL for an agent session and confirms that the file has been written to the session instance for use in later messages. This operation is available during a canary release. Before calling it, make sure the canary release is enabled for your account and the target region.</p>
+     * 
+     * @param tmpReq UploadAgentSessionFileRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UploadAgentSessionFileResponse
+     */
+    public UploadAgentSessionFileResponse uploadAgentSessionFileWithOptions(UploadAgentSessionFileRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UploadAgentSessionFileShrinkRequest request = new UploadAgentSessionFileShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.params)) {
+            request.paramsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.params, "Params", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jsonrpc)) {
+            body.put("Jsonrpc", request.jsonrpc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramsShrink)) {
+            body.put("Params", request.paramsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UploadAgentSessionFile"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UploadAgentSessionFileResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.
+     * Uploads a local file to an agent session that the current caller has access to, and references the file in the conversation. The size of a single file ranges from 1 byte to 10,485,760 bytes (10 MiB). The caller must have access permissions to the target session and the dataworks:UploadAgentSessionFile permission.
+     * Call sequence.</p>
+     * <ol>
+     * <li>Use the SessionId of an existing session, set UploadMode to prepare, and pass the original file name, the byte count Size, and the 32-character lowercase hexadecimal ContentMd5 of the original bytes. The prepare step returns UploadId and Signature, issuing only the upload URL without starting a cold session instance.</li>
+     * <li>Within the validity period of the signature, send an HTTP PUT request to Signature.Url with the original file bytes as the request body, using all the request headers returned in Signature.Headers. The URL and request headers must be used exactly as provided. The ContentMd5 parameter is in hexadecimal format, while the Content-MD5 signature header is Base64-encoded. The two are not interchangeable. The signature is valid for 5 minutes. For the exact expiration time, see ExpiresAt.</li>
+     * <li>After the PUT request succeeds, set UploadMode to complete, pass the UploadId returned by prepare, and keep SessionId, Name, Size, and ContentMd5 consistent. The server resumes the session, and the runtime within the instance downloads the staged object, verifies the size and MD5, writes it to the working directory, and returns Id, Name, RelativePath, and Size. Repeated complete calls use the same UploadId. The same attachment receipt is returned only when the existing file content is identical.</li>
+     * <li>Call PromptAgentSession, add a content block with Type set to resource_link, Name set to the original file name, and Uri set to dataagent-attachment: followed by RelativePath in Params.Prompt, and send it along with the text content block. The backend resolves the reference to the working directory of the session based on the current authenticated session.
+     * For the sample file sample.csv, the original bytes are hello followed by a line feed, Size is 6, and ContentMd5 is b1946ac92492d2347c6235b4d2611184. The SessionId example session and the upload identifier examples are used only to illustrate the parameter structure. Actual calls must use a created session and the values returned by prepare. The Signature.Url example is used only to illustrate the format. The actual PUT request must use the complete signed URL returned by the current prepare call.
+     * Error handling.
+     * You must check the outer POP/BFF failures, JsonRpcResponse.Error, and the expected result fields simultaneously. Missing upload stages or size limit exceedances may result in an HTTP 400 response from the gateway, such as MissingUploadMode or InvalidSize. Business rejections such as object not found or metadata mismatch return an HTTP 400 response with a general Code 400 in the public POP, and the Message retains the actual business code, such as SESSION_ATTACHMENT_OBJECT_MISMATCH. Dependency failures, HTTP 5xx errors, timeouts, and unknown execution results must not be treated as parameter rejections or successful uploads, and automatic write retries must not be performed. When the result is unknown, retain the original upload metadata and UploadId, and verify the result first.
+     * This API operation does not accept ContentBase64. Signature expiration only invalidates the upload authorization and does not indicate that the staged object has been deleted. This description does not guarantee an automatic cleanup cycle for the object.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Issues a file upload URL for an agent session and confirms that the file has been written to the session instance for use in later messages. This operation is available during a canary release. Before calling it, make sure the canary release is enabled for your account and the target region.</p>
+     * 
+     * @param request UploadAgentSessionFileRequest
+     * @return UploadAgentSessionFileResponse
+     */
+    public UploadAgentSessionFileResponse uploadAgentSessionFile(UploadAgentSessionFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.uploadAgentSessionFileWithOptions(request, runtime);
     }
 
     /**

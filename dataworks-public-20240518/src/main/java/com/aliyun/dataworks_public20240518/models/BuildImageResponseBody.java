@@ -8,13 +8,13 @@ public class BuildImageResponseBody extends TeaModel {
      * <p>The API request result.</p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>{&quot;ProcessId&quot;: &quot;582d4896-d224-413b-b883-239eeebe0bc5&quot;, &quot;Success&quot;: true}</p>
      */
     @NameInMap("Data")
     public BuildImageResponseBodyData data;
 
     /**
-     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
+     * <p>The request ID, used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
@@ -71,7 +71,7 @@ public class BuildImageResponseBody extends TeaModel {
         public String processId;
 
         /**
-         * <p>Indicates whether the build was successfully triggered.</p>
+         * <p>Indicates whether the image build was triggered successfully.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
