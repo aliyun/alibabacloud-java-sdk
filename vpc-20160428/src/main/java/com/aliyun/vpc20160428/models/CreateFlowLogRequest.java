@@ -46,10 +46,10 @@ public class CreateFlowLogRequest extends TeaModel {
     public String logFormat;
 
     /**
-     * <p>The name of the Logstore that stores the captured traffic.</p>
+     * <p>The name of the Log Service Logstore that is used to store the captured traffic.</p>
      * <ul>
-     * <li>The Logstore name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
-     * <li>The name must start and end with a lowercase letter or digit.</li>
+     * <li>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
+     * <li>The name must start and end with a lowercase letter or a digit.</li>
      * <li>The name must be 3 to 63 characters in length.</li>
      * </ul>
      * 
@@ -66,10 +66,10 @@ public class CreateFlowLogRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the project that manages the captured traffic.</p>
+     * <p>The name of the Log Service project that is used to manage the captured traffic.</p>
      * <ul>
-     * <li>The project name can contain only lowercase letters, digits, and hyphens (-).</li>
-     * <li>The name must start and end with a lowercase letter or digit.</li>
+     * <li>The name can contain only lowercase letters, digits, and hyphens (-).</li>
+     * <li>The name must start and end with a lowercase letter or a digit.</li>
      * <li>The name must be 3 to 63 characters in length.</li>
      * </ul>
      * 
@@ -80,7 +80,7 @@ public class CreateFlowLogRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The region ID of the flow log. You can call <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the flow log. You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -115,13 +115,13 @@ public class CreateFlowLogRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource whose traffic you want to capture. Valid values:</p>
+     * <p>The type of the resource whose traffic you want to catch. Valid values:</p>
      * <ul>
-     * <li><p><strong>NetworkInterface</strong>: network interface controllers (NICs).</p>
+     * <li><p><strong>NetworkInterface</strong>: elastic network interfaces (ENIs), which act as a network interface controller (NIC).</p>
      * </li>
-     * <li><p><strong>VSwitch</strong>: all network interface controllers (NICs) in a vSwitch.</p>
+     * <li><p><strong>VSwitch</strong>: all elastic network interfaces (ENIs) in the vSwitch.</p>
      * </li>
-     * <li><p><strong>VPC</strong>: all network interface controllers (NICs) in a virtual private cloud (VPC).</p>
+     * <li><p><strong>VPC</strong>: all elastic network interfaces (ENIs) in the virtual private cloud (VPC).</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -139,31 +139,31 @@ public class CreateFlowLogRequest extends TeaModel {
     public java.util.List<CreateFlowLogRequestTag> tag;
 
     /**
-     * <p>The traffic path to collect. Valid values:</p>
+     * <p>The traffic path to catch. Valid values:</p>
      * <ul>
-     * <li><strong>all</strong> (default): all scenarios.</li>
-     * <li><strong>internetGateway</strong>: traffic to access the Internet.</li>
-     * <li><strong>natGateway</strong>: traffic through NAT gateway.</li>
-     * <li><strong>vpnGateway</strong>: traffic through VPN gateway.</li>
-     * <li><strong>transitRouter</strong>: traffic through TR.</li>
-     * <li><strong>gatewayEndpoint</strong>: traffic through gateway endpoint to access Alibaba Cloud services.</li>
-     * <li><strong>vbr</strong>: traffic through Virtual Border Router (VBR) to access Express Connect circuits.</li>
-     * <li><strong>ecr</strong>: traffic through Express Connect Router (ECR).</li>
-     * <li><strong>ipv4Gateway</strong>: traffic through IPv4 gateway to access the Internet.</li>
-     * <li><strong>gatewayLoadBalancerEndpoint</strong>: traffic through Gateway Load Balancer endpoint (GWLBe).</li>
+     * <li><strong>all</strong> (default): catches all traffic.</li>
+     * <li><strong>internetGateway</strong>: catches traffic to access the Internet.</li>
+     * <li><strong>natGateway</strong>: catches traffic through NAT gateways.</li>
+     * <li><strong>vpnGateway</strong>: catches traffic through VPN gateways.</li>
+     * <li><strong>transitRouter</strong>: catches traffic through TR.</li>
+     * <li><strong>gatewayEndpoint</strong>: catches traffic through gateway endpoints to access cloud services.</li>
+     * <li><strong>vbr</strong>: catches traffic through the border router (VBR) to access Express Connect circuits.</li>
+     * <li><strong>ecr</strong>: catches traffic through the Express Connect Router (ECR).</li>
+     * <li><strong>ipv4Gateway</strong>: catches traffic to access the Internet through IPv4 gateways.</li>
+     * <li><strong>gatewayLoadBalancerEndpoint</strong>: catches traffic through the Gateway Load Balancer endpoint (GWLBe).</li>
      * </ul>
      */
     @NameInMap("TrafficPath")
     public java.util.List<String> trafficPath;
 
     /**
-     * <p>The traffic type to collect. Valid values:</p>
+     * <p>The traffic type to catch. Valid values:</p>
      * <ul>
      * <li><p><strong>All</strong>: all traffic.</p>
      * </li>
      * <li><p><strong>Allow</strong>: traffic allowed by access control.</p>
      * </li>
-     * <li><p><strong>Drop</strong>: traffic denied by access control.</p>
+     * <li><p><strong>Drop</strong>: traffic that access control rules deny.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -325,8 +325,8 @@ public class CreateFlowLogRequest extends TeaModel {
 
     public static class CreateFlowLogRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. Do not specify an empty string for this parameter.</p>
-         * <p>A tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, do not enter an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -335,8 +335,8 @@ public class CreateFlowLogRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can enter an empty string.</p>
+         * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

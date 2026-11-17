@@ -222,6 +222,9 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         @NameInMap("ChargeType")
         public String chargeType;
 
+        @NameInMap("CommonBandwidthPackageIpBandwidth")
+        public String commonBandwidthPackageIpBandwidth;
+
         @NameInMap("DeletionProtection")
         public Boolean deletionProtection;
 
@@ -396,6 +399,14 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
         public String getChargeType() {
             return this.chargeType;
+        }
+
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setCommonBandwidthPackageIpBandwidth(String commonBandwidthPackageIpBandwidth) {
+            this.commonBandwidthPackageIpBandwidth = commonBandwidthPackageIpBandwidth;
+            return this;
+        }
+        public String getCommonBandwidthPackageIpBandwidth() {
+            return this.commonBandwidthPackageIpBandwidth;
         }
 
         public DescribeEipAddressesResponseBodyEipAddressesEipAddress setDeletionProtection(Boolean deletionProtection) {

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeRouteEntryListResponseBody extends TeaModel {
     /**
-     * <p>The pagination token that is used to retrieve the next page of results. Valid values:</p>
+     * <p>The pagination token for the next query. Valid values:</p>
      * <ul>
      * <li>If <strong>NextToken</strong> is empty, no subsequent query is required.</li>
-     * <li>If <strong>NextToken</strong> returns a value, the value indicates the token used to start the next query.</li>
+     * <li>If <strong>NextToken</strong> returns a value, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,6 +30,8 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
     public DescribeRouteEntryListResponseBodyRouteEntrys routeEntrys;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

@@ -7,9 +7,9 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
     /**
      * <p>The peak bandwidth of the EIP. Unit: Mbit/s.</p>
      * <ul>
-     * <li><p>When <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>, valid values for <strong>Bandwidth</strong> are <strong>1</strong> to <strong>500</strong>.</p>
+     * <li><p>If <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>, the valid values for <strong>Bandwidth</strong> are <strong>1</strong> to <strong>500</strong>.</p>
      * </li>
-     * <li><p>When <strong>InternetChargeType</strong> is set to <strong>PayByTraffic</strong>, valid values for <strong>Bandwidth</strong> are <strong>1</strong> to <strong>200</strong>.</p>
+     * <li><p>If <strong>InternetChargeType</strong> is set to <strong>PayByTraffic</strong>, the valid values for <strong>Bandwidth</strong> are <strong>1</strong> to <strong>200</strong>.</p>
      * </li>
      * </ul>
      * <p>Default value: <strong>5</strong> Mbit/s.</p>
@@ -22,7 +22,7 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can generate the value from your client and ensure that the value is unique across different requests. The <strong>ClientToken</strong> parameter supports only ASCII characters.</p>
+     * <p>You can generate a parameter value from your client to ensure that the value is unique among different requests. <strong>ClientToken</strong> only supports ASCII characters.</p>
      * <blockquote>
      * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
@@ -48,7 +48,7 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>Due to IP address reservation, the actual number of contiguous EIPs allocated may be 1, 3, or 4 less than the expected number.</p>
+     * <p>Due to IP address reservation, the actual number of contiguous EIPs allocated may be 1, 3, or 4 fewer than expected.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -80,7 +80,7 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
      * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro line. BGP (Multi-ISP) Pro EIPs are supported only in the Hong Kong (China), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.</li>
      * </ul>
      * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro lines, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</p>
-     * <p>If you are a whitelisted user of single-ISP bandwidth, you can also select the following types:</p>
+     * <p>If you are a single-ISP bandwidth whitelist user, you can also select the following types:</p>
      * <ul>
      * <li><strong>ChinaTelecom</strong>: China Telecom</li>
      * <li><strong>ChinaUnicom</strong>: China Unicom</li>
@@ -124,7 +124,7 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4ph****</p>

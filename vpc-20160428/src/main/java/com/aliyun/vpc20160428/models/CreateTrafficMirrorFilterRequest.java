@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateTrafficMirrorFilterRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can generate a parameter value on your client to ensure that the value is unique across different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,9 +18,9 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to only dry run the request. Valid values:</p>
+     * <p>Specifies whether to only perform a dry run for the request. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: sends a check request without creating a traffic mirror filter. The system checks whether the required parameters are specified, the request format, and the service limits. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p><strong>true</strong>: performs a dry run for the request without creating the traffic mirror filter. The system checks whether required parameters are specified, the request format, and service limits. If the dry run fails, the corresponding error is returned. If the dry run succeeds, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
      * <li><p><strong>false</strong> (default): sends a normal request. If the request passes the check, a 2xx HTTP status code is returned and the filter is created.</p>
      * </li>
@@ -235,7 +235,7 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
         public String destinationCidrBlock;
 
         /**
-         * <p>The destination port range of the network traffic for the outbound rule. The port range is <strong>1</strong> to <strong>65535</strong>. Separate the start port and the end port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>. You cannot set this parameter only to <strong>-1/-1</strong>, which indicates that all ports are allowed.</p>
+         * <p>The destination port range of the network traffic for the outbound rule. Valid values are <strong>1</strong> to <strong>65535</strong>. Separate the start port and the end port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>. You cannot set this parameter only to <strong>-1/-1</strong>, which indicates that all ports are allowed.</p>
          * <blockquote>
          * <p>If <strong>EgressRules.N.Protocol</strong> is set to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to specify this parameter, which indicates that all ports are allowed.</p>
          * </blockquote>
@@ -261,7 +261,7 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
 
         /**
          * <p>The priority of the outbound rule. A smaller value indicates a higher priority.
-         * The maximum value of <strong>N</strong> is <strong>10</strong>, which means that you can configure up to 10 outbound rules for a filter.</p>
+         * The maximum value of <strong>N</strong> is <strong>10</strong>, which indicates that you can configure up to 10 outbound rules for a filter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -273,9 +273,9 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
          * <p>The protocol type of the network traffic to be mirrored for the outbound rule. Valid values:</p>
          * <ul>
          * <li><strong>ALL</strong>: all protocols.</li>
-         * <li><strong>ICMP</strong>: Internet Control Message Protocol.</li>
-         * <li><strong>TCP</strong>: Transmission Control Protocol.</li>
-         * <li><strong>UDP</strong>: User Datagram Protocol.</li>
+         * <li><strong>ICMP</strong>: Internet Control Message Protocol (ICMP).</li>
+         * <li><strong>TCP</strong>: Transmission Control Protocol (TCP).</li>
+         * <li><strong>UDP</strong>: User Datagram Protocol (UDP).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -294,7 +294,7 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
         public String sourceCidrBlock;
 
         /**
-         * <p>The source port range of the network traffic for the outbound rule. The port range is <strong>1</strong> to <strong>65535</strong>. Separate the start port and the end port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>. You cannot set this parameter only to <strong>-1/-1</strong>, which indicates that all ports are allowed.</p>
+         * <p>The source port range of the network traffic for the outbound rule. Valid values are <strong>1</strong> to <strong>65535</strong>. Separate the start port and the end port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>. You cannot set this parameter only to <strong>-1/-1</strong>, which indicates that all ports are allowed.</p>
          * <blockquote>
          * <p>If <strong>EgressRules.N.Protocol</strong> is set to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to specify this parameter, which indicates that all ports are allowed.</p>
          * </blockquote>
@@ -400,7 +400,7 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
         public String destinationCidrBlock;
 
         /**
-         * <p>The destination port range of the network traffic for the inbound rule. The port range is <strong>1</strong> to <strong>65535</strong>. Separate the start port and the end port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>.</p>
+         * <p>The destination port range of the network traffic for the inbound rule. Valid values are <strong>1</strong> to <strong>65535</strong>. Separate the start port and the end port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>.</p>
          * <blockquote>
          * <p>If <strong>IngressRules.N.Protocol</strong> is set to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to specify this parameter, which indicates that all ports are allowed.</p>
          * </blockquote>
@@ -426,7 +426,7 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
 
         /**
          * <p>The priority of the inbound rule. A smaller value indicates a higher priority.
-         * The maximum value of <strong>N</strong> is <strong>10</strong>, which means that you can configure up to 10 inbound rules for a filter.</p>
+         * The maximum value of <strong>N</strong> is <strong>10</strong>, which indicates that you can configure up to 10 inbound rules for a filter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -438,9 +438,9 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
          * <p>The protocol type of the network traffic to be mirrored for the inbound rule. Valid values:</p>
          * <ul>
          * <li><strong>ALL</strong>: all protocols.</li>
-         * <li><strong>ICMP</strong>: Internet Control Message Protocol.</li>
-         * <li><strong>TCP</strong>: Transmission Control Protocol.</li>
-         * <li><strong>UDP</strong>: User Datagram Protocol.</li>
+         * <li><strong>ICMP</strong>: Internet Control Message Protocol (ICMP).</li>
+         * <li><strong>TCP</strong>: Transmission Control Protocol (TCP).</li>
+         * <li><strong>UDP</strong>: User Datagram Protocol (UDP).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -459,7 +459,7 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
         public String sourceCidrBlock;
 
         /**
-         * <p>The source port range of the network traffic for the inbound rule. The port range is <strong>1</strong> to <strong>65535</strong>. Separate the start port and the end port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>.</p>
+         * <p>The source port range of the network traffic for the inbound rule. Valid values are <strong>1</strong> to <strong>65535</strong>. Separate the start port and the end port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>.</p>
          * <blockquote>
          * <p>If <strong>IngressRules.N.Protocol</strong> is set to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to specify this parameter, which indicates that all ports are allowed.</p>
          * </blockquote>
@@ -544,7 +544,7 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
     public static class CreateTrafficMirrorFilterRequestTag extends TeaModel {
         /**
          * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot specify an empty string.</p>
-         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>A tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -554,7 +554,7 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can specify an empty string.</p>
-         * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>A tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

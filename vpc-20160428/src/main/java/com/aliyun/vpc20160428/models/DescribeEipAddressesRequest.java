@@ -30,17 +30,17 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public String associatedInstanceId;
 
     /**
-     * <p>The type of the cloud service instance to attach to the EIP. Valid values: </p>
+     * <p>The type of the cloud service instance to associate with. Valid values: </p>
      * <ul>
      * <li><strong>EcsInstance</strong> (default): an ECS instance in a VPC.</li>
      * <li><strong>SlbInstance</strong>: a CLB instance in a VPC.</li>
      * <li><strong>Nat</strong>: a NAT gateway.</li>
      * <li><strong>HaVip</strong>: a high-availability virtual IP address. </li>
-     * <li><strong>NetworkInterface</strong>: a secondary elastic network interface controller (NIC).</li>
+     * <li><strong>NetworkInterface</strong>: a secondary elastic network interface (ENI).</li>
      * <li><strong>IpAddress</strong>: an IP address.</li>
      * </ul>
      * <blockquote>
-     * <p>You can attach only one EIP to each ECS instance, CLB instance, high-availability virtual IP address, or IP address at a time. You can attach multiple EIPs to a NAT gateway. The number of EIPs that can be attached to a secondary elastic network interface controller (NIC) depends on the EIP attach pattern. For more information, see <a href="https://help.aliyun.com/document_detail/72125.html">Overview of elastic IP addresses</a>.</p>
+     * <p>You can associate only one EIP with each ECS instance, CLB instance, high-availability virtual IP address, or IP address at a time. You can associate multiple EIPs with a NAT gateway. The number of EIPs that can be associated with a secondary ENI depends on the EIP association mode. For more information, see <a href="https://help.aliyun.com/document_detail/72125.html">Overview of EIPs</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,9 +65,9 @@ public class DescribeEipAddressesRequest extends TeaModel {
     /**
      * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: sends a check request and does not query the resource status. The system checks whether required parameters are specified, the request format is valid, and the service limits are met. If the request fails the check, the corresponding error is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p><strong>true</strong>: sends a check request and does not query resources. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the check, the corresponding error is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): sends a regular request. After the request passes the check, the system returns an HTTP 2xx status code and performs the operation.</p>
+     * <li><p><strong>false</strong> (default): sends a regular request. If the request passes the check, the HTTP 2xx status code is returned and the operation is performed.</p>
      * </li>
      * </ul>
      * 
@@ -104,10 +104,10 @@ public class DescribeEipAddressesRequest extends TeaModel {
      * <p>The line type. Valid values:</p>
      * <ul>
      * <li><strong>BGP</strong> (default): BGP (multi-ISP) line. BGP (multi-ISP) EIPs are supported in all regions.</li>
-     * <li><strong>BGP_PRO</strong>: BGP (multi-ISP) Pro line. BGP (multi-ISP) Pro EIPs are supported only in the Hong Kong (China), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.</li>
+     * <li><strong>BGP_PRO</strong>: BGP (multi-ISP) Pro line. BGP (multi-ISP) Pro EIPs are supported only in the China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.</li>
      * </ul>
      * <p>For more information about BGP (multi-ISP) and BGP (multi-ISP) Pro lines, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</p>
-     * <p>If you are a whitelisted user for single-ISP bandwidth, you can also select the following types:</p>
+     * <p>If you are a whitelisted user of single-ISP bandwidth, you can also select the following types:</p>
      * <ul>
      * <li><strong>ChinaTelecom</strong>: China Telecom</li>
      * <li><strong>ChinaUnicom</strong>: China Unicom</li>
@@ -127,9 +127,9 @@ public class DescribeEipAddressesRequest extends TeaModel {
     /**
      * <p>Specifies whether to include inactive subscription data. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): Does not include inactive subscription data.</p>
+     * <li><p><strong>false</strong> (default): does not include inactive subscription data.</p>
      * </li>
-     * <li><p><strong>true</strong>: Includes inactive subscription data.</p>
+     * <li><p><strong>true</strong>: includes inactive subscription data.</p>
      * </li>
      * </ul>
      * 
@@ -142,9 +142,9 @@ public class DescribeEipAddressesRequest extends TeaModel {
     /**
      * <p>The lock type. Valid values:</p>
      * <ul>
-     * <li><p><strong>financial</strong>: The EIP is locked due to an overdue payment.</p>
+     * <li><p><strong>financial</strong>: locked due to overdue payments.</p>
      * </li>
-     * <li><p><strong>security</strong>: The EIP is locked due to security reasons.</p>
+     * <li><p><strong>security</strong>: locked due to security reasons.</p>
      * </li>
      * </ul>
      * 
@@ -161,7 +161,7 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -170,7 +170,7 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for a paged query. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -216,8 +216,8 @@ public class DescribeEipAddressesRequest extends TeaModel {
     /**
      * <p>Specifies whether Anti-DDoS (Enhanced) is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong>: Anti-DDoS (Enhanced) is disabled.</li>
-     * <li><strong>true</strong>: Anti-DDoS (Enhanced) is enabled.</li>
+     * <li><strong>false</strong>: disabled.</li>
+     * <li><strong>true</strong>: enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -252,15 +252,15 @@ public class DescribeEipAddressesRequest extends TeaModel {
     /**
      * <p>The status of the EIP. Valid values:</p>
      * <ul>
-     * <li><p><strong>Associating</strong>: The EIP is being associated.</p>
+     * <li><p><strong>Associating</strong>: being associated.</p>
      * </li>
-     * <li><p><strong>Unassociating</strong>: The EIP is being disassociated.</p>
+     * <li><p><strong>Unassociating</strong>: being disassociated.</p>
      * </li>
-     * <li><p><strong>InUse</strong>: The EIP is allocated.</p>
+     * <li><p><strong>InUse</strong>: allocated.</p>
      * </li>
-     * <li><p><strong>Available</strong>: The EIP is available.</p>
+     * <li><p><strong>Available</strong>: available.</p>
      * </li>
-     * <li><p><strong>Releasing</strong>: The EIP is being released.</p>
+     * <li><p><strong>Releasing</strong>: being released.</p>
      * </li>
      * </ul>
      * 

@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyCommonBandwidthPackageSpecRequest extends TeaModel {
     /**
-     * <p>The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s. </p>
+     * <p>The peak bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s. </p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>If the billing method of the Internet Shared Bandwidth instance is pay-by-bandwidth, the default value range of <strong>Bandwidth</strong> is <strong>2</strong> to <strong>20000</strong>.</li>
-     * <li>If the billing method of the Internet Shared Bandwidth instance is pay-by-95th-percentile-bandwidth, the default value range of <strong>Bandwidth</strong> is <strong>200</strong> to <strong>20000</strong>.</li>
-     * <li>If the billing method of the Internet Shared Bandwidth instance is pay-by-predominant-traffic, the default value range of <strong>Bandwidth</strong> is <strong>1</strong> to <strong>2000</strong>.</li>
+     * <li>If the billing method of the Internet Shared Bandwidth instance is pay-by-bandwidth, the default valid values for <strong>Bandwidth</strong> range from <strong>2</strong> to <strong>20000</strong>.</li>
+     * <li>If the billing method of the Internet Shared Bandwidth instance is pay-by-enhanced-95th-percentile, the default valid values for <strong>Bandwidth</strong> range from <strong>200</strong> to <strong>20000</strong>.</li>
+     * <li>If the billing method of the Internet Shared Bandwidth instance is pay-by-dominant-traffic, the default valid values for <strong>Bandwidth</strong> range from <strong>1</strong> to <strong>2000</strong>.</li>
      * </ul>
      * <p>&lt;props=&quot;intl&quot;&gt;Valid values: <strong>1</strong> to <strong>1000</strong>.</p>
      * <p>This parameter is required.</p>
@@ -39,7 +39,7 @@ public class ModifyCommonBandwidthPackageSpecRequest extends TeaModel {
 
     /**
      * <p>The region ID of the Internet Shared Bandwidth instance. </p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

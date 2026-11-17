@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CalculateNatGatewayCapacityUnitsResponseBody extends TeaModel {
     /**
-     * <p>The details of the calculated equivalent resource reservation CUs.</p>
+     * <p>The details of the calculated equivalent reserved CUs.</p>
      */
     @NameInMap("NatGatewayCapacity")
     public CalculateNatGatewayCapacityUnitsResponseBodyNatGatewayCapacity natGatewayCapacity;
@@ -99,7 +99,7 @@ public class CalculateNatGatewayCapacityUnitsResponseBody extends TeaModel {
         public Integer cps;
 
         /**
-         * <p>The number of packets. Unit: pps.</p>
+         * <p>The number of packets per second. Unit: pps.</p>
          * 
          * <strong>example:</strong>
          * <p>160000</p>

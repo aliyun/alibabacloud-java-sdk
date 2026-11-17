@@ -8,7 +8,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
     public DescribeIpv6AddressesResponseBodyIpv6Addresses ipv6Addresses;
 
     /**
-     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -86,6 +86,47 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
     }
     public Integer getTotalCount() {
         return this.totalCount;
+    }
+
+    public static class DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressCommonBandwidthPackageInfo extends TeaModel {
+        @NameInMap("BandwidthPackageBandwidth")
+        public Long bandwidthPackageBandwidth;
+
+        @NameInMap("BandwidthPackageId")
+        public String bandwidthPackageId;
+
+        @NameInMap("CommonBandwidthPackageIpBandwidth")
+        public Long commonBandwidthPackageIpBandwidth;
+
+        public static DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressCommonBandwidthPackageInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressCommonBandwidthPackageInfo self = new DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressCommonBandwidthPackageInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressCommonBandwidthPackageInfo setBandwidthPackageBandwidth(Long bandwidthPackageBandwidth) {
+            this.bandwidthPackageBandwidth = bandwidthPackageBandwidth;
+            return this;
+        }
+        public Long getBandwidthPackageBandwidth() {
+            return this.bandwidthPackageBandwidth;
+        }
+
+        public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressCommonBandwidthPackageInfo setBandwidthPackageId(String bandwidthPackageId) {
+            this.bandwidthPackageId = bandwidthPackageId;
+            return this;
+        }
+        public String getBandwidthPackageId() {
+            return this.bandwidthPackageId;
+        }
+
+        public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressCommonBandwidthPackageInfo setCommonBandwidthPackageIpBandwidth(Long commonBandwidthPackageIpBandwidth) {
+            this.commonBandwidthPackageIpBandwidth = commonBandwidthPackageIpBandwidth;
+            return this;
+        }
+        public Long getCommonBandwidthPackageIpBandwidth() {
+            return this.commonBandwidthPackageIpBandwidth;
+        }
+
     }
 
     public static class DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressIpv6InternetBandwidth extends TeaModel {
@@ -268,6 +309,9 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         @NameInMap("AssociatedInstanceType")
         public String associatedInstanceType;
 
+        @NameInMap("CommonBandwidthPackageInfo")
+        public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressCommonBandwidthPackageInfo commonBandwidthPackageInfo;
+
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
@@ -348,6 +392,14 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         }
         public String getAssociatedInstanceType() {
             return this.associatedInstanceType;
+        }
+
+        public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6Address setCommonBandwidthPackageInfo(DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressCommonBandwidthPackageInfo commonBandwidthPackageInfo) {
+            this.commonBandwidthPackageInfo = commonBandwidthPackageInfo;
+            return this;
+        }
+        public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressCommonBandwidthPackageInfo getCommonBandwidthPackageInfo() {
+            return this.commonBandwidthPackageInfo;
         }
 
         public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6Address setIpv6Address(String ipv6Address) {

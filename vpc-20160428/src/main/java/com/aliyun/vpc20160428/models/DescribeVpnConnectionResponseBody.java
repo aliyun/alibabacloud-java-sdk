@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpnConnectionResponseBody extends TeaModel {
     /**
-     * <p>The instance ID of the Cloud Enterprise Network (CEN) instance to which the transit router instance belongs.</p>
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance to which the transit router instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-lxxpbpalc776qz****</p>
@@ -14,11 +14,11 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public String attachInstanceId;
 
     /**
-     * <p>The type of resource attached to the IPsec-VPN connection.</p>
+     * <p>The type of resource associated with the IPsec-VPN connection. Valid values:</p>
      * <ul>
-     * <li><strong>CEN</strong>: The IPsec-VPN connection is attached to a transit router of a Cloud Enterprise Network (CEN) instance.</li>
-     * <li><strong>NO_ASSOCIATED</strong>: The IPsec-VPN connection is not attached to any resource.</li>
-     * <li><strong>VPNGW</strong>: The IPsec-VPN connection is attached to a VPN gateway instance.</li>
+     * <li><strong>CEN</strong>: The IPsec-VPN connection is associated with a transit router of a Cloud Enterprise Network (CEN) instance.</li>
+     * <li><strong>NO_ASSOCIATED</strong>: The IPsec-VPN connection is not associated with any resource.</li>
+     * <li><strong>VPNGW</strong>: The IPsec-VPN connection is associated with a VPN gateway.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,8 +28,8 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public String attachType;
 
     /**
-     * <p>The timestamp when the IPsec-VPN connection was created. Unit: milliseconds.</p>
-     * <p>The timestamp is in the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 (UTC) to the time when the IPsec-VPN connection was created.</p>
+     * <p>The timestamp when the IPsec-VPN connection was created. Unit: milliseconds.
+     * The timestamp is in UNIX timestamp format, which indicates the total number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
      * 
      * <strong>example:</strong>
      * <p>1492753817000</p>
@@ -38,7 +38,11 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>Indicates whether the IPsec-VPN connection is bound to a transit router instance under a different account.</p>
+     * <p>Indicates whether the IPsec-VPN connection is associated with a cross-account transit router. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -56,12 +60,10 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public String customerGatewayId;
 
     /**
-     * <p>Indicates whether the IPsec-VPN connection configurations take effect immediately.</p>
+     * <p>Indicates whether the configuration of the IPsec-VPN connection takes effect immediately. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The configurations take effect immediately. A reconnection is triggered after the configuration change is complete.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The configurations do not take effect immediately. A reconnection is triggered when traffic is detected.</p>
-     * </li>
+     * <li><strong>true</strong>: Yes. A reconnection is triggered after the configuration is changed.</li>
+     * <li><strong>false</strong>: No. A reconnection is triggered when traffic is detected.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +73,12 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public Boolean effectImmediately;
 
     /**
-     * <p>Indicates whether Dead Peer Detection (DPD) is enabled for the IPsec-VPN connection.</p>
+     * <p>Indicates whether dead peer detection (DPD) is enabled for the IPsec-VPN connection. Valid values:</p>
+     * <ul>
+     * <li><strong>false</strong>: DPD is disabled.</li>
+     * <li><strong>true</strong>: DPD is enabled.
+     * After DPD is enabled, the initiator of the IPsec-VPN connection sends DPD packets to check whether the peer device is alive. If no valid response is received within the specified time, the peer device is considered disconnected. The IPsec-VPN connection deletes the ISAKMP SA and the corresponding IPsec SA, and the secure tunnel is also deleted.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -80,7 +87,12 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public Boolean enableDpd;
 
     /**
-     * <p>Indicates whether NAT traversal is enabled for the IPsec-VPN connection.</p>
+     * <p>Indicates whether NAT traversal is enabled for the IPsec-VPN connection. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: NAT traversal is enabled.</li>
+     * <li><strong>false</strong>: NAT traversal is disabled.
+     * After NAT traversal is enabled, the verification of the UDP port number is skipped during the IKE negotiation process, and NAT gateway devices in the VPN tunnel can be discovered.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -89,7 +101,11 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public Boolean enableNatTraversal;
 
     /**
-     * <p>The enabling status of tunnel BGP.</p>
+     * <p>The enabling status of BGP for the tunnel.</p>
+     * <ul>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -98,7 +114,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public Boolean enableTunnelsBgp;
 
     /**
-     * <p>The configuration of Phase 1 negotiation.</p>
+     * <p>The configuration of Phase 1 negotiations.</p>
      */
     @NameInMap("IkeConfig")
     public DescribeVpnConnectionResponseBodyIkeConfig ikeConfig;
@@ -113,13 +129,14 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public String internetIp;
 
     /**
-     * <p>The configuration of Phase 2 negotiation.</p>
+     * <p>The configuration of Phase 2 negotiations.</p>
      */
     @NameInMap("IpsecConfig")
     public DescribeVpnConnectionResponseBodyIpsecConfig ipsecConfig;
 
     /**
-     * <p>The CIDR block on the Alibaba Cloud side of the IPsec-VPN connection.</p>
+     * <p>The CIDR block on the Alibaba Cloud side of the IPsec-VPN connection.
+     * If multiple CIDR blocks are specified, they are separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.0.0/8</p>
@@ -137,10 +154,10 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The network type of the IPsec-VPN connection.</p>
+     * <p>The network type of the IPsec-VPN connection. Valid values:</p>
      * <ul>
-     * <li><strong>public</strong>: public network. The IPsec-VPN connection establishes an encrypted communication channel over the Internet.</li>
-     * <li><strong>private</strong>: private network. The IPsec-VPN connection establishes an encrypted communication channel over a private network.</li>
+     * <li><strong>public</strong>: Internet. The IPsec-VPN connection establishes an encrypted communication channel over the Internet.</li>
+     * <li><strong>private</strong>: Private network. The IPsec-VPN connection establishes an encrypted communication channel over a private network.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -159,7 +176,8 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public String remoteCaCertificate;
 
     /**
-     * <p>The CIDR block on the on-premises data center side.</p>
+     * <p>The CIDR block on the data center side of the IPsec-VPN connection.
+     * If multiple CIDR blocks are specified, they are separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.0/16</p>
@@ -187,7 +205,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The bandwidth specification of the IPsec-VPN connection. Unit: <strong>Mbps</strong>.</p>
+     * <p>The bandwidth specification of the IPsec-VPN connection. Unit: <strong>Mbit/s</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1000M</p>
@@ -196,7 +214,19 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public String spec;
 
     /**
-     * <p>The binding status between the IPsec-VPN connection and the transit router instance.</p>
+     * <p>The association status between the IPsec-VPN connection and the transit router instance. Valid values:</p>
+     * <ul>
+     * <li><strong>active</strong>: The IPsec-VPN connection is associated with a VPN gateway instance and is in a normal state.</li>
+     * <li><strong>init</strong>: The IPsec-VPN connection is not associated with any resource, and the IPsec-VPN connection is being initialized.</li>
+     * <li><strong>attaching</strong>: The IPsec-VPN connection is being associated with the transit router instance.</li>
+     * <li><strong>attached</strong>: The IPsec-VPN connection is associated with the transit router instance.</li>
+     * <li><strong>detaching</strong>: The IPsec-VPN connection is being disassociated from the transit router instance.</li>
+     * <li><strong>financialLocked</strong>: The instance is locked due to overdue payments.</li>
+     * <li><strong>provisioning</strong>: The resource is being prepared.</li>
+     * <li><strong>updating</strong>: The IPsec-VPN connection is being updated.</li>
+     * <li><strong>upgrading</strong>: The IPsec-VPN connection is being upgraded.</li>
+     * <li><strong>deleted</strong>: The IPsec-VPN connection is deleted.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>attached</p>
@@ -205,16 +235,12 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public String state;
 
     /**
-     * <p>The status of the IPsec-VPN connection.</p>
+     * <p>The status of the IPsec-VPN connection. Valid values:</p>
      * <ul>
-     * <li><p><strong>ike_sa_not_established</strong>: Phase 1 negotiation failed.</p>
-     * </li>
-     * <li><p><strong>ike_sa_established</strong>: Phase 1 negotiation succeeded.</p>
-     * </li>
-     * <li><p><strong>ipsec_sa_not_established</strong>: Phase 2 negotiation failed.</p>
-     * </li>
-     * <li><p><strong>ipsec_sa_established</strong>: Phase 2 negotiation succeeded.</p>
-     * </li>
+     * <li><strong>ike_sa_not_established</strong>: Phase 1 negotiation failed.</li>
+     * <li><strong>ike_sa_established</strong>: Phase 1 negotiation succeeded.</li>
+     * <li><strong>ipsec_sa_not_established</strong>: Phase 2 negotiation failed.</li>
+     * <li><strong>ipsec_sa_established</strong>: Phase 2 negotiation succeeded.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -227,7 +253,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public DescribeVpnConnectionResponseBodyTags tags;
 
     /**
-     * <p>The instance ID of the transit router instance attached to the IPsec-VPN connection.</p>
+     * <p>The ID of the transit router instance associated with the IPsec-VPN connection.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-p0we2edef9qr44a85****</p>
@@ -236,7 +262,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public String transitRouterId;
 
     /**
-     * <p>The name of the transit router instance.</p>
+     * <p>The name of the transit router.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -246,6 +272,10 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
 
     /**
      * <p>The bandwidth specification of a single VPN tunnel. Valid values:</p>
+     * <ul>
+     * <li>Standard (default): The standard type. The default bandwidth is 1 Gbps.</li>
+     * <li>Large: The large type. The default bandwidth is 3 Gbps.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Standard</p>
@@ -278,7 +308,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public String vpnConnectionId;
 
     /**
-     * <p>The instance ID of the VPN gateway.</p>
+     * <p>The ID of the VPN gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>vpn-bp1q8bgx4xnkm2ogj****</p>
@@ -287,8 +317,8 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     public String vpnGatewayId;
 
     /**
-     * <p>The zone ID where the IPsec-VPN connection is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the mapping between zone IDs and zones.</p>
+     * <p>The ID of the zone where the IPsec-VPN connection is deployed.
+     * You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the mapping between zone IDs and zones.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-h</p>
@@ -559,7 +589,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
 
     public static class DescribeVpnConnectionResponseBodyIkeConfig extends TeaModel {
         /**
-         * <p>The authentication algorithm in the IKE phase.</p>
+         * <p>The authentication algorithm at the IKE stage.</p>
          * 
          * <strong>example:</strong>
          * <p>sha1</p>
@@ -568,7 +598,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public String ikeAuthAlg;
 
         /**
-         * <p>The encryption algorithm in the IKE phase.</p>
+         * <p>The encryption algorithm at the IKE stage.</p>
          * 
          * <strong>example:</strong>
          * <p>aes</p>
@@ -577,7 +607,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public String ikeEncAlg;
 
         /**
-         * <p>The IKE phase lifetime. Unit: seconds.</p>
+         * <p>The lifetime of the IKE SA. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -586,7 +616,11 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public Long ikeLifetime;
 
         /**
-         * <p>The IKE negotiation mode.</p>
+         * <p>The IKE negotiation mode. Valid values:</p>
+         * <ul>
+         * <li><strong>main</strong>: Main mode. The negotiation process is highly secure.</li>
+         * <li><strong>aggressive</strong>: Aggressive mode. The negotiation process is fast and has a high success rate.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>main</p>
@@ -595,7 +629,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public String ikeMode;
 
         /**
-         * <p>The DH group in the IKE phase.</p>
+         * <p>The Diffie-Hellman (DH) group at the IKE stage.</p>
          * 
          * <strong>example:</strong>
          * <p>group2</p>
@@ -604,12 +638,12 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public String ikePfs;
 
         /**
-         * <p>The IKE protocol version.</p>
+         * <p>The IKE version. Valid values:</p>
          * <ul>
          * <li><strong>ikev1</strong></li>
-         * <li><strong>ikev2</strong></li>
+         * <li><strong>ikev2</strong>
+         * Compared with IKEv1, IKEv2 simplifies the SA negotiation process and provides better support for scenarios where multiple CIDR blocks are used.</li>
          * </ul>
-         * <p>Compared with IKEv1, IKEv2 simplifies the SA negotiation process and provides better support for multi-CIDR-block scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>ikev1</p>
@@ -636,7 +670,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public String psk;
 
         /**
-         * <p>The identifier on the on-premises data center side of the IPsec-VPN connection.</p>
+         * <p>The identifier of the peer on the data center side of the IPsec-VPN connection.</p>
          * 
          * <strong>example:</strong>
          * <p>139.34.XX.XX</p>
@@ -725,7 +759,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
 
     public static class DescribeVpnConnectionResponseBodyIpsecConfig extends TeaModel {
         /**
-         * <p>The authentication algorithm in the IPsec phase.</p>
+         * <p>The authentication algorithm at the IPsec stage.</p>
          * 
          * <strong>example:</strong>
          * <p>sha1</p>
@@ -734,7 +768,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public String ipsecAuthAlg;
 
         /**
-         * <p>The encryption algorithm in the IPsec phase.</p>
+         * <p>The encryption algorithm at the IPsec stage.</p>
          * 
          * <strong>example:</strong>
          * <p>aes</p>
@@ -743,7 +777,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public String ipsecEncAlg;
 
         /**
-         * <p>The IPsec phase lifetime. Unit: seconds.</p>
+         * <p>The lifetime of the IPsec SA. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -752,7 +786,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public Long ipsecLifetime;
 
         /**
-         * <p>The DH group in the IPsec phase.</p>
+         * <p>The DH group at the IPsec stage.</p>
          * 
          * <strong>example:</strong>
          * <p>group2</p>
@@ -1273,12 +1307,10 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public String dip;
 
         /**
-         * <p>Indicates whether health check is enabled for the IPsec-VPN connection.</p>
+         * <p>Indicates whether health checks are enabled for the IPsec-VPN connection. Valid values:</p>
          * <ul>
-         * <li><p><strong>false</strong>: Not enabled.</p>
-         * </li>
-         * <li><p><strong>true</strong>: Enabled.</p>
-         * </li>
+         * <li><strong>false</strong>: Health checks are disabled.</li>
+         * <li><strong>true</strong>: Health checks are enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1288,7 +1320,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public String enable;
 
         /**
-         * <p>The retry interval of the health check. Unit: seconds.</p>
+         * <p>The retry interval for health checks. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -1297,7 +1329,11 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public Integer interval;
 
         /**
-         * <p>Indicates whether published routes are withdrawn when the health check fails.</p>
+         * <p>Indicates whether to revoke published routes when a health check fails. Valid values:</p>
+         * <ul>
+         * <li><strong>revoke_route</strong>: Revoke routes.</li>
+         * <li><strong>reserve_route</strong>: Do not revoke routes.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>revoke_route</p>
@@ -1306,7 +1342,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public String policy;
 
         /**
-         * <p>The number of health check retries.</p>
+         * <p>The maximum number of health check retries.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -1324,7 +1360,11 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public String sip;
 
         /**
-         * <p>The health check status.</p>
+         * <p>The health check status. Valid values:</p>
+         * <ul>
+         * <li><strong>failed</strong>: Abnormal.</li>
+         * <li><strong>success</strong>: Normal.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>failed</p>
@@ -1406,7 +1446,11 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public String authKey;
 
         /**
-         * <p>The enabling status of the BGP routing protocol.</p>
+         * <p>The enabling status of the BGP routing protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1433,7 +1477,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public String localBgpIp;
 
         /**
-         * <p>The autonomous system number of the peer.</p>
+         * <p>The autonomous system number (ASN) of the peer.</p>
          * 
          * <strong>example:</strong>
          * <p>65530</p>
@@ -1451,7 +1495,11 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public String peerBgpIp;
 
         /**
-         * <p>The negotiation status of the BGP routing protocol.</p>
+         * <p>The negotiation status of the BGP routing protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong>: Normal.</li>
+         * <li><strong>failed</strong>: Abnormal.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -1460,7 +1508,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The BGP CIDR block of the IPsec-VPN connection. The CIDR block is a subnet with a subnet mask of 30 bits in mask length within 169.254.0.0/16.</p>
+         * <p>The BGP CIDR block of the IPsec-VPN connection. The CIDR block must be a subnet of 169.254.0.0/16 with a subnet mask length of 30 bits.</p>
          * 
          * <strong>example:</strong>
          * <p>169.254.11.0/30</p>

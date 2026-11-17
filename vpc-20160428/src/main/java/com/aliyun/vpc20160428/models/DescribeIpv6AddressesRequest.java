@@ -7,8 +7,8 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     /**
      * <p>The type of the IPv6 address. Valid values:</p>
      * <ul>
-     * <li>IPv6Address: queries an IPv6 instance of a single IPv6 address. This is the default value.</li>
-     * <li>IPv6Prefix: queries an IPv6 instance of an IPv6 prefix.</li>
+     * <li>IPv6Address (default): queries an IPv6 instance that has a single IPv6 address.</li>
+     * <li>IPv6Prefix: queries an IPv6 instance that has an IPv6 prefix.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     /**
      * <p>Specifies whether to include inactive order data. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong>: does not include inactive order data. This is the default value.</p>
+     * <li><p><strong>false</strong> (default): does not include inactive order data.</p>
      * </li>
      * <li><p><strong>true</strong>: includes inactive order data.</p>
      * </li>
@@ -56,7 +56,7 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     public Boolean includeReservationData;
 
     /**
-     * <p>The IPv6 addresses to query.</p>
+     * <p>The IPv6 address to query.</p>
      * 
      * <strong>example:</strong>
      * <p>2408:XXXX:153:3921:851c:c435:7b12:1c5f</p>
@@ -65,7 +65,7 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     public String ipv6Address;
 
     /**
-     * <p>The IDs of the IPv6 addresses to query. You can specify up to 20 IPv6 address IDs in each call. Separate multiple IDs with commas (,).</p>
+     * <p>The ID of the IPv6 address to query. You can enter up to 20 IPv6 address IDs in each call. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>ipv6-2zen5j4axcp5l5qyy****</p>
@@ -74,7 +74,7 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     public String ipv6AddressId;
 
     /**
-     * <p>The instance ID of the Internet bandwidth associated with the IPv6 address to query after Internet bandwidth is enabled.</p>
+     * <p>The Internet bandwidth instance ID corresponding to the IPv6 address to query after Internet bandwidth is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>ipv6bw-uf6hcyzu65v98v3du****</p>
@@ -95,9 +95,9 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     /**
      * <p>The network type of the IPv6 address to query. Valid values:</p>
      * <ul>
-     * <li><p><strong>Private</strong>: private network.</p>
+     * <li><p><strong>Private</strong>: internal network.</p>
      * </li>
-     * <li><p><strong>Public</strong>: public network.</p>
+     * <li><p><strong>Public</strong>: Internet.</p>
      * </li>
      * </ul>
      * 
@@ -114,7 +114,7 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -369,8 +369,8 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
 
     public static class DescribeIpv6AddressesRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot specify an empty string.</p>
-         * <p>A tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot enter an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -379,8 +379,8 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can specify an empty string.</p>
-         * <p>A tag value can be up to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can enter an empty string.</p>
+         * <p>A tag value can be up to 128 characters in length. It must start with a letter or a Chinese character, and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>yunke</p>

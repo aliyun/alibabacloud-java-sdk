@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class AssociateEipAddressBatchRequest extends TeaModel {
     /**
-     * <p>The instance ID of the cloud service instance to which you want to associate the EIPs.</p>
-     * <p>You can enter the instance ID of a NAT gateway or secondary elastic network interfaces (ENIs).</p>
+     * <p>The instance ID of the cloud service instance to which you want to attach the EIPs.</p>
+     * <p>You can enter the instance ID of a NAT gateway instance or a secondary elastic network interface controller (NIC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,10 +16,10 @@ public class AssociateEipAddressBatchRequest extends TeaModel {
     public String bindedInstanceId;
 
     /**
-     * <p>The type of the instance to which you want to associate the EIPs. Valid values:</p>
+     * <p>The type of the instance to which you want to attach the EIPs. Valid values:</p>
      * <ul>
      * <li><strong>Nat</strong>: NAT gateway.</li>
-     * <li><strong>NetworkInterface</strong>: secondary elastic network interfaces (ENIs).</li>
+     * <li><strong>NetworkInterface</strong>: secondary elastic network interface controller (NIC).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -31,7 +31,7 @@ public class AssociateEipAddressBatchRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
      * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
@@ -65,7 +65,7 @@ public class AssociateEipAddressBatchRequest extends TeaModel {
 
     /**
      * <p>The region ID of the EIPs that you want to associate with the cloud service instances.
-     * You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query region IDs.</p>
+     * You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

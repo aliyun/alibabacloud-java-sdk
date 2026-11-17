@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateHaVipRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can generate a parameter value on your client to ensure that the parameter value is unique across different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can generate the parameter value on your client to ensure that it is unique across different requests. The client token supports only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class CreateHaVipRequest extends TeaModel {
 
     /**
      * <p>The description of the HAVIP.</p>
-     * <p>The description must be 1 to 255 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description must be 1 to 255 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>This is my HaVip.</p>
@@ -29,7 +29,7 @@ public class CreateHaVipRequest extends TeaModel {
 
     /**
      * <p>The IP address of the HAVIP.</p>
-     * <p>The specified IP address must be an unoccupied IP address in the vSwitch CIDR block. If you do not specify this parameter, an unoccupied IP address is randomly allocated from the specified vSwitch.</p>
+     * <p>The specified IP address must be an unused IP address in the vSwitch CIDR block. If you do not specify this parameter, the system randomly allocates an unused IP address from the specified vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>192.XX.XX.10</p>
@@ -39,7 +39,7 @@ public class CreateHaVipRequest extends TeaModel {
 
     /**
      * <p>The name of the HAVIP.</p>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

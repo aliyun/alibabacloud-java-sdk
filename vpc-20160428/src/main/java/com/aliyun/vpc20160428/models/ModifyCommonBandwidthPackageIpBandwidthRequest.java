@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCommonBandwidthPackageIpBandwidthRequest extends TeaModel {
     /**
-     * <p>The maximum bandwidth that can be allocated within the Internet Shared Bandwidth instance. Unit: Mbps.</p>
+     * <p>The maximum bandwidth that can be allocated in the Internet Shared Bandwidth instance. Unit: Mbit/s.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,13 +26,35 @@ public class ModifyCommonBandwidthPackageIpBandwidthRequest extends TeaModel {
 
     /**
      * <p>The ID of the EIP that is added to the Internet Shared Bandwidth instance. This parameter applies only to EIPs. For IPv6 addresses, use IpInstanceId.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>eip-2zewysoansu0svfbg****</p>
      */
     @NameInMap("EipId")
     public String eipId;
+
+    /**
+     * <p>The ID of the public IP address instance for which you want to set the maximum available bandwidth in the Internet Shared Bandwidth instance. This parameter and EipId are mutually exclusive. We recommend that you use this parameter for new workloads. If IpType is set to <strong>VpcIpv6</strong>, specify the ID of the IPv6 address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-2zewysoansu0svfbg****</p>
+     */
+    @NameInMap("IpInstanceId")
+    public String ipInstanceId;
+
+    /**
+     * <p>The resource type of the public IP address for which you want to set the maximum available bandwidth in the Internet Shared Bandwidth instance. Valid values:</p>
+     * <ul>
+     * <li><strong>EIP</strong>: the public IP address of an EIP.</li>
+     * <li><strong>VpcIpv6</strong>: the IPv6 address of a VPC.</li>
+     * </ul>
+     * <p>If this parameter is not specified, the default value is <strong>EIP</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EIP</p>
+     */
+    @NameInMap("IpType")
+    public String ipType;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -41,7 +63,7 @@ public class ModifyCommonBandwidthPackageIpBandwidthRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the Internet Shared Bandwidth instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
+     * <p>The region ID of the Internet Shared Bandwidth instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,6 +105,22 @@ public class ModifyCommonBandwidthPackageIpBandwidthRequest extends TeaModel {
     }
     public String getEipId() {
         return this.eipId;
+    }
+
+    public ModifyCommonBandwidthPackageIpBandwidthRequest setIpInstanceId(String ipInstanceId) {
+        this.ipInstanceId = ipInstanceId;
+        return this;
+    }
+    public String getIpInstanceId() {
+        return this.ipInstanceId;
+    }
+
+    public ModifyCommonBandwidthPackageIpBandwidthRequest setIpType(String ipType) {
+        this.ipType = ipType;
+        return this;
+    }
+    public String getIpType() {
+        return this.ipType;
     }
 
     public ModifyCommonBandwidthPackageIpBandwidthRequest setOwnerAccount(String ownerAccount) {

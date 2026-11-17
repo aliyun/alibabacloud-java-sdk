@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteNatRateLimitRuleRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
      * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
@@ -18,7 +17,7 @@ public class DeleteNatRateLimitRuleRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the NAT gateway to which the rate limiting rule belongs.</p>
+     * <p>The ID of the NAT gateway to which the rate limit rule belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-bp1uewa15k4iy5770****</p>
@@ -37,7 +36,7 @@ public class DeleteNatRateLimitRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the rate limiting rules to be deleted.</p>
+     * <p>The IDs of the rate limit rules to be deleted.</p>
      */
     @NameInMap("RuleIds")
     public java.util.List<String> ruleIds;

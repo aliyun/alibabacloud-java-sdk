@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CalculateNatGatewayCapacityUnitsShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. Note: If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId of each API request may be different.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. Note: If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId of each API request may be different.</p>
      * 
      * <strong>example:</strong>
      * <p>02fb3da4-130e-11e9-8e44-001****</p>
@@ -16,8 +16,8 @@ public class CalculateNatGatewayCapacityUnitsShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li>true: performs a dry run. The system checks whether your AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned. The Internet NAT gateway is not upgraded.</li>
-     * <li>false (default): sends a normal request. If the request passes the check, a 2xx HTTP status code is returned and the Internet NAT gateway is upgraded.</li>
+     * <li>true: sends the request without upgrading the Internet NAT gateway. The system checks whether your AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the request fails the check, an error message is returned. If the request passes the check, the DryRunOperation error code is returned.</li>
+     * <li>false (default value): sends a normal request. If the request passes the check, a 2xx HTTP status code is returned and the Internet NAT gateway is directly upgraded.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class CalculateNatGatewayCapacityUnitsShrinkRequest extends TeaModel {
     public String dryRun;
 
     /**
-     * <p>The details of the resource reservation CUs to be calculated.</p>
+     * <p>The details of the reserved capacity units (CUs) to be calculated.</p>
      */
     @NameInMap("NatGatewayCapacity")
     public String natGatewayCapacityShrink;
@@ -48,7 +48,7 @@ public class CalculateNatGatewayCapacityUnitsShrinkRequest extends TeaModel {
     public String natGatewayPerformanceValuesShrink;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID of the NAT gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

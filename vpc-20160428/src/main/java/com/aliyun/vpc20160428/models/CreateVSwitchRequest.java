@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateVSwitchRequest extends TeaModel {
     /**
-     * <p>The CIDR block of the vSwitch. The vSwitch CIDR block must meet the following requirements: </p>
+     * <p>The CIDR block of the vSwitch. The CIDR block of the vSwitch must meet the following requirements: </p>
      * <ul>
-     * <li><p>The mask length of the vSwitch CIDR block must be 16 to 29 bits.  </p>
+     * <li><p>The mask length of the vSwitch CIDR block ranges from 16 to 29 bits.  </p>
      * </li>
-     * <li><p>The vSwitch CIDR block must be a subset of the CIDR block of the VPC to which the vSwitch belongs. </p>
+     * <li><p>The vSwitch CIDR block must be a subset of the VPC CIDR block. </p>
      * </li>
-     * <li><p>The vSwitch CIDR block cannot be the same as the destination CIDR block of a route entry in the VPC, but can be a subset of the destination CIDR block. </p>
+     * <li><p>The vSwitch CIDR block cannot be the same as the destination CIDR block of a route in the VPC. However, it can be a subset of the destination CIDR block. </p>
      * </li>
-     * <li><p>The vSwitch CIDR block cannot be within the following reserved address ranges: 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, or 224.0.0.0/4.</p>
+     * <li><p>The vSwitch CIDR block cannot fall within the following reserved address ranges: 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, and 224.0.0.0/4.</p>
      * </li>
      * </ul>
      * <blockquote>
@@ -27,9 +27,9 @@ public class CreateVSwitchRequest extends TeaModel {
     public String cidrBlock;
 
     /**
-     * <p>The mask length of the IPv4 CIDR block of the vSwitch.</p>
+     * <p>The IPv4 CIDR block mask of the vSwitch.</p>
      * <blockquote>
-     * <p>The mask length of the vSwitch IPv4 CIDR block must be 16 to 29 bits. You must specify at least one of CidrBlock and CidrMask.</p>
+     * <p>The mask length of the IPv4 CIDR block of the vSwitch ranges from 16 to 29 bits. You must specify at least one of CidrBlock and CidrMask.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -40,9 +40,9 @@ public class CreateVSwitchRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may vary for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class CreateVSwitchRequest extends TeaModel {
 
     /**
      * <p>The description of the vSwitch.  </p>
-     * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>vSwitch</p>
@@ -63,7 +63,7 @@ public class CreateVSwitchRequest extends TeaModel {
 
     /**
      * <p>The last 8 bits of the IPv6 CIDR block of the vSwitch. Valid values: <strong>0</strong> to <strong>255</strong>.
-     * You can specify this parameter to assign an IPv6 CIDR block to the vSwitch only when the VPC to which the vSwitch belongs has IPv6 enabled. After the IPv6 CIDR block is assigned, it cannot be changed to another CIDR block. Make sure that the CIDR block does not overlap with those of other vSwitches in the VPC.</p>
+     * You can specify this parameter to assign an IPv6 CIDR block to the vSwitch only when IPv6 is enabled for the VPC to which the vSwitch belongs. After the IPv6 CIDR block is assigned, you cannot modify it. Make sure that the IPv6 CIDR block does not overlap with the CIDR blocks of other vSwitches in the same VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -72,7 +72,7 @@ public class CreateVSwitchRequest extends TeaModel {
     public Integer ipv6CidrBlock;
 
     /**
-     * <p>The subnet mask of the IPv6 CIDR block of the vSwitch. You can specify this parameter to assign an IPv6 CIDR block to the vSwitch only when the VPC to which the vSwitch belongs has IPv6 enabled.</p>
+     * <p>The subnet mask of the IPv6 CIDR block of the vSwitch. You can specify this parameter to assign an IPv6 CIDR block to the vSwitch only when IPv6 is enabled for the VPC to which the vSwitch belongs.</p>
      * <blockquote>
      * <p>Only 64 is supported.</p>
      * </blockquote>
@@ -83,6 +83,21 @@ public class CreateVSwitchRequest extends TeaModel {
     @NameInMap("Ipv6CidrMask")
     public Integer ipv6CidrMask;
 
+    /**
+     * <p>Specifies whether to create an IPv6-only vSwitch. Valid values:</p>
+     * <ul>
+     * <li><p>false (default): creates a regular vSwitch (not IPv6-only).</p>
+     * </li>
+     * <li><p>true: creates an IPv6-only vSwitch.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("Ipv6Only")
+    public Boolean ipv6Only;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -90,8 +105,8 @@ public class CreateVSwitchRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the vSwitch to create.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region ID of the vSwitch to be created.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -113,7 +128,7 @@ public class CreateVSwitchRequest extends TeaModel {
 
     /**
      * <p>The name of the vSwitch. </p>
-     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>vSwitch-1</p>
@@ -122,7 +137,7 @@ public class CreateVSwitchRequest extends TeaModel {
     public String vSwitchName;
 
     /**
-     * <p>The ID of the VPC to which the vSwitch belongs.</p>
+     * <p>The ID of the VPC to which the vSwitch to be created belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -132,7 +147,7 @@ public class CreateVSwitchRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The IPv6 CIDR block of the VPC. If the VPC to which the vSwitch belongs has multiple IPv6 CIDR blocks, you can specify this parameter to determine the IPv6 CIDR block range for the vSwitch. If you do not specify this parameter, the IPv6 CIDR block assigned when IPv6 was enabled for the VPC is used.</p>
+     * <p>The IPv6 CIDR block of the VPC. If the VPC to which the vSwitch belongs has multiple IPv6 CIDR blocks, you can specify this parameter to specify the IPv6 CIDR block to which the vSwitch belongs. If you do not specify this parameter, the IPv6 CIDR block assigned when IPv6 is enabled for the VPC is used.</p>
      * 
      * <strong>example:</strong>
      * <p>2408:XXXX:0:6a::/56</p>
@@ -141,8 +156,8 @@ public class CreateVSwitchRequest extends TeaModel {
     public String vpcIpv6CidrBlock;
 
     /**
-     * <p>The ID of the zone in which to create the vSwitch.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the zone ID.</p>
+     * <p>The zone ID of the vSwitch to be created.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query zone IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -202,6 +217,14 @@ public class CreateVSwitchRequest extends TeaModel {
     }
     public Integer getIpv6CidrMask() {
         return this.ipv6CidrMask;
+    }
+
+    public CreateVSwitchRequest setIpv6Only(Boolean ipv6Only) {
+        this.ipv6Only = ipv6Only;
+        return this;
+    }
+    public Boolean getIpv6Only() {
+        return this.ipv6Only;
     }
 
     public CreateVSwitchRequest setOwnerAccount(String ownerAccount) {
@@ -286,7 +309,7 @@ public class CreateVSwitchRequest extends TeaModel {
 
     public static class CreateVSwitchRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key of the resource. You can specify at most 20 tag keys. If you specify this parameter, you cannot specify an empty string.</p>
          * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -296,8 +319,8 @@ public class CreateVSwitchRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify at most 20 tag values. If you specify this parameter, you can specify an empty string.</p>
+         * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>

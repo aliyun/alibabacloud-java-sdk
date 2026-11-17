@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRouteEntriesResponseBody extends TeaModel {
     /**
-     * <p>The number of route entries that failed to be added.</p>
+     * <p>The number of route entries that fail to be added.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +14,7 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
     public Integer failedCount;
 
     /**
-     * <p>The details of the route entries that failed to be added.</p>
+     * <p>The details of the route entries that fail to be added.</p>
      */
     @NameInMap("FailedRouteEntries")
     public java.util.List<CreateRouteEntriesResponseBodyFailedRouteEntries> failedRouteEntries;
@@ -29,13 +29,13 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The routing instance IDs returned for the custom route entries that were successfully added.</p>
+     * <p>The instance IDs returned for the custom route entry (routing) that is successfully added.</p>
      */
     @NameInMap("RouteEntryIds")
     public java.util.List<String> routeEntryIds;
 
     /**
-     * <p>The number of route entries that were successfully added.</p>
+     * <p>The number of route entries that are successfully added.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -90,7 +90,7 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
 
     public static class CreateRouteEntriesResponseBodyFailedRouteEntries extends TeaModel {
         /**
-         * <p>The destination CIDR block of the custom route entry that failed to be added.</p>
+         * <p>The destination CIDR block of the custom route entry that fails to be added.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.0/24</p>
@@ -99,7 +99,7 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
         public String dstCidrBlock;
 
         /**
-         * <p>The error code of the failure.</p>
+         * <p>The error code for the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC_ROUTE_ENTRY_CIDR_BLOCK_DUPLICATE</p>
@@ -108,7 +108,7 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
         public String failedCode;
 
         /**
-         * <p>The error message of the failure.</p>
+         * <p>The specific error message for the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>Specified CIDR block is already exists, entry.cidrBlock=xxxx</p>
@@ -117,7 +117,7 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
         public String failedMessage;
 
         /**
-         * <p>The ID of the next hop instance of the custom route entry that failed to be added.</p>
+         * <p>The ID of the next hop instance for the custom route entry that fails to be added.</p>
          * 
          * <strong>example:</strong>
          * <p>i-j6c2fp57q8rr4jlu****</p>

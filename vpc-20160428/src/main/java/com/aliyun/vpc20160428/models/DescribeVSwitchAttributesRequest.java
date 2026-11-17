@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchAttributesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run without querying the vSwitch configuration. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request. After the request passes the check, an HTTP 2xx status code is returned and the vSwitch configuration is queried.</li>
+     * <li><strong>true</strong>: The system prechecks the request without querying the configuration information of the vSwitch. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): The system sends a normal request. If the request passes the precheck, an HTTP 2xx status code is returned and the configuration information of the vSwitch is queried.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeVSwitchAttributesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the VPC to which the route table belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -40,7 +40,7 @@ public class DescribeVSwitchAttributesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the vSwitch to query.</p>
+     * <p>The ID of the vSwitch.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

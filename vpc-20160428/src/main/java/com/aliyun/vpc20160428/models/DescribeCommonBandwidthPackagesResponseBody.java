@@ -8,7 +8,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
     public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackages commonBandwidthPackages;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the returned page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -95,8 +95,17 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         @NameInMap("BandwidthPackageIpRelationStatus")
         public String bandwidthPackageIpRelationStatus;
 
+        @NameInMap("CommonBandwidthPackageIpBandwidth")
+        public String commonBandwidthPackageIpBandwidth;
+
         @NameInMap("IpAddress")
         public String ipAddress;
+
+        @NameInMap("IpInstanceId")
+        public String ipInstanceId;
+
+        @NameInMap("IpType")
+        public String ipType;
 
         public static DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddressesPublicIpAddresse build(java.util.Map<String, ?> map) throws Exception {
             DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddressesPublicIpAddresse self = new DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddressesPublicIpAddresse();
@@ -119,12 +128,36 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             return this.bandwidthPackageIpRelationStatus;
         }
 
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddressesPublicIpAddresse setCommonBandwidthPackageIpBandwidth(String commonBandwidthPackageIpBandwidth) {
+            this.commonBandwidthPackageIpBandwidth = commonBandwidthPackageIpBandwidth;
+            return this;
+        }
+        public String getCommonBandwidthPackageIpBandwidth() {
+            return this.commonBandwidthPackageIpBandwidth;
+        }
+
         public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddressesPublicIpAddresse setIpAddress(String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
         public String getIpAddress() {
             return this.ipAddress;
+        }
+
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddressesPublicIpAddresse setIpInstanceId(String ipInstanceId) {
+            this.ipInstanceId = ipInstanceId;
+            return this;
+        }
+        public String getIpInstanceId() {
+            return this.ipInstanceId;
+        }
+
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddressesPublicIpAddresse setIpType(String ipType) {
+            this.ipType = ipType;
+            return this;
+        }
+        public String getIpType() {
+            return this.ipType;
         }
 
     }

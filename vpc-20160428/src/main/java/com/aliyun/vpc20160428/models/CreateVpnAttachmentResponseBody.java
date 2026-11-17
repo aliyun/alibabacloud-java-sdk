@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVpnAttachmentResponseBody extends TeaModel {
     /**
-     * <p>The status code returned by the current task. A value of <strong>200</strong> indicates that the task is successful.</p>
+     * <p>The status code returned for the current task. <strong>200</strong> indicates that the task is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -15,7 +15,7 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
 
     /**
      * <p>The timestamp when the IPsec-VPN connection was created. Unit: milliseconds.</p>
-     * <p>The timestamp is in the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 (UTC) to the time when the IPsec-VPN connection was created.</p>
+     * <p>The timestamp follows the UNIX time format. It is the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
      * 
      * <strong>example:</strong>
      * <p>1658201810000</p>
@@ -24,7 +24,7 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>The message returned by the current task.</p>
+     * <p>The message returned for the current task.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -53,8 +53,8 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the current task is successfully executed.</p>
      * <ul>
-     * <li><strong>true</strong>: Successfully executed.</li>
-     * <li><strong>false</strong>: Not successfully executed.</li>
+     * <li><strong>true</strong>: The task is successfully executed.</li>
+     * <li><strong>false</strong>: The task fails to be executed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The IPsec-VPN connection ID.</p>
+     * <p>The ID of the IPsec-VPN connection.</p>
      * 
      * <strong>example:</strong>
      * <p>vco-p0wb09rama8qwwgfn****</p>

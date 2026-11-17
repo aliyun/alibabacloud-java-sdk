@@ -14,9 +14,9 @@ public class ModifyNatRateLimitRuleRequest extends TeaModel {
     public String bandwidthLimit;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId of each API request may be different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,9 +28,9 @@ public class ModifyNatRateLimitRuleRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run and does not query the resource status. The system checks whether your AccessKey pair is valid, the authorization of Resource Access Management (RAM) users, and whether required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p><strong>true</strong>: performs a dry run without querying the resource status. The system checks whether your AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): sends a normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <li><p><strong>false</strong> (default): sends a normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the resource status is queried.</p>
      * </li>
      * </ul>
      * 
@@ -41,7 +41,7 @@ public class ModifyNatRateLimitRuleRequest extends TeaModel {
     public String dryRun;
 
     /**
-     * <p>The ID of the NAT gateway to which the rate limit rule belongs.</p>
+     * <p>The ID of the NAT gateway to which the rate limiting rule belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-bp1b0lic8uz4r6vf2****</p>
@@ -60,7 +60,7 @@ public class ModifyNatRateLimitRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The new description of the rate limit rule.</p>
+     * <p>The new description of the rate limiting rule.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -69,7 +69,7 @@ public class ModifyNatRateLimitRuleRequest extends TeaModel {
     public String ruleDescription;
 
     /**
-     * <p>The ID of the rate limit rule.</p>
+     * <p>The ID of the rate limiting rule.</p>
      * 
      * <strong>example:</strong>
      * <p>limit-rule-****</p>
@@ -78,7 +78,7 @@ public class ModifyNatRateLimitRuleRequest extends TeaModel {
     public String ruleId;
 
     /**
-     * <p>The new name of the rate limit rule.</p>
+     * <p>The new name of the rate limiting rule.</p>
      * 
      * <strong>example:</strong>
      * <p>test-rule</p>
@@ -87,7 +87,7 @@ public class ModifyNatRateLimitRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The new list of source CIDR blocks for the rate limit rule.</p>
+     * <p>The new list of source CIDR blocks for the rate limiting rule.</p>
      */
     @NameInMap("SourceCIDRs")
     public java.util.List<String> sourceCIDRs;

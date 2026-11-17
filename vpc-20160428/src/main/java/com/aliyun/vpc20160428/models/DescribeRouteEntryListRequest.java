@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRouteEntryListRequest extends TeaModel {
     /**
-     * <p>The list of destination CIDR blocks of the route.</p>
+     * <p>The list of destination CIDR blocks of the route entry.</p>
      */
     @NameInMap("DestCidrBlockList")
     public java.util.List<String> destCidrBlockList;
 
     /**
-     * <p>The destination CIDR block of the route. Both IPv4 and IPv6 CIDR blocks are supported.</p>
+     * <p>The destination CIDR block of the route entry. Both IPv4 and IPv6 CIDR blocks are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.2.0/24</p>
@@ -63,13 +63,13 @@ public class DescribeRouteEntryListRequest extends TeaModel {
      * </li>
      * <li><p><strong>NatGateway</strong>: NAT gateway.</p>
      * </li>
-     * <li><p><strong>NetworkInterface</strong>: secondary elastic network interface controller (NIC).</p>
+     * <li><p><strong>NetworkInterface</strong>: secondary ENI.</p>
      * </li>
-     * <li><p><strong>RouterInterface</strong>: vRouter interface.</p>
+     * <li><p><strong>RouterInterface</strong>: router interface.</p>
      * </li>
      * <li><p><strong>IPv6Gateway</strong>: IPv6 gateway.</p>
      * </li>
-     * <li><p><strong>Attachment</strong>: forwarding router.</p>
+     * <li><p><strong>Attachment</strong>: transit router.</p>
      * </li>
      * <li><p><strong>Ipv4Gateway</strong>: IPv4 gateway.</p>
      * </li>
@@ -86,10 +86,10 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     public String nextHopType;
 
     /**
-     * <p>The pagination token that is used to retrieve the next page of results. Valid values:</p>
+     * <p>The pagination token for the next query. Valid values:</p>
      * <ul>
-     * <li>Leave this parameter empty for the first query or when no subsequent query is required.</li>
-     * <li>If a subsequent query is required, set this parameter to the value of NextToken returned from the previous API call.</li>
+     * <li>If this is the first query or no subsequent query is required, leave this parameter empty.</li>
+     * <li>If a subsequent query is required, set this parameter to the NextToken value returned from the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the route table to which the route belongs.</p>
+     * <p>The region ID of the route table to which the route entry belongs.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
@@ -122,7 +122,7 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the route to query.</p>
+     * <p>The ID of the route entry to query.</p>
      * 
      * <strong>example:</strong>
      * <p>rte-bp1mnnr2al0naomnp****</p>
@@ -131,7 +131,7 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     public String routeEntryId;
 
     /**
-     * <p>The name of the route.</p>
+     * <p>The name of the route entry.</p>
      * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>

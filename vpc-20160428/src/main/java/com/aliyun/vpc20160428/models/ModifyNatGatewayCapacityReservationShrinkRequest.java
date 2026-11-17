@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyNatGatewayCapacityReservationShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters. Note: If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters. Note: If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,10 +14,10 @@ public class ModifyNatGatewayCapacityReservationShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
      * <ul>
-     * <li>true: performs a dry run without upgrading the Internet NAT gateway. The system checks whether your AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
-     * <li>false (default): sends a Normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the Internet NAT gateway is upgraded.</li>
+     * <li>true: Performs a dry run without upgrading the Internet NAT gateway. The system checks whether your AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+     * <li>false (default): Sends a Normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the Internet NAT gateway is upgraded.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,8 +53,8 @@ public class ModifyNatGatewayCapacityReservationShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to cancel the resource reservation. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: cancels the resource reservation.</li>
-     * <li><strong>false</strong> (default): does not cancel the resource reservation. This parameter is optional when you create or modify a resource reservation.</li>
+     * <li><strong>true</strong>: Cancels the resource reservation.</li>
+     * <li><strong>false</strong> (default): Does not cancel the resource reservation. You do not need to specify this parameter when you create or modify a resource reservation.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -1,3 +1,18 @@
+2026-11-17 Version: 8.4.1
+- Update API CancelCommonBandwidthPackageIpBandwidth: add request parameters IpInstanceId.
+- Update API CancelCommonBandwidthPackageIpBandwidth: add request parameters IpType.
+- Update API CreateVSwitch: add request parameters Ipv6Only.
+- Update API DescribeCommonBandwidthPackages: add response parameters Body.CommonBandwidthPackages.$.PublicIpAddresses.$.CommonBandwidthPackageIpBandwidth.
+- Update API DescribeCommonBandwidthPackages: add response parameters Body.CommonBandwidthPackages.$.PublicIpAddresses.$.IpInstanceId.
+- Update API DescribeCommonBandwidthPackages: add response parameters Body.CommonBandwidthPackages.$.PublicIpAddresses.$.IpType.
+- Update API DescribeEipAddresses: add response parameters Body.EipAddresses.$.CommonBandwidthPackageIpBandwidth.
+- Update API DescribeIpv6Addresses: add response parameters Body.Ipv6Addresses.$.CommonBandwidthPackageInfo.
+- Update API DescribeVSwitchAttributes: add response parameters Body.Ipv6Only.
+- Update API DescribeVSwitches: add request parameters Ipv6Only.
+- Update API ModifyCommonBandwidthPackageIpBandwidth: add request parameters IpInstanceId.
+- Update API ModifyCommonBandwidthPackageIpBandwidth: add request parameters IpType.
+
+
 2026-11-02 Version: 8.4.0
 - Support API CalculateNatGatewayCapacityUnits.
 - Support API DeleteNatRateLimitRule.

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteIpv6InternetBandwidthRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must ensure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among multiple requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
      * <h2>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</h2>
      * </blockquote>
@@ -17,11 +17,11 @@ public class DeleteIpv6InternetBandwidthRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to only precheck the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run on this request. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: only prechecks the request and does not delete the IPsec server. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the precheck, the corresponding error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p><strong>true</strong>: performs a dry run on this request without deleting the IPsec server. The system checks whether all required parameters are specified, the request format is valid, and service limits are met. If the request fails the check, the corresponding error message is returned. If the request passes the check, <code>DryRunOperation</code> is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): sends the request and deletes the IPsec server after the request passes the precheck.</p>
+     * <li><p><strong>false</strong> (default): sends a regular request and deletes the IPsec server after the request passes the check.</p>
      * </li>
      * </ul>
      * 
@@ -34,7 +34,7 @@ public class DeleteIpv6InternetBandwidthRequest extends TeaModel {
     /**
      * <p>The ID of the IPv6 address.</p>
      * <blockquote>
-     * <p>You must specify either <strong>Ipv6AddressId</strong> or <strong>Ipv6InternetBandwidthId</strong>.</p>
+     * <p>You must specify either the <strong>Ipv6AddressId</strong> parameter or the <strong>Ipv6InternetBandwidthId</strong> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class DeleteIpv6InternetBandwidthRequest extends TeaModel {
 
     /**
      * <p>The region ID of the IPv6 gateway.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
