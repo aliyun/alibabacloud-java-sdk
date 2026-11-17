@@ -108,8 +108,8 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         /**
          * <p>The type of the owner. Valid values:</p>
          * <ul>
-         * <li>MEMBER: human</li>
-         * <li>AGENT: agent</li>
+         * <li>MEMBER: Human user.</li>
+         * <li>AGENT: Agent.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         public Long ownerUserId;
 
         /**
-         * <p>是否人工审核产出物，默认关闭；仅数字员工可开启，审核待办自动发负责人</p>
+         * <p>Specifies whether to manually review the output. Default value: false. This feature can only be enabled for digital workers. When enabled, review tasks are automatically sent to the owner.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -155,7 +155,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         public Long sortOrder;
 
         /**
-         * <p>The processing instructions of the step.</p>
+         * <p>The processing instructions for the step.</p>
          * 
          * <strong>example:</strong>
          * <p>Collect customer information and submit it to the owner for review</p>
@@ -164,16 +164,16 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         public String specification;
 
         /**
-         * <p>The ordered array of fragments. Supported types include text, mention, skill, app, files, and web_search. The referenced identities and order are preserved.</p>
+         * <p>The ordered array of fragments. Supported types include text, mention, skill, app, files, and web_search. This field preserves the referenced identities and the order.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;type\&quot;:\&quot;text\&quot;,\&quot;text\&quot;:\&quot;收集客户信息\&quot;}]</p>
+         * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;Collect customer information&quot;}]</p>
          */
         @NameInMap("specificationJson")
         public java.util.List<java.util.Map<String, ?>> specificationJson;
 
         /**
-         * <p>The ID of the step.</p>
+         * <p>The step ID.</p>
          * 
          * <strong>example:</strong>
          * <p>collect</p>
@@ -287,7 +287,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>节点依赖边；每项包含from/to，引用稳定stepId</p>
+         * <p>The node dependency edges. Each item contains a from field and a to field, which reference stable step IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -296,7 +296,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         public java.util.List<java.util.Map<String, ?>> edges;
 
         /**
-         * <p>可选画布布局，按stepId索引；只影响展示，不决定依赖</p>
+         * <p>The optional canvas layout, indexed by step ID. This field only affects the display and does not determine dependencies.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;collect&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;review&quot;:{&quot;x&quot;:240,&quot;y&quot;:0}}</p>
@@ -314,7 +314,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>模板结构版本，当前为2，与业务版本vN独立</p>
+         * <p>The schema version of the template. The current value is 2, which is independent of the business version vN.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -326,7 +326,7 @@ public class GenerateWorkflowTemplateDraftResponseBody extends TeaModel {
          * <p>The ordered steps.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;stepId\&quot;:\&quot;collect\&quot;,\&quot;sortOrder\&quot;:1,\&quot;name\&quot;:\&quot;收集客户信息\&quot;}]</p>
+         * <p>[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;Collect customer information&quot;}]</p>
          */
         @NameInMap("steps")
         public java.util.List<GenerateWorkflowTemplateDraftResponseBodyDraftSteps> steps;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUserInfoResponseBody extends TeaModel {
     /**
-     * <p>The profile picture URL.</p>
+     * <p>The avatar URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/avatar.png">https://example.com/avatar.png</a></p>
@@ -41,7 +41,7 @@ public class GetUserInfoResponseBody extends TeaModel {
     public Boolean isAdmin;
 
     /**
-     * <p>Indicates whether the current logon tenant is a system tenant (tenantId=10000).</p>
+     * <p>Indicates whether the currently logged-on tenant is the system tenant (tenantId=10000).</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,7 +77,7 @@ public class GetUserInfoResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The user service description. The value can be up to 1000 characters in length.</p>
+     * <p>The user service description. Maximum length: 1,000 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -86,7 +86,7 @@ public class GetUserInfoResponseBody extends TeaModel {
     public String offering;
 
     /**
-     * <p>The parsed result of the user service description in JSON format.</p>
+     * <p>The parsing result of the user service in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -122,7 +122,7 @@ public class GetUserInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The user self-introduction. The value can be up to 1000 characters in length.</p>
+     * <p>The user self-introduction. Maximum length: 1,000 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -157,9 +157,9 @@ public class GetUserInfoResponseBody extends TeaModel {
     /**
      * <p>The tenant type. Valid values:</p>
      * <ul>
-     * <li>user: individual.</li>
-     * <li>org: enterprise.</li>
-     * <li>group: group.</li>
+     * <li>user: individual</li>
+     * <li>org: enterprise</li>
+     * <li>group: group</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -382,9 +382,9 @@ public class GetUserInfoResponseBody extends TeaModel {
         /**
          * <p>The tenant type. Valid values:</p>
          * <ul>
-         * <li>user: individual.</li>
-         * <li>org: enterprise.</li>
-         * <li>group: group.</li>
+         * <li>user: individual</li>
+         * <li>org: enterprise</li>
+         * <li>group: group</li>
          * </ul>
          * 
          * <strong>example:</strong>

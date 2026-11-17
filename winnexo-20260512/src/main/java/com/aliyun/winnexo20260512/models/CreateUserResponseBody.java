@@ -23,7 +23,7 @@ public class CreateUserResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The cluster name.</p>
+     * <p>The display name.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -59,7 +59,7 @@ public class CreateUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The WINNEXO platform user ID.</p>
+     * <p>The user ID in the WINNEXO platform.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

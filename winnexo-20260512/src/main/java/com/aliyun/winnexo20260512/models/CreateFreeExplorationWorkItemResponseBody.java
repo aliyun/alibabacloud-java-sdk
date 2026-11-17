@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFreeExplorationWorkItemResponseBody extends TeaModel {
     /**
-     * <p>已选择的数字员工技术名称</p>
+     * <p>The technical names of the selected digital workers.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;sales-agent&quot;]</p>
@@ -14,7 +14,7 @@ public class CreateFreeExplorationWorkItemResponseBody extends TeaModel {
     public java.util.List<String> agentNames;
 
     /**
-     * <p>业务状态码，成功为200</p>
+     * <p>The business status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class CreateFreeExplorationWorkItemResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>所属协作空间 ID</p>
+     * <p>The ID of the collaboration workspace to which the work item belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>cg_9401</p>
@@ -32,7 +32,7 @@ public class CreateFreeExplorationWorkItemResponseBody extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>真实群话题 ID，可在 queryWorkItemFeed 中关联；不可作为 Workflow workItemId</p>
+     * <p>The actual group topic ID, which can be associated in queryWorkItemFeed. It cannot be used as a workItemId in Workflow.</p>
      * 
      * <strong>example:</strong>
      * <p>conv_20261105_9f2c</p>
@@ -41,7 +41,7 @@ public class CreateFreeExplorationWorkItemResponseBody extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>平台创建人用户 ID</p>
+     * <p>The user ID of the creator on the platform.</p>
      * 
      * <strong>example:</strong>
      * <p>10001</p>
@@ -50,7 +50,7 @@ public class CreateFreeExplorationWorkItemResponseBody extends TeaModel {
     public Long createdByUserId;
 
     /**
-     * <p>工作项模式，固定 FREE_EXPLORATION</p>
+     * <p>The work item mode. The value is fixed to FREE_EXPLORATION.</p>
      * 
      * <strong>example:</strong>
      * <p>FREE_EXPLORATION</p>
@@ -59,7 +59,7 @@ public class CreateFreeExplorationWorkItemResponseBody extends TeaModel {
     public String itemType;
 
     /**
-     * <p>实际话题成员，含创建人；公开档不枚举全空间成员</p>
+     * <p>The actual members of the topic, including the creator. For public topics, members of the entire workspace are not enumerated.</p>
      * 
      * <strong>example:</strong>
      * <p>[43]</p>
@@ -68,16 +68,16 @@ public class CreateFreeExplorationWorkItemResponseBody extends TeaModel {
     public java.util.List<Long> memberUserIds;
 
     /**
-     * <p>错误描述</p>
+     * <p>The error description.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -86,16 +86,16 @@ public class CreateFreeExplorationWorkItemResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>工作项标题</p>
+     * <p>The title of the work item.</p>
      * 
      * <strong>example:</strong>
-     * <p>调查销售机会</p>
+     * <p>Investigate sales opportunities</p>
      */
     @NameInMap("title")
     public String title;
 
     /**
-     * <p>实际可见范围 PRIVATE/COLLABORATIVE/PUBLIC</p>
+     * <p>The actual visibility scope. Valid values: PRIVATE, COLLABORATIVE, and PUBLIC.</p>
      * 
      * <strong>example:</strong>
      * <p>PRIVATE</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateScheduledTaskShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the collaboration group (such as cg_101). If specified, a group space task is created (the caller must be a valid group member). If empty, a personal task is created.</p>
+     * <p>The ID of the associated collaboration group (such as cg_101). If this parameter is passed, a group space task is created, and the caller must be a valid group member. If this parameter is empty, a personal task is created.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleCollaborationGroupId</p>
@@ -20,16 +20,16 @@ public class CreateScheduledTaskShrinkRequest extends TeaModel {
     public String descriptionShrink;
 
     /**
-     * <p>The name of the current effective digital employee. This parameter is empty if not configured.</p>
+     * <p>The name of the currently effective digital employee. This parameter is empty if it is not configured.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>[&quot;pcitc-magent&quot;]</p>
      */
     @NameInMap("digitalEmployeeName")
     public String digitalEmployeeNameShrink;
 
     /**
-     * <p>Specifies whether public access is enabled.</p>
+     * <p>Specifies whether public access is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -38,7 +38,7 @@ public class CreateScheduledTaskShrinkRequest extends TeaModel {
     public Boolean isOpen;
 
     /**
-     * <p>The large model used by the assistant. An empty value indicates that DingTalk automatically selects the model.</p>
+     * <p>The large model used by the assistant. The default value is empty, which indicates that DingTalk automatically selects the model.</p>
      * 
      * <strong>example:</strong>
      * <p>quick</p>
@@ -51,10 +51,19 @@ public class CreateScheduledTaskShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>SampleName.pdf</p>
+     * <p>Sample name.pdf</p>
      */
     @NameInMap("name")
     public String name;
+
+    /**
+     * <p>The output conversation mode. Default value: NEW_CONVERSATION.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NEW_CONVERSATION</p>
+     */
+    @NameInMap("outputMode")
+    public String outputMode;
 
     /**
      * <p>The site ID.</p>
@@ -78,23 +87,13 @@ public class CreateScheduledTaskShrinkRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The trigger configuration. The configuration varies depending on the trigger type. For the specific format, refer to the following data structures:</p>
-     * <ul>
-     * <li>OSS trigger: See <a href="https://help.aliyun.com/document_detail/415697.html">OSSTriggerConfig</a>.</li>
-     * <li>Simple Log Service trigger: See <a href="https://help.aliyun.com/document_detail/415694.html">LogTriggerConfig</a>.</li>
-     * <li>Time trigger: See <a href="https://help.aliyun.com/document_detail/415712.html">TimeTriggerConfig</a>.</li>
-     * <li>HTTP trigger: See <a href="https://help.aliyun.com/document_detail/415685.html">HTTPTriggerConfig</a>.</li>
-     * <li>Tablestore trigger: You only need to specify the complete <strong>SourceArn</strong> parameter. No additional configuration is required. Set the value to an empty object {}.</li>
-     * <li>CDN event trigger: See <a href="https://help.aliyun.com/document_detail/415674.html">CDNEventsTriggerConfig</a>.</li>
-     * <li>MNS topic trigger: See <a href="https://help.aliyun.com/document_detail/415695.html">MnsTopicTriggerConfig</a>.</li>
-     * <li>EventBridge trigger: See <a href="https://help.aliyun.com/document_detail/2508622.html">EventBridgeTriggerConfig</a>.</li>
-     * </ul>
+     * <p>The trigger configuration of the scheduled task. triggerMode supports manual (manual trigger) and scheduled (scheduled trigger). If scheduled is used, cron must be specified. timezone and language are injected by the server, and the client does not need to pass them. pushConfig is the list of task push channels. If it is empty or no channel is enabled, no push is performed.</p>
      */
     @NameInMap("triggerConfig")
     public String triggerConfigShrink;
 
     /**
-     * <p>The visibility scope of the group task. Valid values: PRIVATE (visible only to the creator and group owner), COLLABORATIVE (visible to specified collaborators), and PUBLIC (visible to all group members). Default value for group tasks: PRIVATE. This parameter is ignored for personal tasks.</p>
+     * <p>The visibility scope of the group task. Valid values: PRIVATE (visible only to the creator and group owner), COLLABORATIVE (visible to specified collaboration members), and PUBLIC (visible to all group members). If this parameter is not passed for a group task, the default value is PRIVATE. This field is ignored for personal tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>PRIVATE</p>
@@ -103,10 +102,10 @@ public class CreateScheduledTaskShrinkRequest extends TeaModel {
     public String visibility;
 
     /**
-     * <p>The list of collaborator user IDs. This parameter takes effect only when visibility is set to COLLABORATIVE. It is ignored for other visibility levels. A maximum of 1000 IDs are supported. The task creator and group creator do not need to be included (covered by the authentication layer). This parameter is ignored for personal tasks.</p>
+     * <p>The list of user IDs of collaboration members. This parameter takes effect only when visibility is set to COLLABORATIVE and is ignored for other values. A maximum of 1,000 user IDs can be specified. You do not need to pass the IDs of the task creator and group creator because they are covered by the authentication layer. This field is ignored for personal tasks.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>[&quot;1002&quot;]</p>
      */
     @NameInMap("visibleMemberUserIds")
     public String visibleMemberUserIdsShrink;
@@ -162,6 +161,14 @@ public class CreateScheduledTaskShrinkRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateScheduledTaskShrinkRequest setOutputMode(String outputMode) {
+        this.outputMode = outputMode;
+        return this;
+    }
+    public String getOutputMode() {
+        return this.outputMode;
     }
 
     public CreateScheduledTaskShrinkRequest setSegmentsShrink(String segmentsShrink) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetWorkflowNodeConfigurationRequest extends TeaModel {
     /**
-     * <p>协作空间ID</p>
+     * <p>The collaboration workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ResetWorkflowNodeConfigurationRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>读取接口返回的configVersion；非负整数；版本冲突须刷新</p>
+     * <p>The configuration version returned by the read API. This must be a non-negative integer. Refresh the data if a version conflict occurs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ResetWorkflowNodeConfigurationRequest extends TeaModel {
     public Long expectedVersion;
 
     /**
-     * <p>当前物理计划ID（planId）</p>
+     * <p>The current physical plan ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ResetWorkflowNodeConfigurationRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>业务节点key（nodeKey）</p>
+     * <p>The business node key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ResetWorkflowNodeConfigurationRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>租户ID；缺省使用调用方默认租户</p>
+     * <p>The tenant ID. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

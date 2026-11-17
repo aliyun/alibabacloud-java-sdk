@@ -42,6 +42,9 @@ public class CreateConversationResponseBody extends TeaModel {
 
     /**
      * <p>A reserved field for extension purposes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;source&quot;:&quot;openapi&quot;}</p>
      */
     @NameInMap("metadata")
     public java.util.Map<String, ?> metadata;

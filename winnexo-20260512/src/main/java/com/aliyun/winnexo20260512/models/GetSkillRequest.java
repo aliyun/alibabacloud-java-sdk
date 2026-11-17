@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSkillRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return the complete file tree. Default value: False. This avoids large responses.</p>
+     * <p>Specifies whether to return the complete file tree. Default value: false. This prevents large response payloads.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,7 +23,7 @@ public class GetSkillRequest extends TeaModel {
     public String skillCode;
 
     /**
-     * <p>The skill name.</p>
+     * <p>The name of the skill.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -41,7 +41,7 @@ public class GetSkillRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The view mode. Valid values: draft (draft/editing view) and published (published view, default).</p>
+     * <p>The view mode. Valid values: draft (draft or edit view) and published (published view, default).</p>
      * 
      * <strong>example:</strong>
      * <p>draft</p>

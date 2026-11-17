@@ -23,7 +23,7 @@ public class ListOutputFilesShrinkRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>The output item type. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</p>
+     * <p>The output detail type. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</p>
      * 
      * <strong>example:</strong>
      * <p>document</p>
@@ -35,7 +35,7 @@ public class ListOutputFilesShrinkRequest extends TeaModel {
      * <p>The keyword used to match the output title or detail name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Quarterly operations</p>
+     * <p>Quarterly business</p>
      */
     @NameInMap("keyword")
     public String keyword;
@@ -59,7 +59,7 @@ public class ListOutputFilesShrinkRequest extends TeaModel {
     public Long page;
 
     /**
-     * <p>The number of items per page. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -90,6 +90,15 @@ public class ListOutputFilesShrinkRequest extends TeaModel {
      */
     @NameInMap("tags")
     public String tagsShrink;
+
+    /**
+     * <p>The ID of the current execution used to exactly filter outputs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exampleExecutionId</p>
+     */
+    @NameInMap("taskExecutionId")
+    public String taskExecutionId;
 
     /**
      * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used. The identity and tenant permissions are determined by the gateway and backend authentication.</p>
@@ -183,6 +192,14 @@ public class ListOutputFilesShrinkRequest extends TeaModel {
     }
     public String getTagsShrink() {
         return this.tagsShrink;
+    }
+
+    public ListOutputFilesShrinkRequest setTaskExecutionId(String taskExecutionId) {
+        this.taskExecutionId = taskExecutionId;
+        return this;
+    }
+    public String getTaskExecutionId() {
+        return this.taskExecutionId;
     }
 
     public ListOutputFilesShrinkRequest setTenantId(String tenantId) {

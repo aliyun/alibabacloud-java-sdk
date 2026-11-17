@@ -15,7 +15,7 @@ public class CheckAppResourcePermissionRequest extends TeaModel {
     public String permission;
 
     /**
-     * <p>The dot-separated resource key. The first segment is the APP application key.</p>
+     * <p>The dot-separated resource key. The first segment is the application key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class CheckAppResourcePermissionRequest extends TeaModel {
     public Long targetUserId;
 
     /**
-     * <p>The ID of the tenant to which the target user belongs. This parameter is required for cross-tenant targets.</p>
+     * <p>The tenant to which the target user belongs. This parameter is required for cross-tenant targets.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

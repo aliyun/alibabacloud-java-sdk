@@ -14,7 +14,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error description.</p>
      * 
      * <strong>example:</strong>
      * <p>The requested resource does not exist</p>
@@ -23,7 +23,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -35,7 +35,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
      * <p>The simplified template definition that can be re-imported.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;name\&quot;:\&quot;客户投诉处理流程\&quot;,\&quot;schemaVersion\&quot;:2}</p>
+     * <p>{&quot;name&quot;:&quot;Customer Complaint Handling Process&quot;,&quot;schemaVersion&quot;:2}</p>
      */
     @NameInMap("template")
     public ExportWorkflowTemplateResponseBodyTemplate template;
@@ -91,7 +91,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
          * <p>The step name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Customer complaint handling process</p>
+         * <p>Customer Complaint Handling Process</p>
          */
         @NameInMap("name")
         public String name;
@@ -128,7 +128,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
         public Long ownerUserId;
 
         /**
-         * <p>是否人工审核产出物，默认关闭；仅数字员工可开启，审核待办自动发负责人</p>
+         * <p>Specifies whether to manually review the output. Default value: false. This can only be enabled for digital workers, and review tasks are automatically sent to the owner.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -137,7 +137,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
         public Boolean reviewOutput;
 
         /**
-         * <p>The user IDs of the reviewers.</p>
+         * <p>The list of user IDs of the reviewers.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -155,7 +155,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
         public Long sortOrder;
 
         /**
-         * <p>The step handling instructions.</p>
+         * <p>The step processing instructions.</p>
          * 
          * <strong>example:</strong>
          * <p>Collect customer information and submit it to the owner for review</p>
@@ -164,10 +164,10 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
         public String specification;
 
         /**
-         * <p>The ordered array of fragments. Supports text, mention, skill, app, files, and web_search. Preserves referenced identities and order.</p>
+         * <p>An ordered array of segments. Supports text, mention, skill, app, files, and web_search. Preserves reference identities and order.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;整理输入资料&quot;}]</p>
+         * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;Organize input materials&quot;}]</p>
          */
         @NameInMap("specificationJson")
         public java.util.List<java.util.Map<String, ?>> specificationJson;
@@ -287,7 +287,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>节点依赖边；每项包含from/to，引用稳定stepId</p>
+         * <p>The node dependency edges. Each item contains from and to fields that reference stable step IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -296,7 +296,7 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
         public java.util.List<java.util.Map<String, ?>> edges;
 
         /**
-         * <p>可选画布布局，按stepId索引；只影响展示，不决定依赖</p>
+         * <p>The optional canvas layout, indexed by step ID. This only affects the display and does not determine dependencies.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;collect&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;review&quot;:{&quot;x&quot;:240,&quot;y&quot;:0}}</p>
@@ -308,13 +308,13 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
          * <p>The template name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Customer complaint handling process</p>
+         * <p>Customer Complaint Handling Process</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>模板结构版本，当前为2，与业务版本vN独立</p>
+         * <p>The schema version of the template. The current value is 2, which is independent of the business version vN.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -323,10 +323,10 @@ public class ExportWorkflowTemplateResponseBody extends TeaModel {
         public Long schemaVersion;
 
         /**
-         * <p>The standardized steps.</p>
+         * <p>The normalized steps.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;stepId\&quot;:\&quot;collect\&quot;,\&quot;sortOrder\&quot;:1,\&quot;name\&quot;:\&quot;收集客户信息\&quot;}]</p>
+         * <p>[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;Collect customer information&quot;}]</p>
          */
         @NameInMap("steps")
         public java.util.List<ExportWorkflowTemplateResponseBodyTemplateSteps> steps;

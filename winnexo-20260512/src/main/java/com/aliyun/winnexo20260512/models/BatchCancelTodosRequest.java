@@ -18,7 +18,7 @@ public class BatchCancelTodosRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>todo_abc123</p>
+     * <p>[&quot;todo_abc123&quot;]</p>
      */
     @NameInMap("todoIds")
     public java.util.List<String> todoIds;

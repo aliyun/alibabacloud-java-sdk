@@ -14,7 +14,7 @@ public class GetUserRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The WINNEXO logon account. This parameter is a unique identifier and cannot be empty.</p>
+     * <p>The WINNEXO logon account. This parameter is a unique identifier and cannot be left empty.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleAccountId</p>
@@ -23,7 +23,7 @@ public class GetUserRequest extends TeaModel {
     public String wnAccountId;
 
     /**
-     * <p>The WINNEXO platform user ID. Specify either this parameter or accountId.</p>
+     * <p>The user ID on the WINNEXO platform. Specify either this parameter or accountId.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

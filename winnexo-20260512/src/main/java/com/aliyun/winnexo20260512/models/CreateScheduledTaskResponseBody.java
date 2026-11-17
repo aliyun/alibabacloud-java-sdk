@@ -14,7 +14,7 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The description of the status code.</p>
+     * <p>The status code description.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>

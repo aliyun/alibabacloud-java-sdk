@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class UpdateScheduledTaskShrinkRequest extends TeaModel {
     /**
-     * <p>The description information.</p>
+     * <p>The description.</p>
      */
     @NameInMap("description")
     public String descriptionShrink;
 
     /**
-     * <p>The list of digital human names.</p>
+     * <p>The list of digital employee names.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>[&quot;test&quot;]</p>
      */
     @NameInMap("digitalEmployeeName")
     public String digitalEmployeeNameShrink;
 
     /**
-     * <p>Specifies whether the task is publicly accessible.</p>
+     * <p>Specifies whether public access is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -29,7 +29,7 @@ public class UpdateScheduledTaskShrinkRequest extends TeaModel {
     public Boolean isOpen;
 
     /**
-     * <p>The execution model tier. If not specified, the model tier is not updated.</p>
+     * <p>The execution model tier. If this parameter is not specified, the model tier is not updated.</p>
      * 
      * <strong>example:</strong>
      * <p>quick</p>
@@ -45,6 +45,15 @@ public class UpdateScheduledTaskShrinkRequest extends TeaModel {
      */
     @NameInMap("name")
     public String name;
+
+    /**
+     * <p>The output conversation mode. If this parameter is omitted, the current configuration is retained.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SAME_CONVERSATION</p>
+     */
+    @NameInMap("outputMode")
+    public String outputMode;
 
     /**
      * <p>The segments.</p>
@@ -69,7 +78,7 @@ public class UpdateScheduledTaskShrinkRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
+     * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -78,13 +87,13 @@ public class UpdateScheduledTaskShrinkRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The trigger configuration. The configuration varies depending on the trigger type.</p>
+     * <p>The trigger configuration. The configuration varies based on the trigger type.</p>
      */
     @NameInMap("triggerConfig")
     public String triggerConfigShrink;
 
     /**
-     * <p>The visibility scope for group tasks. Valid values: PRIVATE (visible only to the creator and group owner), COLLABORATIVE (visible to specified collaborators), and PUBLIC (visible to all group members). If not specified, the visibility is not updated. This parameter is ignored for personal tasks.</p>
+     * <p>The visibility scope adjustment for group tasks. Valid values: PRIVATE (visible only to the creator and group owner), COLLABORATIVE (visible to specified collaborators), and PUBLIC (visible to all group members). If this parameter is not specified, the visibility scope is not updated. This field is ignored for personal tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>COLLABORATIVE</p>
@@ -93,10 +102,10 @@ public class UpdateScheduledTaskShrinkRequest extends TeaModel {
     public String visibility;
 
     /**
-     * <p>The full replacement list of collaborator member user IDs. This parameter takes effect only when visibility is set to COLLABORATIVE. The list is cleared when switching away from the COLLABORATIVE tier. A maximum of 1000 members are supported. If not specified, the member list is not updated. The task creator and group creator do not need to be included because they are covered by the authentication layer. This parameter is ignored for personal tasks.</p>
+     * <p>The full replacement list of collaborators. This parameter takes effect only when visibility is set to COLLABORATIVE. When the visibility is changed from COLLABORATIVE to another value, the list is cleared. A maximum of 1,000 members are supported. If this parameter is not specified, the members are not updated. You do not need to specify the task creator and group creator because they are covered by the authentication layer. This field is ignored for personal tasks.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>[&quot;10001&quot;]</p>
      */
     @NameInMap("visibleMemberUserIds")
     public String visibleMemberUserIdsShrink;
@@ -144,6 +153,14 @@ public class UpdateScheduledTaskShrinkRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public UpdateScheduledTaskShrinkRequest setOutputMode(String outputMode) {
+        this.outputMode = outputMode;
+        return this;
+    }
+    public String getOutputMode() {
+        return this.outputMode;
     }
 
     public UpdateScheduledTaskShrinkRequest setSegmentsShrink(String segmentsShrink) {

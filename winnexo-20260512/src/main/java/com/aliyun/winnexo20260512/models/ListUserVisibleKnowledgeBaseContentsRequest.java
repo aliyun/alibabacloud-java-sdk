@@ -15,7 +15,7 @@ public class ListUserVisibleKnowledgeBaseContentsRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The search keyword. Supports fuzzy match on version names.</p>
+     * <p>The search keyword. Fuzzy search on version names is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Product description</p>
@@ -33,7 +33,7 @@ public class ListUserVisibleKnowledgeBaseContentsRequest extends TeaModel {
     public Long page;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -42,11 +42,11 @@ public class ListUserVisibleKnowledgeBaseContentsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The field by which the results are sorted. Valid values:</p>
+     * <p>The field by which to sort the returned results. Valid values:</p>
      * <ul>
-     * <li>event_time: the event creation time.</li>
-     * <li>event_execute_start_time: the event execution time.</li>
-     * <li>event_execute_finish_time: the event completion time.</li>
+     * <li>event_time: the event creation time</li>
+     * <li>event_execute_start_time: the event execution start time</li>
+     * <li>event_execute_finish_time: the event execution completion time</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class ListUserVisibleKnowledgeBaseContentsRequest extends TeaModel {
     public String sortField;
 
     /**
-     * <p>The sort order. This parameter takes effect when sortBy is specified. Valid values: ASC, DESC (case-insensitive).</p>
+     * <p>Specifies the sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC and DESC. The values are case-insensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>asc</p>
@@ -74,7 +74,7 @@ public class ListUserVisibleKnowledgeBaseContentsRequest extends TeaModel {
     public String sourceTypes;
 
     /**
-     * <p>The tenant ID. This is a common parameter. Pass it explicitly through --tenant-id in winnexo-cli.</p>
+     * <p>The tenant ID. This is a common parameter. For winnexo-cli, it is explicitly passed by using the --tenant-id option.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>

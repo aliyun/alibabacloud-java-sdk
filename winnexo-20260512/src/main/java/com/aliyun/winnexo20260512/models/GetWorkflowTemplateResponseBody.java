@@ -32,7 +32,7 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>节点依赖边；每项包含from/to，引用稳定stepId；显式空数组表示没有依赖</p>
+     * <p>The node dependency edges. Each item contains from and to fields that reference stable step IDs. An explicit empty array indicates no dependencies.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;from&quot;:&quot;collect&quot;,&quot;to&quot;:&quot;deliver&quot;}]</p>
@@ -41,7 +41,7 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
     public java.util.List<java.util.Map<String, ?>> edges;
 
     /**
-     * <p>The current effective version number of the template. An empty value indicates that only a draft exists and it cannot be used for work items.</p>
+     * <p>The current effective version number of the template. An empty value indicates that only a draft exists and the template cannot be used for work items.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -68,7 +68,7 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
     public String gmtModified;
 
     /**
-     * <p>可选画布布局，按stepId索引；只影响展示，不决定依赖</p>
+     * <p>The optional canvas layout, indexed by step ID. This only affects the display and does not determine dependencies.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;collect&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;review&quot;:{&quot;x&quot;:240,&quot;y&quot;:0}}</p>
@@ -95,7 +95,7 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -104,7 +104,7 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>模板结构版本，当前为2，与业务版本vN独立</p>
+     * <p>The schema version of the template. The current value is 2, which is independent of the business version vN.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -116,7 +116,7 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
      * <p>The ordered steps.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;stepId\&quot;:\&quot;collect\&quot;,\&quot;sortOrder\&quot;:1,\&quot;name\&quot;:\&quot;收集客户信息\&quot;}]</p>
+     * <p>[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;Collect customer information&quot;}]</p>
      */
     @NameInMap("steps")
     public java.util.List<GetWorkflowTemplateResponseBodySteps> steps;
@@ -149,11 +149,7 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
     public String versionDescription;
 
     /**
-     * <p>The version status. Valid values:</p>
-     * <ul>
-     * <li>DRAFT: Draft.</li>
-     * <li>SUBMITTED: Submitted.</li>
-     * </ul>
+     * <p>The version status. Valid values: DRAFT: Draft. SUBMITTED: Submitted.</p>
      * 
      * <strong>example:</strong>
      * <p>SUBMITTED</p>
@@ -331,11 +327,7 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
         public String ownerAgentName;
 
         /**
-         * <p>The owner type. Valid values:</p>
-         * <ul>
-         * <li>MEMBER: Human.</li>
-         * <li>AGENT: Agent.</li>
-         * </ul>
+         * <p>The owner type. Valid values: MEMBER: Human. AGENT: Agent.</p>
          * 
          * <strong>example:</strong>
          * <p>MEMBER</p>
@@ -353,7 +345,7 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
         public Long ownerUserId;
 
         /**
-         * <p>是否人工审核产出物，默认关闭；仅数字员工可开启，审核待办自动发负责人</p>
+         * <p>Specifies whether the output is manually reviewed. Default value: false. This feature can only be enabled for digital workers, and review to-do items are automatically sent to the owner.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -389,10 +381,10 @@ public class GetWorkflowTemplateResponseBody extends TeaModel {
         public String specification;
 
         /**
-         * <p>The array of structured segments for the step instructions. Supported types include text, mention, skill, app, files, and web_search. The fields and nested attachments of each segment are preserved exactly as returned by the backend.</p>
+         * <p>The structured segment array for the step instructions. Supports text, mention, skill, app, files, and web_search. The fields and nested attachments of each segment are preserved as returned by the backend.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;整理输入资料&quot;}]</p>
+         * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;Organize input materials&quot;}]</p>
          */
         @NameInMap("specificationJson")
         public java.util.List<java.util.Map<String, ?>> specificationJson;

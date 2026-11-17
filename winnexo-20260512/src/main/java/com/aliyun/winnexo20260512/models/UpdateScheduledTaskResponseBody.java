@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateScheduledTaskResponseBody extends TeaModel {
     /**
-     * <p>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* or InvalidParameter.*).</p>
+     * <p>The business status code. A value of 200 indicates success. A value of a backend error code such as ERR.* or InvalidParameter.* indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class UpdateScheduledTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error description. Empty when the request is successful.</p>
+     * <p>The error message. This parameter is empty when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -23,7 +23,7 @@ public class UpdateScheduledTaskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request trace ID.</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -32,7 +32,7 @@ public class UpdateScheduledTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task ID (echoed back).</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleTaskId</p>
@@ -41,7 +41,7 @@ public class UpdateScheduledTaskResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>Indicates whether an actual update was made.</p>
+     * <p>Specifies whether an actual update is performed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

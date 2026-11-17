@@ -33,7 +33,7 @@ public class ListWorkflowTemplatesRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token. Obtain the token from the nextToken parameter in the previous response. This parameter takes precedence over page if both are specified.</p>
+     * <p>The pagination token. Obtain the token from the nextToken value in the previous response. This parameter takes precedence over page if both are specified.</p>
      * 
      * <strong>example:</strong>
      * <p>tok_9401</p>

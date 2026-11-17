@@ -14,11 +14,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether more data is available. Valid values:</p>
-     * <ul>
-     * <li>true: More data is available.</li>
-     * <li>false: No more data is available.</li>
-     * </ul>
+     * <p>Indicates whether more data is available. Valid values: true (yes) and false (no).</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -33,7 +29,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
     public java.util.List<ListScheduledTasksResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of entries to return in this request.</p>
+     * <p>The maximum number of records to return for this request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -42,7 +38,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The status code description.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -51,7 +47,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token.</p>
+     * <p>The pagination cursor.</p>
      * 
      * <strong>example:</strong>
      * <p>1763604514518000_531300</p>
@@ -60,7 +56,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The specified page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -69,7 +65,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
     public Long page;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -182,7 +178,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
 
     public static class ListScheduledTasksResponseBodyItems extends TeaModel {
         /**
-         * <p>The reason for the exception. This parameter has a value only when status is abnormal.</p>
+         * <p>The cause of the exception. This field has a value only when status is abnormal.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -191,7 +187,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public String abnormalReason;
 
         /**
-         * <p>Indicates whether the current caller can delete the task. Only the task creator and group owner can delete the task. For personal tasks, this value is always true.</p>
+         * <p>Indicates whether the current caller can delete the task. This is valid only for the task creator and group owner. For personal tasks, the value is always true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -209,7 +205,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public Boolean canEdit;
 
         /**
-         * <p>Indicates whether the current caller can immediately execute the task. A task is executable if it is visible to the caller, except for abnormal tasks which return false. For personal tasks, this value is always true.</p>
+         * <p>Indicates whether the current caller can immediately execute the task. Visible means operable. For abnormal tasks, the value is false. For personal tasks, the value is always true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -218,7 +214,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public Boolean canExecute;
 
         /**
-         * <p>Indicates whether the current caller can start or stop the task. Only the task creator and group owner can toggle the task. Abnormal tasks return false. For personal tasks, this value is always true.</p>
+         * <p>Indicates whether the current caller can start or stop the task. This is valid only for the task creator and group owner. For abnormal tasks, the value is false. For personal tasks, the value is always true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -227,7 +223,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public Boolean canToggle;
 
         /**
-         * <p>The ID of the collaboration group (such as cg_101). If specified, a group task is created (the caller must be a valid group member). If left empty, a personal task is created.</p>
+         * <p>The ID of the collaboration group to which the task belongs, such as cg_101. If this parameter is specified, a group space task is created, and the caller must be a valid group member. If this parameter is left empty, a personal task is created.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleCollaborationGroupId</p>
@@ -275,7 +271,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
          * <p>The list of digital employee names.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>[&quot;pcitc-magent&quot;]</p>
          */
         @NameInMap("digitalEmployeeName")
         public java.util.List<String> digitalEmployeeName;
@@ -299,7 +295,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The last modification time.</p>
+         * <p>The last update time.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -317,7 +313,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public Boolean isOpen;
 
         /**
-         * <p>The execution model tier. If not specified, the value is not updated.</p>
+         * <p>The execution model tier. If this parameter is not specified, the model tier is not updated.</p>
          * 
          * <strong>example:</strong>
          * <p>standard</p>
@@ -335,7 +331,16 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The task status. Running is returned upon submission.</p>
+         * <p>The task output session mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NEW_CONVERSATION</p>
+         */
+        @NameInMap("outputMode")
+        public String outputMode;
+
+        /**
+         * <p>The task status. Running is returned immediately after submission.</p>
          * 
          * <strong>example:</strong>
          * <p>active</p>
@@ -362,13 +367,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public String triggerType;
 
         /**
-         * <p>The visibility scope of the group task. Valid values:</p>
-         * <ul>
-         * <li>PRIVATE: visible only to the creator and group owner.</li>
-         * <li>COLLABORATIVE: visible to specified collaborators.</li>
-         * <li>PUBLIC: visible to all group members.</li>
-         * </ul>
-         * <p>If not specified for a group task, the default value is PRIVATE. This parameter is ignored for personal tasks.</p>
+         * <p>The visibility scope of the group task. Valid values: PRIVATE (visible only to the creator and group owner), COLLABORATIVE (visible to specified collaboration members), and PUBLIC (visible to all group members). Default value for group tasks: PRIVATE. This field is ignored for personal tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIVATE</p>
@@ -377,10 +376,10 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         public String visibility;
 
         /**
-         * <p>The list of collaborator members, excluding the task creator and group creator whose access is governed by the authentication layer. This parameter is returned only for group tasks. An empty list is returned for PRIVATE and PUBLIC visibility.</p>
+         * <p>The list of collaboration members, excluding the task creator and group creator, which are covered by the authentication layer. This field is returned only for group tasks. An empty list is returned for PRIVATE or PUBLIC visibility scopes.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>[&quot;1001&quot;]</p>
          */
         @NameInMap("visibleMemberUserIds")
         public java.util.List<String> visibleMemberUserIds;
@@ -524,6 +523,14 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListScheduledTasksResponseBodyItems setOutputMode(String outputMode) {
+            this.outputMode = outputMode;
+            return this;
+        }
+        public String getOutputMode() {
+            return this.outputMode;
         }
 
         public ListScheduledTasksResponseBodyItems setStatus(String status) {

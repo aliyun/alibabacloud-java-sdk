@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReplaceManualMemoryRequest extends TeaModel {
     /**
-     * <p>The complete content of profile.md. An empty string indicates that the memory is cleared. This field is required, but an empty value is allowed.</p>
+     * <p>The complete content of profile.md. An empty string indicates that the memory is cleared. This field must be provided, but an empty value is allowed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,11 @@ public class ReplaceManualMemoryRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The owner type. A value of user indicates the personal memory of the authenticated user. A value of group indicates the memory of a specified workspace.</p>
+     * <p>The owner type. Valid values:</p>
+     * <ul>
+     * <li>user: the personal memory of the authenticated user.</li>
+     * <li>group: the memory of the specified workspace.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>group</p>

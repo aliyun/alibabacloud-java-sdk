@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkflowNodeConfigurationRequest extends TeaModel {
     /**
-     * <p>协作空间ID</p>
+     * <p>The ID of the collaboration workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateWorkflowNodeConfigurationRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>节点执行人；省略保持，null恢复默认；与负责人、模型至少修改一项</p>
+     * <p>The executor of the node. If this parameter is omitted, the current value is retained. If this parameter is set to null, the default value is restored. You must modify at least one of the owner, model, or executor.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;type&quot;:&quot;AGENT&quot;,&quot;id&quot;:&quot;agent_1001&quot;}</p>
@@ -24,7 +24,7 @@ public class UpdateWorkflowNodeConfigurationRequest extends TeaModel {
     public UpdateWorkflowNodeConfigurationRequestExecutor executor;
 
     /**
-     * <p>读取接口返回的configVersion；非负整数；版本冲突须刷新</p>
+     * <p>The configuration version returned by the read operation. The value must be a non-negative integer. If a version conflict occurs, you must refresh the version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class UpdateWorkflowNodeConfigurationRequest extends TeaModel {
     public Long expectedVersion;
 
     /**
-     * <p>当前物理计划ID（planId）</p>
+     * <p>The ID of the current physical plan.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class UpdateWorkflowNodeConfigurationRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>模型模式；quick归一化standard；省略保持，null恢复默认</p>
+     * <p>The model mode. The quick value is normalized to standard. If this parameter is omitted, the current value is retained. If this parameter is set to null, the default value is restored.</p>
      * 
      * <strong>example:</strong>
      * <p>standard</p>
@@ -53,7 +53,7 @@ public class UpdateWorkflowNodeConfigurationRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>业务节点key（nodeKey）</p>
+     * <p>The key of the business node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class UpdateWorkflowNodeConfigurationRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>节点负责人用户ID列表，非空正整数数组；省略保持，null恢复默认</p>
+     * <p>The list of user IDs for the node owners. The value must be a non-empty array of positive integers. If this parameter is omitted, the current value is retained. If this parameter is set to null, the default value is restored.</p>
      * 
      * <strong>example:</strong>
      * <p>[10001]</p>
@@ -72,7 +72,7 @@ public class UpdateWorkflowNodeConfigurationRequest extends TeaModel {
     public java.util.List<Long> responsibleUserIds;
 
     /**
-     * <p>租户ID；缺省使用调用方默认租户</p>
+     * <p>The tenant ID. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -151,7 +151,7 @@ public class UpdateWorkflowNodeConfigurationRequest extends TeaModel {
 
     public static class UpdateWorkflowNodeConfigurationRequestExecutor extends TeaModel {
         /**
-         * <p>USER 为正整数平台用户ID字符串；AGENT 为空间数字员工技术名称</p>
+         * <p>The executor ID. If the type is USER, the value is a string representing a positive integer platform user ID. If the type is AGENT, the value is the technical name of the digital worker in the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +161,7 @@ public class UpdateWorkflowNodeConfigurationRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>USER 真人或 AGENT 数字员工</p>
+         * <p>The executor type. Valid values: USER (a human user) and AGENT (a digital worker).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

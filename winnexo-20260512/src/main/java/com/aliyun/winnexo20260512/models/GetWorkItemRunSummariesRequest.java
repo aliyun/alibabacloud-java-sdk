@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWorkItemRunSummariesRequest extends TeaModel {
     /**
-     * <p>协作空间ID</p>
+     * <p>The ID of the collaboration workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetWorkItemRunSummariesRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>可选节点key；传入后只返回该节点当前轮次的总结</p>
+     * <p>The node key.</p>
      * 
      * <strong>example:</strong>
      * <p>query.amount</p>
@@ -24,7 +24,7 @@ public class GetWorkItemRunSummariesRequest extends TeaModel {
     public String nodeKey;
 
     /**
-     * <p>租户ID；缺省使用调用方默认租户</p>
+     * <p>The tenant ID. If not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -33,7 +33,7 @@ public class GetWorkItemRunSummariesRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>工作项ID</p>
+     * <p>The ID of the work item.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

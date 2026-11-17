@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
     /**
-     * <p>当前用户是否可编辑此节点</p>
+     * <p>Indicates whether the current user can edit this node.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
     public Boolean canEdit;
 
     /**
-     * <p>公共业务状态码</p>
+     * <p>The common business status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>配置版本；更新或恢复时作为expectedVersion</p>
+     * <p>The configuration version. Use this value as the expectedVersion when updating or restoring.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -32,7 +32,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
     public Long configVersion;
 
     /**
-     * <p>模板默认执行主体</p>
+     * <p>The default executor defined in the template.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;type&quot;:&quot;AGENT&quot;,&quot;id&quot;:&quot;agent_1001&quot;}</p>
@@ -41,7 +41,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
     public UpdateWorkflowNodeConfigurationResponseBodyDefaultExecutor defaultExecutor;
 
     /**
-     * <p>模板默认模型运行档</p>
+     * <p>The default model profile defined in the template.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen-max</p>
@@ -50,7 +50,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
     public String defaultModel;
 
     /**
-     * <p>模板默认负责人用户ID列表</p>
+     * <p>The list of user IDs for the default owners defined in the template.</p>
      * 
      * <strong>example:</strong>
      * <p>[10001]</p>
@@ -59,7 +59,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
     public java.util.List<String> defaultResponsibleUserIds;
 
     /**
-     * <p>当前生效的执行主体</p>
+     * <p>The currently effective executor.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;type&quot;:&quot;AGENT&quot;,&quot;id&quot;:&quot;agent_1001&quot;}</p>
@@ -68,7 +68,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
     public UpdateWorkflowNodeConfigurationResponseBodyEffectiveExecutor effectiveExecutor;
 
     /**
-     * <p>当前生效的模型运行档</p>
+     * <p>The currently effective model profile.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen-max-plus</p>
@@ -77,7 +77,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
     public String effectiveModel;
 
     /**
-     * <p>当前生效的负责人用户ID列表</p>
+     * <p>The list of user IDs for the currently effective owners.</p>
      * 
      * <strong>example:</strong>
      * <p>[10001]</p>
@@ -86,7 +86,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
     public java.util.List<String> effectiveResponsibleUserIds;
 
     /**
-     * <p>当前物理计划ID</p>
+     * <p>The ID of the current physical plan.</p>
      * 
      * <strong>example:</strong>
      * <p>inst_2081</p>
@@ -95,16 +95,16 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>公共错误描述</p>
+     * <p>The common error description.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>业务节点key</p>
+     * <p>The key of the business node.</p>
      * 
      * <strong>example:</strong>
      * <p>node_7f3a2c</p>
@@ -113,7 +113,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>实例覆盖值；字段为null时使用模板默认值</p>
+     * <p>The instance override values. If a field is null, the default value defined in the template is used.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;model&quot;:&quot;qwen-max-plus&quot;}</p>
@@ -122,7 +122,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
     public UpdateWorkflowNodeConfigurationResponseBodyOverrides overrides;
 
     /**
-     * <p>请求追踪ID</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -131,7 +131,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>状态刷新游标，不能作为配置版本</p>
+     * <p>The state refresh cursor. This value cannot be used as the configuration version.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -140,7 +140,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
     public Long stateVersion;
 
     /**
-     * <p>最后配置更新时间ISO8601；从未更新时为空</p>
+     * <p>The time when the configuration was last updated, in ISO 8601 format. This field is empty if the configuration has never been updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-11-05T08:00:00Z</p>
@@ -149,7 +149,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
     public String updatedAt;
 
     /**
-     * <p>最后更新配置的平台用户ID；从未更新时为空</p>
+     * <p>The platform user ID of the user who last updated the configuration. This field is empty if the configuration has never been updated.</p>
      * 
      * <strong>example:</strong>
      * <p>10001</p>
@@ -300,7 +300,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
 
     public static class UpdateWorkflowNodeConfigurationResponseBodyDefaultExecutor extends TeaModel {
         /**
-         * <p>USER 为正整数平台用户ID字符串；AGENT 为空间数字员工技术名称</p>
+         * <p>The executor ID. If the type is USER, the value is a string representing a positive integer platform user ID. If the type is AGENT, the value is the technical name of the digital worker in the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>agent_1001</p>
@@ -309,7 +309,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>USER 真人、AGENT 数字员工或历史 SYSTEM 系统执行人；SYSTEM仅用于响应</p>
+         * <p>The executor type. Valid values: USER (a human user), AGENT (a digital worker), and SYSTEM (a legacy system executor). The SYSTEM value is used only in responses.</p>
          * 
          * <strong>example:</strong>
          * <p>AGENT</p>
@@ -342,7 +342,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
 
     public static class UpdateWorkflowNodeConfigurationResponseBodyEffectiveExecutor extends TeaModel {
         /**
-         * <p>USER 为正整数平台用户ID字符串；AGENT 为空间数字员工技术名称</p>
+         * <p>The executor ID. If the type is USER, the value is a string representing a positive integer platform user ID. If the type is AGENT, the value is the technical name of the digital worker in the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>agent_1001</p>
@@ -351,7 +351,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>USER 真人、AGENT 数字员工或历史 SYSTEM 系统执行人；SYSTEM仅用于响应</p>
+         * <p>The executor type. Valid values: USER (a human user), AGENT (a digital worker), and SYSTEM (a legacy system executor). The SYSTEM value is used only in responses.</p>
          * 
          * <strong>example:</strong>
          * <p>AGENT</p>
@@ -384,7 +384,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
 
     public static class UpdateWorkflowNodeConfigurationResponseBodyOverridesExecutor extends TeaModel {
         /**
-         * <p>USER 为正整数平台用户ID字符串；AGENT 为空间数字员工技术名称</p>
+         * <p>The executor ID. If the type is USER, the value is a string representing a positive integer platform user ID. If the type is AGENT, the value is the technical name of the digital worker in the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>agent_1001</p>
@@ -393,7 +393,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>USER 真人、AGENT 数字员工或历史 SYSTEM 系统执行人；SYSTEM仅用于响应</p>
+         * <p>The executor type. Valid values: USER (a human user), AGENT (a digital worker), and SYSTEM (a legacy system executor). The SYSTEM value is used only in responses.</p>
          * 
          * <strong>example:</strong>
          * <p>AGENT</p>
@@ -426,7 +426,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
 
     public static class UpdateWorkflowNodeConfigurationResponseBodyOverrides extends TeaModel {
         /**
-         * <p>覆盖执行主体；null为默认</p>
+         * <p>The overridden executor. A value of null indicates that the default value is used.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;AGENT&quot;,&quot;id&quot;:&quot;agent_1001&quot;}</p>
@@ -435,7 +435,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
         public UpdateWorkflowNodeConfigurationResponseBodyOverridesExecutor executor;
 
         /**
-         * <p>覆盖模型运行档；null为默认</p>
+         * <p>The overridden model profile. A value of null indicates that the default value is used.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-max</p>
@@ -444,7 +444,7 @@ public class UpdateWorkflowNodeConfigurationResponseBody extends TeaModel {
         public String model;
 
         /**
-         * <p>覆盖负责人ID列表；null为默认</p>
+         * <p>The list of overridden owner IDs. A value of null indicates that the default value is used.</p>
          * 
          * <strong>example:</strong>
          * <p>[10001]</p>

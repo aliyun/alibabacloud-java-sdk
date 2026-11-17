@@ -14,7 +14,7 @@ public class GetSourceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The completion time, in milliseconds.</p>
+     * <p>The completion time in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-10-01T12:00:00Z</p>
@@ -41,7 +41,7 @@ public class GetSourceResponseBody extends TeaModel {
     public String gmtCreate;
 
     /**
-     * <p>The last modification time.</p>
+     * <p>The last update time.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -86,7 +86,7 @@ public class GetSourceResponseBody extends TeaModel {
     public Boolean hasUnstructuredDocs;
 
     /**
-     * <p>The status code description.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -104,7 +104,7 @@ public class GetSourceResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The meeting notes content (optional). The notes are used for auxiliary analysis.</p>
+     * <p>The content of the meeting notes. This field is optional and is used for auxiliary analysis.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -128,7 +128,7 @@ public class GetSourceResponseBody extends TeaModel {
     public String objectId;
 
     /**
-     * <p>The object type, such as customer. This field has a value when type is set to mention.</p>
+     * <p>The object type, such as customer. This field has a value only when the type is mention.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -137,7 +137,7 @@ public class GetSourceResponseBody extends TeaModel {
     public String objectType;
 
     /**
-     * <p>The name of the digital employee (operating object name, optional).</p>
+     * <p>The name of the digital employee. This field is optional and represents the name of the operations object.</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -155,7 +155,7 @@ public class GetSourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task scope.</p>
+     * <p>The scope of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>PERSONAL</p>
@@ -164,13 +164,16 @@ public class GetSourceResponseBody extends TeaModel {
     public String scope;
 
     /**
-     * <p>The user card information settings.</p>
+     * <p>The datasource config. This field is returned only when includeDetails is set to true. The specific fields vary based on the data source type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;file_name&quot;:&quot;report.pdf&quot;,&quot;file_type&quot;:&quot;pdf&quot;}</p>
      */
     @NameInMap("settings")
     public java.util.Map<String, ?> settings;
 
     /**
-     * <p>The skill output ID. This ID is included when the output is saved as a resource.</p>
+     * <p>The ID of the skill output. This field is included when the output is saved as a resource.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleSkillOutputId</p>
@@ -179,7 +182,7 @@ public class GetSourceResponseBody extends TeaModel {
     public String skillOutputId;
 
     /**
-     * <p>The data source ID.</p>
+     * <p>The ID of the data source.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleSourceId</p>
@@ -188,11 +191,7 @@ public class GetSourceResponseBody extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The knowledge base (KB) ownership type. Valid values:</p>
-     * <ul>
-     * <li>aliding_kb_doc: DingTalk knowledge base document.</li>
-     * <li>normal: standard knowledge.</li>
-     * </ul>
+     * <p>The ownership type of the knowledge base. Valid values: aliding_kb_doc (Alibaba DingTalk knowledge base document) and normal (common knowledge).</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -201,7 +200,7 @@ public class GetSourceResponseBody extends TeaModel {
     public String sourceKind;
 
     /**
-     * <p>The resource tags (optional). The value is a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;].</p>
+     * <p>The resource tags. This field is optional and is a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;].</p>
      * 
      * <strong>example:</strong>
      * <p>string_value</p>
@@ -219,7 +218,7 @@ public class GetSourceResponseBody extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The final message status.</p>
+     * <p>The final status of the message.</p>
      * 
      * <strong>example:</strong>
      * <p>READY</p>
@@ -231,7 +230,7 @@ public class GetSourceResponseBody extends TeaModel {
      * <p>The list of structured tables.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>[&quot;table01&quot;]</p>
      */
     @NameInMap("structuredTables")
     public java.util.List<String> structuredTables;
@@ -483,7 +482,7 @@ public class GetSourceResponseBody extends TeaModel {
         public String objectId;
 
         /**
-         * <p>The object type, such as customer. This field has a value when type is set to mention.</p>
+         * <p>The object type, such as customer. This field has a value only when the type is mention.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -524,7 +523,7 @@ public class GetSourceResponseBody extends TeaModel {
 
     public static class GetSourceResponseBodyUnstructuredDocs extends TeaModel {
         /**
-         * <p>The completion time, in milliseconds.</p>
+         * <p>The completion time in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-01T12:00:00Z</p>
@@ -542,7 +541,7 @@ public class GetSourceResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The file record ID (optional). This value corresponds to settings.file_record_id.</p>
+         * <p>The ID of the file record. This field is optional and corresponds to settings.file_record_id.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleFileRecordId</p>
@@ -551,10 +550,10 @@ public class GetSourceResponseBody extends TeaModel {
         public String fileRecordId;
 
         /**
-         * <p>The file type. Valid values:</p>
+         * <p>The file type.</p>
          * <ul>
-         * <li><strong>file</strong>: file.</li>
-         * <li><strong>folder</strong>: folder.</li>
+         * <li><strong>file</strong>: File.</li>
+         * <li><strong>folder</strong>: Folder.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -564,7 +563,7 @@ public class GetSourceResponseBody extends TeaModel {
         public String fileType;
 
         /**
-         * <p>The session analysis result in OSS URL format. The URL expires after one hour.</p>
+         * <p>The result of the session analysis in the form of an OSS URL. The URL expires in one hour.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></p>
@@ -573,7 +572,7 @@ public class GetSourceResponseBody extends TeaModel {
         public String ossUrl;
 
         /**
-         * <p>The DocumentAgent semantic ID.</p>
+         * <p>The semantic ID of DocumentAgent.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSemanticsId</p>

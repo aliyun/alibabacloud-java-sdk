@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMemoryAutoExtractionSwitchResponseBody extends TeaModel {
     /**
-     * <p>The number of automatic memory files cleared in this synchronous operation. The value is 0 if no files are cleared or no memories are available to be cleared.</p>
+     * <p>The number of automatic memory files cleared in this synchronous operation. The value is 0 if no files are cleared or no memory is available to be cleared.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -23,7 +23,7 @@ public class UpdateMemoryAutoExtractionSwitchResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The updated status of the automatic memory collection toggle. A value of true indicates that the feature is enabled, and a value of false indicates that the feature is disabled.</p>
+     * <p>The updated status of the automatic memory collection switch. A value of true indicates that the feature is enabled, and false indicates that it is disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

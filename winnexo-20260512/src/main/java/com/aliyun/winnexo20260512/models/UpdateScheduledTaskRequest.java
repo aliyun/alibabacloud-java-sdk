@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class UpdateScheduledTaskRequest extends TeaModel {
     /**
-     * <p>The description information.</p>
+     * <p>The description.</p>
      */
     @NameInMap("description")
     public java.util.List<UpdateScheduledTaskRequestDescription> description;
 
     /**
-     * <p>The list of digital human names.</p>
+     * <p>The list of digital employee names.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>[&quot;test&quot;]</p>
      */
     @NameInMap("digitalEmployeeName")
     public java.util.List<String> digitalEmployeeName;
 
     /**
-     * <p>Specifies whether the task is publicly accessible.</p>
+     * <p>Specifies whether public access is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -29,7 +29,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
     public Boolean isOpen;
 
     /**
-     * <p>The execution model tier. If not specified, the model tier is not updated.</p>
+     * <p>The execution model tier. If this parameter is not specified, the model tier is not updated.</p>
      * 
      * <strong>example:</strong>
      * <p>quick</p>
@@ -45,6 +45,15 @@ public class UpdateScheduledTaskRequest extends TeaModel {
      */
     @NameInMap("name")
     public String name;
+
+    /**
+     * <p>The output conversation mode. If this parameter is omitted, the current configuration is retained.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SAME_CONVERSATION</p>
+     */
+    @NameInMap("outputMode")
+    public String outputMode;
 
     /**
      * <p>The segments.</p>
@@ -69,7 +78,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
+     * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -78,13 +87,13 @@ public class UpdateScheduledTaskRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The trigger configuration. The configuration varies depending on the trigger type.</p>
+     * <p>The trigger configuration. The configuration varies based on the trigger type.</p>
      */
     @NameInMap("triggerConfig")
     public UpdateScheduledTaskRequestTriggerConfig triggerConfig;
 
     /**
-     * <p>The visibility scope for group tasks. Valid values: PRIVATE (visible only to the creator and group owner), COLLABORATIVE (visible to specified collaborators), and PUBLIC (visible to all group members). If not specified, the visibility is not updated. This parameter is ignored for personal tasks.</p>
+     * <p>The visibility scope adjustment for group tasks. Valid values: PRIVATE (visible only to the creator and group owner), COLLABORATIVE (visible to specified collaborators), and PUBLIC (visible to all group members). If this parameter is not specified, the visibility scope is not updated. This field is ignored for personal tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>COLLABORATIVE</p>
@@ -93,10 +102,10 @@ public class UpdateScheduledTaskRequest extends TeaModel {
     public String visibility;
 
     /**
-     * <p>The full replacement list of collaborator member user IDs. This parameter takes effect only when visibility is set to COLLABORATIVE. The list is cleared when switching away from the COLLABORATIVE tier. A maximum of 1000 members are supported. If not specified, the member list is not updated. The task creator and group creator do not need to be included because they are covered by the authentication layer. This parameter is ignored for personal tasks.</p>
+     * <p>The full replacement list of collaborators. This parameter takes effect only when visibility is set to COLLABORATIVE. When the visibility is changed from COLLABORATIVE to another value, the list is cleared. A maximum of 1,000 members are supported. If this parameter is not specified, the members are not updated. You do not need to specify the task creator and group creator because they are covered by the authentication layer. This field is ignored for personal tasks.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>[&quot;10001&quot;]</p>
      */
     @NameInMap("visibleMemberUserIds")
     public java.util.List<String> visibleMemberUserIds;
@@ -144,6 +153,14 @@ public class UpdateScheduledTaskRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public UpdateScheduledTaskRequest setOutputMode(String outputMode) {
+        this.outputMode = outputMode;
+        return this;
+    }
+    public String getOutputMode() {
+        return this.outputMode;
     }
 
     public UpdateScheduledTaskRequest setSegments(java.util.List<UpdateScheduledTaskRequestSegments> segments) {
@@ -204,7 +221,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
 
     public static class UpdateScheduledTaskRequestDescription extends TeaModel {
         /**
-         * <p>The text content. Required when type is set to text.</p>
+         * <p>The text content. This parameter is required when type is set to text.</p>
          * 
          * <strong>example:</strong>
          * <p>Sample content</p>
@@ -213,7 +230,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>The feature switch. Optional when type is set to web_search.</p>
+         * <p>Specifies whether the feature is enabled. This parameter is optional when type is set to web_search.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -332,7 +349,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
 
     public static class UpdateScheduledTaskRequestSegments extends TeaModel {
         /**
-         * <p>The text content. Required when type is set to text.</p>
+         * <p>The text content. This parameter is required when type is set to text.</p>
          * 
          * <strong>example:</strong>
          * <p>Sample content</p>
@@ -341,7 +358,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>The feature switch. Optional when type is set to web_search.</p>
+         * <p>Specifies whether the feature is enabled. This parameter is optional when type is set to web_search.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -478,7 +495,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The object ID. This parameter has a value when an object is mentioned using @.</p>
+         * <p>The object ID. This parameter has a value when the object is specified by using the @ symbol.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleObjectId</p>
@@ -536,7 +553,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
 
     public static class UpdateScheduledTaskRequestTaskDetailRelatedSemantics extends TeaModel {
         /**
-         * <p>The semantic attributes (JSON string) used for filtering during semantic retrieval.</p>
+         * <p>The semantic attributes in JSON string format. This parameter is used for filtering during semantic retrieval.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;level&quot;: &quot;VIP&quot;}</p>
@@ -608,7 +625,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
          * <p>sourceIds</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>[&quot;sourceIds&quot;]</p>
          */
         @NameInMap("sourceIds")
         public java.util.List<String> sourceIds;
@@ -672,7 +689,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public java.util.List<UpdateScheduledTaskRequestTaskDetailRelatedSkills> relatedSkills;
 
         /**
-         * <p>The task understanding description polished by the LLM.</p>
+         * <p>The task understanding description refined by the large language model (LLM).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -721,7 +738,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
 
     public static class UpdateScheduledTaskRequestTriggerConfigPushConfig extends TeaModel {
         /**
-         * <p>The push channel type.</p>
+         * <p>The push channel.</p>
          * 
          * <strong>example:</strong>
          * <p>DINGTALK</p>
@@ -730,7 +747,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String channelType;
 
         /**
-         * <p>The scope of push content. Default value: all_replies.</p>
+         * <p>The scope of the push content. Default value: all_replies.</p>
          * 
          * <strong>example:</strong>
          * <p>all_replies</p>
@@ -739,7 +756,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String contentScope;
 
         /**
-         * <p>The push method. Default value: channel_bot.</p>
+         * <p>The delivery method. Default value: channel_bot.</p>
          * 
          * <strong>example:</strong>
          * <p>channel_bot</p>
@@ -748,7 +765,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String deliveryMethod;
 
         /**
-         * <p>Specifies whether to push to this channel. Default value: false.</p>
+         * <p>Specifies whether to push notifications to the channel. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -757,7 +774,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The format for pushing output files. Default value: file.</p>
+         * <p>The push format for output files. Default value: file.</p>
          * 
          * <strong>example:</strong>
          * <p>file</p>
@@ -766,7 +783,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String fileFormat;
 
         /**
-         * <p>The digital human to which the sending bot belongs. This parameter is required and cannot be empty.</p>
+         * <p>The digital employee to which the sending bot belongs. This parameter is required and cannot be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -775,7 +792,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String operatingObjectName;
 
         /**
-         * <p>The receiver type. Currently only self is supported.</p>
+         * <p>The recipient. Only self is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -848,7 +865,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
 
     public static class UpdateScheduledTaskRequestTriggerConfig extends TeaModel {
         /**
-         * <p>The cron expression. Required when trigger_mode is set to scheduled. Example: \&quot;00 09 * * *\&quot;.</p>
+         * <p>The cron expression. This parameter is required when trigger_mode is set to scheduled. Example: 00 09 * * *.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -857,7 +874,7 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String cron;
 
         /**
-         * <p>The language, such as zh-CN or en-US. Automatically injected by the server.</p>
+         * <p>The language, such as zh-CN or en-US. This parameter is automatically injected by the server.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-CN</p>
@@ -866,13 +883,13 @@ public class UpdateScheduledTaskRequest extends TeaModel {
         public String language;
 
         /**
-         * <p>The list of push channels for the task. No push notifications are sent if the list is empty or no channel is enabled.</p>
+         * <p>The list of task push channels. If the list is empty or no channel is enabled, no push notification is sent.</p>
          */
         @NameInMap("pushConfig")
         public java.util.List<UpdateScheduledTaskRequestTriggerConfigPushConfig> pushConfig;
 
         /**
-         * <p>The time zone, such as Asia/Shanghai. Automatically injected by the server.</p>
+         * <p>The time zone, such as Asia/Shanghai. This parameter is automatically injected by the server.</p>
          * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>

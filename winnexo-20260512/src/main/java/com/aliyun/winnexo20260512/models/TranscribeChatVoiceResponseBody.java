@@ -23,7 +23,7 @@ public class TranscribeChatVoiceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -32,7 +32,7 @@ public class TranscribeChatVoiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The recognized text content.</p>
+     * <p>The batch text to be translated.</p>
      * 
      * <strong>example:</strong>
      * <p>The weather is nice today</p>

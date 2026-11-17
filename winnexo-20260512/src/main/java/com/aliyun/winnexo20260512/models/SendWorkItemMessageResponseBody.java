@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendWorkItemMessageResponseBody extends TeaModel {
     /**
-     * <p>公共业务状态码；成功为200，失败为后端错误码。</p>
+     * <p>The business status code. A value of 200 indicates success. Other values indicate backend error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class SendWorkItemMessageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>公共状态说明；成功时为success，失败时描述具体原因。</p>
+     * <p>The error description. This parameter is empty if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class SendWorkItemMessageResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>本轮助手消息ID；回复在后台异步生成，取得该ID不表示AI已开始或已完成回复。</p>
+     * <p>The ID of the assistant message. The reply is generated asynchronously in the background.</p>
      * 
      * <strong>example:</strong>
      * <p>23456789-abcd-4ef0-8123-456789abcdef</p>
@@ -32,7 +32,7 @@ public class SendWorkItemMessageResponseBody extends TeaModel {
     public String messageId;
 
     /**
-     * <p>请求追踪ID，可用于定位本次调用及排查失败原因。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -41,7 +41,7 @@ public class SendWorkItemMessageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>本次消息发送到的已有话题会话ID，不是新建会话ID。</p>
+     * <p>The ID of the existing topic session.</p>
      * 
      * <strong>example:</strong>
      * <p>01234567-89ab-4def-8123-456789abcdef</p>
@@ -50,7 +50,7 @@ public class SendWorkItemMessageResponseBody extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>本次提交的用户消息ID。</p>
+     * <p>The ID of the user message.</p>
      * 
      * <strong>example:</strong>
      * <p>12345678-9abc-4def-8123-456789abcdef</p>
@@ -59,7 +59,7 @@ public class SendWorkItemMessageResponseBody extends TeaModel {
     public String userMessageId;
 
     /**
-     * <p>请求传入的工作项ID；仅传conversationId时返回legacy-topic:<conversationId>形式的兼容ID。</p>
+     * <p>The work item ID in the request. If only conversationId is specified, a compatible ID in the legacy-topic:<conversationId> format is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>wi_0123456789abcdef0123456789abcdef</p>

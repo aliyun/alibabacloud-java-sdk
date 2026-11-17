@@ -20,7 +20,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
     public java.util.List<ListTenantDirectoryResponseBodyItems> items;
 
     /**
-     * <p>The description of the status code.</p>
+     * <p>The status code description.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -154,7 +154,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>The last modification time.</p>
+         * <p>The last update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -163,7 +163,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>The signing record ID.</p>
+         * <p>The ID of the signing record.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleItemId</p>
@@ -172,7 +172,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
         public String itemId;
 
         /**
-         * <p>The data type (group, user, or role).</p>
+         * <p>The data type, such as group, user, or role.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -196,7 +196,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
         public java.util.List<java.util.Map<String, ?>> objectBindings;
 
         /**
-         * <p>The number of resources with the FAILED status. This field is returned only when the top-level directory list of the knowledge base is queried.</p>
+         * <p>The number of resources in the FAILED state. This parameter is returned only when the top-level directory list of the knowledge base is queried.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -205,7 +205,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
         public Long sourceFailedCount;
 
         /**
-         * <p>The number of resources with the READY status. This field is returned only when the top-level directory list of the knowledge base is queried.</p>
+         * <p>The number of resources in the READY state. This parameter is returned only when the top-level directory list of the knowledge base is queried.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -214,7 +214,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
         public Long sourceReadyCount;
 
         /**
-         * <p>The resource status. This field has a value only when itemType is set to resource.</p>
+         * <p>The resource status. This parameter has a value only when itemType is set to resource.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -223,7 +223,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
         public String sourceStatus;
 
         /**
-         * <p>The total number of resources in the directory and its subdirectories. This field is returned only when the top-level directory list of the knowledge base is queried.</p>
+         * <p>The total number of resources in the directory and its subdirectories. This parameter is returned only when the top-level directory list of the knowledge base is queried.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

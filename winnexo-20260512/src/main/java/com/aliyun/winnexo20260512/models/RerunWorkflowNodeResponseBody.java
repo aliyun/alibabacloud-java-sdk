@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RerunWorkflowNodeResponseBody extends TeaModel {
     /**
-     * <p>本次重跑影响的节点 key 列表，供调用方刷新；成功响应恒包含，错误响应可缺省</p>
+     * <p>The list of node keys affected by this rerun, which the caller can use to refresh data. This list is always included in a successful response and may be omitted in an error response.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;query.amount&quot;]</p>
@@ -14,7 +14,7 @@ public class RerunWorkflowNodeResponseBody extends TeaModel {
     public java.util.List<String> affectedNodeKeys;
 
     /**
-     * <p>业务状态码；成功为200</p>
+     * <p>The business status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,16 +23,16 @@ public class RerunWorkflowNodeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>错误描述</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>重跑后的当前物理计划ID；固定规划节点重跑可能生成新计划，后续查询应使用此值</p>
+     * <p>The current physical plan ID after the rerun. Rerunning a fixed planning node may generate a new plan. Use this value for subsequent queries.</p>
      * 
      * <strong>example:</strong>
      * <p>plan_new</p>
@@ -41,7 +41,7 @@ public class RerunWorkflowNodeResponseBody extends TeaModel {
     public String planId;
 
     /**
-     * <p>请求追踪ID</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -50,7 +50,7 @@ public class RerunWorkflowNodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>重跑后的当前计划修订号</p>
+     * <p>The current plan revision number after the rerun.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -59,7 +59,7 @@ public class RerunWorkflowNodeResponseBody extends TeaModel {
     public Long revision;
 
     /**
-     * <p>当前工作流运行ID，固定节点生成新 revision 时保持不变</p>
+     * <p>The current workflow run ID. This value remains unchanged when a fixed node generates a new revision.</p>
      * 
      * <strong>example:</strong>
      * <p>run_20261105_01</p>
@@ -68,7 +68,7 @@ public class RerunWorkflowNodeResponseBody extends TeaModel {
     public String runId;
 
     /**
-     * <p>重跑被接受后的工作流状态版本</p>
+     * <p>The workflow state version after the rerun is accepted.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>

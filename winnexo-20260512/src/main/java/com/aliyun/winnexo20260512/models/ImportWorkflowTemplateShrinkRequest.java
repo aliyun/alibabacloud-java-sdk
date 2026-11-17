@@ -19,7 +19,7 @@ public class ImportWorkflowTemplateShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;name&quot;:&quot;Customer Complaint Handling Process&quot;,&quot;schemaVersion&quot;:2}</p>
+     * <p>{\&quot;name\&quot;:\&quot;Customer Complaint Handling Process\&quot;,\&quot;schemaVersion\&quot;:2}</p>
      */
     @NameInMap("template")
     public String templateShrink;

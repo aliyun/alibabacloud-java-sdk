@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateUserGroupRequest extends TeaModel {
     /**
-     * <p>The new description of the user group. If not specified, the description is not modified.</p>
+     * <p>The new description of the user group. If this parameter is not specified, the description is not modified.</p>
      * 
      * <strong>example:</strong>
-     * <p>South China Sales Organization</p>
+     * <p>string_value</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>Specifies whether to move the user group to the root node. This parameter cannot be set together with parentId.</p>
+     * <p>Specifies whether to move the user group to the root node. This parameter cannot be set at the same time as a non-null parentId.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,19 +23,19 @@ public class UpdateUserGroupRequest extends TeaModel {
     public Boolean moveToRoot;
 
     /**
-     * <p>The ID of the new parent user group. If not specified, the user group is not moved.</p>
+     * <p>The ID of the new parent user group. If this parameter is not specified, the user group is not moved. If it is explicitly set to null, the user group is moved to the root node.</p>
      * 
      * <strong>example:</strong>
-     * <p>7ea8973f-7a5c-4e8a-956b-4fe0e7e2eb11</p>
+     * <p>string_value</p>
      */
     @NameInMap("parentId")
     public String parentId;
 
     /**
-     * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
+     * <p>The tenant ID. This is a common parameter. In winnexo-cli, it is explicitly passed by using --tenant-id.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>string_value</p>
      */
     @NameInMap("tenantId")
     public String tenantId;
@@ -45,16 +45,16 @@ public class UpdateUserGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>7ea8973f-7a5c-4e8a-956b-4fe0e7e2eb11</p>
+     * <p>string_value</p>
      */
     @NameInMap("userGroupId")
     public String userGroupId;
 
     /**
-     * <p>The new name of the user group. If not specified, the name is not modified.</p>
+     * <p>The new name of the user group. If this parameter is not specified, the name is not modified.</p>
      * 
      * <strong>example:</strong>
-     * <p>South China Sales</p>
+     * <p>string_value</p>
      */
     @NameInMap("userGroupName")
     public String userGroupName;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScheduledTasksRequest extends TeaModel {
     /**
-     * <p>The ID of the collaboration group (such as cg_101). If specified, a group task is created (the caller must be a valid group member). If left empty, a personal task is created.</p>
+     * <p>The ID of the collaboration group to which the task belongs, such as cg_101. If this parameter is specified, a group space task is created, and the caller must be a valid group member. If this parameter is left empty, a personal task is created.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleCollaborationGroupId</p>
@@ -14,7 +14,7 @@ public class ListScheduledTasksRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>Specifies whether to return only tasks created by the caller. This parameter takes effect only in the group dimension. In the personal dimension, only the caller\&quot;s own tasks are always returned. If not specified, no filtering is applied.</p>
+     * <p>Specifies whether to view only tasks created by yourself. This parameter takes effect only at the group level (at the personal level, tasks are always your own). If this parameter is not specified, no filtering is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,16 +23,16 @@ public class ListScheduledTasksRequest extends TeaModel {
     public Boolean creatorOnly;
 
     /**
-     * <p>The keyword of the rule name, used for fuzzy match.</p>
+     * <p>The keyword in the rule name for fuzzy matching.</p>
      * 
      * <strong>example:</strong>
-     * <p>SampleKeyword</p>
+     * <p>Sample keyword</p>
      */
     @NameInMap("keyword")
     public String keyword;
 
     /**
-     * <p>The maximum number of entries to return in this request.</p>
+     * <p>The maximum number of records to return for this request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -41,7 +41,7 @@ public class ListScheduledTasksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page.</p>
+     * <p>The pagination token used to retrieve the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>eHiB8vca1XDyBT0cNAmThA==</p>
@@ -50,7 +50,7 @@ public class ListScheduledTasksRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number for pagination. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class ListScheduledTasksRequest extends TeaModel {
     public Long page;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return per page.</p>
      * <blockquote>
      * <p>The maximum number of entries per page is 30.</p>
      * </blockquote>
@@ -71,7 +71,7 @@ public class ListScheduledTasksRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the effective tenant.</p>
+     * <p>The effective tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -80,16 +80,10 @@ public class ListScheduledTasksRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>Filters by visibility. Valid values:</p>
-     * <ul>
-     * <li>PRIVATE: visible only to the creator and group owner.</li>
-     * <li>COLLABORATIVE: visible to specified collaborators.</li>
-     * <li>PUBLIC: visible to all group members.</li>
-     * </ul>
-     * <p>If not specified or an empty list is passed, no filtering is applied. This parameter takes effect only in the group dimension (when collaborationGroupId is specified) and is ignored in the personal dimension.</p>
+     * <p>Filters tasks by visibility scope. Multiple values can be selected. Valid values: PRIVATE (visible only to the creator and group owner), COLLABORATIVE (visible to specified collaboration members), and PUBLIC (visible to all group members). If this parameter is not specified or an empty list is passed, no filtering is applied. This parameter takes effect only at the group level (when collaborationGroupId is specified) and is ignored at the personal level.</p>
      * 
      * <strong>example:</strong>
-     * <p>PRIVATE</p>
+     * <p>[&quot;PRIVATE&quot;]</p>
      */
     @NameInMap("visibilities")
     public java.util.List<String> visibilities;

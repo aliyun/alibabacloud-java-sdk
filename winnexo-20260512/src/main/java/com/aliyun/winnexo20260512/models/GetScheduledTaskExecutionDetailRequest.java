@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetScheduledTaskExecutionDetailRequest extends TeaModel {
     /**
-     * <p>The execution record ID.</p>
+     * <p>The ID of the execution record.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

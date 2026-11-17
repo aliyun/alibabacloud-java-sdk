@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFreeExplorationWorkItemRequest extends TeaModel {
     /**
-     * <p>空间内数字员工技术名称，1–5 个，不可重复</p>
+     * <p>The technical names of the selected digital workers.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateFreeExplorationWorkItemRequest extends TeaModel {
     public java.util.List<String> agentNames;
 
     /**
-     * <p>协作空间 ID；调用者须为有效成员</p>
+     * <p>The ID of the collaboration workspace to which the work item belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateFreeExplorationWorkItemRequest extends TeaModel {
     public String collaborationGroupId;
 
     /**
-     * <p>协作档至少一个创建人以外的有效空间成员；最多 1000 人；私密和公开档忽略；创建人始终加入</p>
+     * <p>The actual members of the topic, including the creator. For public topics, members of the entire workspace are not enumerated.</p>
      * 
      * <strong>example:</strong>
      * <p>[43]</p>
@@ -34,7 +34,7 @@ public class CreateFreeExplorationWorkItemRequest extends TeaModel {
     public java.util.List<Long> memberUserIds;
 
     /**
-     * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+     * <p>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -43,17 +43,17 @@ public class CreateFreeExplorationWorkItemRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>自由探索工作项标题，去首尾空格后 1–200 字符</p>
+     * <p>The title of the work item.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>调查销售机会</p>
+     * <p>Investigate sales opportunities</p>
      */
     @NameInMap("title")
     public String title;
 
     /**
-     * <p>可见范围：PRIVATE 私密；COLLABORATIVE 指定成员协作；PUBLIC 空间内公开</p>
+     * <p>The actual visibility scope. Valid values: PRIVATE, COLLABORATIVE, and PUBLIC.</p>
      * 
      * <strong>example:</strong>
      * <p>PRIVATE</p>

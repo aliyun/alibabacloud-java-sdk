@@ -32,7 +32,7 @@ public class CreateWorkflowTemplateResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>节点依赖边；每项包含from/to，引用稳定stepId；显式空数组表示没有依赖</p>
+     * <p>The node dependency edges. Each item contains from and to fields that reference stable step IDs. An explicit empty array indicates no dependencies.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;from&quot;:&quot;collect&quot;,&quot;to&quot;:&quot;deliver&quot;}]</p>
@@ -68,7 +68,7 @@ public class CreateWorkflowTemplateResponseBody extends TeaModel {
     public String gmtModified;
 
     /**
-     * <p>可选画布布局，按stepId索引；只影响展示，不决定依赖</p>
+     * <p>The optional canvas layout, indexed by step ID. This parameter only affects the display and does not determine dependencies.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;collect&quot;:{&quot;x&quot;:0,&quot;y&quot;:0},&quot;review&quot;:{&quot;x&quot;:240,&quot;y&quot;:0}}</p>
@@ -104,7 +104,7 @@ public class CreateWorkflowTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>模板结构版本，当前为2，与业务版本vN独立</p>
+     * <p>The schema version of the template. The current value is 2, which is independent of the business version vN.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -116,7 +116,7 @@ public class CreateWorkflowTemplateResponseBody extends TeaModel {
      * <p>The ordered steps.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;收集客户信息&quot;}]</p>
+     * <p>[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;Collect Customer Information&quot;}]</p>
      */
     @NameInMap("steps")
     public java.util.List<CreateWorkflowTemplateResponseBodySteps> steps;
@@ -140,7 +140,7 @@ public class CreateWorkflowTemplateResponseBody extends TeaModel {
     public String version;
 
     /**
-     * <p>The change description of the version. If this field is empty for v1, the template description can be displayed.</p>
+     * <p>The change description of the version. If the description for v1 is empty, the template description can be displayed.</p>
      * 
      * <strong>example:</strong>
      * <p>Initial template creation</p>
@@ -322,7 +322,7 @@ public class CreateWorkflowTemplateResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The name of the agent in charge.</p>
+         * <p>The name of the agent assignee.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -331,7 +331,7 @@ public class CreateWorkflowTemplateResponseBody extends TeaModel {
         public String ownerAgentName;
 
         /**
-         * <p>The type of the person in charge. Valid values:</p>
+         * <p>The type of the assignee. Valid values:</p>
          * <ul>
          * <li>MEMBER: Human.</li>
          * <li>AGENT: Agent.</li>
@@ -344,7 +344,7 @@ public class CreateWorkflowTemplateResponseBody extends TeaModel {
         public String ownerType;
 
         /**
-         * <p>The user ID of the human person in charge.</p>
+         * <p>The user ID of the human assignee.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -353,7 +353,7 @@ public class CreateWorkflowTemplateResponseBody extends TeaModel {
         public Long ownerUserId;
 
         /**
-         * <p>是否人工审核产出物，默认关闭；仅数字员工可开启，审核待办自动发负责人</p>
+         * <p>Specifies whether to manually review the output. By default, this feature is disabled. It can only be enabled for digital workers, and review tasks are automatically sent to the assignee.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -380,10 +380,10 @@ public class CreateWorkflowTemplateResponseBody extends TeaModel {
         public Long sortOrder;
 
         /**
-         * <p>The step processing instructions.</p>
+         * <p>The processing instructions for the step.</p>
          * 
          * <strong>example:</strong>
-         * <p>Collect customer information and submit it to the person in charge for review</p>
+         * <p>Collect customer information and submit it to the assignee for review</p>
          */
         @NameInMap("specification")
         public String specification;
@@ -392,7 +392,7 @@ public class CreateWorkflowTemplateResponseBody extends TeaModel {
          * <p>The ordered array of fragments. Supported types include text, mention, skill, app, files, and web_search. The referenced identities and order are preserved.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{\&quot;type\&quot;:\&quot;text\&quot;,\&quot;text\&quot;:\&quot;收集客户信息\&quot;}]</p>
+         * <p>[{\&quot;type\&quot;:\&quot;text\&quot;,\&quot;text\&quot;:\&quot;Collect customer information\&quot;}]</p>
          */
         @NameInMap("specificationJson")
         public java.util.List<java.util.Map<String, ?>> specificationJson;

@@ -9,7 +9,7 @@ public class TranscribeChatVoiceAdvanceRequest extends TeaModel {
      * <ul>
      * <li><strong>image</strong>: Image.</li>
      * <li><strong>document</strong>: General document.</li>
-     * <li><strong>alidoc</strong>: Alibaba Cloud document.</li>
+     * <li><strong>alidoc</strong>: AliDoc.</li>
      * <li><strong>text</strong>: Text.</li>
      * <li><strong>video</strong>: Video.</li>
      * <li><strong>audio</strong>: Audio.</li>
@@ -26,7 +26,16 @@ public class TranscribeChatVoiceAdvanceRequest extends TeaModel {
     public String contentType;
 
     /**
-     * <p>The full path name of the file.</p>
+     * <p>The standard Base64-encoded audio content, excluding the data URI prefix. This parameter and FileUrl are mutually exclusive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UklGRg==</p>
+     */
+    @NameInMap("fileContentBase64")
+    public String fileContentBase64;
+
+    /**
+     * <p>The full path and name of the file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +46,6 @@ public class TranscribeChatVoiceAdvanceRequest extends TeaModel {
 
     /**
      * <p>The publicly accessible URL of the attachment.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://winnexo-file-transfer.oss-cn-hangzhou.aliyuncs.com/openapi/2026-09-08/9f8c2a1b">http://winnexo-file-transfer.oss-cn-hangzhou.aliyuncs.com/openapi/2026-09-08/9f8c2a1b</a></p>
@@ -46,7 +54,7 @@ public class TranscribeChatVoiceAdvanceRequest extends TeaModel {
     public java.io.InputStream fileUrlObject;
 
     /**
-     * <p>The ID of the tenant for which the operation takes effect.</p>
+     * <p>The ID of the tenant.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -65,6 +73,14 @@ public class TranscribeChatVoiceAdvanceRequest extends TeaModel {
     }
     public String getContentType() {
         return this.contentType;
+    }
+
+    public TranscribeChatVoiceAdvanceRequest setFileContentBase64(String fileContentBase64) {
+        this.fileContentBase64 = fileContentBase64;
+        return this;
+    }
+    public String getFileContentBase64() {
+        return this.fileContentBase64;
     }
 
     public TranscribeChatVoiceAdvanceRequest setFileName(String fileName) {

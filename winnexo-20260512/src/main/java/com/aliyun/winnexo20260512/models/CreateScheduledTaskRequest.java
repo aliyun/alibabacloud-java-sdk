@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateScheduledTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the collaboration group (such as cg_101). If specified, a group space task is created (the caller must be a valid group member). If empty, a personal task is created.</p>
+     * <p>The ID of the associated collaboration group (such as cg_101). If this parameter is passed, a group space task is created, and the caller must be a valid group member. If this parameter is empty, a personal task is created.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleCollaborationGroupId</p>
@@ -20,16 +20,16 @@ public class CreateScheduledTaskRequest extends TeaModel {
     public java.util.List<CreateScheduledTaskRequestDescription> description;
 
     /**
-     * <p>The name of the current effective digital employee. This parameter is empty if not configured.</p>
+     * <p>The name of the currently effective digital employee. This parameter is empty if it is not configured.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>[&quot;pcitc-magent&quot;]</p>
      */
     @NameInMap("digitalEmployeeName")
     public java.util.List<String> digitalEmployeeName;
 
     /**
-     * <p>Specifies whether public access is enabled.</p>
+     * <p>Specifies whether public access is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -38,7 +38,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
     public Boolean isOpen;
 
     /**
-     * <p>The large model used by the assistant. An empty value indicates that DingTalk automatically selects the model.</p>
+     * <p>The large model used by the assistant. The default value is empty, which indicates that DingTalk automatically selects the model.</p>
      * 
      * <strong>example:</strong>
      * <p>quick</p>
@@ -51,10 +51,19 @@ public class CreateScheduledTaskRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>SampleName.pdf</p>
+     * <p>Sample name.pdf</p>
      */
     @NameInMap("name")
     public String name;
+
+    /**
+     * <p>The output conversation mode. Default value: NEW_CONVERSATION.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NEW_CONVERSATION</p>
+     */
+    @NameInMap("outputMode")
+    public String outputMode;
 
     /**
      * <p>The site ID.</p>
@@ -78,23 +87,13 @@ public class CreateScheduledTaskRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The trigger configuration. The configuration varies depending on the trigger type. For the specific format, refer to the following data structures:</p>
-     * <ul>
-     * <li>OSS trigger: See <a href="https://help.aliyun.com/document_detail/415697.html">OSSTriggerConfig</a>.</li>
-     * <li>Simple Log Service trigger: See <a href="https://help.aliyun.com/document_detail/415694.html">LogTriggerConfig</a>.</li>
-     * <li>Time trigger: See <a href="https://help.aliyun.com/document_detail/415712.html">TimeTriggerConfig</a>.</li>
-     * <li>HTTP trigger: See <a href="https://help.aliyun.com/document_detail/415685.html">HTTPTriggerConfig</a>.</li>
-     * <li>Tablestore trigger: You only need to specify the complete <strong>SourceArn</strong> parameter. No additional configuration is required. Set the value to an empty object {}.</li>
-     * <li>CDN event trigger: See <a href="https://help.aliyun.com/document_detail/415674.html">CDNEventsTriggerConfig</a>.</li>
-     * <li>MNS topic trigger: See <a href="https://help.aliyun.com/document_detail/415695.html">MnsTopicTriggerConfig</a>.</li>
-     * <li>EventBridge trigger: See <a href="https://help.aliyun.com/document_detail/2508622.html">EventBridgeTriggerConfig</a>.</li>
-     * </ul>
+     * <p>The trigger configuration of the scheduled task. triggerMode supports manual (manual trigger) and scheduled (scheduled trigger). If scheduled is used, cron must be specified. timezone and language are injected by the server, and the client does not need to pass them. pushConfig is the list of task push channels. If it is empty or no channel is enabled, no push is performed.</p>
      */
     @NameInMap("triggerConfig")
     public CreateScheduledTaskRequestTriggerConfig triggerConfig;
 
     /**
-     * <p>The visibility scope of the group task. Valid values: PRIVATE (visible only to the creator and group owner), COLLABORATIVE (visible to specified collaborators), and PUBLIC (visible to all group members). Default value for group tasks: PRIVATE. This parameter is ignored for personal tasks.</p>
+     * <p>The visibility scope of the group task. Valid values: PRIVATE (visible only to the creator and group owner), COLLABORATIVE (visible to specified collaboration members), and PUBLIC (visible to all group members). If this parameter is not passed for a group task, the default value is PRIVATE. This field is ignored for personal tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>PRIVATE</p>
@@ -103,10 +102,10 @@ public class CreateScheduledTaskRequest extends TeaModel {
     public String visibility;
 
     /**
-     * <p>The list of collaborator user IDs. This parameter takes effect only when visibility is set to COLLABORATIVE. It is ignored for other visibility levels. A maximum of 1000 IDs are supported. The task creator and group creator do not need to be included (covered by the authentication layer). This parameter is ignored for personal tasks.</p>
+     * <p>The list of user IDs of collaboration members. This parameter takes effect only when visibility is set to COLLABORATIVE and is ignored for other values. A maximum of 1,000 user IDs can be specified. You do not need to pass the IDs of the task creator and group creator because they are covered by the authentication layer. This field is ignored for personal tasks.</p>
      * 
      * <strong>example:</strong>
-     * <p>string_value</p>
+     * <p>[&quot;1002&quot;]</p>
      */
     @NameInMap("visibleMemberUserIds")
     public java.util.List<String> visibleMemberUserIds;
@@ -162,6 +161,14 @@ public class CreateScheduledTaskRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateScheduledTaskRequest setOutputMode(String outputMode) {
+        this.outputMode = outputMode;
+        return this;
+    }
+    public String getOutputMode() {
+        return this.outputMode;
     }
 
     public CreateScheduledTaskRequest setSegments(java.util.List<CreateScheduledTaskRequestSegments> segments) {
@@ -223,7 +230,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>Specifies whether the throttling rule is enabled. A value of true indicates enabled, and a value of false indicates disabled.</p>
+         * <p>Specifies whether the throttling rule is enabled. A value of true indicates that the rule is enabled, and a value of false indicates that the rule is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -235,7 +242,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>SampleName.pdf</p>
+         * <p>Sample name.pdf</p>
          */
         @NameInMap("name")
         public String name;
@@ -243,10 +250,8 @@ public class CreateScheduledTaskRequest extends TeaModel {
         /**
          * <p>The object ID. Pass the project task ID.</p>
          * <ul>
-         * <li><p>For internal enterprise applications, use the taskId obtained by calling the <a href="https://open.dingtalk.com/document/orgapp-server/create-a-project-task">Create a project task</a> operation.</p>
-         * </li>
-         * <li><p>For third-party enterprise applications, use the taskId obtained by calling the <a href="https://open.dingtalk.com/document/isvapp-server/create-a-project-task">Create a project task</a> operation.</p>
-         * </li>
+         * <li>For internal enterprise applications, call the <a href="https://open.dingtalk.com/document/orgapp-server/create-a-project-task">Create a project task</a> API to obtain the taskId.</li>
+         * <li>For third-party enterprise applications, call the <a href="https://open.dingtalk.com/document/isvapp-server/create-a-project-task">Create a project task</a> API to obtain the taskId.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,7 +261,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
         public String objectId;
 
         /**
-         * <p>The object type. Fixed value: task, indicating a project task.</p>
+         * <p>The object type. Set the value to task, which indicates a project task.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -274,7 +279,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
         public String skillCode;
 
         /**
-         * <p>The HTTP API type. Valid values: Http (standard HTTP API), Rest (RESTful API), WebSocket (WebSocket API), HttpIngress (HTTP API accessed through Ingress), LLM (large language model API), and Agent (Agent proxy API).</p>
+         * <p>The HTTP API type. Valid values: Http (common HTTP API), Rest (RESTful API), WebSocket (WebSocket API), HttpIngress (HTTP API accessed through Ingress), LLM (large language model API), and Agent (agent API).</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -356,7 +361,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>Specifies whether to enable this feature.</p>
+         * <p>Specifies whether to enable the feature.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -368,13 +373,13 @@ public class CreateScheduledTaskRequest extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>SampleName.pdf</p>
+         * <p>Sample name.pdf</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The ID of the recommended item, which can be a <strong>feedId</strong> or a micro-application ID.</p>
+         * <p>The ID of the recommended item. The value can be a <strong>feedId</strong> or a mini-app ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleObjectId</p>
@@ -383,7 +388,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
         public String objectId;
 
         /**
-         * <p>The customer type to save.</p>
+         * <p>The saved customer type.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -401,7 +406,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
         public String skillCode;
 
         /**
-         * <p>The billing type. Only fixed is supported.</p>
+         * <p>The billing type. Currently, only fixed is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -486,7 +491,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>SampleName.pdf</p>
+         * <p>Sample name.pdf</p>
          */
         @NameInMap("name")
         public String name;
@@ -494,10 +499,8 @@ public class CreateScheduledTaskRequest extends TeaModel {
         /**
          * <p>The object ID. Pass the project task ID.</p>
          * <ul>
-         * <li><p>For internal enterprise applications, use the taskId obtained by calling the <a href="https://open.dingtalk.com/document/orgapp-server/create-a-project-task">Create a project task</a> operation.</p>
-         * </li>
-         * <li><p>For third-party enterprise applications, use the taskId obtained by calling the <a href="https://open.dingtalk.com/document/isvapp-server/create-a-project-task">Create a project task</a> operation.</p>
-         * </li>
+         * <li>For internal enterprise applications, call the <a href="https://open.dingtalk.com/document/orgapp-server/create-a-project-task">Create a project task</a> API to obtain the taskId.</li>
+         * <li>For third-party enterprise applications, call the <a href="https://open.dingtalk.com/document/isvapp-server/create-a-project-task">Create a project task</a> API to obtain the taskId.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -509,8 +512,8 @@ public class CreateScheduledTaskRequest extends TeaModel {
         /**
          * <p>The relationship type. Valid values:</p>
          * <ul>
-         * <li>crm_customer: enterprise customer.</li>
-         * <li>crm_customer_personal: individual customer.</li>
+         * <li>crm_customer: Enterprise customer.</li>
+         * <li>crm_customer_personal: Individual customer.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -614,7 +617,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>SampleName.pdf</p>
+         * <p>Sample name.pdf</p>
          */
         @NameInMap("name")
         public String name;
@@ -632,7 +635,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
          * <p>sourceIds</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>[&quot;113424&quot;]</p>
          */
         @NameInMap("sourceIds")
         public java.util.List<String> sourceIds;
@@ -678,19 +681,19 @@ public class CreateScheduledTaskRequest extends TeaModel {
 
     public static class CreateScheduledTaskRequestTaskDetail extends TeaModel {
         /**
-         * <p>The related objects.</p>
+         * <p>The associated objects.</p>
          */
         @NameInMap("relatedObjects")
         public java.util.List<CreateScheduledTaskRequestTaskDetailRelatedObjects> relatedObjects;
 
         /**
-         * <p>The related semantics.</p>
+         * <p>The associated semantics.</p>
          */
         @NameInMap("relatedSemantics")
         public java.util.List<CreateScheduledTaskRequestTaskDetailRelatedSemantics> relatedSemantics;
 
         /**
-         * <p>The related skills.</p>
+         * <p>The associated skills.</p>
          */
         @NameInMap("relatedSkills")
         public java.util.List<CreateScheduledTaskRequestTaskDetailRelatedSkills> relatedSkills;
@@ -747,10 +750,10 @@ public class CreateScheduledTaskRequest extends TeaModel {
         /**
          * <p>The notification method. Valid values:</p>
          * <ul>
-         * <li><strong>hdm_alarm_sms</strong>: SMS.</li>
+         * <li><strong>hdm_alarm_sms</strong>: Text message.</li>
          * <li><strong>dingtalk</strong>: DingTalk chatbot.</li>
-         * <li><strong>hdm_alarm_sms_and_email</strong>: SMS and email.</li>
-         * <li><strong>hdm_alarm_sms,dingtalk</strong>: SMS and DingTalk chatbot.</li>
+         * <li><strong>hdm_alarm_sms_and_email</strong>: Text message and email.</li>
+         * <li><strong>hdm_alarm_sms,dingtalk</strong>: Text message and DingTalk chatbot.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -760,7 +763,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
         public String channelType;
 
         /**
-         * <p>The push content scope. Default value: all_replies.</p>
+         * <p>The scope of the push content. Default value: all_replies.</p>
          * 
          * <strong>example:</strong>
          * <p>all_replies</p>
@@ -791,7 +794,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The file format. Valid values: Excel and CSV.</p>
+         * <p>The file format, such as Excel or CSV.</p>
          * 
          * <strong>example:</strong>
          * <p>file</p>
@@ -800,7 +803,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
         public String fileFormat;
 
         /**
-         * <p>The digital employee name (operating object name, optional).</p>
+         * <p>The name of the digital employee (the name of the operating object, optional).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -809,16 +812,12 @@ public class CreateScheduledTaskRequest extends TeaModel {
         public String operatingObjectName;
 
         /**
-         * <p>The file receiver type. Valid values:</p>
+         * <p>The type of the file receiver. Valid values:</p>
          * <ul>
-         * <li><p>0: One-on-one chat.</p>
-         * </li>
-         * <li><p>1: Group chat.</p>
-         * </li>
-         * <li><p>2: DingTalk Drive.</p>
-         * </li>
-         * <li><p>3: Document.</p>
-         * </li>
+         * <li>0: Private chat.</li>
+         * <li>1: Group chat.</li>
+         * <li>2: DingTalk Drive.</li>
+         * <li>3: Document.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -892,7 +891,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
 
     public static class CreateScheduledTaskRequestTriggerConfig extends TeaModel {
         /**
-         * <p>The periodic training information in cron syntax (Minutes Hours DayofMonth Month DayofWeek). An empty value indicates that periodic training is not performed (default). In DayofWeek, 0 indicates Sunday.</p>
+         * <p>The periodic training information. The cron syntax is used (Minutes Hours DayofMonth Month DayofWeek). If this parameter is empty, periodic training is not performed, which is the default value. In DayofWeek, 0 indicates Sunday.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -903,8 +902,8 @@ public class CreateScheduledTaskRequest extends TeaModel {
         /**
          * <p>The language. Valid values:</p>
          * <ul>
-         * <li>zh_CN: Chinese (default)</li>
-         * <li>en_US: English</li>
+         * <li>zh_CN: Chinese. This is the default value.</li>
+         * <li>en_US: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -914,7 +913,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
         public String language;
 
         /**
-         * <p>The list of task push channels. No push is performed if the list is empty or no channel is enabled.</p>
+         * <p>The list of task push channels. If this parameter is empty or no channel is enabled, no push is performed.</p>
          */
         @NameInMap("pushConfig")
         public java.util.List<CreateScheduledTaskRequestTriggerConfigPushConfig> pushConfig;
@@ -929,12 +928,14 @@ public class CreateScheduledTaskRequest extends TeaModel {
         public String timezone;
 
         /**
-         * <p>The trigger mode.</p>
-         * <p>  1: Manual trigger</p>
-         * <p>  2: Scheduled trigger </p>
-         * <p>  3: Code commit trigger</p>
-         * <p>  5: Pipeline trigger</p>
-         * <p>  6: WEBHOOK trigger</p>
+         * <p>The trigger mode. Valid values:</p>
+         * <ul>
+         * <li>1: Manual trigger.</li>
+         * <li>2: Scheduled trigger.</li>
+         * <li>3: Code commit trigger.</li>
+         * <li>5: Pipeline trigger.</li>
+         * <li>6: WEBHOOK trigger.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>manual</p>

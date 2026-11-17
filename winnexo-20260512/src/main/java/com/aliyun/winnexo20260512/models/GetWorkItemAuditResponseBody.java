@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWorkItemAuditResponseBody extends TeaModel {
     /**
-     * <p>公共业务状态码</p>
+     * <p>The common business status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class GetWorkItemAuditResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>按事件时间倒序排列的完整工作项审计记录</p>
+     * <p>The complete work item audit records sorted in descending order of event time.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;eventId&quot;:&quot;evt_example&quot;,&quot;eventType&quot;:&quot;WORK_ITEM_UPDATED&quot;,&quot;occurredAt&quot;:&quot;2026-11-05T08:00:00Z&quot;,&quot;status&quot;:&quot;SUCCESS&quot;}]</p>
@@ -23,16 +23,16 @@ public class GetWorkItemAuditResponseBody extends TeaModel {
     public java.util.List<GetWorkItemAuditResponseBodyItems> items;
 
     /**
-     * <p>公共错误描述</p>
+     * <p>The common error description.</p>
      * 
      * <strong>example:</strong>
-     * <p>请求的资源不存在</p>
+     * <p>The requested resource does not exist</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>请求追踪ID</p>
+     * <p>The request tracking ID.</p>
      * 
      * <strong>example:</strong>
      * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -79,25 +79,25 @@ public class GetWorkItemAuditResponseBody extends TeaModel {
 
     public static class GetWorkItemAuditResponseBodyItems extends TeaModel {
         /**
-         * <p>字段变更明细列表，每项包含变更字段与前后值</p>
+         * <p>The list of field change details. Each item includes the changed field and its values before and after the change.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;field&quot;:&quot;title&quot;,&quot;before&quot;:&quot;旧标题&quot;,&quot;after&quot;:&quot;新标题&quot;}]</p>
+         * <p>[{&quot;field&quot;:&quot;title&quot;,&quot;before&quot;:&quot;Old title&quot;,&quot;after&quot;:&quot;New title&quot;}]</p>
          */
         @NameInMap("changes")
         public Object changes;
 
         /**
-         * <p>事件描述</p>
+         * <p>The event description.</p>
          * 
          * <strong>example:</strong>
-         * <p>工作项标题调整为季度销售机会复盘</p>
+         * <p>The work item title is changed to Quarterly Sales Opportunity Review</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>审计事件唯一标识</p>
+         * <p>The unique identifier of the audit event.</p>
          * 
          * <strong>example:</strong>
          * <p>evt_20261105_0001</p>
@@ -106,7 +106,7 @@ public class GetWorkItemAuditResponseBody extends TeaModel {
         public String eventId;
 
         /**
-         * <p>审计事件类型，如 WORK_ITEM_UPDATED、TODO_COMPLETED</p>
+         * <p>The audit event type, such as WORK_ITEM_UPDATED or TODO_COMPLETED.</p>
          * 
          * <strong>example:</strong>
          * <p>WORK_ITEM_UPDATED</p>
@@ -115,7 +115,7 @@ public class GetWorkItemAuditResponseBody extends TeaModel {
         public String eventType;
 
         /**
-         * <p>事件发生时间，ISO8601 格式</p>
+         * <p>The time when the event occurred, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-11-05T08:00:00Z</p>
@@ -124,16 +124,16 @@ public class GetWorkItemAuditResponseBody extends TeaModel {
         public String occurredAt;
 
         /**
-         * <p>操作人显示名</p>
+         * <p>The display name of the operator.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("operatorName")
         public String operatorName;
 
         /**
-         * <p>操作人用户 ID</p>
+         * <p>The user ID of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>
@@ -142,16 +142,16 @@ public class GetWorkItemAuditResponseBody extends TeaModel {
         public String operatorUserId;
 
         /**
-         * <p>事件涉及的待确认问题列表</p>
+         * <p>The list of questions to be confirmed related to the event.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;question&quot;:&quot;是否继续执行&quot;}]</p>
+         * <p>[{&quot;question&quot;:&quot;Whether to continue execution&quot;}]</p>
          */
         @NameInMap("questions")
         public java.util.List<?> questions;
 
         /**
-         * <p>事件结果负载，JSON 对象；无结果时为空</p>
+         * <p>The event result payload as a JSON object. If no result is available, this field is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;result&quot;:&quot;ok&quot;}</p>
@@ -160,7 +160,7 @@ public class GetWorkItemAuditResponseBody extends TeaModel {
         public Object resultPayload;
 
         /**
-         * <p>事件状态</p>
+         * <p>The event status.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
@@ -169,16 +169,16 @@ public class GetWorkItemAuditResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>事件标题</p>
+         * <p>The event title.</p>
          * 
          * <strong>example:</strong>
-         * <p>调查销售机会</p>
+         * <p>Investigate sales opportunities</p>
          */
         @NameInMap("title")
         public String title;
 
         /**
-         * <p>关联待办 ID；无关联时为空字符串</p>
+         * <p>The ID of the associated to-do item. If no to-do item is associated, an empty string is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>todo_20261105_0007</p>
