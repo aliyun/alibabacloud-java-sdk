@@ -1,3 +1,10 @@
+2026-11-17 Version: 1.2.0
+- Support API CameraChatCompletionStream.
+- Support API CameraConsoleDebugStream.
+- Update API CuaChatCompletionStream: add request parameters X-QI-Request-Id.
+- Update API CuaChatCompletionStream: add request parameters body.metadata.actionMode.
+
+
 2026-10-27 Version: 1.1.0
 - Support API CuaChatCompletionStream.
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CuaChatCompletionStreamResponseBody extends TeaModel {
     /**
+     * <p>The POP gateway request ID for gateway tracking. It is not the qi_request_id of the agent and cannot replace reading the SSE body.</p>
+     * 
      * <strong>example:</strong>
      * <p>request-20260918-001</p>
      */

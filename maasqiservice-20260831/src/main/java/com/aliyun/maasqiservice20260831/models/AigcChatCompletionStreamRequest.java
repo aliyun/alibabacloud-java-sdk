@@ -15,7 +15,7 @@ public class AigcChatCompletionStreamRequest extends TeaModel {
     public java.util.List<AigcChatCompletionStreamRequestMessages> messages;
 
     /**
-     * <p>The extended input for this image creation request. Use the parameters object to set generation parameters. Do not use this field to pass model addresses or keys.</p>
+     * <p>The extended input for the current image creation. Use the parameters object to set generation parameters. Do not use it to pass model addresses or keys.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;parameters&quot;:{&quot;size&quot;:&quot;1024*1024&quot;,&quot;n&quot;:1}}</p>
@@ -24,7 +24,7 @@ public class AigcChatCompletionStreamRequest extends TeaModel {
     public AigcChatCompletionStreamRequestMetadata metadata;
 
     /**
-     * <p>A compatibility placeholder field. Can be omitted or set to an empty string. You cannot use this field to switch the model used by the instance. The model field in the response is an empty string.</p>
+     * <p>A compatibility placeholder field. You can omit it or pass an empty string. You cannot use this field to switch the model used by the instance. The model field in the response is an empty string.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot; &quot;</p>
@@ -33,7 +33,7 @@ public class AigcChatCompletionStreamRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>Specifies whether to use SSE streaming responses. This parameter must be set to true for this operation.</p>
+     * <p>Specifies whether to use SSE streaming responses. You must set this parameter to true for this operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class AigcChatCompletionStreamRequest extends TeaModel {
     public Boolean stream;
 
     /**
-     * <p>The HTTP JSON key is stream_options. Set include_usage to retrieve the token usage for this call.</p>
+     * <p>The HTTP JSON key is stream_options. Set include_usage to obtain the token usage for the current call.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;include_usage&quot;:true}</p>
@@ -98,7 +98,7 @@ public class AigcChatCompletionStreamRequest extends TeaModel {
 
     public static class AigcChatCompletionStreamRequestMessagesContentImageUrl extends TeaModel {
         /**
-         * <p>The publicly accessible HTTPS URL of the reference image, or a complete Base64 image Data URL (such as data:image/png;base64,...). Signed URLs must remain valid during request execution. Re-upload or update the link for expired or unauthorized images.</p>
+         * <p>The publicly accessible HTTPS URL of the reference image, or a complete Base64 image data URL (such as data:image/png;base64,...). Signed URLs must be valid during request execution. For expired or unauthorized images, you must re-upload them or update the links.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/input.png">https://example.com/input.png</a></p>
@@ -148,13 +148,13 @@ public class AigcChatCompletionStreamRequest extends TeaModel {
 
     public static class AigcChatCompletionStreamRequestMessagesContent extends TeaModel {
         /**
-         * <p>The reference image when type is set to image_url. Supports HTTPS URLs or Base64 Data URLs.</p>
+         * <p>The reference image when type is image_url. HTTPS URLs or Base64 data URLs are supported.</p>
          */
         @NameInMap("imageUrl")
         public AigcChatCompletionStreamRequestMessagesContentImageUrl imageUrl;
 
         /**
-         * <p>The generation or editing objective when type is set to text.</p>
+         * <p>The generation or editing objective when type is text.</p>
          * 
          * <strong>example:</strong>
          * <p>Change the background of the reference image to a seaside sunset</p>
@@ -172,7 +172,7 @@ public class AigcChatCompletionStreamRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The video input when type is set to video_url. Only accepted by the Creative Agent Dedicated edition Planner. The Creative Agent Lite edition rejects this type.</p>
+         * <p>The video input when type is video_url. Only the Planner of the dedicated edition of Creative Agent accepts it. The lite edition of Creative Agent rejects it.</p>
          */
         @NameInMap("videoUrl")
         public AigcChatCompletionStreamRequestMessagesContentVideoUrl videoUrl;
@@ -218,16 +218,16 @@ public class AigcChatCompletionStreamRequest extends TeaModel {
 
     public static class AigcChatCompletionStreamRequestMessages extends TeaModel {
         /**
-         * <p>The message content. Can be text. A multimodal array can contain text, image_url, or video_url. The Creative Agent Lite edition performs image-to-image when a reference image is provided and text-to-image when no reference image is provided. It does not accept video.</p>
+         * <p>The message content. You can pass text. A multimodal array can contain text, image_url, or video_url. The lite edition of Creative Agent performs image-to-image generation when a reference image is provided and text-to-image generation when no reference image is provided. It does not accept videos.</p>
          * 
          * <strong>example:</strong>
-         * <p>Generate a futuristic city nightscape after rain</p>
+         * <p>[{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;Generate a night view of a futuristic city after rain&quot;}]</p>
          */
         @NameInMap("content")
         public java.util.List<AigcChatCompletionStreamRequestMessagesContent> content;
 
         /**
-         * <p>The message role. Place the current generation objective in a user message. History can include user, assistant, and tool.</p>
+         * <p>The message role. Place the current generation objective in a user message. The history can include user, assistant, and tool messages.</p>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -260,7 +260,7 @@ public class AigcChatCompletionStreamRequest extends TeaModel {
 
     public static class AigcChatCompletionStreamRequestMetadataParameters extends TeaModel {
         /**
-         * <p>The guidance scale. Must be a finite number between 0 and 20.</p>
+         * <p>The guidance scale, which must be a finite number from 0 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0</p>
@@ -269,7 +269,7 @@ public class AigcChatCompletionStreamRequest extends TeaModel {
         public Double guidanceScale;
 
         /**
-         * <p>The number of images to generate for this request. Must be an integer in the range of 1 to 6.</p>
+         * <p>The number of images to generate for the current request, which must be an integer from 1 to 6.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -278,16 +278,16 @@ public class AigcChatCompletionStreamRequest extends TeaModel {
         public Long n;
 
         /**
-         * <p>The negative prompt that describes content you do not want to appear in the result.</p>
+         * <p>The negative prompt, which is used to describe content that you do not want to appear in the results.</p>
          * 
          * <strong>example:</strong>
-         * <p>low quality, blurry, text, watermark</p>
+         * <p>Low quality, blurry, text, watermark</p>
          */
         @NameInMap("negativePrompt")
         public String negativePrompt;
 
         /**
-         * <p>The number of model inference iterations. Must be an integer in the range of 1 to 200.</p>
+         * <p>The number of model inference iterations, which must be an integer from 1 to 200.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -296,7 +296,7 @@ public class AigcChatCompletionStreamRequest extends TeaModel {
         public Long numInferenceSteps;
 
         /**
-         * <p>The random seed. Must be an integer in the range of 0 to 2147483647.</p>
+         * <p>The random seed, which must be an integer from 0 to 2147483647.</p>
          * 
          * <strong>example:</strong>
          * <p>42</p>
@@ -305,7 +305,7 @@ public class AigcChatCompletionStreamRequest extends TeaModel {
         public Long seed;
 
         /**
-         * <p>The output pixel dimensions, such as <code>1024*1024</code> or <code>1280*720</code>. The format <code>1024x1024</code> is also accepted. When specified, this value overrides the default canvas dimensions for this request. Use width and height values supported by the model.</p>
+         * <p>The output pixel size, such as 1024<em>1024 or 1280</em>720. 1024x1024 is also accepted. Specifying this parameter overrides the default aspect ratio size for the current request. Use the width and height supported by the model.</p>
          * 
          * <strong>example:</strong>
          * <p>1024*1024</p>
@@ -370,7 +370,7 @@ public class AigcChatCompletionStreamRequest extends TeaModel {
 
     public static class AigcChatCompletionStreamRequestMetadata extends TeaModel {
         /**
-         * <p>The image parameters for this request. Only size, n, seed, negative_prompt, num_inference_steps, and guidance_scale are supported. Omitted fields use the default configurations. response_format is not supported.</p>
+         * <p>The image parameters for the current request. Only size, n, seed, negative_prompt, num_inference_steps, and guidance_scale are supported. Omitted fields use the default configurations. response_format is not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;size&quot;:&quot;1024*1024&quot;,&quot;n&quot;:1,&quot;num_inference_steps&quot;:8}</p>
@@ -395,7 +395,7 @@ public class AigcChatCompletionStreamRequest extends TeaModel {
 
     public static class AigcChatCompletionStreamRequestStreamOptions extends TeaModel {
         /**
-         * <p>The HTTP JSON key is include_usage. When set to true, an independent usage chunk is returned before the end marker. The choices field in this chunk is an empty array. Token usage does not represent the number of images or the final bill.</p>
+         * <p>The HTTP JSON key is include_usage. When set to true, an independent usage block is returned before the end marker, and its choices field is an empty array. Token usage does not represent the number of images or the final bill.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
