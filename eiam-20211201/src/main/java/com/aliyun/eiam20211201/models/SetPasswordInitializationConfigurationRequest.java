@@ -31,7 +31,7 @@ public class SetPasswordInitializationConfigurationRequest extends TeaModel {
      * <p>The list of password initialization notification channels.</p>
      * 
      * <strong>example:</strong>
-     * <p>email</p>
+     * <p>[&quot;email&quot;]</p>
      */
     @NameInMap("PasswordInitializationNotificationChannels")
     public java.util.List<String> passwordInitializationNotificationChannels;

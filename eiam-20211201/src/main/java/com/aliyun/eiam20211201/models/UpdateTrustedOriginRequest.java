@@ -27,7 +27,7 @@ public class UpdateTrustedOriginRequest extends TeaModel {
      * <p>The trusted origin name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Qoder Production Console</p>
+     * <p>Qoder production console</p>
      */
     @NameInMap("TrustOriginName")
     public String trustOriginName;
@@ -46,7 +46,7 @@ public class UpdateTrustedOriginRequest extends TeaModel {
      * <p>The trusted origin scenario.</p>
      * 
      * <strong>example:</strong>
-     * <p>iframe_embed</p>
+     * <p>[&quot;iframe_embed&quot;]</p>
      */
     @NameInMap("TrustedOriginScene")
     public java.util.List<String> trustedOriginScene;

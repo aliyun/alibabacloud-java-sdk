@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetClientPublicKeyResponseBody extends TeaModel {
     /**
-     * <p>The application ClientPublicKey information.</p>
+     * <p>The client public key information of the application.</p>
      */
     @NameInMap("ClientPublicKey")
     public GetClientPublicKeyResponseBodyClientPublicKey clientPublicKey;
@@ -60,7 +60,7 @@ public class GetClientPublicKeyResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The ID of the application ClientPublicKey.</p>
+         * <p>The ID of the client public key for the application.</p>
          * 
          * <strong>example:</strong>
          * <p>KEYEqDnDJhztiEAwSin7MZoxGcihzCAuxxxx</p>
@@ -69,7 +69,7 @@ public class GetClientPublicKeyResponseBody extends TeaModel {
         public String clientPublicKeyId;
 
         /**
-         * <p>The creation time. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1731305755000</p>
@@ -87,7 +87,7 @@ public class GetClientPublicKeyResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The last used time. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The last used time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1771305755000</p>
@@ -96,7 +96,7 @@ public class GetClientPublicKeyResponseBody extends TeaModel {
         public Long lastUsedTime;
 
         /**
-         * <p>Indicates whether the key pair is used with priority.</p>
+         * <p>Indicates whether the key pair is the primary key pair.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

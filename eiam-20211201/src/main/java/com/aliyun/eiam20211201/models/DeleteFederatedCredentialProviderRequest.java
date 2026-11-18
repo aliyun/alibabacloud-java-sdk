@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFederatedCredentialProviderRequest extends TeaModel {
     /**
-     * <p>The ID of the federated credential provider.</p>
+     * <p>The ID of the federated trust source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

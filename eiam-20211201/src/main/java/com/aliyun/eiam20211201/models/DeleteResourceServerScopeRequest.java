@@ -25,7 +25,7 @@ public class DeleteResourceServerScopeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The scope permission ID under the ResourceServer.</p>
+     * <p>The ID of the scope permission.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

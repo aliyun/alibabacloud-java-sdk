@@ -11,7 +11,7 @@ public class ListApplicationRolesResponseBody extends TeaModel {
     public java.util.List<ListApplicationRolesResponseBodyApplicationRoles> applicationRoles;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries per page for paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListApplicationRolesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to start the next query.</p>
+     * <p>The pagination token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxexample</p>
@@ -38,7 +38,7 @@ public class ListApplicationRolesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -111,7 +111,7 @@ public class ListApplicationRolesResponseBody extends TeaModel {
         public String applicationRoleId;
 
         /**
-         * <p>The name of the application role.</p>
+         * <p>The application role name.</p>
          * 
          * <strong>example:</strong>
          * <p>Admin Role</p>
@@ -120,7 +120,7 @@ public class ListApplicationRolesResponseBody extends TeaModel {
         public String applicationRoleName;
 
         /**
-         * <p>The value of the application role.</p>
+         * <p>The application role value.</p>
          * 
          * <strong>example:</strong>
          * <p>admin_role</p>

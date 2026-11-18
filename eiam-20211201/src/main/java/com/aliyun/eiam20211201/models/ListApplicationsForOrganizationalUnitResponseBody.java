@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel {
     /**
-     * <p>The list of applications that the organization is authorized to access.</p>
+     * <p>The list of authorized applications.</p>
      */
     @NameInMap("Applications")
     public java.util.List<ListApplicationsForOrganizationalUnitResponseBodyApplications> applications;
@@ -59,7 +59,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
 
     public static class ListApplicationsForOrganizationalUnitResponseBodyApplicationsApplicationRoles extends TeaModel {
         /**
-         * <p>The application role identifier.</p>
+         * <p>The application role ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>

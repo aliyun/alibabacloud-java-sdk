@@ -11,7 +11,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
     public java.util.List<ListAuthorizationResourcesResponseBodyAuthorizationResources> authorizationResources;
 
     /**
-     * <p>The maximum number of entries returned per page for paging in a paged query.</p>
+     * <p>The maximum number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token returned in the current response for the next paged query.</p>
+     * <p>The next token returned in the current response for the next paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -93,7 +93,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
 
     public static class ListAuthorizationResourcesResponseBodyAuthorizationResourcesConditionCredentialCondition extends TeaModel {
         /**
-         * <p>Specifies whether same-name identity accounts are supported.</p>
+         * <p>Specifies whether identity accounts with the same name are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -118,7 +118,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
 
     public static class ListAuthorizationResourcesResponseBodyAuthorizationResourcesCondition extends TeaModel {
         /**
-         * <p>The effective condition when used as a credential.</p>
+         * <p>The effective conditions when the authorization resource is used as a credential.</p>
          */
         @NameInMap("CredentialCondition")
         public ListAuthorizationResourcesResponseBodyAuthorizationResourcesConditionCredentialCondition credentialCondition;
@@ -151,7 +151,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         /**
          * <p>The type of the resource entity associated with the authorization resource. Valid values:</p>
          * <ul>
-         * <li>cloud_account_role: cloud role.</li>
+         * <li>cloud_account_role: cloud role</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -179,7 +179,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         public String authorizationRuleId;
 
         /**
-         * <p>The ID of the cloud account to which the resource entity associated with the authorization resource belongs.</p>
+         * <p>The ID of the Alibaba Cloud account to which the resource entity associated with the authorization resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ca_01kmegjc11qa1txxxxx</p>

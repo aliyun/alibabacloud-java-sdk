@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -14,7 +14,7 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
     public String requestId;
 
     /**
-     * <p>Outbound synchronization configuration</p>
+     * <p>The outbound synchronization configuration.</p>
      */
     @NameInMap("UdPushConfiguration")
     public GetIdentityProviderUdPushConfigurationResponseBodyUdPushConfiguration udPushConfiguration;
@@ -42,7 +42,7 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
 
     public static class GetIdentityProviderUdPushConfigurationResponseBodyUdPushConfigurationLdapUdPushConfig extends TeaModel {
         /**
-         * <p>Organization ObjectClass</p>
+         * <p>The organization object class.</p>
          * 
          * <strong>example:</strong>
          * <p>ou,top</p>
@@ -51,7 +51,7 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
         public String organizationUnitObjectClass;
 
         /**
-         * <p>Organization RDN</p>
+         * <p>The organization RDN.</p>
          * 
          * <strong>example:</strong>
          * <p>ou</p>
@@ -60,7 +60,7 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
         public String organizationalUnitRdn;
 
         /**
-         * <p>Password synchronization status</p>
+         * <p>Specifies whether to synchronize passwords.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -69,7 +69,7 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
         public String passwordSyncStatus;
 
         /**
-         * <p>User ObjectClass</p>
+         * <p>The user object class.</p>
          * 
          * <strong>example:</strong>
          * <p>user,top</p>
@@ -78,7 +78,7 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
         public String userObjectClass;
 
         /**
-         * <p>User RDN</p>
+         * <p>The user RDN.</p>
          * 
          * <strong>example:</strong>
          * <p>cn</p>
@@ -135,7 +135,7 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
 
     public static class GetIdentityProviderUdPushConfigurationResponseBodyUdPushConfigurationPeriodicSyncConfig extends TeaModel {
         /**
-         * <p>Cron expression</p>
+         * <p>The cron expression.</p>
          * 
          * <strong>example:</strong>
          * <p>0 45 1 * * ?</p>
@@ -144,13 +144,13 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
         public String periodicSyncCron;
 
         /**
-         * <p>Collection of time points</p>
+         * <p>The collection of time points.</p>
          */
         @NameInMap("PeriodicSyncTimes")
         public java.util.List<String> periodicSyncTimes;
 
         /**
-         * <p>Type</p>
+         * <p>The type.</p>
          * 
          * <strong>example:</strong>
          * <p>cron</p>
@@ -191,13 +191,13 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
 
     public static class GetIdentityProviderUdPushConfigurationResponseBodyUdPushConfigurationUdSyncScopeConfigs extends TeaModel {
         /**
-         * <p>Source nodes for synchronization</p>
+         * <p>The source synchronization node.</p>
          */
         @NameInMap("SourceScopes")
         public java.util.List<String> sourceScopes;
 
         /**
-         * <p>Target node for synchronization</p>
+         * <p>The target synchronization node.</p>
          * 
          * <strong>example:</strong>
          * <p>604352338</p>
@@ -230,7 +230,7 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
 
     public static class GetIdentityProviderUdPushConfigurationResponseBodyUdPushConfiguration extends TeaModel {
         /**
-         * <p>Identity provider ID</p>
+         * <p>The identity provider ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idp_na2rzpyc67zr7ixdfy35zgrxxx</p>
@@ -239,7 +239,7 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
         public String identityProviderId;
 
         /**
-         * <p>Incremental callback status. Indicates whether incremental callback data from the IdP is processed.</p>
+         * <p>Indicates whether to process incremental callback data from the IdP.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -248,7 +248,7 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
         public String incrementalCallbackStatus;
 
         /**
-         * <p>Instance ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_7vdv3olzk36gymwtlaq6fixxxx</p>
@@ -257,19 +257,19 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
         public String instanceId;
 
         /**
-         * <p>LDAP synchronization-side configuration</p>
+         * <p>The LDAP synchronization configuration information.</p>
          */
         @NameInMap("LdapUdPushConfig")
         public GetIdentityProviderUdPushConfigurationResponseBodyUdPushConfigurationLdapUdPushConfig ldapUdPushConfig;
 
         /**
-         * <p>Periodic verification configuration</p>
+         * <p>The periodic verification configuration.</p>
          */
         @NameInMap("PeriodicSyncConfig")
         public GetIdentityProviderUdPushConfigurationResponseBodyUdPushConfigurationPeriodicSyncConfig periodicSyncConfig;
 
         /**
-         * <p>Periodic verification status</p>
+         * <p>The periodic verification status.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -278,7 +278,7 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
         public String periodicSyncStatus;
 
         /**
-         * <p>Outbound synchronization configuration details</p>
+         * <p>The outbound synchronization configuration information.</p>
          */
         @NameInMap("UdSyncScopeConfigs")
         public java.util.List<GetIdentityProviderUdPushConfigurationResponseBodyUdPushConfigurationUdSyncScopeConfigs> udSyncScopeConfigs;

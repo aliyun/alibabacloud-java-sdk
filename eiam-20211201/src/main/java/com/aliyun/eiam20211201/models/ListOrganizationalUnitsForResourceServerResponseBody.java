@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaModel {
     /**
-     * <p>The number of rows per page in a paged query.</p>
+     * <p>The number of entries to return per page for paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page.</p>
+     * <p>The query token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -23,7 +23,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
     public String nextToken;
 
     /**
-     * <p>The list of organizational units.</p>
+     * <p>The list of organizations.</p>
      */
     @NameInMap("OrganizationalUnits")
     public java.util.List<ListOrganizationalUnitsForResourceServerResponseBodyOrganizationalUnits> organizationalUnits;
@@ -93,7 +93,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
 
     public static class ListOrganizationalUnitsForResourceServerResponseBodyOrganizationalUnitsResourceServerScopes extends TeaModel {
         /**
-         * <p>The scope permission ID.</p>
+         * <p>The scope ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
@@ -102,7 +102,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
         public String resourceServerScopeId;
 
         /**
-         * <p>The scope permission name.</p>
+         * <p>The scope name.</p>
          * 
          * <strong>example:</strong>
          * <p>Read User Info</p>
@@ -153,7 +153,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
         public String organizationalUnitId;
 
         /**
-         * <p>The list of scope permissions.</p>
+         * <p>The list of scopes.</p>
          */
         @NameInMap("ResourceServerScopes")
         public java.util.List<ListOrganizationalUnitsForResourceServerResponseBodyOrganizationalUnitsResourceServerScopes> resourceServerScopes;

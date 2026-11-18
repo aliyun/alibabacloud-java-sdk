@@ -164,7 +164,7 @@ public class UpdateCloudPermissionTemplateRequest extends TeaModel {
          * <p>The list of group IDs.</p>
          * 
          * <strong>example:</strong>
-         * <p>group_d6sbsusdfa4h66ec3il7yxxxx</p>
+         * <p>[&quot;group_d6sbsusdfa4h66ec3il7yxxxx&quot;]</p>
          */
         @NameInMap("GroupIds")
         public java.util.List<String> groupIds;
@@ -173,13 +173,13 @@ public class UpdateCloudPermissionTemplateRequest extends TeaModel {
          * <p>The list of organizational unit IDs.</p>
          * 
          * <strong>example:</strong>
-         * <p>ou_d6sbsuudfgf4h66ec3il7yxxxx</p>
+         * <p>[&quot;ou_d6sbsuudfgf4h66ec3il7yxxxx&quot;]</p>
          */
         @NameInMap("OrganizationalUnitIds")
         public java.util.List<String> organizationalUnitIds;
 
         /**
-         * <p>The application scope type. Valid values: global and custom.</p>
+         * <p>The type of the application scope. Valid values: global and custom.</p>
          * 
          * <strong>example:</strong>
          * <p>global</p>
@@ -191,7 +191,7 @@ public class UpdateCloudPermissionTemplateRequest extends TeaModel {
          * <p>The list of account IDs.</p>
          * 
          * <strong>example:</strong>
-         * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
+         * <p>[&quot;user_d6sbsuumeta4h66ec3il7yxxxx&quot;]</p>
          */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;

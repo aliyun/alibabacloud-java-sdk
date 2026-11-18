@@ -14,7 +14,7 @@ public class ListIdentityProvidersRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListIdentityProvidersRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class ListIdentityProvidersRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>Page size.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

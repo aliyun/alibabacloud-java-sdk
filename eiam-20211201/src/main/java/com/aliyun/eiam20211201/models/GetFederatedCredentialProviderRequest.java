@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFederatedCredentialProviderRequest extends TeaModel {
     /**
-     * <p>The federated trust source ID.</p>
+     * <p>The ID of the federated trust source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

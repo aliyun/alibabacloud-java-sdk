@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsForGroupRequest extends TeaModel {
     /**
-     * <p>Application ID list. A maximum of 100 application IDs are supported.</p>
+     * <p>The list of application IDs. You can specify up to 100 application IDs.</p>
      * 
      * <strong>example:</strong>
-     * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
+     * <p>[&quot;app_mkv7rgt4d7i4u7zqtzev2mxxxx&quot;]</p>
      */
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;
 
     /**
-     * <p>Group ID.</p>
+     * <p>The group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListApplicationsForGroupRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ListApplicationsForGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -43,7 +43,7 @@ public class ListApplicationsForGroupRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>Page size.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

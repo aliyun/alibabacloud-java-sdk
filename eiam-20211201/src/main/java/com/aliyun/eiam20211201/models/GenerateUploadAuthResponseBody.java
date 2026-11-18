@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateUploadAuthResponseBody extends TeaModel {
     /**
-     * <p>The Access ID for authentication.</p>
+     * <p>The access ID for authentication.</p>
      * 
      * <strong>example:</strong>
      * <p>STS.NYgAmE3cyPoMDxtWgtwG3xxxx</p>
@@ -23,7 +23,7 @@ public class GenerateUploadAuthResponseBody extends TeaModel {
     public String downLoadUrl;
 
     /**
-     * <p>The encrypted file encryption configuration key for the instance.</p>
+     * <p>The encrypted key for the file encryption configuration of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIiwia2lkIjoia2V5X3Z1ZWhjbmh2NWppcGhmZGJwcWpqd3dsemFhIn0..YetpxsPdqdLvAy6G.0Zy5meoTzvCuNfA_0w7E9ItY2uGu1v1BxR9i98KeHXv_P-sm9w1q0XPf5Fw.55V_jFq2t2ZHdjg5c7uxxxx</p>
@@ -50,7 +50,7 @@ public class GenerateUploadAuthResponseBody extends TeaModel {
     public String host;
 
     /**
-     * <p>The key for authentication.</p>
+     * <p>The authentication key.</p>
      * 
      * <strong>example:</strong>
      * <p>idaas-csv://idaas_ly77wa2oexrciw5v672vizxxxx
@@ -69,7 +69,7 @@ public class GenerateUploadAuthResponseBody extends TeaModel {
     public String plaintextKey;
 
     /**
-     * <p>The policy for authentication.</p>
+     * <p>The authentication policy.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJleHBpcmF0aW9uIjoiMjAyNS0xMi0yM1QwNjoxODozNi4zNTZaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjBdLHsiYnVja2V0IjoidGVtcC1pZGFhcy1laWFtLWNuLWhhbmd6aG91In0seyJrZXkiOiJpZGFhc19seTc3d2Eyb2V4cmNpdzV2Njcydml6eG12ZS9maWxlX2ltcG9ydC82ODg2NmQyMS0wYWI3LTQ1MGQtYjllNi01YjFlYWZlMDYzZTEifSx7Ingtb3NzLWZvcmJpZC1vdmVyd3JpdGUiOiJ0cnVlIn0seyJ4LW9zcy1vYmplY3QtYWNsIjoicHJpdmF0ZSJxxxx</p>
@@ -96,7 +96,7 @@ public class GenerateUploadAuthResponseBody extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The signature for authentication.</p>
+     * <p>The authentication signature.</p>
      * 
      * <strong>example:</strong>
      * <p>t3JyykEKg3kHQuUrhaXYxtboUxxxxx</p>

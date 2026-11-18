@@ -20,7 +20,7 @@ public class ListApplicationAccountsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -77,7 +77,7 @@ public class ListApplicationAccountsResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The application account name.</p>
+         * <p>The username of the application account.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -86,7 +86,7 @@ public class ListApplicationAccountsResponseBody extends TeaModel {
         public String applicationUsername;
 
         /**
-         * <p>The time when the application account was created. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1737510353000</p>

@@ -20,7 +20,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -97,7 +97,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String backupSecurityGroupId;
 
         /**
-         * <p>The IDs of the vSwitches for the backup network access endpoint.</p>
+         * <p>The vSwitches for the backup network access endpoint.</p>
          */
         @NameInMap("BackupVSwitchIds")
         public java.util.List<String> backupVSwitchIds;
@@ -183,7 +183,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint backupVpcEndpoint;
 
         /**
-         * <p>The time when the network access endpoint was created. The time is displayed in the UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The time when the network access endpoint was created. The time is displayed as a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -210,7 +210,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String networkAccessEndpointId;
 
         /**
-         * <p>The name of the network access endpoint, such as the xx business VPC access endpoint.</p>
+         * <p>The name of the network access endpoint, such as xx business VPC access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC access endpoint for xx service</p>
@@ -221,8 +221,8 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         /**
          * <p>The type of the network access endpoint. Valid values:</p>
          * <ul>
-         * <li>shared: shared network access endpoint.</li>
-         * <li>private: private network access endpoint.</li>
+         * <li>shared: shared network access endpoint</li>
+         * <li>private: private network access endpoint</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -243,10 +243,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         /**
          * <p>The status of the network access endpoint. Valid values:</p>
          * <ul>
-         * <li>pending: pending initialization.</li>
-         * <li>creating: being created.</li>
-         * <li>running: running.</li>
-         * <li>deleting: being deleted.</li>
+         * <li>pending: pending initialization</li>
+         * <li>creating: being created</li>
+         * <li>running: running</li>
+         * <li>deleting: being deleted</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,7 +256,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the network access endpoint was last updated. The time is displayed in the UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The time when the network access endpoint was last updated. The time is displayed as a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -265,10 +265,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>The IDs of the vSwitches to which the private network access endpoint is connected.</p>
+         * <p>The vSwitches to which the private network access endpoint is connected.</p>
          * 
          * <strong>example:</strong>
-         * <p>vsw-examplexxx</p>
+         * <p>[&quot;vsw-examplexxx&quot;]</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;

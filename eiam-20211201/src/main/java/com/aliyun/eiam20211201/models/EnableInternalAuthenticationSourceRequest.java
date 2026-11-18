@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableInternalAuthenticationSourceRequest extends TeaModel {
     /**
-     * <p>The ID of the internal authentication source.</p>
+     * <p>The internal authentication source ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ia_password</p>

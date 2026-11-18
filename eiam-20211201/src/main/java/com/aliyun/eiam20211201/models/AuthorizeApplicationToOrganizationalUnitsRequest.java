@@ -34,11 +34,11 @@ public class AuthorizeApplicationToOrganizationalUnitsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The list of organizational unit IDs. A single operation supports up to 100 organizational unit IDs.</p>
+     * <p>The list of organizational unit IDs. A maximum of 100 organizational unit IDs are supported in a single operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
+     * <p>[&quot;ou_wovwffm62xifdziem7an7xxxxx&quot;]</p>
      */
     @NameInMap("OrganizationalUnitIds")
     public java.util.List<String> organizationalUnitIds;

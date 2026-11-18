@@ -90,7 +90,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public GetCloudAccountResponseBodyCloudAccountCloudAccountHealthCheckResultErrorReason errorReason;
 
         /**
-         * <p>The last check time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The last check time in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -220,7 +220,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
 
     public static class GetCloudAccountResponseBodyCloudAccountPrivilegeHostingError extends TeaModel {
         /**
-         * <p>The failure error code.</p>
+         * <p>The error code of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>Error</p>
@@ -349,7 +349,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String cloudAccountVendorType;
 
         /**
-         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The creation time in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830225000</p>
@@ -388,14 +388,14 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public GetCloudAccountResponseBodyCloudAccountPrivilegeHostingError privilegeHostingError;
 
         /**
-         * <p>The cloud account hosting status. Default value: hosting_unmanaged. Valid values:</p>
+         * <p>The cloud account hosting state. Default value: hosting_unmanaged. Valid values:</p>
          * <ul>
          * <li>hosting_unmanaged: Unmanaged. The cloud account has not initiated hosting and is in the initial state.</li>
-         * <li>hosting_pending: Hosting. The hosting task is submitted and executed asynchronously. You must wait for the hosting process to complete to enter the final state.</li>
-         * <li>hosting_completed: Hosting completed. The hosting process is executed successfully, and the relevant permission templates and hosting bindings take effect.</li>
-         * <li>hosting_failed: Hosting failed. An exception occurs during the hosting process. You can view the failure cause and initiate hosting again.</li>
-         * <li>hosting_removing: Removing. The removal task is submitted and executed asynchronously. You must wait for the removal process to complete to enter the final state.</li>
-         * <li>hosting_remove_failed: Removal failed. An exception occurs during the removal process. You can view the failure cause and initiate removal again.</li>
+         * <li>hosting_pending: Hosting. The hosting task is submitted and being executed asynchronously. Wait for the hosting process to complete before entering the final state.</li>
+         * <li>hosting_completed: Hosting completed. The cloud account hosting process is executed successfully, and the related permission templates and hosting bindings are in effect.</li>
+         * <li>hosting_failed: Hosting failed. The hosting process encounters an exception. You can view the cause of the failure and initiate hosting again.</li>
+         * <li>hosting_removing: Removing. The remove hosting task is submitted and being executed asynchronously. Wait for the removal process to complete before entering the final state.</li>
+         * <li>hosting_remove_failed: Removal failed. The removal process encounters an exception. You can view the cause of the failure and initiate removal again.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -405,10 +405,10 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String privilegeHostingState;
 
         /**
-         * <p>The privilege switch status. Valid values:</p>
+         * <p>The privilege status. Valid values:</p>
          * <ul>
-         * <li>enabled: Enabled. The resource is active and can be used normally.</li>
-         * <li>disabled: Disabled. The resource is deactivated and no longer takes effect. You can re-enable it to restore the resource.</li>
+         * <li>enabled: Enabled. The resource is in effect and can be used normally.</li>
+         * <li>disabled: Disabled. The resource is deactivated and no longer in effect. You can re-enable it to restore it.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -418,7 +418,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String privilegeStatus;
 
         /**
-         * <p>The last update time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The last update time in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830227000</p>

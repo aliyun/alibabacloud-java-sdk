@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkAccessEndpointRequest extends TeaModel {
     /**
-     * <p>Ensures the idempotency of the request. Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>Ensures the idempotence of the request. You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-example</p>
@@ -14,7 +14,7 @@ public class CreateNetworkAccessEndpointRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,26 +24,26 @@ public class CreateNetworkAccessEndpointRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Network access endpoint name.</p>
+     * <p>The name of the dedicated network endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Xx-business VPC access endpoint</p>
+     * <p>XX business VPC access endpoint</p>
      */
     @NameInMap("NetworkAccessEndpointName")
     public String networkAccessEndpointName;
 
     /**
-     * <p>List of specified vSwitches connected to the network access endpoint.</p>
+     * <p>The list of specified vSwitches to which the dedicated network endpoint is connected.</p>
      * 
      * <strong>example:</strong>
-     * <p>vsw-examplexxx</p>
+     * <p>[&quot;vsw-examplexxx&quot;]</p>
      */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 
     /**
-     * <p>VPC ID connected to the network access endpoint.</p>
+     * <p>The ID of the VPC to which the dedicated network endpoint is connected.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class CreateNetworkAccessEndpointRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>Region of the VPC ID connected to the network access endpoint.</p>
+     * <p>The region of the VPC to which the dedicated network endpoint is connected.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

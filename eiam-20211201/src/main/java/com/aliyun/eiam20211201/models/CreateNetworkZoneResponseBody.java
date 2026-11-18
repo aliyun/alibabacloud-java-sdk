@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkZoneResponseBody extends TeaModel {
     /**
-     * <p>Network zone ID.</p>
+     * <p>The network zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>network_m6a57vre4g3h7m725yrq6pxxxx</p>
@@ -14,7 +14,7 @@ public class CreateNetworkZoneResponseBody extends TeaModel {
     public String networkZoneId;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>

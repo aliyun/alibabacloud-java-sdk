@@ -12,7 +12,7 @@ public class SetForgetPasswordConfigurationRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>email</p>
+     * <p>[&quot;email&quot;]</p>
      */
     @NameInMap("AuthenticationChannels")
     public java.util.List<String> authenticationChannels;

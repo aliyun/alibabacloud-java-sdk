@@ -25,7 +25,7 @@ public class ListCustomPrivacyPoliciesForBrandRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries to return per page for paging in a paged query.</p>
+     * <p>The number of entries per page for paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -43,7 +43,7 @@ public class ListCustomPrivacyPoliciesForBrandRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The previous token.</p>
+     * <p>The pagination token for the previous page.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxxxexample</p>

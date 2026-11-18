@@ -35,7 +35,7 @@ public class UpdateApplicationClientSecretExpirationTimeRequest extends TeaModel
     public String instanceId;
 
     /**
-     * <p>The client secret ID.</p>
+     * <p>The client secret.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

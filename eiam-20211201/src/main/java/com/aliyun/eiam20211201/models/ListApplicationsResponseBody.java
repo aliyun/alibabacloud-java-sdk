@@ -20,7 +20,7 @@ public class ListApplicationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of items in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -59,7 +59,7 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     public static class ListApplicationsResponseBodyApplications extends TeaModel {
         /**
-         * <p>The application creation type.</p>
+         * <p>The creation type of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>user_custom</p>
@@ -77,7 +77,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The application identity type.</p>
+         * <p>The identity type of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>application</p>
@@ -86,7 +86,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String applicationIdentityType;
 
         /**
-         * <p>The application name.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>SAML Application</p>
@@ -95,10 +95,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String applicationName;
 
         /**
-         * <p>The application creation source. Valid values:</p>
+         * <p>The source from which the application is created. Valid values:</p>
          * <ul>
-         * <li>urn:alibaba:idaas:app:source:template: Application template.</li>
-         * <li>urn:alibaba:idaas:app:source:standard: Standard protocol.</li>
+         * <li>urn:alibaba:idaas:app:source:template: application template</li>
+         * <li>urn:alibaba:idaas:app:source:standard: standard protocol</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,7 +108,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String applicationSourceType;
 
         /**
-         * <p>The application template ID.</p>
+         * <p>The ID of the application template.</p>
          * 
          * <strong>example:</strong>
          * <p>apt_xxx_xxx</p>
@@ -126,7 +126,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String clientId;
 
         /**
-         * <p>The application creation time, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The time when the application was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -135,7 +135,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The application description.</p>
+         * <p>The description of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>A test application</p>
@@ -146,13 +146,13 @@ public class ListApplicationsResponseBody extends TeaModel {
         /**
          * <p>The features supported by the application, returned as a JSON array string. Valid values:</p>
          * <ul>
-         * <li>sso: Single sign-on.</li>
-         * <li>slo: Single logout.</li>
-         * <li>provision: Account synchronization.</li>
-         * <li>api_invoke: API access. </li>
-         * <li>m2m_client: M2M Client capability.</li>
-         * <li>resource_server: API service capability.</li>
-         * <li>other: Fallback.</li>
+         * <li>sso: single sign-on</li>
+         * <li>slo: single logout</li>
+         * <li>provision: account synchronization</li>
+         * <li>api_invoke: API publication </li>
+         * <li>m2m_client: M2M client</li>
+         * <li>resource_server: resource server</li>
+         * <li>other: other</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String logoUrl;
 
         /**
-         * <p>The ServiceCode of the cloud service that manages the application template.</p>
+         * <p>The service code of the cloud service that manages the application template.</p>
          * 
          * <strong>example:</strong>
          * <p>rpa</p>
@@ -189,7 +189,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String managedServiceCode;
 
         /**
-         * <p>The unique identifier of the ResourceServer.</p>
+         * <p>The unique identifier of the resource server.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com">https://example.com</a></p>
@@ -198,7 +198,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String resourceServerIdentifier;
 
         /**
-         * <p>The resource server source type.</p>
+         * <p>The source type of the resource server.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:cloud:idaas:resourceserver:source:custom</p>
@@ -207,7 +207,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String resourceServerSourceType;
 
         /**
-         * <p>The resource server status.</p>
+         * <p>The status of the resource server.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -225,12 +225,12 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Boolean serviceManaged;
 
         /**
-         * <p>The single sign-on protocol. Valid values:</p>
+         * <p>The single sign-on (SSO) protocol. Valid values:</p>
          * <ul>
-         * <li>saml2: SAML 2.0 protocol.</li>
-         * <li>oidc: OpenID Connect protocol.</li>
-         * <li>oauth2/m2m: OAuth 2.0 protocol.</li>
-         * <li>oidc+oauth2/m2m: OpenID Connect and OAuth 2.0 protocols.</li>
+         * <li>saml2: SAML 2.0 protocol</li>
+         * <li>oidc: OpenID Connect protocol</li>
+         * <li>oauth2/m2m: OAuth 2.0 protocol</li>
+         * <li>oidc+oauth2/m2m: OpenID Connect and OAuth 2.0 protocols</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -240,11 +240,11 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String ssoType;
 
         /**
-         * <p>The application status. Valid values:</p>
+         * <p>The status of the application. Valid values:</p>
          * <ul>
-         * <li>enabled: Enabled.</li>
-         * <li>disabled: Disabled.</li>
-         * <li>deleted: Soft deleted.</li>
+         * <li>enabled: enabled</li>
+         * <li>disabled: disabled</li>
+         * <li>deleted: soft deleted</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -254,7 +254,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the application was last updated, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The time when the application was last updated. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>

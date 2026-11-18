@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceControlConfigurationResponseBody extends TeaModel {
     /**
-     * <p>The instance control configuration.</p>
+     * <p>The instance control configuration items.</p>
      */
     @NameInMap("InstanceControlConfiguration")
     public GetInstanceControlConfigurationResponseBodyInstanceControlConfiguration instanceControlConfiguration;
@@ -67,7 +67,7 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
 
     public static class GetInstanceControlConfigurationResponseBodyInstanceControlConfigurationControlElements extends TeaModel {
         /**
-         * <p>The name of the instance control item.</p>
+         * <p>The name of the instance control element.</p>
          * 
          * <strong>example:</strong>
          * <p>human_verification</p>
@@ -76,13 +76,13 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
         public String elementName;
 
         /**
-         * <p>The Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) authentication configuration.</p>
+         * <p>The human-machine authentication configuration.</p>
          */
         @NameInMap("HumanVerificationConfig")
         public GetInstanceControlConfigurationResponseBodyInstanceControlConfigurationControlElementsHumanVerificationConfig humanVerificationConfig;
 
         /**
-         * <p>The status of the instance control item.</p>
+         * <p>The status of the instance control element.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -123,7 +123,7 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
 
     public static class GetInstanceControlConfigurationResponseBodyInstanceControlConfiguration extends TeaModel {
         /**
-         * <p>The instance control configuration.</p>
+         * <p>The instance control configuration items.</p>
          */
         @NameInMap("ControlElements")
         public java.util.List<GetInstanceControlConfigurationResponseBodyInstanceControlConfigurationControlElements> controlElements;

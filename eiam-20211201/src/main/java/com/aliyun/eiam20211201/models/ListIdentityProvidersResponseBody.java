@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListIdentityProvidersResponseBody extends TeaModel {
     /**
-     * <p>List of identity provider information.</p>
+     * <p>The list of identity providers.</p>
      */
     @NameInMap("IdentityProviders")
     public java.util.List<ListIdentityProvidersResponseBodyIdentityProviders> identityProviders;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -20,7 +20,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -59,11 +59,11 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
 
     public static class ListIdentityProvidersResponseBodyIdentityProviders extends TeaModel {
         /**
-         * <p>Whether the advanced configuration is enabled. Valid values:</p>
+         * <p>Specifies whether the advanced configuration capability is enabled. Valid values:</p>
          * <ul>
-         * <li><p>Disabled: disabled</p>
+         * <li><p>disabled: Disabled.</p>
          * </li>
-         * <li><p>Enabled: enabled</p>
+         * <li><p>enabled: Enabled.</p>
          * </li>
          * </ul>
          * 
@@ -74,24 +74,23 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String advancedStatus;
 
         /**
-         * <p>The authentication source product, such as Okta, Google, or Azure AD.
-         * Valid values:</p>
+         * <p>The authentication source product, such as Okta, Google, or Azure AD. Valid values:</p>
          * <ul>
-         * <li><p>DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk</p>
+         * <li><p>urn:alibaba:idaas:idp:alibaba:dingtalk: DingTalk.</p>
          * </li>
-         * <li><p>LDAP: urn:alibaba:idaas:idp:unknown:ldap</p>
+         * <li><p>urn:alibaba:idaas:idp:unknown:ldap: LDAP.</p>
          * </li>
-         * <li><p>Alibaba Cloud IDaaS: urn:alibaba:idaas:idp:alibaba:idaas</p>
+         * <li><p>urn:alibaba:idaas:idp:alibaba:idaas: Alibaba Cloud IDaaS.</p>
          * </li>
-         * <li><p>WeCom: urn:alibaba:idaas:idp:tencent:wecom</p>
+         * <li><p>urn:alibaba:idaas:idp:tencent:wecom: WeCom.</p>
          * </li>
-         * <li><p>Lark: urn:alibaba:idaas:idp:bytedance:lark</p>
+         * <li><p>urn:alibaba:idaas:idp:bytedance:lark: Lark.</p>
          * </li>
-         * <li><p>Active Directory: urn:alibaba:idaas:idp:microsoft:ad</p>
+         * <li><p>urn:alibaba:idaas:idp:microsoft:ad: Active Directory.</p>
          * </li>
-         * <li><p>Azure Active Directory: urn:alibaba:idaas:idp:microsoft:aad</p>
+         * <li><p>urn:alibaba:idaas:idp:microsoft:aad: Azure Active Directory.</p>
          * </li>
-         * <li><p>Alibaba Cloud SASE: urn:alibaba:idaas:idp:alibaba:sase</p>
+         * <li><p>urn:alibaba:idaas:idp:alibaba:sase: Alibaba Cloud SASE.</p>
          * </li>
          * </ul>
          * 
@@ -102,11 +101,11 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String authnSourceSupplier;
 
         /**
-         * <p>The authentication source type, OIDC or SAML. Valid values:</p>
+         * <p>The authentication method type, which can be OIDC or SAML. Valid values:</p>
          * <ul>
-         * <li><p>OIDC: urn:alibaba:idaas:authntype:oidc</p>
+         * <li><p>urn:alibaba:idaas:authntype:oidc: OIDC.</p>
          * </li>
-         * <li><p>SAML: urn:alibaba:idaas:authntype:saml2</p>
+         * <li><p>urn:alibaba:idaas:authntype:saml2: SAML.</p>
          * </li>
          * </ul>
          * 
@@ -117,11 +116,11 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String authnSourceType;
 
         /**
-         * <p>Whether the corresponding IdP supports authentication. Valid values:</p>
+         * <p>Specifies whether the IdP supports authentication. Valid values:</p>
          * <ul>
-         * <li><p>Disabled: disabled</p>
+         * <li><p>disabled: Disabled.</p>
          * </li>
-         * <li><p>Enabled: enabled</p>
+         * <li><p>enabled: Enabled.</p>
          * </li>
          * </ul>
          * 
@@ -132,7 +131,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String authnStatus;
 
         /**
-         * <p>The creation time, in Unix timestamp format, measured in milliseconds.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1712561597000</p>
@@ -141,7 +140,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Description of the identity provider.</p>
+         * <p>The description of the identity provider.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -150,7 +149,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>External ID of the identity provider.</p>
+         * <p>The external ID of the identity provider.</p>
          * 
          * <strong>example:</strong>
          * <p>test_123</p>
@@ -159,7 +158,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String identityProviderExternalId;
 
         /**
-         * <p>Identity provider ID.</p>
+         * <p>The identity provider ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idp_m5b5wd5s2hpq4t6iaehhXXX</p>
@@ -168,32 +167,32 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String identityProviderId;
 
         /**
-         * <p>Name of the identity provider.</p>
+         * <p>The name of the identity provider.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>test</p>
          */
         @NameInMap("IdentityProviderName")
         public String identityProviderName;
 
         /**
-         * <p>The synchronization type of the identity provider.</p>
+         * <p>The identity provider synchronization type. Valid values:</p>
          * <ul>
-         * <li><p>Inbound DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk:pull</p>
+         * <li><p>urn:alibaba:idaas:idp:alibaba:dingtalk:pull: Inbound DingTalk.</p>
          * </li>
-         * <li><p>Outbound DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk:push</p>
+         * <li><p>urn:alibaba:idaas:idp:alibaba:dingtalk:push: Outbound DingTalk.</p>
          * </li>
-         * <li><p>Inbound WeCom: urn:alibaba:idaas:idp:tencent:wecom:pull</p>
+         * <li><p>urn:alibaba:idaas:idp:tencent:wecom:pull: Inbound WeCom.</p>
          * </li>
-         * <li><p>Inbound Lark: urn:alibaba:idaas:idp:bytedance:lark:pull</p>
+         * <li><p>urn:alibaba:idaas:idp:bytedance:lark:pull: Inbound Lark.</p>
          * </li>
-         * <li><p>Inbound AD: urn:alibaba:idaas:idp:microsoft:ad:pull</p>
+         * <li><p>urn:alibaba:idaas:idp:microsoft:ad:pull: Inbound Active Directory.</p>
          * </li>
-         * <li><p>Inbound LDAP: urn:alibaba:idaas:idp:unknown:ldap:pull</p>
+         * <li><p>urn:alibaba:idaas:idp:unknown:ldap:pull: Inbound LDAP.</p>
          * </li>
-         * <li><p>Standard OIDC: urn:alibaba:idaas:idp:standard:oidc</p>
+         * <li><p>urn:alibaba:idaas:idp:standard:oidc: Standard OIDC.</p>
          * </li>
-         * <li><p>SASE Customized OIDC: urn:alibaba:idaas:idp:alibaba:sase</p>
+         * <li><p>urn:alibaba:idaas:idp:alibaba:sase: SASE custom OIDC.</p>
          * </li>
          * </ul>
          * 
@@ -204,11 +203,11 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String identityProviderType;
 
         /**
-         * <p>The incremental callback status, indicating whether incremental callback data from the IdP is processed. Valid values:</p>
+         * <p>The incremental callback status, which specifies whether to process incremental callback data from the IdP. Valid values:</p>
          * <ul>
-         * <li><p>Disabled: disabled</p>
+         * <li><p>disabled: Disabled.</p>
          * </li>
-         * <li><p>Enabled: enabled</p>
+         * <li><p>enabled: Enabled.</p>
          * </li>
          * </ul>
          * 
@@ -219,7 +218,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String incrementalCallbackStatus;
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_pbf4dth34l2qb7mydpntXXX</p>
@@ -228,7 +227,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The last status check result. Before synchronization, a sync task can only be triggered when the identity provider status check result is success.</p>
+         * <p>The result of the last status check. A synchronization task can be triggered only when the identity provider status check result is success before synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -255,7 +254,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String logoUrl;
 
         /**
-         * <p>The periodic sync status, indicating whether the data differences between EIAM and the identity provider are periodically checked.</p>
+         * <p>The periodic verification status, which specifies whether to periodically verify data differences between EIAM and the identity provider.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -264,11 +263,11 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String periodicSyncStatus;
 
         /**
-         * <p>Whether the inbound sync feature is supported. Valid values:</p>
+         * <p>Specifies whether the inbound synchronization feature is supported. Valid values:</p>
          * <ul>
-         * <li><p>Disabled: disabled</p>
+         * <li><p>disabled: Disabled.</p>
          * </li>
-         * <li><p>Enabled: enabled</p>
+         * <li><p>enabled: Enabled.</p>
          * </li>
          * </ul>
          * 
@@ -279,7 +278,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String udPullStatus;
 
         /**
-         * <p>The target node for synchronization.</p>
+         * <p>The synchronization target node.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_2buqmxsa3ltyqkjgpwfijurXXX</p>
@@ -288,11 +287,11 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String udPullTargetScope;
 
         /**
-         * <p>Whether the outbound sync feature is enabled. Valid values:</p>
+         * <p>Specifies whether the outbound synchronization capability is enabled. Valid values:</p>
          * <ul>
-         * <li><p>Disabled: disabled</p>
+         * <li><p>disabled: Disabled.</p>
          * </li>
-         * <li><p>Enabled: enabled</p>
+         * <li><p>enabled: Enabled.</p>
          * </li>
          * </ul>
          * 
@@ -303,7 +302,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String udPushStatus;
 
         /**
-         * <p>The update time, in Unix timestamp format, measured in milliseconds.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1712561597000</p>

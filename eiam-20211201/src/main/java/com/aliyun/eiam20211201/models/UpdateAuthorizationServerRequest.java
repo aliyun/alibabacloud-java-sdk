@@ -15,7 +15,7 @@ public class UpdateAuthorizationServerRequest extends TeaModel {
     public String authorizationServerId;
 
     /**
-     * <p>The name of the authorization server.</p>
+     * <p>The authorization server name.</p>
      * 
      * <strong>example:</strong>
      * <p>my_authorization_server</p>
@@ -24,7 +24,7 @@ public class UpdateAuthorizationServerRequest extends TeaModel {
     public String authorizationServerName;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>Ensures the idempotence of the request. You can generate a parameter value on your client to ensure that the value is unique across different requests. ClientToken supports only ASCII characters and can be up to 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

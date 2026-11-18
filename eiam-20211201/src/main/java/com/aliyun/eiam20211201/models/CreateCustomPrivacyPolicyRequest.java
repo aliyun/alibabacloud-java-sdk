@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomPrivacyPolicyRequest extends TeaModel {
     /**
-     * <p>A client token used to ensure the idempotence of the request. The client generates this value to make sure that it is unique among different requests. The value can be up to 64 ASCII characters in length and cannot contain non-ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-example</p>
@@ -30,7 +30,7 @@ public class CreateCustomPrivacyPolicyRequest extends TeaModel {
     public String customPrivacyPolicyName;
 
     /**
-     * <p>The default language of the privacy policy.</p>
+     * <p>The default language code of the custom privacy policy.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-Hans-CN</p>
@@ -58,7 +58,7 @@ public class CreateCustomPrivacyPolicyRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The consent type for the privacy policy.</p>
+     * <p>The user consent type.</p>
      * 
      * <strong>example:</strong>
      * <p>implied_consent</p>
@@ -138,7 +138,7 @@ public class CreateCustomPrivacyPolicyRequest extends TeaModel {
         public String customPrivacyPolicyItemName;
 
         /**
-         * <p>The endpoint of the custom privacy policy item.</p>
+         * <p>The URL of the custom privacy policy item.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.xxxx.com">http://www.xxxx.com</a></p>
@@ -171,13 +171,13 @@ public class CreateCustomPrivacyPolicyRequest extends TeaModel {
 
     public static class CreateCustomPrivacyPolicyRequestCustomPrivacyPolicyContents extends TeaModel {
         /**
-         * <p>The items of the custom privacy policy.</p>
+         * <p>The custom privacy policy items.</p>
          */
         @NameInMap("CustomPrivacyPolicyItems")
         public java.util.List<CreateCustomPrivacyPolicyRequestCustomPrivacyPolicyContentsCustomPrivacyPolicyItems> customPrivacyPolicyItems;
 
         /**
-         * <p>The prompt for the custom privacy policy.</p>
+         * <p>The custom privacy policy tip.</p>
          * 
          * <strong>example:</strong>
          * <p>Please read and agree：</p>
@@ -186,7 +186,7 @@ public class CreateCustomPrivacyPolicyRequest extends TeaModel {
         public String customPrivacyPolicyTip;
 
         /**
-         * <p>The language of the custom privacy policy. The value is the LanguageCode returned by the ListLanguages operation.</p>
+         * <p>The language code of the custom privacy policy. The value is obtained from the LanguageCode parameter returned by the ListLanguages operation.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-Hans-CN</p>

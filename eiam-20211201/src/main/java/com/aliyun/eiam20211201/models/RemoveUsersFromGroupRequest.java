@@ -29,7 +29,7 @@ public class RemoveUsersFromGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[ou_001]</p>
+     * <p>[&quot;ou_001&quot;]</p>
      */
     @NameInMap("UserIds")
     public java.util.List<String> userIds;

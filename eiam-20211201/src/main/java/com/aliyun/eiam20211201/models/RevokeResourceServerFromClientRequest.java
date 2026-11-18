@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeResourceServerFromClientRequest extends TeaModel {
     /**
-     * <p>The ID of the Client application.</p>
+     * <p>The client application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class RevokeResourceServerFromClientRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the ResourceServer application.</p>
+     * <p>The resource server application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

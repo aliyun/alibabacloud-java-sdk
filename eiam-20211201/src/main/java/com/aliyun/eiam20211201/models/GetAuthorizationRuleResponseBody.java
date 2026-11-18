@@ -44,12 +44,11 @@ public class GetAuthorizationRuleResponseBody extends TeaModel {
         /**
          * <p>The authorization resource scope. Valid values:</p>
          * <ul>
-         * <li>global: All resources under the project.</li>
-         * <li>custom: Specified resources within the project scope.</li>
+         * <li>custom: Resources within the specified project scope.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>global</p>
+         * <p>custom</p>
          */
         @NameInMap("AuthorizationResourceScope")
         public String authorizationResourceScope;
@@ -88,18 +87,18 @@ public class GetAuthorizationRuleResponseBody extends TeaModel {
         /**
          * <p>The scenario label of the authorization rule. Valid values:</p>
          * <ul>
-         * <li>privileged_cloud_account: Privileged cloud account scenario.</li>
-         * <li>asset: Asset scenario.</li>
+         * <li>privileged_cloud_account (Privileged cloud account scenario)</li>
+         * <li>asset (Asset scenario)</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Asset</p>
+         * <p>privileged_cloud_account</p>
          */
         @NameInMap("AuthorizationRuleScenarioLabel")
         public String authorizationRuleScenarioLabel;
 
         /**
-         * <p>The subject ID associated with the authorization rule.</p>
+         * <p>The ID of the subject associated with the authorization rule.</p>
          * 
          * <strong>example:</strong>
          * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
@@ -110,8 +109,8 @@ public class GetAuthorizationRuleResponseBody extends TeaModel {
         /**
          * <p>The subject scope of the authorization rule. Valid values:</p>
          * <ul>
-         * <li>shared: Shared type, which supports all subjects, including accounts and applications.</li>
-         * <li>exclusive: Exclusive type.</li>
+         * <li>shared: Shared. A single rule can be used by multiple subjects that meet the rule constraints.</li>
+         * <li>exclusive: Exclusive. A single rule can only be used by the specified subject.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,10 +120,11 @@ public class GetAuthorizationRuleResponseBody extends TeaModel {
         public String authorizationRuleSubjectScope;
 
         /**
-         * <p>The subject type associated with the authorization rule. This parameter is valid only when the authorization rule subject scope is exclusive. Valid values:</p>
+         * <p>The subject category to which the authorization rule applies. For an exclusive rule, this field indicates the type of the specified subject. For a shared rule with a configured subject category, this field indicates the subject category that the rule allows to be associated with. Valid values:</p>
          * <ul>
          * <li>application: Application.</li>
-         * <li>user: Account.</li>
+         * <li>user: Account. For a shared privileged cloud account rule, this value indicates the human user category, which can be associated with accounts, user groups, and organizations.
+         * If no subject category is configured for the rule, this field may be empty. The actual subjects associated with a shared rule are determined by the subject association query results.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class GetAuthorizationRuleResponseBody extends TeaModel {
         public String authorizationRuleSubjectType;
 
         /**
-         * <p>The creation time, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>
@@ -161,7 +161,7 @@ public class GetAuthorizationRuleResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The project ID associated with the authorization rule.</p>
+         * <p>The ID of the project associated with the authorization rule.</p>
          * 
          * <strong>example:</strong>
          * <p>iprj_system_default</p>
@@ -183,7 +183,7 @@ public class GetAuthorizationRuleResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The last update time, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The last update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>

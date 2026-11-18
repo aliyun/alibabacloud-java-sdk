@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourceServerScopesResponseBody extends TeaModel {
     /**
-     * <p>The number of entries per page in a paged query.</p>
+     * <p>The maximum number of entries to return per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -41,13 +41,13 @@ public class ListResourceServerScopesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of scope permissions under the ResourceServer.</p>
+     * <p>The list of scope permissions under the resource server.</p>
      */
     @NameInMap("ResourceServerScopes")
     public java.util.List<ListResourceServerScopesResponseBodyResourceServerScopes> resourceServerScopes;
 
     /**
-     * <p>The total number of entries in the list.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -146,16 +146,16 @@ public class ListResourceServerScopesResponseBody extends TeaModel {
         public String resourceServerScopeId;
 
         /**
-         * <p>The scope permission name.</p>
+         * <p>The name of the scope permission.</p>
          * 
          * <strong>example:</strong>
-         * <p>读取全部用户</p>
+         * <p>Read all users</p>
          */
         @NameInMap("ResourceServerScopeName")
         public String resourceServerScopeName;
 
         /**
-         * <p>The scope permission type.</p>
+         * <p>The type of the scope permission.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:alibaba:idaas:resourceserver:scope:delegated</p>
@@ -164,7 +164,7 @@ public class ListResourceServerScopesResponseBody extends TeaModel {
         public String resourceServerScopeType;
 
         /**
-         * <p>The scope permission value.</p>
+         * <p>The value of the scope permission.</p>
          * 
          * <strong>example:</strong>
          * <p>User:Write:ALL</p>

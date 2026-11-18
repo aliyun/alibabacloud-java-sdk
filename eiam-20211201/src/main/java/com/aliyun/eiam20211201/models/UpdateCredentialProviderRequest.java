@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateCredentialProviderRequest extends TeaModel {
     /**
-     * <p>The idempotency token that ensures the idempotence of the request.</p>
-     * <p>Generate a unique parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can generate the parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class UpdateCredentialProviderRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The credential provider configuration.</p>
+     * <p>The configuration of the credential provider.</p>
      */
     @NameInMap("CredentialProviderConfig")
     public UpdateCredentialProviderRequestCredentialProviderConfig credentialProviderConfig;
@@ -32,9 +32,9 @@ public class UpdateCredentialProviderRequest extends TeaModel {
     public String credentialProviderId;
 
     /**
-     * <p>The credential provider name.</p>
+     * <p>The name of the credential provider.</p>
      * <blockquote>
-     * <p>The name cannot exceed 64 characters in length.</p>
+     * <p>The name can be up to 64 characters in length.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -102,17 +102,17 @@ public class UpdateCredentialProviderRequest extends TeaModel {
         /**
          * <p>The list of allowed JWT issuers.</p>
          * <blockquote>
-         * <p>The list cannot contain more than 200 entries.</p>
+         * <p>The list can contain up to 200 issuers.</p>
          * </blockquote>
          * <blockquote>
-         * <p>Notice: To clear the issuer list, pass an empty list or an empty string when calling the API.</p>
+         * <p>Notice: To clear the issuer list, pass an empty list or an empty string when you call the operation.</notice></p>
          * </blockquote>
          */
         @NameInMap("AllowedTokenIssuers")
         public java.util.List<String> allowedTokenIssuers;
 
         /**
-         * <p>Specifies whether the JWT derived short token feature is enabled.</p>
+         * <p>Specifies whether to enable the JWT derived short token capability.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -121,7 +121,7 @@ public class UpdateCredentialProviderRequest extends TeaModel {
         public Boolean derivedShortTokenEnabled;
 
         /**
-         * <p>The validity period of the JWT, in seconds.</p>
+         * <p>The validity period of the JWT. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>900</p>
@@ -130,7 +130,7 @@ public class UpdateCredentialProviderRequest extends TeaModel {
         public Integer expiration;
 
         /**
-         * <p>Specifies whether JWT expiration cleanup is enabled.</p>
+         * <p>Specifies whether to enable JWT expiration cleanup.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -201,9 +201,9 @@ public class UpdateCredentialProviderRequest extends TeaModel {
         public String authorizationFlow;
 
         /**
-         * <p>The client_secret in the OAuth protocol.</p>
+         * <p>The client secret in the OAuth protocol.</p>
          * <blockquote>
-         * <p>The value cannot exceed 1024 characters in length.</p>
+         * <p>The client secret can be up to 1,024 characters in length.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class UpdateCredentialProviderRequest extends TeaModel {
         public String clientSecret;
 
         /**
-         * <p>The auto-discovery URL.</p>
+         * <p>The URL of the discovery document.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/.well-known/openid-configuration">https://example.com/.well-known/openid-configuration</a></p>
@@ -222,7 +222,7 @@ public class UpdateCredentialProviderRequest extends TeaModel {
         public String discoveryUrl;
 
         /**
-         * <p>The authorization server identifier URL.</p>
+         * <p>The URL of the authorization server identifier.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/issuer">https://example.com/issuer</a></p>
@@ -244,7 +244,7 @@ public class UpdateCredentialProviderRequest extends TeaModel {
         public String pkceChallengeMethod;
 
         /**
-         * <p>Specifies whether PKCE is enabled.</p>
+         * <p>Specifies whether to enable Proof Key for Code Exchange (PKCE).</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -270,19 +270,19 @@ public class UpdateCredentialProviderRequest extends TeaModel {
         public String providerVendor;
 
         /**
-         * <p>The scope in the OAuth protocol, which specifies the permission scope.</p>
+         * <p>The scope in the OAuth protocol.</p>
          * <blockquote>
-         * <p>The Scope configuration on the credential provider serves as the fallback value. If the scope parameter is not specified when calling the DeveloperAPI to obtain an OAuth Access Token, the Scope configuration on the credential provider is used for issuance.</p>
+         * <p>The scope configuration of the OAuth credential provider serves as a fallback value. If the scope parameter is not specified when you call the Developer API to obtain an OAuth access token, the access token is issued based on the scope configuration of the credential provider.</p>
          * </blockquote>
          * <blockquote>
-         * <p>Notice: Separate multiple Scope values with spaces. To clear the Scope configuration, pass an empty string.</p>
+         * <p>Notice: Separate multiple scope values with spaces. To clear the scope configuration, enter an empty string.</notice></p>
          * </blockquote>
-         * <p>Restrictions on each individual Scope value:</p>
+         * <p>The limits on a single scope value are as follows:</p>
          * <ol>
-         * <li>Allowed characters: lowercase letters, digits, and special characters <code>|/:_-.</code></li>
-         * <li>Must contain at least one lowercase letter or digit.</li>
-         * <li>Must start with a special character <code>.</code>, a lowercase letter, or a digit.</li>
-         * <li>Cannot exceed 1024 characters in length.</li>
+         * <li>Allowed characters: lowercase letters, digits, and the following special characters: <code>|/:_-.</code></li>
+         * <li>The value must contain at least one lowercase letter or digit.</li>
+         * <li>The value must start with a period (<code>.</code>), a lowercase letter, or a digit.</li>
+         * <li>The value can be up to 1,024 characters in length.</li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -294,7 +294,7 @@ public class UpdateCredentialProviderRequest extends TeaModel {
         /**
          * <p>The token endpoint of the OAuth protocol.</p>
          * <blockquote>
-         * <p>The value must start with <code>http://</code> or <code>https://</code> and cannot exceed 1024 characters in length.</p>
+         * <p>The endpoint must start with <code>http://</code> or <code>https://</code> and can be up to 1,024 characters in length.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -392,7 +392,7 @@ public class UpdateCredentialProviderRequest extends TeaModel {
 
     public static class UpdateCredentialProviderRequestCredentialProviderConfig extends TeaModel {
         /**
-         * <p>The configuration of the JWT credential provider.</p>
+         * <p>The configuration of the JSON Web Token (JWT) credential provider.</p>
          */
         @NameInMap("JwtProviderConfig")
         public UpdateCredentialProviderRequestCredentialProviderConfigJwtProviderConfig jwtProviderConfig;

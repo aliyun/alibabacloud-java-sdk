@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeactivateCloudAccountPrivilegeRequest extends TeaModel {
     /**
-     * <p>Ensures the idempotence of the request. You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length.</p>
+     * <p>Ensures the idempotence of the request. Generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-example</p>
@@ -14,7 +14,7 @@ public class DeactivateCloudAccountPrivilegeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The cloud account ID.</p>
+     * <p>The ID of the cloud account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

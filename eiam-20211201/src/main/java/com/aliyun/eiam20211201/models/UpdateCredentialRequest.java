@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCredentialRequest extends TeaModel {
     /**
-     * <p>Ensures the idempotence of the request. You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>Ensures the idempotence of the request. Generate a parameter value on your client and ensure that the value is unique across different requests. The ClientToken parameter can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -96,7 +96,7 @@ public class UpdateCredentialRequest extends TeaModel {
 
     public static class UpdateCredentialRequestCredentialContentApiKeyContent extends TeaModel {
         /**
-         * <p>The API key content.</p>
+         * <p>The content of the API key.</p>
          * 
          * <strong>example:</strong>
          * <p>nsklnertyt5ddwizncxxxx</p>
@@ -169,7 +169,7 @@ public class UpdateCredentialRequest extends TeaModel {
         public UpdateCredentialRequestCredentialContentApiKeyContent apiKeyContent;
 
         /**
-         * <p>The credential content for the OAuth client credential type.</p>
+         * <p>The credential content for the OAuth client authentication credential type.</p>
          */
         @NameInMap("OAuthClientContent")
         public UpdateCredentialRequestCredentialContentOAuthClientContent OAuthClientContent;

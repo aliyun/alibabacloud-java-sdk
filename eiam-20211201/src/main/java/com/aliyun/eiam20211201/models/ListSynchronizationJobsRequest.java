@@ -45,7 +45,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of entries per page for a paged query. Maximum value: 100.</p>
+     * <p>The maximum number of entries per page during paging in a paged query. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -54,7 +54,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The token used to query the next page. If no more pages exist, this parameter is not returned.</p>
+     * <p>The token used to query the next page. If no next page exists, this parameter is not returned.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -72,7 +72,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: 100.</p>
+     * <p>The page size. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -114,13 +114,13 @@ public class ListSynchronizationJobsRequest extends TeaModel {
      * <p>The list of synchronization target IDs. Example: [idp_111XXXX,idp_222XXXX].</p>
      * 
      * <strong>example:</strong>
-     * <p>target_001</p>
+     * <p>[&quot;target_001&quot;]</p>
      */
     @NameInMap("TargetIds")
     public java.util.List<String> targetIds;
 
     /**
-     * <p>The type of the synchronization target. Valid values:</p>
+     * <p>The synchronization target type. Valid values:</p>
      * <ul>
      * <li><p>identity_provider: identity provider</p>
      * </li>
@@ -246,7 +246,7 @@ public class ListSynchronizationJobsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the dynamic parameter.</p>
+         * <p>The values of the dynamic parameter.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;

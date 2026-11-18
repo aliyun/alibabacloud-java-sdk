@@ -11,7 +11,7 @@ public class ListGroupsForAuthorizationRuleResponseBody extends TeaModel {
     public java.util.List<ListGroupsForAuthorizationRuleResponseBodyGroups> groups;
 
     /**
-     * <p>The maximum number of entries per page in a paging query.</p>
+     * <p>The number of entries per page for paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListGroupsForAuthorizationRuleResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The next token returned in the current response, which is used to query the next page.</p>
+     * <p>The token returned in the current response, which is used to query the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -93,7 +93,7 @@ public class ListGroupsForAuthorizationRuleResponseBody extends TeaModel {
 
     public static class ListGroupsForAuthorizationRuleResponseBodyGroupsValidityPeriod extends TeaModel {
         /**
-         * <p>The effective end time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The end time of the validity period. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1704042061000</p>
@@ -102,7 +102,7 @@ public class ListGroupsForAuthorizationRuleResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The effective start time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The start time of the validity period. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1704042061000</p>
@@ -159,7 +159,7 @@ public class ListGroupsForAuthorizationRuleResponseBody extends TeaModel {
         public ListGroupsForAuthorizationRuleResponseBodyGroupsValidityPeriod validityPeriod;
 
         /**
-         * <p>The validity period type of the relationship. Valid values:</p>
+         * <p>The validity type of the relationship. Valid values:</p>
          * <ul>
          * <li>permanent: permanent</li>
          * <li>time_bound: custom time range</li>

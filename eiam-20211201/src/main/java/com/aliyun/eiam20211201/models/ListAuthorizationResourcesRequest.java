@@ -31,7 +31,7 @@ public class ListAuthorizationResourcesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries to return per page.</p>
+     * <p>The maximum number of entries per page for a paged query.</p>
      * <ul>
      * <li><p>If you do not specify this parameter, the default value is 20.</p>
      * </li>
@@ -46,7 +46,7 @@ public class ListAuthorizationResourcesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that specifies the starting position for the next page.</p>
+     * <p>The token that specifies the starting position of the next page.</p>
      * <ul>
      * <li>If you do not specify this parameter, the query starts from the first page by default.</li>
      * </ul>
@@ -106,9 +106,9 @@ public class ListAuthorizationResourcesRequest extends TeaModel {
         /**
          * <p>The name of the filter field. Valid values:</p>
          * <ul>
-         * <li><p>AuthorizationResourceEntityType: the type of the resource entity associated with the authorization resource.</p>
+         * <li><p>AuthorizationResourceEntityType: the type of the resource entity associated with the authorization resource</p>
          * </li>
-         * <li><p>AuthorizationResourceEntityId: the ID of the resource entity associated with the authorization resource.</p>
+         * <li><p>AuthorizationResourceEntityId: the ID of the resource entity associated with the authorization resource</p>
          * </li>
          * </ul>
          * 
@@ -119,7 +119,7 @@ public class ListAuthorizationResourcesRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The list of values for the filter field.</p>
+         * <p>The list of filter field values.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

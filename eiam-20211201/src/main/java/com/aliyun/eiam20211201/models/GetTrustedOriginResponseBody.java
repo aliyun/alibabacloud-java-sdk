@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTrustedOriginResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-example</p>
@@ -42,7 +42,7 @@ public class GetTrustedOriginResponseBody extends TeaModel {
 
     public static class GetTrustedOriginResponseBodyTrustedOrigin extends TeaModel {
         /**
-         * <p>The creation time. The time is in RFC 3339 format and in the UTC time zone.</p>
+         * <p>The creation time. The time is in the RFC 3339 format and the UTC time zone.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -97,13 +97,13 @@ public class GetTrustedOriginResponseBody extends TeaModel {
         public String trustedOriginId;
 
         /**
-         * <p>The trusted origin scenes.</p>
+         * <p>The trusted origin scenario.</p>
          */
         @NameInMap("TrustedOriginScene")
         public java.util.List<String> trustedOriginScene;
 
         /**
-         * <p>The update time. The time is in RFC 3339 format and in the UTC time zone.</p>
+         * <p>The update time. The time is in the RFC 3339 format and the UTC time zone.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>

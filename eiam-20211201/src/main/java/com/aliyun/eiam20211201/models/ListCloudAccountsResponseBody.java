@@ -11,7 +11,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
     public java.util.List<ListCloudAccountsResponseBodyCloudAccounts> cloudAccounts;
 
     /**
-     * <p>The number of rows per page for paging.</p>
+     * <p>The number of entries per page in paging.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token returned for this request.</p>
+     * <p>The token returned for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -38,7 +38,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -102,7 +102,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error description.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>There is no permission.</p>
@@ -135,13 +135,13 @@ public class ListCloudAccountsResponseBody extends TeaModel {
 
     public static class ListCloudAccountsResponseBodyCloudAccountsCloudAccountHealthCheckResult extends TeaModel {
         /**
-         * <p>The error reason. This field is returned when the health check status is unhealthy.</p>
+         * <p>The error cause. This field is returned only when the health check status is unhealthy.</p>
          */
         @NameInMap("ErrorReason")
         public ListCloudAccountsResponseBodyCloudAccountsCloudAccountHealthCheckResultErrorReason errorReason;
 
         /**
-         * <p>The last check time, in UNIX timestamp format, measured in milliseconds.</p>
+         * <p>The time of the last health check. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -152,8 +152,8 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         /**
          * <p>The health check result of the cloud account. Valid values:</p>
          * <ul>
-         * <li>success: Succeeded.</li>
-         * <li>failed: Failed.</li>
+         * <li>success: success</li>
+         * <li>failed: failed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,7 +195,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
 
     public static class ListCloudAccountsResponseBodyCloudAccountsPrivilegeHostingError extends TeaModel {
         /**
-         * <p>The error code.</p>
+         * <p>The error code of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>Error</p>
@@ -204,7 +204,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message.</p>
+         * <p>The error message of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>test message</p>
@@ -248,9 +248,9 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         /**
          * <p>The health status of the cloud account. Valid values:</p>
          * <ul>
-         * <li>healthy: Healthy.</li>
-         * <li>unhealthy: Unhealthy.</li>
-         * <li>unknown: Unknown.</li>
+         * <li>healthy: healthy</li>
+         * <li>unhealthy: unhealthy</li>
+         * <li>unknown: unknown</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -266,7 +266,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public ListCloudAccountsResponseBodyCloudAccountsCloudAccountHealthCheckResult cloudAccountHealthCheckResult;
 
         /**
-         * <p>The cloud account ID.</p>
+         * <p>The ID of the cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>ca_01kmegjc11qa1txxxxx</p>
@@ -275,7 +275,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String cloudAccountId;
 
         /**
-         * <p>The cloud account name.</p>
+         * <p>The name of the cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_accout_xxxx</p>
@@ -284,7 +284,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String cloudAccountName;
 
         /**
-         * <p>The identity provider name.</p>
+         * <p>The name of the identity provider.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas-eiam-oidc-provider</p>
@@ -293,10 +293,10 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String cloudAccountProviderName;
 
         /**
-         * <p>The cloud account site. Valid values:</p>
+         * <p>The site of the cloud account. Valid values:</p>
          * <ul>
-         * <li>china_mainland: The Chinese mainland.</li>
-         * <li>global: Global.</li>
+         * <li>china_mainland: the Chinese mainland</li>
+         * <li>global: global</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -306,7 +306,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String cloudAccountSite;
 
         /**
-         * <p>The cloud account type. Valid values:</p>
+         * <p>The type of the cloud account. Valid values:</p>
          * <ul>
          * <li>alibaba_cloud: Alibaba Cloud.</li>
          * </ul>
@@ -318,7 +318,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String cloudAccountVendorType;
 
         /**
-         * <p>The creation time, in UNIX timestamp format, measured in milliseconds.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830225000</p>
@@ -327,7 +327,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The cloud account description.</p>
+         * <p>The description of the cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_accout_description</p>
@@ -345,26 +345,26 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The list of associated privilege application IDs.</p>
+         * <p>The list of IDs of the associated privilege applications.</p>
          */
         @NameInMap("PrivilegeApplicationIds")
         public java.util.List<String> privilegeApplicationIds;
 
         /**
-         * <p>The reason for the privilege hosting or removal failure.</p>
+         * <p>The cause of the privilege hosting or removal failure.</p>
          */
         @NameInMap("PrivilegeHostingError")
         public ListCloudAccountsResponseBodyCloudAccountsPrivilegeHostingError privilegeHostingError;
 
         /**
-         * <p>The hosting state of the cloud account. The default value is unmanaged. Valid values:</p>
+         * <p>The hosting status of the cloud account. Default value: hosting_unmanaged. Valid values:</p>
          * <ul>
          * <li>hosting_unmanaged: Unmanaged. The cloud account has not initiated hosting and is in the initial state.</li>
-         * <li>hosting_pending: Hosting in progress. The hosting task has been submitted and is being executed asynchronously. Wait for the hosting process to complete before the final state is reached.</li>
-         * <li>hosting_completed: Hosting completed. The cloud account hosting process was executed successfully, and the related permission templates and hosting bindings have taken effect.</li>
-         * <li>hosting_failed: Hosting failed. The hosting process encountered an exception. View the failure reason and re-initiate hosting.</li>
-         * <li>hosting_removing: Removal in progress. The removal task has been submitted and is being executed asynchronously. Wait for the removal process to complete before the final state is reached.</li>
-         * <li>hosting_remove_failed: Removal failed. The removal process encountered an exception. View the failure reason and re-initiate removal.</li>
+         * <li>hosting_pending: Hosting. The hosting task has been submitted and is being executed asynchronously. Wait for the hosting process to complete before it enters the final state.</li>
+         * <li>hosting_completed: Hosting completed. The hosting process of the cloud account is executed successfully, and the relevant permission templates and hosting bindings have taken effect.</li>
+         * <li>hosting_failed: Hosting failed. The hosting process encounters an exception. You can view the cause of the failure and initiate hosting again.</li>
+         * <li>hosting_removing: Removing. The task to remove hosting has been submitted and is being executed asynchronously. Wait for the removal process to complete before it enters the final state.</li>
+         * <li>hosting_remove_failed: Removal failed. The removal process encounters an exception. You can view the cause of the failure and initiate removal again.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -374,10 +374,10 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String privilegeHostingState;
 
         /**
-         * <p>The privilege switch status. Valid values:</p>
+         * <p>The status of the privilege switch. Valid values:</p>
          * <ul>
-         * <li>enabled: Enabled. The resource is active and can be used normally.</li>
-         * <li>disabled: Disabled. The resource is deactivated and no longer takes effect. You can re-enable it to restore functionality.</li>
+         * <li>enabled: Enabled. The resource is in effect and can be used normally.</li>
+         * <li>disabled: Disabled. The resource is deactivated and no longer takes effect. You can re-enable it to restore the resource.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -387,7 +387,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         public String privilegeStatus;
 
         /**
-         * <p>The last update time, in UNIX timestamp format, measured in milliseconds.</p>
+         * <p>The last update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830227000</p>

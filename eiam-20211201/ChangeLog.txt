@@ -1,3 +1,16 @@
+2026-11-18 Version: 3.2.0
+- Support API GetCloudAccountResource.
+- Support API GetInventorySynchronizationJob.
+- Support API ListCloudAccountResources.
+- Support API ListCloudAccountResourcesForCloudPermissionTemplate.
+- Support API ListInventorySynchronizationJobs.
+- Support API RunInventorySynchronizationJob.
+- Update API CreateAuthorizationRule: add request parameters SubjectType.
+- Update API GetInstanceLicense: add response parameters Body.License.InstanceLicenseDetail.PamActiveUserBaseQuota.
+- Update API GetInstanceLicense: add response parameters Body.License.InstanceLicenseDetail.PamActiveUserPurchasedQuota.
+- Update API GetInstanceLicense: add response parameters Body.License.InstanceLicenseDetail.PamElasticBillingEnabled.
+
+
 2026-11-06 Version: 3.1.0
 - Support API ActivateCloudAccountPrivilege.
 - Support API CreateCloudPermissionTemplate.

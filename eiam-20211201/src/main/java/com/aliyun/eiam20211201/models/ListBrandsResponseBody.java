@@ -11,7 +11,7 @@ public class ListBrandsResponseBody extends TeaModel {
     public java.util.List<ListBrandsResponseBodyBrands> brands;
 
     /**
-     * <p>The maximum number of entries per page in a paging query.</p>
+     * <p>The maximum number of results per page during paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -164,7 +164,7 @@ public class ListBrandsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The enabling status of system notifications.</p>
+         * <p>The system notification status.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>

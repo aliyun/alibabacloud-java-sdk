@@ -59,7 +59,7 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
 
     public static class ListApplicationsForUserResponseBodyApplicationsApplicationRoles extends TeaModel {
         /**
-         * <p>The ID of the application role.</p>
+         * <p>The application role ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -68,7 +68,7 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
         public String applicationRoleId;
 
         /**
-         * <p>Indicates whether the role is directly assigned to the user.</p>
+         * <p>Indicates whether direct authorization exists.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -77,7 +77,7 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
         public Boolean hasDirectAuthorization;
 
         /**
-         * <p>Indicates whether the role is inherited from an organization or a group to which the user belongs.</p>
+         * <p>Indicates whether inherited authorization exists.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -127,18 +127,16 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The list of application roles.</p>
+         * <p>The list of application roles. No roles are returned for SAML applications.</p>
          */
         @NameInMap("ApplicationRoles")
         public java.util.List<ListApplicationsForUserResponseBodyApplicationsApplicationRoles> applicationRoles;
 
         /**
-         * <p>Indicates whether a direct authorization exists. Valid values:</p>
+         * <p>Indicates whether direct authorization exists. Valid values:</p>
          * <ul>
-         * <li><p>true: A direct authorization record exists between the application and the account.</p>
-         * </li>
-         * <li><p>false: No direct authorization record exists between the application and the account.</p>
-         * </li>
+         * <li>true: A direct authorization record exists between the application and the account.</li>
+         * <li>false: No direct authorization record exists between the application and the account.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,12 +146,10 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
         public Boolean hasDirectAuthorization;
 
         /**
-         * <p>Indicates whether an inherited authorization exists. Valid values:</p>
+         * <p>Indicates whether inherited authorization exists. Valid values:</p>
          * <ul>
-         * <li><p>true: A direct authorization record exists between the application and a parent organization or a group to which the account belongs.</p>
-         * </li>
-         * <li><p>false: No direct authorization record exists between the application and any of the parent organizations or groups to which the account belongs.</p>
-         * </li>
+         * <li>true: A direct authorization record exists between the application and at least one parent organization of the account or a group to which the account belongs.</li>
+         * <li>false: No direct authorization record exists between the application and any parent organization of the account or any group to which the account belongs.</li>
          * </ul>
          * 
          * <strong>example:</strong>

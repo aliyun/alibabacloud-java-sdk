@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourceServersForUserResponseBody extends TeaModel {
     /**
-     * <p>The number of rows per page in a paged query.</p>
+     * <p>The number of entries per page for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page.</p>
+     * <p>The query token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -93,11 +93,7 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
 
     public static class ListResourceServersForUserResponseBodyResourceServersResourceServerScopes extends TeaModel {
         /**
-         * <p>Indicates whether direct authorization exists. Valid values:</p>
-         * <ul>
-         * <li>true: Yes.</li>
-         * <li>false: No.</li>
-         * </ul>
+         * <p>Indicates whether direct authorization exists.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -106,7 +102,7 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
         public Boolean hasDirectAuthorization;
 
         /**
-         * <p>Indicates whether inherited authorization exists.</p>
+         * <p>Indicates whether inherited permissions exist.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

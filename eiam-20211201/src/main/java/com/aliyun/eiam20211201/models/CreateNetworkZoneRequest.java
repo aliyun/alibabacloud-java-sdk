@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkZoneRequest extends TeaModel {
     /**
-     * <p>Idempotency token.</p>
+     * <p>The idempotency token.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-example</p>
@@ -14,7 +14,7 @@ public class CreateNetworkZoneRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Network zone description.</p>
+     * <p>The network zone description.</p>
      * 
      * <strong>example:</strong>
      * <p>Test description</p>
@@ -23,7 +23,7 @@ public class CreateNetworkZoneRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,25 +33,25 @@ public class CreateNetworkZoneRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Network zone IPv4 CIDR blocks.</p>
+     * <p>The IPv4 CIDR blocks of the network zone.</p>
      * 
      * <strong>example:</strong>
-     * <p>0.0.0.0/0</p>
+     * <p>[&quot;0.0.0.0/0&quot;]</p>
      */
     @NameInMap("Ipv4Cidrs")
     public java.util.List<String> ipv4Cidrs;
 
     /**
-     * <p>Network zone IPv6 CIDR blocks.</p>
+     * <p>The IPv6 CIDR blocks of the network zone.</p>
      * 
      * <strong>example:</strong>
-     * <p>::/0</p>
+     * <p>[&quot;::/0&quot;]</p>
      */
     @NameInMap("Ipv6Cidrs")
     public java.util.List<String> ipv6Cidrs;
 
     /**
-     * <p>Network zone name.</p>
+     * <p>The network zone name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class CreateNetworkZoneRequest extends TeaModel {
     public String networkZoneName;
 
     /**
-     * <p>Network zone type.</p>
+     * <p>The network zone type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class CreateNetworkZoneRequest extends TeaModel {
     public String networkZoneType;
 
     /**
-     * <p>VPC ID.</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc_xxxxx</p>

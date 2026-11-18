@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIdentityProviderStatusCheckJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the job.</p>
+     * <p>The job ID.</p>
      * 
      * <strong>example:</strong>
      * <p>async_000xxxx</p>
@@ -14,7 +14,7 @@ public class CreateIdentityProviderStatusCheckJobResponseBody extends TeaModel {
     public String identityProviderStatusCheckJobId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>

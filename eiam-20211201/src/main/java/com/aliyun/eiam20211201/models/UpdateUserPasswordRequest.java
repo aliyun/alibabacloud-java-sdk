@@ -15,7 +15,7 @@ public class UpdateUserPasswordRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The new password of the account. For more information about the password format, see the &quot;Password Policies&quot; topic.</p>
+     * <p>The new password for the account. The password format must comply with the password policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,10 +25,10 @@ public class UpdateUserPasswordRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>Specifies whether to enable forcible password change upon first logon. Default value: disabled. Valid values:</p>
+     * <p>The forced password update status. This feature is disabled by default. Valid values:</p>
      * <ul>
-     * <li>enabled</li>
-     * <li>disabled</li>
+     * <li>enabled: Enabled.</li>
+     * <li>disabled: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,10 +48,14 @@ public class UpdateUserPasswordRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>The methods for receiving password notifications.</p>
+     * <p>The list of password notification channels. Valid values:</p>
+     * <ul>
+     * <li>email: Email.</li>
+     * <li>sms: SMS.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>sms</p>
+     * <p>[&quot;sms&quot;]</p>
      */
     @NameInMap("UserNotificationChannels")
     public java.util.List<String> userNotificationChannels;

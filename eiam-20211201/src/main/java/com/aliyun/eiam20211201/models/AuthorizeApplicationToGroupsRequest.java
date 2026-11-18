@@ -24,11 +24,11 @@ public class AuthorizeApplicationToGroupsRequest extends TeaModel {
     public String applicationRoleId;
 
     /**
-     * <p>The list of group IDs. You can specify up to 100 group IDs in a single operation.</p>
+     * <p>The list of group IDs. A single operation supports up to 100 group IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>group_miu8e4t4d7i4u7uwezgr54xxxx</p>
+     * <p>[&quot;group_miu8e4t4d7i4u7uwezgr54xxxx&quot;]</p>
      */
     @NameInMap("GroupIds")
     public java.util.List<String> groupIds;

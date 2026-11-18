@@ -60,13 +60,13 @@ public class GetNetworkZoneResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The IPv4 CIDR blocks of the network zone.</p>
+         * <p>The IPv4 network zone.</p>
          */
         @NameInMap("Ipv4Cidrs")
         public java.util.List<String> ipv4Cidrs;
 
         /**
-         * <p>The IPv6 CIDR blocks of the network zone.</p>
+         * <p>The IPv6 network zone.</p>
          */
         @NameInMap("Ipv6Cidrs")
         public java.util.List<String> ipv6Cidrs;

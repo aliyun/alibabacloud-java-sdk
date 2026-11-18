@@ -31,11 +31,11 @@ public class ListUsersForAuthorizationRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries per page.</p>
+     * <p>The maximum number of records to return per page.</p>
      * <ul>
-     * <li><p>Default value: 20.</p>
+     * <li><p>If this parameter is not specified, the default value is 20.</p>
      * </li>
-     * <li><p>Maximum value: 100.</p>
+     * <li><p>The maximum value cannot exceed 100.</p>
      * </li>
      * </ul>
      * 
@@ -46,9 +46,9 @@ public class ListUsersForAuthorizationRuleRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the starting position for the next page of results.</p>
+     * <p>The token that identifies the starting position of the next page.</p>
      * <ul>
-     * <li>If not specified, the query starts from the first page.</li>
+     * <li>If this parameter is not specified, the query starts from the first page by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class ListUsersForAuthorizationRuleRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The values of the filter field.</p>
+         * <p>The list of values for the filter field.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

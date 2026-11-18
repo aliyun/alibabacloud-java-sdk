@@ -319,7 +319,7 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
         public java.util.List<String> instanceIds;
 
         /**
-         * <p>The GCP project ID to which the resource belongs.</p>
+         * <p>The GCP project ID.</p>
          * 
          * <strong>example:</strong>
          * <p>turnkey-axiom-475109-xx</p>
@@ -328,7 +328,7 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
         public String projectId;
 
         /**
-         * <p>The sub claim corresponding to the service account.</p>
+         * <p>The sub corresponding to the service account.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -394,7 +394,7 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
 
     public static class CreateApplicationFederatedCredentialRequestOidcVerificationConfigKubernetesConfig extends TeaModel {
         /**
-         * <p>The K8s namespace.</p>
+         * <p>The Kubernetes namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -412,7 +412,7 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
         public String podNamePrefix;
 
         /**
-         * <p>The K8s service account name.</p>
+         * <p>The Kubernetes service account name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-sa</p>
@@ -540,7 +540,7 @@ public class CreateApplicationFederatedCredentialRequest extends TeaModel {
 
     public static class CreateApplicationFederatedCredentialRequestPkcs7VerificationConfig extends TeaModel {
         /**
-         * <p>The list of instance IDs.</p>
+         * <p>The list of instances.</p>
          */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;

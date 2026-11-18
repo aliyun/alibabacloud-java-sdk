@@ -8,7 +8,7 @@ public class ListApplicationsForOrganizationalUnitRequest extends TeaModel {
      * <p>The list of application IDs. You can specify up to 100 application IDs in a single request.</p>
      * 
      * <strong>example:</strong>
-     * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
+     * <p>[&quot;app_mkv7rgt4d7i4u7zqtzev2mxxxx&quot;]</p>
      */
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;

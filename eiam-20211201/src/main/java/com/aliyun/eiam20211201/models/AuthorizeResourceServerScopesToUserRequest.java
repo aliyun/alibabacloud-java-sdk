@@ -15,7 +15,7 @@ public class AuthorizeResourceServerScopesToUserRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>Ensures the idempotence of the request. You can generate a parameter value from your client to ensure that the value is unique across different requests. ClientToken supports only ASCII characters and can be up to 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>Ensures the idempotence of the request. You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class AuthorizeResourceServerScopesToUserRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The list of scope permission IDs under the resource server.</p>
+     * <p>The IDs of the scope permissions under the resource server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

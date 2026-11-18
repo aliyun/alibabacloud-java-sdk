@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCredentialDescriptionRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>Ensures the idempotence of the request. You can generate a parameter value on your client to ensure that the parameter value is unique across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateCredentialDescriptionRequest extends TeaModel {
     public String credentialId;
 
     /**
-     * <p>The description of the credential.</p>
+     * <p>The credential description.</p>
      * 
      * <strong>example:</strong>
      * <p>credential_description</p>

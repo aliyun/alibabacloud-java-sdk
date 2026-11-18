@@ -24,13 +24,13 @@ public class UpdateApplicationInfoRequest extends TeaModel {
     public String applicationName;
 
     /**
-     * <p>The application owner.</p>
+     * <p>The owner of the application.</p>
      */
     @NameInMap("ApplicationOwner")
     public UpdateApplicationInfoRequestApplicationOwner applicationOwner;
 
     /**
-     * <p>The application visibility settings.</p>
+     * <p>The application visibility collection.</p>
      */
     @NameInMap("ApplicationVisibility")
     public java.util.List<String> applicationVisibility;
@@ -45,7 +45,7 @@ public class UpdateApplicationInfoRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The list of application extension fields.</p>
+     * <p>The list of extended fields for the application.</p>
      */
     @NameInMap("CustomFields")
     public java.util.List<UpdateApplicationInfoRequestCustomFields> customFields;
@@ -140,7 +140,7 @@ public class UpdateApplicationInfoRequest extends TeaModel {
 
     public static class UpdateApplicationInfoRequestApplicationOwner extends TeaModel {
         /**
-         * <p>The list of group IDs.</p>
+         * <p>The list of user group IDs.</p>
          */
         @NameInMap("GroupIds")
         public java.util.List<String> groupIds;
@@ -176,7 +176,7 @@ public class UpdateApplicationInfoRequest extends TeaModel {
 
     public static class UpdateApplicationInfoRequestCustomFields extends TeaModel {
         /**
-         * <p>The name of the application extension field.</p>
+         * <p>The name of the extended field for the application.</p>
          * 
          * <strong>example:</strong>
          * <p>agent_type</p>
@@ -185,7 +185,7 @@ public class UpdateApplicationInfoRequest extends TeaModel {
         public String fieldName;
 
         /**
-         * <p>The value of the application extension field. If FieldName is set to agentType, valid values are bailian, pai, dify, and volcano. If FieldName is set to agentExternalId, enter the relevant value.</p>
+         * <p>The value of the extended field for the application. If FieldName is set to agentType, valid values are bailian, pai, dify, and volcano. If FieldName is set to agentExternalId, enter the relevant value.</p>
          * 
          * <strong>example:</strong>
          * <p>bailian</p>
@@ -194,7 +194,7 @@ public class UpdateApplicationInfoRequest extends TeaModel {
         public String fieldValue;
 
         /**
-         * <p>The operation type for the application extension field.</p>
+         * <p>The operation type for the extended field of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>add</p>

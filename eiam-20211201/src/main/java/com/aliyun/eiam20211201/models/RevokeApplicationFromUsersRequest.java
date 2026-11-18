@@ -34,11 +34,11 @@ public class RevokeApplicationFromUsersRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The list of account IDs. You can specify up to 100 account IDs in a single request.</p>
+     * <p>The list of account IDs. You can specify up to 100 account IDs in a single operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
+     * <p>[&quot;user_d6sbsuumeta4h66ec3il7yxxxx&quot;]</p>
      */
     @NameInMap("UserIds")
     public java.util.List<String> userIds;

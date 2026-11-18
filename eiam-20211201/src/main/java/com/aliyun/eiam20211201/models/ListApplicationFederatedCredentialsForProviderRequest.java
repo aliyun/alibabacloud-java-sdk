@@ -24,7 +24,7 @@ public class ListApplicationFederatedCredentialsForProviderRequest extends TeaMo
     public String instanceId;
 
     /**
-     * <p>The maximum number of results per page in a paging query.</p>
+     * <p>The maximum number of entries to return per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

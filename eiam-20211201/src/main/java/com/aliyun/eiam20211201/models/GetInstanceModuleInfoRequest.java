@@ -15,7 +15,7 @@ public class GetInstanceModuleInfoRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The level-1 module identifier.</p>
+     * <p>The identifier of the level-1 module.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

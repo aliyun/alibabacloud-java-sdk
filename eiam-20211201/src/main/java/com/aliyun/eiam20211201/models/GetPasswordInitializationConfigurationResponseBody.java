@@ -42,7 +42,7 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
 
     public static class GetPasswordInitializationConfigurationResponseBodyPasswordInitializationConfiguration extends TeaModel {
         /**
-         * <p>The status of forced password update. Valid values:</p>
+         * <p>The password forced update status. Valid values:</p>
          * <ul>
          * <li>enabled: Enabled.</li>
          * <li>disabled: Disabled.</li>
@@ -58,13 +58,13 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
          * <p>The list of password initialization notification channels.</p>
          * 
          * <strong>example:</strong>
-         * <p>email</p>
+         * <p>[&quot;email&quot;]</p>
          */
         @NameInMap("PasswordInitializationNotificationChannels")
         public java.util.List<String> passwordInitializationNotificationChannels;
 
         /**
-         * <p>The status of the password initialization configuration. Valid values:</p>
+         * <p>The password initialization configuration status. Valid values:</p>
          * <ul>
          * <li>enabled: Enabled.</li>
          * <li>disabled: Disabled.</li>

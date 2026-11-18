@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
     /**
-     * <p>Automatic account creation rule configuration.</p>
+     * <p>The automatic creation rule configuration for accounts.</p>
      */
     @NameInMap("AutoCreateUserConfig")
     public SetIdentityProviderAuthnConfigurationRequestAutoCreateUserConfig autoCreateUserConfig;
 
     /**
-     * <p>Automatic account update configuration.</p>
+     * <p>The automatic account update configuration.</p>
      */
     @NameInMap("AutoUpdateUserConfig")
     public SetIdentityProviderAuthnConfigurationRequestAutoUpdateUserConfig autoUpdateUserConfig;
 
     /**
-     * <p>Account binding rule configuration.</p>
+     * <p>The account binding rule configuration.</p>
      */
     @NameInMap("BindingConfig")
     public SetIdentityProviderAuthnConfigurationRequestBindingConfig bindingConfig;
 
     /**
-     * <p>Identity provider ID.</p>
+     * <p>The identity provider ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
     public String identityProviderId;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>AD/LDAP authentication configuration.</p>
+     * <p>The AD/LDAP authentication configuration.</p>
      */
     @NameInMap("LdapAuthnConfig")
     public SetIdentityProviderAuthnConfigurationRequestLdapAuthnConfig ldapAuthnConfig;
@@ -103,7 +103,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderAuthnConfigurationRequestAutoCreateUserConfig extends TeaModel {
         /**
-         * <p>Indicates whether automatic account creation is enabled.</p>
+         * <p>Specifies whether automatic creation of accounts is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -112,7 +112,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
         public String autoCreateUserStatus;
 
         /**
-         * <p>The organizational unit IDs.</p>
+         * <p>The organization IDs.</p>
          */
         @NameInMap("TargetOrganizationalUnitIds")
         public java.util.List<String> targetOrganizationalUnitIds;
@@ -142,7 +142,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderAuthnConfigurationRequestAutoUpdateUserConfig extends TeaModel {
         /**
-         * <p>Indicates whether automatic account update is enabled.</p>
+         * <p>Specifies whether automatic account updates are enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -177,7 +177,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
         public String expressionMappingType;
 
         /**
-         * <p>The value expression of the mapping attribute.</p>
+         * <p>The expression for the source attribute value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
         public String sourceValueExpression;
 
         /**
-         * <p>The name of the mapping target attribute.</p>
+         * <p>The name of the target attribute for mapping.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +197,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
         public String targetField;
 
         /**
-         * <p>The description of the mapping target attribute.</p>
+         * <p>The name of the target attribute for mapping.</p>
          * 
          * <strong>example:</strong>
          * <p>username</p>
@@ -246,13 +246,13 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderAuthnConfigurationRequestBindingConfig extends TeaModel {
         /**
-         * <p>Rules for automatic account matching.</p>
+         * <p>The rules for automatic account matching.</p>
          */
         @NameInMap("AutoMatchUserProfileExpressions")
         public java.util.List<SetIdentityProviderAuthnConfigurationRequestBindingConfigAutoMatchUserProfileExpressions> autoMatchUserProfileExpressions;
 
         /**
-         * <p>Indicates whether automatic account matching is enabled.</p>
+         * <p>Specifies whether automatic account matching is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -261,7 +261,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
         public String autoMatchUserStatus;
 
         /**
-         * <p>Indicates whether the manual account binding feature is enabled.</p>
+         * <p>Specifies whether manual account binding is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -302,7 +302,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderAuthnConfigurationRequestLdapAuthnConfig extends TeaModel {
         /**
-         * <p>Indicates whether automatic password update is supported.</p>
+         * <p>Specifies whether automatic password updates are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -311,7 +311,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
         public String autoUpdatePasswordStatus;
 
         /**
-         * <p>The user login identifier.</p>
+         * <p>The user logon identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>email</p>
@@ -320,7 +320,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends TeaModel {
         public String userLoginIdentifier;
 
         /**
-         * <p>The user ObjectClass.</p>
+         * <p>The user object class.</p>
          * 
          * <strong>example:</strong>
          * <p>posixAccount</p>

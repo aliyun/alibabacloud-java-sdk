@@ -18,7 +18,7 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>My conditional access policy</p>
+     * <p>我的条件访问策略</p>
      */
     @NameInMap("ConditionalAccessPolicyName")
     public String conditionalAccessPolicyName;
@@ -61,7 +61,7 @@ public class CreateConditionalAccessPolicyRequest extends TeaModel {
      * <p>Conditional access policy description.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test description</p>
+     * <p>测试描述</p>
      */
     @NameInMap("Description")
     public String description;

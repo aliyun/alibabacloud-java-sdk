@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloudPermissionTemplateResponseBody extends TeaModel {
     /**
-     * <p>The ID of the permission template.</p>
+     * <p>The permission template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cpt_01l8dagf2iablhigj75l1n99xxxxx</p>

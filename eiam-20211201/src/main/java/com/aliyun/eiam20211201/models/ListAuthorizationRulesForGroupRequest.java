@@ -40,9 +40,9 @@ public class ListAuthorizationRulesForGroupRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to identify the starting position of the next page.</p>
+     * <p>The token that specifies the starting position of the next page.</p>
      * <ul>
-     * <li>If this parameter is not specified, the query starts from the first page by default.</li>
+     * <li>If you do not specify this parameter, the query starts from the first page by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
     /**
-     * <p>The collection of conditional access policies.</p>
+     * <p>The conditional access policies.</p>
      */
     @NameInMap("ConditionalAccessPolicies")
     public java.util.List<ListConditionalAccessPoliciesForUserResponseBodyConditionalAccessPolicies> conditionalAccessPolicies;
@@ -114,7 +114,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
 
     public static class ListConditionalAccessPoliciesForUserResponseBodyConditionalAccessPoliciesConditionsConfigUsers extends TeaModel {
         /**
-         * <p>The excluded user groups.</p>
+         * <p>The excluded groups.</p>
          */
         @NameInMap("ExcludeGroups")
         public java.util.List<String> excludeGroups;
@@ -132,7 +132,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
         public java.util.List<String> excludeUsers;
 
         /**
-         * <p>The included user groups.</p>
+         * <p>The included groups.</p>
          */
         @NameInMap("IncludeGroups")
         public java.util.List<String> includeGroups;
@@ -206,19 +206,19 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
 
     public static class ListConditionalAccessPoliciesForUserResponseBodyConditionalAccessPoliciesConditionsConfig extends TeaModel {
         /**
-         * <p>The target applications of the conditional access policy.</p>
+         * <p>The target applications for the conditional access policy.</p>
          */
         @NameInMap("Applications")
         public ListConditionalAccessPoliciesForUserResponseBodyConditionalAccessPoliciesConditionsConfigApplications applications;
 
         /**
-         * <p>The network zones of the conditional access policy.</p>
+         * <p>The network zones for the conditional access policy.</p>
          */
         @NameInMap("NetworkZones")
         public ListConditionalAccessPoliciesForUserResponseBodyConditionalAccessPoliciesConditionsConfigNetworkZones networkZones;
 
         /**
-         * <p>The target users of the conditional access policy.</p>
+         * <p>The target users for the conditional access policy.</p>
          */
         @NameInMap("Users")
         public ListConditionalAccessPoliciesForUserResponseBodyConditionalAccessPoliciesConditionsConfigUsers users;
@@ -256,7 +256,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
 
     public static class ListConditionalAccessPoliciesForUserResponseBodyConditionalAccessPoliciesDecisionConfig extends TeaModel {
         /**
-         * <p>Indicates whether session reuse is enabled.</p>
+         * <p>Specifies whether session reuse is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -265,7 +265,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
         public String activeSessionReuseStatus;
 
         /**
-         * <p>The decision action of the conditional access policy.</p>
+         * <p>The decision effect of the conditional access policy.</p>
          * 
          * <strong>example:</strong>
          * <p>allow</p>
@@ -274,7 +274,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
         public String effect;
 
         /**
-         * <p>The re-authentication interval of the conditional access policy, in seconds.</p>
+         * <p>The MFA re-authentication interval for the conditional access policy, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -283,7 +283,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
         public Long mfaAuthenticationIntervalSeconds;
 
         /**
-         * <p>The MFA types allowed by the conditional access policy.</p>
+         * <p>The allowed MFA methods for the conditional access policy.</p>
          */
         @NameInMap("MfaAuthenticationMethods")
         public java.util.List<String> mfaAuthenticationMethods;
@@ -373,13 +373,13 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
         public String conditionalAccessPolicyType;
 
         /**
-         * <p>The conditional access policy conditions.</p>
+         * <p>The conditions of the conditional access policy.</p>
          */
         @NameInMap("ConditionsConfig")
         public ListConditionalAccessPoliciesForUserResponseBodyConditionalAccessPoliciesConditionsConfig conditionsConfig;
 
         /**
-         * <p>The time when the policy was created. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1741857554000</p>
@@ -394,7 +394,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
         public ListConditionalAccessPoliciesForUserResponseBodyConditionalAccessPoliciesDecisionConfig decisionConfig;
 
         /**
-         * <p>The decision type of the conditional access policy.</p>
+         * <p>The enforcement type of the conditional access policy.</p>
          * 
          * <strong>example:</strong>
          * <p>enforcement</p>
@@ -430,7 +430,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the policy was last updated. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The last updated time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1741857554000</p>
@@ -448,7 +448,7 @@ public class ListConditionalAccessPoliciesForUserResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The enabled or disabled status of the conditional access policy.</p>
+         * <p>The enablement status of the conditional access policy.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>

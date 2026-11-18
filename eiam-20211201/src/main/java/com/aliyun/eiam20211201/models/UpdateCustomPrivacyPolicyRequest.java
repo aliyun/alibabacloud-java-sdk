@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomPrivacyPolicyRequest extends TeaModel {
     /**
-     * <p>The details of the custom privacy policy content.</p>
+     * <p>The details of the custom terms.</p>
      */
     @NameInMap("CustomPrivacyPolicyContents")
     public java.util.List<UpdateCustomPrivacyPolicyRequestCustomPrivacyPolicyContents> customPrivacyPolicyContents;
 
     /**
-     * <p>The ID of the custom privacy policy.</p>
+     * <p>The ID of the custom terms.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class UpdateCustomPrivacyPolicyRequest extends TeaModel {
     public String customPrivacyPolicyId;
 
     /**
-     * <p>The name of the custom privacy policy.</p>
+     * <p>The name of the custom terms.</p>
      * 
      * <strong>example:</strong>
      * <p>Custom Privacy Policy Name</p>
@@ -30,7 +30,7 @@ public class UpdateCustomPrivacyPolicyRequest extends TeaModel {
     public String customPrivacyPolicyName;
 
     /**
-     * <p>The default language code for the privacy policy items. The value is the LanguageCode returned by the ListLanguages API operation.</p>
+     * <p>The default language code for the terms. The value is returned by the LanguageCode parameter in the response of the ListLanguages operation.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-Hans-CN</p>
@@ -49,7 +49,7 @@ public class UpdateCustomPrivacyPolicyRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The consent type for the custom privacy policy.</p>
+     * <p>The consent type for the custom terms.</p>
      * 
      * <strong>example:</strong>
      * <p>implied_consent</p>
@@ -112,7 +112,7 @@ public class UpdateCustomPrivacyPolicyRequest extends TeaModel {
 
     public static class UpdateCustomPrivacyPolicyRequestCustomPrivacyPolicyContentsCustomPrivacyPolicyItems extends TeaModel {
         /**
-         * <p>The name of the custom privacy policy item.</p>
+         * <p>The name of the custom terms item.</p>
          * 
          * <strong>example:</strong>
          * <p>Item Name</p>
@@ -121,7 +121,7 @@ public class UpdateCustomPrivacyPolicyRequest extends TeaModel {
         public String customPrivacyPolicyItemName;
 
         /**
-         * <p>The access URL of the custom privacy policy item. The URL must start with https://.</p>
+         * <p>The URL of the custom terms item. The URL must start with https://.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com">https://example.com</a></p>
@@ -154,13 +154,13 @@ public class UpdateCustomPrivacyPolicyRequest extends TeaModel {
 
     public static class UpdateCustomPrivacyPolicyRequestCustomPrivacyPolicyContents extends TeaModel {
         /**
-         * <p>The items of the custom privacy policy.</p>
+         * <p>The items of the custom terms.</p>
          */
         @NameInMap("CustomPrivacyPolicyItems")
         public java.util.List<UpdateCustomPrivacyPolicyRequestCustomPrivacyPolicyContentsCustomPrivacyPolicyItems> customPrivacyPolicyItems;
 
         /**
-         * <p>The tip for the custom privacy policy content.</p>
+         * <p>The prompt for the custom terms.</p>
          * 
          * <strong>example:</strong>
          * <p>Please read and agree：</p>
@@ -169,7 +169,7 @@ public class UpdateCustomPrivacyPolicyRequest extends TeaModel {
         public String customPrivacyPolicyTip;
 
         /**
-         * <p>The language of the custom privacy policy. The value is the LanguageCode returned by the ListLanguages API operation.</p>
+         * <p>The language of the custom terms. The value is returned by the LanguageCode parameter in the response of the ListLanguages operation.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-Hans-CN</p>

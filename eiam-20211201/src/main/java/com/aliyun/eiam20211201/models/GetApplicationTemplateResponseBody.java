@@ -103,7 +103,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The help document URL of the application template.</p>
+         * <p>The URL of the help document for the application template.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/document_detail/409xxx.html">https://example.com/document_detail/409xxx.html</a></p>
@@ -112,7 +112,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
         public String helpDocumentUrl;
 
         /**
-         * <p>The logo URL of the application template.</p>
+         * <p>The URL of the application template logo.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/imgextra/i4/O1CN01xTLxLb1WtyKksHW1H_!!6000000002847-2-tps-xxx-xxx.png">https://example.com/imgextra/i4/O1CN01xTLxLb1WtyKksHW1H_!!6000000002847-2-tps-xxx-xxx.png</a></p>
@@ -130,13 +130,13 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
         public String managedServiceCode;
 
         /**
-         * <p>The sale information of the application template.</p>
+         * <p>The sales information of the application template.</p>
          */
         @NameInMap("SaleInfo")
         public GetApplicationTemplateResponseBodyApplicationTemplateSaleInfo saleInfo;
 
         /**
-         * <p>The console URL of the cloud service that manages the application template.</p>
+         * <p>The URL of the console for the cloud service that manages the application template.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/?p=bastion">https://example.com/?p=bastion</a></p>

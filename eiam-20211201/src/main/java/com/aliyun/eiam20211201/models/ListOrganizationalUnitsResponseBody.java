@@ -20,7 +20,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries that are returned. This value is the total number of matched entries. The maximum number of entries that can be returned in a single request is specified by PageSize.</p>
+     * <p>The total number of entries. This value indicates the total number of matched entries. The maximum number of entries returned per page is specified by the PageSize parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -59,7 +59,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
 
     public static class ListOrganizationalUnitsResponseBodyOrganizationalUnits extends TeaModel {
         /**
-         * <p>The time when the organizational unit was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the organizational unit was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>
@@ -71,7 +71,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
          * <p>The description of the organizational unit.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test organization</p>
+         * <p>Test organizational unit</p>
          */
         @NameInMap("Description")
         public String description;
@@ -95,8 +95,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         public Boolean leaf;
 
         /**
-         * <p>The external ID of the organizational unit. This ID is used to map the data of the organizational unit to the data of an external system. By default, the value of this parameter is the organizational unit ID.</p>
-         * <p>Note: The external ID must be unique within the same source type and source ID.</p>
+         * <p>The external ID of the organizational unit, which is used to map external data to IDaaS organizational units. Default value: the IDaaS organizational unit ID. Note: The external ID must be unique under the same source type and source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
@@ -105,7 +104,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         public String organizationalUnitExternalId;
 
         /**
-         * <p>The organizational unit ID.</p>
+         * <p>The ID of the organizational unit.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
@@ -134,11 +133,11 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         /**
          * <p>The source type of the organizational unit. Valid values:</p>
          * <ul>
-         * <li>build_in: The organizational unit is created in IDaaS.</li>
-         * <li>ding_talk: The organizational unit is imported from DingTalk.</li>
-         * <li>ad: The organizational unit is imported from Active Directory (AD).</li>
-         * <li>ldap: The organizational unit is imported from a Lightweight Directory Access Protocol (LDAP) directory.</li>
-         * <li>we_com: The organizational unit is imported from WeCom.</li>
+         * <li>build_in: built-in.</li>
+         * <li>ding_talk: imported from DingTalk.</li>
+         * <li>ad: imported from AD.</li>
+         * <li>ldap: imported from LDAP.</li>
+         * <li>we_com: imported from WeCom.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,7 +156,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         public String parentId;
 
         /**
-         * <p>The time when the organizational unit was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the organizational unit was last updated. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652085686179</p>

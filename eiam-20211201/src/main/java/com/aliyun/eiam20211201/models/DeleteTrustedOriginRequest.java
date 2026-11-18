@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteTrustedOriginRequest extends TeaModel {
     /**
-     * <p>The idempotence token.</p>
+     * <p>The client token.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-example</p>

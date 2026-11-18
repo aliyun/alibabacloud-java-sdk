@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateFileImportTemplateRequest extends TeaModel {
     /**
-     * <p>Specifies whether field selection mode is enabled.</p>
+     * <p>Specifies whether the field selection mode is enabled.</p>
      */
     @NameInMap("FieldSelectionEnabled")
     public Boolean fieldSelectionEnabled;

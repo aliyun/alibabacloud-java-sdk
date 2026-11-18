@@ -31,11 +31,11 @@ public class ListGroupsForAuthorizationRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of records to return per page.</p>
+     * <p>The maximum number of entries to return per page.</p>
      * <ul>
-     * <li><p>If this parameter is not specified, the default value is 20.</p>
+     * <li><p>Default value: 20.</p>
      * </li>
-     * <li><p>The maximum value is 100.</p>
+     * <li><p>Maximum value: 100.</p>
      * </li>
      * </ul>
      * 
@@ -46,9 +46,9 @@ public class ListGroupsForAuthorizationRuleRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to identify the starting position of the next page.</p>
+     * <p>The token that indicates the starting position for the next page.</p>
      * <ul>
-     * <li>If this parameter is not specified, the query starts from the first page by default.</li>
+     * <li>If this parameter is not specified, the query starts from the first page.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class ListGroupsForAuthorizationRuleRequest extends TeaModel {
         /**
          * <p>The name of the filter field. Valid values:</p>
          * <ul>
-         * <li>GroupId: the group ID</li>
+         * <li>GroupId: the group ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>

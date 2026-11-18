@@ -15,7 +15,7 @@ public class ListApplicationsForNetworkAccessEndpointRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of entries per page in a paged query.</p>
+     * <p>The maximum number of entries to return per page for a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -34,7 +34,7 @@ public class ListApplicationsForNetworkAccessEndpointRequest extends TeaModel {
     public String networkAccessEndpointId;
 
     /**
-     * <p>The pagination token.</p>
+     * <p>The next token.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>

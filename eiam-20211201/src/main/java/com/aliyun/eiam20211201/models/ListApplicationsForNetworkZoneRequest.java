@@ -15,7 +15,7 @@ public class ListApplicationsForNetworkZoneRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of entries to return per page for paging in a paged query.</p>
+     * <p>The number of entries per page for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

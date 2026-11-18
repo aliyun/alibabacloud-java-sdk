@@ -11,7 +11,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
     public java.util.List<ListAuthorizationServersResponseBodyAuthorizationServers> authorizationServers;
 
     /**
-     * <p>The number of entries to return per page in a paging query.</p>
+     * <p>The maximum number of entries to return per page for paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -147,7 +147,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The currently active issuer address.</p>
+         * <p>The currently effective issuer address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/token">https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/token</a></p>

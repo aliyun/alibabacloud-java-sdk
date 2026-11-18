@@ -29,7 +29,7 @@ public class BindUserAuthnSourceMappingRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxxxx</p>
+     * <p>user_123131xxasasa</p>
      */
     @NameInMap("UserExternalId")
     public String userExternalId;

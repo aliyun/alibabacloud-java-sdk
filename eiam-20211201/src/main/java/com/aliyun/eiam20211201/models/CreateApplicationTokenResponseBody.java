@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationTokenResponseBody extends TeaModel {
     /**
-     * <p>The application token.</p>
+     * <p>The application tokens.</p>
      */
     @NameInMap("ApplicationTokens")
     public CreateApplicationTokenResponseBodyApplicationTokens applicationTokens;
@@ -42,7 +42,7 @@ public class CreateApplicationTokenResponseBody extends TeaModel {
 
     public static class CreateApplicationTokenResponseBodyApplicationTokens extends TeaModel {
         /**
-         * <p>The application token.</p>
+         * <p>The application tokens.</p>
          * 
          * <strong>example:</strong>
          * <p>SATFwqX8zxGf83pJcJw78KFGjmrft4erWeZYBGS8oE7NN6qoE217yaJpUdMb1UuuGqhDiF43sCA4CF91CTL5iGntqwyLuaAcS9FJ9HfGadE5a7TjiwVafwrBYkt3XXX</p>

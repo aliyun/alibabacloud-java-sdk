@@ -11,7 +11,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
     public java.util.List<ListApplicationFederatedCredentialsResponseBodyApplicationFederatedCredentials> applicationFederatedCredentials;
 
     /**
-     * <p>The maximum number of rows per page in a paged query.</p>
+     * <p>The maximum number of items per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token returned by this call.</p>
+     * <p>The pagination token returned by the current call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -29,7 +29,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The pagination token returned by this call.</p>
+     * <p>The pagination token returned by the current call.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxexample</p>
@@ -47,7 +47,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries in the list.</p>
+     * <p>The total number of items.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -119,7 +119,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public String principalId;
 
         /**
-         * <p>The Azure resource group name.</p>
+         * <p>The name of the Azure resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>user_default</p>
@@ -189,7 +189,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public java.util.List<String> instanceIds;
 
         /**
-         * <p>The GCP project ID to which the resource belongs.</p>
+         * <p>The ID of the GCP project to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>6193072600270353961</p>
@@ -198,7 +198,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public String projectId;
 
         /**
-         * <p>The subject (sub) that corresponds to the service account.</p>
+         * <p>The sub claim corresponding to the service account.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -264,7 +264,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
 
     public static class ListApplicationFederatedCredentialsResponseBodyApplicationFederatedCredentialsOidcVerificationConfigKubernetesConfig extends TeaModel {
         /**
-         * <p>The K8s namespace.</p>
+         * <p>The Kubernetes namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -282,7 +282,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public String podNamePrefix;
 
         /**
-         * <p>The K8s service account name.</p>
+         * <p>The name of the Kubernetes service account.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -432,7 +432,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
 
     public static class ListApplicationFederatedCredentialsResponseBodyApplicationFederatedCredentials extends TeaModel {
         /**
-         * <p>The application federated credential ID.</p>
+         * <p>The ID of the application federated credential.</p>
          * 
          * <strong>example:</strong>
          * <p>afc_adsa1sdaxxxxx</p>
@@ -441,7 +441,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public String applicationFederatedCredentialId;
 
         /**
-         * <p>The application federated credential name.</p>
+         * <p>The name of the application federated credential.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -450,7 +450,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public String applicationFederatedCredentialName;
 
         /**
-         * <p>The application federated credential type.</p>
+         * <p>The type of the application federated credential.</p>
          * 
          * <strong>example:</strong>
          * <p>oidc</p>
@@ -477,7 +477,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The application federated credential description.</p>
+         * <p>The description of the application federated credential.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -486,7 +486,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The federated trust source ID.</p>
+         * <p>The ID of the federated trust source.</p>
          * 
          * <strong>example:</strong>
          * <p>fcp_das1asda1xxxx</p>
@@ -525,7 +525,7 @@ public class ListApplicationFederatedCredentialsResponseBody extends TeaModel {
         public ListApplicationFederatedCredentialsResponseBodyApplicationFederatedCredentialsPkcs7VerificationConfig pkcs7VerificationConfig;
 
         /**
-         * <p>The application federated credential status.</p>
+         * <p>The status of the application federated credential.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>

@@ -17,7 +17,7 @@ public class ListCredentialProvidersRequest extends TeaModel {
     public java.util.List<String> credentialProviderTypes;
 
     /**
-     * <p>The list of filter conditions.</p>
+     * <p>The list of filters.</p>
      */
     @NameInMap("Filter")
     public java.util.List<ListCredentialProvidersRequestFilter> filter;
@@ -33,7 +33,7 @@ public class ListCredentialProvidersRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of entries per page in a paged query.</p>
+     * <p>The maximum number of rows per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -42,7 +42,7 @@ public class ListCredentialProvidersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token.</p>
+     * <p>The next token.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -119,10 +119,10 @@ public class ListCredentialProvidersRequest extends TeaModel {
 
     public static class ListCredentialProvidersRequestFilter extends TeaModel {
         /**
-         * <p>The filter condition name. Valid values:</p>
+         * <p>The filter name. Valid values:</p>
          * <ul>
-         * <li>CredentialProviderName: the credential provider name.</li>
-         * <li>CredentialProviderIdentifier: the credential provider identifier.</li>
+         * <li>CredentialProviderName: the credential provider name</li>
+         * <li>CredentialProviderIdentifier: the credential provider identifier</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class ListCredentialProvidersRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The list of filter condition values.</p>
+         * <p>The list of filter values.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

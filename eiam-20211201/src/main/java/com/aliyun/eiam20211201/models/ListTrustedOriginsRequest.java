@@ -24,7 +24,7 @@ public class ListTrustedOriginsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token.</p>
+     * <p>The next token.</p>
      * 
      * <strong>example:</strong>
      * <p>NT_example</p>
@@ -42,11 +42,7 @@ public class ListTrustedOriginsRequest extends TeaModel {
     public String origin;
 
     /**
-     * <p>The status filter. Valid values:</p>
-     * <ul>
-     * <li>Enabled: Enabled.</li>
-     * <li>Disabled: Disabled.</li>
-     * </ul>
+     * <p>The status filter.</p>
      * 
      * <strong>example:</strong>
      * <p>Enabled</p>
@@ -58,7 +54,7 @@ public class ListTrustedOriginsRequest extends TeaModel {
      * <p>The name filter.</p>
      * 
      * <strong>example:</strong>
-     * <p>Qoder Production Console</p>
+     * <p>Qoder production console</p>
      */
     @NameInMap("TrustOriginName")
     public String trustOriginName;
@@ -67,7 +63,7 @@ public class ListTrustedOriginsRequest extends TeaModel {
      * <p>The trusted origin scene filter.</p>
      * 
      * <strong>example:</strong>
-     * <p>iframe_embed</p>
+     * <p>[&quot;iframe_embed&quot;]</p>
      */
     @NameInMap("TrustedOriginScene")
     public java.util.List<String> trustedOriginScene;

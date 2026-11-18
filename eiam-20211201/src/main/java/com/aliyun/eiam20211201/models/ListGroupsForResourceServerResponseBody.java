@@ -11,7 +11,7 @@ public class ListGroupsForResourceServerResponseBody extends TeaModel {
     public java.util.List<ListGroupsForResourceServerResponseBodyGroups> groups;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of entries returned per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListGroupsForResourceServerResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. A null or empty value indicates that all results have been returned.</p>
+     * <p>The next token.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -29,7 +29,7 @@ public class ListGroupsForResourceServerResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -38,7 +38,7 @@ public class ListGroupsForResourceServerResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries that meet the filter criteria.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -93,7 +93,7 @@ public class ListGroupsForResourceServerResponseBody extends TeaModel {
 
     public static class ListGroupsForResourceServerResponseBodyGroupsResourceServerScopes extends TeaModel {
         /**
-         * <p>The ID of the scope.</p>
+         * <p>The scope ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
@@ -102,7 +102,7 @@ public class ListGroupsForResourceServerResponseBody extends TeaModel {
         public String resourceServerScopeId;
 
         /**
-         * <p>The name of the scope.</p>
+         * <p>The scope name.</p>
          * 
          * <strong>example:</strong>
          * <p>Read User Info</p>
@@ -135,7 +135,7 @@ public class ListGroupsForResourceServerResponseBody extends TeaModel {
 
     public static class ListGroupsForResourceServerResponseBodyGroups extends TeaModel {
         /**
-         * <p>The ID of the group.</p>
+         * <p>The group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>group_nbsomva32b6utec3hgi7scxxxx</p>
@@ -144,7 +144,7 @@ public class ListGroupsForResourceServerResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_qsw77zl5vrllwzyrrfwbmpxxxx</p>

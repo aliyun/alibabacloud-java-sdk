@@ -79,7 +79,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
     public String networkAccessEndpointId;
 
     /**
-     * <p>The OIDC-related configuration.</p>
+     * <p>The OIDC configuration.</p>
      */
     @NameInMap("OidcConfig")
     public UpdateIdentityProviderRequestOidcConfig oidcConfig;
@@ -310,7 +310,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String appSecret;
 
         /**
-         * <p>The EncryptKey of the custom Lark application.</p>
+         * <p>The encryptKey of the custom Lark application.</p>
          * 
          * <strong>example:</strong>
          * <p>VkdWw91mdkrjVFr3ObNwefap21dfbZbKxxxx</p>
@@ -319,7 +319,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String encryptKey;
 
         /**
-         * <p>The VerificationToken of the custom Lark application.</p>
+         * <p>The verificationToken of the custom Lark application.</p>
          * 
          * <strong>example:</strong>
          * <p>feishuVerifyTokenxxxxx</p>
@@ -677,7 +677,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
          * <p>The list of OIDC grant scopes.</p>
          * 
          * <strong>example:</strong>
-         * <p>openid</p>
+         * <p>[&quot;openid&quot;]</p>
          */
         @NameInMap("GrantScopes")
         public java.util.List<String> grantScopes;
@@ -839,7 +839,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public Long maxClockSkew;
 
         /**
-         * <p>Specifies whether to require the request to be signed.</p>
+         * <p>Specifies whether to require requests to be signed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -938,7 +938,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
 
     public static class UpdateIdentityProviderRequestWeComConfig extends TeaModel {
         /**
-         * <p>The AgentId of the WeCom custom application.</p>
+         * <p>The AgentId of the WeCom self-built application.</p>
          * 
          * <strong>example:</strong>
          * <p>1237403</p>
@@ -965,7 +965,7 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         public String contactSecret;
 
         /**
-         * <p>The CorpSecret of the WeCom custom application.</p>
+         * <p>The CorpSecret of the WeCom self-built application.</p>
          * 
          * <strong>example:</strong>
          * <p>CSEHDddddddxxxxuxkJEHPveWRXBGqVqRsxxxx</p>

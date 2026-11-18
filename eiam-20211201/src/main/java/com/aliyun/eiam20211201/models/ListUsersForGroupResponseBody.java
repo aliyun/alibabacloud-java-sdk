@@ -14,7 +14,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries that match the query.</p>
+     * <p>The total number of matched entries. The maximum number of entries returned on a single page is specified by the PageSize parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -23,7 +23,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>The list of account objects.</p>
+     * <p>The list of account object information.</p>
      */
     @NameInMap("Users")
     public java.util.List<ListUsersForGroupResponseBodyUsers> users;
@@ -59,8 +59,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
 
     public static class ListUsersForGroupResponseBodyUsers extends TeaModel {
         /**
-         * <p>The source ID of the group member relationship.</p>
-         * <p>If the group is created in EIAM, the value of this parameter is the instance ID. For other types of groups, the value is the enterprise ID from the source. For example, if the group is imported from DingTalk, the value is the corpId of the DingTalk enterprise.</p>
+         * <p>The source ID of the group member relationship. For the self-managed type, the default value is the instance ID. For other types, the value corresponds to the enterprise ID of the source. For example, if the source is DingTalk, the value is the corpId of the DingTalk enterprise.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -70,11 +69,13 @@ public class ListUsersForGroupResponseBody extends TeaModel {
 
         /**
          * <p>The source type of the group member relationship. Valid values:</p>
-         * <p>build_in: The group is created in EIAM.</p>
-         * <p>ding_talk: The group is imported from DingTalk.</p>
-         * <p>ad: The group is imported from Active Directory (AD).</p>
-         * <p>ldap: The group is imported from LDAP.</p>
-         * <p>we_com: The group is imported from WeCom.</p>
+         * <ul>
+         * <li>build_in: self-managed</li>
+         * <li>ding_talk: imported from DingTalk</li>
+         * <li>ad: imported from AD</li>
+         * <li>ldap: imported from LDAP</li>
+         * <li>we_com: imported from WeCom</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>build_in</p>

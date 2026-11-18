@@ -25,7 +25,7 @@ public class CreateApplicationTokenRequest extends TeaModel {
     public String applicationTokenType;
 
     /**
-     * <p>The expiration time. Specify a UNIX timestamp in milliseconds.</p>
+     * <p>The expiration time. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1735530123762</p>

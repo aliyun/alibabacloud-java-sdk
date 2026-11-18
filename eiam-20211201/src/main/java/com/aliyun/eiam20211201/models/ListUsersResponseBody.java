@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUsersResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries per page in a paging query.</p>
+     * <p>The maximum number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -114,7 +114,7 @@ public class ListUsersResponseBody extends TeaModel {
          * <p>The description of the account.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>Test account</p>
          */
         @NameInMap("Description")
         public String description;
@@ -201,7 +201,7 @@ public class ListUsersResponseBody extends TeaModel {
         public Boolean phoneNumberVerified;
 
         /**
-         * <p>The phone region code. Example: 86 for the Chinese mainland, without 00 or +.</p>
+         * <p>The region code of the mobile phone number. Example: 86 for the Chinese mainland, without 00 or +.</p>
          * 
          * <strong>example:</strong>
          * <p>86</p>
@@ -221,8 +221,8 @@ public class ListUsersResponseBody extends TeaModel {
         /**
          * <p>The status of the account. Valid values:</p>
          * <ul>
-         * <li>enabled: enabled</li>
-         * <li>disabled: disabled</li>
+         * <li>enabled: The account is enabled.</li>
+         * <li>disabled: The account is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -241,7 +241,8 @@ public class ListUsersResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>The external ID of the account. This ID is used to map external data to IDaaS accounts. The default value is the IDaaS account ID. Note: The external ID must be unique within the same source type and source ID.</p>
+         * <p>The external ID of the account. This ID is used to map external data to IDaaS accounts. The default value is the IDaaS account ID.</p>
+         * <p>Note: The external ID must be unique within the same source type and source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
@@ -260,7 +261,7 @@ public class ListUsersResponseBody extends TeaModel {
 
         /**
          * <p>The source ID of the account.</p>
-         * <p>For the build-in type, the default value is the instance ID. For other types, the value corresponds to the enterprise ID of the source. For example, for the DingTalk source, the value is the corpId of the DingTalk enterprise.</p>
+         * <p>For the built-in type, the default value is the instance ID. For other types, the value corresponds to the enterprise ID of the source. For example, the DingTalk source corresponds to the corpId of the DingTalk enterprise.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -271,10 +272,10 @@ public class ListUsersResponseBody extends TeaModel {
         /**
          * <p>The source type of the account. Valid values:</p>
          * <ul>
-         * <li>build_in: self-managed</li>
-         * <li>ding_talk: imported from DingTalk</li>
-         * <li>ad: imported from AD</li>
-         * <li>ldap: imported from LDAP</li>
+         * <li>build_in: The account is self-managed.</li>
+         * <li>ding_talk: The account is imported from DingTalk.</li>
+         * <li>ad: The account is imported from AD.</li>
+         * <li>ldap: The account is imported from LDAP.</li>
          * </ul>
          * 
          * <strong>example:</strong>

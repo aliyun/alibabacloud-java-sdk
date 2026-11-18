@@ -21,12 +21,10 @@ public class ListCloudAccountsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of records per page.</p>
+     * <p>The maximum number of entries per page.</p>
      * <ul>
-     * <li><p>If this parameter is not specified, the default value is 20.</p>
-     * </li>
-     * <li><p>The maximum value is 100.</p>
-     * </li>
+     * <li>If this parameter is not specified, the default value is 20.</li>
+     * <li>The maximum value is 100.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,9 +34,9 @@ public class ListCloudAccountsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that identifies the start position of the next page.</p>
+     * <p>The token that specifies the starting position of the next page.</p>
      * <ul>
-     * <li>If this parameter is not specified, the query starts from the first page.</li>
+     * <li>If this parameter is not specified, the query starts from the first page by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,11 +84,11 @@ public class ListCloudAccountsRequest extends TeaModel {
 
     public static class ListCloudAccountsRequestFilter extends TeaModel {
         /**
-         * <p>The filter field name. Valid values:</p>
+         * <p>The name of the filter field. Valid values:</p>
          * <ul>
-         * <li>CloudAccountId: the cloud account ID.</li>
+         * <li>CloudAccountId: the ID of the cloud account.</li>
          * <li>CloudAccountExternalId: the external unique identifier of the cloud account.</li>
-         * <li>CloudAccountVendorType: the cloud account type.</li>
+         * <li>CloudAccountVendorType: the type of the cloud account.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -100,7 +98,7 @@ public class ListCloudAccountsRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The list of filter field values.</p>
+         * <p>The list of values for the filter field.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

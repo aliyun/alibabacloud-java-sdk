@@ -160,7 +160,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
 
     public static class ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfiguration extends TeaModel {
         /**
-         * <p>The IdP certificate list.</p>
+         * <p>The list of IdP certificates.</p>
          */
         @NameInMap("Certificates")
         public java.util.List<ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfigurationCertificates> certificates;
@@ -175,7 +175,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
         public String idPEntityId;
 
         /**
-         * <p>The IdP logon URL.</p>
+         * <p>The IdP SSO URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://dc.test.com/adfs/ls/">https://dc.test.com/adfs/ls/</a></p>

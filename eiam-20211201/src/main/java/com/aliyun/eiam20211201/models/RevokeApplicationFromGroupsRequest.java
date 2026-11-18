@@ -24,11 +24,11 @@ public class RevokeApplicationFromGroupsRequest extends TeaModel {
     public String applicationRoleId;
 
     /**
-     * <p>The list of group IDs. A single operation supports a maximum of 100 group IDs.</p>
+     * <p>The list of group IDs. A maximum of 100 group IDs can be specified in a single operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>group_miu8e4t4d7i4u7uwezgr54xxxx</p>
+     * <p>[&quot;group_miu8e4t4d7i4u7uwezgr54xxxx&quot;]</p>
      */
     @NameInMap("GroupIds")
     public java.util.List<String> groupIds;

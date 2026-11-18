@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries to return per page in a paging query.</p>
+     * <p>The maximum number of entries to return per page when paging.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token returned by the current call.</p>
+     * <p>The next token returned in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -23,7 +23,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The pagination token returned by the current call.</p>
+     * <p>The next token returned in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxexample</p>
@@ -41,7 +41,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries in the list.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -110,7 +110,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
 
     public static class ListUserAuthnSourceMappingsResponseBodyUserAuthnSourceMappings extends TeaModel {
         /**
-         * <p>The source IdP authentication source type.</p>
+         * <p>The authentication source type of the source IdP.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:alibaba:idaas:authntype:oidc</p>

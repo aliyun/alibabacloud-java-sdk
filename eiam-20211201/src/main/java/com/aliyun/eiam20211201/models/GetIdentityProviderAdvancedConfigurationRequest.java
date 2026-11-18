@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIdentityProviderAdvancedConfigurationRequest extends TeaModel {
     /**
-     * <p>Identity provider ID</p>
+     * <p>The identity provider ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetIdentityProviderAdvancedConfigurationRequest extends TeaModel {
     public String identityProviderId;
 
     /**
-     * <p>Instance ID</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

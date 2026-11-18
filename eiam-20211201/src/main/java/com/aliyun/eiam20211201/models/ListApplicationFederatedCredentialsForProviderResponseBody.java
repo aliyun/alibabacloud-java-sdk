@@ -11,7 +11,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
     public java.util.List<ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentials> applicationFederatedCredentials;
 
     /**
-     * <p>The maximum number of rows per page in a paging query.</p>
+     * <p>The number of entries per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
     public Integer maxResults;
 
     /**
-     * <p>The pagination token returned by the current call.</p>
+     * <p>The query token returned by the current call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -29,7 +29,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
     public String nextToken;
 
     /**
-     * <p>The pagination token returned by the current call.</p>
+     * <p>The query token returned by the current call.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxexample</p>
@@ -47,7 +47,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
     public String requestId;
 
     /**
-     * <p>The total number of items.</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -264,7 +264,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
 
     public static class ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentialsOidcVerificationConfigKubernetesConfig extends TeaModel {
         /**
-         * <p>The K8s namespace.</p>
+         * <p>The Kubernetes namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -282,7 +282,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         public String podNamePrefix;
 
         /**
-         * <p>The name of the K8s service account.</p>
+         * <p>The name of the Kubernetes service account.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

@@ -15,7 +15,7 @@ public class GetCloudPermissionTemplateRequest extends TeaModel {
     public String cloudAccountId;
 
     /**
-     * <p>The ID of the permission template.</p>
+     * <p>The permission template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

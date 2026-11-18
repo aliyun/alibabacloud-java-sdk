@@ -53,7 +53,7 @@ public class GenerateOauthTokenRequest extends TeaModel {
     public String requestedTokenType;
 
     /**
-     * <p>The permission scope.</p>
+     * <p>The permission scopes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ScopeValues")

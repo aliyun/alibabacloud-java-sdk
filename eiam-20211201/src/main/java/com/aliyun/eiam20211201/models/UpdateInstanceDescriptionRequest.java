@@ -8,7 +8,7 @@ public class UpdateInstanceDescriptionRequest extends TeaModel {
      * <p>The new description of the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>For production use.</p>
+     * <p>生产环境使用。</p>
      */
     @NameInMap("Description")
     public String description;
@@ -18,7 +18,7 @@ public class UpdateInstanceDescriptionRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
+     * <p>eiam-111ccc1111</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

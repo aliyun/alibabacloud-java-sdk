@@ -23,7 +23,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>The list of account IDs.</p>
+     * <p>The list of users.</p>
      */
     @NameInMap("Users")
     public java.util.List<ListUsersForApplicationResponseBodyUsers> users;
@@ -90,7 +90,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
         public java.util.List<ListUsersForApplicationResponseBodyUsersApplicationRoles> applicationRoles;
 
         /**
-         * <p>The account ID.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>

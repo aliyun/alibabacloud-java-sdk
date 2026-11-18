@@ -25,7 +25,7 @@ public class CheckApplicationProvisioningUserPrimaryOrganizationalUnitRequest ex
     public String instanceId;
 
     /**
-     * <p>The organization ID.</p>
+     * <p>The organizational unit ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

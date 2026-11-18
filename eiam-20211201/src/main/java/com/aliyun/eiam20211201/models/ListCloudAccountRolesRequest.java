@@ -31,9 +31,9 @@ public class ListCloudAccountRolesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of records per page.</p>
+     * <p>The maximum number of entries to return per page.</p>
      * <ul>
-     * <li><p>If this parameter is not specified, the default value is 20.</p>
+     * <li><p>If you do not specify this parameter, the default value is 20.</p>
      * </li>
      * <li><p>The maximum value is 100.</p>
      * </li>
@@ -46,9 +46,9 @@ public class ListCloudAccountRolesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that specifies the start position of the next page.</p>
+     * <p>The token that specifies the starting position of the next page.</p>
      * <ul>
-     * <li>If this parameter is not specified, the query starts from the first page.</li>
+     * <li>If you do not specify this parameter, the query starts from the first page by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,12 +104,12 @@ public class ListCloudAccountRolesRequest extends TeaModel {
 
     public static class ListCloudAccountRolesRequestFilter extends TeaModel {
         /**
-         * <p>The filter field name. Valid values:</p>
+         * <p>The name of the filter field. Valid values:</p>
          * <ul>
          * <li>CloudAccountRoleId: the cloud role ID.</li>
          * <li>CloudAccountRoleName: the cloud role name.</li>
-         * <li>CloudAccountRoleExternalId: the cloud role external identifier.</li>
-         * <li>CloudAccountRoleUsageType: the cloud role usage type.</li>
+         * <li>CloudAccountRoleExternalId: the business identifier of the cloud role.</li>
+         * <li>CloudAccountRoleUsageType: the usage type of the cloud role.</li>
          * </ul>
          * 
          * <strong>example:</strong>

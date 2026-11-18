@@ -31,7 +31,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Activates privileged hosting for a cloud account.</p>
+     * <p>Activates privileged access hosting for a cloud account.</p>
      * 
      * @param request ActivateCloudAccountPrivilegeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -71,7 +71,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Activates privileged hosting for a cloud account.</p>
+     * <p>Activates privileged access hosting for a cloud account.</p>
      * 
      * @param request ActivateCloudAccountPrivilegeRequest
      * @return ActivateCloudAccountPrivilegeResponse
@@ -493,7 +493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grants multiple EIAM groups access to an application.</p>
+     * <p>Grants multiple EIAM groups access to an application in batches.</p>
      * 
      * @param request AuthorizeApplicationToGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -537,7 +537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grants multiple EIAM groups access to an application.</p>
+     * <p>Grants multiple EIAM groups access to an application in batches.</p>
      * 
      * @param request AuthorizeApplicationToGroupsRequest
      * @return AuthorizeApplicationToGroupsResponse
@@ -605,7 +605,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grants multiple EIAM accounts access to an application in batches.</p>
+     * <p>Grants multiple EIAM accounts access to an application.</p>
      * 
      * @param request AuthorizeApplicationToUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -649,7 +649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grants multiple EIAM accounts access to an application in batches.</p>
+     * <p>Grants multiple EIAM accounts access to an application.</p>
      * 
      * @param request AuthorizeApplicationToUsersRequest
      * @return AuthorizeApplicationToUsersResponse
@@ -777,7 +777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grants the scope permissions of a specified resource server to an organizational unit.</p>
+     * <p>Grants scope permissions of a specified resource server to an organization.</p>
      * 
      * @param request AuthorizeResourceServerScopesToOrganizationalUnitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -825,7 +825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grants the scope permissions of a specified resource server to an organizational unit.</p>
+     * <p>Grants scope permissions of a specified resource server to an organization.</p>
      * 
      * @param request AuthorizeResourceServerScopesToOrganizationalUnitRequest
      * @return AuthorizeResourceServerScopesToOrganizationalUnitResponse
@@ -837,7 +837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grants scope permissions of a specified resource server to an account.</p>
+     * <p>Grants scope permissions under a specified resource server to an account.</p>
      * 
      * @param request AuthorizeResourceServerScopesToUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -885,7 +885,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grants scope permissions of a specified resource server to an account.</p>
+     * <p>Grants scope permissions under a specified resource server to an account.</p>
      * 
      * @param request AuthorizeResourceServerScopesToUserRequest
      * @return AuthorizeResourceServerScopesToUserResponse
@@ -897,7 +897,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grants a specified ResourceServer to a Client application.</p>
+     * <p>Authorizes a specified ResourceServer for a client application.</p>
      * 
      * @param request AuthorizeResourceServerToClientRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -937,7 +937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grants a specified ResourceServer to a Client application.</p>
+     * <p>Authorizes a specified ResourceServer for a client application.</p>
      * 
      * @param request AuthorizeResourceServerToClientRequest
      * @return AuthorizeResourceServerToClientResponse
@@ -1005,7 +1005,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the primary organization for application synchronization is within the application synchronization scope.</p>
+     * <p>Checks whether the primary organizational unit for application synchronization is within the application synchronization scope.</p>
      * 
      * @param request CheckApplicationProvisioningUserPrimaryOrganizationalUnitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1045,7 +1045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the primary organization for application synchronization is within the application synchronization scope.</p>
+     * <p>Checks whether the primary organizational unit for application synchronization is within the application synchronization scope.</p>
      * 
      * @param request CheckApplicationProvisioningUserPrimaryOrganizationalUnitRequest
      * @return CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponse
@@ -1602,6 +1602,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProjectId", request.projectId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.subjectType)) {
+            query.put("SubjectType", request.subjectType);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("ClientToken", request.clientToken);
@@ -1687,7 +1691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a ClientPublicKey for an application. When an M2M client uses the PRIVATE_KEY_JWT method to request the token endpoint, this public key is used by the M2M authorization server to verify the assertion carried in the client\&quot;s token endpoint request.</p>
+     * <p>Creates a ClientPublicKey for an application. When a machine-to-machine (M2M) client uses the PRIVATE_KEY_JWT method to request the token endpoint, this public key is used by the M2M authorization server to verify the assertion carried in the request.</p>
      * 
      * @param request CreateClientPublicKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1735,7 +1739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a ClientPublicKey for an application. When an M2M client uses the PRIVATE_KEY_JWT method to request the token endpoint, this public key is used by the M2M authorization server to verify the assertion carried in the client\&quot;s token endpoint request.</p>
+     * <p>Creates a ClientPublicKey for an application. When a machine-to-machine (M2M) client uses the PRIVATE_KEY_JWT method to request the token endpoint, this public key is used by the M2M authorization server to verify the assertion carried in the request.</p>
      * 
      * @param request CreateClientPublicKeyRequest
      * @return CreateClientPublicKeyResponse
@@ -1747,8 +1751,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;<strong>Before you call this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.</strong>
-     * &lt;props=&quot;intl&quot;&gt;<strong>Before you call this operation, make sure that you fully understand the billing method of IDaaS EIAM.</strong></p>
+     * <p>&lt;props=&quot;china&quot;&gt;<strong>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.</strong>
+     * &lt;props=&quot;intl&quot;&gt;<strong>Before calling this operation, make sure that you fully understand the billing methods of IDaaS EIAM.</strong></p>
      * 
      * <b>summary</b> : 
      * <p>Creates a cloud account resource under a specified EIAM instance.</p>
@@ -1811,8 +1815,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;<strong>Before you call this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.</strong>
-     * &lt;props=&quot;intl&quot;&gt;<strong>Before you call this operation, make sure that you fully understand the billing method of IDaaS EIAM.</strong></p>
+     * <p>&lt;props=&quot;china&quot;&gt;<strong>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.</strong>
+     * &lt;props=&quot;intl&quot;&gt;<strong>Before calling this operation, make sure that you fully understand the billing methods of IDaaS EIAM.</strong></p>
      * 
      * <b>summary</b> : 
      * <p>Creates a cloud account resource under a specified EIAM instance.</p>
@@ -1827,7 +1831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a cloud role resource under the specified cloud account resource.</p>
+     * <p>Creates a cloud role resource under a specified cloud account resource.</p>
      * 
      * @param request CreateCloudAccountRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1879,7 +1883,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a cloud role resource under the specified cloud account resource.</p>
+     * <p>Creates a cloud role resource under a specified cloud account resource.</p>
      * 
      * @param request CreateCloudAccountRoleRequest
      * @return CreateCloudAccountRoleResponse
@@ -2305,7 +2309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can create custom terms.</p>
+     * <p>Creates a custom privacy policy.</p>
      * 
      * @param request CreateCustomPrivacyPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2361,7 +2365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can create custom terms.</p>
+     * <p>Creates a custom privacy policy.</p>
      * 
      * @param request CreateCustomPrivacyPolicyRequest
      * @return CreateCustomPrivacyPolicyResponse
@@ -2717,7 +2721,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a status check job for an identity provider.</p>
+     * <p>Creates an IdP status check job.</p>
      * 
      * @param request CreateIdentityProviderStatusCheckJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2753,7 +2757,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a status check job for an identity provider.</p>
+     * <p>Creates an IdP status check job.</p>
      * 
      * @param request CreateIdentityProviderStatusCheckJobRequest
      * @return CreateIdentityProviderStatusCheckJobResponse
@@ -2813,7 +2817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a trial License for an instance.</p>
+     * <p>Creates a trial license for an instance.</p>
      * 
      * @param request CreateInstanceTrialLicenseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2845,7 +2849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a trial License for an instance.</p>
+     * <p>Creates a trial license for an instance.</p>
      * 
      * @param request CreateInstanceTrialLicenseRequest
      * @return CreateInstanceTrialLicenseResponse
@@ -2857,7 +2861,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a network access endpoint.</p>
+     * <p>Creates a dedicated network endpoint.</p>
      * 
      * @param request CreateNetworkAccessEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2909,7 +2913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a network access endpoint.</p>
+     * <p>Creates a dedicated network endpoint.</p>
      * 
      * @param request CreateNetworkAccessEndpointRequest
      * @return CreateNetworkAccessEndpointResponse
@@ -3053,7 +3057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a scope permission for a specified resource server.</p>
+     * <p>Creates a scope permission under the specified resource server.</p>
      * 
      * @param request CreateResourceServerScopeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3105,7 +3109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a scope permission for a specified resource server.</p>
+     * <p>Creates a scope permission under the specified resource server.</p>
      * 
      * @param request CreateResourceServerScopeRequest
      * @return CreateResourceServerScopeResponse
@@ -3281,7 +3285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes privileged access for a cloud account.</p>
+     * <p>Removes privileged access hosting for a cloud account.</p>
      * 
      * @param request DeactivateCloudAccountPrivilegeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3321,7 +3325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes privileged access for a cloud account.</p>
+     * <p>Removes privileged access hosting for a cloud account.</p>
      * 
      * @param request DeactivateCloudAccountPrivilegeRequest
      * @return DeactivateCloudAccountPrivilegeResponse
@@ -3439,7 +3443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a federated identity credential of an application.</p>
+     * <p>Deletes a federated identity credential for an application.</p>
      * 
      * @param request DeleteApplicationFederatedCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3479,7 +3483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a federated identity credential of an application.</p>
+     * <p>Deletes a federated identity credential for an application.</p>
      * 
      * @param request DeleteApplicationFederatedCredentialRequest
      * @return DeleteApplicationFederatedCredentialResponse
@@ -3543,7 +3547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an ApplicationToken.</p>
+     * <p>Deletes an application token.</p>
      * 
      * @param request DeleteApplicationTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3583,7 +3587,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an ApplicationToken.</p>
+     * <p>Deletes an application token.</p>
      * 
      * @param request DeleteApplicationTokenRequest
      * @return DeleteApplicationTokenResponse
@@ -3595,7 +3599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an authorized resource.</p>
+     * <p>Deletes an authorization resource.</p>
      * 
      * @param request DeleteAuthorizationResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3635,7 +3639,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an authorized resource.</p>
+     * <p>Deletes an authorization resource.</p>
      * 
      * @param request DeleteAuthorizationResourceRequest
      * @return DeleteAuthorizationResourceResponse
@@ -3647,7 +3651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an authorization rule. The authorization rule can be deleted only when it is in the disabled state.</p>
+     * <p>Deletes an authorization rule. An authorization rule can be deleted only when it is disabled.</p>
      * 
      * @param request DeleteAuthorizationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3683,7 +3687,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an authorization rule. The authorization rule can be deleted only when it is in the disabled state.</p>
+     * <p>Deletes an authorization rule. An authorization rule can be deleted only when it is disabled.</p>
      * 
      * @param request DeleteAuthorizationRuleRequest
      * @return DeleteAuthorizationRuleResponse
@@ -3695,7 +3699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Brand</p>
+     * <p>Deletes a brand.</p>
      * 
      * @param request DeleteBrandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3731,7 +3735,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Brand</p>
+     * <p>Deletes a brand.</p>
      * 
      * @param request DeleteBrandRequest
      * @return DeleteBrandResponse
@@ -3795,7 +3799,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an Alibaba Cloud account resource.</p>
+     * <p>Deletes a cloud account resource.</p>
      * 
      * @param request DeleteCloudAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3831,7 +3835,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an Alibaba Cloud account resource.</p>
+     * <p>Deletes a cloud account resource.</p>
      * 
      * @param request DeleteCloudAccountRequest
      * @return DeleteCloudAccountResponse
@@ -3843,10 +3847,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must disable the cloud role before you delete it. After you delete the role, all related data is also deleted and cannot be recovered.</p>
+     * <p>Before deleting a specified cloud role, ensure that the cloud role is disabled. After the cloud role is deleted, all data related to the cloud role is deleted and cannot be recovered.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a cloud role from a specified Alibaba Cloud account.</p>
+     * <p>Deletes a cloud role resource under a specified cloud account resource.</p>
      * 
      * @param request DeleteCloudAccountRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3886,10 +3890,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must disable the cloud role before you delete it. After you delete the role, all related data is also deleted and cannot be recovered.</p>
+     * <p>Before deleting a specified cloud role, ensure that the cloud role is disabled. After the cloud role is deleted, all data related to the cloud role is deleted and cannot be recovered.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a cloud role from a specified Alibaba Cloud account.</p>
+     * <p>Deletes a cloud role resource under a specified cloud account resource.</p>
      * 
      * @param request DeleteCloudAccountRoleRequest
      * @return DeleteCloudAccountRoleResponse
@@ -4103,7 +4107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an extended character field.</p>
+     * <p>Deletes an extension field.</p>
      * 
      * @param request DeleteCustomFieldRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4139,7 +4143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an extended character field.</p>
+     * <p>Deletes an extension field.</p>
      * 
      * @param request DeleteCustomFieldRequest
      * @return DeleteCustomFieldResponse
@@ -4151,7 +4155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a custom clause.</p>
+     * <p>Deletes custom terms.</p>
      * 
      * @param request DeleteCustomPrivacyPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4187,7 +4191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a custom clause.</p>
+     * <p>Deletes custom terms.</p>
      * 
      * @param request DeleteCustomPrivacyPolicyRequest
      * @return DeleteCustomPrivacyPolicyResponse
@@ -4299,7 +4303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a federated credential provider.</p>
+     * <p>Deletes a federated trust source.</p>
      * 
      * @param request DeleteFederatedCredentialProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4335,7 +4339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a federated credential provider.</p>
+     * <p>Deletes a federated trust source.</p>
      * 
      * @param request DeleteFederatedCredentialProviderRequest
      * @return DeleteFederatedCredentialProviderResponse
@@ -4685,7 +4689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a scope permission under a specified ResourceServer.</p>
+     * <p>Deletes the scope permissions of a specified resource server.</p>
      * 
      * @param request DeleteResourceServerScopeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4725,7 +4729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a scope permission under a specified ResourceServer.</p>
+     * <p>Deletes the scope permissions of a specified resource server.</p>
      * 
      * @param request DeleteResourceServerScopeRequest
      * @return DeleteResourceServerScopeResponse
@@ -5097,7 +5101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables an application federated credential.</p>
+     * <p>Disables a federated identity credential for an application.</p>
      * 
      * @param request DisableApplicationFederatedCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5137,7 +5141,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables an application federated credential.</p>
+     * <p>Disables a federated identity credential for an application.</p>
      * 
      * @param request DisableApplicationFederatedCredentialRequest
      * @return DisableApplicationFederatedCredentialResponse
@@ -5149,7 +5153,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the machine-to-machine (M2M) client feature for an application. This feature enables an application to act as an OAuth client and make calls to access resources.</p>
+     * <p>Disables the machine-to-machine (M2M) client capability for an application. When this feature is enabled, the application can act as a caller (that is, an OAuth client) to initiate access to resources.</p>
      * 
      * @param request DisableApplicationM2MClientRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5185,7 +5189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the machine-to-machine (M2M) client feature for an application. This feature enables an application to act as an OAuth client and make calls to access resources.</p>
+     * <p>Disables the machine-to-machine (M2M) client capability for an application. When this feature is enabled, the application can act as a caller (that is, an OAuth client) to initiate access to resources.</p>
      * 
      * @param request DisableApplicationM2MClientRequest
      * @return DisableApplicationM2MClientResponse
@@ -5245,7 +5249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the ResourceServer capability of a specified application.</p>
+     * <p>Disables the ResourceServer capability for a specified application.</p>
      * 
      * @param request DisableApplicationResourceServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5281,7 +5285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the ResourceServer capability of a specified application.</p>
+     * <p>Disables the ResourceServer capability for a specified application.</p>
      * 
      * @param request DisableApplicationResourceServerRequest
      * @return DisableApplicationResourceServerResponse
@@ -5341,7 +5345,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you disable an application, all features of the application, such as SSO and account synchronization, become unavailable. Make sure that you are aware of the risks associated with this operation.</p>
+     * <p>When an application is disabled, all its features such as SSO and account synchronization become unavailable. Make sure that you are aware of the potential risks of this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Disables an application token.</p>
@@ -5384,7 +5388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you disable an application, all features of the application, such as SSO and account synchronization, become unavailable. Make sure that you are aware of the risks associated with this operation.</p>
+     * <p>When an application is disabled, all its features such as SSO and account synchronization become unavailable. Make sure that you are aware of the potential risks of this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Disables an application token.</p>
@@ -5501,7 +5505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables a specified application ClientPublicKey.</p>
+     * <p>Disables the specified application ClientPublicKey.</p>
      * 
      * @param request DisableClientPublicKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5545,7 +5549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables a specified application ClientPublicKey.</p>
+     * <p>Disables the specified application ClientPublicKey.</p>
      * 
      * @param request DisableClientPublicKeyRequest
      * @return DisableClientPublicKeyResponse
@@ -5557,7 +5561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables cloud account privileges.</p>
+     * <p>Disables the privileges of a cloud account.</p>
      * 
      * @param request DisableCloudAccountPrivilegeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5597,7 +5601,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables cloud account privileges.</p>
+     * <p>Disables the privileges of a cloud account.</p>
      * 
      * @param request DisableCloudAccountPrivilegeRequest
      * @return DisableCloudAccountPrivilegeResponse
@@ -5919,7 +5923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables a custom term.</p>
+     * <p>Disables custom terms.</p>
      * 
      * @param request DisableCustomPrivacyPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5955,7 +5959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables a custom term.</p>
+     * <p>Disables custom terms.</p>
      * 
      * @param request DisableCustomPrivacyPolicyRequest
      * @return DisableCustomPrivacyPolicyResponse
@@ -6019,7 +6023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables a federated trust source.</p>
+     * <p>Disables a federated credential provider.</p>
      * 
      * @param request DisableFederatedCredentialProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6055,7 +6059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables a federated trust source.</p>
+     * <p>Disables a federated credential provider.</p>
      * 
      * @param request DisableFederatedCredentialProviderRequest
      * @return DisableFederatedCredentialProviderResponse
@@ -6067,7 +6071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the advanced configuration.</p>
+     * <p>Disables advanced configuration.</p>
      * 
      * @param request DisableIdentityProviderAdvancedAbilityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6103,7 +6107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the advanced configuration.</p>
+     * <p>Disables advanced configuration.</p>
      * 
      * @param request DisableIdentityProviderAdvancedAbilityRequest
      * @return DisableIdentityProviderAdvancedAbilityResponse
@@ -6115,7 +6119,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that this operation may cause.</p>
+     * <p>When you change an application from the enabled state to the disabled state, all features of the application, such as SSO and account synchronization, become unavailable. Make sure that you are aware of the potential risks of this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Disables authentication.</p>
@@ -6154,7 +6158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that this operation may cause.</p>
+     * <p>When you change an application from the enabled state to the disabled state, all features of the application, such as SSO and account synchronization, become unavailable. Make sure that you are aware of the potential risks of this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Disables authentication.</p>
@@ -6261,7 +6265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the internal authentication source.</p>
+     * <p>Disables an internal authentication source.</p>
      * 
      * @param request DisableInternalAuthenticationSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6297,7 +6301,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the internal authentication source.</p>
+     * <p>Disables an internal authentication source.</p>
      * 
      * @param request DisableInternalAuthenticationSourceRequest
      * @return DisableInternalAuthenticationSourceResponse
@@ -6309,7 +6313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the custom subject feature for a specified resource server.</p>
+     * <p>Disables the custom subject capability of a specified resource server.</p>
      * 
      * @param request DisableResourceServerCustomSubjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6345,7 +6349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the custom subject feature for a specified resource server.</p>
+     * <p>Disables the custom subject capability of a specified resource server.</p>
      * 
      * @param request DisableResourceServerCustomSubjectRequest
      * @return DisableResourceServerCustomSubjectResponse
@@ -6659,7 +6663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the machine-to-machine (M2M) client feature for an application. This allows the application to act as a caller (an OAuth client) to access resources.</p>
+     * <p>Enables the machine-to-machine (M2M) client capability for an application. After this feature is enabled, the application can act as a caller (an OAuth client) to access resources.</p>
      * 
      * @param request EnableApplicationM2MClientRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6695,7 +6699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the machine-to-machine (M2M) client feature for an application. This allows the application to act as a caller (an OAuth client) to access resources.</p>
+     * <p>Enables the machine-to-machine (M2M) client capability for an application. After this feature is enabled, the application can act as a caller (an OAuth client) to access resources.</p>
      * 
      * @param request EnableApplicationM2MClientRequest
      * @return EnableApplicationM2MClientResponse
@@ -6755,7 +6759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the ResourceServer feature for a specified application.</p>
+     * <p>Enables the ResourceServer capability for a specified application.</p>
      * 
      * @param request EnableApplicationResourceServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6791,7 +6795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the ResourceServer feature for a specified application.</p>
+     * <p>Enables the ResourceServer capability for a specified application.</p>
      * 
      * @param request EnableApplicationResourceServerRequest
      * @return EnableApplicationResourceServerResponse
@@ -7113,7 +7117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables a cloud role under a specified cloud account.</p>
+     * <p>Enables a cloud role for a specified cloud account.</p>
      * 
      * @param request EnableCloudAccountRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7157,7 +7161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables a cloud role under a specified cloud account.</p>
+     * <p>Enables a cloud role for a specified cloud account.</p>
      * 
      * @param request EnableCloudAccountRoleRequest
      * @return EnableCloudAccountRoleResponse
@@ -7375,8 +7379,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;<strong>Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.</strong>
-     * &lt;props=&quot;intl&quot;&gt;<strong>Before using this operation, make sure that you fully understand the billing methods of IDaaS EIAM.</strong></p>
+     * <p>&lt;props=&quot;china&quot;&gt;<strong>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.</strong>
+     * &lt;props=&quot;intl&quot;&gt;<strong>Before calling this operation, make sure that you fully understand the billing methods of IDaaS EIAM.</strong></p>
      * 
      * <b>summary</b> : 
      * <p>Enables a field.</p>
@@ -7415,8 +7419,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;<strong>Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.</strong>
-     * &lt;props=&quot;intl&quot;&gt;<strong>Before using this operation, make sure that you fully understand the billing methods of IDaaS EIAM.</strong></p>
+     * <p>&lt;props=&quot;china&quot;&gt;<strong>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.</strong>
+     * &lt;props=&quot;intl&quot;&gt;<strong>Before calling this operation, make sure that you fully understand the billing methods of IDaaS EIAM.</strong></p>
      * 
      * <b>summary</b> : 
      * <p>Enables a field.</p>
@@ -7531,7 +7535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables a federated credential provider.</p>
+     * <p>Enables a federated trust source.</p>
      * 
      * @param request EnableFederatedCredentialProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7567,7 +7571,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables a federated credential provider.</p>
+     * <p>Enables a federated trust source.</p>
      * 
      * @param request EnableFederatedCredentialProviderRequest
      * @return EnableFederatedCredentialProviderResponse
@@ -7627,7 +7631,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the potential risks of this operation.</p>
+     * <p>When a conditional access policy is changed from the enabled state to the disabled state, the policy no longer blocks requests. Confirm that you are aware of the potential risks of this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables authentication.</p>
@@ -7666,7 +7670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the potential risks of this operation.</p>
+     * <p>When a conditional access policy is changed from the enabled state to the disabled state, the policy no longer blocks requests. Confirm that you are aware of the potential risks of this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables authentication.</p>
@@ -7821,7 +7825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the custom subject capability for a specified resource server. After the custom subject is enabled, the issued access token changes from <clientId> to <clientId>:&lt;client.activeSubjectUrn&gt;, where client.activeSubjectUrn is configured in the attribute mapping of the federated identity credential for the application.</p>
+     * <p>Enables the custom subject capability for a specified resource server. After the custom subject is enabled, the issued access token changes from <clientId> to <clientId>:&lt;client.activeSubjectUrn&gt;, where client.activeSubjectUrn is configured in the attribute mapping of the federated credential for the application.</p>
      * 
      * @param request EnableResourceServerCustomSubjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7857,7 +7861,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the custom subject capability for a specified resource server. After the custom subject is enabled, the issued access token changes from <clientId> to <clientId>:&lt;client.activeSubjectUrn&gt;, where client.activeSubjectUrn is configured in the attribute mapping of the federated identity credential for the application.</p>
+     * <p>Enables the custom subject capability for a specified resource server. After the custom subject is enabled, the issued access token changes from <clientId> to <clientId>:&lt;client.activeSubjectUrn&gt;, where client.activeSubjectUrn is configured in the attribute mapping of the federated credential for the application.</p>
      * 
      * @param request EnableResourceServerCustomSubjectRequest
      * @return EnableResourceServerCustomSubjectResponse
@@ -8079,7 +8083,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates a download URL for file import results.</p>
+     * <p>Generates the download URL for the file import result.</p>
      * 
      * @param request GenerateDownloadUrlForSynchronizationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8115,7 +8119,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates a download URL for file import results.</p>
+     * <p>Generates the download URL for the file import result.</p>
      * 
      * @param request GenerateDownloadUrlForSynchronizationJobRequest
      * @return GenerateDownloadUrlForSynchronizationJobResponse
@@ -8183,7 +8187,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains an access token for accessing a resource server by using a specified application as the client identity.</p>
+     * <p>Obtains an access token to access a resource server by using a specified application as the client identity.</p>
      * 
      * @param request GenerateOauthTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8243,7 +8247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains an access token for accessing a resource server by using a specified application as the client identity.</p>
+     * <p>Obtains an access token to access a resource server by using a specified application as the client identity.</p>
      * 
      * @param request GenerateOauthTokenRequest
      * @return GenerateOauthTokenResponse
@@ -8255,7 +8259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves upload authentication.</p>
+     * <p>Retrieves upload credentials.</p>
      * 
      * @param request GenerateUploadAuthRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8295,7 +8299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves upload authentication.</p>
+     * <p>Retrieves upload credentials.</p>
      * 
      * @param request GenerateUploadAuthRequest
      * @return GenerateUploadAuthResponse
@@ -8307,7 +8311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates a WebAuthn authenticator registration URL.</p>
+     * <p>Generates the WebAuthn authenticator registration URL.</p>
      * 
      * @param request GenerateWebAuthnAuthenticatorRegistrationUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8347,7 +8351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates a WebAuthn authenticator registration URL.</p>
+     * <p>Generates the WebAuthn authenticator registration URL.</p>
      * 
      * @param request GenerateWebAuthnAuthenticatorRegistrationUrlRequest
      * @return GenerateWebAuthnAuthenticatorRegistrationUrlResponse
@@ -8413,7 +8417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the advanced configuration of an application.</p>
+     * <p>Retrieves the advanced configurations of an application.</p>
      * 
      * @param request GetApplicationAdvancedConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8449,7 +8453,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the advanced configuration of an application.</p>
+     * <p>Retrieves the advanced configurations of an application.</p>
      * 
      * @param request GetApplicationAdvancedConfigRequest
      * @return GetApplicationAdvancedConfigResponse
@@ -8461,7 +8465,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the federated identity credential of an application.</p>
+     * <p>Retrieves an application federated credential.</p>
      * 
      * @param request GetApplicationFederatedCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8501,7 +8505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the federated identity credential of an application.</p>
+     * <p>Retrieves an application federated credential.</p>
      * 
      * @param request GetApplicationFederatedCredentialRequest
      * @return GetApplicationFederatedCredentialResponse
@@ -8805,7 +8809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves application template information.</p>
+     * <p>Retrieves the details of an application template.</p>
      * 
      * @param request GetApplicationTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8837,7 +8841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves application template information.</p>
+     * <p>Retrieves the details of an application template.</p>
      * 
      * @param request GetApplicationTemplateRequest
      * @return GetApplicationTemplateResponse
@@ -8849,7 +8853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an authorization resource.</p>
+     * <p>Queries the details of an authorization resource.</p>
      * 
      * @param request GetAuthorizationResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8889,7 +8893,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an authorization resource.</p>
+     * <p>Queries the details of an authorization resource.</p>
      * 
      * @param request GetAuthorizationResourceRequest
      * @return GetAuthorizationResourceResponse
@@ -8901,7 +8905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an authorization rule.</p>
+     * <p>Queries the details of an authorization rule.</p>
      * 
      * @param request GetAuthorizationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8937,7 +8941,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an authorization rule.</p>
+     * <p>Queries the details of an authorization rule.</p>
      * 
      * @param request GetAuthorizationRuleRequest
      * @return GetAuthorizationRuleResponse
@@ -9045,7 +9049,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the ClientPublicKey of a specified application.</p>
+     * <p>Queries the client public key of a specified application.</p>
      * 
      * @param request GetClientPublicKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9085,7 +9089,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the ClientPublicKey of a specified application.</p>
+     * <p>Queries the client public key of a specified application.</p>
      * 
      * @param request GetClientPublicKeyRequest
      * @return GetClientPublicKeyResponse
@@ -9145,7 +9149,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource information of a cloud role.</p>
+     * <p>Retrieves the details of a specified cloud account resource.</p>
+     * 
+     * @param request GetCloudAccountResourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCloudAccountResourceResponse
+     */
+    public GetCloudAccountResourceResponse getCloudAccountResourceWithOptions(GetCloudAccountResourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudAccountId)) {
+            query.put("CloudAccountId", request.cloudAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudAccountResourceId)) {
+            query.put("CloudAccountResourceId", request.cloudAccountResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCloudAccountResource"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCloudAccountResourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a specified cloud account resource.</p>
+     * 
+     * @param request GetCloudAccountResourceRequest
+     * @return GetCloudAccountResourceResponse
+     */
+    public GetCloudAccountResourceResponse getCloudAccountResource(GetCloudAccountResourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCloudAccountResourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a cloud role resource.</p>
      * 
      * @param request GetCloudAccountRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9185,7 +9241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource information of a cloud role.</p>
+     * <p>Queries the information about a cloud role resource.</p>
      * 
      * @param request GetCloudAccountRoleRequest
      * @return GetCloudAccountRoleResponse
@@ -9303,7 +9359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a credential resource.</p>
+     * <p>Queries the details of a credential resource.</p>
      * 
      * @param request GetCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9339,7 +9395,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a credential resource.</p>
+     * <p>Queries the details of a credential resource.</p>
      * 
      * @param request GetCredentialRequest
      * @return GetCredentialResponse
@@ -9447,7 +9503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the custom privacy policy.</p>
+     * <p>Retrieves a custom privacy policy.</p>
      * 
      * @param request GetCustomPrivacyPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9483,7 +9539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the custom privacy policy.</p>
+     * <p>Retrieves a custom privacy policy.</p>
      * 
      * @param request GetCustomPrivacyPolicyRequest
      * @return GetCustomPrivacyPolicyResponse
@@ -9683,7 +9739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询全局云账号系统角色权限模板</p>
+     * <p>Queries the permission template for the global cloud account system role.</p>
      * 
      * @param request GetGlobalCloudAccountSystemRolePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9708,7 +9764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询全局云账号系统角色权限模板</p>
+     * <p>Queries the permission template for the global cloud account system role.</p>
      * 
      * @param request GetGlobalCloudAccountSystemRolePolicyRequest
      * @return GetGlobalCloudAccountSystemRolePolicyResponse
@@ -9768,7 +9824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves an identity provider.</p>
+     * <p>Retrieves the identity provider.</p>
      * 
      * @param request GetIdentityProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9804,7 +9860,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves an identity provider.</p>
+     * <p>Retrieves the identity provider.</p>
      * 
      * @param request GetIdentityProviderRequest
      * @return GetIdentityProviderResponse
@@ -9816,7 +9872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves advanced configuration information.</p>
+     * <p>Retrieves the advanced configuration information.</p>
      * 
      * @param request GetIdentityProviderAdvancedConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9852,7 +9908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves advanced configuration information.</p>
+     * <p>Retrieves the advanced configuration information.</p>
      * 
      * @param request GetIdentityProviderAdvancedConfigurationRequest
      * @return GetIdentityProviderAdvancedConfigurationResponse
@@ -9964,7 +10020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve the IdP outbound synchronization configuration.</p>
+     * <p>Retrieves the outbound synchronization configuration of an IdP.</p>
      * 
      * @param request GetIdentityProviderUdPushConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10000,7 +10056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve the IdP outbound synchronization configuration.</p>
+     * <p>Retrieves the outbound synchronization configuration of an IdP.</p>
      * 
      * @param request GetIdentityProviderUdPushConfigurationRequest
      * @return GetIdentityProviderUdPushConfigurationResponse
@@ -10056,7 +10112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries instance control items.</p>
+     * <p>Queries the instance control elements.</p>
      * 
      * @param request GetInstanceControlConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10092,7 +10148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries instance control items.</p>
+     * <p>Queries the instance control elements.</p>
      * 
      * @param request GetInstanceControlConfigurationRequest
      * @return GetInstanceControlConfigurationResponse
@@ -10148,10 +10204,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that the instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</p>
+     * <p>Ensure that your current instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the license information that is currently effective for an instance.</p>
+     * <p>Queries the active license information of an instance.</p>
      * 
      * @param request GetInstanceLicenseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10183,10 +10239,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that the instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</p>
+     * <p>Ensure that your current instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the license information that is currently effective for an instance.</p>
+     * <p>Queries the active license information of an instance.</p>
      * 
      * @param request GetInstanceLicenseRequest
      * @return GetInstanceLicenseResponse
@@ -10246,7 +10302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the quota of a single type for an instance.</p>
+     * <p>Retrieves a single type of quota for an instance.</p>
      * 
      * @param request GetInstanceQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10282,7 +10338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the quota of a single type for an instance.</p>
+     * <p>Retrieves a single type of quota for an instance.</p>
      * 
      * @param request GetInstanceQuotaRequest
      * @return GetInstanceQuotaResponse
@@ -10338,6 +10394,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries resource synchronization tasks.</p>
+     * 
+     * @param request GetInventorySynchronizationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInventorySynchronizationJobResponse
+     */
+    public GetInventorySynchronizationJobResponse getInventorySynchronizationJobWithOptions(GetInventorySynchronizationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inventorySynchronizationJobId)) {
+            query.put("InventorySynchronizationJobId", request.inventorySynchronizationJobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetInventorySynchronizationJob"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInventorySynchronizationJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries resource synchronization tasks.</p>
+     * 
+     * @param request GetInventorySynchronizationJobRequest
+     * @return GetInventorySynchronizationJobResponse
+     */
+    public GetInventorySynchronizationJobResponse getInventorySynchronizationJob(GetInventorySynchronizationJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getInventorySynchronizationJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Sets the post-logon redirect application for a brand.</p>
      * 
      * @param request GetLoginRedirectApplicationForBrandRequest
@@ -10386,7 +10490,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specified network endpoint.</p>
+     * <p>Queries the details of a specified network access endpoint.</p>
      * 
      * @param request GetNetworkAccessEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10422,7 +10526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specified network endpoint.</p>
+     * <p>Queries the details of a specified network access endpoint.</p>
      * 
      * @param request GetNetworkAccessEndpointRequest
      * @return GetNetworkAccessEndpointResponse
@@ -10574,7 +10678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the password expiration policy of a specified EIAM instance.</p>
+     * <p>Queries the password expiration policy for a specified EIAM instance.</p>
      * 
      * @param request GetPasswordExpirationConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10606,7 +10710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the password expiration policy of a specified EIAM instance.</p>
+     * <p>Queries the password expiration policy for a specified EIAM instance.</p>
      * 
      * @param request GetPasswordExpirationConfigurationRequest
      * @return GetPasswordExpirationConfigurationResponse
@@ -10662,7 +10766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the password initialization policy of Employee Identity and Access Management (EIAM).</p>
+     * <p>Queries the EIAM password initialization policy.</p>
      * 
      * @param request GetPasswordInitializationConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10694,7 +10798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the password initialization policy of Employee Identity and Access Management (EIAM).</p>
+     * <p>Queries the EIAM password initialization policy.</p>
      * 
      * @param request GetPasswordInitializationConfigurationRequest
      * @return GetPasswordInitializationConfigurationResponse
@@ -10706,7 +10810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the scope permissions under a specified ResourceServer.</p>
+     * <p>Queries the scope permissions of a specified resource server.</p>
      * 
      * @param request GetResourceServerScopeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10746,7 +10850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the scope permissions under a specified ResourceServer.</p>
+     * <p>Queries the scope permissions of a specified resource server.</p>
      * 
      * @param request GetResourceServerScopeRequest
      * @return GetResourceServerScopeResponse
@@ -10894,10 +10998,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries a trusted origin in a specified EIAM instance.</p>
+     * <p>Queries the trusted origins in a specified EIAM instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a trusted origin in a specified EIAM instance.</p>
+     * <p>Queries the trusted origins in a specified EIAM instance.</p>
      * 
      * @param request GetTrustedOriginRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10933,10 +11037,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries a trusted origin in a specified EIAM instance.</p>
+     * <p>Queries the trusted origins in a specified EIAM instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a trusted origin in a specified EIAM instance.</p>
+     * <p>Queries the trusted origins in a specified EIAM instance.</p>
      * 
      * @param request GetTrustedOriginRequest
      * @return GetTrustedOriginResponse
@@ -10996,7 +11100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>View the list of invocation events.</p>
+     * <p>Lists invocation events.</p>
      * 
      * @param request ListActionTrackEventTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11040,7 +11144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>View the list of invocation events.</p>
+     * <p>Lists invocation events.</p>
      * 
      * @param request ListActionTrackEventTypesRequest
      * @return ListActionTrackEventTypesResponse
@@ -11052,7 +11156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries application accounts under an application by paging.</p>
+     * <p>Queries the list of application accounts for an application by using paging.</p>
      * 
      * @param request ListApplicationAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11096,7 +11200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries application accounts under an application by paging.</p>
+     * <p>Queries the list of application accounts for an application by using paging.</p>
      * 
      * @param request ListApplicationAccountsRequest
      * @return ListApplicationAccountsResponse
@@ -11108,10 +11212,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the direct permissions of the organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * <p>This operation queries only the direct permissions of the organization, which are the applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries all accounts of a specified user in the current application.</p>
+     * <p>Queries all accounts of a specified user under the current application.</p>
      * 
      * @param request ListApplicationAccountsForUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11151,10 +11255,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the direct permissions of the organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * <p>This operation queries only the direct permissions of the organization, which are the applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries all accounts of a specified user in the current application.</p>
+     * <p>Queries all accounts of a specified user under the current application.</p>
      * 
      * @param request ListApplicationAccountsForUserRequest
      * @return ListApplicationAccountsForUserResponse
@@ -11214,7 +11318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of application federated identity credentials.</p>
+     * <p>Queries the list of application federated credentials.</p>
      * 
      * @param request ListApplicationFederatedCredentialsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11266,7 +11370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of application federated identity credentials.</p>
+     * <p>Queries the list of application federated credentials.</p>
      * 
      * @param request ListApplicationFederatedCredentialsRequest
      * @return ListApplicationFederatedCredentialsResponse
@@ -11338,7 +11442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of application roles using a cursor.</p>
+     * <p>Queries a list of application roles by using a cursor.</p>
      * 
      * @param request ListApplicationRolesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11386,7 +11490,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of application roles using a cursor.</p>
+     * <p>Queries a list of application roles by using a cursor.</p>
      * 
      * @param request ListApplicationRolesRequest
      * @return ListApplicationRolesResponse
@@ -11398,7 +11502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of account synchronization types supported by an application.</p>
+     * <p>Queries the account synchronization types supported by an application.</p>
      * 
      * @param request ListApplicationSupportedProvisionProtocolTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11434,7 +11538,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of account synchronization types supported by an application.</p>
+     * <p>Queries the account synchronization types supported by an application.</p>
      * 
      * @param request ListApplicationSupportedProvisionProtocolTypesRequest
      * @return ListApplicationSupportedProvisionProtocolTypesResponse
@@ -11446,7 +11550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of application tokens.</p>
+     * <p>Retrieves a list of application tokens.</p>
      * 
      * @param request ListApplicationTokensRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11486,7 +11590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of application tokens.</p>
+     * <p>Retrieves a list of application tokens.</p>
      * 
      * @param request ListApplicationTokensRequest
      * @return ListApplicationTokensResponse
@@ -11498,7 +11602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about one or more EIAM applications by using paging.</p>
+     * <p>Queries the information of one or more EIAM applications by using paging.</p>
      * 
      * @param request ListApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11590,7 +11694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about one or more EIAM applications by using paging.</p>
+     * <p>Queries the information of one or more EIAM applications by using paging.</p>
      * 
      * @param request ListApplicationsRequest
      * @return ListApplicationsResponse
@@ -11662,7 +11766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of applications accessible to an EIAM group.</p>
+     * <p>Queries the list of applications that an EIAM group can access.</p>
      * 
      * @param request ListApplicationsForGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11710,7 +11814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of applications accessible to an EIAM group.</p>
+     * <p>Queries the list of applications that an EIAM group can access.</p>
      * 
      * @param request ListApplicationsForGroupRequest
      * @return ListApplicationsForGroupResponse
@@ -11722,7 +11826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves application information under a network access endpoint.</p>
+     * <p>Retrieves the applications associated with a network access endpoint.</p>
      * 
      * @param request ListApplicationsForNetworkAccessEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11766,7 +11870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves application information under a network access endpoint.</p>
+     * <p>Retrieves the applications associated with a network access endpoint.</p>
      * 
      * @param request ListApplicationsForNetworkAccessEndpointRequest
      * @return ListApplicationsForNetworkAccessEndpointResponse
@@ -11838,10 +11942,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the direct permissions of the organization, which are applications directly assigned to the organization. When you call this operation, you can filter applications by using the <strong>ApplicationIds</strong> parameter.</p>
+     * <p>This operation queries only the direct permissions of the organizational unit, which are the applications directly assigned to the organizational unit. When you call this operation, you can filter applications by using the <strong>ApplicationIds</strong> parameter.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query for the list of applications accessible to an EIAM organization. The returned results include application IDs. To obtain detailed application information, call the GetApplication operation.</p>
+     * <p>Invokes the ListApplicationsForOrganizationalUnit operation to query a list of applications accessible to an EIAM organizational unit by using paging. The returned result includes application IDs. To obtain detailed application information, invoke the GetApplication operation.</p>
      * 
      * @param request ListApplicationsForOrganizationalUnitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11889,10 +11993,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the direct permissions of the organization, which are applications directly assigned to the organization. When you call this operation, you can filter applications by using the <strong>ApplicationIds</strong> parameter.</p>
+     * <p>This operation queries only the direct permissions of the organizational unit, which are the applications directly assigned to the organizational unit. When you call this operation, you can filter applications by using the <strong>ApplicationIds</strong> parameter.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query for the list of applications accessible to an EIAM organization. The returned results include application IDs. To obtain detailed application information, call the GetApplication operation.</p>
+     * <p>Invokes the ListApplicationsForOrganizationalUnit operation to query a list of applications accessible to an EIAM organizational unit by using paging. The returned result includes application IDs. To obtain detailed application information, invoke the GetApplication operation.</p>
      * 
      * @param request ListApplicationsForOrganizationalUnitRequest
      * @return ListApplicationsForOrganizationalUnitResponse
@@ -11904,7 +12008,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the applications that an EIAM account can access and returns a paginated list of application IDs. To retrieve detailed information about a specific application, call the GetApplication operation.</p>
+     * <p>Calls the ListApplicationsForUser operation to perform a paging query on the list of applications accessible to an EIAM account. The response includes application IDs. To obtain detailed application information, call the GetApplication operation.</p>
      * 
      * @param request ListApplicationsForUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11956,7 +12060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the applications that an EIAM account can access and returns a paginated list of application IDs. To retrieve detailed information about a specific application, call the GetApplication operation.</p>
+     * <p>Calls the ListApplicationsForUser operation to perform a paging query on the list of applications accessible to an EIAM account. The response includes application IDs. To obtain detailed application information, call the GetApplication operation.</p>
      * 
      * @param request ListApplicationsForUserRequest
      * @return ListApplicationsForUserResponse
@@ -12366,7 +12470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of ClientPublicKeys for a specified application by using a cursor.</p>
+     * <p>Queries the ClientPublicKeys of a specified application by using a cursor.</p>
      * 
      * @param request ListClientPublicKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12410,7 +12514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of ClientPublicKeys for a specified application by using a cursor.</p>
+     * <p>Queries the ClientPublicKeys of a specified application by using a cursor.</p>
      * 
      * @param request ListClientPublicKeysRequest
      * @return ListClientPublicKeysResponse
@@ -12422,7 +12526,139 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about one or more cloud roles by using paging.</p>
+     * <p>Invokes ListCloudAccountResources to perform a paged query for cloud account resources with paging.</p>
+     * 
+     * @param request ListCloudAccountResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCloudAccountResourcesResponse
+     */
+    public ListCloudAccountResourcesResponse listCloudAccountResourcesWithOptions(ListCloudAccountResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudAccountId)) {
+            query.put("CloudAccountId", request.cloudAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudAccountResourceEntityType)) {
+            query.put("CloudAccountResourceEntityType", request.cloudAccountResourceEntityType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudAccountResourceNameContains)) {
+            query.put("CloudAccountResourceNameContains", request.cloudAccountResourceNameContains);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudAccountResourceNamePrefix)) {
+            query.put("CloudAccountResourceNamePrefix", request.cloudAccountResourceNamePrefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCloudAccountResources"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCloudAccountResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Invokes ListCloudAccountResources to perform a paged query for cloud account resources with paging.</p>
+     * 
+     * @param request ListCloudAccountResourcesRequest
+     * @return ListCloudAccountResourcesResponse
+     */
+    public ListCloudAccountResourcesResponse listCloudAccountResources(ListCloudAccountResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCloudAccountResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of cloud account resources associated with a specified cloud permission template by using a paging query.</p>
+     * 
+     * @param request ListCloudAccountResourcesForCloudPermissionTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCloudAccountResourcesForCloudPermissionTemplateResponse
+     */
+    public ListCloudAccountResourcesForCloudPermissionTemplateResponse listCloudAccountResourcesForCloudPermissionTemplateWithOptions(ListCloudAccountResourcesForCloudPermissionTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudAccountId)) {
+            query.put("CloudAccountId", request.cloudAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudAccountResourceEntityType)) {
+            query.put("CloudAccountResourceEntityType", request.cloudAccountResourceEntityType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudPermissionTemplateId)) {
+            query.put("CloudPermissionTemplateId", request.cloudPermissionTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCloudAccountResourcesForCloudPermissionTemplate"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCloudAccountResourcesForCloudPermissionTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of cloud account resources associated with a specified cloud permission template by using a paging query.</p>
+     * 
+     * @param request ListCloudAccountResourcesForCloudPermissionTemplateRequest
+     * @return ListCloudAccountResourcesForCloudPermissionTemplateResponse
+     */
+    public ListCloudAccountResourcesForCloudPermissionTemplateResponse listCloudAccountResourcesForCloudPermissionTemplate(ListCloudAccountResourcesForCloudPermissionTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCloudAccountResourcesForCloudPermissionTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information of one or more cloud roles by using paging.</p>
      * 
      * @param request ListCloudAccountRolesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12470,7 +12706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about one or more cloud roles by using paging.</p>
+     * <p>Queries the information of one or more cloud roles by using paging.</p>
      * 
      * @param request ListCloudAccountRolesRequest
      * @return ListCloudAccountRolesResponse
@@ -12482,7 +12718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about one or more cloud accounts by using paging.</p>
+     * <p>Queries the information about one or more cloud accounts by using paging.</p>
      * 
      * @param request ListCloudAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12526,7 +12762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about one or more cloud accounts by using paging.</p>
+     * <p>Queries the information about one or more cloud accounts by using paging.</p>
      * 
      * @param request ListCloudAccountsRequest
      * @return ListCloudAccountsResponse
@@ -12538,7 +12774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of one or more permission templates by using a paging query.</p>
+     * <p>Performs a paged query to retrieve the information of one or more permission templates. This operation supports paging.</p>
      * 
      * @param request ListCloudPermissionTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12598,7 +12834,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of one or more permission templates by using a paging query.</p>
+     * <p>Performs a paged query to retrieve the information of one or more permission templates. This operation supports paging.</p>
      * 
      * @param request ListCloudPermissionTemplatesRequest
      * @return ListCloudPermissionTemplatesResponse
@@ -12672,7 +12908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of conditional access policies associated with an application.</p>
+     * <p>Retrieves the conditional access policies associated with an application.</p>
      * 
      * @param request ListConditionalAccessPoliciesForApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12708,7 +12944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of conditional access policies associated with an application.</p>
+     * <p>Retrieves the conditional access policies associated with an application.</p>
      * 
      * @param request ListConditionalAccessPoliciesForApplicationRequest
      * @return ListConditionalAccessPoliciesForApplicationResponse
@@ -12774,7 +13010,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of conditional access policies associated with a user.</p>
+     * <p>Retrieves the conditional access policies associated with a user.</p>
      * 
      * @param request ListConditionalAccessPoliciesForUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12810,7 +13046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of conditional access policies associated with a user.</p>
+     * <p>Retrieves the conditional access policies associated with a user.</p>
      * 
      * @param request ListConditionalAccessPoliciesForUserRequest
      * @return ListConditionalAccessPoliciesForUserResponse
@@ -13263,7 +13499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists events.</p>
+     * <p>Queries the event list.</p>
      * 
      * @param request ListEventTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13299,7 +13535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists events.</p>
+     * <p>Queries the event list.</p>
      * 
      * @param request ListEventTypesRequest
      * @return ListEventTypesResponse
@@ -13311,7 +13547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of federated trust sources.</p>
+     * <p>Queries federated trust sources.</p>
      * 
      * @param request ListFederatedCredentialProvidersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13363,7 +13599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of federated trust sources.</p>
+     * <p>Queries federated trust sources.</p>
      * 
      * @param request ListFederatedCredentialProvidersRequest
      * @return ListFederatedCredentialProvidersResponse
@@ -13443,7 +13679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query on the list of groups with authorization to access an application. The response includes group IDs and supports paging. To obtain detailed group information, invoke the GetGroup operation.</p>
+     * <p>Performs a paging query on the list of groups that are authorized to access an application. The response includes group IDs. To obtain detailed group information, call the GetGroup operation.</p>
      * 
      * @param request ListGroupsForApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13495,7 +13731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query on the list of groups with authorization to access an application. The response includes group IDs and supports paging. To obtain detailed group information, invoke the GetGroup operation.</p>
+     * <p>Performs a paging query on the list of groups that are authorized to access an application. The response includes group IDs. To obtain detailed group information, call the GetGroup operation.</p>
      * 
      * @param request ListGroupsForApplicationRequest
      * @return ListGroupsForApplicationResponse
@@ -13567,7 +13803,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the scopes authorized for groups on a specified resource server. This operation supports cursor-based pagination.</p>
+     * <p>Queries the scopes authorized to groups for the current resource server by using a cursor.</p>
      * 
      * @param request ListGroupsForResourceServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13619,7 +13855,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the scopes authorized for groups on a specified resource server. This operation supports cursor-based pagination.</p>
+     * <p>Queries the scopes authorized to groups for the current resource server by using a cursor.</p>
      * 
      * @param request ListGroupsForResourceServerRequest
      * @return ListGroupsForResourceServerResponse
@@ -13687,7 +13923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of identity providers.</p>
+     * <p>Queries the list of identity providers.</p>
      * 
      * @param request ListIdentityProvidersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13731,7 +13967,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of identity providers.</p>
+     * <p>Queries the list of identity providers.</p>
      * 
      * @param request ListIdentityProvidersRequest
      * @return ListIdentityProvidersResponse
@@ -13743,7 +13979,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the IdP information for a network access endpoint.</p>
+     * <p>Retrieves the identity provider (IdP) information for a network access endpoint.</p>
      * 
      * @param request ListIdentityProvidersForNetworkAccessEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13787,7 +14023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the IdP information for a network access endpoint.</p>
+     * <p>Retrieves the identity provider (IdP) information for a network access endpoint.</p>
      * 
      * @param request ListIdentityProvidersForNetworkAccessEndpointRequest
      * @return ListIdentityProvidersForNetworkAccessEndpointResponse
@@ -13867,6 +14103,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListInstancesResponse listInstances(ListInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can use one of the following two methods to view the returned data:</p>
+     * <ul>
+     * <li>Method 1: When querying the first page during paging in a paged query, you only need to apply the Settings for MaxResults to limit the number of returned entries. The NextToken value in the response is used as the token to query the next page. When querying subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response, and apply the Settings for MaxResults to limit the number of returned entries. If there are no more pages, NextToken is not returned. The maximum value of MaxResults is 100.</li>
+     * <li>Method 2: Use the PageSize Settings to specify the number of entries returned per page during paging, and use the PageNumber Settings to specify the page number.
+     * You can use only one of the two methods. Method 1 is recommended when a large number of entries are returned. If the Settings for MaxResults or NextToken are applied, the PageSize and PageNumber request parameters become invalid.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries resource synchronization tasks.</p>
+     * 
+     * @param request ListInventorySynchronizationJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInventorySynchronizationJobsResponse
+     */
+    public ListInventorySynchronizationJobsResponse listInventorySynchronizationJobsWithOptions(ListInventorySynchronizationJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inventorySourceIds)) {
+            query.put("InventorySourceIds", request.inventorySourceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInventorySynchronizationJobs"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInventorySynchronizationJobsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can use one of the following two methods to view the returned data:</p>
+     * <ul>
+     * <li>Method 1: When querying the first page during paging in a paged query, you only need to apply the Settings for MaxResults to limit the number of returned entries. The NextToken value in the response is used as the token to query the next page. When querying subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response, and apply the Settings for MaxResults to limit the number of returned entries. If there are no more pages, NextToken is not returned. The maximum value of MaxResults is 100.</li>
+     * <li>Method 2: Use the PageSize Settings to specify the number of entries returned per page during paging, and use the PageNumber Settings to specify the page number.
+     * You can use only one of the two methods. Method 1 is recommended when a large number of entries are returned. If the Settings for MaxResults or NextToken are applied, the PageSize and PageNumber request parameters become invalid.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries resource synchronization tasks.</p>
+     * 
+     * @param request ListInventorySynchronizationJobsRequest
+     * @return ListInventorySynchronizationJobsResponse
+     */
+    public ListInventorySynchronizationJobsResponse listInventorySynchronizationJobs(ListInventorySynchronizationJobsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listInventorySynchronizationJobsWithOptions(request, runtime);
     }
 
     /**
@@ -14172,7 +14492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query for EIAM organizational units.</p>
+     * <p>Queries EIAM organizational units by using paging.</p>
      * 
      * @param request ListOrganizationalUnitsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14228,7 +14548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query for EIAM organizational units.</p>
+     * <p>Queries EIAM organizational units by using paging.</p>
      * 
      * @param request ListOrganizationalUnitsRequest
      * @return ListOrganizationalUnitsResponse
@@ -14240,7 +14560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query for the list of organizational units that an application is authorized to access. The returned result includes the organizational unit IDs. To obtain detailed information about an organizational unit, call the GetOrganizationalUnit operation.</p>
+     * <p>Calls the ListOrganizationalUnitsForApplication operation to query the list of organizational units that an application is authorized to access by using paging. The response includes organizational unit IDs. To obtain detailed information about an organizational unit, call the GetOrganizationalUnit operation.</p>
      * 
      * @param request ListOrganizationalUnitsForApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14292,7 +14612,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query for the list of organizational units that an application is authorized to access. The returned result includes the organizational unit IDs. To obtain detailed information about an organizational unit, call the GetOrganizationalUnit operation.</p>
+     * <p>Calls the ListOrganizationalUnitsForApplication operation to query the list of organizational units that an application is authorized to access by using paging. The response includes organizational unit IDs. To obtain detailed information about an organizational unit, call the GetOrganizationalUnit operation.</p>
      * 
      * @param request ListOrganizationalUnitsForApplicationRequest
      * @return ListOrganizationalUnitsForApplicationResponse
@@ -14304,7 +14624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of scope permissions that the current ResourceServer has authorized to organizational units by using a cursor-based pagination method.</p>
+     * <p>Queries the list of scopes authorized by the current resource server to organizations by using a cursor.</p>
      * 
      * @param request ListOrganizationalUnitsForResourceServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14356,7 +14676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of scope permissions that the current ResourceServer has authorized to organizational units by using a cursor-based pagination method.</p>
+     * <p>Queries the list of scopes authorized by the current resource server to organizations by using a cursor.</p>
      * 
      * @param request ListOrganizationalUnitsForResourceServerRequest
      * @return ListOrganizationalUnitsForResourceServerResponse
@@ -14401,7 +14721,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of scope permissions under a specified ResourceServer by using a cursor.</p>
+     * <p>Queries the scope permissions of a specified resource server by using a cursor.</p>
      * 
      * @param request ListResourceServerScopesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14469,7 +14789,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of scope permissions under a specified ResourceServer by using a cursor.</p>
+     * <p>Queries the scope permissions of a specified resource server by using a cursor.</p>
      * 
      * @param request ListResourceServerScopesRequest
      * @return ListResourceServerScopesResponse
@@ -14481,7 +14801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of ResourceServer and Scope permissions granted to the current account by using a cursor-based approach.</p>
+     * <p>Queries the list of ResourceServer and Scope permissions granted to the current account by using a cursor.</p>
      * 
      * @param request ListResourceServersForUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14529,7 +14849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of ResourceServer and Scope permissions granted to the current account by using a cursor-based approach.</p>
+     * <p>Queries the list of ResourceServer and Scope permissions granted to the current account by using a cursor.</p>
      * 
      * @param request ListResourceServersForUserRequest
      * @return ListResourceServersForUserResponse
@@ -14541,11 +14861,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can view the returned data in one of the following ways:</p>
+     * <p>You can use one of the following methods to view the returned data:</p>
      * <ul>
-     * <li>Method 1: When performing a paged query for the first page, specify only MaxResults to limit the number of entries to return. The NextToken value in the response is used as the token to query the next page. When querying subsequent pages, set the NextToken parameter to the value obtained from the previous response and specify MaxResults to limit the number of entries to return. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</li>
-     * <li>Method 2: Use PageSize to specify the number of entries to return per page, and use PageNumber to specify the page number.
-     * You can use only one of the preceding methods. Method 1 is recommended when a large number of entries are returned. If you specify MaxResults or NextToken, the PageSize and PageNumber request parameters become invalid.</li>
+     * <li>Method 1: When using paging in a paged query for the first page, you only need to configure the Settings for MaxResults to limit the number of returned entries. The NextToken in the response is used as the token for querying the next page. When querying subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response as the query token, and configure the Settings for MaxResults to limit the number of returned entries. If there is no next page, NextToken is not returned. The maximum value of MaxResults is 100.</li>
+     * <li>Method 2: Specify the Settings for PageSize to determine the number of entries returned per page during paging, and specify the Settings for PageNumber to determine the page number.
+     * You can use only one of the two methods. When a large number of entries are returned, Method 1 is recommended. If the Settings for MaxResults or NextToken are configured, the PageSize and PageNumber request parameters become invalid.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -14625,11 +14945,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can view the returned data in one of the following ways:</p>
+     * <p>You can use one of the following methods to view the returned data:</p>
      * <ul>
-     * <li>Method 1: When performing a paged query for the first page, specify only MaxResults to limit the number of entries to return. The NextToken value in the response is used as the token to query the next page. When querying subsequent pages, set the NextToken parameter to the value obtained from the previous response and specify MaxResults to limit the number of entries to return. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</li>
-     * <li>Method 2: Use PageSize to specify the number of entries to return per page, and use PageNumber to specify the page number.
-     * You can use only one of the preceding methods. Method 1 is recommended when a large number of entries are returned. If you specify MaxResults or NextToken, the PageSize and PageNumber request parameters become invalid.</li>
+     * <li>Method 1: When using paging in a paged query for the first page, you only need to configure the Settings for MaxResults to limit the number of returned entries. The NextToken in the response is used as the token for querying the next page. When querying subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response as the query token, and configure the Settings for MaxResults to limit the number of returned entries. If there is no next page, NextToken is not returned. The maximum value of MaxResults is 100.</li>
+     * <li>Method 2: Specify the Settings for PageSize to determine the number of entries returned per page during paging, and specify the Settings for PageNumber to determine the page number.
+     * You can use only one of the two methods. When a large number of entries are returned, Method 1 is recommended. If the Settings for MaxResults or NextToken are configured, the PageSize and PageNumber request parameters become invalid.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -14645,10 +14965,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of trusted origins in a specified EIAM instance.</p>
+     * <p>Queries the trusted origins in a specified EIAM instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of trusted origins in a specified Employees Identity and Access Management (EIAM) instance.</p>
+     * <p>Queries the trusted origins in a specified EIAM instance.</p>
      * 
      * @param request ListTrustedOriginsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14704,10 +15024,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of trusted origins in a specified EIAM instance.</p>
+     * <p>Queries the trusted origins in a specified EIAM instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of trusted origins in a specified Employees Identity and Access Management (EIAM) instance.</p>
+     * <p>Queries the trusted origins in a specified EIAM instance.</p>
      * 
      * @param request ListTrustedOriginsRequest
      * @return ListTrustedOriginsResponse
@@ -14722,7 +15042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation queries only the direct permissions of an organization, namely the applications directly assigned to the organization. When you call this operation, you can filter applications by using the <strong>ApplicationIds</strong> parameter.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the binding relationships of third-party logon accounts.</p>
+     * <p>Queries the bindings of third-party logon accounts.</p>
      * 
      * @param request ListUserAuthnSourceMappingsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14781,7 +15101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation queries only the direct permissions of an organization, namely the applications directly assigned to the organization. When you call this operation, you can filter applications by using the <strong>ApplicationIds</strong> parameter.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the binding relationships of third-party logon accounts.</p>
+     * <p>Queries the bindings of third-party logon accounts.</p>
      * 
      * @param request ListUserAuthnSourceMappingsRequest
      * @return ListUserAuthnSourceMappingsResponse
@@ -14793,10 +15113,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the direct permissions of an organization, which are the applications directly assigned to the organization. When you call this operation, you can filter applications by using the <strong>ApplicationIds</strong> parameter.</p>
+     * <p>This operation queries only the direct permissions of the organization, which are the applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query of EIAM account information.</p>
+     * <p>Queries EIAM account information by using paging.</p>
      * 
      * @param request ListUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14888,10 +15208,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries only the direct permissions of an organization, which are the applications directly assigned to the organization. When you call this operation, you can filter applications by using the <strong>ApplicationIds</strong> parameter.</p>
+     * <p>This operation queries only the direct permissions of the organization, which are the applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a paging query of EIAM account information.</p>
+     * <p>Queries EIAM account information by using paging.</p>
      * 
      * @param request ListUsersRequest
      * @return ListUsersResponse
@@ -14903,7 +15223,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query to retrieve the list of accounts authorized to access an application. The response includes account IDs. To obtain detailed account information, call the GetUser operation.</p>
+     * <p>Invokes the ListUsersForApplication operation to perform a paging query on the list of accounts authorized to access an application. The response includes account IDs. To obtain detailed account information, invoke the GetUser operation.</p>
      * 
      * @param request ListUsersForApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14955,7 +15275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query to retrieve the list of accounts authorized to access an application. The response includes account IDs. To obtain detailed account information, call the GetUser operation.</p>
+     * <p>Invokes the ListUsersForApplication operation to perform a paging query on the list of accounts authorized to access an application. The response includes account IDs. To obtain detailed account information, invoke the GetUser operation.</p>
      * 
      * @param request ListUsersForApplicationRequest
      * @return ListUsersForApplicationResponse
@@ -15027,7 +15347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the users in a specified EIAM account group.</p>
+     * <p>Queries the accounts in a specified EIAM account group.</p>
      * 
      * @param request ListUsersForGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15075,7 +15395,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the users in a specified EIAM account group.</p>
+     * <p>Queries the accounts in a specified EIAM account group.</p>
      * 
      * @param request ListUsersForGroupRequest
      * @return ListUsersForGroupResponse
@@ -15087,7 +15407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of scope permissions that the current ResourceServer has granted to accounts by using a cursor-based pagination method.</p>
+     * <p>Queries the scopes authorized by the current resource server to accounts by using a cursor.</p>
      * 
      * @param request ListUsersForResourceServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15139,7 +15459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of scope permissions that the current ResourceServer has granted to accounts by using a cursor-based pagination method.</p>
+     * <p>Queries the scopes authorized by the current resource server to accounts by using a cursor.</p>
      * 
      * @param request ListUsersForResourceServerRequest
      * @return ListUsersForResourceServerResponse
@@ -15203,10 +15523,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that may be caused by this operation.</p>
+     * <p>When an application is changed from the enabled state to the disabled state, all features of the application, such as SSO and account synchronization, become unavailable. Make sure that you are aware of the potential risks of this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a specified application token.</p>
+     * <p>Queries the specified application token.</p>
      * 
      * @param request ObtainApplicationTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15246,10 +15566,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that may be caused by this operation.</p>
+     * <p>When an application is changed from the enabled state to the disabled state, all features of the application, such as SSO and account synchronization, become unavailable. Make sure that you are aware of the potential risks of this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a specified application token.</p>
+     * <p>Queries the specified application token.</p>
      * 
      * @param request ObtainApplicationTokenRequest
      * @return ObtainApplicationTokenResponse
@@ -15361,10 +15681,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation only queries the direct permissions of the organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * <p>This operation retrieves only the direct permissions of the organization, which are the applications directly assigned to the organization. When you call this operation, you can filter applications by using the <strong>ApplicationIds</strong> parameter.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an application account of a specified employee under the current application.</p>
+     * <p>Deletes the application account of a specified employee under the current application.</p>
      * 
      * @param request RemoveApplicationAccountFromUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15408,10 +15728,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation only queries the direct permissions of the organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * <p>This operation retrieves only the direct permissions of the organization, which are the applications directly assigned to the organization. When you call this operation, you can filter applications by using the <strong>ApplicationIds</strong> parameter.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an application account of a specified employee under the current application.</p>
+     * <p>Deletes the application account of a specified employee under the current application.</p>
      * 
      * @param request RemoveApplicationAccountFromUserRequest
      * @return RemoveApplicationAccountFromUserResponse
@@ -15475,7 +15795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes custom terms associated with a brand.</p>
+     * <p>Removes custom privacy policies associated with a brand.</p>
      * 
      * @param request RemoveCustomPrivacyPoliciesFromBrandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15515,7 +15835,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes custom terms associated with a brand.</p>
+     * <p>Removes custom privacy policies associated with a brand.</p>
      * 
      * @param request RemoveCustomPrivacyPoliciesFromBrandRequest
      * @return RemoveCustomPrivacyPoliciesFromBrandResponse
@@ -15735,7 +16055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews a Free Edition instance.</p>
+     * <p>Renews the Free Edition.</p>
      * 
      * @param request RenewFreeLicenseEndTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15767,7 +16087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews a Free Edition instance.</p>
+     * <p>Renews the Free Edition.</p>
      * 
      * @param request RenewFreeLicenseEndTimeRequest
      * @return RenewFreeLicenseEndTimeResponse
@@ -15779,7 +16099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes application access permissions for multiple EIAM groups.</p>
+     * <p>Revokes access to an application for multiple EIAM groups in batches.</p>
      * 
      * @param request RevokeApplicationFromGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15823,7 +16143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes application access permissions for multiple EIAM groups.</p>
+     * <p>Revokes access to an application for multiple EIAM groups in batches.</p>
      * 
      * @param request RevokeApplicationFromGroupsRequest
      * @return RevokeApplicationFromGroupsResponse
@@ -15891,7 +16211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes access to an application for multiple EIAM accounts.</p>
+     * <p>Revokes the access permissions of multiple EIAM accounts to an application.</p>
      * 
      * @param request RevokeApplicationFromUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15935,7 +16255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes access to an application for multiple EIAM accounts.</p>
+     * <p>Revokes the access permissions of multiple EIAM accounts to an application.</p>
      * 
      * @param request RevokeApplicationFromUsersRequest
      * @return RevokeApplicationFromUsersResponse
@@ -15947,7 +16267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes the authorization granted by a specified ResourceServer to a Client application.</p>
+     * <p>Revokes the authorization granted by a specified resource server to a client application.</p>
      * 
      * @param request RevokeResourceServerFromClientRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15987,7 +16307,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes the authorization granted by a specified ResourceServer to a Client application.</p>
+     * <p>Revokes the authorization granted by a specified resource server to a client application.</p>
      * 
      * @param request RevokeResourceServerFromClientRequest
      * @return RevokeResourceServerFromClientResponse
@@ -15999,7 +16319,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes the Scope permissions of a specified ResourceServer from a Client application.</p>
+     * <p>Revokes the authorization granted to a client application for scope permissions under a specified resource server.</p>
      * 
      * @param request RevokeResourceServerScopesFromClientRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16043,7 +16363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes the Scope permissions of a specified ResourceServer from a Client application.</p>
+     * <p>Revokes the authorization granted to a client application for scope permissions under a specified resource server.</p>
      * 
      * @param request RevokeResourceServerScopesFromClientRequest
      * @return RevokeResourceServerScopesFromClientResponse
@@ -16055,7 +16375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes the authorization of Scope permissions under a specified ResourceServer from a group.</p>
+     * <p>Revokes the authorization of scope permissions under a specified resource server for a group.</p>
      * 
      * @param request RevokeResourceServerScopesFromGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16099,7 +16419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes the authorization of Scope permissions under a specified ResourceServer from a group.</p>
+     * <p>Revokes the authorization of scope permissions under a specified resource server for a group.</p>
      * 
      * @param request RevokeResourceServerScopesFromGroupRequest
      * @return RevokeResourceServerScopesFromGroupResponse
@@ -16111,7 +16431,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes the authorization of Scope permissions under a specified ResourceServer from an organizational unit.</p>
+     * <p>Revokes the authorization of scope permissions under a specified resource server for an organization.</p>
      * 
      * @param request RevokeResourceServerScopesFromOrganizationalUnitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16155,7 +16475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes the authorization of Scope permissions under a specified ResourceServer from an organizational unit.</p>
+     * <p>Revokes the authorization of scope permissions under a specified resource server for an organization.</p>
      * 
      * @param request RevokeResourceServerScopesFromOrganizationalUnitRequest
      * @return RevokeResourceServerScopesFromOrganizationalUnitResponse
@@ -16167,7 +16487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes the Scope permissions under a specified ResourceServer from an account.</p>
+     * <p>Revokes the authorization of scope permissions under a specified resource server for an account.</p>
      * 
      * @param request RevokeResourceServerScopesFromUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16211,7 +16531,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes the Scope permissions under a specified ResourceServer from an account.</p>
+     * <p>Revokes the authorization of scope permissions under a specified resource server for an account.</p>
      * 
      * @param request RevokeResourceServerScopesFromUserRequest
      * @return RevokeResourceServerScopesFromUserResponse
@@ -16219,6 +16539,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RevokeResourceServerScopesFromUserResponse revokeResourceServerScopesFromUser(RevokeResourceServerScopesFromUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.revokeResourceServerScopesFromUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Runs a resource synchronization task.</p>
+     * 
+     * @param request RunInventorySynchronizationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunInventorySynchronizationJobResponse
+     */
+    public RunInventorySynchronizationJobResponse runInventorySynchronizationJobWithOptions(RunInventorySynchronizationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inventorySourceId)) {
+            query.put("InventorySourceId", request.inventorySourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inventoryTypes)) {
+            query.put("InventoryTypes", request.inventoryTypes);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunInventorySynchronizationJob"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunInventorySynchronizationJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Runs a resource synchronization task.</p>
+     * 
+     * @param request RunInventorySynchronizationJobRequest
+     * @return RunInventorySynchronizationJobResponse
+     */
+    public RunInventorySynchronizationJobResponse runInventorySynchronizationJob(RunInventorySynchronizationJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.runInventorySynchronizationJobWithOptions(request, runtime);
     }
 
     /**
@@ -16475,7 +16847,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the primary organizational unit for an application\&quot;s user provisioning.</p>
+     * <p>Configures the primary organizational unit for application user synchronization.</p>
      * 
      * @param request SetApplicationProvisioningUserPrimaryOrganizationalUnitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16515,7 +16887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the primary organizational unit for an application\&quot;s user provisioning.</p>
+     * <p>Configures the primary organizational unit for application user synchronization.</p>
      * 
      * @param request SetApplicationProvisioningUserPrimaryOrganizationalUnitRequest
      * @return SetApplicationProvisioningUserPrimaryOrganizationalUnitResponse
@@ -16527,7 +16899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the unique identifier for a resource server. This identifier is used as the aud (audience) claim in a JSON Web Token (JWT) to specify the service that is intended to accept the token.</p>
+     * <p>Sets the unique identifier of the resource server. This field specifies the value of the aud (audience) claim in the payload of a JSON Web Token (JWT), which indicates the intended recipient or service of the JWT.</p>
      * 
      * @param request SetApplicationResourceServerIdentifierRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16571,7 +16943,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the unique identifier for a resource server. This identifier is used as the aud (audience) claim in a JSON Web Token (JWT) to specify the service that is intended to accept the token.</p>
+     * <p>Sets the unique identifier of the resource server. This field specifies the value of the aud (audience) claim in the payload of a JSON Web Token (JWT), which indicates the intended recipient or service of the JWT.</p>
      * 
      * @param request SetApplicationResourceServerIdentifierRequest
      * @return SetApplicationResourceServerIdentifierResponse
@@ -16583,10 +16955,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In EIAM, application management supports adding applications that use multiple single sign-on (SSO) protocols (SAML 2.0 and OIDC). However, each application supports only one SSO protocol, which is specified during creation and cannot be changed afterward. Specify the corresponding SSO configuration property parameters based on the SSO protocol type supported by the current application.</p>
+     * <p>In EIAM, application management supports adding applications with various single sign-on (SSO) logon protocols (SAML 2.0 and OIDC). However, an application can support only one SSO protocol, which cannot be changed after it is specified during creation. Specify the corresponding SSO configuration property parameters based on the SSO protocol type supported by the current application.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets the single sign-on (SSO) configuration properties of an EIAM application.</p>
+     * <p>Configures the single sign-on (SSO) configuration properties for an EIAM application.</p>
      * 
      * @param request SetApplicationSsoConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16642,10 +17014,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In EIAM, application management supports adding applications that use multiple single sign-on (SSO) protocols (SAML 2.0 and OIDC). However, each application supports only one SSO protocol, which is specified during creation and cannot be changed afterward. Specify the corresponding SSO configuration property parameters based on the SSO protocol type supported by the current application.</p>
+     * <p>In EIAM, application management supports adding applications with various single sign-on (SSO) logon protocols (SAML 2.0 and OIDC). However, an application can support only one SSO protocol, which cannot be changed after it is specified during creation. Specify the corresponding SSO configuration property parameters based on the SSO protocol type supported by the current application.</p>
      * 
      * <b>summary</b> : 
-     * <p>Sets the single sign-on (SSO) configuration properties of an EIAM application.</p>
+     * <p>Configures the single sign-on (SSO) configuration properties for an EIAM application.</p>
      * 
      * @param request SetApplicationSsoConfigRequest
      * @return SetApplicationSsoConfigResponse
@@ -16757,7 +17129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Authentication Information</p>
+     * <p>Modifies authentication information.</p>
      * 
      * @param request SetIdentityProviderAuthnConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16809,7 +17181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Authentication Information</p>
+     * <p>Modifies authentication information.</p>
      * 
      * @param request SetIdentityProviderAuthnConfigurationRequest
      * @return SetIdentityProviderAuthnConfigurationResponse
@@ -16897,7 +17269,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the push configuration for an identity provider (IdP).</p>
+     * <p>Modifies the outbound synchronization configuration of an IdP.</p>
      * 
      * @param request SetIdentityProviderUdPushConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16953,7 +17325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the push configuration for an identity provider (IdP).</p>
+     * <p>Modifies the outbound synchronization configuration of an IdP.</p>
      * 
      * @param request SetIdentityProviderUdPushConfigurationRequest
      * @return SetIdentityProviderUdPushConfigurationResponse
@@ -16965,7 +17337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the control elements of an instance.</p>
+     * <p>Configures the control elements of an instance.</p>
      * 
      * @param request SetInstanceControlConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17001,7 +17373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the control elements of an instance.</p>
+     * <p>Configures the control elements of an instance.</p>
      * 
      * @param request SetInstanceControlConfigurationRequest
      * @return SetInstanceControlConfigurationResponse
@@ -17013,7 +17385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the language and time zone information for an instance.</p>
+     * <p>Sets the language and time zone of an instance.</p>
      * 
      * @param request SetInstanceGlobalizationConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17053,7 +17425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the language and time zone information for an instance.</p>
+     * <p>Sets the language and time zone of an instance.</p>
      * 
      * @param request SetInstanceGlobalizationConfigRequest
      * @return SetInstanceGlobalizationConfigResponse
@@ -17065,7 +17437,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Set login redirect application for brand</p>
+     * <p>Sets the post-logon redirect application for a brand.</p>
      * 
      * @param request SetLoginRedirectApplicationForBrandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17105,7 +17477,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Set login redirect application for brand</p>
+     * <p>Sets the post-logon redirect application for a brand.</p>
      * 
      * @param request SetLoginRedirectApplicationForBrandRequest
      * @return SetLoginRedirectApplicationForBrandResponse
@@ -17301,7 +17673,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures the password initialization policy for a specified EIAM instance.</p>
+     * <p>Sets the password initialization policy for a specified EIAM instance.</p>
      * 
      * @param request SetPasswordInitializationConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17349,7 +17721,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures the password initialization policy for a specified EIAM instance.</p>
+     * <p>Sets the password initialization policy for a specified EIAM instance.</p>
      * 
      * @param request SetPasswordInitializationConfigurationRequest
      * @return SetPasswordInitializationConfigurationResponse
@@ -17469,7 +17841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the WebAuthn configuration.</p>
+     * <p>Configures WebAuthn settings.</p>
      * 
      * @param request SetWebAuthnConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17517,7 +17889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the WebAuthn configuration.</p>
+     * <p>Configures WebAuthn settings.</p>
      * 
      * @param request SetWebAuthnConfigurationRequest
      * @return SetWebAuthnConfigurationResponse
@@ -17529,7 +17901,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detaches the TOTP authenticator for a specified user.</p>
+     * <p>Disassociates the TOTP from a specified user.</p>
      * 
      * @param request UnbindTotpAuthenticatorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17565,7 +17937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detaches the TOTP authenticator for a specified user.</p>
+     * <p>Disassociates the TOTP from a specified user.</p>
      * 
      * @param request UnbindTotpAuthenticatorRequest
      * @return UnbindTotpAuthenticatorResponse
@@ -17893,7 +18265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an application federated identity credential.</p>
+     * <p>Updates an application federated credential.</p>
      * 
      * @param request UpdateApplicationFederatedCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17949,7 +18321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an application federated identity credential.</p>
+     * <p>Updates an application federated credential.</p>
      * 
      * @param request UpdateApplicationFederatedCredentialRequest
      * @return UpdateApplicationFederatedCredentialResponse
@@ -17961,7 +18333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the description of a federated credential for an application.</p>
+     * <p>Updates the description of an application federated credential.</p>
      * 
      * @param request UpdateApplicationFederatedCredentialDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18005,7 +18377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the description of a federated credential for an application.</p>
+     * <p>Updates the description of an application federated credential.</p>
      * 
      * @param request UpdateApplicationFederatedCredentialDescriptionRequest
      * @return UpdateApplicationFederatedCredentialDescriptionResponse
@@ -18089,7 +18461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an application role.</p>
+     * <p>Modifies an application role.</p>
      * 
      * @param request UpdateApplicationRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18137,7 +18509,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an application role.</p>
+     * <p>Modifies an application role.</p>
      * 
      * @param request UpdateApplicationRoleRequest
      * @return UpdateApplicationRoleResponse
@@ -18205,10 +18577,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the single sign-on (SSO) parameters for an application template from the marketplace.</p>
+     * <p>Updates the single sign-on (SSO) parameters of an application template created in the marketplace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the SSO parameters for an application template.</p>
+     * <p>Updates the single sign-on (SSO) parameters of a template application.</p>
      * 
      * @param request UpdateApplicationSsoFormParamsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18248,10 +18620,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates the single sign-on (SSO) parameters for an application template from the marketplace.</p>
+     * <p>Updates the single sign-on (SSO) parameters of an application template created in the marketplace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the SSO parameters for an application template.</p>
+     * <p>Updates the single sign-on (SSO) parameters of a template application.</p>
      * 
      * @param request UpdateApplicationSsoFormParamsRequest
      * @return UpdateApplicationSsoFormParamsResponse
@@ -18263,7 +18635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the expiration time of an ApplicationToken.</p>
+     * <p>Updates the expiration time of an application token.</p>
      * 
      * @param request UpdateApplicationTokenExpirationTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18307,7 +18679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the expiration time of an ApplicationToken.</p>
+     * <p>Updates the expiration time of an application token.</p>
      * 
      * @param request UpdateApplicationTokenExpirationTimeRequest
      * @return UpdateApplicationTokenExpirationTimeResponse
@@ -18381,7 +18753,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the relationship properties between an authorization rule and an application.</p>
+     * <p>Updates the relationship attributes between an authorization rule and an application.</p>
      * 
      * @param request UpdateAuthorizationRuleApplicationAttachmentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18435,7 +18807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the relationship properties between an authorization rule and an application.</p>
+     * <p>Updates the relationship attributes between an authorization rule and an application.</p>
      * 
      * @param request UpdateAuthorizationRuleApplicationAttachmentRequest
      * @return UpdateAuthorizationRuleApplicationAttachmentResponse
@@ -18637,7 +19009,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration of an authorization server.</p>
+     * <p>Updates the authorization server configuration.</p>
      * 
      * @param request UpdateAuthorizationServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18691,7 +19063,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration of an authorization server.</p>
+     * <p>Updates the authorization server configuration.</p>
      * 
      * @param request UpdateAuthorizationServerRequest
      * @return UpdateAuthorizationServerResponse
@@ -18703,7 +19075,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the description of an authorization server.</p>
+     * <p>Update the description of an authorization server</p>
      * 
      * @param request UpdateAuthorizationServerDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18749,7 +19121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the description of an authorization server.</p>
+     * <p>Update the description of an authorization server</p>
      * 
      * @param request UpdateAuthorizationServerDescriptionRequest
      * @return UpdateAuthorizationServerDescriptionResponse
@@ -18761,7 +19133,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a brand.</p>
+     * <p>Updates a brand.</p>
      * 
      * @param request UpdateBrandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18801,7 +19173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a brand.</p>
+     * <p>Updates a brand.</p>
      * 
      * @param request UpdateBrandRequest
      * @return UpdateBrandResponse
@@ -18813,7 +19185,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the basic information of an Alibaba Cloud account.</p>
+     * <p>Updates the basic information of a cloud account.</p>
      * 
      * @param request UpdateCloudAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18857,7 +19229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the basic information of an Alibaba Cloud account.</p>
+     * <p>Updates the basic information of a cloud account.</p>
      * 
      * @param request UpdateCloudAccountRequest
      * @return UpdateCloudAccountResponse
@@ -18869,7 +19241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the description of an Alibaba Cloud account.</p>
+     * <p>Updates the description of a cloud account.</p>
      * 
      * @param request UpdateCloudAccountDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18913,7 +19285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the description of an Alibaba Cloud account.</p>
+     * <p>Updates the description of a cloud account.</p>
      * 
      * @param request UpdateCloudAccountDescriptionRequest
      * @return UpdateCloudAccountDescriptionResponse
@@ -19383,7 +19755,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the description of a credential provider.</p>
+     * <p>Updates the description of a credential provider.</p>
      * 
      * @param request UpdateCredentialProviderDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19423,7 +19795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the description of a credential provider.</p>
+     * <p>Updates the description of a credential provider.</p>
      * 
      * @param request UpdateCredentialProviderDescriptionRequest
      * @return UpdateCredentialProviderDescriptionResponse
@@ -19435,7 +19807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a custom privacy policy.</p>
+     * <p>Updates custom terms.</p>
      * 
      * @param request UpdateCustomPrivacyPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19487,7 +19859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a custom privacy policy.</p>
+     * <p>Updates custom terms.</p>
      * 
      * @param request UpdateCustomPrivacyPolicyRequest
      * @return UpdateCustomPrivacyPolicyResponse
@@ -19499,7 +19871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the brand associated with a domain name.</p>
+     * <p>Modifies the brand associated with a domain name.</p>
      * 
      * @param request UpdateDomainBrandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19539,7 +19911,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the brand associated with a domain name.</p>
+     * <p>Modifies the brand associated with a domain name.</p>
      * 
      * @param request UpdateDomainBrandRequest
      * @return UpdateDomainBrandResponse
@@ -19551,7 +19923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the ICP filing number of a domain.</p>
+     * <p>Updates the ICP filing number of a domain name.</p>
      * 
      * @param request UpdateDomainIcpNumberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19591,7 +19963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the ICP filing number of a domain.</p>
+     * <p>Updates the ICP filing number of a domain name.</p>
      * 
      * @param request UpdateDomainIcpNumberRequest
      * @return UpdateDomainIcpNumberResponse
@@ -20299,7 +20671,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a scope permission for a specified resource server.</p>
+     * <p>Modifies the scope permissions of a specified resource server.</p>
      * 
      * @param request UpdateResourceServerScopeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20343,7 +20715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a scope permission for a specified resource server.</p>
+     * <p>Modifies the scope permissions of a specified resource server.</p>
      * 
      * @param request UpdateResourceServerScopeRequest
      * @return UpdateResourceServerScopeResponse
@@ -20553,7 +20925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the password information of an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS). The password must meet the requirements of the password policies that are configured in the IDaaS console.</p>
+     * <p>Updates the password of a specified EIAM account. The password must comply with the password policy configured in the console.</p>
      * 
      * @param request UpdateUserPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20601,7 +20973,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the password information of an Employee Identity and Access Management (EIAM) account of Identity as a Service (IDaaS). The password must meet the requirements of the password policies that are configured in the IDaaS console.</p>
+     * <p>Updates the password of a specified EIAM account. The password must comply with the password policy configured in the console.</p>
      * 
      * @param request UpdateUserPasswordRequest
      * @return UpdateUserPasswordResponse

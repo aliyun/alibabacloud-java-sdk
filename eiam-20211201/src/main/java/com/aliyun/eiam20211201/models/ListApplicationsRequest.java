@@ -23,16 +23,16 @@ public class ListApplicationsRequest extends TeaModel {
     public String applicationIdentityType;
 
     /**
-     * <p>The list of application IDs.</p>
+     * <p>The application IDs.</p>
      * 
      * <strong>example:</strong>
-     * <p>Ram Account SSO</p>
+     * <p>[&quot;Ram Account SSO&quot;]</p>
      */
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;
 
     /**
-     * <p>The application name. Only left fuzzy match is supported.</p>
+     * <p>The application name. Only left-fuzzy matching is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Ram Account SSO</p>
@@ -50,7 +50,7 @@ public class ListApplicationsRequest extends TeaModel {
     public String applicationTemplateId;
 
     /**
-     * <p>The application access authorization type. Valid values:</p>
+     * <p>The access authorization type of the application. Valid values:</p>
      * <ul>
      * <li>authorize_required: Explicit authorization is required for access.</li>
      * <li>default_all: All members have access permissions by default.</li>
@@ -63,7 +63,7 @@ public class ListApplicationsRequest extends TeaModel {
     public String authorizationType;
 
     /**
-     * <p>The list of custom fields.</p>
+     * <p>The extended fields.</p>
      */
     @NameInMap("CustomFields")
     public java.util.List<ListApplicationsRequestCustomFields> customFields;
@@ -79,7 +79,7 @@ public class ListApplicationsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies whether the M2M Client identity is enabled.</p>
+     * <p>Specifies whether the M2M client identity is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>enabled</p>
@@ -88,7 +88,7 @@ public class ListApplicationsRequest extends TeaModel {
     public String m2MClientStatus;
 
     /**
-     * <p>The ServiceCode of the cloud service that manages the application template.</p>
+     * <p>The service code of the cloud service that manages the application template.</p>
      * 
      * <strong>example:</strong>
      * <p>waf</p>
@@ -106,7 +106,7 @@ public class ListApplicationsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -115,7 +115,7 @@ public class ListApplicationsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Specifies whether the ResourceServer capability is enabled.</p>
+     * <p>Specifies whether the resource server capability is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>enabled</p>
@@ -133,7 +133,7 @@ public class ListApplicationsRequest extends TeaModel {
     public Boolean serviceManaged;
 
     /**
-     * <p>The SSO type filter condition. Multiple types can be separated by commas. Example: oauth2/m2m,oidc+oauth2/m2m.</p>
+     * <p>The SSO type search condition. You can specify multiple types separated by commas (,). Example: oauth2/m2m,oidc+oauth2/m2m.</p>
      * 
      * <strong>example:</strong>
      * <p>oauth2/m2m</p>
@@ -289,7 +289,7 @@ public class ListApplicationsRequest extends TeaModel {
 
     public static class ListApplicationsRequestCustomFields extends TeaModel {
         /**
-         * <p>The custom field identifier. Valid values:</p>
+         * <p>The extended field identifier. Valid values:</p>
          * <ul>
          * <li>agent_type: The agent type.</li>
          * </ul>
@@ -301,7 +301,7 @@ public class ListApplicationsRequest extends TeaModel {
         public String fieldName;
 
         /**
-         * <p>The custom field value.</p>
+         * <p>The extended field value.</p>
          * 
          * <strong>example:</strong>
          * <p>x-claw</p>

@@ -54,7 +54,11 @@ public class GetCloudPermissionTemplateResponseBody extends TeaModel {
         public java.util.List<String> organizationalUnitIds;
 
         /**
-         * <p>The type of the applicable scope. Valid values: global and custom.</p>
+         * <p>The scope type. Valid values:</p>
+         * <ul>
+         * <li>global</li>
+         * <li>custom</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>global</p>
@@ -127,7 +131,11 @@ public class GetCloudPermissionTemplateResponseBody extends TeaModel {
         public String creatorName;
 
         /**
-         * <p>The type of the creator. Valid values: idaas_admin and idaas_user.</p>
+         * <p>The creator type. Valid values:</p>
+         * <ul>
+         * <li>idaas_admin: Created by an administrator.</li>
+         * <li>idaas_user: Created by a user.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>idaas_user</p>
@@ -186,7 +194,11 @@ public class GetCloudPermissionTemplateResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The initialization result. Valid values: success and failed.</p>
+         * <p>The initialization result. Valid values:</p>
+         * <ul>
+         * <li>success</li>
+         * <li>failed</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -227,7 +239,7 @@ public class GetCloudPermissionTemplateResponseBody extends TeaModel {
 
     public static class GetCloudPermissionTemplateResponseBodyCloudPermissionTemplate extends TeaModel {
         /**
-         * <p>Specifies whether users are allowed to request the permission.</p>
+         * <p>Specifies whether users are allowed to apply for the permission template.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -242,7 +254,7 @@ public class GetCloudPermissionTemplateResponseBody extends TeaModel {
         public GetCloudPermissionTemplateResponseBodyCloudPermissionTemplateApplicableScope applicableScope;
 
         /**
-         * <p>The ID of the cloud account to which the template belongs.</p>
+         * <p>The cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ca_01kq1us6frlbo3rr8m216vj3bkak2</p>
@@ -290,7 +302,12 @@ public class GetCloudPermissionTemplateResponseBody extends TeaModel {
         public String cloudPermissionTemplateOwnerId;
 
         /**
-         * <p>The owner type of the exclusive template. Valid values: application (M2M applications) and user (human users). This parameter is empty for shared templates.</p>
+         * <p>The owner type of the exclusive template. Valid values:</p>
+         * <ul>
+         * <li>application: M2M application.</li>
+         * <li>user: Human user.
+         * This parameter is empty for shared templates.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -299,7 +316,11 @@ public class GetCloudPermissionTemplateResponseBody extends TeaModel {
         public String cloudPermissionTemplateOwnerType;
 
         /**
-         * <p>The sharing mode of the permission template. Valid values: shared and exclusive.</p>
+         * <p>The sharing mode of the permission template. Valid values:</p>
+         * <ul>
+         * <li>shared: Shared.</li>
+         * <li>exclusive: Exclusive.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>shared</p>
@@ -308,7 +329,11 @@ public class GetCloudPermissionTemplateResponseBody extends TeaModel {
         public String cloudPermissionTemplateSharingMode;
 
         /**
-         * <p>The usage type of the permission template. Valid values: user (privilege escalation for human users) and application (privilege escalation for M2M applications).</p>
+         * <p>The usage type of the permission template. Valid values:</p>
+         * <ul>
+         * <li>user: Privilege escalation for human users.</li>
+         * <li>application: Privilege escalation for M2M applications.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>user</p>
@@ -344,7 +369,7 @@ public class GetCloudPermissionTemplateResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The external unique identifier of the associated cloud role, which is the ARN of the role on the cloud provider side.</p>
+         * <p>The external unique identifier of the associated cloud role, which is the role ARN on the cloud provider side.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::123456:role/idaas-test</p>
@@ -371,7 +396,13 @@ public class GetCloudPermissionTemplateResponseBody extends TeaModel {
         public String permissionEntityType;
 
         /**
-         * <p>The status of the permission template. Valid values: initializing, init_failed, enabled, and disabled.</p>
+         * <p>The status of the permission template. Valid values:</p>
+         * <ul>
+         * <li>initializing</li>
+         * <li>init_failed</li>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>

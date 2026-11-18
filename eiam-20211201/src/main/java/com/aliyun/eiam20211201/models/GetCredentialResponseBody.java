@@ -67,7 +67,7 @@ public class GetCredentialResponseBody extends TeaModel {
 
     public static class GetCredentialResponseBodyCredentialCredentialContent extends TeaModel {
         /**
-         * <p>The credential content of the OAuth client authentication credential type.</p>
+         * <p>The credential content for the OAuth client authentication credential type.</p>
          */
         @NameInMap("OAuthClientContent")
         public GetCredentialResponseBodyCredentialCredentialContentOAuthClientContent OAuthClientContent;
@@ -89,7 +89,7 @@ public class GetCredentialResponseBody extends TeaModel {
 
     public static class GetCredentialResponseBodyCredential extends TeaModel {
         /**
-         * <p>The creation time, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830225000</p>
@@ -166,7 +166,7 @@ public class GetCredentialResponseBody extends TeaModel {
         public String credentialScenarioLabel;
 
         /**
-         * <p>The credential sharing scope.</p>
+         * <p>The sharing scope of the credential.</p>
          * 
          * <strong>example:</strong>
          * <p>common</p>
@@ -175,7 +175,7 @@ public class GetCredentialResponseBody extends TeaModel {
         public String credentialSharingScope;
 
         /**
-         * <p>The subject ID to which the credential belongs.</p>
+         * <p>The ID of the subject to which the credential belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>apt_werthgfdsasffxxxxx</p>
@@ -218,7 +218,7 @@ public class GetCredentialResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The exclusive account ID of the credential.</p>
+         * <p>The ID of the exclusive user for the credential.</p>
          * 
          * <strong>example:</strong>
          * <p>user_1234567890</p>
@@ -249,7 +249,7 @@ public class GetCredentialResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The update time, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830227000</p>

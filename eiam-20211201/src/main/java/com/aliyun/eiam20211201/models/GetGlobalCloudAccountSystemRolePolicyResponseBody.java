@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGlobalCloudAccountSystemRolePolicyResponseBody extends TeaModel {
     /**
+     * <p>The access policy document for the global cloud account system role (JSON character string).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,7 @@ public class GetGlobalCloudAccountSystemRolePolicyResponseBody extends TeaModel 
     public String policyDocument;
 
     /**
-     * <p>本次请求的唯一标识。</p>
+     * <p>The unique identifier of the request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

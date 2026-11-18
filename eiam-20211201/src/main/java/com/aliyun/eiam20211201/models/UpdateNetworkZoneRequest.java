@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateNetworkZoneRequest extends TeaModel {
     /**
-     * <p>The idempotence token.</p>
+     * <p>The client token used to ensure idempotence.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-examplexxxx</p>

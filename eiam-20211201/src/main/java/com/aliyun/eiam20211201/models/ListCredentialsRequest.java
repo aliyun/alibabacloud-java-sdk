@@ -11,19 +11,19 @@ public class ListCredentialsRequest extends TeaModel {
     public java.util.List<String> credentialExternalIds;
 
     /**
-     * <p>The credential IDs.</p>
+     * <p>The list of credential IDs.</p>
      */
     @NameInMap("CredentialIds")
     public java.util.List<String> credentialIds;
 
     /**
-     * <p>The credential sharing scopes.</p>
+     * <p>The list of credential sharing scopes.</p>
      */
     @NameInMap("CredentialSharingScopes")
     public java.util.List<String> credentialSharingScopes;
 
     /**
-     * <p>The credential types.</p>
+     * <p>The list of credential types.</p>
      */
     @NameInMap("CredentialTypes")
     public java.util.List<String> credentialTypes;
@@ -45,7 +45,11 @@ public class ListCredentialsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of records per page. Default value: 20. Maximum value: 100.</p>
+     * <p>The maximum number of records per page.</p>
+     * <ul>
+     * <li>Default value: 20.</li>
+     * <li>Maximum value: 100.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -54,7 +58,7 @@ public class ListCredentialsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token.</p>
+     * <p>The query token.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -63,7 +67,7 @@ public class ListCredentialsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The credential statuses.</p>
+     * <p>The list of credential statuses.</p>
      */
     @NameInMap("Statuses")
     public java.util.List<String> statuses;
@@ -159,7 +163,7 @@ public class ListCredentialsRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The values for the filter field.</p>
+         * <p>The list of filter field values.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

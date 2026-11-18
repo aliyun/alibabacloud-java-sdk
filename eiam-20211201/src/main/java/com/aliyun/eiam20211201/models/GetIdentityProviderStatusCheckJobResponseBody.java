@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
     /**
-     * <p>The IdP status check job information.</p>
+     * <p>The IdP status check information.</p>
      */
     @NameInMap("IdentityProviderStatusCheckJob")
     public GetIdentityProviderStatusCheckJobResponseBodyIdentityProviderStatusCheckJob identityProviderStatusCheckJob;
@@ -101,7 +101,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
 
     public static class GetIdentityProviderStatusCheckJobResponseBodyIdentityProviderStatusCheckJobJobCheckItems extends TeaModel {
         /**
-         * <p>The error reason.</p>
+         * <p>The error cause.</p>
          */
         @NameInMap("ErrorReason")
         public GetIdentityProviderStatusCheckJobResponseBodyIdentityProviderStatusCheckJobJobCheckItemsErrorReason errorReason;
@@ -174,7 +174,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
 
     public static class GetIdentityProviderStatusCheckJobResponseBodyIdentityProviderStatusCheckJob extends TeaModel {
         /**
-         * <p>The job check result.</p>
+         * <p>The check result of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -219,7 +219,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The status check sub-item task result information.</p>
+         * <p>The status check subkey node task result information.</p>
          */
         @NameInMap("JobCheckItems")
         public java.util.List<GetIdentityProviderStatusCheckJobResponseBodyIdentityProviderStatusCheckJobJobCheckItems> jobCheckItems;
@@ -234,7 +234,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The job check status.</p>
+         * <p>The check status of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

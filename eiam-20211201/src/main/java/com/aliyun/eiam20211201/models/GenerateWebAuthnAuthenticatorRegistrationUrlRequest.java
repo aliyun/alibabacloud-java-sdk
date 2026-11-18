@@ -24,7 +24,7 @@ public class GenerateWebAuthnAuthenticatorRegistrationUrlRequest extends TeaMode
     public String instanceId;
 
     /**
-     * <p>UserID</p>
+     * <p>The user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

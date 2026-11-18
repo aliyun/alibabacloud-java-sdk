@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel {
     /**
-     * <p>The list of organizational unit IDs.</p>
+     * <p>The organizational units.</p>
      */
     @NameInMap("OrganizationalUnits")
     public java.util.List<ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits> organizationalUnits;
@@ -84,7 +84,7 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
 
     public static class ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits extends TeaModel {
         /**
-         * <p>The application roles.</p>
+         * <p>The application roles. No roles are returned for SAML applications.</p>
          */
         @NameInMap("ApplicationRoles")
         public java.util.List<ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnitsApplicationRoles> applicationRoles;

@@ -11,7 +11,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
     public java.util.List<ListCustomPrivacyPoliciesResponseBodyCustomPrivacyPolicies> customPrivacyPolicies;
 
     /**
-     * <p>The maximum number of entries to return per page in a paging query.</p>
+     * <p>The maximum number of entries per page for a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token returned by the current request.</p>
+     * <p>The next token returned in the current call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -29,7 +29,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The pagination token returned by the current request.</p>
+     * <p>The next token returned in the current call.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxexample</p>
@@ -47,7 +47,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of items.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -110,7 +110,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
 
     public static class ListCustomPrivacyPoliciesResponseBodyCustomPrivacyPolicies extends TeaModel {
         /**
-         * <p>The ID of the custom privacy policy.</p>
+         * <p>The custom privacy policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pp_xxxxx</p>
@@ -119,7 +119,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
         public String customPrivacyPolicyId;
 
         /**
-         * <p>The name of the custom privacy policy.</p>
+         * <p>The custom privacy policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom Privacy Policy Name</p>
@@ -128,7 +128,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
         public String customPrivacyPolicyName;
 
         /**
-         * <p>The default language code for the privacy policy. The valid values are the LanguageCode values returned by the ListLanguages operation.</p>
+         * <p>The default language code. The valid values are the LanguageCode values returned by the ListLanguages operation.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-Hans-CN</p>

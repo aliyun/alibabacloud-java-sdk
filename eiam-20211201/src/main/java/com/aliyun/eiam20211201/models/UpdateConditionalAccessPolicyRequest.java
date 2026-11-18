@@ -28,7 +28,7 @@ public class UpdateConditionalAccessPolicyRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>My conditional access policy</p>
+     * <p>我的条件访问策略</p>
      */
     @NameInMap("ConditionalAccessPolicyName")
     public String conditionalAccessPolicyName;

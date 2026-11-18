@@ -19,7 +19,7 @@ public class DeleteUsersRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>u_001</p>
+     * <p>[&quot;u_001&quot;]</p>
      */
     @NameInMap("UserIds")
     public java.util.List<String> userIds;

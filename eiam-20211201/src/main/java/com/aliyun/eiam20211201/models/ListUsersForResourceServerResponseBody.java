@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUsersForResourceServerResponseBody extends TeaModel {
     /**
-     * <p>The number of entries per page in a paged query.</p>
+     * <p>The maximum number of entries to return per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page.</p>
+     * <p>The token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -32,7 +32,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries in the list.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -93,7 +93,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
 
     public static class ListUsersForResourceServerResponseBodyUsersResourceServerScopes extends TeaModel {
         /**
-         * <p>The scope permission ID.</p>
+         * <p>The scope ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
@@ -102,7 +102,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
         public String resourceServerScopeId;
 
         /**
-         * <p>The scope permission name.</p>
+         * <p>The scope name.</p>
          * 
          * <strong>example:</strong>
          * <p>Read All User</p>
@@ -144,7 +144,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The list of granted scope permissions.</p>
+         * <p>The list of authorized scopes.</p>
          */
         @NameInMap("ResourceServerScopes")
         public java.util.List<ListUsersForResourceServerResponseBodyUsersResourceServerScopes> resourceServerScopes;

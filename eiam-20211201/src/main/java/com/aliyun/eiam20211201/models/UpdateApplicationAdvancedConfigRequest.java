@@ -25,7 +25,7 @@ public class UpdateApplicationAdvancedConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The advanced configurations of the SCIM server.</p>
+     * <p>The advanced configuration of the SCIM server.</p>
      */
     @NameInMap("ScimServerAdvancedConfig")
     public UpdateApplicationAdvancedConfigRequestScimServerAdvancedConfig scimServerAdvancedConfig;
@@ -67,7 +67,7 @@ public class UpdateApplicationAdvancedConfigRequest extends TeaModel {
         public java.util.List<String> supportedUserCustomFieldIds;
 
         /**
-         * <p>The namespace of user extension fields.</p>
+         * <p>The namespace of user custom fields.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:ietf:params:scim:schemas:extension:customfield:2.0:User</p>

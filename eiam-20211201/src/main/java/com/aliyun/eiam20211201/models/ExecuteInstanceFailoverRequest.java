@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteInstanceFailoverRequest extends TeaModel {
     /**
-     * <p>The failover status. Valid values:</p>
-     * <ul>
-     * <li>inactive: The primary instance is active.</li>
-     * <li>active: The replica instance is active.</li>
-     * </ul>
+     * <p>The failover status.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
