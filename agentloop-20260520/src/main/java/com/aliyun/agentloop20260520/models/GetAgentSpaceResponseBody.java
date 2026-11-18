@@ -84,6 +84,15 @@ public class GetAgentSpaceResponseBody extends TeaModel {
     public String slsProject;
 
     /**
+     * <p>The complete standard tags of the active AgentSpace in the current region. An empty array is returned if it is confirmed that no tags exist. This field is omitted if the AgentSpace is not active or the tags cannot be determined. The omission of this field does not indicate that no tags exist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;test&quot;}]</p>
+     */
+    @NameInMap("tags")
+    public java.util.List<GetAgentSpaceResponseBodyTags> tags;
+
+    /**
      * <p>The update time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
@@ -170,6 +179,14 @@ public class GetAgentSpaceResponseBody extends TeaModel {
         return this.slsProject;
     }
 
+    public GetAgentSpaceResponseBody setTags(java.util.List<GetAgentSpaceResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<GetAgentSpaceResponseBodyTags> getTags() {
+        return this.tags;
+    }
+
     public GetAgentSpaceResponseBody setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -180,7 +197,7 @@ public class GetAgentSpaceResponseBody extends TeaModel {
 
     public static class GetAgentSpaceResponseBodyMseNamespace extends TeaModel {
         /**
-         * <p>The attach type of the MSE namespace. AutoCreated indicates automatic creation by AgentLoop. UserSelected indicates that an existing namespace is selected and attached when the AgentSpace is created.</p>
+         * <p>The attach type of the MSE namespace. AutoCreated indicates automatic creation by AgentLoop. UserSelected indicates that you select and attach an existing namespace when creating the AgentSpace.</p>
          * 
          * <strong>example:</strong>
          * <p>AutoCreated</p>
@@ -233,6 +250,48 @@ public class GetAgentSpaceResponseBody extends TeaModel {
         }
         public String getNamespaceName() {
             return this.namespaceName;
+        }
+
+    }
+
+    public static class GetAgentSpaceResponseBodyTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
+         */
+        @NameInMap("key")
+        public String key;
+
+        /**
+         * <p>The tag value, which can be an empty string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static GetAgentSpaceResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            GetAgentSpaceResponseBodyTags self = new GetAgentSpaceResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAgentSpaceResponseBodyTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetAgentSpaceResponseBodyTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

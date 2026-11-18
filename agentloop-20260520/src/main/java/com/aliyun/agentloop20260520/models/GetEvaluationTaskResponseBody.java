@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEvaluationTaskResponseBody extends TeaModel {
     /**
-     * <p>The AgentSpace name.</p>
+     * <p>The name of the AgentSpace.</p>
      * 
      * <strong>example:</strong>
      * <p>prod-agentspace</p>
@@ -23,7 +23,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     public String channel;
 
     /**
-     * <p>The data source and execution configuration. Tasks with <code>dataType=trace</code> typically contain backend-populated <code>project</code>, <code>storeName</code>, and <code>dataScope</code> fields.</p>
+     * <p>The data source and execution configurations. Tasks with <code>dataType=trace</code> typically include the <code>project</code>, <code>storeName</code>, and <code>dataScope</code> fields populated by the backend.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;project&quot;:&quot;agentspace-project&quot;,&quot;storeName&quot;:&quot;logstore-tracing&quot;,&quot;dataScope&quot;:&quot;trace&quot;}</p>
@@ -32,7 +32,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     public java.util.Map<String, String> config;
 
     /**
-     * <p>The creation time, in seconds as a UNIX timestamp.</p>
+     * <p>The creation time, represented as a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1782816000</p>
@@ -41,7 +41,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     public Long createdAt;
 
     /**
-     * <p>The evaluation data filter conditions, returned by the backend as a JSON string.</p>
+     * <p>The filter conditions for evaluation data. The backend returns this value as a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;query&quot;:&quot;serviceName=\&quot;checkout-service\&quot;&quot;,&quot;maxRecords&quot;:10,&quot;samplingRate&quot;:100}</p>
@@ -62,7 +62,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
      * <p>The description of the evaluation task.</p>
      * 
      * <strong>example:</strong>
-     * <p>Evaluate the task completion of the online Agent pipeline</p>
+     * <p>Evaluate the task completion rate of online agent workflows</p>
      */
     @NameInMap("description")
     public String description;
@@ -77,6 +77,15 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     public java.util.List<Evaluator> evaluators;
 
     /**
+     * <p>The quality score and coverage snapshot of the most recent evaluator run. This field is empty when the feature is not enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
+    @NameInMap("qualityMetrics")
+    public java.util.Map<String, ?> qualityMetrics;
+
+    /**
      * <p>The region to which the task belongs.</p>
      * 
      * <strong>example:</strong>
@@ -86,7 +95,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>3FE4CD1E-FF41-56BE-B590-7A021D9C1524</p>
@@ -95,7 +104,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The structured run strategy configuration, including the parsed backfill strategy and continuous evaluation strategy.</p>
+     * <p>The structured configuration of the run strategy, including the parsed backfill strategy and continuous evaluation strategy.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;backfill&quot;:{&quot;enabled&quot;:true,&quot;startTime&quot;:1782816000000,&quot;endTime&quot;:1782902400000},&quot;continuous&quot;:{&quot;enabled&quot;:true,&quot;intervalUnit&quot;:&quot;HOUR&quot;,&quot;intervalValue&quot;:1,&quot;dataDelayMinutes&quot;:5}}</p>
@@ -104,7 +113,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     public RunStrategies runStrategyConfig;
 
     /**
-     * <p>The evaluation task status.</p>
+     * <p>The status of the evaluation task.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -113,7 +122,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The key-value pairs of task tags. Empty if not set.</p>
+     * <p>The key-value pairs of task tags. This field is empty when no tags are set.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;serviceId&quot;:&quot;checkout-service&quot;,&quot;env&quot;:&quot;prod&quot;}</p>
@@ -122,7 +131,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     public java.util.Map<String, String> tags;
 
     /**
-     * <p>The evaluation task ID.</p>
+     * <p>The ID of the evaluation task.</p>
      * 
      * <strong>example:</strong>
      * <p>eval-task-8b36f2e2b1f94f9c91ce7a4b0f6d9c25</p>
@@ -131,7 +140,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The evaluation task mode.</p>
+     * <p>The mode of the evaluation task.</p>
      * 
      * <strong>example:</strong>
      * <p>batch</p>
@@ -140,7 +149,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     public String taskMode;
 
     /**
-     * <p>The task name.</p>
+     * <p>The name of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>trace_task_completion_eval</p>
@@ -149,7 +158,7 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The last update time, in seconds as a UNIX timestamp.</p>
+     * <p>The last update time, represented as a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1782816600</p>
@@ -224,6 +233,14 @@ public class GetEvaluationTaskResponseBody extends TeaModel {
     }
     public java.util.List<Evaluator> getEvaluators() {
         return this.evaluators;
+    }
+
+    public GetEvaluationTaskResponseBody setQualityMetrics(java.util.Map<String, ?> qualityMetrics) {
+        this.qualityMetrics = qualityMetrics;
+        return this;
+    }
+    public java.util.Map<String, ?> getQualityMetrics() {
+        return this.qualityMetrics;
     }
 
     public GetEvaluationTaskResponseBody setRegionId(String regionId) {

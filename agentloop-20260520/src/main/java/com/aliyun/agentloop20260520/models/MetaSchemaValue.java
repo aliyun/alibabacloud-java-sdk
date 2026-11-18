@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MetaSchemaValue extends TeaModel {
     /**
-     * <p>The dataset field types. Valid values: text, long, double, and json.</p>
+     * <p>The dataset field type. Valid values: text, long, double, and json.</p>
      * 
      * <strong>example:</strong>
      * <p>text</p>

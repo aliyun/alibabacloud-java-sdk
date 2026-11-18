@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOptimizeRunsRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return. Default value: 20. Maximum value: 100.</p>
+     * <p>The maximum number of results to return. Default value: 20. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListOptimizeRunsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The status used to filter results.</p>
+     * <p>The status used to filter the results.</p>
      * 
      * <strong>example:</strong>
      * <p>Succeeded</p>
@@ -32,19 +32,19 @@ public class ListOptimizeRunsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The lower bound of the window start time in UNIX seconds.</p>
+     * <p>The lower bound of the window start time, in UNIX seconds.</p>
      * 
      * <strong>example:</strong>
-     * <p>1786432688000</p>
+     * <p>1786432688</p>
      */
     @NameInMap("windowStartTimeBegin")
     public Long windowStartTimeBegin;
 
     /**
-     * <p>The upper bound of the window start time in UNIX seconds.</p>
+     * <p>The upper bound of the window start time, in UNIX seconds.</p>
      * 
      * <strong>example:</strong>
-     * <p>1786432690000</p>
+     * <p>1786432690</p>
      */
     @NameInMap("windowStartTimeEnd")
     public Long windowStartTimeEnd;

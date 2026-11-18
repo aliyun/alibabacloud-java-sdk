@@ -5,13 +5,22 @@ import com.aliyun.tea.*;
 
 public class GetOptimizeTaskResponseBody extends TeaModel {
     /**
-     * <p>The scheduling checkpoint, which stores states such as the general scheduling watermark.</p>
+     * <p>The scheduling checkpoint that stores states such as the general scheduling watermark.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;lastWindowEndTime&quot;: 1787133600000,
+     *     &quot;lastScheduleStatus&quot;: &quot;Succeeded&quot;,
+     *     &quot;nextWindowStartTime&quot;: 1787133600000,
+     *     &quot;lastScheduleAttemptTime&quot;: 1787137386912,
+     *     &quot;lastScheduleSuccessTime&quot;: 1787137386912
+     * }</p>
      */
     @NameInMap("checkpoint")
     public java.util.Map<String, ?> checkpoint;
 
     /**
-     * <p>The type-specific configuration. Optional prompts for ExperienceMining or SkillOptimize support only inline Markdown. The body is saved to inputs.prompt.content, which must be a non-empty UTF-8 string of up to 16 KiB.</p>
+     * <p>The type-specific configuration. Optional prompts for ExperienceMining or SkillOptimize support only inline Markdown. The main text is stored in inputs.prompt.content, which must be non-empty UTF-8 and up to 16 KiB in size.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;ioVersion&quot;:2,&quot;inputs&quot;:{&quot;experienceLibrary&quot;:{&quot;type&quot;:&quot;dataset&quot;,&quot;dataset&quot;:&quot;experiences&quot;},&quot;trajectory&quot;:{&quot;type&quot;:&quot;sls&quot;,&quot;project&quot;:&quot;my-project&quot;,&quot;logstore&quot;:&quot;agent-trajectory&quot;,&quot;format&quot;:&quot;atif&quot;},&quot;prompt&quot;:{&quot;type&quot;:&quot;inline&quot;,&quot;format&quot;:&quot;markdown&quot;,&quot;content&quot;:&quot;# Guidance\\nExtract evidence-backed tool contracts.&quot;}},&quot;outputs&quot;:{&quot;changePlan&quot;:{&quot;type&quot;:&quot;dataset&quot;,&quot;dataset&quot;:&quot;experience-plans&quot;}},&quot;operators&quot;:[&quot;tool_contract&quot;],&quot;application&quot;:{&quot;mode&quot;:&quot;manual&quot;}}</p>
@@ -38,7 +47,7 @@ public class GetOptimizeTaskResponseBody extends TeaModel {
     public String nextTriggerTime;
 
     /**
-     * <p>The optimization task name.</p>
+     * <p>The name of the optimization task.</p>
      * 
      * <strong>example:</strong>
      * <p>efficiency-analysis</p>
@@ -65,7 +74,7 @@ public class GetOptimizeTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task status. Valid values: Enabled, Disabled.</p>
+     * <p>The task status. Valid values: Enabled and Disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>Enabled</p>
@@ -74,7 +83,7 @@ public class GetOptimizeTaskResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The optimization task type.</p>
+     * <p>The type of the optimization task.</p>
      * 
      * <strong>example:</strong>
      * <p>EfficiencyAnalysis</p>

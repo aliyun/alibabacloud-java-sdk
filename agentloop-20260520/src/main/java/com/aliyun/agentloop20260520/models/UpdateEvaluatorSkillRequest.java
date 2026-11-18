@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateEvaluatorSkillRequest extends TeaModel {
     /**
-     * <p>The AgentSpace name.</p>
+     * <p>The name of the AgentSpace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateEvaluatorSkillRequest extends TeaModel {
      * <p>The description of the skill.</p>
      * 
      * <strong>example:</strong>
-     * <p>读取链路上下文辅助评估</p>
+     * <p>Read trace context to assist evaluation</p>
      */
     @NameInMap("description")
     public String description;
@@ -27,13 +27,13 @@ public class UpdateEvaluatorSkillRequest extends TeaModel {
      * <p>The display name of the skill.</p>
      * 
      * <strong>example:</strong>
-     * <p>Trace 上下文读取</p>
+     * <p>Read Trace Context</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
-     * <p>Specifies whether to enable the skill.</p>
+     * <p>Specifies whether the skill is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -42,16 +42,16 @@ public class UpdateEvaluatorSkillRequest extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>The list of skill files. When provided, the skill file content is updated.</p>
+     * <p>The list of skill files. If specified, the content of the skill files is updated.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;# Trace Context Loader&quot;,&quot;remark&quot;:&quot;主技能说明&quot;}]</p>
+     * <p>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;# Trace Context Loader&quot;,&quot;remark&quot;:&quot;Primary skill description&quot;}]</p>
      */
     @NameInMap("files")
     public java.util.List<UpdateEvaluatorSkillRequestFiles> files;
 
     /**
-     * <p>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency comparison.</p>
+     * <p>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency checks.</p>
      * 
      * <strong>example:</strong>
      * <p>a1b2c3d4-1234-5678-90ab-cdef12345678</p>
@@ -114,7 +114,7 @@ public class UpdateEvaluatorSkillRequest extends TeaModel {
 
     public static class UpdateEvaluatorSkillRequestFiles extends TeaModel {
         /**
-         * <p>The skill file content.</p>
+         * <p>The content of the skill file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class UpdateEvaluatorSkillRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>The skill file name.</p>
+         * <p>The name of the skill file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,10 +134,10 @@ public class UpdateEvaluatorSkillRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The file remark.</p>
+         * <p>The remark for the file.</p>
          * 
          * <strong>example:</strong>
-         * <p>主技能说明</p>
+         * <p>Primary skill description</p>
          */
         @NameInMap("remark")
         public String remark;

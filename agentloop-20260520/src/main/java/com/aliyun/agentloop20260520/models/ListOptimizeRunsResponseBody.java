@@ -38,7 +38,7 @@ public class ListOptimizeRunsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total count.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -138,7 +138,16 @@ public class ListOptimizeRunsResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The execution summary and finite-state information. To obtain complete result references, frozen outputs, and publish receipts, call GetOptimizeRun.</p>
+         * <p>The execution summary and finite-state information. Complete result references, frozen outputs, and publish receipts can be obtained by calling GetOptimizeRun.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;inputSelection&quot;: &quot;trigger-re&quot;,
+         *     &quot;inputSelectorHash&quot;: &quot;sha256:43cfdbfc0260d11d3491c4987478a1a0e9966dda88*************&quot;,
+         *     &quot;sourceTrajectoryScanSkipped&quot;: true,
+         *     &quot;featureTriggerTrajectoryCount&quot;: 1011,
+         *     &quot;incompleteTriggerTrajectoryCount&quot;: 0
+         * }</p>
          */
         @NameInMap("extra")
         public java.util.Map<String, ?> extra;
@@ -181,12 +190,20 @@ public class ListOptimizeRunsResponseBody extends TeaModel {
 
         /**
          * <p>The current execution progress. The fields are defined by the task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;total&quot;: 1469,
+         *     &quot;skipped&quot;: 2,
+         *     &quot;processed&quot;: 370,
+         *     &quot;succeeded&quot;: 368
+         * }</p>
          */
         @NameInMap("progress")
         public java.util.Map<String, ?> progress;
 
         /**
-         * <p>The initial start time.</p>
+         * <p>The first start time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T10:00:01Z</p>
@@ -222,7 +239,7 @@ public class ListOptimizeRunsResponseBody extends TeaModel {
         public String triggerType;
 
         /**
-         * <p>The snapshot of the task type.</p>
+         * <p>The task type snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>EfficiencyAnalysis</p>
@@ -231,19 +248,19 @@ public class ListOptimizeRunsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The end time of the analysis window in UNIX seconds.</p>
+         * <p>The end time of the analysis window, in UNIX seconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>1786432690000</p>
+         * <p>1786432690</p>
          */
         @NameInMap("windowEndTime")
         public Long windowEndTime;
 
         /**
-         * <p>The start time of the analysis window in UNIX seconds.</p>
+         * <p>The start time of the analysis window, in UNIX seconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>1786432688000</p>
+         * <p>1786432688</p>
          */
         @NameInMap("windowStartTime")
         public Long windowStartTime;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOptimizeTasksResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of results per page.</p>
+     * <p>The maximum number of results returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListOptimizeTasksResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page.</p>
+     * <p>The token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>MTIzNDU2Nzg5MA==</p>
@@ -38,7 +38,7 @@ public class ListOptimizeTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total count.</p>
+     * <p>The total number of tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,16 @@ public class ListOptimizeTasksResponseBody extends TeaModel {
 
     public static class ListOptimizeTasksResponseBodyOptimizeTasks extends TeaModel {
         /**
-         * <p>The scheduling checkpoint that stores states such as the general scheduling watermark.</p>
+         * <p>The scheduling checkpoint, which stores states such as the general scheduling watermark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;lastWindowEndTime&quot;: 1787133600000,
+         *     &quot;lastScheduleStatus&quot;: &quot;Succeeded&quot;,
+         *     &quot;nextWindowStartTime&quot;: 1787133600000,
+         *     &quot;lastScheduleAttemptTime&quot;: 1787137386912,
+         *     &quot;lastScheduleSuccessTime&quot;: 1787137386912
+         * }</p>
          */
         @NameInMap("checkpoint")
         public java.util.Map<String, ?> checkpoint;
@@ -108,7 +117,7 @@ public class ListOptimizeTasksResponseBody extends TeaModel {
         public java.util.Map<String, ?> config;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the task was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T10:00:00Z</p>
@@ -117,7 +126,7 @@ public class ListOptimizeTasksResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The next scheduling trigger time.</p>
+         * <p>The next scheduled trigger time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-13T16:00:00Z</p>
@@ -144,7 +153,7 @@ public class ListOptimizeTasksResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The task status.</p>
+         * <p>The status of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>Enabled</p>
@@ -162,7 +171,7 @@ public class ListOptimizeTasksResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The update time.</p>
+         * <p>The time when the task was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T10:00:00Z</p>

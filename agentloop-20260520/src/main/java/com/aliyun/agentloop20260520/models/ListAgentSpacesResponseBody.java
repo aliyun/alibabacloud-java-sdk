@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentSpacesResponseBody extends TeaModel {
     /**
-     * <p>The information about the AgentSpaces.</p>
+     * <p>The AgentSpaces information.</p>
      */
     @NameInMap("agentSpaces")
     public java.util.List<ListAgentSpacesResponseBodyAgentSpaces> agentSpaces;
@@ -20,7 +20,7 @@ public class ListAgentSpacesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. This parameter is empty if no next page is available.</p>
+     * <p>The pagination token. This parameter is empty if no next page exists.</p>
      * 
      * <strong>example:</strong>
      * <p>b5754ef15c784abc8696d82790d2985c</p>
@@ -38,7 +38,7 @@ public class ListAgentSpacesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total count.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>13</p>
@@ -93,7 +93,7 @@ public class ListAgentSpacesResponseBody extends TeaModel {
 
     public static class ListAgentSpacesResponseBodyAgentSpacesMseNamespace extends TeaModel {
         /**
-         * <p>The attach method of the MSE namespace. AutoCreated indicates automatic creation by AgentLoop. UserSelected indicates that an existing namespace is selected and attached when the AgentSpace is created.</p>
+         * <p>The attach method for the MSE namespace. AutoCreated indicates automatic creation by AgentLoop. UserSelected indicates that an existing namespace is selected and attached when the AgentSpace is created.</p>
          * 
          * <strong>example:</strong>
          * <p>AutoCreated</p>
@@ -146,6 +146,48 @@ public class ListAgentSpacesResponseBody extends TeaModel {
         }
         public String getNamespaceName() {
             return this.namespaceName;
+        }
+
+    }
+
+    public static class ListAgentSpacesResponseBodyAgentSpacesTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
+         */
+        @NameInMap("key")
+        public String key;
+
+        /**
+         * <p>The tag value, which can be an empty string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static ListAgentSpacesResponseBodyAgentSpacesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListAgentSpacesResponseBodyAgentSpacesTags self = new ListAgentSpacesResponseBodyAgentSpacesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAgentSpacesResponseBodyAgentSpacesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListAgentSpacesResponseBodyAgentSpacesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -211,6 +253,15 @@ public class ListAgentSpacesResponseBody extends TeaModel {
          */
         @NameInMap("slsProject")
         public String slsProject;
+
+        /**
+         * <p>Returns only AgentSpace tags that are active in the current region and match the local instance. An empty array is returned when it is confirmed that no tags exist. This field is omitted for entries in other regions, inactive entries, or entries that do not match the local instance. Omission of this field does not indicate the absence of tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;test&quot;}]</p>
+         */
+        @NameInMap("tags")
+        public java.util.List<ListAgentSpacesResponseBodyAgentSpacesTags> tags;
 
         /**
          * <p>The update time.</p>
@@ -281,6 +332,14 @@ public class ListAgentSpacesResponseBody extends TeaModel {
         }
         public String getSlsProject() {
             return this.slsProject;
+        }
+
+        public ListAgentSpacesResponseBodyAgentSpaces setTags(java.util.List<ListAgentSpacesResponseBodyAgentSpacesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListAgentSpacesResponseBodyAgentSpacesTags> getTags() {
+            return this.tags;
         }
 
         public ListAgentSpacesResponseBodyAgentSpaces setUpdateTime(String updateTime) {

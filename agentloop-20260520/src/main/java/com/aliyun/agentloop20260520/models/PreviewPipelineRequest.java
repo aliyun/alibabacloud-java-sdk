@@ -89,6 +89,9 @@ public class PreviewPipelineRequest extends TeaModel {
 
         /**
          * <p>The parameters of the node. The parameters are in key-value format and vary based on the node type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ID&quot;:&quot;ID&quot;}</p>
          */
         @NameInMap("parameters")
         public java.util.Map<String, ?> parameters;
@@ -169,7 +172,7 @@ public class PreviewPipelineRequest extends TeaModel {
         public String dataset;
 
         /**
-         * <p>The filter condition for the dataset data.</p>
+         * <p>The data filter condition for the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>status = \&quot;pending\&quot;</p>
@@ -211,7 +214,7 @@ public class PreviewPipelineRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the field. Valid values: text, long, double, and json.</p>
+         * <p>The data type of the field. Valid values: text, long, double, and json.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -244,7 +247,7 @@ public class PreviewPipelineRequest extends TeaModel {
 
     public static class PreviewPipelineRequestSourceLogstore extends TeaModel {
         /**
-         * <p>The name of the Simple Log Service Logstore.</p>
+         * <p>The name of the SLS Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>my-sls-logstore</p>
@@ -253,7 +256,7 @@ public class PreviewPipelineRequest extends TeaModel {
         public String logstore;
 
         /**
-         * <p>The name of the Simple Log Service project.</p>
+         * <p>The name of the SLS project.</p>
          * 
          * <strong>example:</strong>
          * <p>my-sls-project</p>
@@ -262,7 +265,7 @@ public class PreviewPipelineRequest extends TeaModel {
         public String project;
 
         /**
-         * <p>The filtered query statement (Simple Log Service query and analysis syntax).</p>
+         * <p>The filtered query statement (SLS query and analysis syntax).</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -305,7 +308,7 @@ public class PreviewPipelineRequest extends TeaModel {
 
     public static class PreviewPipelineRequestSourceTrajectoryEnrich extends TeaModel {
         /**
-         * <p>The list of enrichment columns. This parameter is retained for compatibility. The current implementation outputs only the fixed agent_trajectory column, and this parameter no longer affects the output.</p>
+         * <p>The list of enrichment columns. This parameter is retained for compatibility. The current implementation outputs only the fixed column agent_trajectory, and this parameter no longer affects the output.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;input&quot;,&quot;output&quot;,&quot;session_id&quot;]</p>
@@ -347,7 +350,7 @@ public class PreviewPipelineRequest extends TeaModel {
 
     public static class PreviewPipelineRequestSourceTrajectory extends TeaModel {
         /**
-         * <p>Trajectory enrichment: mounts trajectory data into the cleaning results based on the trace_id. When writing data to a dataset, the data is stored in the fixed agent_trajectory column, and the column value is the JSON content of the trajectory.</p>
+         * <p>The trajectory enrichment configuration. Trajectory data is mounted into the cleaning results based on trace_id. When data is written to the dataset, it is stored in the fixed column agent_trajectory, where the column value is the trajectory JSON content.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;enabled&quot;:true,&quot;columns&quot;:[&quot;input&quot;,&quot;output&quot;]}</p>
@@ -390,7 +393,7 @@ public class PreviewPipelineRequest extends TeaModel {
         public java.util.List<PreviewPipelineRequestSourceInputFields> inputFields;
 
         /**
-         * <p>The Simple Log Service Logstore datasource config.</p>
+         * <p>The Simple Log Service (SLS) Logstore datasource config.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;project&quot;:&quot;my-sls-project&quot;,&quot;logstore&quot;:&quot;agent-logs&quot;}</p>
@@ -399,7 +402,7 @@ public class PreviewPipelineRequest extends TeaModel {
         public PreviewPipelineRequestSourceLogstore logstore;
 
         /**
-         * <p>The configuration of trajectory data. This parameter is optional and takes effect only when the type is set to trace. It retrieves ATIF standard trajectory data from the trajectory cleaning service and extends the data based on features.</p>
+         * <p>The trajectory data configuration. This parameter is optional and takes effect only when the type is trace. It obtains ATIF standard trajectory data from the trajectory cleaning service and extends it based on features.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;enrich&quot;:{&quot;enabled&quot;:true,&quot;columns&quot;:[&quot;input&quot;,&quot;output&quot;]}}</p>
@@ -408,7 +411,7 @@ public class PreviewPipelineRequest extends TeaModel {
         public PreviewPipelineRequestSourceTrajectory trajectory;
 
         /**
-         * <p>The type of the data source. Simple Log Service is currently supported.</p>
+         * <p>The type of the data source. Currently, SLS is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>SLS</p>

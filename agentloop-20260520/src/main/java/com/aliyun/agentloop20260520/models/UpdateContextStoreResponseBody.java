@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateContextStoreResponseBody extends TeaModel {
     /**
-     * <p>The configuration properties after updating the runtime recall switch. This block is not returned for other library update operations.</p>
+     * <p>The attributes returned after the runtime recall switch is updated. This block is not returned for other library update operations.</p>
      */
     @NameInMap("config")
     public UpdateContextStoreResponseBodyConfig config;
 
     /**
-     * <p>The request ID. You can use this ID to locate the request when troubleshooting issues.</p>
+     * <p>The request ID. It is used to locate the request when you troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
@@ -20,7 +20,7 @@ public class UpdateContextStoreResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The strategy version number that takes effect after the update for the memory type. If the strategy remains unchanged, the version number is the same as before the update.</p>
+     * <p>The strategy version number that takes effect after the update for the memory type. If the strategy remains unchanged, the version is the same as the one before the update.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -59,13 +59,13 @@ public class UpdateContextStoreResponseBody extends TeaModel {
 
     public static class UpdateContextStoreResponseBodyConfig extends TeaModel {
         /**
-         * <p>Indicates whether runtime recall is allowed after the experience library is updated.</p>
+         * <p>Specifies whether runtime recall is allowed after the experience library is updated.</p>
          */
         @NameInMap("runtimeRecallEnabled")
         public Boolean runtimeRecallEnabled;
 
         /**
-         * <p>The runtime recall property version that takes effect after this update.</p>
+         * <p>The version of the runtime recall attributes that takes effect after the current update.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

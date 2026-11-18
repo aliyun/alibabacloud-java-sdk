@@ -19,7 +19,7 @@ public class DescribeRegionsRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The maximum number of entries to return in a single request.</p>
+     * <p>The maximum number of results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

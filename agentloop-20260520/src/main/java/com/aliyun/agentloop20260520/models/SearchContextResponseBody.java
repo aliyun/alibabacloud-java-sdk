@@ -14,7 +14,7 @@ public class SearchContextResponseBody extends TeaModel {
     public String auditStatus;
 
     /**
-     * <p>The call ID for the multi-strategy recall of the experience store.</p>
+     * <p>The call ID for multi-strategy recall in the experience store.</p>
      * 
      * <strong>example:</strong>
      * <p>550e8400-e29b-41d4-a716-446655440000</p>
@@ -24,12 +24,23 @@ public class SearchContextResponseBody extends TeaModel {
 
     /**
      * <p>The diagnostics information for the current experience recall, including duration, model call volume, and filtering. The actual diagnostics items are determined by the running mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;durationMs&quot;: 386.5,
+     *     &quot;modelCalls&quot;: 2,
+     *     &quot;relevanceValidation&quot;: &quot;semantic&quot;,
+     *     &quot;candidateCount&quot;: 1,
+     *     &quot;filtering&quot;: {
+     *         &quot;model_not_relevant&quot;: 0
+     *     }
+     * }</p>
      */
     @NameInMap("diagnostics")
     public java.util.Map<String, ?> diagnostics;
 
     /**
-     * <p>The actual experience recall mode used for the current request. Valid values: direct, agentic, and hybrid.</p>
+     * <p>The experience recall mode actually used for the current request. Valid values: direct, agentic, and hybrid.</p>
      * 
      * <strong>example:</strong>
      * <p>agentic</p>
@@ -38,7 +49,7 @@ public class SearchContextResponseBody extends TeaModel {
     public String mode;
 
     /**
-     * <p>The ID of the recall event. You can use this ID to call the GetContextStoreRecall operation to view audit details.</p>
+     * <p>The ID of the recall event. You can use this ID to call GetContextStoreRecall to view audit details.</p>
      * 
      * <strong>example:</strong>
      * <p>0190f1c2-7d3e-7a1b-9c4d-2e5f6a7b8c9d</p>
@@ -48,12 +59,21 @@ public class SearchContextResponseBody extends TeaModel {
 
     /**
      * <p>The list of relevance judgment results for candidate experiences.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[
+     *   {
+     *     &quot;contextId&quot;: &quot;a:1&quot;,
+     *     &quot;judgment&quot;: &quot;relevant&quot;,
+     *     &quot;reason&quot;: &quot;This experience explains how to skip tasks with unchanged inputs, which is relevant to the search query.&quot;
+     *   }
+     * ]</p>
      */
     @NameInMap("relevance")
     public java.util.List<java.util.Map<String, ?>> relevance;
 
     /**
-     * <p>The ID of the request. You can use this ID to locate the request for troubleshooting.</p>
+     * <p>The ID of the request. You can use this ID to locate the request when troubleshooting issues.</p>
      * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
@@ -62,13 +82,19 @@ public class SearchContextResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of retrieval results, sorted by similarity in descending order.</p>
+     * <p>The list of retrieval results, sorted by similarity in descending order. Each item contains contextId, context, metadata, score, rank, revision, strategyVersion, and strategyId.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;contextId&quot;:&quot;01a1cf08-c368-7c83******&quot;,&quot;strategyId&quot;:&quot;default&quot;,&quot;context&quot;:&quot;The assistant recommends steamed seafood because it is fresh and not spicy, which aligns with the user\&quot;s preference for seafood and constraint against spicy food.&quot;,&quot;metadata&quot;:{&quot;contextType&quot;:&quot;memory&quot;,&quot;memoryType&quot;:&quot;long&quot;,&quot;userId&quot;:&quot;test_user_002&quot;,&quot;agentId&quot;:&quot;95273000000000&quot;,&quot;appId&quot;:&quot;mm_480d961******&quot;,&quot;runId&quot;:&quot;jr-80ded1d6******&quot;,&quot;strategyId&quot;:&quot;default&quot;,&quot;category&quot;:&quot;recommendation&quot;,&quot;kind&quot;:&quot;state&quot;,&quot;sourceKind&quot;:&quot;api&quot;,&quot;sourceId&quot;:&quot;addctx:75395808-cb81-54cd******&quot;,&quot;revision&quot;:1,&quot;reviewStatus&quot;:&quot;unreviewed&quot;,&quot;sourceState&quot;:&quot;active&quot;,&quot;factKey&quot;:&quot;assistant:recommendation:dish******&quot;,&quot;sessionId&quot;:&quot;test_session_001&quot;},&quot;score&quot;:0.6617179,&quot;rank&quot;:1,&quot;revision&quot;:1,&quot;strategyVersion&quot;:1}]</p>
      */
     @NameInMap("results")
     public java.util.List<java.util.Map<String, ?>> results;
 
     /**
      * <p>The list of rewritten queries generated based on the original retrieval query. The original query is not included.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;How to avoid repeatedly executing unchanged inputs&quot;]</p>
      */
     @NameInMap("rewrittenQueries")
     public java.util.List<String> rewrittenQueries;
@@ -83,7 +109,7 @@ public class SearchContextResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The strategy implementation version used for the current experience recall. This is used for auditing and result tracing.</p>
+     * <p>The implementation version of the strategy used for the current experience recall. This is used for auditing and result tracing.</p>
      * 
      * <strong>example:</strong>
      * <p>experience-recall-20261031-v5</p>

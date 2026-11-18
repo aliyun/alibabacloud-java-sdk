@@ -23,7 +23,7 @@ public class ListOptimizeTasksRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The task status.</p>
+     * <p>Filters the results by status.</p>
      * 
      * <strong>example:</strong>
      * <p>Enabled</p>
@@ -32,7 +32,7 @@ public class ListOptimizeTasksRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The task type.</p>
+     * <p>Filters the results by task type.</p>
      * 
      * <strong>example:</strong>
      * <p>EfficiencyAnalysis</p>

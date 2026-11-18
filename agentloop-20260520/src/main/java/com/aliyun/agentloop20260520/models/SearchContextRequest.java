@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class SearchContextRequest extends TeaModel {
     /**
-     * <p>The structured filter conditions. The key is the field name, and the value is the expected match value.</p>
+     * <p>The structured filter conditions. The experience store supports scene. When __agentloopControl.mode is set to direct, hybrid, or agentic, multi-strategy recall with auditing is used, and you can pass source, callId, application, fields, channels, and budget simultaneously. The management plane can additionally pass contentStatus=all, active, candidate, gray, or deprecated to perform content retrieval, which includes disabled or unreviewed content and is not affected by store-level runtime switches. The API key runtime entry prohibits contentStatus and retains the original governance thresholds. The maximum value of timeoutMs is 60000. If mode is not passed, the existing semantics of fields, channels, minQualityScore, expansion, and debug are retained. When query is *, you can use includeCandidates, cursor, and offset to browse experiences (management plane only).</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;userId&quot;:&quot;alice&quot;}</p>
+     * <p>{&quot;scene&quot;:&quot;incident-recovery&quot;,&quot;__agentloopControl&quot;:{&quot;fields&quot;:[&quot;when_to_use&quot;,&quot;summary&quot;],&quot;channels&quot;:[&quot;vector&quot;,&quot;fulltext&quot;],&quot;minQualityScore&quot;:0.6,&quot;expansion&quot;:false,&quot;debug&quot;:true}}</p>
      */
     @NameInMap("filter")
     public java.util.Map<String, ?> filter;
@@ -23,7 +23,7 @@ public class SearchContextRequest extends TeaModel {
     public Boolean formatted;
 
     /**
-     * <p>Specifies whether to include memories with sourceState=inactive. Default value: false.</p>
+     * <p>Specifies whether to include memories with sourceState set to inactive. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,7 +32,7 @@ public class SearchContextRequest extends TeaModel {
     public Boolean includeInactive;
 
     /**
-     * <p>The maximum number of returned results based on the top-N similarity.</p>
+     * <p>The maximum number of returned results (Top-N similarity).</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,28 +45,28 @@ public class SearchContextRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Recent user preferences</p>
+     * <p>Recent user preference settings</p>
      */
     @NameInMap("query")
     public String query;
 
     /**
-     * <p>The retrieval options used to control the retrieval strategy.</p>
+     * <p>The retrieval options. The experience store supports normal and reranker (deterministic reranking). The memory store uses its own retrieval strategy. For real-time recall in the experience store, the limit ranges from 1 to 20.</p>
      * 
      * <strong>example:</strong>
-     * <p>semantic</p>
+     * <p>normal</p>
      */
     @NameInMap("retrievalOption")
     public String retrievalOption;
 
     /**
-     * <p>The recall scope. If a field with the same name exists in the filter, a 400 ScopeFilterConflict error is returned.</p>
+     * <p>The recall scope. If this field conflicts with a field of the same name in filter, a 400 ScopeFilterConflict error is returned.</p>
      */
     @NameInMap("scope")
     public SearchContextRequestScope scope;
 
     /**
-     * <p>Filters results by extraction strategy IDs. Multiple IDs in the list are evaluated with an OR logic. If this parameter is not specified, all strategies are recalled. An empty list returns a 400 error. Valid IDs with no matches return empty results. Historical removed strategy IDs are supported.</p>
+     * <p>Filters results by extraction strategy IDs. The conditions in the list are combined by using the OR operator. If this parameter is not passed, all strategies are recalled. An empty list returns a 400 error. If the format is valid but no matching IDs are found, an empty result is returned. Historical removed strategy IDs are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;preferences&quot;,&quot;profile&quot;]</p>
@@ -75,7 +75,7 @@ public class SearchContextRequest extends TeaModel {
     public java.util.List<String> strategyIds;
 
     /**
-     * <p>The similarity threshold. Results with a similarity score below this value are filtered out. Valid values: 0 to 1.</p>
+     * <p>The similarity threshold. Results with a score lower than this value are filtered out. Valid values: 0 to 1.</p>
      * 
      * <strong>example:</strong>
      * <p>0.5</p>

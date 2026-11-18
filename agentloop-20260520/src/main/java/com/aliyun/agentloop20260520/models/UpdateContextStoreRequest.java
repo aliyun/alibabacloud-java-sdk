@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateContextStoreRequest extends TeaModel {
     /**
-     * <p>The description of the policy change. A new policy version is written when a policy field in the config changes.</p>
+     * <p>The description of the policy change. A new policy version is created when policy fields in the config are modified.</p>
      * 
      * <strong>example:</strong>
      * <p>Relax the similarity threshold</p>
@@ -14,13 +14,13 @@ public class UpdateContextStoreRequest extends TeaModel {
     public String changeNote;
 
     /**
-     * <p>The context library configuration. If passed, the configuration is completely overwritten. If not passed, the original configuration is retained.</p>
+     * <p>The context library configuration. If specified, the entire configuration is overwritten. If not specified, the original configuration is retained.</p>
      */
     @NameInMap("config")
     public UpdateContextStoreRequestConfig config;
 
     /**
-     * <p>The context library type. This field is typically immutable after creation and is provided only for exception correction.</p>
+     * <p>The context library type. It is generally immutable after creation and is provided only for exception correction.</p>
      * 
      * <strong>example:</strong>
      * <p>experience</p>
@@ -38,7 +38,7 @@ public class UpdateContextStoreRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Required when modifying the runtime recall switch. The value must be equal to the config.runtimeRecallRevision value returned by GetContextStore. A 409 error is returned if a conflict occurs.</p>
+     * <p>Required when modifying the runtime recall switch. The value must be equal to the config.runtimeRecallRevision value returned by GetContextStore. A conflict returns a 409 error.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -56,10 +56,10 @@ public class UpdateContextStoreRequest extends TeaModel {
     public String reason;
 
     /**
-     * <p>The running status. Valid values: Active and Paused. For the memory type, Paused suspends data source reading and extraction. For the experience Dataset follow type, Paused retains committed and in-flight checkpoints, and resuming continues to process new records without skipping history from the current time. You do not need to pass back the source parameter if you only update the status.</p>
+     * <p>The mining status of the experience library. This field applies only to the experience type. The specific valid values and combination constraints are defined by the server.</p>
      * 
      * <strong>example:</strong>
-     * <p>Active</p>
+     * <p>Paused</p>
      */
     @NameInMap("status")
     public String status;
@@ -228,7 +228,7 @@ public class UpdateContextStoreRequest extends TeaModel {
 
     public static class UpdateContextStoreRequestConfigExtractionPoliciesStoragePolicy extends TeaModel {
         /**
-         * <p>The allowed storage actions. Default value: all actions (ADD, UPDATE, MERGE, and DELETE).</p>
+         * <p>The allowed storage actions. By default, all actions are allowed, including ADD, UPDATE, MERGE, and DELETE.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;ADD&quot;,&quot;UPDATE&quot;,&quot;MERGE&quot;,&quot;DELETE&quot;]</p>
@@ -237,7 +237,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public java.util.List<String> allowedActions;
 
         /**
-         * <p>Specifies whether to deduplicate data in event mode. Default value: true.</p>
+         * <p>Specifies whether to enable deduplication in event mode. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -246,7 +246,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public Boolean dedupe;
 
         /**
-         * <p>Specifies whether to enable human edit protection. Default value: true. When enabled, automatic extraction does not overwrite manually modified memory.</p>
+         * <p>Specifies whether to enable manual edit protection. Default value: true. When enabled, automatic extraction does not overwrite manually modified memories.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -255,7 +255,13 @@ public class UpdateContextStoreRequest extends TeaModel {
         public Boolean humanEditProtection;
 
         /**
-         * <p>The merge key for the upsert mode. Valid values: factKey, semantic, and both. Default value: semantic.</p>
+         * <p>The merge key for the upsert mode. Valid values:</p>
+         * <ul>
+         * <li>factKey</li>
+         * <li>semantic</li>
+         * <li>both
+         * Default value: semantic.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>semantic</p>
@@ -264,7 +270,12 @@ public class UpdateContextStoreRequest extends TeaModel {
         public String mergeKey;
 
         /**
-         * <p>The storage mode. Valid values: event (event append) and upsert (merge and update). Default value: upsert.</p>
+         * <p>The storage mode. Valid values:</p>
+         * <ul>
+         * <li>event: event append</li>
+         * <li>upsert: merge and update
+         * Default value: upsert.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>upsert</p>
@@ -282,7 +293,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public Double similarityThreshold;
 
         /**
-         * <p>The number of days before memory expires. A value of 0 indicates that the memory does not expire.</p>
+         * <p>The number of days before a memory expires. A value of 0 indicates that the memory does not expire.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -364,7 +375,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public java.util.List<String> categories;
 
         /**
-         * <p>The custom extraction instructions. This parameter is required when preset is set to custom. The length must be 1 to 8,000 characters.</p>
+         * <p>The custom extraction instructions. This is required when preset is set to custom. The length must be 1 to 8,000 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>Extract only user product preferences</p>
@@ -373,7 +384,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public String customInstructions;
 
         /**
-         * <p>Specifies whether to execute this policy for new input. Default value: true. Disabling the policy does not delete historical memory.</p>
+         * <p>Specifies whether to execute this policy for new input. Default value: true. Disabling the policy does not delete historical memories.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -415,13 +426,13 @@ public class UpdateContextStoreRequest extends TeaModel {
         public String preset;
 
         /**
-         * <p>The independent storage rules for this policy. If omitted, the original value is retained. New policies use the default value. Repeatedly confirmed memory refreshes the validity period by default.</p>
+         * <p>The independent storage rules for this policy. If omitted, the original value is retained. New policies use the default value. By default, the validity period is refreshed for repeatedly confirmed memories.</p>
          */
         @NameInMap("storagePolicy")
         public UpdateContextStoreRequestConfigExtractionPoliciesStoragePolicy storagePolicy;
 
         /**
-         * <p>The ID of the extraction policy. This parameter is optional. If omitted, the default value is used. The ID must start with a letter and can contain only letters, digits, underscores, and hyphens. It can be up to 64 characters in length. After default processing, the ID must be unique within the same database. Modifying the name or instructions does not change this ID.</p>
+         * <p>The ID of the extraction policy. This parameter is optional. If omitted, the default value is default. The ID must start with a letter and can contain only letters, digits, underscores, and hyphens. It can be up to 64 characters in length. After default processing, the ID must be unique within the same database. Modifying the name or instructions does not change this ID.</p>
          * 
          * <strong>example:</strong>
          * <p>preferences</p>
@@ -544,7 +555,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public java.util.List<String> categories;
 
         /**
-         * <p>The custom extraction instructions. This parameter is required when preset is set to custom. The length must be 1 to 8,000 characters.</p>
+         * <p>The custom extraction instructions. This is required when preset is set to custom. The length must be 1 to 8,000 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>Extract only user product preferences</p>
@@ -625,7 +636,7 @@ public class UpdateContextStoreRequest extends TeaModel {
 
     public static class UpdateContextStoreRequestConfigScopePolicy extends TeaModel {
         /**
-         * <p>Specifies that at least one scope field must be non-empty. Valid values: userId, agentId, appId, and runId.</p>
+         * <p>At least one scope field must be non-empty. Valid element values are userId, agentId, appId, and runId.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;userId&quot;]</p>
@@ -650,7 +661,7 @@ public class UpdateContextStoreRequest extends TeaModel {
 
     public static class UpdateContextStoreRequestConfigSourceDatasetCustomFields extends TeaModel {
         /**
-         * <p>The field description. This parameter is required when usage is set to extraction-input.</p>
+         * <p>The description of the field. This is required when usage is set to extraction-input.</p>
          * 
          * <strong>example:</strong>
          * <p>Customer tier</p>
@@ -659,7 +670,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>Specifies whether the field is a sensitive field.</p>
+         * <p>Specifies whether the field is sensitive.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -668,7 +679,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public Boolean sensitive;
 
         /**
-         * <p>The source field name.</p>
+         * <p>The name of the source field.</p>
          * 
          * <strong>example:</strong>
          * <p>customerTier</p>
@@ -677,7 +688,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public String sourceField;
 
         /**
-         * <p>The write target path, such as metadata.customerTier.</p>
+         * <p>The target path for writing data, such as metadata.customerTier.</p>
          * 
          * <strong>example:</strong>
          * <p>metadata.customerTier</p>
@@ -768,7 +779,7 @@ public class UpdateContextStoreRequest extends TeaModel {
 
     public static class UpdateContextStoreRequestConfigSourceDataset extends TeaModel {
         /**
-         * <p>The list of custom field declarations. If passed, the list is completely overwritten.</p>
+         * <p>The list of custom field declarations. If specified, the entire list is overwritten.</p>
          */
         @NameInMap("customFields")
         public java.util.List<UpdateContextStoreRequestConfigSourceDatasetCustomFields> customFields;
@@ -839,7 +850,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public Boolean excludeDegraded;
 
         /**
-         * <p>The minimum step count, which must be greater than or equal to 0.</p>
+         * <p>The minimum number of steps. The value must be greater than or equal to 0.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -848,7 +859,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public Integer minStepCount;
 
         /**
-         * <p>The native Simple Log Service (SLS) query statement, which is combined with the preceding conditions using AND.</p>
+         * <p>The native Simple Log Service (SLS) query statement. This is combined with the preceding conditions using AND.</p>
          * 
          * <strong>example:</strong>
          * <p>tool_names:&quot;search_order&quot;</p>
@@ -932,7 +943,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public String appId;
 
         /**
-         * <p>The JSONPath for runId. It is not mapped by default to avoid isolating memory by a single trajectory.</p>
+         * <p>The JSONPath for runId. By default, this field is not mapped to prevent memory isolation by a single trajectory.</p>
          * 
          * <strong>example:</strong>
          * <p>$.trajectory_id</p>
@@ -941,7 +952,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public String runId;
 
         /**
-         * <p>The JSONPath for userId. In version 1, it is not mapped by default. In version 2, it defaults to user.id and then enduser.id from agent attributes.</p>
+         * <p>The JSONPath for userId. By default, version 1 does not map this field, and version 2 sequentially retrieves user.id and enduser.id from agent attributes.</p>
          * 
          * <strong>example:</strong>
          * <p>$.trajectory_extensions.user_id</p>
@@ -990,13 +1001,13 @@ public class UpdateContextStoreRequest extends TeaModel {
 
     public static class UpdateContextStoreRequestConfigSourceTrajectory extends TeaModel {
         /**
-         * <p>The trajectory filter conditions. Conditions are combined with AND, and items within a list are combined with OR.</p>
+         * <p>The trajectory filter conditions. Conditions are combined with AND, while items within a list are combined with OR.</p>
          */
         @NameInMap("filter")
         public UpdateContextStoreRequestConfigSourceTrajectoryFilter filter;
 
         /**
-         * <p>The name of the trajectory Logstore. Default value: agent-trajectory. It cannot be changed after creation.</p>
+         * <p>The name of the trajectory Logstore. Default value: agent-trajectory. This cannot be changed after creation.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-trajectory</p>
@@ -1014,13 +1025,13 @@ public class UpdateContextStoreRequest extends TeaModel {
         public Integer pollIntervalSeconds;
 
         /**
-         * <p>The scope field mapping. Dot paths, array indices, and quoted property keys are supported. An empty string indicates no mapping.</p>
+         * <p>The scope field mapping. Dot paths, array subscripts, and quoted property keys are supported. An empty string indicates no mapping.</p>
          */
         @NameInMap("scopeMapping")
         public UpdateContextStoreRequestConfigSourceTrajectoryScopeMapping scopeMapping;
 
         /**
-         * <p>The default mapping version for trajectory identity. Version 1 retains the old rules. Version 2 reads user.id or enduser.id from agent attributes. The version is frozen upon creation.</p>
+         * <p>The default mapping version for trajectory identity. Version 1 retains the legacy rules. Version 2 reads user.id or enduser.id from agent attributes. The version is frozen upon creation.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1077,7 +1088,7 @@ public class UpdateContextStoreRequest extends TeaModel {
 
     public static class UpdateContextStoreRequestConfigSource extends TeaModel {
         /**
-         * <p>The AgentSpace where the trace data source is located. Cross-AgentSpace is not supported in the current phase. If passed, it must be equal to the path AgentSpace. Otherwise, a 400 parameter error is returned. The AgentSpace cannot be changed after creation.</p>
+         * <p>The AgentSpace where the trace data source is located. Cross-AgentSpace operations are not supported in the current version. If specified, the value must be equal to the path AgentSpace. Otherwise, a 400 parameter error is returned. The AgentSpace cannot be changed after creation.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent-space</p>
@@ -1086,13 +1097,13 @@ public class UpdateContextStoreRequest extends TeaModel {
         public String agentSpace;
 
         /**
-         * <p>The updatable items of the dataset data source. The datasetName cannot be changed after creation.</p>
+         * <p>The updatable items for the dataset data source. The datasetName cannot be changed after creation.</p>
          */
         @NameInMap("dataset")
         public UpdateContextStoreRequestConfigSourceDataset dataset;
 
         /**
-         * <p>The data backfill start time in ISO 8601 UTC format.</p>
+         * <p>The start time for data backfill in ISO 8601 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01T00:00:00Z</p>
@@ -1101,7 +1112,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The updatable items of the trajectory data source. The source.type cannot be changed after creation.</p>
+         * <p>The updatable items for the trajectory data source. The source.type cannot be changed after creation.</p>
          */
         @NameInMap("trajectory")
         public UpdateContextStoreRequestConfigSourceTrajectory trajectory;
@@ -1147,7 +1158,7 @@ public class UpdateContextStoreRequest extends TeaModel {
 
     public static class UpdateContextStoreRequestConfigStoragePolicy extends TeaModel {
         /**
-         * <p>The allowed storage actions. Default value: all actions (ADD, UPDATE, MERGE, and DELETE).</p>
+         * <p>The allowed storage actions. By default, all actions are allowed, including ADD, UPDATE, MERGE, and DELETE.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;ADD&quot;,&quot;UPDATE&quot;,&quot;MERGE&quot;,&quot;DELETE&quot;]</p>
@@ -1156,7 +1167,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public java.util.List<String> allowedActions;
 
         /**
-         * <p>Specifies whether to deduplicate data in event mode. Default value: true.</p>
+         * <p>Specifies whether to enable deduplication in event mode. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1165,7 +1176,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public Boolean dedupe;
 
         /**
-         * <p>Specifies whether to enable human edit protection. Default value: true. When enabled, automatic extraction does not overwrite manually modified memory.</p>
+         * <p>Specifies whether to enable manual edit protection. Default value: true. When enabled, automatic extraction does not overwrite manually modified memories.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1174,7 +1185,13 @@ public class UpdateContextStoreRequest extends TeaModel {
         public Boolean humanEditProtection;
 
         /**
-         * <p>The merge key for the upsert mode. Valid values: factKey, semantic, and both. Default value: semantic.</p>
+         * <p>The merge key for the upsert mode. Valid values:</p>
+         * <ul>
+         * <li>factKey</li>
+         * <li>semantic</li>
+         * <li>both
+         * Default value: semantic.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>semantic</p>
@@ -1183,7 +1200,12 @@ public class UpdateContextStoreRequest extends TeaModel {
         public String mergeKey;
 
         /**
-         * <p>The storage mode. Valid values: event (event append) and upsert (merge and update). Default value: upsert.</p>
+         * <p>The storage mode. Valid values:</p>
+         * <ul>
+         * <li>event: event append</li>
+         * <li>upsert: merge and update
+         * Default value: upsert.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>upsert</p>
@@ -1201,7 +1223,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public Double similarityThreshold;
 
         /**
-         * <p>The number of days before memory expires. A value of 0 indicates that the memory does not expire.</p>
+         * <p>The number of days before a memory expires. A value of 0 indicates that the memory does not expire.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1280,7 +1302,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public UpdateContextStoreRequestConfigAudit audit;
 
         /**
-         * <p>The list of extraction policies. You can specify 1 to 10 policies. During an update, compatible fields returned as-is are ignored. The strategyVersion parameter indicates the snapshot version of the entire database configuration.</p>
+         * <p>The list of extraction policies. You can specify 1 to 10 policies. During an update, compatible fields returned as-is are ignored. The strategyVersion field indicates the snapshot version of the overall database configuration.</p>
          */
         @NameInMap("extractionPolicies")
         public java.util.List<UpdateContextStoreRequestConfigExtractionPolicies> extractionPolicies;
@@ -1292,7 +1314,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public UpdateContextStoreRequestConfigExtractionPolicy extractionPolicy;
 
         /**
-         * <p>The metadata field mapping, where the key is the business field and the value is the storage field.</p>
+         * <p>The metadata field mapping. The key is the business field and the value is the storage field.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;userId&quot;:&quot;user_id&quot;,&quot;sessionId&quot;:&quot;session_id&quot;}</p>
@@ -1301,7 +1323,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public java.util.Map<String, String> metadataField;
 
         /**
-         * <p>Specifies whether the experience library allows runtime recall. When modifying this property, you must pass expectedRuntimeRecallRevision and submit only this property in the config.</p>
+         * <p>Specifies whether runtime recall is enabled for the experience library. When modifying this property, you must pass expectedRuntimeRecallRevision and submit only this property in the config.</p>
          */
         @NameInMap("runtimeRecallEnabled")
         public Boolean runtimeRecallEnabled;
@@ -1313,7 +1335,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public UpdateContextStoreRequestConfigScopePolicy scopePolicy;
 
         /**
-         * <p>The datasource config, which serves only as the root identity for the data source.</p>
+         * <p>The datasource config. This serves only as the root identity for the datasource.</p>
          */
         @NameInMap("source")
         public UpdateContextStoreRequestConfigSource source;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListExperimentPlansRequest extends TeaModel {
     /**
-     * <p>The number of entries to return. Default value: 20.</p>
+     * <p>The maximum number of entries to return. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListExperimentPlansRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>Optional. Use <code>offset</code> and <code>limit</code> for pagination instead.</p>
+     * <p>Optional. For pagination, use <code>offset</code> and <code>limit</code> instead.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListExperimentPlansRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Optional. Use <code>offset</code> and <code>limit</code> for pagination instead.</p>
+     * <p>Optional. For pagination, use <code>offset</code> and <code>limit</code> instead.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJsYXN0SWQiOjEyM30=</p>
@@ -41,7 +41,7 @@ public class ListExperimentPlansRequest extends TeaModel {
     public Integer offset;
 
     /**
-     * <p>Fuzzy matches experiment plans by plan name.</p>
+     * <p>The plan name used for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>arms_agent</p>
@@ -50,7 +50,7 @@ public class ListExperimentPlansRequest extends TeaModel {
     public String planName;
 
     /**
-     * <p>Filters experiment plans by exact status.</p>
+     * <p>The exact status used for filtering.</p>
      * 
      * <strong>example:</strong>
      * <p>pending</p>

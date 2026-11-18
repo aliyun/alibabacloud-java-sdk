@@ -32,7 +32,7 @@ public class UpdateExperimentPlanRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The list of evaluators. If omitted, the list is not modified. If an empty array is passed, the list is cleared. When configured, evaluation is automatically triggered upon experiment completion.</p>
+     * <p>The list of evaluators. If omitted, the list is not modified. If an empty array is passed, the list is cleared.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;evaluatorRef&quot;: &quot;Builtin.agent_task_completion&quot;}]</p>
@@ -41,7 +41,7 @@ public class UpdateExperimentPlanRequest extends TeaModel {
     public java.util.List<Evaluator> evaluators;
 
     /**
-     * <p>The type of the experiment. Valid values: OFFLINE (offline experiment) and ONLINE (online experiment).</p>
+     * <p>The type of the experiment.</p>
      * 
      * <strong>example:</strong>
      * <p>OFFLINE</p>
@@ -68,7 +68,10 @@ public class UpdateExperimentPlanRequest extends TeaModel {
     public java.util.Map<String, ?> input;
 
     /**
-     * <p>The name of the associated data processing pipeline. This parameter is optional. If you do not specify this parameter, the association is not updated. If you specify an empty string, the association is removed. After the association is established, when an experiment under this plan completes and writes experiment results to a Logstore, the system filters the data by the traceId of the current experiment trace and calls PreviewPipeline to write the pipeline-processed trace results together with the experiment results.</p>
+     * <p>The name of the associated data processing pipeline. This parameter is optional. If this parameter is not specified, the pipeline is not updated. If an empty character string is specified, the association is dissociated. After the association, when an experiment under this plan executes and completes writing experiment results to the Logstore, the system filters by the traceId of the current experiment trace and invokes PreviewPipeline to write the results processed by the pipeline.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-pipeline</p>
      */
     @NameInMap("pipelineName")
     public String pipelineName;
@@ -92,7 +95,7 @@ public class UpdateExperimentPlanRequest extends TeaModel {
     public String querySql;
 
     /**
-     * <p>The list of selected data item IDs in partial dataset mode. Passing an empty array clears the list.</p>
+     * <p>The list of selected data item IDs in partial dataset mode. If an empty array is passed, the list is cleared.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>

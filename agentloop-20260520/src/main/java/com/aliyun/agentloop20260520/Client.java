@@ -376,6 +376,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a named historical version for a dataset in a specified agent workspace to preserve the historical state of the dataset. You can call ListDatasetVersions to query version information. When a version is no longer needed, you can call DeleteDatasetVersion to delete it.</p>
+     * 
+     * @param request CreateDatasetVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDatasetVersionResponse
+     */
+    public CreateDatasetVersionResponse createDatasetVersionWithOptions(String agentSpace, String datasetName, CreateDatasetVersionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            body.put("version", request.version);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDatasetVersion"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/agentspace/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/dataset/" + com.aliyun.openapiutil.Client.getEncodeParam(datasetName) + "/version"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDatasetVersionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a named historical version for a dataset in a specified agent workspace to preserve the historical state of the dataset. You can call ListDatasetVersions to query version information. When a version is no longer needed, you can call DeleteDatasetVersion to delete it.</p>
+     * 
+     * @param request CreateDatasetVersionRequest
+     * @return CreateDatasetVersionResponse
+     */
+    public CreateDatasetVersionResponse createDatasetVersion(String agentSpace, String datasetName, CreateDatasetVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createDatasetVersionWithOptions(agentSpace, datasetName, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Calls the CreateEvaluationTask operation to create an evaluation task under a specified AgentSpace. The server validates AgentSpace permissions, initializes evaluation result storage, checks task name uniqueness, and asynchronously creates and executes an EvaluationRun based on <code>taskMode</code> and <code>runStrategies</code>.
      * This operation is applicable to running built-in or custom evaluators on Trace, Dataset, or SLS Log data. It supports two execution strategies: historical backfill and continuous evaluation.</p>
@@ -636,7 +693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an experiment plan in a specified AgentSpace. You can use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</p>
+     * <p>Calls CreateExperimentPlan to create an experiment plan in a specified AgentSpace. This operation is used to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an experiment plan.</p>
@@ -709,7 +766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an experiment plan in a specified AgentSpace. You can use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</p>
+     * <p>Calls CreateExperimentPlan to create an experiment plan in a specified AgentSpace. This operation is used to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an experiment plan.</p>
@@ -1191,6 +1248,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteDatasetWithOptions(agentSpace, datasetName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a historical version of a dataset in a specified agent space. After the deletion, the version no longer appears in the list returned by ListDatasetVersions. This operation does not delete the dataset itself, current data, or other historical versions.</p>
+     * 
+     * @param request DeleteDatasetVersionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDatasetVersionResponse
+     */
+    public DeleteDatasetVersionResponse deleteDatasetVersionWithOptions(String agentSpace, String datasetName, String version, DeleteDatasetVersionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDatasetVersion"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/agentspace/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/dataset/" + com.aliyun.openapiutil.Client.getEncodeParam(datasetName) + "/version/" + com.aliyun.openapiutil.Client.getEncodeParam(version) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDatasetVersionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a historical version of a dataset in a specified agent space. After the deletion, the version no longer appears in the list returned by ListDatasetVersions. This operation does not delete the dataset itself, current data, or other historical versions.</p>
+     * 
+     * @param request DeleteDatasetVersionRequest
+     * @return DeleteDatasetVersionResponse
+     */
+    public DeleteDatasetVersionResponse deleteDatasetVersion(String agentSpace, String datasetName, String version, DeleteDatasetVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteDatasetVersionWithOptions(agentSpace, datasetName, version, request, headers, runtime);
     }
 
     /**
@@ -2261,8 +2359,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and fault message.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the details of a single pipeline run.</p>
+     * <p>Queries the details of a single run, including the data window, execute status, retry information, run statistics, and fault message.</p>
      * 
      * @param request GetPipelineRunRequest
      * @param headers map
@@ -2289,8 +2390,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and fault message.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the details of a single pipeline run.</p>
+     * <p>Queries the details of a single run, including the data window, execute status, retry information, run statistics, and fault message.</p>
      * 
      * @param request GetPipelineRunRequest
      * @return GetPipelineRunResponse
@@ -2363,13 +2467,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries a list of AgentSpaces.</p>
      * 
-     * @param request ListAgentSpacesRequest
+     * @param tmpReq ListAgentSpacesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAgentSpacesResponse
      */
-    public ListAgentSpacesResponse listAgentSpacesWithOptions(ListAgentSpacesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListAgentSpacesResponse listAgentSpacesWithOptions(ListAgentSpacesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListAgentSpacesShrinkRequest request = new ListAgentSpacesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "tag", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.agentSpace)) {
             query.put("agentSpace", request.agentSpace);
@@ -2385,6 +2495,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("regionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("tag", request.tagShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2533,6 +2647,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listContextStoresWithOptions(agentSpace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query to retrieve the historical versions of a dataset in a specified agent space and returns the version names, descriptions, and creation time. Deleted versions are not returned in the list. Do not specify nextToken in the first request. For subsequent requests, use the nextToken from the previous response to continue paging.</p>
+     * 
+     * @param request ListDatasetVersionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDatasetVersionsResponse
+     */
+    public ListDatasetVersionsResponse listDatasetVersionsWithOptions(String agentSpace, String datasetName, ListDatasetVersionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDatasetVersions"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/agentspace/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/dataset/" + com.aliyun.openapiutil.Client.getEncodeParam(datasetName) + "/version"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDatasetVersionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a paged query to retrieve the historical versions of a dataset in a specified agent space and returns the version names, descriptions, and creation time. Deleted versions are not returned in the list. Do not specify nextToken in the first request. For subsequent requests, use the nextToken from the previous response to continue paging.</p>
+     * 
+     * @param request ListDatasetVersionsRequest
+     * @return ListDatasetVersionsResponse
+     */
+    public ListDatasetVersionsResponse listDatasetVersions(String agentSpace, String datasetName, ListDatasetVersionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listDatasetVersionsWithOptions(agentSpace, datasetName, request, headers, runtime);
     }
 
     /**
@@ -2791,7 +2956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of evaluators.</p>
+     * <p>Queries the list of evaluators.</p>
      * 
      * @param request ListEvaluatorsRequest
      * @param headers map
@@ -2845,7 +3010,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of evaluators.</p>
+     * <p>Queries the list of evaluators.</p>
      * 
      * @param request ListEvaluatorsRequest
      * @return ListEvaluatorsResponse
@@ -2858,7 +3023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination by using <code>offset</code>/<code>limit</code>.</p>
+     * <p>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. This operation supports fuzzy match by plan name, filtering by status, and pagination by using <code>offset</code> and <code>limit</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of experiment plans.</p>
@@ -2915,7 +3080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination by using <code>offset</code>/<code>limit</code>.</p>
+     * <p>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. This operation supports fuzzy match by plan name, filtering by status, and pagination by using <code>offset</code> and <code>limit</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of experiment plans.</p>
@@ -3012,7 +3177,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query on the run records of a specified optimization task. To obtain complete result references and frozen outputs, call GetOptimizeRun.</p>
+     * <p>Queries the run records of a specified optimization task by using paging. Complete result references and frozen outputs are queried by calling GetOptimizeRun.</p>
      * 
      * @param request ListOptimizeRunsRequest
      * @param headers map
@@ -3062,7 +3227,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paging query on the run records of a specified optimization task. To obtain complete result references and frozen outputs, call GetOptimizeRun.</p>
+     * <p>Queries the run records of a specified optimization task by using paging. Complete result references and frozen outputs are queried by calling GetOptimizeRun.</p>
      * 
      * @param request ListOptimizeRunsRequest
      * @return ListOptimizeRunsResponse
@@ -3075,7 +3240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries optimization tasks in a specified AgentSpace by using paging and returns the task status, configurations, and scheduling checkpoints.</p>
+     * <p>Performs a paging query on the optimization tasks in a specified AgentSpace and returns the task status, configurations, and scheduling checkpoints.</p>
      * 
      * @param request ListOptimizeTasksRequest
      * @param headers map
@@ -3121,7 +3286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries optimization tasks in a specified AgentSpace by using paging and returns the task status, configurations, and scheduling checkpoints.</p>
+     * <p>Performs a paging query on the optimization tasks in a specified AgentSpace and returns the task status, configurations, and scheduling checkpoints.</p>
      * 
      * @param request ListOptimizeTasksRequest
      * @return ListOptimizeTasksResponse
@@ -3133,8 +3298,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Calls the ListPipelineRuns operation to query the pipeline run history. You can filter the results by status, trigger type, and time range, and use cursor-based pagination.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the run history. Supports filtering by status, trigger type, and time range, and cursor-based pagination.</p>
+     * <p>Queries the run history. Supports filtering by status, trigger type, and time range, and uses cursor-based pagination.</p>
      * 
      * @param request ListPipelineRunsRequest
      * @param headers map
@@ -3187,8 +3355,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Calls the ListPipelineRuns operation to query the pipeline run history. You can filter the results by status, trigger type, and time range, and use cursor-based pagination.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the run history. Supports filtering by status, trigger type, and time range, and cursor-based pagination.</p>
+     * <p>Queries the run history. Supports filtering by status, trigger type, and time range, and uses cursor-based pagination.</p>
      * 
      * @param request ListPipelineRunsRequest
      * @return ListPipelineRunsResponse
@@ -3317,8 +3488,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><strong>agentSpace</strong> must be an AgentSpace instance created under the current account.</li>
-     * <li><strong>source.type</strong> currently supports only the <code>logstore</code> type, and <code>logstore.project</code> and <code>logstore.logstore</code> must be authorized within the AgentSpace and reside in the same region.</li>
+     * <li><strong>agentSpace</strong> must be an existing AgentSpace instance under the current account.</li>
+     * <li><strong>source.type</strong> currently supports only the <code>logstore</code> type. The <code>logstore.project</code> and <code>logstore.logstore</code> must be authorized within the AgentSpace and reside in the same region.</li>
      * <li><strong>pipeline.nodes</strong> must contain at least one <code>Source</code> node and cannot be empty.</li>
      * <li><strong>fromTime</strong> and <strong>toTime</strong> are UNIX timestamps in seconds. <strong>fromTime</strong> must be earlier than <strong>toTime</strong>.</li>
      * <li>A maximum of 5 records are returned, and internal fields of the data source system are automatically filtered out.</li>
@@ -3373,8 +3544,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><strong>agentSpace</strong> must be an AgentSpace instance created under the current account.</li>
-     * <li><strong>source.type</strong> currently supports only the <code>logstore</code> type, and <code>logstore.project</code> and <code>logstore.logstore</code> must be authorized within the AgentSpace and reside in the same region.</li>
+     * <li><strong>agentSpace</strong> must be an existing AgentSpace instance under the current account.</li>
+     * <li><strong>source.type</strong> currently supports only the <code>logstore</code> type. The <code>logstore.project</code> and <code>logstore.logstore</code> must be authorized within the AgentSpace and reside in the same region.</li>
      * <li><strong>pipeline.nodes</strong> must contain at least one <code>Source</code> node and cannot be empty.</li>
      * <li><strong>fromTime</strong> and <strong>toTime</strong> are UNIX timestamps in seconds. <strong>fromTime</strong> must be earlier than <strong>toTime</strong>.</li>
      * <li>A maximum of 5 records are returned, and internal fields of the data source system are automatically filtered out.</li>
