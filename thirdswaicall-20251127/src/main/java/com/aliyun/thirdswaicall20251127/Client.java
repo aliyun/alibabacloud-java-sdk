@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "ThirdswAicall";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("thirdswaicall", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -47,6 +50,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.callerUacAccountId)) {
             body.put("CallerUacAccountId", request.callerUacAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentWorkspaceCode)) {
+            body.put("CurrentWorkspaceCode", request.currentWorkspaceCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.currentWorkspaceId)) {
@@ -121,6 +128,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CallerUacAccountId", request.callerUacAccountId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.currentWorkspaceCode)) {
+            body.put("CurrentWorkspaceCode", request.currentWorkspaceCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.currentWorkspaceId)) {
             body.put("CurrentWorkspaceId", request.currentWorkspaceId);
         }
@@ -182,6 +193,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.labelTagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.labelTags, "LabelTags", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.structuredLabelTags)) {
+            request.structuredLabelTagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.structuredLabelTags, "StructuredLabelTags", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.callEndTimeBegin)) {
             body.put("CallEndTimeBegin", request.callEndTimeBegin);
@@ -205,6 +220,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.current)) {
             body.put("Current", request.current);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentWorkspaceCode)) {
+            body.put("CurrentWorkspaceCode", request.currentWorkspaceCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.currentWorkspaceId)) {
@@ -237,6 +256,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.size)) {
             body.put("Size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.structuredLabelTagsShrink)) {
+            body.put("StructuredLabelTags", request.structuredLabelTagsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {

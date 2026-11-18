@@ -48,6 +48,13 @@ public class ReadOutboundTaskCallListShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>1ab92c</p>
+     */
+    @NameInMap("CurrentWorkspaceCode")
+    public String currentWorkspaceCode;
+
+    /**
+     * <strong>example:</strong>
      * <p>abc123***</p>
      */
     @NameInMap("CurrentWorkspaceId")
@@ -101,6 +108,9 @@ public class ReadOutboundTaskCallListShrinkRequest extends TeaModel {
      */
     @NameInMap("Size")
     public Integer size;
+
+    @NameInMap("StructuredLabelTags")
+    public String structuredLabelTagsShrink;
 
     /**
      * <strong>example:</strong>
@@ -169,6 +179,14 @@ public class ReadOutboundTaskCallListShrinkRequest extends TeaModel {
         return this.current;
     }
 
+    public ReadOutboundTaskCallListShrinkRequest setCurrentWorkspaceCode(String currentWorkspaceCode) {
+        this.currentWorkspaceCode = currentWorkspaceCode;
+        return this;
+    }
+    public String getCurrentWorkspaceCode() {
+        return this.currentWorkspaceCode;
+    }
+
     public ReadOutboundTaskCallListShrinkRequest setCurrentWorkspaceId(String currentWorkspaceId) {
         this.currentWorkspaceId = currentWorkspaceId;
         return this;
@@ -231,6 +249,14 @@ public class ReadOutboundTaskCallListShrinkRequest extends TeaModel {
     }
     public Integer getSize() {
         return this.size;
+    }
+
+    public ReadOutboundTaskCallListShrinkRequest setStructuredLabelTagsShrink(String structuredLabelTagsShrink) {
+        this.structuredLabelTagsShrink = structuredLabelTagsShrink;
+        return this;
+    }
+    public String getStructuredLabelTagsShrink() {
+        return this.structuredLabelTagsShrink;
     }
 
     public ReadOutboundTaskCallListShrinkRequest setTaskId(String taskId) {

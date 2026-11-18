@@ -48,6 +48,13 @@ public class ReadOutboundTaskCallListRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>1ab92c</p>
+     */
+    @NameInMap("CurrentWorkspaceCode")
+    public String currentWorkspaceCode;
+
+    /**
+     * <strong>example:</strong>
      * <p>abc123***</p>
      */
     @NameInMap("CurrentWorkspaceId")
@@ -101,6 +108,9 @@ public class ReadOutboundTaskCallListRequest extends TeaModel {
      */
     @NameInMap("Size")
     public Integer size;
+
+    @NameInMap("StructuredLabelTags")
+    public java.util.List<ReadOutboundTaskCallListRequestStructuredLabelTags> structuredLabelTags;
 
     /**
      * <strong>example:</strong>
@@ -169,6 +179,14 @@ public class ReadOutboundTaskCallListRequest extends TeaModel {
         return this.current;
     }
 
+    public ReadOutboundTaskCallListRequest setCurrentWorkspaceCode(String currentWorkspaceCode) {
+        this.currentWorkspaceCode = currentWorkspaceCode;
+        return this;
+    }
+    public String getCurrentWorkspaceCode() {
+        return this.currentWorkspaceCode;
+    }
+
     public ReadOutboundTaskCallListRequest setCurrentWorkspaceId(String currentWorkspaceId) {
         this.currentWorkspaceId = currentWorkspaceId;
         return this;
@@ -233,6 +251,14 @@ public class ReadOutboundTaskCallListRequest extends TeaModel {
         return this.size;
     }
 
+    public ReadOutboundTaskCallListRequest setStructuredLabelTags(java.util.List<ReadOutboundTaskCallListRequestStructuredLabelTags> structuredLabelTags) {
+        this.structuredLabelTags = structuredLabelTags;
+        return this;
+    }
+    public java.util.List<ReadOutboundTaskCallListRequestStructuredLabelTags> getStructuredLabelTags() {
+        return this.structuredLabelTags;
+    }
+
     public ReadOutboundTaskCallListRequest setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -247,6 +273,40 @@ public class ReadOutboundTaskCallListRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public static class ReadOutboundTaskCallListRequestStructuredLabelTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>是否有意向</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public java.util.List<String> value;
+
+        public static ReadOutboundTaskCallListRequestStructuredLabelTags build(java.util.Map<String, ?> map) throws Exception {
+            ReadOutboundTaskCallListRequestStructuredLabelTags self = new ReadOutboundTaskCallListRequestStructuredLabelTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ReadOutboundTaskCallListRequestStructuredLabelTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ReadOutboundTaskCallListRequestStructuredLabelTags setValue(java.util.List<String> value) {
+            this.value = value;
+            return this;
+        }
+        public java.util.List<String> getValue() {
+            return this.value;
+        }
+
     }
 
 }

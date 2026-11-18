@@ -187,6 +187,40 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
 
     }
 
+    public static class ReadOutboundTaskCallListResponseBodyRecordsStructuredLabelTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>是否有意向</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public java.util.List<String> value;
+
+        public static ReadOutboundTaskCallListResponseBodyRecordsStructuredLabelTags build(java.util.Map<String, ?> map) throws Exception {
+            ReadOutboundTaskCallListResponseBodyRecordsStructuredLabelTags self = new ReadOutboundTaskCallListResponseBodyRecordsStructuredLabelTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ReadOutboundTaskCallListResponseBodyRecordsStructuredLabelTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ReadOutboundTaskCallListResponseBodyRecordsStructuredLabelTags setValue(java.util.List<String> value) {
+            this.value = value;
+            return this;
+        }
+        public java.util.List<String> getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ReadOutboundTaskCallListResponseBodyRecords extends TeaModel {
         @NameInMap("BillingDuration")
         public Long billingDuration;
@@ -289,6 +323,9 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        @NameInMap("HangupDirection")
+        public String hangupDirection;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -351,6 +388,9 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("StructuredLabelTags")
+        public java.util.List<ReadOutboundTaskCallListResponseBodyRecordsStructuredLabelTags> structuredLabelTags;
 
         /**
          * <strong>example:</strong>
@@ -512,6 +552,14 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
+        public ReadOutboundTaskCallListResponseBodyRecords setHangupDirection(String hangupDirection) {
+            this.hangupDirection = hangupDirection;
+            return this;
+        }
+        public String getHangupDirection() {
+            return this.hangupDirection;
+        }
+
         public ReadOutboundTaskCallListResponseBodyRecords setId(Long id) {
             this.id = id;
             return this;
@@ -582,6 +630,14 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ReadOutboundTaskCallListResponseBodyRecords setStructuredLabelTags(java.util.List<ReadOutboundTaskCallListResponseBodyRecordsStructuredLabelTags> structuredLabelTags) {
+            this.structuredLabelTags = structuredLabelTags;
+            return this;
+        }
+        public java.util.List<ReadOutboundTaskCallListResponseBodyRecordsStructuredLabelTags> getStructuredLabelTags() {
+            return this.structuredLabelTags;
         }
 
         public ReadOutboundTaskCallListResponseBodyRecords setTaskId(String taskId) {
