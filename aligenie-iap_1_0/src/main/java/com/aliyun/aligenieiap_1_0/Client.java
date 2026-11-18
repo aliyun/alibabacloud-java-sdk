@@ -385,6 +385,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CtripOrderPushResponse ctripOrderPushWithOptions(CtripOrderPushRequest request, CtripOrderPushHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.journeyId)) {
+            query.put("JourneyId", request.journeyId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.scheduleItem)) {
             query.put("ScheduleItem", request.scheduleItem);
         }
