@@ -14,7 +14,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The token for the next query. If NextToken is empty, no more results exist.</p>
+     * <p>The token used to start the next query. An empty NextToken indicates that no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6mnFXZiT7NdvGNgkInJ****</p>
@@ -32,7 +32,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result information.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Results")
     public java.util.List<DescribeGlobalTimerRecordsResponseBodyResults> results;
@@ -76,7 +76,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
 
     public static class DescribeGlobalTimerRecordsResponseBodyResults extends TeaModel {
         /**
-         * <p>The type of action that was performed.</p>
+         * <p>The type of action performed.</p>
          * 
          * <strong>example:</strong>
          * <p>REBOOT</p>
@@ -94,7 +94,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         public String batchId;
 
         /**
-         * <p>The record information during the execution of the scheduled task.</p>
+         * <p>The record information generated during the execution of the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -104,7 +104,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the record was created.
-         * The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-08-03T08:27:29Z</p>
@@ -113,7 +113,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The cloud computer ID.</p>
+         * <p>The cloud desktop ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-0c951fy9arnk9****</p>
@@ -122,7 +122,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The name of the cloud computer.</p>
+         * <p>The name of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>DesktopName</p>
@@ -131,7 +131,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         public String desktopName;
 
         /**
-         * <p>The display result name.</p>
+         * <p>The display name of the result.</p>
          * 
          * <strong>example:</strong>
          * <p>SKIPPED</p>
@@ -141,7 +141,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the task ended.
-         * The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-21T02:00:45Z</p>
@@ -159,7 +159,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the resource parent.</p>
+         * <p>The ID of the parent resource.</p>
          * 
          * <strong>example:</strong>
          * <p>p-xxx</p>

@@ -24,7 +24,7 @@ public class BindConfigGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource information to associate.</p>
+     * <p>The information about the resources to be associated.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceInfos")

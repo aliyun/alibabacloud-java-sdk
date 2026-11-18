@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ListOfficeSiteUsersRequest extends TeaModel {
     /**
      * <blockquote>
-     * <p>This parameter is not publicly available. You can only pass in <code>1</code> or leave it empty.</p>
+     * <p>This field is not available for use. You can only set this parameter to <code>1</code> or leave it empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
     public String assignedInfo;
 
     /**
-     * <p>The fuzzy query character string.</p>
+     * <p>The fuzzy query string.</p>
      * 
      * <strong>example:</strong>
      * <p><em>jin</em></p>
@@ -25,7 +25,7 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>Specifies whether to return only users who are assigned cloud computers.</p>
+     * <p>Specifies whether to return only the users to which cloud desktops are assigned.</p>
      */
     @NameInMap("IncludeAssignedUser")
     public Boolean includeAssignedUser;
@@ -44,7 +44,7 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Leave this parameter empty for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>The pagination token for the next query. Leave this parameter empty for the first query or when no subsequent query is required. For subsequent queries, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -53,7 +53,7 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The specified AD domain organizational unit (OU).</p>
+     * <p>The specified organizational unit (OU) of the AD domain.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com/Domain Controllers</p>
@@ -72,7 +72,7 @@ public class ListOfficeSiteUsersRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

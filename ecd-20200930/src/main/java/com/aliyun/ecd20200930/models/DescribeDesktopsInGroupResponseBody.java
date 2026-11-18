@@ -53,7 +53,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     public Integer postPaidDesktopsCount;
 
     /**
-     * <p>The total billing amount of pay-as-you-go cloud desktops.</p>
+     * <p>The total billing amount for pay-as-you-go cloud desktops.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -201,7 +201,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String connectionStatus;
 
         /**
-         * <p>The cloud desktop ID.</p>
+         * <p>The ID of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>ud-7ftf5b6yu77b0****</p>
@@ -210,7 +210,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The cloud desktop name.</p>
+         * <p>The name of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>DemoComputer</p>
@@ -219,7 +219,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String desktopName;
 
         /**
-         * <p>The cloud desktop status.</p>
+         * <p>The status of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -228,7 +228,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String desktopStatus;
 
         /**
-         * <p>The disk type.</p>
+         * <p>The cloud disk type.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>
@@ -237,7 +237,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The authorized user.</p>
+         * <p>The ID of the authorized user.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -246,13 +246,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String endUserId;
 
         /**
-         * <p>The list of currently connected user IDs. This value is empty if the desktop is not connected.</p>
+         * <p>The list of IDs of currently connected users. This list is empty if the cloud desktop is disconnected.</p>
          */
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
 
         /**
-         * <p>The authorized username.</p>
+         * <p>The username of the authorized user.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -261,13 +261,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String endUserName;
 
         /**
-         * <p>The list of current usernames. This value is empty if the desktop is not connected.</p>
+         * <p>The list of usernames of currently connected users. This list is empty if the cloud desktop is disconnected.</p>
          */
         @NameInMap("EndUserNames")
         public java.util.List<String> endUserNames;
 
         /**
-         * <p>The time when the cloud desktop expires. This value is returned only for cloud desktops that use the subscription billable methods. The time is in the ISO 8601 format (UTC).</p>
+         * <p>The time when the cloud desktop will expire. This value is returned only for cloud desktops whose Billable methods are subscription billing. Time format: ISO 8601 standard (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-31T15:59Z</p>
@@ -327,7 +327,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public java.util.List<String> managementFlags;
 
         /**
-         * <p>The IP address of the secondary ENI of the instance.</p>
+         * <p>The IP address of the member elastic network interface (ENI) of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -345,7 +345,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The IP address of the primary ENI of the instance.</p>
+         * <p>The IP address of the primary elastic network interface (ENI) of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -363,7 +363,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String protocolType;
 
         /**
-         * <p>The reset time of the cloud desktop.</p>
+         * <p>The reset time of the cloud desktop. Time format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-03 08:48:08</p>
@@ -372,7 +372,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String resetTime;
 
         /**
-         * <p>The system cloud disk size. Unit: GiB.</p>
+         * <p>The size of the system cloud disk. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -583,8 +583,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String createDuration;
 
         /**
-         * <p>The creation time.</p>
-         * <p>The time is displayed in UTC in the ISO 8601 standard format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The creation time. Time format: ISO 8601 standard in UTC (yyyy-MM-ddTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-21T06:34:57Z</p>
@@ -593,7 +592,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The cloud desktop ID.</p>
+         * <p>The ID of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>ud-2i8qxpv6t1a07****</p>
@@ -602,7 +601,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The cloud desktop name.</p>
+         * <p>The name of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>DemoComputer</p>
@@ -611,7 +610,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String desktopName;
 
         /**
-         * <p>The cloud desktop status.</p>
+         * <p>The status of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>Stopped</p>
@@ -620,7 +619,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String desktopStatus;
 
         /**
-         * <p>The disk type.</p>
+         * <p>The cloud disk type.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>
@@ -629,7 +628,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The authorized user.</p>
+         * <p>The ID of the authorized user.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -638,13 +637,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String endUserId;
 
         /**
-         * <p>The list of currently connected user IDs. This value is empty if the desktop is not connected.</p>
+         * <p>The list of IDs of currently connected users. This list is empty if the cloud desktop is disconnected.</p>
          */
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
 
         /**
-         * <p>The authorized username.</p>
+         * <p>The username of the authorized user.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -653,7 +652,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String endUserName;
 
         /**
-         * <p>The list of current usernames. This value is empty if the desktop is not connected.</p>
+         * <p>The list of usernames of currently connected users. This list is empty if the cloud desktop is disconnected.</p>
          */
         @NameInMap("EndUserNames")
         public java.util.List<String> endUserNames;
@@ -704,13 +703,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String managementFlag;
 
         /**
-         * <p>The collection of management flags.</p>
+         * <p>The set of management flags.</p>
          */
         @NameInMap("ManagementFlags")
         public java.util.List<String> managementFlags;
 
         /**
-         * <p>The IP address of the secondary ENI of the instance.</p>
+         * <p>The IP address of the member elastic network interface (ENI) of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -728,7 +727,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The IP address of the primary ENI of the instance.</p>
+         * <p>The IP address of the primary elastic network interface (ENI) of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -746,8 +745,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String protocolType;
 
         /**
-         * <p>The release time.
-         * The time is displayed in UTC in the ISO 8601 standard format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The release time. Time format: ISO 8601 standard in UTC (yyyy-MM-ddTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-21T16:34:57Z</p>
@@ -756,7 +754,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String releaseTime;
 
         /**
-         * <p>The reset time of the cloud desktop.</p>
+         * <p>The reset time of the cloud desktop. Time format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-03 08:48:08</p>
@@ -765,7 +763,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String resetTime;
 
         /**
-         * <p>The system cloud disk size. Unit: GiB.</p>
+         * <p>The size of the system cloud disk. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>

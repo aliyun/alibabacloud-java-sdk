@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeNASFileSystemsResponseBody extends TeaModel {
     /**
-     * <p>The NAS file system information.</p>
+     * <p>The collection of NAS file system information.</p>
      */
     @NameInMap("FileSystems")
     public java.util.List<DescribeNASFileSystemsResponseBodyFileSystems> fileSystems;
 
     /**
-     * <p>The pagination token for the next query. An empty NextToken indicates that no more results are available.</p>
+     * <p>The token for the next query. An empty value indicates that no subsequent results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -59,7 +59,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
 
     public static class DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups extends TeaModel {
         /**
-         * <p>The ID of the delivery group.</p>
+         * <p>The delivery group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-0bz55ibznu9p7****</p>
@@ -68,7 +68,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
-         * <p>The name of the delivery group.</p>
+         * <p>The delivery group name.</p>
          * 
          * <strong>example:</strong>
          * <p>DemoDeliveryGroup</p>
@@ -143,7 +143,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
 
     public static class DescribeNASFileSystemsResponseBodyFileSystemsOfficeSites extends TeaModel {
         /**
-         * <p>The ID of the office network.</p>
+         * <p>The office network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-363353****</p>
@@ -152,7 +152,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The name of the office network.</p>
+         * <p>The office network name.</p>
          * 
          * <strong>example:</strong>
          * <p>DemoOfficeNetwork</p>
@@ -185,7 +185,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
 
     public static class DescribeNASFileSystemsResponseBodyFileSystems extends TeaModel {
         /**
-         * <p>Indicates whether operations on user directories are supported, such as adding users and deleting data.</p>
+         * <p>Specifies whether operations on the user directory are supported, such as adding users and deleting data.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -211,8 +211,8 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         /**
          * <p>The total capacity of the NAS file system. Unit: GiB.</p>
          * <ul>
-         * <li>If the storage type is Capacity, the capacity is fixed at 10 PiB, which is 10485760 GiB.</li>
-         * <li>If the storage type is Performance, the capacity is fixed at 1 PiB, which is 1048576 GiB.</li>
+         * <li>If the storage type is Capacity, the capacity is fixed at 10 PiB, which is 10,485,760 GiB.</li>
+         * <li>If the storage type is Performance, the capacity is fixed at 1 PiB, which is 1,048,576 GiB.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public Long capacity;
 
         /**
-         * <p>The time when the NAS file system was created. The time follows the ISO 8601 standard in the UTC time zone.</p>
+         * <p>The creation time of the NAS file system. The time is displayed in ISO 8601 format in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-05-10T11:39Z</p>
@@ -246,7 +246,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public java.util.List<DescribeNASFileSystemsResponseBodyFileSystemsDesktopGroups> desktopGroups;
 
         /**
-         * <p>Indicates whether disk encryption is enabled.</p>
+         * <p>Specifies whether disk encryption is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -255,7 +255,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public Boolean encryptionEnabled;
 
         /**
-         * <p>The ID of the NAS file system.</p>
+         * <p>The NAS file system ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04f314****</p>
@@ -282,7 +282,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String fileSystemStatus;
 
         /**
-         * <p>The type of the NAS file system. Currently, only the general-purpose type is supported, which is <code>standard</code>.</p>
+         * <p>The type of the NAS file system. Only the standard type is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>standard</p>
@@ -291,7 +291,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String fileSystemType;
 
         /**
-         * <p>The used capacity of the NAS file system. Unit: Byte.</p>
+         * <p>The used capacity of the NAS file system. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -309,7 +309,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String mountTargetDomain;
 
         /**
-         * <p>The status of the mount target.</p>
+         * <p>The mount target status.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -318,7 +318,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String mountTargetStatus;
 
         /**
-         * <p><strong>[Deprecated]</strong> The ID of the office network.</p>
+         * <p>The office network ID. <strong>[Deprecated]</strong></p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-363353****</p>
@@ -327,7 +327,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p><strong>[Deprecated]</strong> The name of the office network.</p>
+         * <p>The office network name. <strong>[Deprecated]</strong></p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -351,7 +351,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String productType;
 
         /**
-         * <p>Indicates whether the User Profile Management (UPM) feature is supported.</p>
+         * <p>Specifies whether the User Profile Management (UPM) feature is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -362,8 +362,8 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         /**
          * <p>The protocol type of the file system. Valid values:</p>
          * <ul>
-         * <li>NFS: NFS protocol</li>
-         * <li>SMB: SMB protocol</li>
+         * <li>NFS: NFS protocol.</li>
+         * <li>SMB: SMB protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -409,7 +409,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         public String storageType;
 
         /**
-         * <p>Indicates whether the SMB ACL feature is supported.</p>
+         * <p>Specifies whether the SMB ACL feature is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

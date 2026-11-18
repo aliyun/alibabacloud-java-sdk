@@ -25,7 +25,7 @@ public class CreateDriveRequest extends TeaModel {
     /**
      * <p>The storage resource ID.</p>
      * <blockquote>
-     * <p>You can call the DescribeDrives operation to obtain this value.</p>
+     * <p>You can obtain this ID by calling the DescribeDrives operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class CreateDriveRequest extends TeaModel {
     /**
      * <p>The external storage resource ID.</p>
      * <blockquote>
-     * <p>You can call the DescribeDrives operation to obtain this value.</p>
+     * <p>You can obtain this ID by calling the DescribeDrives operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,8 +56,17 @@ public class CreateDriveRequest extends TeaModel {
     public String externalDomainId;
 
     /**
+     * <p>The list of image platforms for which to initialize VHDs, such as WINDOWS_SERVER_2025. This parameter applies to UPM binding scenarios such as workspaces, desktop pools, and cloud application delivery groups. If you specify this parameter, the VHDs are initialized based on the specified platforms. If you do not specify this parameter, the original platform derivation rules for each scenario are used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;WINDOWS_11&quot;,&quot;WINDOWS_SERVER_2025&quot;]</p>
+     */
+    @NameInMap("Platforms")
+    public java.util.List<String> platforms;
+
+    /**
      * <blockquote>
-     * <p>This parameter is deprecated.</p>
+     * <p><strong>[Deprecated]</strong></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -147,6 +156,14 @@ public class CreateDriveRequest extends TeaModel {
     }
     public String getExternalDomainId() {
         return this.externalDomainId;
+    }
+
+    public CreateDriveRequest setPlatforms(java.util.List<String> platforms) {
+        this.platforms = platforms;
+        return this;
+    }
+    public java.util.List<String> getPlatforms() {
+        return this.platforms;
     }
 
     public CreateDriveRequest setProfileRoaming(Boolean profileRoaming) {

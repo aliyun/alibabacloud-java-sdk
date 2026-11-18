@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopsInGroupRequest extends TeaModel {
     /**
-     * <p>The end time of the custom time range.</p>
+     * <p>The end time of the custom time period.</p>
      * 
      * <strong>example:</strong>
      * <p>18</p>
@@ -14,7 +14,7 @@ public class DescribeDesktopsInGroupRequest extends TeaModel {
     public Long customEndTimePeriod;
 
     /**
-     * <p>The start time of the custom time range.</p>
+     * <p>The start time of the custom time period.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -42,7 +42,11 @@ public class DescribeDesktopsInGroupRequest extends TeaModel {
     public Boolean ignoreDeleted;
 
     /**
-     * <p>The number of entries per page for a paged query.</p>
+     * <p>The number of entries to return per page for paging in a paged query.</p>
+     * <ul>
+     * <li>Default value: 10.</li>
+     * <li>Maximum value: 100.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -51,7 +55,7 @@ public class DescribeDesktopsInGroupRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
+     * <p>The pagination token used to start the next query. An empty value indicates that no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -69,7 +73,7 @@ public class DescribeDesktopsInGroupRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to obtain the list of regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

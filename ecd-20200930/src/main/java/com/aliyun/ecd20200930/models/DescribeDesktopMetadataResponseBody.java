@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopMetadataResponseBody extends TeaModel {
     /**
-     * <p>The cloud desktop details.</p>
+     * <p>The detailed information of the cloud desktops.</p>
      */
     @NameInMap("Desktops")
     public java.util.List<DescribeDesktopMetadataResponseBodyDesktops> desktops;
 
     /**
-     * <p>The token for the next query. An empty value indicates that there are no more results.</p>
+     * <p>The pagination token for the next query. If NextToken is empty, no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -59,16 +59,16 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
 
     public static class DescribeDesktopMetadataResponseBodyDesktops extends TeaModel {
         /**
-         * <p>The agents supported by the current cloud computer.</p>
+         * <p>The agents supported by the cloud desktop.</p>
          */
         @NameInMap("AgentProviderList")
         public java.util.List<String> agentProviderList;
 
         /**
-         * <p>The billing type of the cloud desktop. Valid values:</p>
+         * <p>The billing method of the cloud desktop. Valid values:</p>
          * <ul>
-         * <li>PostPaid: pay-as-you-go.</li>
-         * <li>PrePaid: subscription.</li>
+         * <li>PostPaid: pay-as-you-go</li>
+         * <li>PrePaid: subscription</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The time when the cloud desktop was created. The time is in the ISO 8601 standard (UTC).</p>
+         * <p>The creation time of the cloud desktop. The time is displayed in the ISO 8601 standard in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-06T08:28Z</p>
@@ -87,7 +87,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The shared cloud computer ID.</p>
+         * <p>The ID of the shared cloud desktop group.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-3uiojcc0j4kh7****</p>
@@ -105,7 +105,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The cloud desktop name.</p>
+         * <p>The name of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>testDesktopName</p>
@@ -114,16 +114,16 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String desktopName;
 
         /**
-         * <p>The cloud desktop status. Valid values:</p>
+         * <p>The status of the cloud desktop. Valid values:</p>
          * <ul>
-         * <li>Stopped: stopped.</li>
-         * <li>Starting: starting.</li>
-         * <li>Rebuilding: rebuilding.</li>
-         * <li>Running: running.</li>
-         * <li>Stopping: stopping.</li>
-         * <li>Expired: expired.</li>
-         * <li>Deleted: deleted.</li>
-         * <li>Pending: pending.</li>
+         * <li>Stopped: The cloud desktop is stopped.</li>
+         * <li>Starting: The cloud desktop is starting.</li>
+         * <li>Rebuilding: The cloud desktop is being rebuilt.</li>
+         * <li>Running: The cloud desktop is running.</li>
+         * <li>Stopping: The cloud desktop is stopping.</li>
+         * <li>Expired: The cloud desktop has expired.</li>
+         * <li>Deleted: The cloud desktop is deleted.</li>
+         * <li>Pending: The cloud desktop is pending.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String desktopType;
 
         /**
-         * <p>The time when the cloud desktop expires. This value is returned only for cloud desktops that use the subscription billable method. The time format follows the ISO 8601 standard (UTC).</p>
+         * <p>The time when the cloud desktop will expire. This parameter is returned only for cloud desktops whose Billable methods are subscription billing. The time format is ISO 8601 standard (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-31T15:59Z</p>
@@ -160,16 +160,16 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The local name of the region to which the cloud desktop belongs.</p>
+         * <p>The local name of the region where the cloud desktop resides.</p>
          * 
          * <strong>example:</strong>
-         * <p>华东2（上海）</p>
+         * <p>China (Shanghai)</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>The management status of the cloud computer.</p>
+         * <p>The management status of the cloud desktop.</p>
          */
         @NameInMap("ManagementFlags")
         public java.util.List<String> managementFlags;
@@ -229,7 +229,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String resourceGroupName;
 
         /**
-         * <p>The time when the cloud desktop was started. The time is in the ISO 8601 standard (UTC).</p>
+         * <p>The start time of the cloud desktop. The time is displayed in the ISO 8601 standard in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-06T08:31Z</p>

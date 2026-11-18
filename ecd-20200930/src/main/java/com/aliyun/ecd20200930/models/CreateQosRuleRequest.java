@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateQosRuleRequest extends TeaModel {
     /**
-     * <p>The list of cloud phones to associate.</p>
+     * <p>The IDs of the cloud phones to associate.</p>
      */
     @NameInMap("AuthAndroidId")
     public java.util.List<String> authAndroidId;
 
     /**
-     * <p>The ID of the cloud computer pool for which the authorization takes effect.</p>
+     * <p>The ID of the cloud computer pool where the authorization takes effect.</p>
      */
     @NameInMap("AuthDesktopGroupId")
     public java.util.List<String> authDesktopGroupId;
 
     /**
-     * <p>The list of cloud computer IDs to associate.</p>
+     * <p>The IDs of the cloud computers to associate.</p>
      */
     @NameInMap("AuthDesktopId")
     public java.util.List<String> authDesktopId;
@@ -33,7 +33,7 @@ public class CreateQosRuleRequest extends TeaModel {
     public Integer download;
 
     /**
-     * <p>The premium bandwidth ID.</p>
+     * <p>The ID of the premium bandwidth.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,11 +43,11 @@ public class CreateQosRuleRequest extends TeaModel {
     public String networkPackageId;
 
     /**
-     * <p>The name of the rate limiting rule.</p>
+     * <p>The name of the bandwidth throttling rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Office network rate limiting rule</p>
+     * <p>Office network bandwidth throttling rule</p>
      */
     @NameInMap("QosRuleName")
     public String qosRuleName;

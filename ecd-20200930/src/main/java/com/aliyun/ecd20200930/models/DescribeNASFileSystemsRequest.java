@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNASFileSystemsRequest extends TeaModel {
     /**
-     * <p>The IDs of the NAS file systems.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>04f314****</p>
+     * <p>The list of NAS file system IDs.</p>
      */
     @NameInMap("FileSystemId")
     public java.util.List<String> fileSystemId;
@@ -23,9 +20,9 @@ public class DescribeNASFileSystemsRequest extends TeaModel {
     public Boolean matchCompatibleProfile;
 
     /**
-     * <p>The number of entries to return per page in a paging query.    </p>
+     * <p>The number of entries to return on each page in a paging query.</p>
      * <ul>
-     * <li>Maximum value: 100.    </li>
+     * <li>Maximum value: 100.</li>
      * <li>Default value: 10.</li>
      * </ul>
      * 
@@ -36,7 +33,7 @@ public class DescribeNASFileSystemsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set the value to the NextToken value returned from the last API call.</p>
+     * <p>The query token. The value is the NextToken parameter value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -45,7 +42,7 @@ public class DescribeNASFileSystemsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the office network.</p>
+     * <p>The office network ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-363353****</p>
@@ -54,7 +51,7 @@ public class DescribeNASFileSystemsRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions supported by WUYING Workspace.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

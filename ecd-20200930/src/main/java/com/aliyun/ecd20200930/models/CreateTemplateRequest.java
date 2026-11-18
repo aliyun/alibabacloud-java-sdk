@@ -11,14 +11,14 @@ public class CreateTemplateRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the subscription cloud computer.</p>
+     * <p>Specifies whether to enable auto-renewal for the subscription shared cloud desktop.</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
      * <blockquote>
-     * <p>This parameter is not publicly available.</p>
+     * <p>This parameter is not available for public use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class CreateTemplateRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>The billing method of the cloud computer.</p>
+     * <p>The billing method of the cloud desktop.</p>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -37,13 +37,13 @@ public class CreateTemplateRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The data disk size and specification configurations.</p>
+     * <p>The size and specification configurations of the data cloud disk.</p>
      */
     @NameInMap("DataDiskList")
     public java.util.List<CreateTemplateRequestDataDiskList> dataDiskList;
 
     /**
-     * <p>The default language set when the cloud computer starts. This parameter takes effect only when a system image is used to create the cloud computer.</p>
+     * <p>The default language configured when the cloud desktop starts. This parameter takes effect only when you use a system image to create a cloud desktop.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -54,18 +54,18 @@ public class CreateTemplateRequest extends TeaModel {
     /**
      * <p>The description of the template. The description must meet the following requirements:</p>
      * <ul>
-     * <li>The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>The description can contain Chinese characters, letters, digits, spaces, and special characters, and supports line breaks.</li>
+     * <li>The description must be 2 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The description can contain Chinese characters, English letters, digits, spaces, and special characters, and supports line breaks.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>DesignDepartmentTemplate</p>
+     * <p>Design department template</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The cloud computer image ID. You can query the ID on the image management page. System images, custom images, and other image types are supported.</p>
+     * <p>The ID of the cloud desktop image. You can query the image ID on the Images page. System images and custom images are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>desktopimage-windows-server-2022-64-asp</p>
@@ -74,7 +74,7 @@ public class CreateTemplateRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The instance name.</p>
+     * <p>The name of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>myHost</p>
@@ -83,16 +83,16 @@ public class CreateTemplateRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The subscription duration of the subscription cloud computer. This parameter takes effect and is required only when <code>ChargeType</code> is set to <code>PrePaid</code>. The unit is specified by <code>PeriodUnit</code>.</p>
+     * <p>The subscription duration of the shared cloud desktop. This parameter is required and takes effect only when the <code>ChargeType</code> parameter is set to <code>PrePaid</code>. The unit is specified by the <code>PeriodUnit</code> parameter.</p>
      * <ul>
-     * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values:<ul>
+     * <li>If the <code>PeriodUnit</code> parameter is set to <code>Month</code>, valid values are:<ul>
      * <li>1</li>
      * <li>2</li>
      * <li>3</li>
      * <li>6</li>
      * </ul>
      * </li>
-     * <li>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values:<ul>
+     * <li>If the <code>PeriodUnit</code> parameter is set to <code>Year</code>, valid values are:<ul>
      * <li>1</li>
      * <li>2</li>
      * <li>3</li>
@@ -109,7 +109,7 @@ public class CreateTemplateRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription billable methods duration.</p>
+     * <p>The time unit of the subscription Billable methods.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -127,7 +127,7 @@ public class CreateTemplateRequest extends TeaModel {
     public String policyGroupId;
 
     /**
-     * <p>Specifies whether to automatically switch to pay-as-you-go billing after the duration plan is used up.</p>
+     * <p>Specifies whether to automatically switch to the pay-as-you-go billing method after the usage duration plan is exhausted.</p>
      */
     @NameInMap("PostPaidAfterUsedUp")
     public Boolean postPaidAfterUsedUp;
@@ -142,7 +142,7 @@ public class CreateTemplateRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The region-specific template configurations. Multiple configurations are supported. The configuration that matches the specific region is used.</p>
+     * <p>The region-specific template configurations. You can configure multiple regions. The configurations are matched based on the specific region when the template is used.</p>
      * <blockquote>
      * <p>You can configure up to 20 regions.</p>
      * </blockquote>
@@ -151,7 +151,7 @@ public class CreateTemplateRequest extends TeaModel {
     public java.util.List<CreateTemplateRequestRegionConfigList> regionConfigList;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-4knxmfneq1e******</p>
@@ -160,21 +160,21 @@ public class CreateTemplateRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The cloud computer tags in key-value format. You can specify up to 20 tags.</p>
+     * <p>The tags of the cloud desktop. The tags are in key-value pairs. You can specify up to 20 tags.</p>
      */
     @NameInMap("ResourceTagList")
     public java.util.List<CreateTemplateRequestResourceTagList> resourceTagList;
 
     /**
-     * <p>The site configuration management.</p>
+     * <p>Site configuration management.</p>
      */
     @NameInMap("SiteConfigList")
     public java.util.List<CreateTemplateRequestSiteConfigList> siteConfigList;
 
     /**
-     * <p>The system disk type.</p>
+     * <p>The type of the system cloud disk.</p>
      * <blockquote>
-     * <p>Only high frequency and graphics cloud computer specifications support ESSD disks.</p>
+     * <p>Only cloud desktops with high clock speeds or GPU-accelerated specifications support ESSDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -184,9 +184,9 @@ public class CreateTemplateRequest extends TeaModel {
     public String systemDiskPerformanceLevel;
 
     /**
-     * <p>The system disk size. Unit: GiB. Valid values: 40 to 500, in increments of 10 GiB.</p>
+     * <p>The size of the system cloud disk. Unit: GiB. Valid values: 40 to 500. The value must be a multiple of 10.</p>
      * <blockquote>
-     * <p>The system disk size cannot be smaller than the size of the configured image.</p>
+     * <p>The size of the system cloud disk cannot be smaller than the size of the configured image.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -198,20 +198,20 @@ public class CreateTemplateRequest extends TeaModel {
     /**
      * <p>The name of the template. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name must be 2 to 126 characters in length and can contain letters and Chinese characters.</li>
-     * <li>The name must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>The name can contain letters, digits, Chinese characters, colons (:), underscores (_), or hyphens (-). Periods (.) are not supported.</li>
+     * <li>The name must be 2 to 126 characters in length.</li>
+     * <li>The name must start with a letter or a Chinese character, and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The name can contain letters, digits, Chinese characters, colons (:), underscores (_), and hyphens (-), but cannot contain periods (.).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>MyCloudComputerTemplate001</p>
+     * <p>My cloud desktop template 001</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
-     * <p>The configuration group ID.</p>
+     * <p>The ID of the configuration group.</p>
      * 
      * <strong>example:</strong>
      * <p>ccg-0caoeogrk9m5****</p>
@@ -220,7 +220,7 @@ public class CreateTemplateRequest extends TeaModel {
     public String timerGroupId;
 
     /**
-     * <p>The usage duration plan per user.</p>
+     * <p>The usage duration plan for a single user.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -419,7 +419,7 @@ public class CreateTemplateRequest extends TeaModel {
 
     public static class CreateTemplateRequestDataDiskList extends TeaModel {
         /**
-         * <p>The performance level of the data disk. Default value: <code>AutoPL</code>.</p>
+         * <p>The performance level of the data cloud disk. Default value: <code>AutoPL</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>AutoPL</p>
@@ -428,9 +428,9 @@ public class CreateTemplateRequest extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The data cloud disk size. Unit: GiB. Valid values: 40 to 2040, in increments of 10 GiB.</p>
+         * <p>The size of the data cloud disk. Unit: GiB. Valid values: 40 to 2040. The value must be a multiple of 10.</p>
          * <blockquote>
-         * <p>Notice: The larger the ESSD cloud disk capacity, the higher the available performance level (PL) (for example, PL2 is available for capacities of 460 GiB or more). Higher performance levels (PLs) incur higher costs. Select the ESSD cloud disk performance level (PL) based on your requirements.</p>
+         * <p>Notice: The larger the capacity of a standard SSD, the higher the performance level (PL) that you can select. For example, you can select PL2 for a standard SSD with a capacity of 460 GiB or larger. A higher PL incurs higher costs. Select an appropriate PL based on your business requirements.</notice></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -464,7 +464,7 @@ public class CreateTemplateRequest extends TeaModel {
 
     public static class CreateTemplateRequestRegionConfigList extends TeaModel {
         /**
-         * <p>The office network ID.</p>
+         * <p>The ID of the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-709******</p>
@@ -473,7 +473,7 @@ public class CreateTemplateRequest extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by WUYING Workspace.</p>
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -482,7 +482,7 @@ public class CreateTemplateRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The cloud computer specification ID.</p>
+         * <p>The ID of the cloud desktop specification.</p>
          * 
          * <strong>example:</strong>
          * <p>eds.enterprise_office.8c16g</p>
@@ -491,7 +491,7 @@ public class CreateTemplateRequest extends TeaModel {
         public String resourceInstanceType;
 
         /**
-         * <p>The automatic snapshot policy ID.</p>
+         * <p>The ID of the automatic snapshot policy.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-35fvn8m21pnx2****</p>
@@ -500,7 +500,7 @@ public class CreateTemplateRequest extends TeaModel {
         public String snapshotPolicyId;
 
         /**
-         * <p>The subnet ID.</p>
+         * <p>The ID of the subnet.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1yiu**********</p>
@@ -509,7 +509,7 @@ public class CreateTemplateRequest extends TeaModel {
         public String subnetId;
 
         /**
-         * <p>The virtual node pool, used in workstation scenarios.</p>
+         * <p>The ID of the virtual node pool. This parameter is used in workstation scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>vnp-0bydg********</p>
@@ -518,7 +518,7 @@ public class CreateTemplateRequest extends TeaModel {
         public String virtualNodePoolId;
 
         /**
-         * <p>Specifies whether to enable disk encryption.</p>
+         * <p>Specifies whether to enable cloud disk encryption.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -527,7 +527,7 @@ public class CreateTemplateRequest extends TeaModel {
         public Boolean volumeEncryptionEnable;
 
         /**
-         * <p>The KMS key ID used when disk encryption is enabled. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</p>
+         * <p>The ID of the Key Management Service (KMS) key used when cloud disk encryption is enabled. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to obtain the key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>a7b3c0c8-b3a2-4876-b1cc-*********</p>
@@ -650,7 +650,7 @@ public class CreateTemplateRequest extends TeaModel {
 
     public static class CreateTemplateRequestSiteConfigList extends TeaModel {
         /**
-         * <p>The application control policy ID.</p>
+         * <p>The ID of the application control policy.</p>
          * 
          * <strong>example:</strong>
          * <p>bwr-5a5371e0db954d********</p>

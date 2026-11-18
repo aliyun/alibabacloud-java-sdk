@@ -35,7 +35,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String desktopScenario;
 
     /**
-     * <p>The end time of the snapshot creation. The time is displayed in UTC and follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format.</p>
+     * <p>The end time of snapshot creation. Specify the time in the <code>yyyy-mm-ddthh:mm:ssz</code> format based on the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-31T06:32:31Z</p>
@@ -44,7 +44,11 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The number of entries to return per page in a paging query.</p>
+     * <p>The number of entries per page for a paging query.    </p>
+     * <ul>
+     * <li>Maximum value: 100.    </li>
+     * <li>Default value: 10.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -53,7 +57,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token. Set the value to the NextToken parameter value returned by the previous API call.</p>
+     * <p>The query token. Set the value to the NextToken value returned from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>8051af8d01b5479bec9f5ddf02e4a8fbd0ab6e7e43f8****</p>
@@ -71,7 +75,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String osType;
 
     /**
-     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,7 +94,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String snapshotId;
 
     /**
-     * <p>The display name of the snapshot. The name must be 2 to 127 characters in length. It must start with a letter or a Chinese character, and can contain digits, underscores (_), and hyphens (-). To prevent name conflicts with automatic snapshots, the name cannot start with <code>auto</code>.</p>
+     * <p>The display name of the snapshot. The name must be 2 to 127 characters in length and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter or a Chinese character. To prevent name conflicts with automatic snapshots, the name cannot start with <code>auto</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Test data disk</p>
@@ -108,9 +112,9 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String snapshotType;
 
     /**
-     * <p>The type of the disk for which you want to create a snapshot.</p>
+     * <p>The disk for which the snapshot is created.</p>
      * <blockquote>
-     * <p>The values are not case-sensitive.</p>
+     * <p>The values are case-insensitive.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -120,7 +124,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String sourceDiskType;
 
     /**
-     * <p>The start time of the snapshot creation. The time is displayed in UTC and follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format.</p>
+     * <p>The start time of snapshot creation. Specify the time in the <code>yyyy-mm-ddthh:mm:ssz</code> format based on the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-30T06:32:31Z</p>

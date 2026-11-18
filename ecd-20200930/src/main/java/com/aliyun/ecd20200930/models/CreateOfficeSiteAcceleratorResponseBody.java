@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateOfficeSiteAcceleratorResponseBody extends TeaModel {
     /**
-     * <p>The GA instance ID.</p>
+     * <p>The instance ID of the Alibaba Cloud Global Accelerator (GA).</p>
      * 
      * <strong>example:</strong>
      * <p>ga-bp1qxuk10jceqw3zb***p</p>

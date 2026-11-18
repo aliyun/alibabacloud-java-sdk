@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateResponseBody extends TeaModel {
     /**
-     * <p>The execution result. A value of <code>success</code> indicates success. Otherwise, an error message is returned.</p>
+     * <p>The execution result. A value of <code>success</code> indicates that the operation is successful. Otherwise, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,7 +14,7 @@ public class CreateTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The template ID returned after the template is created.</p>
+     * <p>The ID of the created template.</p>
      * 
      * <strong>example:</strong>
      * <p>b-0cc7rx533*****</p>

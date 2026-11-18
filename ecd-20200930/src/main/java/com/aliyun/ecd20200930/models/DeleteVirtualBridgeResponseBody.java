@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteVirtualBridgeResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F7E4322D-D679-5ACB-A909-490D2F0E****</p>

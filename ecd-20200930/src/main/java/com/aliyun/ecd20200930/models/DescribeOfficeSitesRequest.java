@@ -14,7 +14,7 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     public String accountType;
 
     /**
-     * <p>The number of entries per page for a paginated query.    </p>
+     * <p>The number of entries to return per page in a paging query.    </p>
      * <ul>
      * <li>Maximum value: 100.    </li>
      * <li>Default value: 10.</li>
@@ -27,7 +27,7 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query.</p>
+     * <p>The token that is used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -36,10 +36,7 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The office network ID. You can specify 1 to 100 IDs.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou+dir-363353****</p>
+     * <p>The ID of the office network. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("OfficeSiteId")
     public java.util.List<String> officeSiteId;
@@ -54,7 +51,7 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     public String officeSiteType;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions supported by Wuying Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +61,7 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The security protection configuration of the office network.</p>
+     * <p>The network security protection settings of the office network.</p>
      * 
      * <strong>example:</strong>
      * <p>SASE</p>
@@ -73,7 +70,7 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     public String securityProtection;
 
     /**
-     * <p>The office network status.</p>
+     * <p>The status of the office network.</p>
      * 
      * <strong>example:</strong>
      * <p>REGISTERED</p>
@@ -82,9 +79,9 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The VPC ID of the office network for shared cloud computers.</p>
+     * <p>The ID of the VPC where the office network of the shared cloud desktop resides.</p>
      * <blockquote>
-     * <p>This parameter is not yet available for use.</p>
+     * <p>This parameter is not available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

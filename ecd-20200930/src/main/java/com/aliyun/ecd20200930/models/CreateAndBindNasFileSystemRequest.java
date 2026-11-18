@@ -14,8 +14,7 @@ public class CreateAndBindNasFileSystemRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the shared cloud computer.</p>
-     * <p>This parameter is required.</p>
+     * <p>The ID of the shared cloud desktop.</p>
      * 
      * <strong>example:</strong>
      * <p>dg-fh0vdzyh6rdc*****</p>
@@ -24,9 +23,9 @@ public class CreateAndBindNasFileSystemRequest extends TeaModel {
     public String desktopGroupId;
 
     /**
-     * <p>Specifies whether the file system uses a KMS-managed key to encrypt data at rest. Encrypted data does not need to be decrypted during read and write operations.</p>
+     * <p>Specifies whether the file system uses Key Management Service (KMS) managed keys to encrypt data at rest. No decryption is required when reading or writing encrypted data.</p>
      * <blockquote>
-     * <p>NAS-managed keys are supported when <code>FileSystemType</code> is set to <code>standard</code> or <code>extreme</code>. User-managed keys are supported when <code>FileSystemType</code> is set to <code>extreme</code>.</p>
+     * <p>When <code>FileSystemType</code> is set to <code>standard</code> or <code>extreme</code>, NAS-managed keys are supported. When <code>FileSystemType</code> is set to <code>extreme</code>, user-managed keys are supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -62,7 +61,7 @@ public class CreateAndBindNasFileSystemRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +71,16 @@ public class CreateAndBindNasFileSystemRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The storage specification type of the NAS file system.</p>
+     * <p>The user VHD capacity tier in GiB. Valid values: 5, 20, 50, 100, and 500. Default value: 500.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
+     */
+    @NameInMap("SizeQuota")
+    public Long sizeQuota;
+
+    /**
+     * <p>The storage type of the NAS file system.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -140,6 +148,14 @@ public class CreateAndBindNasFileSystemRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateAndBindNasFileSystemRequest setSizeQuota(Long sizeQuota) {
+        this.sizeQuota = sizeQuota;
+        return this;
+    }
+    public Long getSizeQuota() {
+        return this.sizeQuota;
     }
 
     public CreateAndBindNasFileSystemRequest setStorageType(String storageType) {

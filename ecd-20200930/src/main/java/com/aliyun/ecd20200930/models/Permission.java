@@ -12,12 +12,18 @@ public class Permission extends TeaModel {
 
     /**
      * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例安全组规则</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The destination CIDR block.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>198.51.100.0/24</p>
      */
     @NameInMap("DestCidrIp")
     public String destCidrIp;
@@ -54,6 +60,9 @@ public class Permission extends TeaModel {
 
     /**
      * <p>The source CIDR block.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.2.0/24</p>
      */
     @NameInMap("SourceCidrIp")
     public String sourceCidrIp;
