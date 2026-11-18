@@ -15,7 +15,7 @@ public class DescribeLangfuseOrgMembershipsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The Langfuse organization ID.</p>
+     * <p>The ID of the Langfuse organization.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeLangfuseOrgMembershipsRequest extends TeaModel {
     public String organizationId;
 
     /**
-     * <p>The page number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

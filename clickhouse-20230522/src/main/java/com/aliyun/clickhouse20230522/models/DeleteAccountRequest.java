@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAccountRequest extends TeaModel {
     /**
-     * <p>The destination database account.</p>
+     * <p>The target database account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DeleteAccountRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The code of the cloud service.</p>
+     * <p>The product code.</p>
      * 
      * <strong>example:</strong>
      * <p>clickhouse</p>

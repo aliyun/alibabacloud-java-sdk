@@ -11,7 +11,7 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
     public AttachWhitelistTemplateToInstanceResponseBodyData data;
 
     /**
-     * <p>Request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -51,10 +51,10 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
-         * <p>The reason for the attachment failure.</p>
+         * <p>The reason for the association failure.</p>
          * 
          * <strong>example:</strong>
-         * <p>处理异常</p>
+         * <p>Processing error</p>
          */
         @NameInMap("Reason")
         public String reason;
@@ -84,7 +84,7 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
 
     public static class AttachWhitelistTemplateToInstanceResponseBodyDataAttachSuccessedListTemplatesDbInstances extends TeaModel {
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>asdfwef</p>
@@ -109,13 +109,13 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
 
     public static class AttachWhitelistTemplateToInstanceResponseBodyDataAttachSuccessedListTemplates extends TeaModel {
         /**
-         * <p>The list of attached instances.</p>
+         * <p>The list of associated instances.</p>
          */
         @NameInMap("DbInstances")
         public java.util.List<AttachWhitelistTemplateToInstanceResponseBodyDataAttachSuccessedListTemplatesDbInstances> dbInstances;
 
         /**
-         * <p>The IP address whitelist.</p>
+         * <p>The IP whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.1,10.0.0.1</p>
@@ -221,19 +221,19 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
 
     public static class AttachWhitelistTemplateToInstanceResponseBodyData extends TeaModel {
         /**
-         * <p>Instances that failed to be attached.</p>
+         * <p>The instances that failed to be associated.</p>
          */
         @NameInMap("AttachFailList")
         public java.util.List<AttachWhitelistTemplateToInstanceResponseBodyDataAttachFailList> attachFailList;
 
         /**
-         * <p>Instances to which the template was successfully attached.</p>
+         * <p>The successfully associated templates.</p>
          */
         @NameInMap("AttachSuccessedList")
         public java.util.List<AttachWhitelistTemplateToInstanceResponseBodyDataAttachSuccessedList> attachSuccessedList;
 
         /**
-         * <p>The status of the operation. A value of <code>ok</code> indicates success.</p>
+         * <p>The status of the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>

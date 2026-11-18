@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceClassRequest extends TeaModel {
     /**
-     * <p>The automatic horizontal scaling configuration.</p>
+     * <p>The automatic horizontal elastic configuration.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -70,7 +70,7 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The maximum value for serverless elastic scaling.</p>
+     * <p><strong>[Deprecated]</strong> The maximum value for serverless elastic scaling.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>
@@ -79,7 +79,7 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public Long scaleMax;
 
     /**
-     * <p>The minimum value for serverless elastic scaling.</p>
+     * <p><strong>[Deprecated]</strong> The minimum value for serverless elastic scaling.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -88,7 +88,7 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public Long scaleMin;
 
     /**
-     * <p>The pre-purchased storage quota, in GB.</p>
+     * <p>The purchased storage quota. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -200,7 +200,7 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
 
     public static class ModifyDBInstanceClassRequestAutoScaleConfigVSwitchInfos extends TeaModel {
         /**
-         * <p>The vSwitch IDs in the zone.</p>
+         * <p>The vSwitch ID in the zone.</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
@@ -239,7 +239,7 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
 
     public static class ModifyDBInstanceClassRequestAutoScaleConfig extends TeaModel {
         /**
-         * <p>The number of nodes available for burstable horizontal scaling.</p>
+         * <p>The number of burstable nodes for horizontal elastic scaling.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -250,8 +250,8 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
         /**
          * <p>The configuration status. Valid values:</p>
          * <ul>
-         * <li>disable: disabled.</li>
-         * <li>enable: enabled.</li>
+         * <li>disable: Disabled.</li>
+         * <li>enable: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

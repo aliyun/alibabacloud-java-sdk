@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteWhitelistTemplateResponseBody extends TeaModel {
     /**
-     * <p>The data returned from the call.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public DeleteWhitelistTemplateResponseBodyData data;
@@ -42,7 +42,7 @@ public class DeleteWhitelistTemplateResponseBody extends TeaModel {
 
     public static class DeleteWhitelistTemplateResponseBodyDataTemplatesDbInstances extends TeaModel {
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>asdfwef</p>
@@ -67,13 +67,13 @@ public class DeleteWhitelistTemplateResponseBody extends TeaModel {
 
     public static class DeleteWhitelistTemplateResponseBodyDataTemplates extends TeaModel {
         /**
-         * <p>The instances associated with the template.</p>
+         * <p>The associated instances.</p>
          */
         @NameInMap("DbInstances")
         public java.util.List<DeleteWhitelistTemplateResponseBodyDataTemplatesDbInstances> dbInstances;
 
         /**
-         * <p>The IP whitelist.</p>
+         * <p>The IP whitelists.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.1,10.0.0.1</p>

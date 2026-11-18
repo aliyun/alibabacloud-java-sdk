@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachWhitelistTemplateToInstanceRequest extends TeaModel {
     /**
-     * <p>The ClickHouse instance ID. Separate multiple instance IDs with commas. A maximum of 20 instances can be attached at a time.</p>
+     * <p>The IDs of the database instances. Separate multiple IDs with commas. You can associate up to 20 instances at a time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AttachWhitelistTemplateToInstanceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Region ID.</p>
+     * <p>RegionId</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

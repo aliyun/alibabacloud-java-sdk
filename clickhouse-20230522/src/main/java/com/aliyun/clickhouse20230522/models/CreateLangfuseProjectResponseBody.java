@@ -42,7 +42,7 @@ public class CreateLangfuseProjectResponseBody extends TeaModel {
 
     public static class CreateLangfuseProjectResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the Langfuse project was created.</p>
+         * <p>The time when the Langfuse project was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-24T10:14:33Z</p>
@@ -51,7 +51,7 @@ public class CreateLangfuseProjectResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The Langfuse project name.</p>
+         * <p>The name of the Langfuse project.</p>
          * 
          * <strong>example:</strong>
          * <p>project_name</p>
@@ -60,7 +60,7 @@ public class CreateLangfuseProjectResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The Langfuse organization ID.</p>
+         * <p>The ID of the Langfuse organization.</p>
          * 
          * <strong>example:</strong>
          * <p>cmrbhzx930005jw2q****</p>
@@ -69,7 +69,7 @@ public class CreateLangfuseProjectResponseBody extends TeaModel {
         public String organizationId;
 
         /**
-         * <p>The Langfuse project ID.</p>
+         * <p>The ID of the Langfuse project.</p>
          * 
          * <strong>example:</strong>
          * <p>cmrbhzx930005jw2q****</p>

@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateAccountShrinkRequest extends TeaModel {
     /**
-     * <p>The name of the account.</p>
+     * <p>The database account. The name must meet the following requirements:</p>
+     * <ul>
+     * <li>The name must be unique.</li>
+     * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
+     * <li>The name must start with a lowercase letter and end with a lowercase letter or a digit.</li>
+     * <li>The name must be 2 to 64 characters in length.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,10 +23,8 @@ public class CreateAccountShrinkRequest extends TeaModel {
     /**
      * <p>The type of the database account. Valid values:</p>
      * <ul>
-     * <li><p><strong>NormalAccount</strong>: standard account</p>
-     * </li>
-     * <li><p><strong>SuperAccount</strong>: privileged account</p>
-     * </li>
+     * <li><strong>NormalAccount</strong>: standard account.</li>
+     * <li><strong>SuperAccount</strong>: privileged account.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -41,16 +45,16 @@ public class CreateAccountShrinkRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The description of the account.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>For testing</p>
+     * <p>For testing purposes</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The information about permissions.</p>
+     * <p>The authorization information.</p>
      */
     @NameInMap("DmlAuthSetting")
     public String dmlAuthSettingShrink;
@@ -60,7 +64,7 @@ public class CreateAccountShrinkRequest extends TeaModel {
      * <ul>
      * <li><p>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
      * </li>
-     * <li><p>The following special characters are supported: ! @ # $ % ^ &amp; \* ( ) _ + - =</p>
+     * <li><p>Special characters include !@#$%^&amp;*()_+-=.</p>
      * </li>
      * <li><p>The password must be 8 to 32 characters in length.</p>
      * </li>
@@ -74,7 +78,7 @@ public class CreateAccountShrinkRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The code of the cloud service.</p>
+     * <p>The product code.</p>
      * 
      * <strong>example:</strong>
      * <p>clickhouse</p>

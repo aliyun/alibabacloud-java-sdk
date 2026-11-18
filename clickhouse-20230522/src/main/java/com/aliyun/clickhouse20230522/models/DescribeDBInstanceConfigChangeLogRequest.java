@@ -15,7 +15,7 @@ public class DescribeDBInstanceConfigChangeLogRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The end time of the query. Format: yyyy-MM-dd hh:mm:ss.</p>
+     * <p>The end of the time range to query. Format: yyyy-MM-dd hh:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeDBInstanceConfigChangeLogRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The page number to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -34,7 +34,7 @@ public class DescribeDBInstanceConfigChangeLogRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Default value: 30. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
      * <li><strong>30</strong> (default)</li>
      * <li><strong>50</strong></li>
@@ -58,7 +58,7 @@ public class DescribeDBInstanceConfigChangeLogRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start time of the query. Format: yyyy-MM-dd hh:mm:ss.</p>
+     * <p>The beginning of the time range to query. Format: yyyy-MM-dd hh:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

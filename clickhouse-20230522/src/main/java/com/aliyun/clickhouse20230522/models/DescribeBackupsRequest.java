@@ -24,7 +24,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The end of the time range to query. The time is in UTC.</p>
+     * <p>The end time of the backup in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -62,7 +62,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. The time is in UTC.</p>
+     * <p>The start time of the backup in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

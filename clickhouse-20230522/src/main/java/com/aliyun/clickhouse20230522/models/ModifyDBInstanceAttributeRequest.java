@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceAttributeRequest extends TeaModel {
     /**
-     * <p>The type of attribute to modify. Valid values:</p>
+     * <p>The attribute type to modify.</p>
      * <ul>
-     * <li><p>MaintainTime: Modify the O\&amp;M window.</p>
-     * </li>
-     * <li><p>DBInstanceDescription: Modify the instance name.</p>
-     * </li>
+     * <li>MaintainTime: Modifies the O&amp;M window.</li>
+     * <li>DBInstanceDescription: Modifies the instance name.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,7 +19,7 @@ public class ModifyDBInstanceAttributeRequest extends TeaModel {
     public String attributeType;
 
     /**
-     * <p>The new value for the attribute.</p>
+     * <p>The new value of the attribute.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

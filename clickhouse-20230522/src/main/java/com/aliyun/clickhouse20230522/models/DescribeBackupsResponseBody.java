@@ -20,7 +20,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -38,7 +38,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of backups.</p>
+     * <p>The total number of backup sets.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     public static class DescribeBackupsResponseBodyItems extends TeaModel {
         /**
-         * <p>The end time of the backup. The time is in UTC.</p>
+         * <p>The end time of the backup in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-22T18:28:41Z</p>
@@ -120,7 +120,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupMethod;
 
         /**
-         * <p>The information about the backup set.</p>
+         * <p>The backup set information.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;shard_count&quot;: 4}</p>
@@ -129,7 +129,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupSetInfo;
 
         /**
-         * <p>The size of the backup file in MB.</p>
+         * <p>The size of the backup file. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>131072</p>
@@ -138,7 +138,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public Long backupSize;
 
         /**
-         * <p>The start time of the backup.</p>
+         * <p>The start time of the backup. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-22T18:28:22Z</p>
@@ -156,13 +156,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupStatus;
 
         /**
-         * <p>The backup type.
-         * Valid values:</p>
+         * <p>The backup type. Valid values:</p>
          * <ul>
-         * <li><p><strong>FullBackup</strong>: full backup.</p>
-         * </li>
-         * <li><p><strong>IncrementalBackup</strong>: incremental backup.</p>
-         * </li>
+         * <li><strong>FullBackup</strong>: full backup</li>
+         * <li><strong>IncrementalBackup</strong>: incremental backup</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -181,7 +178,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
-         * <p>The expiration time of the backup set.</p>
+         * <p>The expiration time of the backup set. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-22T18:28:41Z</p>

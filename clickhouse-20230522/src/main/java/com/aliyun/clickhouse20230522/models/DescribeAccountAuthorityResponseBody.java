@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountAuthorityResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public DescribeAccountAuthorityResponseBodyData data;
@@ -51,13 +51,13 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         public String account;
 
         /**
-         * <p>A list of authorized databases.</p>
+         * <p>The list of authorized databases.</p>
          */
         @NameInMap("AllowDatabases")
         public java.util.List<String> allowDatabases;
 
         /**
-         * <p>A list of authorized dictionaries.</p>
+         * <p>The list of authorized dictionaries.</p>
          */
         @NameInMap("AllowDictionaries")
         public java.util.List<String> allowDictionaries;
@@ -72,12 +72,10 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
-         * <p>Indicates whether DDL permissions are granted to the database account. Valid values:</p>
+         * <p>Indicates whether Data Definition Language (DDL) permissions are granted to the database account. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: DDL operations are allowed.</p>
-         * </li>
-         * <li><p><strong>false</strong>: DDL operations are prohibited.</p>
-         * </li>
+         * <li><strong>true</strong>: DDL is allowed.</li>
+         * <li><strong>false</strong>: DDL is not allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -87,14 +85,11 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         public Boolean ddlAuthority;
 
         /**
-         * <p>The DML permissions that are granted to the database account. Valid values:</p>
+         * <p>Indicates whether Data Manipulation Language (DML) permissions are granted to the database account. Valid values:</p>
          * <ul>
-         * <li><p>0: Read, write, and change settings queries are allowed.</p>
-         * </li>
-         * <li><p>1: Only read data queries are allowed.</p>
-         * </li>
-         * <li><p>2: Read data and change settings queries are allowed.</p>
-         * </li>
+         * <li>0: Read, write, and change settings queries are allowed.</li>
+         * <li>1: Only read data queries are allowed.</li>
+         * <li>2: Read data and change settings queries are allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -104,13 +99,13 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         public Integer dmlAuthority;
 
         /**
-         * <p>A list of all databases.</p>
+         * <p>The list of all databases.</p>
          */
         @NameInMap("TotalDatabases")
         public java.util.List<String> totalDatabases;
 
         /**
-         * <p>The database.</p>
+         * <p>The dictionaries.</p>
          */
         @NameInMap("TotalDictionaries")
         public java.util.List<String> totalDictionaries;

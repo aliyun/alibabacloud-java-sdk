@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLangfuseUserResponseBody extends TeaModel {
     /**
-     * <p>The returned result.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public DescribeLangfuseUserResponseBodyData data;
@@ -42,7 +42,7 @@ public class DescribeLangfuseUserResponseBody extends TeaModel {
 
     public static class DescribeLangfuseUserResponseBodyDataMembershipsProjects extends TeaModel {
         /**
-         * <p>The Langfuse project ID.</p>
+         * <p>The ID of the Langfuse project.</p>
          * 
          * <strong>example:</strong>
          * <p>cmrbhzx930005jw2q****</p>
@@ -51,7 +51,7 @@ public class DescribeLangfuseUserResponseBody extends TeaModel {
         public String projectId;
 
         /**
-         * <p>The Langfuse project name.</p>
+         * <p>The name of the Langfuse project.</p>
          * 
          * <strong>example:</strong>
          * <p>project_name</p>
@@ -60,7 +60,7 @@ public class DescribeLangfuseUserResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>The role of the user within the project.</p>
+         * <p>The role in the project.</p>
          * 
          * <strong>example:</strong>
          * <p>VIEWER</p>
@@ -101,7 +101,7 @@ public class DescribeLangfuseUserResponseBody extends TeaModel {
 
     public static class DescribeLangfuseUserResponseBodyDataMemberships extends TeaModel {
         /**
-         * <p>The role of the user within the organization.</p>
+         * <p>The role in the organization.</p>
          * 
          * <strong>example:</strong>
          * <p>ADMIN</p>
@@ -110,7 +110,7 @@ public class DescribeLangfuseUserResponseBody extends TeaModel {
         public String orgRole;
 
         /**
-         * <p>The Langfuse organization ID.</p>
+         * <p>The ID of the Langfuse organization.</p>
          * 
          * <strong>example:</strong>
          * <p>cmrbhzx930005jw2q****</p>
@@ -119,7 +119,7 @@ public class DescribeLangfuseUserResponseBody extends TeaModel {
         public String organizationId;
 
         /**
-         * <p>The Langfuse organization name.</p>
+         * <p>The name of the Langfuse organization.</p>
          * 
          * <strong>example:</strong>
          * <p>org_name</p>
@@ -174,7 +174,13 @@ public class DescribeLangfuseUserResponseBody extends TeaModel {
 
     public static class DescribeLangfuseUserResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the user was created.</p>
+         * <p>Indicates whether the user is allowed to create an organization.</p>
+         */
+        @NameInMap("AllowOrgCreation")
+        public Boolean allowOrgCreation;
+
+        /**
+         * <p>The time when the user was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-01T10:03:05Z</p>
@@ -198,7 +204,7 @@ public class DescribeLangfuseUserResponseBody extends TeaModel {
         public java.util.List<DescribeLangfuseUserResponseBodyDataMemberships> memberships;
 
         /**
-         * <p>The username.</p>
+         * <p>The name of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>john</p>
@@ -207,7 +213,7 @@ public class DescribeLangfuseUserResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The time when the user was last updated.</p>
+         * <p>The time when the user was updated. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-01T10:03:05Z</p>
@@ -218,6 +224,14 @@ public class DescribeLangfuseUserResponseBody extends TeaModel {
         public static DescribeLangfuseUserResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeLangfuseUserResponseBodyData self = new DescribeLangfuseUserResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLangfuseUserResponseBodyData setAllowOrgCreation(Boolean allowOrgCreation) {
+            this.allowOrgCreation = allowOrgCreation;
+            return this;
+        }
+        public Boolean getAllowOrgCreation() {
+            return this.allowOrgCreation;
         }
 
         public DescribeLangfuseUserResponseBodyData setCreatedAt(String createdAt) {

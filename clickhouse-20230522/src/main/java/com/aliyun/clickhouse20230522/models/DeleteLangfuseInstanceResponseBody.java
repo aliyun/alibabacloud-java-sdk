@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLangfuseInstanceResponseBody extends TeaModel {
     /**
-     * <p>The response data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public DeleteLangfuseInstanceResponseBodyData data;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
     /**
-     * <p>The result set.</p>
+     * <p>The query result set.</p>
      */
     @NameInMap("Data")
     public DescribeDBInstanceConfigChangeLogResponseBodyData data;
@@ -42,10 +42,12 @@ public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceConfigChangeLogResponseBodyDataParamChangeLogs extends TeaModel {
         /**
-         * <p>Indicates whether the configuration takes effect:</p>
+         * <p>Indicates whether the configuration has taken effect. Valid values:</p>
          * <ul>
-         * <li>true: The execution plan takes effect.</li>
-         * <li>false: The execution plan does not take effect.</li>
+         * <li><p>true: The configuration has taken effect.</p>
+         * </li>
+         * <li><p>false: The configuration has not taken effect.</p>
+         * </li>
          * </ul>
          */
         @NameInMap("Applied")
@@ -61,7 +63,7 @@ public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The time when the change was modified.</p>
+         * <p>The time when the change was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-25 13:46:06</p>
@@ -79,7 +81,7 @@ public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
         public Long ID;
 
         /**
-         * <p>The name of the parameter.</p>
+         * <p>The parameter name.</p>
          * 
          * <strong>example:</strong>
          * <p>max_concurrent_queries</p>

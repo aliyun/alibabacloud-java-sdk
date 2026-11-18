@@ -11,7 +11,7 @@ public class CreateWhitelistTemplateResponseBody extends TeaModel {
     public CreateWhitelistTemplateResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -42,7 +42,7 @@ public class CreateWhitelistTemplateResponseBody extends TeaModel {
 
     public static class CreateWhitelistTemplateResponseBodyDataTemplates extends TeaModel {
         /**
-         * <p>The list of IP addresses in the whitelist.</p>
+         * <p>The IP whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.1,10.0.0.1</p>

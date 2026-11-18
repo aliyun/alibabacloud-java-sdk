@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceClassShrinkRequest extends TeaModel {
     /**
-     * <p>The automatic horizontal scaling configuration.</p>
+     * <p>The automatic horizontal elastic configuration.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -70,7 +70,7 @@ public class ModifyDBInstanceClassShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The maximum value for serverless elastic scaling.</p>
+     * <p><strong>[Deprecated]</strong> The maximum value for serverless elastic scaling.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>
@@ -79,7 +79,7 @@ public class ModifyDBInstanceClassShrinkRequest extends TeaModel {
     public Long scaleMax;
 
     /**
-     * <p>The minimum value for serverless elastic scaling.</p>
+     * <p><strong>[Deprecated]</strong> The minimum value for serverless elastic scaling.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -88,7 +88,7 @@ public class ModifyDBInstanceClassShrinkRequest extends TeaModel {
     public Long scaleMin;
 
     /**
-     * <p>The pre-purchased storage quota, in GB.</p>
+     * <p>The purchased storage quota. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

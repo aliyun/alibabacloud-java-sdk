@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEndpointRequest extends TeaModel {
     /**
-     * <p>The computing group ID.</p>
+     * <p>The compute group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cc-bp100p4q1g9z3****-clickhouse</p>
@@ -14,7 +14,7 @@ public class CreateEndpointRequest extends TeaModel {
     public String computingGroupId;
 
     /**
-     * <p>The prefix for the connection string.</p>
+     * <p>The prefix of the destination endpoint, which is the prefix of the ConnectionString parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>cc-bp100p4q1g9z3****-clickhouse.clickhouseserver.rds.aliyuncs.com</p>
@@ -33,7 +33,7 @@ public class CreateEndpointRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The network type. Set this value to Public to create a public endpoint.</p>
+     * <p>The network type.</p>
      * 
      * <strong>example:</strong>
      * <p>Public</p>

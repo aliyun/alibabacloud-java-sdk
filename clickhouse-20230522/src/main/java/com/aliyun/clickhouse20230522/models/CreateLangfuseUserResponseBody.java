@@ -42,7 +42,7 @@ public class CreateLangfuseUserResponseBody extends TeaModel {
 
     public static class CreateLangfuseUserResponseBodyDataMembership extends TeaModel {
         /**
-         * <p>The Langfuse organization ID.</p>
+         * <p>The ID of the Langfuse organization.</p>
          * 
          * <strong>example:</strong>
          * <p>cmrbhzx930005jw2q****</p>
@@ -84,7 +84,13 @@ public class CreateLangfuseUserResponseBody extends TeaModel {
 
     public static class CreateLangfuseUserResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the user was created.</p>
+         * <p>Indicates whether the user is allowed to create organizations.</p>
+         */
+        @NameInMap("AllowOrgCreation")
+        public Boolean allowOrgCreation;
+
+        /**
+         * <p>The time when the user was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-04T10:20:33Z</p>
@@ -108,7 +114,7 @@ public class CreateLangfuseUserResponseBody extends TeaModel {
         public CreateLangfuseUserResponseBodyDataMembership membership;
 
         /**
-         * <p>The username.</p>
+         * <p>The name of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>john</p>
@@ -119,6 +125,14 @@ public class CreateLangfuseUserResponseBody extends TeaModel {
         public static CreateLangfuseUserResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateLangfuseUserResponseBodyData self = new CreateLangfuseUserResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public CreateLangfuseUserResponseBodyData setAllowOrgCreation(Boolean allowOrgCreation) {
+            this.allowOrgCreation = allowOrgCreation;
+            return this;
+        }
+        public Boolean getAllowOrgCreation() {
+            return this.allowOrgCreation;
         }
 
         public CreateLangfuseUserResponseBodyData setCreatedAt(String createdAt) {

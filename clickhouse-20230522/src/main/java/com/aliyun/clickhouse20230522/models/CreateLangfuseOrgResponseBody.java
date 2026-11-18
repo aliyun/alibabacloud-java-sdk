@@ -42,7 +42,7 @@ public class CreateLangfuseOrgResponseBody extends TeaModel {
 
     public static class CreateLangfuseOrgResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the Langfuse organization was created.</p>
+         * <p>The time when the Langfuse organization was created. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ss.SSSZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-25T09:28:30.949Z</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAccountResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public DeleteAccountResponseBodyData data;
@@ -42,7 +42,7 @@ public class DeleteAccountResponseBody extends TeaModel {
 
     public static class DeleteAccountResponseBodyData extends TeaModel {
         /**
-         * <p>The name of the account.</p>
+         * <p>The database account.</p>
          * 
          * <strong>example:</strong>
          * <p>test1</p>

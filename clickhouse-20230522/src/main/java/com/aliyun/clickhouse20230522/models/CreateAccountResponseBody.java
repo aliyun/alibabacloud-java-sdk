@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAccountResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public CreateAccountResponseBodyData data;
@@ -42,7 +42,7 @@ public class CreateAccountResponseBody extends TeaModel {
 
     public static class CreateAccountResponseBodyData extends TeaModel {
         /**
-         * <p>The name of the database account.</p>
+         * <p>The database account.</p>
          * 
          * <strong>example:</strong>
          * <p>test1</p>

@@ -8,6 +8,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "clickhouse";
+        com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
+        this._spi = gatewayClient;
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-northeast-2-pop", "clickhouse.aliyuncs.com"),
@@ -54,7 +57,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("rus-west-1-pop", "clickhouse.aliyuncs.com"),
             new TeaPair("us-east-1", "clickhouse.aliyuncs.com"),
             new TeaPair("us-west-1", "clickhouse.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "clickhouse.aliyuncs.com")
+            new TeaPair("ap-southeast-3", "clickhouse.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "clickhouse.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("clickhouse", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -75,7 +79,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Attaches a whitelist template to instances.</p>
+     * <p>Associates instances with a whitelist template.</p>
      * 
      * @param request AttachWhitelistTemplateToInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -115,7 +119,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Attaches a whitelist template to instances.</p>
+     * <p>Associates instances with a whitelist template.</p>
      * 
      * @param request AttachWhitelistTemplateToInstanceRequest
      * @return AttachWhitelistTemplateToInstanceResponse
@@ -127,7 +131,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the resource group of a ClickHouse Enterprise instance.</p>
+     * <p>Modifies the resource group of a ClickHouse Enterprise instance.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -171,7 +175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the resource group of a ClickHouse Enterprise instance.</p>
+     * <p>Modifies the resource group of a ClickHouse Enterprise instance.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -261,7 +265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a backup policy for a specified ClickHouse Enterprise Edition cluster.</p>
+     * <p>Creates a backup policy for a specified ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request CreateBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -309,7 +313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a backup policy for a specified ClickHouse Enterprise Edition cluster.</p>
+     * <p>Creates a backup policy for a specified ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request CreateBackupPolicyRequest
      * @return CreateBackupPolicyResponse
@@ -377,7 +381,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>To create a ClickHouse Enterprise Edition cluster, call the <code>CreateDBInstance</code> API.</p>
+     * <p>Creates an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param tmpReq CreateDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -503,7 +507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>To create a ClickHouse Enterprise Edition cluster, call the <code>CreateDBInstance</code> API.</p>
+     * <p>Creates an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
@@ -515,7 +519,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a public endpoint that provides a public address to access a cluster.</p>
+     * <p>Creates a public endpoint.</p>
      * 
      * @param request CreateEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -563,7 +567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a public endpoint that provides a public address to access a cluster.</p>
+     * <p>Creates a public endpoint.</p>
      * 
      * @param request CreateEndpointRequest
      * @return CreateEndpointResponse
@@ -756,6 +760,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateLangfuseUserResponse createLangfuseUserWithOptions(CreateLangfuseUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowOrgCreation)) {
+            query.put("AllowOrgCreation", request.allowOrgCreation);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
             query.put("DBInstanceId", request.DBInstanceId);
         }
@@ -869,7 +877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a database account from an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Deletes an account.</p>
      * 
      * @param request DeleteAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -913,7 +921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a database account from an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Deletes an account.</p>
      * 
      * @param request DeleteAccountRequest
      * @return DeleteAccountResponse
@@ -925,7 +933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the backup policy for a ClickHouse Enterprise Edition cluster.</p>
+     * <p>Deletes the backup policy of an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request DeleteBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -961,7 +969,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the backup policy for a ClickHouse Enterprise Edition cluster.</p>
+     * <p>Deletes the backup policy of an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request DeleteBackupPolicyRequest
      * @return DeleteBackupPolicyResponse
@@ -973,7 +981,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call this operation to delete a database.</p>
+     * <p>Deletes a database.</p>
      * 
      * @param request DeleteDBRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1013,7 +1021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call this operation to delete a database.</p>
+     * <p>Deletes a database.</p>
      * 
      * @param request DeleteDBRequest
      * @return DeleteDBResponse
@@ -1453,7 +1461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call the DescribeAccountAuthority operation to query the permissions of an account.</p>
+     * <p>Queries the permissions of an account.</p>
      * 
      * @param request DescribeAccountAuthorityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1493,7 +1501,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call the DescribeAccountAuthority operation to query the permissions of an account.</p>
+     * <p>Queries the permissions of an account.</p>
      * 
      * @param request DescribeAccountAuthorityRequest
      * @return DescribeAccountAuthorityResponse
@@ -1613,7 +1621,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the backup sets of a ClickHouse Enterprise Edition cluster.</p>
+     * <p>Queries the backup sets of an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request DescribeBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1669,7 +1677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the backup sets of a ClickHouse Enterprise Edition cluster.</p>
+     * <p>Queries the backup sets of an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request DescribeBackupsRequest
      * @return DescribeBackupsResponse
@@ -1681,7 +1689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries the details of an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request DescribeDBInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1717,7 +1725,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries the details of an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request DescribeDBInstanceAttributeRequest
      * @return DescribeDBInstanceAttributeResponse
@@ -1769,7 +1777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the parameter configuration records of an instance</p>
+     * <p>Queries the parameter settings change records of an instance.</p>
      * 
      * @param request DescribeDBInstanceConfigChangeLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1797,7 +1805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the parameter configuration records of an instance</p>
+     * <p>Queries the parameter settings change records of an instance.</p>
      * 
      * @param request DescribeDBInstanceConfigChangeLogRequest
      * @return DescribeDBInstanceConfigChangeLogResponse
@@ -2041,7 +2049,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the member information of a Langfuse organization.</p>
+     * <p>Queries the members of a Langfuse organization.</p>
      * 
      * @param request DescribeLangfuseOrgMembershipsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2089,7 +2097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the member information of a Langfuse organization.</p>
+     * <p>Queries the members of a Langfuse organization.</p>
      * 
      * @param request DescribeLangfuseOrgMembershipsRequest
      * @return DescribeLangfuseOrgMembershipsResponse
@@ -2101,7 +2109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of organizations for a Langfuse instance.</p>
+     * <p>Queries the organizations of a Langfuse instance.</p>
      * 
      * @param request DescribeLangfuseOrgsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2145,7 +2153,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of organizations for a Langfuse instance.</p>
+     * <p>Queries the organizations of a Langfuse instance.</p>
      * 
      * @param request DescribeLangfuseOrgsRequest
      * @return DescribeLangfuseOrgsResponse
@@ -2527,7 +2535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns information about the available regions and zones for ApsaraDB for ClickHouse.</p>
+     * <p>Queries the information about all regions and zones of ApsaraDB for ClickHouse Enterprise Edition.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRegionsResponse
@@ -2550,7 +2558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns information about the available regions and zones for ApsaraDB for ClickHouse.</p>
+     * <p>Queries the information about all regions and zones of ApsaraDB for ClickHouse Enterprise Edition.</p>
      * @return DescribeRegionsResponse
      */
     public DescribeRegionsResponse describeRegions() throws Exception {
@@ -3062,7 +3070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the permissions of a database account.</p>
+     * <p>Modifies the authorization information of an account.</p>
      * 
      * @param tmpReq ModifyAccountAuthorityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3112,7 +3120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the permissions of a database account.</p>
+     * <p>Modifies the authorization information of an account.</p>
      * 
      * @param request ModifyAccountAuthorityRequest
      * @return ModifyAccountAuthorityResponse
@@ -3185,7 +3193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the backup policy of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the backup policy of an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request ModifyBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3238,7 +3246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the backup policy of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the backup policy of an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request ModifyBackupPolicyRequest
      * @return ModifyBackupPolicyResponse
@@ -3250,7 +3258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the ModifyDBInstanceAttribute operation to modify the configuration of a cluster.</p>
+     * <p>Modifies the configuration attributes of a cluster.</p>
      * 
      * @param request ModifyDBInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3298,7 +3306,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the ModifyDBInstanceAttribute operation to modify the configuration of a cluster.</p>
+     * <p>Modifies the configuration attributes of a cluster.</p>
      * 
      * @param request ModifyDBInstanceAttributeRequest
      * @return ModifyDBInstanceAttributeResponse
@@ -3313,7 +3321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the elastic configuration of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the elastic configuration of a cluster.</p>
      * 
      * @param tmpReq ModifyDBInstanceClassRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3394,7 +3402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the elastic configuration of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the elastic configuration of a cluster.</p>
      * 
      * @param request ModifyDBInstanceClassRequest
      * @return ModifyDBInstanceClassResponse
@@ -3706,6 +3714,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyLangfuseSecurityIPListResponse modifyLangfuseSecurityIPList(ModifyLangfuseSecurityIPListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyLangfuseSecurityIPListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the organization creation permissions for a Langfuse user.</p>
+     * 
+     * @param request ModifyLangfuseUserAllowOrgCreationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyLangfuseUserAllowOrgCreationResponse
+     */
+    public ModifyLangfuseUserAllowOrgCreationResponse modifyLangfuseUserAllowOrgCreationWithOptions(ModifyLangfuseUserAllowOrgCreationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowOrgCreation)) {
+            query.put("AllowOrgCreation", request.allowOrgCreation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyLangfuseUserAllowOrgCreation"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyLangfuseUserAllowOrgCreationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the organization creation permissions for a Langfuse user.</p>
+     * 
+     * @param request ModifyLangfuseUserAllowOrgCreationRequest
+     * @return ModifyLangfuseUserAllowOrgCreationResponse
+     */
+    public ModifyLangfuseUserAllowOrgCreationResponse modifyLangfuseUserAllowOrgCreation(ModifyLangfuseUserAllowOrgCreationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyLangfuseUserAllowOrgCreationWithOptions(request, runtime);
     }
 
     /**
@@ -4086,7 +4150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades the minor engine version of a specified ApsaraDB for ClickHouse cluster.</p>
+     * <p>Upgrades the minor engine version of a specified ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request UpgradeMinorVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4134,7 +4198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upgrades the minor engine version of a specified ApsaraDB for ClickHouse cluster.</p>
+     * <p>Upgrades the minor engine version of a specified ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request UpgradeMinorVersionRequest
      * @return UpgradeMinorVersionResponse

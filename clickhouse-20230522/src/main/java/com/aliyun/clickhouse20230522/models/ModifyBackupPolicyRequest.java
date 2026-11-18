@@ -34,7 +34,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String preferredBackupPeriod;
 
     /**
-     * <p>The backup time.</p>
+     * <p>The backup time in UTC. The format is HH:mmZ-HH:mmZ.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

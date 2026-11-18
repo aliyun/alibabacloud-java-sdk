@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLangfuseProjectsResponseBody extends TeaModel {
     /**
-     * <p>The returned result.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Data")
     public DescribeLangfuseProjectsResponseBodyData data;
@@ -42,7 +42,7 @@ public class DescribeLangfuseProjectsResponseBody extends TeaModel {
 
     public static class DescribeLangfuseProjectsResponseBodyDataProjects extends TeaModel {
         /**
-         * <p>The time when the Langfuse project was created.</p>
+         * <p>The time when the Langfuse project was created. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-27T08:23:45Z</p>
@@ -51,7 +51,7 @@ public class DescribeLangfuseProjectsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The Langfuse project name.</p>
+         * <p>The name of the Langfuse project.</p>
          * 
          * <strong>example:</strong>
          * <p>project_name</p>
@@ -60,7 +60,7 @@ public class DescribeLangfuseProjectsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The organization ID to which the Langfuse project belongs.</p>
+         * <p>The ID of the organization to which the Langfuse project belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cmrbhzx930005jw2q****</p>
@@ -78,7 +78,7 @@ public class DescribeLangfuseProjectsResponseBody extends TeaModel {
         public String projectId;
 
         /**
-         * <p>The time when the Langfuse project was last updated.</p>
+         * <p>The time when the Langfuse project was updated. The time is in the YYYY-MM-DDTHH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-09T10:27:35</p>
@@ -144,7 +144,7 @@ public class DescribeLangfuseProjectsResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -159,7 +159,7 @@ public class DescribeLangfuseProjectsResponseBody extends TeaModel {
         public java.util.List<DescribeLangfuseProjectsResponseBodyDataProjects> projects;
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

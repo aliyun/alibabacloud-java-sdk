@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateAccountRequest extends TeaModel {
     /**
-     * <p>The name of the account.</p>
+     * <p>The database account. The name must meet the following requirements:</p>
+     * <ul>
+     * <li>The name must be unique.</li>
+     * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
+     * <li>The name must start with a lowercase letter and end with a lowercase letter or a digit.</li>
+     * <li>The name must be 2 to 64 characters in length.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,10 +23,8 @@ public class CreateAccountRequest extends TeaModel {
     /**
      * <p>The type of the database account. Valid values:</p>
      * <ul>
-     * <li><p><strong>NormalAccount</strong>: standard account</p>
-     * </li>
-     * <li><p><strong>SuperAccount</strong>: privileged account</p>
-     * </li>
+     * <li><strong>NormalAccount</strong>: standard account.</li>
+     * <li><strong>SuperAccount</strong>: privileged account.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -41,16 +45,16 @@ public class CreateAccountRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The description of the account.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>For testing</p>
+     * <p>For testing purposes</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The information about permissions.</p>
+     * <p>The authorization information.</p>
      */
     @NameInMap("DmlAuthSetting")
     public CreateAccountRequestDmlAuthSetting dmlAuthSetting;
@@ -60,7 +64,7 @@ public class CreateAccountRequest extends TeaModel {
      * <ul>
      * <li><p>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
      * </li>
-     * <li><p>The following special characters are supported: ! @ # $ % ^ &amp; \* ( ) _ + - =</p>
+     * <li><p>Special characters include !@#$%^&amp;*()_+-=.</p>
      * </li>
      * <li><p>The password must be 8 to 32 characters in length.</p>
      * </li>
@@ -74,7 +78,7 @@ public class CreateAccountRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The code of the cloud service.</p>
+     * <p>The product code.</p>
      * 
      * <strong>example:</strong>
      * <p>clickhouse</p>
@@ -163,24 +167,22 @@ public class CreateAccountRequest extends TeaModel {
 
     public static class CreateAccountRequestDmlAuthSetting extends TeaModel {
         /**
-         * <p>The databases on which you want to grant permissions. Separate multiple databases with commas (,).</p>
+         * <p>The list of databases to be authorized. Separate multiple databases with commas (,).</p>
          */
         @NameInMap("AllowDatabases")
         public java.util.List<String> allowDatabases;
 
         /**
-         * <p>The dictionaries on which you want to grant permissions. Separate multiple dictionaries with commas (,).</p>
+         * <p>The list of dictionaries to be authorized. Separate multiple dictionaries with commas (,).</p>
          */
         @NameInMap("AllowDictionaries")
         public java.util.List<String> allowDictionaries;
 
         /**
-         * <p>Specifies whether to grant the DDL permissions to the database account. Valid values:</p>
+         * <p>Specifies whether to grant Data Definition Language (DDL) permissions to the database account. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The account has the permissions to execute DDL statements.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The account does not have the permissions to execute DDL statements.</p>
-         * </li>
+         * <li><strong>true</strong>: Allows DDL operations.</li>
+         * <li><strong>false</strong>: Prohibits DDL operations.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -190,14 +192,11 @@ public class CreateAccountRequest extends TeaModel {
         public Boolean ddlAuthority;
 
         /**
-         * <p>Specifies whether to grant the DML permissions to the database account. Valid values:</p>
+         * <p>Specifies whether to grant Data Manipulation Language (DML) permissions to the database account. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: The account has the permissions to read data from the database, write data to the database, and modify the settings of the database.</p>
-         * </li>
-         * <li><p><strong>1</strong>: The account only has the permissions to read data from the database.</p>
-         * </li>
-         * <li><p><strong>2</strong>: The account only has the permissions to read data from the database and modify the settings of the database.</p>
-         * </li>
+         * <li><strong>0</strong>: Allows queries for reading, writing, and changing settings.</li>
+         * <li><strong>1</strong>: Allows only queries for reading data.</li>
+         * <li><strong>2</strong>: Allows queries for reading data and changing settings.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -42,7 +42,7 @@ public class DescribeLangfuseOrgMembershipsResponseBody extends TeaModel {
 
     public static class DescribeLangfuseOrgMembershipsResponseBodyDataMemberships extends TeaModel {
         /**
-         * <p>The time when the user was created.</p>
+         * <p>The time when the user was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-24T10:14:33Z</p>
@@ -60,7 +60,7 @@ public class DescribeLangfuseOrgMembershipsResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The username.</p>
+         * <p>The name of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>john</p>
@@ -142,7 +142,7 @@ public class DescribeLangfuseOrgMembershipsResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

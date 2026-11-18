@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLangfuseOrgsResponseBody extends TeaModel {
     /**
-     * <p>The returned result.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public DescribeLangfuseOrgsResponseBodyData data;
@@ -42,7 +42,7 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
 
     public static class DescribeLangfuseOrgsResponseBodyDataOrganizations extends TeaModel {
         /**
-         * <p>The time when the Langfuse organization was created.</p>
+         * <p>The time when the Langfuse organization was created. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-11T10:27:23Z</p>
@@ -51,7 +51,7 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The Langfuse organization name.</p>
+         * <p>The name of the Langfuse organization.</p>
          * 
          * <strong>example:</strong>
          * <p>org_name</p>
@@ -60,7 +60,7 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The Langfuse organization ID.</p>
+         * <p>The ID of the Langfuse organization.</p>
          * 
          * <strong>example:</strong>
          * <p>cmrbhzx930005jw2q****</p>
@@ -69,7 +69,7 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
         public String organizationId;
 
         /**
-         * <p>The time when the Langfuse organization was last updated.</p>
+         * <p>The time when the Langfuse organization was updated. The time follows the YYYY-MM-DDTHH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-09T10:27:55</p>
@@ -118,7 +118,7 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
 
     public static class DescribeLangfuseOrgsResponseBodyData extends TeaModel {
         /**
-         * <p>The Langfuse organization information.</p>
+         * <p>The Langfuse organizations.</p>
          */
         @NameInMap("Organizations")
         public java.util.List<DescribeLangfuseOrgsResponseBodyDataOrganizations> organizations;
@@ -133,7 +133,7 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -142,7 +142,7 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>17</p>

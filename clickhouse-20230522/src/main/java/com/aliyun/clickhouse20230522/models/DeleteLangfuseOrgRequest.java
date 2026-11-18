@@ -15,7 +15,7 @@ public class DeleteLangfuseOrgRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The Langfuse organization ID.</p>
+     * <p>The ID of the Langfuse organization.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

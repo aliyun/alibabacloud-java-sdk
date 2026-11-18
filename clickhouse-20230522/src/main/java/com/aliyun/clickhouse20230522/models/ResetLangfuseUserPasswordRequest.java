@@ -25,10 +25,10 @@ public class ResetLangfuseUserPasswordRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>The new user password. The password must meet the following rules:</p>
-     * <p>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
-     * <p>The supported special characters are !@#$%^&amp;*()_+-=.</p>
-     * <p>The password must be 8 to 32 characters in length.</p>
+     * <p>The new password of the user. The password must meet the following requirements:</p>
+     * <p>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+     * <p>Special characters include !@#$%^&amp;*()_+-=.</p>
+     * <p>It must be 8 to 32 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

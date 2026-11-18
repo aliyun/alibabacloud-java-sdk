@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLangfuseOrgsRequest extends TeaModel {
     /**
-     * <p>The Langfuse instance ID.</p>
+     * <p>The instance ID of the Langfuse instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeLangfuseOrgsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The current page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -15,7 +15,7 @@ public class CreateLangfuseProjectRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The Langfuse project name.</p>
+     * <p>The name of the Langfuse project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateLangfuseProjectRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The organization ID to which the Langfuse project belongs.</p>
+     * <p>The ID of the organization to which the Langfuse project belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

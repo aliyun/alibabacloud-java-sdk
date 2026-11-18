@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetLangfuseUserPasswordResponseBody extends TeaModel {
     /**
-     * <p>The response result.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public ResetLangfuseUserPasswordResponseBodyData data;

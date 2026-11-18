@@ -15,7 +15,7 @@ public class DeleteLangfuseProjectRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The Langfuse organization ID.</p>
+     * <p>The ID of the Langfuse organization.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DeleteLangfuseProjectRequest extends TeaModel {
     public String organizationId;
 
     /**
-     * <p>The Langfuse project ID.</p>
+     * <p>The ID of the Langfuse project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

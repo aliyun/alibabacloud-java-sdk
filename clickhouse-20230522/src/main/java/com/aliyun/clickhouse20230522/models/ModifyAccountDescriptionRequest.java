@@ -19,7 +19,7 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cc-bp1anv7jo84t****</p>
+     * <p>cc-xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

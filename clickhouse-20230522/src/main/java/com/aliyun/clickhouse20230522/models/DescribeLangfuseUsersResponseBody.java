@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLangfuseUsersResponseBody extends TeaModel {
     /**
-     * <p>The returned result.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public DescribeLangfuseUsersResponseBodyData data;
@@ -42,7 +42,13 @@ public class DescribeLangfuseUsersResponseBody extends TeaModel {
 
     public static class DescribeLangfuseUsersResponseBodyDataUsers extends TeaModel {
         /**
-         * <p>The time when the user was created.</p>
+         * <p>Indicates whether the user is allowed to create an organization.</p>
+         */
+        @NameInMap("AllowOrgCreation")
+        public Boolean allowOrgCreation;
+
+        /**
+         * <p>The time when the user was created. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format and is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-01T10:03:05Z</p>
@@ -60,7 +66,7 @@ public class DescribeLangfuseUsersResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The username.</p>
+         * <p>The name of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>john</p>
@@ -71,6 +77,14 @@ public class DescribeLangfuseUsersResponseBody extends TeaModel {
         public static DescribeLangfuseUsersResponseBodyDataUsers build(java.util.Map<String, ?> map) throws Exception {
             DescribeLangfuseUsersResponseBodyDataUsers self = new DescribeLangfuseUsersResponseBodyDataUsers();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLangfuseUsersResponseBodyDataUsers setAllowOrgCreation(Boolean allowOrgCreation) {
+            this.allowOrgCreation = allowOrgCreation;
+            return this;
+        }
+        public Boolean getAllowOrgCreation() {
+            return this.allowOrgCreation;
         }
 
         public DescribeLangfuseUsersResponseBodyDataUsers setCreatedAt(String createdAt) {
@@ -110,7 +124,7 @@ public class DescribeLangfuseUsersResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries to return on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -119,7 +133,7 @@ public class DescribeLangfuseUsersResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

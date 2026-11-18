@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDBRequest extends TeaModel {
     /**
-     * <p>The description of the database.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -24,19 +24,15 @@ public class CreateDBRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The name of the database. The name must meet the following requirements:</p>
+     * <p>The database name. The name must meet the following requirements:</p>
      * <ul>
-     * <li><p>Consist of lowercase letters, digits, underscores (_), and hyphens (-).</p>
-     * </li>
-     * <li><p>Start with a lowercase letter and end with a lowercase letter or a digit.</p>
-     * </li>
-     * <li><p>Be up to 64 characters in length.</p>
-     * </li>
+     * <li>It can contain lowercase letters, digits, underscores (_), and hyphens (-).</li>
+     * <li>It must start with a lowercase letter and end with a lowercase letter or a digit.</li>
+     * <li>It can be up to 64 characters in length.</li>
      * </ul>
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: An underscore (_) is counted as two characters.</p>
      * </blockquote>
-     * <p>An underscore (_) is counted as two characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

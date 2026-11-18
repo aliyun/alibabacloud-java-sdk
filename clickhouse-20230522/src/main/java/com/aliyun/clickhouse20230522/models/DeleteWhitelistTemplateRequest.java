@@ -25,7 +25,7 @@ public class DeleteWhitelistTemplateRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The name of the whitelist template.</p>
+     * <p>The whitelist template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>98a6d3db05984dca</p>

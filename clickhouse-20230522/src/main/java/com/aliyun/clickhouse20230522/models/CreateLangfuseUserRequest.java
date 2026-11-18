@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateLangfuseUserRequest extends TeaModel {
     /**
+     * <p>Specifies whether the user is allowed to create organizations. Default value: false.</p>
+     */
+    @NameInMap("AllowOrgCreation")
+    public Boolean allowOrgCreation;
+
+    /**
      * <p>The Langfuse instance ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -25,7 +31,7 @@ public class CreateLangfuseUserRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>The username.</p>
+     * <p>The name of the user.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +50,7 @@ public class CreateLangfuseUserRequest extends TeaModel {
     public String orgRole;
 
     /**
-     * <p>The Langfuse organization ID.</p>
+     * <p>The ID of the Langfuse organization.</p>
      * 
      * <strong>example:</strong>
      * <p>cmrbhzx930005jw2q****</p>
@@ -55,9 +61,9 @@ public class CreateLangfuseUserRequest extends TeaModel {
     /**
      * <p>The password of the user account. The password must meet the following requirements:</p>
      * <ul>
-     * <li><p>Contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+     * <li><p>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
      * </li>
-     * <li><p>The following special characters are supported: !@#$%^&amp;*()_+-=</p>
+     * <li><p>Special characters include !@#$%^&amp;*()_+-=.</p>
      * </li>
      * <li><p>The password must be 8 to 32 characters in length.</p>
      * </li>
@@ -83,6 +89,14 @@ public class CreateLangfuseUserRequest extends TeaModel {
     public static CreateLangfuseUserRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLangfuseUserRequest self = new CreateLangfuseUserRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateLangfuseUserRequest setAllowOrgCreation(Boolean allowOrgCreation) {
+        this.allowOrgCreation = allowOrgCreation;
+        return this;
+    }
+    public Boolean getAllowOrgCreation() {
+        return this.allowOrgCreation;
     }
 
     public CreateLangfuseUserRequest setDBInstanceId(String DBInstanceId) {

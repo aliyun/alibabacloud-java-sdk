@@ -24,7 +24,7 @@ public class DescribeLangfuseUsersRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>The username.</p>
+     * <p>The name of the user.</p>
      * 
      * <strong>example:</strong>
      * <p>john</p>
@@ -42,7 +42,7 @@ public class DescribeLangfuseUsersRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

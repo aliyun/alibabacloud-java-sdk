@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLangfuseInstanceRequest extends TeaModel {
     /**
-     * <p>The confirmation flag for deleting the AiGateway instance associated with the Langfuse instance.</p>
+     * <p>The confirmation mark for deleting the AI gateway instance associated with the Langfuse instance.</p>
      */
     @NameInMap("ConfirmDeleteAiGateway")
     public Boolean confirmDeleteAiGateway;

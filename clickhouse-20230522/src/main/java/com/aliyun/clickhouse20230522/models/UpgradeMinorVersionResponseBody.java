@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeMinorVersionResponseBody extends TeaModel {
     /**
-     * <p>The response result.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public UpgradeMinorVersionResponseBodyData data;

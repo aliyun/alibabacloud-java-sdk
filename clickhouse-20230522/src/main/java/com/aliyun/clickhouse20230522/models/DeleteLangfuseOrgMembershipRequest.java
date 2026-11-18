@@ -25,7 +25,7 @@ public class DeleteLangfuseOrgMembershipRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>The Langfuse organization ID.</p>
+     * <p>The ID of the Langfuse organization.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
