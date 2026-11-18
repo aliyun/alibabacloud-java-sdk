@@ -1,3 +1,6 @@
+2026-11-18 Version: 9.6.1
+- Generated java 2017-12-07 for Cloudfw.
+
 2026-11-17 Version: 9.6.0
 - Support API CreateApplicationCustomRules.
 - Support API CreateApplicationTemplate.
