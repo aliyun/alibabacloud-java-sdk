@@ -14,7 +14,7 @@ public class UpdateActionPlanRequest extends TeaModel {
     public String actionPlanId;
 
     /**
-     * <p>The expected scale of resources for the execution plan. If the ResourceType parameter is set to VcpuCapacity, the execution plan is expected to have 10000 vCPUs.</p>
+     * <p>The expected resource scale of the execution plan. If ResourceType is set to VcpuCapacity, this field indicates that the execution plan expects to maintain 10,000 vCPUs.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -23,13 +23,14 @@ public class UpdateActionPlanRequest extends TeaModel {
     public Float desiredCapacity;
 
     /**
-     * <p>Whether to enable the execution plan. Valid values:</p>
+     * <p>Specifies whether to enable the execution plan. Valid values:</p>
      * <ul>
-     * <li><p>true: enables the execution plan.</p>
+     * <li><p>true: Enables the execution plan.</p>
      * </li>
-     * <li><p>false: The execution plan is disabled.</p>
-     * <p>**</p>
-     * <p><strong>Note:</strong> After an execution plan is disabled, the created Instant jobs are not automatically managed by the execution plan.</p>
+     * <li><p>false: Disables the execution plan.</p>
+     * <blockquote>
+     * <p>Notice: After the execution plan is disabled, already created Instant jobs are no longer automatically managed by the execution plan.</p>
+     * </blockquote>
      * </li>
      * </ul>
      * 
@@ -40,6 +41,8 @@ public class UpdateActionPlanRequest extends TeaModel {
     public String enabled;
 
     /**
+     * <p>The scheduling interval of the execution plan. Unit: minutes. Valid values: 10 to 10080. Default value: 60.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */

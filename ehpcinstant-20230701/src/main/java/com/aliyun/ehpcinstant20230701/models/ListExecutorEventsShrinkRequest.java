@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListExecutorEventsShrinkRequest extends TeaModel {
     /**
-     * <p>The filter conditions for querying Executors.</p>
+     * <p>The filter conditions for querying executors.</p>
      */
     @NameInMap("Filter")
     public String filterShrink;
 
     /**
-     * <p>The page number.<br>Minimum value: 1.<br>Default value: 1.</p>
+     * <p>The page number. Starting value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListExecutorEventsShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for paging. Default value: 50. Maximum value: 100.</p>
+     * <p>The paging Settings for the number of entries per page in a paged query. Default value: 50. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

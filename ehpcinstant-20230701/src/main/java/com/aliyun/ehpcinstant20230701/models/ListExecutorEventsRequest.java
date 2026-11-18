@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListExecutorEventsRequest extends TeaModel {
     /**
-     * <p>The filter conditions for querying Executors.</p>
+     * <p>The filter conditions for querying executors.</p>
      */
     @NameInMap("Filter")
     public ListExecutorEventsRequestFilter filter;
 
     /**
-     * <p>The page number.<br>Minimum value: 1.<br>Default value: 1.</p>
+     * <p>The page number. Starting value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListExecutorEventsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for paging. Default value: 50. Maximum value: 100.</p>
+     * <p>The paging Settings for the number of entries per page in a paged query. Default value: 50. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -59,7 +59,7 @@ public class ListExecutorEventsRequest extends TeaModel {
 
     public static class ListExecutorEventsRequestFilter extends TeaModel {
         /**
-         * <p>The list of Executor IDs. A maximum of 100 entries are supported.</p>
+         * <p>The list of executor IDs. You can specify up to 100 IDs.</p>
          */
         @NameInMap("ExecutorIds")
         public java.util.List<String> executorIds;
@@ -74,7 +74,7 @@ public class ListExecutorEventsRequest extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The runtime event level. Valid values:</p>
+         * <p>The level of the runtime event. Valid values:</p>
          * <ul>
          * <li>Normal</li>
          * <li>Warning</li>
@@ -88,7 +88,7 @@ public class ListExecutorEventsRequest extends TeaModel {
         public String level;
 
         /**
-         * <p>Events that occurred after this time. The value is a UNIX timestamp converted from the local time of the region (UTC+8 for Chinese mainland regions).</p>
+         * <p>The start time of the events. Events that occur after this time are returned. The time must be a UNIX timestamp based on the time zone of the region (UTC+8 for the Chinese site).</p>
          * 
          * <strong>example:</strong>
          * <p>1703820113</p>
@@ -97,7 +97,7 @@ public class ListExecutorEventsRequest extends TeaModel {
         public Long timeAfter;
 
         /**
-         * <p>Events that occurred before this time. The value is a UNIX timestamp converted from the local time of the region (UTC+8 for Chinese mainland regions).</p>
+         * <p>The end time of the events. Events that occur before this time are returned. The time must be a UNIX timestamp based on the time zone of the region (UTC+8 for the Chinese site).</p>
          * 
          * <strong>example:</strong>
          * <p>1703819914</p>

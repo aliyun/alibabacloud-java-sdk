@@ -8,16 +8,16 @@ public class DescribeJobResultsRequest extends TeaModel {
      * <p>The executor index.</p>
      * 
      * <strong>example:</strong>
-     * <p>0_1</p>
+     * <p>0</p>
      */
     @NameInMap("ArrayIndex")
     public Integer arrayIndex;
 
     /**
-     * <p>The encoding method for the CommandContent and Output fields in the response. Valid values:</p>
+     * <p>Specifies the encoding method for the CommandContent and Output fields in the response. Valid values:</p>
      * <ul>
-     * <li>PlainText: returns the original script content and output.</li>
-     * <li>Base64: returns Base64-encoded script content and output.</li>
+     * <li>PlainText: Returns the original script content and output.</li>
+     * <li>Base64: Returns the Base64-encoded script content and output.</li>
      * </ul>
      * <p>Default value: Base64.</p>
      * 
@@ -37,7 +37,7 @@ public class DescribeJobResultsRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The maximum size of the log. Unit: bytes. Valid values: 1 to 1048576 (1 MB).</p>
+     * <p>The limit on the total size of the logs. Unit: bytes. Valid values: 1 to 1048576 (1 MB).</p>
      * 
      * <strong>example:</strong>
      * <p>1048576</p>

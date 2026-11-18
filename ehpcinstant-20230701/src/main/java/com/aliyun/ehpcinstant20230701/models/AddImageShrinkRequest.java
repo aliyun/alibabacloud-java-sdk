@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddImageShrinkRequest extends TeaModel {
     /**
-     * <p>The configurations of the container image.</p>
+     * <p>The container image configuration.</p>
      */
     @NameInMap("ContainerImageSpec")
     public String containerImageSpecShrink;
 
     /**
-     * <p>The description of the image.</p>
+     * <p>The image description.</p>
      * 
      * <strong>example:</strong>
      * <p>Test image</p>
@@ -20,10 +20,10 @@ public class AddImageShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The type of the images. Valid values:</p>
+     * <p>The image type. Valid values:</p>
      * <ul>
-     * <li>VM: virtual machine image.</li>
-     * <li>Container: the container image.</li>
+     * <li>VM: virtual machine image</li>
+     * <li>Container: container image</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class AddImageShrinkRequest extends TeaModel {
     public String imageType;
 
     /**
-     * <p>The version of the image.</p>
+     * <p>The image version.</p>
      * 
      * <strong>example:</strong>
      * <p>V1.0</p>
@@ -42,7 +42,7 @@ public class AddImageShrinkRequest extends TeaModel {
     public String imageVersion;
 
     /**
-     * <p>The name of the custom image.</p>
+     * <p>The image name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class AddImageShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The image configuration of the virtual machine.</p>
+     * <p>The virtual machine image configuration.</p>
      */
     @NameInMap("VMImageSpec")
     public String VMImageSpecShrink;

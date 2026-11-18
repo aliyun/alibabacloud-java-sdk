@@ -35,7 +35,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -53,7 +53,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The job name.</p>
+     * <p>The task name.</p>
      * 
      * <strong>example:</strong>
      * <p>Task0</p>
@@ -62,7 +62,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The total number of entries in the list.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -177,7 +177,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Integer initing;
 
         /**
-         * <p>The number of executors in the queued state.</p>
+         * <p>The number of executors in the pending state.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -213,7 +213,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Integer succeeded;
 
         /**
-         * <p>The number of executors in the hibernation state.</p>
+         * <p>The number of executors in the hibernated state.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -346,9 +346,9 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         /**
          * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li>Standard: standard.</li>
-         * <li>Dedicated: dedicated. You must be added to the whitelist to use this type.</li>
-         * <li>Economic: economy. You must be added to the whitelist to use this type.</li>
+         * <li>Standard: Standard.</li>
+         * <li>Dedicated: Dedicated. Requires whitelist authorization.</li>
+         * <li>Economic: Economic. Requires whitelist authorization.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -358,7 +358,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public String allocationSpec;
 
         /**
-         * <p>The array index of the executor.</p>
+         * <p>The executor index.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -367,7 +367,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Integer arrayIndex;
 
         /**
-         * <p>The retention duration of compute resources.</p>
+         * <p>The retention period of the compute resource.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -376,7 +376,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public Integer blockDuration;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The example uses the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-20 10:04:10</p>
@@ -385,7 +385,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The end time.</p>
+         * <p>The end time. The example uses the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-20 10:04:18</p>
@@ -402,11 +402,17 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         @NameInMap("ExecutorId")
         public String executorId;
 
+        /**
+         * <p>The expiration time of the execution instance, returned in the YYYY-MM-DD HH:mm:ss format (UTC+8).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-10-21 00:00:00</p>
+         */
         @NameInMap("ExpirationTime")
         public String expirationTime;
 
         /**
-         * <p>The list of node public IP addresses.</p>
+         * <p>The list of public IP addresses of the node.</p>
          */
         @NameInMap("ExternalIpAddress")
         public java.util.List<String> externalIpAddress;
@@ -423,11 +429,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         @NameInMap("IpAddress")
         public java.util.List<String> ipAddress;
 
+        /**
+         * <p>Indicates whether the execution instance is preemptible.</p>
+         */
         @NameInMap("Preemptible")
         public Boolean preemptible;
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time. The example uses the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-20 10:04:13</p>
@@ -438,17 +447,17 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         /**
          * <p>The executor status. Valid values:</p>
          * <ul>
-         * <li>Pending: queued.</li>
-         * <li>Initing: initializing.</li>
-         * <li>Succeed: succeeded.</li>
-         * <li>Failed: failed.</li>
-         * <li>Running: running.</li>
-         * <li>Exception: scheduling exception.</li>
-         * <li>Retrying: retrying.</li>
-         * <li>Expired: timed out.</li>
-         * <li>Suspended: in hibernation.</li>
-         * <li>Restarting: restarting.</li>
-         * <li>Deleted: deleted.</li>
+         * <li>Pending: Queued.</li>
+         * <li>Initing: Initializing.</li>
+         * <li>Succeed: Succeeded.</li>
+         * <li>Failed: Failed.</li>
+         * <li>Running: Running.</li>
+         * <li>Exception: Scheduling exception.</li>
+         * <li>Retrying: Retrying.</li>
+         * <li>Expired: Timed out.</li>
+         * <li>Suspended: Hibernated.</li>
+         * <li>Restarting: Restarting.</li>
+         * <li>Deleted: Deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>

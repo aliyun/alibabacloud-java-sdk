@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetJobTemplateResponseBody extends TeaModel {
     /**
-     * <p>The creation time.</p>
+     * <p>The creation time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-04-20 11:09:59</p>
@@ -29,7 +29,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
     public String jobTemplateDescription;
 
     /**
-     * <p>The ID of the job template.</p>
+     * <p>The job template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>jt-xxxx</p>
@@ -56,7 +56,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The job template status.</p>
+     * <p>The status of the job template.</p>
      * 
      * <strong>example:</strong>
      * <p>Working</p>
@@ -65,7 +65,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The update time.</p>
+     * <p>The update time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-04-20 11:09:59</p>
@@ -144,7 +144,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
 
     public static class GetJobTemplateResponseBodyJobTemplateConfigDeploymentPolicyNetwork extends TeaModel {
         /**
-         * <p>Indicates whether a public IP address is created for the job. Default value: false.</p>
+         * <p>Specifies whether to create a public IP address for the job. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -153,7 +153,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public Boolean enableExternalIpAddress;
 
         /**
-         * <p>The vSwitch array.</p>
+         * <p>The vSwitches.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-xxxx</p>
@@ -186,7 +186,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
 
     public static class GetJobTemplateResponseBodyJobTemplateConfigDeploymentPolicyTags extends TeaModel {
         /**
-         * <p>The job tag key.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -195,7 +195,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The job tag value.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
@@ -237,10 +237,10 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public String allocationSpec;
 
         /**
-         * <p>The computing power level. This parameter is valid only when the resource type is Economy. Valid values:</p>
+         * <p>The computing power level. This parameter is valid only when the resource type is economy. Valid values:</p>
          * <ul>
-         * <li>General: General-purpose.</li>
-         * <li>Performance: Performance.</li>
+         * <li>General: general-purpose.</li>
+         * <li>Performance: compute-optimized.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -265,7 +265,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public String pool;
 
         /**
-         * <p>The job priority. A larger value indicates a higher scheduling priority.</p>
+         * <p>The job priority. A larger value indicates a higher scheduling priority for the job.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -274,7 +274,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The job tag information.</p>
+         * <p>The tags of the job.</p>
          */
         @NameInMap("Tags")
         public java.util.List<GetJobTemplateResponseBodyJobTemplateConfigDeploymentPolicyTags> tags;
@@ -336,7 +336,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
 
     public static class GetJobTemplateResponseBodyJobTemplateConfigSecurityPolicySecurityGroup extends TeaModel {
         /**
-         * <p>The array of security group IDs.</p>
+         * <p>The security group IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-xxxx</p>
@@ -383,7 +383,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
 
     public static class GetJobTemplateResponseBodyJobTemplateConfigTasksExecutorPolicyArraySpec extends TeaModel {
         /**
-         * <p>The end value of the array job index. Valid values: 0 to 4999. The value must be greater than or equal to IndexStart.</p>
+         * <p>The end index of the array job. Valid values: 0 to 4999. The value must be greater than or equal to the value of IndexStart.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -392,7 +392,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public Integer indexEnd;
 
         /**
-         * <p>The start value of the array job index. Valid values: 0 to 4999.</p>
+         * <p>The start index of the array job. Valid values: 0 to 4999.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -401,7 +401,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public Integer indexStart;
 
         /**
-         * <p>The step of the array job index.</p>
+         * <p>The step size of the array job index.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -442,13 +442,13 @@ public class GetJobTemplateResponseBody extends TeaModel {
 
     public static class GetJobTemplateResponseBodyJobTemplateConfigTasksExecutorPolicy extends TeaModel {
         /**
-         * <p>The array job details.</p>
+         * <p>The details of the array job.</p>
          */
         @NameInMap("ArraySpec")
         public GetJobTemplateResponseBodyJobTemplateConfigTasksExecutorPolicyArraySpec arraySpec;
 
         /**
-         * <p>The maximum number of nodes for running the job.</p>
+         * <p>The maximum number of nodes for the job execution.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -481,7 +481,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
 
     public static class GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecResourceDisks extends TeaModel {
         /**
-         * <p>The cloud disk size. Unit: GiB.</p>
+         * <p>The size of the cloud disk. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -490,7 +490,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public Integer size;
 
         /**
-         * <p>The cloud disk type.</p>
+         * <p>The type of the cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>System</p>
@@ -523,7 +523,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
 
     public static class GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecResource extends TeaModel {
         /**
-         * <p>The number of CPUs in the runtime environment.</p>
+         * <p>The number of CPU cores in the runtime environment.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -532,7 +532,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public Float cores;
 
         /**
-         * <p>The cloud disk array.</p>
+         * <p>The array of cloud disks.</p>
          */
         @NameInMap("Disks")
         public java.util.List<GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecResourceDisks> disks;
@@ -630,11 +630,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
 
     public static class GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecRetryPolicyExitCodeActions extends TeaModel {
         /**
-         * <p>The next action for the task. Valid values:</p>
-         * <ul>
-         * <li>Retry: retries the task.</li>
-         * <li>Exit: exits the task.</li>
-         * </ul>
+         * <p>The next action of the task. Valid values: Retry: retries the task. Exit: exits the task.</p>
          * 
          * <strong>example:</strong>
          * <p>Retry</p>
@@ -643,7 +639,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The task exit code, which is used together with Action to form a job retry rule. Valid values: 0 to 255.</p>
+         * <p>The exit code of the task. It is used together with the Action parameter to form the job retry rule. Valid values: 0 to 255.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -757,7 +753,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
 
     public static class GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecTaskExecutorContainer extends TeaModel {
         /**
-         * <p>The container application ID.</p>
+         * <p>The application ID of the container.</p>
          * 
          * <strong>example:</strong>
          * <p>ci-vm-32k6LXAi3cOG</p>
@@ -766,7 +762,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The arguments for the container startup command.</p>
+         * <p>The arguments for the container startup commands.</p>
          * 
          * <strong>example:</strong>
          * <p>60s</p>
@@ -775,7 +771,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public java.util.List<String> arg;
 
         /**
-         * <p>The list of container startup commands.</p>
+         * <p>The startup commands of the container.</p>
          * 
          * <strong>example:</strong>
          * <p>sleep</p>
@@ -790,6 +786,15 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public java.util.List<GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecTaskExecutorContainerEnvironmentVars> environmentVars;
 
         /**
+         * <p>The GPU driver version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tesla=535</p>
+         */
+        @NameInMap("GpuDriverVersion")
+        public String gpuDriverVersion;
+
+        /**
          * <p>The container image.</p>
          * 
          * <strong>example:</strong>
@@ -799,13 +804,22 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>The list of self-managed image registry mount parameters. The parameters are in key-value format and passed as JSON.</p>
+         * <p>The mount parameters for the self-managed image registry. The parameters are in key-value pairs and passed in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
         @NameInMap("ImageRegistryOptions")
         public String imageRegistryOptions;
+
+        /**
+         * <p>Specifies whether the container runs in privileged mode. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("Privileged")
+        public Boolean privileged;
 
         /**
          * <p>The working directory of the container.</p>
@@ -853,6 +867,14 @@ public class GetJobTemplateResponseBody extends TeaModel {
             return this.environmentVars;
         }
 
+        public GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecTaskExecutorContainer setGpuDriverVersion(String gpuDriverVersion) {
+            this.gpuDriverVersion = gpuDriverVersion;
+            return this;
+        }
+        public String getGpuDriverVersion() {
+            return this.gpuDriverVersion;
+        }
+
         public GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecTaskExecutorContainer setImage(String image) {
             this.image = image;
             return this;
@@ -867,6 +889,14 @@ public class GetJobTemplateResponseBody extends TeaModel {
         }
         public String getImageRegistryOptions() {
             return this.imageRegistryOptions;
+        }
+
+        public GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecTaskExecutorContainer setPrivileged(Boolean privileged) {
+            this.privileged = privileged;
+            return this;
+        }
+        public Boolean getPrivileged() {
+            return this.privileged;
         }
 
         public GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecTaskExecutorContainer setWorkingDir(String workingDir) {
@@ -899,7 +929,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>The login password for the VM environment.</p>
+         * <p>The logon password for the VM environment.</p>
          * 
          * <strong>example:</strong>
          * <p>EHPC@1234</p>
@@ -908,7 +938,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public String password;
 
         /**
-         * <p>The pre-processing script. The script must be Base64-encoded.</p>
+         * <p>The prolog script. It must be Base64-encoded.</p>
          * 
          * <strong>example:</strong>
          * <p>ZWNobyBoZWxsbyBlY3Mh</p>
@@ -917,7 +947,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public String prologScript;
 
         /**
-         * <p>The job execution script. The script must be Base64-encoded.</p>
+         * <p>The job script. It must be Base64-encoded.</p>
          * 
          * <strong>example:</strong>
          * <p>ZWNobyBoZWxsbyBlY3Mh</p>
@@ -974,13 +1004,13 @@ public class GetJobTemplateResponseBody extends TeaModel {
 
     public static class GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecTaskExecutor extends TeaModel {
         /**
-         * <p>The container environment configuration.</p>
+         * <p>The container environment.</p>
          */
         @NameInMap("Container")
         public GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecTaskExecutorContainer container;
 
         /**
-         * <p>The virtual machine (VM) environment configuration.</p>
+         * <p>The virtual machine environment.</p>
          */
         @NameInMap("VM")
         public GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecTaskExecutorVM VM;
@@ -1010,7 +1040,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
 
     public static class GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecVolumeMount extends TeaModel {
         /**
-         * <p>The list of data volume mount parameters. The parameters are in key-value format and passed as JSON.</p>
+         * <p>The list of mount options for the data volume. The options are passed in JSON format as key-value pairs.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;server&quot;:&quot;xxxxx-xxxxx.cn-heyuan.nas.aliyuncs.com&quot;,&quot;vers&quot;:&quot;3&quot;,&quot;path&quot;:&quot;/data&quot;,&quot;options&quot;:&quot;nolock,tcp,noresvport&quot;}</p>
@@ -1019,7 +1049,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public String mountOptions;
 
         /**
-         * <p>The directory where the data volume is mounted to the task.</p>
+         * <p>The mount path of the data volume for the task.</p>
          * 
          * <strong>example:</strong>
          * <p>/mnt</p>
@@ -1037,7 +1067,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public Boolean readOnly;
 
         /**
-         * <p>The currently supported data volume type.</p>
+         * <p>The type of the data volume.</p>
          * 
          * <strong>example:</strong>
          * <p>alicloud/nas</p>
@@ -1086,13 +1116,13 @@ public class GetJobTemplateResponseBody extends TeaModel {
 
     public static class GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpec extends TeaModel {
         /**
-         * <p>The runtime environment resource information.</p>
+         * <p>The resource information of the runtime environment.</p>
          */
         @NameInMap("Resource")
         public GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecResource resource;
 
         /**
-         * <p>The task retry policy.</p>
+         * <p>The retry policy for the task.</p>
          */
         @NameInMap("RetryPolicy")
         public GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecRetryPolicy retryPolicy;
@@ -1104,7 +1134,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public java.util.List<GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecTaskExecutor> taskExecutor;
 
         /**
-         * <p>The list of data volumes mounted to the task. A maximum of 10 volumes are supported.</p>
+         * <p>The list of data volumes mounted to the task. A maximum of 10 volumes can be mounted.</p>
          */
         @NameInMap("VolumeMount")
         public java.util.List<GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpecVolumeMount> volumeMount;
@@ -1150,7 +1180,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
 
     public static class GetJobTemplateResponseBodyJobTemplateConfigTasks extends TeaModel {
         /**
-         * <p>The task execution policy.</p>
+         * <p>The execution policy of the task.</p>
          */
         @NameInMap("ExecutorPolicy")
         public GetJobTemplateResponseBodyJobTemplateConfigTasksExecutorPolicy executorPolicy;
@@ -1165,18 +1195,13 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The task specification details.</p>
+         * <p>The task specifications.</p>
          */
         @NameInMap("TaskSpec")
         public GetJobTemplateResponseBodyJobTemplateConfigTasksTaskSpec taskSpec;
 
         /**
-         * <p>Specifies whether the job is long-running. Valid values:</p>
-         * <ul>
-         * <li>true: The job is a background service job.</li>
-         * <li>false: The job is a batch processing job.</li>
-         * </ul>
-         * <p>Default value: false.</p>
+         * <p>Indicates whether the job is a long-running job. Valid values: true: The job is a background service job. false: The job is a batch job. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1264,7 +1289,7 @@ public class GetJobTemplateResponseBody extends TeaModel {
         public GetJobTemplateResponseBodyJobTemplateConfigSecurityPolicy securityPolicy;
 
         /**
-         * <p>The task list.</p>
+         * <p>The tasks.</p>
          */
         @NameInMap("Tasks")
         public java.util.List<GetJobTemplateResponseBodyJobTemplateConfigTasks> tasks;

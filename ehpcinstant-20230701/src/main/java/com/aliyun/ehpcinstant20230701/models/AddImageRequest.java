@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddImageRequest extends TeaModel {
     /**
-     * <p>The configurations of the container image.</p>
+     * <p>The container image configuration.</p>
      */
     @NameInMap("ContainerImageSpec")
     public AddImageRequestContainerImageSpec containerImageSpec;
 
     /**
-     * <p>The description of the image.</p>
+     * <p>The image description.</p>
      * 
      * <strong>example:</strong>
      * <p>Test image</p>
@@ -20,10 +20,10 @@ public class AddImageRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The type of the images. Valid values:</p>
+     * <p>The image type. Valid values:</p>
      * <ul>
-     * <li>VM: virtual machine image.</li>
-     * <li>Container: the container image.</li>
+     * <li>VM: virtual machine image</li>
+     * <li>Container: container image</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class AddImageRequest extends TeaModel {
     public String imageType;
 
     /**
-     * <p>The version of the image.</p>
+     * <p>The image version.</p>
      * 
      * <strong>example:</strong>
      * <p>V1.0</p>
@@ -42,7 +42,7 @@ public class AddImageRequest extends TeaModel {
     public String imageVersion;
 
     /**
-     * <p>The name of the custom image.</p>
+     * <p>The image name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class AddImageRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The image configuration of the virtual machine.</p>
+     * <p>The virtual machine image configuration.</p>
      */
     @NameInMap("VMImageSpec")
     public AddImageRequestVMImageSpec VMImageSpec;
@@ -112,7 +112,7 @@ public class AddImageRequest extends TeaModel {
 
     public static class AddImageRequestContainerImageSpecRegistryCredential extends TeaModel {
         /**
-         * <p>The password of the logon user.</p>
+         * <p>The logon password.</p>
          * 
          * <strong>example:</strong>
          * <p>userpassword</p>
@@ -121,7 +121,7 @@ public class AddImageRequest extends TeaModel {
         public String password;
 
         /**
-         * <p>The registered address of the image repository.</p>
+         * <p>The registry address of the image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>registry-vpc.cn-hangzhou.aliyuncs.com</p>
@@ -130,7 +130,7 @@ public class AddImageRequest extends TeaModel {
         public String server;
 
         /**
-         * <p>The username of the logon user.</p>
+         * <p>The logon username.</p>
          * 
          * <strong>example:</strong>
          * <p>username</p>
@@ -171,10 +171,10 @@ public class AddImageRequest extends TeaModel {
 
     public static class AddImageRequestContainerImageSpec extends TeaModel {
         /**
-         * <p>Whether the instance is an Alibaba Cloud image repository Enterprise Edition.</p>
+         * <p>Specifies whether the image is stored in Alibaba Cloud Container Registry Enterprise Edition. Valid values:</p>
          * <ul>
-         * <li>True</li>
-         * <li>False</li>
+         * <li>True: yes</li>
+         * <li>False: no</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,10 +184,10 @@ public class AddImageRequest extends TeaModel {
         public Boolean isACREnterprise;
 
         /**
-         * <p>Whether it is an Alibaba Cloud image repository.</p>
+         * <p>Specifies whether the image is stored in Alibaba Cloud Container Registry. Valid values:</p>
          * <ul>
-         * <li>True</li>
-         * <li>False</li>
+         * <li>True: yes</li>
+         * <li>False: no</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,13 +197,13 @@ public class AddImageRequest extends TeaModel {
         public Boolean isACRRegistry;
 
         /**
-         * <p>The authentication of the private image repository.</p>
+         * <p>The authentication credentials for the private image repository.</p>
          */
         @NameInMap("RegistryCredential")
         public AddImageRequestContainerImageSpecRegistryCredential registryCredential;
 
         /**
-         * <p>The ID of the Container Registry Enterprise Edition image repository.</p>
+         * <p>The ID of the Container Registry Enterprise Edition instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-xyz795ygf8k9****</p>
@@ -212,7 +212,7 @@ public class AddImageRequest extends TeaModel {
         public String registryCriId;
 
         /**
-         * <p>The endpoint of the container image.</p>
+         * <p>The access URL of the container image.</p>
          * 
          * <strong>example:</strong>
          * <p>registry-vpc.cn-hangzhou.aliyuncs.com/ehpc_open/nginx:latest</p>

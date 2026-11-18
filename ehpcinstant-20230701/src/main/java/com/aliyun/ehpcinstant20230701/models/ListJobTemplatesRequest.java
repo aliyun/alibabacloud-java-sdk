@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobTemplatesRequest extends TeaModel {
     /**
-     * <p>The page number. Minimum value: 1. Default value: 1.</p>
+     * <p>The page number. Starting value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListJobTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The page size. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

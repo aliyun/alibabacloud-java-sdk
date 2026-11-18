@@ -11,7 +11,7 @@ public class ListPoolsRequest extends TeaModel {
     public ListPoolsRequestFilter filter;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListPoolsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 50. Default value: 10.</p>
+     * <p>The number of entries per page in a paging query. Maximum value: 50. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -77,7 +77,7 @@ public class ListPoolsRequest extends TeaModel {
         public java.util.List<String> status;
 
         /**
-         * <p>Returns only resource pools created after the specified time. The time must be a Unix timestamp in UTC+8.</p>
+         * <p>The UNIX timestamp. Only resource pools created after the specified time are queried. The time is converted to a UNIX timestamp based on the time zone of the region where the resource pool resides. For regions in the Chinese mainland, the time zone is UTC+8.</p>
          * 
          * <strong>example:</strong>
          * <p>1703819914</p>
@@ -86,7 +86,7 @@ public class ListPoolsRequest extends TeaModel {
         public Integer timeCreatedAfter;
 
         /**
-         * <p>Returns only resource pools created before the specified time. The time must be a Unix timestamp in UTC+8.</p>
+         * <p>The UNIX timestamp. Only resource pools created before the specified time are queried. The time is converted to a UNIX timestamp based on the time zone of the region where the resource pool resides. For regions in the Chinese mainland, the time zone is UTC+8.</p>
          * 
          * <strong>example:</strong>
          * <p>1703820113</p>

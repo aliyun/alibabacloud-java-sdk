@@ -11,9 +11,7 @@ public class ListJobsRequest extends TeaModel {
     public ListJobsRequestFilter filter;
 
     /**
-     * <p>The current page number.</p>
-     * <p>Start value: 1</p>
-     * <p>Default value: 1</p>
+     * <p>The page number. Starting value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -22,7 +20,7 @@ public class ListJobsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. The default value is 50. The maximum value is 100.</p>
+     * <p>The paging Settings for the number of entries per page in a paged query. Default value: 50. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -75,6 +73,8 @@ public class ListJobsRequest extends TeaModel {
 
     public static class ListJobsRequestFilterTag extends TeaModel {
         /**
+         * <p>The key of the job tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -82,6 +82,8 @@ public class ListJobsRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the job tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */
@@ -113,7 +115,7 @@ public class ListJobsRequest extends TeaModel {
 
     public static class ListJobsRequestFilter extends TeaModel {
         /**
-         * <p>The ID of the job.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>job-xxxx</p>
@@ -121,11 +123,14 @@ public class ListJobsRequest extends TeaModel {
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>Filters jobs by a list of job IDs. A maximum of 100 job IDs are supported.</p>
+         */
         @NameInMap("JobIds")
         public java.util.List<String> jobIds;
 
         /**
-         * <p>The name of the job. Fuzzy search is supported.</p>
+         * <p>The job name. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>testJob</p>
@@ -134,6 +139,8 @@ public class ListJobsRequest extends TeaModel {
         public String jobName;
 
         /**
+         * <p>The ID of the job template.</p>
+         * 
          * <strong>example:</strong>
          * <p>jt-xxxx</p>
          */
@@ -141,6 +148,8 @@ public class ListJobsRequest extends TeaModel {
         public String jobTemplateId;
 
         /**
+         * <p>The name of the resource pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>MyPool</p>
          */
@@ -148,30 +157,19 @@ public class ListJobsRequest extends TeaModel {
         public String poolName;
 
         /**
-         * <p>The status of the job. Valid values:</p>
+         * <p>The job status. Valid values:</p>
          * <ul>
-         * <li><p>Pending: The job is in the queue.</p>
-         * </li>
-         * <li><p>Initing: The job is initializing.</p>
-         * </li>
-         * <li><p>Succeeded: The job was successful.</p>
-         * </li>
-         * <li><p>Failed: The job failed.</p>
-         * </li>
-         * <li><p>Running: The job is running.</p>
-         * </li>
-         * <li><p>Exception: A scheduling exception occurred.</p>
-         * </li>
-         * <li><p>Retrying: The job is being retried.</p>
-         * </li>
-         * <li><p>Expired: The job timed out.</p>
-         * </li>
-         * <li><p>Suspended: The job is in hibernation.</p>
-         * </li>
-         * <li><p>Restarting: The job is restarting.</p>
-         * </li>
-         * <li><p>Deleted: The job is deleted.</p>
-         * </li>
+         * <li>Pending: The job is queued.</li>
+         * <li>Initing: The job is being initialized.</li>
+         * <li>Succeeded: The job ran successfully.</li>
+         * <li>Failed: The job failed to run.</li>
+         * <li>Running: The job is running.</li>
+         * <li>Exception: A scheduling exception occurred.</li>
+         * <li>Retrying: The job is being retried.</li>
+         * <li>Expired: The job timed out.</li>
+         * <li>Suspended: The job is hibernated.</li>
+         * <li>Restarting: The job is being restarted.</li>
+         * <li>Deleted: The job is deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -180,11 +178,14 @@ public class ListJobsRequest extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The list of job tags.</p>
+         */
         @NameInMap("Tag")
         public java.util.List<ListJobsRequestFilterTag> tag;
 
         /**
-         * <p>The time after which the jobs were submitted. This is a UNIX timestamp based on the local time of the region. For sites in the Chinese mainland, the time zone is UTC+8.</p>
+         * <p>The time after which jobs were submitted. The time is converted to a UNIX timestamp based on the time zone of the region. For regions in the Chinese mainland, the time zone is UTC+8.</p>
          * 
          * <strong>example:</strong>
          * <p>1703819914</p>
@@ -193,7 +194,7 @@ public class ListJobsRequest extends TeaModel {
         public Integer timeCreatedAfter;
 
         /**
-         * <p>The time before which the jobs were submitted. This is a UNIX timestamp based on the local time of the region. For sites in the Chinese mainland, the time zone is UTC+8.</p>
+         * <p>The time before which jobs were submitted. The time is converted to a UNIX timestamp based on the time zone of the region. For regions in the Chinese mainland, the time zone is UTC+8.</p>
          * 
          * <strong>example:</strong>
          * <p>1703820113</p>
@@ -282,12 +283,10 @@ public class ListJobsRequest extends TeaModel {
 
     public static class ListJobsRequestSortBy extends TeaModel {
         /**
-         * <p>The field to sort by. Valid values:</p>
+         * <p>The sorting label. Valid values:</p>
          * <ul>
-         * <li><p>time_start</p>
-         * </li>
-         * <li><p>job_name</p>
-         * </li>
+         * <li>time_start</li>
+         * <li>job_name</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -297,12 +296,10 @@ public class ListJobsRequest extends TeaModel {
         public String label;
 
         /**
-         * <p>The sort order. Valid values:</p>
+         * <p>The sorting order. Valid values:</p>
          * <ul>
-         * <li><p>ASC (default): Ascending</p>
-         * </li>
-         * <li><p>DESC: Descending</p>
-         * </li>
+         * <li>ASC: ascending order. This is the default value.</li>
+         * <li>DESC: descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>

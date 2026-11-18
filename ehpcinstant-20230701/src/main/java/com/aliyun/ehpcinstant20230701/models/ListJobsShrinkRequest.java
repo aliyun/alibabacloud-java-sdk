@@ -11,9 +11,7 @@ public class ListJobsShrinkRequest extends TeaModel {
     public String filterShrink;
 
     /**
-     * <p>The current page number.</p>
-     * <p>Start value: 1</p>
-     * <p>Default value: 1</p>
+     * <p>The page number. Starting value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -22,7 +20,7 @@ public class ListJobsShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. The default value is 50. The maximum value is 100.</p>
+     * <p>The paging Settings for the number of entries per page in a paged query. Default value: 50. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

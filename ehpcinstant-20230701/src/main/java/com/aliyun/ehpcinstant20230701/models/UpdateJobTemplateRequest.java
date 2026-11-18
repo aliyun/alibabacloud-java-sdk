@@ -77,7 +77,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
 
     public static class UpdateJobTemplateRequestJobTemplateConfigDeploymentPolicyNetwork extends TeaModel {
         /**
-         * <p>Specifies whether to create a public IP address for the job. Default value: false.</p>
+         * <p>Specifies whether to assign a public IP address to the job. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -86,7 +86,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
         public Boolean enableExternalIpAddress;
 
         /**
-         * <p>The array of vSwitches.</p>
+         * <p>The vSwitches.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-xxxx</p>
@@ -171,11 +171,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
         public String allocationSpec;
 
         /**
-         * <p>The computing power level. This parameter takes effect only when the resource type is economy. Valid values:</p>
-         * <ul>
-         * <li>General: general-purpose.</li>
-         * <li>Performance: performance-optimized.</li>
-         * </ul>
+         * <p>The computing power level. This parameter is valid only when the resource type is economy. Valid values: General: general-purpose. Performance: performance-enhanced.</p>
          * 
          * <strong>example:</strong>
          * <p>General</p>
@@ -199,7 +195,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
         public String pool;
 
         /**
-         * <p>The job priority. A larger value indicates a higher scheduling priority.</p>
+         * <p>The job priority. A larger value indicates a higher scheduling priority for the job.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -208,7 +204,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The job tag information.</p>
+         * <p>The job tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<UpdateJobTemplateRequestJobTemplateConfigDeploymentPolicyTags> tags;
@@ -270,7 +266,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
 
     public static class UpdateJobTemplateRequestJobTemplateConfigSecurityPolicySecurityGroup extends TeaModel {
         /**
-         * <p>The array of security group IDs.</p>
+         * <p>The security group IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-xxxx</p>
@@ -317,7 +313,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
 
     public static class UpdateJobTemplateRequestJobTemplateConfigTasksExecutorPolicyArraySpec extends TeaModel {
         /**
-         * <p>The end value of the array job index. Valid values: 0 to 4999. The value must be greater than or equal to IndexStart.</p>
+         * <p>The end value of the array job index. Valid values: 0 to 4999. The value must be greater than or equal to the value of IndexStart.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -376,13 +372,13 @@ public class UpdateJobTemplateRequest extends TeaModel {
 
     public static class UpdateJobTemplateRequestJobTemplateConfigTasksExecutorPolicy extends TeaModel {
         /**
-         * <p>The details of the array job.</p>
+         * <p>The array job details.</p>
          */
         @NameInMap("ArraySpec")
         public UpdateJobTemplateRequestJobTemplateConfigTasksExecutorPolicyArraySpec arraySpec;
 
         /**
-         * <p>The maximum number of nodes for running the job.</p>
+         * <p>The maximum number of nodes for job execution.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -415,7 +411,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
 
     public static class UpdateJobTemplateRequestJobTemplateConfigTasksTaskSpecResourceDisks extends TeaModel {
         /**
-         * <p>The cloud disk size. Unit: GiB.</p>
+         * <p>The size of the cloud disk. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -424,7 +420,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
         public Integer size;
 
         /**
-         * <p>The cloud disk type.</p>
+         * <p>The type of the cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>System</p>
@@ -472,7 +468,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
         public java.util.List<UpdateJobTemplateRequestJobTemplateConfigTasksTaskSpecResourceDisks> disks;
 
         /**
-         * <p>Specifies whether to enable hyper-threading in the runtime environment.</p>
+         * <p>Specifies whether hyper-threading is enabled in the runtime environment.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -564,10 +560,10 @@ public class UpdateJobTemplateRequest extends TeaModel {
 
     public static class UpdateJobTemplateRequestJobTemplateConfigTasksTaskSpecRetryPolicyExitCodeActions extends TeaModel {
         /**
-         * <p>The next action for the task. Valid values:</p>
+         * <p>The next action of the task. Valid values:</p>
          * <ul>
-         * <li>Retry: Retry the task.</li>
-         * <li>Exit: Exit the task.</li>
+         * <li>Retry: Retries the task.</li>
+         * <li>Exit: Exits the task.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -577,7 +573,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
         public String action;
 
         /**
-         * <p>The task exit code, which is used together with Action to form a job retry rule. Valid values: 0 to 255.</p>
+         * <p>The task exit code. This parameter is used together with Action to form the job retry rule. Valid values: 0 to 255.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -649,7 +645,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
 
     public static class UpdateJobTemplateRequestJobTemplateConfigTasksTaskSpecTaskExecutorContainerEnvironmentVars extends TeaModel {
         /**
-         * <p>The environment variable name.</p>
+         * <p>The name of the environment variable.</p>
          * 
          * <strong>example:</strong>
          * <p>PATH</p>
@@ -658,7 +654,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The environment variable value.</p>
+         * <p>The value of the environment variable.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/local/bin</p>
@@ -691,7 +687,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
 
     public static class UpdateJobTemplateRequestJobTemplateConfigTasksTaskSpecTaskExecutorContainer extends TeaModel {
         /**
-         * <p>The container application ID.</p>
+         * <p>The ID of the container application.</p>
          * 
          * <strong>example:</strong>
          * <p>ci-vm-32k6LXAi3cOG</p>
@@ -724,6 +720,15 @@ public class UpdateJobTemplateRequest extends TeaModel {
         public java.util.List<UpdateJobTemplateRequestJobTemplateConfigTasksTaskSpecTaskExecutorContainerEnvironmentVars> environmentVars;
 
         /**
+         * <p>The GPU driver version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tesla=535</p>
+         */
+        @NameInMap("GpuDriverVersion")
+        public String gpuDriverVersion;
+
+        /**
          * <p>The container image.</p>
          * 
          * <strong>example:</strong>
@@ -733,13 +738,22 @@ public class UpdateJobTemplateRequest extends TeaModel {
         public String image;
 
         /**
-         * <p>The mount parameter list for the self-managed image repository. The parameters are in key-value format and passed as JSON.</p>
+         * <p>The list of mount parameters for the self-managed image repository. The parameters are in key-value pair format and passed in JSON.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
         @NameInMap("ImageRegistryOptions")
         public String imageRegistryOptions;
+
+        /**
+         * <p>Specifies whether the container runs in privileged mode. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("Privileged")
+        public Boolean privileged;
 
         /**
          * <p>The working directory of the container.</p>
@@ -787,6 +801,14 @@ public class UpdateJobTemplateRequest extends TeaModel {
             return this.environmentVars;
         }
 
+        public UpdateJobTemplateRequestJobTemplateConfigTasksTaskSpecTaskExecutorContainer setGpuDriverVersion(String gpuDriverVersion) {
+            this.gpuDriverVersion = gpuDriverVersion;
+            return this;
+        }
+        public String getGpuDriverVersion() {
+            return this.gpuDriverVersion;
+        }
+
         public UpdateJobTemplateRequestJobTemplateConfigTasksTaskSpecTaskExecutorContainer setImage(String image) {
             this.image = image;
             return this;
@@ -803,6 +825,14 @@ public class UpdateJobTemplateRequest extends TeaModel {
             return this.imageRegistryOptions;
         }
 
+        public UpdateJobTemplateRequestJobTemplateConfigTasksTaskSpecTaskExecutorContainer setPrivileged(Boolean privileged) {
+            this.privileged = privileged;
+            return this;
+        }
+        public Boolean getPrivileged() {
+            return this.privileged;
+        }
+
         public UpdateJobTemplateRequestJobTemplateConfigTasksTaskSpecTaskExecutorContainer setWorkingDir(String workingDir) {
             this.workingDir = workingDir;
             return this;
@@ -815,7 +845,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
 
     public static class UpdateJobTemplateRequestJobTemplateConfigTasksTaskSpecTaskExecutorVM extends TeaModel {
         /**
-         * <p>The virtual machine application ID.</p>
+         * <p>The ID of the virtual machine application.</p>
          * 
          * <strong>example:</strong>
          * <p>ci-vm-9jc58Pm5Leky</p>
@@ -842,7 +872,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
         public String password;
 
         /**
-         * <p>The prolog script. The value must be Base64-encoded.</p>
+         * <p>The preprocessing script. The script must be Base64-encoded.</p>
          * 
          * <strong>example:</strong>
          * <p>ZWNobyBoZWxsbyBlY3Mh</p>
@@ -851,7 +881,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
         public String prologScript;
 
         /**
-         * <p>The job script to run. The value must be Base64-encoded.</p>
+         * <p>The job execution script. The script must be Base64-encoded.</p>
          * 
          * <strong>example:</strong>
          * <p>ZWNobyBoZWxsbyBlY3Mh</p>
@@ -908,13 +938,13 @@ public class UpdateJobTemplateRequest extends TeaModel {
 
     public static class UpdateJobTemplateRequestJobTemplateConfigTasksTaskSpecTaskExecutor extends TeaModel {
         /**
-         * <p>The container environment configuration.</p>
+         * <p>The container environment.</p>
          */
         @NameInMap("Container")
         public UpdateJobTemplateRequestJobTemplateConfigTasksTaskSpecTaskExecutorContainer container;
 
         /**
-         * <p>The virtual machine environment configuration.</p>
+         * <p>The virtual machine environment.</p>
          */
         @NameInMap("VM")
         public UpdateJobTemplateRequestJobTemplateConfigTasksTaskSpecTaskExecutorVM VM;
@@ -944,7 +974,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
 
     public static class UpdateJobTemplateRequestJobTemplateConfigTasksTaskSpecVolumeMount extends TeaModel {
         /**
-         * <p>The list of data volume mount options. The value is in key-value format and passed as JSON.</p>
+         * <p>The list of mount options for the data volume. The options are passed as key-value pairs in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;server&quot;:&quot;xxxxx-xxxxx.cn-heyuan.nas.aliyuncs.com&quot;,&quot;vers&quot;:&quot;3&quot;,&quot;path&quot;:&quot;/data&quot;,&quot;options&quot;:&quot;nolock,tcp,noresvport&quot;}</p>
@@ -953,7 +983,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
         public String mountOptions;
 
         /**
-         * <p>The directory where the data volume is mounted to the task.</p>
+         * <p>The directory where the data volume is mounted for the task.</p>
          * 
          * <strong>example:</strong>
          * <p>/mnt</p>
@@ -971,7 +1001,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
         public Boolean readOnly;
 
         /**
-         * <p>The currently supported data volume type.</p>
+         * <p>The supported data volume type.</p>
          * 
          * <strong>example:</strong>
          * <p>alicloud/nas</p>
@@ -1020,7 +1050,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
 
     public static class UpdateJobTemplateRequestJobTemplateConfigTasksTaskSpec extends TeaModel {
         /**
-         * <p>The runtime environment resource information.</p>
+         * <p>The resource information of the runtime environment.</p>
          */
         @NameInMap("Resource")
         public UpdateJobTemplateRequestJobTemplateConfigTasksTaskSpecResource resource;
@@ -1038,7 +1068,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
         public java.util.List<UpdateJobTemplateRequestJobTemplateConfigTasksTaskSpecTaskExecutor> taskExecutor;
 
         /**
-         * <p>The list of data volumes mounted to the task. A maximum of 10 data volumes are supported.</p>
+         * <p>The list of data volumes mounted to the task. You can mount up to 10 data volumes.</p>
          */
         @NameInMap("VolumeMount")
         public java.util.List<UpdateJobTemplateRequestJobTemplateConfigTasksTaskSpecVolumeMount> volumeMount;
@@ -1105,12 +1135,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
         public UpdateJobTemplateRequestJobTemplateConfigTasksTaskSpec taskSpec;
 
         /**
-         * <p>Specifies whether the job is long-running. Valid values:</p>
-         * <ul>
-         * <li>true: The job is a background service job.</li>
-         * <li>false: The job is a batch job.
-         * Default value: false.</li>
-         * </ul>
+         * <p>Specifies whether the job is long-running. Valid values: true: Background service job. false: Batch job. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

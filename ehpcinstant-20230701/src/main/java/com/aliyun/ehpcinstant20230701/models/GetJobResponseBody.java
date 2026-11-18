@@ -41,9 +41,28 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyJobInfoDependencyPolicyJobDependency extends TeaModel {
+        /**
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-bjxxxxxxxxxxxx</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The dependency type. Valid values:</p>
+         * <ul>
+         * <li>AfterSucceeded: All subtasks of the dependent job or array job run successfully (the exit code is 0).</li>
+         * <li>AfterFailed: Any subtask of the dependent job or array job fails (the exit code is not 0).</li>
+         * <li>AfterAny: The dependent job finishes running, regardless of success or failure.</li>
+         * <li>AfterCorresponding: The corresponding subtask of the dependent array job runs successfully (the exit code is 0).</li>
+         * </ul>
+         * <p>Default value: AfterSucceeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AfterSucceeded</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -71,6 +90,9 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyJobInfoDependencyPolicy extends TeaModel {
+        /**
+         * <p>The job dependencies. A maximum of 10 dependencies are supported.</p>
+         */
         @NameInMap("JobDependency")
         public java.util.List<GetJobResponseBodyJobInfoDependencyPolicyJobDependency> jobDependency;
 
@@ -91,11 +113,11 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyJobInfoDeploymentPolicyNetwork extends TeaModel {
         /**
-         * <p>Indicates whether resources are created in the zone that corresponds to the specified vSwitch.</p>
+         * <p>Specifies whether the resource is created in the zone corresponding to the specified vSwitch parameter. Valid values:</p>
          * <ul>
-         * <li><p>true: Resources are created in the zone that corresponds to the specified vSwitch.</p>
+         * <li><p>true: The resource is created in the zone corresponding to the specified vSwitch parameter.</p>
          * </li>
-         * <li><p>false: Resources are created in any zone that has available resources.</p>
+         * <li><p>false: The resource is created in any zone with available resources.</p>
          * </li>
          * </ul>
          * 
@@ -106,7 +128,7 @@ public class GetJobResponseBody extends TeaModel {
         public Boolean enableENIMapping;
 
         /**
-         * <p>Indicates whether a public IP address is created.</p>
+         * <p>Specifies whether to create a public IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -206,8 +228,8 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * <p>The computing power level. Valid values:</p>
          * <ul>
-         * <li>General: general-purpose.</li>
-         * <li>Performance: performance-optimized.</li>
+         * <li>General: General-purpose.</li>
+         * <li>Performance: Performance-optimized.</li>
          * </ul>
          * <p>Default value: General.</p>
          * 
@@ -218,7 +240,7 @@ public class GetJobResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>The network configuration.</p>
+         * <p>The network configuration information.</p>
          */
         @NameInMap("Network")
         public GetJobResponseBodyJobInfoDeploymentPolicyNetwork network;
@@ -234,12 +256,15 @@ public class GetJobResponseBody extends TeaModel {
 
         /**
          * <p>The priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
-         * <p>The job tag list.</p>
+         * <p>The list of job tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<GetJobResponseBodyJobInfoDeploymentPolicyTags> tags;
@@ -300,6 +325,9 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyJobInfoSecurityPolicySecurityGroup extends TeaModel {
+        /**
+         * <p>The security group ID array.</p>
+         */
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
 
@@ -319,6 +347,9 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyJobInfoSecurityPolicy extends TeaModel {
+        /**
+         * <p>The security group.</p>
+         */
         @NameInMap("SecurityGroup")
         public GetJobResponseBodyJobInfoSecurityPolicySecurityGroup securityGroup;
 
@@ -339,7 +370,7 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyJobInfoTasksExecutorPolicyArraySpec extends TeaModel {
         /**
-         * <p>The end value of the array job index. Valid values: 0 to 4999. The value must be greater than or equal to IndexStart.</p>
+         * <p>The end value of the array job index. Valid values: 0 to 4999. The value must be greater than or equal to the value of IndexStart.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -357,9 +388,9 @@ public class GetJobResponseBody extends TeaModel {
         public Integer indexStart;
 
         /**
-         * <p>The interval of the array job index.</p>
+         * <p>The step size of the array job index.</p>
          * <blockquote>
-         * <p>If the array job properties are IndexStart=1, IndexEnd=5, and IndexStep=2, the array job contains three subtasks with indexes 1, 3, and 5.</p>
+         * <p>If the array job attributes are IndexStart=1, IndexEnd=5, and IndexStep=2, the array job contains three subtasks with indexes 1, 3, and 5.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -407,7 +438,7 @@ public class GetJobResponseBody extends TeaModel {
         public GetJobResponseBodyJobInfoTasksExecutorPolicyArraySpec arraySpec;
 
         /**
-         * <p>The maximum number of nodes for running the job.</p>
+         * <p>The maximum number of nodes for job execution.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -440,7 +471,7 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyJobInfoTasksExecutorStatus extends TeaModel {
         /**
-         * <p>The subtask ID.</p>
+         * <p>The sub-job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -449,7 +480,7 @@ public class GetJobResponseBody extends TeaModel {
         public Integer arrayId;
 
         /**
-         * <p>The job creation time.</p>
+         * <p>The time when the job was created. The example uses the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-04 13:54:10</p>
@@ -458,7 +489,7 @@ public class GetJobResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The job end time.</p>
+         * <p>The time when the job ended. The example uses the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-04 13:54:10</p>
@@ -467,7 +498,7 @@ public class GetJobResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The job start time.</p>
+         * <p>The time when the job started. The example uses the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-04 13:54:10</p>
@@ -485,7 +516,7 @@ public class GetJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The status reason description.</p>
+         * <p>The description of the status reason.</p>
          * 
          * <strong>example:</strong>
          * <p>Creating executor</p>
@@ -561,8 +592,8 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * <p>The cloud disk type. Valid values:</p>
          * <ul>
-         * <li>System: system cloud disk.</li>
-         * <li>Data: data cloud disk.</li>
+         * <li>System: System cloud disk.</li>
+         * <li>Data: Data cloud disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -610,12 +641,32 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("Disks")
         public java.util.List<GetJobResponseBodyJobInfoTasksTaskSpecResourceDisks> disks;
 
+        /**
+         * <p>Specifies whether to enable hyper-threading for the runtime environment. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableHT")
         public Boolean enableHT;
 
+        /**
+         * <p>The hostname prefix of the runtime environment. The limits are as follows:</p>
+         * <ul>
+         * <li>A period (.) and a hyphen (-) cannot be used as the first or last character, and cannot be used consecutively.</li>
+         * <li>Windows environment: The length cannot exceed 10 characters. Periods (.) are not supported, and the name cannot contain only digits. Uppercase and lowercase letters, digits, and hyphens (-) are allowed.</li>
+         * <li>Linux environment: The length cannot exceed 32 characters. Multiple periods (.) are supported. The string between periods is considered a segment, and each segment can contain uppercase and lowercase letters, digits, and hyphens (-).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>compute</p>
+         */
         @NameInMap("HostNamePrefix")
         public String hostNamePrefix;
 
+        /**
+         * <p>The instance types of the runtime environment. A maximum of 5 instance types are supported.</p>
+         */
         @NameInMap("InstanceTypes")
         public java.util.List<String> instanceTypes;
 
@@ -684,9 +735,27 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicyExitCodeActions extends TeaModel {
+        /**
+         * <p>The next action for the task. Valid values:</p>
+         * <ul>
+         * <li><p>Retry: The job starts a new retry when a specific exit code is matched.</p>
+         * </li>
+         * <li><p>Exit: The job exits when a specific exit code is matched.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Exit</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The task exit code, which is used together with Action to form a job retry rule. Valid values: 0 to 255.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ExitCode")
         public Long exitCode;
 
@@ -714,9 +783,18 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicy extends TeaModel {
+        /**
+         * <p>The retry rules. A maximum of 10 rules are supported.</p>
+         */
         @NameInMap("ExitCodeActions")
         public java.util.List<GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicyExitCodeActions> exitCodeActions;
 
+        /**
+         * <p>The number of retries. Valid values: 1 to 10. Default value: 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("RetryCount")
         public Integer retryCount;
 
@@ -754,7 +832,7 @@ public class GetJobResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>The pre-processing script. The script must be Base64-encoded.</p>
+         * <p>The pre-processing script. Base64 encoding is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ZWNobyAiMTIzNCIgPiBgZGF0ZSArJXNg</p>
@@ -763,7 +841,7 @@ public class GetJobResponseBody extends TeaModel {
         public String prologScript;
 
         /**
-         * <p>The job execution script. The script must be Base64-encoded.</p>
+         * <p>The script used to run the job. Base64 encoding is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ZWNobyAiMTIzNCIgPiBgZGF0ZSArJXNg</p>
@@ -804,7 +882,7 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutor extends TeaModel {
         /**
-         * <p>The ECS instance configuration.</p>
+         * <p>The ECS instance used.</p>
          */
         @NameInMap("VM")
         public GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutorVM VM;
@@ -825,12 +903,49 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyJobInfoTasksTaskSpecVolumeMount extends TeaModel {
+        /**
+         * <p>The list of mount parameters for the data volume. The parameters are key-value pairs in JSON format.</p>
+         * <ul>
+         * <li><p>Format for mounting a NAS file system: {&quot;server&quot;:&quot;xxxxx-xxxxx.cn-heyuan.nas.aliyuncs.com&quot;,&quot;vers&quot;:&quot;3&quot;,&quot;path&quot;:&quot;/data&quot;,&quot;options&quot;:&quot;nolock,tcp,noresvport&quot;}</p>
+         * <blockquote>
+         * <p>server specifies the mount target address of the NAS file system. path specifies the subdirectory under the NAS path, which must start with / and must already exist. vers specifies the NFS protocol version used to mount the NAS file system. Use v3. options specifies the custom parameters used when mounting the NAS file system, in the format of &quot;xxx,xxx,xxx&quot;.</p>
+         * </blockquote>
+         * </li>
+         * <li><p>Format for mounting an OSS bucket: {&quot;bucket&quot;:&quot;xxxxx&quot;, &quot;url&quot;:&quot;oss-cn-heyuan-internal.aliyuncs.com&quot;,&quot;path&quot;:&quot;/data&quot;,&quot;akId&quot;:&quot;xxxxx&quot;,&quot;akSecret&quot;:&quot;xxxxx&quot;}</p>
+         * <blockquote>
+         * <p>bucket specifies the name of the OSS bucket. url specifies the endpoint of the OSS bucket. You can log on to the OSS console and obtain the endpoint on the Overview page of the bucket. path specifies the directory structure relative to the root directory of the bucket when mounting. The default value is /, and the directory must already exist. akId specifies the AccessKey ID used for direct authorization with an AccessKey pair. akSecret specifies the AccessKey secret used for direct authorization with an AccessKey pair.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;bucket&quot;:&quot;demo-bucket&quot;,&quot;otherOpts&quot;:&quot;-o allow_other&quot;,&quot;url&quot;:&quot;oss-cn-hangzhou.aliyuncs.com&quot;}</p>
+         */
         @NameInMap("MountOptions")
         public String mountOptions;
 
+        /**
+         * <p>The directory where the data volume is mounted to the task.</p>
+         * <blockquote>
+         * <p>The content in the mount directory will be directly overwritten by the content of the volume. Use this parameter with caution.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/cromwell_inputs/1234abcd</p>
+         */
         @NameInMap("MountPath")
         public String mountPath;
 
+        /**
+         * <p>The supported data volume types. Valid values:</p>
+         * <ul>
+         * <li>alicloud/nas: Mount a NAS file system.</li>
+         * <li>alicloud/oss: Mount an OSS bucket.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>alicloud/nas</p>
+         */
         @NameInMap("VolumeDriver")
         public String volumeDriver;
 
@@ -872,6 +987,9 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("Resource")
         public GetJobResponseBodyJobInfoTasksTaskSpecResource resource;
 
+        /**
+         * <p>The task retry policy.</p>
+         */
         @NameInMap("RetryPolicy")
         public GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicy retryPolicy;
 
@@ -881,6 +999,9 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("TaskExecutor")
         public java.util.List<GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutor> taskExecutor;
 
+        /**
+         * <p>The list of data volumes mounted to the task. A maximum of 10 data volumes are supported.</p>
+         */
         @NameInMap("VolumeMount")
         public java.util.List<GetJobResponseBodyJobInfoTasksTaskSpecVolumeMount> volumeMount;
 
@@ -952,7 +1073,7 @@ public class GetJobResponseBody extends TeaModel {
         public GetJobResponseBodyJobInfoTasksTaskSpec taskSpec;
 
         /**
-         * <p>Indicates whether the job is a long-running job.</p>
+         * <p>Specifies whether the job is a long-running job.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1009,7 +1130,7 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyJobInfo extends TeaModel {
         /**
-         * <p>The application additional information.</p>
+         * <p>The additional application information.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;xxx\&quot;: \&quot;xxxxx\&quot;}</p>
@@ -1018,7 +1139,7 @@ public class GetJobResponseBody extends TeaModel {
         public String appExtraInfo;
 
         /**
-         * <p>The job submission time.</p>
+         * <p>The time when the job was submitted. The example uses the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-05 20:00:46</p>
@@ -1026,6 +1147,9 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The dependency policy.</p>
+         */
         @NameInMap("DependencyPolicy")
         public GetJobResponseBodyJobInfoDependencyPolicy dependencyPolicy;
 
@@ -1036,7 +1160,7 @@ public class GetJobResponseBody extends TeaModel {
         public GetJobResponseBodyJobInfoDeploymentPolicy deploymentPolicy;
 
         /**
-         * <p>The job end time.</p>
+         * <p>The time when the job ended. The example uses the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-05 20:01:48</p>
@@ -1074,11 +1198,14 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("JobScheduler")
         public String jobScheduler;
 
+        /**
+         * <p>The security policy.</p>
+         */
         @NameInMap("SecurityPolicy")
         public GetJobResponseBodyJobInfoSecurityPolicy securityPolicy;
 
         /**
-         * <p>The job start time.</p>
+         * <p>The time when the job started. The example uses the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-05 20:00:48</p>
@@ -1092,13 +1219,13 @@ public class GetJobResponseBody extends TeaModel {
          * <li>Pending: The job is queued.</li>
          * <li>Initing: The job is being initialized.</li>
          * <li>Succeed: The job ran successfully.</li>
-         * <li>Failed: The job failed.</li>
+         * <li>Failed: The job failed to run.</li>
          * <li>Running: The job is running.</li>
          * <li>Exception: A scheduling exception occurred.</li>
          * <li>Retrying: The job is being retried.</li>
          * <li>Expired: The job timed out.</li>
-         * <li>Deleted: The job has been deleted.</li>
-         * <li>Suspended: The job is in hibernation.</li>
+         * <li>Deleted: The job is deleted.</li>
+         * <li>Suspended: The job is hibernated.</li>
          * <li>Restarting: The job is being restarted.</li>
          * </ul>
          * 

@@ -8,7 +8,7 @@ public class DescribeJobResultsResponseBody extends TeaModel {
      * <p>The exit code of the command.</p>
      * <ul>
      * <li>For Linux instances, this is the exit code of the shell command.</li>
-     * <li>For Windows instances, this is the exit code of the Bat or PowerShell command.</li>
+     * <li>For Windows instances, this is the exit code of the batch or PowerShell command.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeJobResultsResponseBody extends TeaModel {
     public Long exitCode;
 
     /**
-     * <p>The output of the command execution. If ContentEncoding is set to PlainText, the original output is returned. If ContentEncoding is set to Base64, the Base64-encoded output is returned.</p>
+     * <p>The output generated after the command is executed. If ContentEncoding is set to PlainText, the original output is returned. If ContentEncoding is set to Base64, the Base64-encoded output is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>MTU6MzA6MDEK</p>

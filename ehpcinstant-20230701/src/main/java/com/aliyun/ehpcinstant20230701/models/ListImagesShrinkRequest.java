@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListImagesShrinkRequest extends TeaModel {
     /**
-     * <p>The source of the image. Valid values:</p>
+     * <p>The image source. Valid values:</p>
      * <ul>
-     * <li>Public: public images provided by Alibaba Cloud.</li>
-     * <li>Custom: the custom image that you added.</li>
+     * <li>Public: public images provided by Alibaba Cloud</li>
+     * <li>Custom: custom images added by you</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,12 +30,12 @@ public class ListImagesShrinkRequest extends TeaModel {
     public String imageNamesShrink;
 
     /**
-     * <p>The type of the images. Valid values:</p>
+     * <p>The image type. Valid values:</p>
      * <ul>
-     * <li>VM: virtual machine image.</li>
-     * <li>Container: the container image.</li>
+     * <li>VM: virtual machine image</li>
+     * <li>Container: container image</li>
      * </ul>
-     * <p>Default value: VM</p>
+     * <p>Default value: VM.</p>
      * 
      * <strong>example:</strong>
      * <p>VM</p>
@@ -46,8 +46,8 @@ public class ListImagesShrinkRequest extends TeaModel {
     /**
      * <p>The query mode. Valid values:</p>
      * <ul>
-     * <li>List: queries the list of all corresponding image versions.</li>
-     * <li>Merge: merges images to query the latest version list.</li>
+     * <li>List: Queries the list of all image versions.</li>
+     * <li>Merge: Queries the list of the latest versions for each image.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,8 +57,7 @@ public class ListImagesShrinkRequest extends TeaModel {
     public String mode;
 
     /**
-     * <p>The number of the page to return.\
-     * Default value: 1.</p>
+     * <p>The current page number.<br>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -67,8 +66,7 @@ public class ListImagesShrinkRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of pieces per page.\
-     * Default value: 20.</p>
+     * <p>The number of entries per page.<br>Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

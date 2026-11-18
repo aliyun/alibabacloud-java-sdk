@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeJobMetricLastShrinkRequest extends TeaModel {
     /**
-     * <p>The list of array job indexes.</p>
+     * <p>The list of job array indexes.</p>
      */
     @NameInMap("ArrayIndex")
     public String arrayIndexShrink;
@@ -20,7 +20,7 @@ public class DescribeJobMetricLastShrinkRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The name of the task.</p>
+     * <p>The task name.</p>
      * 
      * <strong>example:</strong>
      * <p>Task0</p>

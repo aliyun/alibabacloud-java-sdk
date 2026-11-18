@@ -11,7 +11,7 @@ public class ListExecutorsResponseBody extends TeaModel {
     public java.util.List<ListExecutorsResponseBodyExecutors> executors;
 
     /**
-     * <p>The current page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListExecutorsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page in the paging Settings for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -38,7 +38,7 @@ public class ListExecutorsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries in the list.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>40</p>
@@ -93,7 +93,7 @@ public class ListExecutorsResponseBody extends TeaModel {
 
     public static class ListExecutorsResponseBodyExecutorsResourceDisks extends TeaModel {
         /**
-         * <p>The size of the cloud disk.</p>
+         * <p>The cloud disk size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -102,12 +102,10 @@ public class ListExecutorsResponseBody extends TeaModel {
         public Integer size;
 
         /**
-         * <p>The type of the cloud disk. The following types are supported:</p>
+         * <p>The cloud disk type. Valid values:</p>
          * <ul>
-         * <li><p>System: The system disk.</p>
-         * </li>
-         * <li><p>Data: The data disk.</p>
-         * </li>
+         * <li>System: System cloud disk.</li>
+         * <li>Data: Data cloud disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -141,7 +139,7 @@ public class ListExecutorsResponseBody extends TeaModel {
 
     public static class ListExecutorsResponseBodyExecutorsResource extends TeaModel {
         /**
-         * <p>The number of CPU cores.</p>
+         * <p>The number of CPUs.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -150,7 +148,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         public Float cores;
 
         /**
-         * <p>An array of cloud disks.</p>
+         * <p>The array of cloud disks.</p>
          */
         @NameInMap("Disks")
         public java.util.List<ListExecutorsResponseBodyExecutorsResourceDisks> disks;
@@ -165,7 +163,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The total amount of memory resources. Unit: GiB.</p>
+         * <p>The total memory resources. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -214,7 +212,7 @@ public class ListExecutorsResponseBody extends TeaModel {
 
     public static class ListExecutorsResponseBodyExecutorsTags extends TeaModel {
         /**
-         * <p>The tag key of the executor.</p>
+         * <p>The executor tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -223,7 +221,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value of the executor.</p>
+         * <p>The executor tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
@@ -256,14 +254,11 @@ public class ListExecutorsResponseBody extends TeaModel {
 
     public static class ListExecutorsResponseBodyExecutors extends TeaModel {
         /**
-         * <p>The resource type.</p>
+         * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li><p>Standard: Standard.</p>
-         * </li>
-         * <li><p>Dedicated: Dedicated. This type requires whitelisting.</p>
-         * </li>
-         * <li><p>Economic: Economy. This type requires whitelisting.</p>
-         * </li>
+         * <li>Standard: Standard.</li>
+         * <li>Dedicated: Dedicated. A whitelist is required.</li>
+         * <li>Economic: Economic. A whitelist is required.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -282,7 +277,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The executor number.</p>
+         * <p>The executor index.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -291,7 +286,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         public Integer arrayIndex;
 
         /**
-         * <p>The duration for which the compute resources are reserved.</p>
+         * <p>The retention period of compute resources.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -300,7 +295,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         public Integer blockDuration;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-20 10:04:10</p>
@@ -309,7 +304,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The end time.</p>
+         * <p>The end time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-20 10:04:18</p>
@@ -327,19 +322,22 @@ public class ListExecutorsResponseBody extends TeaModel {
         public String executorId;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration time. The time is returned in the YYYY-MM-DD HH:mm:ss format based on the UTC+8 time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202******:00</p>
          */
         @NameInMap("ExpirationTime")
         public String expirationTime;
 
         /**
-         * <p>A list of public IP addresses of the node.</p>
+         * <p>The list of public IP addresses of the node.</p>
          */
         @NameInMap("ExternalIpAddress")
         public java.util.List<String> externalIpAddress;
 
         /**
-         * <p>A list of hostnames.</p>
+         * <p>The list of hostnames.</p>
          */
         @NameInMap("HostName")
         public java.util.List<String> hostName;
@@ -354,7 +352,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>A list of private IP addresses.</p>
+         * <p>The list of internal IP addresses.</p>
          */
         @NameInMap("IpAddress")
         public java.util.List<String> ipAddress;
@@ -377,6 +375,9 @@ public class ListExecutorsResponseBody extends TeaModel {
         @NameInMap("JobName")
         public String jobName;
 
+        /**
+         * <p>Indicates whether the execution instance is preemptible.</p>
+         */
         @NameInMap("Preemptible")
         public Boolean preemptible;
 
@@ -396,7 +397,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-20 10:04:13</p>
@@ -405,30 +406,19 @@ public class ListExecutorsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The status of the executor. Possible values:</p>
+         * <p>The executor status. Valid values:</p>
          * <ul>
-         * <li><p>Pending: The executor is waiting in a queue.</p>
-         * </li>
-         * <li><p>Initing: The executor is being initialized.</p>
-         * </li>
-         * <li><p>Succeeded: The executor ran successfully.</p>
-         * </li>
-         * <li><p>Failed: The executor failed to run.</p>
-         * </li>
-         * <li><p>Running: The executor is running.</p>
-         * </li>
-         * <li><p>Exception: A scheduling error occurred.</p>
-         * </li>
-         * <li><p>Retrying: The system is retrying the executor.</p>
-         * </li>
-         * <li><p>Expired: The executor timed out.</p>
-         * </li>
-         * <li><p>Suspended: The job is in hibernation.</p>
-         * </li>
-         * <li><p>Restarting: The job is restarting.</p>
-         * </li>
-         * <li><p>Deleted: The executor is deleted.</p>
-         * </li>
+         * <li>Pending: Queued.</li>
+         * <li>Initing: Initializing.</li>
+         * <li>Succeeded: Succeeded.</li>
+         * <li>Failed: Failed.</li>
+         * <li>Running: Running.</li>
+         * <li>Exception: Scheduling exception.</li>
+         * <li>Retrying: Retrying.</li>
+         * <li>Expired: Timed out.</li>
+         * <li>Suspended: Job suspended.</li>
+         * <li>Restarting: Job restarting.</li>
+         * <li>Deleted: Deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -447,7 +437,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         public String statusReason;
 
         /**
-         * <p>A list of executor tags.</p>
+         * <p>The list of executor tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListExecutorsResponseBodyExecutorsTags> tags;
@@ -471,7 +461,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         public Boolean taskSustainable;
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-xxx</p>

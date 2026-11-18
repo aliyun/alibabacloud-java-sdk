@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The list of job templates.</p>
+     * <p>The job templates.</p>
      */
     @NameInMap("JobTemplates")
     public java.util.List<ListJobTemplatesResponseBodyJobTemplates> jobTemplates;
@@ -20,7 +20,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -93,7 +93,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
 
     public static class ListJobTemplatesResponseBodyJobTemplatesTags extends TeaModel {
         /**
-         * <p>The key of the job tag.</p>
+         * <p>The job tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -102,7 +102,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the job tag.</p>
+         * <p>The job tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
@@ -135,7 +135,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
 
     public static class ListJobTemplatesResponseBodyJobTemplates extends TeaModel {
         /**
-         * <p>The time when the job template was created.</p>
+         * <p>The creation time. The example uses the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-20 11:09:59</p>
@@ -144,7 +144,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the template.</p>
+         * <p>The template description.</p>
          * 
          * <strong>example:</strong>
          * <p>Demo</p>
@@ -153,7 +153,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String jobTemplateDescription;
 
         /**
-         * <p>The ID of the job template.</p>
+         * <p>The job template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>jt-xxxx</p>
@@ -162,7 +162,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String jobTemplateId;
 
         /**
-         * <p>The name of the template.</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-template</p>
@@ -171,7 +171,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String jobTemplateName;
 
         /**
-         * <p>The status of the job template.</p>
+         * <p>The job template status.</p>
          * 
          * <strong>example:</strong>
          * <p>Working</p>
@@ -180,13 +180,13 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tag information of the job.</p>
+         * <p>The job tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListJobTemplatesResponseBodyJobTemplatesTags> tags;
 
         /**
-         * <p>The time when the job template was last updated.</p>
+         * <p>The update time. The example uses the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-20 11:09:59</p>

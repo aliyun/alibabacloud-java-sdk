@@ -20,7 +20,7 @@ public class DescribeJobMetricDataRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The metrics of the job.</p>
+     * <p>The job monitoring metric.</p>
      * 
      * <strong>example:</strong>
      * <p>cpu_utilization</p>
@@ -29,7 +29,7 @@ public class DescribeJobMetricDataRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The name of the task.</p>
+     * <p>The task name.</p>
      * 
      * <strong>example:</strong>
      * <p>Task0</p>

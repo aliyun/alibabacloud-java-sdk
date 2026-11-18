@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPoolsResponseBody extends TeaModel {
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListPoolsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Maximum value: 50. Default value: 10.</p>
+     * <p>The number of entries per page in a paging query. Maximum value: 50. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,13 +23,13 @@ public class ListPoolsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>An array of resource pools.</p>
+     * <p>The list of resource pools.</p>
      */
     @NameInMap("PoolList")
     public java.util.List<ListPoolsResponseBodyPoolList> poolList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
@@ -93,6 +93,8 @@ public class ListPoolsResponseBody extends TeaModel {
 
     public static class ListPoolsResponseBodyPoolListTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -100,6 +102,8 @@ public class ListPoolsResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */
@@ -131,7 +135,7 @@ public class ListPoolsResponseBody extends TeaModel {
 
     public static class ListPoolsResponseBodyPoolList extends TeaModel {
         /**
-         * <p>The time when the resource pool was created.</p>
+         * <p>The time when the resource pool was created. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-20 11:09:59</p>
@@ -140,12 +144,10 @@ public class ListPoolsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Indicates whether the resource pool is the default pool. Valid values:</p>
+         * <p>Specifies whether the resource pool is the default resource pool. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The resource pool is the default pool.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The resource pool is not the default pool.</p>
-         * </li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -155,7 +157,7 @@ public class ListPoolsResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The number of running executor nodes in the resource pool.</p>
+         * <p>The number of running executor nodes in a resource pool.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -164,12 +166,10 @@ public class ListPoolsResponseBody extends TeaModel {
         public Integer maxExecutorNum;
 
         /**
-         * <p>The name of the resource pool.</p>
+         * <p>The resource pool name.</p>
          * <ul>
-         * <li><p>Maximum length: 15 characters.</p>
-         * </li>
-         * <li><p>Allowed characters: digits, letters, underscores (_), and periods (.).</p>
-         * </li>
+         * <li>The name can be up to 15 characters in length.</li>
+         * <li>The name can contain digits, uppercase letters, lowercase letters, underscores (_), and periods (.).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -181,10 +181,8 @@ public class ListPoolsResponseBody extends TeaModel {
         /**
          * <p>The priority of the resource pool.</p>
          * <ul>
-         * <li><p>Valid values: 1 to 99. Default value: 1 (lowest priority).</p>
-         * </li>
-         * <li><p>Jobs in a resource pool with a higher priority are scheduled before those in a pool with a lower priority. The pool\&quot;s priority overrides the priority of an individual job.</p>
-         * </li>
+         * <li>Valid values: 1 to 99. Default value: 1, which indicates the lowest priority.</li>
+         * <li>Jobs submitted to a resource pool with a higher priority level are scheduled before pending jobs in a resource pool with a lower priority level. The priority level of a resource pool takes precedence over the priority of a job.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,18 +201,13 @@ public class ListPoolsResponseBody extends TeaModel {
         public String schedulingPolicyId;
 
         /**
-         * <p>The status of the resource pool. Valid values:</p>
+         * <p>The resource pool status. Valid values:</p>
          * <ul>
-         * <li><p>Creating: The resource pool is being created.</p>
-         * </li>
-         * <li><p>Updating: The resource pool is being updated.</p>
-         * </li>
-         * <li><p>Deleting: The resource pool is being deleted.</p>
-         * </li>
-         * <li><p>Working: The resource pool is operational.</p>
-         * </li>
-         * <li><p>Deleted: The resource pool has been deleted.</p>
-         * </li>
+         * <li>Creating: The resource pool is being created.</li>
+         * <li>Updating: The resource pool is being updated.</li>
+         * <li>Deleting: The resource pool is being deleted.</li>
+         * <li>Working: The resource pool is working.</li>
+         * <li>Deleted: The resource pool is deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,11 +216,14 @@ public class ListPoolsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tag information.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListPoolsResponseBodyPoolListTags> tags;
 
         /**
-         * <p>The time when the resource pool was last updated.</p>
+         * <p>The time when the resource pool was updated. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-20 11:09:59</p>

@@ -11,7 +11,7 @@ public class GetAppVersionsResponseBody extends TeaModel {
     public java.util.List<GetAppVersionsResponseBodyAppVersions> appVersions;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class GetAppVersionsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class GetAppVersionsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
@@ -38,9 +38,13 @@ public class GetAppVersionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <p>true</p>
-     * <p>false</p>
+     * <p>Indicates whether the process of executing the command and retrieving the result was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: Successful.</p>
+     * </li>
+     * <li><p>false: Failed.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -49,7 +53,7 @@ public class GetAppVersionsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries that meet the request conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -112,7 +116,7 @@ public class GetAppVersionsResponseBody extends TeaModel {
 
     public static class GetAppVersionsResponseBodyAppVersions extends TeaModel {
         /**
-         * <p>The image ID of the application.</p>
+         * <p>The ID of the application image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -122,7 +126,7 @@ public class GetAppVersionsResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The application name.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>V-Ray</p>

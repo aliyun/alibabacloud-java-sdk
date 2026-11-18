@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetActionPlanResponseBody extends TeaModel {
     /**
-     * <p>ID of the execution plan.</p>
+     * <p>The ID of the execution plan.</p>
      * 
      * <strong>example:</strong>
      * <p>ap-hz036ubmx2qmw93k****</p>
@@ -14,7 +14,7 @@ public class GetActionPlanResponseBody extends TeaModel {
     public String actionPlanId;
 
     /**
-     * <p>Name of the execution plan.</p>
+     * <p>The name of the execution plan.</p>
      * 
      * <strong>example:</strong>
      * <p>TestActionPlan</p>
@@ -23,7 +23,7 @@ public class GetActionPlanResponseBody extends TeaModel {
     public String actionPlanName;
 
     /**
-     * <p>Resource type.</p>
+     * <p>The resource type.</p>
      * 
      * <strong>example:</strong>
      * <p>Standard</p>
@@ -32,7 +32,7 @@ public class GetActionPlanResponseBody extends TeaModel {
     public String allocationSpec;
 
     /**
-     * <p>ID of the application.</p>
+     * <p>The ID of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>ci-vm-rYfypJKwlN9Y</p>
@@ -41,7 +41,7 @@ public class GetActionPlanResponseBody extends TeaModel {
     public String appId;
 
     /**
-     * <p>Time when the execution plan was created.</p>
+     * <p>The time when the execution plan was created. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-08-10 18:28:05</p>
@@ -50,7 +50,7 @@ public class GetActionPlanResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>Target resource size for the execution plan. If ResourceType is VCpuCapacity, this value represents the target vCPU count.</p>
+     * <p>The desired resource capacity of the execution plan. If ResourceType is set to VcpuCapacity, this field indicates that the execution plan expects to maintain 10,000 vCPUs.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -59,6 +59,8 @@ public class GetActionPlanResponseBody extends TeaModel {
     public Float desiredCapacity;
 
     /**
+     * <p>The scheduling interval of the execution plan. Unit: minutes.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -66,7 +68,7 @@ public class GetActionPlanResponseBody extends TeaModel {
     public Integer intervalMinutes;
 
     /**
-     * <p>Computing power level.</p>
+     * <p>The computing power level.</p>
      * 
      * <strong>example:</strong>
      * <p>General</p>
@@ -75,7 +77,7 @@ public class GetActionPlanResponseBody extends TeaModel {
     public String level;
 
     /**
-     * <p>Prologue script. Must be Base64-encoded.</p>
+     * <p>The preprocessing script. The script must be Base64-encoded.</p>
      * 
      * <strong>example:</strong>
      * <p>bHMgLWFsCmxzIC1hbGggfCB3YyAtbA==</p>
@@ -84,13 +86,13 @@ public class GetActionPlanResponseBody extends TeaModel {
     public String prologScript;
 
     /**
-     * <p>List of region-specific resource configurations for the execution plan\&quot;s runtime environment.</p>
+     * <p>The list of regional resource configurations for the runtime environment of the execution plan.</p>
      */
     @NameInMap("Regions")
     public java.util.List<GetActionPlanResponseBodyRegions> regions;
 
     /**
-     * <p>ID of the request.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
@@ -99,11 +101,11 @@ public class GetActionPlanResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Type of target resource for the execution plan. Valid values are:</p>
+     * <p>The type of the target resource. Valid values:</p>
      * <ul>
      * <li><p>VCpuCapacity: vCPU capacity</p>
      * </li>
-     * <li><p>ExecutorCapacity: number of executor nodes</p>
+     * <li><p>ExecutorCapacity: number of execution nodes</p>
      * </li>
      * </ul>
      * 
@@ -114,19 +116,19 @@ public class GetActionPlanResponseBody extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>List of resource configurations for the execution plan\&quot;s runtime environment.</p>
+     * <p>The list of resource configurations for the runtime environment of the execution plan.</p>
      */
     @NameInMap("Resources")
     public java.util.List<GetActionPlanResponseBodyResources> resources;
 
     /**
-     * <p>Status of the execution plan. Valid values are:</p>
+     * <p>The status of the execution plan. Valid values:</p>
      * <ul>
-     * <li><p>Active: The execution plan is active and dynamically manages Instant jobs.</p>
+     * <li><p>Active: The execution plan is active. Only active execution plans dynamically manage instant tasks.</p>
      * </li>
-     * <li><p>Inactive: The execution plan is inactive and no longer manages Instant jobs.</p>
+     * <li><p>Inactive: The execution plan is inactive. Inactive execution plans no longer manage instant tasks.</p>
      * </li>
-     * <li><p>Deleting: The execution plan is being deleted. You cannot modify parameters during this state.</p>
+     * <li><p>Deleting: The execution plan is being deleted. You cannot modify the parameters of an execution plan in this state.</p>
      * </li>
      * </ul>
      * 
@@ -137,7 +139,7 @@ public class GetActionPlanResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Current resource size managed by the execution plan.</p>
+     * <p>The current resource capacity managed by the execution plan.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -146,7 +148,7 @@ public class GetActionPlanResponseBody extends TeaModel {
     public Float totalCapacity;
 
     /**
-     * <p>Last time the execution plan was modified.</p>
+     * <p>The time when the execution plan was last modified. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-08-10 18:28:05</p>
@@ -289,7 +291,7 @@ public class GetActionPlanResponseBody extends TeaModel {
 
     public static class GetActionPlanResponseBodyRegions extends TeaModel {
         /**
-         * <p>ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -298,13 +300,13 @@ public class GetActionPlanResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>List of security groups available to the execution plan in this region.</p>
+         * <p>The list of security groups available for the execution plan in the region.</p>
          */
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
 
         /**
-         * <p>List of vSwitches available to the execution plan in this region.</p>
+         * <p>The list of vSwitches available for the execution plan in the region.</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
@@ -342,7 +344,7 @@ public class GetActionPlanResponseBody extends TeaModel {
 
     public static class GetActionPlanResponseBodyResources extends TeaModel {
         /**
-         * <p>Number of CPUs in the runtime environment.</p>
+         * <p>The number of CPUs in the runtime environment.</p>
          * 
          * <strong>example:</strong>
          * <p>64</p>
@@ -351,7 +353,7 @@ public class GetActionPlanResponseBody extends TeaModel {
         public Float cores;
 
         /**
-         * <p>Memory size in the runtime environment, in GiB.</p>
+         * <p>The memory size of the runtime environment. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>

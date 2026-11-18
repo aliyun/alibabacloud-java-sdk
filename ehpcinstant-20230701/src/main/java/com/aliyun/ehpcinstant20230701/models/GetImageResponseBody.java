@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetImageResponseBody extends TeaModel {
     /**
-     * <p>Image details.</p>
+     * <p>The image details.</p>
      */
     @NameInMap("Image")
     public GetImageResponseBodyImage image;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -20,12 +20,10 @@ public class GetImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation succeeded. Valid values:</p>
+     * <p>Indicates whether the process of executing the command and obtaining the result is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: succeeded.</p>
-     * </li>
-     * <li><p>false: failed.</p>
-     * </li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +33,7 @@ public class GetImageResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Total number of items returned for this request.</p>
+     * <p>The total number of items that meet the request conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -81,12 +79,30 @@ public class GetImageResponseBody extends TeaModel {
     }
 
     public static class GetImageResponseBodyImageAdditionalRegionsInfo extends TeaModel {
+        /**
+         * <p>The image ID in the additional region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-f8abcdef0123456789ab</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The additional region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-heyuan</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The status of the image in the additional region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -123,7 +139,7 @@ public class GetImageResponseBody extends TeaModel {
 
     public static class GetImageResponseBodyImageContainerImageSpecRegistryCredential extends TeaModel {
         /**
-         * <p>Password for the username.</p>
+         * <p>The logon password.</p>
          * 
          * <strong>example:</strong>
          * <p>userpassword</p>
@@ -132,7 +148,7 @@ public class GetImageResponseBody extends TeaModel {
         public String password;
 
         /**
-         * <p>Registry server address.</p>
+         * <p>The server address of the image registry.</p>
          * 
          * <strong>example:</strong>
          * <p>registry-vpc.cn-hangzhou.aliyuncs.com</p>
@@ -141,7 +157,7 @@ public class GetImageResponseBody extends TeaModel {
         public String server;
 
         /**
-         * <p>Username to log on to the registry.</p>
+         * <p>The logon username.</p>
          * 
          * <strong>example:</strong>
          * <p>username</p>
@@ -181,16 +197,20 @@ public class GetImageResponseBody extends TeaModel {
     }
 
     public static class GetImageResponseBodyImageContainerImageSpec extends TeaModel {
+        /**
+         * <p>The architecture type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x86_64</p>
+         */
         @NameInMap("Architecture")
         public String architecture;
 
         /**
-         * <p>Indicates whether the image is stored in an ACR Enterprise Edition instance. Valid values:</p>
+         * <p>Indicates whether the image is stored in Container Registry Enterprise Edition. Valid values:</p>
          * <ul>
-         * <li><p>True: yes.</p>
-         * </li>
-         * <li><p>False: no.</p>
-         * </li>
+         * <li>True: Yes.</li>
+         * <li>False: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,12 +220,10 @@ public class GetImageResponseBody extends TeaModel {
         public Boolean isACREnterprise;
 
         /**
-         * <p>Indicates whether the image is stored in an Alibaba Cloud Container Registry (ACR) instance. Valid values:</p>
+         * <p>Indicates whether the image is stored in Container Registry. Valid values:</p>
          * <ul>
-         * <li><p>True: yes.</p>
-         * </li>
-         * <li><p>False: no.</p>
-         * </li>
+         * <li>True: Yes.</li>
+         * <li>False: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -214,20 +232,32 @@ public class GetImageResponseBody extends TeaModel {
         @NameInMap("IsACRRegistry")
         public Boolean isACRRegistry;
 
+        /**
+         * <p>The specific version identifier of the operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS  7.6 64 bit</p>
+         */
         @NameInMap("OsTag")
         public String osTag;
 
+        /**
+         * <p>The platform type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
         /**
-         * <p>Authentication for a private image registry.</p>
+         * <p>The authentication information for the private image registry.</p>
          */
         @NameInMap("RegistryCredential")
         public GetImageResponseBodyImageContainerImageSpecRegistryCredential registryCredential;
 
         /**
-         * <p>ACR Enterprise Edition instance ID.</p>
+         * <p>The ID of the Container Registry Enterprise Edition instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-xyz795ygf8k9****</p>
@@ -236,7 +266,7 @@ public class GetImageResponseBody extends TeaModel {
         public String registryCriId;
 
         /**
-         * <p>Container image registry URL.</p>
+         * <p>The access URL of the container image.</p>
          * 
          * <strong>example:</strong>
          * <p>registry-vpc.cn-hangzhou.aliyuncs.com/ehpc_open/nginx:latest</p>
@@ -316,12 +346,30 @@ public class GetImageResponseBody extends TeaModel {
     }
 
     public static class GetImageResponseBodyImageDocumentInfo extends TeaModel {
+        /**
+         * <p>The content of the application document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VGhpcyBpcyBhbiBleGFtcGxlIGFwcGxpY2F0aW9uIGRvY3VtZW50Lg==</p>
+         */
         @NameInMap("Document")
         public String document;
 
+        /**
+         * <p>The application document ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
         @NameInMap("DocumentId")
         public String documentId;
 
+        /**
+         * <p>The encoding method of the application document. Base64 and PlainText are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Base64</p>
+         */
         @NameInMap("EncodingMode")
         public String encodingMode;
 
@@ -358,7 +406,7 @@ public class GetImageResponseBody extends TeaModel {
 
     public static class GetImageResponseBodyImageVMImageSpec extends TeaModel {
         /**
-         * <p>Architecture type.</p>
+         * <p>The architecture type.</p>
          * 
          * <strong>example:</strong>
          * <p>x86_64</p>
@@ -367,7 +415,7 @@ public class GetImageResponseBody extends TeaModel {
         public String architecture;
 
         /**
-         * <p>Image ID.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>m-uf60twafjtaart******</p>
@@ -376,7 +424,7 @@ public class GetImageResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>OS version identifier.</p>
+         * <p>The specific version identifier of the operating system.</p>
          * 
          * <strong>example:</strong>
          * <p>CentOS  7.6 64 bit</p>
@@ -385,7 +433,7 @@ public class GetImageResponseBody extends TeaModel {
         public String osTag;
 
         /**
-         * <p>Platform type.</p>
+         * <p>The platform type.</p>
          * 
          * <strong>example:</strong>
          * <p>CentOS</p>
@@ -433,20 +481,29 @@ public class GetImageResponseBody extends TeaModel {
     }
 
     public static class GetImageResponseBodyImage extends TeaModel {
+        /**
+         * <p>The list of status information of the image in additional regions.</p>
+         */
         @NameInMap("AdditionalRegionsInfo")
         public java.util.List<GetImageResponseBodyImageAdditionalRegionsInfo> additionalRegionsInfo;
 
+        /**
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ci-vm-0123456789abcdef</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
         /**
-         * <p>Container image configuration details.</p>
+         * <p>The configuration details of the container image.</p>
          */
         @NameInMap("ContainerImageSpec")
         public GetImageResponseBodyImageContainerImageSpec containerImageSpec;
 
         /**
-         * <p>Image creation time.</p>
+         * <p>The time when the image was created. The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format, where Z represents UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-12-23T09:51:39Z</p>
@@ -455,19 +512,22 @@ public class GetImageResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Image description.</p>
+         * <p>The image description.</p>
          * 
          * <strong>example:</strong>
-         * <p>应用测试镜像。</p>
+         * <p>Application test image</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The application document information associated with the image.</p>
+         */
         @NameInMap("DocumentInfo")
         public GetImageResponseBodyImageDocumentInfo documentInfo;
 
         /**
-         * <p>Image type.</p>
+         * <p>The image type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -477,7 +537,7 @@ public class GetImageResponseBody extends TeaModel {
         public String imageType;
 
         /**
-         * <p>Image name.</p>
+         * <p>The image name.</p>
          * 
          * <strong>example:</strong>
          * <p>app-image</p>
@@ -486,7 +546,7 @@ public class GetImageResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Image size, in GiB.</p>
+         * <p>The image size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>40 GiB</p>
@@ -494,17 +554,23 @@ public class GetImageResponseBody extends TeaModel {
         @NameInMap("Size")
         public String size;
 
+        /**
+         * <p>The image status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>Virtual machine image configuration details.</p>
+         * <p>The configuration details of the virtual machine image.</p>
          */
         @NameInMap("VMImageSpec")
         public GetImageResponseBodyImageVMImageSpec VMImageSpec;
 
         /**
-         * <p>Version.</p>
+         * <p>The version.</p>
          * 
          * <strong>example:</strong>
          * <p>v1.0</p>

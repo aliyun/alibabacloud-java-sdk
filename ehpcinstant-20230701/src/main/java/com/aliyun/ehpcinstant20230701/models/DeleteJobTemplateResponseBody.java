@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteJobTemplateResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>

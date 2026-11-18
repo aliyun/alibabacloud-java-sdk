@@ -14,14 +14,11 @@ public class CreateActionPlanRequest extends TeaModel {
     public String actionPlanName;
 
     /**
-     * <p>The resource type.</p>
+     * <p>The resource allocation specification. Valid values:</p>
      * <ul>
-     * <li><p>Standard: Standard.</p>
-     * </li>
-     * <li><p>Dedicated: Dedicated. This type is available only to users in the whitelist.</p>
-     * </li>
-     * <li><p>Economic: Economy. This type is available only to users in the whitelist.</p>
-     * </li>
+     * <li>Standard: standard</li>
+     * <li>Dedicated: dedicated. To use this value, you must be added to the whitelist.</li>
+     * <li>Economic: economy. To use this value, you must be added to the whitelist.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +37,7 @@ public class CreateActionPlanRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The desired size of the resource for the execution plan. For example, if you set ResourceType to VcpuCapacity, this parameter specifies the number of vCPUs that you want to maintain for the execution plan.</p>
+     * <p>The desired resource capacity for the execution plan. If ResourceType is set to VCpuCapacity, this parameter specifies the expected number of vCPUs to maintain, such as 10000.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -49,6 +46,8 @@ public class CreateActionPlanRequest extends TeaModel {
     public Double desiredCapacity;
 
     /**
+     * <p>The scheduling interval of the execution plan. Unit: minutes. Valid values: 10 to 10080. Default value: 60.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -56,14 +55,12 @@ public class CreateActionPlanRequest extends TeaModel {
     public Integer intervalMinutes;
 
     /**
-     * <p>The computing power level. This parameter is valid only when you set AllocationSpec to Economic. The following types are supported:</p>
+     * <p>The computing power level. This parameter takes effect only when the resource type is set to Economic. Valid values:</p>
      * <ul>
-     * <li><p>General: General-purpose.</p>
-     * </li>
-     * <li><p>Performance: Compute-optimized.</p>
-     * </li>
+     * <li>General: general-purpose</li>
+     * <li>Performance: performance-optimized</li>
      * </ul>
-     * <p>Default value: General</p>
+     * <p>Default value: General.</p>
      * 
      * <strong>example:</strong>
      * <p>General</p>
@@ -72,7 +69,7 @@ public class CreateActionPlanRequest extends TeaModel {
     public String level;
 
     /**
-     * <p>The pre-execution script. The script must be Base64-encoded.</p>
+     * <p>The prolog script. The script must be Base64-encoded.</p>
      * 
      * <strong>example:</strong>
      * <p>bHMgLWFsCmxzIC1hbGggfCB3YyAtbA==</p>
@@ -81,17 +78,17 @@ public class CreateActionPlanRequest extends TeaModel {
     public String prologScript;
 
     /**
-     * <p>A list of regional resource configurations for the runtime environment of the execution plan.</p>
+     * <p>The list of region-specific resource configurations for the runtime environment of the execution plan.</p>
      */
     @NameInMap("Regions")
     public java.util.List<CreateActionPlanRequestRegions> regions;
 
     /**
-     * <p>The type of resource for the execution target. The value can be the vCPU capacity or the number of executor nodes. Valid values:</p>
+     * <p>The type of the target resource for the execution plan. Valid values:</p>
      * <ul>
      * <li><p>VCpuCapacity: vCPU capacity</p>
      * </li>
-     * <li><p>ExecutorCapacity: number of executor nodes</p>
+     * <li><p>ExecutorCapacity: number of execution nodes</p>
      * </li>
      * </ul>
      * 
@@ -102,16 +99,13 @@ public class CreateActionPlanRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>A list of resource configurations for the runtime environment of the execution plan. You can specify 1 to 10 resource configurations.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1000</p>
+     * <p>The list of resource configurations for the runtime environment of the execution plan. You can specify 1 to 10 resource configurations.</p>
      */
     @NameInMap("Resources")
     public java.util.List<CreateActionPlanRequestResources> resources;
 
     /**
-     * <p>The script to run the job. The script must be Base64-encoded.</p>
+     * <p>The script used to run the job. The script must be Base64-encoded.</p>
      * 
      * <strong>example:</strong>
      * <p>bHMgLWFsCmxzIC1hbGggfCB3YyAtbA==</p>
@@ -223,19 +217,19 @@ public class CreateActionPlanRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>A list of security groups that are available for the execution plan in the region. You can specify 0 to 5 security groups.</p>
+         * <p>The list of security groups available for the execution plan in the region. You can specify 0 to 5 security groups.</p>
          */
         @NameInMap("SecurityGroupId")
         public java.util.List<String> securityGroupId;
 
         /**
-         * <p>A list of security group IDs. You can call the <a href="https://api.aliyun.com/document/Ecs/2014-05-26/DescribeSecurityGroups">DescribeSecurityGroups</a> operation to query information about available security groups.</p>
+         * <p>The list of security group IDs. You can call the <a href="https://api.aliyun.com/document/Ecs/2014-05-26/DescribeSecurityGroups">DescribeSecurityGroups</a> operation to query available security groups.</p>
          */
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
 
         /**
-         * <p>A list of vSwitches that are available for the execution plan in the region. You can specify 0 to 5 vSwitches.</p>
+         * <p>The list of vSwitches available for the execution plan in the region. You can specify 0 to 5 vSwitches.</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
@@ -281,7 +275,7 @@ public class CreateActionPlanRequest extends TeaModel {
 
     public static class CreateActionPlanRequestResources extends TeaModel {
         /**
-         * <p>The number of vCPUs for the runtime environment.</p>
+         * <p>The number of CPU cores in the runtime environment.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

@@ -15,7 +15,7 @@ public class SynchronizeAppRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The list of arrays that are synchronized to the specified region. If \&quot;all\&quot; is included, it is synchronized to all other unsynchronized regions by default.</p>
+     * <p>The list of target region IDs. If the list includes \&quot;all\&quot;, the application is synchronized to all other unsynchronized regions by default.</p>
      */
     @NameInMap("TargetRegionIds")
     public java.util.List<String> targetRegionIds;

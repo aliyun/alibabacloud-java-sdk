@@ -23,7 +23,7 @@ public class CreateJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task list.</p>
+     * <p>The list of tasks.</p>
      */
     @NameInMap("Tasks")
     public java.util.List<CreateJobResponseBodyTasks> tasks;
@@ -59,7 +59,7 @@ public class CreateJobResponseBody extends TeaModel {
 
     public static class CreateJobResponseBodyTasks extends TeaModel {
         /**
-         * <p>The list of executor IDs contained in the task.</p>
+         * <p>The list of executor IDs included in the task.</p>
          */
         @NameInMap("ExecutorIds")
         public java.util.List<String> executorIds;

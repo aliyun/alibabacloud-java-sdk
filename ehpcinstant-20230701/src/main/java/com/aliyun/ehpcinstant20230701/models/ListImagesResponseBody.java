@@ -11,7 +11,7 @@ public class ListImagesResponseBody extends TeaModel {
     public java.util.List<ListImagesResponseBodyImages> images;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListImagesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,10 +38,10 @@ public class ListImagesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the process of executing the command and obtaining the result was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class ListImagesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of items that meet the request conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -124,7 +124,7 @@ public class ListImagesResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The time when the storage resource was created.</p>
+         * <p>The creation time. The time is in the YYYY-MM-DDTHH:mm:ssZ format, where Z represents UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-12-09T07:06:34Z</p>
@@ -133,10 +133,10 @@ public class ListImagesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the image.</p>
+         * <p>The image description.</p>
          * 
          * <strong>example:</strong>
-         * <p>应用测试镜像。</p>
+         * <p>Application test image</p>
          */
         @NameInMap("Description")
         public String description;
@@ -161,7 +161,7 @@ public class ListImagesResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The type of the image.</p>
+         * <p>The image type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class ListImagesResponseBody extends TeaModel {
         public String imageType;
 
         /**
-         * <p>The name of the image.</p>
+         * <p>The image name.</p>
          * 
          * <strong>example:</strong>
          * <p>app-image</p>
@@ -180,7 +180,7 @@ public class ListImagesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the specific OS version.</p>
+         * <p>The specific OS version identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>Ubuntu  22.04 64 bit</p>
@@ -189,7 +189,7 @@ public class ListImagesResponseBody extends TeaModel {
         public String osTag;
 
         /**
-         * <p>The time when the image was updated.</p>
+         * <p>The image update time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-25 14:15:28</p>
@@ -198,7 +198,7 @@ public class ListImagesResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The version of the image.</p>
+         * <p>The image version.</p>
          * 
          * <strong>example:</strong>
          * <p>v1.0</p>

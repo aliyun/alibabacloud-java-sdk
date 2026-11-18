@@ -26,7 +26,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public String jobDescription;
 
     /**
-     * <p>The job name. The name must be 2 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+     * <p>The job name. The name must be 2 to 64 characters in length and can contain Chinese characters, English letters, and digits. It can also contain hyphens (-) and underscores (_).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public String securityPolicyShrink;
 
     /**
-     * <p>The task list. Currently, only one task is supported.</p>
+     * <p>The list of tasks. Only one task is supported.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tasks")

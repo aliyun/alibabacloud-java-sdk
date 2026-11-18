@@ -20,7 +20,7 @@ public class ListExecutorEventsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for paging.</p>
+     * <p>The paging Settings for the number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -102,7 +102,7 @@ public class ListExecutorEventsResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The Executor ID. Format: JobId-TaskName-ArrayIndex.</p>
+         * <p>The executor ID. Format: JobId-TaskName-ArrayIndex.</p>
          * 
          * <strong>example:</strong>
          * <p>job-xxxx-Task0-1</p>
@@ -120,7 +120,7 @@ public class ListExecutorEventsResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The runtime event level. Valid values:</p>
+         * <p>The level of the runtime event. Valid values:</p>
          * <ul>
          * <li>Normal</li>
          * <li>Warning</li>

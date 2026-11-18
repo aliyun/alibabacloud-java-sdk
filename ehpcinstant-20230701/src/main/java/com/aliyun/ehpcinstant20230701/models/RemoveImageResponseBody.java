@@ -14,10 +14,10 @@ public class RemoveImageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the command execution and result retrieval were successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: The operation succeeded.</li>
+     * <li>false: The operation failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
