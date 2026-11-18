@@ -51,7 +51,7 @@ public class GetAppPlayKeyResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The time when the playback key was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The creation time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-18T03:59:01Z</p>
@@ -60,7 +60,7 @@ public class GetAppPlayKeyResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The time when the playback key was last modified. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The update time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-18T03:59:01Z</p>
@@ -71,8 +71,8 @@ public class GetAppPlayKeyResponseBody extends TeaModel {
         /**
          * <p>The playback key.</p>
          * <ul>
-         * <li>Only uppercase letters, lowercase letters, and digits are supported. The length must be 8 to 20 characters.</li>
-         * <li>UTF-8 encoding.</li>
+         * <li>Only uppercase and lowercase letters and digits are supported. The length must be 8 to 20 characters.</li>
+         * <li>Encoded in UTF-8.</li>
          * </ul>
          * 
          * <strong>example:</strong>

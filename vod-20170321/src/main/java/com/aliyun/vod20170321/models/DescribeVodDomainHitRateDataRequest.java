@@ -8,8 +8,8 @@ public class DescribeVodDomainHitRateDataRequest extends TeaModel {
      * <p>The accelerated domain name to query.</p>
      * <ul>
      * <li>If you do not specify this parameter, the pooled data of all accelerated domain names is returned by default.</li>
-     * <li>Batch queries are supported. Separate multiple domain names with commas (,). You can specify up to 500 domain names at a time.</li>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>, and choose <strong>Configuration Management &gt; CDN Configuration &gt; Domain Names</strong> in the left-side navigation pane to view the accelerated domain names that you have added to ApsaraVideo VOD. You can also call the <a href="~~DescribeVodUserDomains~~">DescribeVodUserDomains</a> operation to query the list of accelerated domain names.</li>
+     * <li>Batch queries are supported. Separate multiple domain names with commas (,). You can query up to 500 domain names at a time.</li>
+     * <li>You can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management &gt; Distribution Configuration &gt; Domain Names</strong> in the left-side navigation pane to view the accelerated domain names added to ApsaraVideo VOD. Alternatively, you can call the <a href="~~DescribeVodUserDomains~~">DescribeVodUserDomains</a> operation to query the list of accelerated domain names.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,8 +19,7 @@ public class DescribeVodDomainHitRateDataRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query.</p>
-     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time of the data to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <blockquote>
      * <p>The end time must be later than the start time.</p>
      * </blockquote>
@@ -32,11 +31,11 @@ public class DescribeVodDomainHitRateDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time granularity of the data to query. Unit: seconds. Valid values: <strong>300</strong>, <strong>3600</strong>, and <strong>86400</strong>. If you do not specify this parameter or specify an unsupported value, the default value is used. The supported time granularity varies based on the time span specified by <code>StartTime</code> and <code>EndTime</code>:</p>
+     * <p>The time granularity of the data to query. Unit: seconds. Valid values: <strong>300</strong>, <strong>3600</strong>, and <strong>86400</strong>. If you do not specify this parameter or specify an unsupported value, the default value is used. Based on the time range specified by <code>StartTime</code> and <code>EndTime</code>, the supported time granularities are as follows:</p>
      * <ul>
-     * <li>Less than 3 days (exclusive): <strong>300</strong> (default), <strong>3600</strong>, and <strong>86400</strong>.</li>
-     * <li>3 to 31 days (exclusive): <strong>3600</strong> (default) and <strong>86400</strong>.</li>
-     * <li>31 days or more: <strong>86400</strong> (default).</li>
+     * <li>Less than 3 days: <strong>300</strong> (default), <strong>3600</strong>, and <strong>86400</strong>.</li>
+     * <li>3 to 31 days (excluding 31 days): <strong>3600</strong> (default) and <strong>86400</strong>.</li>
+     * <li>More than 31 days: <strong>86400</strong> (default).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +48,7 @@ public class DescribeVodDomainHitRateDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start time of the data to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-20T13:59:58Z</p>

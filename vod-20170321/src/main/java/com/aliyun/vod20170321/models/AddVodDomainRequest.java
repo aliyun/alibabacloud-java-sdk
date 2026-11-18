@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddVodDomainRequest extends TeaModel {
     /**
-     * <p>The health check URL.</p>
+     * <p>The URL for health checks.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com/test.html">www.example.com/test.html</a></p>
@@ -14,7 +14,7 @@ public class AddVodDomainRequest extends TeaModel {
     public String checkUrl;
 
     /**
-     * <p>The accelerated domain name to be added to ApsaraVideo VOD. Wildcard domain names are supported, starting with a period (.), such as .example.com.</p>
+     * <p>The accelerated domain name that you want to add to ApsaraVideo VOD. Wildcard domain names are supported. A wildcard domain name must start with a period (.), such as .example.com.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class AddVodDomainRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>This parameter is valid for international users and Chinese mainland users of L3 or higher. Valid values:</p>
+     * <p>The acceleration region. This parameter is valid for users outside the Chinese mainland and users in the Chinese mainland at level 3 or above. Valid values:</p>
      * <ul>
      * <li><strong>domestic</strong> (default): the Chinese mainland.</li>
      * <li><strong>overseas</strong>: Hong Kong (China), Macao (China), Taiwan (China), and regions outside China.</li>

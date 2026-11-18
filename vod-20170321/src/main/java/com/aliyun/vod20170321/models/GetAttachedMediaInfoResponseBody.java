@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAttachedMediaInfoResponseBody extends TeaModel {
     /**
-     * <p>The information about the auxiliary media assets.</p>
+     * <p>The list of auxiliary media assets.</p>
      */
     @NameInMap("AttachedMediaList")
     public java.util.List<GetAttachedMediaInfoResponseBodyAttachedMediaList> attachedMediaList;
@@ -56,7 +56,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
 
     public static class GetAttachedMediaInfoResponseBodyAttachedMediaListCategories extends TeaModel {
         /**
-         * <p>The category ID.</p>
+         * <p>The ID of the category.</p>
          * 
          * <strong>example:</strong>
          * <p>1000224338</p>
@@ -65,7 +65,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         public Long cateId;
 
         /**
-         * <p>The category name.</p>
+         * <p>The name of the category.</p>
          * 
          * <strong>example:</strong>
          * <p>Test</p>
@@ -74,7 +74,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         public String cateName;
 
         /**
-         * <p>The category level.</p>
+         * <p>The level of the category.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -147,7 +147,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         public java.util.List<GetAttachedMediaInfoResponseBodyAttachedMediaListCategories> categories;
 
         /**
-         * <p>The time when the auxiliary media asset was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The time when the auxiliary media asset was created. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-01-01T10:00:00Z</p>
@@ -162,13 +162,13 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>Description test</p>
+         * <p>Test description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The auxiliary media asset ID.</p>
+         * <p>The ID of the auxiliary media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>0222e203cf80f9c22870a4d2c****</p>
@@ -177,7 +177,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The time when the auxiliary media asset was last updated. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The time when the auxiliary media asset was last updated. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-05-31T11:42:20Z</p>
@@ -188,9 +188,9 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         /**
          * <p>The status of the auxiliary media asset. Valid values:</p>
          * <ul>
-         * <li><strong>Uploading</strong>: uploading.</li>
+         * <li><strong>Uploading</strong>: The auxiliary media asset is being uploaded.</li>
          * <li><strong>Normal</strong>: Normal.</li>
-         * <li><strong>UploadFail</strong>: upload failed.</li>
+         * <li><strong>UploadFail</strong>: The auxiliary media asset failed to be uploaded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -211,7 +211,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         /**
          * <p>The tags.</p>
          * <blockquote>
-         * <p>This parameter is returned only if the auxiliary media asset has tag information.</p>
+         * <p>This parameter is returned only if the auxiliary media asset has tags.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -224,7 +224,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
          * <p>The title.</p>
          * 
          * <strong>example:</strong>
-         * <p>Subtitle test</p>
+         * <p>Test subtitle</p>
          */
         @NameInMap("Title")
         public String title;
@@ -246,7 +246,7 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         /**
          * <p>The access URL of the auxiliary media asset.</p>
          * <blockquote>
-         * <p>If a CDN domain name is configured in ApsaraVideo VOD, the CDN URL is returned. Otherwise, the OSS URL is returned.</p>
+         * <p>If a CDN domain name is configured for ApsaraVideo VOD, the CDN URL is returned. Otherwise, the OSS URL is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -15,7 +15,7 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
     public String dynamicImageTemplateId;
 
     /**
-     * <p>The override parameters in the JSON format. For more information, see <a href="https://help.aliyun.com/document_detail/98618.html">OverrideParams</a>. You can use this parameter to override the parameters in the animated image template. For more information, see <a href="https://help.aliyun.com/document_detail/52839.html">DynamicImageTemplateConfig</a>.</p>
+     * <p>The override parameters in JSON string format. For more information, see <a href="https://help.aliyun.com/document_detail/98618.html">OverrideParams</a>. You can override the parameters in the animated image template configuration. For more information, see <a href="https://help.aliyun.com/document_detail/52839.html">DynamicImageTemplateConfig</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Watermarks&quot;:[{&quot;Content&quot;:&quot;UserID: 666**&quot;,&quot;WatermarkId&quot;:&quot;8ca03c884944bd05efccc312367****&quot;}]}</p>
@@ -26,9 +26,9 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
     /**
      * <p>The video ID. You can obtain the video ID by using one of the following methods:</p>
      * <ul>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Assets</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
-     * <li>Obtain the video ID from the value of the VideoId parameter returned by the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation when you obtain the upload URL and credential.</li>
-     * <li>After the video is uploaded, obtain the video ID from the value of the VideoId parameter returned by the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation.</li>
+     * <li>For videos uploaded through the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Assets</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
+     * <li>When you call the <a href="https://help.aliyun.com/document_detail/55407.html">Obtain the upload URL and credential for a video</a> operation to obtain the upload URL and credential, the video ID is the value of the VideoId response parameter.</li>
+     * <li>After a video is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">Search for media information</a> operation to query the video ID. The video ID is the value of the VideoId response parameter.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

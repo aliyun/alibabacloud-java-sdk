@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWorkflowTaskRequest extends TeaModel {
     /**
-     * <p>The task ID used to query the refresh status.</p>
+     * <p>The workflow task ID. It is returned by the SubmitWorkflowJob operation and is used to query the execution status and result of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>70422****</p>

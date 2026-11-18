@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateVideoInfosRequest extends TeaModel {
     /**
-     * <p>The update content. You can modify the information about up to 20 audio and video files at a time. Separate multiple audio and video object information entries with commas (,). If you specify more than 20 objects, the update is failed and the <code>CountExceededMax</code> error is returned.
-     * The value is a JSON character string. For more details about the parameters, see the <strong>UpdateContent</strong> table below.</p>
+     * <p>The update content. You can modify object information of up to 20 audio or video files at a time. Separate object information of multiple audio or video files with commas (,). If you attempt to update more than 20 files at a time, the update fails and the <code>CountExceededMax</code> error is returned.
+     * The value must be a JSON string. For more information about how to construct the parameters, see the <strong>UpdateContent</strong> table below.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

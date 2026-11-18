@@ -4,34 +4,64 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class AppInfoDTO extends TeaModel {
+    /**
+     * <p>The application name.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
     /**
+     * <p>The application type. Valid values:</p>
+     * <ul>
+     * <li>1: Common application.</li>
+     * <li>2: Embedded SDK.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>1-普通应用，2-内嵌SDK.</p>
+     * <p>1</p>
      */
     @NameInMap("AppType")
     public Integer appType;
 
+    /**
+     * <p>The creation time.</p>
+     */
     @NameInMap("CreationTime")
     public String creationTime;
 
+    /**
+     * <p>The creation time.</p>
+     */
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
+    /**
+     * <p>The update time.</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    /**
+     * <p>The application ID.</p>
+     */
     @NameInMap("ItemId")
     public String itemId;
 
+    /**
+     * <p>The update time.</p>
+     */
     @NameInMap("ModificationTime")
     public String modificationTime;
 
+    /**
+     * <p>The list of platform information for the application.</p>
+     */
     @NameInMap("Platforms")
     public java.util.List<AppInfoDTOPlatforms> platforms;
 
+    /**
+     * <p>The user ID.</p>
+     */
     @NameInMap("UserId")
     public Long userId;
 
@@ -113,21 +143,39 @@ public class AppInfoDTO extends TeaModel {
     }
 
     public static class AppInfoDTOPlatforms extends TeaModel {
+        /**
+         * <p>The platform ID.</p>
+         */
         @NameInMap("ItemId")
         public String itemId;
 
+        /**
+         * <p>The list of licenses.</p>
+         */
         @NameInMap("LicenseItemIds")
         public java.util.List<String> licenseItemIds;
 
+        /**
+         * <p>The package name.</p>
+         */
         @NameInMap("PkgName")
         public String pkgName;
 
+        /**
+         * <p>The package signature.</p>
+         */
         @NameInMap("PkgSignature")
         public String pkgSignature;
 
+        /**
+         * <p>The platform type.</p>
+         */
         @NameInMap("PlatformType")
         public Long platformType;
 
+        /**
+         * <p>The platform type.</p>
+         */
         @NameInMap("Type")
         public Long type;
 

@@ -51,7 +51,7 @@ public class UploadMediaByURLResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The source file URL of the upload job.</p>
+         * <p>The source file URL corresponding to the upload job.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example****.mp4">http://example****.mp4</a></p>

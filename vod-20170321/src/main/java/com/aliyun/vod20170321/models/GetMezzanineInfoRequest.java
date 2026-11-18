@@ -7,8 +7,8 @@ public class GetMezzanineInfoRequest extends TeaModel {
     /**
      * <p>The type of additional information. Separate multiple values with commas (,). By default, only basic information is returned. Valid values:</p>
      * <ul>
-     * <li><strong>video</strong>: video stream information.</li>
-     * <li><strong>audio</strong>: audio stream information.</li>
+     * <li><strong>video</strong>: the video stream information.</li>
+     * <li><strong>audio</strong>: the audio stream information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,20 +18,20 @@ public class GetMezzanineInfoRequest extends TeaModel {
     public String additionType;
 
     /**
-     * <p>The validity period of the signature for FileURL (source file URL). Unit: seconds. Default value: <strong>3600</strong>. The minimum value is <strong>1</strong>.</p>
+     * <p>The expiration time of the signature for the FileURL (source file URL). Unit: seconds. Default value: <strong>3600</strong>. Minimum value: <strong>1</strong>.</p>
      * <ul>
      * <li>If OutputType is set to <strong>cdn</strong>:<ul>
-     * <li>FileURL expires periodically only if URL signing is enabled. Otherwise, FileURL is permanently valid.</li>
+     * <li>The FileURL expires periodically only if URL authentication is enabled. Otherwise, the FileURL is permanently valid.</li>
      * <li>Minimum value: <strong>1</strong>.</li>
      * <li>Maximum value: unlimited.</li>
-     * <li>Default value: <strong>3600</strong> if this parameter is not specified.</li>
+     * <li>Default value: <strong>3600</strong> if not specified.</li>
      * </ul>
      * </li>
      * <li>If OutputType is set to <strong>oss</strong>:<ul>
-     * <li>FileURL expires periodically only if the storage permission is set to private. Otherwise, FileURL is permanently valid.</li>
+     * <li>The FileURL expires periodically only if the storage permission is set to private. Otherwise, the FileURL is permanently valid.</li>
      * <li>Minimum value: <strong>1</strong>.</li>
-     * <li>Maximum value: To reduce security risks to the origin server, the maximum value is <strong>2592000</strong> (30 days) when the audio or video file is stored in a bucket managed by ApsaraVideo VOD, and <strong>129600</strong> (36 hours) when the file is stored in your own OSS bucket.</li>
-     * <li>Default value: <strong>3600</strong> if this parameter is not specified.</li>
+     * <li>Maximum value: To reduce security risks of the origin server, the maximum value is <strong>2592000</strong> (30 days) when the audio or video file is stored in an ApsaraVideo VOD bucket, and <strong>129600</strong> (36 hours) when the audio or video file is stored in a user-owned OSS bucket.</li>
+     * <li>Default value: <strong>3600</strong> if not specified.</li>
      * </ul>
      * </li>
      * </ul>
@@ -43,13 +43,13 @@ public class GetMezzanineInfoRequest extends TeaModel {
     public Long authTimeout;
 
     /**
-     * <p>The type of the output URL. Valid values:</p>
+     * <p>The output URL type. Valid values:</p>
      * <ul>
-     * <li><strong>oss</strong>: back-to-origin URL.</li>
-     * <li><strong>cdn</strong> (default): CDN URL.</li>
+     * <li><strong>oss</strong>: the back-to-origin URL.</li>
+     * <li><strong>cdn</strong> (default): the accelerated URL.</li>
      * </ul>
      * <blockquote>
-     * <p>If the bucket type of the source file is in, only the OSS URL is returned.</p>
+     * <p>If the bucket where the source file is stored is of the in type, only the OSS URL is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class GetMezzanineInfoRequest extends TeaModel {
     public String outputType;
 
     /**
-     * <p>The custom ID. Only lowercase letters, uppercase letters, digits, hyphens (-), and underscores (_) are supported. The value must be 6 to 64 characters in length and is unique at the user level.</p>
+     * <p>The custom ID. The ID must be 6 to 64 characters in length and can contain only lowercase letters, uppercase letters, digits, hyphens (-), and underscores (_). The ID must be unique per user.</p>
      * 
      * <strong>example:</strong>
      * <p>123-123</p>
@@ -70,9 +70,9 @@ public class GetMezzanineInfoRequest extends TeaModel {
     /**
      * <p>The audio or video ID. You can obtain the ID by using one of the following methods:</p>
      * <ul>
-     * <li>For audio or video files uploaded through the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
-     * <li>Obtain the video ID from the VideoId parameter returned by the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation when you request an upload URL and credential.</li>
-     * <li>After the video is uploaded, call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the audio or video ID, which is the value of VideoId in the response.</li>
+     * <li>For an audio or video file uploaded in the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Assets</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
+     * <li>When you call the <a href="https://help.aliyun.com/document_detail/55407.html">Obtain the upload URL and credential for a video</a> operation to obtain the upload URL and credential, the audio or video ID is the value of the VideoId response parameter.</li>
+     * <li>After a video is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">Search media information</a> operation to query the audio or video ID, which is the value of the VideoId response parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -25,10 +25,10 @@ public class GetEditingProjectMaterialsRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The online editing project ID. You can obtain the ID by using one of the following methods:</p>
+     * <p>The ID of the online editing project. You can obtain the ID by using one of the following methods:</p>
      * <ul>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>, and choose <strong>Production Center</strong> &gt; <strong>Video Editing</strong> to view the ID.</li>
-     * <li>Obtain the value of the ProjectId response parameter when you create a project by calling the <strong>CreateEditingProject</strong> operation.</li>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>, choose <strong>Production center</strong> &gt; <strong>Video editing</strong>, and view the ID.</li>
+     * <li>The value of the ProjectId response parameter returned when you create a project by calling the <strong>Create an online editing project</strong> operation.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

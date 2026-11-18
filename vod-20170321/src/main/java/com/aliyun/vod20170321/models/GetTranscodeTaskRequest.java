@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetTranscodeTaskRequest extends TeaModel {
     /**
-     * <p>The transcoding job IDs. You can specify a maximum of 10 IDs. Separate multiple IDs with commas (,). You can obtain the IDs by using the following method:</p>
+     * <p>The IDs of the transcoding jobs. You can specify up to 10 IDs. Separate multiple IDs with commas (,). You can obtain the IDs by using the following method:</p>
      * <ul>
-     * <li>Call the <a href="https://help.aliyun.com/document_detail/68570.html">SubmitTranscodeJobs</a> operation to submit a transcoding task. The value of JobId in the response is the transcoding job ID.</li>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/68570.html">SubmitTranscodeJobs</a> operation to initiate a transcoding task. The ID is the value of the JobId response parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,8 +19,8 @@ public class GetTranscodeTaskRequest extends TeaModel {
     /**
      * <p>The transcoding task ID. You can obtain the ID by using one of the following methods:</p>
      * <ul>
-     * <li>Call the <a href="https://help.aliyun.com/document_detail/68570.html">SubmitTranscodeJobs</a> operation to submit a transcoding task. The value of TranscodeTaskId in the response is the transcoding task ID.</li>
-     * <li>Call the <a href="https://help.aliyun.com/document_detail/109120.html">ListTranscodeTask</a> operation. The value of TranscodeTaskId in the response is the transcoding task ID.</li>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/68570.html">SubmitTranscodeJobs</a> operation to initiate a transcoding task. The ID is the value of the TranscodeTaskId response parameter.</li>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/109120.html">ListTranscodeTask</a> operation to query transcoding tasks. The ID is the value of the TranscodeTaskId response parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>

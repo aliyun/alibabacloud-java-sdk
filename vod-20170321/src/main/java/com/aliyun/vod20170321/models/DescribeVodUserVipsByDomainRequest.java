@@ -18,7 +18,7 @@ public class DescribeVodUserVipsByDomainRequest extends TeaModel {
     public String available;
 
     /**
-     * <p>The accelerated domain name for ApsaraVideo VOD. Only a single domain name can be queried.</p>
+     * <p>The ApsaraVideo VOD accelerated domain name. You can specify only one domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetCategoriesRequest extends TeaModel {
     /**
-     * <p>The category ID. If you specify this parameter, the information about the specified category is returned. Only a single category ID is supported. You can obtain the category ID by using the following methods:</p>
+     * <p>The category ID. If you specify this parameter, you can query the category with the specified ID. You can specify only one category ID. You can obtain the category ID by using one of the following methods:</p>
      * <ul>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Asset Management Configuration</strong> &gt; <strong>Category Management</strong> to view the category ID.</li>
-     * <li>Obtain the category ID from the response of the <a href="~~AddCategory~~">AddCategory</a> operation when you create a category.</li>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Asset Configuration</strong> &gt; <strong>Category Management</strong> to view the category ID.</li>
+     * <li>The category ID is returned when you call the <a href="~~AddCategory~~">AddCategory</a> operation to create a category.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class GetCategoriesRequest extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The number of entries per page of the subcategory list. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
+     * <p>The number of entries per page in the subcategory list. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -36,10 +36,10 @@ public class GetCategoriesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The method for sorting the query results. Valid values:</p>
+     * <p>The sorting method of the query results. Valid values:</p>
      * <ul>
-     * <li><strong>CreationTime:Desc</strong> (default): sorts the results by creation time in descending order.</li>
-     * <li><strong>CreationTime:Asc</strong>: sorts the results by creation time in ascending order.</li>
+     * <li><strong>CreationTime:Desc</strong> (default): Sort by creation time in descending order.</li>
+     * <li><strong>CreationTime:Asc</strong>: Sort by creation time in ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,10 +49,10 @@ public class GetCategoriesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The categorization type. If you specify this parameter, a filtered query is performed to return categories of the specified type. Valid values:</p>
+     * <p>The categorization type. If you specify this parameter, you can perform a filtered query for categorizations of the specified type. Valid values:</p>
      * <ul>
-     * <li><strong>default</strong>: audio, video, and image categorization.</li>
-     * <li><strong>material</strong>: short video material categorization.</li>
+     * <li><strong>default</strong>: Audio, video, or image categorization.</li>
+     * <li><strong>material</strong>: Short video material categorization.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -17,7 +17,7 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
     public SubmitTranscodeJobsResponseBodyTranscodeJobs transcodeJobs;
 
     /**
-     * <p>The ID of the submitted transcoding task.</p>
+     * <p>The ID of the submitted transcoding job.</p>
      * 
      * <strong>example:</strong>
      * <p>9f4a0df7da2c8a81c8c0408c84****</p>

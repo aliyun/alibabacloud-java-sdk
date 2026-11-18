@@ -8,7 +8,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
     public DescribeVodDomainBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
 
     /**
-     * <p>The time interval between consecutive data entries, which is the time granularity of the data. Unit: seconds.</p>
+     * <p>The time interval between each record, which is the time granularity of the data. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -26,7 +26,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range for the returned data.</p>
+     * <p>The end time of the data. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2015-12-10T14:00:00Z</p>
@@ -35,7 +35,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The name of the ISP in English.</p>
+     * <p>The English name of the ISP.</p>
      * 
      * <strong>example:</strong>
      * <p>unicom</p>
@@ -44,7 +44,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
     public String ispNameEn;
 
     /**
-     * <p>The name of the region in English.</p>
+     * <p>The English name of the region.</p>
      * 
      * <strong>example:</strong>
      * <p>shanghai</p>
@@ -62,7 +62,7 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range for the returned data.</p>
+     * <p>The start time of the data. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2015-12-10T13:00:00Z</p>

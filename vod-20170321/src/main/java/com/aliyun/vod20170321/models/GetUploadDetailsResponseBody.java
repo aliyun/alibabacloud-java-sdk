@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetUploadDetailsResponseBody extends TeaModel {
     /**
-     * <p>The IDs of media files that cannot be accessed.</p>
+     * <p>The IDs of the media assets that you are not authorized to access.</p>
      */
     @NameInMap("ForbiddenMediaIds")
     public java.util.List<String> forbiddenMediaIds;
 
     /**
-     * <p>The IDs of media files that do not exist.</p>
+     * <p>The IDs of the media assets that do not exist.</p>
      */
     @NameInMap("NonExistMediaIds")
     public java.util.List<String> nonExistMediaIds;
@@ -26,7 +26,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The upload details.</p>
+     * <p>The list of upload details.</p>
      */
     @NameInMap("UploadDetails")
     public java.util.List<GetUploadDetailsResponseBodyUploadDetails> uploadDetails;
@@ -70,7 +70,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
 
     public static class GetUploadDetailsResponseBodyUploadDetails extends TeaModel {
         /**
-         * <p>The completion time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The completion time. The time is displayed in UTC and follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-04-28T09:45:07Z</p>
@@ -79,7 +79,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
         public String completionTime;
 
         /**
-         * <p>The creation time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The creation time. The time is displayed in UTC and follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-04-28T09:42:07Z</p>
@@ -115,7 +115,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The modification time. The time is in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format (UTC).</p>
+         * <p>The update time. The time is displayed in UTC and follows the <em>yyyy-MM-ddTHH:mm:ssZ</em> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-04-28T09:43:12Z</p>
@@ -124,7 +124,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
         public String modificationTime;
 
         /**
-         * <p>The video status. For the valid values and descriptions of video statuses, see the value list in <a href="https://help.aliyun.com/document_detail/52839.html">Status: video status</a>.</p>
+         * <p>The video status. For more information about the valid values and descriptions of the video status, see the valid values of <a href="https://help.aliyun.com/document_detail/52839.html">Status: Video status</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Uploading</p>
@@ -178,7 +178,7 @@ public class GetUploadDetailsResponseBody extends TeaModel {
         public String uploadSource;
 
         /**
-         * <p>The upload task status. For the valid values and descriptions of upload statuses, see the value list in <a href="https://help.aliyun.com/document_detail/52839.html">Status: URL upload task status</a>.</p>
+         * <p>The status of the upload task. For more information about the valid values and descriptions of the upload status, see the valid values of <a href="https://help.aliyun.com/document_detail/52839.html">Status: URL upload task status</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Uploading</p>

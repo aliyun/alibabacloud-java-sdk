@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetUploadDetailsRequest extends TeaModel {
     /**
-     * <p>The media IDs, which are audio or video IDs (VideoId). Separate multiple IDs with commas (,). A maximum of 20 IDs are supported. You can obtain the IDs by using the following methods:</p>
+     * <p>The media IDs, which are the audio or video IDs (VideoId). Separate multiple IDs with commas (,). You can specify up to 20 IDs. You can obtain the IDs by using one of the following methods:</p>
      * <ul>
-     * <li>For audio or video files uploaded through the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the audio or video ID.</li>
-     * <li>When you call the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation to obtain the upload URL and credential, the video ID is the value of the VideoId response parameter.</li>
-     * <li>After the audio or video file is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the video ID, which is the value of the VideoId response parameter.</li>
+     * <li>For audio or video files uploaded through the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Library</strong> &gt; <strong>Audio and Video</strong> to view the audio or video IDs.</li>
+     * <li>When you call the <a href="https://help.aliyun.com/document_detail/55407.html">Create upload URLs and credentials for audio and video files</a> operation to obtain the upload URL and credential, the value of the VideoId response parameter is the media ID.</li>
+     * <li>After an audio or video file is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">Search for media information</a> operation to query the media ID. The value of the VideoId response parameter is the media ID.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class GetUploadDetailsRequest extends TeaModel {
     public String mediaIds;
 
     /**
-     * <p>The media type. Set the value to <strong>video</strong> (audio/video).</p>
+     * <p>The media type. Set the value to <strong>video</strong>, which indicates audio and video files.</p>
      * 
      * <strong>example:</strong>
      * <p>video</p>

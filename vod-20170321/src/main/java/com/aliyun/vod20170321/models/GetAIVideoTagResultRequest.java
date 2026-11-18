@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetAIVideoTagResultRequest extends TeaModel {
     /**
-     * <p>The media asset ID, which is the video ID. You can obtain the video ID by using the following methods:</p>
+     * <p>The media asset ID, which is the video ID. You can obtain the video ID by using one of the following methods:</p>
      * <ul>
-     * <li>For videos uploaded through the console, logon to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
-     * <li>When you call the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation to obtain the upload URL and credential, the video ID is the value of the VideoId parameter in the response.</li>
-     * <li>After the video is uploaded, call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the video ID. The video ID is the value of the VideoId parameter in the response.</li>
+     * <li>For videos uploaded through the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Assets</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
+     * <li>When you call the <a href="https://help.aliyun.com/document_detail/55407.html">Obtain the upload URL and credential for a video</a> operation to obtain the upload URL and credential, the video ID is the value of the VideoId response parameter.</li>
+     * <li>After a video is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">Search media information</a> operation to query the video ID. The video ID is the value of the VideoId response parameter.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

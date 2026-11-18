@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddWatermarkRequest extends TeaModel {
     /**
-     * <p>The application ID. Default value: <strong>app-1000000</strong>. If you have activated the multi-application service, specify the application ID to add the watermark template to the specified application. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application service</a>.</p>
+     * <p>The application ID. Default value: <strong>app-1000000</strong>. If the multi-application system is activated, you can specify an application ID to add the watermark template to a specific application. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application system</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>app-****</p>
@@ -14,11 +14,11 @@ public class AddWatermarkRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The Object Storage Service (OSS) URL of the watermark image file (without authentication).</p>
+     * <p>The OSS URL of the watermark image file without authentication.</p>
      * <blockquote>
      * <ul>
-     * <li>Request parameter is required when you set an image watermark template (<code>Type</code> is <code>Image</code>).</li>
-     * <li>You can call <a href="~~CreateUploadAttachedMedia~~">CreateUploadAttachedMedia</a> to upload the watermark image to ApsaraVideo VOD. The value of the <code>FileURL</code> parameter returned after the upload can be used as the value of request parameter.</li>
+     * <li>Request parameter is required when you create an image watermark template by setting <code>Type</code> to <code>Image</code>.</li>
+     * <li>You can call the <a href="~~CreateUploadAttachedMedia~~">CreateUploadAttachedMedia</a> operation to upload the watermark image to ApsaraVideo VOD. The value of the <code>FileURL</code> parameter returned after the upload can be used as the value of request parameter.</li>
      * </ul>
      * </blockquote>
      * 
@@ -31,9 +31,9 @@ public class AddWatermarkRequest extends TeaModel {
     /**
      * <p>The name of the watermark template.</p>
      * <ul>
-     * <li>Only Chinese characters, letters, and digits are supported.</li>
+     * <li>Only Chinese characters, English letters, and digits are supported.</li>
      * <li>The name can be up to 128 bytes in length.</li>
-     * <li>UTF-8 encoding.</li>
+     * <li>The name must be encoded in UTF-8.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -44,7 +44,7 @@ public class AddWatermarkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The templatetype of the watermark. Valid values:</p>
+     * <p>The watermark templatetype. Valid values:</p>
      * <ul>
      * <li><strong>Image</strong> (default): image watermark template.</li>
      * <li><strong>Text</strong>: text watermark template.</li>
@@ -58,7 +58,7 @@ public class AddWatermarkRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The configuration information of the watermark (JSON string), including the display position and effect of the watermark. The configuration parameters differ between image watermarks and text watermarks. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</p>
+     * <p>The configuration information of the image or text watermark in JSON format, including the display position and effects of the watermark. The configuration parameters for image watermarks and text watermarks are different. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

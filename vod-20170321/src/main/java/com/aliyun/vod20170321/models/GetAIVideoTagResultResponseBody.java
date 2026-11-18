@@ -42,7 +42,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
 
     public static class GetAIVideoTagResultResponseBodyVideoTagResultCategory extends TeaModel {
         /**
-         * <p>The label.</p>
+         * <p>The tag.</p>
          * 
          * <strong>example:</strong>
          * <p>Beauty</p>
@@ -67,7 +67,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
 
     public static class GetAIVideoTagResultResponseBodyVideoTagResultKeyword extends TeaModel {
         /**
-         * <p>The label.</p>
+         * <p>The tag.</p>
          * 
          * <strong>example:</strong>
          * <p>Cushion</p>
@@ -76,7 +76,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         public String tag;
 
         /**
-         * <p>The collection of time points. Unit: milliseconds.</p>
+         * <p>The time points. Unit: milliseconds.</p>
          */
         @NameInMap("Times")
         public java.util.List<String> times;
@@ -106,7 +106,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
 
     public static class GetAIVideoTagResultResponseBodyVideoTagResultLocation extends TeaModel {
         /**
-         * <p>The label.</p>
+         * <p>The tag.</p>
          * 
          * <strong>example:</strong>
          * <p>Asia</p>
@@ -115,7 +115,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         public String tag;
 
         /**
-         * <p>The collection of time points. Unit: milliseconds.</p>
+         * <p>The time points. Unit: milliseconds.</p>
          */
         @NameInMap("Times")
         public java.util.List<String> times;
@@ -145,9 +145,9 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
 
     public static class GetAIVideoTagResultResponseBodyVideoTagResultPerson extends TeaModel {
         /**
-         * <p>The face URL.</p>
+         * <p>The URL of the face.</p>
          * <blockquote>
-         * <p>This field is returned only for person tag results.</p>
+         * <p>This field is returned only for person tags.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         public String faceUrl;
 
         /**
-         * <p>The label.</p>
+         * <p>The tag.</p>
          * 
          * <strong>example:</strong>
          * <p>Xiao Wang</p>
@@ -166,7 +166,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         public String tag;
 
         /**
-         * <p>The collection of time points. Unit: milliseconds.</p>
+         * <p>The time points. Unit: milliseconds.</p>
          */
         @NameInMap("Times")
         public java.util.List<String> times;
@@ -204,16 +204,16 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
 
     public static class GetAIVideoTagResultResponseBodyVideoTagResultTime extends TeaModel {
         /**
-         * <p>The label.</p>
+         * <p>The tag.</p>
          * 
          * <strong>example:</strong>
-         * <p>Millisecond</p>
+         * <p>Milliseconds</p>
          */
         @NameInMap("Tag")
         public String tag;
 
         /**
-         * <p>The collection of time points. Unit: milliseconds.</p>
+         * <p>The time points. Unit: milliseconds.</p>
          */
         @NameInMap("Times")
         public java.util.List<String> times;
@@ -243,31 +243,31 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
 
     public static class GetAIVideoTagResultResponseBodyVideoTagResult extends TeaModel {
         /**
-         * <p>The collection of video categories.</p>
+         * <p>The video categories.</p>
          */
         @NameInMap("Category")
         public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultCategory> category;
 
         /**
-         * <p>The collection of keyword tags.</p>
+         * <p>The keyword tags.</p>
          */
         @NameInMap("Keyword")
         public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultKeyword> keyword;
 
         /**
-         * <p>The collection of location tags.</p>
+         * <p>The location tags.</p>
          */
         @NameInMap("Location")
         public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultLocation> location;
 
         /**
-         * <p>The collection of person tags.</p>
+         * <p>The person tags.</p>
          */
         @NameInMap("Person")
         public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultPerson> person;
 
         /**
-         * <p>The collection of time tags.</p>
+         * <p>The time tags.</p>
          */
         @NameInMap("Time")
         public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultTime> time;

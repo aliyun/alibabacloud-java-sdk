@@ -26,7 +26,7 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
     public String domesticMax95Bps;
 
     /**
-     * <p>The end time of the data.</p>
+     * <p>The end time of the data. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-01-11T13:00:00Z</p>
@@ -62,7 +62,7 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start time of the data.</p>
+     * <p>The start time of the data. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-01-11T12:00:00Z</p>

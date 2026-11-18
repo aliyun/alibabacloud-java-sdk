@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class BatchGetMediaInfosRequest extends TeaModel {
     /**
-     * <p>The media asset IDs, which are audio/video IDs (VideoId). Separate multiple IDs with commas (,). You can specify up to 20 IDs. You can obtain the IDs by using the following methods:</p>
+     * <p>The media asset IDs, namely the audio or video IDs (VideoId). Separate multiple IDs with commas (,). A maximum of 20 IDs are supported. You can obtain the IDs by using one of the following methods:</p>
      * <ul>
-     * <li>For audio/video files uploaded through the console, log on to the ApsaraVideo VOD console and choose Media Files &gt; Audio/Video to view the audio/video IDs.</li>
-     * <li>When you call the operation to obtain the upload URL and credential for audio/video files, the VideoId value is returned as a response parameter.</li>
-     * <li>After an audio/video file is uploaded, you can call the SearchMedia operation to query the VideoId value in the response.</li>
+     * <li>For audio or video files uploaded through the console, log on to the ApsaraVideo VOD console and choose Media Library &gt; Audio/Video to view the audio or video IDs.</li>
+     * <li>When you call the operation to obtain the upload URL and credential for an audio or video file, the ID is the value of the VideoId response parameter.</li>
+     * <li>After an audio or video file is uploaded, you can call the operation to search for media asset information. The ID is the value of the VideoId response parameter.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class BatchGetMediaInfosRequest extends TeaModel {
     public String mediaIds;
 
     /**
-     * <p>The list of custom IDs. Separate multiple custom IDs with commas (,). You can specify up to 20 IDs.</p>
+     * <p>The custom ID list. It consists of one or more custom IDs. Separate multiple IDs with commas (,). A maximum of 20 IDs are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>123-123,1234-1234</p>

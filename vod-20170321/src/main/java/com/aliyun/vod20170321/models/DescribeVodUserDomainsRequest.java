@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVodUserDomainsRequest extends TeaModel {
     /**
-     * <p>The accelerated domain name for ApsaraVideo VOD. Fuzzy match filtering is supported.</p>
+     * <p>The ApsaraVideo VOD accelerated domain name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>example.aliyundoc.com</p>
@@ -14,7 +14,7 @@ public class DescribeVodUserDomainsRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The domain name query type. Valid values:</p>
+     * <p>The domain name search type. Valid values:</p>
      * <ul>
      * <li><strong>fuzzy_match</strong> (default): fuzzy match.</li>
      * <li><strong>pre_match</strong>: prefix match.</li>
@@ -29,14 +29,14 @@ public class DescribeVodUserDomainsRequest extends TeaModel {
     public String domainSearchType;
 
     /**
-     * <p>The domain name status filter. Valid values:</p>
+     * <p>The domain name status used for filtering. Valid values:</p>
      * <ul>
-     * <li><strong>online</strong>: Enabled.</li>
-     * <li><strong>offline</strong>: Disabled.</li>
-     * <li><strong>configuring</strong>: Being configured.</li>
-     * <li><strong>configure_failed</strong>: Configuration failed.</li>
-     * <li><strong>checking</strong>: Being reviewed.</li>
-     * <li><strong>check_failed</strong>: Review failed.</li>
+     * <li><strong>online</strong>: The domain name is enabled.</li>
+     * <li><strong>offline</strong>: The domain name is disabled.</li>
+     * <li><strong>configuring</strong>: The domain name is being configured.</li>
+     * <li><strong>configure_failed</strong>: The domain name failed to be configured.</li>
+     * <li><strong>checking</strong>: The domain name is being reviewed.</li>
+     * <li><strong>check_failed</strong>: The domain name failed the review.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class DescribeVodUserDomainsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the returned page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

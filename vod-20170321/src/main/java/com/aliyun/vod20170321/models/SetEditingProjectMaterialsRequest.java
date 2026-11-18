@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetEditingProjectMaterialsRequest extends TeaModel {
     /**
-     * <p>The material IDs, which are media asset IDs such as video VideoId, image ImageId, and auxiliary media asset MediaId. Separate multiple material IDs with commas (,).</p>
+     * <p>The material IDs, which are media asset IDs such as video IDs, image IDs, and auxiliary media asset IDs. Separate multiple material IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class SetEditingProjectMaterialsRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The online editing project ID.</p>
+     * <p>The ID of the online editing project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

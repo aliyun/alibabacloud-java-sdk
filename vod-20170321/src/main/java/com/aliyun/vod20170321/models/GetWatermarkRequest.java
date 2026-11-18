@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetWatermarkRequest extends TeaModel {
     /**
-     * <p>The ID of the watermark template to query. Only a single watermark template ID is supported. You can obtain the ID by using one of the following methods:</p>
+     * <p>The ID of the image or text watermark template to query. You can specify only one watermark template ID. You can obtain the ID by using one of the following methods:</p>
      * <ul>
-     * <li>Call the <a href="~~AddWatermark~~">AddWatermark</a> operation to add a watermark template. The ID is returned.</li>
-     * <li>Call the <a href="~~ListWatermark~~">ListWatermark</a> operation to query the list of watermark templates. The ID is returned.</li>
+     * <li>Call the <a href="~~AddWatermark~~">AddWatermark</a> operation to add an image or text watermark template. The ID is returned in the response.</li>
+     * <li>Call the <a href="~~ListWatermark~~">ListWatermark</a> operation to query the list of image or text watermark templates. The ID is returned in the response.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

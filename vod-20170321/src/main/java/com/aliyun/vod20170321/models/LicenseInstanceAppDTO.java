@@ -4,36 +4,69 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class LicenseInstanceAppDTO extends TeaModel {
+    /**
+     * <p>appId</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>beginOn</p>
+     */
     @NameInMap("BeginOn")
     public String beginOn;
 
+    /**
+     * <p>contractNo</p>
+     */
     @NameInMap("ContractNo")
     public String contractNo;
 
+    /**
+     * <p>creationTime</p>
+     */
     @NameInMap("CreationTime")
     public String creationTime;
 
+    /**
+     * <p>expiredOn</p>
+     */
     @NameInMap("ExpiredOn")
     public String expiredOn;
 
+    /**
+     * <p>instanceId</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>itemId</p>
+     */
     @NameInMap("ItemId")
     public String itemId;
 
+    /**
+     * <p>LicenseConfigDTOS</p>
+     */
     @NameInMap("LicenseConfigs")
     public java.util.List<LicenseInstanceAppDTOLicenseConfigs> licenseConfigs;
 
+    /**
+     * <p>modificationTime</p>
+     */
     @NameInMap("ModificationTime")
     public String modificationTime;
 
+    /**
+     * <p>status</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>userId</p>
+     */
     @NameInMap("UserId")
     public Long userId;
 
@@ -131,27 +164,51 @@ public class LicenseInstanceAppDTO extends TeaModel {
     }
 
     public static class LicenseInstanceAppDTOLicenseConfigs extends TeaModel {
+        /**
+         * <p>businessType</p>
+         */
         @NameInMap("BusinessType")
         public String businessType;
 
+        /**
+         * <p>featureIds</p>
+         */
         @NameInMap("FeatureIds")
         public String featureIds;
 
+        /**
+         * <p>isTrial</p>
+         */
         @NameInMap("IsTrial")
         public Boolean isTrial;
 
+        /**
+         * <p>sdkId</p>
+         */
         @NameInMap("SdkId")
         public Integer sdkId;
 
+        /**
+         * <p>sdkName</p>
+         */
         @NameInMap("SdkName")
         public String sdkName;
 
+        /**
+         * <p>subscription</p>
+         */
         @NameInMap("Subscription")
         public String subscription;
 
+        /**
+         * <p>subscriptionImp</p>
+         */
         @NameInMap("SubscriptionImp")
         public String subscriptionImp;
 
+        /**
+         * <p>subscriptionPkg</p>
+         */
         @NameInMap("SubscriptionPkg")
         public String subscriptionPkg;
 

@@ -51,7 +51,7 @@ public class ListWatermarkResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The time when the watermark template was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The creation time of the watermark template. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2018-11-07T09:05:52Z</p>
@@ -60,7 +60,7 @@ public class ListWatermarkResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The URL of the watermark file (OSS URL or CDN URL).</p>
+         * <p>The URL of the watermark file, which is an OSS URL or a CDN URL.</p>
          * <blockquote>
          * <p>This parameter is returned only for image watermark templates.</p>
          * </blockquote>
@@ -72,10 +72,10 @@ public class ListWatermarkResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
-         * <p>Indicates whether the watermark template is the default template. Valid values:</p>
+         * <p>Indicates whether the watermark template is the default image and text watermark template. Valid values:</p>
          * <ul>
-         * <li><strong>Default</strong>: the default watermark template.</li>
-         * <li><strong>NotDefault</strong>: not the default watermark template.</li>
+         * <li><strong>Default</strong>: default image and text watermark template</li>
+         * <li><strong>NotDefault</strong>: non-default image and text watermark template</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -96,8 +96,8 @@ public class ListWatermarkResponseBody extends TeaModel {
         /**
          * <p>The type of the watermark template. Valid values:</p>
          * <ul>
-         * <li><strong>Image</strong>: image watermark template.</li>
-         * <li><strong>Text</strong>: text watermark template.</li>
+         * <li><strong>Image</strong>: image watermark template</li>
+         * <li><strong>Text</strong>: text watermark template</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,16 +107,16 @@ public class ListWatermarkResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The configuration information of the watermark (JSON string), including the display position and effect of the watermark. The configuration parameters for image watermarks and text watermarks are different. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</p>
+         * <p>The configuration information of the image and text watermark in JSON string format, including the display position and effect of the watermark. The configuration parameters for image watermarks and text watermarks are different. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;FontColor&quot;: &quot;Blue&quot;,&quot;FontSize&quot;: 80,&quot;Content&quot;: &quot; watermark test&quot;}</p>
+         * <p>{&quot;FontColor&quot;: &quot;Blue&quot;,&quot;FontSize&quot;: 80,&quot;Content&quot;: &quot;Watermark test&quot;}</p>
          */
         @NameInMap("WatermarkConfig")
         public String watermarkConfig;
 
         /**
-         * <p>The ID of the watermark template.</p>
+         * <p>The watermark template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9bcc8bfadb843*****109a2671d0df97</p>

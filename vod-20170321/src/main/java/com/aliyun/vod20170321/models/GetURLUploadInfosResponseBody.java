@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetURLUploadInfosResponseBody extends TeaModel {
     /**
-     * <p>The list of upload task IDs or URLs that do not exist.</p>
+     * <p>The list of URL upload task IDs or URLs that do not exist.</p>
      */
     @NameInMap("NonExists")
     public java.util.List<String> nonExists;
@@ -20,7 +20,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of URL upload information. For more information about the fields and descriptions, see <a href="https://help.aliyun.com/document_detail/52839.html">URLUploadInfo</a>.</p>
+     * <p>The list of URL upload information. For more information about the specific upload names and descriptions, see <a href="https://help.aliyun.com/document_detail/52839.html">URLUploadInfo: URL upload information</a>.</p>
      */
     @NameInMap("URLUploadInfoList")
     public java.util.List<GetURLUploadInfosResponseBodyURLUploadInfoList> URLUploadInfoList;
@@ -56,7 +56,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
 
     public static class GetURLUploadInfosResponseBodyURLUploadInfoList extends TeaModel {
         /**
-         * <p>The completion time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The completion time. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-01-01T01:11:01Z</p>
@@ -65,7 +65,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         public String completeTime;
 
         /**
-         * <p>The creation time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The creation time. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-01-01T01:01:01Z</p>
@@ -119,6 +119,8 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>The registered media asset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>93ab850b4f654b6e91d24d81d44****</p>
          */
@@ -126,7 +128,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         public String registeredMediaId;
 
         /**
-         * <p>The status of the URL-based upload task. For more information about the status values and descriptions, see <a href="https://help.aliyun.com/document_detail/52839.html">Status</a>.</p>
+         * <p>The status of the URL pull task. For more information about the specific values and descriptions of the pull status, see <a href="https://help.aliyun.com/document_detail/52839.html">Status: URL upload task status</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -135,7 +137,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The URL of the source video file.</p>
+         * <p>The URL of the video source file to upload.</p>
          * <blockquote>
          * <p>A maximum of 100 records can be returned.</p>
          * </blockquote>

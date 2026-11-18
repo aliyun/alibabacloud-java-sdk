@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitAIImageJobResponseBody extends TeaModel {
     /**
-     * <p>The AI image processing task ID.</p>
+     * <p>The ID of the AI image processing task.</p>
      * 
      * <strong>example:</strong>
      * <p>cf08a2c6e11e*****de1711b738b9067</p>

@@ -13,6 +13,12 @@ public class SubmitWorkflowJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The workflow job ID. After the job is submitted, it is executed asynchronously. You can pass this ID to GetWorkflowTask to query the job status and result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0123456789abcdef0123456789abcdef</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

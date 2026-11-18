@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitDynamicImageJobResponseBody extends TeaModel {
     /**
-     * <p>The information about the animated image job.</p>
+     * <p>The animated image job information.</p>
      */
     @NameInMap("DynamicImageJob")
     public SubmitDynamicImageJobResponseBodyDynamicImageJob dynamicImageJob;

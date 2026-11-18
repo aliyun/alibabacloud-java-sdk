@@ -17,19 +17,19 @@ public class DescribeVodPlayerDimensionDataRequest extends TeaModel {
     /**
      * <p>The dimension type. Valid values:</p>
      * <ul>
-     * <li>Os: operating system.</li>
-     * <li>AppVersion: application version.</li>
+     * <li>Os: Operating system.</li>
+     * <li>AppVersion: App version.</li>
      * <li>SdkVersion: SDK version.</li>
-     * <li>Codec: codec.</li>
-     * <li>VideoType: video format.</li>
-     * <li>Network: network type.</li>
-     * <li>Isp: Internet service provider.</li>
-     * <li>VideoDefinition: resolution.</li>
-     * <li>Domain: domain name.</li>
-     * <li>Country: country.</li>
-     * <li>Province: province.</li>
-     * <li>ErrorCode: error code.</li>
-     * <li>IsHw: whether hardware decoding is used.</li>
+     * <li>Codec: Codec.</li>
+     * <li>VideoType: Video format.</li>
+     * <li>Network: Network type.</li>
+     * <li>Isp: ISP.</li>
+     * <li>VideoDefinition: Resolution.</li>
+     * <li>Domain: Domain name.</li>
+     * <li>Country: Country.</li>
+     * <li>Province: Province.</li>
+     * <li>ErrorCode: Error code.</li>
+     * <li>IsHw: Hardware decoding.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -40,7 +40,7 @@ public class DescribeVodPlayerDimensionDataRequest extends TeaModel {
     public String dimension;
 
     /**
-     * <p>The end time of the query. Specify the time in the yyyy-mm-ddthh:mm:ssz format (UTC).</p>
+     * <p>The end time of the query. Format: yyyy-mm-ddThh:mm:ssZ (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2025-06-05T15:59:59Z</p>
@@ -49,11 +49,11 @@ public class DescribeVodPlayerDimensionDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The region filter used when querying the Province or Isp dimension metadata. Valid values:</p>
+     * <p>The region used to limit the query scope when querying the metadata for the Province and ISP dimensions. Valid values:</p>
      * <ul>
-     * <li>ALL (default): all regions.</li>
+     * <li>ALL (default): All regions.</li>
      * <li>CN: China.</li>
-     * <li>OVERSEAS: outside China.</li>
+     * <li>OVERSEAS: Outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,10 +63,10 @@ public class DescribeVodPlayerDimensionDataRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The start time of the query. Specify the time in the <i>yyyy-mm-dd</i>t<i>hh:mm:ss</i>z format (UTC).</p>
+     * <p>The start time of the query. Format: <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z (UTC).</p>
      * <blockquote>
      * <ul>
-     * <li>Playback data from the last year is supported.</li>
+     * <li>You can query playback data history for the past year.</li>
      * <li>The time range for a single query cannot exceed 31 days.</li>
      * <li>The time interval is left-closed and right-open [StartTime, EndTime).</li>
      * </ul>

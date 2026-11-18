@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAuditRequest extends TeaModel {
     /**
-     * <p>The array of review content.</p>
-     * <p>A maximum of <strong>100</strong> audio or video entries can be reviewed at a time. Convert the array to a string before passing it as the parameter value.</p>
-     * <p>For the specific parameter structure, see the <strong>AuditContent</strong> table below.</p>
+     * <p>The array of review content. A maximum of <strong>100</strong> audio or video review items are supported at a time. You must convert the array to a string before passing it as a parameter value. For the specific parameter structure definition, see the <strong>AuditContent</strong> table below.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -8,7 +8,7 @@ public class DescribeVodDomainReqHitRateDataResponseBody extends TeaModel {
     public DescribeVodDomainReqHitRateDataResponseBodyData data;
 
     /**
-     * <p>The time interval between data entries, which is the time granularity of the data. Unit: seconds.</p>
+     * <p>The time interval of each data entry, which is the time granularity of the data. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -26,7 +26,7 @@ public class DescribeVodDomainReqHitRateDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range for the returned data.</p>
+     * <p>The end time of the returned data. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-12-22T08:00:00Z</p>
@@ -44,7 +44,7 @@ public class DescribeVodDomainReqHitRateDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range for the returned data.</p>
+     * <p>The start time of the returned data. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-12-21T08:00:00Z</p>

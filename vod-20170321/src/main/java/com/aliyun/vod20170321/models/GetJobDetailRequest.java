@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetJobDetailRequest extends TeaModel {
     /**
-     * <p>The task ID. Note: To query a transcoding task by TaskId, see <a href="https://www.alibabacloud.com/help/en/vod/developer-reference/api-vod-2017-03-21-gettranscodetask">GetTranscodeTask</a>.</p>
+     * <p>The job ID. Note: To query a transcoding task by TaskId, refer to <a href="https://www.alibabacloud.com/help/en/vod/developer-reference/api-vod-2017-03-21-gettranscodetask">GetTranscodeTask</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachAppPolicyToIdentityRequest extends TeaModel {
     /**
-     * <p>The application ID. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</p>
+     * <p>The application ID. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multiple applications</a>.</p>
      * <blockquote>
      * <p>If the policy name is VODAppAdministratorAccess, this parameter is optional. For other policies, this parameter is required.</p>
      * </blockquote>
@@ -45,11 +45,11 @@ public class AttachAppPolicyToIdentityRequest extends TeaModel {
     public String identityType;
 
     /**
-     * <p>The policy names. Separate multiple names with commas (,). Only system policies are supported. Valid values:</p>
+     * <p>The policy names. Separate multiple names with commas (,). Currently, only system policies are supported. Valid values:</p>
      * <ul>
-     * <li><strong>VODAppFullAccess</strong>: permissions to manage and operate all resources in the application.</li>
-     * <li><strong>VODAppReadOnlyAccess</strong>: read-only permissions on all resources in the application.</li>
-     * <li><strong>VODAppAdministratorAccess</strong>: application administrator permissions.</li>
+     * <li><strong>VODAppFullAccess</strong>: the permissions to manage and operate all resources under the application.</li>
+     * <li><strong>VODAppReadOnlyAccess</strong>: the read-only permissions on all resources under the application.</li>
+     * <li><strong>VODAppAdministratorAccess</strong>: the application administrator permissions.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

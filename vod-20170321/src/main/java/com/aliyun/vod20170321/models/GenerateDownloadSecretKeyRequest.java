@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateDownloadSecretKeyRequest extends TeaModel {
     /**
-     * <p>The custom encryption private key string. The string is 16 to 32 characters in length and consists of letters and digits. The string must contain uppercase letters, lowercase letters, and digits.</p>
+     * <p>The custom encryption private key string. The string must be 16 to 32 characters in length, consist of letters and digits, and contain uppercase letters, lowercase letters, and digits.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,13 @@ public class GenerateDownloadSecretKeyRequest extends TeaModel {
     public String appDecryptKey;
 
     /**
-     * <p>The unique identity of the app.</p>
+     * <p>The unique app identifier.</p>
      * <ul>
-     * <li>Android: the SHA-1 value of the keystore file. The obtained SHA-1 value is a character string with colons.</li>
-     * <li>iOS: the App Bundle ID value.</li>
-     * <li>Windows: the serial number of the digital signing certificate.</li>
+     * <li>Android: the SHA-1 value of the keystore file. The obtained SHA-1 value must be a string that contains colons.</li>
+     * <li>iOS: the app bundle ID.</li>
+     * <li>Windows: the serial number of the digital signature certificate.</li>
      * </ul>
-     * <p>For information about how to obtain the unique identity of the app, see <a href="~~86107#section-wtj-9d7-lg2~~">Obtain the unique identity of the app</a>.</p>
+     * <p>For more information about how to obtain the unique app identifier, see <a href="~~86107#section-wtj-9d7-lg2~~">Obtain the unique app identifier</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

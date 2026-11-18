@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetImageInfoRequest extends TeaModel {
     /**
-     * <p>The validity period of the image access URL. Unit: seconds.</p>
+     * <p>The expiration time of the image access URL. Unit: seconds.</p>
      * <ul>
      * <li>If OutputType is set to cdn:<ul>
-     * <li>The image URL expires only if URL signing is enabled. Otherwise, the URL is permanently valid.</li>
+     * <li>The image URL expires only if URL authentication is enabled. Otherwise, the URL is permanently valid.</li>
      * <li>Minimum value: 1.</li>
      * <li>Maximum value: unlimited.</li>
-     * <li>Default value: If this parameter is not specified, the default validity period specified in URL signing is used.</li>
+     * <li>Default value: If this parameter is not specified, the default validity period configured for URL authentication is used.</li>
      * </ul>
      * </li>
      * <li>If OutputType is set to oss:<ul>
      * <li>The playback URL expires only if the storage permission is set to private. Otherwise, the URL is permanently valid.</li>
      * <li>Minimum value: 1.</li>
-     * <li>Maximum value: To reduce security risks to the origin server, the maximum value is <strong>2592000</strong> (30 days) if the image is stored in a VOD system bucket, and <strong>129600</strong> (36 hours) if the image is stored in your own OSS bucket.</li>
+     * <li>Maximum value: To reduce security risks of the origin server, the maximum value is <strong>2592000</strong> (30 days) if the image is stored in an ApsaraVideo VOD bucket, and <strong>129600</strong> (36 hours) if the image is stored in a custom OSS bucket.</li>
      * <li>Default value: If this parameter is not specified, the value is 3600.</li>
      * </ul>
      * </li>
@@ -32,9 +32,9 @@ public class GetImageInfoRequest extends TeaModel {
     /**
      * <p>The image ID. You can obtain the image ID by using one of the following methods:</p>
      * <ul>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com/">ApsaraVideo VOD console</a> and choose <strong>Media Files &gt; Images</strong> to view the ID.</li>
-     * <li>Obtain the ID from the response of the <a href="~~CreateUploadImage~~">CreateUploadImage</a> operation when you retrieve the upload URL and credential.</li>
-     * <li>Obtain the ID from the response of the <a href="~~SearchMedia~~">SearchMedia</a> operation when you query images.</li>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com/">ApsaraVideo VOD console</a> and choose <strong>Media Assets</strong> &gt; <strong>Images</strong> to view the ID.</li>
+     * <li>Call the <a href="~~CreateUploadImage~~">CreateUploadImage</a> operation to obtain the upload URL and credential. The image ID is returned in the response.</li>
+     * <li>Call the <a href="~~SearchMedia~~">SearchMedia</a> operation to query images. The image ID is returned in the response.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -45,10 +45,10 @@ public class GetImageInfoRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The type of the image access URL to return. Valid values:</p>
+     * <p>The type of the output image access URL. Valid values:</p>
      * <ul>
-     * <li>oss: the origin URL.</li>
-     * <li>cdn (default): the accelerated URL.</li>
+     * <li>oss: the back-to-origin URL.</li>
+     * <li>cdn: the accelerated URL. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>

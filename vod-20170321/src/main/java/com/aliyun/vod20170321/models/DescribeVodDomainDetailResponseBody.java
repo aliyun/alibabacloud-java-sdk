@@ -135,7 +135,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
 
     public static class DescribeVodDomainDetailResponseBodyDomainDetail extends TeaModel {
         /**
-         * <p>The name of the HTTPS certificate. This parameter is returned only if HTTPS secure acceleration is enabled.</p>
+         * <p>The name of the HTTPS certificate if HTTPS secure acceleration is enabled. This parameter is not returned if HTTPS secure acceleration is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>testCertName</p>
@@ -144,7 +144,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         public String certName;
 
         /**
-         * <p>The CNAME assigned to the accelerated domain name. You must add a CNAME record with your DNS provider to map the accelerated domain name to this CNAME. For more information, see <a href="https://help.aliyun.com/document_detail/86075.html">Configure a CNAME record</a>.</p>
+         * <p>The CNAME domain name generated for the accelerated domain name. You must add a CNAME record at your DNS provider to resolve the accelerated domain name to this CNAME domain name. For more information, see <a href="https://help.aliyun.com/document_detail/86075.html">Configure CNAME</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com.w.alikunlun.net</p>
@@ -153,7 +153,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         public String cname;
 
         /**
-         * <p>The description of the VOD acceleration domain name.</p>
+         * <p>The description of the ApsaraVideo VOD accelerated domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>testDescription</p>
@@ -162,7 +162,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The VOD acceleration domain name.</p>
+         * <p>The ApsaraVideo VOD accelerated domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -171,14 +171,14 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The status of the accelerated domain name. Valid values:</p>
+         * <p>The running status of the accelerated domain name. Valid values:</p>
          * <ul>
-         * <li><strong>online</strong>: enabled.</li>
-         * <li><strong>offline</strong>: disabled.</li>
-         * <li><strong>configuring</strong>: being configured.</li>
-         * <li><strong>configure_failed</strong>: configuration failed.</li>
-         * <li><strong>checking</strong>: being reviewed.</li>
-         * <li><strong>check_failed</strong>: review failed.</li>
+         * <li><strong>online</strong>: Enabled.</li>
+         * <li><strong>offline</strong>: Disabled.</li>
+         * <li><strong>configuring</strong>: Configuring.</li>
+         * <li><strong>configure_failed</strong>: Configuration failed.</li>
+         * <li><strong>checking</strong>: Under review.</li>
+         * <li><strong>check_failed</strong>: Review failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -188,7 +188,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         public String domainStatus;
 
         /**
-         * <p>The time when the domain name was created. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
+         * <p>The creation time. The format is <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2017-11-27T06:51:26Z</p>
@@ -197,7 +197,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The time when the domain name was last modified. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
+         * <p>The last modification time. The format is <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2017-11-27T06:55:26Z</p>
@@ -206,7 +206,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>Indicates whether the SSL certificate is enabled. Valid values:</p>
+         * <p>Specifies whether the SSL certificate is enabled. Valid values:</p>
          * <ul>
          * <li><strong>on</strong>: Enabled.</li>
          * <li><strong>off</strong>: Disabled.</li>
@@ -219,7 +219,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         public String SSLProtocol;
 
         /**
-         * <p>The public key of the HTTPS certificate. This parameter is returned only if HTTPS secure acceleration is enabled.</p>
+         * <p>The public key of the HTTPS certificate if HTTPS secure acceleration is enabled. This parameter is not returned if HTTPS secure acceleration is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>yourSSLPub</p>
@@ -228,11 +228,11 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         public String SSLPub;
 
         /**
-         * <p>The acceleration region. Valid values:</p>
+         * <p>The accelerated region. Valid values:</p>
          * <ul>
-         * <li><strong>domestic</strong> (default): the Chinese mainland only.</li>
-         * <li><strong>overseas</strong>: global (excluding the Chinese mainland).</li>
-         * <li><strong>global</strong>: global.</li>
+         * <li><strong>domestic</strong> (default): The Chinese mainland.</li>
+         * <li><strong>overseas</strong>: Global (excluding the Chinese mainland).</li>
+         * <li><strong>global</strong>: Global.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -42,7 +42,7 @@ public class AddCategoryResponseBody extends TeaModel {
 
     public static class AddCategoryResponseBodyCategory extends TeaModel {
         /**
-         * <p>The category ID. This ID can be used as a request parameter for the <a href="~~UpdateCategory~~">UpdateCategory</a>, <a href="~~DeleteCategory~~">DeleteCategory</a>, and <a href="~~GetCategories~~">GetCategories</a> operations.</p>
+         * <p>The category ID. You can use it as a request parameter for the <a href="~~UpdateCategory~~">UpdateCategory</a>, <a href="~~DeleteCategory~~">DeleteCategory</a>, and <a href="~~GetCategories~~">GetCategories</a> operations.</p>
          * 
          * <strong>example:</strong>
          * <p>10020</p>
@@ -62,9 +62,9 @@ public class AddCategoryResponseBody extends TeaModel {
         /**
          * <p>The category level. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: level-0 category.</li>
-         * <li><strong>1</strong>: level-1 category.</li>
-         * <li><strong>2</strong>: level-2 category.</li>
+         * <li><strong>0</strong>: level-1 category.</li>
+         * <li><strong>1</strong>: level-2 category.</li>
+         * <li><strong>2</strong>: level-3 category.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class AddCategoryResponseBody extends TeaModel {
         public Long level;
 
         /**
-         * <p>The parent category ID.</p>
+         * <p>The ID of the parent category.</p>
          * 
          * <strong>example:</strong>
          * <p>100012</p>
@@ -85,8 +85,8 @@ public class AddCategoryResponseBody extends TeaModel {
         /**
          * <p>The category type. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong>: audio/video/image category.</li>
-         * <li><strong>material</strong>: short video material category.</li>
+         * <li><strong>default</strong>: audio, video, and image categories.</li>
+         * <li><strong>material</strong>: short video material categories.</li>
          * </ul>
          * 
          * <strong>example:</strong>

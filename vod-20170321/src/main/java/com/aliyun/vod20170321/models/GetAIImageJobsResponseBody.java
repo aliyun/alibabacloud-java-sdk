@@ -44,7 +44,7 @@ public class GetAIImageJobsResponseBody extends TeaModel {
         /**
          * <p>The OSS URL of the AI image.</p>
          * <blockquote>
-         * <p>This is the task result. The URL does not contain complete authentication information. To obtain authentication information, generate it yourself or call the <a href="https://help.aliyun.com/document_detail/186924.html">ListAIImage</a> operation to retrieve the media asset result.</p>
+         * <p>This URL is returned as the task result and does not provide complete authentication information. To obtain authentication information, generate it or call the <a href="https://help.aliyun.com/document_detail/186924.html">ListAIImage</a> operation to retrieve the media asset result.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class GetAIImageJobsResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The time when the AI image processing task was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The creation time of the AI image processing task. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-15T03:30:03Z</p>
@@ -92,7 +92,7 @@ public class GetAIImageJobsResponseBody extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong>: The task is successful.</li>
+         * <li><strong>success</strong>: The task succeeded.</li>
          * <li><strong>fail</strong>: The task failed.</li>
          * </ul>
          * 
@@ -103,7 +103,7 @@ public class GetAIImageJobsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The snapshot of the configuration information of the specified template when the task was submitted.</p>
+         * <p>The snapshot of the configuration of the specified template when the task was submitted.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Format&quot;:&quot;gif&quot;,&quot;SetDefaultCover&quot;:&quot;true&quot;}</p>
@@ -112,7 +112,7 @@ public class GetAIImageJobsResponseBody extends TeaModel {
         public String templateConfig;
 
         /**
-         * <p>The AI template ID.</p>
+         * <p>The ID of the AI template.</p>
          * 
          * <strong>example:</strong>
          * <p>5a86a00f15194*****d7fe7de1b4a173</p>
@@ -127,7 +127,7 @@ public class GetAIImageJobsResponseBody extends TeaModel {
          * <li>The value must contain the MessageCallback or Extend parameter.</li>
          * <li>The maximum length is 512 bytes.</li>
          * </ul>
-         * <p>For more information about the parameter structure, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
+         * <p>For more information about how to construct the parameter, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Extend&quot;:{&quot;localId&quot;:&quot;****&quot;,&quot;test&quot;:&quot;www&quot;}}</p>

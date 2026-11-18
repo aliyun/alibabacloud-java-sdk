@@ -22,8 +22,8 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
     /**
      * <p>The task status. Valid values:</p>
      * <ul>
-     * <li><strong>Processing</strong>: Processing.</li>
-     * <li><strong>Failed</strong>: Failed.</li>
+     * <li><strong>Processing</strong>: The task is being processed.</li>
+     * <li><strong>Failed</strong>: The task failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

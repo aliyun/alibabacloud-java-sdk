@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetMessageCallbackRequest extends TeaModel {
     /**
-     * <p>The application ID. If this parameter is not specified, the ID of the default application is used, which is the fixed value: <strong>app-1000000</strong>.</p>
+     * <p>The application ID. If you do not specify this parameter, the ID of the default application is used, which is fixed at <strong>app-1000000</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>app-1000000</p>
@@ -14,7 +14,7 @@ public class SetMessageCallbackRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The authentication key. The key can be up to 32 characters in length and must contain uppercase letters, lowercase letters, and digits. This parameter can be set when the callback method is <strong>HTTP</strong>.</p>
+     * <p>The authentication key. The key can be up to 32 characters in length and must contain both uppercase and lowercase letters and digits. You can set this parameter when the callback method is set to <strong>HTTP</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>Dsf346dvet</p>
@@ -23,10 +23,10 @@ public class SetMessageCallbackRequest extends TeaModel {
     public String authKey;
 
     /**
-     * <p>The authentication switch for HTTP callbacks. This parameter takes effect only when the callback method is set to <strong>HTTP</strong>. Valid values:</p>
+     * <p>Specifies whether to enable authentication for HTTP callbacks. This parameter takes effect only when the callback method is set to <strong>HTTP</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: enabled.</li>
-     * <li><strong>off</strong>: disabled.</li>
+     * <li><strong>on</strong>: Enabled.</li>
+     * <li><strong>off</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class SetMessageCallbackRequest extends TeaModel {
      * <p>The callback method. Valid values:</p>
      * <ul>
      * <li><strong>HTTP</strong></li>
-     * <li><strong>Simple Message Queue (formerly MNS)</strong></li>
+     * <li><strong>Simple MSMQ (formerly MNS)</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class SetMessageCallbackRequest extends TeaModel {
 
     /**
      * <p>The callback URL. This parameter is required when the callback method is set to <strong>HTTP</strong>.
-     * The callback URL cannot exceed 256 bytes in length. Multiple callback URLs are not supported.</p>
+     * The callback URL cannot exceed 256 bytes in length. You cannot specify multiple callback URLs.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://developer.aliyundoc.com">http://developer.aliyundoc.com</a></p>
@@ -59,10 +59,10 @@ public class SetMessageCallbackRequest extends TeaModel {
     public String callbackURL;
 
     /**
-     * <p>The event types for callbacks. If this parameter is left empty, all notifications are disabled. If this parameter is set to <strong>ALL</strong>, all notifications are enabled. You can also specify specific event types, separated by commas (,). For the valid event types, see <a href="https://help.aliyun.com/document_detail/55627.html">Event types</a>.</p>
+     * <p>The callback event types. If this parameter is left empty, all message notifications are disabled. If this parameter is set to <strong>ALL</strong>, all message notifications are enabled. You can also specify specific event types to enable. Separate multiple event types with commas (,). For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/55627.html">Event types</a>.</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <blockquote>
-     * <p>All AI-related events such as AIMediaAuditComplete and AIMediaDNAComplete use the value <strong>AIComplete</strong>.</p>
+     * <p>All AI-related events, such as AIMediaAuditComplete and AIMediaDNAComplete, use the value <strong>AIComplete</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class SetMessageCallbackRequest extends TeaModel {
     public String eventTypeList;
 
     /**
-     * <p>The public endpoint of Simple Message Queue (formerly MNS). This parameter is required when the callback method is set to <strong>Simple Message Queue (formerly MNS)</strong>. Log on to the <a href="https://account.aliyun.com/login/login.html">Simple Message Queue (formerly MNS) console</a> and click the <strong>Get Endpoint</strong> button in the upper-right corner to obtain the endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/27480.html">Endpoint</a>.</p>
+     * <p>The public endpoint of the MSMQ. Settings for this parameter are required when the callback method is set to <strong>Simple MSMQ (formerly MNS)</strong>. You can logon to the <a href="https://account.aliyun.com/login/login.html">Message Service console</a> and click the <strong>Get Endpoint</strong> button in the upper-right corner to obtain the endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/27480.html">Endpoints</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>http://****.mns.cn-shanghai.aliyuncs.com/</p>
@@ -81,7 +81,7 @@ public class SetMessageCallbackRequest extends TeaModel {
     public String mnsEndpoint;
 
     /**
-     * <p>The name of the message queue. Log on to the <a href="https://account.aliyun.com/login/login.html">Simple Message Queue (formerly MNS) console</a> and view the queue in the <strong>Queue List</strong>. This parameter is required when the callback method is set to <strong>Simple Message Queue (formerly MNS)</strong>.</p>
+     * <p>The name of the MSMQ. You can logon to the <a href="https://account.aliyun.com/login/login.html">Message Service console</a> and view the name in the <strong>Queue List</strong>. Settings for this parameter are required when the callback method is set to <strong>Simple MSMQ (formerly MNS)</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>quene_name</p>

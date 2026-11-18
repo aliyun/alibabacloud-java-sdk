@@ -21,7 +21,7 @@ public class CancelUrlUploadJobsRequest extends TeaModel {
     public String jobIds;
 
     /**
-     * <p>The list of source video upload URLs. Separate multiple URLs with commas (,). A maximum of 10 URLs are supported.</p>
+     * <p>The list of source video URLs to upload. Separate multiple URLs with commas (,). A maximum of 10 URLs are supported.</p>
      * <blockquote>
      * <ul>
      * <li>URL-encode the URLs before use.</li>

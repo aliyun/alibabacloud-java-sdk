@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
     /**
-     * <p>The time interval between data entries. Unit: seconds.</p>
-     * <p>Based on the time range per query, this parameter returns a fixed value of 60 (1 minute), 300 (5 minutes), or 3600 (1 hour). For more information, see <strong>Time granularity of returned data</strong> in the <strong>operation description</strong>.</p>
+     * <p>The time interval between two consecutive data points. Unit: seconds.</p>
+     * <p>Based on the time range for a single query, this parameter returns a fixed value of 60 (1 minute), 300 (5 minutes), or 3600 (1 hour). For more information, see the <strong>Time granularity of returned data</strong> section in the <strong>Operation description</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -24,7 +24,7 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
     public String domainName;
 
     /**
-     * <p>The end of the time range for the returned data.</p>
+     * <p>The end time of the data. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-11-30T05:40:00Z</p>
@@ -45,7 +45,7 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>The beginning of the time range for the returned data.</p>
+     * <p>The start time of the data. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-11-30T05:39:00Z</p>

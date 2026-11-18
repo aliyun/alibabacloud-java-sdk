@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class UpdateVideoInfosResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the audio and video files that cannot be operated on. This is typically caused by insufficient <a href="https://help.aliyun.com/document_detail/113600.html">permissions</a>.</p>
+     * <p>The IDs of the audio or video files on which operations are forbidden. This is usually caused by a lack of <a href="https://help.aliyun.com/document_detail/113600.html">permissions</a>.</p>
      */
     @NameInMap("ForbiddenVideoIds")
     public java.util.List<String> forbiddenVideoIds;
 
     /**
-     * <p>The list of custom IDs that do not exist.</p>
+     * <p>The custom IDs that do not exist.</p>
      */
     @NameInMap("NonExistReferenceIds")
     public java.util.List<String> nonExistReferenceIds;
 
     /**
-     * <p>The IDs of the audio and video files that do not exist.</p>
+     * <p>The IDs of the audio or video files that do not exist.</p>
      */
     @NameInMap("NonExistVideoIds")
     public java.util.List<String> nonExistVideoIds;

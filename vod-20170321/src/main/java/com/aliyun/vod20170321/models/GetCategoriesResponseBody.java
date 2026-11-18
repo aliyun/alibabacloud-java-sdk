@@ -79,10 +79,10 @@ public class GetCategoriesResponseBody extends TeaModel {
         public Long cateId;
 
         /**
-         * <p>The category name.</p>
+         * <p>The name of the category.</p>
          * 
          * <strong>example:</strong>
-         * <p>Movie</p>
+         * <p>movie</p>
          */
         @NameInMap("CateName")
         public String cateName;
@@ -90,9 +90,9 @@ public class GetCategoriesResponseBody extends TeaModel {
         /**
          * <p>The category level. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: level-1 category.</li>
-         * <li><strong>1</strong>: level-2 category.</li>
-         * <li><strong>2</strong>: level-3 category.</li>
+         * <li><strong>0</strong>: Level 1 category.</li>
+         * <li><strong>1</strong>: Level 2 category.</li>
+         * <li><strong>2</strong>: Level 3 category.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -113,8 +113,8 @@ public class GetCategoriesResponseBody extends TeaModel {
         /**
          * <p>The category type. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong>: audio, video, and image category.</li>
-         * <li><strong>material</strong>: short video material category.</li>
+         * <li><strong>default</strong>: Audio, video, or image category.</li>
+         * <li><strong>material</strong>: Short video material category.</li>
          * </ul>
          * 
          * <strong>example:</strong>

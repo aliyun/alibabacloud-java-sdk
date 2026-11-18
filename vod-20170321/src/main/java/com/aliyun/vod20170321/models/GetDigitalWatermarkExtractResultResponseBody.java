@@ -11,7 +11,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
     public java.util.List<GetDigitalWatermarkExtractResultResponseBodyAiExtractResultList> aiExtractResultList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>42E0554B-80F4-4921-****-ACFB22CAAAD0</p>
@@ -42,7 +42,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
 
     public static class GetDigitalWatermarkExtractResultResponseBodyAiExtractResultList extends TeaModel {
         /**
-         * <p>The time when the watermark extraction job was created.</p>
+         * <p>The time when the watermark extraction job was created. The time is displayed in UTC and formatted in accordance with ISO 8601 in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-09-16T02:49:04Z</p>
@@ -51,7 +51,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The error message. This parameter is returned only when the watermark extraction job fails (the value of <code>Status</code> is <code>Failed</code>).</p>
+         * <p>The error message. This parameter is returned only when the watermark extraction job fails (the Status parameter is Failed).</p>
          * 
          * <strong>example:</strong>
          * <p>query copyright info err</p>
@@ -69,7 +69,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The time when the watermark extraction job was last updated.</p>
+         * <p>The time when the watermark extraction job was last updated. The time is displayed in UTC and formatted in accordance with ISO 8601 in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-09-17T06:20:45Z</p>
@@ -82,7 +82,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
          * <ul>
          * <li><strong>Success</strong>: The job succeeded.	</li>
          * <li><strong>Failed</strong>: The job failed.</li>
-         * <li><strong>Processing</strong>: The job is being processed.</li>
+         * <li><strong>Processing</strong>: The job is in progress.</li>
          * </ul>
          * 
          * <strong>example:</strong>

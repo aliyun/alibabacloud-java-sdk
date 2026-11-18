@@ -16,7 +16,7 @@ public class CreateUploadVideoResponseBody extends TeaModel {
     /**
      * <p>The upload URL.</p>
      * <blockquote>
-     * <p>The upload URL returned by this operation is a Base64-encoded value. When you use an SDK or API to upload media assets, you must Base64-decode the value before use. Only uploads by using the native OSS SDK or OSS API require you to parse UploadAddress.</p>
+     * <p>The upload URL returned by the operation is Base64-encoded. When you call an SDK or API operation to upload the media asset, you must decode the URL before use. You only need to parse UploadAddress when you use the native OSS SDK or OSS API for upload.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class CreateUploadVideoResponseBody extends TeaModel {
     /**
      * <p>The upload credential.</p>
      * <blockquote>
-     * <p>The upload credential returned by this operation is a Base64-encoded value. When you use an SDK or API to upload media assets, you must Base64-decode the value before use. Only uploads by using the native OSS SDK or OSS API require you to parse UploadAuth.</p>
+     * <p>The upload credential returned by the operation is Base64-encoded. When you call an SDK or API operation to upload the media asset, you must decode the credential before use. You only need to parse UploadAuth when you use the native OSS SDK or OSS API for upload.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class CreateUploadVideoResponseBody extends TeaModel {
     public String uploadAuth;
 
     /**
-     * <p>The audio or video ID. This ID can be used as a request parameter for media asset management, media processing, and content moderation operations.</p>
+     * <p>The audio or video ID. You can use this ID as a request parameter for media asset management, media processing, and media review operations.</p>
      * 
      * <strong>example:</strong>
      * <p>93ab850b4f6f54b6e91d24d81d44****</p>

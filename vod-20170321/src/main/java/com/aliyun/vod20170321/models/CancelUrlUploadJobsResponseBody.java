@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelUrlUploadJobsResponseBody extends TeaModel {
     /**
-     * <p>The list of tasks that were successfully canceled.</p>
+     * <p>The list of successfully canceled tasks.</p>
      */
     @NameInMap("CanceledJobs")
     public java.util.List<String> canceledJobs;

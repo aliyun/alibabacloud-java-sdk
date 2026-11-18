@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobInfoResponseBody extends TeaModel {
     /**
-     * <p>The historical task list within the last 6 months.</p>
+     * <p>The list of historical tasks within the last 6 months.</p>
      */
     @NameInMap("JobInfoList")
     public java.util.List<ListJobInfoResponseBodyJobInfoList> jobInfoList;
@@ -37,7 +37,7 @@ public class ListJobInfoResponseBody extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6708D849-F109-1A6C-AC91-************</p>
@@ -84,7 +84,7 @@ public class ListJobInfoResponseBody extends TeaModel {
 
     public static class ListJobInfoResponseBodyJobInfoList extends TeaModel {
         /**
-         * <p>The time when the task was completed.</p>
+         * <p>The time when the task was completed. The time is displayed in UTC in the YYYY-MM-DDTHH:MM:SSZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:34Z</p>
@@ -93,7 +93,7 @@ public class ListJobInfoResponseBody extends TeaModel {
         public String completeTime;
 
         /**
-         * <p>The time when the task was created, in UTC. Format: YYYY-MM-DDTHH:MM:SSZ.</p>
+         * <p>The time when the task was created. The time is displayed in UTC in the YYYY-MM-DDTHH:MM:SSZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:25Z</p>

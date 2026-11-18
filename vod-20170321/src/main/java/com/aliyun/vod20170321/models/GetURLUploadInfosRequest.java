@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetURLUploadInfosRequest extends TeaModel {
     /**
-     * <p>The list of upload task IDs (JobId). The list consists of one or more JobId values. A JobId is the value of the JobId parameter returned when you call the <a href="https://help.aliyun.com/document_detail/86311.html">UploadMediaByURL</a> operation.</p>
+     * <p>The list of upload task IDs (JobIds). It consists of one or more JobIds. A JobId is the value of the JobId response parameter returned when you call the <a href="https://help.aliyun.com/document_detail/86311.html">UploadMediaByURL</a> operation.</p>
      * <ul>
      * <li>A maximum of 10 IDs are supported.</li>
      * <li>Separate multiple IDs with commas (,).</li>
@@ -21,11 +21,11 @@ public class GetURLUploadInfosRequest extends TeaModel {
     public String jobIds;
 
     /**
-     * <p>The list of source video file URLs. Separate multiple URLs with commas (,). A maximum of 10 URLs are supported.</p>
+     * <p>The list of URLs of the video source files to upload. Separate multiple URLs with commas (,). A maximum of 10 URLs are supported.</p>
      * <blockquote>
      * <ul>
-     * <li>URL-encode the URLs before use.</li>
-     * <li>If the same URL video is uploaded multiple times, pass in a single URL for the query.</li>
+     * <li>URL-encode the URLs before you use them.</li>
+     * <li>If the same video URL is uploaded multiple times, specify a single URL for the query.</li>
      * <li>You must specify either JobIds or UploadURLs. If both are specified, only JobIds is processed.</li>
      * </ul>
      * </blockquote>

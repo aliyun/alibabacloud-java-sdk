@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetImageInfosResponseBody extends TeaModel {
     /**
-     * <p>The image information list.</p>
+     * <p>The list of image information.</p>
      */
     @NameInMap("ImageInfo")
     public java.util.List<GetImageInfosResponseBodyImageInfo> imageInfo;
@@ -56,7 +56,7 @@ public class GetImageInfosResponseBody extends TeaModel {
 
     public static class GetImageInfosResponseBodyImageInfoMezzanine extends TeaModel {
         /**
-         * <p>The file size. Unit: byte.</p>
+         * <p>The file size. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>8932</p>
@@ -74,7 +74,7 @@ public class GetImageInfosResponseBody extends TeaModel {
         public String fileURL;
 
         /**
-         * <p>The image height. Unit: pixel.</p>
+         * <p>The height of the image. Unit: pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -83,7 +83,7 @@ public class GetImageInfosResponseBody extends TeaModel {
         public Integer height;
 
         /**
-         * <p>The address of the uploaded source image file.</p>
+         * <p>The name of the uploaded source image file.</p>
          * 
          * <strong>example:</strong>
          * <p>****.gif</p>
@@ -92,7 +92,7 @@ public class GetImageInfosResponseBody extends TeaModel {
         public String originalFileName;
 
         /**
-         * <p>The image width. Unit: pixel.</p>
+         * <p>The width of the image. Unit: pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -176,7 +176,7 @@ public class GetImageInfosResponseBody extends TeaModel {
         public String cateName;
 
         /**
-         * <p>The time when the image was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The time when the image was created. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-11-21T02:37:23Z</p>
@@ -216,7 +216,7 @@ public class GetImageInfosResponseBody extends TeaModel {
         public String imageType;
 
         /**
-         * <p>The mezzanine information of the image.</p>
+         * <p>The source information of the image.</p>
          */
         @NameInMap("Mezzanine")
         public GetImageInfosResponseBodyImageInfoMezzanine mezzanine;
@@ -224,7 +224,7 @@ public class GetImageInfosResponseBody extends TeaModel {
         /**
          * <p>The image status. Valid values:</p>
          * <ul>
-         * <li><strong>Uploading</strong>: The image is being uploaded. This is the initial status.</li>
+         * <li><strong>Uploading</strong>: The initial status, which indicates that the image is being uploaded.</li>
          * <li><strong>Normal</strong>: The image is uploaded.</li>
          * <li><strong>UploadFail</strong>: The image failed to be uploaded.</li>
          * </ul>
@@ -245,7 +245,7 @@ public class GetImageInfosResponseBody extends TeaModel {
         public String storageLocation;
 
         /**
-         * <p>The image tags. Multiple tags are separated by commas (,).</p>
+         * <p>The image tags. Separate multiple tags with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>tag1,tag2,tag3</p>
@@ -263,7 +263,7 @@ public class GetImageInfosResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>The image access URL. If a CDN domain name is configured, the CDN URL is returned. Otherwise, the OSS URL is returned.</p>
+         * <p>The image access URL. If a CDN domain name is configured, the value is a CDN URL. Otherwise, the value is an OSS URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example.aliyundoc.com/image/default/****.gif?auth_key=">http://example.aliyundoc.com/image/default/****.gif?auth_key=</a>****</p>

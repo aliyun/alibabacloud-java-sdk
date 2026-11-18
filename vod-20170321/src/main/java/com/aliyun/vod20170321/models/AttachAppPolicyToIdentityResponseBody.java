@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AttachAppPolicyToIdentityResponseBody extends TeaModel {
     /**
-     * <p>The policy names that failed to be attached.</p>
+     * <p>The Policy Name of the failed policy.</p>
      */
     @NameInMap("FailedPolicyNames")
     public java.util.List<String> failedPolicyNames;
 
     /**
-     * <p>The list of policy names that do not exist.</p>
+     * <p>The list of non-existent policy names.</p>
      */
     @NameInMap("NonExistPolicyNames")
     public java.util.List<String> nonExistPolicyNames;

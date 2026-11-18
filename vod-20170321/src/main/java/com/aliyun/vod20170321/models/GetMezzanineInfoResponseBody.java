@@ -73,7 +73,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String channels;
 
         /**
-         * <p>The full name of the codec.</p>
+         * <p>The long name of the codec format.</p>
          * 
          * <strong>example:</strong>
          * <p>AAC (Advanced Audio Coding)</p>
@@ -82,7 +82,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String codecLongName;
 
         /**
-         * <p>The short name of the codec.</p>
+         * <p>The short name of the codec format.</p>
          * 
          * <strong>example:</strong>
          * <p>aac</p>
@@ -127,7 +127,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String duration;
 
         /**
-         * <p>The sequence number of the audio stream, which identifies the position of the audio stream in the overall media stream.</p>
+         * <p>The sequence number of the audio stream, which identifies the position of the audio stream in the entire media stream.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -154,7 +154,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String numFrames;
 
         /**
-         * <p>The sample format.</p>
+         * <p>The sampling format.</p>
          * 
          * <strong>example:</strong>
          * <p>fltp</p>
@@ -172,7 +172,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String sampleRate;
 
         /**
-         * <p>The start time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The start time. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-01-11T12:00:00Z</p>
@@ -335,7 +335,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String avgFPS;
 
         /**
-         * <p>The file bitrate. Unit: Kbps.</p>
+         * <p>The bitrate of the file. Unit: Kbps.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -344,7 +344,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String bitrate;
 
         /**
-         * <p>The full name of the codec.</p>
+         * <p>The long name of the codec format.</p>
          * 
          * <strong>example:</strong>
          * <p>H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</p>
@@ -353,7 +353,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String codecLongName;
 
         /**
-         * <p>The short name of the codec.</p>
+         * <p>The short name of the codec format.</p>
          * 
          * <strong>example:</strong>
          * <p>h264</p>
@@ -425,7 +425,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String HDRType;
 
         /**
-         * <p>Indicates whether the video stream contains B-frames.</p>
+         * <p>Indicates whether the video contains B-frames.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -434,7 +434,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String hasBFrames;
 
         /**
-         * <p>The height of the video resolution.</p>
+         * <p>The height of the video.</p>
          * 
          * <strong>example:</strong>
          * <p>320</p>
@@ -443,7 +443,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String height;
 
         /**
-         * <p>The sequence number of the video stream, which identifies the position of the video stream in the overall media stream.</p>
+         * <p>The sequence number of the video stream, which identifies the position of the video stream in the entire media stream.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -497,7 +497,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String profile;
 
         /**
-         * <p>The video rotation angle. Value range: <strong>[0, 360)</strong>.</p>
+         * <p>The video rotation angle. Valid values: <strong>[0, 360)</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -515,7 +515,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String sar;
 
         /**
-         * <p>The start time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The start time. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-01-11T12:00:00Z</p>
@@ -533,7 +533,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String timebase;
 
         /**
-         * <p>The width of the video resolution.</p>
+         * <p>The width of the video.</p>
          * 
          * <strong>example:</strong>
          * <p>568</p>
@@ -748,7 +748,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public java.util.List<GetMezzanineInfoResponseBodyMezzanineAudioStreamList> audioStreamList;
 
         /**
-         * <p>The file bitrate. Unit: Kbps.</p>
+         * <p>The bitrate of the file. Unit: Kbps.</p>
          * 
          * <strong>example:</strong>
          * <p>771.2280</p>
@@ -757,7 +757,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String bitrate;
 
         /**
-         * <p>The time when the file was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The time when the file was created. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-11-14T09:15:50Z</p>
@@ -774,6 +774,9 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <p>The MD5 hash of the source file.</p>
+         */
         @NameInMap("FileMD5")
         public String fileMD5;
 
@@ -796,7 +799,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String fileURL;
 
         /**
-         * <p>The file frame rate, in frames per second.</p>
+         * <p>The frame rate of the file, which indicates the number of frames per second.</p>
          * 
          * <strong>example:</strong>
          * <p>25.0000</p>
@@ -805,7 +808,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String fps;
 
         /**
-         * <p>The file height. Unit: px.</p>
+         * <p>The height of the file. Unit: pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>540</p>
@@ -814,13 +817,13 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public Long height;
 
         /**
-         * <p>The type of the output URL. Valid values:</p>
+         * <p>The output URL type. Valid values:</p>
          * <ul>
-         * <li><strong>oss</strong>: back-to-origin URL.</li>
-         * <li><strong>cdn</strong> (default): CDN URL.</li>
+         * <li><strong>oss</strong>: the back-to-origin URL.</li>
+         * <li><strong>cdn</strong> (default): the accelerated URL.</li>
          * </ul>
          * <blockquote>
-         * <p>Only OSS URLs in the MP4 playback format are supported.</p>
+         * <p>Only OSS URLs for MP4 playback are supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -835,7 +838,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
          * <li><strong>UnPreprocess</strong>: Not preprocessed.</li>
          * <li><strong>Preprocessing</strong>: Being preprocessed.</li>
          * <li><strong>PreprocessSucceed</strong>: Preprocessed.</li>
-         * <li><strong>PreprocessFailed</strong>: Failed to be preprocessed.</li>
+         * <li><strong>PreprocessFailed</strong>: Preprocessing failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -845,7 +848,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String preprocessStatus;
 
         /**
-         * <p>The expiration time of the media asset restore.</p>
+         * <p>The expiration time of the media asset restoration.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-30T10:14:14Z</p>
@@ -854,11 +857,11 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String restoreExpiration;
 
         /**
-         * <p>The restore status of the media asset. Valid values:</p>
+         * <p>The media asset restoration status. Valid values:</p>
          * <ul>
-         * <li><strong>Processing</strong>: Being restored.</li>
+         * <li><strong>Processing</strong>: Restoring.</li>
          * <li><strong>Success</strong>: Restored.</li>
-         * <li><strong>Failed</strong>: Failed to be restored.</li>
+         * <li><strong>Failed</strong>: Restoration failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -879,9 +882,9 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         /**
          * <p>The file status. Valid values:</p>
          * <ul>
-         * <li><strong>Uploading</strong>: The file is being uploaded. This is the initial status.</li>
+         * <li><strong>Uploading</strong>: The file is being uploaded. This is the initial status of the file.</li>
          * <li><strong>Normal</strong>: The file is uploaded.</li>
-         * <li><strong>UploadFail</strong>: The file failed to be uploaded.</li>
+         * <li><strong>UploadFail</strong>: The file fails to be uploaded.</li>
          * <li><strong>Deleted</strong>: The file is deleted.</li>
          * </ul>
          * 
@@ -892,7 +895,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The storage class of the media asset. Valid values:</p>
+         * <p>The media asset storage class. Valid values:</p>
          * <ul>
          * <li><strong>Standard</strong>: Standard.</li>
          * <li><strong>IA</strong>: Infrequent Access for media assets.</li>
@@ -927,7 +930,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public java.util.List<GetMezzanineInfoResponseBodyMezzanineVideoStreamList> videoStreamList;
 
         /**
-         * <p>The file width. Unit: px.</p>
+         * <p>The width of the file. Unit: pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>960</p>

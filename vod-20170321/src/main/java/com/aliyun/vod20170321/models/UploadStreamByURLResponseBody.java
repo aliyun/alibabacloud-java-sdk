@@ -23,7 +23,7 @@ public class UploadStreamByURLResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The input URL of the transcoded stream. This value can be used as a request parameter of the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</p>
+     * <p>The input URL of the transcoded stream. You can use this value as a request parameter of the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/lesson-01.mp4">https://example.com/lesson-01.mp4</a></p>
@@ -32,7 +32,7 @@ public class UploadStreamByURLResponseBody extends TeaModel {
     public String sourceURL;
 
     /**
-     * <p>The job ID of the transcoded stream. This value can be used as a request parameter of the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</p>
+     * <p>The job ID of the transcoded stream. You can use this value as a request parameter of the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</p>
      * <p>ApsaraVideo VOD uses the job ID to uniquely identify a transcoded stream file. For more information, see <a href="https://help.aliyun.com/document_detail/52839.html">Basic data types - PlayInfo</a>.</p>
      * 
      * <strong>example:</strong>

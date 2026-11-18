@@ -14,7 +14,7 @@ public class GetWatermarkResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The watermark template information.</p>
+     * <p>The image or text watermark template information.</p>
      */
     @NameInMap("WatermarkInfo")
     public GetWatermarkResponseBodyWatermarkInfo watermarkInfo;
@@ -51,7 +51,7 @@ public class GetWatermarkResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The time when the watermark template was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+         * <p>The creation time of the watermark template. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format and is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-11-06T08:03:17Z</p>
@@ -60,7 +60,7 @@ public class GetWatermarkResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The URL of the watermark file (OSS URL or CDN URL).</p>
+         * <p>The URL of the watermark file, which is an OSS URL or a CDN URL.</p>
          * <blockquote>
          * <p>This parameter is returned only for image watermark templates.</p>
          * </blockquote>
@@ -72,10 +72,10 @@ public class GetWatermarkResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
-         * <p>Indicates whether the watermark template is the default template. Valid values:</p>
+         * <p>Specifies whether the watermark template is the default image or text watermark template. Valid values:</p>
          * <ul>
-         * <li><strong>Default</strong>: the default watermark template.</li>
-         * <li><strong>NotDefault</strong>: not the default watermark template.</li>
+         * <li><strong>Default</strong>: default image or text watermark template.</li>
+         * <li><strong>NotDefault</strong>: non-default image or text watermark template.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class GetWatermarkResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The configuration information of the watermark (JSON string), including the display position and effect of the watermark. The configuration parameters differ between image watermarks and text watermarks. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</p>
+         * <p>The configuration information of the image or text watermark in JSON string format, including the display position and effect of the watermark. The configuration parameters for image watermarks and text watermarks are different. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;ReferPos&quot;: &quot;BottomRight&quot;,&quot;Height&quot;: &quot;55&quot;,&quot;Width&quot;: &quot;55&quot;,&quot;Dx&quot;: &quot;8&quot;,&quot;Dy&quot;: &quot;8&quot; }</p>
@@ -116,7 +116,7 @@ public class GetWatermarkResponseBody extends TeaModel {
         public String watermarkConfig;
 
         /**
-         * <p>The watermark template ID.</p>
+         * <p>The ID of the watermark template.</p>
          * 
          * <strong>example:</strong>
          * <p>505e2e287ea*****ecfddd386d384</p>

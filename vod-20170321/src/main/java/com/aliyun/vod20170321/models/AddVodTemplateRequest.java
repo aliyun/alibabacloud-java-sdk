@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddVodTemplateRequest extends TeaModel {
     /**
-     * <p>The application ID. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</p>
+     * <p>The ID of the application. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>app-****</p>
@@ -14,10 +14,10 @@ public class AddVodTemplateRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The template name.</p>
+     * <p>The name of the template.</p>
      * <ul>
      * <li>The name can be up to 128 bytes in length.</li>
-     * <li>UTF-8 encoded.</li>
+     * <li>The name must be encoded in UTF-8.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -28,7 +28,7 @@ public class AddVodTemplateRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The template configuration data in JSON format. For more information about the data structure, see <a href="https://help.aliyun.com/document_detail/98618.html">Snapshot template configuration</a> or <a href="https://help.aliyun.com/document_detail/98618.html">Animated image template configuration</a>.</p>
+     * <p>The configuration data of the template in JSON format. For more information about the data structure, see <a href="https://help.aliyun.com/document_detail/98618.html">Snapshot template configuration</a> or <a href="https://help.aliyun.com/document_detail/98618.html">Animated image template configuration</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

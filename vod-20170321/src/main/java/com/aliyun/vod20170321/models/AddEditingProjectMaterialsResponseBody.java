@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddEditingProjectMaterialsResponseBody extends TeaModel {
     /**
-     * <p>The list of materials.</p>
+     * <p>The list of media assets.</p>
      */
     @NameInMap("MaterialList")
     public java.util.List<AddEditingProjectMaterialsResponseBodyMaterialList> materialList;
@@ -51,7 +51,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public Integer cateId;
 
         /**
-         * <p>The material category name.</p>
+         * <p>The name of the media asset category.</p>
          * 
          * <strong>example:</strong>
          * <p>Category 1</p>
@@ -60,13 +60,13 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String cateName;
 
         /**
-         * <p>The thumbnail URL of the material.</p>
+         * <p>The URL of the media asset thumbnail.</p>
          */
         @NameInMap("CoverURL")
         public String coverURL;
 
         /**
-         * <p>The time when the material was created. The time follows the format: <i>yyyy-mm-dd</i>t<i>hh:mm:ss</i>z (UTC).</p>
+         * <p>The time when the media asset was created. The time follows the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-10-02T08:26Z</p>
@@ -84,16 +84,16 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public Long customerId;
 
         /**
-         * <p>The material description.</p>
+         * <p>The description of the media asset.</p>
          * 
          * <strong>example:</strong>
-         * <p>Material description</p>
+         * <p>Media asset description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The material duration. Unit: seconds. The value is accurate to four decimal places.</p>
+         * <p>The duration of the media asset. Unit: seconds. The value is accurate to four decimal places.</p>
          * 
          * <strong>example:</strong>
          * <p>3690.2332</p>
@@ -102,7 +102,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public Float duration;
 
         /**
-         * <p>The material ID.</p>
+         * <p>The ID of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>85befc4118b84c6723e53b80b1****</p>
@@ -111,11 +111,11 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String materialId;
 
         /**
-         * <p>The material type. Valid values:</p>
+         * <p>The type of the media asset. Valid values:</p>
          * <ul>
-         * <li><strong>video</strong>: video.</li>
-         * <li><strong>audio</strong>: audio-only.</li>
-         * <li><strong>image</strong>: image.</li>
+         * <li><strong>video</strong>: video</li>
+         * <li><strong>audio</strong>: audio-only</li>
+         * <li><strong>image</strong>: image</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String materialType;
 
         /**
-         * <p>The time when the material was last modified. The time follows the format: <i>yyyy-mm-dd</i>t<i>hh:mm:ss</i>z (UTC).</p>
+         * <p>The time when the media asset was updated. The time follows the <i>yyyy-mm-dd</i>T<i>hh:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-25T07:28:34Z</p>
@@ -143,7 +143,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>The array of snapshot URLs for the material.</p>
+         * <p>The array of snapshot URLs for the media asset.</p>
          */
         @NameInMap("Snapshots")
         public java.util.List<String> snapshots;
@@ -158,13 +158,13 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String spriteConfig;
 
         /**
-         * <p>The array of sprite URLs for the material.</p>
+         * <p>The array of sprite URLs for the media asset.</p>
          */
         @NameInMap("Sprites")
         public java.util.List<String> sprites;
 
         /**
-         * <p>The material status. Valid values:</p>
+         * <p>The status of the media asset. Valid values:</p>
          * <ul>
          * <li><strong>Normal</strong>: Normal.</li>
          * <li><strong>Uploading</strong>: Uploading.</li>
@@ -178,7 +178,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The material tags. Multiple tags are separated by commas (,).</p>
+         * <p>The tags of the media asset. Separate multiple tags with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>tag1,tag2</p>
@@ -187,7 +187,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String tags;
 
         /**
-         * <p>The material title.</p>
+         * <p>The title of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

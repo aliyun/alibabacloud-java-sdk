@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class BatchGetMediaInfosResponseBody extends TeaModel {
     /**
-     * <p>The list of media asset IDs that are forbidden. This is typically because you do not have permissions for multi-application operations. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</p>
+     * <p>The list of media asset IDs for which operations are forbidden. This is typically caused by a lack of multi-application permissions. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Multi-application</a>.</p>
      */
     @NameInMap("ForbiddenMediaIds")
     public java.util.List<String> forbiddenMediaIds;
 
     /**
-     * <p>The media asset list.</p>
+     * <p>The list of media assets.</p>
      */
     @NameInMap("MediaInfos")
     public java.util.List<BatchGetMediaInfosResponseBodyMediaInfos> mediaInfos;
@@ -111,7 +111,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String cateName;
 
         /**
-         * <p>The thumbnail URL of the audio/video file.</p>
+         * <p>The URL of the thumbnail for the audio or video file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.aliyundoc.com/****.jpg">https://example.aliyundoc.com/****.jpg</a></p>
@@ -120,7 +120,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String coverURL;
 
         /**
-         * <p>The time when the audio/video file was created. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+         * <p>The time when the audio or video file was created. The time follows the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-11-14T09:15:50Z</p>
@@ -129,7 +129,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The description of the audio/video file.</p>
+         * <p>The description of the audio or video file.</p>
          * 
          * <strong>example:</strong>
          * <p>Alibaba Cloud VOD video description</p>
@@ -138,10 +138,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The status of the offline download switch. After the offline download feature is enabled, mobile users can cache videos to their local devices for viewing by using ApsaraVideo Player. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Offline download</a>. Valid values:</p>
+         * <p>The status of the offline download switch. After you enable the offline download feature, mobile users can use ApsaraVideo Player to cache videos to their local devices for offline viewing. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Offline download</a>. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: Offline download is enabled.</li>
-         * <li><strong>off</strong>: Offline download is disabled.</li>
+         * <li><strong>on</strong>: The offline download feature is enabled.</li>
+         * <li><strong>off</strong>: The offline download feature is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The last time when the audio/video file was updated. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+         * <p>The time when the audio or video file was last updated. The time follows the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-06-26T06:38:48Z</p>
@@ -169,7 +169,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String modificationTime;
 
         /**
-         * <p>The custom ID. Only lowercase letters, uppercase letters, digits, hyphens, and underscores are supported. The ID must be 6 to 64 characters in length and is unique at the user level.</p>
+         * <p>The custom ID. The ID must be 6 to 64 characters in length and can contain only lowercase letters, uppercase letters, digits, hyphens (-), and underscores (_). The ID must be unique within the user dimension.</p>
          * 
          * <strong>example:</strong>
          * <p>123-123</p>
@@ -178,7 +178,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String referenceId;
 
         /**
-         * <p>The expiration time of the media asset restoration.</p>
+         * <p>The expiration time of the restored media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-30T10:14:14Z</p>
@@ -191,7 +191,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
          * <ul>
          * <li><strong>Processing</strong>: The media asset is being restored.</li>
          * <li><strong>Success</strong>: The media asset is restored.</li>
-         * <li><strong>Failed</strong>: The media asset failed to be restored.</li>
+         * <li><strong>Failed</strong>: The restoration failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -201,7 +201,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String restoreStatus;
 
         /**
-         * <p>The video snapshot URL array.</p>
+         * <p>The array of video snapshot URLs.</p>
          */
         @NameInMap("Snapshots")
         public java.util.List<String> snapshots;
@@ -210,12 +210,12 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
          * <p>The video status. Valid values:</p>
          * <ul>
          * <li><strong>Uploading</strong>: The video is being uploaded.</li>
-         * <li><strong>UploadFail</strong>: The video failed to be uploaded.</li>
-         * <li><strong>UploadSucc</strong>: The video has been uploaded.</li>
+         * <li><strong>UploadFail</strong>: The upload failed.</li>
+         * <li><strong>UploadSucc</strong>: The upload is complete.</li>
          * <li><strong>Transcoding</strong>: The video is being transcoded.</li>
-         * <li><strong>TranscodeFail</strong>: The video failed to be transcoded.</li>
+         * <li><strong>TranscodeFail</strong>: The transcoding failed.</li>
          * <li><strong>Blocked</strong>: The video is blocked.</li>
-         * <li><strong>Normal</strong>: The video is in a normal state.</li>
+         * <li><strong>Normal</strong>: The video is normal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,13 +227,13 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         /**
          * <p>The storage class of the media asset. Valid values:</p>
          * <ul>
-         * <li><strong>Standard</strong>: standard.</li>
-         * <li><strong>IA</strong>: Infrequent Access for media assets.</li>
-         * <li><strong>Archive</strong>: Archive for media assets.</li>
-         * <li><strong>ColdArchive</strong>: Cold Archive for media assets.</li>
-         * <li><strong>SourceIA</strong>: Infrequent Access for source files.</li>
-         * <li><strong>SourceArchive</strong>: Archive for source files.</li>
-         * <li><strong>SourceColdArchive</strong>: Cold Archive for source files.</li>
+         * <li><strong>Standard</strong>: Standard storage.</li>
+         * <li><strong>IA</strong>: Infrequent access storage for media assets.</li>
+         * <li><strong>Archive</strong>: Archive storage for media assets.</li>
+         * <li><strong>ColdArchive</strong>: Cold archive storage for media assets.</li>
+         * <li><strong>SourceIA</strong>: Infrequent access storage for source files.</li>
+         * <li><strong>SourceArchive</strong>: Archive storage for source files.</li>
+         * <li><strong>SourceColdArchive</strong>: Cold archive storage for source files.</li>
          * <li><strong>Changing</strong>: The storage class of the media asset is being changed.</li>
          * <li><strong>SourceChanging</strong>: The storage class of the source file is being changed.</li>
          * </ul>
@@ -245,7 +245,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String storageClass;
 
         /**
-         * <p>The storage address of the audio/video file.</p>
+         * <p>The storage address of the audio or video file.</p>
          * 
          * <strong>example:</strong>
          * <p>outin-***.oss-cn-shanghai.aliyuncs.com</p>
@@ -254,7 +254,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String storageLocation;
 
         /**
-         * <p>The tags of the audio/video file. Multiple tags are separated by commas (,).</p>
+         * <p>The tags of the audio or video file. Separate multiple tags with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>tag1, tag2</p>
@@ -263,7 +263,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String tags;
 
         /**
-         * <p>The transcoding template group ID.</p>
+         * <p>The ID of the transcoding template group.</p>
          * 
          * <strong>example:</strong>
          * <p>b4039216985f4312a5382a4ed****</p>
@@ -272,7 +272,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String templateGroupId;
 
         /**
-         * <p>The title of the audio/video file.</p>
+         * <p>The title of the audio or video file.</p>
          * 
          * <strong>example:</strong>
          * <p>Alibaba Cloud VOD Video Title</p>
@@ -281,7 +281,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>The custom parameter.</p>
+         * <p>The custom parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Extend&quot;:&quot;xxx&quot;,&quot;MessageCallback&quot;:&quot;xxx&quot;}</p>
@@ -469,8 +469,8 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         /**
          * <p>The channel layout. Valid values:</p>
          * <ul>
-         * <li><strong>mono</strong>: mono.</li>
-         * <li><strong>stereo</strong>: stereo.</li>
+         * <li><strong>mono</strong>: Mono.</li>
+         * <li><strong>stereo</strong>: Stereo.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -489,7 +489,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String channels;
 
         /**
-         * <p>The full name of the codec.</p>
+         * <p>The long name of the codec.</p>
          * 
          * <strong>example:</strong>
          * <p>AAC (Advanced Audio Coding)</p>
@@ -543,7 +543,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String duration;
 
         /**
-         * <p>The sequence number of the audio stream, which identifies the position of the audio stream in the overall media stream.</p>
+         * <p>The index of the audio stream, which indicates the position of the audio stream in all media streams.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -570,7 +570,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String numFrames;
 
         /**
-         * <p>The sample format.</p>
+         * <p>The sampling format.</p>
          * 
          * <strong>example:</strong>
          * <p>fltp</p>
@@ -588,7 +588,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String sampleRate;
 
         /**
-         * <p>The start time. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+         * <p>The start time. The time follows the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-01-11T12:00:00Z</p>
@@ -760,7 +760,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String bitrate;
 
         /**
-         * <p>The full name of the codec.</p>
+         * <p>The long name of the codec.</p>
          * 
          * <strong>example:</strong>
          * <p>H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</p>
@@ -841,7 +841,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String HDRType;
 
         /**
-         * <p>Indicates whether the video stream contains B-frames.</p>
+         * <p>Indicates whether the video contains B-frames.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -850,7 +850,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String hasBFrames;
 
         /**
-         * <p>The height of the video resolution.</p>
+         * <p>The height of the video.</p>
          * 
          * <strong>example:</strong>
          * <p>320</p>
@@ -859,7 +859,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String height;
 
         /**
-         * <p>The sequence number of the video stream, which identifies the position of the video stream in the overall media stream.</p>
+         * <p>The index of the video stream, which indicates the position of the video stream in all media streams.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -913,7 +913,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String profile;
 
         /**
-         * <p>The video rotation angle. Valid values: [0, 360).</p>
+         * <p>The rotation angle of the video. Value range: [0, 360).</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -931,7 +931,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String sar;
 
         /**
-         * <p>The start time. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+         * <p>The start time. The time follows the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-01-11T12:00:00Z</p>
@@ -949,7 +949,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String timebase;
 
         /**
-         * <p>The width of the video resolution.</p>
+         * <p>The width of the video.</p>
          * 
          * <strong>example:</strong>
          * <p>568</p>
@@ -1158,7 +1158,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
 
     public static class BatchGetMediaInfosResponseBodyMediaInfosMezzanineInfo extends TeaModel {
         /**
-         * <p>The audio stream information.</p>
+         * <p>The information about the audio streams.</p>
          */
         @NameInMap("AudioStreamList")
         public java.util.List<BatchGetMediaInfosResponseBodyMediaInfosMezzanineInfoAudioStreamList> audioStreamList;
@@ -1173,7 +1173,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String bitrate;
 
         /**
-         * <p>The time when the file was created. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+         * <p>The time when the file was created. The time follows the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-11-14T09:15:50Z</p>
@@ -1190,6 +1190,9 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <p>The MD5 hash value of the source file.</p>
+         */
         @NameInMap("FileMD5")
         public String fileMD5;
 
@@ -1212,7 +1215,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String fileURL;
 
         /**
-         * <p>The frame rate of the file, in frames per second.</p>
+         * <p>The frame rate of the file. Unit: frames per second.</p>
          * 
          * <strong>example:</strong>
          * <p>25.0000</p>
@@ -1221,7 +1224,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String fps;
 
         /**
-         * <p>The height of the file. Unit: px.</p>
+         * <p>The height of the file. Unit: pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>540</p>
@@ -1239,7 +1242,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The size of the file. Unit: bytes.</p>
+         * <p>The file size. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>4096477</p>
@@ -1252,7 +1255,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
          * <ul>
          * <li><strong>Uploading</strong>: The file is being uploaded. This is the initial status of the file.</li>
          * <li><strong>Normal</strong>: The file is uploaded.</li>
-         * <li><strong>UploadFail</strong>: The file failed to be uploaded.</li>
+         * <li><strong>UploadFail</strong>: The upload failed.</li>
          * <li><strong>Deleted</strong>: The file is deleted.</li>
          * </ul>
          * 
@@ -1263,13 +1266,13 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The video stream information.</p>
+         * <p>The information about the video streams.</p>
          */
         @NameInMap("VideoStreamList")
         public java.util.List<BatchGetMediaInfosResponseBodyMediaInfosMezzanineInfoVideoStreamList> videoStreamList;
 
         /**
-         * <p>The width of the file. Unit: px.</p>
+         * <p>The width of the file. Unit: pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>960</p>
@@ -1398,7 +1401,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
 
     public static class BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList extends TeaModel {
         /**
-         * <p>The color bit depth. The value is an integer.</p>
+         * <p>The color depth. The value is an integer.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -1425,7 +1428,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String codecName;
 
         /**
-         * <p>The time when the stream was created. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+         * <p>The creation time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-18T07:37:15Z</p>
@@ -1436,16 +1439,16 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         /**
          * <p>The definition of the video stream. Valid values:</p>
          * <ul>
-         * <li><strong>FD</strong>: low definition.</li>
-         * <li><strong>LD</strong>: standard definition.</li>
-         * <li><strong>SD</strong>: high definition.</li>
-         * <li><strong>HD</strong>: ultra high definition.</li>
-         * <li><strong>OD</strong>: original quality.</li>
-         * <li><strong>2K</strong>: 2K.</li>
-         * <li><strong>4K</strong>: 4K.</li>
-         * <li><strong>SQ</strong>: standard sound quality.</li>
-         * <li><strong>HQ</strong>: high sound quality.</li>
-         * <li><strong>AUTO</strong>: adaptive bitrate streaming.</li>
+         * <li><strong>FD</strong>: smooth</li>
+         * <li><strong>LD</strong>: standard definition</li>
+         * <li><strong>SD</strong>: high definition</li>
+         * <li><strong>HD</strong>: ultra-high definition</li>
+         * <li><strong>OD</strong>: original quality</li>
+         * <li><strong>2K</strong>: 2K</li>
+         * <li><strong>4K</strong>: 4K</li>
+         * <li><strong>SQ</strong>: standard audio quality</li>
+         * <li><strong>HQ</strong>: high audio quality</li>
+         * <li><strong>AUTO</strong>: adaptive bitrate</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1464,10 +1467,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String duration;
 
         /**
-         * <p>Indicates whether the media stream is encrypted. Valid values:</p>
+         * <p>Specifies whether the media stream is encrypted. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The stream is not encrypted.</li>
-         * <li><strong>1</strong>: The stream is encrypted.</li>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1479,10 +1482,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         /**
          * <p>The encryption mode of the media stream. Valid values:</p>
          * <ul>
-         * <li><strong>License</strong>: local decryption mode.</li>
+         * <li><strong>License</strong>: local decryption mode</li>
          * </ul>
          * <blockquote>
-         * <p>If the encryption mode is <strong>License</strong>, only ApsaraVideo Player SDK can be used for playback.</p>
+         * <p>If the encryption mode is <strong>License</strong>, the stream can only be played by using the ApsaraVideo Player SDK.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1494,11 +1497,11 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         /**
          * <p>The encryption type of the media stream. Valid values:</p>
          * <ul>
-         * <li><strong>AliyunVoDEncryption</strong>: Alibaba Cloud video encryption.</li>
-         * <li><strong>HLSEncryption</strong>: HLS encryption.</li>
+         * <li><strong>AliyunVoDEncryption</strong>: Alibaba Cloud video encryption</li>
+         * <li><strong>HLSEncryption</strong>: HLS encryption</li>
          * </ul>
          * <blockquote>
-         * <p>If the encryption type is <strong>AliyunVoDEncryption</strong>, only ApsaraVideo Player SDK can be used for playback.</p>
+         * <p>If the encryption type is <strong>AliyunVoDEncryption</strong>, the stream can only be played by using the ApsaraVideo Player SDK.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1511,7 +1514,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
          * <p>The format of the media stream.</p>
          * <ul>
          * <li>If the media file is a video, valid values are <strong>mp4</strong> and <strong>m3u8</strong>.</li>
-         * <li>If the media file is audio-only, the value is <strong>mp3</strong>.</li>
+         * <li>If the media file is audio-only, the valid value is <strong>mp3</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1547,7 +1550,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String HDRType;
 
         /**
-         * <p>The height of the media stream. Unit: px.</p>
+         * <p>The height of the media stream. Unit: pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>640</p>
@@ -1556,7 +1559,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public Long height;
 
         /**
-         * <p>The custom watermark information of the copyright watermark. This field is returned only when <code>JobType</code> is <code>2</code>.</p>
+         * <p>The custom watermark information for the copyright watermark. This field is returned only when <code>JobType</code> is set to <code>2</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>CopyrightMarkTest</p>
@@ -1565,7 +1568,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String jobExt;
 
         /**
-         * <p>The job ID of the media stream transcoding. This value serves as the unique identifier of the media stream.</p>
+         * <p>The ID of the transcoding job for the media stream. This ID uniquely identifies the media stream.</p>
          * 
          * <strong>example:</strong>
          * <p>80e9c6580e754a798c3c19c59b16****</p>
@@ -1576,8 +1579,8 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         /**
          * <p>The digital watermarking type. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: tracing watermark.</li>
-         * <li><strong>2</strong>: copyright watermark.</li>
+         * <li><strong>1</strong>: tracing watermark</li>
+         * <li><strong>2</strong>: copyright watermark</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1587,7 +1590,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public Integer jobType;
 
         /**
-         * <p>The time when the stream was last updated. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+         * <p>The update time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-20T06:32:19Z</p>
@@ -1598,9 +1601,9 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         /**
          * <p>The transcoding type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: standard transcoding.</li>
-         * <li><strong>1.0</strong>: Narrowband HD 1.0 transcoding.</li>
-         * <li><strong>2.0</strong>: Narrowband HD 2.0 transcoding.</li>
+         * <li><strong>0</strong>: standard transcoding</li>
+         * <li><strong>1.0</strong>: Narrowband HD 1.0 transcoding</li>
+         * <li><strong>2.0</strong>: Narrowband HD 2.0 transcoding</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1625,7 +1628,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>The output specification of the audio/video transcoding. For more information about valid values and descriptions, see <a href="~~124671#section-6bv-l0g-opq~~">Output specifications: Specification</a>.</p>
+         * <p>The output specification of video transcoding. For more information about the valid values and descriptions, see <a href="~~124671#section-6bv-l0g-opq~~">Output specifications: Specification</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>H264.LD</p>
@@ -1636,8 +1639,8 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         /**
          * <p>The status of the media stream. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: The stream is in a normal state. This value indicates the status of the latest transcoded stream for each definition and format.</li>
-         * <li><strong>Invisible</strong>: The stream is invisible. When multiple duplicate transcoded streams exist for each definition and format, only the latest stream is marked as Normal, and the other streams are marked as Invisible.</li>
+         * <li><strong>Normal</strong>: The stream is in the normal state. This state marks the latest transcoded stream for each definition and format.</li>
+         * <li><strong>Invisible</strong>: The stream is in the invisible state. If multiple transcoded streams exist for the same definition and format, only the latest stream is marked as Normal, and the other streams are marked as Invisible.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1657,7 +1660,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String streamType;
 
         /**
-         * <p>The transcoding template group ID.</p>
+         * <p>The ID of the transcoding template group.</p>
          * 
          * <strong>example:</strong>
          * <p>fb0716154b21a4ecb5b70a26ccc8****</p>
@@ -1666,7 +1669,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String templateGroupId;
 
         /**
-         * <p>The transcoding template ID.</p>
+         * <p>The ID of the transcoding template.</p>
          * 
          * <strong>example:</strong>
          * <p>a86a4338dd2e83da45154004a541****</p>
@@ -1675,7 +1678,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>The watermark template ID associated with the current media stream.</p>
+         * <p>The ID of the watermark template associated with the current media stream.</p>
          * 
          * <strong>example:</strong>
          * <p>dgfn26457856****</p>
@@ -1684,7 +1687,7 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String watermarkId;
 
         /**
-         * <p>The width of the media stream. Unit: px.</p>
+         * <p>The width of the media stream. Unit: pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>360</p>
@@ -1926,19 +1929,19 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The basic information of the media asset.</p>
+         * <p>The basic information about the media asset.</p>
          */
         @NameInMap("MediaInfo")
         public BatchGetMediaInfosResponseBodyMediaInfosMediaInfo mediaInfo;
 
         /**
-         * <p>The source file information.</p>
+         * <p>The information about the source file.</p>
          */
         @NameInMap("MezzanineInfo")
         public BatchGetMediaInfosResponseBodyMediaInfosMezzanineInfo mezzanineInfo;
 
         /**
-         * <p>The playback information (stream information) of the audio/video file.</p>
+         * <p>The playback information of the audio and video streams.</p>
          */
         @NameInMap("PlayInfoList")
         public java.util.List<BatchGetMediaInfosResponseBodyMediaInfosPlayInfoList> playInfoList;

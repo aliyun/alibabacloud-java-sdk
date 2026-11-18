@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAppInfoRequest extends TeaModel {
     /**
-     * <p>The application ID. This is the value of the AppId parameter returned by the <a href="https://help.aliyun.com/document_detail/113266.html">CreateApp</a> or <a href="https://help.aliyun.com/document_detail/114000.html">GetAppInfos</a> operation.</p>
+     * <p>The application ID. You can obtain the value from the AppId parameter returned by the <a href="https://help.aliyun.com/document_detail/113266.html">Create an application</a> or <a href="https://help.aliyun.com/document_detail/114000.html">List applications</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class UpdateAppInfoRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The new application name.</p>
+     * <p>The new name of the application.</p>
      * <ul>
-     * <li>The name can be up to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), hyphens (-), and at signs (@).</li>
-     * <li>UTF-8 encoding.</li>
+     * <li>The name can be up to 128 characters in length and can contain only Chinese characters, uppercase and lowercase letters, digits, periods (.), hyphens (-), and at signs (@).</li>
+     * <li>The name must be encoded in UTF-8.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,10 +28,10 @@ public class UpdateAppInfoRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The new application description.</p>
+     * <p>The new description of the application.</p>
      * <ul>
      * <li>The description can be up to 512 characters in length.</li>
-     * <li>UTF-8 encoding.</li>
+     * <li>The description must be encoded in UTF-8.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,9 +41,9 @@ public class UpdateAppInfoRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The new application status. Valid values:</p>
+     * <p>The new status of the application. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong>: Normal.</li>
+     * <li><strong>Normal</strong>: Enabled.</li>
      * <li><strong>Disable</strong>: Disabled.</li>
      * </ul>
      * 

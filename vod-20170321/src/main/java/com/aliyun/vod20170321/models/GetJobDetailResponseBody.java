@@ -20,7 +20,7 @@ public class GetJobDetailResponseBody extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6708D849-F109-1A6C-AC91-************</p>
@@ -29,13 +29,13 @@ public class GetJobDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the snapshot task. This field has a value only when jobType is Snapshot.</p>
+     * <p>The details of the snapshot task. This field has a value only when JobType is Snapshot.</p>
      */
     @NameInMap("SnapshotJobDetail")
     public GetJobDetailResponseBodySnapshotJobDetail snapshotJobDetail;
 
     /**
-     * <p>The details of the transcoding task. This field has a value only when jobType is Transcode.</p>
+     * <p>The details of the transcoding task. This field has a value only when JobType is Transcode.</p>
      */
     @NameInMap("TranscodeJobDetail")
     public GetJobDetailResponseBodyTranscodeJobDetail transcodeJobDetail;
@@ -101,7 +101,7 @@ public class GetJobDetailResponseBody extends TeaModel {
 
     public static class GetJobDetailResponseBodyAIJobDetail extends TeaModel {
         /**
-         * <p>The time when the task was completed.</p>
+         * <p>The time when the task ended. The time is displayed in UTC in the YYYY-MM-DDTHH:MM:SSZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:46Z</p>
@@ -110,7 +110,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String completeTime;
 
         /**
-         * <p>The time when the task was created, in UTC. Format: YYYY-MM-DDTHH:MM:SSZ.</p>
+         * <p>The time when the task was created. The time is displayed in UTC in the YYYY-MM-DDTHH:MM:SSZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:25Z</p>
@@ -119,7 +119,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5c9dff751ba**********59d50a967f5</p>
@@ -148,12 +148,12 @@ public class GetJobDetailResponseBody extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li>reserved: submitted.</li>
-         * <li>init: started.</li>
-         * <li>success: execution succeeded.</li>
-         * <li>fail: execution failed.</li>
-         * <li>processing: processing in progress.</li>
-         * <li>analysing: analysis in progress.</li>
+         * <li>reserved: The task is submitted.</li>
+         * <li>init: The task is started.</li>
+         * <li>success: The task succeeded.</li>
+         * <li>fail: The task failed.</li>
+         * <li>processing: The task is being processed.</li>
+         * <li>analysing: The task is being analyzed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,8 +174,8 @@ public class GetJobDetailResponseBody extends TeaModel {
         /**
          * <p>The trigger method. Valid values:</p>
          * <ul>
-         * <li>Auto: automatically triggered by a workflow.</li>
-         * <li>Manual: manually submitted.</li>
+         * <li>Auto: Automatically triggered by a workflow.</li>
+         * <li>Manual: Manually submitted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -274,7 +274,7 @@ public class GetJobDetailResponseBody extends TeaModel {
 
     public static class GetJobDetailResponseBodySnapshotJobDetail extends TeaModel {
         /**
-         * <p>The time when the task was completed.</p>
+         * <p>The time when the task was completed. The time is displayed in UTC in the YYYY-MM-DDTHH:MM:SSZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:45Z</p>
@@ -283,7 +283,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String completeTime;
 
         /**
-         * <p>The time when the task was created, in UTC. Format: YYYY-MM-DDTHH:MM:SSZ.</p>
+         * <p>The time when the task was created. The time is displayed in UTC in the YYYY-MM-DDTHH:MM:SSZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:25Z</p>
@@ -292,7 +292,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>63df12s0**********4hdq249t82kr91</p>
@@ -321,9 +321,9 @@ public class GetJobDetailResponseBody extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li>Processing: processing in progress.</li>
-         * <li>Fail: task failed.</li>
-         * <li>Success: task succeeded.</li>
+         * <li>Processing: The task is being processed.</li>
+         * <li>Fail: The task failed.</li>
+         * <li>Success: The task succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -335,8 +335,8 @@ public class GetJobDetailResponseBody extends TeaModel {
         /**
          * <p>The trigger method. Valid values:</p>
          * <ul>
-         * <li>Auto: automatically triggered by a workflow.</li>
-         * <li>Manual: manually submitted.</li>
+         * <li>Auto: Automatically triggered by a workflow.</li>
+         * <li>Manual: Manually submitted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -444,7 +444,7 @@ public class GetJobDetailResponseBody extends TeaModel {
 
     public static class GetJobDetailResponseBodyTranscodeJobDetail extends TeaModel {
         /**
-         * <p>The time when the task was completed.</p>
+         * <p>The time when the task was completed. The time is displayed in UTC in the YYYY-MM-DDTHH:MM:SSZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:34Z</p>
@@ -453,7 +453,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String completeTime;
 
         /**
-         * <p>The time when the task was created, in UTC. Format: YYYY-MM-DDTHH:MM:SSZ.</p>
+         * <p>The time when the task was created. The time is displayed in UTC in the YYYY-MM-DDTHH:MM:SSZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:25Z</p>
@@ -471,7 +471,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String definition;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2dc1634e**********3f1d22d1a0174e</p>
@@ -482,11 +482,11 @@ public class GetJobDetailResponseBody extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li>Submitted: submitted.</li>
-         * <li>Transcoding: transcoding in progress.</li>
-         * <li>TranscodeSuccess: transcoding succeeded.</li>
-         * <li>TranscodeFail: transcoding failed.</li>
-         * <li>TranscodeCancelled: transcoding canceled.</li>
+         * <li>Submitted: The task is submitted.</li>
+         * <li>Transcoding: The task is being transcoded.</li>
+         * <li>TranscodeSuccess: Transcoding succeeded.</li>
+         * <li>TranscodeFail: Transcoding failed.</li>
+         * <li>TranscodeCancelled: Transcoding is canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -604,7 +604,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The time when the workflow was created, in UTC. Format: YYYY-MM-DDTHH:MM:SSZ.</p>
+         * <p>The time when the workflow was created. The time is displayed in UTC in the YYYY-MM-DDTHH:MM:SSZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-26T05:50:14Z</p>
@@ -613,7 +613,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the workflow was last modified.</p>
+         * <p>The time when the workflow was modified. The time is displayed in UTC in the YYYY-MM-DDTHH:MM:SSZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-26T07:51:55Z</p>
@@ -633,9 +633,9 @@ public class GetJobDetailResponseBody extends TeaModel {
         /**
          * <p>The workflow status. Valid values:</p>
          * <ul>
-         * <li>Active: activated.</li>
-         * <li>Inactive: not activated.</li>
-         * <li>Deleted: deleted.</li>
+         * <li>Active: The workflow is activated.</li>
+         * <li>Inactive: The workflow is not activated.</li>
+         * <li>Deleted: The workflow is deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -645,7 +645,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The workflow type. Not populated by default.</p>
+         * <p>The workflow type. By default, this field is not populated.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -724,7 +724,7 @@ public class GetJobDetailResponseBody extends TeaModel {
 
     public static class GetJobDetailResponseBodyWorkflowTaskDetail extends TeaModel {
         /**
-         * <p>The processing results of each workflow node, in JSON format.</p>
+         * <p>The processing results of each node in the workflow, in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;VodSnapshot_123\&quot;:{\&quot;ActivityId\&quot;:\&quot;VodSnapshot\&quot;,\&quot;ActivityInstanceId\&quot;:\&quot;c8cf62d53bef4e04bf703976bae6d0b9\&quot;,\&quot;EndTime\&quot;:\&quot;2025-03-27T08:15:51Z\&quot;,\&quot;Result\&quot;:\&quot;{\\\&quot;RequestId\\\&quot;:\\\&quot;8B3649AF-5A6B-1099-BEB6-164D81067398\\\&quot;,\\\&quot;EventType\\\&quot;:\\\&quot;SnapshotComplete\\\&quot;,\\\&quot;UserId\\\&quot;:1797131669910763,\\\&quot;MessageBody\\\&quot;:{\\\&quot;Status\\\&quot;:\\\&quot;success\\\&quot;,\\\&quot;VideoId\\\&quot;:\\\&quot;00f985a50ae371f0ad1c4106e0ea0102\\\&quot;,\\\&quot;EventType\\\&quot;:\\\&quot;SnapshotComplete\\\&quot;,\\\&quot;EventTime\\\&quot;:\\\&quot;2025-03-27T08:15:50Z\\\&quot;,\\\&quot;TriggerSource\\\&quot;:\\\&quot;{\\\\\\\&quot;ActivityInstanceId\\\\\\\&quot;:\\\\\\\&quot;c8cf62d53bef4e04bf703976bae6d0b9\\\\\\\&quot;,\\\\\\\&quot;BizType\\\\\\\&quot;:\\\\\\\&quot;ice-workflow\\\\\\\&quot;}\\\&quot;}}\&quot;,\&quot;StartTime\&quot;:\&quot;2025-03-27T08:15:47Z\&quot;,\&quot;Status\&quot;:\&quot;Succeed\&quot;},\&quot;Translate_zh_en\&quot;:{\&quot;ActivityId\&quot;:\&quot;VodTranslation\&quot;,\&quot;ActivityInstanceId\&quot;:\&quot;c043a872bb044763a3d293a5c2458b50\&quot;,\&quot;EndTime\&quot;:\&quot;2025-03-27T08:20:19Z\&quot;,\&quot;Result\&quot;:\&quot;{\\\&quot;Type\\\&quot;:\\\&quot;VideoTranslationAll\\\&quot;,\\\&quot;Success\\\&quot;:false}\&quot;,\&quot;StartTime\&quot;:\&quot;2025-03-27T08:15:46Z\&quot;,\&quot;Status\&quot;:\&quot;Failed\&quot;},\&quot;Act_Start\&quot;:{\&quot;ActivityId\&quot;:\&quot;start\&quot;,\&quot;ActivityInstanceId\&quot;:\&quot;8a9402f4ff064084bf496707fb2d664a\&quot;,\&quot;Result\&quot;:\&quot;{\\\&quot;Type\\\&quot;:\\\&quot;Media\\\&quot;,\\\&quot;bizType\\\&quot;:6,\\\&quot;Media\\\&quot;:\\\&quot;00f985a50ae371f0ad1c4106e0ea0102\\\&quot;,\\\&quot;Title\\\&quot;:\\\&quot;2.mp4\\\&quot;,\\\&quot;taskInput\\\&quot;:\\\&quot;{\\\\\\\&quot;Type\\\\\\\&quot;:\\\\\\\&quot;Media\\\\\\\&quot;,\\\\\\\&quot;Media\\\\\\\&quot;:\\\\\\\&quot;00f985a50ae371f0ad1c4106e0ea0102\\\\\\\&quot;}\\\&quot;,\\\&quot;userTaskInput\\\&quot;:\\\&quot;{\\\\\\\&quot;Type\\\\\\\&quot;:\\\\\\\&quot;Media\\\\\\\&quot;,\\\\\\\&quot;Media\\\\\\\&quot;:\\\\\\\&quot;00f985a50ae371f0ad1c4106e0ea0102\\\\\\\&quot;,\\\\\\\&quot;Title\\\\\\\&quot;:\\\\\\\&quot;2.mp4\\\\\\\&quot;,\\\\\\\&quot;StorageLocation\\\\\\\&quot;:\\\\\\\&quot;yiming-pre.oss-cn-shanghai.aliyuncs.com\\\\\\\&quot;}\\\&quot;,\\\&quot;StorageLocation\\\&quot;:\\\&quot;yiming-pre.oss-cn-shanghai.aliyuncs.com\\\&quot;,\\\&quot;callerUid\\\&quot;:1797131669910763,\\\&quot;CUR_NODE_NAME\\\&quot;:\\\&quot;Act_Start\\\&quot;}\&quot;,\&quot;StartTime\&quot;:\&quot;2025-03-27T08:15:45Z\&quot;,\&quot;Status\&quot;:\&quot;Succeed\&quot;},\&quot;VodDynamicImage_123\&quot;:{\&quot;ActivityId\&quot;:\&quot;VodDynamicImage\&quot;,\&quot;ActivityInstanceId\&quot;:\&quot;26e8dab82ab84110b1150f146caf633c\&quot;,\&quot;EndTime\&quot;:\&quot;2025-03-27T08:15:55Z\&quot;,\&quot;Result\&quot;:\&quot;{\\\&quot;RequestId\\\&quot;:\\\&quot;7120B5D5-430F-14AD-8922-577F072DDD64\\\&quot;,\\\&quot;EventType\\\&quot;:\\\&quot;DynamicImageComplete\\\&quot;,\\\&quot;UserId\\\&quot;:1797131669910763,\\\&quot;MessageBody\\\&quot;:{\\\&quot;Status\\\&quot;:\\\&quot;success\\\&quot;,\\\&quot;VideoId\\\&quot;:\\\&quot;00f985a50ae371f0ad1c4106e0ea0102\\\&quot;,\\\&quot;EventType\\\&quot;:\\\&quot;DynamicImageComplete\\\&quot;,\\\&quot;EventTime\\\&quot;:\\\&quot;2025-03-27T08:15:52Z\\\&quot;,\\\&quot;TriggerSource\\\&quot;:\\\&quot;{\\\\\\\&quot;ActivityInstanceId\\\\\\\&quot;:\\\\\\\&quot;26e8dab82ab84110b1150f146caf633c\\\\\\\&quot;,\\\\\\\&quot;BizType\\\\\\\&quot;:\\\\\\\&quot;ice-workflow\\\\\\\&quot;}\\\&quot;}}\&quot;,\&quot;StartTime\&quot;:\&quot;2025-03-27T08:15:47Z\&quot;,\&quot;Status\&quot;:\&quot;Succeed\&quot;}}</p>
@@ -733,7 +733,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String activityResults;
 
         /**
-         * <p>The time when the task was created, in UTC. Format: YYYY-MM-DDTHH:MM:SSZ.</p>
+         * <p>The time when the task was created. The time is displayed in UTC in the YYYY-MM-DDTHH:MM:SSZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-27T08:15:46Z</p>
@@ -742,7 +742,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the task was completed.</p>
+         * <p>The time when the task was completed. The time is displayed in UTC in the YYYY-MM-DDTHH:MM:SSZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-27T08:20:19Z</p>
@@ -753,12 +753,12 @@ public class GetJobDetailResponseBody extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li>Init: started.</li>
-         * <li>Processing: processing in progress.</li>
-         * <li>Succeed: succeeded.</li>
-         * <li>Failed: failed.</li>
-         * <li>Canceled: canceled.</li>
-         * <li>Skip: skipped.</li>
+         * <li>Init: The task is started.</li>
+         * <li>Processing: The task is being processed.</li>
+         * <li>Succeed: The task succeeded.</li>
+         * <li>Failed: The task failed.</li>
+         * <li>Canceled: The task is canceled.</li>
+         * <li>Skip: The task is skipped.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -768,7 +768,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>46ecc024******92c8e26237e51</p>
@@ -786,7 +786,7 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String taskInput;
 
         /**
-         * <p>The custom settings. The value is a JSON string that supports message callback, upload acceleration, and other settings.</p>
+         * <p>The custom settings. The value is a JSON string that supports settings such as message callbacks and upload acceleration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;<a href="http://example.aliyundoc.com%22%7D,%22Extend%22:%7B%22localId%22:%22*****%22,%22test%22:%22www%22%7D%7D">http://example.aliyundoc.com&quot;},&quot;Extend&quot;:{&quot;localId&quot;:&quot;*****&quot;,&quot;test&quot;:&quot;www&quot;}}</a></p>

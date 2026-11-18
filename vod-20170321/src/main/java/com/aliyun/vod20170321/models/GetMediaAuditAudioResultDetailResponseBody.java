@@ -42,7 +42,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
 
     public static class GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList extends TeaModel {
         /**
-         * <p>The end time of the problematic audio segment. Unit: seconds.</p>
+         * <p>The end time of the flagged audio segment, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -54,15 +54,15 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
          * <p>The category of the audio review result. Valid values:</p>
          * <ul>
          * <li><strong>normal</strong>: Normal.</li>
-         * <li><strong>spam</strong>: Contains spam.</li>
-         * <li><strong>ad</strong>: Advertisement.</li>
+         * <li><strong>spam</strong>: Spam.</li>
+         * <li><strong>ad</strong>: Ad.</li>
          * <li><strong>politics</strong>: Political content.</li>
-         * <li><strong>terrorism</strong>: Terrorist content.</li>
-         * <li><strong>abuse</strong>: Abusive content.</li>
-         * <li><strong>porn</strong>: Pornographic content.</li>
-         * <li><strong>flood</strong>: Junk content.</li>
-         * <li><strong>contraband</strong>: Prohibited content.</li>
-         * <li><strong>meaningless</strong>: Meaningless content.</li>
+         * <li><strong>terrorism</strong>: Terrorism.</li>
+         * <li><strong>abuse</strong>: Abuse.</li>
+         * <li><strong>porn</strong>: Pornography.</li>
+         * <li><strong>flood</strong>: Flooding.</li>
+         * <li><strong>contraband</strong>: Contraband.</li>
+         * <li><strong>meaningless</strong>: Meaningless.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The start time of the problematic audio segment. Unit: seconds.</p>
+         * <p>The start time of the flagged audio segment, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -84,7 +84,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
          * <p>The text content corresponding to the audio.</p>
          * 
          * <strong>example:</strong>
-         * <p>Tiananmen</p>
+         * <p>Tian\&quot;anmen</p>
          */
         @NameInMap("Text")
         public String text;
@@ -130,7 +130,7 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
 
     public static class GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail extends TeaModel {
         /**
-         * <p>The result list.</p>
+         * <p>The list of results.</p>
          */
         @NameInMap("List")
         public java.util.List<GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList> list;

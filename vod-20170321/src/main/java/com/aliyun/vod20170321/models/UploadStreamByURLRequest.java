@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class UploadStreamByURLRequest extends TeaModel {
     /**
      * <p>The definition of the video stream.</p>
-     * <p>For valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/124671.html">Media asset parameter description - Definition</a>.</p>
+     * <p>For details, see <a href="https://help.aliyun.com/document_detail/124671.html">Media asset parameter description - Definition</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class UploadStreamByURLRequest extends TeaModel {
      * <li>HDRVivid</li>
      * <li>SDR+<blockquote>
      * <ul>
-     * <li>Case-insensitive.</li>
+     * <li>This parameter is case-insensitive.</li>
      * <li>Leave this parameter empty for non-HDR videos.</li>
      * </ul>
      * </blockquote>
@@ -64,7 +64,7 @@ public class UploadStreamByURLRequest extends TeaModel {
 
     /**
      * <p>The URL of the transcoded stream file.</p>
-     * <p>If the URL of the transcoded stream requires authentication, include the authentication parameters in StreamURL and make sure the URL is accessible through public network access.</p>
+     * <p>If the URL of the transcoded stream requires authentication, include the authentication parameters in StreamURL and make sure that the URL is accessible over public network access.</p>
      * <blockquote>
      * <p>You can obtain the audio or video URL from the console or by invoking the GetPlayInfo operation.</p>
      * </blockquote>

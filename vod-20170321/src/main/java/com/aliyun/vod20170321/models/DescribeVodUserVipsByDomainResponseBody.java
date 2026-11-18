@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVodUserVipsByDomainResponseBody extends TeaModel {
     /**
-     * <p>The accelerated domain name for ApsaraVideo VOD.</p>
+     * <p>The ApsaraVideo VOD accelerated domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>

@@ -23,7 +23,7 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The time when the task was completed. The time is in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+     * <p>The time when the task was completed. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-08-19T02:28:22Z</p>
@@ -32,7 +32,7 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
     public String finishTimeUtc;
 
     /**
-     * <p>The time when the task was created. The time is in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+     * <p>The time when the task was created. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-07-28T02:17:26Z</p>
@@ -68,7 +68,7 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of this review. This indicates the current manual review result. Valid values:</p>
+     * <p>The review result. Indicates the current manual review result. Valid values:</p>
      * <ul>
      * <li><strong>running</strong>: Running.</li>
      * <li><strong>stopped</strong>: Stopped.</li>
@@ -102,7 +102,7 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
     public String userData;
 
     /**
-     * <p>The workflow ID. You can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Processing</strong> &gt; <strong>Workflow Management</strong> to view the ID.</p>
+     * <p>The workflow ID. You can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration management</strong> &gt; <strong>Media processing configuration</strong> &gt; <strong>Workflow management</strong> to view the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>613efff3887ec34af685714cc461****</p>

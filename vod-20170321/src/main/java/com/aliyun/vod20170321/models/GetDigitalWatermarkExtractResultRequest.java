@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetDigitalWatermarkExtractResultRequest extends TeaModel {
     /**
-     * <p>The type of watermark extraction. Valid values:</p>
+     * <p>The type of the watermark to extract. Valid values:</p>
      * <ul>
-     * <li><strong>TraceMark</strong>: tracing watermark.</li>
-     * <li><strong>CopyrightMark</strong>: copyright watermark.</li>
+     * <li><strong>TraceMark</strong>: tracing watermark</li>
+     * <li><strong>CopyrightMark</strong>: copyright watermark</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -32,10 +32,10 @@ public class GetDigitalWatermarkExtractResultRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The ID of the video to query. Only a single video ID is supported. You can obtain the video ID by using the following methods:</p>
+     * <p>The ID of the video to query. You can specify only one video ID. You can obtain the video ID by using one of the following methods:</p>
      * <ul>
-     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
-     * <li>Call the <a href="~~SearchMedia~~">SearchMedia</a> operation. The video ID (VideoId) is returned in the response.</li>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Assets</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
+     * <li>Call the <a href="~~SearchMedia~~">SearchMedia</a> operation. The video ID is returned in the VideoId parameter.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

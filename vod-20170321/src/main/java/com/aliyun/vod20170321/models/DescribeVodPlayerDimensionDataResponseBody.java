@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVodPlayerDimensionDataResponseBody extends TeaModel {
     /**
-     * <p>The returned data list.</p>
+     * <p>The list of returned data.</p>
      */
     @NameInMap("DataList")
     public java.util.List<String> dataList;

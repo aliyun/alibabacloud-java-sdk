@@ -7,7 +7,7 @@ public class ListAIJobRequest extends TeaModel {
     /**
      * <p>The list of job IDs. You can obtain the JobId from the PlayInfo struct returned by the <a href="https://help.aliyun.com/document_detail/56124.html">GetPlayInfo</a> operation.</p>
      * <blockquote>
-     * <p>Separate multiple IDs with commas (,). You can specify up to 10 job IDs at a time.</p>
+     * <p>Separate multiple IDs with commas (,). You can query up to 10 job IDs at a time.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

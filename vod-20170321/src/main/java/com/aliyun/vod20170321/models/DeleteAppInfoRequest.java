@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAppInfoRequest extends TeaModel {
     /**
-     * <p>The application ID. Set this parameter to the value of AppId returned by the <a href="https://help.aliyun.com/document_detail/113266.html">CreateApp</a> or <a href="https://help.aliyun.com/document_detail/114000.html">ListApps</a> operation.</p>
+     * <p>The application ID. You can obtain the value from the AppId response parameter returned by the <a href="https://help.aliyun.com/document_detail/113266.html">Create an application</a> or <a href="https://help.aliyun.com/document_detail/114000.html">List applications</a> API operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

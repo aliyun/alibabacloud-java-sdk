@@ -19,8 +19,8 @@ public class SetAppPlayKeyRequest extends TeaModel {
     /**
      * <p>The playback key.</p>
      * <ul>
-     * <li>Only uppercase letters, lowercase letters, and digits are supported. The length must be 8 to 20 characters.</li>
-     * <li>UTF-8 encoding.</li>
+     * <li>The value must be 8 to 20 characters in length and can contain only uppercase and lowercase letters and digits.</li>
+     * <li>The value must be encoded in UTF-8.</li>
      * </ul>
      * 
      * <strong>example:</strong>

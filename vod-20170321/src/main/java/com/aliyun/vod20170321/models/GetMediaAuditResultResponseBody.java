@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMediaAuditResultResponseBody extends TeaModel {
     /**
-     * <p>The content moderation result.</p>
+     * <p>The moderation result.</p>
      */
     @NameInMap("MediaAuditResult")
     public GetMediaAuditResultResponseBodyMediaAuditResult mediaAuditResult;
@@ -42,18 +42,18 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultAudioResult extends TeaModel {
         /**
-         * <p>The category of the moderation result:</p>
+         * <p>The category of the moderation result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal.</li>
-         * <li><strong>spam</strong>: spam.</li>
-         * <li><strong>ad</strong>: advertisement.</li>
-         * <li><strong>politics</strong>: politically sensitive content.</li>
-         * <li><strong>terrorism</strong>: terrorist content.</li>
-         * <li><strong>abuse</strong>: abusive content.</li>
-         * <li><strong>porn</strong>: pornographic content.</li>
-         * <li><strong>flood</strong>: junk content.</li>
-         * <li><strong>contraband</strong>: prohibited content.</li>
-         * <li><strong>meaningless</strong>: meaningless content.</li>
+         * <li><strong>normal</strong>: Normal content.</li>
+         * <li><strong>spam</strong>: Spam.</li>
+         * <li><strong>ad</strong>: Ads.</li>
+         * <li><strong>politics</strong>: Political content.</li>
+         * <li><strong>terrorism</strong>: Terrorist content.</li>
+         * <li><strong>abuse</strong>: Abuse.</li>
+         * <li><strong>porn</strong>: Pornographic content.</li>
+         * <li><strong>flood</strong>: Flooding.</li>
+         * <li><strong>contraband</strong>: Contraband.</li>
+         * <li><strong>meaningless</strong>: Meaningless content.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String scene;
 
         /**
-         * <p>The score of the audio that matches the label. Value range: <code>[0, 100]</code>. The score represents the probability of the corresponding label classification. A higher value indicates higher accuracy.</p>
+         * <p>The confidence score for the matched label in the audio. Valid values: <code>[0, 100]</code>. The score indicates the probability that the audio belongs to the corresponding category. A higher score indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>99.91</p>
@@ -81,11 +81,11 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String score;
 
         /**
-         * <p>The recommended action based on the moderation result. Valid values:</p>
+         * <p>The moderation suggestion. Valid values:</p>
          * <ul>
-         * <li><strong>block</strong>: Blocked.</li>
-         * <li><strong>review</strong>: Needs manual review.</li>
-         * <li><strong>pass</strong>: Passed.</li>
+         * <li><strong>block</strong>: The content is blocked.</li>
+         * <li><strong>review</strong>: The content requires manual review.</li>
+         * <li><strong>pass</strong>: The content passes the moderation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,56 +136,56 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     public static class GetMediaAuditResultResponseBodyMediaAuditResultImageResultResult extends TeaModel {
         /**
          * <p>The category of the moderation result.</p>
-         * <p>When scene is <strong>porn</strong>, valid values:</p>
+         * <p>When the scene is <strong>porn</strong>, valid values are:</p>
          * <ul>
-         * <li><strong>porn</strong>: pornographic.</li>
-         * <li><strong>sexy</strong>: sexy.</li>
-         * <li><strong>normal</strong>: normal.</li>
+         * <li><strong>porn</strong>: Pornographic content.</li>
+         * <li><strong>sexy</strong>: Sexy content.</li>
+         * <li><strong>normal</strong>: Normal content.</li>
          * </ul>
-         * <p>When scene is <strong>terrorism</strong>, valid values:</p>
+         * <p>When the scene is <strong>terrorism</strong>, valid values are:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal.</li>
-         * <li><strong>bloody</strong>: bloody.</li>
-         * <li><strong>explosion</strong>: explosion or smoke.</li>
-         * <li><strong>outfit</strong>: special attire.</li>
-         * <li><strong>logo</strong>: special logo.</li>
-         * <li><strong>weapon</strong>: weapon.</li>
-         * <li><strong>politics</strong>: politically sensitive.</li>
-         * <li><strong>violence</strong>: fighting.</li>
-         * <li><strong>crowd</strong>: crowd gathering.</li>
-         * <li><strong>parade</strong>: parade.</li>
-         * <li><strong>carcrash</strong>: car crash scene.</li>
-         * <li><strong>flag</strong>: flag.</li>
-         * <li><strong>location</strong>: landmark.</li>
-         * <li><strong>others</strong>: others.</li>
+         * <li><strong>normal</strong>: Normal content.</li>
+         * <li><strong>bloody</strong>: Bloody content.</li>
+         * <li><strong>explosion</strong>: Explosions and smoke.</li>
+         * <li><strong>outfit</strong>: Special outfits.</li>
+         * <li><strong>logo</strong>: Special logos.</li>
+         * <li><strong>weapon</strong>: Weapons.</li>
+         * <li><strong>politics</strong>: Political content.</li>
+         * <li><strong>violence</strong>: Violence.</li>
+         * <li><strong>crowd</strong>: Crowds.</li>
+         * <li><strong>parade</strong>: Parades.</li>
+         * <li><strong>carcrash</strong>: Car crashes.</li>
+         * <li><strong>flag</strong>: Flags.</li>
+         * <li><strong>location</strong>: Landmarks.</li>
+         * <li><strong>others</strong>: Others.</li>
          * </ul>
-         * <p>When scene is <strong>ad</strong>, valid values:</p>
+         * <p>When the scene is <strong>ad</strong>, valid values are:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal.</li>
-         * <li><strong>ad</strong>: other advertisement.</li>
-         * <li><strong>politics</strong>: text contains politically sensitive content.</li>
-         * <li><strong>porn</strong>: text contains pornographic content.</li>
-         * <li><strong>abuse</strong>: text contains abusive content.</li>
-         * <li><strong>terrorism</strong>: text contains terrorist content.</li>
-         * <li><strong>contraband</strong>: text contains prohibited content.</li>
-         * <li><strong>spam</strong>: text contains other spam content.</li>
-         * <li><strong>npx</strong>: small ads.</li>
-         * <li><strong>qrcode</strong>: contains QR code.</li>
-         * <li><strong>programCode</strong>: contains mini program code.</li>
+         * <li><strong>normal</strong>: Normal content.</li>
+         * <li><strong>ad</strong>: Other ads.</li>
+         * <li><strong>politics</strong>: Text containing political content.</li>
+         * <li><strong>porn</strong>: Text containing pornographic content.</li>
+         * <li><strong>abuse</strong>: Text containing abusive content.</li>
+         * <li><strong>terrorism</strong>: Text containing terrorist content.</li>
+         * <li><strong>contraband</strong>: Text containing contraband content.</li>
+         * <li><strong>spam</strong>: Text containing other spam content.</li>
+         * <li><strong>npx</strong>: Intrusive ads.</li>
+         * <li><strong>qrcode</strong>: QR codes.</li>
+         * <li><strong>programCode</strong>: Mini program codes.</li>
          * </ul>
-         * <p>When scene is <strong>live</strong>, valid values:</p>
+         * <p>When the scene is <strong>live</strong>, valid values are:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal.</li>
-         * <li><strong>meaningless</strong>: no content in the image (for example, black screen or white screen).</li>
+         * <li><strong>normal</strong>: Normal content.</li>
+         * <li><strong>meaningless</strong>: No content in the image, such as a black or white screen.</li>
          * <li><strong>PIP</strong>: Picture-in-Picture (PiP).</li>
-         * <li><strong>smoking</strong>: smoking.</li>
-         * <li><strong>drivelive</strong>: in-car live streaming.</li>
+         * <li><strong>smoking</strong>: Smoking.</li>
+         * <li><strong>drivelive</strong>: Live streaming in a car.</li>
          * </ul>
-         * <p>When scene is <strong>logo</strong>, valid values:</p>
+         * <p>When the scene is <strong>logo</strong>, valid values are:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal.</li>
-         * <li><strong>TV</strong>: contains a regulated logo.</li>
-         * <li><strong>trademark</strong>: contains a trademark.</li>
+         * <li><strong>normal</strong>: Normal content.</li>
+         * <li><strong>TV</strong>: Regulated logos.</li>
+         * <li><strong>trademark</strong>: Trademarks.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,11 +197,11 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * <p>The moderation scenario. Valid values:</p>
          * <ul>
-         * <li><strong>porn</strong>: pornography detection.</li>
-         * <li><strong>terrorism</strong>: terrorist content or politically sensitive content.</li>
-         * <li><strong>ad</strong>: image or text violations.</li>
-         * <li><strong>live</strong>: undesirable scenes.</li>
-         * <li><strong>logo</strong>: image logos.</li>
+         * <li><strong>porn</strong>: Pornography detection.</li>
+         * <li><strong>terrorism</strong>: Terrorist and political content detection.</li>
+         * <li><strong>ad</strong>: Image and text violation detection.</li>
+         * <li><strong>live</strong>: Inappropriate scene detection.</li>
+         * <li><strong>logo</strong>: Image logo detection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -211,7 +211,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String scene;
 
         /**
-         * <p>The score of the image that matches the label. Value range: <code>[0, 100]</code>. The score represents the probability of the corresponding label classification. A higher value indicates higher accuracy.</p>
+         * <p>The confidence score for the matched label in the image. Valid values: <code>[0, 100]</code>. The score indicates the probability that the image belongs to the corresponding category. A higher score indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100.00000</p>
@@ -220,11 +220,11 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String score;
 
         /**
-         * <p>The recommended action based on the moderation result. Valid values:</p>
+         * <p>The moderation suggestion. Valid values:</p>
          * <ul>
-         * <li><strong>block</strong>: Blocked.</li>
-         * <li><strong>review</strong>: Needs manual review.</li>
-         * <li><strong>pass</strong>: Passed.</li>
+         * <li><strong>block</strong>: The content is blocked.</li>
+         * <li><strong>review</strong>: The content requires manual review.</li>
+         * <li><strong>pass</strong>: The content passes the moderation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -276,12 +276,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * <p>The category of the image moderation result. Multiple values are separated by commas (,). Valid values:</p>
          * <ul>
-         * <li><strong>porn</strong>: pornography.</li>
-         * <li><strong>terrorism</strong>: terrorist content or politically sensitive content.</li>
-         * <li><strong>ad</strong>: image or text violations.</li>
-         * <li><strong>live</strong>: undesirable scenes.</li>
-         * <li><strong>logo</strong>: image logos.</li>
-         * <li><strong>normal</strong>: normal.</li>
+         * <li><strong>porn</strong>: Pornographic content.</li>
+         * <li><strong>terrorism</strong>: Terrorist and political content.</li>
+         * <li><strong>ad</strong>: Image and text violations.</li>
+         * <li><strong>live</strong>: Inappropriate scenes.</li>
+         * <li><strong>logo</strong>: Image logos.</li>
+         * <li><strong>normal</strong>: Normal content.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -297,11 +297,11 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultImageResultResult> result;
 
         /**
-         * <p>The recommended action based on the moderation result. Valid values:</p>
+         * <p>The moderation suggestion. Valid values:</p>
          * <ul>
-         * <li><strong>block</strong>: Blocked.</li>
-         * <li><strong>review</strong>: Needs manual review.</li>
-         * <li><strong>pass</strong>: Passed.</li>
+         * <li><strong>block</strong>: The content is blocked.</li>
+         * <li><strong>review</strong>: The content requires manual review.</li>
+         * <li><strong>pass</strong>: The content passes the moderation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -311,7 +311,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String suggestion;
 
         /**
-         * <p>The image type. Valid values: <strong>cover</strong> (thumbnail).</p>
+         * <p>The image category. Valid value: <strong>cover</strong> (thumbnail).</p>
          * 
          * <strong>example:</strong>
          * <p>cover</p>
@@ -377,7 +377,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultTextResult extends TeaModel {
         /**
-         * <p>The text content that was moderated.</p>
+         * <p>The moderated text content.</p>
          * 
          * <strong>example:</strong>
          * <p>Hotline 123****</p>
@@ -388,13 +388,13 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * <p>The category of the moderation result. Valid values:</p>
          * <ul>
-         * <li><strong>spam</strong>: spam.</li>
-         * <li><strong>ad</strong>: advertisement.</li>
-         * <li><strong>abuse</strong>: abusive content.</li>
-         * <li><strong>flood</strong>: junk content.</li>
-         * <li><strong>contraband</strong>: prohibited content.</li>
-         * <li><strong>meaningless</strong>: meaningless content.</li>
-         * <li><strong>normal</strong>: normal.</li>
+         * <li><strong>spam</strong>: Spam.</li>
+         * <li><strong>ad</strong>: Ads.</li>
+         * <li><strong>abuse</strong>: Abuse.</li>
+         * <li><strong>flood</strong>: Flooding.</li>
+         * <li><strong>contraband</strong>: Contraband.</li>
+         * <li><strong>meaningless</strong>: Meaningless content.</li>
+         * <li><strong>normal</strong>: Normal content.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -413,7 +413,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String scene;
 
         /**
-         * <p>The score of the text that matches the label. Value range: <code>[0, 100]</code>. The score represents the probability of the corresponding label classification. A higher value indicates higher accuracy.</p>
+         * <p>The confidence score for the matched label in the text snapshot. Valid values: <code>[0, 100]</code>. The score indicates the probability that the text belongs to the corresponding category. A higher score indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100.00000</p>
@@ -422,11 +422,11 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String score;
 
         /**
-         * <p>The recommended action based on the moderation result. Valid values:</p>
+         * <p>The moderation suggestion. Valid values:</p>
          * <ul>
-         * <li><strong>block</strong>: Blocked.</li>
-         * <li><strong>review</strong>: Needs manual review.</li>
-         * <li><strong>pass</strong>: Passed.</li>
+         * <li><strong>block</strong>: The content is blocked.</li>
+         * <li><strong>review</strong>: The content requires manual review.</li>
+         * <li><strong>pass</strong>: The content passes the moderation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -436,7 +436,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String suggestion;
 
         /**
-         * <p>The text categorization. Valid values: <strong>title</strong> (title).</p>
+         * <p>The text categorization. Valid value: <strong>title</strong> (title).</p>
          * 
          * <strong>example:</strong>
          * <p>title</p>
@@ -510,19 +510,19 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The category of the advertisement moderation result. Valid values:</p>
+         * <p>The category of the ad moderation result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal.</li>
-         * <li><strong>ad</strong>: other advertisement.</li>
-         * <li><strong>politics</strong>: text contains politically sensitive content.</li>
-         * <li><strong>porn</strong>: text contains pornographic content.</li>
-         * <li><strong>abuse</strong>: text contains abusive content.</li>
-         * <li><strong>terrorism</strong>: text contains terrorist content.</li>
-         * <li><strong>contraband</strong>: text contains prohibited content.</li>
-         * <li><strong>spam</strong>: text contains other spam content.</li>
-         * <li><strong>npx</strong>: small ads.</li>
-         * <li><strong>qrcode</strong>: contains QR code.</li>
-         * <li><strong>programCode</strong>: contains mini program code.</li>
+         * <li><strong>normal</strong>: Normal content.</li>
+         * <li><strong>ad</strong>: Other ads.</li>
+         * <li><strong>politics</strong>: Text containing political content.</li>
+         * <li><strong>porn</strong>: Text containing pornographic content.</li>
+         * <li><strong>abuse</strong>: Text containing abusive content.</li>
+         * <li><strong>terrorism</strong>: Text containing terrorist content.</li>
+         * <li><strong>contraband</strong>: Text containing contraband content.</li>
+         * <li><strong>spam</strong>: Text containing other spam content.</li>
+         * <li><strong>npx</strong>: Intrusive ads.</li>
+         * <li><strong>qrcode</strong>: QR codes.</li>
+         * <li><strong>programCode</strong>: Mini program codes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -556,19 +556,19 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultTopList extends TeaModel {
         /**
-         * <p>The category of the advertisement moderation result. Valid values:</p>
+         * <p>The category of the ad moderation result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal.</li>
-         * <li><strong>ad</strong>: other advertisement.</li>
-         * <li><strong>politics</strong>: text contains politically sensitive content.</li>
-         * <li><strong>porn</strong>: text contains pornographic content.</li>
-         * <li><strong>abuse</strong>: text contains abusive content.</li>
-         * <li><strong>terrorism</strong>: text contains terrorist content.</li>
-         * <li><strong>contraband</strong>: text contains prohibited content.</li>
-         * <li><strong>spam</strong>: text contains other spam content.</li>
-         * <li><strong>npx</strong>: small ads.</li>
-         * <li><strong>qrcode</strong>: contains QR code.</li>
-         * <li><strong>programCode</strong>: contains mini program code.</li>
+         * <li><strong>normal</strong>: Normal content.</li>
+         * <li><strong>ad</strong>: Other ads.</li>
+         * <li><strong>politics</strong>: Text containing political content.</li>
+         * <li><strong>porn</strong>: Text containing pornographic content.</li>
+         * <li><strong>abuse</strong>: Text containing abusive content.</li>
+         * <li><strong>terrorism</strong>: Text containing terrorist content.</li>
+         * <li><strong>contraband</strong>: Text containing contraband content.</li>
+         * <li><strong>spam</strong>: Text containing other spam content.</li>
+         * <li><strong>npx</strong>: Intrusive ads.</li>
+         * <li><strong>qrcode</strong>: QR codes.</li>
+         * <li><strong>programCode</strong>: Mini program codes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -578,7 +578,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The score of the video snapshot that matches the label. Value range: <code>[0, 100]</code>, with precision up to 10 decimal places. The score represents the probability of the corresponding label classification. A higher value indicates higher accuracy.</p>
+         * <p>The confidence score for the matched label in the video snapshot. Valid values: <code>[0, 100]</code>. The score is accurate to 10 decimal places. The score indicates the probability that the video snapshot belongs to the corresponding category. A higher score indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -645,7 +645,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResult extends TeaModel {
         /**
-         * <p>The average score of video snapshots that match the label. Value range: <code>[0, 100]</code>, with precision up to 10 decimal places. The score represents the probability of the corresponding label classification. A higher value indicates higher accuracy.</p>
+         * <p>The average confidence score for the matched label in the video snapshots. Valid values: <code>[0, 100]</code>. The score is accurate to 10 decimal places. The score indicates the probability that the video snapshot belongs to the corresponding category. A higher score indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -654,25 +654,25 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String averageScore;
 
         /**
-         * <p>The number of video snapshots for each moderation result category.</p>
+         * <p>The number of video snapshots for each category in the moderation result.</p>
          */
         @NameInMap("CounterList")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultCounterList> counterList;
 
         /**
-         * <p>The category of the advertisement moderation result. Valid values:</p>
+         * <p>The category of the ad moderation result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal.</li>
-         * <li><strong>ad</strong>: other advertisement.</li>
-         * <li><strong>politics</strong>: text contains politically sensitive content.</li>
-         * <li><strong>porn</strong>: text contains pornographic content.</li>
-         * <li><strong>abuse</strong>: text contains abusive content.</li>
-         * <li><strong>terrorism</strong>: text contains terrorist content.</li>
-         * <li><strong>contraband</strong>: text contains prohibited content.</li>
-         * <li><strong>spam</strong>: text contains other spam content.</li>
-         * <li><strong>npx</strong>: small ads.</li>
-         * <li><strong>qrcode</strong>: contains QR code.</li>
-         * <li><strong>programCode</strong>: contains mini program code.</li>
+         * <li><strong>normal</strong>: Normal content.</li>
+         * <li><strong>ad</strong>: Other ads.</li>
+         * <li><strong>politics</strong>: Text containing political content.</li>
+         * <li><strong>porn</strong>: Text containing pornographic content.</li>
+         * <li><strong>abuse</strong>: Text containing abusive content.</li>
+         * <li><strong>terrorism</strong>: Text containing terrorist content.</li>
+         * <li><strong>contraband</strong>: Text containing contraband content.</li>
+         * <li><strong>spam</strong>: Text containing other spam content.</li>
+         * <li><strong>npx</strong>: Intrusive ads.</li>
+         * <li><strong>qrcode</strong>: QR codes.</li>
+         * <li><strong>programCode</strong>: Mini program codes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -682,7 +682,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The highest score of video snapshots that match the label. Value range: <code>[0, 100]</code>, with precision up to 10 decimal places. The score represents the probability of the corresponding label classification. A higher value indicates higher accuracy.</p>
+         * <p>The maximum confidence score for the matched label in the video snapshots. Valid values: <code>[0, 100]</code>. The score is accurate to 10 decimal places. The score indicates the probability that the video snapshot belongs to the corresponding category. A higher score indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -691,11 +691,11 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String maxScore;
 
         /**
-         * <p>The recommended action based on the moderation result. Valid values:</p>
+         * <p>The moderation suggestion. Valid values:</p>
          * <ul>
-         * <li><strong>block</strong>: Blocked.</li>
-         * <li><strong>review</strong>: Needs manual review.</li>
-         * <li><strong>pass</strong>: Passed.</li>
+         * <li><strong>block</strong>: The content is blocked.</li>
+         * <li><strong>review</strong>: The content requires manual review.</li>
+         * <li><strong>pass</strong>: The content passes the moderation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -773,7 +773,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The review result category.</p>
+         * <p>The moderation result label.</p>
          */
         @NameInMap("Label")
         public String label;
@@ -803,7 +803,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultGreenEnhancedResultTopList extends TeaModel {
         /**
-         * <p>The review result category.</p>
+         * <p>The moderation result category.</p>
          */
         @NameInMap("Label")
         public String label;
@@ -815,7 +815,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String score;
 
         /**
-         * <p>The position of the video snapshot in the video.</p>
+         * <p>The timestamp of the video snapshot in the video.</p>
          */
         @NameInMap("Timestamp")
         public String timestamp;
@@ -867,37 +867,43 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultGreenEnhancedResult extends TeaModel {
         /**
-         * <p>The average confidence score of matched frames. This field is not returned if no frames are matched.</p>
+         * <p>The average confidence score of the matched frames. This parameter is not returned if no frames are matched.</p>
          */
         @NameInMap("AverageScore")
         public String averageScore;
 
         /**
-         * <p>The aggregated count of violation labels: Label (Green label) / Count (number of matched frames for the label).</p>
+         * <p>The aggregation of violation label counts, including Label for the Green label and Count for the number of matched frames for the label.</p>
          */
         @NameInMap("CounterList")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultGreenEnhancedResultCounterList> counterList;
 
         /**
-         * <p>The union of matched Green native labels, comma-separated (such as pornographic_adultContent_tii). The value is normal if no labels are matched.</p>
+         * <p>The union of matched native Green labels, separated by commas, such as pornographic_adultContent_tii. If no labels are matched, the value is normal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("Label")
         public String label;
 
         /**
-         * <p>The highest confidence score of matched frames. This field is not returned if no frames are matched.</p>
+         * <p>The maximum confidence score of the matched frames. This parameter is not returned if no frames are matched.</p>
          */
         @NameInMap("MaxScore")
         public String maxScore;
 
         /**
-         * <p>The frame review conclusion mapped from frameResult.riskLevel: high→block, medium/low→review, none→pass.</p>
+         * <p>The image moderation conclusion, which is mapped from frameResult.riskLevel: high is mapped to block, medium or low is mapped to review, and none is mapped to pass.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         @NameInMap("Suggestion")
         public String suggestion;
 
         /**
-         * <p>The matched frame details, sorted by confidence score in descending order.</p>
+         * <p>The details of the matched frames, sorted in descending order of confidence score.</p>
          */
         @NameInMap("TopList")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultGreenEnhancedResultTopList> topList;
@@ -970,11 +976,11 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * <p>The category of the moderation result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal.</li>
-         * <li><strong>meaningless</strong>: no content in the image (for example, black screen or white screen).</li>
+         * <li><strong>normal</strong>: Normal content.</li>
+         * <li><strong>meaningless</strong>: No content in the image, such as a black or white screen.</li>
          * <li><strong>PIP</strong>: Picture-in-Picture (PiP).</li>
-         * <li><strong>smoking</strong>: smoking.</li>
-         * <li><strong>drivelive</strong>: in-car live streaming.</li>
+         * <li><strong>smoking</strong>: Smoking.</li>
+         * <li><strong>drivelive</strong>: Live streaming in a car.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1010,11 +1016,11 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * <p>The category of the moderation result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal.</li>
-         * <li><strong>meaningless</strong>: no content in the image (for example, black screen or white screen).</li>
+         * <li><strong>normal</strong>: Normal content.</li>
+         * <li><strong>meaningless</strong>: No content in the image, such as a black or white screen.</li>
          * <li><strong>PIP</strong>: Picture-in-Picture (PiP).</li>
-         * <li><strong>smoking</strong>: smoking.</li>
-         * <li><strong>drivelive</strong>: in-car live streaming.</li>
+         * <li><strong>smoking</strong>: Smoking.</li>
+         * <li><strong>drivelive</strong>: Live streaming in a car.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1024,7 +1030,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The score of the video snapshot that matches the label. Value range: <code>[0, 100]</code>, with precision up to 10 decimal places. The score represents the probability of the corresponding label classification. A higher value indicates higher accuracy.</p>
+         * <p>The confidence score for the matched label in the video snapshot. Valid values: <code>[0, 100]</code>. The score is accurate to 10 decimal places. The score indicates the probability that the video snapshot belongs to the corresponding category. A higher score indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -1091,7 +1097,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResult extends TeaModel {
         /**
-         * <p>The average score of video snapshots that match the label. Value range: <code>[0, 100]</code>, with precision up to 10 decimal places. The score represents the probability of the corresponding label classification. A higher value indicates higher accuracy.</p>
+         * <p>The average confidence score for the matched label in the video snapshots. Valid values: <code>[0, 100]</code>. The score is accurate to 10 decimal places. The score indicates the probability that the video snapshot belongs to the corresponding category. A higher score indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -1100,7 +1106,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String averageScore;
 
         /**
-         * <p>The categories of the undesirable content moderation results and the number of video snapshots for each category.</p>
+         * <p>The number of video snapshots for each inappropriate content category in the moderation result.</p>
          */
         @NameInMap("CounterList")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultCounterList> counterList;
@@ -1108,11 +1114,11 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * <p>The category of the moderation result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal.</li>
-         * <li><strong>meaningless</strong>: no content in the image (for example, black screen or white screen).</li>
+         * <li><strong>normal</strong>: Normal content.</li>
+         * <li><strong>meaningless</strong>: No content in the image, such as a black or white screen.</li>
          * <li><strong>PIP</strong>: Picture-in-Picture (PiP).</li>
-         * <li><strong>smoking</strong>: smoking.</li>
-         * <li><strong>drivelive</strong>: in-car live streaming.</li>
+         * <li><strong>smoking</strong>: Smoking.</li>
+         * <li><strong>drivelive</strong>: Live streaming in a car.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1122,7 +1128,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The highest score of video snapshots that match the label. Value range: <code>[0, 100]</code>, with precision up to 10 decimal places. The score represents the probability of the corresponding label classification. A higher value indicates higher accuracy.</p>
+         * <p>The maximum confidence score for the matched label in the video snapshots. Valid values: <code>[0, 100]</code>. The score is accurate to 10 decimal places. The score indicates the probability that the video snapshot belongs to the corresponding category. A higher score indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -1131,11 +1137,11 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String maxScore;
 
         /**
-         * <p>The recommended action based on the moderation result. Valid values:</p>
+         * <p>The moderation suggestion. Valid values:</p>
          * <ul>
-         * <li><strong>block</strong>: Blocked.</li>
-         * <li><strong>review</strong>: Needs manual review.</li>
-         * <li><strong>pass</strong>: Passed.</li>
+         * <li><strong>block</strong>: The content is blocked.</li>
+         * <li><strong>review</strong>: The content requires manual review.</li>
+         * <li><strong>pass</strong>: The content passes the moderation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1218,9 +1224,9 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * <p>The category of the logo moderation result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal.</li>
-         * <li><strong>TV</strong>: contains a regulated logo.</li>
-         * <li><strong>trademark</strong>: contains a trademark.</li>
+         * <li><strong>normal</strong>: Normal content.</li>
+         * <li><strong>TV</strong>: Regulated logos.</li>
+         * <li><strong>trademark</strong>: Trademarks.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1256,9 +1262,9 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * <p>The category of the logo moderation result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal.</li>
-         * <li><strong>TV</strong>: contains a regulated logo.</li>
-         * <li><strong>trademark</strong>: contains a trademark.</li>
+         * <li><strong>normal</strong>: Normal content.</li>
+         * <li><strong>TV</strong>: Regulated logos.</li>
+         * <li><strong>trademark</strong>: Trademarks.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1268,7 +1274,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The score of the video snapshot that matches the label. Value range: <code>[0, 100]</code>, with precision up to 10 decimal places. The score represents the probability of the corresponding label classification. A higher value indicates higher accuracy.</p>
+         * <p>The confidence score for the matched label in the video snapshot. Valid values: <code>[0, 100]</code>. The score is accurate to 10 decimal places. The score indicates the probability that the video snapshot belongs to the corresponding category. A higher score indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -1335,7 +1341,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult extends TeaModel {
         /**
-         * <p>The average score of video snapshots that match the label. Value range: <code>[0, 100]</code>, with precision up to 10 decimal places. The score represents the probability of the corresponding label classification. A higher value indicates higher accuracy.</p>
+         * <p>The average confidence score for the matched label in the video snapshots. Valid values: <code>[0, 100]</code>. The score is accurate to 10 decimal places. The score indicates the probability that the video snapshot belongs to the corresponding category. A higher score indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -1344,7 +1350,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String averageScore;
 
         /**
-         * <p>The number of video snapshots for each moderation result category.</p>
+         * <p>The number of video snapshots for each category in the moderation result.</p>
          */
         @NameInMap("CounterList")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultCounterList> counterList;
@@ -1352,9 +1358,9 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * <p>The category of the logo moderation result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: normal.</li>
-         * <li><strong>TV</strong>: contains a regulated logo.</li>
-         * <li><strong>trademark</strong>: contains a trademark.</li>
+         * <li><strong>normal</strong>: Normal content.</li>
+         * <li><strong>TV</strong>: Regulated logos.</li>
+         * <li><strong>trademark</strong>: Trademarks.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1364,7 +1370,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The highest score of video snapshots that match the label. Value range: <code>[0, 100]</code>, with precision up to 10 decimal places. The score represents the probability of the corresponding label classification. A higher value indicates higher accuracy.</p>
+         * <p>The maximum confidence score for the matched label in the video snapshots. Valid values: <code>[0, 100]</code>. The score is accurate to 10 decimal places. The score indicates the probability that the video snapshot belongs to the corresponding category. A higher score indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -1373,11 +1379,11 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String maxScore;
 
         /**
-         * <p>The recommended action based on the moderation result. Valid values:</p>
+         * <p>The moderation suggestion. Valid values:</p>
          * <ul>
-         * <li><strong>block</strong>: Blocked.</li>
-         * <li><strong>review</strong>: Needs manual review.</li>
-         * <li><strong>pass</strong>: Passed.</li>
+         * <li><strong>block</strong>: The content is blocked.</li>
+         * <li><strong>review</strong>: The content requires manual review.</li>
+         * <li><strong>pass</strong>: The content passes the moderation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1458,11 +1464,11 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The pornography detection result. Valid values:</p>
+         * <p>The pornography moderation result. Valid values:</p>
          * <ul>
-         * <li><strong>porn</strong>: pornographic.</li>
-         * <li><strong>sexy</strong>: sexy.</li>
-         * <li><strong>normal</strong>: normal.</li>
+         * <li><strong>porn</strong>: Pornographic content.</li>
+         * <li><strong>sexy</strong>: Sexy content.</li>
+         * <li><strong>normal</strong>: Normal content.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1496,11 +1502,11 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList extends TeaModel {
         /**
-         * <p>The pornography detection result. Valid values:</p>
+         * <p>The pornography moderation result. Valid values:</p>
          * <ul>
-         * <li><strong>porn</strong>: pornographic.</li>
-         * <li><strong>sexy</strong>: sexy.</li>
-         * <li><strong>normal</strong>: normal.</li>
+         * <li><strong>porn</strong>: Pornographic content.</li>
+         * <li><strong>sexy</strong>: Sexy content.</li>
+         * <li><strong>normal</strong>: Normal content.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1510,7 +1516,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The score of the video snapshot that matches the label. Value range: <code>[0, 100]</code>, with precision up to 10 decimal places. The score represents the probability of the corresponding label classification. A higher value indicates higher accuracy.</p>
+         * <p>The confidence score for the matched label in the video snapshot. Valid values: <code>[0, 100]</code>. The score is accurate to 10 decimal places. The score indicates the probability that the video snapshot belongs to the corresponding category. A higher score indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100.0000</p>
@@ -1577,7 +1583,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult extends TeaModel {
         /**
-         * <p>The average score of video snapshots that match the label. Value range: <code>[0, 100]</code>, with precision up to 10 decimal places. The score represents the probability of the corresponding label classification. A higher value indicates higher accuracy.</p>
+         * <p>The average confidence score for the matched label in the video snapshots. Valid values: <code>[0, 100]</code>. The score is accurate to 10 decimal places. The score indicates the probability that the video snapshot belongs to the corresponding category. A higher score indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -1586,17 +1592,17 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String averageScore;
 
         /**
-         * <p>The number of video snapshots for each moderation result category.</p>
+         * <p>The number of video snapshots for each category in the moderation result.</p>
          */
         @NameInMap("CounterList")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultCounterList> counterList;
 
         /**
-         * <p>The pornography detection result. Valid values:</p>
+         * <p>The pornography moderation result. Valid values:</p>
          * <ul>
-         * <li><strong>porn</strong>: pornographic.</li>
-         * <li><strong>sexy</strong>: sexy.</li>
-         * <li><strong>normal</strong>: normal.</li>
+         * <li><strong>porn</strong>: Pornographic content.</li>
+         * <li><strong>sexy</strong>: Sexy content.</li>
+         * <li><strong>normal</strong>: Normal content.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1606,7 +1612,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The highest score of video snapshots that match the label. Value range: <code>[0, 100]</code>, with precision up to 10 decimal places. The score represents the probability of the corresponding label classification. A higher value indicates higher accuracy.</p>
+         * <p>The maximum confidence score for the matched label in the video snapshots. Valid values: <code>[0, 100]</code>. The score is accurate to 10 decimal places. The score indicates the probability that the video snapshot belongs to the corresponding category. A higher score indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -1615,11 +1621,11 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String maxScore;
 
         /**
-         * <p>The recommended action based on the pornography detection result. Valid values:</p>
+         * <p>The pornography moderation suggestion. Valid values:</p>
          * <ul>
-         * <li><strong>block</strong>: Blocked.</li>
-         * <li><strong>review</strong>: Needs manual review.</li>
-         * <li><strong>pass</strong>: Passed.</li>
+         * <li><strong>block</strong>: The content is blocked.</li>
+         * <li><strong>review</strong>: The content requires manual review.</li>
+         * <li><strong>pass</strong>: The content passes the moderation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1691,7 +1697,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultCounterList extends TeaModel {
         /**
-         * <p>The number of video snapshots that contain terrorism and political content.</p>
+         * <p>The number of video snapshots for the terrorism and political content moderation result.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1700,22 +1706,22 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The review result label for terrorism and political content. Valid values:</p>
+         * <p>The moderation label for terrorism and political content. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: Normal.</li>
-         * <li><strong>bloody</strong>: Bloody content.</li>
-         * <li><strong>explosion</strong>: Explosion or smoke.</li>
-         * <li><strong>outfit</strong>: Special outfit.</li>
-         * <li><strong>logo</strong>: Special logo.</li>
-         * <li><strong>weapon</strong>: Weapon.</li>
-         * <li><strong>politics</strong>: Political content.</li>
-         * <li><strong>violence</strong>: Fighting.</li>
-         * <li><strong>crowd</strong>: Crowd gathering.</li>
-         * <li><strong>parade</strong>: Parade.</li>
-         * <li><strong>carcrash</strong>: Car crash scene.</li>
-         * <li><strong>flag</strong>: Flag.</li>
-         * <li><strong>location</strong>: Landmark.</li>
-         * <li><strong>others</strong>: Others.</li>
+         * <li><strong>normal</strong>: The content is normal.</li>
+         * <li><strong>bloody</strong>: The content contains bloody scenes.</li>
+         * <li><strong>explosion</strong>: The content contains explosions and smoke.</li>
+         * <li><strong>outfit</strong>: The content contains special outfits.</li>
+         * <li><strong>logo</strong>: The content contains special logos.</li>
+         * <li><strong>weapon</strong>: The content contains weapons.</li>
+         * <li><strong>politics</strong>: The content contains political elements.</li>
+         * <li><strong>violence</strong>: The content contains violence.</li>
+         * <li><strong>crowd</strong>: The content contains crowd gatherings.</li>
+         * <li><strong>parade</strong>: The content contains parades.</li>
+         * <li><strong>carcrash</strong>: The content contains car crash scenes.</li>
+         * <li><strong>flag</strong>: The content contains flags.</li>
+         * <li><strong>location</strong>: The content contains landmarks.</li>
+         * <li><strong>others</strong>: The content contains other elements.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1749,22 +1755,22 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultTopList extends TeaModel {
         /**
-         * <p>The review result label for terrorism and political content. Valid values:</p>
+         * <p>The moderation label for terrorism and political content. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: Normal.</li>
-         * <li><strong>bloody</strong>: Bloody content.</li>
-         * <li><strong>explosion</strong>: Explosion or smoke.</li>
-         * <li><strong>outfit</strong>: Special outfit.</li>
-         * <li><strong>logo</strong>: Special logo.</li>
-         * <li><strong>weapon</strong>: Weapon.</li>
-         * <li><strong>politics</strong>: Political content.</li>
-         * <li><strong>violence</strong>: Fighting.</li>
-         * <li><strong>crowd</strong>: Crowd gathering.</li>
-         * <li><strong>parade</strong>: Parade.</li>
-         * <li><strong>carcrash</strong>: Car crash scene.</li>
-         * <li><strong>flag</strong>: Flag.</li>
-         * <li><strong>location</strong>: Landmark.</li>
-         * <li><strong>others</strong>: Others.</li>
+         * <li><strong>normal</strong>: The content is normal.</li>
+         * <li><strong>bloody</strong>: The content contains bloody scenes.</li>
+         * <li><strong>explosion</strong>: The content contains explosions and smoke.</li>
+         * <li><strong>outfit</strong>: The content contains special outfits.</li>
+         * <li><strong>logo</strong>: The content contains special logos.</li>
+         * <li><strong>weapon</strong>: The content contains weapons.</li>
+         * <li><strong>politics</strong>: The content contains political elements.</li>
+         * <li><strong>violence</strong>: The content contains violence.</li>
+         * <li><strong>crowd</strong>: The content contains crowd gatherings.</li>
+         * <li><strong>parade</strong>: The content contains parades.</li>
+         * <li><strong>carcrash</strong>: The content contains car crash scenes.</li>
+         * <li><strong>flag</strong>: The content contains flags.</li>
+         * <li><strong>location</strong>: The content contains landmarks.</li>
+         * <li><strong>others</strong>: The content contains other elements.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1774,7 +1780,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The score of the video snapshot that matches the label. Value range: <code>[0, 100]</code>, with precision up to 10 decimal places. The score represents the probability of the corresponding label classification. A higher value indicates higher accuracy.</p>
+         * <p>The confidence score for the matched label in the video snapshot. Valid values: <code>[0, 100]</code>. The score is accurate to 10 decimal places. The score indicates the probability that the video snapshot belongs to the corresponding category. A higher score indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100.000</p>
@@ -1841,7 +1847,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResult extends TeaModel {
         /**
-         * <p>The average score of video snapshots that match the label. Value range: <code>[0, 100]</code>, with precision up to 10 decimal places. The score represents the probability of the corresponding label classification. A higher value indicates higher accuracy.</p>
+         * <p>The average confidence score for the matched label in the video snapshots. Valid values: <code>[0, 100]</code>. The score is accurate to 10 decimal places. The score indicates the probability that the video snapshot belongs to the corresponding category. A higher score indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -1850,28 +1856,28 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String averageScore;
 
         /**
-         * <p>The categories of terrorism and political content review results and the number of video snapshots in each category.</p>
+         * <p>The categories of terrorism and political content moderation results and the number of video snapshots for each category.</p>
          */
         @NameInMap("CounterList")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultCounterList> counterList;
 
         /**
-         * <p>The review result label for terrorism and political content. Valid values:</p>
+         * <p>The moderation label for terrorism and political content. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: Normal.</li>
-         * <li><strong>bloody</strong>: Bloody content.</li>
-         * <li><strong>explosion</strong>: Explosion or smoke.</li>
-         * <li><strong>outfit</strong>: Special outfit.</li>
-         * <li><strong>logo</strong>: Special logo.</li>
-         * <li><strong>weapon</strong>: Weapon.</li>
-         * <li><strong>politics</strong>: Political content.</li>
-         * <li><strong>violence</strong>: Fighting.</li>
-         * <li><strong>crowd</strong>: Crowd gathering.</li>
-         * <li><strong>parade</strong>: Parade.</li>
-         * <li><strong>carcrash</strong>: Car crash scene.</li>
-         * <li><strong>flag</strong>: Flag.</li>
-         * <li><strong>location</strong>: Landmark.</li>
-         * <li><strong>others</strong>: Others.</li>
+         * <li><strong>normal</strong>: The content is normal.</li>
+         * <li><strong>bloody</strong>: The content contains bloody scenes.</li>
+         * <li><strong>explosion</strong>: The content contains explosions and smoke.</li>
+         * <li><strong>outfit</strong>: The content contains special outfits.</li>
+         * <li><strong>logo</strong>: The content contains special logos.</li>
+         * <li><strong>weapon</strong>: The content contains weapons.</li>
+         * <li><strong>politics</strong>: The content contains political elements.</li>
+         * <li><strong>violence</strong>: The content contains violence.</li>
+         * <li><strong>crowd</strong>: The content contains crowd gatherings.</li>
+         * <li><strong>parade</strong>: The content contains parades.</li>
+         * <li><strong>carcrash</strong>: The content contains car crash scenes.</li>
+         * <li><strong>flag</strong>: The content contains flags.</li>
+         * <li><strong>location</strong>: The content contains landmarks.</li>
+         * <li><strong>others</strong>: The content contains other elements.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1881,7 +1887,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The highest score of video snapshots that match the label. Value range: <code>[0, 100]</code>, with precision up to 10 decimal places. The score represents the probability of the corresponding label classification. A higher value indicates higher accuracy.</p>
+         * <p>The maximum confidence score for the matched label in the video snapshots. Valid values: <code>[0, 100]</code>. The score is accurate to 10 decimal places. The score indicates the probability that the video snapshot belongs to the corresponding category. A higher score indicates higher accuracy.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -1890,11 +1896,11 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String maxScore;
 
         /**
-         * <p>The review suggestion for terrorism and political content. Valid values:</p>
+         * <p>The moderation suggestion for terrorism and political content. Valid values:</p>
          * <ul>
-         * <li><strong>block</strong>: Violation.</li>
-         * <li><strong>review</strong>: Suspected violation.</li>
-         * <li><strong>pass</strong>: Passed.</li>
+         * <li><strong>block</strong>: The content is blocked.</li>
+         * <li><strong>review</strong>: The content requires manual review.</li>
+         * <li><strong>pass</strong>: The content passes the moderation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1966,13 +1972,13 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResult extends TeaModel {
         /**
-         * <p>The advertisement moderation result.</p>
+         * <p>The ad moderation result.</p>
          */
         @NameInMap("AdResult")
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResult adResult;
 
         /**
-         * <p>The review result of the GreenEnhanced route.</p>
+         * <p>The GreenEnhanced moderation result.</p>
          */
         @NameInMap("GreenEnhancedResult")
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultGreenEnhancedResult greenEnhancedResult;
@@ -1980,12 +1986,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * <p>The category of the moderation result. Valid values:</p>
          * <ul>
-         * <li><strong>porn</strong>: pornography.</li>
-         * <li><strong>terrorism</strong>: terrorist content or politically sensitive content.</li>
-         * <li><strong>ad</strong>: image or text violations.</li>
-         * <li><strong>live</strong>: undesirable scenes.</li>
-         * <li><strong>logo</strong>: image logos.</li>
-         * <li><strong>normal</strong>: normal.</li>
+         * <li><strong>porn</strong>: Pornographic content.</li>
+         * <li><strong>terrorism</strong>: Terrorist and political content.</li>
+         * <li><strong>ad</strong>: Image and text violations.</li>
+         * <li><strong>live</strong>: Inappropriate scenes.</li>
+         * <li><strong>logo</strong>: Image logos.</li>
+         * <li><strong>normal</strong>: Normal content.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1995,7 +2001,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The undesirable content moderation result.</p>
+         * <p>The inappropriate content moderation result.</p>
          */
         @NameInMap("LiveResult")
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResult liveResult;
@@ -2007,17 +2013,17 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult logoResult;
 
         /**
-         * <p>The pornography detection result.</p>
+         * <p>The pornography moderation result.</p>
          */
         @NameInMap("PornResult")
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult pornResult;
 
         /**
-         * <p>The recommended action based on the moderation result. Valid values:</p>
+         * <p>The moderation suggestion. Valid values:</p>
          * <ul>
-         * <li><strong>block</strong>: Blocked.</li>
-         * <li><strong>review</strong>: Needs manual review.</li>
-         * <li><strong>pass</strong>: Passed.</li>
+         * <li><strong>block</strong>: The content is blocked.</li>
+         * <li><strong>review</strong>: The content requires manual review.</li>
+         * <li><strong>pass</strong>: The content passes the moderation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2027,7 +2033,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String suggestion;
 
         /**
-         * <p>The terrorism and political content review result.</p>
+         * <p>The moderation result for terrorism and political content.</p>
          */
         @NameInMap("TerrorismResult")
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResult terrorismResult;
@@ -2105,11 +2111,11 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResult extends TeaModel {
         /**
-         * <p>The content types that contain violations. Multiple values are separated by commas (,). Valid values:</p>
+         * <p>The moderated content that contains violations. Multiple values are separated by commas (,). Valid values:</p>
          * <ul>
-         * <li><strong>video</strong>: video.</li>
-         * <li><strong>image-cover</strong>: thumbnail.</li>
-         * <li><strong>text-title</strong>: title.</li>
+         * <li><strong>video</strong>: Video.</li>
+         * <li><strong>image-cover</strong>: Thumbnail.</li>
+         * <li><strong>text-title</strong>: Title.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2119,13 +2125,13 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String abnormalModules;
 
         /**
-         * <p>The audio moderation results.</p>
+         * <p>The audio moderation result.</p>
          */
         @NameInMap("AudioResult")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultAudioResult> audioResult;
 
         /**
-         * <p>The image moderation results.</p>
+         * <p>The image moderation result.</p>
          */
         @NameInMap("ImageResult")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultImageResult> imageResult;
@@ -2133,13 +2139,13 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         /**
          * <p>The category of the moderation result. Multiple values are separated by commas (,). Valid values:</p>
          * <ul>
-         * <li><strong>porn</strong>: pornography.</li>
-         * <li><strong>terrorism</strong>: terrorist content or politically sensitive content.</li>
-         * <li><strong>ad</strong>: image or text violations.</li>
-         * <li><strong>live</strong>: undesirable scenes.</li>
-         * <li><strong>logo</strong>: image logos.</li>
-         * <li><strong>audio</strong>: audio anti-spam.</li>
-         * <li><strong>normal</strong>: normal.</li>
+         * <li><strong>porn</strong>: Pornographic content.</li>
+         * <li><strong>terrorism</strong>: Terrorist and political content.</li>
+         * <li><strong>ad</strong>: Image and text violations.</li>
+         * <li><strong>live</strong>: Inappropriate scenes.</li>
+         * <li><strong>logo</strong>: Image logos.</li>
+         * <li><strong>audio</strong>: Audio anti-spam.</li>
+         * <li><strong>normal</strong>: Normal content.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2149,11 +2155,11 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The recommended action based on the moderation result. Valid values:</p>
+         * <p>The moderation suggestion. Valid values:</p>
          * <ul>
-         * <li><strong>block</strong>: Blocked.</li>
-         * <li><strong>review</strong>: Needs manual review.</li>
-         * <li><strong>pass</strong>: Passed.</li>
+         * <li><strong>block</strong>: The content is blocked.</li>
+         * <li><strong>review</strong>: The content requires manual review.</li>
+         * <li><strong>pass</strong>: The content passes the moderation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2163,7 +2169,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public String suggestion;
 
         /**
-         * <p>The text moderation results.</p>
+         * <p>The text moderation result.</p>
          */
         @NameInMap("TextResult")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultTextResult> textResult;

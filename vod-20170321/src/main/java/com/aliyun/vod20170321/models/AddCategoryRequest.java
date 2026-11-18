@@ -7,8 +7,8 @@ public class AddCategoryRequest extends TeaModel {
     /**
      * <p>The category name.</p>
      * <ul>
-     * <li>Maximum length: 64 bytes.</li>
-     * <li>UTF-8 encoded.</li>
+     * <li>It can be up to 64 bytes in length.</li>
+     * <li>It is encoded in UTF-8.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,12 +19,12 @@ public class AddCategoryRequest extends TeaModel {
     public String cateName;
 
     /**
-     * <p>The parent category ID.</p>
-     * <p>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Management Configuration</strong> &gt; <strong>Category Management</strong> &gt; <strong>Audio/Video/Image Categories</strong> or <strong>Short Video Material Categories</strong> to view category IDs.</p>
+     * <p>The ID of the parent category.</p>
+     * <p>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Configuration Management</strong> &gt; <strong>Media Asset Management Configuration</strong> &gt; <strong>Category Management</strong> &gt; <strong>Audio/Video/Image Categories</strong> or <strong>Short Video Material Categories</strong> to view the category ID.</p>
      * <blockquote>
      * <ul>
-     * <li>If you specify this parameter, a subcategory is created under the specified parent category. If you do not specify this parameter, a level-0 category is created.</li>
-     * <li>Because all level-0 categories for short video materials are built-in and cannot be modified, added, or deleted, only subcategories can be created under level-0 categories. Therefore, this parameter is required when <code>Type</code> is set to <code>material</code>.</li>
+     * <li>If you specify this parameter, a subcategory is created under the specified parent category. If you do not specify this parameter, a level-1 category is created.</li>
+     * <li>All level-1 categories for short video materials are built-in and cannot be modified, added, or deleted. You can only create subcategories under level-1 categories. Therefore, this parameter is required when <code>Type</code> is set to <code>material</code>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -37,8 +37,8 @@ public class AddCategoryRequest extends TeaModel {
     /**
      * <p>The category type. Valid values:</p>
      * <ul>
-     * <li><strong>default</strong> (default): audio/video/image category.</li>
-     * <li><strong>material</strong>: short video material category.</li>
+     * <li><strong>default</strong>: audio, video, and image categories. This is the default value.</li>
+     * <li><strong>material</strong>: short video material categories.</li>
      * </ul>
      * 
      * <strong>example:</strong>
